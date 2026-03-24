@@ -1,6 +1,8 @@
 <div class="header-content" [class.scrolled]="isScrolled">
   <h1 class="page-title">
     {{ cleanTitle }}
-    <img *ngIf="isNew" [src]="newBadgeSrc" alt="Nuevo" class="nuevo-icon" />
+    @if (isNew) {
+      <img [src]="newBadgeSrc" alt="Nuevo" class="nuevo-icon" />
+    }
   </h1>
 </div>

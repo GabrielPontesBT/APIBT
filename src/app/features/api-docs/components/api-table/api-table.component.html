@@ -1,38 +1,44 @@
 
-  <!-- Si hay datos, muestro encabezado y cuerpo -->
-  <ng-container *ngIf="(data?.length ?? 0) > 0; else noData">
-    <table>
+<!-- Si hay datos, muestro encabezado y cuerpo -->
+@if ((data?.length ?? 0) > 0) {
+  <table>
     <thead>
       <tr>
-        <th *ngFor="let col of columns">{{ col }}</th>
+        @for (col of columns; track col) {
+          <th>{{ col }}</th>
+        }
       </tr>
     </thead>
     <tbody>
       <!-- Modo columnas o dinámico -->
-      <ng-container *ngIf="(columns?.length ?? 0) > 0; else dynamicRow">
-        <tr *ngFor="let row of data">
-          <td *ngFor="let col of columns"
-              [innerHTML]="row[col]">
-          </td>
-        </tr>
-      </ng-container>
-      <ng-template #dynamicRow>
-        <tr *ngFor="let row of data">
-          <th>{{ row.campo }}</th>
-          <td>{{ row.valor }}</td>
-        </tr>
-      </ng-template>
+      @if ((columns?.length ?? 0) > 0) {
+        @for (row of data; track row) {
+          <tr>
+            @for (col of columns; track col) {
+              <td
+                [innerHTML]="row[col]">
+              </td>
+            }
+          </tr>
+        }
+      } @else {
+        @for (row of data; track row) {
+          <tr>
+            <th>{{ row.campo }}</th>
+            <td>{{ row.valor }}</td>
+          </tr>
+        }
+      }
     </tbody>
-</table>
-  </ng-container>
+  </table>
+} @else {
+  <tbody>
+    <tr>
+      <td [attr.colspan]="columns?.length ?? 1" class="text-center">
+        No aplica.
+      </td>
+    </tr>
+  </tbody>
+}
 
-  <!-- Si NO hay datos, solo un tbody con “No aplica” -->
-  <ng-template #noData>
-    <tbody>
-      <tr>
-        <td [attr.colspan]="columns?.length ?? 1" class="text-center">
-          No aplica.
-        </td>
-      </tr>
-    </tbody>
-  </ng-template>
+<!-- Si NO hay datos, solo un tbody con “No aplica” -->

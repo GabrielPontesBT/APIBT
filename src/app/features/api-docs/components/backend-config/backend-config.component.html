@@ -5,18 +5,19 @@
   </div>
 
   <!-- Si hay backendData, muestra las tablas -->
-  <ng-container *ngIf="backendData && backendData.length > 0; else noBackendData">
-    <div *ngFor="let config of backendData; let i = index" class="configuracion">
-      <p class="config-title">{{ config.titulo }}</p>
-      <app-api-table
-        [columns]="['Campo', 'Valor']"
-        [data]="config.datos">
-      </app-api-table>
-    </div>
-  </ng-container>
+  @if (backendData && backendData.length > 0) {
+    @for (config of backendData; track config; let i = $index) {
+      <div class="configuracion">
+        <p class="config-title">{{ config.titulo }}</p>
+        <app-api-table
+          [columns]="['Campo', 'Valor']"
+          [data]="config.datos">
+        </app-api-table>
+      </div>
+    }
+  } @else {
+    <pre [innerHTML]="text"></pre>
+  }
 
   <!-- Si no hay backendData, muestra el texto -->
-  <ng-template #noBackendData>
-    <pre [innerHTML]="text"></pre>
-  </ng-template>
 </mat-card>

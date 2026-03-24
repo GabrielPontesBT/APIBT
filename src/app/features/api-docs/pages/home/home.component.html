@@ -6,34 +6,34 @@
           <img
             src="assets/image/logo_negativo_Bantotal.png"
             alt="Bantotal"
-          />
-        </div>
+            />
+          </div>
 
-        <div class="home-banner__text">
-          <h1>DOCUMENTACIÓN<br />API BANKING</h1>
+          <div class="home-banner__text">
+            <h1>DOCUMENTACIÓN<br />API BANKING</h1>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="home-content">
-    <div class="home-separator"></div>
+    <section class="home-content">
+      <div class="home-separator"></div>
 
-    <div class="home-cards">
-      <a
-        class="home-card"
-        *ngFor="let doc of docs"
-        [routerLink]="doc.link"
-      >
-        <div class="home-card__title">
-          <span class="home-card__icon">›</span>
-          <span>{{ doc.title }}</span>
-        </div>
-
-        <div class="home-card__description">
-          {{ doc.description }}
-        </div>
-      </a>
-    </div>
-  </section>
-</div>
+      <div class="home-cards">
+        @for (doc of docs; track doc) {
+          <a
+            class="home-card"
+            [routerLink]="doc.link"
+            >
+            <div class="home-card__title">
+              <span class="home-card__icon">›</span>
+              <span>{{ doc.title }}</span>
+            </div>
+            <div class="home-card__description">
+              {{ doc.description }}
+            </div>
+          </a>
+        }
+      </div>
+    </section>
+  </div>

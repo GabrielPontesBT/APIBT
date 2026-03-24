@@ -12,7 +12,7 @@ Antes de trabajar con el proyecto, instalar las siguientes herramientas:
 |---|---|---|
 | **Node.js** | 18.19+ (recomendado: 20 o 22 LTS) | [nodejs.org](https://nodejs.org) |
 | **npm** | 9+ (viene incluido con Node) | — |
-| **Angular CLI** | 20 | `npm install -g @angular/cli` |
+| **Angular CLI** | 21 | `npm install -g @angular/cli` |
 
 Verificar instalación:
 ```bash
@@ -145,8 +145,8 @@ Si se crea un nuevo componente y se quiere usar en el módulo de documentación:
 
 | Tecnología | Versión |
 |---|---|
-| Angular | 20 |
-| Angular Material | 20 |
-| TypeScript | 5.8 |
+| Angular | 21 |
+| Angular Material | 21 |
+| TypeScript | 6.0 |
 | Node.js (recomendado) | 22 LTS |
-| zone.js | 0.15 |
+| zone.js | 0.16 |

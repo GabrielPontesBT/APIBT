@@ -1,32 +1,32 @@
 <mat-tab-group class="code-tabs" disableRipple>
-  <mat-tab *ngFor="let section of sections" [label]="getTabLabel(section)">
-
-    <div class="code-toggle">
-      <button
-        mat-button
-        [class.active]="view[section] === 'xml'"
-        (click)="switchView(section, 'xml')">
-        XML
-      </button>
-      <button
-        mat-button
-        [class.active]="view[section] === 'json'"
-        (click)="switchView(section, 'json')">
-        JSON
-      </button>
-      <button mat-icon-button (click)="copyCode(section)">
-        <mat-icon>content_copy</mat-icon>
-      </button>
-    </div>
-
-    <!-- ENVOLVER con div para manejar el scroll -->
-    <div class="code-scroll">
-      <pre>
-        <code
-          [innerHTML]="highlightedCode[section][view[section]]"
-          [class]="'language-' + view[section]">
-        </code>
-      </pre>
-    </div>
-  </mat-tab>
+  @for (section of sections; track section) {
+    <mat-tab [label]="getTabLabel(section)">
+      <div class="code-toggle">
+        <button
+          mat-button
+          [class.active]="view[section] === 'xml'"
+          (click)="switchView(section, 'xml')">
+          XML
+        </button>
+        <button
+          mat-button
+          [class.active]="view[section] === 'json'"
+          (click)="switchView(section, 'json')">
+          JSON
+        </button>
+        <button mat-icon-button (click)="copyCode(section)">
+          <mat-icon>content_copy</mat-icon>
+        </button>
+      </div>
+      <!-- ENVOLVER con div para manejar el scroll -->
+      <div class="code-scroll">
+        <pre>
+          <code
+            [innerHTML]="highlightedCode[section][view[section]]"
+            [class]="'language-' + view[section]">
+          </code>
+        </pre>
+      </div>
+    </mat-tab>
+  }
 </mat-tab-group>

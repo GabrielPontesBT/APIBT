@@ -4,30 +4,30 @@
 </div>
 
 <!-- Popup flotante arriba del botón -->
-<div
-  class="chat-popup"
-  *ngIf="renderChat"
-  [@popupFromButton]="showChat ? 'open' : 'closed'"
-  (@popupFromButton.done)="onAnimationDone($event)">
-
-  <button class="clear-history-button" title="Borrar historial" *ngIf="showChat" (click)="clearChatHistory()">
-    <span class="material-icons">history</span>
-  </button>
-
-  <div class="chat-messages" #chatMessages>
-    <div *ngFor="let m of messagesHTML"
-        [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
-        [@messageAnim]="m.isUser ? true : null">
-      <span [innerHTML]="m.text"></span>
+@if (renderChat) {
+  <div
+    class="chat-popup"
+    [@popupFromButton]="showChat ? 'open' : 'closed'"
+    (@popupFromButton.done)="onAnimationDone($event)">
+    @if (showChat) {
+      <button class="clear-history-button" title="Borrar historial" (click)="clearChatHistory()">
+        <span class="material-icons">history</span>
+      </button>
+    }
+    <div class="chat-messages" #chatMessages>
+      @for (m of messagesHTML; track m) {
+        <div
+          [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
+          [@messageAnim]="m.isUser ? true : null">
+          <span [innerHTML]="m.text"></span>
+        </div>
+      }
     </div>
-
-  </div>
-
-  <div class="chat-input">
-    <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading"
-      placeholder="Escribe un mensaje..." />
-    <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
-  </div>
-
-  <span class="chat-popup-punta"></span>
-</div>
+    <div class="chat-input">
+      <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading"
+        placeholder="Escribe un mensaje..." />
+        <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
+      </div>
+      <span class="chat-popup-punta"></span>
+    </div>
+  }

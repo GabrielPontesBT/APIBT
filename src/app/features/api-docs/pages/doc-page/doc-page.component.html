@@ -1,16 +1,15 @@
 <!--
-  doc-page.component.html
- *
- * Renderiza una página de documentación usando los componentes visuales
- * reutilizables del proyecto, alimentados desde el JSON cargado dinámicamente.
+doc-page.component.html
+*
+* Renderiza una página de documentación usando los componentes visuales
+* reutilizables del proyecto, alimentados desde el JSON cargado dinámicamente.
 -->
 
-<ng-container *ngIf="page$ | async as page; else pageNotFoundTemplate">
+@if (page$ | async; as page) {
   <app-page-header
     class="fade-only front"
     [title]="page.pageTitle">
   </app-page-header>
-
   <div class="content">
     <div class="content-left">
       <app-info-card
@@ -20,14 +19,13 @@
         [programa]="page.programa"
         [scope]="page.scope">
       </app-info-card>
-
-      <app-backend-config
-        class="fade-only"
-        *ngIf="page.hasBackendConfig"
-        [text]="page.backendText"
-        [backendData]="page.backendData || []">
-      </app-backend-config>
-
+      @if (page.hasBackendConfig) {
+        <app-backend-config
+          class="fade-only"
+          [text]="page.backendText"
+          [backendData]="page.backendData || []">
+        </app-backend-config>
+      }
       <app-api-tabs
         class="fade-only"
         [inputCols]="['Nombre', 'Tipo', 'Comentarios']"
@@ -37,33 +35,29 @@
         [errorCols]="['Código', 'Descripción']"
         [errors]="page.errors">
       </app-api-tabs>
-
-      <app-vals-data
-        class="fade-only"
-        *ngIf="page.valuesTable && page.valuesTable.length > 0"
-        [types]="page.valuesTable">
-      </app-vals-data>
-
+      @if (page.valuesTable && page.valuesTable.length > 0) {
+        <app-vals-data
+          class="fade-only"
+          [types]="page.valuesTable">
+        </app-vals-data>
+      }
       <app-structured-data
         class="fade-only"
         [types]="page.structuredTypes">
       </app-structured-data>
     </div>
-
     <div class="content-right fade-only" appAnchorScroll>
       <app-code-example [examples]="page.examples"></app-code-example>
     </div>
   </div><!-- .content -->
-
   <app-chat-popup></app-chat-popup>
   <app-footer-space></app-footer-space>
-</ng-container>
-
-<ng-template #pageNotFoundTemplate>
+} @else {
   <section class="doc-page doc-page--empty">
     <h1 class="doc-page__title">Documento no encontrado</h1>
     <p class="doc-page__description">
       No se pudo cargar el contenido para esta ruta.
     </p>
   </section>
-</ng-template>
+}
+

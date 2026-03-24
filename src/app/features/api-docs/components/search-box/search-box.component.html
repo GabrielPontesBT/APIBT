@@ -1,9 +1,9 @@
 <!--
-  search-box.component.html
- *
- * Renderiza un buscador de documentación con resultados en vivo, permitiendo
- * escribir una consulta, visualizar coincidencias relevantes y navegar a la
- * página seleccionada sin cargar manualmente la ruta.
+search-box.component.html
+*
+* Renderiza un buscador de documentación con resultados en vivo, permitiendo
+* escribir una consulta, visualizar coincidencias relevantes y navegar a la
+* página seleccionada sin cargar manualmente la ruta.
 -->
 
 <section class="search-box">
@@ -14,57 +14,64 @@
       [formControl]="searchControl"
       placeholder="Buscar por título, pubName, programa, alcance..."
       autocomplete="off"
-    />
+      />
 
-    <button
-      *ngIf="hasText(searchControl.value)"
-      type="button"
-      class="search-box__clear"
-      (click)="clearSearch()"
-    >
-      Limpiar
-    </button>
-  </div>
+      @if (hasText(searchControl.value)) {
+        <button
+          type="button"
+          class="search-box__clear"
+          (click)="clearSearch()"
+          >
+          Limpiar
+        </button>
+      }
+    </div>
 
-  <div
-    *ngIf="hasText(searchControl.value)"
-    class="search-box__results"
-  >
-    <ng-container *ngIf="results$ | async as results">
-      <button
-        *ngFor="let result of results"
-        type="button"
-        class="search-box__result"
-        (click)="selectResult(result)"
-      >
-        <span class="search-box__result-title">
-          {{ result.pageTitle }}
-        </span>
-
-        <span
-          *ngIf="hasText(result.description)"
-          class="search-box__result-description"
-        >
-          {{ result.description }}
-        </span>
-
-        <span class="search-box__result-meta">
-          <span *ngIf="hasText(result.pubName)">PubName: {{ result.pubName }}</span>
-          <span *ngIf="hasText(result.programa)">Programa: {{ result.programa }}</span>
-          <span *ngIf="hasText(result.scope)">Alcance: {{ result.scope }}</span>
-        </span>
-
-        <span class="search-box__result-slug">
-          /{{ result.slug }}
-        </span>
-      </button>
-
+    @if (hasText(searchControl.value)) {
       <div
-        *ngIf="results.length === 0"
-        class="search-box__empty"
-      >
-        No se encontraron resultados.
+        class="search-box__results"
+        >
+        @if (results$ | async; as results) {
+          @for (result of results; track result) {
+            <button
+              type="button"
+              class="search-box__result"
+              (click)="selectResult(result)"
+              >
+              <span class="search-box__result-title">
+                {{ result.pageTitle }}
+              </span>
+              @if (hasText(result.description)) {
+                <span
+                  class="search-box__result-description"
+                  >
+                  {{ result.description }}
+                </span>
+              }
+              <span class="search-box__result-meta">
+                @if (hasText(result.pubName)) {
+                  <span>PubName: {{ result.pubName }}</span>
+                }
+                @if (hasText(result.programa)) {
+                  <span>Programa: {{ result.programa }}</span>
+                }
+                @if (hasText(result.scope)) {
+                  <span>Alcance: {{ result.scope }}</span>
+                }
+              </span>
+              <span class="search-box__result-slug">
+                /{{ result.slug }}
+              </span>
+            </button>
+          }
+          @if (results.length === 0) {
+            <div
+              class="search-box__empty"
+              >
+              No se encontraron resultados.
+            </div>
+          }
+        }
       </div>
-    </ng-container>
-  </div>
-</section>
+    }
+  </section>

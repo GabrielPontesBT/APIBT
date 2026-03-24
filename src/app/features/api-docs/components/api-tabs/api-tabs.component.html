@@ -1,29 +1,26 @@
 <mat-tab-group class="api-tabs" disableRipple>
   <mat-tab label="Datos de Entrada">
-    <ng-container *ngIf="inputCols?.length || inputData?.length; else noAplicaEntrada">
+    @if (inputCols?.length || inputData?.length) {
       <app-api-table [columns]="inputCols" [data]="inputData"></app-api-table>
-    </ng-container>
-    <ng-template #noAplicaEntrada>
+    } @else {
       <p class="no-aplica">No aplica</p>
-    </ng-template>
+    }
   </mat-tab>
 
   <mat-tab label="Datos de Salida">
-    <ng-container *ngIf="outputCols?.length || outputData?.length; else noAplicaSalida">
+    @if (outputCols?.length || outputData?.length) {
       <app-api-table [columns]="outputCols" [data]="outputData"></app-api-table>
-    </ng-container>
-    <ng-template #noAplicaSalida>
+    } @else {
       <p class="no-aplica">No aplica</p>
-    </ng-template>
+    }
   </mat-tab>
 
   <mat-tab label="Errores">
-    <ng-container *ngIf="errorCols?.length || errors?.length; else noAplicaErrores">
+    @if (errorCols?.length || errors?.length) {
       <app-api-table [columns]="errorCols" [data]="errors"></app-api-table>
-    </ng-container>
-    <ng-template #noAplicaErrores>
+    } @else {
       <p class="no-aplica">No aplica</p>
-    </ng-template>
+    }
   </mat-tab>
 </mat-tab-group>
 
