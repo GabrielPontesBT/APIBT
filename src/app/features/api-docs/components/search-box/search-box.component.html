@@ -6,72 +6,50 @@ search-box.component.html
 * página seleccionada sin cargar manualmente la ruta.
 -->
 
-<section class="search-box">
-  <div class="search-box__input-wrapper">
+<div class="search-wrapper" (click)="$event.stopPropagation()">
+
+  @if (isFocused) {
+    <div class="blur-overlay" (click)="clearResults()"></div>
+  }
+
+  <div class="input-wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="search-icon"
+      viewBox="0 0 1024 1024"
+      fill="currentColor"
+      aria-label="search icon"
+    >
+      <path
+        d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"
+      ></path>
+    </svg>
     <input
       type="text"
-      class="search-box__input"
-      [formControl]="searchControl"
-      placeholder="Buscar por título, pubName, programa, alcance..."
-      autocomplete="off"
-      />
+      [(ngModel)]="query"
+      (input)="search()"
+      (focus)="isFocused = true"
+      placeholder="Buscar..."
+    />
+  </div>
 
-      @if (hasText(searchControl.value)) {
-        <button
-          type="button"
-          class="search-box__clear"
-          (click)="clearSearch()"
-          >
-          Limpiar
-        </button>
+  @if (searchDone && results.length > 0) {
+    <ul class="search-popup" (click)="$event.stopPropagation()">
+      @for (r of results; track r.url) {
+        <li class="search-result">
+          <button (click)="goTo(r.url)" class="link-button">
+            {{ r.pubName || r.url }}
+          </button>
+          <p class="snippet">{{ r.snippet }}</p>
+        </li>
       }
-    </div>
+    </ul>
+  }
 
-    @if (hasText(searchControl.value)) {
-      <div
-        class="search-box__results"
-        >
-        @if (results$ | async; as results) {
-          @for (result of results; track result) {
-            <button
-              type="button"
-              class="search-box__result"
-              (click)="selectResult(result)"
-              >
-              <span class="search-box__result-title">
-                {{ result.pageTitle }}
-              </span>
-              @if (hasText(result.description)) {
-                <span
-                  class="search-box__result-description"
-                  >
-                  {{ result.description }}
-                </span>
-              }
-              <span class="search-box__result-meta">
-                @if (hasText(result.pubName)) {
-                  <span>PubName: {{ result.pubName }}</span>
-                }
-                @if (hasText(result.programa)) {
-                  <span>Programa: {{ result.programa }}</span>
-                }
-                @if (hasText(result.scope)) {
-                  <span>Alcance: {{ result.scope }}</span>
-                }
-              </span>
-              <span class="search-box__result-slug">
-                /{{ result.slug }}
-              </span>
-            </button>
-          }
-          @if (results.length === 0) {
-            <div
-              class="search-box__empty"
-              >
-              No se encontraron resultados.
-            </div>
-          }
-        }
-      </div>
-    }
-  </section>
+  @if (searchDone && !results.length) {
+    <p class="search-popup" (click)="$event.stopPropagation()">
+      No se encontraron resultados.
+    </p>
+  }
+
+</div>
