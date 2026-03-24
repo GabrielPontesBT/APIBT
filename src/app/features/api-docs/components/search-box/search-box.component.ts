@@ -6,46 +6,74 @@
  * rápidamente a una página desde el frontend.
  */
 
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl } from '@angular/forms';
-import { Observable, of } from 'rxjs';
-import { debounceTime, distinctUntilChanged, startWith, switchMap } from 'rxjs/operators';
-import { SearchIndexEntry } from '../../../../core/models/search-index-entry.model';
-import { SearchService } from '../../services/search.service';
+import { SearchService, SearchResult } from '../../../../core/services/search.service';
 
 @Component({
-    selector: 'app-search-box',
-    templateUrl: './search-box.component.html',
-    styleUrls: ['./search-box.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-search-box',
+  templateUrl: './search-box.component.html',
+  styleUrls: ['./search-box.component.scss'],
+  standalone: false
 })
 export class SearchBoxComponent {
-  searchControl = new FormControl('', { nonNullable: true });
-  results$: Observable<SearchIndexEntry[]> = of([]);
+  query = '';
+  results: SearchResult[] = [];
+  searchDone = false;
+  isFocused = false;
 
   constructor(
     private searchService: SearchService,
-    private router: Router
-  ) {
-    this.results$ = this.searchControl.valueChanges.pipe(
-      startWith(this.searchControl.value),
-      debounceTime(180),
-      distinctUntilChanged(),
-      switchMap((query) => this.searchService.search(query || '', 12))
-    );
+    private router: Router,
+    private elRef: ElementRef
+  ) {}
+
+  search(): void {
+    if (!this.query.trim()) {
+      return this.clearResults();
+    }
+    this.results = this.searchService.search(this.query);
+    this.searchDone = true;
   }
 
-  hasText(value: string | null | undefined): boolean {
-    return !!String(value || '').trim();
+  clearResults(): void {
+    this.query = '';
+    this.results = [];
+    this.searchDone = false;
+    this.isFocused = false;
   }
 
-  selectResult(result: SearchIndexEntry): void {
-    this.router.navigate(['/', result.slug]);
+  goTo(url: string): void {
+    this.router.navigateByUrl(url);
+    this.clearResults();
   }
 
-  clearSearch(): void {
-    this.searchControl.setValue('');
+  focusInput(): void {
+    const input = this.elRef.nativeElement.querySelector('input');
+    if (input) input.focus();
+  }
+
+  blurInput(): void {
+    const input = this.elRef.nativeElement.querySelector('input');
+    if (input) input.blur();
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: MouseEvent): void {
+    if (!this.elRef.nativeElement.contains(event.target)) {
+      this.clearResults();
+    }
+  }
+
+  @HostListener('document:keydown.escape')
+  handleEscape(): void {
+    this.clearResults();
+    this.blurInput();
+  }
+
+  @HostListener('document:keydown.control.f', ['$event'])
+  handleCtrlF(event: Event): void {
+    event.preventDefault();
+    this.focusInput();
   }
 }
