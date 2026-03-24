@@ -1,0 +1,83 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerproductos",
+  "pageTitle": "Obtener Productos",
+  "description": "Método para obtener un listado de los productos de cuenta de ahorro.",
+  "pubName": "BTCuentasDeAhorro.ObtenerProductos",
+  "programa": "RBTPG054",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "sBTProducto",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \r\n   <SOAP-ENV:Body> \r\n      <BTCuentasDeAhorro.ObtenerProductos xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n         <Btinreq> \r\n            <Device>AV</Device> \r\n            <Usuario>MINSTALADOR</Usuario> \r\n            <Requerimiento/> \r\n            <Canal>BTDIGITAL</Canal> \r\n            <Token>be9fc8708b4A8B5C60A82434</Token> \r\n         </Btinreq> \r\n      </BTCuentasDeAhorro.ObtenerProductos> \r\n   </SOAP-ENV:Body> \r\n</SOAP-ENV:Envelope>",
+      "json": "curl -X POST \\ \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerProductos=' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 6bd8fd4d-69ed-56f1-79fc-8d458f726066' \\ \r\n  -d '{ \r\n\t\"Btinreq\": { \r\n\t\t\"Device\": \"AV\", \r\n\t\t\"Usuario\": \"MINSTALADOR\", \r\n\t\t\"Requerimiento\": \"\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \r\n\t}, \r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \r\n   <SOAP-ENV:Body> \r\n      <BTCuentasDeAhorro.ObtenerProductosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n         <Btinreq> \r\n            <Device>AV</Device> \r\n            <Usuario>MINSTALADOR</Usuario> \r\n            <Requerimiento/> \r\n            <Canal>BTDIGITAL</Canal> \r\n            <Token>be9fc8708b4A8B5C60A82434</Token> \r\n         </Btinreq> \r\n         <sdtProductos> \r\n            <sBTProducto> \r\n               <productoUId>1</productoUId> \r\n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> \r\n               <moneda>$</moneda> \r\n               <papel/> \r\n               <otrosConceptos></otrosConceptos>\r\n            </sBTProducto> \r\n            <sBTProducto> \r\n               <productoUId>2</productoUId> \r\n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> \r\n               <moneda>USD</moneda> \r\n               <papel/> \r\n               <otrosConceptos></otrosConceptos>\r\n            </sBTProducto> \r\n            <sBTProducto> \r\n               <productoUId>3</productoUId> \r\n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> \r\n               <moneda>$</moneda> \r\n               <papel/> \r\n               <otrosConceptos></otrosConceptos>\r\n            </sBTProducto> \r\n            <sBTProducto> \r\n               <productoUId>4</productoUId> \r\n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> \r\n               <moneda>USD</moneda> \r\n               <papel/> \r\n               <otrosConceptos></otrosConceptos>\r\n            </sBTProducto> \r\n         </sdtProductos> \r\n         <Erroresnegocio></Erroresnegocio> \r\n         <Btoutreq> \r\n            <Numero>988</Numero> \r\n            <Estado>OK</Estado> \r\n            <Servicio>BTCuentasDeAhorro.ObtenerProductos</Servicio> \r\n            <Requerimiento/> \r\n            <Fecha>2017-12-22</Fecha> \r\n            <Hora>17:52:40</Hora> \r\n            <Canal>BTDIGITAL</Canal> \r\n         </Btoutreq> \r\n      </BTCuentasDeAhorro.ObtenerProductosResponse> \r\n   </SOAP-ENV:Body> \r\n</SOAP-ENV:Envelope>",
+      "json": "'{ \r\n\t\"Btinreq\": { \r\n\t\t\"Device\": \"AV\", \r\n\t\t\"Usuario\": \"MINSTALADOR\", \r\n\t\t\"Requerimiento\": \"\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \r\n\t}, \r\n    \"sdtProductos\": { \r\n        \"sBTProducto\": [ \r\n            { \r\n                \"papel\": \"\", \r\n                \"moneda\": \"$\", \r\n                \"productoUId\": \"1\", \r\n                \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\",\r\n                \"otrosConceptos\":\"\"  \r\n            }, \r\n            { \r\n                \"papel\": \"\", \r\n                \"moneda\": \"USD\", \r\n                \"productoUId\": \"2\", \r\n                \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\",\r\n                \"otrosConceptos\":\"\" \r\n            }, \r\n        ] \r\n    }, \r\n    \"Erroresnegocio\": { \r\n        \"BTErrorNegocio\": [] \r\n    }, \r\n    \"Btoutreq\": { \r\n        \"Numero\": \"989\", \r\n        \"Estado\": \"OK\", \r\n        \"Servicio\": \"BTCuentasDeAhorro.ObtenerProductos\", \r\n        \"Requerimiento\": \"\", \r\n        \"Fecha\": \"2017-12-22\", \r\n        \"Hora\": \"17:55:13\", \r\n        \"Canal\": \"BTDIGITAL\" \r\n    } \r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

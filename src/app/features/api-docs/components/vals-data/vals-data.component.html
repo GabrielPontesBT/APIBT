@@ -1,0 +1,24 @@
+<ng-container *ngIf="types.length > 0">
+  <h1 class="vals-title" [id]="types.length === 1 ? 'valores' : null">
+    Valores
+  </h1>
+
+  <div class="mat-accordion-BT">
+    <mat-expansion-panel *ngFor="let group of types; let i = index"
+                         [expanded]="expandedMap[i]">
+      <mat-expansion-panel-header>
+        <mat-panel-title
+          [id]="types.length === 1 ? 'valores' : 'valores' + (i + 1)">
+          {{ group.elementValName }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <p *ngIf="group.description">{{ group.description }}</p>
+
+      <app-api-table
+        [columns]="group.listHeader.split(',')"
+        [data]="group.fields">
+      </app-api-table>
+    </mat-expansion-panel>
+  </div>
+</ng-container>

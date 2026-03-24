@@ -1,0 +1,78 @@
+{
+  "slug": "clientes/actualizar/eliminarintegrante",
+  "pageTitle": "Eliminar Integrante",
+  "description": "Método para eliminar un integrante de una cuenta cliente.",
+  "pubName": "BTClientes.EliminarIntegrantes",
+  "programa": "RBTPG386",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe cuenta para el identificador único: [Número de identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe persona para el identificador único: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La persona ingresada no integra la cuenta."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se puede realizar esta acción para este tipo de titular."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se pueden realizar cambios de integrantes cuando la cuenta cliente tiene productos activos."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No se puede eliminar el titular representativo."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "No se puede eliminar el representante legal."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Error: La Autorización a sido negada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.EliminarIntegrante>\r\n         <bts:Btinreq>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>c2cfd09eff4A8B5C60A82434</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTClientes.EliminarIntegrante>\r\n      <bts:clienteUId>1</bts:clienteUId>\r\n      <bts:personaUId>853</bts:personaUId>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?EliminarIntegrante' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\r\n    },\r\n    \"clienteUId\": 1,\r\n    \"personaUId\": 853\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.EliminarIntegranteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Token>c2cfd09eff4A8B5C60A82434</Token>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16576</Numero>\r\n            <Hora>12:36:58</Hora>\r\n            <Fecha>2022-05-26</Fecha>\r\n            <Servicio>BTClientes.EliminarIntegrante</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btoutreq>\r\n      </BTClientes.EliminarIntegranteResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"c2cfd09eff4A8B5C60A82434\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"839\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.EliminarIntegrante\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2022-05-12\",\r\n        \"Hora\": \"15:35:54\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

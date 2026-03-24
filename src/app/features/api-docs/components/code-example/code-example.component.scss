@@ -1,0 +1,196 @@
+@import '~prismjs/themes/prism.css';
+@import 'variables';
+
+// CONTENEDOR PRINCIPAL
+::ng-deep .code-tabs {
+  //margin: 0rem 40px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// TABS HEADER
+::ng-deep .code-tabs .mat-mdc-tab-header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  display: flex;
+  background: var(--table-header);
+  font-weight: 700;
+}
+
+// TABS HOVER
+::ng-deep .code-tabs .mdc-tab {
+  &:hover {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    background: var(--grey-hover) !important;
+  }
+}
+
+// TAB ACTIVA
+::ng-deep .code-tabs .mdc-tab.mdc-tab--active {
+  background: var(--bg-elements);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-top: var(--red-border);
+  &:hover {
+    background: var(--bg-elements) !important;
+    cursor: default;
+  }
+}
+
+// CUERPO DE LA TAB ACTIVA
+::ng-deep .code-tabs .mat-mdc-tab-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+::ng-deep .code-tabs .mat-mdc-tab-body-wrapper {
+  padding: 2rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: var(--bg-elements) !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+::ng-deep .code-tabs .mat-mdc-tab-body-content {
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden !important;
+}
+
+// OCULTAR INDICADOR
+::ng-deep .code-tabs .mdc-tab-indicator {
+  display: none !important;
+}
+
+// BARRA DE TABS DE CÓDIGO
+.code-toggle {
+  display: flex;
+  align-items: center;
+  background-color: var(--code-header);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-color) !important;
+  flex-shrink: 0; // para que no se achique
+
+  button[mat-button] {
+    padding: 0.4rem 0.75rem;
+    background: none;
+    border-radius: 0.7rem 0.7rem 0 0;
+    font-weight: 700;
+
+    &:not(.active):hover {
+      background-color: var(--code-bg-darken);
+    }
+
+    &.active {
+      background-color: var(--code-bg);
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  button[mat-icon-button] {
+    margin-left: auto;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--code-bg-darken);
+    }
+  }
+}
+
+// PROPIEDADES DE CÓDIGO
+::ng-deep code[class*="language-"] {
+  font-size: 0.7rem !important;
+  color: var(--text-color) !important;
+  background: none !important;
+  text-shadow: none !important;
+
+  .token.property, .token.tag, .token.boolean, .token.number,
+  .token.constant, .token.symbol, .token.deleted {
+    color: #e45649 !important;
+  }
+
+  .token.selector, .token.attr-name, .token.string, .token.char,
+  .token.builtin, .token.url, .token.inserted {
+    color: #b76b01 !important;
+  }
+
+  .token.atrule, .token.attr-value, .token.keyword {
+    color: #50a14f;
+  }
+}
+
+// CONTENEDOR DE SCROLL EXCLUSIVO DEL CÓDIGO
+.code-scroll {
+  padding: 0rem 1rem;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  max-height: 100%;
+  background: var(--code-bg);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-1) var(--table-columns);
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--red-1);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--table-columns);
+  }
+}
+
+::ng-deep pre[class*="language-"] {
+  font-size: 0.7rem !important;
+  color: var(--text-color) !important;
+  background: var(--code-bg) !important;
+  padding: 1rem;
+  margin: 0;
+  min-width: max-content;
+  scrollbar-width: thin !important;
+  overflow: visible
+}
+
+// NÚMEROS VERDES
+:host ::ng-deep .token.number {
+  color: #025c52 !important;
+  font-weight: 500;
+}
+
+// EXTRAS
+.accordion-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.code-container {
+  max-height: 200px;
+  overflow-y: auto;
+}

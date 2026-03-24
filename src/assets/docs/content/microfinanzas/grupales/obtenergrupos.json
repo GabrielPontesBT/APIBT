@@ -1,0 +1,63 @@
+{
+  "slug": "microfinanzas/grupales/obtenergrupos",
+  "pageTitle": "Obtener Grupos",
+  "description": "Método para obtener los grupos de crédito existentes.",
+  "pubName": "BTMicrofinanzas.ObtenerGrupos",
+  "programa": "RBTPG428",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tipoGrupoId",
+      "Tipo": "Short",
+      "Comentarios": "Tipo de grupos."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtGrupos",
+      "Tipo": "sBTGrupo",
+      "Comentarios": "Listado de grupos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el tipo de grupo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existen grupos para el tipo de grupo ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.ObtenerGrupos>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1271951833CD285A89A23FBE</bts:Token>\r\n            <bts:Device>1</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:tipoGrupoId>4</bts:tipoGrupoId>\r\n      </bts:BTMicrofinanzas.ObtenerGrupos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerGrupos=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"tipoGrupoId\": 4\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTMicrofinanzas.ObtenerGruposResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1271951833CD285A89A23FBE</Token>\r\n            <Device>1</Device>\r\n         </Btinreq>\r\n         <sdtGrupos>\r\n            <sBTGrupo>\r\n               <codigo>4</codigo>\r\n               <nombre>Compartamos</nombre>\r\n            </sBTGrupo>\r\n            <sBTGrupo>\r\n               <codigo>27</codigo>\r\n               <nombre>Prueba CD</nombre>\r\n            </sBTGrupo>\r\n            <sBTGrupo>\r\n               <codigo>29</codigo>\r\n               <nombre>Cartera Digital</nombre>\r\n            </sBTGrupo>\r\n         </sdtGrupos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTMicrofinanzas.ObtenerGrupos</Servicio>\r\n            <Fecha>2020-04-20</Fecha>\r\n            <Hora>14:46:58</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>4992</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTMicrofinanzas.ObtenerGruposResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtGrupos\": {\r\n\t\t\"sBTGrupo\": [\r\n\t\t  {\r\n\t\t\t\"codigo\": \"4\",\r\n\t\t\t\"nombre\": \"Compartamos\"\r\n\t\t  },\r\n\t\t  {\r\n\t\t\t\"codigo\": \"27\",\r\n\t\t\t\"nombre\": \"Prueba CD\"\r\n\t\t  },\r\n\t\t  {\r\n\t\t\t\"codigo\": \"29\",\r\n\t\t\t\"nombre\": \"Cartera Digital\"\r\n\t\t  }\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"786\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTMicrofinanzas.ObtenerGrupos\",\r\n        \"Fecha\": \"2017-12-15\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"16:35:22\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTGrupo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del grupo."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Descripción del grupo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

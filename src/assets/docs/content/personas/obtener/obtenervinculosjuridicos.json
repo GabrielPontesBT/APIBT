@@ -1,0 +1,64 @@
+{
+  "slug": "personas/obtener/obtenervinculosjuridicos",
+  "pageTitle": "Obtener Vínculos Juridicos",
+  "description": "Método para obtener un listado de los vínculos jurídicos registrados.",
+  "pubName": "BTPersonas.ObtenerVinculosJuridicos",
+  "programa": "RBTPG395",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tipo",
+      "Tipo": "String",
+      "Comentarios": "Tipo de vínculo [Hidden: Valor fijo 'S' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtVinculos",
+      "Tipo": "sBTVinculo",
+      "Comentarios": "Listado de vínculos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No existen Vínculos ingresados en el sistema."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerVinculosJuridicos>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n      </bts:BTPersonas.ObtenerVinculosJuridicos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVinculosJuridicos=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 0ccca369-0793-d62f-ebc0-3033cc750dad' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t}\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerVinculosJuridicosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>268b6d23eb4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sBTVinculo>\r\n               <identificador>1</identificador>\r\n               <descripcion>Presidente</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n            <sBTVinculo>\r\n               <identificador>2</identificador>\r\n               <descripcion>Vicepresidente</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n            <sBTVinculo>\r\n               <identificador>3</identificador>\r\n               <descripcion>Director</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n            <sBTVinculo>\r\n               <identificador>4</identificador>\r\n               <descripcion>Secretario</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n            <sBTVinculo>\r\n               <identificador>5</identificador>\r\n               <descripcion>Tesorero</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n            <sBTVinculo>\r\n               <identificador>6</identificador>\r\n               <descripcion>Prosecretario</descripcion>\r\n               <tipo/>\r\n            </sBTVinculo>\r\n         </sdtVinculos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>828</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ObtenerVinculosJuridicos</Servicio>\r\n            <Fecha>2017-12-17</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>18:47:35</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerVinculosJuridicosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtVinculos\": {\r\n        \"sBTVinculo\": [\r\n            {\r\n                \"descripcion\": \"Presidente\",\r\n                \"identificador\": \"1\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Vicepresidente\",\r\n                \"identificador\": \"2\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Director\",\r\n                \"identificador\": \"3\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Secretario\",\r\n                \"identificador\": \"4\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Tesorero\",\r\n                \"identificador\": \"5\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Prosecretario\",\r\n                \"identificador\": \"6\",\r\n                \"tipo\": \"\"\r\n            },\r\n            {\r\n                \"descripcion\": \"Protesorero\",\r\n                \"identificador\": \"7\",\r\n                \"tipo\": \"\"\r\n            },\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"827\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerVinculosJuridicos\",\r\n        \"Fecha\": \"2017-12-17\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"18:47:21\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTVinculo",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de vínculo."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de vínculo."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de vínculo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

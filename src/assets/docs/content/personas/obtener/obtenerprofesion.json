@@ -1,0 +1,59 @@
+{
+  "slug": "personas/obtener/obtenerprofesion",
+  "pageTitle": "Obtener Profesión",
+  "description": "Método para obtener la profesión de una persona física.",
+  "pubName": "BTPersonas.ObtenerProfesion",
+  "programa": "RBTPG289",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProfesion",
+      "Tipo": "sBTProfesion",
+      "Comentarios": "Datos de la profesión."
+    },
+    {
+      "Nombre": "fechaInicioProfesion",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de inicio de la profesión."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerProfesion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>761768101CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>10003</bts:personaUId>\r\n      </bts:BTPersonas.ObtenerProfesion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerProfesionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>761768101CD285A89A23FBEE</Token>\r\n            <Device>GP</Device>\r\n         </Btinreq>\r\n         <sdtProfesion>\r\n            <identificador>8</identificador>\r\n            <descripcion>Contador</descripcion>\r\n         </sdtProfesion>\r\n         <fechaInicioProfesion>2012-03-01</fechaInicioProfesion>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTPersonas.ObtenerProfesion</Servicio>\r\n            <Fecha>2021-02-05</Fecha>\r\n            <Hora>13:37:57</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>7984</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerProfesionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n\t\"Btinreq\": {\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Usuario\": \"INSTALADOR\",\r\n\t  \"Token\": \"761768101CD285A89A23FBEE\",\r\n\t  \"Device\": \"GP\"\r\n\t},\r\n\t\"sdtProfesion\": {\r\n\t  \"identificador\": \"8\",\r\n\t  \"descripcion\": \"Contador\"\r\n\t},\r\n\t\"fechaInicioProfesion\": \"2012-03-01\",\r\n\t\"Erroresnegocio\": {\r\n\t},\r\n\t\"Btoutreq\": {\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Servicio\": \"BTPersonas.ObtenerProfesion\",\r\n\t  \"Fecha\": \"2021-02-05\",\r\n\t  \"Hora\": \"13:37:57\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Numero\": \"7984\",\r\n\t  \"Estado\": \"OK\"\r\n\t}\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProfesion",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de profesión."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de profesión."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

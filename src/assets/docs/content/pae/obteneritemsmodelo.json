@@ -1,0 +1,64 @@
+{
+  "slug": "pae/obteneritemsmodelo",
+  "pageTitle": "Obtener Items Modelo",
+  "description": "Método para obtener los items de un determinado modelo PAE.",
+  "pubName": "BTPAE.ObtenerItemsModelo",
+  "programa": "RBTPGP52",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "modeloId",
+      "Tipo": "Short",
+      "Comentarios": "Código de modelo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtItems",
+      "Tipo": "sBTItemPAE",
+      "Comentarios": "Listado de items de modelo PAE."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1011050",
+      "Descripción": "No se recibió modelo de evaluación PAE."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPAE.ObtenerItemsModelo>\r\n         <bts:Btinreq>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>86b12d9cbaCD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:modeloId>2</bts:modeloId>\r\n      </bts:BTPAE.ObtenerItemsModelo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerItemsModelo' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\r\n    },\r\n    \"modeloId\": 1\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPAE.ObtenerItemsModeloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>86b12d9cbaCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sdtItems>\r\n            <SdtsBTItemPAE>\r\n               <tipoDato>N-Numerico</tipoDato>\r\n               <itemId>105</itemId>\r\n               <nombre>ANTIG_LABORAL</nombre>\r\n            </SdtsBTItemPAE>\r\n            <SdtsBTItemPAE>\r\n               <tipoDato>N-Numerico</tipoDato>\r\n               <itemId>115</itemId>\r\n               <nombre>MONTO_CRED_MN</nombre>\r\n            </SdtsBTItemPAE>\r\n         </sdtItems>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>43265</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPAE.ObtenerItemsModelo</Servicio>\r\n            <Fecha>2022-06-02</Fecha>\r\n            <Hora>07:11:36</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPAE.ObtenerItemsModeloResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"c2cfd09eff4A8B5C60A82434\"\r\n    },\r\n    \"sdtItems\": {\r\n         \"SdtsBTItemPAE\": [ \r\n         { \r\n            \"tipoDato\": \"N-Numerico\", \r\n            \"itemId\": \"105\", \r\n            \"nombre\": \"ANTIG_LABORAL\" \r\n         }, \r\n         { \r\n            \"tipoDato\": \"N-Numerico\", \r\n            \"itemId\": \"115\", \r\n            \"nombre\": \"MONTO_CRED_MN\" \r\n         },\r\n         ] \r\n      }, \r\n    \"Erroresnegocio\": { \r\n    }, \r\n    \"Btoutreq\": { \r\n        \"Canal\": \"BTDIGITAL\", \r\n        \"Servicio\": \"BTPAE.ObtenerItemsModelo\", \r\n        \"Fecha\": \"2022-06-01\", \r\n        \"Hora\": \"15:38:59\", \r\n        \"Requerimiento\": \"1\", \r\n        \"Numero\": \"8881\", \r\n        \"Estado\": \"OK\" \r\n    } \r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTItemPAE",
+      "fields": [
+        {
+          "Nombre": "itemId",
+          "Tipo": "Short",
+          "Comentarios": "Código de item."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de item."
+        },
+        {
+          "Nombre": "tipoDato",
+          "Tipo": "String",
+          "Comentarios": "Descripción de tipo de dato."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

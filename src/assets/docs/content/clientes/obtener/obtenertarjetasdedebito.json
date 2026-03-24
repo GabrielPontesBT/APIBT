@@ -1,0 +1,73 @@
+{
+  "slug": "clientes/obtener/obtenertarjetasdedebito",
+  "pageTitle": "Obtener Tarjetas de Débito",
+  "description": "Método para obtener los productos de tarjeta de débito que tiene contratado un cliente.",
+  "pubName": "BTClientes.ObtenerTarjetasDebito",
+  "programa": "RBTPG015",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Si la opción general de procesos 20665 se encuentra activada o no se encuentra parametrizada, el servicio devuelve solo las tarjetas preferenciales. De lo contrario, si está parametrizada pero desactivada devolverá tanto las preferenciales como las adicionales.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductosTarjeta",
+      "Tipo": "sBDProductoTarjeta",
+      "Comentarios": "Listado de tarjetas."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerTarjetasDebito>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>81</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerTarjetasDebito>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTarjetasDebito=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: d89acb55-7235-c1e6-3866-0e89f6f76091' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"clienteUId\": \"81\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerTarjetasDebitoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>268b6d23eb4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtProductosTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>1</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000089</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>2</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000132</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>3</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000098</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>4</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000105</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>5</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000141</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <tarjetaUId>6</tarjetaUId>\r\n               <numeroTarjeta>5010730101000000123</numeroTarjeta>\r\n               <tipoTarjeta/>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBDProductoTarjeta>\r\n         </sdtProductosTarjeta>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>839</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerTarjetasDebito</Servicio>\r\n            <Fecha>2017-12-18</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>02:12:35</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerTarjetasDebitoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtProductosTarjeta\": {\r\n        \"sBDProductoTarjeta\": [\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000089\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"1\"\r\n            },\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000132\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"2\"\r\n            },\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000098\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"3\"\r\n            },\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000105\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"4\"\r\n            },\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000141\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"5\"\r\n            },\r\n            {\r\n                \"sucursal\": \"Casa Matriz\",\r\n                \"numeroTarjeta\": \"5010730101000000123\",\r\n                \"tipoTarjeta\": \"\",\r\n                \"tarjetaUId\": \"6\"\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"840\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.ObtenerTarjetasDebito\",\r\n        \"Fecha\": \"2017-12-18\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"02:16:29\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBDProductoTarjeta",
+      "fields": [
+        {
+          "Nombre": "numeroTarjeta",
+          "Tipo": "String",
+          "Comentarios": "Numero de tarjeta."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal de la tarjeta."
+        },
+        {
+          "Nombre": "tarjetaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de tarjeta de débito."
+        },
+        {
+          "Nombre": "tipoTarjeta",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tarjeta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

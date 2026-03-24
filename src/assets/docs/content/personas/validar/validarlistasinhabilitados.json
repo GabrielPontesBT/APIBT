@@ -1,0 +1,130 @@
+{
+  "slug": "personas/validar/validarlistasinhabilitados",
+  "pageTitle": "Validar Listas Inhabilitados",
+  "description": "Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)",
+  "pubName": "BTPersonas.ValidarListasInhabilitados",
+  "programa": "RBTPG313",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "pais",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de país."
+    },
+    {
+      "Nombre": "tipoDocumento",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de documento."
+    },
+    {
+      "Nombre": "numeroDocumento",
+      "Tipo": "String",
+      "Comentarios": "Número de documento."
+    },
+    {
+      "Nombre": "tipoPersona",
+      "Tipo": "String",
+      "Comentarios": "Tipo de persona (Física / Jurídica)."
+    },
+    {
+      "Nombre": "primerNombre",
+      "Tipo": "String",
+      "Comentarios": "Primer nombre."
+    },
+    {
+      "Nombre": "segundoNombre",
+      "Tipo": "String",
+      "Comentarios": "Segundo nombre."
+    },
+    {
+      "Nombre": "primerApellido",
+      "Tipo": "String",
+      "Comentarios": "Primer apellido."
+    },
+    {
+      "Nombre": "segundoApellido",
+      "Tipo": "String",
+      "Comentarios": "Segundo apellido."
+    },
+    {
+      "Nombre": "razonSocial",
+      "Tipo": "String",
+      "Comentarios": "Razón social"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "listaInhabilitados",
+      "Tipo": "sBTListaInhabilitados",
+      "Comentarios": "Listado de lista de inhabilitados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se ingresó primer nombre de la persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se ingresó primer apellido de la persona."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se ingresó país de la persona."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se ingresó tipo de documento de la persona."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se ingresó documento de la persona."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ValidarListasInhabilitados>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>ccbe8f2A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:pais>845</bts:pais>\r\n         <bts:tipoDocumento>1</bts:tipoDocumento>\r\n         <bts:numeroDeDocumento>27511184</bts:numeroDeDocumento>\r\n         <bts:tipoPersona></bts:tipoPersona>\r\n         <bts:primerNombre></bts:primerNombre>\r\n         <bts:segundoNombre></bts:segundoNombre>\r\n         <bts:primerApellido></bts:primerApellido>\r\n         <bts:segundoApellido></bts:segundoApellido>\r\n         <bts:razonSocial></bts:razonSocial>\r\n      </bts:BTPersonas.ValidarListasInhabilitados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarListasInhabilitados' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"pais\":\"845\",\r\n\t\"tipoDocumento\":\"1\",\r\n\t\"numeroDeDocumento\":\"27511184\",\r\n\t\"tipoPersona\":\"\",\r\n\t\"primerNombre\":\"\",\r\n\t\"segundoNombre\":\"\",\r\n\t\"primerApellido\":\"\",\r\n\t\"segundoApellido\":\"\",\r\n\t\"razonSocial\":\"\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ValidarListasInhabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>ccbe8f2A82434</Token>\r\n         </Btinreq>\r\n         <sdtListaInhabilitados>\r\n            <sBTListaInhabilitados>\r\n               <descripcion>LAVADO DE DINERO</descripcion>\r\n               <fechaHasta>0000-00-00</fechaHasta>\r\n               <fechaDesde>2016-06-13</fechaDesde>\r\n               <codigo>1</codigo>\r\n               <bloqueante>S</bloqueante>\r\n            </sBTListaInhabilitados>\r\n         </sdtListaInhabilitados>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8508</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ValidarListasInhabilitados</Servicio>\r\n            <Fecha>2019-05-09</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>10:32:18</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ValidarListasInhabilitadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtListaInhabilitados\": {\r\n\t\t\"sBTListaInhabilitados\": {\r\n\t\t\t\"descripcion\": \"LAVADO DE DINERO\",\r\n\t\t\t\"fechaHasta\": \"0000-00-00\",\r\n\t\t\t\"fechaDesde\": \"2016-06-13\",\r\n\t\t\t\"codigo\": \"1\",\r\n\t\t\t\"bloqueante\": \"S\"\r\n\t\t}\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ValidarListasInhabilitados\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTListaInhabilitados",
+      "fields": [
+        {
+          "Nombre": "bloqueante",
+          "Tipo": "String",
+          "Comentarios": "¿Es bloqueante? (S/N)."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de lista de inhabilitados."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de lista de inhabilitados."
+        },
+        {
+          "Nombre": "fechaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha en que la persona ingresa a la lista de inhabilitados."
+        },
+        {
+          "Nombre": "fechaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha en que la persona deja de pertenecer a la lista."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

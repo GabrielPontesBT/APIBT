@@ -1,0 +1,11 @@
+<app-navbar *ngIf="!isHome"></app-navbar>
+
+<div class="main-container" [class.main-container--home]="isHome" [class.sidebar-collapsed]="sidebarCollapsed">
+  <app-sidebar *ngIf="!isHome"
+    [collapsed]="sidebarCollapsed"
+    (toggleSidebar)="sidebarCollapsed = !sidebarCollapsed"></app-sidebar>
+
+  <main class="content-area" [class.content-area--home]="isHome">
+    <router-outlet (activate)="onChildActivate($event)"></router-outlet>
+  </main>
+</div>

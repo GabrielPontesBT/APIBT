@@ -1,0 +1,21 @@
+<mat-card class="info-card">
+  <div class="info-card_content">
+    <div class="info-card_description" *ngIf="description">
+      <span><strong>{{ description }}</strong></span>
+    </div>
+
+    <div class="info-card_block" *ngIf="pubName">
+      <span><strong>Nombre de publicación: </strong>{{ pubName }}</span>
+    </div>
+
+    <div class="info-card_row">
+      <div class="info-card_block" *ngIf="programa">
+        <span><strong>Programa: </strong>{{ programa }}</span>
+      </div>
+
+      <div class="info-card_block" *ngIf="scope">
+        <span><strong>Alcance: </strong>{{ scope }}</span>
+      </div>
+    </div>
+  </div>
+</mat-card>

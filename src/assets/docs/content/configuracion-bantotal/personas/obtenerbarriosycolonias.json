@@ -1,0 +1,64 @@
+{
+  "slug": "configuracion-bantotal/personas/obtenerbarriosycolonias",
+  "pageTitle": "Obtener Barrios y Colonias",
+  "description": "Método para obtener un listado de los barrios/colonias ingresados en Bantotal para una determinada ciudad de un país.",
+  "pubName": "BTConfiguracionBantotal.ObtenerBarriosColonias",
+  "programa": "RBTPG045",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "pais",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de país."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de estado."
+    },
+    {
+      "Nombre": "ciudad",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de ciudad."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtBarrios",
+      "Tipo": "sBTBarrio",
+      "Comentarios": "Listado de barrios."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerBarriosColonias>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:pais>845</bts:pais>\r\n         <bts:estado>10</bts:estado>\r\n         <bts:ciudad>10</bts:ciudad>\r\n      </bts:BTConfiguracionBantotal.ObtenerBarriosColonias>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerBarriosColonias=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 31d2b4c2-4885-03aa-98ba-969ccb380b6d' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"pais\": 845,\r\n    \"estado\": 10,\r\n    \"ciudad\": 10\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTConfiguracionBantotal.ObtenerBarriosColoniasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>268b6d23eb4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtBarrios>             \r\n            <sBTBarrio> \r\n               <identificador>910</identificador> \r\n               <descripcion>Paso de la Arena</descripcion> \r\n            </sBTBarrio> \r\n            <sBTBarrio> \r\n               <identificador>920</identificador> \r\n               <descripcion>Paso Molino</descripcion> \r\n            </sBTBarrio> \r\n         </sdtBarrios> \r\n         <Erroresnegocio></Erroresnegocio> \r\n         <Btoutreq> \r\n            <Numero>795</Numero> \r\n            <Estado>OK</Estado> \r\n            <Servicio>BTConfiguracionBantotal.ObtenerBarriosColonias</Servicio> \r\n            <Fecha>2017-12-17</Fecha> \r\n            <Requerimiento/> \r\n            <Hora>17:52:51</Hora> \r\n            <Canal>BTDIGITAL</Canal> \r\n         </Btoutreq> \r\n      </BTConfiguracionBantotal.ObtenerBarriosColoniasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"sdtBarrios\": {\r\n      \"sBTBarrio\": [\r\n         {\r\n               \"descripcion\": \"Santa Catalina\",\r\n               \"identificador\": \"1100\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Santiago Vazquez\",\r\n               \"identificador\": \"1110\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Sarandi\",\r\n               \"identificador\": \"1120\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Sayago\",\r\n               \"identificador\": \"1130\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Toledo Chico\",\r\n               \"identificador\": \"1140\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Tres Cruces\",\r\n               \"identificador\": \"1150\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Tres Esquinas\",\r\n               \"identificador\": \"1160\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Tres Ombúes\",\r\n               \"identificador\": \"1170\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Tres Palmas\",\r\n               \"identificador\": \"1180\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Trouville\",\r\n               \"identificador\": \"1190\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Unión\",\r\n               \"identificador\": \"1200\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa Colon\",\r\n               \"identificador\": \"1210\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa del Cerro\",\r\n               \"identificador\": \"1220\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa Dolores\",\r\n               \"identificador\": \"1230\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa García\",\r\n               \"identificador\": \"1240\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa Muñoz\",\r\n               \"identificador\": \"1250\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa Prosperidad\",\r\n               \"identificador\": \"1260\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Villa Teresa\",\r\n               \"identificador\": \"1270\"\r\n         },\r\n         {\r\n               \"descripcion\": \"Otro\",\r\n               \"identificador\": \"2000\"\r\n         }\r\n      ]\r\n   },\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"797\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTConfiguracionBantotal.ObtenerBarriosColonias\",\r\n      \"Fecha\": \"2017-12-17\",\r\n      \"Requerimiento\": \"\",\r\n      \"Hora\": \"17:58:50\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTBarrio",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripcion de barrio."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de barrio."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

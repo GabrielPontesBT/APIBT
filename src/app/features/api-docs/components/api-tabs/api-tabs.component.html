@@ -1,0 +1,29 @@
+<mat-tab-group class="api-tabs" disableRipple>
+  <mat-tab label="Datos de Entrada">
+    <ng-container *ngIf="inputCols?.length || inputData?.length; else noAplicaEntrada">
+      <app-api-table [columns]="inputCols" [data]="inputData"></app-api-table>
+    </ng-container>
+    <ng-template #noAplicaEntrada>
+      <p class="no-aplica">No aplica</p>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Datos de Salida">
+    <ng-container *ngIf="outputCols?.length || outputData?.length; else noAplicaSalida">
+      <app-api-table [columns]="outputCols" [data]="outputData"></app-api-table>
+    </ng-container>
+    <ng-template #noAplicaSalida>
+      <p class="no-aplica">No aplica</p>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Errores">
+    <ng-container *ngIf="errorCols?.length || errors?.length; else noAplicaErrores">
+      <app-api-table [columns]="errorCols" [data]="errors"></app-api-table>
+    </ng-container>
+    <ng-template #noAplicaErrores>
+      <p class="no-aplica">No aplica</p>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+

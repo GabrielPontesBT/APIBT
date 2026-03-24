@@ -1,0 +1,88 @@
+{
+  "slug": "microfinanzas/grupales/obtenerintegrantesdegrupo",
+  "pageTitle": "Obtener Integrantes de Grupo",
+  "description": "Método para obtener los integrantes de un grupo de crédito.",
+  "pubName": "BTMicrofinanzas.ObtenerIntegrantesGrupo",
+  "programa": "RBTPG435",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "grupoId",
+      "Tipo": "Int",
+      "Comentarios": "Código de grupo"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtIntegrantesGrupo",
+      "Tipo": "sBTIntegranteGrupo",
+      "Comentarios": "Listado de integrantes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30011",
+      "Descripción": "No se recibió código de grupo."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "El grupo ingresado no contiene integrantes."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.ObtenerIntegrantesGrupo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1414147105CD285A89A23FBE</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:grupoId>3</bts:grupoId>\r\n      </bts:BTMicrofinanzas.ObtenerIntegrantesGrupo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerIntegrantesGrupo=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"grupoId\": 3\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTMicrofinanzas.ObtenerIntegrantesGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1414147105CD285A89A23FBE</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <sdtIntegrantesGrupo>\r\n            <sBTIntegranteGrupo>\r\n               <clienteUId>27</clienteUId>\r\n               <cuenta>GONZALEZ DUARTE MARÍA LUISA</cuenta>\r\n               <tipoIntegranteId>2</tipoIntegranteId>\r\n               <tipoIntegrante>Integrantes</tipoIntegrante>\r\n               <fechaAlta>2019-05-23</fechaAlta>\r\n               <fechaBaja>0000-00-00</fechaBaja>\r\n               <vigente>S</vigente>\r\n               <identificacionAlternativa/>\r\n            </sBTIntegranteGrupo>\r\n            <sBTIntegranteGrupo>\r\n               <clienteUId>28</clienteUId>\r\n               <cuenta>ILARIO BRAN</cuenta>\r\n               <tipoIntegranteId>2</tipoIntegranteId>\r\n               <tipoIntegrante>Integrantes</tipoIntegrante>\r\n               <fechaAlta>2019-05-23</fechaAlta>\r\n               <fechaBaja>0000-00-00</fechaBaja>\r\n               <vigente>S</vigente>\r\n               <identificacionAlternativa/>\r\n            </sBTIntegranteGrupo>\r\n         </sdtIntegrantesGrupo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTMicrofinanzas.ObtenerIntegrantesGrupo</Servicio>\r\n            <Fecha>2020-04-20</Fecha>\r\n            <Hora>17:20:58</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>5016</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTMicrofinanzas.ObtenerIntegrantesGrupoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtIntegrantesGrupo\": {\r\n\t\t\"sBTIntegranteGrupo\": [\r\n\t\t  {\r\n\t\t\t\"clienteUId\": \"27\",\r\n\t\t\t\"cuenta\": \"GONZALEZ DUARTE MARÍA LUISA\",\r\n\t\t\t\"tipoIntegranteId\": \"2\",\r\n\t\t\t\"tipoIntegrante\": \"Integrantes\",\r\n\t\t\t\"fechaAlta\": \"2019-05-23\",\r\n\t\t\t\"fechaBaja\": \"0000-00-00\",\r\n\t\t\t\"vigente\": \"S\"\r\n\t\t  },\r\n\t\t  {\r\n\t\t\t\"clienteUId\": \"28\",\r\n\t\t\t\"cuenta\": \"ILARIO BRAN\",\r\n\t\t\t\"tipoIntegranteId\": \"2\",\r\n\t\t\t\"tipoIntegrante\": \"Integrantes\",\r\n\t\t\t\"fechaAlta\": \"2019-05-23\",\r\n\t\t\t\"fechaBaja\": \"0000-00-00\",\r\n\t\t\t\"vigente\": \"S\"\r\n\t\t  }\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"786\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTMicrofinanzas.ObtenerIntegrantesGrupo\",\r\n        \"Fecha\": \"2017-12-15\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"16:35:22\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTIntegranteGrupo",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "cuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta."
+        },
+        {
+          "Nombre": "fechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del integrante."
+        },
+        {
+          "Nombre": "fechaBaja",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de baja del integrante."
+        },
+        {
+          "Nombre": "identificacionAlternativa",
+          "Tipo": "String",
+          "Comentarios": "Identificación alternativa del integrante."
+        },
+        {
+          "Nombre": "tipoIntegrante",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de integrante."
+        },
+        {
+          "Nombre": "tipoIntegranteId",
+          "Tipo": "Short",
+          "Comentarios": "Tipo de integrante a ser agregado."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

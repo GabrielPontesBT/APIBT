@@ -1,0 +1,304 @@
+{
+  "slug": "prestamos/obtener/obtenerprestamossinmora-disponibleunicamenteparav3r1",
+  "pageTitle": "Obtener Préstamos Sin Mora",
+  "description": "Método para retornar préstamos sin mora.",
+  "pubName": "BTPrestamos.ObtenerPrestamosSinMora",
+  "programa": "RBTPG471",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "diasMoraDesde",
+      "Tipo": "Int",
+      "Comentarios": "[Hidden: Valor fijo '0' para este método]."
+    },
+    {
+      "Nombre": "diasMoraHasta",
+      "Tipo": "Int",
+      "Comentarios": "[Hidden: Valor fijo '0' para este método]."
+    },
+    {
+      "Nombre": "stringAux",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'SIN_MORA' para este método]."
+    },
+    {
+      "Nombre": "update912",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'N' para este método]."
+    },
+    {
+      "Nombre": "offset",
+      "Tipo": "Int",
+      "Comentarios": "Valor desde donde empieza a contar la cantidad de préstamos."
+    },
+    {
+      "Nombre": "limit",
+      "Tipo": "int",
+      "Comentarios": "Cantidad de préstamos que va a mostrar."
+    },
+    {
+      "Nombre": "contarRegistros",
+      "Tipo": "Sting",
+      "Comentarios": "¿Cuenta el total de préstamos? (S/N)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "quedanRegistros",
+      "Tipo": "String",
+      "Comentarios": "¿Quedan registros? (S/N)."
+    },
+    {
+      "Nombre": "countRegistros",
+      "Tipo": "Int",
+      "Comentarios": "Muestra el total de préstamos sin mora."
+    },
+    {
+      "Nombre": "sdtDatosPrestamos",
+      "Tipo": "sBTDatosPrestamo",
+      "Comentarios": "Listado de los préstamos sin mora."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerPrestamosSinMora>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>papa</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>45A5647518BC5FBB73003EA9</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:offset>1</bts:offset>\r\n         <bts:limit>5</bts:limit>\r\n         <bts:contarRegistros>S</bts:contarRegistros>\r\n      </bts:BTPrestamos.ObtenerPrestamosSinMora>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosSinMora=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 1e026dc4-d252-eff9-4dce-9398f81a587e' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"Instalador\",\r\n    \"Token\": \"d51ae0498699865B3A2E76CF\"\r\n  },\r\n  \"offset\": 23,\r\n  \"limit\": 100,\r\n  \"contarRegistros\": \"S\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerPrestamosSinMoraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>papa</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>45A5647518BC5FBB73003EA9</Token>\r\n         </Btinreq>\r\n         <quedanRegistros>S</quedanRegistros>\r\n         <countRegistros>154</countRegistros>\r\n         <sdtDatosPrestamos>\r\n            <sBTDatosPrestamo>\r\n               <plazo>422</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>2623560.33</deudaTotalVencida>\r\n               <periodicidad>30</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2021-01-02</fechaVencimiento>\r\n               <producto>\r\n                  <moneda>CRC</moneda>\r\n                  <papel>$</papel>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <productoUId>72</productoUId>\r\n                  <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>4</clienteUId>\r\n               <fechaProximoVencimiento/>\r\n               <tasaVigente>10.000000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga>2020-02-07</fechaPrimerCuotaImpaga>\r\n               <valorCuota>-34266.33</valorCuota>\r\n               <saldoCapital>30000.00</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>12</cantidadCuotasVencidas>\r\n               <capitalOriginal>30000.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>2623560.33</deudaCancelacionTotal>\r\n               <diasMora>0</diasMora>\r\n               <operacionUId>15</operacionUId>\r\n               <cantidadCuotasImpagas>12</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>2623560.33</deudaTotalAFecha>\r\n               <nombreCliente>PRANKA ERIKA</nombreCliente>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion>Francés</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>10.000000</tasaMoraVigente>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <fechaValor>2019-11-07</fechaValor>\r\n               <cantidadCuotas>12</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n            <sBTDatosPrestamo>\r\n               <plazo>452</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>7255644.02</deudaTotalVencida>\r\n               <periodicidad>30</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2021-03-05</fechaVencimiento>\r\n               <producto>\r\n                  <moneda>CRC</moneda>\r\n                  <papel>$</papel>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <productoUId>72</productoUId>\r\n                  <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>4</clienteUId>\r\n               <fechaProximoVencimiento/>\r\n               <tasaVigente>10.000000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga>2020-06-08</fechaPrimerCuotaImpaga>\r\n               <valorCuota>21968.79</valorCuota>\r\n               <saldoCapital>109602.47</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>10</cantidadCuotasVencidas>\r\n               <capitalOriginal>120000.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>7255644.02</deudaCancelacionTotal>\r\n               <diasMora>0</diasMora>\r\n               <operacionUId>16</operacionUId>\r\n               <cantidadCuotasImpagas>10</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>7255644.02</deudaTotalAFecha>\r\n               <nombreCliente>PRANKA ERIKA</nombreCliente>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago>2020-02-07</fechaUltimoPago>\r\n               <tipoAmortizacion>Francés con Seg.e Impu.</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>10.000000</tasaMoraVigente>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <fechaValor>2019-12-09</fechaValor>\r\n               <cantidadCuotas>12</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n            <sBTDatosPrestamo>\r\n               <plazo>360</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>1818126.01</deudaTotalVencida>\r\n               <periodicidad>30</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2020-12-03</fechaVencimiento>\r\n               <producto>\r\n                  <moneda>CRC</moneda>\r\n                  <papel>$</papel>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <productoUId>72</productoUId>\r\n                  <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>4</clienteUId>\r\n               <fechaProximoVencimiento/>\r\n               <tasaVigente>10.000000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga/>\r\n               <valorCuota>-48039.65</valorCuota>\r\n               <saldoCapital>24289.29</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>0</cantidadCuotasVencidas>\r\n               <capitalOriginal>38000.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>1818126.01</deudaCancelacionTotal>\r\n               <diasMora>0</diasMora>\r\n               <operacionUId>17</operacionUId>\r\n               <cantidadCuotasImpagas>0</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>1818126.01</deudaTotalAFecha>\r\n               <nombreCliente>PRANKA ERIKA</nombreCliente>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion>Francés</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>10.000000</tasaMoraVigente>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <fechaValor>2019-12-09</fechaValor>\r\n               <cantidadCuotas>0</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n            <sBTDatosPrestamo>\r\n               <plazo>452</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>6759733.33</deudaTotalVencida>\r\n               <periodicidad>30</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2021-03-05</fechaVencimiento>\r\n               <producto>\r\n                  <moneda>CRC</moneda>\r\n                  <papel>$</papel>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <productoUId>72</productoUId>\r\n                  <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>4</clienteUId>\r\n               <fechaProximoVencimiento/>\r\n               <tasaVigente>10.000000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga>2020-01-08</fechaPrimerCuotaImpaga>\r\n               <valorCuota>-113220.30</valorCuota>\r\n               <saldoCapital>89000.00</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>12</cantidadCuotasVencidas>\r\n               <capitalOriginal>89000.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>6759733.33</deudaCancelacionTotal>\r\n               <diasMora>0</diasMora>\r\n               <operacionUId>18</operacionUId>\r\n               <cantidadCuotasImpagas>12</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>6759733.33</deudaTotalAFecha>\r\n               <nombreCliente>PRANKA ERIKA</nombreCliente>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion>Francés</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>10.000000</tasaMoraVigente>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <fechaValor>2019-12-09</fechaValor>\r\n               <cantidadCuotas>12</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n         </sdtDatosPrestamos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16823</Numero>\r\n            <Servicio>BTPrestamos.ObtenerPrestamosSinMora</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2023-10-25</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>17:00:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerPrestamosSinMoraResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{ \r\n\t\"Btinreq\": { \r\n    \"Requerimiento\": 0, \r\n    \"Canal\": \"BTDIGITAL\", \r\n    \"Device\": \"GZ\", \r\n    \"Usuario\": \"Instalador\", \r\n    \"Token\": \"d51ae0498699865B3A2E76CF\" \r\n\t}, \r\n    \"quedanRegistros\": \"S\", \r\n    \"countRegistros\": 154, \r\n    \"sdtDatosPrestamos\": { \r\n        \"sBTDatosPrestamo\": [ \r\n        { \r\n            \"plazo\": 422, \r\n            \"eventosPosteriores\": \"N\", \r\n            \"deudaTotalVencida\": 2623560.33, \r\n            \"periodicidad\": 30, \r\n            \"simboloMoneda\": \"$\", \r\n            \"fechaVencimiento\": \"2021-01-02\", \r\n            \"producto\": { \r\n            \"moneda\": \"CRC\", \r\n            \"papel\": \"$\", \r\n            \"otrosConceptos\": \"\", \r\n            \"productoUId\": 72, \r\n            \"nombre\": \"PRÉSTAMOS-Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\"  \r\n            }, \r\n            \"clienteUId\": 4, \r\n            \"fechaProximoVencimiento\": \"\", \r\n            \"tasaVigente\": 10, \r\n            \"fechaPrimerCuotaImpaga\": \"2020-02-07\", \r\n            \"valorCuota\": -34266.33, \r\n            \"saldoCapital\": 30000, \r\n            \"otrosConceptos\": \"\", \r\n            \"cantidadCuotasVencidas\": 12, \r\n            \"capitalOriginal\": 30000, \r\n            \"tir\": 0, \r\n            \"deudaCancelacionTotal\": 2623560.33, \r\n            \"diasMora\": 0, \r\n            \"operacionUId\": 15, \r\n            \"cantidadCuotasImpagas\": 12, \r\n            \"deudaTotalAFecha\": 2623560.33, \r\n            \"nombreCliente\": \"PRANKA ERIKA\", \r\n            \"cuotasPagasConRetraso\": 0, \r\n            \"fechaUltimoPago\": \"\", \r\n            \"tipoAmortizacion\": \"Francés\", \r\n            \"datosAdicionales\": \"\", \r\n            \"estado\": \"Normal\", \r\n            \"tasaMoraVigente\": 10, \r\n            \"sucursal\": \"Casa Matriz\", \r\n            \"fechaValor\": \"2019-11-07\", \r\n            \"cantidadCuotas\": 12 \r\n        }, \r\n        { \r\n            \"plazo\": 452, \r\n            \"eventosPosteriores\": \"N\", \r\n            \"deudaTotalVencida\": 7255644.02, \r\n            \"periodicidad\": 30, \r\n            \"simboloMoneda\": \"$\", \r\n            \"fechaVencimiento\": \"2021-03-05\", \r\n            \"producto\": { \r\n            \"moneda\": \"CRC\", \r\n            \"papel\": \"$\", \r\n            \"otrosConceptos\": \"\", \r\n            \"productoUId\": 72, \r\n            \"nombre\": \"PRÉSTAMOS-Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\"  \r\n            }, \r\n            \"clienteUId\": 4, \r\n            \"fechaProximoVencimiento\": \"\", \r\n            \"tasaVigente\": 10, \r\n            \"fechaPrimerCuotaImpaga\": \"2020-06-08\", \r\n            \"valorCuota\": 21968.79, \r\n            \"saldoCapital\": 109602.47, \r\n            \"otrosConceptos\": \"\", \r\n            \"cantidadCuotasVencidas\": 10, \r\n            \"capitalOriginal\": 120000, \r\n            \"tir\": 0, \r\n            \"deudaCancelacionTotal\": 7255644.02, \r\n            \"diasMora\": 0, \r\n            \"operacionUId\": 16, \r\n            \"cantidadCuotasImpagas\": 10, \r\n            \"deudaTotalAFecha\": 7255644.02, \r\n            \"nombreCliente\": \"PRANKA ERIKA\", \r\n            \"cuotasPagasConRetraso\": 0, \r\n            \"fechaUltimoPago\": \"2020-02-07\", \r\n            \"tipoAmortizacion\": \"Francés con Seg.e Impu.\", \r\n            \"datosAdicionales\": \"\", \r\n            \"estado\": \"Normal\", \r\n            \"tasaMoraVigente\": 10, \r\n            \"sucursal\": \"Casa Matriz\", \r\n            \"fechaValor\": \"2019-12-09\", \r\n            \"cantidadCuotas\": 12 \r\n        }, \r\n        { \r\n            \"plazo\": 360, \r\n            \"eventosPosteriores\": \"N\", \r\n            \"deudaTotalVencida\": 1818126.01, \r\n            \"periodicidad\": 30, \r\n            \"simboloMoneda\": \"$\", \r\n            \"fechaVencimiento\": \"2020-12-03\", \r\n            \"producto\": { \r\n            \"moneda\": \"CRC\", \r\n            \"papel\": \"$\", \r\n            \"otrosConceptos\": \"\", \r\n            \"productoUId\": 72, \r\n            \"nombre\": \"PRÉSTAMOS-Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\"  \r\n            }, \r\n            \"clienteUId\": 4, \r\n            \"fechaProximoVencimiento\": \"\", \r\n            \"tasaVigente\": 10, \r\n            \"fechaPrimerCuotaImpaga\": \"\", \r\n            \"valorCuota\": -48039.65, \r\n            \"saldoCapital\": 24289.29, \r\n            \"otrosConceptos\": \"\", \r\n            \"cantidadCuotasVencidas\": 0, \r\n            \"capitalOriginal\": 38000, \r\n            \"tir\": 0, \r\n            \"deudaCancelacionTotal\": 1818126.01, \r\n            \"diasMora\": 0, \r\n            \"operacionUId\": 17, \r\n            \"cantidadCuotasImpagas\": 0, \r\n            \"deudaTotalAFecha\": 1818126.01, \r\n            \"nombreCliente\": \"PRANKA ERIKA\", \r\n            \"cuotasPagasConRetraso\": 0, \r\n            \"fechaUltimoPago\": \"\", \r\n            \"tipoAmortizacion\": \"Francés\", \r\n            \"datosAdicionales\": \"\", \r\n            \"estado\": \"Normal\", \r\n            \"tasaMoraVigente\": 10, \r\n            \"sucursal\": \"Casa Matriz\", \r\n            \"fechaValor\": \"2019-12-09\", \r\n            \"cantidadCuotas\": 0 \r\n        }, \r\n        { \r\n            \"plazo\": 452, \r\n            \"eventosPosteriores\": \"N\", \r\n            \"deudaTotalVencida\": 6759733.33, \r\n            \"periodicidad\": 30, \r\n            \"simboloMoneda\": \"$\", \r\n            \"fechaVencimiento\": \"2021-03-05\", \r\n            \"producto\": { \r\n            \"moneda\": \"CRC\", \r\n            \"papel\": \"$\", \r\n            \"otrosConceptos\": \"\", \r\n            \"productoUId\": 72, \r\n            \"nombre\": \"PRÉSTAMOS-Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\"  \r\n            }, \r\n            \"clienteUId\": 4, \r\n            \"fechaProximoVencimiento\": \"\", \r\n            \"tasaVigente\": 10, \r\n            \"fechaPrimerCuotaImpaga\": \"2020-01-08\", \r\n            \"valorCuota\": -113220.3, \r\n            \"saldoCapital\": 89000, \r\n            \"otrosConceptos\": \"\", \r\n            \"cantidadCuotasVencidas\": 12, \r\n            \"capitalOriginal\": 89000, \r\n            \"tir\": 0, \r\n            \"deudaCancelacionTotal\": 6759733.33, \r\n            \"diasMora\": 0, \r\n            \"operacionUId\": 18, \r\n            \"cantidadCuotasImpagas\": 12, \r\n            \"deudaTotalAFecha\": 6759733.33, \r\n            \"nombreCliente\": \"PRANKA ERIKA\", \r\n            \"cuotasPagasConRetraso\": 0, \r\n            \"fechaUltimoPago\": \"\", \r\n            \"tipoAmortizacion\": \"Francés\", \r\n            \"datosAdicionales\": \"\", \r\n            \"estado\": \"Normal\", \r\n            \"tasaMoraVigente\": 10, \r\n            \"sucursal\": \"Casa Matriz\", \r\n            \"fechaValor\": \"2019-12-09\", \r\n            \"cantidadCuotas\": 12 \r\n        }, \r\n        { \r\n            \"plazo\": 360, \r\n            \"eventosPosteriores\": \"N\", \r\n            \"deudaTotalVencida\": 4996392.44, \r\n            \"periodicidad\": 30, \r\n            \"simboloMoneda\": \"$\", \r\n            \"fechaVencimiento\": \"2020-12-03\", \r\n            \"producto\": { \r\n            \"moneda\": \"CRC\", \r\n            \"papel\": \"$\", \r\n            \"otrosConceptos\": \"\", \r\n            \"productoUId\": 72, \r\n            \"nombre\": \"PRÉSTAMOS-Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\" \r\n            }, \r\n            \"clienteUId\": 4, \r\n            \"fechaProximoVencimiento\": \"\", \r\n            \"tasaVigente\": 10, \r\n            \"fechaPrimerCuotaImpaga\": \"\", \r\n            \"valorCuota\": -66151.03, \r\n            \"saldoCapital\": 52000, \r\n            \"otrosConceptos\": \"\", \r\n            \"cantidadCuotasVencidas\": 0, \r\n            \"capitalOriginal\": 52000, \r\n            \"tir\": 0, \r\n            \"deudaCancelacionTotal\": 4996392.44, \r\n            \"diasMora\": 0, \r\n            \"operacionUId\": 19, \r\n            \"cantidadCuotasImpagas\": 0, \r\n            \"deudaTotalAFecha\": 4996392.44, \r\n            \"nombreCliente\": \"PRANKA ERIKA\", \r\n            \"cuotasPagasConRetraso\": 0, \r\n            \"fechaUltimoPago\": \"\", \r\n            \"tipoAmortizacion\": \"Francés\", \r\n            \"datosAdicionales\": \"\", \r\n            \"estado\": \"Normal\", \r\n            \"tasaMoraVigente\": 10, \r\n            \"sucursal\": \"Casa Matriz\", \r\n            \"fechaValor\": \"2019-12-09\", \r\n            \"cantidadCuotas\": 0 \r\n        } \r\n        ] \r\n    }, \r\n    \"Erroresnegocio\": { \r\n        \"BTErrorNegocio\": [] \r\n    }, \r\n    \"Btoutreq\": { \r\n        \"Numero\": \"901\", \r\n        \"Estado\": \"OK\", \r\n        \"Servicio\": \"BTPrestamos.ObtenerPrestamosSinMora\", \r\n        \"Fecha\": \"2023-10-25\", \r\n        \"Requerimiento\": \"\", \r\n        \"Hora\": \"12:27:52\", \r\n        \"Canal\": \"BTDIGITAL\" \r\n    } \r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosPrestamo",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas del préstamo."
+        },
+        {
+          "Nombre": "cantidadCuotasImpagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas impagas."
+        },
+        {
+          "Nombre": "cantidadCuotasVencidas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas vencidas."
+        },
+        {
+          "Nombre": "capitalOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Capital original del préstamo."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "cuotasPagasConRetraso",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas pagas con retraso."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "sBTDatoAdicional",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "deudaCancelacionTotal",
+          "Tipo": "Double",
+          "Comentarios": "Monto de cancelación total."
+        },
+        {
+          "Nombre": "deudaTotalAFecha",
+          "Tipo": "Double",
+          "Comentarios": "Monto a pagar para estar al día."
+        },
+        {
+          "Nombre": "deudaTotalVencida",
+          "Tipo": "Double",
+          "Comentarios": "Monto de la deuda vencida a la fecha."
+        },
+        {
+          "Nombre": "diasMora",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora del préstamo."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "eventosPosteriores",
+          "Tipo": "String",
+          "Comentarios": "Hay eventos posteriores (S/N)."
+        },
+        {
+          "Nombre": "fechaPrimerCuotaImpaga",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de la primera cuota impaga."
+        },
+        {
+          "Nombre": "fechaProximoVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de la próxima cuota."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de cuota."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del préstamo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del préstamo."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Otros conceptos del préstamo."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Int",
+          "Comentarios": "Período entre cuotas."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "saldoCapital",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de capital."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "Sting",
+          "Comentarios": "Símbolo monetario."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal del préstamo."
+        },
+        {
+          "Nombre": "tasaMoraVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa de mora vigente."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoAmortizacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de amortización."
+        },
+        {
+          "Nombre": "tir",
+          "Tipo": "Double",
+          "Comentarios": "Tir."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor de la cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoAdicional",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "String",
+          "Comentarios": "Detalle de dato adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

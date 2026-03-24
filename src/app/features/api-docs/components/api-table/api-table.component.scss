@@ -1,0 +1,49 @@
+@import 'variables';
+
+* {
+  color: var(--text-color) !important;
+}
+
+// 1) Tablas genéricas
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--border-radius) !important;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  scrollbar-width: thin;
+
+  thead {
+    background: var(--table-header);
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+
+  tbody {
+    border: 1px solid var(--border-color);
+    tr {
+      &:nth-child(even) {
+        background: #f1f1f1;
+      }
+    }
+    td, th {
+      background: var(--table-columns);
+      padding: 0.6rem 1rem;
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  // mensaje "No aplica"
+  .no-aplica {
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+

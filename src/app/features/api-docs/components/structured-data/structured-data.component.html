@@ -1,0 +1,33 @@
+<ng-container *ngIf="types.length > 0">
+  <h1 class="sdt-title">Tipos de Dato Estructurado</h1>
+
+  <div class="mat-accordion-BT">
+    <mat-expansion-panel
+      *ngFor="let sdt of types"
+      [attr.id]="sdt.typeName.toLowerCase()"
+      [expanded]="expandedMap[sdt.typeName.toLowerCase()] || false"
+      (expandedChange)="onExpansionChange($event, sdt.typeName)">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ sdt.typeName }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <p>
+        Los campos del tipo de dato estructurado
+        <strong>{{ sdt.typeName }}</strong> son:
+      </p>
+
+      <app-api-table
+        [columns]="['Nombre','Tipo','Comentarios']"
+        [data]="sdt.fields">
+      </app-api-table>
+
+      <div *ngIf="sdt.children?.length" class="nested-sdts">
+        <!-- Siempre pasamos un array, no undefined -->
+        <app-structured-data [types]="sdt.children || []"></app-structured-data>
+      </div>
+    </mat-expansion-panel>
+  </div>
+</ng-container>

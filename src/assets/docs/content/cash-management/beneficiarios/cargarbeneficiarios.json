@@ -1,0 +1,104 @@
+{
+  "slug": "cash-management/beneficiarios/cargarbeneficiarios",
+  "pageTitle": "Cargar Beneficiarios",
+  "description": "Método para cargar un archivo con los beneficiarios de los pagos.",
+  "pubName": "BTCASHManagement.CargarBeneficiarios",
+  "programa": "RBTPGC70",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del contrato CASH del cliente."
+    },
+    {
+      "Nombre": "servicio",
+      "Tipo": "Short",
+      "Comentarios": "Servicio de pago CASH."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "agendaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador del tipo de agenda."
+    },
+    {
+      "Nombre": "nomArchBeneficiarios",
+      "Tipo": "String",
+      "Comentarios": "Nombre del Archivo de beneficiarios a subir."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "archivoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de archivo subido."
+    },
+    {
+      "Nombre": "lineasCant",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de líneas del archivo recibido."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030701",
+      "Descripción": "El Servicio no existe."
+    },
+    {
+      "Código": "1030704",
+      "Descripción": "Id de contrato cliente desconocido."
+    },
+    {
+      "Código": "1030713",
+      "Descripción": "El contrato consultado no corresponde a la cuenta recibida."
+    },
+    {
+      "Código": "1030770",
+      "Descripción": "No se recupero información para la cuenta recibida."
+    },
+    {
+      "Código": "1030774",
+      "Descripción": "No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor."
+    },
+    {
+      "Código": "1030775",
+      "Descripción": "No se identifico servicio para la Agenda."
+    },
+    {
+      "Código": "1030776",
+      "Descripción": "No se identifico la Agenda para la cual se realiza la Carga."
+    },
+    {
+      "Código": "1030702",
+      "Descripción": "El archivo esta vacío."
+    },
+    {
+      "Código": "1030703",
+      "Descripción": "No hay información en el archivo."
+    },
+    {
+      "Código": "1030707",
+      "Descripción": "Error al abrir el archivo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.CargarBeneficiarios>\r\n         <bts:Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>8</bts:contratoId>\r\n         <bts:servicio>240</bts:servicio>\r\n         <bts:clienteUId></bts:clienteUId>\r\n         <bts:agendaId></bts:agendaId>\r\n         <bts:nomArchBeneficiarios>Agenda_8_240.xls</bts:nomArchBeneficiarios>\r\n      </bts:BTCASHManagement.CargarBeneficiarios>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?CargarBeneficiarios=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": \"1\",\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"contratoId\": 8,\r\n    \"servicio\": 240,\r\n    \"clienteUId\": \"\",\r\n    \"agendaId\": \"\",\r\n    \"nomArchBeneficiarios\": \"Agenda_8_240.xls\"\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.CargarBeneficiariosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <archivoId>322</archivoId>\r\n         <lineasCant>1</lineasCant>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-20</Fecha>\r\n            <Hora>12:20:19</Hora>\r\n            <Numero>26771</Numero>\r\n            <Servicio>BTCASHManagement.CargarBeneficiarios</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.CargarBeneficiariosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"archivoId\": 322,\r\n    \"lineasCant\": 1,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTCASHManagement.CargarBeneficiarios\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

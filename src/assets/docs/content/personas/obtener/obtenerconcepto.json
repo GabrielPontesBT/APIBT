@@ -1,0 +1,68 @@
+{
+  "slug": "personas/obtener/obtenerconcepto",
+  "pageTitle": "Obtener Concepto",
+  "description": "Método para obtener los conceptos de los programas de personas.",
+  "pubName": "BTPersonas.ObtenerConcepto",
+  "programa": "RBTPG529",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "programa",
+      "Tipo": "String",
+      "Comentarios": "Nombre del programa."
+    },
+    {
+      "Nombre": "conceptoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del concepto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtValorCampo",
+      "Tipo": "sBTValorCampo",
+      "Comentarios": "Listado de conceptos del programa."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el nombre del programa."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del campo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerConcepto>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>45A5647518BC5FBB73003EA9</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:programa>HDECOCPD</bts:programa>\r\n         <bts:conceptoId>11</bts:conceptoId>\r\n      </bts:BTPersonas.ObtenerConcepto>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerConcepto=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"programa\":\"HDECOCPD\",\r\n   \"conceptoId\": 11\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerConceptoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\r\n         </Btinreq>\r\n         <sdtValorCampo>\r\n            <sBTValorCampo>\r\n               <descripcion>Cliente</descripcion>\r\n               <identificador>1</identificador>\r\n            </sBTValorCampo>\r\n            <sBTValorCampo>\r\n               <descripcion>Agencia</descripcion>\r\n               <identificador>2</identificador>\r\n            </sBTValorCampo>\r\n         </sdtValorCampo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16846</Numero>\r\n            <Servicio>BTPersonas.ObtenerConcepto</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2023-10-26</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>11:44:45</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerConceptoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"sdtValorCampo\": {\r\n        \"sBTValorCampo\": [\r\n        {\r\n            \"descripcion\": \"Cliente\",\r\n            \"identificador\": 1\r\n        },\r\n        {\r\n            \"descripcion\": \"Agencia\",\r\n            \"identificador\": 2\r\n        }\r\n        ]\r\n    },  \r\n   \"Erroresnegocio\": {\r\n       \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n       \"Numero\": \"835\",\r\n       \"Estado\": \"OK\",\r\n       \"Servicio\": \"BTPersonas.ObtenerConcepto\",\r\n       \"Fecha\": \"2023-12-18\",\r\n       \"Requerimiento\": \"\",\r\n       \"Hora\": \"01:48:53\",\r\n       \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorCampo",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

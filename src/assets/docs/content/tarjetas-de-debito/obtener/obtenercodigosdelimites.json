@@ -1,0 +1,63 @@
+{
+  "slug": "tarjetas-de-debito/obtener/obtenercodigosdelimites",
+  "pageTitle": "Obtener Códigos de Límites",
+  "description": "Método para obtener un listado de los códigos de límites disponibles para tarjetas de débito.",
+  "pubName": "BTTarjetasDeDebito.ObtenerCodigosDeLimites",
+  "programa": "RBTPG147",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtLimites",
+      "Tipo": "sBTLimiteTarjeta",
+      "Comentarios": "Listado de códigos de límite."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.ObtenerCodigosDeLimites>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>352296800F955E77534D3E02</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n      </bts:BTTarjetasDeDebito.ObtenerCodigosDeLimites>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X GET \\\r\n   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerCodigosDeLimites' \\\r\n   -H 'cache-control: no-cache' \\\r\n   -H 'content-type: application/json' \\\r\n   -d '{\r\n   \"Btinreq\": {\r\n        \"Device\": \"AC\",\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"352296800F955E77534D3E02\"\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.ObtenerCodigosDeLimitesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Token>352296800F955E77534D3E02</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <sdtLimites>\r\n            <SdtsBTLimiteTarjeta>\r\n               <identificador>1</identificador>\r\n               <moneda>0</moneda>\r\n               <limiteEMV>30000.00</limiteEMV>\r\n               <limiteBandaMagnetica>15000.00</limiteBandaMagnetica>\r\n               <limiteNoPresencial>10000.00</limiteNoPresencial>\r\n            </SdtsBTLimiteTarjeta>\r\n            <SdtsBTLimiteTarjeta>\r\n               <identificador>2</identificador>\r\n               <moneda>0</moneda>\r\n               <limiteEMV>12850.00</limiteEMV>\r\n               <limiteBandaMagnetica>13000.00</limiteBandaMagnetica>\r\n               <limiteNoPresencial>8000.00</limiteNoPresencial>\r\n            </SdtsBTLimiteTarjeta>\r\n            <SdtsBTLimiteTarjeta>\r\n               <identificador>3</identificador>\r\n               <moneda>0</moneda>\r\n               <limiteEMV>0.00</limiteEMV>\r\n               <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>\r\n               <limiteNoPresencial>0.00</limiteNoPresencial>\r\n            </SdtsBTLimiteTarjeta>\r\n            <SdtsBTLimiteTarjeta>\r\n               <identificador>4</identificador>\r\n               <moneda>0</moneda>\r\n               <limiteEMV>0.00</limiteEMV>\r\n               <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>\r\n               <limiteNoPresencial>10000.00</limiteNoPresencial>\r\n            </SdtsBTLimiteTarjeta>\r\n            <SdtsBTLimiteTarjeta>\r\n               <identificador>5</identificador>\r\n               <moneda>0</moneda>\r\n               <limiteEMV>50000.00</limiteEMV>\r\n               <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>\r\n               <limiteNoPresencial>10000.00</limiteNoPresencial>\r\n            </SdtsBTLimiteTarjeta>\r\n         </sdtLimites>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTTarjetasDeDebito.ObtenerCodigosDeLimites</Servicio>\r\n            <Fecha>2020-11-12</Fecha>\r\n            <Hora>16:55:23</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>7833</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.ObtenerCodigosDeLimitesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{ \r\n\t\"Btinreq\": { \r\n        \"Device\": \"AC\", \r\n        \"Usuario\": \"BANTOTAL\", \r\n        \"Requerimiento\": \"1\", \r\n        \"Canal\": \"BTDIGITAL\", \r\n        \"Token\": \"352296800F955E77534D3E02\" \r\n    }, \r\n\t\"sdtLimites\": { \r\n\t\t\"SdtsBTLimiteTarjeta\": [ \r\n\t\t  { \r\n\t\t\t\"identificador\": \"1\", \r\n\t\t\t\"moneda\": \"0\", \r\n\t\t\t\"limiteEMV\": \"30000.00\", \r\n\t\t\t\"limiteBandaMagnetica\": \"15000.00\", \r\n\t\t\t\"limiteNoPresencial\": \"10000.00\" \r\n\t\t  }, \r\n\t\t  { \r\n\t\t\t\"identificador\": \"2\", \r\n\t\t\t\"moneda\": \"0\", \r\n\t\t\t\"limiteEMV\": \"12850.00\", \r\n\t\t\t\"limiteBandaMagnetica\": \"13000.00\", \r\n\t\t\t\"limiteNoPresencial\": \"8000.00\" \r\n\t\t  }, \r\n\t\t  { \r\n\t\t\t\"identificador\": \"3\", \r\n\t\t\t\"moneda\": \"0\", \r\n\t\t\t\"limiteEMV\": \"0.00\", \r\n\t\t\t\"limiteBandaMagnetica\": \"30000.00\", \r\n\t\t\t\"limiteNoPresencial\": \"0.00\" \r\n\t\t  }, \r\n\t\t  { \r\n\t\t\t\"identificador\": \"4\", \r\n\t\t\t\"moneda\": \"0\", \r\n\t\t\t\"limiteEMV\": \"0.00\", \r\n\t\t\t\"limiteBandaMagnetica\": \"30000.00\", \r\n\t\t\t\"limiteNoPresencial\": \"10000.00\" \r\n\t\t  }, \r\n\t\t  { \r\n\t\t\t\"identificador\": \"5\", \r\n\t\t\t\"moneda\": \"0\", \r\n\t\t\t\"limiteEMV\": \"50000.00\", \r\n\t\t\t\"limiteBandaMagnetica\": \"30000.00\", \r\n\t\t\t\"limiteNoPresencial\": \"10000.00\" \r\n\t\t  } \r\n\t\t] \r\n\t} \r\n    , \r\n    \"Erroresnegocio\": { \r\n        \"BTErrorNegocio\": [] \r\n    }, \r\n\t\"Btoutreq\": { \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Servicio\": \"BTTarjetasDeDebito.ObtenerCodigosDeLimites\", \r\n\t\t\"Fecha\": \"2020-11-12\", \r\n\t\t\"Hora\": \"16:55:23\", \r\n\t\t\"Requerimiento\": \"1\", \r\n\t\t\"Numero\": \"7833\", \r\n\t\t\"Estado\": \"OK\" \r\n\t} \r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTLimiteTarjeta",
+      "fields": [
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Código de límite."
+        },
+        {
+          "Nombre": "limiteBandaMagnetica",
+          "Tipo": "Double",
+          "Comentarios": "Monto límite en banda magnética."
+        },
+        {
+          "Nombre": "limiteEMV",
+          "Tipo": "Double",
+          "Comentarios": "Monto límite EMV."
+        },
+        {
+          "Nombre": "limiteNoPresencial",
+          "Tipo": "Double",
+          "Comentarios": "Monto límite no presencial."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Código de moneda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "indicadores/obtenermetodosmasejecutados",
+  "pageTitle": "Obtener Métodos Más Ejecutados",
+  "description": "Método para obtener un listado de los métodos más ejecutados para un servicio dado y sus estadísticas.",
+  "pubName": "BTIndicadores.ObtenerMetodosMasEjecutados",
+  "programa": "RBTPG712",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "servicio",
+      "Tipo": "String",
+      "Comentarios": "Identificador del servicio."
+    },
+    {
+      "Nombre": "cantidadDeRegistros",
+      "Tipo": "Int",
+      "Comentarios": "[Hidden: Valor por defecto '10' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEstadisticasMetodos",
+      "Tipo": "sBTEstadisticasServicioMetodo",
+      "Comentarios": "Colección de datos de métodos y sus estadísticas."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTIndicadores.ObtenerMetodosMasEjecutados>\r\n         <bts:Btinreq>\r\n            <bts:Device>MC</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>3</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>3483F7F3C05B0DDF791C90A3</bts:Token>\r\n         </bts:Btinreq>\t\t \r\n         <bts:servicio>BTClientes</bts:servicio>\r\n      </bts:BTIndicadores.ObtenerMetodosMasEjecutados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerMetodosMasEjecutados' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"servicio\": \"BTClientes\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTIndicadores.ObtenerMetodosMasEjecutadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>MC</Device>\r\n            <Requerimiento>3</Requerimiento>\r\n            <Token>3483F7F3C05B0DDF791C90A3</Token>\r\n         </Btinreq>\r\n         <sdtEstadisticasMetodos>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>2063</tiempoMaximo>\r\n               <tiempoMinimo>54</tiempoMinimo>\r\n               <metodo>ObtenerCuentasCorrientes</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>277</tiempoPromedio>\r\n               <cantidadEjecuciones>313</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>3316</tiempoMaximo>\r\n               <tiempoMinimo>91</tiempoMinimo>\r\n               <metodo>ObtenerPrestamos</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>392</tiempoPromedio>\r\n               <cantidadEjecuciones>296</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>3312</tiempoMaximo>\r\n               <tiempoMinimo>67</tiempoMinimo>\r\n               <metodo>ObtenerPlazosFijos</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>293</tiempoPromedio>\r\n               <cantidadEjecuciones>295</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>5739</tiempoMaximo>\r\n               <tiempoMinimo>74</tiempoMinimo>\r\n               <metodo>ObtenerCuentasAhorro</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>364</tiempoPromedio>\r\n               <cantidadEjecuciones>241</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>842</tiempoMaximo>\r\n               <tiempoMinimo>52</tiempoMinimo>\r\n               <metodo>ObtenerIntegrantes</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>175</tiempoPromedio>\r\n               <cantidadEjecuciones>124</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>4547</tiempoMaximo>\r\n               <tiempoMinimo>311</tiempoMinimo>\r\n               <metodo>Crear</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>1222</tiempoPromedio>\r\n               <cantidadEjecuciones>109</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>10156</tiempoMaximo>\r\n               <tiempoMinimo>219</tiempoMinimo>\r\n               <metodo>ActualizarTelefono</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>621</tiempoPromedio>\r\n               <cantidadEjecuciones>64</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>11589</tiempoMaximo>\r\n               <tiempoMinimo>33</tiempoMinimo>\r\n               <metodo>Obtener</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>976</tiempoPromedio>\r\n               <cantidadEjecuciones>47</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>1221</tiempoMaximo>\r\n               <tiempoMinimo>216</tiempoMinimo>\r\n               <metodo>ObtenerIdentificadorUnico</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>497</tiempoPromedio>\r\n               <cantidadEjecuciones>33</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n            <sBTEstadisticasMetodo>\r\n               <tiempoMaximo>711</tiempoMaximo>\r\n               <tiempoMinimo>203</tiempoMinimo>\r\n               <metodo>ObtenerTelefonos</metodo>\r\n               <servicio>BTClientes</servicio>\r\n               <tiempoPromedio>353</tiempoPromedio>\r\n               <cantidadEjecuciones>32</cantidadEjecuciones>\r\n            </sBTEstadisticasMetodo>\r\n         </sdtEstadisticasMetodos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-05-31</Fecha>\r\n            <Hora>17:15:32</Hora>\r\n            <Numero>25897</Numero>\r\n            <Servicio>BTIndicadores.ObtenerMetodosMasEjecutados</Servicio>\r\n            <Requerimiento>3</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTIndicadores.ObtenerMetodosMasEjecutadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},    \r\n\t\"sdtEstadisticasMetodos\": {\r\n\t\t\"sBTEstadisticasServicioMetodo\": [\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"2063\",\r\n\t\t\t\t\"tiempoMinimo\": \"54\",\r\n\t\t\t\t\"metodo\": \"ObtenerCuentasCorrientes\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"277\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"313\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"3316\",\r\n\t\t\t\t\"tiempoMinimo\": \"91\",\r\n\t\t\t\t\"metodo\": \"ObtenerPrestamos\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"392\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"296\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"3312\",\r\n\t\t\t\t\"tiempoMinimo\": \"67\",\r\n\t\t\t\t\"metodo\": \"ObtenerPlazosFijos\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"293\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"295\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"5739\",\r\n\t\t\t\t\"tiempoMinimo\": \"74\",\r\n\t\t\t\t\"metodo\": \"ObtenerCuentasAhorro\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"364\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"241\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"842\",\r\n\t\t\t\t\"tiempoMinimo\": \"52\",\r\n\t\t\t\t\"metodo\": \"ObtenerIntegrantes\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"175\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"124\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"4547\",\r\n\t\t\t\t\"tiempoMinimo\": \"311\",\r\n\t\t\t\t\"metodo\": \"Crear\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"1222\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"109\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"10156\",\r\n\t\t\t\t\"tiempoMinimo\": \"219\",\r\n\t\t\t\t\"metodo\": \"ActualizarTelefono\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"621\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"64\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"11589\",\r\n\t\t\t\t\"tiempoMinimo\": \"33\",\r\n\t\t\t\t\"metodo\": \"Obtener\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"976\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"47\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"1221\",\r\n\t\t\t\t\"tiempoMinimo\": \"216\",\r\n\t\t\t\t\"metodo\": \"ObtenerIdentificadorUnico\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"497\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"33\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"tiempoMaximo\": \"711\",\r\n\t\t\t\t\"tiempoMinimo\": \"203\",\r\n\t\t\t\t\"metodo\": \"ObtenerTelefonos\",\r\n\t\t\t\t\"servicio\": \"BTClientes\",\r\n\t\t\t\t\"tiempoPromedio\": \"353\",\r\n\t\t\t\t\"cantidadEjecuciones\": \"32\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"397\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTIndicadores.ObtenerMetodosMasEjecutados\",\r\n        \"Fecha\": \"2018-05-02\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Hora\": \"18:40:30\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEstadisticasServicioMetodo",
+      "fields": [
+        {
+          "Nombre": "cantidadEjecuciones",
+          "Tipo": "Long",
+          "Comentarios": "Cantidad de ejecuciones."
+        },
+        {
+          "Nombre": "metodo",
+          "Tipo": "String",
+          "Comentarios": "Método del servicio."
+        },
+        {
+          "Nombre": "servicio",
+          "Tipo": "String",
+          "Comentarios": "Identificador del servicio"
+        },
+        {
+          "Nombre": "tiempoMaximo",
+          "Tipo": "Int",
+          "Comentarios": "Tiempo máximo registrado para los métodos del servicio."
+        },
+        {
+          "Nombre": "tiempoMinimo",
+          "Tipo": "Int",
+          "Comentarios": "Tiempo mínimo registrado para los métodos del servicio."
+        },
+        {
+          "Nombre": "tiempoPromedio",
+          "Tipo": "Int",
+          "Comentarios": "Tiempo promedio de las ejecuciones a los métodos del servicio."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

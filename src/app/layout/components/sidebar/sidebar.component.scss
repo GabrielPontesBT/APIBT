@@ -1,0 +1,335 @@
+@import 'variables';
+
+/**
+ * sidebar.component.scss
+ *
+ * Sidebar jerárquico con efecto de panel para ramas expandidas.
+ * Reglas visuales:
+ * - Los padres expandidos NO van en rojo.
+ * - Solo el documento activo se marca en rojo.
+ * - El documento activo queda con hover fijo real.
+ * - Las transiciones de color y fondo se sienten más fluidas.
+ */
+
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+:host.collapsed .sidebar-container {
+  overflow: hidden;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 48px;
+  background: var(--bg-elements);
+  border: 1px solid var(--grey-1);
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  color: var(--red-1);
+  padding: 0;
+  transition: background-color 180ms ease;
+
+  .material-icons {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: var(--red-2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--red-1);
+    outline-offset: 2px;
+  }
+}
+
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-elements);
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  scrollbar-color: var(--red-1) var(--grey-hover);
+  scrollbar-width: thin;
+  box-shadow: 2px 15px 15px 10px rgba(0, 0, 0, 0.08);
+  scroll-behavior: smooth;
+}
+
+.sidebar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-item {
+  list-style: none;
+  margin: 0;
+}
+
+.sidebar-node {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--text-color);
+  padding: 0;           // padding se mueve al __content
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;     // contiene el scale hijo sin afectar vecinos
+
+  transition:
+    background-color 200ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+// El contenido interno es el que hace zoom — el contenedor no se mueve
+.sidebar-node__content {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  transform-origin: left center;
+  transition: transform 200ms cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+.sidebar-node:hover .sidebar-node__content {
+  transform: scale(1.03);
+}
+
+.sidebar-node:hover {
+  background-color: var(--red-2);
+  color: var(--red-1);
+  box-shadow: inset 2px 0 0 rgba(179, 35, 35, 0.22);
+}
+
+/* ----------------------------- */
+/* DOCUMENTOS */
+/* ----------------------------- */
+
+.sidebar-file {
+  display: flex;
+}
+
+.sidebar-file__dash {
+  flex-shrink: 0;
+  margin-right: 0.15rem;
+  color: var(--red-1);
+  opacity: 0.7;
+  transition:
+    color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar-file:hover .sidebar-file__dash {
+  opacity: 1;
+}
+
+.sidebar-file:hover .sidebar-label {
+  color: var(--red-1);
+}
+
+// Un solo selector cubre todos los casos — la clase .active se pone
+// directamente en el <a>, sin importar cuántos niveles de anidado haya.
+.sidebar-file.active {
+  color: var(--red-1);
+  background-color: var(--red-2);
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 var(--red-1);
+}
+
+.sidebar-file.active .sidebar-node__content {
+  transform: scale(1.03);
+}
+
+.sidebar-file.active .sidebar-label {
+  color: var(--red-1);
+}
+
+.sidebar-file.active .sidebar-file__dash {
+  opacity: 1;
+}
+
+// Al hacer hover sobre el activo, se mantiene igual
+.sidebar-file.active:hover {
+  color: var(--red-1);
+  background-color: var(--red-2);
+  box-shadow: inset 2px 0 0 var(--red-1);
+}
+
+/* ----------------------------- */
+/* FOLDERS */
+/* ----------------------------- */
+
+.sidebar-folder {
+  font: inherit;
+}
+
+/* Los padres abiertos se mantienen neutros (pero respetan el hover) */
+.sidebar-item--expanded > .sidebar-folder:not(:hover),
+.sidebar-item--active-branch > .sidebar-folder:not(:hover) {
+  color: var(--text-color);
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.sidebar-item--active-branch > .sidebar-folder {
+  font-weight: 500;
+}
+
+.sidebar-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
+  color: var(--red-1);
+  transform-origin: center;
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar-flag {
+  flex-shrink: 0;
+  width: 1.9em;
+  height: 1.2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.sidebar-item--expanded > .sidebar-folder .sidebar-icon,
+.sidebar-item--active-branch > .sidebar-folder .sidebar-icon {
+  transform: rotate(180deg);
+}
+
+.sidebar-label-wrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.sidebar-label {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.25;
+  transition: color 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ----------------------------- */
+/* PANELES EXPANDIDOS */
+/* ----------------------------- */
+
+.sidebar-item--expanded,
+.sidebar-item--active-branch {
+  background-color: $sidebar-branch-bg;
+  box-shadow:
+    inset 0 6px 6px -6px rgba(179, 35, 35, 0.16),
+    inset 0 -6px 6px -6px rgba(179, 35, 35, 0.12);
+  transition:
+    background-color 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Paneles anidados */
+.sidebar-item--expanded .sidebar-item--expanded,
+.sidebar-item--expanded .sidebar-item--active-branch,
+.sidebar-item--active-branch .sidebar-item--expanded,
+.sidebar-item--active-branch .sidebar-item--active-branch {
+  background-color: $sidebar-branch-bg-deep;
+  box-shadow:
+    inset 0 6px 6px -6px rgba(179, 35, 35, 0.12),
+    inset 0 -6px 6px -6px rgba(179, 35, 35, 0.08);
+}
+
+/* ----------------------------- */
+/* CONTENEDOR DE HIJOS */
+/* ----------------------------- */
+
+.sidebar-children {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: translateY(-4px);
+  overflow: hidden;
+  transition:
+    grid-template-rows 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar-children--expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sidebar-item--expanded > .sidebar-folder + .sidebar-children,
+.sidebar-item--active-branch > .sidebar-folder + .sidebar-children {
+  margin-top: 0;
+}
+
+.sidebar-children__inner {
+  position: relative;
+  min-height: 0;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: transparent;
+  border-left: none;
+  box-shadow: none;
+}
+
+/* Hijos dentro de panel expandido con indentación suave */
+.sidebar-children__inner > .sidebar-list > .sidebar-item > .sidebar-node .sidebar-node__content {
+  padding-left: 1rem;
+}
+
+/* ----------------------------- */
+/* ACCESIBILIDAD */
+/* ----------------------------- */
+
+.sidebar-node:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 3px 0 0 var(--red-1),
+    0 0 0 2px color-mix(in oklab, var(--red-1) 55%, transparent);
+}
+
+.sidebar-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-container {
+    box-shadow: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--grey-1);
+    max-height: none;
+  }
+}

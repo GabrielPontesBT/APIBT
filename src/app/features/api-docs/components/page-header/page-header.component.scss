@@ -1,0 +1,55 @@
+@import 'variables';
+
+
+// TÍTULO DE LA PÁGINA
+.header-content {
+  position: fixed;
+  top: var(--navbar-height);
+  left: var(--content-left-offset, var(--sidebar-offset));
+  right: 0;
+  z-index: 99;
+  height: var(--title-height);
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+  transition:
+    height $page-header-duration $page-header-easing,
+    background-color $page-header-duration $page-header-easing,
+    box-shadow $page-header-duration $page-header-easing,
+    left 320ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  .page-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transform-origin: left center;
+    padding-left: 4rem;
+    transition: transform $page-header-duration $page-header-easing;
+
+    .nuevo-icon {
+      display: inline-block;
+      flex: 0 0 auto;
+      height: 0.9em !important;
+      width: auto;
+      max-height: calc(var(--title-height) - 16px);
+      object-fit: contain;
+      margin-left: 0.5rem;
+      max-width: none;
+    }
+  }
+
+  &.scrolled {
+    height: 60px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    .page-title {
+      transform: scale(0.8);
+    }
+  }
+}

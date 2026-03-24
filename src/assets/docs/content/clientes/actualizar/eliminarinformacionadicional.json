@@ -1,0 +1,67 @@
+{
+  "slug": "clientes/actualizar/eliminarinformacionadicional",
+  "pageTitle": "Eliminar Información Adicional",
+  "description": "Método para eliminar la información adicional de una cuenta cliente.",
+  "pubName": "BTClientes.EliminarInformacionAdicional",
+  "programa": "RBTPG516",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "sdtInformacionAdicional",
+      "Tipo": "sBTDatoLista",
+      "Comentarios": "Listado de datos adicionales."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'DLT' para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La cuenta ingresada no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.EliminarInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>1189</bts:clienteUId>\r\n         <bts:sdtInformacionAdicional>\r\n            <bts:sBTDatoLista>\r\n               <bts:clave>AnioNacimiento</bts:clave>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTDatoLista>\r\n         </bts:sdtInformacionAdicional>\r\n      </bts:BTClientes.EliminarInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?EliminarInformacionAdicional' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t  \"Device\": \"1\",\r\n\t  \"Usuario\": \"INSTALADOR\",\r\n\t  \"Token\": \"e2db881814CD285A89A23FBE\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\"\r\n\t},\r\n\t\"clienteUId\": \"61\",\r\n\t\"sdtInformacionAdicional\": {\r\n      \"sBTDatoLista\": {\r\n         \"clave\": \"AnioNacimiento\",\r\n         \"valor\": \"\"\r\n      }\r\n\t}\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.EliminarInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>e2db881814CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>589870</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.EliminarInformacionAdicional</Servicio>\r\n            <Fecha>2023-10-11</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>08:43:27</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.EliminarInformacionAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n      \"Device\": \"1\",\r\n      \"Usuario\": \"INSTALADOR\",\r\n      \"Token\": \"e2db881814CD285A89A23FBE\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"1\"\r\n   },\r\n\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"111399\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTClientes.EliminarInformacionAdicional\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Fecha\": \"2023-10-11\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"15:10:52\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,60 @@
+<!--
+  sidebar.component.html
+ *
+ * Renderiza de forma recursiva el árbol de navegación del sidebar,
+ * mostrando carpetas expandibles con transición suave vía CSS y archivos navegables,
+ * resaltando la ruta activa y su rama contenedora.
+-->
+
+<ng-template #recursiveNodeTemplate let-nodes>
+  <ul class="sidebar-list">
+    <li *ngFor="let node of nodes; trackBy: trackByNode" class="sidebar-item"
+      [class.sidebar-item--expanded]="isFolder(node) && isExpanded(node)"
+      [class.sidebar-item--active-branch]="isFolder(node) && isFolderInActivePath(node)"
+      [class.sidebar-item--active-document]="isFile(node) && isNodeActive(node)">
+      <button *ngIf="isFolder(node)" type="button" class="sidebar-node sidebar-folder"
+        [class.active-branch]="isFolderInActivePath(node)" [attr.aria-expanded]="isExpanded(node)"
+        [attr.aria-label]="'Expandir carpeta ' + node.label" [attr.data-slug]="node.slug"
+        (click)="toggleFolder(node, nodes)">
+        <span class="sidebar-node__content">
+          <span class="sidebar-icon material-icons" aria-hidden="true">
+            {{ getFolderIcon(node) }}
+          </span>
+          <span class="sidebar-label-wrapper">
+            <span class="sidebar-label">{{ getNodeLabel(node) }}</span>
+            <span *ngIf="getFlagCode(node)" class="sidebar-flag fi"
+              [class]="'fi fi-' + getFlagCode(node)" [attr.aria-label]="node.label" role="img">
+            </span>
+          </span>
+        </span>
+      </button>
+
+      <a *ngIf="isFile(node)" class="sidebar-node sidebar-file" [class.active]="isNodeActive(node)"
+        [attr.data-slug]="node.slug" [routerLink]="['/', node.slug]">
+        <span class="sidebar-node__content">
+          <span class="sidebar-file__dash" aria-hidden="true">–</span>
+          <span class="sidebar-label">
+            {{ node.pageTitle || node.label }}
+          </span>
+        </span>
+      </a>
+
+      <div *ngIf="isFolder(node) && hasChildren(node)" class="sidebar-children"
+        [class.sidebar-children--expanded]="isExpanded(node)" [attr.aria-hidden]="!isExpanded(node)">
+        <div class="sidebar-children__inner">
+          <ng-container *ngTemplateOutlet="recursiveNodeTemplate; context: { $implicit: node.children }"></ng-container>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ng-template>
+
+<button class="sidebar-toggle-btn" type="button"
+  [attr.aria-label]="collapsed ? 'Expandir sidebar' : 'Colapsar sidebar'"
+  (click)="toggleSidebar.emit()">
+  <span class="material-icons">{{ collapsed ? 'chevron_right' : 'chevron_left' }}</span>
+</button>
+
+<nav class="sidebar-container" #sidebarContainer>
+  <ng-container *ngTemplateOutlet="recursiveNodeTemplate; context: { $implicit: navigationTree }"></ng-container>
+</nav>

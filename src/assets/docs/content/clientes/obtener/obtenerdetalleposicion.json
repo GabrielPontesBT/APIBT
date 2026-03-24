@@ -1,0 +1,187 @@
+{
+  "slug": "clientes/obtener/obtenerdetalleposicion",
+  "pageTitle": "Obtener Detalle de Posición",
+  "description": "Método para obtener el detalle de una posición de los títulos de un cliente.",
+  "pubName": "BTClientes.ObtenerDetallePosicion",
+  "programa": "RBTPG540",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la moneda."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    },
+    {
+      "Nombre": "identificadorClaseActivo",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de la clase del activo."
+    },
+    {
+      "Nombre": "numeradorConsulta",
+      "Tipo": "Int",
+      "Comentarios": "Numerador de la consulta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "totalGeneral",
+      "Tipo": "Double",
+      "Comentarios": "Total general."
+    },
+    {
+      "Nombre": "sdtDetalleClaseActivo",
+      "Tipo": "sBTDetalleClaseActivo",
+      "Comentarios": "Datos del detalle de la clase del activo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar la fecha."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la clase de activo."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el numerador de la consulta."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se recuperó el componente del portafolio para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se encontraron datos de la posición del cliente, ejecutar el servicio de consultar posición del cliente."
+    },
+    {
+      "Código": "40021",
+      "Descripción": "Error - No hay precio para el papel [Número de Identificador]."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerDetallePosicion>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>E362E52FED059AA3BF86A6E3</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>341</bts:clienteUId>\r\n         <bts:monedaId>2222</bts:monedaId>\r\n         <bts:fecha>2020-08-06</bts:fecha>\r\n         <bts:identificadorClaseActivo>10</bts:identificadorClaseActivo>\r\n         <bts:numeradorConsulta>12928</bts:numeradorConsulta>\r\n      </bts:BTClientes.ObtenerDetallePosicion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDetallePosicion=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": \"1\",\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"clienteUId\": 341,\r\n    \"monedaId\": 2222,\r\n    \"fecha\": \"2020-08-06\",\r\n    \"identificadorClaseActivo\": 10,\r\n    \"numeradorConsulta\": 12928\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerDetallePosicionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Device>GZ</Device>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Token>E362E52FED059AA3BF86A6E3</Token>\r\n         </Btinreq>\r\n         <totalGeneral>527406.43</totalGeneral>\r\n         <sdtDetalleClaseActivo>\r\n            <sBTDetalleClaseActivo>\r\n               <nombreElemento>Depósitos a plazo fijo</nombreElemento>\r\n               <datosSinManejoEspecie>\r\n                  <SdtsBTDatoSinManejoEspecie>\r\n                     <signo>$</signo>\r\n                     <monedaId>0</monedaId>\r\n                     <total>5263.16</total>\r\n                     <cantidadOperaciones>2</cantidadOperaciones>\r\n                     <totalOrigen>200000.00</totalOrigen>\r\n                  </SdtsBTDatoSinManejoEspecie>\r\n               </datosSinManejoEspecie>\r\n               <porcentajeComposicion>1.00</porcentajeComposicion>\r\n               <datosConManejoEspecie></datosConManejoEspecie>\r\n               <total>5263.16</total>\r\n            </sBTDetalleClaseActivo>\r\n            <sBTDetalleClaseActivo>\r\n               <nombreElemento>Cuenta Corrientes</nombreElemento>\r\n               <datosSinManejoEspecie>\r\n                  <SdtsBTDatoSinManejoEspecie>\r\n                     <signo>USD</signo>\r\n                     <monedaId>2222</monedaId>\r\n                     <total>496723.14</total>\r\n                     <cantidadOperaciones>2</cantidadOperaciones>\r\n                     <totalOrigen>522143.27</totalOrigen>\r\n                  </SdtsBTDatoSinManejoEspecie>\r\n               </datosSinManejoEspecie>\r\n               <porcentajeComposicion>99.00</porcentajeComposicion>\r\n               <datosConManejoEspecie></datosConManejoEspecie>\r\n               <total>522143.27</total>\r\n            </sBTDetalleClaseActivo>\r\n         </sdtDetalleClaseActivo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-10-08</Fecha>\r\n            <Hora>12:46:22</Hora>\r\n            <Numero>744</Numero>\r\n            <Servicio>BTClientes.ObtenerDetallePosicion</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerDetallePosicionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"totalGeneral\": 527406.43,\r\n      \"sdtDetalleClaseActivo\": {\r\n         \"sBTDetalleClaseActivo\": [\r\n         {\r\n            \"nombreElemento\": \"Depósitos a plazo fijo\",\r\n            \"datosSinManejoEspecie\": {\r\n               \"SdtsBTDatoSinManejoEspecie\": {\r\n               \"signo\": \"$\",\r\n               \"monedaId\": 0,\r\n               \"total\": 5263.16,\r\n               \"cantidadOperaciones\": 2,\r\n               \"totalOrigen\": 200000\r\n               }\r\n            },\r\n            \"porcentajeComposicion\": 1,\r\n            \"datosConManejoEspecie\": \"\",\r\n            \"total\": 5263.16\r\n         },\r\n         {\r\n            \"nombreElemento\": \"Cuenta Corrientes\",\r\n            \"datosSinManejoEspecie\": {\r\n               \"SdtsBTDatoSinManejoEspecie\": {\r\n               \"signo\": \"USD\",\r\n               \"monedaId\": 2222,\r\n               \"total\": 496723.14,\r\n               \"cantidadOperaciones\": 2,\r\n               \"totalOrigen\": 522143.27\r\n               }\r\n            },\r\n            \"porcentajeComposicion\": 99,\r\n            \"datosConManejoEspecie\": \"\",\r\n            \"total\": 522143.27\r\n         }\r\n         ]\r\n      },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTClientes.ObtenerDetallePosicion\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDetalleClaseActivo",
+      "fields": [
+        {
+          "Nombre": "datosConManejoEspecie",
+          "Tipo": "sBTDatoConManejoEspecie",
+          "Comentarios": "Listado de datos con manejo de especie."
+        },
+        {
+          "Nombre": "datosSinManejoEspecie",
+          "Tipo": "sBTDatoSinManejoEspecie",
+          "Comentarios": "Listado de datos sin manejo de especie."
+        },
+        {
+          "Nombre": "nombreElemento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del elemento del detalle."
+        },
+        {
+          "Nombre": "porcentajeComposicion",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de composición del elemento del detalle."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Double",
+          "Comentarios": "Total del elemento del detalle."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoConManejoEspecie",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "papelId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del papel."
+        },
+        {
+          "Nombre": "resultado",
+          "Tipo": "Double",
+          "Comentarios": "Resultado."
+        },
+        {
+          "Nombre": "totalEfectivo",
+          "Tipo": "Double",
+          "Comentarios": "Total en efectivo."
+        },
+        {
+          "Nombre": "totalNominal",
+          "Tipo": "Double",
+          "Comentarios": "Total nominal."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoSinManejoEspecie",
+      "fields": [
+        {
+          "Nombre": "cantidadOperaciones",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de operaciones."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la moneda."
+        },
+        {
+          "Nombre": "signo",
+          "Tipo": "String",
+          "Comentarios": "Signo de la moneda."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Double",
+          "Comentarios": "Total."
+        },
+        {
+          "Nombre": "totalOrigen",
+          "Tipo": "Double",
+          "Comentarios": "Total del origen."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

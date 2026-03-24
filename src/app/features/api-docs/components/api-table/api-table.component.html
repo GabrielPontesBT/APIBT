@@ -1,0 +1,38 @@
+
+  <!-- Si hay datos, muestro encabezado y cuerpo -->
+  <ng-container *ngIf="(data?.length ?? 0) > 0; else noData">
+    <table>
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns">{{ col }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Modo columnas o dinámico -->
+      <ng-container *ngIf="(columns?.length ?? 0) > 0; else dynamicRow">
+        <tr *ngFor="let row of data">
+          <td *ngFor="let col of columns"
+              [innerHTML]="row[col]">
+          </td>
+        </tr>
+      </ng-container>
+      <ng-template #dynamicRow>
+        <tr *ngFor="let row of data">
+          <th>{{ row.campo }}</th>
+          <td>{{ row.valor }}</td>
+        </tr>
+      </ng-template>
+    </tbody>
+</table>
+  </ng-container>
+
+  <!-- Si NO hay datos, solo un tbody con “No aplica” -->
+  <ng-template #noData>
+    <tbody>
+      <tr>
+        <td [attr.colspan]="columns?.length ?? 1" class="text-center">
+          No aplica.
+        </td>
+      </tr>
+    </tbody>
+  </ng-template>

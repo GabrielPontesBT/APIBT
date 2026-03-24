@@ -1,0 +1,278 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenerdatos",
+  "pageTitle": "Obtener Datos",
+  "description": "Método para obtener los datos de un producto de depósito a plazo.",
+  "pubName": "BTDepositosAPlazo.ObtenerDatos",
+  "programa": "RBTPG014",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "expresadoEn",
+      "Tipo": "String",
+      "Comentarios": "[M-Moneda / E-Especie]"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPlazoFijo",
+      "Tipo": "sBTPlazoFijo",
+      "Comentarios": "Datos del depósito a plazo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ObtenerDatos>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>5</bts:operacionUId>\r\n      </bts:BTDepositosAPlazo.ObtenerDatos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatos=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"operacionUId\": 5,\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>be9fc8708b4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPlazoFijo>\r\n            <plazo>360</plazo>\r\n            <tasaEfectiva>0.000000</tasaEfectiva>\r\n            <periodicidad>0</periodicidad>\r\n            <simboloMoneda>$</simboloMoneda>\r\n            <fechaVencimiento>2016-12-22</fechaVencimiento>\r\n            <producto>\r\n               <papel/>\r\n               <moneda>$</moneda>\r\n               <productoUId>0</productoUId>\r\n               <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>\r\n               <otrosConceptos></otrosConceptos>\r\n            </producto>\r\n            <intereses>55465.38</intereses>\r\n            <fechaProximoVencimiento>0000-00-00</fechaProximoVencimiento>\r\n            <tasaVigente>3.750000</tasaVigente>\r\n            <idOperacionBT>0010100000022000000000000000002700000000000085001</idOperacionBT>\r\n            <renovacionAutomatica>N</renovacionAutomatica>\r\n            <idOperacionFmt>85-0</idOperacionFmt>\r\n            <interesesPendientes>0.00</interesesPendientes>\r\n            <cantidadRenovaciones>0</cantidadRenovaciones>\r\n            <tasaOriginal>3.750000</tasaOriginal>\r\n            <interesesAcreditados>0.00</interesesAcreditados>\r\n            <tipoTasa>Efectiva Anual</tipoTasa>\r\n            <acreditacionPeriodicaIntereses>N</acreditacionPeriodicaIntereses>\r\n            <cuentaContable/>\r\n            <operacionUId>5</operacionUId>\r\n            <instruccionVencimiento>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <producto>\r\n                  <papel/>\r\n                  <moneda>$</moneda>\r\n                  <productoUId>0</productoUId>\r\n                  <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <descripcion>Cancelar y Acreditar al vto.</descripcion>\r\n               <operacionUId>9</operacionUId>\r\n               <idOperacionFmt>000000027_001</idOperacionFmt>\r\n            </instruccionVencimiento>\r\n            <instruccionAcreditacion>\r\n               <sucursal/>\r\n               <producto>\r\n                  <papel/>\r\n                  <moneda/>\r\n                  <productoUId>0</productoUId>\r\n                  <nombre/>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <descripcion/>\r\n               <operacionUId>0</operacionUId>\r\n               <idOperacionFmt/>\r\n            </instruccionAcreditacion>\r\n            <saldo>0.00</saldo>\r\n            <montoInicial>1500000.00</montoInicial>\r\n            <estado/>\r\n            <diasHastaVencimiento>0</diasHastaVencimiento>\r\n            <montoFinal>0.00</montoFinal>\r\n            <sucursal>Casa Matriz</sucursal>\r\n            <fechaValor>2015-12-28</fechaValor>\r\n         </sdtPlazoFijo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>986</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTDepositosAPlazo.ObtenerDatos</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-22</Fecha>\r\n            <Hora>14:57:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ObtenerDatosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtPlazoFijo\": {\r\n      \"plazo\": \"360\",\r\n      \"tasaEfectiva\": \"0.000000\",\r\n      \"periodicidad\": \"0\",\r\n      \"simboloMoneda\": \"$\",\r\n      \"fechaVencimiento\": \"2016-12-22\",\r\n      \"producto\": {\r\n        \"papel\": \"\",\r\n        \"moneda\": \"$\",\r\n        \"productoUId\": \"0\",\r\n        \"nombre\": \"DEPOSITOS A PLAZO FIJO, DPF Intransferible\",\r\n        \"otrosConceptos\":\"\"\r\n      },\r\n      \"intereses\": \"55465.38\",\r\n      \"fechaProximoVencimiento\": \"0000-00-00\",\r\n      \"tasaVigente\": \"3.750000\",\r\n      \"idOperacionBT\": \"0010100000022000000000000000002700000000000085001\",\r\n      \"renovacionAutomatica\": \"N\",\r\n      \"idOperacionFmt\": \"85-0\",\r\n      \"interesesPendientes\": \"0.00\",\r\n      \"cantidadRenovaciones\": \"0\",\r\n      \"tasaOriginal\": \"3.750000\",\r\n      \"interesesAcreditados\": \"0.00\",\r\n      \"tipoTasa\": \"Efectiva Anual\",\r\n      \"acreditacionPeriodicaIntereses\": \"N\",\r\n      \"cuentaContable\": \"\",\r\n      \"operacionUId\": \"5\",\r\n      \"instruccionVencimiento\": {\r\n        \"sucursal\": \"Casa Matriz\",\r\n        \"producto\": {\r\n          \"papel\": \"\",\r\n          \"moneda\": \"$\",\r\n          \"productoUId\": \"0\",\r\n          \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\",\r\n          \"otrosConceptos\":\"\"\r\n        },\r\n        \"descripcion\": \"Cancelar y Acreditar al vto.\",\r\n        \"operacionUId\": \"9\",\r\n        \"idOperacionFmt\": \"000000027_001\"\r\n      },\r\n      \"instruccionAcreditacion\": {\r\n        \"sucursal\": \"\",\r\n        \"producto\": {\r\n          \"papel\": \"\",\r\n          \"moneda\": \"\",\r\n          \"productoUId\": \"0\",\r\n          \"nombre\": \"\",\r\n          \"otrosConceptos\":\"\"\r\n        },\r\n        \"descripcion\": \"\",\r\n        \"operacionUId\": \"0\",\r\n        \"idOperacionFmt\": \"\"\r\n      },\r\n      \"saldo\": \"0.00\",\r\n      \"montoInicial\": \"1500000.00\",\r\n      \"estado\": \"\",\r\n      \"diasHastaVencimiento\": \"0\",\r\n      \"montoFinal\": \"0.00\",\r\n      \"sucursal\": \"Casa Matriz\",\r\n      \"fechaValor\": \"2015-12-28\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"986\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTDepositosAPlazo.ObtenerDatos\",\r\n      \"Requerimiento\": \"\",\r\n      \"Fecha\": \"2017-12-22\",\r\n      \"Hora\": \"14:57:24\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPlazoFijo",
+      "fields": [
+        {
+          "Nombre": "acreditacionPeriodicaIntereses",
+          "Tipo": "String",
+          "Comentarios": "Acredita periódicamente intereses (S/N)."
+        },
+        {
+          "Nombre": "cantidadRenovaciones",
+          "Tipo": "Short",
+          "Comentarios": "Cantidad de renovaciones del depósito."
+        },
+        {
+          "Nombre": "cuentaContable",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta contable."
+        },
+        {
+          "Nombre": "diasHastaVencimiento",
+          "Tipo": "Int",
+          "Comentarios": "Dias restantes hasta el vencimiento."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "fechaProximoVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha para proximo vencimiento."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "instruccionAcreditacion",
+          "Tipo": "sBTInstruccion",
+          "Comentarios": "Datos de la instrucción de acreditación."
+        },
+        {
+          "Nombre": "instruccionVencimiento",
+          "Tipo": "sBTInstruccion",
+          "Comentarios": "Datos de la instrucción al vencimiento."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Total de intereses del depósito."
+        },
+        {
+          "Nombre": "interesesAcreditados",
+          "Tipo": "Double",
+          "Comentarios": "Intereses acreditados."
+        },
+        {
+          "Nombre": "interesesPendientes",
+          "Tipo": "Double",
+          "Comentarios": "Intereses pendientes."
+        },
+        {
+          "Nombre": "montoInicial",
+          "Tipo": "Double",
+          "Comentarios": "Capital inicial del depósito."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Int",
+          "Comentarios": "Periodicidad de acreditación de intereses."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo en días."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "renovacionAutomatica",
+          "Tipo": "String",
+          "Comentarios": "Renovación automatica (S/N)."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo Actual."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo moneda."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal de alta."
+        },
+        {
+          "Nombre": "tasaEfectiva",
+          "Tipo": "Double",
+          "Comentarios": "Tasa efectiva."
+        },
+        {
+          "Nombre": "tasaOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Tasa original."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoTasa",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tasa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTInstruccion",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la instrucción."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Datos de producto."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la Sucursal de la operación."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "cash-management/pagos/pagardeudadesdecuenta",
+  "pageTitle": "Pagar Deuda Desde Cuenta",
+  "description": "Método para pagar una factura debitando desde una cuenta vista.",
+  "pubName": "BTCASHManagement.PagarDeudaDesdeCuenta",
+  "programa": "RBTPGC65",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la orden."
+    },
+    {
+      "Nombre": "nroLineaOrden",
+      "Tipo": "Int",
+      "Comentarios": "Número de línea de orden CASH."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la moneda."
+    },
+    {
+      "Nombre": "importePago",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cuenta vista."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "transaccionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de transacción."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030610",
+      "Descripción": "Debe indicar el numero de la orden."
+    },
+    {
+      "Código": "1030611",
+      "Descripción": "Debe indicar el numero de linea en la orden."
+    },
+    {
+      "Código": "1030612",
+      "Descripción": "El valor recibido no corresponde a un numero de orden."
+    },
+    {
+      "Código": "1030614",
+      "Descripción": "Canal no habilitado para el servicio."
+    },
+    {
+      "Código": "1030615",
+      "Descripción": "Canal no habilitado para el contrato."
+    },
+    {
+      "Código": "1030616",
+      "Descripción": "Numero de linea de la orden no existe."
+    },
+    {
+      "Código": "1030617",
+      "Descripción": "Estado de la linea de la orden no permite pago."
+    },
+    {
+      "Código": "1030618",
+      "Descripción": "El importe debe ser mayor a cero."
+    },
+    {
+      "Código": "1030619",
+      "Descripción": "código de Moneda desconocido"
+    },
+    {
+      "Código": "1030620",
+      "Descripción": "El importe del pago es inferior a la deuda."
+    },
+    {
+      "Código": "1030621",
+      "Descripción": "El importe del pago supera a la deuda."
+    },
+    {
+      "Código": "1030751",
+      "Descripción": "Estado de la orden no permite procesar."
+    },
+    {
+      "Código": "1030761",
+      "Descripción": "No se obtuvo Canal CASH para el canal que invoca."
+    },
+    {
+      "Código": "1030770",
+      "Descripción": "No se recupero información para la cuenta recibida."
+    },
+    {
+      "Código": "1030801",
+      "Descripción": "Saldo insuficiente para realizar el pago."
+    },
+    {
+      "Código": "1039999",
+      "Descripción": "No se obtuvo Regla para determinar la Transacción a ejecutar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.PagarDeudaDesdeCuenta>\r\n         <bts:Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </bts:Btinreq>\r\n         <bts:ordenId>293</bts:ordenId>\r\n         <bts:nroLineaOrden>1</bts:nroLineaOrden>\r\n         <bts:monedaId>0</bts:monedaId>\r\n         <bts:importePago>100</bts:importePago>\r\n         <bts:operacionUId>835</bts:operacionUId>\r\n      </bts:BTCASHManagement.PagarDeudaDesdeCuenta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?PagarDeudaDesdeCuenta=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": \"1\",\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"ordenId\": 293,\r\n    \"nroLineaOrden\": 1,\r\n    \"monedaId\": 0,\r\n    \"importePago\": 100,\r\n    \"operacionUId\": 835\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.PagarDeudaDesdeCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <transaccionId>98</transaccionId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-19</Fecha>\r\n            <Hora>11:36:57</Hora>\r\n            <Numero>26133</Numero>\r\n            <Servicio>BTCASHManagement.PagarDeudaDesdeCuenta</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.PagarDeudaDesdeCuentaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"transaccionId\": 98,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTCASHManagement.PagarDeudaDesdeCuenta\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

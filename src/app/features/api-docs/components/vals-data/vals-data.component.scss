@@ -1,0 +1,62 @@
+@import '~prismjs/themes/prism.css';
+@import 'variables';
+
+// CONFIGURACIÓN BACKEND
+
+::ng-deep .mat-accordion-BT {
+  margin: 2rem 0;
+  font-family: var(--font-family);
+
+  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+    margin: var(--margin-info);
+    background: var(--bg-elements);
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--box-shadow) !important;
+    transition: box-shadow 0s ease-in-out !important;
+
+    .mat-expansion-panel-header {
+      background: var(--bg-elements);
+      color: var(--text-color);
+      font-size: 1rem;
+      font-family: var(--font-family);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      box-shadow: none !important;
+
+      .mat-panel-title {
+        font-weight: 500;
+        color: var(--text-color);
+      }
+      .mat-expansion-indicator::after {
+        color: var(--red-1);
+        font-weight: 700;
+      }
+    }
+
+    .mat-expansion-panel-body {
+      background: var(--bg-elements);
+      padding: 0rem 2rem 2rem 2rem !important;
+    }
+
+    .mat-expansion-panel-content {
+      background: var(--bg-elements);
+      border-radius: var(--border-radius);
+      padding: 0rem !important;
+    }
+
+    .mat-icon {
+      color: var(--text-color);
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+.vals-title {
+  // TÍTULO DEL EJEMPLO
+  //margin: var(--margin-title-2);
+  font-size: 1.8rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-color);
+}

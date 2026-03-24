@@ -1,0 +1,108 @@
+{
+  "slug": "parametros-base/obtenerguiaespecialdeproceso",
+  "pageTitle": "Obtener Guía Especial de Proceso",
+  "description": "Método para obtener los datos de una determinada guía especial de procesos.",
+  "pubName": "BTParametrosBase.ObtenerGuiaEspecialDeProceso",
+  "programa": "RBTPG052",
+  "scope": "Institucional",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "empresaId",
+      "Tipo": "Short",
+      "Comentarios": "Código de empresa [Hidden]."
+    },
+    {
+      "Nombre": "codigo",
+      "Tipo": "Long",
+      "Comentarios": "Código de la Guía de Procesos."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtGuiaEspecialDeProceso",
+      "Tipo": "sBTCorrelativoGuiaEspecial",
+      "Comentarios": "Listado de datos de la guía especial de proceso."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió código de guía."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe la guía recibida."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTParametrosBase.ObtenerGuiaEspecialDeProceso>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>43f21ff61cCD285A89A23FBE</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Device>1</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:codigo>73</bts:codigo>\r\n      </bts:BTParametrosBase.ObtenerGuiaEspecialDeProceso>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerGuiaEspecialDeProceso \\\r\n-H 'cache-control: no-cache' \\\r\n-H 'content-type: application/json' \\\r\n-d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"codigo\": \"73\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTParametrosBase.ObtenerGuiaEspecialDeProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>43f21ff61cCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sdtGuiaEspecialDeProceso>\r\n            <sBTCorrelativoGuiaEspecial>\r\n               <correlativo3>0</correlativo3>\r\n               <correlativo2>539</correlativo2>\r\n               <descripcion>Prima sin cuenta</descripcion>\r\n               <correlativo1>50</correlativo1>\r\n               <valorEspecifico3>0</valorEspecifico3>\r\n               <valorEspecifico2>0</valorEspecifico2>\r\n               <valorEspecifico1>0</valorEspecifico1>\r\n               <importeEspecifico3>0.00</importeEspecifico3>\r\n               <importeEspecifico2>0.00</importeEspecifico2>\r\n               <importeEspecifico1>0.00</importeEspecifico1>\r\n            </sBTCorrelativoGuiaEspecial>\r\n            <sBTCorrelativoGuiaEspecial>\r\n               <correlativo3>0</correlativo3>\r\n               <correlativo2>125</correlativo2>\r\n               <descripcion>No genera prima</descripcion>\r\n               <correlativo1>163</correlativo1>\r\n               <valorEspecifico3>0</valorEspecifico3>\r\n               <valorEspecifico2>0</valorEspecifico2>\r\n               <valorEspecifico1>0</valorEspecifico1>\r\n               <importeEspecifico3>0.00</importeEspecifico3>\r\n               <importeEspecifico2>0.00</importeEspecifico2>\r\n               <importeEspecifico1>0.00</importeEspecifico1>\r\n            </sBTCorrelativoGuiaEspecial>\r\n         </sdtGuiaEspecialDeProceso>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>592</Numero>\r\n            <Servicio>BTParametrosBase.ObtenerGuiaEspecialDeProceso</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2020-03-11</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>11:37:51</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTParametrosBase.ObtenerGuiaEspecialDeProcesoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtGuiaEspecialDeProceso\": {\r\n\t  \"sBTCorrelativoGuiaEspecial\": [\r\n\t\t{\r\n\t\t  \"correlativo3\": \"0\",\r\n\t\t  \"correlativo2\": \"539\",\r\n\t\t  \"descripcion\": \"Prima sin cuenta\",\r\n\t\t  \"correlativo1\": \"50\",\r\n\t\t  \"valorEspecifico3\": \"0\",\r\n\t\t  \"valorEspecifico2\": \"0\",\r\n\t\t  \"valorEspecifico1\": \"0\",\r\n\t\t  \"importeEspecifico3\": \"0.00\",\r\n\t\t  \"importeEspecifico2\": \"0.00\",\r\n\t\t  \"importeEspecifico1\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"correlativo3\": \"0\",\r\n\t\t  \"correlativo2\": \"125\",\r\n\t\t  \"descripcion\": \"No genera prima\",\r\n\t\t  \"correlativo1\": \"163\",\r\n\t\t  \"valorEspecifico3\": \"0\",\r\n\t\t  \"valorEspecifico2\": \"0\",\r\n\t\t  \"valorEspecifico1\": \"0\",\r\n\t\t  \"importeEspecifico3\": \"0.00\",\r\n\t\t  \"importeEspecifico2\": \"0.00\",\r\n\t\t  \"importeEspecifico1\": \"0.00\"\r\n\t\t}\r\n\t  ]\r\n\t},\r\n\t\"Btoutreq\": {\r\n\t\t\"Numero\": \"592\",\r\n\t\t\"Servicio\": \"BTParametrosBase.ObtenerGuiaEspecialDeProceso\",\r\n\t\t\"Estado\": \"OK\",\r\n\t\t\"Fecha\": \"2020-03-11\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Hora\": \"11:37:51\",\r\n\t\t\"Canal\": \"BTDIGITAL\"\r\n\t}\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCorrelativoGuiaEspecial",
+      "fields": [
+        {
+          "Nombre": "correlativo1",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo 1."
+        },
+        {
+          "Nombre": "correlativo2",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo 2."
+        },
+        {
+          "Nombre": "correlativo3",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo 3."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "importeEspecifico1",
+          "Tipo": "Double",
+          "Comentarios": "Importe específico 1."
+        },
+        {
+          "Nombre": "importeEspecifico2",
+          "Tipo": "Double",
+          "Comentarios": "Importe específico 2."
+        },
+        {
+          "Nombre": "importeEspecifico3",
+          "Tipo": "Double",
+          "Comentarios": "Importe específico 3."
+        },
+        {
+          "Nombre": "valorEspecifico1",
+          "Tipo": "Long",
+          "Comentarios": "Valor específico 1."
+        },
+        {
+          "Nombre": "valorEspecifico2",
+          "Tipo": "Long",
+          "Comentarios": "Valor específico 2."
+        },
+        {
+          "Nombre": "valorEspecifico3",
+          "Tipo": "Long",
+          "Comentarios": "Valor específico 3."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

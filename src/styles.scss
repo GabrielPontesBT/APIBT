@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import "flag-icons/css/flag-icons.min.css";
+@import 'variables';
+
+/**
+ * styles.scss
+ *
+ * Define estilos globales reales de la aplicación:
+ * reset base, tipografía, tema global, scroll general,
+ * accesibilidad y algunos overrides mínimos de Angular Material.
+ *
+ * No incluye estilos específicos de sidebar, layout o páginas de documentación,
+ * porque esos deben vivir en sus componentes correspondientes.
+ */
+
+/* -------------------------------------------------------- */
+/* RESET / BASE GLOBAL */
+/* -------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-1) var(--table-grey-columns);
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------- */
+/* VARIABLES GLOBALES AUXILIARES */
+/* -------------------------------------------------------- */
+
+:root {
+  transition: all 0.4s ease-in-out;
+}
+
+/* -------------------------------------------------------- */
+/* EFECTO DE TRANSICIÓN DE TEMA */
+/* -------------------------------------------------------- */
+
+body.theme-transition::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-color);
+  pointer-events: none;
+  animation: smoothFade 0.6s ease;
+}
+
+@keyframes smoothFade {
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------------------------- */
+/* CLASES UTILITARIAS GLOBALES */
+/* -------------------------------------------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+/* Esto lo dejé porque lo estás usando en el layout de docs */
+.content-left,
+.content-right app-code-example {
+  will-change: opacity, transform;
+}
+
+/* -------------------------------------------------------- */
+/* LINKS GLOBALES */
+/* -------------------------------------------------------- */
+
+/**
+ * Se aplican solo a links fuera del sidebar.
+ * El sidebar maneja sus propios estilos en sidebar.component.scss.
+ */
+:where(a):not(:where(.sidebar-container *)) {
+  color: var(--red-1);
+}
+
+:where(a):not(:where(.sidebar-container *)):hover {
+  color: var(--red-1-darken);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------- */
+/* OVERRIDES MÍNIMOS DE ANGULAR MATERIAL */
+/* -------------------------------------------------------- */
+
+/**
+ * Solo dejamos overrides globales que realmente afectan componentes Material
+ * reutilizados por varias partes del proyecto.
+ * Todo override específico de sidebar viejo o componentes concretos se debe mover.
+ */
+
+.mat-drawer-content {
+  background-color: var(--bg-color);
+}
+
+.mat-mdc-tab-body-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-1) var(--table-columns);
+}
+
+.mat-expansion-indicator {
+  color: var(--red-1) !important;
+}
+
+/* -------------------------------------------------------- */
+/* ACCESIBILIDAD */
+/* -------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

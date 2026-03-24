@@ -1,0 +1,278 @@
+{
+  "slug": "prestamos/obtener/obtenerprestamosporrangomora-disponibleunicamenteparav3r1",
+  "pageTitle": "Obtener Préstamos por Rango Mora",
+  "description": "Método para obtener los préstamos que estén dentro del rango de mora ingresado.",
+  "pubName": "BTPrestamos.ObtenerPrestamosPorRangoMora",
+  "programa": "RBTPG471",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "diasMoraDesde",
+      "Tipo": "Int",
+      "Comentarios": "Días de mora desde."
+    },
+    {
+      "Nombre": "diasMoraHasta",
+      "Tipo": "Int",
+      "Comentarios": "Días de mora hasta."
+    },
+    {
+      "Nombre": "actualiza",
+      "Tipo": "String",
+      "Comentarios": "Habilita la actualización en la tabla SNG912 con los datos del préstamo [Hidden: Valor fijo 'S']."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosPrestamos",
+      "Tipo": "sBTDatosPrestamo",
+      "Comentarios": "Listado de los préstamos que están dentro del rango de días de mora."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Días Mora Hasta no puede ser menor a Días Mora Desde."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerPrestamosPorRangoMora>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>Instalador</bts:Usuario>\r\n            <bts:Token>d51ae0498699865B3A2E76CF</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:diasMoraDesde>23</bts:diasMoraDesde>\r\n         <bts:diasMoraHasta>100</bts:diasMoraHasta>\r\n      </bts:BTPrestamos.ObtenerPrestamosPorRangoMora>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosPorRangoMora=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 1e026dc4-d252-eff9-4dce-9398f81a587e' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"Instalador\",\r\n    \"Token\": \"d51ae0498699865B3A2E76CF\"\r\n  },\r\n  \"diasMoraDesde\": 23,\r\n  \"diasMoraHasta\": 100\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n        <BTPrestamos.ObtenerPrestamosPorRangoMoraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>Instalador</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>ad33e17b1199865B3A2E76CF</Token>\r\n         </Btinreq>\r\n         <sdtDatosPrestamos>\r\n            <sBTDatosPrestamo>\r\n               <plazo>113</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>521.12</deudaTotalVencida>\r\n               <periodicidad>15</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2023-02-15</fechaVencimiento>\r\n               <producto>\r\n                  <papel>$</papel>\r\n                  <moneda>S/</moneda>\r\n                  <productoUId>1</productoUId>\r\n                  <nombre>PRÉSTAMO-Financiero 9</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>253</clienteUId>\r\n               <fechaProximoVencimiento>2023-01-31</fechaProximoVencimiento>\r\n               <tasaVigente>83.230000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga>2022-10-25</fechaPrimerCuotaImpaga>\r\n               <valorCuota>75.77</valorCuota>\r\n               <saldoCapital>500.00</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>6</cantidadCuotasVencidas>\r\n               <capitalOriginal>500.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>672.70</deudaCancelacionTotal>\r\n               <diasMora>95</diasMora>\r\n               <operacionUId>5819</operacionUId>\r\n               <cantidadCuotasImpagas>8</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>596.89</deudaTotalAFecha>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion>Francés con Seg.e Impu.</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>40.000000</tasaMoraVigente>\r\n               <sucursal>MIRAFLORES</sucursal>\r\n               <fechaValor>2022-10-25</fechaValor>\r\n               <cantidadCuotas>8</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n            <sBTDatosPrestamo>\r\n               <plazo>112</plazo>\r\n               <eventosPosteriores>N</eventosPosteriores>\r\n               <deudaTotalVencida>770.80</deudaTotalVencida>\r\n               <periodicidad>15</periodicidad>\r\n               <simboloMoneda>$</simboloMoneda>\r\n               <fechaVencimiento>2023-02-15</fechaVencimiento>\r\n               <producto>\r\n                  <papel>$</papel>\r\n                  <moneda>S/</moneda>\r\n                  <productoUId>1</productoUId>\r\n                  <nombre>PRÉSTAMO-Financiero 9</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <clienteUId>310</clienteUId>\r\n               <fechaProximoVencimiento>2023-01-31</fechaProximoVencimiento>\r\n               <tasaVigente>83.230000</tasaVigente>\r\n               <fechaPrimerCuotaImpaga>2022-10-26</fechaPrimerCuotaImpaga>\r\n               <valorCuota>117.50</valorCuota>\r\n               <saldoCapital>800.00</saldoCapital>\r\n               <otrosConceptos></otrosConceptos>\r\n               <cantidadCuotasVencidas>6</cantidadCuotasVencidas>\r\n               <capitalOriginal>800.00</capitalOriginal>\r\n               <tir>0.000000</tir>\r\n               <deudaCancelacionTotal>1006.52</deudaCancelacionTotal>\r\n               <diasMora>94</diasMora>\r\n               <operacionUId>9197</operacionUId>\r\n               <cantidadCuotasImpagas>8</cantidadCuotasImpagas>\r\n               <deudaTotalAFecha>888.30</deudaTotalAFecha>\r\n               <cuotasPagasConRetraso>0</cuotasPagasConRetraso>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion>Francés con Seg.e Impu.</tipoAmortizacion>\r\n               <datosAdicionales></datosAdicionales>\r\n               <estado>Normal</estado>\r\n               <tasaMoraVigente>40.000000</tasaMoraVigente>\r\n               <sucursal>MIRAFLORES</sucursal>\r\n               <fechaValor>2022-10-26</fechaValor>\r\n               <cantidadCuotas>8</cantidadCuotas>\r\n            </sBTDatosPrestamo>\r\n         </sdtDatosPrestamos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>227484</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerPrestamosPorRangoMora</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2023-05-09</Fecha>\r\n            <Hora>12:58:32</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerPrestamosPorRangoMoraResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"Instalador\",\r\n    \"Token\": \"d51ae0498699865B3A2E76CF\"\r\n\t},\r\n    \"sdtDatosPrestamos\": {\r\n    \"sBTDatosPrestamo\": [\r\n      {\r\n        \"plazo\": 113,\r\n        \"eventosPosteriores\": \"N\",\r\n        \"deudaTotalVencida\": 521.12,\r\n        \"periodicidad\": 15,\r\n        \"simboloMoneda\": \"$\",\r\n        \"fechaVencimiento\": \"2023-02-15\",\r\n        \"producto\": {\r\n          \"papel\": \"$\",\r\n          \"moneda\": \"S/\",\r\n          \"productoUId\": 1,\r\n          \"nombre\": \"PRÉSTAMO-Financiero 9\",\r\n          \"otrosConceptos\":\"\"\r\n        },\r\n        \"clienteUId\": 253,\r\n        \"fechaProximoVencimiento\": \"2023-01-31\",\r\n        \"tasaVigente\": 83.23,\r\n        \"fechaPrimerCuotaImpaga\": \"2022-10-25\",\r\n        \"valorCuota\": 75.77,\r\n        \"saldoCapital\": 500,\r\n        \"otrosConceptos\": \"\",\r\n        \"cantidadCuotasVencidas\": 6,\r\n        \"capitalOriginal\": 500,\r\n        \"tir\": 0,\r\n        \"deudaCancelacionTotal\": 672.7,\r\n        \"diasMora\": 95,\r\n        \"operacionUId\": 5819,\r\n        \"cantidadCuotasImpagas\": 8,\r\n        \"deudaTotalAFecha\": 596.89,\r\n        \"cuotasPagasConRetraso\": 0,\r\n        \"fechaUltimoPago\": \"\",\r\n        \"tipoAmortizacion\": \"Francés con Seg.e Impu.\",\r\n        \"datosAdicionales\": \"\",\r\n        \"estado\": \"Normal\",\r\n        \"tasaMoraVigente\": 40,\r\n        \"sucursal\": \"MIRAFLORES\",\r\n        \"fechaValor\": \"2022-10-25\",\r\n        \"cantidadCuotas\": 8\r\n      },\r\n      {\r\n        \"plazo\": 112,\r\n        \"eventosPosteriores\": \"N\",\r\n        \"deudaTotalVencida\": 770.8,\r\n        \"periodicidad\": 15,\r\n        \"simboloMoneda\": \"$\",\r\n        \"fechaVencimiento\": \"2023-02-15\",\r\n        \"producto\": {\r\n          \"papel\": \"$\",\r\n          \"moneda\": \"S/\",\r\n          \"productoUId\": 1,\r\n          \"nombre\": \"PRÉSTAMO-Financiero 9\",\r\n          \"otrosConceptos\":\"\"\r\n        },\r\n        \"clienteUId\": 310,\r\n        \"fechaProximoVencimiento\": \"2023-01-31\",\r\n        \"tasaVigente\": 83.23,\r\n        \"fechaPrimerCuotaImpaga\": \"2022-10-26\",\r\n        \"valorCuota\": 117.5,\r\n        \"saldoCapital\": 800,\r\n        \"otrosConceptos\": \"\",\r\n        \"cantidadCuotasVencidas\": 6,\r\n        \"capitalOriginal\": 800,\r\n        \"tir\": 0,\r\n        \"deudaCancelacionTotal\": 1006.52,\r\n        \"diasMora\": 94,\r\n        \"operacionUId\": 9197,\r\n        \"cantidadCuotasImpagas\": 8,\r\n        \"deudaTotalAFecha\": 888.3,\r\n        \"cuotasPagasConRetraso\": 0,\r\n        \"fechaUltimoPago\": \"\",\r\n        \"tipoAmortizacion\": \"Francés con Seg.e Impu.\",\r\n        \"datosAdicionales\": \"\",\r\n        \"estado\": \"Normal\",\r\n        \"tasaMoraVigente\": 40,\r\n        \"sucursal\": \"MIRAFLORES\",\r\n        \"fechaValor\": \"2022-10-26\",\r\n        \"cantidadCuotas\": 8\r\n      }\r\n    ]\r\n  },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"901\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerPrestamosPorRangoMora\",\r\n        \"Fecha\": \"2017-12-21\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"12:27:52\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosPrestamo",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas del préstamo."
+        },
+        {
+          "Nombre": "cantidadCuotasImpagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas impagas."
+        },
+        {
+          "Nombre": "cantidadCuotasVencidas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas vencidas."
+        },
+        {
+          "Nombre": "capitalOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Capital original del préstamo."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "cuotasPagasConRetraso",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas pagas con retraso."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "sBTDatoAdicional",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "deudaCancelacionTotal",
+          "Tipo": "Double",
+          "Comentarios": "Monto de cancelación total."
+        },
+        {
+          "Nombre": "deudaTotalAFecha",
+          "Tipo": "Double",
+          "Comentarios": "Monto a pagar para estar al día."
+        },
+        {
+          "Nombre": "deudaTotalVencida",
+          "Tipo": "Double",
+          "Comentarios": "Monto de la deuda vencida a la fecha."
+        },
+        {
+          "Nombre": "diasMora",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora del préstamo."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "eventosPosteriores",
+          "Tipo": "String",
+          "Comentarios": "Hay eventos posteriores (S/N)."
+        },
+        {
+          "Nombre": "fechaPrimerCuotaImpaga",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de la primera cuota impaga."
+        },
+        {
+          "Nombre": "fechaProximoVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de la próxima cuota."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de cuota."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del préstamo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del préstamo."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Otros conceptos del préstamo."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Int",
+          "Comentarios": "Período entre cuotas."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "saldoCapital",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de capital."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "Sting",
+          "Comentarios": "Símbolo monetario."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal del préstamo."
+        },
+        {
+          "Nombre": "tasaMoraVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa de mora vigente."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoAmortizacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de amortización."
+        },
+        {
+          "Nombre": "tir",
+          "Tipo": "Double",
+          "Comentarios": "Tir."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor de la cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoAdicional",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "String",
+          "Comentarios": "Detalle de dato adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

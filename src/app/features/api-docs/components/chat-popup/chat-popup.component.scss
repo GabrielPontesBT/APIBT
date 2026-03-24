@@ -1,0 +1,244 @@
+@import 'variables';
+
+.chat-bubble {
+  position: fixed !important;
+  bottom: 1rem;
+  inset-inline-end: 2rem;
+  z-index: 100;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: .5rem;
+  border-width: 0;
+  border-radius: 50%;
+  background: var(--red-1);
+  box-shadow: 10px 10px 10px 5px var(--shadow-light);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
+    transition-duration: 400ms;
+    background: var(--red-1-darken);
+  }
+}
+
+.chat-img {
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.chat-popup {
+  padding: 0.5rem;
+  font-family: var(--font-family);
+  position: fixed;
+  bottom: calc(2.5rem + 3.5rem);
+  right: 2rem;
+  width: 50vw;
+  max-height: 70vh;
+  background: var(--bg-elements);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 50px rgba(0,0,0,1);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  cursor: default;
+  overflow: visible;
+  transform-origin: bottom right;
+  will-change: transform, opacity;
+}
+
+.chat-popup-punta {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  right: 25px;
+  width: 18px;
+  height: 18px;
+  background: var(--bg-elements);
+  transform: rotate(45deg);
+  z-index: 11;
+  box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.25);
+}
+
+.clear-history-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  width: 35px;
+  height: 35px;
+  color: var(--text-color);
+  background-color: var(--grey-hover);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  .material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--red-1) var(--grey-hover);
+}
+
+.user-message, .bot-message {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  max-width: 80%;
+}
+
+.user-message {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: var(--red-2);
+  color: var(--red-1);
+  align-self: flex-end;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px 20px 0 / 20px 20px 0px;
+  float: right;
+  clear: both;
+  width: fit-content;
+}
+
+.bot-message {
+  background-color: var(--grey-1);
+  color: var(--text-color);
+  align-self: flex-start;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px 20px 20px 0 / 20px 20px 20px 0px;
+  float: left;
+  clear: both;
+  width: fit-content;
+  line-height: 1.5;
+  scrollbar-width: thin !important;
+}
+
+::ng-deep .bot-message h1,
+::ng-deep .bot-message h2,
+::ng-deep .bot-message h3 {
+  margin: 1em 0 0.5em;
+  font-weight: 500;
+}
+
+::ng-deep .bot-message h1 { font-size: 1.6em; }
+::ng-deep .bot-message h2 { font-size: 1.4em; }
+::ng-deep .bot-message h3 { font-size: 1.2em; }
+
+::ng-deep .bot-message pre[class*="language-"]   {
+  position: relative; // Necesario para que el botón se posicione dentro
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+::ng-deep .bot-message pre.language-json code,
+::ng-deep .bot-message pre.language-xml code {
+  font-size: 0.6rem !important;
+  display: block;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  padding-right: 2rem; // deja espacio para que el botón no tape texto
+  box-sizing: border-box;
+}
+
+::ng-deep .bot-message .chat-code-wrapper {
+  position: relative;
+}
+
+::ng-deep .bot-message .chat-code-wrapper .mat-icon-button-chat {
+  //position: sticky;
+  top: 0.5rem;
+  right: 0.5rem;
+  float: right;
+  z-index: 10;
+}
+
+::ng-deep .bot-message .mat-icon-button-chat {
+  font-family: 'Material Icons';
+  position: absolute;
+  top: 0.5rem;
+  width: 40px;
+  height: 40px;
+  right: 0.5rem;
+  border-radius: 20%;
+  background-color: var(--code-bg) !important;
+  border: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  mat-icon {
+    color: var(--text-color);
+    font-size: 1.4rem;
+  }
+}
+
+::ng-deep .mat-mdc-tab-body-content {
+  overflow-x: hidden;
+}
+
+.chat-input {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 1rem;
+  border: var(--grey-1);
+  border-radius: 1rem;
+  outline: none;
+  background-color: var(--grey-1);
+  color: var(--text-color);
+}
+
+.chat-input button {
+  margin-left: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: var(--red-1);
+  color: var(--text-color-enviar);
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    background-color: var(--red-1-darken);
+  }
+}

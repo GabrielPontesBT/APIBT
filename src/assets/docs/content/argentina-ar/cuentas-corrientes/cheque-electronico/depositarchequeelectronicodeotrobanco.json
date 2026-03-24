@@ -1,0 +1,66 @@
+{
+  "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/depositarchequeelectronicodeotrobanco",
+  "pageTitle": "Depositar Cheque Electrónico de Otro Banco",
+  "description": "Método para depositar un cheque electrónico de otro banco.",
+  "pubName": "BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco",
+  "programa": "RBTPAR33",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de subcuenta."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "numeroCheque",
+      "Tipo": "Int",
+      "Comentarios": "Número de cheque a emitir."
+    },
+    {
+      "Nombre": "bancoLibradorId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de banco librador."
+    },
+    {
+      "Nombre": "sucursalLibradoraId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de sucursal del banco librador."
+    },
+    {
+      "Nombre": "cuentaDeCheque",
+      "Tipo": "String",
+      "Comentarios": "Cuenta del cheque a depositar."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe registro con el identificador indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n   <soapenv:Header/> \r\n   <soapenv:Body> \r\n      <bts:BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco> \r\n         <bts:Btinreq> \r\n           <bts:Device>10</bts:Device> \r\n            <bts:Usuario>BA</bts:Usuario> \r\n            <bts:Requerimiento>1</bts:Requerimiento> \r\n            <bts:Canal>BTDIGITAL</bts:Canal> \r\n            <bts:Token>ec8CE93AA1</bts:Token> \r\n         </bts:Btinreq> \r\n         <bts:operacionUId>15</bts:operacionUId> \r\n         <bts:importe>3000</bts:importe> \r\n         <bts:bancoLibradorId>1</bts:bancoLibradorId> \r\n         <bts:sucursalLibradoraId>2</bts:sucursalLibradoraId> \r\n         <bts:numeroCheque>3434</bts:numeroCheque> \r\n         <bts:cuentaDeCheque>32</bts:cuentaDeCheque> \r\n      </bts:BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco> \r\n   </soapenv:Body> \r\n</soapenv:Envelope></soapenv:Envelope>",
+      "json": "curl -X POST \\ \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.?DepositarChequeElectronicoDeOtroBanco' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\ \r\n  -d '{ \r\n\t\"Btinreq\": { \r\n\t\t\"Device\": \"AV\", \r\n\t\t\"Usuario\": \"MINSTALADOR\", \r\n\t\t\"Requerimiento\": \"\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \r\n\t}, \r\n\t\"operacionUId\": \"15\", \r\n\t\"importe\": \"3000\", \r\n\t\"bancoLibradorId\": \"1\", \r\n\t\"sucursalLibradoraId\": \"2\", \r\n\t\"numeroCheque\": \"3434\", \r\n\t\"cuentaDeCheque\": \"32\", \r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \r\n   <SOAP-ENV:Body> \r\n      <BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBancoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n         <Btinreq> \r\n            <Device>10</Device> \r\n            <Usuario>BA</Usuario> \r\n            <Requerimiento>1</Requerimiento> \r\n            <Canal>BTDIGITAL</Canal> \r\n            <Token>ec8CE93AA1</Token> \r\n         </Btinreq> \r\n         <Erroresnegocio></Erroresnegocio> \r\n         <Btoutreq> \r\n            <Numero>2565</Numero> \r\n            <Estado>OK</Estado> \r\n            <Servicio>BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco</Servicio> \r\n            <Fecha>2019-05-28</Fecha> \r\n            <Requerimiento>1</Requerimiento> \r\n            <Hora>11:40:41</Hora> \r\n            <Canal>BTDIGITAL</Canal> \r\n         </Btoutreq> \r\n      </BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBancoResponse> \r\n   </SOAP-ENV:Body> \r\n</SOAP-ENV:Envelope>",
+      "json": "'{ \r\n\t\"Btinreq\": { \r\n\t\t\"Device\": \"AV\", \r\n\t\t\"Usuario\": \"MINSTALADOR\", \r\n\t\t\"Requerimiento\": \"\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \r\n\t}, \r\n    \"Erroresnegocio\": { \r\n        \"BTErrorNegocio\": [] \r\n    }, \r\n    \"Btoutreq\": { \r\n        \"Numero\": 8396, \r\n        \"Estado\": \"OK\", \r\n        \"Servicio\": \"BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco\", \r\n        \"Requerimiento\": \"1\", \r\n        \"Fecha\": \"2019-05-07\", \r\n        \"Hora\": \"15:54:44\", \r\n        \"Canal\": \"BTDIGITAL\" \r\n    } \r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

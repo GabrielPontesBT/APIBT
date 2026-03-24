@@ -1,0 +1,67 @@
+{
+  "slug": "personas/agregar/agregaralistanegra",
+  "pageTitle": "Agregar a Lista Negra",
+  "description": "Método para agregar una persona a una lista negra.",
+  "pubName": "BTPersonas.AgregarAListaNegra",
+  "programa": "RBTPG310",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "codigoDeLista",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de lista negra."
+    },
+    {
+      "Nombre": "motivo",
+      "Tipo": "String",
+      "Comentarios": "Motivo por el cual la persona debe estar en la lista."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Identificador de persona requerido."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe persona con el identificador ingresado."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Código Lista no puede ser vacío."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "Código Lista Inválido."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Motivo no puede ser vacío."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "La persona ya se encuentra inhabilitada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarAListaNegra>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>0d402ef5A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>21</bts:personaUId>\r\n         <bts:codigoDeLista>1</bts:codigoDeLista>\r\n         <bts:motivo>Lavado de dinero</bts:motivo>\r\n      </bts:BTPersonas.AgregarAListaNegra>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarAListaNegra' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"personaUId\":\"21\",\r\n\t\"codigoDeLista\":\"1\",\r\n\t\"motivo\":\"Lavado de dinero\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.AgregarAListaNegraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0d402ef5A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8496</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.AgregarAListaNegra</Servicio>\r\n            <Fecha>2019-05-08</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>18:55:05</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.AgregarAListaNegraResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.AgregarAListaNegra\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

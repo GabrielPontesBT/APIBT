@@ -1,0 +1,44 @@
+@import 'variables';
+
+/* INFORMACIÓN INICIAL DEL MÉTODO */
+
+.info-card {
+  padding: 2rem 2rem 2rem 2rem;
+  background: var(--bg-elements);
+  margin: var(--margin-info);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  border-left: var(--red-border);
+  border-right: var(--red-border);
+  line-height: var(--line-height) !important;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.info-card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.info-card_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.info-card_block {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0.7rem 0rem 0.7rem 1rem;
+  border-radius: var(--border-radius);
+  background: var(--table-columns);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .info-card_row {
+    grid-template-columns: 1fr;
+  }
+}

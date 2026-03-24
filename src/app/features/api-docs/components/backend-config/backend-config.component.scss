@@ -1,0 +1,45 @@
+@import '~prismjs/themes/prism.css';
+@import 'variables';
+
+// CONFIGURACIÓN BACKEND
+
+.backend-card {
+  font-family: var(--font-family);
+  margin: var(--margin-backend);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  background: var(--bg-elements);
+  border-radius: var(--border-radius);
+
+  .custom-icon {
+    background-image: url(exclamation.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-weight: 600 !important;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-color);
+  }
+
+  pre {
+    background: transparent;
+    font-family: 'Roboto', sans-serif !important;
+    padding: 0;
+    border-radius: var(--border-radius) / 2;
+    overflow-x: auto;
+    margin: 1rem 0;
+    white-space: pre-wrap;       // <-- clave
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

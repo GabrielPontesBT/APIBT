@@ -1,0 +1,217 @@
+{
+  "slug": "clientes/obtener/obtenerprestamoscancelados",
+  "pageTitle": "Obtener Préstamos Cancelados",
+  "description": "Método para obtener los préstamos cancelados de un cliente.",
+  "pubName": "BTClientes.ObtenerPrestamosCancelados",
+  "programa": "RBTPG486",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "cancelado",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'C' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPrestamos",
+      "Tipo": "sBTPrestamoItem",
+      "Comentarios": "Listado de prestamos del cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El cliente no tiene operaciones."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerPrestamosCancelados>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>54878527AF5867CA94C680B0</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>61</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerPrestamosCancelados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPrestamosCancelados=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": \"1\",\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"clienteUId\": 61,\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerPrestamosCanceladosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>GZ</Device>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Token>54878527AF5867CA94C680B0</Token>\r\n         </Btinreq>\r\n         <sdtPrestamos>\r\n            <sBTPrestamoItem>\r\n               <plazo>634</plazo>\r\n               <periodicidad>0</periodicidad>\r\n               <fechaVencimiento/>\r\n               <producto>\r\n                  <papel>$</papel>\r\n                  <moneda>$</moneda>\r\n                  <productoUId>72</productoUId>\r\n                  <nombre>PRÉSTAMOS, Amortización Automática TF</nombre>\r\n                  <otrosConceptos></otrosConceptos>\r\n               </producto>\r\n               <tasaVigente>0.0</tasaVigente>\r\n               <idOperacionBT>0010100000103000000000000000002900000000000426001</idOperacionBT>\r\n               <valorCuota>1760.66</valorCuota>\r\n               <saldoCapital>1760.66</saldoCapital>\r\n               <fechaPrimerIncumplimiento/>\r\n               <otrosConceptos/>\r\n               <idOperacionFmt>0000000426-000</idOperacionFmt>\r\n               <capitalOriginal>1760.66</capitalOriginal>\r\n               <cantidadCuotasPagas>2</cantidadCuotasPagas>\r\n               <operacionUId>834</operacionUId>\r\n               <fechaUltimoPago/>\r\n               <tipoAmortizacion/>\r\n               <estado>Operación Cancelada</estado>\r\n               <sucursal>Sucursal Ciudad de la Costa</sucursal>\r\n               <tipoProducto>AM</tipoProducto>\r\n               <fechaValor>2018-11-10</fechaValor>\r\n               <cantidadCuotas>44</cantidadCuotas>\r\n            </sBTPrestamoItem>\r\n         </sdtPrestamos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-22</Fecha>\r\n            <Hora>11:58:57</Hora>\r\n            <Numero>26937</Numero>\r\n            <Servicio>BTClientes.ObtenerPrestamosCancelados</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerPrestamosCanceladosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"sdtPrestamos\": {\r\n         \"sBTPrestamoItem\": {\r\n         \"plazo\": 634,\r\n         \"periodicidad\": 0,\r\n         \"fechaVencimiento\": \"\",\r\n         \"producto\": {\r\n            \"papel\": \"$\",\r\n            \"moneda\": \"$\",\r\n            \"productoUId\": 72,\r\n            \"nombre\": \"PRÉSTAMOS, Amortización Automática TF\",\r\n            \"otrosConceptos\":\"\"\r\n         },\r\n         \"tasaVigente\": 0,\r\n         \"idOperacionBT\": 1.0100000103e+46,\r\n         \"valorCuota\": 1760.66,\r\n         \"saldoCapital\": 1760.66,\r\n         \"fechaPrimerIncumplimiento\": \"\",\r\n         \"otrosConceptos\": \"\",\r\n         \"idOperacionFmt\": \"0000000426-000\",\r\n         \"capitalOriginal\": 1760.66,\r\n         \"cantidadCuotasPagas\": 2,\r\n         \"operacionUId\": 834,\r\n         \"fechaUltimoPago\": \"\",\r\n         \"tipoAmortizacion\": \"\",\r\n         \"estado\": \"Operación Cancelada\",\r\n         \"sucursal\": \"Sucursal Ciudad de la Costa\",\r\n         \"tipoProducto\": \"AM\",\r\n         \"fechaValor\": \"2018-11-10\",\r\n         \"cantidadCuotas\": 44\r\n         }\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTClientes.ObtenerPrestamosCancelados\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPrestamoItem",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas."
+        },
+        {
+          "Nombre": "cantidadCuotasPagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas del préstamo."
+        },
+        {
+          "Nombre": "capitalOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Capital original del préstamo."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del préstamo."
+        },
+        {
+          "Nombre": "fechaPrimerIncumplimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer incumplimiento."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de la cuota."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del préstamo."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador texto de operación."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Importe otros conceptos."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Int",
+          "Comentarios": "Período entre cuotas."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "saldoCapital",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de capital."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoAmortizacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de amortización."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA')."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor de la cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

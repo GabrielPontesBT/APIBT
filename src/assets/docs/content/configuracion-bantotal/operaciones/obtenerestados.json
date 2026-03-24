@@ -1,0 +1,58 @@
+{
+  "slug": "configuracion-bantotal/operaciones/obtenerestados",
+  "pageTitle": "Obtener Estados",
+  "description": "Método para obtener un listado de los estados de producto ingresados en Bantotal.",
+  "pubName": "BTConfiguracionBantotal.ObtenerEstados",
+  "programa": "RBTPG801",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtEstados",
+      "Tipo": "sBTEstadoOperacion",
+      "Comentarios": "Listado de estados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No hay estados parametrizados."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerEstados>\r\n         <bts:Btinreq>\r\n            <bts:Device>bms</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Token>f99a68ce154A8B5C60A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n         </bts:Btinreq>\r\n      </bts:BTConfiguracionBantotal.ObtenerEstados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X GET \\\r\n   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados' \\\r\n   -H 'cache-control: no-cache' \\\r\n   -H 'content-type: application/json' \\\r\n   -d '{\r\n   \"Btinreq\": {\r\n        \"Device\": \"bms\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"0\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTConfiguracionBantotal.ObtenerEstadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>bms</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>f99a68ce154A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtEstados>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>S</permiteOperar>\r\n               <descripcion>NORMAL</descripcion>\r\n               <codigo>0</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>N</permiteOperar>\r\n               <descripcion>ORDEN DE NO PAGAR</descripcion>\r\n               <codigo>5</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>C</permiteOperar>\r\n               <descripcion>BLOQUEO P/ FONDO DESEMPLEO</descripcion>\r\n               <codigo>8</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>D</permiteOperar>\r\n               <descripcion>BLOQUEO DE CREDITOS</descripcion>\r\n               <codigo>10</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>C</permiteOperar>\r\n               <descripcion>BLOQUEO DE DEBITOS</descripcion>\r\n               <codigo>11</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>A</permiteOperar>\r\n               <descripcion>BLOQUEO CON AUTORIZACION</descripcion>\r\n               <codigo>12</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>S</permiteOperar>\r\n               <descripcion>CUENTA UNIFICADA</descripcion>\r\n               <codigo>13</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>C</permiteOperar>\r\n               <descripcion>EMBARGO JUDICIAL</descripcion>\r\n               <codigo>15</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>S</permiteOperar>\r\n               <descripcion>Cuenta 50952 en Factoring</descripcion>\r\n               <codigo>20</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>N</permiteOperar>\r\n               <descripcion>Bloqueo por juicio</descripcion>\r\n               <codigo>25</codigo>\r\n            </sBTEstadoOperacion>\r\n            <sBTEstadoOperacion>\r\n               <permiteOperar>N</permiteOperar>\r\n               <descripcion>CANCELADA</descripcion>\r\n               <codigo>99</codigo>\r\n            </sBTEstadoOperacion>\r\n         </sdtEstados>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>1098</Numero>\r\n            <Servicio>BTConfiguracionBantotal.ObtenerEstados</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2020-10-30</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>18:32:26</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTConfiguracionBantotal.ObtenerEstadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Device\": \"bms\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"0\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\r\n    },\r\n    \"sdtEstados\": {\r\n        \"sBTEstadoOperacion\": [\r\n            {\r\n                \"permiteOperar\": \"S\",\r\n                \"descripcion\": \"NORMAL\",\r\n                \"codigo\": 0\r\n            },\r\n            {\r\n                \"permiteOperar\": \"N\",\r\n                \"descripcion\": \"ORDEN DE NO PAGAR\",\r\n                \"codigo\": 5\r\n            },\r\n            {\r\n                \"permiteOperar\": \"C\",\r\n                \"descripcion\": \"BLOQUEO P/ FONDO DESEMPLEO\",\r\n                \"codigo\": 8\r\n            },\r\n            {\r\n                \"permiteOperar\": \"D\",\r\n                \"descripcion\": \"BLOQUEO DE CREDITOS\",\r\n                \"codigo\": 10\r\n            },\r\n            {\r\n                \"permiteOperar\": \"C\",\r\n                \"descripcion\": \"BLOQUEO DE DEBITOS\",\r\n                \"codigo\": 11\r\n            },\r\n            {\r\n                \"permiteOperar\": \"A\",\r\n                \"descripcion\": \"BLOQUEO CON AUTORIZACION\",\r\n                \"codigo\": 12\r\n            },\r\n            {\r\n                \"permiteOperar\": \"S\",\r\n                \"descripcion\": \"CUENTA UNIFICADA\",\r\n                \"codigo\": 13\r\n            },\r\n            {\r\n                \"permiteOperar\": \"C\",\r\n                \"descripcion\": \"EMBARGO JUDICIAL\",\r\n                \"codigo\": 15\r\n            },\r\n            {\r\n                \"permiteOperar\": \"S\",\r\n                \"descripcion\": \"Cuenta 50952 en Factoring\",\r\n                \"codigo\": 20\r\n            },\r\n            {\r\n                \"permiteOperar\": \"N\",\r\n                \"descripcion\": \"Bloqueo por juicio\",\r\n                \"codigo\": 25\r\n            },\r\n            {\r\n                \"permiteOperar\": \"N\",\r\n                \"descripcion\": \"CANCELADA\",\r\n                \"codigo\": 99\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 1104,\r\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerEstados\",\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2020-11-02\",\r\n        \"Requerimiento\": \"0\",\r\n        \"Hora\": \"14:13:38\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEstadoOperacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código del estado."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "permiteOperar",
+          "Tipo": "String",
+          "Comentarios": "¿Permite Operar?"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

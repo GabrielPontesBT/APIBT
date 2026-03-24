@@ -1,0 +1,54 @@
+{
+  "slug": "personas/obtener/obtenerhobby",
+  "pageTitle": "Obtener Hobby",
+  "description": "Método para obtener el hobby de una persona.",
+  "pubName": "BTPersonas.ObtenerHobby",
+  "programa": "RBTPG510",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtHobby",
+      "Tipo": "sBTHobby",
+      "Comentarios": "Datos del hobby."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerHobby>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>3214436424A8B5C60A82434C</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n      </bts:BTPersonas.ObtenerHobby>\r\n      <bts:personaUId>10003</bts:personaUId>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerHobby' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\r\n    },\r\n    \"personaUId\": 10003\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerHobbyResponse  xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Token>3214436424A8B5C60A82434C</Token>\r\n            <Device>GP</Device>\r\n         </Btinreq>\r\n         <sBTHobby>\r\n            <codigo>24</codigo>\r\n            <descripcion>Football</descripcion>\r\n         </sBTHobby>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTPersonas.ObtenerHobby</Servicio>\r\n            <Fecha>2022-05-31</Fecha>\r\n            <Hora>16:03:29</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>8856</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerHobbyResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"c2cfd09eff4A8B5C60A82434\"\r\n    },\r\n   \"SdtsBTHobby\": {\r\n      \"codigo\": \"24\",\r\n      \"descripcion\": \"Football\"\r\n   },\r\n    \"Erroresnegocio\": {\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"839\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerHobby\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2022-05-12\",\r\n        \"Hora\": \"15:35:54\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTHobby",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código de hobby."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de hobby."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

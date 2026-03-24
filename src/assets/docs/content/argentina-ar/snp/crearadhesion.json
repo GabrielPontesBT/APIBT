@@ -1,0 +1,178 @@
+{
+  "slug": "argentina-ar/snp/crearadhesion",
+  "pageTitle": "Crear Adhesión",
+  "description": "Método para crear una adhesión.",
+  "pubName": "BTSNP.CrearAdhesion",
+  "programa": "RBTPG346",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "prestacion",
+      "Tipo": "String",
+      "Comentarios": "Identificador de prestación."
+    },
+    {
+      "Nombre": "empresaOriginante",
+      "Tipo": "String",
+      "Comentarios": "Identificador de la empresa originante."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "idCliente",
+      "Tipo": "String",
+      "Comentarios": "Identificador del Cliente SNP."
+    },
+    {
+      "Nombre": "tipoDeDebito",
+      "Tipo": "Byte",
+      "Comentarios": "Tipo de débito (1=Abierto/2=Cerrado)."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "avisoRechazo",
+      "Tipo": "String",
+      "Comentarios": "¿Aviso rechazo? (S/N)"
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "montoMaximoDebito",
+      "Tipo": "String",
+      "Comentarios": "Monto máximo de débito (M=Mensual/F=Factura)"
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe del Stop Debit."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la empresa originante."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el tipo de débito."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió la prestación."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el ID del cliente SNP."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se encontró un cliente para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El tipo de débito no es correcto."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se recibió importe."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "La operación no corresponde al cliente."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El largo del ID no coincide con el esperado."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El código de moneda no es válido."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "La prestación para la empresa seleccionada no está disponible."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No existe prestación para la empresa seleccionada."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Empresa Originante Inexistente."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "No se pudieron generar los bloques de CBU a partir de la operación dada."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "La operación recibida para obtener el CBU no pertenece al cliente especificado."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "No existe la cuenta."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "Cuenta bloqueada, no permite la adhesión."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "El tipo de débito no es correcto."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "El código de monto máximo de débito es incorrecto."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "El monto no puede ser nulo."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "Ya existe un alta activa o pendiente de proceso."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "Cargar Programa de generación de CBU."
+    },
+    {
+      "Código": "40102",
+      "Descripción": "Cuenta Vinculada debe ser distinto de cero."
+    },
+    {
+      "Código": "40104",
+      "Descripción": "Cuenta BT inexistente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSNP.CrearAdhesion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>7649e27cf5F955E77534D3E0</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>4</bts:clienteUId>\r\n         <bts:tipoDeDebito>1</bts:tipoDeDebito>\r\n         <bts:empresaOriginante>3050001626</bts:empresaOriginante>\r\n         <bts:prestacion>DEB RIO</bts:prestacion>\r\n         <bts:idCliente>5550101516490000005000</bts:idCliente>\r\n         <bts:operacionUId>6</bts:operacionUId>\r\n         <bts:avisoRechazo>S</bts:avisoRechazo>\r\n         <bts:moneda>80</bts:moneda>\r\n         <bts:montoMaximoDebito>M</bts:montoMaximoDebito>\r\n         <bts:importe>1000</bts:importe>\r\n      </bts:BTSNP.CrearAdhesion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearAdhesion' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{   \r\n    \"Btinreq\": {\r\n        \"Device\": \"AC\",\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Requerimiento\": \"\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"7649e27cf5F955E77534D3E0\"\r\n    },\r\n    \"clienteUId\": 4,\r\n    \"empresaOriginante\": \"3050001626\",\r\n    \"tipoDeDebito\": 1,\r\n    \"prestacion\": \"DEB RIO\",\r\n    \"idCliente\": \"5550101516490000005000\",\r\n    \"operacionUId\": 6,\r\n    \"avisoRechazo\": \"N\",\r\n    \"moneda\": 80,\r\n    \"montoMaximoDebito\": \"M\",\r\n    \"importe\": 1000\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTSNP.CrearAdhesionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AC</Device>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>7649e27cf5F955E77534D3E0</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>1637</Numero>\r\n            <Servicio>BTSNP.CrearAdhesion</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2021-06-18</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>11:22:09</Hora>\r\n         </Btoutreq>\r\n      </BTSNP.CrearAdhesionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

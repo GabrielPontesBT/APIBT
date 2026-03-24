@@ -1,0 +1,24 @@
+<nav class="navbar">
+
+  <img
+    class="logo"
+    (click)="goHome()"
+    [src]="isDarkMode ? 'assets/image/logo-Bantotal-blanco.png' : 'assets/image/logo-Bantotal-negro.png'"
+    alt="Logo"
+  >
+
+  <div class="right-section">
+
+    <button class="toggle-theme-button"
+            [class.rotate]="rotate"
+            (click)="toggleTheme()"
+            title="Cambiar tema">
+      <span class="material-icons">
+        {{ isDarkMode ? 'dark_mode' : 'light_mode' }}
+      </span>
+    </button>
+
+    <app-search-box></app-search-box>
+
+  </div>
+</nav>

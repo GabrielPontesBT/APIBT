@@ -1,0 +1,59 @@
+{
+  "slug": "configuracion-bantotal/precios/obtenerpizarrapormodulo",
+  "pageTitle": "Obtener Pizarra por Módulo",
+  "description": "Método para obtener la pizarra genérica por módulo.",
+  "pubName": "BTConfiguracionBantotal.ObtenerPizarraPorModulo",
+  "programa": "RBTPG294",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "modulo",
+      "Tipo": "Int",
+      "Comentarios": "Módulo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPizarras",
+      "Tipo": "sBTPizarra",
+      "Comentarios": "Listado de pizarras."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No se encontraron pizarras de tasas para el módulo indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>480647346F955E77534D3E02</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:modulo>20</bts:modulo>\r\n      </bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPizarraPorModulo' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '\r\n  \t\"bts:Btinreq\": {\r\n\t  \"bts:Canal\": \"BTDIGITAL\",\r\n\t  \"bts:Requerimiento\": \"1\",\r\n\t  \"bts:Usuario\": \"BANTOTAL\",\r\n\t  \"bts:Token\": \"480647346F955E77534D3E02\",\r\n\t  \"bts:Device\": \"AC\"\r\n\t},\r\n\t\"modulo\": 20,"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Token>480647346F955E77534D3E02</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <sdtPizarras>\r\n            <sBTPizarra>\r\n               <codigo>99998</codigo>\r\n               <descripcion>Pizarra Atrib. Exten</descripcion>\r\n            </sBTPizarra>\r\n         </sdtPizarras>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTConfiguracionBantotal.ObtenerPizarraPorModulo</Servicio>\r\n            <Fecha>2021-03-18</Fecha>\r\n            <Hora>10:49:45</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>8033</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n\t\"Btinreq\": {\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Usuario\": \"BANTOTAL\",\r\n\t  \"Token\": \"480647346F955E77534D3E02\",\r\n\t  \"Device\": \"AC\"\r\n\t},\r\n\t\"sdtPizarras\": {\r\n\t  \"sBTPizarra\": {\r\n\t\t\"codigo\": \"99998\",\r\n\t\t\"descripcion\": \"Pizarra Atrib. Exten\"\r\n\t  }\r\n\t},\r\n\t\"Erroresnegocio\": {},\r\n\t\"Btoutreq\": {\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerPizarraPorModulo\",\r\n\t  \"Fecha\": \"2021-03-18\",\r\n\t  \"Hora\": \"10:49:45\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Numero\": \"8033\",\r\n\t  \"Estado\": \"OK\"\r\n\t}\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPizarra",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de pizarra."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la pizarra."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

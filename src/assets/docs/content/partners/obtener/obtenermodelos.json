@@ -1,0 +1,130 @@
+{
+  "slug": "partners/obtener/obtenermodelos",
+  "pageTitle": "Obtener Modelos",
+  "description": "Método para retornar los modelos de una marca.",
+  "pubName": "BTPartners.ObtenerModelos",
+  "programa": "RBTPNV04",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "sBTPartnerInReq",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "marcaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la marca."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtModelos",
+      "Tipo": "sBTModelo",
+      "Comentarios": "Listado de los modelos de una marca."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió Partner ni canal."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se recibió vendedor."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerModelos>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\r\n            <bts:vendedorUId>0</bts:vendedorUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n         </bts:sdtPartner>\r\n         <bts:marcaUId>1</bts:marcaUId>\r\n      </bts:BTPartners.ObtenerModelos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerModelos' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t  \"Device\": \"1\",\r\n\t  \"Usuario\": \"MINSTALADOR\",\r\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\"\r\n\t},\r\n\t\"sdtPartner\": {\r\n          \"puntoVentaUId\": 2,\r\n          \"vendedorUId\": 0,\r\n          \"partnerUId\": 1\r\n   },\r\n   \"marcaUId\": 1\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ObtenerModelosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\r\n         </Btinreq>\r\n         <sdtModelos>\r\n            <sBTModelo>\r\n               <carroceria>Opción 3</carroceria>\r\n               <modeloUId>1</modeloUId>\r\n               <gpsObligatorio>S</gpsObligatorio>\r\n               <tipoVehiculo>Opción 2</tipoVehiculo>\r\n               <tipoVehiculoId>2</tipoVehiculoId>\r\n               <carroceriaId>3</carroceriaId>\r\n               <marcaUId>1</marcaUId>\r\n               <nombreModelo>Q5</nombreModelo>\r\n            </sBTModelo>\r\n         </sdtModelos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16858</Numero>\r\n            <Servicio>BTPartners.ObtenerModelos</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2023-10-27</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>12:11:18</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ObtenerModelosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n      \"Device\": \"1\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Token\": \"16c1cFC33CD93505A5382434\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"1\"\r\n   },\r\n   \"sdtModelos\": {\r\n      \"sBTModelo\": {\r\n      \"carroceria\": \"Opción 3\",\r\n      \"modeloUId\": 1,\r\n      \"gpsObligatorio\": \"S\",\r\n      \"tipoVehiculo\": \"Opción 2\",\r\n      \"tipoVehiculoId\": 2,\r\n      \"carroceriaId\": 3,\r\n      \"marcaUId\": 1,\r\n      \"nombreModelo\": \"Q5\"\r\n      }\r\n   },\r\n   \"Erroresnegocio\": \"\",\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"111399\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTPartners.ObtenerModelos\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Fecha\": \"2023-05-10\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"17:08:56\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTModelo",
+      "fields": [
+        {
+          "Nombre": "carroceria",
+          "Tipo": "String",
+          "Comentarios": "Carrocería."
+        },
+        {
+          "Nombre": "carroceriaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la carrocería."
+        },
+        {
+          "Nombre": "gpsObligatorio",
+          "Tipo": "String",
+          "Comentarios": "¿Es el GPS obligatorio? (S/N)"
+        },
+        {
+          "Nombre": "marcaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la marca."
+        },
+        {
+          "Nombre": "modeloUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador del modelo."
+        },
+        {
+          "Nombre": "nombreModelo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del modelo."
+        },
+        {
+          "Nombre": "tipoVehiculo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de vehículo."
+        },
+        {
+          "Nombre": "tipoVehiculoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de vehículo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

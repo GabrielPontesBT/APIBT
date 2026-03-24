@@ -1,0 +1,123 @@
+/**
+ * search-box.component.scss
+ *
+ * Define los estilos del buscador de documentación, mostrando el panel de
+ * resultados como un dropdown flotante debajo del input para que no altere
+ * el layout principal ni se vea como una segunda sidebar.
+ */
+
+.search-box {
+  position: relative;
+  width: 320px;
+  max-width: 320px;
+}
+
+.search-box__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-box__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  outline: none;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color);
+  font: inherit;
+}
+
+.search-box__clear {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+  color: var(--text-color);
+}
+
+.search-box__results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 420px;
+  max-width: min(420px, 90vw);
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 0.9rem;
+  background: var(--card-bg, #ffffff);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+}
+
+.search-box__result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+  border: 1px solid rgba(128, 128, 128, 0.12);
+  background: transparent;
+  border-radius: 0.8rem;
+  padding: 0.85rem 0.95rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.search-box__result:hover {
+  background: var(--table-columns);
+}
+
+.search-box__result-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.search-box__result-description {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.search-box__result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+.search-box__result-slug {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  word-break: break-word;
+}
+
+.search-box__empty {
+  padding: 0.9rem 0.2rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-box__results {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}

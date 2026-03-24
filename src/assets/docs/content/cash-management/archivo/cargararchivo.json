@@ -1,0 +1,95 @@
+{
+  "slug": "cash-management/archivo/cargararchivo",
+  "pageTitle": "Cargar Archivo",
+  "description": "Método para realizar la carga de un archivo.",
+  "pubName": "BTCASHManagement.CargarArchivo",
+  "programa": "RBTPG360",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contrato",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del contrato CASH."
+    },
+    {
+      "Nombre": "servicio",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "archivo",
+      "Tipo": "String",
+      "Comentarios": "Nombre del archivo a subir."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "archivoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de archivo."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Estado del archivo."
+    },
+    {
+      "Nombre": "cantidadLineas",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de líneas del archivo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030701",
+      "Descripción": "El servicio no existe."
+    },
+    {
+      "Código": "1030702",
+      "Descripción": "El archivo esta vacío."
+    },
+    {
+      "Código": "1030703",
+      "Descripción": "No hay informacion en el archivo."
+    },
+    {
+      "Código": "1030704",
+      "Descripción": "Id de contrato cliente desconocido."
+    },
+    {
+      "Código": "1030706",
+      "Descripción": "El contrato no esta activo."
+    },
+    {
+      "Código": "1030707",
+      "Descripción": "Error al abrir el archivo."
+    },
+    {
+      "Código": "1030710",
+      "Descripción": "Error interno al procesar."
+    },
+    {
+      "Código": "1030715",
+      "Descripción": "No se procesa, este archivo ya fue recibido y procesado."
+    },
+    {
+      "Código": "1030720",
+      "Descripción": "Error procesando el archivo. Ver detalle."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.CargarArchivo>\r\n         <bts:Btinreq>\r\n            <bts:Device>001</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>1e39d33c824A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contrato>94</bts:contrato>\r\n         <bts:servicio>33</bts:servicio>\r\n         <bts:archivo>nomina201903.txt</bts:archivo>\r\n      </bts:BTCASHManagement.CargarArchivo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?CargarArchivo=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'Postman-Token: 71f989b4-091e-46eb-943e-2f53f669b9bb,685d27e3-9d5e-48c2-866a-030669223f5d' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"contrato\": \"94\",\r\n    \"servicio\": \"33\",\r\n    \"archivo\": \"ACH.txt\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.CargarArchivoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>001</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>1e39d33c824A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <archivoId>179</archivoId>\r\n         <estado>P</estado>\r\n         <cantidadLineas>2</cantidadLineas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>7157</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCASHManagement.CargarArchivo</Servicio>\r\n            <Fecha>2019-04-23</Fecha>\r\n            <Requerimiento>?</Requerimiento>\r\n            <Hora>17:21:58</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.CargarArchivoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n   \"Btinreq\":{\r\n      \"Device\":\"001\",\r\n      \"Usuario\":\"MINSTALADOR\",\r\n      \"Requerimiento\":\"1\",\r\n      \"Canal\":\"BTDIGITAL\",\r\n      \"Token\":\"1e39d33c824A8B5C60A82434\"\r\n   },\r\n   \"archivoId\":181,\r\n   \"estado\":\"N\",\r\n   \"cantidadLineas\":2,\r\n   \"Erroresnegocio\":{\r\n      \"BTErrorNegocio\":[\r\n\r\n      ]\r\n   },\r\n   \"Btoutreq\":{\r\n      \"Numero\":7167,\r\n      \"Estado\":\"OK\",\r\n      \"Servicio\":\"BTCASHManagement.CargarArchivo\",\r\n      \"Requerimiento\":\"1\",\r\n      \"Fecha\":\"2019-04-24\",\r\n      \"Hora\":\"11:43:15\",\r\n      \"Canal\":\"BTDIGITAL\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

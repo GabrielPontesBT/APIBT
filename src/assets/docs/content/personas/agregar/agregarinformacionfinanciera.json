@@ -1,0 +1,297 @@
+{
+  "slug": "personas/agregar/agregarinformacionfinanciera",
+  "pageTitle": "Agregar Información Financiera",
+  "description": "Método para agregar la información financiera de una persona.",
+  "pubName": "BTPersonas.AgregarInformacionFinanciera",
+  "programa": "RBTPCO01",
+  "scope": "Colombia",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "sdtInformacionFinanciera",
+      "Tipo": "sBTPCOInformacionFinanciera",
+      "Comentarios": "Datos de información financiera de la persona."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de persona."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar ingresos mensuales."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "Los ingresos mensuales deben ser mayor a [Importe parametrizado]."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El campo ¿Cuales? debe ser [alfabético / numérico]."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "Debe ingresar valor en campo ¿Cuales?."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar total de egresos."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "El total de egresos debe ser mayor a [Importe parametrizado]."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar total de activos."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "El total de activos debe ser mayor a [Importe parametrizado]."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "Debe ingresar valor en origen de recursos."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "Debe ingresar cual es el país de origen de recursos."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "El país de origen de recursos ingresado no es válido."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "El valor ingresado en el campo Origen Recursos no es válido."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "Debe ingresar si opera o no en moneda extranjera."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "Debe ingresar tipo de operación."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "El campo tipo de operación debe ser [alfabético / numérico]."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Debe ingresar tipo de producto."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "El campo tipo de producto debe ser [alfabético / numérico]."
+    },
+    {
+      "Código": "40018",
+      "Descripción": "El tipo de producto ingresado no es válido."
+    },
+    {
+      "Código": "40019",
+      "Descripción": "Debe ingresar número de producto."
+    },
+    {
+      "Código": "40020",
+      "Descripción": "El campo número de producto debe ser [alfabético / numérico]."
+    },
+    {
+      "Código": "40021",
+      "Descripción": "Debe ingresar nombre de entidad."
+    },
+    {
+      "Código": "40022",
+      "Descripción": "El campo nombre de entidad debe ser [alfabético / numérico]."
+    },
+    {
+      "Código": "40023",
+      "Descripción": "Debe ingresar moneda."
+    },
+    {
+      "Código": "40024",
+      "Descripción": "La moneda ingresada no es válida."
+    },
+    {
+      "Código": "40025",
+      "Descripción": "Debe ingresar monto."
+    },
+    {
+      "Código": "40026",
+      "Descripción": "El monto no puede ser menor a 0."
+    },
+    {
+      "Código": "40027",
+      "Descripción": "Debe ingresar país de operaciones internacionales."
+    },
+    {
+      "Código": "40028",
+      "Descripción": "El país de operaciones internacionales ingresado no es válido."
+    },
+    {
+      "Código": "40029",
+      "Descripción": "Debe ingresar ciudad de operaciones internacionales."
+    },
+    {
+      "Código": "40030",
+      "Descripción": "La ciudad ingresada no es válida."
+    },
+    {
+      "Código": "40031",
+      "Descripción": "El valor ingresado en Opera en Moneda Extranjera no es válido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarInformacionFinanciera>\r\n         <bts:Btinreq>\r\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>42</bts:personaUId>\r\n         <bts:sdtInformacionFinanciera>\r\n            <bts:paisOrigenRecursos></bts:paisOrigenRecursos>\r\n            <bts:otrosIngresosMensualesDesc>Alquileres</bts:otrosIngresosMensualesDesc>\r\n            <bts:operacionesInternacionales>\r\n               <bts:tipoProducto>CDT</bts:tipoProducto>\r\n               <bts:moneda></bts:moneda>\r\n               <bts:ciudadId>1465</bts:ciudadId>\r\n               <bts:nombreEntidad>Nombre Entidad Prueba</bts:nombreEntidad>\r\n               <bts:monto>884561.00</bts:monto>\r\n               <bts:pais></bts:pais>\r\n               <bts:ciudad></bts:ciudad>\r\n               <bts:operaMonedaExtranjera>S</bts:operaMonedaExtranjera>\r\n               <bts:numeroProducto>AAALLL</bts:numeroProducto>\r\n               <bts:tipoOperacion>Inversiones</bts:tipoOperacion>\r\n               <bts:monedaId>801</bts:monedaId>\r\n               <bts:paisId>845</bts:paisId>\r\n            </bts:operacionesInternacionales>\r\n            <bts:totalPasivos>450000.00</bts:totalPasivos>\r\n            <bts:origenRecursos>C</bts:origenRecursos>\r\n            <bts:totalIngresosMensuales>550015.00</bts:totalIngresosMensuales>\r\n            <bts:egresosMensuales>380000.00</bts:egresosMensuales>\r\n            <bts:otrosIngresosMensuales>450015.00</bts:otrosIngresosMensuales>\r\n            <bts:ingresosMensuales>100000.00</bts:ingresosMensuales>\r\n            <bts:totalActivos>950000.00</bts:totalActivos>\r\n            <bts:paisOrigenRecursosId></bts:paisOrigenRecursosId>\r\n         </bts:sdtInformacionFinanciera>\r\n      </bts:BTPersonas.AgregarInformacionFinanciera>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarInformacionFinanciera \\\r\n-H 'cache-control: no-cache' \\\r\n-H 'content-type: application/json' \\\r\n-d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"personaUId\": \"42\",\r\n\t\"totalPasivos\": \"450000.00\",\r\n\t\"origenRecursos\": \"C\",\r\n\t\"totalIngresosMensuales\": \"550015.00\",\r\n\t\"egresosMensuales\": \"380000.00\",\r\n\t\"otrosIngresosMensuales\": \"450015.00\",\r\n\t\"ingresosMensuales\": \"100000.00\",\r\n\t\"totalActivos\": \"950000.00\",\r\n\t\"sdtInformacionFinanciera\": {\r\n\t  \"otrosIngresosMensualesDesc\": \"Alquileres\",\r\n\t  \"operacionesInternacionales\": {\r\n\t\t\"tipoProducto\": \"CDT\",\r\n\t\t\"ciudadId\": \"1465\",\r\n\t\t\"nombreEntidad\": \"Nombre Entidad Prueba\",\r\n\t\t\"monto\": \"884561.00\",\r\n\t\t\"operaMonedaExtranjera\": \"S\",\r\n\t\t\"numeroProducto\": \"AAALLL\",\r\n\t\t\"tipoOperacion\": \"Inversiones\",\r\n\t\t\"monedaId\": \"801\",\r\n\t\t\"paisId\": \"845\"\r\n\t  },   \r\n\t}\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.AgregarInformacionFinancieraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>042638a184CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>2098</Numero>\r\n            <Servicio>BTPersonas.AgregarInformacionFinanciera</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2020-03-10</Fecha>\r\n            <Hora>08:54:28</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.AgregarInformacionFinancieraResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"1\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"Btoutreq\": {\r\n\t  \"Numero\": \"2098\",\r\n\t  \"Servicio\": \"BTPersonas.AgregarInformacionFinanciera\",\r\n\t  \"Estado\": \"OK\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Fecha\": \"2020-03-10\",\r\n\t  \"Hora\": \"08:54:28\",\r\n\t  \"Canal\": \"BTDIGITAL\"\r\n\t}\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPCOInformacionFinanciera",
+      "fields": [
+        {
+          "Nombre": "egresosMensuales",
+          "Tipo": "Double",
+          "Comentarios": "Importe de egresos mensuales."
+        },
+        {
+          "Nombre": "ingresosMensuales",
+          "Tipo": "Double",
+          "Comentarios": "Importe de ingresos mensuales."
+        },
+        {
+          "Nombre": "operacionesInternacionales",
+          "Tipo": "sBTPCOOperacionesInternacionales",
+          "Comentarios": "Datos de operaciones internacionales."
+        },
+        {
+          "Nombre": "origenRecursos",
+          "Tipo": "String",
+          "Comentarios": "(C = Colombia / O = Otro)."
+        },
+        {
+          "Nombre": "otrosIngresosMensuales",
+          "Tipo": "Double",
+          "Comentarios": "Importe de otros ingresos mensuales."
+        },
+        {
+          "Nombre": "otrosIngresosMensualesDesc",
+          "Tipo": "String",
+          "Comentarios": "Descripción de otros ingresos mensuales (Se ingresa si se ingresó valor en el campo otrosIngresosMensuales)."
+        },
+        {
+          "Nombre": "paisOrigenRecursos",
+          "Tipo": "String",
+          "Comentarios": "País (Se pide si el país de origen de recursos es O = Otro)."
+        },
+        {
+          "Nombre": "paisOrigenRecursosId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país (Se pide si el país de origen de recursos es O = Otro)."
+        },
+        {
+          "Nombre": "totalActivos",
+          "Tipo": "Double",
+          "Comentarios": "Importe del total de activos."
+        },
+        {
+          "Nombre": "totalIngresosMensuales",
+          "Tipo": "Double",
+          "Comentarios": "Importe del total de ingresos mensuales."
+        },
+        {
+          "Nombre": "totalPasivos",
+          "Tipo": "Double",
+          "Comentarios": "Importe del total de pasivos."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPCOOperacionesInternacionales",
+      "fields": [
+        {
+          "Nombre": "ciudad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de ciudad."
+        },
+        {
+          "Nombre": "ciudadId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de ciudad."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de departamento."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Nombre de moneda."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Double",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "nombreEntidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la entidad."
+        },
+        {
+          "Nombre": "numeroProducto",
+          "Tipo": "String",
+          "Comentarios": "Número del producto."
+        },
+        {
+          "Nombre": "operaMonedaExtranjera",
+          "Tipo": "String",
+          "Comentarios": "(S = Si / N = No) (El resto de los datos solo se piden si se indica S = Si)."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre de país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país."
+        },
+        {
+          "Nombre": "tipoOperacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de operación (Se puede ingresar uno que no se encuentre en la guía de proceso)."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

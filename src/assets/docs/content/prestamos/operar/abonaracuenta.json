@@ -1,0 +1,108 @@
+{
+  "slug": "prestamos/operar/abonaracuenta",
+  "pageTitle": "Abonar a Cuenta",
+  "description": "Método para recibir un pago a un préstamo en el que por alguna condición no se pudiere operar en ese momento. El pago se realiza a un pasivo transitorio u otro rubro a definir, el cual luego deberá ser volcado al préstamo.",
+  "pubName": "BTPrestamos.AbonarACuenta",
+  "programa": "RBTPG226",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de pago, teniendo en cuenta que: \r\n\r\n\t- El préstamo se almacena en el preformato 1. \r\n\r\n\t- La cuenta vista de cobro se almacena en el preformato 2. \r\n\r\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \r\n\r\n3)\tSe debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe a pagar."
+    },
+    {
+      "Nombre": "recibeOperacionCobro",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Recibe o no operación de cobro (S/N)]."
+    },
+    {
+      "Nombre": "operacionUId_cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista de donde se cobrará el préstamo."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento [Asiento]."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de operación de cobro."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operacion para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operacion para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación no pertenece al cliente."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La Cuenta indicada es incorrecta."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.AbonarACuenta>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>321</bts:operacionUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n         <bts:Importe>1000</bts:Importe>\r\n         <bts:operacionUId_cobro>281</bts:operacionUId_cobro>\r\n         <bts:referencia>AbonarACuenta</bts:referencia>\r\n      </bts:BTPrestamos.AbonarACuenta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AbonarACuenta=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 342,\r\n    \"clienteUId\": 161,\r\n    \"Importe\": 1000,\r\n    \"operacionUId_cobro\": 281,\r\n    \"referencia\": \"AbonarACuenta\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.AbonarACuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>dc7d30c0044A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <movimientoUId>121</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>758</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.PagarCuota</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-05</Fecha>\r\n            <Hora>13:32:15</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.AbonarACuentaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": \"122\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"759\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.AbonarACuenta\",\r\n        \"Requerimiento\": \"\",\r\n        \"Fecha\": \"2017-12-05\",\r\n        \"Hora\": \"13:39:04\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

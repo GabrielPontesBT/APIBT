@@ -1,0 +1,22 @@
+<mat-card class="backend-card">
+  <div class="icon-text-container">
+    <span class="custom-icon"></span>
+    <h2>Configuración Backend</h2>
+  </div>
+
+  <!-- Si hay backendData, muestra las tablas -->
+  <ng-container *ngIf="backendData && backendData.length > 0; else noBackendData">
+    <div *ngFor="let config of backendData; let i = index" class="configuracion">
+      <p class="config-title">{{ config.titulo }}</p>
+      <app-api-table
+        [columns]="['Campo', 'Valor']"
+        [data]="config.datos">
+      </app-api-table>
+    </div>
+  </ng-container>
+
+  <!-- Si no hay backendData, muestra el texto -->
+  <ng-template #noBackendData>
+    <pre [innerHTML]="text"></pre>
+  </ng-template>
+</mat-card>

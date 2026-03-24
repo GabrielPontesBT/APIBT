@@ -1,0 +1,119 @@
+{
+  "slug": "seguros-voluntarios/contratarseguro",
+  "pageTitle": "Contratar Seguro",
+  "description": "Método para contratar un seguro.",
+  "pubName": "BTSegurosVoluntarios.ContratarSeguro",
+  "programa": "RBTPG542",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "seguroUId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador único del seguro."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "cantidadCuotas",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de cuotas."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "numeroAfiliacion",
+      "Tipo": "Int",
+      "Comentarios": "Número de afiliación."
+    },
+    {
+      "Nombre": "operacionCobroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cobro."
+    },
+    {
+      "Nombre": "stringAux",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo vacío para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se ingresó código de seguro."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "El importe ingresado no puede ser nulo."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El importe ingresado no puede ser negativo."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La cantidad de Cuotas es menor a la indicada."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]"
+    },
+    {
+      "Código": "40044",
+      "Descripción": "Error de configuración: No se definió transacción a ejecutar."
+    },
+    {
+      "Código": "60001",
+      "Descripción": "El código del seguro no es válido para la contratación."
+    },
+    {
+      "Código": "60008",
+      "Descripción": "La cantidad de Cuotas debe ser menor a la indicada."
+    },
+    {
+      "Código": "60009",
+      "Descripción": "El código de moneda ingresado no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSegurosVoluntarios.ContratarSeguro>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:seguroUId>3</bts:seguroUId>\r\n         <bts:clienteUId>25</bts:clienteUId>\r\n         <bts:importe>3342</bts:importe>\r\n         <bts:cantidadCuotas>6</bts:cantidadCuotas>\r\n         <bts:monedaId>1</bts:monedaId>\r\n         <bts:numeroAfiliacion>3</bts:numeroAfiliacion>\r\n         <bts:operacionCobroUId>47</bts:operacionCobroUId>\r\n      </bts:BTSegurosVoluntarios.ContratarSeguro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ContratarSeguro' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"AC\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"seguroUId\": 3,\r\n    \"clienteUId\": 25,\r\n    \"importe\": 3342,\r\n    \"cantidadCuotas\": 6,\r\n    \"monedaId\": 1,\r\n    \"numeroAfiliacion\": 3,\r\n    \"operacionCobroUId\": 47\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTSegurosVoluntarios.ContratarSeguroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>89B4F6D7BEFB0C7F653DB37A</Token>\r\n         </Btinreq>\r\n         <bts:operacionUId>754</bts:operacionUId>\r\n         <bts:movimientoUId>76</bts:movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>20473</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTSegurosVoluntarios.ContratarSeguro</Servicio>\r\n            <Fecha>2024-05-14</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>15:58:12</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTSegurosVoluntarios.ContratarSeguroResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"\",\r\n      \"Usuario\": \"BANTOTAL\",\r\n      \"Token\": \"324915377F955E77534D3E02\",\r\n      \"Device\": \"AC\"\r\n   },\r\n   \"operacionUId\": 754,\r\n   \"movimientoUId\": 76,\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Servicio\": \"BTSegurosVoluntarios.ObtenerSeguros\",\r\n      \"Fecha\": \"2019-11-19\",\r\n      \"Hora\": \"13:05:22\",\r\n      \"Requerimiento\": \"\",\r\n      \"Numero\": 6924,\r\n      \"Estado\": \"OK\"\r\n   }\r\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

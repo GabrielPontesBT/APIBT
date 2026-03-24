@@ -1,0 +1,89 @@
+{
+  "slug": "microfinanzas/validarpoliticas",
+  "pageTitle": "Validar Políticas",
+  "description": "Método para validar las políticas crediticias de una determinada etapa del proceso de otorgamiento de créditos.",
+  "pubName": "BTMicrofinanzas.ValidarPoliticas",
+  "programa": "RBTPG417",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de instancia Workflow."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "controlOK",
+      "Tipo": "String",
+      "Comentarios": "Devuelve \"N\" si existen políticas que no permiten continuar. \"S\" en caso contrario."
+    },
+    {
+      "Nombre": "sdtValidacionesPoliticas",
+      "Tipo": "sBTValidacionPoliticas",
+      "Comentarios": "Listado de validación de políticas."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de solicitud."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.ValidarPoliticas>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>95</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1001009404CD285A89A23FBE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:solicitudUId>10972</bts:solicitudUId>\r\n      </bts:BTMicrofinanzas.ValidarPoliticas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ValidarPoliticas \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n      \"Btinreq\": {\r\n         \"Canal\": \"BTDIGITAL\",\r\n         \"Requerimiento\": \"95\",\r\n         \"Usuario\": \"INSTALADOR\",\r\n         \"Token\": \"1001009404CD285A89A23FBE\",\r\n         \"Device\": \"GP\"\r\n      },\r\n      \"solicitudUId\": \"10972\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTMicrofinanzas.ValidarPoliticasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>95</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1001009404CD285A89A23FBE</Token>\r\n            <Device>GP</Device>\r\n         </Btinreq>\r\n         <politicasOK>N</politicasOK>\r\n         <sdtValidacionesPoliticas>\r\n            <ValidacionPolitica>\r\n               <paisDocumentoId>320</paisDocumentoId>\r\n               <paisDocumento>GUATEMALA</paisDocumento>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <tipoDocumento>DPI</tipoDocumento>\r\n               <numeroDocumento>2131248150408</numeroDocumento>\r\n               <nombre>ROQUEL POYON MARÍA</nombre>\r\n               <correlativo>1</correlativo>\r\n               <modeloId>951</modeloId>\r\n               <modeloEvaluacion>Politicas - Solicitud Individual</modeloEvaluacion>\r\n               <relacion>1</relacion>\r\n               <relCorrelativo>0</relCorrelativo>\r\n               <tipoIntegrante>T</tipoIntegrante>\r\n               <tipoIntegranteDsc/>\r\n               <nroEjecucion>394</nroEjecucion>\r\n               <politicas>\r\n                  <SdtsBTPoliticaIncumplida>\r\n                     <politicaId>354</politicaId>\r\n                     <politica>Edad del solicitante es mayor a la máxima permitida.</politica>\r\n                     <restriccion>B</restriccion>\r\n                     <restriccionDsc>Bloqueante</restriccionDsc>\r\n                     <estado/>\r\n                     <estadoDsc/>\r\n                     <nroAutorizacion>0</nroAutorizacion>\r\n                     <observacion/>\r\n                  </SdtsBTPoliticaIncumplida>\r\n                  <SdtsBTPoliticaIncumplida>\r\n                     <politicaId>363</politicaId>\r\n                     <politica>Cliente excede el N° máximo de solicitudes en trámite.</politica>\r\n                     <restriccion>A</restriccion>\r\n                     <restriccionDsc>Alerta</restriccionDsc>\r\n                     <estado/>\r\n                     <estadoDsc/>\r\n                     <nroAutorizacion>0</nroAutorizacion>\r\n                     <observacion/>\r\n                  </SdtsBTPoliticaIncumplida>\r\n                  <SdtsBTPoliticaIncumplida>\r\n                     <politicaId>366</politicaId>\r\n                     <politica>Existen Documentos Obligatorios No Recibidos.</politica>\r\n                     <restriccion>A</restriccion>\r\n                     <restriccionDsc>Alerta</restriccionDsc>\r\n                     <estado/>\r\n                     <estadoDsc/>\r\n                     <nroAutorizacion>0</nroAutorizacion>\r\n                     <observacion/>\r\n                  </SdtsBTPoliticaIncumplida>\r\n               </politicas>\r\n            </ValidacionPolitica>\r\n         </sdtValidacionesPoliticas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTMicrofinanzas.ValidarPoliticas</Servicio>\r\n            <Fecha>2019-11-01</Fecha>\r\n            <Hora>13:56:51</Hora>\r\n            <Requerimiento>95</Requerimiento>\r\n            <Numero>1400</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTMicrofinanzas.ValidarPoliticasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n   \"Btinreq\": {\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"95\",\r\n      \"Usuario\": \"INSTALADOR\",\r\n      \"Token\": \"1001009404CD285A89A23FBE\",\r\n      \"Device\": \"GP\"\r\n   },\r\n   \"politicasOK\": \"N\",\r\n   \"sdtValidacionesPoliticas\": {\r\n      \"ValidacionPolitica\": {\r\n      \"paisDocumentoId\": \"320\",\r\n      \"paisDocumento\": \"GUATEMALA\",\r\n      \"tipoDocumentoId\": \"1\",\r\n      \"tipoDocumento\": \"DPI\",\r\n      \"numeroDocumento\": \"2131248150408\",\r\n      \"nombre\": \"ROQUEL POYON MARÍA\",\r\n      \"correlativo\": \"1\",\r\n      \"modeloId\": \"951\",\r\n      \"modeloEvaluacion\": \"Politicas - Solicitud Individual\",\r\n      \"relacion\": \"1\",\r\n      \"relCorrelativo\": \"0\",\r\n      \"tipoIntegrante\": \"T\",\r\n      \"nroEjecucion\": \"394\",\r\n      \"politicas\": {\r\n         \"SdtsBTPoliticaIncumplida\": [\r\n            {\r\n            \"politicaId\": \"354\",\r\n            \"politica\": \"Edad del solicitante es mayor a la máxima permitida.\",\r\n            \"restriccion\": \"B\",\r\n            \"restriccionDsc\": \"Bloqueante\",\r\n            \"nroAutorizacion\": \"0\"\r\n            },\r\n            {\r\n            \"politicaId\": \"363\",\r\n            \"politica\": \"Cliente excede el N° máximo de solicitudes en trámite.\",\r\n            \"restriccion\": \"A\",\r\n            \"restriccionDsc\": \"Alerta\",\r\n            \"nroAutorizacion\": \"0\"\r\n            },\r\n            {\r\n            \"politicaId\": \"366\",\r\n            \"politica\": \"Existen Documentos Obligatorios No Recibidos.\",\r\n            \"restriccion\": \"A\",\r\n            \"restriccionDsc\": \"Alerta\",\r\n            \"nroAutorizacion\": \"0\"\r\n            }\r\n         ]\r\n      }\r\n      }\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Servicio\": \"BTMicrofinanzas.ValidarPoliticas\",\r\n      \"Fecha\": \"2019-11-01\",\r\n      \"Hora\": \"13:56:51\",\r\n      \"Requerimiento\": \"95\",\r\n      \"Numero\": \"1400\",\r\n      \"Estado\": \"OK\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValidacionPoliticas",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "estadoDsc",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "observacion",
+          "Tipo": "String",
+          "Comentarios": "Observación que aplique para una política. Por ejemplo, que haya sido autorizada en una etapa previa."
+        },
+        {
+          "Nombre": "politica",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la política."
+        },
+        {
+          "Nombre": "politicaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de política."
+        },
+        {
+          "Nombre": "restriccion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de restricción de la política."
+        },
+        {
+          "Nombre": "restriccionDsc",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la restricción."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "clientes/obtener/obtenerinformacionadicional",
+  "pageTitle": "Obtener Información Adicional",
+  "description": "Método para obtener la información adicional de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerInformacionAdicional",
+  "programa": "RBTPG520",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtInformacionAdicional",
+      "Tipo": "sBTDatoLista",
+      "Comentarios": "Información Adicional de datos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No existe registro para el identificador único."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>976EB9CBE6D99B71A5E627F1</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>61</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerInformacionAdicional' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t  \"Device\": \"1\",\r\n\t  \"Usuario\": \"MINSTALADOR\",\r\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\"\r\n\t},\r\n\t\"clienteUId\": \"101\",\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>976EB9CBE6D99B71A5E627F1</Token>\r\n         </Btinreq>\r\n         <sdtInformacionAdicional>\r\n            <sBTDatoLista>\r\n               <valor>695</valor>\r\n               <clave>Código Pais</clave>\r\n            </sBTDatoLista>\r\n            <sBTDatoLista>\r\n               <valor>2</valor>\r\n               <clave>Integrantes</clave>\r\n            </sBTDatoLista>\r\n         </sdtInformacionAdicional>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>10787</Numero>\r\n            <Servicio>BTClientes.ObtenerInformacionAdicional</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-10</Fecha>\r\n            <Hora>15:48:08</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerInformacionAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n      \"Device\": \"1\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Token\": \"16c1cFC33CD93505A5382434\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"1\"\r\n   },\r\n   \"sdtInformacionAdicional\": {\r\n      \"sBTDatoLista\": [\r\n      {\r\n         \"clave\": \"Integrantes\",\r\n         \"valor\": \"2\"\r\n      },\r\n      {\r\n          \"clave\": \"Código Pais\",\r\n          \"valor\": \"695\"\r\n      }\r\n      ]\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"111399\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTClientes.ObtenerInformacionAdicional\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Fecha\": \"2023-05-09\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"16:01:52\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

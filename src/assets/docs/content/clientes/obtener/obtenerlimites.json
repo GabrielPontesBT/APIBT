@@ -1,0 +1,73 @@
+{
+  "slug": "clientes/obtener/obtenerlimites",
+  "pageTitle": "Obtener Límites",
+  "description": "Método para obtener los límites de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerLimites",
+  "programa": "RBTPG160",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtLimites",
+      "Tipo": "sBTLimiteCliente",
+      "Comentarios": "Listado de límites."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se encontró un cliente para el identificador recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerLimites>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Device>AC</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>d77f406def4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>61</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerLimites>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerLimites' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Token\": \"d77f406def4A8B5C60A82434\",\r\n\t\t\"Device\": \"AC\"\r\n\t },\r\n\t \"clienteUId\": \"61\"\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerLimitesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AC</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>d77f406def4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtLimites>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Créditos Hipotecarios / $</descripcion>\r\n               <limiteDisponible>2116165.69</limiteDisponible>\r\n               <limiteOtorgado>2500000.00</limiteOtorgado>\r\n               <limteUtilizado>383834.30999999994</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Créditos Comercial PF / $</descripcion>\r\n               <limiteDisponible>2500000.00</limiteDisponible>\r\n               <limiteOtorgado>2500000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Créditos Comercial LP / $</descripcion>\r\n               <limiteDisponible>2500000.00</limiteDisponible>\r\n               <limiteOtorgado>2500000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Firmantes no calificados / $</descripcion>\r\n               <limiteDisponible>500000.00</limiteDisponible>\r\n               <limiteOtorgado>500000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Firmantes AAA / $</descripcion>\r\n               <limiteDisponible>500000.00</limiteDisponible>\r\n               <limiteOtorgado>500000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Línea_Firmantes Estado / $</descripcion>\r\n               <limiteDisponible>500000.00</limiteDisponible>\r\n               <limiteOtorgado>500000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Total / MN</descripcion>\r\n               <limiteDisponible>3000000.00</limiteDisponible>\r\n               <limiteOtorgado>3000000.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n            <sBTLimiteCliente>\r\n               <descripcion>Total / ME</descripcion>\r\n               <limiteDisponible>0.00</limiteDisponible>\r\n               <limiteOtorgado>0.00</limiteOtorgado>\r\n               <limteUtilizado>0.00</limteUtilizado>\r\n            </sBTLimiteCliente>\r\n         </sdtLimites>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>10329</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerLimites</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2020-11-09</Fecha>\r\n            <Hora>18:15:06</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerLimitesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n\t\"Btinreq\": {\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Token\": \"d77f406def4A8B5C60A82434\",\r\n\t\t\"Device\": \"AC\"\r\n\t },\r\n\t\"sdtLimites\": {\r\n\t  \"sBTLimiteCliente\": [\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Créditos Hipotecarios / $\",\r\n\t\t  \"limiteDisponible\": \"2116165.69\",\r\n\t\t  \"limiteOtorgado\": \"2500000.00\",\r\n\t\t  \"limteUtilizado\": \"383834.30999999994\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Créditos Comercial PF / $\",\r\n\t\t  \"limiteDisponible\": \"2500000.00\",\r\n\t\t  \"limiteOtorgado\": \"2500000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Créditos Comercial LP / $\",\r\n\t\t  \"limiteDisponible\": \"2500000.00\",\r\n\t\t  \"limiteOtorgado\": \"2500000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Firmantes no calificados / $\",\r\n\t\t  \"limiteDisponible\": \"500000.00\",\r\n\t\t  \"limiteOtorgado\": \"500000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Firmantes AAA / $\",\r\n\t\t  \"limiteDisponible\": \"500000.00\",\r\n\t\t  \"limiteOtorgado\": \"500000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Línea_Firmantes Estado / $\",\r\n\t\t  \"limiteDisponible\": \"500000.00\",\r\n\t\t  \"limiteOtorgado\": \"500000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Total / MN\",\r\n\t\t  \"limiteDisponible\": \"3000000.00\",\r\n\t\t  \"limiteOtorgado\": \"3000000.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t},\r\n\t\t{\r\n\t\t  \"descripcion\": \"Total / ME\",\r\n\t\t  \"limiteDisponible\": \"0.00\",\r\n\t\t  \"limiteOtorgado\": \"0.00\",\r\n\t\t  \"limteUtilizado\": \"0.00\"\r\n\t\t}\r\n\t  ]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n\t\"Btoutreq\": {\r\n\t  \"Numero\": \"10329\",\r\n\t  \"Estado\": \"OK\",\r\n\t  \"Servicio\": \"BTClientes.ObtenerLimites\",\r\n\t  \"Requerimiento\": \"1\",\r\n\t  \"Fecha\": \"2020-11-09\",\r\n\t  \"Hora\": \"18:15:06\",\r\n\t  \"Canal\": \"BTDIGITAL\"\r\n\t}\r\n }"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTLimiteCliente",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "limiteDisponible",
+          "Tipo": "Double",
+          "Comentarios": "Límite disponible para el cliente."
+        },
+        {
+          "Nombre": "limiteOtorgado",
+          "Tipo": "Double",
+          "Comentarios": "Límite otorgado al cliente."
+        },
+        {
+          "Nombre": "limteUtilizado",
+          "Tipo": "Double",
+          "Comentarios": "Límite utilizado por el cliente."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

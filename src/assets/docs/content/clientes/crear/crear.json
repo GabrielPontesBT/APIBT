@@ -1,0 +1,389 @@
+{
+  "slug": "clientes/crear/crear",
+  "pageTitle": "Crear",
+  "description": "Método para crear una persona y su cuenta cliente.",
+  "pubName": "BTClientes.Crear",
+  "programa": "RBTPG027",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPersona",
+      "Tipo": "sBTPersona1",
+      "Comentarios": "Datos de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30003",
+      "Descripción": "No se pudo obtener identificador único de la cuenta."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar País del Documento."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El País del Documento no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Debe ingresar Tipo de Documento."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El Tipo de Documento no existe."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar Nro de Documento."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Número de Documento incorrecto."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar Primer Apellido."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "Debe ingresar Primer Nombre."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "Debe ingresar Fecha de Nacimiento."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "La Fecha de Nacimiento no puede ser posterior a hoy."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "La persona no es mayor de [Edad mínima] años."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Debe ingresar Sexo."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "Debe ingresar Ocupación."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "El código de Ocupación no existe."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "La Fecha de Inicio de Actividad no puede ser posterior a hoy."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Caracteres incorrectos en nombre/apellido."
+    },
+    {
+      "Código": "40028",
+      "Descripción": "Debe ingresar al menos un Teléfono."
+    },
+    {
+      "Código": "40029",
+      "Descripción": "Email inválido."
+    },
+    {
+      "Código": "40030",
+      "Descripción": "La persona se encuentra en la lista de Inhabilitados: [Descripción lista]."
+    },
+    {
+      "Código": "40035",
+      "Descripción": "Debe ingresar Segmento."
+    },
+    {
+      "Código": "40036",
+      "Descripción": "El código de Segmento no existe."
+    },
+    {
+      "Código": "40037",
+      "Descripción": "Debe ingresar clasificación interna."
+    },
+    {
+      "Código": "40038",
+      "Descripción": "El código de clasificación interna no existe."
+    },
+    {
+      "Código": "40039",
+      "Descripción": "Debe ingresar código de sector."
+    },
+    {
+      "Código": "40040",
+      "Descripción": "El código de Sector no existe."
+    },
+    {
+      "Código": "40041",
+      "Descripción": "Debe ingresar Actividad Laboral."
+    },
+    {
+      "Código": "40042",
+      "Descripción": "El código de Actividad Laboral no existe."
+    },
+    {
+      "Código": "40043",
+      "Descripción": "El País de la nacionalidad no existe."
+    },
+    {
+      "Código": "40044",
+      "Descripción": "El sexo ingresado no es válido."
+    },
+    {
+      "Código": "40049",
+      "Descripción": "Error al obtener el número de cuenta Bantotal."
+    },
+    {
+      "Código": "40051",
+      "Descripción": "La persona ya existe."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "Código de domicilio no válido."
+    },
+    {
+      "Código": "40119",
+      "Descripción": "Debe ingresar País del Domicilio"
+    },
+    {
+      "Código": "40120",
+      "Descripción": "El País del Domicilio no existe."
+    },
+    {
+      "Código": "40121",
+      "Descripción": "Debe ingresar Departamento."
+    },
+    {
+      "Código": "40122",
+      "Descripción": "El Departamento no existe."
+    },
+    {
+      "Código": "40123",
+      "Descripción": "Debe ingresar Localidad."
+    },
+    {
+      "Código": "40124",
+      "Descripción": "La Localidad no existe."
+    },
+    {
+      "Código": "40125",
+      "Descripción": "El barrio no existe."
+    },
+    {
+      "Código": "40126",
+      "Descripción": "Debe ingresar calle."
+    },
+    {
+      "Código": "40127",
+      "Descripción": "Debe ingresar número de puerta."
+    },
+    {
+      "Código": "40128",
+      "Descripción": "Debe ingresar código postal."
+    },
+    {
+      "Código": "40130",
+      "Descripción": "El domicilio ingresado ya existe."
+    },
+    {
+      "Código": "40131",
+      "Descripción": "El domicilio ingresado no existe."
+    },
+    {
+      "Código": "40132",
+      "Descripción": "El número de puerta no puede superar los 5 dígitos."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.Crear>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>0306ebbd9c4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPersona>\r\n            <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n            <bts:paisDocumento></bts:paisDocumento>\r\n            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n            <bts:tipoDocumento></bts:tipoDocumento>\r\n            <bts:nroDocumento>27573084</bts:nroDocumento>\r\n            <bts:segundoNombre/>\r\n            <bts:sexo>M</bts:sexo>\r\n            <bts:estadoCivil>?</bts:estadoCivil>\r\n            <bts:nacionalidad></bts:nacionalidad>\r\n            <bts:ingresos>1500</bts:ingresos>\r\n            <bts:ocupacionId>1</bts:ocupacionId>\r\n            <bts:actividadLaboral></bts:actividadLaboral>\r\n            <bts:apartamento>13B</bts:apartamento>\r\n            <bts:localidad>10</bts:localidad>\r\n            <bts:barrio/>\r\n            <bts:sectorId>3</bts:sectorId>\r\n            <bts:clasificacionInternaId>1</bts:clasificacionInternaId>\r\n            <bts:telefonoCelular>091897718</bts:telefonoCelular>\r\n            <bts:departamentoId>10</bts:departamentoId>\r\n            <bts:nacionalidadId>845</bts:nacionalidadId>\r\n            <bts:localidadId>10</bts:localidadId>\r\n            <bts:clasificacionInterna></bts:clasificacionInterna>\r\n            <bts:paisDomicilioId>845</bts:paisDomicilioId>\r\n            <bts:sector></bts:sector>\r\n            <bts:telefonoFijo>26004288</bts:telefonoFijo>\r\n            <bts:codigoPostal/>\r\n            <bts:primerNombre>ALEJANDRO</bts:primerNombre>\r\n            <bts:fechaNacimiento>1976-02-26</bts:fechaNacimiento>\r\n            <bts:actividadLaboralId>1112</bts:actividadLaboralId>\r\n            <bts:primerApellido>VAZQUEZ</bts:primerApellido>\r\n            <bts:estadoCivilId>1</bts:estadoCivilId>\r\n            <bts:segundoApellido>SZENTANDRASI</bts:segundoApellido>\r\n            <bts:paisDocumento></bts:paisDocumento>\r\n            <bts:fechaInicioActividad/>\r\n            <bts:ocupacion></bts:ocupacion>\r\n            <bts:paisDomicilio></bts:paisDomicilio>\r\n            <bts:departamento></bts:departamento>\r\n            <bts:fechaVencimiento></bts:fechaVencimiento>\r\n            <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>\r\n            <bts:numeroPuerta>7216</bts:numeroPuerta>\r\n            <bts:calle>BAZZURRO</bts:calle>\r\n            <bts:barrioId></bts:barrioId>\r\n            <bts:direccion></bts:direccion>\r\n            <bts:referencia>EN LA ESQUINA</bts:referencia>\r\n            <bts:piso>123</bts:piso>\r\n         </bts:sdtPersona>\r\n      </bts:BTClientes.Crear>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Crear=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"sdtPersona\": {\r\n      \"paisDocumentoId\": 845,\r\n      \"tipoDocumentoId\": 1,\r\n      \"nroDocumento\": \"41875255\",\r\n      \"ingresos\": \"1500.00\",\r\n      \"nacionalidad\": \"URUGUAY\",\r\n      \"sexo\": \"M\",\r\n      \"clasificacionInternaId\": 1,\r\n      \"segundoNombre\": \"\",\r\n      \"telefonoCelular\": \"\",\r\n      \"departamentoId\": 10,\r\n      \"ocupacionId\": \"1\",\r\n      \"actividadLaboralId\": 1112,\r\n      \"nacionalidadId\": 845,\r\n      \"localidadId\": \"10\",\r\n      \"paisDomicilioId\": 845,\r\n      \"telefonoFijo\": \"26004288\",\r\n      \"codigoPostal\": \"\",\r\n      \"primerNombre\": \"aALEJANDRO\",\r\n      \"fechaNacimiento\": \"1976-02-26\",\r\n      \"primerApellido\": \"vVAZQUEZ\",\r\n      \"estadoCivilId\": \"1\",\r\n      \"segundoApellido\": \"SZENTANDRASI\",\r\n      \"paisDocumento\": \"URUGUAY\",\r\n      \"fechaInicioActividad\": \"1980-01-01\",\r\n      \"ocupacion\": \"Empleado\",\r\n      \"paisDomicilio\": \"URUGUAY\",\r\n      \"fechaVencimiento\": \"2025-01-01\",\r\n      \"correoElectronico\": \"AV@GMAIL.COM\",\r\n      \"numeroPuerta\": \"7216\",\r\n      \"calle\": \"BAZZURRO\",\r\n      \"apartamento\": \"13B\",\r\n      \"barrioId\": 0,\r\n      \"sectorId\": 3,\r\n      \"direccion\": \"\",\r\n      \"referencia\": \"EN LA ESQUINA\",\r\n      \"piso\": \"123\"\r\n   }  \r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.CrearResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0306ebbd9c4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <clienteUId>181</clienteUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>770</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.Crear</Servicio>\r\n            <Fecha>2017-12-14</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>18:17:10</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.CrearResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"clienteUId\": \"202\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"835\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.Crear\",\r\n        \"Fecha\": \"2017-12-18\",\r\n        \"Requerimiento\": \"\",\r\n        \"Hora\": \"01:48:53\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersona1",
+      "fields": [
+        {
+          "Nombre": "actividadLaboralId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de actividad."
+        },
+        {
+          "Nombre": "apartamento",
+          "Tipo": "String",
+          "Comentarios": "Apartamento."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de localidad."
+        },
+        {
+          "Nombre": "calle",
+          "Tipo": "String",
+          "Comentarios": "Calle."
+        },
+        {
+          "Nombre": "clasificacionInternaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de clasificación interna."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de departamento."
+        },
+        {
+          "Nombre": "ejecutivoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del ejecutivo."
+        },
+        {
+          "Nombre": "estadoCivil",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado civil."
+        },
+        {
+          "Nombre": "estadoCivilId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de estado civil."
+        },
+        {
+          "Nombre": "fechaInicioActividad",
+          "Tipo": "Date",
+          "Comentarios": "Fecha inicio actividad."
+        },
+        {
+          "Nombre": "fechaNacimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de nacimiento."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de documento."
+        },
+        {
+          "Nombre": "ingresos",
+          "Tipo": "Double",
+          "Comentarios": "Ingresos."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de localidad."
+        },
+        {
+          "Nombre": "nacionalidadId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "numeroPuerta",
+          "Tipo": "String",
+          "Comentarios": "Número de puerta."
+        },
+        {
+          "Nombre": "ocupacionId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de ocupación."
+        },
+        {
+          "Nombre": "paisDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país del documento."
+        },
+        {
+          "Nombre": "paisDomicilioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país de domicilio."
+        },
+        {
+          "Nombre": "piso",
+          "Tipo": "String",
+          "Comentarios": "Piso del domicilio."
+        },
+        {
+          "Nombre": "primerApellido",
+          "Tipo": "String",
+          "Comentarios": "Primer apellido."
+        },
+        {
+          "Nombre": "primerNombre",
+          "Tipo": "String",
+          "Comentarios": "Primer nombre."
+        },
+        {
+          "Nombre": "sectorId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de sector."
+        },
+        {
+          "Nombre": "segundoApellido",
+          "Tipo": "String",
+          "Comentarios": "Segundo apellido."
+        },
+        {
+          "Nombre": "segundoNombre",
+          "Tipo": "String",
+          "Comentarios": "Segundo nombre."
+        },
+        {
+          "Nombre": "sexo",
+          "Tipo": "String",
+          "Comentarios": "Sexo (M/F)."
+        },
+        {
+          "Nombre": "telefonoCelular",
+          "Tipo": "String",
+          "Comentarios": "Teléfono celular."
+        },
+        {
+          "Nombre": "telefonoFijo",
+          "Tipo": "String",
+          "Comentarios": "Teléfono fijo."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de tipo de documento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

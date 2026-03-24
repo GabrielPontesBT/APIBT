@@ -1,0 +1,175 @@
+{
+  "slug": "clientes/obtener/obtenerfacultades",
+  "pageTitle": "Obtener Facultades",
+  "description": "Método para obtener un listado de las facultades de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerFacultades",
+  "programa": "RBTPG452",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtFacultades",
+      "Tipo": "sBTFacultad",
+      "Comentarios": "Listado de datos de facultades."
+    },
+    {
+      "Nombre": "sdtFirmantes",
+      "Tipo": "sBTFacultadFirmante",
+      "Comentarios": "Listado de datos de firmantes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de cliente."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "No se recibió identificador de cuenta a consultar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerFacultades>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>papa</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>BC79E967434CDFE2512C069E</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>342</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerFacultades>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n          \"Requerimiento\": 0,\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Device\": \"papa\",\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Token\": \"BC79E967434CDFE2512C069E\"\r\n        },\r\n        \"clienteUId\": 342\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerFacultadesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>30F74741A02C318CEFD55684</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <sdtFacultades>\r\n            <SdtsBTFacultad>\r\n                <grupos></grupos>\r\n                <firmantes></firmantes>\r\n                <descripcion>Firma de Cheques</descripcion>\r\n                <tipo>Categoría</tipo>\r\n                <codigo>1</codigo>\r\n            </SdtsBTFacultad>\r\n            <SdtsBTFacultad>\r\n                <grupos>\r\n                    <SdtsBTFacultadGrupo>\r\n                        <moneda>$</moneda>\r\n                        <codigoMoneda>0</codigoMoneda>\r\n                        <vigenciaHasta>2022-10-04</vigenciaHasta>\r\n                        <monto>99999990.00</monto>\r\n                        <habilitado>S</habilitado>\r\n                        <firmantes>\r\n                            <SdtsBTFacultadFirmante>\r\n                                <potestad>Titular</potestad>\r\n                                <personaUId>161</personaUId>\r\n                                <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>\r\n                                <categoria/>\r\n                            </SdtsBTFacultadFirmante>\r\n                        </firmantes>\r\n                        <codigoPapel>0</codigoPapel>\r\n                        <papel>$</papel>\r\n                        <numero>1</numero>\r\n                        <vigenciaDesde>2020-01-02</vigenciaDesde>\r\n                    </SdtsBTFacultadGrupo>\r\n                </grupos>\r\n                <firmantes></firmantes>\r\n                <descripcion>Retiro de cuentas vista</descripcion>\r\n                <tipo>Persona</tipo>\r\n                <codigo>2</codigo>\r\n            </SdtsBTFacultad>\r\n        </sdtFacultades>\r\n        <sdtFirmantes>\r\n            <SdtsBTFacultadFirmante>\r\n                <potestad>Titular</potestad>\r\n                <personaUId>161</personaUId>\r\n                <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>\r\n                <categoria/>\r\n            </SdtsBTFacultadFirmante>\r\n        </sdtFirmantes>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTClientes.ObtenerFacultades</Servicio>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>10:23:37</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>486</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerFacultadesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Requerimiento\": 1,\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Token\": \"30F74741A02C318CEFD55684\",\r\n          \"Device\": \"GL\"\r\n        },\r\n        \"sdtFacultades\": {\r\n          \"SdtsBTFacultad\": [\r\n            {\r\n              \"grupos\": \"\",\r\n              \"firmantes\": \"\",\r\n              \"descripcion\": \"Firma de Cheques\",\r\n              \"tipo\": \"Categoría\",\r\n              \"codigo\": 1\r\n            },\r\n            {\r\n              \"grupos\": {\r\n                \"SdtsBTFacultadGrupo\": {\r\n                  \"moneda\": \"$\",\r\n                  \"codigoMoneda\": 0,\r\n                  \"vigenciaHasta\": \"2022-10-04\",\r\n                  \"monto\": 99999990,\r\n                  \"habilitado\": \"S\",\r\n                  \"firmantes\": {\r\n                    \"SdtsBTFacultadFirmante\": {\r\n                      \"potestad\": \"Titular\",\r\n                      \"personaUId\": 161,\r\n                      \"nombre\": \"AZQUEZ SZENTANDRASI LEJANDRO\",\r\n                      \"categoria\": \"\"\r\n                    }\r\n                  },\r\n                  \"codigoPapel\": 0,\r\n                  \"papel\": \"$\",\r\n                  \"numero\": 1,\r\n                  \"vigenciaDesde\": \"2020-01-02\"\r\n                }\r\n              },\r\n              \"firmantes\": \"\",\r\n              \"descripcion\": \"Retiro de cuentas vista\",\r\n              \"tipo\": \"Persona\",\r\n              \"codigo\": 2\r\n            }\r\n          ]\r\n        },\r\n        \"sdtFirmantes\": {\r\n          \"SdtsBTFacultadFirmante\": {\r\n            \"potestad\": \"Titular\",\r\n            \"personaUId\": 161,\r\n            \"nombre\": \"AZQUEZ SZENTANDRASI LEJANDRO\",\r\n            \"categoria\": \"\"\r\n          }\r\n        },\r\n        \"Erroresnegocio\": \"\",\r\n        \"Btoutreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Servicio\": \"BTClientes.ObtenerFacultades\",\r\n          \"Fecha\": \"2022-11-29\",\r\n          \"Hora\": \"10:23:37\",\r\n          \"Requerimiento\": 1,\r\n          \"Numero\": 486,\r\n          \"Estado\": \"OK\"\r\n        }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTFacultad",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "firmantes",
+          "Tipo": "sBTFacultadFirmante",
+          "Comentarios": "Listado de firmantes de la facultad."
+        },
+        {
+          "Nombre": "grupos",
+          "Tipo": "sBTFacultadGrupo",
+          "Comentarios": "Listado de grupos de la facultad."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadGrupo",
+      "fields": [
+        {
+          "Nombre": "codigoMoneda",
+          "Tipo": "Int",
+          "Comentarios": "Código de moneda."
+        },
+        {
+          "Nombre": "codigoPapel",
+          "Tipo": "Long",
+          "Comentarios": "Código de papel."
+        },
+        {
+          "Nombre": "firmantes",
+          "Tipo": "sBTFacultadFirmante",
+          "Comentarios": "Listado de firmantes."
+        },
+        {
+          "Nombre": "habilitado",
+          "Tipo": "String",
+          "Comentarios": "¿Habilitado? (S/N)."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Long",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "numero",
+          "Tipo": "Short",
+          "Comentarios": "Número de grupo."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Papel."
+        },
+        {
+          "Nombre": "vigenciaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia desde."
+        },
+        {
+          "Nombre": "vigenciaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia hasta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadFirmante",
+      "fields": [
+        {
+          "Nombre": "categoria",
+          "Tipo": "String",
+          "Comentarios": "Categoría."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "potestad",
+          "Tipo": "String",
+          "Comentarios": "Potestad."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

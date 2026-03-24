@@ -1,0 +1,48 @@
+{
+  "slug": "personas/obtener/obtenernaturalezasjuridicas",
+  "pageTitle": "Obtener Naturalezas Jurídicas",
+  "description": "Método para obtener un listado de las naturalezas jurídicas ingresadas.",
+  "pubName": "BTPersonas.ObtenerNaturalezasJuridicas",
+  "programa": "RBTPG311",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtNaturalezas",
+      "Tipo": "sBTNaturalezaJuridica",
+      "Comentarios": "Listado de naturalezas jurídicas."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerNaturalezasJuridicas>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>ccbe8f2e2434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTPersonas.ObtenerNaturalezasJuridicas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerNaturalezasJuridicas' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t}\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerNaturalezasJuridicasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>ccbe8f2e2434</Token>\r\n         </Btinreq>\r\n         <sdtNaturalezas>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Sociedad Anónima</descripcion>\r\n               <identificador>1</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Sociedad de Hecho</descripcion>\r\n               <identificador>4</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Soc.Comandita p/Acciones</descripcion>\r\n               <identificador>5</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Sociedad Colectiva</descripcion>\r\n               <identificador>8</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Cooperativa</descripcion>\r\n               <identificador>9</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Ente Público</descripcion>\r\n               <identificador>10</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Sociedad Extranjera</descripcion>\r\n               <identificador>11</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>Unipersonal</descripcion>\r\n               <identificador>17</identificador>\r\n            </sBTNaturalezaJuridica>\r\n            <sBTNaturalezaJuridica>\r\n               <descripcion>No corresponde</descripcion>\r\n               <identificador>99</identificador>\r\n            </sBTNaturalezaJuridica>\r\n         </sdtNaturalezas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8514</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ObtenerNaturalezasJuridicas</Servicio>\r\n            <Fecha>2019-05-09</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>11:43:07</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerNaturalezasJuridicasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtNaturalezas\": {\r\n\t\t\"sBTNaturalezaJuridica\": [\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Sociedad Anónima\",\r\n\t\t\t\t\"identificador\": \"1\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Sociedad de Hecho\",\r\n\t\t\t\t\"identificador\": \"4\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Soc.Comandita p/Acciones\",\r\n\t\t\t\t\"identificador\": \"5\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Sociedad Colectiva\",\r\n\t\t\t\t\"identificador\": \"8\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Cooperativa\",\r\n\t\t\t\t\"identificador\": \"9\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Ente Público\",\r\n\t\t\t\t\"identificador\": \"10\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Sociedad Extranjera\",\r\n\t\t\t\t\"identificador\": \"11\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Unipersonal\",\r\n\t\t\t\t\"identificador\": \"17\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"No corresponde\",\r\n\t\t\t\t\"identificador\": \"99\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerNaturalezasJuridicas\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTNaturalezaJuridica",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de naturaleza jurídica."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de naturaleza jurídica."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

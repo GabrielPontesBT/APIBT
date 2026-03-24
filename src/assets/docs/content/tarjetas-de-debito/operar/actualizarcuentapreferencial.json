@@ -1,0 +1,111 @@
+{
+  "slug": "tarjetas-de-debito/operar/actualizarcuentapreferencial",
+  "pageTitle": "Actualizar Cuenta Preferencial",
+  "description": "Método para actualizar la cuenta preferencial de tarjeta de débito.",
+  "pubName": "BTTarjetasDeDebito.ActualizarCuentaPreferencial",
+  "programa": "RBTPG774",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "tarjetaId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de tarjeta."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de cuenta preferencial del cliente."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30000",
+      "Descripción": "No se recibió el identificador de la tarjeta."
+    },
+    {
+      "Código": "30001",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La Cuenta Preferencial no pertenece al Cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió ni Id ni Número de Tarjeta."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se encontró una tarjeta con el Id recibido."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se encontró una tarjeta con el Número recibido."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La Tarjeta no pertenece al Cliente."
+    },
+    {
+      "Código": "40102",
+      "Descripción": "Error, se ha indicado un Tipo de Cuenta inhabilitado/erróneo."
+    },
+    {
+      "Código": "40104",
+      "Descripción": "Tarjeta inexistente TDD003."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, se ha excedido el máximo de X cuentas permitidas."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, no se permiten mas de X Cajas de Ahorro."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, no se permiten mas de X Cuentas Corriente."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, solo se permite una Cuenta PREFERENCIAL por Moneda."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, solo se permiten X Cuentas PREFERENCIALES."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, no se han asociado Cuentas a la Tarjeta."
+    },
+    {
+      "Código": "40105",
+      "Descripción": "Error, se deberá indicar una Cuenta como PREFERENCIAL, por favor indicarla."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BA</bts:Usuario>\r\n            <bts:Token>0211202010280000399672</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>1</bts:clienteUId>\r\n         <bts:tarjetaUId>109</bts:tarjetaId>\r\n         <bts:operacionUId>10</bts:operacionUId>\r\n      </bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ActualizarCuentaPreferencial' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": \"1\",\r\n\t\t\"Usuario\": \"BA\",\r\n\t\t\"Token\": \"0211202010280000399672\",\r\n\t\t\"Device\": \"MC\"\r\n\t },\r\n\t \"clienteUId\": \"1\",\r\n\t \"tarjetaUId\": \"109\"\r\n\t \"operacionUId\": \"10\"\r\n  }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>BA</Usuario>\r\n            <Token>0211202010280000399672</Token>\r\n            <Device>MC</Device>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTTarjetasDeDebito.ActualizarCuentaPreferencial</Servicio>\r\n            <Fecha>2020-11-02</Fecha>\r\n            <Hora>12:06:37</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>10140</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{ \r\n   \"Btinreq\": { \r\n      \"Canal\": \"BTDIGITAL\", \r\n      \"Requerimiento\": \"1\", \r\n      \"Usuario\": \"BA\", \r\n      \"Token\": \"0211202010280000399672\", \r\n      \"Device\": \"MC\" \r\n   }, \r\n   \"Erroresnegocio\": null, \r\n   \"Btoutreq\": { \r\n      \"Canal\": \"BTDIGITAL\", \r\n      \"Servicio\": \"BTTarjetasDeDebito.ActualizarCuentaPreferencial\", \r\n      \"Fecha\": \"2020-11-02\", \r\n      \"Hora\": \"12:06:37\", \r\n      \"Requerimiento\": \"1\", \r\n      \"Numero\": \"10140\", \r\n      \"Estado\": \"OK\" \r\n   } \r\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

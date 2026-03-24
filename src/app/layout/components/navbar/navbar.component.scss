@@ -1,0 +1,82 @@
+@import 'variables';
+
+.navbar {
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  box-shadow: 0 8px 15px (rgba(0, 0, 0, .15));
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 175;
+  height: var(--navbar-height);
+  background-color:var(--bg-color);
+}
+
+.logo {
+  vertical-align: middle;
+  height: calc( 3.25rem - .5rem);
+  margin-inline-end: .8rem;
+  margin-left: -1rem;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-theme-button {
+  border: none;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: var(--grey-hover);
+    transition-duration: 400ms;
+  }
+}
+
+.toggle-theme-button .material-icons {
+  transition: transform 200ms ease;
+}
+
+.toggle-theme-button:hover .material-icons {
+  color: var(--red-1);
+  transform: scale(1.2);
+  transition-duration: 400ms;
+}
+
+.toggle-theme-button.rotate {
+  animation: rotate-icon 0.6s ease;
+}
+
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

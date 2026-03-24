@@ -1,0 +1,53 @@
+{
+  "slug": "indicadores/obteneragrupadores",
+  "pageTitle": "Obtener Agrupadores",
+  "description": "Método para obtener los agrupadores de indicadores ingresados en el sistema.",
+  "pubName": "BTIndicadores.ObtenerAgrupadores",
+  "programa": "RBTPG700",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtAgrupadores",
+      "Tipo": "sBTAgrupador",
+      "Comentarios": "Listado de Agrupadores."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No existen Agrupadores."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTIndicadores.ObtenerAgrupadores>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>959C2E0AEF210ABC0D8AA8F7</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTIndicadores.ObtenerAgrupadores>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerAgrupadores' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n      \"Device\": 1,\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"959C2E0AEF210ABC0D8AA8F7\",\r\n      \"Usuario\": \"INSTALADOR\",\r\n      \"Requerimiento\": \"1\"\r\n   }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTIndicadores.ObtenerAgrupadoresResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>959C2E0AEF210ABC0D8AA8F7</Token>\r\n         </Btinreq>\r\n         <sdtAgrupadores>\r\n            <sBTAgrupador>\r\n               <descripcion>Condiciones Generales</descripcion>\r\n               <codigo>100</codigo>\r\n            </sBTAgrupador>\r\n            <sBTAgrupador>\r\n               <descripcion>Cajas y Sucursales</descripcion>\r\n               <codigo>200</codigo>\r\n            </sBTAgrupador>\r\n            <sBTAgrupador>\r\n               <descripcion>Contabilidad</descripcion>\r\n               <codigo>300</codigo>\r\n            </sBTAgrupador>\r\n         </sdtAgrupadores>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>11988</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTIndicadores.ObtenerAgrupadores</Servicio>\r\n            <Requerimiento>?</Requerimiento>\r\n            <Fecha>2023-05-22</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>13:56:18</Hora>\r\n         </Btoutreq>\r\n      </BTIndicadores.ObtenerAgrupadoresResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n      \"Device\": 1,\r\n      \"Usuario\": \"INSTALADOR\",\r\n      \"Requerimiento\": \"?\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"959C2E0AEF210ABC0D8AA8F7\"\r\n   },\r\n   \"sdtAgrupadores\": {\r\n      \"sBTAgrupador\": [\r\n      {\r\n         \"descripcion\": \"Condiciones Generales\",\r\n         \"codigo\": 100\r\n      },\r\n      {\r\n         \"descripcion\": \"Cajas y Sucursales\",\r\n         \"codigo\": 200\r\n      },\r\n      {\r\n         \"descripcion\": \"Contabilidad\",\r\n         \"codigo\": 300\r\n      }\r\n      ]\r\n   },\r\n   \"Erroresnegocio\": \"\",\r\n   \"Btoutreq\": {\r\n      \"Numero\": 11988,\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTIndicadores.ObtenerAgrupadores\",\r\n      \"Requerimiento\": \"?\",\r\n      \"Fecha\": \"2023-05-22\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"13:56:18\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTAgrupador",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del agrupador."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del agrupador."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

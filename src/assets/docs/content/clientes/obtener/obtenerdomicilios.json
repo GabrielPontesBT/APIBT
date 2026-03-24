@@ -1,0 +1,193 @@
+{
+  "slug": "clientes/obtener/obtenerdomicilios",
+  "pageTitle": "Obtener Domicilios",
+  "description": "Método para obtener los datos del domicilio de un cliente.",
+  "pubName": "BTClientes.ObtenerDomicilios",
+  "programa": "RBTPG577",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sbtDomicilioCompleto",
+      "Tipo": "sBTDomicilioCompleto",
+      "Comentarios": "Datos de domicilio."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El identificador de la cuenta no es correcto."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerDomicilios>\r\n         <bts:Btinreq>\r\n \t\t  <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>FC</bts:Device>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Token>6C363FC1CD2072DE525376D3</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUID>322</bts:clienteUID>\r\n      </bts:BTClientes.ObtenerDomicilios>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \\\r\n  -d '{\r\n      \"bts:Btinreq\": {\r\n         \"bts:Canal\": \"BTDIGITAL\",\r\n         \"bts:Usuario\": \"INSTALADOR\",\r\n         \"bts:Device\": \"FC\",\r\n         \"bts:Requerimiento\": \"0\",\r\n         \"bts:Token\": \"6C363FC1CD2072DE525376D3\"\r\n         },\r\n      \"bts:clienteUID\": \"322\"\r\n        }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerDomiciliosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FC</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6C363FC1CD2072DE525376D3</Token>\r\n         </Btinreq>\r\n         <SbtdomicilioCompleto>\r\n            <domicilioCompleto>\r\n               <coloniaId>0</coloniaId>\r\n               <agrupador1Id>3</agrupador1Id>\r\n               <agrupador5/>\r\n               <departamento>Artigas</departamento>\r\n               <agrupador4/>\r\n               <agrupador3Id>0</agrupador3Id>\r\n               <detalleUbicacion/>\r\n               <barrio/>\r\n               <agrupador3/>\r\n               <agrupador2>259</agrupador2>\r\n               <agrupador1>LECUEDER</agrupador1>\r\n               <agrupador5Id>0</agrupador5Id>\r\n               <tipoDomicilio>Residencia</tipoDomicilio>\r\n               <ubicacionDesde/>\r\n               <direccion>CALLE LECUEDER NO. PUERTA 259</direccion>\r\n               <colonia/>\r\n               <paisId>845</paisId>\r\n               <tipoVivienda/>\r\n               <pais>URUGUAY</pais>\r\n               <agrupador2Id>1</agrupador2Id>\r\n               <codigoPostal/>\r\n               <tipoViviendaId/>\r\n               <agrupador4Id>0</agrupador4Id>\r\n               <barrioId>1</barrioId>\r\n               <localidadId>1022</localidadId>\r\n               <localidad/>\r\n               <tipoDomicilioId>1</tipoDomicilioId>\r\n               <departamentoId>1</departamentoId>\r\n            </domicilioCompleto>\r\n         </SbtdomicilioCompleto>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>34981</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerDomicilios</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2025-04-30</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>11:02:11</Hora>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerDomiciliosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \\\r\n  -d ' {\r\n\t\"Btinreq\": {\r\n      \"Device\": \"FC\",\r\n      \"Usuario\": \"INSTALADOR\",\r\n      \"Requerimiento\": 0,\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6C363FC1CD2072DE525376D3\"\r\n\t},\r\n   \"sbtDomicilioCompleto\": {\r\n      \"domicilioCompleto\": [\r\n        {\r\n         \"coloniaId\": \"0\",\r\n         \"agrupador1Id\": \"3\",\r\n         \"agrupador5\": \"\",\r\n         \"departamento\": \"Artigas\",\r\n         \"agrupador4\": \"\",\r\n         \"agrupador3Id\": \"0\",\r\n         \"detalleUbicacion\": \"\",\r\n         \"barrio\": \"\",\r\n         \"agrupador3\": \"\",\r\n         \"agrupador2\": \"259\",\r\n         \"agrupador1\": \"LECUEDER\",\r\n         \"agrupador5Id\": \"0\",\r\n         \"tipoDomicilio\": \"Residencia\",\r\n         \"ubicacionDesde\": \"\",\r\n         \"direccion\": \"CALLE LECUEDER NO. PUERTA 259\",\r\n         \"colonia\": \"\",\r\n         \"paisId\": \"845\",\r\n         \"tipoVivienda\": \"\",\r\n         \"pais\": \"URUGUAY\",\r\n         \"agrupador2Id\": \"1\",\r\n         \"codigoPostal\": \"\",\r\n         \"tipoViviendaId\": \"\",\r\n         \"agrupador4Id\": \"0\",\r\n         \"barrioId\": \"1\",\r\n         \"localidadId\": \"1022\",\r\n         \"localidad\": \"\",\r\n         \"tipoDomicilioId\": \"1\",\r\n         \"departamentoId\": \"1\"\r\n         }\r\n      ]\r\n   },\r\n      \"Erroresnegocio\": {\r\n         \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"34981\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTClientes.ObtenerDomicilios\",\r\n      \"Requerimiento\": \"0\",\r\n      \"Fecha\": \"2025-04-30\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"11:02:11\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDomicilioCompleto",
+      "fields": [
+        {
+          "Nombre": "agrupador1",
+          "Tipo": "String",
+          "Comentarios": "Agrupador 1."
+        },
+        {
+          "Nombre": "agrupador1Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador 1."
+        },
+        {
+          "Nombre": "agrupador2",
+          "Tipo": "String",
+          "Comentarios": "Agrupador 2."
+        },
+        {
+          "Nombre": "agrupador2Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador 2."
+        },
+        {
+          "Nombre": "agrupador3",
+          "Tipo": "String",
+          "Comentarios": "Agrupador 3."
+        },
+        {
+          "Nombre": "agrupador3Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador 3."
+        },
+        {
+          "Nombre": "agrupador4",
+          "Tipo": "String",
+          "Comentarios": "Agrupador 4."
+        },
+        {
+          "Nombre": "agrupador4Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador 4."
+        },
+        {
+          "Nombre": "agrupador5",
+          "Tipo": "String",
+          "Comentarios": "Agrupador 5."
+        },
+        {
+          "Nombre": "agrupador5Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador 5."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "colonia",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la colonia."
+        },
+        {
+          "Nombre": "coloniaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la colonia."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "detalleUbicacion",
+          "Tipo": "String",
+          "Comentarios": "Detalle de la ubicación."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la localidad."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "tipoDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoDomicilioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoVivienda",
+          "Tipo": "String",
+          "Comentarios": "Tipo de vivienda."
+        },
+        {
+          "Nombre": "tipoViviendaId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del tipo de vivienda."
+        },
+        {
+          "Nombre": "ubicacionDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde la que se utiliza esta ubicación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

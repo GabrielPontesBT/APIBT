@@ -1,0 +1,72 @@
+{
+  "slug": "ahorro-programado/obtener/obtenerplazoshabilitados",
+  "pageTitle": "Obtener Plazos Habilitados",
+  "description": "Método para obtener un listado de plazos habilitados para los casos que el alta de ahorro programado se realice mediante selección de plazo como lista de valores.",
+  "pubName": "BTAhorroProgramado.ObtenerPlazosHabilitados",
+  "programa": "RBTPG119",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPlazos",
+      "Tipo": "sBTPlazo",
+      "Comentarios": "Listado de plazos habilitados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del producto."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó el producto de ahorro para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Error de configuración: No se definió listado de plazos."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ObtenerPlazosHabilitados>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>f2f7be2ebc4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>41</bts:productoUId>\r\n      </bts:BTAhorroProgramado.ObtenerPlazosHabilitados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerPlazosHabilitados' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\t\"productoUId\": 41\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ObtenerPlazosHabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>f2f7be2ebc4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPlazos>\r\n            <sBTPlazo>\r\n               <Valor>15</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>15 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n            <sBTPlazo>\r\n               <Valor>30</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>30 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n            <sBTPlazo>\r\n               <Valor>60</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>60 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n            <sBTPlazo>\r\n               <Valor>90</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>90 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n            <sBTPlazo>\r\n               <Valor>180</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>180 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n            <sBTPlazo>\r\n               <Valor>360</Valor>\r\n               <Tipo>D</Tipo>\r\n               <Descripcion>360 - Dias</Descripcion>\r\n            </sBTPlazo>\r\n         </sdtPlazos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n\t\t <Btoutreq>\r\n            <Numero>370</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTAhorroProgramado.ObtenerPlazosHabilitados</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2018-04-30</Fecha>\r\n            <Hora>11:21:10</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ObtenerPlazosHabilitadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": \"\",\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtPlazos\": {\r\n        \"sBTPlazo\": [\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"15 - Dias\",\r\n                \"Valor\": \"15\"\r\n            },\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"30 - Dias\",\r\n                \"Valor\": \"30\"\r\n            },\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"60 - Dias\",\r\n                \"Valor\": \"60\"\r\n            },\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"90 - Dias\",\r\n                \"Valor\": \"90\"\r\n            },\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"180 - Dias\",\r\n                \"Valor\": \"180\"\r\n            },\r\n            {\r\n                \"Tipo\": \"D\",\r\n                \"Descripcion\": \"360 - Dias\",\r\n                \"Valor\": \"360\"\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"401\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTAhorroProgramado.ObtenerPlazosHabilitados\",\r\n        \"Fecha\": \"2018-05-03\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Hora\": \"11:10:49\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPlazo",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción extendida del plazo."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de plazo (Diario: 'D', Mensual: 'M', Anual: 'A')."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

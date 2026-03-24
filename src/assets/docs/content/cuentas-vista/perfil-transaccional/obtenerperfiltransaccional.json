@@ -1,0 +1,187 @@
+{
+  "slug": "cuentas-vista/perfil-transaccional/obtenerperfiltransaccional",
+  "pageTitle": "Obtener Perfil Transaccional",
+  "description": "Método para obtener el perfil transaccional de una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerPerfilTransaccional",
+  "programa": "RBTPG625",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPerfilTransaccional",
+      "Tipo": "sBTDatosPerfilTransaccional",
+      "Comentarios": "Datos del perfil transaccional."
+    },
+    {
+      "Nombre": "totalCantidadDepositos",
+      "Tipo": "Int",
+      "Comentarios": "Total de movimientos de depósitos."
+    },
+    {
+      "Nombre": "totalCantidadRetiros",
+      "Tipo": "Int",
+      "Comentarios": "Total de movimientos de retiros."
+    },
+    {
+      "Nombre": "totalMontoDepositos",
+      "Tipo": "Double",
+      "Comentarios": "Total de importes de depósitos."
+    },
+    {
+      "Nombre": "totalMontoRetiros",
+      "Tipo": "Double",
+      "Comentarios": "Total de importes de retiros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Producto a consultar no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.ObtenerPerfilTransaccional>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>GP</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>1EA88623CBDC6645284505C9</Token>\r\n         </Btinreq>\r\n         <bts:operaionUId>2</bts:operaionUId>\r\n      </bts:BTCuentasVista.ObtenerPerfilTransaccional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerPerfilTransaccional=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": \"1\",\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"operacionUId\": 1\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasVista.ObtenerPerfilTransaccionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>GP</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>1EA88623CBDC6645284505C9</Token>\r\n         </Btinreq>\r\n         <sdtPerfilTransaccional>\r\n            <origenDeFondosId>1</origenDeFondosId>\r\n            <origenDeFondos>Asalariado</origenDeFondos>\r\n            <movimientosMensuales>\r\n               <conCheque>\r\n                  <montoRetiros>400.0</montoRetiros>\r\n                  <montoDepositos>300.0</montoDepositos>\r\n                  <cantidadDepositos>3</cantidadDepositos>\r\n                  <cantidadRetiros>4</cantidadRetiros>\r\n               </conCheque>\r\n               <transferenciaLocal>\r\n                  <montoRetiros>500.0</montoRetiros>\r\n                  <montoDepositos>500.0</montoDepositos>\r\n                  <cantidadDepositos>5</cantidadDepositos>\r\n                  <cantidadRetiros>6</cantidadRetiros>\r\n               </transferenciaLocal>\r\n               <transferenciaInternacional>\r\n                  <montoRetiros>800.0</montoRetiros>\r\n                  <paisOrigen>PANAMA</paisOrigen>\r\n                  <paisDestinoId>248</paisDestinoId>\r\n                  <montoDepositos>700.0</montoDepositos>\r\n                  <cantidadDepositos>7</cantidadDepositos>\r\n                  <paisDestino>ALAND</paisDestino>\r\n                  <cantidadRetiros>8</cantidadRetiros>\r\n                  <paisOrigenId>591</paisOrigenId>\r\n               </transferenciaInternacional>\r\n               <enEfectivo>\r\n                  <montoRetiros>200.0</montoRetiros>\r\n                  <montoDepositos>100.0</montoDepositos>\r\n                  <cantidadDepositos>1</cantidadDepositos>\r\n                  <cantidadRetiros>2</cantidadRetiros>\r\n               </enEfectivo>\r\n            </movimientosMensuales>\r\n         </sdtPerfilTransaccional>\r\n         <totalCantidadDepositos>16</totalCantidadDepositos>\r\n         <totalCantidadRetiros>20</totalCantidadRetiros>\r\n         <totalMontoDepositos>1600.0</totalMontoDepositos>\r\n         <totalMontoRetiros>1900.0</totalMontoRetiros>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-09-18</Fecha>\r\n            <Hora>09:51:04</Hora>\r\n            <Numero>6201</Numero>\r\n            <Servicio>BTCuentasVista.ObtenerPerfilTransaccional</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCuentasVista.ObtenerPerfilTransaccionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"sdtPerfilTransaccional\": {\r\n        \"origenDeFondosId\": 1,\r\n        \"origenDeFondos\": \"Asalariado\",\r\n        \"movimientosMensuales\": {\r\n        \"conCheque\": {\r\n            \"montoRetiros\": 400,\r\n            \"montoDepositos\": 300,\r\n            \"cantidadDepositos\": 3,\r\n            \"cantidadRetiros\": 4\r\n        },\r\n        \"transferenciaLocal\": {\r\n            \"montoRetiros\": 500,\r\n            \"montoDepositos\": 500,\r\n            \"cantidadDepositos\": 5,\r\n            \"cantidadRetiros\": 6\r\n        },\r\n        \"transferenciaInternacional\": {\r\n            \"montoRetiros\": 800,\r\n            \"paisOrigen\": \"PANAMA\",\r\n            \"paisDestinoId\": 248,\r\n            \"montoDepositos\": 700,\r\n            \"cantidadDepositos\": 7,\r\n            \"paisDestino\": \"ALAND\",\r\n            \"cantidadRetiros\": 8,\r\n            \"paisOrigenId\": 591\r\n        },\r\n        \"enEfectivo\": {\r\n            \"montoRetiros\": 200,\r\n            \"montoDepositos\": 100,\r\n            \"cantidadDepositos\": 1,\r\n            \"cantidadRetiros\": 2\r\n        }\r\n        }\r\n    },\r\n    \"totalCantidadDepositos\": 16,\r\n    \"totalCantidadRetiros\": 20,\r\n    \"totalMontoDepositos\": 1600,\r\n    \"totalMontoRetiros\": 1900,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTCuentasVista.ObtenerPerfilTransaccional\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosPerfilTransaccional",
+      "fields": [
+        {
+          "Nombre": "origenDeFondosId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del origen de los fondos."
+        },
+        {
+          "Nombre": "origenDeFondos",
+          "Tipo": "String",
+          "Comentarios": "Origen de los fondos."
+        },
+        {
+          "Nombre": "movimientosMensuales",
+          "Tipo": "sBTPerfilTrnMovimientosMensuales",
+          "Comentarios": "Datos de los movimientos mensuales."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPerfilTrnMovimientosMensuales",
+      "fields": [
+        {
+          "Nombre": "enEfectivo",
+          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Comentarios": "Datos de los movimientos mensuales en efectivo."
+        },
+        {
+          "Nombre": "conCheque",
+          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Comentarios": "Datos de los movimientos mensuales con cheques."
+        },
+        {
+          "Nombre": "transferenciaLocal",
+          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Comentarios": "Datos de los movimientos mensuales de transferencias locales."
+        },
+        {
+          "Nombre": "transferenciaInternacional",
+          "Tipo": "sBTPerfilTrnDatosMovInternacionales",
+          "Comentarios": "Datos de los movimientos mensuales de transferencias internacionales."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPerfilTrnDatosMovimientos",
+      "fields": [
+        {
+          "Nombre": "montoRetiros",
+          "Tipo": "Double",
+          "Comentarios": "Total de importes de retiros."
+        },
+        {
+          "Nombre": "montoDepositos",
+          "Tipo": "Double",
+          "Comentarios": "Total de importes de depósitos."
+        },
+        {
+          "Nombre": "cantidadDepositos",
+          "Tipo": "int",
+          "Comentarios": "Cantidad de movimientos de depósitos."
+        },
+        {
+          "Nombre": "cantidadRetiros",
+          "Tipo": "int",
+          "Comentarios": "Cantidad de movimientos de retiros."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPerfilTrnDatosMovInternacionales",
+      "fields": [
+        {
+          "Nombre": "montoRetiros",
+          "Tipo": "Double",
+          "Comentarios": "Total de importes de retiros."
+        },
+        {
+          "Nombre": "montoDepositos",
+          "Tipo": "Double",
+          "Comentarios": "Total de importes de depósitos."
+        },
+        {
+          "Nombre": "cantidadDepositos",
+          "Tipo": "int",
+          "Comentarios": "Cantidad de movimientos de depósitos."
+        },
+        {
+          "Nombre": "cantidadRetiros",
+          "Tipo": "int",
+          "Comentarios": "Cantidad de movimientos de retiros."
+        },
+        {
+          "Nombre": "paisOrigenId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "paisOrigen",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisDestinoId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "paisDestino",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

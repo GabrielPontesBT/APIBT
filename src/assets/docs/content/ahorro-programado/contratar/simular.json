@@ -1,0 +1,302 @@
+{
+  "slug": "ahorro-programado/contratar/simular",
+  "pageTitle": "Simular",
+  "description": "Método para simular el alta de un ahorro programado.",
+  "pubName": "BTAhorroProgramado.Simular",
+  "programa": "RBTPG446",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sBTSolicitudSimulacionAhorroProgramado",
+      "Tipo": "sBTSolicitudSimulacionAhorro",
+      "Comentarios": "Datos de la simulación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sBTSimulacionAhorroProgramado",
+      "Tipo": "sBTSimulacionAhorroProgramado",
+      "Comentarios": "Simulación de ahorro programado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador del producto."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se recuperó la persona para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recuperó el producto de ahorro para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "40150",
+      "Descripción": "Ocurrio un error al actualizar la información del ahorro."
+    },
+    {
+      "Código": "40955",
+      "Descripción": "El deposito inicial es superior al total a ahorrar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.Simular>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>GL</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatos>\r\n            <bts:abono>10000</bts:abono>\r\n            <bts:productoUid>82</bts:productoUid>\r\n            <bts:montoTotalAhorrar>0</bts:montoTotalAhorrar>\r\n            <bts:clienteUid>61</bts:clienteUid>\r\n            <bts:personaUid>22</bts:personaUid>\r\n            <bts:diaIncremento>5</bts:diaIncremento>\r\n            <bts:depositoInicial>1000</bts:depositoInicial>\r\n            <bts:fechaInicioAhorro></bts:fechaInicioAhorro>\r\n            <bts:plazo>360</bts:plazo>\r\n            <bts:periodicidadIncremento>1</bts:periodicidadIncremento>\r\n         </bts:sdtDatos>\r\n      </bts:BTAhorroProgramado.Simular>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Simular' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Device\": \"GL\",\r\n          \"Requerimiento\": 1,\r\n          \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n        },\r\n        \"sdtDatos\": {\r\n          \"abono\": 10000,\r\n          \"productoUid\": 82,\r\n          \"montoTotalAhorrar\": 0,\r\n          \"clienteUid\": 61,\r\n          \"personaUid\": 22,\r\n          \"diaIncremento\": 5,\r\n          \"depositoInicial\": 1000,\r\n          \"fechaInicioAhorro\": \"\",\r\n          \"plazo\": 360,\r\n          \"periodicidadIncremento\": 1\r\n        }\r\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.SimularResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Device>GL</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>01D45E9964612A4C8CCB1055</Token>\r\n         </Btinreq>\r\n         <sdtSimulacion>\r\n            <fechaInicio>2021-01-05</fechaInicio>\r\n            <cronograma>\r\n               <SdtsBTCuotaAhorro>\r\n                  <tasa>10.00</tasa>\r\n                  <impuestos>0.00</impuestos>\r\n                  <interes>8.49</interes>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <plazo>31</plazo>\r\n                  <fechaPago>2021-01-05</fechaPago>\r\n                  <capital>1000.00</capital>\r\n               </SdtsBTCuotaAhorro>\r\n               <SdtsBTCuotaAhorro>\r\n                  <tasa>10.00</tasa>\r\n                  <impuestos>0.00</impuestos>\r\n                  <interes>84.38</interes>\r\n                  <otrosConceptos></otrosConceptos>\r\n                  <plazo>59</plazo>\r\n                  <fechaPago>2021-02-05</fechaPago>\r\n                  <capital>10000.00</capital>\r\n               </SdtsBTCuotaAhorro>\r\n            </cronograma>\r\n            <simulacionId>741</simulacionId>\r\n            <depositoInicial>1000.00</depositoInicial>\r\n            <tasaOriginal>10.00</tasaOriginal>\r\n            <totalIntereses>5463.00</totalIntereses>\r\n            <Abono>10000.00</Abono>\r\n            <totalAhorro>111000.00</totalAhorro>\r\n            <fechaVencimiento>2021-12-31</fechaVencimiento>\r\n            <plazo>360</plazo>\r\n            <producto>\r\n               <moneda>$</moneda>\r\n               <otrosConceptos></otrosConceptos>\r\n               <papel>$</papel>\r\n               <productoUId>82</productoUId>\r\n               <nombre>Ahorro en Sueldo Pesos</nombre>\r\n            </producto>\r\n            <periodicidadIncremento>1</periodicidadIncremento>\r\n            <sucursal>Casa Matriz</sucursal>\r\n            <totalImpuestos>0.00</totalImpuestos>\r\n         </sdtSimulacion>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>17:21:52</Hora>\r\n            <Numero>11095</Numero>\r\n            <Servicio>BTAhorroProgramado.Simular</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.SimularResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Device\": \"GL\",\r\n          \"Requerimiento\": 1,\r\n          \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n        },\r\n        \"sdtSimulacion\": {\r\n          \"fechaInicio\": \"2021-01-05\",\r\n          \"cronograma\": {\r\n            \"SdtsBTCuotaAhorro\": [\r\n              {\r\n                \"tasa\": 10,\r\n                \"impuestos\": 0,\r\n                \"interes\": 8.49,\r\n                \"otrosConceptos\": \"\",\r\n                \"plazo\": 31,\r\n                \"fechaPago\": \"2021-01-05\",\r\n                \"capital\": 1000\r\n              },\r\n              {\r\n                \"tasa\": 10,\r\n                \"impuestos\": 0,\r\n                \"interes\": 84.38,\r\n                \"otrosConceptos\": \"\",\r\n                \"plazo\": 59,\r\n                \"fechaPago\": \"2021-02-05\",\r\n                \"capital\": 10000\r\n              },\r\n            ]\r\n          },\r\n          \"simulacionId\": 741,\r\n          \"depositoInicial\": 1000,\r\n          \"tasaOriginal\": 10,\r\n          \"totalIntereses\": 5463,\r\n          \"Abono\": 10000,\r\n          \"totalAhorro\": 111000,\r\n          \"fechaVencimiento\": \"2021-12-31\",\r\n          \"plazo\": 360,\r\n          \"producto\": {\r\n            \"moneda\": \"$\",\r\n            \"otrosConceptos\":\"\",\r\n            \"papel\": \"$\",\r\n            \"productoUId\": 82,\r\n            \"nombre\": \"Ahorro en Sueldo Pesos\"\r\n          },\r\n          \"periodicidadIncremento\": 1,\r\n          \"sucursal\": \"Casa Matriz\",\r\n          \"totalImpuestos\": 0\r\n        },\r\n        \"Erroresnegocio\": \"\",\r\n        \"Btoutreq\": {\r\n          \"Estado\": \"OK\",\r\n          \"Fecha\": \"2022-11-29\",\r\n          \"Hora\": \"17:21:52\",\r\n          \"Numero\": 11095,\r\n          \"Servicio\": \"BTAhorroProgramado.Simular\",\r\n          \"Requerimiento\": 1,\r\n          \"Canal\": \"BTDIGITAL\"\r\n        }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSolicitudSimulacionAhorro",
+      "fields": [
+        {
+          "Nombre": "abono",
+          "Tipo": "Double",
+          "Comentarios": "Abono."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cliente."
+        },
+        {
+          "Nombre": "depositoInicial",
+          "Tipo": "Double",
+          "Comentarios": "Depósito inicial."
+        },
+        {
+          "Nombre": "diaIncremento",
+          "Tipo": "Int",
+          "Comentarios": "Día de incremento."
+        },
+        {
+          "Nombre": "fechaInicioAhorro",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio del ahorro."
+        },
+        {
+          "Nombre": "montoTotalAhorrar",
+          "Tipo": "Double",
+          "Comentarios": "Monto total del ahorro."
+        },
+        {
+          "Nombre": "periodicidadIncremento",
+          "Tipo": "Int",
+          "Comentarios": "Periodicidad de incremento."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSimulacionAhorroProgramado",
+      "fields": [
+        {
+          "Nombre": "abono",
+          "Tipo": "Double",
+          "Comentarios": "Abono."
+        },
+        {
+          "Nombre": "cronograma",
+          "Tipo": "sBTCronogramaAhorro",
+          "Comentarios": "Detalle del cronograma de ahorro."
+        },
+        {
+          "Nombre": "depositoInicial",
+          "Tipo": "Double",
+          "Comentarios": "Depósito inicial."
+        },
+        {
+          "Nombre": "fechaInicio",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "periodicidadIncremento",
+          "Tipo": "Int",
+          "Comentarios": "Periodicidad de incremento."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "sBTProducto",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "simulacionId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de simulación."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "tasaOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Tasa original."
+        },
+        {
+          "Nombre": "totalAhorro",
+          "Tipo": "Double",
+          "Comentarios": "Total del ahorro."
+        },
+        {
+          "Nombre": "totalImpuestos",
+          "Tipo": "Double",
+          "Comentarios": "Total de impuestos."
+        },
+        {
+          "Nombre": "totalIntereses",
+          "Tipo": "Double",
+          "Comentarios": "Total de intereses."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCronogramaAhorro",
+      "fields": [
+        {
+          "Nombre": "sBTCronogramaAhorro",
+          "Tipo": "sBTCuotaAhorro",
+          "Comentarios": "Datos de la cuota de ahorro."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCuotaAhorro",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago."
+        },
+        {
+          "Nombre": "impuestos",
+          "Tipo": "Double",
+          "Comentarios": "Impuestos."
+        },
+        {
+          "Nombre": "interes",
+          "Tipo": "Double",
+          "Comentarios": "Interés."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "sBTConcepto",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}
