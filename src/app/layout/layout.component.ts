@@ -5,26 +5,26 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
-  animations: [
-    trigger('pageTransition', [
-      transition('* <=> *', [
-        group([
-          query(':leave', [
-            style({ opacity: 1, transform: 'translateY(0)' }),
-            animate('350ms ease-out', style({ opacity: 0, transform: 'translateY(8px)' }))
-          ], { optional: true }),
-
-          query(':enter', [
-            style({ opacity: 0, transform: 'translateY(-8px)' }),
-            animate('450ms 80ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-          ], { optional: true }),
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss'],
+    animations: [
+        trigger('pageTransition', [
+            transition('* <=> *', [
+                group([
+                    query(':leave', [
+                        style({ opacity: 1, transform: 'translateY(0)' }),
+                        animate('350ms ease-out', style({ opacity: 0, transform: 'translateY(8px)' }))
+                    ], { optional: true }),
+                    query(':enter', [
+                        style({ opacity: 0, transform: 'translateY(-8px)' }),
+                        animate('450ms 80ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+                    ], { optional: true }),
+                ]),
+            ]),
         ]),
-      ]),
-    ]),
-  ]
+    ],
+    standalone: false
 })
 export class LayoutComponent {
 

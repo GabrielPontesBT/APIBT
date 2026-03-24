@@ -14,10 +14,11 @@ import { DocPage } from '../../../../core/models/doc-page.model';
 import { DocsService } from '../../services/docs.service';
 
 @Component({
-  selector: 'app-doc-page',
-  templateUrl: './doc-page.component.html',
-  styleUrls: ['./doc-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-doc-page',
+    templateUrl: './doc-page.component.html',
+    styleUrls: ['./doc-page.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class DocPageComponent implements OnInit {
   page$!: Observable<DocPage | null>;

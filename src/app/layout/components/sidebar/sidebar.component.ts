@@ -31,10 +31,11 @@ import { NavigationNode } from '../../../core/models/navigation-node.model';
 import { NavigationService } from '../../../features/api-docs/services/navigation.service';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('sidebarContainer')

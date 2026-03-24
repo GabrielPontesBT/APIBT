@@ -14,9 +14,10 @@ import 'prismjs/components/prism-markup.js';
 import 'prismjs/components/prism-json.min.js';
 
 @Component({
-  selector: 'app-code-example',
-  templateUrl: './code-example.component.html',
-  styleUrls: ['./code-example.component.scss']
+    selector: 'app-code-example',
+    templateUrl: './code-example.component.html',
+    styleUrls: ['./code-example.component.scss'],
+    standalone: false
 })
 export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked {
   readonly sections: Array<'invocation' | 'response'> = ['invocation', 'response'];

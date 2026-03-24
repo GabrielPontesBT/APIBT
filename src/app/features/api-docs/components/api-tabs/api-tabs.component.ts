@@ -1,8 +1,11 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 
-@Component({ selector: 'app-api-tabs', templateUrl: './api-tabs.component.html', 
-  styleUrls: ['./api-tabs.component.scss'],
-  encapsulation: ViewEncapsulation.None })
+@Component({
+    selector: 'app-api-tabs', templateUrl: './api-tabs.component.html',
+    styleUrls: ['./api-tabs.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
+})
 export class ApiTabsComponent {
   @Input() inputCols!: string[];
   @Input() inputData!: any[];

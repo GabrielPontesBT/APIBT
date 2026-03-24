@@ -1,9 +1,10 @@
 import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-vals-data',
-  templateUrl: './vals-data.component.html',
-  styleUrls: ['./vals-data.component.scss']
+    selector: 'app-vals-data',
+    templateUrl: './vals-data.component.html',
+    styleUrls: ['./vals-data.component.scss'],
+    standalone: false
 })
 export class ValsDataComponent {
   @Input() types: { elementValName: string; listHeader: string; description?: string; fields: any[] }[] = [];

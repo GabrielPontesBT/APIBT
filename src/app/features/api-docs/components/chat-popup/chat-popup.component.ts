@@ -15,31 +15,32 @@ interface ChatEntry { role: string; content: string /* raw text */; }
 
 
 @Component({
-  selector: 'app-chat-popup',
-  templateUrl: './chat-popup.component.html',
-  styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
-  animations: [
-    trigger('popupFromButton', [
-      // Fallback para :enter (primer render)
-      transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-      ]),
-      transition('open => closed', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
-      ]),
-      transition('closed => open', [
-        style({ opacity: 0, transform: 'scale(0)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ]),
-    trigger('messageAnim', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0.95)' }),
-        animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ])
-  ]
+    selector: 'app-chat-popup',
+    templateUrl: './chat-popup.component.html',
+    styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
+    animations: [
+        trigger('popupFromButton', [
+            // Fallback para :enter (primer render)
+            transition(':enter', [
+                style({ opacity: 0, transform: 'scale(0)' }),
+                animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+            ]),
+            transition('open => closed', [
+                animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
+            ]),
+            transition('closed => open', [
+                style({ opacity: 0, transform: 'scale(0)' }),
+                animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+            ])
+        ]),
+        trigger('messageAnim', [
+            transition(':enter', [
+                style({ opacity: 0, transform: 'scale(0.95)' }),
+                animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' }))
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;

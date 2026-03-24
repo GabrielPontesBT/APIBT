@@ -15,10 +15,11 @@ import { SearchIndexEntry } from '../../../../core/models/search-index-entry.mod
 import { SearchService } from '../../services/search.service';
 
 @Component({
-  selector: 'app-search-box',
-  templateUrl: './search-box.component.html',
-  styleUrls: ['./search-box.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-search-box',
+    templateUrl: './search-box.component.html',
+    styleUrls: ['./search-box.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class SearchBoxComponent {
   searchControl = new FormControl('', { nonNullable: true });

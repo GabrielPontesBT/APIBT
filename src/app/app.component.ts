@@ -7,27 +7,26 @@ import {
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',   // sigue siendo SOLO <router-outlet>
-  styleUrls: ['./app.component.scss'],
-  animations: [
-    trigger('routeFadeSlide', [
-      transition('* <=> *', [
-        // versión simple (sin forzar position) para no tocar layout
-        group([
-          query(':leave', [
-            animate('140ms ease-out',
-              style({ opacity: 0, transform: 'translateY(0.25rem)' }))
-          ], { optional: true }),
-          query(':enter', [
-            style({ opacity: 0, transform: 'translateY(0.375rem)' }),
-            animate('200ms 40ms ease-out',
-              style({ opacity: 1, transform: 'translateY(0)' }))
-          ], { optional: true }),
+    selector: 'app-root',
+    templateUrl: './app.component.html', // sigue siendo SOLO <router-outlet>
+    styleUrls: ['./app.component.scss'],
+    animations: [
+        trigger('routeFadeSlide', [
+            transition('* <=> *', [
+                // versión simple (sin forzar position) para no tocar layout
+                group([
+                    query(':leave', [
+                        animate('140ms ease-out', style({ opacity: 0, transform: 'translateY(0.25rem)' }))
+                    ], { optional: true }),
+                    query(':enter', [
+                        style({ opacity: 0, transform: 'translateY(0.375rem)' }),
+                        animate('200ms 40ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+                    ], { optional: true }),
+                ]),
+            ]),
         ]),
-      ]),
-    ]),
-  ],
+    ],
+    standalone: false
 })
 export class AppComponent {
   // Dispara la animación en el host sin tocar el template

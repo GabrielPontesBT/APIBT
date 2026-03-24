@@ -8,9 +8,11 @@ interface StructuredType {
 }
 
 @Component({
-  selector: 'app-structured-data',
-  templateUrl: './structured-data.component.html',
-  styleUrls: ['./structured-data.component.scss'] // <- ¿esto está bien escrito?
+    selector: 'app-structured-data',
+    templateUrl: './structured-data.component.html',
+    styleUrls: ['./structured-data.component.scss'] // <- ¿esto está bien escrito?
+    ,
+    standalone: false
 })
 export class StructuredDataComponent {
   @Input() types: StructuredType[] = [];
