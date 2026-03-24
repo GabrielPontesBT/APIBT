@@ -14,31 +14,25 @@ import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/materia
 // ⬇️ NUEVO: registrar la estrategia de título
 import { TitleStrategy } from '@angular/router';
 import { AppTitleStrategy } from './app-title.strategy'; // asegúrate de tener este archivo
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const globalRippleConfig: RippleGlobalOptions = {
   disabled: true,
 };
 
-@NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatListModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    LayoutModule
-  ],
-  providers: [
-    Title, // servicio Title para que la estrategia pueda setearlo
-    { provide: TitleStrategy, useClass: AppTitleStrategy }, // ⬅️ estrategia global "API | ..."
-    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig }
-  ],
-  bootstrap: [ AppComponent ]
-})
+@NgModule({ declarations: [
+        AppComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatListModule,
+        AppRoutingModule,
+        FormsModule,
+        LayoutModule], providers: [
+        Title, // servicio Title para que la estrategia pueda setearlo
+        { provide: TitleStrategy, useClass: AppTitleStrategy }, // ⬅️ estrategia global "API | ..."
+        { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {}
