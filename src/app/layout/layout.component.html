@@ -13,3 +13,7 @@
     <router-outlet (activate)="onChildActivate($event)"></router-outlet>
   </main>
 </div>
+
+@if (!isHome) {
+  <app-scroll-to-top></app-scroll-to-top>
+}

@@ -1,22 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import Fuse from 'fuse.js';
 
 interface PageIndex {
-  url: string;
+  slug: string;
   pageTitle: string;
   description: string;
   pubName: string;
   programa: string;
   scope: string;
-  hasBackendConfig: boolean;
-  backendText: string;
-  backendConfig: any[];
+  keywords: string[];
+  searchableText: string;
 }
 
 export interface SearchResult {
   url: string;
   snippet: string;
   pubName: string;
+  breadcrumb: string;
+  pageTitle: string;
+  // Versiones con términos resaltados en HTML (para [innerHTML])
+  highlightedBreadcrumb: string;
+  highlightedPubName: string;
 }
 
 @Injectable({
@@ -24,14 +29,28 @@ export interface SearchResult {
 })
 export class SearchService {
   private pages: PageIndex[] = [];
-  private indexUrl = 'assets/docs/index.json';
+  private fuse!: Fuse<PageIndex>;
+  private indexUrl = 'assets/docs/search-index.json';
 
   constructor(private http: HttpClient) {
-    this.http.get<{ pages: PageIndex[] }>(this.indexUrl)
-      .subscribe(
-        resp => this.pages = resp.pages,
-        err  => console.error('No se pudo cargar index.json', err)
-      );
+    this.http.get<PageIndex[]>(this.indexUrl).subscribe({
+      next: pages => {
+        this.pages = pages;
+        this.fuse = new Fuse(pages, {
+          keys: [
+            { name: 'pageTitle',      weight: 0.4 },
+            { name: 'pubName',        weight: 0.3 },
+            { name: 'programa',       weight: 0.2 },
+            { name: 'scope',          weight: 0.1 },
+          ],
+          threshold: 0.35,       // 0 = exacto, 1 = todo coincide
+          includeScore: true,
+          ignoreLocation: true,
+          useExtendedSearch: false,
+        });
+      },
+      error: err => console.error('No se pudo cargar search-index.json', err)
+    });
   }
 
   private normalizeText(text: string): string {
@@ -41,60 +60,85 @@ export class SearchService {
       .toLowerCase();
   }
 
+  private slugToBreadcrumb(slug: string): string {
+    return slug
+      .split('/')
+      .map(segment =>
+        segment
+          .split('-')
+          .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(' ')
+      )
+      .join(' > ');
+  }
+
+  /** Envuelve las ocurrencias de los términos en <strong> para resaltado */
+  private highlight(text: string, terms: string[]): string {
+    if (!text) return '';
+    let result = text;
+    for (const term of terms) {
+      if (!term) continue;
+      // Escapa caracteres especiales de regex
+      const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${escaped})`, 'gi');
+      result = result.replace(regex, '<strong>$1</strong>');
+    }
+    return result;
+  }
+
+  private buildResult(page: PageIndex, terms: string[]): SearchResult {
+    const breadcrumb = this.slugToBreadcrumb(page.slug);
+    return {
+      url: '/' + page.slug,
+      snippet: '',
+      pubName: page.pubName,
+      breadcrumb,
+      pageTitle: page.pageTitle,
+      highlightedBreadcrumb: this.highlight(breadcrumb, terms),
+      highlightedPubName: this.highlight(page.pubName, terms),
+    };
+  }
+
   search(query: string): SearchResult[] {
     if (!this.pages.length || !query.trim()) {
       return [];
     }
 
-    // 1) Separa la query en términos
-    const terms = this
-      .normalizeText(query)
-      .split(/\s+/)
-      .filter(t => t);
+    const terms = this.normalizeText(query).split(/\s+/).filter(t => t);
 
-    const results: SearchResult[] = [];
+    // ── 1. Búsqueda exacta por substring (campos clave + searchableText) ──
+    const exactSlugs = new Set<string>();
+    const exactResults: SearchResult[] = [];
 
     for (const page of this.pages) {
-      // 2) Arma y normaliza el haystack
-      const originalText = [
+      const slugText = page.slug.replace(/\//g, ' ').replace(/-/g, ' ');
+      const haystack = this.normalizeText([
+        slugText,
         page.pageTitle,
-        page.description,
         page.pubName,
         page.programa,
         page.scope,
-        page.backendText,
-        ...page.backendConfig.map(cfg => JSON.stringify(cfg))
-      ].join(' ');
-      const haystack = this.normalizeText(originalText);
+        page.searchableText
+      ].join(' '));
 
-      // 3) AND lógico con substring
-      if (!terms.every(term => haystack.includes(term))) {
-        continue;
+      if (terms.every(term => haystack.includes(term))) {
+        exactSlugs.add(page.slug);
+        exactResults.push(this.buildResult(page, terms));
       }
-
-      // 4) Preparamos palabras para extraer contexto
-      const words = haystack.split(/\s+/);
-      const originalWords = originalText.split(/\s+/);
-
-      // 5) Encontramos el primer término que haga match parcial
-      let snippet = '';
-      for (const term of terms) {
-        const idx = words.findIndex(w => w.includes(term));
-        if (idx !== -1) {
-          const start = Math.max(0, idx - 5);
-          const end   = Math.min(words.length, idx + 6);
-          snippet = `... ${originalWords.slice(start, end).join(' ')} ...`;
-          break;
-        }
-      }
-
-      results.push({
-        url: page.url,
-        snippet,
-        pubName: page.pubName
-      });
     }
 
-    return results;
+    // ── 2. Fuzzy search (Fuse.js) para tolerancia a errores de tipeo ──
+    const fuzzyResults: SearchResult[] = [];
+    if (this.fuse) {
+      const fuseHits = this.fuse.search(query);
+      for (const hit of fuseHits) {
+        if (!exactSlugs.has(hit.item.slug)) {
+          fuzzyResults.push(this.buildResult(hit.item, terms));
+        }
+      }
+    }
+
+    // Exactos primero, luego fuzzy
+    return [...exactResults, ...fuzzyResults];
   }
 }
