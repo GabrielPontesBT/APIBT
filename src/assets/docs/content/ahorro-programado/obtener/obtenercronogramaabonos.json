@@ -17,13 +17,13 @@
     {
       "Nombre": "filtroAbono",
       "Tipo": "Byte",
-      "Comentarios": "Tipo de filtro de abono. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de filtro de abono. Se pueden enviar los siguientes <a href=\"#valores1\">valores</a>."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtSituacionAhorro",
-      "Tipo": "sBTSituacionAhorro",
+      "Tipo": "<a href=\"#sbtsituacionahorro\">sBTSituacionAhorro </a>",
       "Comentarios": "Datos de la situación del cronograma."
     }
   ],
@@ -61,7 +61,7 @@
       "fields": [
         {
           "Nombre": "abonos",
-          "Tipo": "sBTAbono",
+          "Tipo": "<a href=\"#sbtabono\">sBTAbono</a>",
           "Comentarios": "Listado de abonos."
         },
         {

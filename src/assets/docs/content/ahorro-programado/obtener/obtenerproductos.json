@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductos",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
       "Comentarios": "Listado de los productos habilitados de ahorro programado."
     }
   ],
@@ -52,7 +52,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

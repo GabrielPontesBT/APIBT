@@ -11,14 +11,14 @@
   "inputData": [
     {
       "Nombre": "sdtOperacionesARefinanciar",
-      "Tipo": "sBTPrestamos",
+      "Tipo": "<a href=\"#sBTPrestamos\">sBTPrestamos</a>",
       "Comentarios": "Datos de las operaciones a refinanciar."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtProductos",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sBTProducto\">sBTProducto</a>",
       "Comentarios": "Listados de los datos de producto."
     }
   ],
@@ -86,7 +86,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

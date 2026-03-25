@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtActividades",
-      "Tipo": "sBTActividad",
+      "Tipo": "<a href=\"#sbtactividad\">sBTActividad</a>",
       "Comentarios": "Listado de actividades."
     }
   ],

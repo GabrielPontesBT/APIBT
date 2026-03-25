@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtPrecancelar",
-      "Tipo": "sBTDatoPrecancelar",
+      "Tipo": "<a href=\"#sbtdatoprecancelar\">sBTDatoPrecancelar</a>",
       "Comentarios": "Datos de la precancelación."
     }
   ],
@@ -67,7 +67,7 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoAdicional",
+          "Tipo": "<a href=\"#sbtdatoAdicional\">sBTDatoAdicional</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {

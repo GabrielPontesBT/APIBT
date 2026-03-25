@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtOperaciones",
-      "Tipo": "sBTOperacionWF",
+      "Tipo": "<a href=\"#sbtoperacionwf\">sBTOperacionWF</a>",
       "Comentarios": "Listado de operaciones."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtIntegrantesJuridicos",
-      "Tipo": "sBTIntegranteJuridico",
+      "Tipo": "<a href=\"#sbtintegrantejuridico\">sBTIntegranteJuridico</a>",
       "Comentarios": "Listado de integrantes jurídicos."
     }
   ],

@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtCalendario",
-      "Tipo": "sBTCalendario",
+      "Tipo": "<a href=\"#sbtcalendario\">sBTCalendario</a>",
       "Comentarios": "Calendario de la sucursal."
     }
   ],

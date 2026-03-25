@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtSectores",
-      "Tipo": "sBTSector",
+      "Tipo": "<a href=\"#sbtsector\">sBTSector</a>",
       "Comentarios": "Listado de sectores."
     }
   ],

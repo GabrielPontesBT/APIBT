@@ -17,18 +17,18 @@
     {
       "Nombre": "parmsAux",
       "Tipo": "String",
-      "Comentarios": "Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores.]"
+      "Comentarios": "<a href=\"#valores\">Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores</a>.]"
     },
     {
       "Nombre": "sdtSimulacionInput",
-      "Tipo": "sBTSimulacionInput",
+      "Tipo": "<a href=\"#sbtsimulacioninput\">sBTSimulacionInput</a>",
       "Comentarios": "Datos necesarios para la simulación."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtSimulacionOutput",
-      "Tipo": "sBTSimulacionOutput",
+      "Tipo": "<a href=\"#sbtsimulacionoutput\">sBTSimulacionOutput</a>",
       "Comentarios": "Datos de salida de la simulación."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtFacultades",
-      "Tipo": "sBTFacultadesPersona",
+      "Tipo": "<a href=\"#sbtfacultadespersona\">sBTFacultadesPersona</a>",
       "Comentarios": "Listado de datos de facultades."
     }
   ],
@@ -48,12 +48,12 @@
       "fields": [
         {
           "Nombre": "sBTFacultadesCliente",
-          "Tipo": "sBTFacultadPersonaCliente",
+          "Tipo": "<a href=\"#sbtfacultadpersonacliente\">sBTFacultadPersonaCliente</a>",
           "Comentarios": "Listado de datos de cliente."
         },
         {
           "Nombre": "sBTFacultadesOperacion",
-          "Tipo": "sBTFacultadPersonaOperacion",
+          "Tipo": "<a href=\"#sbtfacultadpersonaoperacion\">sBTFacultadPersonaOperacion</a>",
           "Comentarios": "Listado de datos de operación."
         }
       ]
@@ -83,7 +83,7 @@
         },
         {
           "Nombre": "grupo",
-          "Tipo": "sBTFacultadGrupoPersona",
+          "Tipo": "<a href=\"#sbtfacultadgrupopersona\">sBTFacultadGrupoPersona</a>",
           "Comentarios": "Listado de grupos de la facultad."
         },
         {
@@ -118,7 +118,7 @@
         },
         {
           "Nombre": "grupo",
-          "Tipo": "sBTFacultadGrupoPersona",
+          "Tipo": "<a href=\"#sbtfacultadgrupopersona\">sBTFacultadGrupoPersona</a>",
           "Comentarios": "Listado de grupos de la facultad."
         },
         {
@@ -133,7 +133,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos de producto."
         },
         {
@@ -203,7 +203,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtDatosConyuge",
-      "Tipo": "sBTDatosConyuge",
+      "Tipo": "<a href=\"#sbtdatosconyuge\">sBTDatosConyuge</a>",
       "Comentarios": "Datos del cónyuge."
     }
   ],

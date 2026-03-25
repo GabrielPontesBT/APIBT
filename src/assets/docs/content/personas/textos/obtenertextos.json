@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sbtTextos",
-      "Tipo": "sBTTextoPersona",
+      "Tipo": "<a href=\"#sbttextoPersona\">sBTTextoPersona</a>",
       "Comentarios": "Listado de textos de la persona."
     }
   ],

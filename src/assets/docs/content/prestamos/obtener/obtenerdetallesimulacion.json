@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtDetalleSimulacion",
-      "Tipo": "sBTDetalleSimulacion",
+      "Tipo": "<a href=\"#sbtdetallesimulacion\">sBTDetalleSimulacion</a>",
       "Comentarios": "Detalles de la simulación."
     }
   ],
@@ -122,7 +122,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto."
         },
         {
@@ -177,7 +177,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

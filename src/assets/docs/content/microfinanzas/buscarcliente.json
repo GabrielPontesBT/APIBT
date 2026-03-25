@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtCuentas",
-      "Tipo": "sBTCuentasCliente",
+      "Tipo": "<a href=\"#sbtcuentascliente\">sBTCuentasCliente</a>",
       "Comentarios": "Listado de cuentas de la persona."
     }
   ],
@@ -84,7 +84,7 @@
         },
         {
           "Nombre": "titularidad",
-          "Tipo": "sBTTipoIntegrante",
+          "Tipo": "<a href=\"#sbttipointegrante\">sBTTipoIntegrante</a>",
           "Comentarios": "Tipo de integrante."
         }
       ]

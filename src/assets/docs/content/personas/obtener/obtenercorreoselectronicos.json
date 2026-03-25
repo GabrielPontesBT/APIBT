@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtCorreoElectronicos",
-      "Tipo": "sBTCorreoElectronico",
+      "Tipo": "<a href=\"#sbtcorreoelectronico\">sBTCorreoElectronico</a>",
       "Comentarios": "Listado de correos electrónicos."
     }
   ],

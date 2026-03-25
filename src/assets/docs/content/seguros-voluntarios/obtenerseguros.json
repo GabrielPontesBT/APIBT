@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtSeguros",
-      "Tipo": "sBTSeguro",
+      "Tipo": "<a href=\"#sbtseguro\">sBTSeguro</a>",
       "Comentarios": "Listado de seguros."
     }
   ],

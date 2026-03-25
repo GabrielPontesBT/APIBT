@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "sdtClasesActivos",
-      "Tipo": "sBTClaseActivo",
+      "Tipo": "<a href=\"#sbtclaseactivo\">sBTClaseActivo</a>",
       "Comentarios": "Datos de las clases de activos."
     }
   ],

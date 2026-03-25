@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtMenus",
-      "Tipo": "sBTMenu",
+      "Tipo": "<a href=\"#sbtmenu\">sBTMenu</a>",
       "Comentarios": "Listado de menús."
     }
   ],

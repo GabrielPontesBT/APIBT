@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtAcuerdosCliente",
-      "Tipo": "sBTAcuerdoClienteCC",
+      "Tipo": "<a href=\"#sbtacuerdoclientecc\">sBTAcuerdoClienteCC</a>",
       "Comentarios": "Listado de acuerdos del cliente."
     }
   ],

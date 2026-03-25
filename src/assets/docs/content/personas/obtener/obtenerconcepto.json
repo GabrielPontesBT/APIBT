@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtValorCampo",
-      "Tipo": "sBTValorCampo",
+      "Tipo": "<a href=\"#sbtvalorcampo\">sBTValorCampo</a>",
       "Comentarios": "Listado de conceptos del programa."
     }
   ],

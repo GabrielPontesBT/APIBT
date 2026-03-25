@@ -43,7 +43,7 @@
   "outputData": [
     {
       "Nombre": "listaArchivos",
-      "Tipo": "sBTResumenCabezal",
+      "Tipo": "<a href=\"#sbtresumencabezal\">sBTResumenCabezal</a>",
       "Comentarios": "Listado de cabezales solicitado."
     }
   ],

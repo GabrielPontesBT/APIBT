@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductosDepositoAPlazo",
-      "Tipo": "sBTProductosDepositoAPlazo",
+      "Tipo": "<a href=\"#sbtproductosdepositoaplazo\">sBTProductosDepositoAPlazo</a>",
       "Comentarios": "Listado de productos habilitados."
     }
   ],
@@ -39,7 +39,7 @@
       "fields": [
         {
           "Nombre": "datosExtendidos",
-          "Tipo": "sBTDatoExtendido",
+          "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
           "Comentarios": "Listado de datos complementarios."
         },
         {
@@ -79,7 +79,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Lista de datos"
         },
         {

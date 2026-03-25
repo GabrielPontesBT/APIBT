@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     }
   ],

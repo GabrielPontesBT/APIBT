@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstadosCiviles",
-      "Tipo": "sBTEstadoCivil",
+      "Tipo": "<a href=\"#sbtestadocivil\">sBTEstadoCivil</a>",
       "Comentarios": "Listado de estados civiles."
     }
   ],

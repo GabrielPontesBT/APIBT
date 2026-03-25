@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "excepciones",
-      "Tipo": "sBTDetalleExcepcion",
+      "Tipo": "<a href=\"#sbtdetalleexcepcion\">sBTDetalleExcepcion</a>",
       "Comentarios": "Datos detallados de la excepción"
     }
   ],

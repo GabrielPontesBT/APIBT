@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtBarrios",
-      "Tipo": "sBTBarrio",
+      "Tipo": "<a href=\"#sbtbarrio\">sBTBarrio</a>",
       "Comentarios": "Listado de barrios."
     }
   ],

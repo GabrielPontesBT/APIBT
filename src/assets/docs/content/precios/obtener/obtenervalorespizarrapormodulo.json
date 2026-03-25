@@ -48,7 +48,7 @@
   "outputData": [
     {
       "Nombre": "sdtValorPizarra",
-      "Tipo": "sBTValorPizarra",
+      "Tipo": "<a href=\"#sbtvalorpizarra\">sBTValorPizarra</a>",
       "Comentarios": "Datos de la pizarra."
     }
   ],

@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtReferencia",
-      "Tipo": "sBTReferencia",
+      "Tipo": "<a href=\"#sbtreferencia\">sBTReferencia</a>",
       "Comentarios": "Datos de referencia de la persona."
     }
   ],

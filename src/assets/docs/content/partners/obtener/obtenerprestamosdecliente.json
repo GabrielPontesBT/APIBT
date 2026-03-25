@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     },
     {
@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "prestamos",
-      "Tipo": "sBTProductoPrestamo",
+      "Tipo": "<a href=\"#sbtproductoprestamo\">sBTProductoPrestamo</a>",
       "Comentarios": "Listado de préstamos."
     }
   ],
@@ -113,7 +113,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -143,7 +143,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

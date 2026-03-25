@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposDeCambioEspecial",
-      "Tipo": "sBTTipoDeCambioEspecial",
+      "Tipo": "<a href=\"#sbttipodecambioespecial\">sBTTipoDeCambioEspecial</a>",
       "Comentarios": "Listado de pizarras especiales parametrizadas."
     }
   ],

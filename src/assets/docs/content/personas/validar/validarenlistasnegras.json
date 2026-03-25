@@ -58,7 +58,7 @@
     },
     {
       "Nombre": "sdtListasInhabilitados",
-      "Tipo": "sBTListaInhabilitados",
+      "Tipo": "<a href=\"#sbtlistainhabilitados\">sBTListaInhabilitados</a>",
       "Comentarios": "Listado de listas negras."
     }
   ],

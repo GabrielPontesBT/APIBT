@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtMonedas",
-      "Tipo": "sBTMonedaIndice",
+      "Tipo": "<a href=\"#sbtmonedaindice\">sBTMonedaIndice</a>",
       "Comentarios": "Listado de monedas en uso contable."
     }
   ],

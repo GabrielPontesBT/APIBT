@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtCajaAhorro",
-      "Tipo": "sBTCajaAhorro",
+      "Tipo": "<a href=\"#sbtcajaahorro\">sBTCajaAhorro</a>",
       "Comentarios": "Datos de caja de ahorro."
     }
   ],
@@ -127,7 +127,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto."
         },
         {
@@ -177,7 +177,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

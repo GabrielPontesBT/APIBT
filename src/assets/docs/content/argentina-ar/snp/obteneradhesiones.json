@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtAdhesiones",
-      "Tipo": "sBTAdhesion",
+      "Tipo": "<a href=\"#sbtadhesion\">sBTAdhesion</a>",
       "Comentarios": "Listado de adhesiones."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtItems",
-      "Tipo": "sBTItemPAE",
+      "Tipo": "<a href=\"#sbtitempae\">sBTItemPAE</a>",
       "Comentarios": "Listado de items de modelo PAE."
     }
   ],

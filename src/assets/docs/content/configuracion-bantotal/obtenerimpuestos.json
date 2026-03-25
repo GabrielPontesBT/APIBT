@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtImpuestos",
-      "Tipo": "sBTImpuesto",
+      "Tipo": "<a href=\"#sbtimpuesto\">sBTImpuesto</a>",
       "Comentarios": "Listado de impuestos."
     }
   ],

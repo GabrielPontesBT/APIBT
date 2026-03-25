@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "sdtDetalleClaseActivo",
-      "Tipo": "sBTDetalleClaseActivo",
+      "Tipo": "<a href=\"#sbtdetalleclaseactivo\">sBTDetalleClaseActivo</a>",
       "Comentarios": "Datos del detalle de la clase del activo."
     }
   ],
@@ -97,12 +97,12 @@
       "fields": [
         {
           "Nombre": "datosConManejoEspecie",
-          "Tipo": "sBTDatoConManejoEspecie",
+          "Tipo": "<a href=\"#sbtdatoconmanejoespecie\">sBTDatoConManejoEspecie</a>",
           "Comentarios": "Listado de datos con manejo de especie."
         },
         {
           "Nombre": "datosSinManejoEspecie",
-          "Tipo": "sBTDatoSinManejoEspecie",
+          "Tipo": "<a href=\"#sbtdatosinmanejoespecie\">sBTDatoSinManejoEspecie</a>",
           "Comentarios": "Listado de datos sin manejo de especie."
         },
         {

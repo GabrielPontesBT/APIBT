@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtScoresPAE",
-      "Tipo": "sBTScorePAE",
+      "Tipo": "<a href=\"#sbtscorepae\">sBTScorePAE</a>",
       "Comentarios": "Listado de scores de un modelo PAE."
     }
   ],

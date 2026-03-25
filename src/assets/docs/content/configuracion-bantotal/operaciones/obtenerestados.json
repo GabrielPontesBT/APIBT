@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstados",
-      "Tipo": "sBTEstadoOperacion",
+      "Tipo": "<a href=\"#sbtestadooperacion\">sBTEstadoOperacion</a>",
       "Comentarios": "Listado de estados."
     }
   ],

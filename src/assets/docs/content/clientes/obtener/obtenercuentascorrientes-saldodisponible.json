@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductosPasivos",
-      "Tipo": "sBTProductoPasivo",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
       "Comentarios": "Listado de cuentas corrientes."
     }
   ],
@@ -68,7 +68,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -108,7 +108,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

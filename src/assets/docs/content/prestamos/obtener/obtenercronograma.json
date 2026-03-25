@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "cronograma",
-      "Tipo": "sBTCuotaPrestamo",
+      "Tipo": "<a href=\"#sbtcuotaprestamo\">sBTCuotaPrestamo</a>",
       "Comentarios": "Cronograma del préstamo."
     }
   ],
@@ -63,7 +63,7 @@
         },
         {
           "Nombre": "detalleConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Detalle de los conceptos adicionales."
         },
         {

@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstadoCuentaAhorro",
-      "Tipo": "sBTEstadoCuentaAhorro",
+      "Tipo": "<a href=\"#sbtestadocuentaahorro\">sBTEstadoCuentaAhorro</a>",
       "Comentarios": "Estado de cuenta del ahorro."
     }
   ],
@@ -93,7 +93,7 @@
         },
         {
           "Nombre": "movimientos",
-          "Tipo": "sBTMovimientoAhorro",
+          "Tipo": "<a href=\"#sbtmovimientoahorro\">sBTMovimientoAhorro</a>",
           "Comentarios": "Listado de movimientos del ahorro."
         },
         {

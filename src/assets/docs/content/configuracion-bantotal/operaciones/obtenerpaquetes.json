@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPaquetes",
-      "Tipo": "sBTPaquete",
+      "Tipo": "<a href=\"#sbtpaquete\">sBTPaquete</a>",
       "Comentarios": "Listado de paquetes."
     }
   ],

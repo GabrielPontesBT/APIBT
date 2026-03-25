@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtSimulacion",
-      "Tipo": "sBTDatosSimulacion",
+      "Tipo": "<a href=\"#sbtdatossimulacion\">sBTDatosSimulacion</a>",
       "Comentarios": "Datos necesarios para la simulación."
     }
   ],
@@ -28,7 +28,7 @@
     },
     {
       "Nombre": "sdtOfertasPrestamo",
-      "Tipo": "sBTOfertaPrestamo",
+      "Tipo": "<a href=\"#sbtofertaprestamo\">sBTOfertaPrestamo</a>",
       "Comentarios": "Colección de ofertas de préstamo."
     }
   ],
@@ -74,7 +74,7 @@
       "fields": [
         {
           "Nombre": "cuotas",
-          "Tipo": "sBTCuota",
+          "Tipo": "<a href=\"#sbtcuota\">sBTCuota</a>",
           "Comentarios": "Colección de cantidad de cuotas para simular."
         },
         {

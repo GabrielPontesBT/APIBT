@@ -33,7 +33,7 @@
   "outputData": [
     {
       "Nombre": "sdtCuentas",
-      "Tipo": "sBTProductoPasivo",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
       "Comentarios": "Listado de cuentas habilitadas para origen del ahorro."
     }
   ],
@@ -123,7 +123,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto pasivo."
         },
         {
@@ -163,7 +163,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

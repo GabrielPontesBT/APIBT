@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtNivelesEducativos",
-      "Tipo": "sBTNivelEducativo",
+      "Tipo": "<a href=\"#sbtniveleducativo\">sBTNivelEducativo</a>",
       "Comentarios": "Listado de niveles educativos."
     }
   ],

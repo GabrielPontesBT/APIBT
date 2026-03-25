@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtAsesores",
-      "Tipo": "sBTAsesor",
+      "Tipo": "<a href=\"#sbtasesor\">sBTAsesor</a>",
       "Comentarios": "Listado de asesores."
     }
   ],

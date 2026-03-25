@@ -21,7 +21,7 @@
     },
     {
       "Nombre": "sdtListaDocumentos",
-      "Tipo": "sBTDescuentoDocumento",
+      "Tipo": "<a href=\"#sbtdescuentodocumento\">sBTDescuentoDocumento</a>",
       "Comentarios": "Lista de documentos."
     },
     {

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtHobbies",
-      "Tipo": "sBTHobby",
+      "Tipo": "<a href=\"#sbthobby\">sBTHobby</a>",
       "Comentarios": "Listado de hobbies."
     }
   ],

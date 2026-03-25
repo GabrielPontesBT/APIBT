@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtUsuarios",
-      "Tipo": "sBTDetalleUsuario",
+      "Tipo": "<a href=\"#sbtdetalleusuario\">sBTDetalleUsuario</a>",
       "Comentarios": "Listado de usuarios."
     }
   ],

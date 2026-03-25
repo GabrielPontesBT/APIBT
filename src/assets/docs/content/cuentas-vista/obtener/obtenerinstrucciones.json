@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtInstruciones",
-      "Tipo": "sBTInstruccionCV",
+      "Tipo": "<a href=\"#sbtinstruccioncv\">sBTInstruccionCV</a>",
       "Comentarios": "Listado de las instrucciones."
     }
   ],
@@ -58,7 +58,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -83,7 +83,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

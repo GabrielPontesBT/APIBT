@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposListaNegra",
-      "Tipo": "sBTTipoListaNegra",
+      "Tipo": "<a href=\"#sbttipolistanegra\">sBTTipoListaNegra</a>",
       "Comentarios": "Listado de tipos de listas negras."
     }
   ],

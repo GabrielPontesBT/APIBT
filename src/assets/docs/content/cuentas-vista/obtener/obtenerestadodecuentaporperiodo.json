@@ -33,7 +33,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstadoDeCuenta",
-      "Tipo": "sBTEstadoCuentaCV",
+      "Tipo": "<a href=\"#sbtestadocuentacv\">sBTEstadoCuentaCV</a>",
       "Comentarios": "Datos de Estado de Cuenta."
     }
   ],
@@ -101,7 +101,7 @@
         },
         {
           "Nombre": "movimientos",
-          "Tipo": "sBTMovimiento",
+          "Tipo": "<a href=\"#sbtmovimiento\">sBTMovimiento</a>",
           "Comentarios": "Datos de Movimiento."
         },
         {
@@ -131,7 +131,7 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoAdicional",
+          "Tipo": "<a href=\"#sbtdatoadicional\">sBTDatoAdicional</a>",
           "Comentarios": "Datos Adicionales."
         },
         {

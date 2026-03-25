@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtVariables",
-      "Tipo": "sBTVariable",
+      "Tipo": "<a href=\"#sbtvariable\">sBTVariable</a>",
       "Comentarios": "Listado de variables."
     }
   ],
@@ -28,7 +28,7 @@
     },
     {
       "Nombre": "sdtRetornos",
-      "Tipo": "sBTRetorno",
+      "Tipo": "<a href=\"#sbtretorno\">sBTRetorno</a>",
       "Comentarios": "Listado de retornos."
     },
     {

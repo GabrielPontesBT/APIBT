@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposAval",
-      "Tipo": "sBTTipoAval",
+      "Tipo": "<a href=\"#sbttipoaval\">sBTTipoAval</a>",
       "Comentarios": "Listado de tipos de aval."
     }
   ],

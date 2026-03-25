@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtSesionesPorUsuario",
-      "Tipo": "sBTSesionesPorUsuario",
+      "Tipo": "<a href=\"#sbtsesionesporusuario\">sBTSesionesPorUsuario</a>",
       "Comentarios": "Colección de datos de sesiones por usuario."
     }
   ],

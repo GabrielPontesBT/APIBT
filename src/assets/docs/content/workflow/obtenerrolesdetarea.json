@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtRoles",
-      "Tipo": "sBTRolWF",
+      "Tipo": "<a href=\"#sbtrolwf\">sBTRolWF</a>",
       "Comentarios": "Listado de roles de Workflow."
     }
   ],

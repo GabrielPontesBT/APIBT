@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtDocumentoDigital",
-      "Tipo": "sBTVersionDocumentoDigital",
+      "Tipo": "<a href=\"#sbtversiondocumentodigital\">sBTVersionDocumentoDigital</a>",
       "Comentarios": "Versión de documento digital."
     }
   ],

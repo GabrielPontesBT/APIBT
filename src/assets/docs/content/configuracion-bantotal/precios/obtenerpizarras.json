@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPizarras",
-      "Tipo": "sBTPizarra",
+      "Tipo": "<a href=\"#sbtpizarra\">sBTPizarra</a>",
       "Comentarios": "Listado de pizarras."
     }
   ],

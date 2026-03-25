@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtEmpresas",
-      "Tipo": "sBTEmpresaOriginante",
+      "Tipo": "<a href=\"#sbtempresaoriginante\">sBTEmpresaOriginante</a>",
       "Comentarios": "Listado de empresas originantes."
     }
   ],
@@ -57,7 +57,7 @@
         },
         {
           "Nombre": "prestaciones",
-          "Tipo": "sBTPrestacion",
+          "Tipo": "<a href=\"#sbtprestacion\">sBTPrestacion</a>",
           "Comentarios": "Listado de prestaciones."
         }
       ]

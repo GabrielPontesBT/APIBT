@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "listaResumenOrdenes",
-      "Tipo": "sBTResumenCabezal",
+      "Tipo": "<a href=\"#sbtresumencabezal\">sBTResumenCabezal</a>",
       "Comentarios": "Listados de resumen de ordenes."
     }
   ],

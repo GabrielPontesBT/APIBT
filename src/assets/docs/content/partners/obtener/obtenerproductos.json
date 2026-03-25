@@ -11,12 +11,12 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     },
     {
       "Nombre": "sdtVehiculo",
-      "Tipo": "sBTVehiculo",
+      "Tipo": "<a href=\"#sbtvehiculo\">sBTVehiculo</a>",
       "Comentarios": "Datos del vehículo."
     },
     {
@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductos",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
       "Comentarios": "Listado de los productos."
     }
   ],
@@ -98,7 +98,7 @@
       "fields": [
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {
@@ -158,7 +158,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
           "Comentarios": "Listado de otros conceptos."
         },
         {

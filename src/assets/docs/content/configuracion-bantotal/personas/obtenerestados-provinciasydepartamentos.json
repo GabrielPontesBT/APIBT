@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstados",
-      "Tipo": "sBTEstado",
+      "Tipo": "<a href=\"#sbtestado\">sBTEstado</a>",
       "Comentarios": "Listado de estados."
     }
   ],

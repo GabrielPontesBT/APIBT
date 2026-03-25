@@ -21,7 +21,7 @@
     },
     {
       "Nombre": "sdtPersona",
-      "Tipo": "sBTDatosBasicosPersona",
+      "Tipo": "<a href=\"#sbtdatosbasicospersona\">sBTDatosBasicosPersona</a>",
       "Comentarios": "Datos del cónyuge."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtServicios",
-      "Tipo": "sBTConvServicioCASH",
+      "Tipo": "<a href=\"#sbtconvserviciocash\">sBTConvServicioCASH</a>",
       "Comentarios": "Lista de servicios del contrato."
     }
   ],

@@ -47,7 +47,7 @@
     {
       "Nombre": "accion",
       "Tipo": "String",
-      "Comentarios": "Tipo de acción. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de acción. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
     }
   ],
   "outputData": [],

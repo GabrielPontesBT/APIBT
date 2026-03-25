@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtExcepciones",
-      "Tipo": "sBTExcepcion",
+      "Tipo": "<a href=\"#sbtexcepcion\">sBTExcepcion</a>",
       "Comentarios": "Listado de excepciones."
     }
   ],

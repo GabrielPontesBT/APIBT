@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtOcupaciones",
-      "Tipo": "sBTOcupacion",
+      "Tipo": "<a href=\"#sbtocupacion\">sBTOcupacion</a>",
       "Comentarios": "Listado de ocupaciones."
     }
   ],

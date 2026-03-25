@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtCobroPrestamo",
-      "Tipo": "sBTCobroPrestamo",
+      "Tipo": "<a href=\"#sbtcobroprestamo\">sBTCobroPrestamo</a>",
       "Comentarios": "Datos de cobro del préstamo."
     }
   ],

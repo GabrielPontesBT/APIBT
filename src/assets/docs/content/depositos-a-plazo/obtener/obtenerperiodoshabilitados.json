@@ -18,12 +18,12 @@
   "outputData": [
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatosExtendidos",
+      "Tipo": "<a href=\"#sbtdatosextendidos\">sBTDatosExtendidos</a>",
       "Comentarios": "Listado de datos complementarios."
     },
     {
       "Nombre": "sdtPeriodos",
-      "Tipo": "sBTPeriodoHabilitado",
+      "Tipo": "<a href=\"#sbtperiodohabilitado\">sBTPeriodoHabilitado</a>",
       "Comentarios": "Listado de períodos habilitados."
     }
   ],
@@ -62,7 +62,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatosLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatosLista</a>",
           "Comentarios": "Lista de datos."
         },
         {
@@ -97,7 +97,7 @@
       "fields": [
         {
           "Nombre": "datosExtendidos",
-          "Tipo": "sBTDatoExtendido",
+          "Tipo": "<a href=\"#sbtdatoextendidosalida\">sBTDatoExtendido</a>",
           "Comentarios": "Listado de datos complementarios."
         },
         {
@@ -122,7 +122,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatosLista",
+          "Tipo": "<a href=\"#sbtdatolistasalida\">sBTDatosLista</a>",
           "Comentarios": "Lista de datos."
         },
         {

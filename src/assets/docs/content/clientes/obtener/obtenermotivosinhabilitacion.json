@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtMotivosInhabilitacion",
-      "Tipo": "sBTMotivoInhabilitacion",
+      "Tipo": "<a href=\"#sbtmotivoinhabilitacion\">sBTMotivoInhabilitacion</a>",
       "Comentarios": "Listado de motivos de inhabilitación."
     }
   ],

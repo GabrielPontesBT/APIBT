@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductosPrestamos",
-      "Tipo": "sBTProductoPrestamo",
+      "Tipo": "<a href=\"#sbtproductoprestamo\">sBTProductoPrestamo</a>",
       "Comentarios": "Listado de préstamos."
     }
   ],
@@ -73,7 +73,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -103,7 +103,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

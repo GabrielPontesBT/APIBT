@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtInstrucciones",
-      "Tipo": "sBTEInstruccion",
+      "Tipo": "<a href=\"#sbteinstruccion\">sBTEInstruccion</a>",
       "Comentarios": "Listado de instrucciones."
     }
   ],

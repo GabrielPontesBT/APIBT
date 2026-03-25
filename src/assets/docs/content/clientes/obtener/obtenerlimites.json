@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtLimites",
-      "Tipo": "sBTLimiteCliente",
+      "Tipo": "<a href=\"#sbtlimitecliente\">sBTLimiteCliente</a>",
       "Comentarios": "Listado de límites."
     }
   ],

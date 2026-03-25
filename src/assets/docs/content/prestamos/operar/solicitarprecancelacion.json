@@ -37,7 +37,7 @@
     {
       "Nombre": "tipoPrecancelacion",
       "Tipo": "String",
-      "Comentarios": "Tipo de precancelación. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de precancelación. Se pueden enviar los siguientes <a href=\"#valores1\">valores</a>."
     },
     {
       "Nombre": "prepagoManual",
@@ -47,12 +47,12 @@
     {
       "Nombre": "tipoReduccion",
       "Tipo": "String",
-      "Comentarios": "Tipo de reducción. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de reducción. Se pueden enviar los siguientes <a href=\"#valores2\">valores</a>."
     },
     {
       "Nombre": "modalidadIntereses",
       "Tipo": "String",
-      "Comentarios": "Modalidad de intereses. Se pueden enviar los siguientes valores."
+      "Comentarios": "Modalidad de intereses. Se pueden enviar los siguientes <a href=\"#valores3\">valores</a>."
     },
     {
       "Nombre": "motivoPrecancelacion",

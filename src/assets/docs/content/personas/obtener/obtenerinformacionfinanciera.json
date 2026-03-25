@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtInformacionFinanciera",
-      "Tipo": "sBTPCOInformacionFinanciera",
+      "Tipo": "<a href=\"#sbtpcoinformacionfinanciera\">sBTPCOInformacionFinanciera</a>",
       "Comentarios": "Datos de información financiera de la persona."
     }
   ],
@@ -58,7 +58,7 @@
         },
         {
           "Nombre": "operacionesInternacionales",
-          "Tipo": "sBTPCOOperacionesInternacionales",
+          "Tipo": "<a href=\"#sbtpcooperacionesinternacionales\">sBTPCOOperacionesInternacionales</a>",
           "Comentarios": "Datos de operaciones internacionales."
         },
         {

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductos",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
       "Comentarios": "Datos de estado de cuenta."
     }
   ],
@@ -62,7 +62,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

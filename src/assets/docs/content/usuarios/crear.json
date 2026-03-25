@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtUsuario",
-      "Tipo": "sBTUsuarioBT",
+      "Tipo": "<a href=\"#sbtusuariobt\">sBTUsuarioBT</a>",
       "Comentarios": "Datos de usuario Bantotal."
     },
     {

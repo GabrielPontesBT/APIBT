@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposDesembolso",
-      "Tipo": "sBTTipoDesembolso",
+      "Tipo": "<a href=\"#sbttipodesembolso\">sBTTipoDesembolso</a>",
       "Comentarios": "Listado de tipos de desembolso."
     }
   ],

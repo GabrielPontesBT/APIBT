@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTipoPEP",
-      "Tipo": "sBTTipoPEP",
+      "Tipo": "<a href=\"#sbttipospep\">sBTTipoPEP</a>",
       "Comentarios": "Listado de los tipos de PEP."
     }
   ],

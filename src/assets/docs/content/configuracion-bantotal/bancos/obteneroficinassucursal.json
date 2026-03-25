@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtOficinas",
-      "Tipo": "sBTSucursal",
+      "Tipo": "<a href=\"#sbtsucursal\">sBTSucursal</a>",
       "Comentarios": "Listado de las oficinas."
     }
   ],

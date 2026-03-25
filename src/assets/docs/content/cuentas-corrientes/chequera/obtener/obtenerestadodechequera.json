@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "estado",
-      "Tipo": "sBTEstado",
+      "Tipo": "<a href=\"#sbtestado\">sBTEstado</a>",
       "Comentarios": "Estado de la chequera."
     }
   ],

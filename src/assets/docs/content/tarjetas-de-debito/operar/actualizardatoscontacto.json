@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtDatosContacto",
-      "Tipo": "sBTDatosContacto",
+      "Tipo": "<a href=\"#sbtdatoscontacto\">sBTDatosContacto</a>",
       "Comentarios": "Datos del contacto de tarjeta."
     }
   ],

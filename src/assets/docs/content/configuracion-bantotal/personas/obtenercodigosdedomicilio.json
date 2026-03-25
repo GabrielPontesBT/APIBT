@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtCodigos",
-      "Tipo": "sBTCodigoDomicilio",
+      "Tipo": "<a href=\"#sbtcodigodomicilio\">sBTCodigoDomicilio</a>",
       "Comentarios": "Listado de códigos de domicilio."
     }
   ],

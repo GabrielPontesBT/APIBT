@@ -31,14 +31,14 @@
     },
     {
       "Nombre": "sdtValorCampoCash",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Lista de valores de campos CASH a buscar."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtBeneficiario",
-      "Tipo": "sBTResumenBeneficiario",
+      "Tipo": "<a href=\"#sbtresumenbeneficiario\">sBTResumenBeneficiario</a>",
       "Comentarios": "Listado de beneficiarios."
     }
   ],

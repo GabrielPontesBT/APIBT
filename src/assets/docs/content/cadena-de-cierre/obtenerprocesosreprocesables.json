@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtProcesosBatch",
-      "Tipo": "sBTProcesoBatch",
+      "Tipo": "<a href=\"#sbtprocesobatch\">sBTProcesoBatch</a>",
       "Comentarios": "Colección de procesos de cadena de cierre."
     }
   ],

@@ -32,7 +32,7 @@
     {
       "Nombre": "controlarOperacionCobro",
       "Tipo": "String",
-      "Comentarios": "Hidden: Controlar si recibe operación de cobro. Se pueden enviar los siguientes [valores.]"
+      "Comentarios": "<a href=\"#valores\">Hidden: Controlar si recibe operación de cobro. Se pueden enviar los siguientes [valores</a>.]"
     }
   ],
   "outputData": [

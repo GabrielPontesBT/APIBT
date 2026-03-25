@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtSobregiros",
-      "Tipo": "sBTSobregiro",
+      "Tipo": "<a href=\"#sbtsobregiro\">sBTSobregiro</a>",
       "Comentarios": "Listado de los sobregiros."
     }
   ],

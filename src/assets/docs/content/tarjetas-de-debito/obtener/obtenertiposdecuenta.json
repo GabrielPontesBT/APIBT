@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposDeCuenta",
-      "Tipo": "sBTTipoDeCuentaTD",
+      "Tipo": "<a href=\"#sbttipodecuentatd\">sBTTipoDeCuentaTD</a>",
       "Comentarios": "Listado de tipos de cuenta."
     }
   ],

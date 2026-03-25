@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtBancos",
-      "Tipo": "sBTBanco",
+      "Tipo": "<a href=\"#sbtbanco\">sBTBanco</a>",
       "Comentarios": "Listado de bancos."
     }
   ],

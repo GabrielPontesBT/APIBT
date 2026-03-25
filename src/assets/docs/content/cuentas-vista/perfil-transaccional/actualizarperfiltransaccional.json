@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtPerfilTransaccional",
-      "Tipo": "sBTDatosPerfilTransaccional",
+      "Tipo": "<a href=\"#sbtdatosperfiltransaccional\">sBTDatosPerfilTransaccional</a>",
       "Comentarios": "Datos del perfil transaccional."
     },
     {
@@ -119,7 +119,7 @@
         },
         {
           "Nombre": "movimientosMensuales",
-          "Tipo": "sBTPerfilTrnMovimientosMensuales",
+          "Tipo": "<a href=\"#sbtperfiltrnmovimientosmensuales\">sBTPerfilTrnMovimientosMensuales</a>",
           "Comentarios": "Datos de los movimientos mensuales."
         }
       ]
@@ -129,22 +129,22 @@
       "fields": [
         {
           "Nombre": "enEfectivo",
-          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Tipo": "<a href=\"#sbtperfiltrndatosmovimientos\">sBTPerfilTrnDatosMovimientos</a>",
           "Comentarios": "Datos de los movimientos mensuales en efectivo."
         },
         {
           "Nombre": "conCheque",
-          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Tipo": "<a href=\"#sbtperfiltrndatosmovimientos\">sBTPerfilTrnDatosMovimientos</a>",
           "Comentarios": "Datos de los movimientos mensuales con cheques."
         },
         {
           "Nombre": "transferenciaLocal",
-          "Tipo": "sBTPerfilTrnDatosMovimientos",
+          "Tipo": "<a href=\"#sbtperfiltrndatosmovimientos\">sBTPerfilTrnDatosMovimientos</a>",
           "Comentarios": "Datos de los movimientos mensuales de transferencias locales."
         },
         {
           "Nombre": "transferenciaInternacional",
-          "Tipo": "sBTPerfilTrnDatosMovInternacionales",
+          "Tipo": "<a href=\"#sbtperfiltrndatosmovinternacionales\">sBTPerfilTrnDatosMovInternacionales</a>",
           "Comentarios": "Datos de los movimientos mensuales de transferencias internacionales."
         }
       ]

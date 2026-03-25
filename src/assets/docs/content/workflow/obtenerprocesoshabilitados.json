@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtProcesos",
-      "Tipo": "sBTProcesoWF",
+      "Tipo": "<a href=\"#sbtprocesowf\">sBTProcesoWF</a>",
       "Comentarios": "Listado de procesos habilitados."
     }
   ],

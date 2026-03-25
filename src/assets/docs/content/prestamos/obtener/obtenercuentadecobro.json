@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtCuentasDeCobro",
-      "Tipo": "sBTCuentaDeCobro",
+      "Tipo": "<a href=\"#sbtcuentadecobro\">sBTCuentaDeCobro</a>",
       "Comentarios": "Listado de cuentas de cobro."
     }
   ],
@@ -71,7 +71,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Información del producto."
         },
         {
@@ -111,7 +111,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

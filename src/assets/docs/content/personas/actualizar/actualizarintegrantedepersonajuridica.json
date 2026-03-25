@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtIntegranteAlta",
-      "Tipo": "sBTIntegranteJuridicoAlta",
+      "Tipo": "<a href=\"#sbtintegrantejuridicoalta\">sBTIntegranteJuridicoAlta</a>",
       "Comentarios": "Datos de la persona física integrante de la persona jurídica indicada."
     },
     {

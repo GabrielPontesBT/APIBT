@@ -11,12 +11,12 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     },
     {
       "Nombre": "sdtPersona",
-      "Tipo": "sBTPersonaFisica",
+      "Tipo": "<a href=\"#sbtpersonafisica\">sBTPersonaFisica</a>",
       "Comentarios": "Datos de persona física."
     }
   ],
@@ -98,7 +98,7 @@
         },
         {
           "Nombre": "domicilios",
-          "Tipo": "sBTDomicilioCompleto",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
           "Comentarios": "Listado de los domicilios."
         },
         {

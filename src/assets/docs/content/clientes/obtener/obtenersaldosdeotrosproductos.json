@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtSaldosProducto",
-      "Tipo": "sBTSaldoProducto",
+      "Tipo": "<a href=\"#sbtsaldoproducto\">sBTSaldoProducto</a>",
       "Comentarios": "Listado de productos."
     }
   ],
@@ -88,7 +88,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -123,7 +123,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

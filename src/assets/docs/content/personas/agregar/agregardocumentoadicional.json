@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sBTDocumentoAdicional",
-      "Tipo": "sBTDocumentoAdicional",
+      "Tipo": "<a href=\"#sbtdocumentoadicional\">sBTDocumentoAdicional</a>",
       "Comentarios": "Datos de documento adicional."
     },
     {

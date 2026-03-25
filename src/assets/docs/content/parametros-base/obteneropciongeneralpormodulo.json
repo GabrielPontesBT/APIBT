@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtOpcionGeneralModulo",
-      "Tipo": "sBTOpcionGeneral",
+      "Tipo": "<a href=\"#sbtopciongeneral\">sBTOpcionGeneral</a>",
       "Comentarios": "Datos de la opción general de procesos."
     }
   ],

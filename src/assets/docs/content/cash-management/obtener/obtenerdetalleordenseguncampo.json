@@ -21,7 +21,7 @@
     },
     {
       "Nombre": "sdtValorCampoBusqueda",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Valor del campo CASH a buscar."
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "Nombre": "detallePagos",
-      "Tipo": "sBTDetallePago",
+      "Tipo": "<a href=\"#sbtdetallepago\">sBTDetallePago</a>",
       "Comentarios": "Listado del detalle de pago."
     }
   ],

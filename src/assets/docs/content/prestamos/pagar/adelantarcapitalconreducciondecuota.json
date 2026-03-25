@@ -42,7 +42,7 @@
     {
       "Nombre": "modalidadIntereses",
       "Tipo": "String",
-      "Comentarios": "Modalidad de intereses. Se pueden enviar los siguientes valores."
+      "Comentarios": "Modalidad de intereses. Se pueden enviar los siguientes <a href=\"#valores\">valores</a>."
     }
   ],
   "outputData": [

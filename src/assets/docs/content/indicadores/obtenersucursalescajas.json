@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtSucursalesCajas",
-      "Tipo": "sBTSucursalesCajas",
+      "Tipo": "<a href=\"#sbtsucursalescajas\">sBTSucursalesCajas</a>",
       "Comentarios": "Listado de sucursales y cajas."
     }
   ],
@@ -58,12 +58,12 @@
         },
         {
           "Nombre": "listadoSucursalesC",
-          "Tipo": "sBTSucursal",
+          "Tipo": "<a href=\"#sbtsucursal\">sBTSucursal</a>",
           "Comentarios": "Listado de sucursales cerradas."
         },
         {
           "Nombre": "listadoSucursalesA",
-          "Tipo": "sBTSucursal",
+          "Tipo": "<a href=\"#sbtsucursal\">sBTSucursal</a>",
           "Comentarios": "Listado de sucursales abiertas."
         },
         {
@@ -93,12 +93,12 @@
         },
         {
           "Nombre": "listadoCajasC",
-          "Tipo": "sBTCaja",
+          "Tipo": "<a href=\"#sbtcaja\">sBTCaja</a>",
           "Comentarios": "Listado de cajas cerradas."
         },
         {
           "Nombre": "listadoCajasA",
-          "Tipo": "sBTCaja",
+          "Tipo": "<a href=\"#sbtcaja\">sBTCaja</a>",
           "Comentarios": "Listado de cajas abiertas."
         }
       ]

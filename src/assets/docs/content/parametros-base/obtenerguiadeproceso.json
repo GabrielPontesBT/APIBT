@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtGuiaDeProceso",
-      "Tipo": "sBTCorrelativoGuia",
+      "Tipo": "<a href=\"#sbtcorrelativoguia\">sBTCorrelativoGuia</a>",
       "Comentarios": "Listado de datos de la guía de proceso."
     }
   ],

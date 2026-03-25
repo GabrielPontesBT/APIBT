@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     },
     {
@@ -26,12 +26,12 @@
     },
     {
       "Nombre": "sdtDatosVehiculo",
-      "Tipo": "sBTSimulacionVeh",
+      "Tipo": "<a href=\"#sbtsimulacionveh\">sBTSimulacionVeh</a>",
       "Comentarios": "Datos del vehículo."
     },
     {
       "Nombre": "sdtDatosOferta",
-      "Tipo": "sBTOfertaInput",
+      "Tipo": "<a href=\"#sbtofertainput\">sBTOfertaInput</a>",
       "Comentarios": "Datos de la oferta."
     }
   ],
@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "sdtOfertasPrestamo",
-      "Tipo": "sBTOfertaPrestamo",
+      "Tipo": "<a href=\"#sbtofertaprestamo\">sBTOfertaPrestamo</a>",
       "Comentarios": "Listado de ofertas del préstamo."
     }
   ],
@@ -125,7 +125,7 @@
       "fields": [
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos adicionales."
         },
         {
@@ -205,12 +205,12 @@
         },
         {
           "Nombre": "comisiones",
-          "Tipo": "sBTComisionPrestamo",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
           "Comentarios": "Listado de comisiones."
         },
         {
           "Nombre": "comisionesCuota",
-          "Tipo": "sBTComisionPrestamo",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
           "Comentarios": "Listado de comisiones."
         },
         {
@@ -220,7 +220,7 @@
         },
         {
           "Nombre": "cuotasExtraordinarias",
-          "Tipo": "sBTCuotaExtraordinaria",
+          "Tipo": "<a href=\"#sbtcuotaextraordinaria\">sBTCuotaExtraordinaria</a>",
           "Comentarios": "Listado de datos de cuota extraordinaria."
         },
         {
@@ -260,7 +260,7 @@
         },
         {
           "Nombre": "seguros",
-          "Tipo": "sBTSeguroPrestamo",
+          "Tipo": "<a href=\"#sbtseguroprestamo\">sBTSeguroPrestamo</a>",
           "Comentarios": "Listado de seguros."
         },
         {

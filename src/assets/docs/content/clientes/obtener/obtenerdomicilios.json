@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDomicilios",
-      "Tipo": "sBTDomicilioCompleto",
+      "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
       "Comentarios": "Datos de domicilio."
     }
   ],

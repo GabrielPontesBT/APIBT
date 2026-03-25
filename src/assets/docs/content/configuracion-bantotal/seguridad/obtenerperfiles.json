@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPerfiles",
-      "Tipo": "sBTPerfil",
+      "Tipo": "<a href=\"#sbtperfil\">sBTPerfil</a>",
       "Comentarios": "Listado de perfiles."
     }
   ],

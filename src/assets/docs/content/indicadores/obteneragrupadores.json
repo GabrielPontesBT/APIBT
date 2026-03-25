@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtAgrupadores",
-      "Tipo": "sBTAgrupador",
+      "Tipo": "<a href=\"#sbtagrupador\">sBTAgrupador</a>",
       "Comentarios": "Listado de Agrupadores."
     }
   ],

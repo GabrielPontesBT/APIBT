@@ -36,7 +36,7 @@
     },
     {
       "Nombre": "sdtDatosSolicitud",
-      "Tipo": "sBTSolicitudGrupal",
+      "Tipo": "<a href=\"#sbtsolicitudgrupal\">sBTSolicitudGrupal</a>",
       "Comentarios": "Datos de entrada de la solicitud."
     }
   ],

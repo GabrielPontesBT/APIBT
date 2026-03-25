@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtComisiones",
-      "Tipo": "sBTComisionPrestamo",
+      "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
       "Comentarios": "Listado de comisiones."
     }
   ],

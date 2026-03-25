@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtEmpresa",
-      "Tipo": "sBTEmpresa",
+      "Tipo": "<a href=\"#sbtempresa\">sBTEmpresa</a>",
       "Comentarios": "Datos de la empresa."
     }
   ],
@@ -33,7 +33,7 @@
       "fields": [
         {
           "Nombre": "casaCentral",
-          "Tipo": "sBTSucursal",
+          "Tipo": "<a href=\"#sbtsucursal\">sBTSucursal</a>",
           "Comentarios": "Datos sobre la sucursal indicada como casa central."
         },
         {
@@ -58,12 +58,12 @@
         },
         {
           "Nombre": "monedaDolar",
-          "Tipo": "sBTMoneda",
+          "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
           "Comentarios": "Código moneda dolar."
         },
         {
           "Nombre": "monedaNacional",
-          "Tipo": "sBTMoneda",
+          "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
           "Comentarios": "Código moneda nacional."
         },
         {

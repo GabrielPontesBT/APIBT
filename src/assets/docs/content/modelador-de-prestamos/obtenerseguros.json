@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtSeguros",
-      "Tipo": "sBTSeguroPrestamo",
+      "Tipo": "<a href=\"#sbtseguroprestamo\">sBTSeguroPrestamo</a>",
       "Comentarios": "Listado de seguros."
     }
   ],

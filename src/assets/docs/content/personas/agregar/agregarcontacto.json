@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtContacto",
-      "Tipo": "sBTContactoJuridico",
+      "Tipo": "<a href=\"#sbtcontactojuridico\">sBTContactoJuridico</a>",
       "Comentarios": "Datos del contacto jurídico."
     }
   ],

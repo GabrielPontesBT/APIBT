@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposChequera",
-      "Tipo": "sBTTipoChequera",
+      "Tipo": "<a href=\"#sbttipochequera\">sBTTipoChequera</a>",
       "Comentarios": "Listado de tipos de chequera."
     }
   ],

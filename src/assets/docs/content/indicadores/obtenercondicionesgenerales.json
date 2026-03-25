@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtCondicionesGenerales",
-      "Tipo": "sBTCondicionesGenerales",
+      "Tipo": "<a href=\"#sbtcondicionesgenerales\">sBTCondicionesGenerales</a>",
       "Comentarios": "Listado de las Condiciones Generales."
     }
   ],

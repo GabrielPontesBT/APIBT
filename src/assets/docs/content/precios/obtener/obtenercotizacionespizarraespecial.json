@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtMoneda",
-      "Tipo": "sBTMoneda",
+      "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
       "Comentarios": "Datos de la moneda."
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "Nombre": "sdtCotizacionesPizarra",
-      "Tipo": "sBTCotizacionPizarra",
+      "Tipo": "<a href=\"#sbtcotizacionpizarra\">sBTCotizacionPizarra</a>",
       "Comentarios": "Lista de las cotizaciones de la pizarra."
     }
   ],
@@ -84,7 +84,7 @@
         },
         {
           "Nombre": "moneda",
-          "Tipo": "sBTMoneda",
+          "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
           "Comentarios": "Datos de la moneda."
         },
         {

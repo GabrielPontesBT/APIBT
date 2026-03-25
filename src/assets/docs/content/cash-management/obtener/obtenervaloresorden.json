@@ -21,14 +21,14 @@
     },
     {
       "Nombre": "camposCash",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Listado de campos CASH a devolver valor (Si no se ingresan items en la colección, se devuelven todos los valores)."
     }
   ],
   "outputData": [
     {
       "Nombre": "valoresCamposCash",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Listado de valores de campos CASH."
     }
   ],

@@ -23,12 +23,12 @@
   "outputData": [
     {
       "Nombre": "instruccionVencimiento",
-      "Tipo": "sBTInstruccion",
+      "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
       "Comentarios": "Datos de instrucción al vencimiento."
     },
     {
       "Nombre": "instruccionAcreditacion",
-      "Tipo": "sBTInstruccion",
+      "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
       "Comentarios": "Datos de instrucción de acreditación."
     }
   ],
@@ -125,7 +125,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos de producto."
         },
         {
@@ -150,7 +150,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

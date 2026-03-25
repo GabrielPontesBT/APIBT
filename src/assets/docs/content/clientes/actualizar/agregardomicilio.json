@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "domicilio",
-      "Tipo": "sBTDomicilioCompleto",
+      "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
       "Comentarios": "Datos del domicilio."
     }
   ],

@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtTextos",
-      "Tipo": "sBTTextoOperacion",
+      "Tipo": "<a href=\"#sbttextooperacion\">sBTTextoOperacion</a>",
       "Comentarios": "Listado de textos de la operación."
     },
     {

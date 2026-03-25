@@ -53,7 +53,7 @@
     },
     {
       "Nombre": "sdtDatosPrestamos",
-      "Tipo": "sBTDatosPrestamo",
+      "Tipo": "<a href=\"#sbtdatosprestamo\">sBTDatosPrestamo</a>",
       "Comentarios": "Listado de los préstamos que están por vencer en determinados días."
     }
   ],
@@ -109,7 +109,7 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoAdicional",
+          "Tipo": "<a href=\"#sbtdatoadicional\">sBTDatoAdicional</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {
@@ -174,7 +174,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos del préstamo."
         },
         {
@@ -189,7 +189,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Descripción del producto."
         },
         {
@@ -249,7 +249,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

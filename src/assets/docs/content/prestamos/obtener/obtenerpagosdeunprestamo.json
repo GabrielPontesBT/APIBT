@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtPagos",
-      "Tipo": "sBTPagoPrestamo",
+      "Tipo": "<a href=\"#sbtpagoprestamo\">sBTPagoPrestamo</a>",
       "Comentarios": "Listado de pagos del préstamo."
     }
   ],

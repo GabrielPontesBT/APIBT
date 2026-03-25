@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtIntegranteGrupo",
-      "Tipo": "sBTIntegranteGrupo",
+      "Tipo": "<a href=\"#sbtintegrantegrupo\">sBTIntegranteGrupo</a>",
       "Comentarios": "Datos del integrante"
     }
   ],

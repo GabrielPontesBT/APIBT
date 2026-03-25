@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtProxVencimiento",
-      "Tipo": "sBTProximoVto",
+      "Tipo": "<a href=\"#sbtproximovto\">sBTProximoVto</a>",
       "Comentarios": "Datos del próximo vencimiento del préstamo."
     }
   ],
@@ -110,7 +110,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         }
       ]

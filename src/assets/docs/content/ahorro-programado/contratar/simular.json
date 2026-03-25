@@ -11,14 +11,14 @@
   "inputData": [
     {
       "Nombre": "sdtSolicitudSimulacionAhorroProgramado",
-      "Tipo": "sBTSolicitudSimulacionAhorro",
+      "Tipo": "<a href=\"#sbtsolicitudsimulacionahorro\">sBTSolicitudSimulacionAhorro</a>",
       "Comentarios": "Datos de la simulación."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtSimulacionAhorroProgramado",
-      "Tipo": "sBTSimulacionAhorroProgramado",
+      "Tipo": "<a href=\"#sbtsimulacionahorroprogramado\">sBTSimulacionAhorroProgramado</a>",
       "Comentarios": "Simulación de ahorro programado."
     }
   ],
@@ -132,7 +132,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCronogramaAhorro",
+          "Tipo": "<a href=\"#sbtcronogramaahorro\">sBTCronogramaAhorro</a>",
           "Comentarios": "Detalle del cronograma de ahorro."
         },
         {
@@ -162,7 +162,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -227,7 +227,7 @@
       "fields": [
         {
           "Nombre": "sBTCronogramaAhorro",
-          "Tipo": "sBTCuotaAhorro",
+          "Tipo": "<a href=\"#sbtcuotaahorro\">sBTCuotaAhorro</a>",
           "Comentarios": "Datos de la cuota de ahorro."
         }
       ]
@@ -257,7 +257,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

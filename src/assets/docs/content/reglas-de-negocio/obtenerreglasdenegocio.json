@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtReglasNegocio",
-      "Tipo": "sBTReglaNegocio",
+      "Tipo": "<a href=\"#sbtreglanegocio\">sBTReglaNegocio</a>",
       "Comentarios": "Listado de reglas de negocio."
     }
   ],

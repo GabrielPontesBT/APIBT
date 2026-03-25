@@ -33,7 +33,7 @@
     },
     {
       "Nombre": "sdtDetalleCalendario",
-      "Tipo": "sBTDiaCalendario",
+      "Tipo": "<a href=\"#sbtdiacalendario\">sBTDiaCalendario</a>",
       "Comentarios": "Detalle de la consulta del calendario."
     }
   ],

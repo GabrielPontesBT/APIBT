@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPersonasVinculadas",
-      "Tipo": "sBTPersonaVinculada",
+      "Tipo": "<a href=\"#sbtpersonavinculada\">sBTPersonaVinculada</a>",
       "Comentarios": "Datos de la persona vinculada."
     }
   ],
@@ -58,7 +58,7 @@
         },
         {
           "Nombre": "vinculo",
-          "Tipo": "sBTVinculo",
+          "Tipo": "<a href=\"#sbtvinculo\">sBTVinculo</a>",
           "Comentarios": "Datos del vínculo."
         }
       ]

@@ -41,7 +41,7 @@
     },
     {
       "Nombre": "datosSolicitud",
-      "Tipo": "sBTSolicitudIndividual",
+      "Tipo": "<a href=\"#sbtsolicitudindividual\">sBTSolicitudIndividual</a>",
       "Comentarios": "Datos de la solicitud."
     }
   ],

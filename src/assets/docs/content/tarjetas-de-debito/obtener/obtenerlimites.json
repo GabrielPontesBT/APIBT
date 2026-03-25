@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtLimites",
-      "Tipo": "sBTLimiteTarjeta",
+      "Tipo": "<a href=\"#sbtlimitetarjeta\">sBTLimiteTarjeta</a>",
       "Comentarios": "Datos de los límites de la tarjeta."
     }
   ],

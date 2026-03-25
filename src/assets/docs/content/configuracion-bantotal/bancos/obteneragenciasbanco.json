@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtAgencias",
-      "Tipo": "sBTAgenciaBanco",
+      "Tipo": "<a href=\"#sbtagenciabanco\">sBTAgenciaBanco</a>",
       "Comentarios": "Listado de las agencias."
     }
   ],

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposFuncionarios",
-      "Tipo": "sBTTipoFuncionario",
+      "Tipo": "<a href=\"#sbttipofuncionario\">sBTTipoFuncionario</a>",
       "Comentarios": "Listado de los tipos de funcionario público."
     }
   ],

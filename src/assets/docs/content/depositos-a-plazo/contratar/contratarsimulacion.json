@@ -46,14 +46,14 @@
     },
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatoExtendido",
-      "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes valores."
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatoExtendido",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
       "Comentarios": "Listado de datos complementarios."
     },
     {
@@ -150,7 +150,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Lista de datos."
         },
         {

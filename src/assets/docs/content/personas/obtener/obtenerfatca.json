@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtInformacionFATCA",
-      "Tipo": "sBTPCOInformacionFATCA",
+      "Tipo": "<a href=\"#sbtpcoinformacionfatca\">sBTPCOInformacionFATCA</a>",
       "Comentarios": "Datos FATCA de la persona."
     }
   ],
@@ -74,7 +74,7 @@
         },
         {
           "Nombre": "residenciasFiscales",
-          "Tipo": "sBTPCOResidenciasFiscales",
+          "Tipo": "<a href=\"#sbtpcoresidenciasfiscales\">sBTPCOResidenciasFiscales</a>",
           "Comentarios": "Listado de residencias."
         },
         {

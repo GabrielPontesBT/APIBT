@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtValidacionesPoliticas",
-      "Tipo": "sBTValidacionPolitica",
+      "Tipo": "<a href=\"#sbtvalidacionpolitica\">sBTValidacionPolitica</a>",
       "Comentarios": "Listado de validación de políticas."
     }
   ],

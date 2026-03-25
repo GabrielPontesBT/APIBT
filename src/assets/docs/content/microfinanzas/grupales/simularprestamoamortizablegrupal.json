@@ -11,19 +11,19 @@
   "inputData": [
     {
       "Nombre": "sdtSimulacionAmortizableGrupal",
-      "Tipo": "sBTSimulacionAmortizableGrupal",
+      "Tipo": "<a href=\"#sbtsimulacionamortizablegrupal\">sBTSimulacionAmortizableGrupal</a>",
       "Comentarios": "Datos de la simulación grupal."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtSimulacionPrestamo",
-      "Tipo": "sBTSimulacionPrestamo",
+      "Tipo": "<a href=\"#sbtsimulacionprestamo\">sBTSimulacionPrestamo</a>",
       "Comentarios": "Datos del préstamo simulado."
     },
     {
       "Nombre": "sdtIntegrantesGrupo",
-      "Tipo": "sBTIntegranteGrupoSolicitud",
+      "Tipo": "<a href=\"#sbtintegrantegruposolicitud\">sBTIntegranteGrupoSolicitud</a>",
       "Comentarios": "Datos de los integrantes del grupo."
     }
   ],
@@ -70,7 +70,7 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Importe otros conceptos."
         },
         {
@@ -80,7 +80,7 @@
         },
         {
           "Nombre": "integrantesGrupo",
-          "Tipo": "sBTIntegranteGrupoSolicitud",
+          "Tipo": "<a href=\"#sbtintegrantegruposolicitud\">sBTIntegranteGrupoSolicitud</a>",
           "Comentarios": "Datos de los integrantes del grupo."
         },
         {
@@ -180,7 +180,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCuotaSimulacion",
+          "Tipo": "<a href=\"#sbtcuotasimulacion\">sBTCuotaSimulacion</a>",
           "Comentarios": "Cronograma del préstamo."
         },
         {
@@ -210,7 +210,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
           "Comentarios": "Importe otros conceptos."
         },
         {
@@ -220,7 +220,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -270,7 +270,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

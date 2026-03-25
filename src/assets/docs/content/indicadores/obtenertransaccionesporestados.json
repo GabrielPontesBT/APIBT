@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTransaccionesEstados",
-      "Tipo": "sBTTransaccionesEstados",
+      "Tipo": "<a href=\"#sbttransaccionesestados\">sBTTransaccionesEstados</a>",
       "Comentarios": "Listado de trasacciones."
     }
   ],

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtOrigenesCaptacion",
-      "Tipo": "sBTOrigenCaptacion",
+      "Tipo": "<a href=\"#sbtorigencaptacion\">sBTOrigenCaptacion</a>",
       "Comentarios": "Listado de orígenes de captación."
     }
   ],

@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtAhorroProgramado",
-      "Tipo": "sBTAhorroProgramadoAlta",
+      "Tipo": "<a href=\"#sbtahorroprogramadoalta\">sBTAhorroProgramadoAlta</a>",
       "Comentarios": "Datos de la solicitud de ahorro programado."
     }
   ],

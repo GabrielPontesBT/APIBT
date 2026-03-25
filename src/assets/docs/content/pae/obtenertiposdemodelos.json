@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTModelosPAE",
-      "Tipo": "sBTTModeloPAE",
+      "Tipo": "<a href=\"#sbttmodelopae\">sBTTModeloPAE</a>",
       "Comentarios": "Listado de los modelos de evaluación."
     }
   ],

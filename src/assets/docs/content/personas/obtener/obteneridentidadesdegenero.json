@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtIdentidadesDeGenero",
-      "Tipo": "sBTIdentidadDeGenero",
+      "Tipo": "<a href=\"#sbtidentidaddegenero\">sBTIdentidadDeGenero</a>",
       "Comentarios": "Listado de identidades de género."
     }
   ],

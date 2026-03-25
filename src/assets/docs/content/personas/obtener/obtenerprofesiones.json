@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtProfesiones",
-      "Tipo": "sBTProfesion",
+      "Tipo": "<a href=\"#sbtprofesion\">sBTProfesion</a>",
       "Comentarios": "Listado de profesiones."
     }
   ],

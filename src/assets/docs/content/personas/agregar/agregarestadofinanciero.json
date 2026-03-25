@@ -16,24 +16,24 @@
     },
     {
       "Nombre": "sdtEstadoFinanciero",
-      "Tipo": "sBTEstadoFinanciero",
+      "Tipo": "<a href=\"#sbtestadofinanciero\">sBTEstadoFinanciero </a>",
       "Comentarios": "Datos del estado financiero."
     },
     {
       "Nombre": "sdtCondicionTributaria",
-      "Tipo": "sBTCondicionTributaria",
+      "Tipo": "<a href=\"#sbtcondiciontributaria\">sBTCondicionTributaria </a>",
       "Comentarios": "Datos de la condición tributaria."
     },
     {
       "Nombre": "sdtConceptosEstadoFinanciero",
-      "Tipo": "sBTDetallesEstadosFinancieros",
+      "Tipo": "<a href=\"#sbtdetallesestadosfinancieros\">sBTDetallesEstadosFinancieros </a>",
       "Comentarios": "Listado de los conceptos financieros."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtEstadoFinanciero",
-      "Tipo": "sBTEstadoFinanciero",
+      "Tipo": "<a href=\"#sbtestadofinanciero\">sBTEstadoFinanciero </a>",
       "Comentarios": "Datos del estado financiero."
     }
   ],

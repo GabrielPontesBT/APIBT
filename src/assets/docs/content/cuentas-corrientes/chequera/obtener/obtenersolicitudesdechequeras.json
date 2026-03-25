@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtSolicitudesChequeras",
-      "Tipo": "sBTSolicitudesChequeras",
+      "Tipo": "<a href=\"#sbtsolicitudeschequeras\">sBTSolicitudesChequeras</a>",
       "Comentarios": "Listado de chequeras."
     }
   ],
@@ -52,7 +52,7 @@
       "fields": [
         {
           "Nombre": "sdtDatosChequera",
-          "Tipo": "sBTDatosChequera",
+          "Tipo": "<a href=\"#sbtdatoschequera\">sBTDatosChequera</a>",
           "Comentarios": "Listado de chequeras."
         }
       ]

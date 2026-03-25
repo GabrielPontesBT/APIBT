@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtContactos",
-      "Tipo": "sBTContactoJuridico",
+      "Tipo": "<a href=\"#sbtcontactojuridico\">sBTContactoJuridico</a>",
       "Comentarios": "Listado de contactos."
     }
   ],

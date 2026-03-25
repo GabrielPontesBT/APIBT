@@ -27,7 +27,7 @@
     {
       "Nombre": "parmsAux",
       "Tipo": "String",
-      "Comentarios": "Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores]."
+      "Comentarios": "<a href=\"#valores\">Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores</a>]."
     },
     {
       "Nombre": "operacionCobroUId",

@@ -58,7 +58,7 @@
     },
     {
       "Nombre": "detallePagos",
-      "Tipo": "sBTDetallePago",
+      "Tipo": "<a href=\"#sbtdetallepago\">sBTDetallePago</a>",
       "Comentarios": "Lista de información del archivo con su estado y mensaje."
     }
   ],

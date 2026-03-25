@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDocumentosAdicionales",
-      "Tipo": "sBTDocumentoAdicional",
+      "Tipo": "<a href=\"#sbtdocumentoadicional\">sBTDocumentoAdicional</a>",
       "Comentarios": "Listado de documentos adicionales"
     }
   ],

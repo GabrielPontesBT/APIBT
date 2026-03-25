@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtDatosAsiento",
-      "Tipo": "sBTDatosAsiento",
+      "Tipo": "<a href=\"#sbtdatosasiento\">sBTDatosAsiento</a>",
       "Comentarios": "Datos del movimiento."
     },
     {

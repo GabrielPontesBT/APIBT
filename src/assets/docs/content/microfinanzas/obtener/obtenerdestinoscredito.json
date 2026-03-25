@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtDestinosCredito",
-      "Tipo": "sBTDestinoCredito",
+      "Tipo": "<a href=\"#sbtdestinocredito\">sBTDestinoCredito</a>",
       "Comentarios": "Listado de destinos de crédito."
     }
   ],

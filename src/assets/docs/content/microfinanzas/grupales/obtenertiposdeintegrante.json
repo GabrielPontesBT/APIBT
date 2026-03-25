@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposIntegrantesGrupo",
-      "Tipo": "sBTTipoIntegranteGrupo",
+      "Tipo": "<a href=\"#sbttipointegrantegrupo\">sBTTipoIntegranteGrupo</a>",
       "Comentarios": "Listado de tipos de integrantes."
     }
   ],

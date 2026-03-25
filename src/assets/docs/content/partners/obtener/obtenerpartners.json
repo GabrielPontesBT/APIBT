@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPartners",
-      "Tipo": "sBTPartner",
+      "Tipo": "<a href=\"#sbtpartner\">sBTPartner</a>",
       "Comentarios": "Listado de los Partners."
     }
   ],

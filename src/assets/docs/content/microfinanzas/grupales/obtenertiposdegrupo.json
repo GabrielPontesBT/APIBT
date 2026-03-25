@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposGrupos",
-      "Tipo": "sBTTipoGrupo",
+      "Tipo": "<a href=\"#sbttipogrupo\">sBTTipoGrupo</a>",
       "Comentarios": "Listado de tipos de grupos."
     }
   ],

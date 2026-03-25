@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtResumenProductos",
-      "Tipo": "sCTInfoProductos",
+      "Tipo": "<a href=\"#sctinfoproductos\">sCTInfoProductos</a>",
       "Comentarios": "Listado de productos."
     }
   ],
@@ -53,7 +53,7 @@
       "fields": [
         {
           "Nombre": "cajasAhorros",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Cajas de ahorro."
         },
         {
@@ -63,27 +63,27 @@
         },
         {
           "Nombre": "cofresSeguridad",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Cofres de seguridad."
         },
         {
           "Nombre": "cuentasCorrientes",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Cuentas corrientes."
         },
         {
           "Nombre": "plazosFijos",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Plazos fijos."
         },
         {
           "Nombre": "prestamos",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Préstamos."
         },
         {
           "Nombre": "tarjetasDebito",
-          "Tipo": "sCTResumenProducto",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
           "Comentarios": "Tarjetas de débito."
         }
       ]

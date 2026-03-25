@@ -26,7 +26,7 @@
     },
     {
       "Nombre": "sdtValores",
-      "Tipo": "sBTPAEValorItem",
+      "Tipo": "<a href=\"#sbtpaevaloritem\">sBTPAEValorItem</a>",
       "Comentarios": "Colección de valores PAE."
     }
   ],
@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "sdtPoliticas",
-      "Tipo": "sBTPoliticaIncumplida",
+      "Tipo": "<a href=\"#sbtpoliticaincumplida\">sBTPoliticaIncumplida</a>",
       "Comentarios": "Colección de políticas incumplidas."
     },
     {

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtEjecutivos",
-      "Tipo": "sBTEjecutivo",
+      "Tipo": "<a href=\"#sbtejecutivo\">sBTEjecutivo</a>",
       "Comentarios": "Listado de ejecutivos."
     }
   ],

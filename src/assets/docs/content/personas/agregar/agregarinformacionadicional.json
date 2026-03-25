@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtInformacionAdicional",
-      "Tipo": "sBTDatoLista",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
       "Comentarios": "Listado de datos."
     }
   ],

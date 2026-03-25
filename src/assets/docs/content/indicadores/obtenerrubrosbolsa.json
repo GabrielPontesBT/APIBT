@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtRubrosBolsa",
-      "Tipo": "sBTRubroBolsa",
+      "Tipo": "<a href=\"#sbtrubrobolsa\">sBTRubroBolsa</a>",
       "Comentarios": "Listado de rubros de bolsa."
     }
   ],

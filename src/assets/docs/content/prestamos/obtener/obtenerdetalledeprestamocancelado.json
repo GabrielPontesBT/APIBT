@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPrestamo",
-      "Tipo": "sBTPrestamoCancelado",
+      "Tipo": "<a href=\"#sbtprestamocancelado\">sBTPrestamoCancelado</a>",
       "Comentarios": "Datos del préstamo cancelado."
     }
   ],
@@ -67,7 +67,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCuotaCancelada",
+          "Tipo": "<a href=\"#sbtcuotacancelada\">sBTCuotaCancelada</a>",
           "Comentarios": "Cronograma de pagos del préstamo."
         },
         {
@@ -117,7 +117,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto."
         },
         {
@@ -182,7 +182,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

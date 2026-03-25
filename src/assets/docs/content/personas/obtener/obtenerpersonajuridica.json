@@ -18,12 +18,12 @@
   "outputData": [
     {
       "Nombre": "personaJuridica",
-      "Tipo": "sBTPersonaJuridica1",
+      "Tipo": "<a href=\"#sbtpersonajuridica1\">sBTPersonaJuridica1</a>",
       "Comentarios": "Datos de persona jurídica."
     },
     {
       "Nombre": "sdtIntegrantesJuridicos",
-      "Tipo": "sBTResumenIntegranteJuridico",
+      "Tipo": "<a href=\"#sbtresumenintegrantejuridico\">sBTResumenIntegranteJuridico</a>",
       "Comentarios": "Listado de integrantes jurídicos."
     }
   ],
@@ -59,12 +59,12 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {
           "Nombre": "domicilios",
-          "Tipo": "sBTDomicilioCompleto",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
           "Comentarios": "Listado de los domicilios."
         },
         {

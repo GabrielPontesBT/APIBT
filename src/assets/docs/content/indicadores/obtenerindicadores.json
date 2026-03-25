@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtIndicadores",
-      "Tipo": "sBTIndicador",
+      "Tipo": "<a href=\"#sbtindicador\">sBTIndicador</a>",
       "Comentarios": "Listado de indicadores."
     }
   ],

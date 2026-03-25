@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "textoMovimiento",
-      "Tipo": "sBTTextoMovimiento",
+      "Tipo": "<a href=\"#sbttextomovimiento\">sBTTextoMovimiento</a>",
       "Comentarios": "Datos del texto del movimiento."
     }
   ],

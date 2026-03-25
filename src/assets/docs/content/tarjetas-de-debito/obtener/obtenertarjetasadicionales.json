@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTarjetaDebitoAdicionales",
-      "Tipo": "sBDTarjetasDebitoAdicionales",
+      "Tipo": "<a href=\"#sbdtarjetadebitoadicional\">sBDTarjetasDebitoAdicionales</a>",
       "Comentarios": "Datos de la tarjeta de débito."
     }
   ],
@@ -44,7 +44,7 @@
       "fields": [
         {
           "Nombre": "adicionales",
-          "Tipo": "sBDTarjetaDebitoAdicional",
+          "Tipo": "<a href=\"#sbdtarjetadebitoadicional\">sBDTarjetaDebitoAdicional</a>",
           "Comentarios": "Listado de tarjetas de débito adicionales."
         },
         {

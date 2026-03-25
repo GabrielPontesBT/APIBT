@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtMonedas",
-      "Tipo": "sBTMoneda",
+      "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
       "Comentarios": "Listado de monedas."
     }
   ],

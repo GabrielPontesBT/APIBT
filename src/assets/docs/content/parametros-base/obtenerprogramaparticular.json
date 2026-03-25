@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtProgramaParticular",
-      "Tipo": "sBTProgramaParticular",
+      "Tipo": "<a href=\"#sbtprogramaparticular\">sBTProgramaParticular</a>",
       "Comentarios": "Datos del programa particular."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstadisticasMetodos",
-      "Tipo": "sBTEstadisticasServicioMetodo",
+      "Tipo": "<a href=\"#sbtestadisticasserviciometodo\">sBTEstadisticasServicioMetodo</a>",
       "Comentarios": "Colección de datos de métodos y sus estadísticas."
     }
   ],

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtNaturalezas",
-      "Tipo": "sBTNaturalezaJuridica",
+      "Tipo": "<a href=\"#sbtnaturalezajuridica\">sBTNaturalezaJuridica</a>",
       "Comentarios": "Listado de naturalezas jurídicas."
     }
   ],

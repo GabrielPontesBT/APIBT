@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPlazos",
-      "Tipo": "sBTPlazo",
+      "Tipo": "<a href=\"#sbtplazo\">sBTPlazo</a>",
       "Comentarios": "Listado de plazos habilitados."
     }
   ],

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtProducto",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
       "Comentarios": "Listado de productos."
     }
   ],
@@ -43,7 +43,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

@@ -16,14 +16,14 @@
     },
     {
       "Nombre": "sdtTraspaso",
-      "Tipo": "sBTTraspaso",
+      "Tipo": "<a href=\"#sbttraspaso\">sBTTraspaso</a>",
       "Comentarios": "Datos del traspaso."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtResultadoTraspaso",
-      "Tipo": "sBTResultadoTraspaso",
+      "Tipo": "<a href=\"#sbtresultadotraspaso\">sBTResultadoTraspaso</a>",
       "Comentarios": "Datos resultado del traspaso."
     }
   ],

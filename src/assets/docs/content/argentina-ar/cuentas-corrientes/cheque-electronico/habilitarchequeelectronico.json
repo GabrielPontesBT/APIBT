@@ -38,7 +38,7 @@
   "outputData": [
     {
       "Nombre": "listaCheques",
-      "Tipo": "sBTChequeElectronico",
+      "Tipo": "<a href=\"#sbtchequeelectronico\">sBTChequeElectronico</a>",
       "Comentarios": "Lista de cheques."
     }
   ],

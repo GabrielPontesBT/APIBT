@@ -16,7 +16,7 @@
           <tr>
             @for (col of columns; track col) {
               <td
-                [innerHTML]="row[col]">
+                [innerHTML]="safeHtml(row[col])">
               </td>
             }
           </tr>

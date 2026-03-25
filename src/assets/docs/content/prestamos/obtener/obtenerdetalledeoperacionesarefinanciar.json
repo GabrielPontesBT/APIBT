@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtOperacionesARefinanciar",
-      "Tipo": "sBTPrestamos",
+      "Tipo": "<a href=\"#sbtprestamos\">sBTPrestamos</a>",
       "Comentarios": "Datos de las operaciones a refinanciar."
     },
     {
@@ -28,12 +28,12 @@
     },
     {
       "Nombre": "sdtPrestamosACancelar",
-      "Tipo": "sBTPrestamoACancelar",
+      "Tipo": "<a href=\"#sbtprestamoacancelar\">sBTPrestamoACancelar</a>",
       "Comentarios": "Listado de préstamos a cancelar."
     },
     {
       "Nombre": "sdtConceptosPrestamo",
-      "Tipo": "sBTConceptosPrestamo",
+      "Tipo": "<a href=\"#sbtconceptosprestamo\">sBTConceptosPrestamo</a>",
       "Comentarios": "Conceptos del préstamo."
     }
   ],
@@ -104,7 +104,7 @@
         },
         {
           "Nombre": "detalleConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Listado de detalles concepto."
         },
         {
@@ -154,7 +154,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -209,7 +209,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtProductosPlazoFijo",
-      "Tipo": "sBTProductoPlazoFijo",
+      "Tipo": "<a href=\"#sbtproductoplazofijo\">sBTProductoPlazoFijo</a>",
       "Comentarios": "Listado de plazos fijos."
     }
   ],
@@ -93,7 +93,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -123,7 +123,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

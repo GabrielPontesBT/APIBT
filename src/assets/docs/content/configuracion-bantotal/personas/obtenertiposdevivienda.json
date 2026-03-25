@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtViviendas",
-      "Tipo": "sBTTipoDeVivienda",
+      "Tipo": "<a href=\"#sbttipodevivienda\">sBTTipoDeVivienda</a>",
       "Comentarios": "Listado de viviendas."
     }
   ],

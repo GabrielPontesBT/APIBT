@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTitulos",
-      "Tipo": "sBTTitulo",
+      "Tipo": "<a href=\"#sbttitulo\">sBTTitulo</a>",
       "Comentarios": "Listado de títulos del cliente."
     }
   ],
@@ -73,7 +73,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Listado de otros conceptos."
         },
         {

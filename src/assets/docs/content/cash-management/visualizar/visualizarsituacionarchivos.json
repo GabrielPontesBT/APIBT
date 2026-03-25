@@ -43,7 +43,7 @@
   "outputData": [
     {
       "Nombre": "sdtListaArchivos",
-      "Tipo": "sBTSituacionArchivo",
+      "Tipo": "<a href=\"#sbtsituacionarchivo\">sBTSituacionArchivo</a>",
       "Comentarios": "Listado de archivos solicitado."
     }
   ],

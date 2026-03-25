@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "situacionLineas",
-      "Tipo": "sBTSituacionLinea",
+      "Tipo": "<a href=\"#sbtsituacionlinea\">sBTSituacionLinea</a>",
       "Comentarios": "Listado de líneas del archivo con su estado y mensaje."
     }
   ],

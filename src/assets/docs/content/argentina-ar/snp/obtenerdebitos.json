@@ -43,7 +43,7 @@
   "outputData": [
     {
       "Nombre": "sdtDebitos",
-      "Tipo": "sBTDebito",
+      "Tipo": "<a href=\"#sbtdebito\">sBTDebito</a>",
       "Comentarios": "Listado de débitos."
     }
   ],

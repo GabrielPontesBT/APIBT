@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtPersona",
-      "Tipo": "sBTPersonaFisica",
+      "Tipo": "<a href=\"#sbtpersonafisica\">sBTPersonaFisica</a>",
       "Comentarios": "Datos de la persona."
     }
   ],
@@ -244,12 +244,12 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {
           "Nombre": "domicilios",
-          "Tipo": "sBTDomicilioCompleto",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
           "Comentarios": "Listado de los domicilios."
         },
         {

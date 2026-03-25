@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtCompra",
-      "Tipo": "sBTCompraTitulo",
+      "Tipo": "<a href=\"#sbtcompratitulo\">sBTCompraTitulo</a>",
       "Comentarios": "Datos del título a comprar."
     }
   ],
@@ -150,7 +150,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos."
         },
         {

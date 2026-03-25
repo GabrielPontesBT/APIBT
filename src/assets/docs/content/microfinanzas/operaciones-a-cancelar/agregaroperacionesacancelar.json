@@ -21,7 +21,7 @@
     },
     {
       "Nombre": "sdtOperaciones",
-      "Tipo": "sBTOperacionId",
+      "Tipo": "<a href=\"#sbtoperacionid\">sBTOperacionId</a>",
       "Comentarios": "Listado de operaciones."
     }
   ],

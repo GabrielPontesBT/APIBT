@@ -128,7 +128,7 @@ function parseTable(md) {
       .filter((header) => header);
 
     return lines.slice(2).map((line) => {
-      const cols = line.split('|').map((col) => stripMarkdownLinks(col.trim()));
+      const cols = line.split('|').map((col) => col.trim());
       const obj = {};
 
       headers.forEach((header, index) => {

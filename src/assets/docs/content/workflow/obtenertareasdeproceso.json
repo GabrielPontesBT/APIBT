@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTareas",
-      "Tipo": "sBTTareaWF",
+      "Tipo": "<a href=\"#sbttareawf\">sBTTareaWF</a>",
       "Comentarios": "Listado de tareas Workflow."
     }
   ],

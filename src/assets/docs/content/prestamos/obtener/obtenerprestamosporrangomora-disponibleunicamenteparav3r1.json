@@ -53,7 +53,7 @@
     },
     {
       "Nombre": "sdtDatosPrestamos",
-      "Tipo": "sBTDatosPrestamo",
+      "Tipo": "<a href=\"#sbtdatosprestamo\">sBTDatosPrestamo</a>",
       "Comentarios": "Listado de los préstamos que están dentro del rango de días de mora."
     }
   ],

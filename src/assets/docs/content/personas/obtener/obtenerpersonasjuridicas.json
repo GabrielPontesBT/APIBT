@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPersonasJuridicas",
-      "Tipo": "sBTPersonaJuridica",
+      "Tipo": "<a href=\"#sbtpersonajuridica\">sBTPersonaJuridica</a>",
       "Comentarios": "Listado de personas jurídicas."
     }
   ],

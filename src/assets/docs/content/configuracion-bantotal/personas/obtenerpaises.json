@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPaises",
-      "Tipo": "sBTPais",
+      "Tipo": "<a href=\"#sbtpais\">sBTPais</a>",
       "Comentarios": "Listado de países."
     }
   ],

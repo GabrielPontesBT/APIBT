@@ -26,7 +26,7 @@
     },
     {
       "Nombre": "sdtIdOperaciones",
-      "Tipo": "sBTIdOperacion",
+      "Tipo": "<a href=\"#sbtidoperacion\">sBTIdOperacion</a>",
       "Comentarios": "Listado de identificadores únicos de operaciones de las cuentas a asociar."
     }
   ],

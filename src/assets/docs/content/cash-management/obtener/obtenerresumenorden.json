@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtResumenCabezal",
-      "Tipo": "sBTResumenCabezal",
+      "Tipo": "<a href=\"#sbtresumencabezal\">sBTResumenCabezal</a>",
       "Comentarios": "Listado de cabezales de los resúmenes."
     }
   ],

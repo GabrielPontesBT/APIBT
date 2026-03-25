@@ -36,19 +36,19 @@
     },
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatoExtendido",
-      "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes valores."
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatoExtendido",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
       "Comentarios": "Listado de datos complementarios."
     },
     {
       "Nombre": "sBTSimulacionDepositoAPlazo",
-      "Tipo": "sBTSimulacionDepositoAPlazo",
+      "Tipo": "<a href=\"#sbtsimulaciondepositoaplazo\">sBTSimulacionDepositoAPlazo</a>",
       "Comentarios": "Datos de simulación del depósito."
     }
   ],
@@ -111,7 +111,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Lista de datos."
         },
         {
@@ -156,7 +156,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCuotaPlanDeposito",
+          "Tipo": "<a href=\"#sbtcuotaplandeposito\">sBTCuotaPlanDeposito</a>",
           "Comentarios": "Cronograma del préstamo."
         },
         {
@@ -171,7 +171,7 @@
         },
         {
           "Nombre": "impuestos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de impuestos."
         },
         {
@@ -181,7 +181,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos."
         },
         {
@@ -201,7 +201,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -261,7 +261,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {
@@ -311,7 +311,7 @@
         },
         {
           "Nombre": "impuestos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de impuestos."
         },
         {
@@ -321,7 +321,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos."
         },
         {

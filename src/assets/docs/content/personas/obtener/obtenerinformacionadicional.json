@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtInformacionAdicional",
-      "Tipo": "sBTDatoLista",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
       "Comentarios": "Información Adicional de datos."
     }
   ],

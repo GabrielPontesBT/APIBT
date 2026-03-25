@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtPeriodosDeAcreditacion",
-      "Tipo": "sBTPeriodoDeAcreditacion",
+      "Tipo": "<a href=\"#sbtperiododeacreditacion\">sBTPeriodoDeAcreditacion</a>",
       "Comentarios": "Listado de períodos de acreditación."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtPaquete",
-      "Tipo": "sBTPaquete",
+      "Tipo": "<a href=\"#sbtpaquete\">sBTPaquete</a>",
       "Comentarios": "Datos del paquete."
     }
   ],
@@ -54,7 +54,7 @@
         },
         {
           "Nombre": "productos",
-          "Tipo": "sBTProductoPaquete",
+          "Tipo": "<a href=\"#sbtproductopaquete\">sBTProductoPaquete</a>",
           "Comentarios": "Listado de productos incluidos en el paquete."
         },
         {

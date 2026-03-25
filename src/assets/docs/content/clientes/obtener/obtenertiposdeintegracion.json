@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposIntegracion",
-      "Tipo": "sBTTipoIntegrante",
+      "Tipo": "<a href=\"#sbttipointegrante\">sBTTipoIntegrante</a>",
       "Comentarios": "Lista de tipos de integrantes."
     }
   ],

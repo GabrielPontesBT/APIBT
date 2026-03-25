@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtPagoDeCuota",
-      "Tipo": "sBTPagoDeCuota",
+      "Tipo": "<a href=\"#sbtpagodecuota\">sBTPagoDeCuota</a>",
       "Comentarios": "Identificador único de movimiento [Asiento]."
     }
   ],
@@ -57,7 +57,7 @@
       "fields": [
         {
           "Nombre": "detalle",
-          "Tipo": "sBTDetallePagoCuota",
+          "Tipo": "<a href=\"#sbtdetallepagocuota\">sBTDetallePagoCuota</a>",
           "Comentarios": "Listado de pagos de una cuota."
         },
         {
@@ -87,7 +87,7 @@
         },
         {
           "Nombre": "detalleConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Detalle de los conceptos adicionales."
         },
         {

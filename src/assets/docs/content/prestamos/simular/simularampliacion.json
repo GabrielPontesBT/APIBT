@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtAmpliacion",
-      "Tipo": "sBTAmpliacionAlta",
+      "Tipo": "<a href=\"#sbtampliacionalta\">sBTAmpliacionAlta</a>",
       "Comentarios": "Datos de simulación."
     }
   ],
@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtSimulacion",
-      "Tipo": "sBTSimulacionPrestamo",
+      "Tipo": "<a href=\"#sbtsimulacionprestamo\">sBTSimulacionPrestamo</a>",
       "Comentarios": "Datos del préstamo simulado."
     },
     {
@@ -246,7 +246,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCuotaPrestamoAlta",
+          "Tipo": "<a href=\"#sbtcuotaprestamoalta\">sBTCuotaPrestamoAlta</a>",
           "Comentarios": "Cronograma del préstamo."
         },
         {
@@ -276,7 +276,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos."
         },
         {
@@ -286,7 +286,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -336,7 +336,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

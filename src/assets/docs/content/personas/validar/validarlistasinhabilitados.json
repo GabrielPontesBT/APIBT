@@ -58,7 +58,7 @@
   "outputData": [
     {
       "Nombre": "sdtListaInhabilitados",
-      "Tipo": "sBTListaInhabilitados",
+      "Tipo": "<a href=\"#sbtlistainhabilitados\">sBTListaInhabilitados</a>",
       "Comentarios": "Listado de lista de inhabilitados."
     }
   ],

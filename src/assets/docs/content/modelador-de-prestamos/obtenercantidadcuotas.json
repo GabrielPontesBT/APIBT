@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "sdtListaValores",
-      "Tipo": "sBTValor",
+      "Tipo": "<a href=\"#sbtvalor\">sBTValor</a>",
       "Comentarios": "Listado de valores."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtSaldosBloqueados",
-      "Tipo": "sBTBloqueoSaldo",
+      "Tipo": "<a href=\"#sbtbloqueosaldo\">sBTBloqueoSaldo</a>",
       "Comentarios": "Listado de saldos bloqueados."
     }
   ],

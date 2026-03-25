@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sCTPersona",
-      "Tipo": "sCTPersona",
+      "Tipo": "<a href=\"#sctpersona\">sCTPersona</a>",
       "Comentarios": "Datos de cliente."
     }
   ],
@@ -68,12 +68,12 @@
         },
         {
           "Nombre": "documento",
-          "Tipo": "sCTDocumento",
+          "Tipo": "<a href=\"#sctdocumento\">sCTDocumento</a>",
           "Comentarios": "Datos del documento."
         },
         {
           "Nombre": "domicilio",
-          "Tipo": "sCTDomicilio",
+          "Tipo": "<a href=\"#sctdomicilio\">sCTDomicilio</a>",
           "Comentarios": "Datos de domicilio."
         },
         {

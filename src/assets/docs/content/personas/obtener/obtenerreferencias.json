@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtReferencias",
-      "Tipo": "sBTReferencia",
+      "Tipo": "<a href=\"#sbtreferencia\">sBTReferencia</a>",
       "Comentarios": "Listado de referencias."
     }
   ],

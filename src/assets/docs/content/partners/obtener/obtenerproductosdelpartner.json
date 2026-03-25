@@ -11,14 +11,14 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtProductos",
-      "Tipo": "sBTProducto",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
       "Comentarios": "Listado de los productos."
     }
   ],
@@ -90,7 +90,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Listado de otros conceptos."
         },
         {

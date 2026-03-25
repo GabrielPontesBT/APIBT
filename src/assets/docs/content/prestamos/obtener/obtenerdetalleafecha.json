@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtPrestamo",
-      "Tipo": "sBTPrestamo",
+      "Tipo": "<a href=\"#sbtprestamo\">sBTPrestamo</a>",
       "Comentarios": "Datos del préstamo."
     }
   ],
@@ -242,7 +242,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Producto."
         },
         {
@@ -257,7 +257,7 @@
         },
         {
           "Nombre": "saldosPendiente",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Saldos pendientes."
         },
         {
@@ -362,7 +362,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

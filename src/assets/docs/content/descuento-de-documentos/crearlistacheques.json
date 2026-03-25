@@ -21,7 +21,7 @@
     },
     {
       "Nombre": "sdtListaCheques",
-      "Tipo": "sBTDescuentoCheque",
+      "Tipo": "<a href=\"#sbtdescuentocheque\">sBTDescuentoCheque</a>",
       "Comentarios": "Lista de documentos."
     },
     {

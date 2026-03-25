@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtEstadoDeCuenta",
-      "Tipo": "sBTEstadoCuentaDebito",
+      "Tipo": "<a href=\"#sbtestadocuentadebito\">sBTEstadoCuentaDebito</a>",
       "Comentarios": "Datos del estado de cuenta de la tarjeta de débito."
     }
   ],
@@ -54,7 +54,7 @@
       "fields": [
         {
           "Nombre": "movimientos",
-          "Tipo": "sBTMovimientoDebito",
+          "Tipo": "<a href=\"#sbtmovimientodebito\">sBTMovimientoDebito</a>",
           "Comentarios": "Listado de movimientos."
         }
       ]

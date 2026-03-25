@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtCorreoElectronico",
-      "Tipo": "sBTCorreoElectronico",
+      "Tipo": "<a href=\"#sbtcorreoelectronico\">sBTCorreoElectronico</a>",
       "Comentarios": "Datos de correo electrónico."
     }
   ],

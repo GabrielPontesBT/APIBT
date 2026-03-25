@@ -26,7 +26,7 @@
     },
     {
       "Nombre": "datosSolicitud",
-      "Tipo": "sBTSolicitudChequera",
+      "Tipo": "<a href=\"#sbtsolicitudchequera\">sBTSolicitudChequera</a>",
       "Comentarios": "Datos de solicitud de chequera."
     }
   ],

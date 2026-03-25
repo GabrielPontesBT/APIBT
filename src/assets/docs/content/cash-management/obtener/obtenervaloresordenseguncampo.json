@@ -21,12 +21,12 @@
     },
     {
       "Nombre": "campoBusqueda",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Lista de valores de campos CASH a buscar."
     },
     {
       "Nombre": "camposCash",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Lista de campos CASH a devolver valor."
     }
   ],
@@ -43,7 +43,7 @@
     },
     {
       "Nombre": "valoresCampoCASH",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Lista de valores de campos CASH."
     }
   ],

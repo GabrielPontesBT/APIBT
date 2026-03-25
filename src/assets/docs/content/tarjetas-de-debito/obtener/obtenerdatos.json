@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtEntidadTarjetaDebito",
-      "Tipo": "sBDTarjetaDebito",
+      "Tipo": "<a href=\"#sbdtarjetadebito\">sBDTarjetaDebito</a>",
       "Comentarios": "Datos de tarjeta de débito."
     }
   ],
@@ -69,7 +69,7 @@
         },
         {
           "Nombre": "limites",
-          "Tipo": "sBDLimitesTarjeta",
+          "Tipo": "<a href=\"#sbdlimitestarjeta\">sBDLimitesTarjeta</a>",
           "Comentarios": "Listado de límites de la tarjeta."
         },
         {

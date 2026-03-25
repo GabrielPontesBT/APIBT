@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtEvolucionSaldo",
-      "Tipo": "sBTEvolucionSaldos",
+      "Tipo": "<a href=\"#sbtevolucionsaldos\">sBTEvolucionSaldos</a>",
       "Comentarios": "Datos de la evolución de saldos."
     }
   ],
@@ -57,7 +57,7 @@
         },
         {
           "Nombre": "saldos",
-          "Tipo": "sBTSaldoMensual",
+          "Tipo": "<a href=\"#sbtsaldomensual\">sBTSaldoMensual</a>",
           "Comentarios": "Listado de saldo mensual."
         }
       ]

@@ -11,12 +11,12 @@
   "inputData": [
     {
       "Nombre": "sdtPersonaJuridica",
-      "Tipo": "sBTPersonaJuridica1",
+      "Tipo": "<a href=\"#sbtpersonajuridica1\">sBTPersonaJuridica1</a>",
       "Comentarios": "Datos de la persona jurídica."
     },
     {
       "Nombre": "sdtIntegrantesJuridicosAlta",
-      "Tipo": "sBTIntegranteJuridicoAlta",
+      "Tipo": "<a href=\"#sbtintegrantejuridicoalta\">sBTIntegranteJuridicoAlta</a>",
       "Comentarios": "Listado de personas físicas integrantes de la persona jurídica."
     }
   ],
@@ -184,12 +184,12 @@
         },
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {
           "Nombre": "domicilios",
-          "Tipo": "sBTDomicilioCompleto",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
           "Comentarios": "Listado de los domicilios."
         },
         {

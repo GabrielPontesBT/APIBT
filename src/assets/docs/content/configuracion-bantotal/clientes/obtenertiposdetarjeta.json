@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTipos",
-      "Tipo": "sBTTipoTarjeta",
+      "Tipo": "<a href=\"#sbttipotarjeta\">sBTTipoTarjeta</a>",
       "Comentarios": "Listado de tipos de tarjeta."
     }
   ],

@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtClasificacionesInternas",
-      "Tipo": "sBTClasificacionInterna",
+      "Tipo": "<a href=\"#sbtclasificacioninterna\">sBTClasificacionInterna</a>",
       "Comentarios": "Listado de clasificaciones internas."
     }
   ],

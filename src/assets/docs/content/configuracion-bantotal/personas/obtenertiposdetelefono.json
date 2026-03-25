@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTiposTelefono",
-      "Tipo": "sBTTipoTelefono",
+      "Tipo": "<a href=\"#sbttipotelefono\">sBTTipoTelefono</a>",
       "Comentarios": "Listado de tipos de teléfono."
     }
   ],

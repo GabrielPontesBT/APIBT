@@ -33,7 +33,7 @@
   "outputData": [
     {
       "Nombre": "sdtPersonas",
-      "Tipo": "sBTPersonaBusqueda",
+      "Tipo": "<a href=\"#sbtpersonabusqueda\">sBTPersonaBusqueda</a>",
       "Comentarios": "Listado de datos de persona."
     }
   ],

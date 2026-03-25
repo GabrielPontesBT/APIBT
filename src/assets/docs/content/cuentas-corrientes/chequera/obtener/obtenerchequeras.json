@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtChequeras",
-      "Tipo": "sBTChequerasCC",
+      "Tipo": "<a href=\"#sbtchequerascc\">sBTChequerasCC</a>",
       "Comentarios": "Listado de chequeras."
     }
   ],
@@ -53,7 +53,7 @@
         },
         {
           "Nombre": "chequera",
-          "Tipo": "sBTChequera",
+          "Tipo": "<a href=\"#sbtchequera\">sBTChequera</a>",
           "Comentarios": "Datos de Chequera."
         },
         {

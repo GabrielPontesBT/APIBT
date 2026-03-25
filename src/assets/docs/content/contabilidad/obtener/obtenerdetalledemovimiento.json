@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDetalleAsiento",
-      "Tipo": "sBTDetalleAsiento",
+      "Tipo": "<a href=\"#sbtdetalleasiento\">sBTDetalleAsiento</a>",
       "Comentarios": "Datos del movimiento."
     }
   ],
@@ -87,7 +87,7 @@
         },
         {
           "Nombre": "ordinales",
-          "Tipo": "sBTOrdinal",
+          "Tipo": "<a href=\"#sbtordinal\">sBTOrdinal</a>",
           "Comentarios": "Listado de ordinales del movimiento."
         },
         {
@@ -132,7 +132,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto."
         }
       ]
@@ -152,7 +152,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

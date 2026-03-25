@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtCampanias",
-      "Tipo": "sBTCampania",
+      "Tipo": "<a href=\"#sbtcampania\">sBTCampania</a>",
       "Comentarios": "Listado de campañas."
     }
   ],

@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtDatosDebito",
-      "Tipo": "sBTDatosAcreditarDebitar",
+      "Tipo": "<a href=\"#sbtdatosacreditardebitar\">sBTDatosAcreditarDebitar</a>",
       "Comentarios": "Datos del débito."
     }
   ],

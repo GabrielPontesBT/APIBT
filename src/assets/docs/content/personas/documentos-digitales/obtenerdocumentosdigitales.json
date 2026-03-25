@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDocumentosDigitales",
-      "Tipo": "sBTDocumentoDigital",
+      "Tipo": "<a href=\"#sbtdocumentodigital\">sBTDocumentoDigital</a>",
       "Comentarios": "Listado de Documentos Digitales."
     }
   ],

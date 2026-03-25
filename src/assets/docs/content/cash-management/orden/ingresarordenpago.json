@@ -41,7 +41,7 @@
     },
     {
       "Nombre": "sdtListaCampos",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Listado de valores de campos CASH."
     }
   ],

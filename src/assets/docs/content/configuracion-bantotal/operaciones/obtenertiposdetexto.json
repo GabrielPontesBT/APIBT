@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtTextos",
-      "Tipo": "sBTTipoTexto",
+      "Tipo": "<a href=\"#sbttipotexto\">sBTTipoTexto</a>",
       "Comentarios": "Listado de tipos de texto."
     }
   ],

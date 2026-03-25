@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTitulares",
-      "Tipo": "sBTTitularTelefono",
+      "Tipo": "<a href=\"#sbttitulartelefono\">sBTTitularTelefono</a>",
       "Comentarios": "Listado de titulares del teléfono."
     }
   ],
@@ -48,7 +48,7 @@
       "fields": [
         {
           "Nombre": "datosAdicionales",
-          "Tipo": "sBTDatoAdicional",
+          "Tipo": "<a href=\"#sbtdatoadicional\">sBTDatoAdicional</a>",
           "Comentarios": "Listado de datos adicionales."
         },
         {

@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtSimulacionUpdate",
-      "Tipo": "sBTSimulacionUpdate",
+      "Tipo": "<a href=\"#sbtsimulacionupdate\">sBTSimulacionUpdate</a>",
       "Comentarios": "Datos de la resimulación."
     },
     {
@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtSimulacion",
-      "Tipo": "sBTSimulacionOutput",
+      "Tipo": "<a href=\"#sbtsimulacionoutput\">sBTSimulacionOutput</a>",
       "Comentarios": "Datos de salida de la simulación."
     }
   ],
@@ -81,7 +81,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto1\">sBTConcepto</a>",
           "Comentarios": "Otros conceptos."
         }
       ]
@@ -131,12 +131,12 @@
         },
         {
           "Nombre": "comisiones",
-          "Tipo": "sBTComisionPrestamo",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
           "Comentarios": "Listado de comisiones."
         },
         {
           "Nombre": "comisionesCuota",
-          "Tipo": "sBTComisionPrestamo",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
           "Comentarios": "Listado de comisiones de cuota."
         },
         {
@@ -146,7 +146,7 @@
         },
         {
           "Nombre": "cronograma",
-          "Tipo": "sBTCuotaSimulacion",
+          "Tipo": "<a href=\"#sbtcuotasimulacion\">sBTCuotaSimulacion</a>",
           "Comentarios": "Cronograma del préstamo."
         },
         {
@@ -191,7 +191,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto2\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {
@@ -216,7 +216,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -226,7 +226,7 @@
         },
         {
           "Nombre": "seguros",
-          "Tipo": "sBTSeguroPrestamo",
+          "Tipo": "<a href=\"#sbtseguroprestamo\">sBTSeguroPrestamo</a>",
           "Comentarios": "Listado de seguros."
         },
         {
@@ -381,7 +381,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto3\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

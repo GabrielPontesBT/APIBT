@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtBeneficiarios",
-      "Tipo": "sBTBeneficiario",
+      "Tipo": "<a href=\"#sbtbeneficiario\">sBTBeneficiario</a>",
       "Comentarios": "Listado de beneficiarios del depósito a plazo."
     },
     {

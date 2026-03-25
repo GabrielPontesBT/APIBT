@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtPerfil",
-      "Tipo": "sBTPerfilBT",
+      "Tipo": "<a href=\"#sbtperfilbt\">sBTPerfilBT</a>",
       "Comentarios": "Datos del perfil."
     }
   ],

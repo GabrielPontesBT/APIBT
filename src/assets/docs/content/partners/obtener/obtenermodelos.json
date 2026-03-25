@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     },
     {
@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtModelos",
-      "Tipo": "sBTModelo",
+      "Tipo": "<a href=\"#sbtmodelo\">sBTModelo</a>",
       "Comentarios": "Listado de los modelos de una marca."
     }
   ],

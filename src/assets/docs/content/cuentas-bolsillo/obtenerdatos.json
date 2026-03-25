@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtInformacionBolsillo",
-      "Tipo": "sBTInfBolsillo",
+      "Tipo": "<a href=\"#sbtinfbolsillo\">sBTInfBolsillo</a>",
       "Comentarios": "Información del bolsillo."
     }
   ],
@@ -92,7 +92,7 @@
         },
         {
           "Nombre": "parametros",
-          "Tipo": "sBTParamBolsillo",
+          "Tipo": "<a href=\"#sbtparambolsillo\">sBTParamBolsillo</a>",
           "Comentarios": ""
         },
         {

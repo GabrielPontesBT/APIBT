@@ -38,7 +38,7 @@
   "outputData": [
     {
       "Nombre": "sdtCorrelativo",
-      "Tipo": "sBTCorrelativoGuiaEspecial",
+      "Tipo": "<a href=\"#sbtcorrelativoguiaespecial\">sBTCorrelativoGuiaEspecial</a>",
       "Comentarios": "Datos de la guía especial de proceso."
     }
   ],

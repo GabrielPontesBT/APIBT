@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtDatosAcreditacion",
-      "Tipo": "sBTDatosAcreditarDebitar",
+      "Tipo": "<a href=\"#sbtdatosacreditardebitar\">sBTDatosAcreditarDebitar</a>",
       "Comentarios": "Datos de la acreditación."
     }
   ],

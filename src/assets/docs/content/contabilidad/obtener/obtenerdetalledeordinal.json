@@ -28,7 +28,7 @@
   "outputData": [
     {
       "Nombre": "sdtOrdinal",
-      "Tipo": "sBTOrdinal",
+      "Tipo": "<a href=\"#sbtordinal\">sBTOrdinal</a>",
       "Comentarios": "Ordinales del movimiento."
     }
   ],
@@ -82,7 +82,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del Producto."
         }
       ]
@@ -102,7 +102,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

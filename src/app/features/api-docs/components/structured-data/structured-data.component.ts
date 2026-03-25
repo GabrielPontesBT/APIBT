@@ -1,5 +1,5 @@
-import { Component, Input, HostListener } from '@angular/core';
-import { ViewportScroller }              from '@angular/common';
+import { Component, Input, HostListener, OnChanges, SimpleChanges } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 interface StructuredType {
   typeName: string;
@@ -14,13 +14,19 @@ interface StructuredType {
     ,
     standalone: false
 })
-export class StructuredDataComponent {
+export class StructuredDataComponent implements OnChanges {
   @Input() types: StructuredType[] = [];
 
   /** Guarda qué panel (por id lowercase) está abierto */
   expandedMap: Record<string, boolean> = {};
 
   constructor(private viewport: ViewportScroller) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['types']) {
+      this.expandedMap = {};
+    }
+  }
 
   /**
    * Atiende clicks en enlaces <a href="#fragment">:

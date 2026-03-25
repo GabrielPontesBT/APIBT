@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtOperaciones",
-      "Tipo": "sBTDetalleOperacion",
+      "Tipo": "<a href=\"#sbtdetalleoperacion\">sBTDetalleOperacion</a>",
       "Comentarios": "Listado de detalle de operaciones."
     }
   ],
@@ -63,7 +63,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

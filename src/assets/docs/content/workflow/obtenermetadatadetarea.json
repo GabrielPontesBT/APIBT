@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtMetadatas",
-      "Tipo": "sBTMetadataWF",
+      "Tipo": "<a href=\"#sbtmetadatawf\">sBTMetadataWF</a>",
       "Comentarios": "Listado de datos de metadata Workflow."
     }
   ],

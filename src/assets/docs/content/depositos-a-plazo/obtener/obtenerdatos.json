@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtPlazoFijo",
-      "Tipo": "sBTPlazoFijo",
+      "Tipo": "<a href=\"#sbtplazofijo\">sBTPlazoFijo</a>",
       "Comentarios": "Datos del depósito a plazo."
     }
   ],
@@ -103,12 +103,12 @@
         },
         {
           "Nombre": "instruccionAcreditacion",
-          "Tipo": "sBTInstruccion",
+          "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
           "Comentarios": "Datos de la instrucción de acreditación."
         },
         {
           "Nombre": "instruccionVencimiento",
-          "Tipo": "sBTInstruccion",
+          "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
           "Comentarios": "Datos de la instrucción al vencimiento."
         },
         {
@@ -148,7 +148,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -213,7 +213,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos de producto."
         },
         {
@@ -238,7 +238,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

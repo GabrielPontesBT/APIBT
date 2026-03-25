@@ -11,14 +11,14 @@
   "inputData": [
     {
       "Nombre": "sdtPartner",
-      "Tipo": "sBTPartnerInReq",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
       "Comentarios": "Datos del usuario."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtMarcas",
-      "Tipo": "sBTMarca",
+      "Tipo": "<a href=\"#sbtmarca\">sBTMarca</a>",
       "Comentarios": "Colección de las marcas de vehículos."
     }
   ],

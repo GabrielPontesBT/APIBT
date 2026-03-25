@@ -31,7 +31,7 @@
     },
     {
       "Nombre": "sdtDatosBeneficiario",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Datos de Beneficiario con sus valores."
     }
   ],

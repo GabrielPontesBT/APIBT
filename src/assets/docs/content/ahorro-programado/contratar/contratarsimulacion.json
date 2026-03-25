@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtDatos",
-      "Tipo": "sBTCrearSolicitudAhorro",
+      "Tipo": "<a href=\"#sbtcrearsolicitudahorro\">sBTCrearSolicitudAhorro</a>",
       "Comentarios": "Datos de la solicitud de ahorro programado."
     }
   ],

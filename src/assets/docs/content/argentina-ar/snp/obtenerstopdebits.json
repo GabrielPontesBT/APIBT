@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtConsultaStopDebit",
-      "Tipo": "sBTConsultaStopDebit",
+      "Tipo": "<a href=\"#sbtconsultastopdebit\">sBTConsultaStopDebit</a>",
       "Comentarios": "Datos del alta de Stop Debits."
     }
   ],
@@ -83,7 +83,7 @@
         },
         {
           "Nombre": "stopDebit",
-          "Tipo": "sBTStopDebit",
+          "Tipo": "<a href=\"#sbtstopdebit\">sBTStopDebit</a>",
           "Comentarios": "Datos del Stop Debit."
         }
       ]

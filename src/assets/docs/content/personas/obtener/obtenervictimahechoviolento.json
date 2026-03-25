@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtVictimaHechoViolento",
-      "Tipo": "sBTPCOVictimaHechoViolento",
+      "Tipo": "<a href=\"#sbtpcovictimahechoviolento\">sBTPCOVictimaHechoViolento</a>",
       "Comentarios": "Datos de víctima de hecho violento."
     }
   ],

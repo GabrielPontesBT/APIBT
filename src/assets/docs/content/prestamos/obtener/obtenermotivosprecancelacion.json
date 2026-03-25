@@ -17,13 +17,13 @@
     {
       "Nombre": "tipoPrecancelacion",
       "Tipo": "String",
-      "Comentarios": "Tipo de precancelación. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de precancelación. Se pueden enviar los siguientes <a href=\"#valores1\">valores</a>."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtMotivosPrecancelacion",
-      "Tipo": "sBTValorCampo",
+      "Tipo": "<a href=\"#sbtvalorcampo\">sBTValorCampo</a>",
       "Comentarios": "Listado de motivos de precancelación."
     }
   ],

@@ -58,7 +58,7 @@
     },
     {
       "Nombre": "situacionLineas",
-      "Tipo": "sBTSituacionLinea",
+      "Tipo": "<a href=\"#sbtsituacionlinea\">sBTSituacionLinea</a>",
       "Comentarios": "Lista de las líneas con su estado."
     }
   ],

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtCuentaCorriente",
-      "Tipo": "sBTCuentaCorriente",
+      "Tipo": "<a href=\"#sbtcuentacorriente\">sBTCuentaCorriente</a>",
       "Comentarios": "Datos del producto."
     }
   ],
@@ -127,7 +127,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos del producto."
         },
         {
@@ -182,7 +182,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDetalleAhorro",
-      "Tipo": "sBTDetalleAhorro",
+      "Tipo": "<a href=\"#sbtdetalleahorro\">sBTDetalleAhorro</a>",
       "Comentarios": "Datos del ahorro."
     }
   ],

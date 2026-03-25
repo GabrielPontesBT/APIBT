@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtTraspaso",
-      "Tipo": "sBTTraspasoMoneda",
+      "Tipo": "<a href=\"#sbttraspasomoneda\">sBTTraspasoMoneda</a>",
       "Comentarios": "Datos de traspaso."
     },
     {
@@ -33,7 +33,7 @@
   "outputData": [
     {
       "Nombre": "sdtResultadoTraspaso",
-      "Tipo": "sBTResultadoTraspaso",
+      "Tipo": "<a href=\"#sbtresultadotraspaso\">sBTResultadoTraspaso</a>",
       "Comentarios": "Resultado del traspaso."
     }
   ],

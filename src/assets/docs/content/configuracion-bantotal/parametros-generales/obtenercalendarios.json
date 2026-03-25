@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtCalendarios",
-      "Tipo": "sBTCalendario",
+      "Tipo": "<a href=\"#sbtcalendario\">sBTCalendario</a>",
       "Comentarios": "Colección de calendarios."
     }
   ],

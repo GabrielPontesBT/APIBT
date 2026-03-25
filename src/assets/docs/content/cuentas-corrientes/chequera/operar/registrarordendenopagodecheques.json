@@ -36,7 +36,7 @@
     },
     {
       "Nombre": "sdtCheques",
-      "Tipo": "sBTCheque",
+      "Tipo": "<a href=\"#sbtcheque\">sBTCheque</a>",
       "Comentarios": "Listado de cheques."
     }
   ],

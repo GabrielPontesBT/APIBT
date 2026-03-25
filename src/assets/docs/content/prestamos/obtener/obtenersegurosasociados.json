@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtSegurosAsociados",
-      "Tipo": "sBTSeguroAsociado",
+      "Tipo": "<a href=\"#sbtseguroasociado\">sBTSeguroAsociado</a>",
       "Comentarios": "Datos del seguro asociado a la operación."
     }
   ],

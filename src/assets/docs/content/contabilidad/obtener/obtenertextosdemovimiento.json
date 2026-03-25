@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtTextosMovimiento",
-      "Tipo": "sBTTextoMovimiento",
+      "Tipo": "<a href=\"#sbttextomovimiento\">sBTTextoMovimiento</a>",
       "Comentarios": "Listado de textos del movimiento."
     }
   ],

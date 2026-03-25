@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtModelosPAE",
-      "Tipo": "sBTModeloPAE",
+      "Tipo": "<a href=\"#sbtmodelopae\">sBTModeloPAE</a>",
       "Comentarios": "Listado de modelos PAE."
     }
   ],

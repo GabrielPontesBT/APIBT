@@ -23,12 +23,12 @@
   "outputData": [
     {
       "Nombre": "sdtDatosExtendidos",
-      "Tipo": "sBTDatoExtendido",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
       "Comentarios": "Listado de datos complementarios."
     },
     {
       "Nombre": "sdtCodigoInstrucciones",
-      "Tipo": "sBTCodigoInstrucciones",
+      "Tipo": "<a href=\"#sbtcodigoinstrucciones\">sBTCodigoInstrucciones</a>",
       "Comentarios": "Listado de códigos de instrucciones."
     }
   ],
@@ -67,7 +67,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatosLista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatosLista</a>",
           "Comentarios": "Lista de datos."
         },
         {
@@ -107,7 +107,7 @@
         },
         {
           "Nombre": "datosExtendidos",
-          "Tipo": "sBTDatoExtendido",
+          "Tipo": "<a href=\"#sbtdatoextendidosalida\">sBTDatoExtendido</a>",
           "Comentarios": "Listado de datos complementarios."
         },
         {
@@ -127,7 +127,7 @@
         },
         {
           "Nombre": "lista",
-          "Tipo": "sBTDatoLista",
+          "Tipo": "<a href=\"#sbtdatolistasalida\">sBTDatoLista</a>",
           "Comentarios": "Lista de datos."
         },
         {

@@ -38,7 +38,7 @@
   "outputData": [
     {
       "Nombre": "sdtConceptosPrestamo",
-      "Tipo": "sBTConceptosPrestamo",
+      "Tipo": "<a href=\"#sbtconceptosprestamo\">sBTConceptosPrestamo</a>",
       "Comentarios": "Datos de la cancelación total del préstamo."
     }
   ],
@@ -115,12 +115,12 @@
         },
         {
           "Nombre": "detalleConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Detalle de los conceptos adicionales."
         },
         {
           "Nombre": "detalleSeguros",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Listado de los seguros."
         },
         {

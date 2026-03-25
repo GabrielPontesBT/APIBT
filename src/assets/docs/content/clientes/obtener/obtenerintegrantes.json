@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtIntegrantes",
-      "Tipo": "sBTIntegrante",
+      "Tipo": "<a href=\"#sbtintegrante\">sBTIntegrante</a>",
       "Comentarios": "Datos de integrantes del cliente."
     }
   ],
@@ -82,7 +82,7 @@
         },
         {
           "Nombre": "titularidad",
-          "Tipo": "sBTTipoIntegrante",
+          "Tipo": "<a href=\"#sbttipointegrante\">sBTTipoIntegrante</a>",
           "Comentarios": "Tipo de integrante."
         }
       ]

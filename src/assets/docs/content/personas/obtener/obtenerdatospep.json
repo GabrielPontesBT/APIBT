@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "sdtDatosPEP",
-      "Tipo": "sBTDatosPEP",
+      "Tipo": "<a href=\"#sbtdatospep\">sBTDatosPEP</a>",
       "Comentarios": "Datos de la PEP."
     }
   ],

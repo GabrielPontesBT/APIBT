@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtDetallePagoPrestamo",
-      "Tipo": "sBTDetallePagoPrestamo",
+      "Tipo": "<a href=\"#sbtdetallepagoprestamo\">sBTDetallePagoPrestamo</a>",
       "Comentarios": "Detalle del pago del préstamo."
     }
   ],
@@ -75,7 +75,7 @@
         },
         {
           "Nombre": "detalle",
-          "Tipo": "sBTDetallePagoCuota",
+          "Tipo": "<a href=\"#sbtdetallepagocuota\">sBTDetallePagoCuota</a>",
           "Comentarios": "Detalle pago de la cuota."
         },
         {
@@ -130,7 +130,7 @@
         },
         {
           "Nombre": "detalleConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Detalle de los conceptos adicionales."
         },
         {

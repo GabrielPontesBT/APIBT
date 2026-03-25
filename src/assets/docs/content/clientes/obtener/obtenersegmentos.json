@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtSegmentos",
-      "Tipo": "sBTSegmento",
+      "Tipo": "<a href=\"#sbtsegmento\">sBTSegmento</a>",
       "Comentarios": "Listado de segmentos."
     }
   ],

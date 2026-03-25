@@ -26,14 +26,14 @@
     },
     {
       "Nombre": "sdtValorCampoCash",
-      "Tipo": "sBTValorCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
       "Comentarios": "Datos de valores de campos CASH."
     }
   ],
   "outputData": [
     {
       "Nombre": "sdtInfoDetalleCash",
-      "Tipo": "sBTInfoDetalleCASH",
+      "Tipo": "<a href=\"#sbtinfodetallecash\">sBTInfoDetalleCASH</a>",
       "Comentarios": "Listado de cabezales de los resúmenes."
     }
   ],

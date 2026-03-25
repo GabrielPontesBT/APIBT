@@ -16,7 +16,7 @@
     },
     {
       "Nombre": "sdtTextos",
-      "Tipo": "sBTTextoPersona",
+      "Tipo": "<a href=\"#sBTTextoPersona\">sBTTextoPersona</a>",
       "Comentarios": "Listado de textos de la persona."
     },
     {

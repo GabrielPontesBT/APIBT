@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtCuentasAsociadasTD",
-      "Tipo": "sBTCuentasAsociadasTD",
+      "Tipo": "<a href=\"#sbtcuentasasociadastd\">sBTCuentasAsociadasTD</a>",
       "Comentarios": "Listado de cuentas asociadas."
     }
   ],
@@ -49,7 +49,7 @@
       "fields": [
         {
           "Nombre": "cuentas",
-          "Tipo": "sBTCuentaAsociadaTD",
+          "Tipo": "<a href=\"#sbtcuentaasociadatd\">sBTCuentaAsociadaTD</a>",
           "Comentarios": "Datos cuenta asociada."
         },
         {
@@ -79,7 +79,7 @@
         },
         {
           "Nombre": "producto",
-          "Tipo": "sBTProducto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
           "Comentarios": "Datos producto."
         },
         {
@@ -124,7 +124,7 @@
         },
         {
           "Nombre": "otrosConceptos",
-          "Tipo": "sBTConcepto",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
         },
         {

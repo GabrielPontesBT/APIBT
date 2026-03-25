@@ -31,8 +31,8 @@
     },
     {
       "Nombre": "sdtDatosAdicionales",
-      "Tipo": "sBTDatoLista",
-      "Comentarios": "Listado de datos adicionales. Se pueden enviar los siguientes valores."
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+      "Comentarios": "Listado de datos adicionales. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
     },
     {
       "Nombre": "sucursalId",

@@ -18,12 +18,12 @@
   "outputData": [
     {
       "Nombre": "sdtFacultades",
-      "Tipo": "sBTFacultad",
+      "Tipo": "<a href=\"#sbtfacultad\">sBTFacultad</a>",
       "Comentarios": "Listado de datos de facultades."
     },
     {
       "Nombre": "sdtFirmantes",
-      "Tipo": "sBTFacultadFirmante",
+      "Tipo": "<a href=\"#sbtfacultadfirmante\">sBTFacultadFirmante</a>",
       "Comentarios": "Listado de datos de firmantes."
     }
   ],
@@ -75,12 +75,12 @@
         },
         {
           "Nombre": "firmantes",
-          "Tipo": "sBTFacultadFirmante",
+          "Tipo": "<a href=\"#sbtfacultadfirmante\">sBTFacultadFirmante</a>",
           "Comentarios": "Listado de firmantes de la facultad."
         },
         {
           "Nombre": "grupos",
-          "Tipo": "sBTFacultadGrupo",
+          "Tipo": "<a href=\"#sbtfacultadgrupo\">sBTFacultadGrupo</a>",
           "Comentarios": "Listado de grupos de la facultad."
         },
         {
@@ -105,7 +105,7 @@
         },
         {
           "Nombre": "firmantes",
-          "Tipo": "sBTFacultadFirmante",
+          "Tipo": "<a href=\"#sbtfacultadfirmante\">sBTFacultadFirmante</a>",
           "Comentarios": "Listado de firmantes."
         },
         {

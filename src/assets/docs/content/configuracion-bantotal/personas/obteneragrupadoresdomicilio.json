@@ -43,7 +43,7 @@
   "outputData": [
     {
       "Nombre": "sdtAgrupadores",
-      "Tipo": "sBTAgrupadores",
+      "Tipo": "<a href=\"#sbtagrupadores\">sBTAgrupadores</a>",
       "Comentarios": "Listado de agrupadores."
     }
   ],
@@ -69,7 +69,7 @@
       "fields": [
         {
           "Nombre": "niveles",
-          "Tipo": "sBTAgrupadorNiv1",
+          "Tipo": "<a href=\"#sbtagrupadorniv1\">sBTAgrupadorNiv1</a>",
           "Comentarios": "Colección del primer subnivel de agrupación."
         }
       ]
@@ -89,7 +89,7 @@
         },
         {
           "Nombre": "subNivel2",
-          "Tipo": "sBTAgrupadorNiv2",
+          "Tipo": "<a href=\"#sbtagrupadorniv2\">sBTAgrupadorNiv2</a>",
           "Comentarios": "Colección del segundo subnivel de agrupación."
         }
       ]
@@ -109,7 +109,7 @@
         },
         {
           "Nombre": "subNivel3",
-          "Tipo": "sBTAgrupadorNiv3",
+          "Tipo": "<a href=\"#sbtagrupadorniv3\">sBTAgrupadorNiv3</a>",
           "Comentarios": "Colección del tercer subnivel de agrupación."
         }
       ]
@@ -129,7 +129,7 @@
         },
         {
           "Nombre": "subNivel4",
-          "Tipo": "sBTAgrupadorNiv4",
+          "Tipo": "<a href=\"#sbtagrupadorniv4\">sBTAgrupadorNiv4</a>",
           "Comentarios": "Colección del cuarto subnivel de agrupación."
         }
       ]
@@ -149,7 +149,7 @@
         },
         {
           "Nombre": "subNivel",
-          "Tipo": "sBTAgrupadorNiv5",
+          "Tipo": "<a href=\"#sbtagrupadorniv5\">sBTAgrupadorNiv5</a>",
           "Comentarios": "Colección del quinto subnivel de agrupación."
         }
       ]
@@ -169,7 +169,7 @@
         },
         {
           "Nombre": "subNivel6",
-          "Tipo": "sBTAgrupadorNiv6",
+          "Tipo": "<a href=\"#sbtagrupadorniv6\">sBTAgrupadorNiv6</a>",
           "Comentarios": "Colección del quinto subnivel de agrupación."
         }
       ]

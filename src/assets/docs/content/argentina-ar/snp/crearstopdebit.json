@@ -11,7 +11,7 @@
   "inputData": [
     {
       "Nombre": "sdtStopDebit",
-      "Tipo": "sBTStopDebit",
+      "Tipo": "<a href=\"#sbtstopdebit\">sBTStopDebit</a>",
       "Comentarios": "Datos del alta de Stop Debits."
     }
   ],

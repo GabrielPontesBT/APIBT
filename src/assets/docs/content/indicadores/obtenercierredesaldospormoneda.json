@@ -12,7 +12,7 @@
   "outputData": [
     {
       "Nombre": "sdtBalanceMonedaSaldos",
-      "Tipo": "sBTBalanceMonedaSaldo",
+      "Tipo": "<a href=\"#sbtbalancemonedasaldo\">sBTBalanceMonedaSaldo</a>",
       "Comentarios": "Listado de cierre de saldos por moneda."
     }
   ],

@@ -27,7 +27,7 @@
     {
       "Nombre": "tipoCotizacion",
       "Tipo": "String",
-      "Comentarios": "Tipo de cotización. Se pueden enviar los siguientes valores."
+      "Comentarios": "Tipo de cotización. Se pueden enviar los siguientes <a href=\"#valores\">valores</a>."
     }
   ],
   "outputData": [

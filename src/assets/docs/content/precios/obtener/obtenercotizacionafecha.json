@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtCotizacion",
-      "Tipo": "sBTCotizacion",
+      "Tipo": "<a href=\"#sbtcotizacion\">sBTCotizacion</a>",
       "Comentarios": "Listado de cotizaciones."
     }
   ],

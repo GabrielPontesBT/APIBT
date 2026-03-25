@@ -18,7 +18,7 @@
   "outputData": [
     {
       "Nombre": "sdtDetalleGrupo",
-      "Tipo": "sBTDetalleGrupo",
+      "Tipo": "<a href=\"#sbtdetallegrupo\">sBTDetalleGrupo</a>",
       "Comentarios": "Datos del grupo."
     }
   ],

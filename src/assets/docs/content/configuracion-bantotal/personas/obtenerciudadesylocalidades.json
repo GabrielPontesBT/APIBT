@@ -23,7 +23,7 @@
   "outputData": [
     {
       "Nombre": "sdtCiudades",
-      "Tipo": "sBTCiudad",
+      "Tipo": "<a href=\"#sbtciudad\">sBTCiudad</a>",
       "Comentarios": "Listado de Ciudades."
     }
   ],
