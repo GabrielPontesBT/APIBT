@@ -7,9 +7,10 @@
  */
 
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { DocPage } from '../../../../core/models/doc-page.model';
 import { DocsService } from '../../services/docs.service';
 
@@ -25,7 +26,8 @@ export class DocPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private docsService: DocsService
+    private docsService: DocsService,
+    private titleService: Title
   ) {}
 
   ngOnInit(): void {
@@ -46,6 +48,11 @@ export class DocPageComponent implements OnInit {
               return of(null);
             })
           );
+        }
+      }),
+      tap((page) => {
+        if (page?.pageTitle) {
+          this.titleService.setTitle(`API | ${page.pageTitle}`);
         }
       })
     );
