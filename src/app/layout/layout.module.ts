@@ -12,13 +12,15 @@ import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { ApiDocsModule } from '../features/api-docs/api-docs.module';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScrollToTopComponent
   ],
   imports: [
     CommonModule,

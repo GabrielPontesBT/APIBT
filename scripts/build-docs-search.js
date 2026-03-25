@@ -147,7 +147,15 @@ function collectValuesTableText(valuesTable) {
 }
 
 function buildSearchableText(doc) {
+  // Incluye segmentos del slug para que términos como "crear" o "contratar"
+  // (que solo aparecen como nombres de carpeta) sean buscables
+  const slugSegments = String(doc.slug || '')
+    .split('/')
+    .map(s => s.replace(/-/g, ' '));
+
   const parts = [
+    normalizeWhitespace(doc.slug),
+    ...slugSegments,
     normalizeWhitespace(doc.pageTitle),
     normalizeWhitespace(doc.description),
     normalizeWhitespace(doc.pubName),
