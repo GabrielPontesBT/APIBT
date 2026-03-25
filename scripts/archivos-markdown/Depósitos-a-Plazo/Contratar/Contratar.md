@@ -58,14 +58,14 @@ controlaMismoCliente | String | ¿Controla correspondencia de cuenta de débito 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 movimientoUId | Long | Identificador único de movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el identificador.
 :::

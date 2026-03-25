@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 1000 
 Correlativo 2 | Valor del segundo parámetro del servicio. 
 Valor específico 1 | Identificador del módulo a incluir. 	 
@@ -51,13 +51,13 @@ correlativo | Long | Correlativo 2 de la guía especial.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSaldosProducto | [sBTSaldoProducto](#sbtsaldoproducto) | Listado de productos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el identificador.
 ::: 
@@ -142,7 +142,6 @@ curl -X POST \
                   <papel>UI</papel>
                   <productoUId>62</productoUId>
                   <nombre>CAJAS DE AHORRO, Caja Ahorro P.Física Especie</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <plazo>0</plazo>
                <sucursal>Casa Matriz</sucursal>
@@ -161,7 +160,6 @@ curl -X POST \
                   <papel/>
                   <productoUId>63</productoUId>
                   <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <plazo>0</plazo>
                <sucursal>Casa Matriz</sucursal>
@@ -207,8 +205,7 @@ curl -X POST \
                     "moneda": "$", 
                     "papel": "UI", 
                     "productoUId": 62, 
-                    "nombre": "CAJAS DE AHORRO, Caja Ahorro P.Física Especie" ,
-                    "otrosConceptos":""
+                    "nombre": "CAJAS DE AHORRO, Caja Ahorro P.Física Especie" 
                 }, 
                 "plazo": 0, 
                 "sucursal": "Casa Matriz" 
@@ -226,8 +223,7 @@ curl -X POST \
                     "moneda": "USD", 
                     "papel": "", 
                     "productoUId": 63, 
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" ,
-                    "otrosConceptos":""
+                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
                 }, 
                 "plazo": 0, 
                 "sucursal": "Casa Matriz" 
@@ -263,7 +259,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSaldoProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado. 
 fechaValor | Date | Fecha de alta del saldo. 
 fechaVencimiento | Date | Fecha de vencimiento. 
@@ -282,7 +278,7 @@ tasa | Double | Tasa.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -295,7 +291,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

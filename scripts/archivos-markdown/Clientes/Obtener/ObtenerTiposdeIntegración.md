@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposIntegracion | [sBTTipoIntegrante](#sbttipointegrante) | Lista de tipos de integrantes.
 
 @tab Errores
@@ -194,7 +194,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de tipo de integrante. 
 identificador | Int | Identificador de tipo de integrante. 
 :::

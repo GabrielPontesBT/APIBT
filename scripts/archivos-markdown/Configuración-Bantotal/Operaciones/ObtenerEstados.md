@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstados | [sBTEstadoOperacion](#sbtestadooperacion) | Listado de estados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No hay estados parametrizados.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -273,7 +273,7 @@ curl -X GET \
 Los campos del tipo de dato estructurado sBTEstadoOperacion son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Short | Código del estado.
 descripcion | String | Descripción del estado.
 permiteOperar | String | ¿Permite Operar?

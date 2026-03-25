@@ -32,18 +32,18 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
-expresadoEn | String | [M-Moneda / E-Especie]
+expresadoEn | String | [Hidden: Valores M-Moneda / E-Especie]
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPlazoFijo | [sBTPlazoFijo](#sbtplazofijo) | Datos del depósito a plazo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el identificador.
 ::: 
@@ -122,7 +122,6 @@ curl -X POST \
                <moneda>$</moneda>
                <productoUId>0</productoUId>
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <intereses>55465.38</intereses>
             <fechaProximoVencimiento>0000-00-00</fechaProximoVencimiento>
@@ -145,7 +144,6 @@ curl -X POST \
                   <moneda>$</moneda>
                   <productoUId>0</productoUId>
                   <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <descripcion>Cancelar y Acreditar al vto.</descripcion>
                <operacionUId>9</operacionUId>
@@ -158,7 +156,6 @@ curl -X POST \
                   <moneda/>
                   <productoUId>0</productoUId>
                   <nombre/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <descripcion/>
                <operacionUId>0</operacionUId>
@@ -207,8 +204,7 @@ curl -X POST \
         "papel": "",
         "moneda": "$",
         "productoUId": "0",
-        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
-        "otrosConceptos":""
+        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
       },
       "intereses": "55465.38",
       "fechaProximoVencimiento": "0000-00-00",
@@ -230,8 +226,7 @@ curl -X POST \
           "papel": "",
           "moneda": "$",
           "productoUId": "0",
-          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-          "otrosConceptos":""
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
         },
         "descripcion": "Cancelar y Acreditar al vto.",
         "operacionUId": "9",
@@ -243,8 +238,7 @@ curl -X POST \
           "papel": "",
           "moneda": "",
           "productoUId": "0",
-          "nombre": "",
-          "otrosConceptos":""
+          "nombre": ""
         },
         "descripcion": "",
         "operacionUId": "0",
@@ -286,7 +280,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPlazoFijo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 acreditacionPeriodicaIntereses | String | Acredita periódicamente intereses (S/N). 
 cantidadRenovaciones | Short | Cantidad de renovaciones del depósito. 
 cuentaContable | String | Nombre de la cuenta contable. 
@@ -322,7 +316,7 @@ tipoTasa | String | Tipo de tasa.
 Los campos del tipo de dato estructurado sBTInstruccion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la instrucción. 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
@@ -335,7 +329,7 @@ sucursal | String | Nombre de la Sucursal de la operación.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -348,7 +342,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

@@ -39,7 +39,7 @@ sdtValores | [sBTPAEValorItem](#sbtpaevaloritem) | Colección de valores PAE.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valor | Double | Valor.
 mensaje | String | Mensaje.
 sdtPoliticas | [sBTPoliticaIncumplida](#sbtpoliticaincumplida) | Colección de políticas incumplidas.
@@ -48,7 +48,7 @@ numeroEjecucion | Long | Número de la ejecución.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1011050 | No se recibió modelo de evaluación PAE.
 1011051 | No se recuperó la persona para el Id recibido.
 1011052 | No se recuperó el producto para el Id recibido.
@@ -160,7 +160,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -169,8 +169,8 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "valor": 10000,
-   "mensaje": "",
-   "sdtPoliticas": "",
+   "mensaje": {},
+   "sdtPoliticas": {},
    "numeroEjecucion": 2,
    "Erroresnegocio": {
        "BTErrorNegocio": []
@@ -184,7 +184,7 @@ curl -X POST \
        "Hora": "01:48:53",
        "Canal": "BTDIGITAL"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPAEValorItem son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 itemNombre | String | Nombre del ítem. 
 itemValor | String | Valor del ítem. 
 :::
@@ -213,7 +213,7 @@ itemValor | String | Valor del ítem.
 Los campos del tipo de dato estructurado sBTPoliticaIncumplida son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Estado. 
 estadoDsc | String | Descripción del estado. 
 nroAutorizacion | Long | Número de la autorización. 

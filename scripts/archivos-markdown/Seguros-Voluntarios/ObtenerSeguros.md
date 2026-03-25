@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSeguros | [sBTSeguro](#sbtseguro) | Listado de seguros.
 
 @tab Errores
@@ -179,7 +179,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSeguro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Long | Código.
 descripcion | String | Descripción.
 :::

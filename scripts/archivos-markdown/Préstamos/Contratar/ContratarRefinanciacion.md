@@ -41,13 +41,13 @@ operacionUIdIns | Long | [Hidden: Valor fijo vacío para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | 	Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación a contratar.
 30002 | No se recuperó la operación a contratar para el Identificador: [Número de Identificador].
 30003 | No se recibió el identificador de cliente.
@@ -73,7 +73,7 @@ Código | Descripción
 Este campo se compone de 2 valores S/N separados por ; (por ejemplo N;S), que corresponden a:
 
 Posición |  Valor | Comentarios
-:--------- | :--------- | :-----------
+:--------- | :--------- | :---------
 1 | [S,N] (Valor por defecto "N") | Permite indicar si el servicio controla el ingreso del campo operacionUIdIns - Operación de instrucción de cobro.
 2 | [S,N] (Valor por defecto "N") | Permite indicar si la cancelación se realiza con fecha valor.
 :::

@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-contratoId | Short | Identificador del contrato.
+contratoId | Int | Identificador del contrato.
 servicio | Short | Servicio CASH.
 deudaId | String | Identificador de la deuda.
 monedaId | Short | Identificador de la moneda.
@@ -50,7 +50,7 @@ nroLineaOrden | Int | Número de línea de orden CASH.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030614 | Canal no habilitado para el servicio.
 1030615 | Canal no habilitado para el contrato.
 1030618 | El importe debe ser mayor a cero.
@@ -213,7 +213,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 

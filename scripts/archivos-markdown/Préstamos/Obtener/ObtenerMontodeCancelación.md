@@ -37,13 +37,13 @@ fecha | Date | Fecha a consultar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 montoCancelacion | Double | Monto de cancelación de la operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de la operación.
 30002 | No se recuperó la operación para el Identificador: [Número de Identificador].
 ::: 

@@ -36,13 +36,13 @@ paqueteId | Int | Identificador de paquete.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPaquete | [sBTPaquete](#sbtpaquete) | Datos del paquete.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se encontraron paquetes para el identificador ingresado.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -219,7 +219,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPaquete son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código de paquete. 
 descripcion | String | Descripción de paquete. 
 productos | [sBTProductoPaquete](#sbtproductopaquete) | Listado de productos incluidos en el paquete. 
@@ -231,7 +231,7 @@ vigente | String | Indica si está vigente el paquete (S/N).
 Los campos del tipo de dato estructurado sBTProductoPaquete son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidad | Short | Cantidad de productos de este tipo incluidos en el paquete. 
 moneda | String | Símbolo de moneda. 
 nombre | String | Nombre de producto. 

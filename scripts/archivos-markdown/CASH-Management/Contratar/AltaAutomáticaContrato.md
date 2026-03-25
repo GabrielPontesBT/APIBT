@@ -37,13 +37,13 @@ servicioId | Short | Codigo de Servicio CASH.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 contratoId | Int | Identificador del Contrato CASH.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030709 | Se requiere identificacion de cuenta cliente.
 1030760 | No se pudo dar de alta el contrato.

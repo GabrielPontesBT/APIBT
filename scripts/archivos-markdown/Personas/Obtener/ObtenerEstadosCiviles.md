@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadosCiviles | [sBTEstadoCivil](#sbtestadocivil) | Listado de estados civiles.
 
 @tab Errores 
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No existen Estados Civiles ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -160,7 +160,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -220,7 +220,7 @@ curl -X POST \
         "Hora": "18:41:11",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -236,7 +236,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCivil son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de estado civil.
 identificador | String | Identificador de estado civil. 
 :::

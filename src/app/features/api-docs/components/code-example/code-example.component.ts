@@ -45,6 +45,7 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
 
   @ViewChildren('codeBlock') codeBlocks!: QueryList<ElementRef>;
 
+  copiedSection: 'invocation' | 'response' | null = null;
   private needsRehighlight = false;
 
   getTabLabel(section: 'invocation' | 'response'): string {
@@ -77,7 +78,10 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
 
   copyCode(section: 'invocation' | 'response') {
     const text = this.examples[section][this.view[section]];
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(text).then(() => {
+      this.copiedSection = section;
+      setTimeout(() => { this.copiedSection = null; }, 2000);
+    });
   }
 
   private updateHighlight() {

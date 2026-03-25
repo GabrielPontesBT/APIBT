@@ -44,13 +44,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTDocumentoDigital](#sbtdocumentodigital) | Listado de documentos digitales.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30021 | No se recupero la operación para el identificador recibido.
 30031 | La operación seleccionada no corresponde a un producto de préstamos.
@@ -276,7 +276,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 documentoId | Long | Identificador del documento digital. 
 fechaActualizacion | Date | Fecha de actualización del documento digital. 
 fechaVencimiento | Date | Fecha de vencimiento del documento digital. 

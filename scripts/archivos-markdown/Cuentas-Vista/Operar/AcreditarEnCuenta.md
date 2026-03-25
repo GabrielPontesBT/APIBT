@@ -1,6 +1,5 @@
 ---
 title: Acreditar en Cuenta
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -52,7 +51,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtDatosAcreditar | [sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar) | Datos de la acreditación.
+sdtDatosAcreditacion | [sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar) | Datos de la acreditación.
 
 @tab Datos de Salida
 
@@ -63,12 +62,11 @@ movimientoUId | Long | Identificador del movimiento realizado.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar una operación.
 30002 | Debe ingresar al menos un importe.
 30004 | No se recuperó la operación origen para el Identificador: X.
 30004 | No se recuperó la cuenta cliente origen para el Identificador: X.
-
 
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -92,7 +90,7 @@ Código | Descripción
             <bts:Token>1244265502F955E77534D3E0</bts:Token>
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
-         <bts:sdtDatosAcreditar>
+         <bts:sdtDatosAcreditacion>
             <bts:clienteUId>140</bts:clienteUId>
             <bts:operacionUId>10140</bts:operacionUId>
             <bts:importe1>1000</bts:importe1>
@@ -103,7 +101,7 @@ Código | Descripción
             <bts:concepto2></bts:concepto2>
             <bts:concepto3></bts:concepto3>
             <bts:concepto4></bts:concepto4>
-         </bts:sdtDatosAcreditar>
+         </bts:sdtDatosAcreditacion>
       </bts:BTCuentasVista.AcreditarEnCuenta>
    </soapenv:Body>
 
@@ -124,7 +122,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
-	"sdtDatosAcreditar": { 
+	"sdtDatosAcreditacion": { 
 		"operacionUId1": "10140", 
 		"operacionUId2": "10141", 
 		"operacionUId3": "", 
@@ -154,7 +152,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
-	"sdtDatosAcreditar": { 
+	"sdtDatosAcreditacion": { 
 		"clienteUId": "140",
 		"operacionUId": "10140", 
 		"importe1": "1000", 
@@ -243,7 +241,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosAcreditarDebitar son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId |	Long|	Identificador único de cliente.
 concepto1	|String	|Concepto 1 del movimiento.
 concepto2	|String	|Concepto 2 del movimiento.

@@ -36,14 +36,14 @@ personaUId | Long | Identificador de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 apellidoMatrimonio | String | Apellido de matrimonio
 sdtDatosConyuge | [sBTDatosConyuge](#sbtdatosconyuge) | Datos del cónyuge.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | El identificador no corresponde a una persona física.
 30013 | No existe registro para el identificador único.
@@ -180,7 +180,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosConyuge son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 personaUId | Long | Identificador del cónyuge.
 primerApellido | String | Primer apellido del cónyuge. 
 primerNombre | String | Primer nombre del cónyuge.

@@ -109,8 +109,8 @@ curl -X POST \
                <nombre>Amortización Automática TF</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
+            ...
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -142,9 +142,9 @@ curl -X POST \
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "61",
-                "nombre": "Amortización Automática TF",
-                "otrosConceptos":""
+                "nombre": "Amortización Automática TF"
             },
+            ...
         ]
     },
     "Erroresnegocio": {
@@ -175,7 +175,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -188,7 +188,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

@@ -39,7 +39,7 @@ sdtIdOperaciones | [sBTIdOperacion](#sbtidoperacion) | Listado de identificadore
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tarjetaUId | Long | Identificador único de tarjeta.
 numeroTarjeta | String | Número de tarjeta.
 fechaExpiracion | Date | Fecha de vencimiento.
@@ -49,7 +49,7 @@ estadoPlastico | String | Estado del plástico.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].
 30003 | No se recibieron los Identificadores de las operaciones a asociar.
@@ -216,7 +216,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIdOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idOperacion | Long | Identificador único de operación.
 :::
 <!-- CIERRA SDT -->

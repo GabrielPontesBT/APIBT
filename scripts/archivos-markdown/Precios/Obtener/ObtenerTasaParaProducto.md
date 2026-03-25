@@ -33,13 +33,13 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 productoUId | Long | Identificador del producto.
 fecha | Date | Fecha de la consulta.
-importe | Long | Importe.
+importe | Double | Importe.
 plazo | Int | Plazo.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tipoTasa | String | Tipo de tasa.
 tasa | Double | Tasa.
 tasaMinima | Double | Tasa mínima.
@@ -49,7 +49,7 @@ fechaVigencia | Date | Fecha de vigencia.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar identificador de producto.
 30002 | Debe ingresar fecha.
 30003 | Debe ingresar importe.

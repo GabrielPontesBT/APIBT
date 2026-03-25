@@ -37,14 +37,14 @@ depositoUId | Long | Identificador único de operación del depósito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 instruccionVencimiento | [sBTInstruccion](#sbtinstruccion) | Datos de instrucción al vencimiento.
 instruccionAcreditacion | [sBTInstruccion](#sbtinstruccion) | Datos de instrucción de acreditación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | No se recibió el identificador de la operación del depósito.
 30003 | No se recuperó la cuenta para el identificador de cliente: [Número de identificador].
@@ -137,7 +137,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, int.</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
             </sBTInstruccion>
@@ -152,7 +151,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, int.</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
             </sBTInstruccion>
@@ -192,8 +190,7 @@ curl -X POST \
            "productoUId": 21,
                "nombre": "CUENTA CORRIENTE, int.",
                "moneda": "$",
-               "papel": "",
-               "otrosConceptos":""
+               "papel": ""
             }
          ]
       }
@@ -209,8 +206,7 @@ curl -X POST \
                "productoUId": 21,
                "nombre": "CUENTA CORRIENTE, int.",
                "moneda": "$",
-               "papel": "",
-               "otrosConceptos":""
+               "papel": ""
             }
          ],
       }
@@ -244,7 +240,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTInstruccion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la instrucción. 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
@@ -257,7 +253,7 @@ sucursal | String | Nombre de la Sucursal de la operación.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -270,7 +266,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe. 

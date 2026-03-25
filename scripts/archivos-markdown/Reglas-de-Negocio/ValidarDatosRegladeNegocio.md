@@ -37,7 +37,7 @@ sdtVariables | [sBTVariable](#sbtvariable) | Listado de variables.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 resultado | String | Resultado de la evaluación.
 sdtRetornos | [sBTRetorno](#sbtretorno) | Listado de retornos.
 cantidadResultados | Long | Cantidad de resultados.
@@ -45,7 +45,7 @@ cantidadResultados | Long | Cantidad de resultados.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1011050 | No se recibió ID de Regla.
 40001 | Error de Parametrización
 ::: 
@@ -72,10 +72,10 @@ Código | Descripción
          </bts:Btinreq>
          <bts:reglaId>4</bts:reglaId>
          <bts:sdtVariables>
-            <bts:SdtsBTVariable>
+            <bts:sBTVariable>
                <bts:valor>S</bts:valor>
                <bts:nombre>CHECKAUX2</bts:nombre>
-            </bts:SdtsBTVariable>
+            </bts:sBTVariable>
          </bts:sdtVariables>
       </bts:BTReglasNegocio.ValidarDatosReglaNegocio>
    </soapenv:Body>
@@ -99,7 +99,7 @@ curl -X POST \
     },
     "reglaId": "4",
     "sdtVariables": {
-        "SdtsBTVariable": {
+        "sBTVariable": {
             "valor": "S",
             "nombre": "CHECKAUX2"
         },
@@ -191,7 +191,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVariable son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre de variable. 
 valor | String | Valor de variable.  
 :::
@@ -204,7 +204,7 @@ valor | String | Valor de variable.
 Los campos del tipo de dato estructurado sBTRetorno son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 retorno | String | Retorno de la evaluación.  
 :::
 <!-- CIERRA SDT -->

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtImpuestos | [sBTImpuesto](#sbtimpuesto) | Listado de impuestos.
 
 @tab Errores
@@ -104,75 +104,75 @@ curl -X POST \
             <Device>BTDIGITAL</Device>
          </Btinreq>
          <sdtImpuestos>
-            <SdtsBTImpuesto>
+            <sBTImpuesto>
                <codigo>1</codigo>
                <descripcion>I.V.A.</descripcion>
                <condiciones>
-                  <SdtsBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>1</codigo>
                      <descripcion>Gravado</descripcion>
                      <tipo>A</tipo>
-                  </SdtsBTImpuestoCondicion>
-                  <SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>2</codigo>
                      <descripcion>Responsable Inscripto</descripcion>
                      <tipo>J</tipo>
-                  </SdtsBTImpuestoCondicion>
-                  <SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>4</codigo>
                      <descripcion>Exento o  No Alcanzado</descripcion>
                      <tipo>A</tipo>
-                  </SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
                </condiciones>
-            </SdtsBTImpuesto>
-            <SdtsBTImpuesto>
+            </sBTImpuesto>
+            <sBTImpuesto>
                <codigo>2</codigo>
                <descripcion>Ingresos Brutos Percepciones</descripcion>
                <condiciones>
-                  <SdtsBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>1</codigo>
                      <descripcion>Gravado</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
-                  <SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>2</codigo>
                      <descripcion>Responsable Inscripto</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
                </condiciones>
-            </SdtsBTImpuesto>
-            <SdtsBTImpuesto>
+            </sBTImpuesto>
+            <sBTImpuesto>
                <codigo>4</codigo>
                <descripcion>Impuesto de Sellos</descripcion>
                <condiciones>
-                  <SdtsBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>1</codigo>
                      <descripcion>Gravado</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
-                  <SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>2</codigo>
                      <descripcion>Exento</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
                </condiciones>
-            </SdtsBTImpuesto>
-            <SdtsBTImpuesto>
+            </sBTImpuesto>
+            <sBTImpuesto>
                <codigo>5</codigo>
                <descripcion>Ret. Impuesto a las Ganancias</descripcion>
                <condiciones>
-                  <SdtsBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>1</codigo>
                      <descripcion>Gravado</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
-                  <SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
+                  <sBTImpuestoCondicion>
                      <codigo>4</codigo>
                      <descripcion>Excento</descripcion>
                      <tipo/>
-                  </SdtsBTImpuestoCondicion>
+                  </sBTImpuestoCondicion>
                </condiciones>
-            </SdtsBTImpuesto>
+            </sBTImpuesto>
          </sdtImpuestos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -200,12 +200,12 @@ curl -X POST \
       "Device": "BTDIGITAL" 
    }, 
    "sdtImpuestos": { 
-      "SdtsBTImpuesto": [ 
+      "sBTImpuesto": [ 
          { 
             "codigo": "1", 
             "descripcion": "I.V.A.", 
             "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
+               "sBTImpuestoCondicion": [ 
                   { 
                      "codigo": "1", 
                      "descripcion": "Gravado", 
@@ -225,10 +225,10 @@ curl -X POST \
             } 
          }, 
          { 
-            "", 
+            "":, 
             "": "Ingresos Brutos Percepciones", 
             "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
+               "sBTImpuestoCondicion": [ 
                   { 
                      "codigo": "1", 
                      "descripcion": "Gravado", 
@@ -246,7 +246,7 @@ curl -X POST \
             "codigo": "4", 
             "descripcion": "Impuesto de Sellos", 
             "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
+               "sBTImpuestoCondicion": [ 
                   { 
                      "codigo": "1", 
                      "descripcion": "Gravado", 
@@ -264,7 +264,7 @@ curl -X POST \
             "codigo": "5", 
             "descripcion": "Ret. Impuesto a las Ganancias", 
             "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
+               "sBTImpuestoCondicion": [ 
                   { 
                      "codigo": "1", 
                      "descripcion": "Gravado", 
@@ -305,8 +305,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTImpuesto son los siguientes: 
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 codigo | Short | Código de impuesto.
 condiciones | [sBTImpuestoCondicion](#sbtimpuestocondicion) | Listado de condiciones del impuesto.
 descripcion | String | Descripción del impuesto.
@@ -315,8 +315,8 @@ descripcion | String | Descripción del impuesto.
 
 Los campos del tipo de dato estructurado sBTImpuestoCondicion son los siguientes: 
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 codigo | Short | Código de condición.
 descripcion | String | Descripción de condición.
 tipo | String | Tipo de condición.

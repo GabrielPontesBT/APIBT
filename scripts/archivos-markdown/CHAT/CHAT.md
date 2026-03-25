@@ -36,6 +36,21 @@ const MyComponent = defineComponent({
       chatHistory.value = [];
       localStorage.removeItem('messages');
       localStorage.removeItem('chatHistory');
+      const ejecutar = async () => {
+        try {
+          const sesion = await iniciarSesion();
+          localStorage.setItem('chatSessionId', sesion.data.sessionId);
+          console.log('variable',localStorage.getItem('chatSessionId'));
+          console.log('Respuesta:', sesion);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+      
+      console.log('sesionantesborrar',localStorage.getItem('chatSessionId'));
+      ejecutar();
+      
+      console.log('sesiondespuesborrar',localStorage.getItem('chatSessionId'));
     };
 
     // Cargar historial del chat desde localStorage
@@ -61,9 +76,29 @@ const MyComponent = defineComponent({
       localStorage.setItem('chatHistory', JSON.stringify(chatHistory.value));
     };
 
-    onMounted(() => {
-      loadChatHistory();
+    async function iniciarSesion() {
+      const url = 'https://bt-ia2.bantotal.com/aihub/api/agents/session';
+      const data = {
+          agent: 'APIBT',
+          user: '1.1.1.1'
+      };
 
+      const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'apikey': 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy'
+          },
+          body: JSON.stringify(data)
+      });
+
+      const responseData = await response.json();
+      return responseData;
+  };
+
+    onMounted(() => {
+     
+      loadChatHistory();
       // Observar cambios en los mensajes para el guardado automático
       watch(messages, saveChatHistory, { deep: true });
       watch(chatHistory, saveChatHistory, { deep: true });
@@ -129,64 +164,104 @@ const MyComponent = defineComponent({
 
     const sendMessage = async () => {
       const message = inputMessage.value.trim();
-
       if (message === '') return;
 
       messages.value.push({ text: message, isUser: true });
       chatHistory.value.push({ role: "user", content: message });
       inputMessage.value = '';
 
-      const data = {
-        input: message,
-        chat_history: chatHistory.value
-      };
+      const sessionId = localStorage.getItem('chatSessionId');
       
-      const remoteChain = new RemoteRunnable({
-        url: 'https://btasistentes.azurewebsites.net/API_docs'
-      });
+      console.log('sesionantes',localStorage.getItem('chatSessionId'));
+      if (!sessionId) {
+        
+        const ejecutar = async () => {
+          try {
+            const sesion = await iniciarSesion();
+            localStorage.setItem('chatSessionId', sesion.data.sessionId);
+            console.log('variable',localStorage.getItem('chatSessionId'));
+            console.log('Respuesta:', sesion);
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        };
 
-      showLoader();
+        ejecutar();
+        
+        }
+
+        console.log('sesiondespues',localStorage.getItem('chatSessionId'));
+      const assistantMsg = { role: "assistant", content: "" };
+      chatHistory.value.push(assistantMsg);
+      messages.value.push({ text: "", isUser: false });
+      const lastMessageIndex = chatHistory.value.length - 1;
 
       try {
+        showLoader();
         typingIndicator.value = true;
 
-        const logStream = await remoteChain.streamEvents(data, {
-          version: "v1",
-          configurable: {
-            user_id: '',
-            usuario: '',
-            asistente: ''
+        const response = await fetch('https://bt-ia2.bantotal.com/aihub/api/agents/APIBT', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy'
           },
-          metadata: {
-          }
+          body: JSON.stringify({ message, sessionId })
         });
 
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let buffer = "";
         let fullMessage = "";
-        chatHistory.value.push({ role: "assistant", content: message }); // Placeholder para el bot
-        messages.value.push({ text: "", isUser: false });
-        const lastMessageIndex = chatHistory.value.length - 1;
 
-        for await (const chunk of logStream) {
-          const processedContent = processChunk(chunk);
-          if (processedContent) {
-            fullMessage += chunkProcess(processedContent);
-            const regex = /\n/; 
-            if (regex.test(processedContent)){
-              fullMessage = formatMessage(fullMessage);
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n");
+          console.log(lines)
+          buffer = lines.pop(); // guarda chunk incompleto
+
+          for (const line of lines) {
+            if (line.startsWith("data: ")) {
+              const json = JSON.parse(line.slice(6));
+
+              if (json.t === "msg" || json.t === "chunk") {
+                // Nueva lógica: dividir por cada \n que no esté al final
+                let partes = json.v.split(/(?<=\n)/g); // conserva el \n en la parte anterior
+
+                for (let parte of partes) {
+                  if (!parte) continue; // evitar strings vacíos
+
+                  const processedContent = processChunk({
+                    event: 'on_chat_model_stream',
+                    data: { chunk: { content: parte } }
+                  });
+
+                  if (processedContent) {
+                    fullMessage += chunkProcess(processedContent);
+
+                    // Si tiene saltos de línea, aplicar formato
+                    if (/\n/.test(processedContent)) {
+                      fullMessage = formatMessage(fullMessage);
+                    }
+
+                    // Actualizar en tiempo real
+                    chatHistory.value[lastMessageIndex].content = fullMessage;
+                    messages.value[messages.value.length - 1] = {
+                      text: fullMessage,
+                      isUser: false
+                    };
+
+                    scrollToBottom();
+                  }
+                }
+              }
             }
-
-            // Actualiza el historial de chat y el mensaje en pantalla progresivamente
-            chatHistory.value[lastMessageIndex].content = fullMessage;
-            messages.value[messages.value.length - 1] = {
-              text: fullMessage,
-              isUser: false
-            };
-
-            // Llamar al autoscroll dinámico
-            scrollToBottom();
           }
-          
         }
+
       } catch (error) {
         console.error('Error:', error);
         messages.value.push({ text: 'Error en la solicitud.', isUser: false });
@@ -194,24 +269,14 @@ const MyComponent = defineComponent({
         typingIndicator.value = false;
         hideLoader();
 
-        // Asegurar el enfoque del cuadro de entrada
         nextTick(() => {
-          const inputElement = inputRef.value;
-          if (inputElement) {
-            inputElement.focus();
-          } else {
-            console.warn("inputRef no está disponible después de la respuesta.");
-            setTimeout(() => {
-              if (inputRef.value) {
-                inputRef.value.focus();
-              }
-            }, 100); // Retraso adicional para garantizar el enfoque
-          }
+          inputRef.value?.focus();
         });
 
         scrollToBottom();
       }
     };
+
 
     // Funciones auxiliares para procesar mensajes
     const processChunk = (chunk) => {
@@ -424,7 +489,7 @@ const MyComponent = defineComponent({
   border-radius: 1rem;
   overflow: hidden;
   background-color: var(--warning-bg-color);
-  box-shadow: 15px 15px 15px 10px var(--card-shadow);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.08);
 }
 
 .chat-messages {

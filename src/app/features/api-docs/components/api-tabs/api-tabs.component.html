@@ -1,4 +1,4 @@
-<mat-tab-group class="api-tabs" disableRipple>
+<mat-tab-group class="api-tabs" disableRipple animationDuration="0ms">
   <mat-tab label="Datos de Entrada">
     @if (inputCols?.length || inputData?.length) {
       <app-api-table [columns]="inputCols" [data]="inputData"></app-api-table>

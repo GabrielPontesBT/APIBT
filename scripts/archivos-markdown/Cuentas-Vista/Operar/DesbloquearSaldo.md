@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del Bloqueo.
 30002 | No se encontró el ID del bloqueo.
 30003 | El Bloqueo ya no está Activo, no se puede dar de baja.

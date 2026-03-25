@@ -36,7 +36,7 @@ pais | Short | Identificador de país.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstados | [sBTEstado](#sbtestado) | Listado de estados.
 
 @tab Errores
@@ -318,7 +318,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstado son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de estado.
 identificador | Int | Identificador de estado.
 :::

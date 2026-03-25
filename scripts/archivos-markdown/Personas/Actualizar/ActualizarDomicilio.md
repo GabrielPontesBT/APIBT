@@ -1,6 +1,5 @@
 ---
 title: Actualizar Domicilio
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -42,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | El identificador de la persona no es correcto.
 30011 | Código de domicilio no válido.
@@ -225,7 +224,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios  
-:--------- | :----------- | :-----------  
+:--------- | :--------- | :---------  
 agrupador1 | String | Agrupador 1.  
 agrupador1Id | Short | Identificador del agrupador 1.  
 agrupador2 | String | Agrupador 2.  

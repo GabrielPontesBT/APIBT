@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de grupo
 30002 | No se recibió el identificador de cliente
 30014 | No existe registro con el identificador indicado
@@ -181,7 +181,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIntegranteGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único del cliente.
 cuenta | String | Nombre de la cuenta.
 fechaAlta | Date | Fecha de alta del integrante. 

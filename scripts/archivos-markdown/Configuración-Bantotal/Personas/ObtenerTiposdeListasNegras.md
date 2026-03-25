@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposListaNegra | [sBTTipoListaNegra](#sbttipolistanegra) | Listado de tipos de listas negras.
 
 @tab Errores
@@ -211,7 +211,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoListaNegra son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Long | Identificador de tipo de lista negra.
 descripcion | String | Descripción de tipo de lista negra.
 :::

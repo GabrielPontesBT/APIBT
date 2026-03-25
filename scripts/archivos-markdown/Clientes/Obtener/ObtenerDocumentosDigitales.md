@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTDocumentoDigital](#sbtdocumentodigital) | Listado de documentos digitales.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la cuenta.
 30024 | No existe registro con el identificador indicado.
 30033 | El cliente indicado no existe.
@@ -254,7 +254,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaActualizacion | Date | Fecha de actualizacion del documento digital. 
 fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
 instancia | Long | Instancia del documento digital. 

@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | El período de acreditación ingresado es inválido.
 30003 | No se recuperó la operación para el Identificador: [Número de identificador].

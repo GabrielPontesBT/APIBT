@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposAval | [sBTTipoAval](#sbttipoaval)| Listado de tipos de aval.
 
 @tab Errores
@@ -104,10 +104,10 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtTiposAval>
-            <TipoAval>
+            <sBTTipoAval>
                <codigo>1</codigo>
                <descripcion>Fiduciaria</descripcion>
-            </TipoAval>
+            </sBTTipoAval>
          </sdtTiposAval>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -135,7 +135,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
         "sdtTiposAval": {
-          "TipoAval": {
+          "sBTTipoAval": {
             "codigo": "1",
             "descripcion": "Fiduciaria"
           }
@@ -165,7 +165,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoAval son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Identificador de tipo de aval. 
 descripcion | String | Descripción de tipo de aval.
 :::

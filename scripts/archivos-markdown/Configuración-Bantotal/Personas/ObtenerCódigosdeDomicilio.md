@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCodigos | [sBTCodigoDomicilio](#sbtcodigodomicilio) | Listado de códigos de domicilio.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30011 | No existen Códigos de domicilio ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -106,46 +106,46 @@ curl -X POST \
             <Token>ccbe8f2e2434</Token>
          </Btinreq>
          <sdtCodigos>
-            <codigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Legal</descripcion>
                <identificador>1</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Particular</descripcion>
                <identificador>2</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Laboral</descripcion>
                <identificador>3</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Correspondencia 1</descripcion>
                <identificador>4</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Correspondencia 2</descripcion>
                <identificador>5</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Leasing Corresponden</descripcion>
                <identificador>6</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Migración</descripcion>
                <identificador>50</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Factoring (Ver BGL)</descripcion>
                <identificador>97</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Migración-Particular</descripcion>
                <identificador>98</identificador>
-            </codigoDomicilio>
-            <codigoDomicilio>
+            </sBTCodigoDomicilio>
+            <sBTCodigoDomicilio>
                <descripcion>Migración-Call Cente</descripcion>
                <identificador>99</identificador>
-            </codigoDomicilio>
+            </sBTCodigoDomicilio>
          </sdtCodigos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -173,7 +173,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"sdtCodigos": {
-		"codigoDomicilio": [
+		"sBTCodigoDomicilio": [
 			{
 				"descripcion": "Legal",
 				"identificador": "1"
@@ -244,7 +244,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCodigoDomicilio son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion	| String	| Descripción de código de domicilio.
 identificador | Long | Identificador de código de domicilio.
 :::

@@ -36,13 +36,13 @@ grupoId | Int | Identificador de grupo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDetalleGrupo | [sBTDetalleGrupo](#sbtdetallegrupo) | Datos del grupo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de grupo.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agencia | String | Agencia. 
 agenciaId | Int | Identificador de agencia. 
 asesor | String | Asesor del grupo. 

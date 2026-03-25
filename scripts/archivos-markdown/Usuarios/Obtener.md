@@ -36,13 +36,13 @@ usuario | String | Usuario a consultar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosUsuario | [sBTDatosUsuario](#sbtdatosusuario) | Datos del usuario.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió Usuario. 
 40001 | No existe el usuario ingresado. 
 ::: 
@@ -236,8 +236,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDatosUsuario son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 cajero | String | Es cajero? (S/N). 
 cantidadSesionesAbiertas | Short | Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal. 
 email | String | Email del usuario. 
@@ -256,8 +256,8 @@ usuario | String | Identificador del usuario.
 
 Los campos del tipo de dato estructurado sBTPerfilBT son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 FechaAlta | Date | Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil. 
 FechaVencimiento | Date | Fecha de vencimiento del perfil para el usuario. 
 Perfil | String | Identificador de perfil Bantotal. 

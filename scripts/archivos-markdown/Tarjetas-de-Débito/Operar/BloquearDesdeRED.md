@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjetaUId | Long | Identificador único de tarjeta.
+numeroTarjeta | String | Número de la tarjeta.
 clienteUId | Long | Identificador único de cliente.
 
 @tab Datos de Salida
@@ -41,8 +41,8 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
-30001 | No se recibió el identificador de la tarjeta.
+:--------- | :---------
+30001 | No se recibió el Número de la tarjeta.
 30002 | No se recuperó la tarjeta de débito para el identificador: [Número de identificador].
 30003 | No existe registro con el identificador indicado.
 30004 | La tarjeta no pertenece al cliente.
@@ -71,7 +71,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>407fce50864A8B5C60A82434</bts:Token>
          </bts:Btinreq>
-         <bts:tarjetaUId>2000002072</bts:tarjetaUId>
+         <bts:numeroTarjeta>2000002072</bts:numeroTarjeta>
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.BloquearDesdeRED>
    </soapenv:Body>
@@ -93,7 +93,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "tarjetaUId": 2000002072,
+   "numeroTarjeta": 2000002072,
    "clienteUId": 161
 }'
 ```

@@ -36,13 +36,13 @@ tipoGrupoId | Short | Identificador del tipo de grupo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposIntegrantesGrupo | [sBTTipoIntegranteGrupo](#sbttipointegrantegrupo) | Listado de tipos de integrantes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No existen Tipos de Grupo ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoIntegranteGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadPermitida | Int | Cantidad máxima de integrantes de este tipo permitidos. 
 codigo | Short | Identificador del tipo de integrante.  
 coordinador | String | Indica si el integrante es coordinador o no (S/N). 

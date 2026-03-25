@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar usuario a inhabilitar.
 30002 | Debe ingresar fecha desde.
 30003 | Debe ingresar fecha hasta.

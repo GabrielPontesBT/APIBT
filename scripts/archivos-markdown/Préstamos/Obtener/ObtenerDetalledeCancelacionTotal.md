@@ -40,13 +40,13 @@ expresadoEn | String | [M-Moneda / E-Especie].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtConceptosPrestamo | [sBTConceptosPrestamo](#sbtconceptosprestamo) | Datos de la cancelación total del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó préstamo para el identificador: [Número de Identificador].
 30003 | No se recibió el modo expresado.
@@ -261,7 +261,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTConceptosPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital.
 comisionesCuota | Double | Total de comisiones de las cuotas. 
 comisionMora | Double | Comisión de mora.
@@ -295,7 +295,7 @@ totalSeguros | Double | Total de seguros.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Date | Importe.

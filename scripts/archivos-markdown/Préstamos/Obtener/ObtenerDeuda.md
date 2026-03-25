@@ -37,13 +37,13 @@ fechaCalculo | Date | Fecha a la que se calcula la deuda.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 deuda | Double | Deuda a la fecha.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el identificador: [Número de Identificador].
 ::: 
@@ -68,8 +68,8 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>
          </bts:Btinreq>
-         <bts:OperacionUId>142</bts:OperacionUId>
-         <bts:FechaCalculo></bts:FechaCalculo>
+         <bts:operacionUId>142</bts:operacionUId>
+         <bts:fechaCalculo></bts:fechaCalculo>
       </bts:BTPrestamos.ObtenerDeuda>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -90,7 +90,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "OperacionUId": 142
+    "operacionUId": 142
 }'
 ```
 :::
@@ -112,7 +112,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>75e20bd1614A8B5C60A82434</Token>
          </Btinreq>
-         <Deuda>23433.85</Deuda>
+         <deuda>23433.85</deuda>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>916</Numero>
@@ -138,7 +138,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "Deuda": "23433.85",
+    "deuda": "23433.85",
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },

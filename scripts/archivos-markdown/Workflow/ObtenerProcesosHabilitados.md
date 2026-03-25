@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 sdtProcesos | [sBTProcesoWF](#sbtprocesowf) | Listado de procesos habilitados. 
 
 @tab Errores 
@@ -339,7 +339,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 Los campos del tipo de dato estructurado sBTProcesoWF son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 deadline | Double | Tiempo de deadline. 
 descripcion | String | Descripción. 
 fechaActualizacion | Date | Fecha de actualización. 

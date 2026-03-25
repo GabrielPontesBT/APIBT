@@ -36,13 +36,13 @@ bolsilloUId | Long | Identificador único del bolsillo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtInformacionBolsillo | [sBTInfBolsillo](#sbtinfbolsillo) | Información del bolsillo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 30003 | La operación ingresada no corresponde a una cuenta bolsillo.
@@ -197,7 +197,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTInfBolsillo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuentaPrincipalUId | Long | Identificador único de la operación principal.
 estado | Byte | Estado.
 fechaApert | Date | Fecha de apertura.
@@ -216,7 +216,7 @@ saldo | Double | Saldo.
 Los campos del tipo de dato estructurado sBTParamBolsillo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 heredaCondiciones | String | ¿Hereda condiciones? (S/N).
 metaAhorro | Double | Meta de ahorro de la cuenta.
 pagaIntereses | String | ¿Paga intereses? (S/N).

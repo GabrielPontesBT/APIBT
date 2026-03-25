@@ -36,7 +36,7 @@ identificador | Int | Identificador de proceso batch.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 procesosBatch | [sBTProcesoBatch](#sbtprocesobatch) | Datos de proceso de cadena de cierre.
 
 @tab Errores
@@ -175,7 +175,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProcesoBatch son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 esReprocesable | String | Descripción para reprocesamiento. 
 identificador | Int | Identificador de proceso batch. 

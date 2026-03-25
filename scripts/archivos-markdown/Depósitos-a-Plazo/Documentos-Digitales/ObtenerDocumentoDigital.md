@@ -45,13 +45,13 @@ documentoId | Long | Identificador de documento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentoDigital | [sBTVersionDocumentoDigital](#sbtversiondocumentodigital) | Versión de documento digital.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30002 | No se recibió el identificador de documento.
 30003 | La operación ingresada no corresponde a un depósito a plazo.
@@ -125,17 +125,17 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b98a5858014A8B5C60A82434</Token>
          </Btinreq>
-         <sdtDocumentosDigitales>
-            <sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital xmlns:sBTVersionDocumentoDigitalns="http://uy.com.dlya.bantotal/BTSOA/" xmlns="ServiciosBT">
-               <DocumentoId>87</DocumentoId>
-               <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>
-               <Nombre>Prueba Asociar Contrato</Nombre>
-               <Version>1</Version>
-               <FechaEmision>2020-10-10</FechaEmision>
-               <FechaVencimiento>2010-10-10</FechaVencimiento>
-               <Archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</Archivo>
-            </sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital>
-         </sdtDocumentosDigitales>
+         <sdtDocumentoDigital>
+            <sBTVersionDocumentoDigital>
+               <documentoId>87</documentoId>
+               <tipoDocumentoDigital>Contrato</tipoDocumentoDigital>
+               <nombre>Prueba Asociar Contrato</nombre>
+               <version>1</version>
+               <fechaEmision>2020-10-10</fechaEmision>
+               <fechaVencimiento>2010-10-10</fechaVencimiento>
+               <archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</archivo>
+            </sBTVersionDocumentoDigital>
+         </sdtDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>3107</Numero>
@@ -161,16 +161,16 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "sdtDocumentosDigitales": {
+    "sdtDocumentoDigital": {
         "sBTVersionDocumentoDigital": [
             {
-                "FechaEmision": "2020-10-10",
-                "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-                "FechaVencimiento": "2010-10-10",
-                "TipoDocumentoDigital": "Contrato",
-                "Version": "1",
-                "Nombre": "Prueba Asociar Contrato",
-                "DocumentoId": "87"
+                "fechaEmision": "2020-10-10",
+                "archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+                "fechaVencimiento": "2010-10-10",
+                "tipoDocumentoDigital": "Contrato",
+                "version": "1",
+                "nombre": "Prueba Asociar Contrato",
+                "documentoId": "87"
             }
         ]
     },
@@ -202,7 +202,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 documentoId | Long | Titulo del documento digital. 
 fechaEmision | Date | Fecha de emisión del documento digital. 
 archivo | String | Documento digital codificado en base 64. 

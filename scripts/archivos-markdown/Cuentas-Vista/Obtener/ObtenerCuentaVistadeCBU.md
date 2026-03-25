@@ -37,13 +37,13 @@ CBU | String | Clave Bancaria Uniforme.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación CC o CA.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió CBU.
 40001 | No se encontró operación correspondiente al CBU.
 ::: 

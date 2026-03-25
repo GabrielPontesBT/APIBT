@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtContactos | [sBTContactoJuridico](#sbtcontactojuridico) | Listado de contactos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Identificador de persona requerido.
 30002 | No existe persona con el identificador ingresado.
 40001 | No existe Contactos para la persona en consulta.
@@ -154,9 +154,7 @@ curl -X POST \
 			"domicilio3": "",
 			"domicilio2": "",
 			"domicilio1": "18 de Julio 1234",
-			"tipoId": "P",
 			"correlativo": "1",
-			"tipo": "Personal",
 			"telefono": "1234 5678",
 			"nombre": "Rodolfo Rías",
 			"vinculo": "Director"
@@ -190,7 +188,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTContactoJuridico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo	| Short | Correlativo. 
 domicilio1 | String | Domicilio 1. 
 domicilio2 | String | Domicilio 2. 

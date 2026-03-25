@@ -37,7 +37,7 @@ productoUId | Long | Identificador único del producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 simulacionUId | Long | Identificador único de la simulación.
 sdtPrestamosACancelar | [sBTPrestamoACancelar](#sbtprestamoacancelar) | Listado de préstamos a cancelar.
 sdtConceptosPrestamo | [sBTConceptosPrestamo](#sbtconceptosprestamo) | Conceptos del préstamo.
@@ -45,7 +45,7 @@ sdtConceptosPrestamo | [sBTConceptosPrestamo](#sbtconceptosprestamo) | Conceptos
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
 30003 | No se recibió el identificador de producto.
@@ -151,7 +151,6 @@ curl -X POST \
                   <papel>$</papel>
                   <productoUId>60</productoUId>
                   <nombre>PRESTAMO VEHICULAR, Credito Convencional</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <detalleConceptos></detalleConceptos>
                <totalImpuestos>0.0</totalImpuestos>
@@ -226,8 +225,7 @@ curl -X POST \
          "moneda": "$",
          "papel": "$",
          "productoUId": 60,
-         "nombre": "PRESTAMO VEHICULAR, Credito Convencional",
-         "otrosConceptos":""
+         "nombre": "PRESTAMO VEHICULAR, Credito Convencional"
       },
       "detalleConceptos": "",
       "totalImpuestos": 0
@@ -285,7 +283,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único del cliente.
 fecha | Date | Fecha.
 operaciones | Long | Listado de operaciones.
@@ -299,7 +297,7 @@ operaciones | Long | Listado de operaciones.
 Los campos del tipo de dato estructurado sBTPrestamoACancelar son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital.
 detalleConceptos | [sBTConcepto](#sbtconcepto) | Listado de detalles concepto.
 deudaTotal | Double | Deuda total.
@@ -322,7 +320,7 @@ totalSeguros | Double | Total de seguros.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -333,7 +331,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -346,7 +344,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -360,7 +358,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTConceptosPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital.
 comisionesCuota | Double | Comisiones de las cuotas.
 comisionMora | Double | Comisión de mora.

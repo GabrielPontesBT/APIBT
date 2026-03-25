@@ -37,13 +37,13 @@ codigoImpuesto | Short | Código de impuesto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigoCondicion | Short | Código de condición.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se recibió el código del impuesto.
 40004 | Condición por Impuesto/Persona inexistente.

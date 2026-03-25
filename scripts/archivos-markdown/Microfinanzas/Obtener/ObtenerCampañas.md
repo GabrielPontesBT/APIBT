@@ -37,13 +37,13 @@ fecha | Date | Fecha de inicio de campaña.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCampanias | [sBTCampania](#sbtcampania) | Listado de campañas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | No se recuperó la cuenta para el Identificador de cliente.
 30011 | No se obtuvo el titular representativo de la cuenta.
@@ -79,7 +79,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerCampanias \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerCampanias' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
@@ -137,30 +137,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtCampanias": {
-          "sBTCampania": {
-            "codigo": "1",
-            "descripcion": "Campaña Uno"
-          }
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.ObtenerCampanias",
-          "Fecha": "2019-09-25",
-          "Hora": "10:06:27",
-          "Requerimiento": "95",
-          "Numero": "246",
-          "Estado": "OK"
-        }
-}'
+{
+   "Envelope": {
+      "Body": {
+         "BTMicrofinanzas.ObtenerCampaniasResponse": {
+            "Btinreq": {
+               "Canal": "BTINTERNO",
+               "Requerimiento": "95",
+               "Usuario": "INSTALADOR",
+               "Token": "419385365CD285A89A23FBEE",
+               "Device": "GP"
+            },
+            "sdtCampanias": {
+               "sBTCampania": {
+                  "codigo": "1",
+                  "descripcion": "Campaña Uno"
+               }
+            },
+            "Erroresnegocio": "",
+            "Btoutreq": {
+               "Canal": "BTDIGITAL",
+               "Servicio": "BTMicrofinanzas.ObtenerCampanias",
+               "Fecha": "2019-09-25",
+               "Hora": "10:06:27",
+               "Requerimiento": "95",
+               "Numero": "246",
+               "Estado": "OK"
+            }
+         }
+      },
+      "_xmlns:SOAP-ENV": "http://schemas.xmlsoap.org/soap/envelope/",
+      "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+      "_xmlns:SOAP-ENC": "http://schemas.xmlsoap.org/soap/encoding/",
+      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+   }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -176,7 +187,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCampania son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Identificador de campaña. 
 descripcion | String | Descripción de campaña. 
 :::

@@ -1,0 +1,81 @@
+{
+  "slug": "cuentas-corrientes/obtener/obtenersobregiros",
+  "pageTitle": "Obtener Sobregiros",
+  "description": "Método para obtener los sobregiros de una cuenta corriente.",
+  "pubName": "BTCuentasCorrientes.ObtenerSobregiros",
+  "programa": "RBTPG587",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "anio",
+      "Tipo": "Short",
+      "Comentarios": "Año."
+    },
+    {
+      "Nombre": "mes",
+      "Tipo": "Byte",
+      "Comentarios": "Mes."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSobregiros",
+      "Tipo": "sBTSobregiro",
+      "Comentarios": "Listado de los sobregiros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta Corriente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El valor del campo mes no puede ser menor a 1 o mayor a 12."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.ObtenerSobregiros>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>8B2DAF8BCFD755A866C37214</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>958</bts:operacionUId>\n         <bts:anio></bts:anio>\n         <bts:mes></bts:mes>\n      </bts:BTCuentasCorrientes.ObtenerSobregiros>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerSobregiros' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": 958,\n   \"anio\": \"\",\n   \"mes\": \"\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.ObtenerSobregirosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>8B2DAF8BCFD755A866C37214</Token>\n         </Btinreq>\n         <sdtSobregiros>\n            <sBTSobregiro>\n               <fecha>2025-09-01</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-02</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-03</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-04</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-05</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-06</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-07</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-08</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-09</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-10</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-11</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-12</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-13</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-14</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-15</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-16</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-17</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-18</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-19</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-20</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-21</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-22</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-23</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-24</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n            <sBTSobregiro>\n               <fecha>2025-09-11</fecha>\n               <sobregiro>-9966.17</sobregiro>\n            </sBTSobregiro>\n         </sdtSobregiros>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>36491</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasCorrientes.ObtenerSobregiros</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-10-28</Fecha>\n            <Hora>15:45:24</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasCorrientes.ObtenerSobregirosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"sdtSobregiros\": {\n      \"sBTSobregiro\": [\n      {\n         \"fecha\": \"2025-09-01\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-02\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-03\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-04\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-05\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-06\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-07\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-08\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-09\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-10\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-11\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-12\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-13\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-14\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-15\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-16\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-17\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-18\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-19\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-20\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-21\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-22\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-23\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-24\",\n         \"sobregiro\": -9966.17\n      },\n      {\n         \"fecha\": \"2025-09-11\",\n         \"sobregiro\": -9966.17\n      }\n      ]\n   },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8418,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasCorrientes.ObtenerSobregiros\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSobregiro",
+      "fields": [
+        {
+          "Nombre": "fecha",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del sobregiro."
+        },
+        {
+          "Nombre": "sobregiro",
+          "Tipo": "Double",
+          "Comentarios": "Valor del sobregiro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

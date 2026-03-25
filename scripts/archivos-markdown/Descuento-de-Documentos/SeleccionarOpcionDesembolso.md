@@ -1,5 +1,6 @@
 ---
 title: Seleccionar Opción Desembolso
+icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -42,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de lista.
 30002 | No se recibió el identificador único de operación.
 30003 | No se recibió tipo de desembolso.

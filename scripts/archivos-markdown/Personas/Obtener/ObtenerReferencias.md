@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtReferencias | [sBTReferencia](#sbtreferencia) | Listado de referencias.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Identificador de persona requerido.
 30002 | No existe persona con el identificador ingresado.
 40001 | No existe Referencias para la persona en consulta.
@@ -142,7 +142,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -176,7 +176,7 @@ curl -X POST \
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTReferencia son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo	| Short | Correlativo. 
 domicilio1 | String | Domicilio 1. 
 domicilio2 | String | Domicilio 2. 

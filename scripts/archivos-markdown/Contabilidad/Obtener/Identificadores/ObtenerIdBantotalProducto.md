@@ -36,7 +36,7 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 empresaId | Short | Identificador de empresa.
 moduloId | Int | Módulo Bantotal.
 tipoOperacionBT | Short | Tipo de operación Bantotal.
@@ -46,7 +46,7 @@ papelId | Int | Identificador de papel.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió productoUId.
 40001 | No existe una empresa con los datos ingresados.
 40002 | No se pudo resolver la empresa del usuario.

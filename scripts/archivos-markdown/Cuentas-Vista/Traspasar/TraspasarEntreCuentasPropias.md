@@ -58,13 +58,13 @@ sdtTraspaso | [sBTTraspaso](#sbttraspaso) | Datos del traspaso.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtResultadoTraspaso | [sBTResultadoTraspaso](#sbtresultadotraspaso) | Datos resultado del traspaso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de origen.
 30002 | No se recibió el identificador único de operación de destino.
 30003 | Debe ingresar importe.
@@ -98,6 +98,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
+         <bts:clienteUId>40</bts:clienteUId>
          <bts:sdtTraspaso>
             <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>
             <bts:importe>500</bts:importe>
@@ -125,6 +126,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
+   "clienteUId": 40,
 	"sdtTraspaso": {
 		"operacionUIdOrigen": 281,
 		"operacionUIdDestino": 282,
@@ -218,8 +220,8 @@ curl -X POST \
 ::: center
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 concepto | String | Concepto del traspaso.
 importe | Double | Importe del movimiento.
 monedaId | Short | Identificador de moneda.
@@ -234,8 +236,8 @@ operacionUIdOrigen | long | Identificador único de operación de origen del tra
 ::: center
 Los campos del tipo de dato estructurado sBTResultadoTraspaso son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 idMovimiento | String | Identificador de movimiento string.
 movimientoUId | Long | Identificador único de movimiento.
 operacionUIdDestino | Long | Identificador único de operación destino del traspaso.

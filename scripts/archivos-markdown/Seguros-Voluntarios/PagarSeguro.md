@@ -30,7 +30,7 @@ backtotop: false
 @tab Datos de Entrada
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 seguroUId | Long | Identificador único del seguro.
 montoPago | Double | Monto a pagar.
 operacionUIdCobro | Long | Identificador único de la operación de cobro.
@@ -38,13 +38,13 @@ operacionUIdCobro | Long | Identificador único de la operación de cobro.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador de operación del seguro.
 30003 | Se debe ingresar un monto.
 30004 | No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].

@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | No se recibió si la persona es políticamente expuesta.
 30003 | No se pudo determinar si la persona es políticamente expuesta. (¿Es PEP? S / N).
@@ -195,7 +195,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosPEP son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cargoRelacion | String | Cargo que ocupa.
 correlativo | Short | Correlativo.
 entidad | String | Entidad.

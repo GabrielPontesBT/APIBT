@@ -37,13 +37,13 @@ fecha | Date | Fecha de cotización. [Si es vacía devuelve cotización al día 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCotizacion | [sBTCotizacion](#sbtcotizacion) | Listado de cotizaciones.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | El identificador de moneda se corresponde con la moneda nacional. 
 40002 | No se recuperó moneda para el identificador ingresado. 
 40003 | No se recuperaron monedas. 
@@ -229,7 +229,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCotizacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 compra | Double | Cotización Compra. 
 identificador | Short | Identificador de moneda. 
 monedaISO | String | Código ISO de la moneda. 

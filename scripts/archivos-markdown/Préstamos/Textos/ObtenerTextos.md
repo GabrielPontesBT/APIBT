@@ -1,6 +1,5 @@
 ---
 title: Obtener Textos
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -43,7 +42,7 @@ sdtTextos | [sBTTextoOperacion](#sbttextooperacion) | Listado de textos de la op
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30011 | No se recupero la operación para el identificador recibido.
 
@@ -212,7 +211,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTextoOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código.
 descripcion | String | Descripción.
 renglon | Short | Renglón. 

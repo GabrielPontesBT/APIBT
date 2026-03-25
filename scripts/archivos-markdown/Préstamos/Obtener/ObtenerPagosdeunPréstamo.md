@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3 
 Correlativo 2 | 1 
 Valor específico 1 | Identificador del módulo a incluir. 
@@ -38,7 +38,7 @@ Valor específico 1 | Identificador del módulo a incluir.
 Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :----------- 
+:--------- | :--------- 
 Correlativo 1 | 3 
 Correlativo 2 | 2 
 Valor específico 1 | Módulo del tipo de operación a excluir. 
@@ -61,13 +61,13 @@ fechaDesde | Date | Fecha desde la cual buscar pagos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPagos | [sBTPagoPrestamo](#sbtpagoprestamo) | Listado de pagos del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30011 | No se recuperó la operación para el identificador recibido.
 ::: 
@@ -250,7 +250,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPagoPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fecha | Date | Fecha de pago. 
 importe | Double | Importe pagado. 
 movimientoUId | Long | Identificador único del movimiento. 

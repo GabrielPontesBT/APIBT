@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSaldosBloqueados | [sBTBloqueoSaldo](#sbtbloqueosaldo) | Listado de saldos bloqueados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se encontró el identificador de la operación para la cuenta vista bloqueada.
 ::: 
@@ -191,7 +191,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBloqueoSaldo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 bloqueoId | Long | Identificador del bloqueo.
 fechaVencimiento | Date | Fecha de vencimiento.
 importe | Double | Importe.

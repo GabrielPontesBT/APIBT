@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtBancos | [sBTBanco](#sbtbanco) | Listado de bancos.
 
 @tab Errores
@@ -290,7 +290,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBanco son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de banco.
 identificador | Short | Identificador de banco.
 :::

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEjecutivos | [sBTEjecutivo](#sbtejecutivo) | Listado de ejecutivos.
 
 @tab Errores
@@ -314,7 +314,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEjecutivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Int | Identificador del ejecutivo.
 nombre | String | Descripción de ejecutivo.
 :::

@@ -36,13 +36,13 @@ sdtAhorroProgramado | [sBTAhorroProgramadoAlta](#sbtahorroprogramadoalta) | Dato
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 ahorroUId | Long | Identificador único de operación del ahorro programado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | No se recibió el identificador del cliente.
 30003 | No se recibió el identificador del producto.
@@ -234,7 +234,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAhorroProgramadoAlta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 abono | Decimal | Monto de abono periódico.
 clienteUId | Long | Identificador único de cliente.
 cuentaDestinoUId | Long | Identificador único de operación de la cuenta destino del ahorro.

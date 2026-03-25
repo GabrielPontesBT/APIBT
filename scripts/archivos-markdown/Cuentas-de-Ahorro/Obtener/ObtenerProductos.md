@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de productos.
 
 @tab Errores
@@ -108,29 +108,26 @@ curl -X POST \
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> 
                <moneda>$</moneda> 
                <papel/> 
-               <otrosConceptos></otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>2</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> 
                <moneda>USD</moneda> 
                <papel/> 
-               <otrosConceptos></otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>3</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> 
                <moneda>$</moneda> 
                <papel/> 
-               <otrosConceptos></otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>4</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> 
                <moneda>USD</moneda> 
                <papel/> 
-               <otrosConceptos></otrosConceptos>
             </sBTProducto> 
+            ...
          </sdtProductos> 
          <Erroresnegocio></Erroresnegocio> 
          <Btoutreq> 
@@ -163,16 +160,15 @@ curl -X POST \
                 "papel": "", 
                 "moneda": "$", 
                 "productoUId": "1", 
-                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
-                "otrosConceptos":""  
+                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
             }, 
             { 
                 "papel": "", 
                 "moneda": "USD", 
                 "productoUId": "2", 
-                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
-                "otrosConceptos":"" 
+                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
             }, 
+            ...
         ] 
     }, 
     "Erroresnegocio": { 
@@ -203,7 +199,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -216,7 +212,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

@@ -42,7 +42,7 @@ sdtResumenCabezal | [sBTResumenCabezal](#sbtresumencabezal) | Listado de cabezal
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030705 | Cuenta cliente sin contrato vinculado.
 1030708 | Estado de archivo desconocido.
 1030709 | Se requiere identificación de cuenta cliente.
@@ -198,7 +198,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTResumenCabezal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivoId | Long | Identificador de archivo.
 contratoId | Int | Identificador del contrato CASH.
 servicio | Short | Servicio CASH.

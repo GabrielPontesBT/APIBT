@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposFuncionarios | [sBTTipoFuncionario](#sbttipofuncionario) | Listado de los tipos de funcionario público.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40002 | La guía 8260 no está parametrizada.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -180,7 +180,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoFuncionario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del tipo de funcionario público.
 identificador | Short | Identificador del tipo de funcionario público.
 :::

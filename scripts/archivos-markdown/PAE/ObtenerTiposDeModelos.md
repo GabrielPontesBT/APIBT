@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTModelosPAE | [sBTTModeloPAE](#sbttmodelopae) | Listado de los modelos de evaluación.
 
 @tab Errores 
@@ -225,7 +225,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 Los campos del tipo de dato estructurado sBTTModeloPAE son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 categoriaModelo | Numérico | Categoría de Modelo (1 - Lineal, 2 - Mínimo, 3 - Máximo, 4 - Especial). 
 descripcion | String | Descripción del tipo de modelo. 
 programaEvaluacion | String | Programa particular para realizar la evaluación del modelo. 

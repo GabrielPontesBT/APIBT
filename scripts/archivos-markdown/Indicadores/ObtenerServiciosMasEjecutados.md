@@ -32,12 +32,11 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 servicio | String | [Hidden: Valor fijo vacío para este método].
-cantidadDeRegistros | Int | [Hidden: Valor por defecto '10' para este método].
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadisticasServicios | [sBTEstadisticasServicioMetodo](#sbtestadisticasserviciometodo) | Colección de datos de servicios y sus estadísticas.
  
 @tab Errores
@@ -322,7 +321,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadisticasServicioMetodo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadEjecuciones | Long | Cantidad de ejecuciones.
 metodo       | String | Método del servicio.
 servicio 	 | String | Identificador del servicio

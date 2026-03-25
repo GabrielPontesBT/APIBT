@@ -33,20 +33,20 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 sdtPartner | [sBTPartnerInReq](#sbtpartnerinreq)  | Datos del usuario.
 operacionUId | Long | Identificador único de operación.
-cuentaUId | Long | Identificador único de la cuenta.
+clienteUId | Long | Identificador único de la cuenta cliente.
 operacionAcreditacionUId | Long | Identificador único de la operación de acreditación.
 operacionCobroUId | Long | Identificador único de la operación de cobro
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación de préstamo
 30002 | No se recibió el identificador de operación de Acreditación
 30004 | No se recuperó el préstamo para el identificador: [Número de identificador]
@@ -87,7 +87,7 @@ Código | Descripción
             <bts:partnerUId>23</bts:partnerUId>
          </bts:sdtPartner>
          <bts:operacionUId>32123</bts:operacionUId>
-         <bts:cuentaUId>23</bts:cuentaUId>
+         <bts:clienteUId>23</bts:clienteUId>
          <bts:operacionAcreditacionUId>8542</bts:operacionAcreditacionUId>
          <bts:operacionCobroUId>8412</bts:operacionCobroUId>
       </bts:BTPartners.ContratarPrestamo>
@@ -116,7 +116,7 @@ curl -X POST \
       "partnerUId": 23
    },
    "operacionUId": 32123,
-   "cuentaUId": 23,
+   "clienteUId": 23,
    "operacionAcreditacionUId": 8542,
    "operacionCobroUId": 8412
 }'
@@ -179,7 +179,7 @@ curl -X POST \
         "Hora": "17:15:28",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -195,7 +195,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.

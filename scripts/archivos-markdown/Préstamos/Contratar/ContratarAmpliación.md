@@ -60,13 +60,13 @@ operacionUId_cobro | Long | Identificador único de operación de la cuenta vist
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento [Asiento].  
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de ampliación.
 30002 | El identificador de ampliación no es válido.
 30003 | No se recibió el identificador de oper. de la cuenta vista.

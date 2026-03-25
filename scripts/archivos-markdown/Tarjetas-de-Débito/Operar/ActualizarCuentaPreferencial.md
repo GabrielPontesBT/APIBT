@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30000 | No se recibió el identificador de la tarjeta.
 30001 | No existe registro con el identificador indicado.
 30002 | No se recuperó la operación para el identificador recibido.
@@ -83,7 +83,7 @@ Código | Descripción
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
          <bts:clienteUId>1</bts:clienteUId>
-         <bts:tarjetaUId>109</bts:tarjetaId>
+         <bts:tarjetaId>109</bts:tarjetaId>
          <bts:operacionUId>10</bts:operacionUId>
       </bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>
    </soapenv:Body>
@@ -105,7 +105,7 @@ curl -X POST \
 		"Device": "MC"
 	 },
 	 "clienteUId": "1",
-	 "tarjetaUId": "109"
+	 "tarjetaId": "109"
 	 "operacionUId": "10"
   } 
 ```

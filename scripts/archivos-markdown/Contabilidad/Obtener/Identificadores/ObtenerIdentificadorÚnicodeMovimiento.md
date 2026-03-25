@@ -41,13 +41,13 @@ fechaContabilizacion | Date | Fecha de contabilización.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento (asiento).
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió empresa. 
 30002 | No se recibió sucursal. 
 30003 | No se recibió módulo. 

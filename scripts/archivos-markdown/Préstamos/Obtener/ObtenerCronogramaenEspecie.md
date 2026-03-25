@@ -37,13 +37,13 @@ expresadoEn | String | [Hidden: Valor fijo 'E' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtCuotaPrestamo | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
+:--------- | :--------- | :---------
+cronograma | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el Identificador.
 ::: 
@@ -111,7 +111,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>75e20bd1614A8B5C60A82434</Token>
          </Btinreq>
-         <sdtCuotaPrestamo> 
+         <cronograma> 
             <sBTCuotaPrestamo> 
                <nroCuota>1</nroCuota> 
                <fechaPago>2018-11-05</fechaPago> 
@@ -288,7 +288,7 @@ curl -X POST \
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
             </sBTCuotaPrestamo> 
-         </sdtCuotaPrestamo> 
+         </cronograma> 
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>898</Numero>
@@ -314,7 +314,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
 	}, 
-    "sdtCuotaPrestamo": { 
+    "cronograma": { 
         "sBTCuotaPrestamo": [ 
             { 
                 "impuestos": "0.00", 
@@ -538,7 +538,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuotaPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de la cuota. 
 comisiones | Double | Comisiones de la cuota. 
 concepto | String |  (Capital / Interés / Capital-Interés / Pago Mínimo / Cuota Fija). 
@@ -566,7 +566,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

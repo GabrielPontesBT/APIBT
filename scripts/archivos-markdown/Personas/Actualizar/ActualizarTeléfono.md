@@ -35,7 +35,7 @@ personaUId | Long | Identificador único de persona.
 numeroTelefono | String | Número de teléfono.
 tipoTelefonoId | Short | Identificador de tipo de teléfono.
 domicilioId | Byte | Identificador de tipo de domicilio.
-telefonoId | Byte | Identificador correlativo de teléfono.
+telefonoId | Short | Identificador correlativo de teléfono.
 
 @tab Datos de Salida
 
@@ -44,7 +44,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona.
 30002 | Debe ingresar al menos un teléfono.
 30005 | No se recibió el tipo del telefono.

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtBalanceMonedaSaldos | [sBTBalanceMonedaSaldo](#sbtbalancemonedasaldo) | Listado de cierre de saldos por moneda.
 
 @tab Errores
@@ -244,7 +244,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBalanceMonedaSaldo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código de la moneda. 
 nombre | String | Nombre de moneda. 
 saldo | Int | Saldo de cierre de moneda. 

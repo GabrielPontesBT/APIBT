@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOrigenesCaptacion | [sBTOrigenCaptacion](#sbtorigencaptacion) | Listado de orígenes de captación.
 
 @tab Errores
@@ -104,38 +104,38 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtOrigenesCaptacion>
-            <OrigenCaptación>
+            <sBTOrigenCaptacion>
                <identificador>1</identificador>
                <descripcion>Red de Agencias</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>2</identificador>
                <descripcion>Call Center</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>3</identificador>
                <descripcion>Visita Página Web</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>4</identificador>
                <descripcion>Referencia de otro cliente</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>5</identificador>
                <descripcion>Publicidad Masiva</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>6</identificador>
                <descripcion>Correos masivos</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>7</identificador>
                <descripcion>Promotor Comunitario</descripcion>
-            </OrigenCaptación>
-            <OrigenCaptación>
+            </sBTOrigenCaptacion>
+            <sBTOrigenCaptacion>
                <identificador>8</identificador>
                <descripcion>Otro</descripcion>
-            </OrigenCaptación>
+            </sBTOrigenCaptacion>
          </sdtOrigenesCaptacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -163,7 +163,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
       "sdtOrigenesCaptacion": {
-        "OrigenCaptación": [
+        "sBTOrigenCaptacion": [
           {
             "identificador": "1",
             "descripcion": "Red de Agencias"
@@ -207,7 +207,7 @@ curl -X POST \
         "Numero": "123",
         "Estado": "OK"
       }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -224,7 +224,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTOrigenCaptacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de origen de captación.
 identificador | Short | Identificador de origen de captación. 
 :::

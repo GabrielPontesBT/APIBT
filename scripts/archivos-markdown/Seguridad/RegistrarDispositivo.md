@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el usuario.
 30002 | No se recibió el identificador para notificaciones.
 30003 | Usuario no válido.

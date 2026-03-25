@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTResumenCabezal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivoId | Long | Identificador de archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 contratoId | Int | Identificador del contrato CASH.

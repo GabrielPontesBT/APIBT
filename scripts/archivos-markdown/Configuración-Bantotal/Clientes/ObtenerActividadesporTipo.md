@@ -36,13 +36,13 @@ tipoActividadId | Long | Identificador de tipo de actividad.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtActividades | [sBTActividad](#sbtactividad) | Listado de actividades.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió código de actividad.
 40001 | No existen actividades ingresadas en el sistema.
 ::: 
@@ -494,7 +494,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTActividad son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de actividad.
 identificador | Int | Identificador de actividad.
 identificadorEntidadReguladora | Long | Identificador de entidad reguladora.

@@ -36,7 +36,7 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 empresa | Short | Identificador de empresa.
 sucursalId | Int | Identificador de sucursal.
 moduloId | Int | Identificador de módulo.
@@ -50,7 +50,7 @@ tipoOperacionId | Short | Identificador de tipo de operación.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No existe registro para el identificador de operación ingresado.
 ::: 

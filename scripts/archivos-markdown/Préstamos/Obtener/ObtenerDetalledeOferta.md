@@ -39,13 +39,13 @@ actividad | Long | Destino del crédito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOferta | [sBTSimulacionPrestamoOferta](#sbtsimulacionprestamooferta) | Detalle de la oferta de préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de simulación.
 30003 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
@@ -140,6 +140,7 @@ curl -X POST \
                   <fechaPago>2020-05-05</fechaPago>
                   <seguros>0.00</seguros>
                </sBTCuotaSimulacion>
+               ...
             </cronograma>
             <tasaEfectiva>0.000000</tasaEfectiva>
             <intereses>279.90</intereses>
@@ -157,7 +158,6 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>43</productoUId>
                <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <plazo>497</plazo>
          </sdtOferta>
@@ -203,6 +203,7 @@ curl -X POST \
 			  "fechaPago": "2020-05-05", 
 			  "seguros": "0.00" 
 			}, 
+			...
 		  ] 
 		}, 
 		"tasaEfectiva": "0.000000", 
@@ -220,8 +221,7 @@ curl -X POST \
 		  "moneda": "$", 
 		  "papel": "$", 
 		  "productoUId": "43", 
-		  "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-        "otrosConceptos":"" 
+		  "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF" 
 		}, 
 		"plazo": "497" 
 	},
@@ -253,7 +253,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSimulacionPrestamoOferta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital total. 
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha primer pago. 
@@ -279,7 +279,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 
@@ -291,7 +291,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Monto de capital en la cuota. 
 concepto | String | Concepto. 
 cuota | Double | Importe total de la cuota. 
@@ -309,7 +309,7 @@ tipoCuota | String | Tipo de la cuota (Capital/Interés).
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -322,7 +322,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

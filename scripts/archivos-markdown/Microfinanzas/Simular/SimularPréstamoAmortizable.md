@@ -31,18 +31,18 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sBTSimulacionAmortizable | [sBTSimulacionAmortizable](#sbtsimulacionamortizable) | Datos de la simulación.
+sdtSimulacionAmortizable | [sBTSimulacionAmortizable](#sbtsimulacionamortizable) | Datos de la simulación.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSimulacion | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos del préstamo simulado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la solicitud. 
 30002 | No se recibió el identificador de cliente. 
 30003 | No se recibió el identificador de producto. 
@@ -69,7 +69,7 @@ Código | Descripción
             <bts:Token>987391075CD285A89A23FBEE</bts:Token>
             <bts:Device>GP</bts:Device>
          </bts:Btinreq>
-         <bts:sBTSimulacionAmortizable>
+         <bts:sdtSimulacionAmortizable>
             <bts:solicitudUId>10896</bts:solicitudUId>
             <bts:clienteUId>7</bts:clienteUId>
             <bts:productoUId>23</bts:productoUId>
@@ -81,7 +81,7 @@ Código | Descripción
             <bts:tasa>0</bts:tasa>
             <bts:destinoCredito>33</bts:destinoCredito>
             <bts:datosAdicionales/>
-         </bts:sBTSimulacionAmortizable>
+         </bts:sdtSimulacionAmortizable>
       </bts:BTMicrofinanzas.SimularAmortizable>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -102,7 +102,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "sBTSimulacionAmortizable": {
+      "sdtSimulacionAmortizable": {
           "solicitudUId": "10896",
           "clienteUId": "7",
           "productoUId": "23",
@@ -114,10 +114,7 @@ curl -X POST \
           "tasa": "0",
           "destinoCredito": "33"
         }
-      }
-    }
-  }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -145,7 +142,6 @@ curl -X POST \
                <nombre>HIPOTECARIOS VIVIENDA, VIVIENDA HIPOTECARIO</nombre>
                <moneda>Q</moneda>
                <papel>$</papel>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <capital>30000.00</capital>
             <valorCuota>10783.16</valorCuota>
@@ -209,8 +205,7 @@ curl -X POST \
             "productoUId": "23",
             "nombre": "HIPOTECARIOS VIVIENDA, VIVIENDA HIPOTECARIO",
             "moneda": "Q",
-            "papel": "$",
-            "otrosConceptos":""
+            "papel": "$"
           },
           "capital": "30000.00",
           "valorCuota": "10783.16",
@@ -269,7 +264,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSimulacionAmortizable son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas. 
 clienteUId | Long | Identificador único de cliente. 
 datosAdicionales | [sBTConcepto](#sbtconcepto) | Importe otros conceptos.
@@ -288,7 +283,7 @@ tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 
@@ -302,7 +297,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital del préstamo. 
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -326,7 +321,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Datos de otros conceptos.
@@ -339,7 +334,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 
@@ -350,7 +345,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Monto de capital en la cuota. 
 concepto | String | Concepto. 
 cuota | Double | Importe total de la cuota. 

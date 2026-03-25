@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPaises | [sBTPais](#sbtpais) | Listado de países.
 
 @tab Errores
@@ -574,8 +574,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPais son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 descripcion | String | Descripcion de moneda.
 identificador | Short | Identificador de país.
 paisISO | String | Codigo ISO de país.

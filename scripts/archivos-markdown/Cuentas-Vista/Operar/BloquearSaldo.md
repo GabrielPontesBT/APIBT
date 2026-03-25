@@ -33,14 +33,14 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 clienteUId | Long | Identificador único de cliente.
-importe | Long | Importe a bloquear.
+importe | Double | Importe a bloquear.
 fechaVencimiento | Date | Fecha vencimiento de bloqueo.
 motivo | String | Motivo del bloqueo.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 idBloqueo | Long | Identificador de bloqueo.
 movimientoUId | Long | Identificador único de movimiento.
 saldo | Double | Saldo disponible de la operación.
@@ -48,7 +48,7 @@ saldo | Double | Saldo disponible de la operación.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la Operación a bloquear.
 30002 | No se encontró el Id de Operación para la Cuenta Vista a bloquear.
 30003 | No se recibió el identificador del Cliente.

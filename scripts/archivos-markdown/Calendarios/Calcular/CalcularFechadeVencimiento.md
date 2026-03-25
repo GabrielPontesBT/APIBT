@@ -40,7 +40,7 @@ tipoVencimiento | String | Tipo de ajuste al vencimiento ('A': Hábil anterior, 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaVencimiento | Date | Fecha de vencimiento del plazo.
 
 @tab Errores
@@ -117,7 +117,7 @@ curl -X POST \
             <Token>573607534CD285A89A23FBEE</Token>
             <Device>N</Device>
          </Btinreq>
-         <fechaFin>2020-03-13</fechaFin>
+         <fechaVencimiento>2020-03-13</fechaVencimiento>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -136,17 +136,17 @@ curl -X POST \
 @tab JSON
 ```json
 { 
-    "Btinreq": { 
+   "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
       "Usuario": "INSTALADOR", 
       "Token": "573607534CD285A89A23FBEE", 
       "Device": "N" 
-    }, 
-    "fechaFin": "2020-03-13", 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
+   }, 
+      "fechaVencimiento": "2020-03-13", 
+      "Erroresnegocio": { 
+   }, 
+   "Btoutreq": { 
       "Canal": "BTDIGITAL", 
       "Servicio": "BTCalendarios.CalcularFechaVencimiento", 
       "Fecha": "2021-04-07", 
@@ -154,7 +154,7 @@ curl -X POST \
       "Requerimiento": "1", 
       "Numero": "8156", 
       "Estado": "OK" 
-    } 
+   } 
 }
 ```
 ::: 

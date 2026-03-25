@@ -51,20 +51,20 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-clienteUId | Long | Identificador de cliente.
+personaUId | Long | Identificador único de persona.
 sdtTraspaso | [sBTTraspaso](#sbttraspaso) | Datos del traspaso.
 tipoDeCambio | Double | Cotización.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtResultadoTraspaso | [sBTResultadoTraspasoDatos](#sbtresultadotraspasodatos) | Resultado del traspaso.
+:--------- | :--------- | :---------
+sdtResultadoTraspaso | [sBTResultadoTraspaso](#sbtresultadotraspaso) | Resultado del traspaso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador.
 30003 | No se recibió el identificador único de operación de origen.
@@ -98,7 +98,7 @@ Código | Descripción
                 <bts:Canal>BTDIGITAL</bts:Canal> 
                 <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token> 
             </bts:Btinreq> 
-            <bts:clienteUId>21</bts:clienteUId> 
+            <bts:personaUId>21</bts:personaUId> 
             <bts:sdtTraspaso> 
                 <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> 
                 <bts:importe>500</bts:importe> 
@@ -127,7 +127,7 @@ curl -X POST \
         "Usuario": "MINSTALADOR", 
         "Canal": "BTDIGITAL" 
     }, 
-    "clienteUId": "21", 
+    "personaUId": "21", 
     "sdtTraspaso":  
       { 
         "operacionUIdOrigen": "281", 
@@ -223,7 +223,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del Traspaso. 
 importe | Double | Importe del Movimiento. 
 monedaId | Short | Identificador de Moneda.  
@@ -231,15 +231,15 @@ operacionUIdDestino | Long | Identificador de operación de destino del traspaso
 operacionUIdOrigen | Long | Identificador de operación de origen del traspaso.  
 :::
 
-::: details sBTResultadoTraspasoDatos
+::: details sBTResultadoTraspaso
 
-### sBTResultadoTraspasoDatos
+### sBTResultadoTraspaso
 
 ::: center 
-Los campos del tipo de dato estructurado sBTResultadoTraspasoDatos son los siguientes: 
+Los campos del tipo de dato estructurado sBTResultadoTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idMovimiento | String | Identificador de Movimiento String. 
 movimientoUId |	Long | Identificador de Movimiento.  
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso.  

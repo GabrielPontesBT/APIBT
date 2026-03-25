@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEntidadTarjetaDebito | [sBDTarjetaDebito](#sbdtarjetadebito) | Datos de tarjeta de débito.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tarjeta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBDTarjetaDebito son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descPaquete | String | Descripción de paquete. 
 diasHastaVencimiento | Int | Días restantes para el vencimiento. 
 estadoPlastico | String | Descripción de estado del plástico. 
@@ -210,8 +210,8 @@ tipoTarjeta |  String | Tipo de tarjeta.
 
 Los campos del tipo de dato estructurado sBDLimitesTarjeta son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del límite. 
 limiteBandaMagnetica | Double | Monto del límite por banda magnética. 
 limiteChip | Double | Monto del límite por chip. 

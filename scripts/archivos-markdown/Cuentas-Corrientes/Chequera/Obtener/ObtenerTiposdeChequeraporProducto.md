@@ -36,13 +36,13 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposChequera | [sBTTipoChequera](#sbttipochequera) | Listado de tipos de chequera.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de producto.
 30003 | No existe registro para el identificador único.
 40001 | El producto no tiene habilitado el manejo de chequeras.
@@ -112,14 +112,14 @@ curl -X POST \
             <Token>7b789d76ae4A8B5C60A82434</Token>
          </Btinreq>
          <sdtTiposChequera>
-            <SdtsBTTipoChequera>
+            <sBTTipoChequera>
                <descripcion>Chequera Común 25 / Pesos</descripcion>
                <identificador>1</identificador>
-            </SdtsBTTipoChequera>
-            <SdtsBTTipoChequera>
+            </sBTTipoChequera>
+            <sBTTipoChequera>
                <descripcion>Chequeras Diferidas 25 /Pesos</descripcion>
                <identificador>2</identificador>
-            </SdtsBTTipoChequera>
+            </sBTTipoChequera>
          </sdtTiposChequera>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -147,7 +147,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
       "sdtTiposChequera": {
-        "SdtsBTTipoChequera": [
+        "sBTTipoChequera": [
           {
             "descripcion": "Chequera Común 25 / Pesos",
             "identificador": "1"
@@ -183,7 +183,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoChequera son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcion | String | Descripción de tipo de chequera.
 identificador | Int | Identificador de tipo de chequera.
 :::

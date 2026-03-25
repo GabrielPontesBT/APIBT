@@ -38,13 +38,13 @@ camposCash | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de campos CASH a 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valoresCamposCash | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de valores de campos CASH.
 
 @tab Errores
 
 Código | Descripción
-:----------- | :-----------
+:--------- | :---------
 1030753 | No se encontró la orden para el identificador recibido.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -207,7 +207,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 :::

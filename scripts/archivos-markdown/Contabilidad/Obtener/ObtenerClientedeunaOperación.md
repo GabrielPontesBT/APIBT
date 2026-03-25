@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador único de operación.
 30101 | No se recupero la operación para el identificador recibido.
 ::: 

@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 40001 | Debe ingresar entidad.
 40002 | La entidad ingresada no es válida.
@@ -210,7 +210,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 Los campos del tipo de dato estructurado sBTPCOVictimaHechoViolento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 corregimiento | String | Corregimiento. 
 departamento | String | Nombre del departamento donde ocurrió el hecho. 
 departamentoId | Short | Identificador de departamento. 

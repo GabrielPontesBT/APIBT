@@ -39,7 +39,7 @@ archivoDato | String | Archivo recibido como dato comprimido expresado en Base 6
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 archivoId | Long | Identificacion de archivo.
 estado | String | Estado del archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
@@ -47,7 +47,7 @@ cantidadLineas | Int | Cantidad de líneas del archivo.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030702 | El archivo esta vacio.
 1030703 | No hay informacion en el archivo.

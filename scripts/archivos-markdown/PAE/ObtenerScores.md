@@ -36,7 +36,7 @@ modeloEvaluacionId | Int | Código de modelo de evaluación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtScoresPAE | [sBTScorePAE](#sbtscorepae) | Listado de scores de un modelo PAE.
 
 @tab Errores
@@ -123,6 +123,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
                <desdeFecha>0001-01-01</desdeFecha>
                <hastaCaracter/>
             </sBTScorePAE>
+            ...
          </sdtScoresPAE>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -170,6 +171,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
               "desdeFecha": "0001-01-01",
               "hastaCaracter": ""
             },
+            ...
           ]
         },
         "Erroresnegocio": "",
@@ -201,7 +203,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 Los campos del tipo de dato estructurado sBTScorePAE son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigoItem | Numérico | Código de item. 
 codigoModelo | Numérico | Código de modelo. 
 correlativo | Numérico | Correlativo. 

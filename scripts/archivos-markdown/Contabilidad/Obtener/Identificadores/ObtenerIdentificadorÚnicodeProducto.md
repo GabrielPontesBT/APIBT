@@ -40,13 +40,13 @@ papelId | Int | Identificador de papel.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 productoUId | Long | Identificador único de producto.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió módulo.
 30002 | No se recibió tipo de operación.
 30003 | Moneda no existe.

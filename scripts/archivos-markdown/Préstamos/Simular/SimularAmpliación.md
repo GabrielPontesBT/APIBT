@@ -46,7 +46,7 @@ sdtAmpliacion | [sBTAmpliacionAlta](#sbtampliacionalta) | Datos de simulación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 ampliacionId | Long | Identificador de ampliación.
 sdtSimulacion | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos del préstamo simulado.
 deudaTotalCancelacion | Double | Monto de cancelación total de los préstamos a consolidar.
@@ -54,7 +54,7 @@ deudaTotalCancelacion | Double | Monto de cancelación total de los préstamos a
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
@@ -181,6 +181,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>72e34bcd9d4A8B5C60A82434</Token>
          </Btinreq>
+         <deudaTotalCancelacion>30216.45</deudaTotalCancelacion>
          <ampliacionId>122</ampliacionId>
          <sdtSimulacion>
             <otrosConceptos></otrosConceptos>
@@ -252,7 +253,6 @@ curl -X POST \
                <moneda>$</moneda>
                <productoUId>61</productoUId>
                <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
          </sdtSimulacion>
          <Erroresnegocio></Erroresnegocio>
@@ -281,6 +281,7 @@ curl -X POST \
       "Token": "72e34bcd9d4A8B5C60A82434"
     },
     "ampliacionId": "122",
+    "deudaTotalCancelacion":"30216.45",
     "sdtSimulacion": {
       "otrosConceptos": {
       },
@@ -353,8 +354,7 @@ curl -X POST \
         "papel": "$",
         "moneda": "$",
         "productoUId": "61",
-        "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-        "otrosConceptos":""
+        "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
       }
     },
     "Erroresnegocio": {
@@ -384,7 +384,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAmpliacionAlta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividad | Long | Código de actividad (Destino del crédito). 
 cantidadCuotas | Int | Cantidad de cuotas. 
 clienteUId | Long | Identificador único de cliente. 
@@ -405,7 +405,7 @@ tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra
 Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital del préstamo. 
 cronograma | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -429,7 +429,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -442,7 +442,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -452,7 +452,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
 importe | Double | Importe de la cuota. 
 :::

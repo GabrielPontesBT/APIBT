@@ -16,7 +16,7 @@ backtotop: false
 <!-- ABRE DATOS DEL MÉTODO -->
 ::: note Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente, con su correspondiente avance.
 
-**Nombre publicación:** BTClientes.ObtenerPlazosFijoConAvance
+**Nombre publicación:** BTClientes.ObtenerPlazosFijosConAvance
 
 **Programa:** RBTPG403
 
@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 1 
 Valor específico 1 | Identificador del módulo a incluir. 
@@ -38,7 +38,7 @@ Valor específico 1 | Identificador del módulo a incluir.
 Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 2 
 Valor específico 1 | Módulo del tipo de operación a excluir. 
@@ -59,13 +59,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosPlazoFijo | [sBTProductoPlazoFijo](#sbtproductoplazofijo) | Listado de plazos fijos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de identificador]
 ::: 
@@ -82,7 +82,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:BTClientes.ObtenerPlazosFijoConAvance>
+      <bts:BTClientes.ObtenerPlazosFijosConAvance>
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
@@ -91,7 +91,7 @@ Código | Descripción
             <bts:Device>AC</bts:Device>
          </bts:Btinreq>
          <bts:clienteUId>10010</bts:clienteUId>
-      </bts:BTClientes.ObtenerPlazosFijoConAvance>
+      </bts:BTClientes.ObtenerPlazosFijosConAvance>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -99,7 +99,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPlazosFijoConAvance=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPlazosFijosConAvance=' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 02100864-83c5-1642-ca5f-a8589b3524b4' \
@@ -125,7 +125,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTClientes.ObtenerPlazosFijoConAvanceResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTClientes.ObtenerPlazosFijosConAvanceResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Canal>BTDIGITAL</Canal>
             <Requerimiento>1</Requerimiento>
@@ -198,14 +198,14 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTClientes.ObtenerPlazosFijoConAvance</Servicio>
+            <Servicio>BTClientes.ObtenerPlazosFijosConAvance</Servicio>
             <Fecha>2020-04-20</Fecha>
             <Hora>18:06:18</Hora>
             <Requerimiento>1</Requerimiento>
             <Numero>7333</Numero>
             <Estado>OK</Estado>
          </Btoutreq>
-      </BTClientes.ObtenerPlazosFijoConAvanceResponse>
+      </BTClientes.ObtenerPlazosFijosConAvanceResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -289,7 +289,7 @@ curl -X POST \
     }, 
     "Btoutreq": { 
         "Canal": "BTDIGITAL", 
-        "Servicio": "BTClientes.ObtenerPlazosFijoConAvance", 
+        "Servicio": "BTClientes.ObtenerPlazosFijosConAvance", 
         "Fecha": "2019-11-19", 
         "Hora": "13:05:22", 
         "Requerimiento": "", 
@@ -312,7 +312,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductoPlazoFijo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado de la operación. 
 fechaAlta | Date | Fecha de alta de la operación. 
 fechaVencimiento | Date | Fecha de vencimiento de la operación. 
@@ -332,7 +332,7 @@ sucursal | String | Nombre de la sucursal de alta.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -345,7 +345,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

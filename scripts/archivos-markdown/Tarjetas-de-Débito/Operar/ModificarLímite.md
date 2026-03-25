@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de tarjeta.
 30002 | No se recibió código de límite
 40001 | No existe el tipo de límite

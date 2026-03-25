@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar Usuario.
 30002 | El Usuario ya existe.
 30004 | Debe ingresar Nombre.
@@ -210,8 +210,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTUsuarioBT son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 cajero | String | Indica si el usuario es cajero (S/N). 
 cantidadSesionesAbiertas | Short | Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal. 
 email | String | Email de usuario. 
@@ -232,7 +232,7 @@ usuarioWorkflow | String | ¿Es usuario Workflow? (S/N).
 Los campos del tipo de dato estructurado sBTRolWF son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código del rol.
 descripcion | String | Descripción del rol.
 :::

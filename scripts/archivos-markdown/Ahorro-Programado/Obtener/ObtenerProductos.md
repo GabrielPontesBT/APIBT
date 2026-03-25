@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de los productos habilitados de ahorro programado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No es posible determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.
 40002 | No se recuperó productos habilitados para el producto de ahorro programado.
 ::: 
@@ -112,14 +112,12 @@ curl -X POST \
                <nombre>AHORRO PROGRAMADO, Ahorro Casa</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>42</productoUId>
                <nombre>AHORRO PROGRAMADO, Ahorro Casa</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
@@ -153,15 +151,13 @@ curl -X POST \
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "41",
-                "nombre": "AHORRO PROGRAMADO, Ahorro Casa",
-                "otrosConceptos":""
+                "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "42",
-                "nombre": "AHORRO PROGRAMADO, Ahorro Casa",
-                "otrosConceptos":""
+                "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
             }
         ]
     },
@@ -193,7 +189,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -206,7 +202,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

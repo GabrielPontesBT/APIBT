@@ -45,7 +45,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30002 | No existe registro con el identificador indicado.
 ::: 

@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de tarjeta de débito.
 30002 | No se recibió el identificador de la operación a eliminar.
 ::: 

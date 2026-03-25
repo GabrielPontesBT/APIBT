@@ -45,13 +45,13 @@ codigoSistema | Short | [Hidden: Valor fijo '3' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTDocumentoDigital](#sbtdocumentodigital) | Listado de documentos digitales.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30021 | No se recupero la operación para el identificador recibido.
 ::: 
@@ -119,15 +119,15 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>65386256C895CD01D7DC796E</Token>
          </Btinreq>
-         <sdtDocumentoDigital>
+         <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
-               <Titulo>PRUEBA</Titulo>
-               <FechaActualizacion>2015-01-01</FechaActualizacion>
+               <titulo>PRUEBA</titulo>
+               <fechaActualizacion>2015-01-01</fechaActualizacion>
                <FechaVencimiento/>
-               <TipoDocumentoDigital>Plan de Pagos</TipoDocumentoDigital>
-               <DocumentoId>265</DocumentoId>
+               <tipoDocumentoDigital>Plan de Pagos</tipoDocumentoDigital>
+               <documentoId>265</documentoId>
             </sBTDocumentoDigital>
-         </sdtDocumentoDigital>
+         </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>12028</Numero>
@@ -153,13 +153,13 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "sdtDocumentoDigital": {
+    "sdtDocumentosDigitales": {
         "sBTDocumentoDigital": {
-            "Titulo": "PRUEBA GABO",
-            "FechaActualizacion": "2015-01-01",
-            "FechaVencimiento": "",
-            "TipoDocumentoDigital": "Plan de Pagos",
-            "DocumentoId": "265"
+            "documentoId": "265",
+            "fechaActualizacion": "2015-01-01",
+            "fechaVencimiento": "",
+            "tipoDocumentoDigital": "Plan de Pagos",
+            "titulo": "PRUEBA GABO",
         }
     },
     "Erroresnegocio": {
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 documentoId | Long | Identificador del documento digital.
 fechaActualizacion | Date | Fecha de actualización del documento digital.
 fechaVencimiento | Date | Fecha de vencimiento del documento digital.

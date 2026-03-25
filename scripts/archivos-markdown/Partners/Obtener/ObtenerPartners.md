@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPartners | [sBTPartner](#sbtpartner) | Listado de los Partners.
 
 @tab Errores
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartner son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre del Partner.
 partnerUId | Int | Identificador del Partner.
 :::

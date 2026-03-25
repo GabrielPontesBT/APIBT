@@ -36,13 +36,13 @@ sdtDetalleGrupo | [sBTDetalleGrupo](#sbtdetallegrupo) | Datos del grupo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 grupoId | Int | Identificador de grupo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40002 | El tipo de grupo no existe.
 40003 | Debe ingresar nombre de grupo.
 40005 | Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agencia | String | Agencia. 
 agenciaId | Int | Identificador de agencia. 
 asesor | String | Asesor del grupo. 

@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador único de la operación.
 30003 | No se recuperó la operación origen para el Identificador: [Número de Identificador].
 30004 | Se tiene que ingresar al menos un beneficiario.
@@ -111,31 +111,31 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
   -d '{
-    "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "operacionUId": 789,
-      "sdtBeneficiarios": {
-         "sBTBeneficiario": {
-         "numeroDocumento": "",
-         "parentesco": "",
-         "pais": "",
-         "tipoDocumentoId": "",
-         "participacion": 100,
-         "tipoDocumento": "",
-         "paisDocumentoId": "",
-         "personaUId": 193,
-         "correlativo": "?",
-         "telefono": 64211,
-         "nombre": "Prueba",
-         "parentescoId": 41,
-         "apellido": ""
-         }
+   "Btinreq": {
+         "Requerimiento": "1",
+         "Device": "AC",
+         "Canal": "BTDIGITAL",
+         "Usuario": "MINSTALADOR",
+         "Token": "6fc29caa9d4A8B5C60A82434"
+   },
+   "operacionUId": 789,
+   "sdtBeneficiarios": {
+      "sBTBeneficiario": {
+      "numeroDocumento": "",
+      "parentesco": "",
+      "pais": "",
+      "tipoDocumentoId": "",
+      "participacion": 100,
+      "tipoDocumento": "",
+      "paisDocumentoId": "",
+      "personaUId": 193,
+      "correlativo": "?",
+      "telefono": 64211,
+      "nombre": "Prueba",
+      "parentescoId": 41,
+      "apellido": ""
       }
+   }
   }'
 ```
 :::
@@ -207,7 +207,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBeneficiario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 apellido | String | Apellido.
 correlativo | Short | Correlativo.
 nombre | String | Nombre.

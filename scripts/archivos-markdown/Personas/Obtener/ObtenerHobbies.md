@@ -36,7 +36,7 @@ No aplica. | No aplica. | No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtHobbies | [sBTHobby](#sbthobby) | Listado de hobbies.
 
 @tab Errores 
@@ -83,7 +83,7 @@ curl -X POST \
         "Requerimiento": "1",
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
-    },
+    }
 }'
 ```
 :::
@@ -106,186 +106,186 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtHobbies> 
-            <SdtsBTHobby> 
+            <sBTHobby> 
                <codigo>1</codigo> 
                <descripcion>Aeromodelismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>2</codigo> 
                <descripcion>Ajedrez</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>3</codigo> 
                <descripcion>Arte</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>4</codigo> 
                <descripcion>Arte Gráfico</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>5</codigo> 
                <descripcion>Automovilismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>6</codigo> 
                <descripcion>Automodelismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>7</codigo> 
                <descripcion>Baile</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>8</codigo> 
                <descripcion>Basquetball</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>9</codigo> 
                <descripcion>Bolos</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>10</codigo> 
                <descripcion>Camping</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>11</codigo> 
                <descripcion>Carpintería</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>12</codigo> 
                <descripcion>Caza</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>13</codigo> 
                <descripcion>Ciclismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>14</codigo> 
                <descripcion>Cine</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>15</codigo> 
                <descripcion>Coleccionista</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>16</codigo> 
                <descripcion>Computadores</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>17</codigo> 
                <descripcion>Decoración</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>18</codigo> 
                <descripcion>Dep.Aventura</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>19</codigo> 
                <descripcion>Dep.Náuticos</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>20</codigo> 
                <descripcion>Deportes</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>21</codigo> 
                <descripcion>Dibujar</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>22</codigo> 
                <descripcion>Ecología</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>23</codigo> 
                <descripcion>Equitación</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>24</codigo> 
                <descripcion>Football</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>25</codigo> 
                <descripcion>Fotografía</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>26</codigo> 
                <descripcion>Golf</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>27</codigo> 
                <descripcion>Idiomas</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>28</codigo> 
                <descripcion>Jardinería</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>29</codigo> 
                <descripcion>Lectura</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>30</codigo> 
                <descripcion>Montañismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>31</codigo> 
                <descripcion>Motociclismo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>32</codigo> 
                <descripcion>Música</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>33</codigo> 
                <descripcion>Natación</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>34</codigo> 
                <descripcion>Pasatiempos</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>35</codigo> 
                <descripcion>Pasear</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>36</codigo> 
                <descripcion>Pesca</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>37</codigo> 
                <descripcion>Pintar</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>38</codigo> 
                <descripcion>Rugby</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>39</codigo> 
                <descripcion>Squash</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>40</codigo> 
                <descripcion>Taekwondo</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>41</codigo> 
                <descripcion>Teatro</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>42</codigo> 
                <descripcion>Tenis</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>43</codigo> 
                <descripcion>Tenis de mesa</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>44</codigo> 
                <descripcion>Viajar</descripcion> 
-            </SdtsBTHobby> 
-            <SdtsBTHobby> 
+            </sBTHobby> 
+            <sBTHobby> 
                <codigo>99</codigo> 
                <descripcion>Otros</descripcion> 
-            </SdtsBTHobby> 
+            </sBTHobby> 
          </sdtHobbies>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -313,7 +313,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtHobbies": { 
-        "SdtsBTHobby": [ 
+        "sBTHobby": [ 
         { 
             "codigo": "1", 
             "descripcion": "Aeromodelismo" 
@@ -523,7 +523,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTHobby son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Short | Código de Hobby. 
 descripcion | String | Descripción de Hobby. 
 :::

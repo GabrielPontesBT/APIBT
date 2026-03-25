@@ -51,20 +51,20 @@ Nombre | Tipo | Comentarios
 operacionUId | Long | Identificador único de operación simulada.
 clienteUId | Long | Identificador único de cliente.
 importe | Double | Importe a pagar.
-recibeOperacionCobro | String | [Hidden: Recibe o no operación de cobro (S/N)].
+recibeOperacionCobro | String | [Hidden: Recibe o no operación de cobro (S: Si / N: No / C: Controla misma cuenta)].
 operacionUId_cobro | Long | Identificador único de operación de la cuenta vista de donde se cobrará el préstamo.
 referencia | String | Referencia
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento [Asiento].
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación de préstamo.
 30002 | No se recibió el identificador de operación de cobro.
 30003 | Debe ingresar importe.
@@ -100,7 +100,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:operacionUId>321</bts:operacionUId>
          <bts:clienteUId>161</bts:clienteUId>
-         <bts:Importe>1000</bts:Importe>
+         <bts:importe>1000</bts:importe>
          <bts:operacionUId_cobro>281</bts:operacionUId_cobro>
          <bts:referencia>AbonarACuenta</bts:referencia>
       </bts:BTPrestamos.AbonarACuenta>
@@ -125,7 +125,7 @@ curl -X POST \
 	},
     "operacionUId": 342,
     "clienteUId": 161,
-    "Importe": 1000,
+    "importe": 1000,
     "operacionUId_cobro": 281,
     "referencia": "AbonarACuenta"
 }'

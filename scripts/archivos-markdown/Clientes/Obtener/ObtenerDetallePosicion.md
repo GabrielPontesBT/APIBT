@@ -47,7 +47,7 @@ sdtDetalleClaseActivo | [sBTDetalleClaseActivo](#sbtdetalleclaseactivo) | Datos 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | Debe ingresar la fecha.
 30003 | No se recibió el identificador de la clase de activo.
@@ -250,7 +250,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleClaseActivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 datosConManejoEspecie | [sBTDatoConManejoEspecie](#sbtdatoconmanejoespecie) | Listado de datos con manejo de especie.
 datosSinManejoEspecie | [sBTDatoSinManejoEspecie](#sbtdatosinmanejoespecie) | Listado de datos sin manejo de especie.
 nombreElemento | String | Nombre del elemento del detalle. 
@@ -262,7 +262,7 @@ total | Double | Total del elemento del detalle.
 Los campos del tipo de dato estructurado sBTDatoConManejoEspecie son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción.
 papelId | Int | Identificador del papel.
 resultado | Double | Resultado.
@@ -274,7 +274,7 @@ totalNominal | Double | Total nominal.
 Los campos del tipo de dato estructurado sBTDatoSinManejoEspecie son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadOperaciones | Int | Cantidad de operaciones. 
 monedaId | Short | Identificador de la moneda.
 signo | String | Signo de la moneda.

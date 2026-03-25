@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtIntegrantes | [sBTIntegrante](#sbtintegrante) | Listado de integrantes de la operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la cuenta para el identificador de operación: [Número de identificador].
 :::
@@ -192,7 +192,7 @@ Código | Descripción
 Los campos del tipo de dato estructurado sBTIntegrante son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 nombre | Long | Nombre de la persona.
 numeroDocumento | String | Número de documento.
 paisDocumento | String | Nombre del país del documento.
@@ -207,7 +207,7 @@ titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante.
 Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcion | String | Descripción del tipo de integrante.
 identificador | Int | Identificador del tipo de integrante.
 :::

@@ -37,13 +37,13 @@ codigo | Long | Código de la Guía de Procesos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtGuiaDeProceso | [sBTCorrelativoGuia](#sbtcorrelativoguia) | Listado de datos de la guía de proceso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió código de guía.
 40001 | No existe la guía.
 :::
@@ -147,7 +147,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -186,7 +186,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	  "Canal": "BTDIGITAL",
 	  "Hora": "07:31:11"
 	}
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -202,7 +202,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 Los campos del tipo de dato estructurado sBTCorrelativoGuia son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 correlativo | Short | Correlativo de la guía.
 descripcion | String | Descripción del correlativo.
 importeEspecifico | Double | Importe específico del correlativo.

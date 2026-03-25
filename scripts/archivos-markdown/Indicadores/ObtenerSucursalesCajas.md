@@ -34,21 +34,8 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-totalSucursales | Int | Número total de sucursales.
-sucursalesCerradas | Int | Número de sucursales cerradas.
-sucursalesAbiertas | Int | Número de sucursales abiertas.
-porcentajeSucursalesC | Int | Porcentaje de sucursales cerradas.
-porcentajeSucursalesA | Int | Porcentaje de sucursales abiertas.
-listadoSucursalesC | [sBTSucursal](#sbtsucursal) | Listado de sucursales cerradas.
-listadoSucursalesA | [sBTSucursal](#sbtsucursal) | Listado de sucursales abiertas.
-totalCajas | Int | Número total de cajas.
-cajasCerradas | Int | Número de cajas cerradas.
-cajasAbiertas | Int | Número de cajas abiertas.
-porcentajeCajasC | Int | Porcentaje de cajas cerradas.
-porcentajeCajasA | Int | Porcentaje de cajas abiertas.
-listadoCajasC | [sBTCaja](#sbtcaja) | Listado de cajas cerradas.
-listadoCajasA | [sBTCaja](#sbtcaja) | Listado de cajas abiertas.
+:--------- | :--------- | :---------
+sdtSucursalesCajas | [sBTSucursalesCajas](#sbtsucursalescajas) | Listado de sucursales y cajas. 
 
 @tab Errores
 
@@ -116,18 +103,137 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>959C2E0AEF210ABC0D8AA8F7</Token>
          </Btinreq>
-         <sdtSucursalesCajas>
-            <cajasCerradas>0</cajasCerradas>
-            <porcentajeCajasA>100.00</porcentajeCajasA>
-            <listadoCajasA>
-               <sBTCaja>
-                  <usuario>ASESOR</usuario>
-                  <nombre>ASESOR</nombre>
-                  <indicador>400</indicador>
-                  <sucursalId>1</sucursalId>
-               </sBTCaja>
-            </listadoCajasA>
-         </sdtSucursalesCajas>
+         <sdtSucursalesCajas> 
+            <cajasCerradas>0</cajasCerradas> 
+            <porcentajeCajasA>100.00</porcentajeCajasA> 
+            <listadoCajasA> 
+               <sBTCaja> 
+                  <usuario>ASESOR</usuario> 
+                  <nombre>ASESOR</nombre> 
+                  <indicador>400</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>BANTOTAL</usuario> 
+                  <nombre>BANTOTAL</nombre> 
+                  <indicador>111</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>CAJERO</usuario> 
+                  <nombre>CAJERO</nombre> 
+                  <indicador>402</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>CAPTACCONF</usuario> 
+                  <nombre>CAPTACCONF</nombre> 
+                  <indicador>350</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>CAPTACION</usuario> 
+                  <nombre>CAPTACION</nombre> 
+                  <indicador>401</indicador> 
+                  <sucursalId>1000</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>EJECCUENTA</usuario> 
+                  <nombre>EJECCUENTA</nombre> 
+                  <indicador>23</indicador> 
+                  <sucursalId>1000</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>GERENTE</usuario> 
+                  <nombre>GERENTE</nombre> 
+                  <indicador>400</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>INSTALADOR</usuario> 
+                  <nombre>INSTALADOR</nombre> 
+                  <indicador>400</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>INSTALADORBANTOTAL</usuario> 
+                  <nombre>INSTALADOR BANTOTAL2</nombre> 
+                  <indicador>5000</indicador> 
+                  <sucursalId>1000</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>JEFE</usuario> 
+                  <nombre>JEFE</nombre> 
+                  <indicador>400</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>SEGURIDAD</usuario> 
+                  <nombre>SEGURIDAD</nombre> 
+                  <indicador>55</indicador> 
+                  <sucursalId>1000</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>TESORSUC</usuario> 
+                  <nombre>TESORSUC</nombre> 
+                  <indicador>403</indicador> 
+                  <sucursalId>1000</sucursalId> 
+               </sBTCaja> 
+               <sBTCaja> 
+                  <usuario>USUARIOBIT</usuario> 
+                  <nombre/> 
+                  <indicador>17</indicador> 
+                  <sucursalId>1</sucursalId> 
+               </sBTCaja> 
+            </listadoCajasA> 
+            <listadoSucursalesC> 
+               <sBTSucursal> 
+                  <telefono/> 
+                  <descripcion>Sucursal 25634</descripcion> 
+                  <direccion/> 
+                  <identificador>25634</identificador> 
+                  <longitud>0E-14</longitud> 
+                  <latitud>0E-14</latitud> 
+               </sBTSucursal> 
+            </listadoSucursalesC> 
+            <cajasAbiertas>13</cajasAbiertas> 
+            <listadoSucursalesA> 
+               <sBTSucursal> 
+                  <telefono/> 
+                  <descripcion>Casa Matriz</descripcion> 
+                  <direccion/> 
+                  <identificador>1</identificador> 
+                  <longitud>0E-14</longitud> 
+                  <latitud>0E-14</latitud> 
+               </sBTSucursal> 
+               <sBTSucursal> 
+                  <telefono/> 
+                  <descripcion>Sucursal Ciudad de la Costa</descripcion> 
+                  <direccion/> 
+                  <identificador>1000</identificador> 
+                  <longitud>0E-14</longitud> 
+                  <latitud>0E-14</latitud> 
+               </sBTSucursal> 
+            </listadoSucursalesA> 
+            <sucursalesCerradas>1</sucursalesCerradas> 
+            <sucursalesAbiertas>2</sucursalesAbiertas> 
+            <porcentajeSucursalesC>33.33</porcentajeSucursalesC> 
+            <totalCajas>13</totalCajas> 
+            <porcentajeSucursalesA>66.66</porcentajeSucursalesA> 
+            <porcentajeCajasC>0.00</porcentajeCajasC> 
+            <totalSucursales>3</totalSucursales> 
+            <listadoCajasC></listadoCajasC> 
+         </sdtSucursalesCajas> 
+         <Erroresnegocio></Erroresnegocio> 
+         <Btoutreq> 
+            <Numero>11992</Numero> 
+            <Estado>OK</Estado> 
+            <Servicio>BTIndicadores.ObtenerSucursalesCajas</Servicio> 
+            <Requerimiento>?</Requerimiento> 
+            <Fecha>2023-05-22</Fecha> 
+            <Canal>BTDIGITAL</Canal> 
+            <Hora>15:20:16</Hora> 
+         </Btoutreq> 
       </BTIndicadores.ObtenerSucursalesCajasResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
@@ -154,9 +260,12 @@ curl -X POST \
             "indicador": 400,
             "sucursalId": 1
          },
+         ...
       ]
       },
+      ...
    },
+   ...
 }
 ```
 ::: 
@@ -167,13 +276,35 @@ curl -X POST \
 <!-- ABRE SDT -->
 ::: details sBTSucursal  
 
+### sBTSucursalesCajas 
+
+::: center 
+Los campos del tipo de dato estructurado sBTSucursalesCajas son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+totalSucursales | Int | Número total de sucursales.
+sucursalesCerradas | Int | Número de sucursales cerradas.
+sucursalesAbiertas | Int | Número de sucursales abiertas.
+porcentajeSucursalesC | Int | Porcentaje de sucursales cerradas.
+porcentajeSucursalesA | Int | Porcentaje de sucursales abiertas.
+listadoSucursalesC | [sBTSucursal](#sbtsucursal) | Listado de sucursales cerradas.
+listadoSucursalesA | [sBTSucursal](#sbtsucursal) | Listado de sucursales abiertas.
+totalCajas | Int | Número total de cajas.
+cajasCerradas | Int | Número de cajas cerradas.
+cajasAbiertas | Int | Número de cajas abiertas.
+porcentajeCajasC | Int | Porcentaje de cajas cerradas.
+porcentajeCajasA | Int | Porcentaje de cajas abiertas.
+listadoCajasC | [sBTCaja](#sbtcaja) | Listado de cajas cerradas.
+listadoCajasA | [sBTCaja](#sbtcaja) | Listado de cajas abiertas.
+
 ### sBTSucursal
 
 ::: center 
 Los campos del tipo de dato estructurado sBTSucursal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la sucursal. 
 direccion | String | Dirección de la sucursal. 
 identificador | Int | Identificador de sucursal. 
@@ -181,8 +312,6 @@ latitud | Int | Latitud de la sucursal.
 longitud | Int | Longitud de la sucursal. 
 telefono | String | Teléfono de la sucursal. 
 :::
- 
-::: details sBTCaja  
 
 ### sBTCaja
 
@@ -190,7 +319,7 @@ telefono | String | Teléfono de la sucursal.
 Los campos del tipo de dato estructurado sBTCaja son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 indicador | Int | Indicador de la caja. 
 nombre | String | Nombre de la caja. 
 sucursalId | Int | Identificador de la sucursal. 

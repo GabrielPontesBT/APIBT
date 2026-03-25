@@ -36,14 +36,14 @@ sdtSimulacionAmortizableGrupal | [sBTSimulacionAmortizableGrupal](#sbtsimulacion
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSimulacionPrestamo | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos del préstamo simulado. 
 sdtIntegrantesGrupo | [sBTIntegranteGrupoSolicitud](#sbtintegrantegruposolicitud) | Datos de los integrantes del grupo. 
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la solicitud.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el Identificador: [Número de identificador].
@@ -171,7 +171,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTMicrofinanzas.SimulaAmortizableGrupalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTMicrofinanzas.SimularAmortizableGrupalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Canal>BTDIGITAL</Canal>
             <Requerimiento>1</Requerimiento>
@@ -186,7 +186,6 @@ curl -X POST \
                <nombre>PRESTAMOS, GRUPAL PAGO MENSUAL INT Y CAP</nombre>
                <moneda>Q</moneda>
                <papel>$</papel>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <capital>38000.00</capital>
             <valorCuota>7467.00</valorCuota>
@@ -242,84 +241,97 @@ curl -X POST \
             <Numero>5417</Numero>
             <Estado>OK</Estado>
          </Btoutreq>
-      </BTMicrofinanzas.SimulaAmortizableGrupalResponse>
+      </BTMicrofinanzas.SimularAmortizableGrupalResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
 
 @tab JSON
 ```json
-'{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
-      "Usuario": "INSTALADOR",
-      "Token": "1973148151CD285A89A23FBE",
-      "Device": "1"
-   },
-   "sdtSimulacionPrestamo": {
-      "operacionUId": "94",
-      "producto": {
-         "productoUId": "17",
-         "nombre": "PRESTAMOS, GRUPAL PAGO MENSUAL INT Y CAP",
-         "moneda": "Q",
-         "papel": "$",
-         "otrosConceptos":""
+{
+   "Envelope": {
+      "Body": {
+         "BTMicrofinanzas.SimularAmortizableGrupalResponse": {
+            "Btinreq": {
+               "Canal": "BTDIGITAL",
+               "Requerimiento": "1",
+               "Usuario": "INSTALADOR",
+               "Token": "1973148151CD285A89A23FBE",
+               "Device": "1"
+            },
+            "sdtSimulacionPrestamo": {
+               "operacionUId": "94",
+               "producto": {
+                  "productoUId": "17",
+                  "nombre": "PRESTAMOS, GRUPAL PAGO MENSUAL INT Y CAP",
+                  "moneda": "Q",
+                  "papel": "$"
+               },
+               "capital": "38000.00",
+               "valorCuota": "7467.00",
+               "intereses": "6802.02",
+               "tasa": "36.000000",
+               "tasaEfectiva": "0.000000",
+               "tasaEfectivaAnual": "42.576089",
+               "tasaNominalAnual": "36.000000",
+               "totalPrestamo": "44802.02",
+               "fechaValor": "2018-07-19",
+               "fechaVencimiento": "2019-01-14",
+               "fechaPrimerPago": "2018-08-14",
+               "plazo": "179",
+               "otrosConceptos": "",
+               "cronograma": ""
+            },
+            "sdtIntegrantesGrupo": {
+               "sBTIntegranteGrupoSolicitud": [
+                  {
+                     "empresa": "1",
+                     "clienteUId": "91",
+                     "cuenta": "PONTES SILVA GABRIEL",
+                     "monto": "10500.00",
+                     "destinoCredito": "41",
+                     "destinoCreditoDesc": "CAPITAL DE TRABAJO PARA TEMPORADA ALTA",
+                     "valorCuota": "2063.25"
+                  },
+                  {
+                     "empresa": "1",
+                     "clienteUId": "102",
+                     "cuenta": "BERGESSIO MARTINEZ GONZALO",
+                     "monto": "15000.00",
+                     "destinoCredito": "42",
+                     "destinoCreditoDesc": "CAPITAL DE TRABAJO P.E.A.",
+                     "valorCuota": "2947.50"
+                  },
+                  {
+                     "empresa": "1",
+                     "clienteUId": "119",
+                     "cuenta": "CERON RODRIGUEZ CESAR MAURICIO",
+                     "monto": "12500.00",
+                     "destinoCredito": "43",
+                     "destinoCreditoDesc": "CAPITAL DE TRABAJO PERMANENTE P.E.A.",
+                     "valorCuota": "2456.25"
+                  }
+               ]
+            },
+            "Erroresnegocio": "",
+            "Btoutreq": {
+               "Canal": "BTDIGITAL",
+               "Servicio": "BTMicrofinanzas.SimulaAmortizableGrupal",
+               "Fecha": "2020-10-28",
+               "Hora": "11:03:57",
+               "Requerimiento": "1",
+               "Numero": "5417",
+               "Estado": "OK"
+            },
+            "_xmlns": "http://uy.com.dlya.bantotal/BTSOA/"
+         }
       },
-      "capital": "38000.00",
-      "valorCuota": "7467.00",
-      "intereses": "6802.02",
-      "tasa": "36.000000",
-      "tasaEfectiva": "0.000000",
-      "tasaEfectivaAnual": "42.576089",
-      "tasaNominalAnual": "36.000000",
-      "totalPrestamo": "44802.02",
-      "fechaValor": "2018-07-19",
-      "fechaVencimiento": "2019-01-14",
-      "fechaPrimerPago": "2018-08-14",
-      "plazo": "179"
-   },
-   "sdtIntegrantesGrupo": {
-      "sBTIntegranteGrupoSolicitud": [
-      {
-         "empresa": "1",
-         "clienteUId": "91",
-         "cuenta": "PONTES SILVA GABRIEL",
-         "monto": "10500.00",
-         "destinoCredito": "41",
-         "destinoCreditoDesc": "CAPITAL DE TRABAJO PARA TEMPORADA ALTA",
-         "valorCuota": "2063.25"
-      },
-      {
-         "empresa": "1",
-         "clienteUId": "102",
-         "cuenta": "BERGESSIO MARTINEZ GONZALO",
-         "monto": "15000.00",
-         "destinoCredito": "42",
-         "destinoCreditoDesc": "CAPITAL DE TRABAJO P.E.A.",
-         "valorCuota": "2947.50"
-      },
-      {
-         "empresa": "1",
-         "clienteUId": "119",
-         "cuenta": "CERON RODRIGUEZ CESAR MAURICIO",
-         "monto": "12500.00",
-         "destinoCredito": "43",
-         "destinoCreditoDesc": "CAPITAL DE TRABAJO PERMANENTE P.E.A.",
-         "valorCuota": "2456.25"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.SimulaAmortizableGrupal",
-      "Fecha": "2020-10-28",
-      "Hora": "11:03:57",
-      "Requerimiento": "1",
-      "Numero": "5417",
-      "Estado": "OK"
+      "_xmlns:SOAP-ENV": "http://schemas.xmlsoap.org/soap/envelope/",
+      "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+      "_xmlns:SOAP-ENC": "http://schemas.xmlsoap.org/soap/encoding/",
+      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -335,7 +347,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSimulacionAmortizableGrupal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas. 
 datosAdicionales | [sBTConcepto](#sbtconcepto) | Importe otros conceptos. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -352,7 +364,7 @@ tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra
 Los campos del tipo de dato estructurado sBTIntegranteGrupoSolicitud son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único de cliente. 
 cuenta | String | Cuenta del cliente. 
 destinoCredito | Int | Identificador del destino del crédito. 
@@ -367,7 +379,7 @@ valorCuota | Double | Valor de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 
@@ -381,7 +393,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital del préstamo. 
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -405,7 +417,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Datos de otros conceptos.
@@ -418,7 +430,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 
@@ -429,7 +441,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Monto de capital en la cuota. 
 concepto | String | Concepto. 
 cuota | Double | Importe total de la cuota. 

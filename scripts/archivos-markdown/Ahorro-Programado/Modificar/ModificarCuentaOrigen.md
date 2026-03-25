@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | No se recibió el identificador del ahorro.
 30003 | No se recibió el identificador de operación de la cuenta origen.

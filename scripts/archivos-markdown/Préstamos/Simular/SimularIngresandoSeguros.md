@@ -33,18 +33,18 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 sdtPrestamoAlta | [sBTPrestamoAlta](#sbtprestamoalta) | Datos de la simulación.
 sinSeguros | String | Acción a tomar cuando la lista de seguros a aplicar es vacía (S: Simula sin tener en cuenta ningún seguro, N: Simula con los seguros preseteados).
-sdtSeguros | [sBTSegurosSimulacion](#sbtsegurossimulacion) | Listado de códigos de seguros a aplicar.
+sdtSeguros | [sBTSeguroSimulacion](#sbtsegurosimulacion) | Listado de códigos de seguros a aplicar.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sBTSimulacionPrestamo | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos de simulación del préstamo.
+:--------- | :--------- | :---------
+sdtSimulacionPrestamo | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos de simulación del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de producto.
 30002 | No se recuperó la cuenta para el Identificador: [Número de identificador].
 ::: 
@@ -144,7 +144,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>72e34bcd9d4A8B5C60A82434</Token>
          </Btinreq>
-         <sdtSimulacion>
+         <sdtSimulacionPrestamo>
             <otrosConceptos>
                 <sBTConceptos>
                     <concepto>100</concepto>
@@ -222,7 +222,7 @@ curl -X POST \
                <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
                <otrosConceptos></otrosConceptos>
             </producto>
-         </sdtSimulacion>
+         </sdtSimulacionPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>623</Numero>
@@ -248,7 +248,7 @@ curl -X POST \
           "Canal": "BTDIGITAL",
           "Token": "72e34bcd9d4A8B5C60A82434"
         },
-        "sdtSimulacion": {
+        "sdtSimulacionPrestamo": {
           "otrosConceptos": {
             "sBTConceptos": {
               "concepto": 100,
@@ -356,7 +356,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamoAlta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividad | Long | Código de actividad (Destino del crédito). 
 cantidadCuotas | Int | Cantidad de cuotas. 
 clienteUId | Long | Identificador único de cliente. 
@@ -368,15 +368,15 @@ productoUId | Long | Identificador único de producto.
 tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
 :::
  
-::: details sBTSegurosSimulacion  
+::: details sBTSeguroSimulacion  
 
-### sBTSegurosSimulacion
+### sBTSeguroSimulacion
 
 ::: center 
-Los campos del tipo de dato estructurado sBTSegurosSimulacion son los siguientes: 
+Los campos del tipo de dato estructurado sBTSeguroSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código de seguro a aplicar. 
 :::
 
@@ -388,7 +388,7 @@ codigo | Int | Código de seguro a aplicar.
 Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital del préstamo. 
 cronograma | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -412,7 +412,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -425,7 +425,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -435,7 +435,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
 importe | Double | Importe de la cuota. 
 :::

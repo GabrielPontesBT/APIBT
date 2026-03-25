@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosInstancias | [sBTDatosInstancia](#sbtdatosinstancia) | Listado de solicitudes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -75,7 +75,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerSolicitudesCliente \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerSolicitudesCliente' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
@@ -193,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosInstancia son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 asesor | String | Usuario asesor del crédito. 
 capital | Decimal | Importe capital del crédito. 
 instancia | Long | Número de instancia WorkFlow. 

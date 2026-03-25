@@ -49,13 +49,13 @@ fechaVencimiento | Date | Fecha de emisión del documento (en caso que correspon
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 documentoId | Long | Identificador del documento asociado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tipo de documento digital.
 30002 | No se recibió nombre.
 30003 | No se recibió el identificador de la operación.

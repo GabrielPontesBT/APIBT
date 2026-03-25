@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtUsuarios | [sBTDetalleUsuario](#sbtdetalleusuario) | Listado de usuarios.
 
 @tab Errores
@@ -220,8 +220,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDetalleUsuario son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 empresa | String | Nombre de la empresa. 
 nombre | String | Nombre del usuario. 
 ultimoAvisoActividad | String | Último aviso de actividad del usuario.  

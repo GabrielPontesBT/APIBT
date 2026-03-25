@@ -41,13 +41,13 @@ fechaVencimiento | Date | Fecha de vencimiento del documento (en caso que corres
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 documentoId | Long | Identificador del documento asociado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tipo de documento digital.
 30002 | No se recibió nombre.
 30004 | No se recibió el identificador de persona.

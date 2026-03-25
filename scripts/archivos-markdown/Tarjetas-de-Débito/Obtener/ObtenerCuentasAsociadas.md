@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta de débito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentasAsociadasTD | [sBDCuentasAsociadasTD](#sbdcuentasasociadastd) | Listado de cuentas asociadas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tarjeta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -119,7 +119,6 @@ curl -X POST \
                      <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                      <moneda>$</moneda>
                      <papel/>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                   <sucursal>Casa Matriz</sucursal>
                   <simboloMoneda>$</simboloMoneda>
@@ -165,8 +164,7 @@ curl -X POST \
                "papel": "",
                "moneda": "$",
                "productoUId": "0",
-               "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-               "otrosConceptos":""
+               "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
             },
             "operacionUId": "101",
             "subCuenta": "",
@@ -205,7 +203,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBDCuentasAsociadasTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuentas | [sBDCuentaAsociadaTD](#sbdcuentaasociadatd) | Datos de cuenta asociada. 
 tarjetaUId | Long | Identificador único de tarjeta. 
 
@@ -215,7 +213,7 @@ tarjetaUId | Long | Identificador único de tarjeta.
 Los campos del tipo de dato estructurado sBDCuentaAsociadaTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado. 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
@@ -231,7 +229,7 @@ sucursal | String | Nombre de la sucursal.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -244,7 +242,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

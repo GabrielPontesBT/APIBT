@@ -44,13 +44,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTDocumentoDigital](#sbtdocumentodigital) | Listado de documentos digitales.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30004 | La operación ingresada no corresponde a una cuenta vista.
 30021 | No se recuperó la operación para el identificador recibido.
@@ -120,13 +120,13 @@ curl -X POST \
             <Token>1355f5da724A8B5C60A82434</Token>
          </Btinreq>
          <sdtDocumentosDigitales>
-            <sBTDocumentoDigitalns:sBTDocumentoDigital xmlns:sBTDocumentoDigitalns="http://uy.com.dlya.bantotal/BTSOA/" xmlns="ServiciosBT">
+            <sBTDocumentoDigital>
                <DocumentoId>87</DocumentoId>
                <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>
                <Titulo>Prueba Asociar Contrato</Titulo>
                <FechaActualizacion>2020-10-10</FechaActualizacion>
                <FechaVencimiento>2010-10-10</FechaVencimiento>
-            </sBTDocumentoDigitalns:sBTDocumentoDigital>
+            </sBTDocumentoDigita>
          </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 documentoId | Long | documentoId del documento digital.
 fechaActualizacion | Date | Fecha de actualización del documento digital. 
 fechaVencimiento | Date | Fecha de vencimiento del documento digital. 

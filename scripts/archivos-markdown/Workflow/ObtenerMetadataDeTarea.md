@@ -31,19 +31,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-procesoId | Int | Identificador de proceso Workflow. 
+procesoId | Short | Identificador de proceso Workflow. 
 tareaId | Int | Identificador de tarea Workflow. 
 
 @tab Datos de Salida 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 sdtMetadatas | [sBTMetadataWF](#sbtmetadatawf) | Listado de datos de metadata Workflow. 
 
 @tab Errores 
 
 Código | Descripción 
-:--------- | :----------- 
+:--------- | :--------- 
 30001 | No se recibió el identificador de proceso. 
 30002 | No se recibió el identificador de tarea. 
 40001 | El proceso ingresado no existe. 
@@ -219,8 +219,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 ::: center 
 Los campos del tipo de dato estructurado sBTMetadataWF son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre del campo. 
 valor | String | Valor del campo. 
 <!-- CIERRA SDT -->

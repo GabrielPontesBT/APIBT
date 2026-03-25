@@ -36,13 +36,13 @@ idExcepcion | Int | Identificador de excepción
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 excepciones | [sBTDetalleExcepcion](#sbtdetalleexcepcion) | Datos detallados de la excepción
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de excepción.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -249,8 +249,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDetalleExcepcion son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 descripcionEstado | String | Descripción del estado.
 estado | String | Estado.
 importeMovimiento | Double | Importe del movimiento.
@@ -266,8 +266,8 @@ solicitaPassword | String | Solicita contraseña (S/N).
 
 Los campos del tipo de dato estructurado sBTExcepcion son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la excepción.
 descripcionMovimiento | String | Descripción del movimiento.
 identificador | Int | Identificador de excepción.
@@ -281,8 +281,8 @@ usuario | String | Usuario.
 
 Los campos del tipo de dato estructurado sBTMetadataExcepcion son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la MetaData.
 esImporte | String | Es Importe (S/N).
 valor | String | Valor de la MetaData.

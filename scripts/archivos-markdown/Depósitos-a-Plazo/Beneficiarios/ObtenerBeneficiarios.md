@@ -42,7 +42,7 @@ sdtBeneficiarios | [sBTBeneficiario](#sbtbeneficiario) | Listado de beneficiario
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30003 | No se recupero la operación para el identificador [Número de Identificador].
 40001 | No se encontraron beneficiaros para el identificador ingresado.
@@ -231,7 +231,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBeneficiario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 apellido | String | Apellido.
 correlativo | Short | Correlativo.
 nombre | String | Nombre.

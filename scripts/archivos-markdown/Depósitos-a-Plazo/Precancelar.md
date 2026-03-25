@@ -50,13 +50,13 @@ cuentaAcreditacionUId | Long | Identificador único de operación de cuenta vist
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de operación.
 30003 | No se recuperó la operación origen para el Identificador ingresado.

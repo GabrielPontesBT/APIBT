@@ -37,13 +37,13 @@ movimientoUId | Long | Identificador único de movimiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDetallePagoPrestamo | [sBTDetallePagoPrestamo](#sbtdetallepagoprestamo) | Detalle del pago del préstamo. 
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación. 
 30002 | No se recibió el identificador de movimiento. 
 30003 | No se recuperó el préstamo para el identificador: [Número de Identificador]. 
@@ -116,7 +116,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>ae6041cefd4A8B5C60A82434</Token>
          </Btinreq>
-         <sbtDetallePagoPrestamo>
+         <sdtDetallePagoPrestamo>
             <redondeos>0.00</redondeos>
             <otrosConceptos>0.00</otrosConceptos>
             <capital>883.21</capital>
@@ -375,7 +375,7 @@ curl -X POST \
             <total>1137.39</total>
             <seguros>0.00</seguros>
             <comisiones>118.13</comisiones>
-         </sbtDetallePagoPrestamo>
+         </sdtDetallePagoPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>155926</Numero>
@@ -401,7 +401,7 @@ curl -X POST \
           "Canal": "BTDIGITAL", 
           "Token": "ae6041cefd4A8B5C60A82434" 
         }, 
-        "sbtDetallePagoPrestamo": { 
+        "sdtDetallePagoPrestamo": { 
           "redondeos": 0, 
           "otrosConceptos": 0, 
           "capital": 883.21, 
@@ -707,7 +707,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetallePagoPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital. 
 comisiones | Double | Comisiones de la cuota. 
 detalle | [sBTDetallePagoCuota](#sbtdetallepagocuota) | Detalle pago de la cuota. 
@@ -725,7 +725,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTDetallePagoCuota son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de la cuota. 
 comisiones | Double | Comisiones de la cuota. 
 detalleConceptos | [sBTConcepto](#sbtconcepto) | Detalle de los conceptos adicionales. 
@@ -742,7 +742,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 

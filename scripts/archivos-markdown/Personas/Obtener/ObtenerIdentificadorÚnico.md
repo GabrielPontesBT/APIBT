@@ -38,13 +38,13 @@ numeroDocumento | String | Número de documento de la persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del país de documento.
 30002 | No se recibió el identificador del tipo de documento.
 30003 | No se recibió el número de documento.

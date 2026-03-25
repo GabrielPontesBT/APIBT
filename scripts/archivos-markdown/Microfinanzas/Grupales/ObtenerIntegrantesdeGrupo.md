@@ -36,13 +36,13 @@ grupoId | Int | Código de grupo
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtIntegrantesGrupo | [sBTIntegranteGrupo](#sbtintegrantegrupo) | Listado de integrantes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30011 | No se recibió código de grupo.
 30012 | El grupo ingresado no contiene integrantes.
 ::: 
@@ -207,7 +207,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIntegranteGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único del cliente. 
 cuenta | String | Nombre de la cuenta. 
 fechaAlta | Date | Fecha de alta del integrante. 

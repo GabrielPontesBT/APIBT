@@ -43,7 +43,7 @@ transaccionId | Long | Identificador de transacción.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030610 | Debe indicar el numero de la orden.
 1030611 | Debe indicar el numero de linea en la orden.
 1030612 | El valor recibido no corresponde a un numero de orden.

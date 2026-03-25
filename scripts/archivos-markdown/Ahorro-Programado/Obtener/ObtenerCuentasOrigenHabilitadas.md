@@ -38,13 +38,13 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentas | [sBTProductoPasivo](#sbtproductopasivo) | Listado de cuentas habilitadas para origen del ahorro.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | No se recibió el identificador del cliente.
 30003 | No se recibió el identificador del producto de ahorro.
@@ -133,7 +133,6 @@ curl -X POST \
                   <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <tipoProducto>CA</tipoProducto>
                <sucursal>Casa Matriz</sucursal>
@@ -181,8 +180,7 @@ curl -X POST \
                     "papel": "",
                     "moneda": "$",
                     "productoUId": "0",
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
-                    "otrosConceptos":""
+                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
                 },
                 "sucursal": "Casa Matriz"
             },
@@ -232,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductoPasivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado.
 idOperacionBT | String | Identificador String bantotal (concatenación de todos los conceptos claves de la operación).
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación).
@@ -249,7 +247,7 @@ tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -262,7 +260,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

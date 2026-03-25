@@ -60,13 +60,13 @@ operacionUId_cobro | Long | Identificador único de operación de la cuenta vist
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento [Asiento].
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de refinanciación.
 30002 | El identificador de refinanciación no es válido.
 30003 | No se recibió el identificador de operación de la cuenta vista.

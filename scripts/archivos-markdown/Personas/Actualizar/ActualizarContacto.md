@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Identificador de persona requerido.
 30002 | No existe persona con el identificador ingresada.
 40001 | Correlativo no puede ser vacío.
@@ -189,7 +189,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTContactoJuridico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo | Short | Correlativo. 
 domicilio1 | String | Domicilio 1. 
 domicilio2 | String | Domicilio 2. 

@@ -37,13 +37,13 @@ fecha | Date | Fecha de los pagos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtCuotasPrestamos | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
+:--------- | :--------- | :---------
+cronograma | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación. 
 30002 | No se recuperó la operación para el Identificador. 
 30003 | No se recibió fecha para consulta. 
@@ -114,8 +114,8 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>75e20bd1614A8B5C60A82434</Token>
         </Btinreq>
-        <sdtCuotasPrestamos>
-            <SdtsBTCuotaPrestamo>
+        <cronograma>
+            <sBTCuotaPrestamo>
                 <impuestos>0</impuestos>
                 <importePago>292.6</importePago>
                 <subsidios>0</subsidios>
@@ -153,8 +153,8 @@ curl -X POST \
                 <estado>Paga</estado>
                 <fechaPago>2022-09-21</fechaPago>
                 <total>0</total>
-            </SdtsBTCuotaPrestamo>
-        </sdtCuotasPrestamos>
+            </sBTCuotaPrestamo>
+        </cronograma>
         <Erroresnegocio></Erroresnegocio>
         <Btoutreq>
             <Numero>898</Numero>
@@ -180,8 +180,8 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "sdtCuotasPrestamos": {
-        "SdtsBTCuotaPrestamo": [
+    "cronograma": {
+        "sBTCuotaPrestamo": [
             {
                 "impuestos": 0,
                 "importePago": 292.6,
@@ -223,6 +223,7 @@ curl -X POST \
                 "fechaPago": "2022-09-21",
                 "total": 0
             },
+            ...
         ]
     },
     "Erroresnegocio": {
@@ -253,7 +254,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuotaPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de la cuota. 
 comisiones | Double | Comisiones de la cuota. 
 concepto | String |  (Capital / Interés / Capital-Interés / Pago Mínimo / Cuota Fija). 
@@ -281,7 +282,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

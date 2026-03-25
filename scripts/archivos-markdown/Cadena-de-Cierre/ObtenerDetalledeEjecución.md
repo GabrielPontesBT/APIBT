@@ -37,7 +37,7 @@ fecha | Date | Fecha de ejecución.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 identificador | Int | Identificador de proceso batch.
 fechaInicio | Date | Fecha de inicio de ejecución.
 fechaFin | Date | Fecha de fin de ejecución.

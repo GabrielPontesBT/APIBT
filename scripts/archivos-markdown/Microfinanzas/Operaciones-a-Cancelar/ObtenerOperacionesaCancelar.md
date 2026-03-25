@@ -37,13 +37,13 @@ clienteUId | Long | Identificador único del cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOperaciones | [sBTOperacionWF](#sbtoperacionwf) | Listado de operaciones.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de solicitud.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recuperó la cuenta para el identificador de cliente: [Número de identificador].
@@ -209,7 +209,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTOperacionWF son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 diasMora | Int | Días de mora de la operación. 
 fechaUltimoPago | Date | Fecha de último pago de la operación. 
 fechaValor | Date | Fecha valor de la operación. 

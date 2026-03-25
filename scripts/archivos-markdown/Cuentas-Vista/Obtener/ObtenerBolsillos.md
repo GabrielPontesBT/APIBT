@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtInformacionBolsillos | [sBTInfRBolsillo](#sbtinfrbolsillo) | Listado de la información del bolsillo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No se recibió el identificador de operación.
 30005 | OperacionUID no corresponde a CA.
 30006 | La cuenta no existe o no se encuentra activa.
@@ -112,7 +112,7 @@ curl -X POST \
             <Token>64d9fe0781F955E77534D3E0</Token>
          </Btinreq>
          <sdtInformacionBolsillos>
-            <SBTINFRBOLSILLO>
+            <sBTInfRBolsillo>
                <OperacionBolsilloUID>8</OperacionBolsilloUID>
                <FechaBaja>0000-00-00</FechaBaja>
                <ProductoBolsilloId>32</ProductoBolsilloId>
@@ -121,8 +121,8 @@ curl -X POST \
                <Saldo>21981.00</Saldo>
                <FechaApertura>0000-00-00</FechaApertura>
                <Nombresubcuenta/>
-            </SBTINFRBOLSILLO>
-            <SBTINFRBOLSILLO>
+            </sBTInfRBolsillo>
+            <sBTInfRBolsillo>
                <OperacionBolsilloUID>11</OperacionBolsilloUID>
                <FechaBaja>0000-00-00</FechaBaja>
                <ProductoBolsilloId>32</ProductoBolsilloId>
@@ -131,8 +131,8 @@ curl -X POST \
                <Saldo>4000.00</Saldo>
                <FechaApertura>0000-00-00</FechaApertura>
                <Nombresubcuenta/>
-            </SBTINFRBOLSILLO>
-            <SBTINFRBOLSILLO>
+            </sBTInfRBolsillo>
+            <sBTInfRBolsillo>
                <OperacionBolsilloUID>10</OperacionBolsilloUID>
                <FechaBaja>0000-00-00</FechaBaja>
                <ProductoBolsilloId>33</ProductoBolsilloId>
@@ -141,7 +141,7 @@ curl -X POST \
                <Saldo>4000.00</Saldo>
                <FechaApertura>0000-00-00</FechaApertura>
                <Nombresubcuenta/>
-            </SBTINFRBOLSILLO>
+            </sBTInfRBolsillo>
          </sdtInformacionBolsillos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -169,7 +169,7 @@ curl -X POST \
         "Requerimiento": "1" 
     }, 
     "sdtInformacionBolsillos": { 
-      "SBTINFRBOLSILLO": [ 
+      "sBTInfRBolsillo": [ 
          { 
          "OperacionBolsilloUID": 8, 
          "FechaBaja": "0000-00-00", 
@@ -227,7 +227,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTInfRBolsillo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | Byte | Estado. 
 nombreProducto | String | Nombre del producto. 
 operacionBolsilloUId | Long | Identificador único de la operación de bolsillo. 

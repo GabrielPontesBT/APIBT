@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar identificador de cliente.
 30002 | Debe ingresar motivo de inhabilitación.
 30003 | Debe ingresar justificación.

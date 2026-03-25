@@ -36,13 +36,14 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 esPEP | String | Es persona políticamente expuesta? (S/N).
+sdtDatosPEP | [sBTDatosPEP](#sbtdatospep) | Datos de la PEP.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -110,6 +111,13 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <esPEP>S</esPEP>
+         <sdtDatosPEP>
+            <cargoRelacion>Presidente</cargoRelacion>
+            <entidad>Presidencia</entidad>
+            <fechaInicio>2010-01-01</fechaInicio>
+            <fechaSalida>2015-01-01</fechaSalida>
+            <observacion></observacion>
+         </sdtDatosPEP>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -136,6 +144,13 @@ curl -X POST \
 	  "Device": "GP"
 	},
 	"esPEP": "S",
+   "sdtDatosPEP": {
+      "cargoRelacion": "Presidente",
+      "entidad": "Presidencia",
+      "fechaInicio": "2010-01-01",
+      "fechaSalida": "2015-01-01",
+      "observacion":"",
+   },
 	"Erroresnegocio": {
 	},
 	"Btoutreq": {
@@ -163,7 +178,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosPEP son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cargoRelacion | String | Cargo que ocupa. 
 entidad | String | Entidad. 
 fechaInicio | Date | Fecha de inicio. 

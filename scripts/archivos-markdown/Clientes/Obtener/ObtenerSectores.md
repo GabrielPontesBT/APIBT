@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSectores | [sBTSector](#sbtsector) | Listado de sectores.
 
 @tab Errores
@@ -203,7 +203,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSector son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de sector.  
 identificador | Short | Identificador de sector. 
 :::

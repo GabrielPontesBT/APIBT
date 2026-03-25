@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtIdentidadesDeGenero | [sBTIdentidadDeGenero](#sbtidentidaddegenero) | Listado de identidades de género.
  
 @tab  Errores
@@ -170,7 +170,7 @@ No aplica.
 ### sBTIdentidadDeGenero
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de identidad de género. 
 descripcion | String | Descripción de identidad de género.  
 

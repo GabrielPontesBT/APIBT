@@ -38,13 +38,13 @@ cuentaAcreditacionUId | Long | Identificador único de la cuenta vista de acredi
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento realizado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | La cuenta indicada no existe.
 30003 | No se recibió el identificador de la cuenta.

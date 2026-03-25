@@ -1209,6 +1209,12 @@
           },
           {
             "type": "file",
+            "label": "ObtenerOficinasSucursal",
+            "pageTitle": "Obtener Oficinas de Sucursal",
+            "slug": "configuracion-bantotal/bancos/obteneroficinassucursal"
+          },
+          {
+            "type": "file",
             "label": "ObtenerSucursalesPrincipales",
             "pageTitle": "Obtener Sucursales Principales",
             "slug": "configuracion-bantotal/bancos/obtenersucursalesprincipales"
@@ -1831,6 +1837,12 @@
             "label": "ObtenerProductos",
             "pageTitle": "Obtener Productos",
             "slug": "cuentas-corrientes/obtener/obtenerproductos"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerSobregiros",
+            "pageTitle": "Obtener Sobregiros",
+            "slug": "cuentas-corrientes/obtener/obtenersobregiros"
           }
         ]
       }
@@ -1876,6 +1888,12 @@
             "label": "ObtenerDatos",
             "pageTitle": "Obtener Datos",
             "slug": "cuentas-de-ahorro/obtener/obtenerdatos"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerDebitoAutomaticoPrestamo",
+            "pageTitle": "Obtener Débito Automático de Préstamo",
+            "slug": "cuentas-de-ahorro/obtener/obtenerdebitoautomaticoprestamo"
           },
           {
             "type": "file",
@@ -2006,6 +2024,12 @@
             "label": "ObtenerFacultades",
             "pageTitle": "Obtener Facultades",
             "slug": "cuentas-vista/obtener/obtenerfacultades"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerInstrucciones",
+            "pageTitle": "Obtener Instrucciones",
+            "slug": "cuentas-vista/obtener/obtenerinstrucciones"
           },
           {
             "type": "file",
@@ -2265,6 +2289,12 @@
             "label": "ObtenerDocumentoDigital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "depositos-a-plazo/documentos-digitales/obtenerdocumentodigital"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerDocumentosDigitales",
+            "pageTitle": "Obtener Documentos Digitales",
+            "slug": "depositos-a-plazo/documentos-digitales/obtenerdocumentosdigitales"
           }
         ]
       },
@@ -2315,12 +2345,6 @@
             "label": "ObtenerDatosPrecancelacion",
             "pageTitle": "Obtener Datos de Precancelación",
             "slug": "depositos-a-plazo/obtener/obtenerdatosprecancelacion"
-          },
-          {
-            "type": "file",
-            "label": "ObtenerDocumentosDigitales",
-            "pageTitle": "Obtener Documentos Digitales",
-            "slug": "depositos-a-plazo/obtener/obtenerdocumentosdigitales"
           },
           {
             "type": "file",
@@ -3154,6 +3178,12 @@
           },
           {
             "type": "file",
+            "label": "ActualizarReducido",
+            "pageTitle": "Actualizar Reducido",
+            "slug": "personas/actualizar/actualizarreducido"
+          },
+          {
+            "type": "file",
             "label": "ActualizarReferencia",
             "pageTitle": "Actualizar Referencia",
             "slug": "personas/actualizar/actualizarreferencia"
@@ -3665,6 +3695,37 @@
       },
       {
         "type": "folder",
+        "label": "Textos",
+        "slug": "personas/textos",
+        "children": [
+          {
+            "type": "file",
+            "label": "ActualizarTextos",
+            "pageTitle": "Actualizar Textos",
+            "slug": "personas/textos/actualizartextos"
+          },
+          {
+            "type": "file",
+            "label": "AgregarTextos",
+            "pageTitle": "Agregar Textos",
+            "slug": "personas/textos/agregartextos"
+          },
+          {
+            "type": "file",
+            "label": "EliminarTextos",
+            "pageTitle": "Eliminar Textos",
+            "slug": "personas/textos/eliminartextos"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerTextos",
+            "pageTitle": "Obtener Textos",
+            "slug": "personas/textos/obtenertextos"
+          }
+        ]
+      },
+      {
+        "type": "folder",
         "label": "Validar",
         "slug": "personas/validar",
         "children": [
@@ -3775,6 +3836,12 @@
           },
           {
             "type": "file",
+            "label": "ObtenerCotizacionesPizarraEspecial",
+            "pageTitle": "Obtener Cotizaciones de Pizarra Especial",
+            "slug": "precios/obtener/obtenercotizacionespizarraespecial"
+          },
+          {
+            "type": "file",
             "label": "ObtenerPizarraEspecialporTransacción",
             "pageTitle": "Obtener Pizarra Especial por Transacción",
             "slug": "precios/obtener/obtenerpizarraespecialportransaccion"
@@ -3820,6 +3887,12 @@
             "label": "ObtenerTiposDeCambioEspeciales",
             "pageTitle": "Obtener Tipos de Cambio Especiales",
             "slug": "precios/obtener/obtenertiposdecambioespeciales"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerValoresPizarraPorModulo",
+            "pageTitle": "Obtener Valores de Pizarra Por Módulo",
+            "slug": "precios/obtener/obtenervalorespizarrapormodulo"
           }
         ]
       }
@@ -3830,6 +3903,31 @@
     "label": "Préstamos",
     "slug": "prestamos",
     "children": [
+      {
+        "type": "folder",
+        "label": "Cancelación Anticipada",
+        "slug": "prestamos/cancelacion-anticipada",
+        "children": [
+          {
+            "type": "file",
+            "label": "ConfirmarCancelacionAnticipada",
+            "pageTitle": "Confirmar Cancelación Anticipada",
+            "slug": "prestamos/cancelacion-anticipada/confirmarcancelacionanticipada"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerSimulacionCancAnticipada",
+            "pageTitle": "Obtener Simulación de Cancelación Anticipada",
+            "slug": "prestamos/cancelacion-anticipada/obtenersimulacioncancanticipada"
+          },
+          {
+            "type": "file",
+            "label": "SimularCancelacionAnticipada",
+            "pageTitle": "Simular Cancelación Anticipada",
+            "slug": "prestamos/cancelacion-anticipada/simularcancelacionanticipada"
+          }
+        ]
+      },
       {
         "type": "folder",
         "label": "Cancelar",
@@ -4143,6 +4241,12 @@
             "label": "ObtenerRefinanciacionSimulada",
             "pageTitle": "Obtener Refinanciación Simulada",
             "slug": "prestamos/obtener/obtenerrefinanciacionsimulada"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerSegurosAsociados",
+            "pageTitle": "Obtener Seguros Asociados",
+            "slug": "prestamos/obtener/obtenersegurosasociados"
           }
         ]
       },
@@ -4851,6 +4955,18 @@
     "children": [
       {
         "type": "file",
+        "label": "AgregarRolesUsuario",
+        "pageTitle": "Agregar Roles Usuario",
+        "slug": "workflow/agregarrolesusuario"
+      },
+      {
+        "type": "file",
+        "label": "EliminarRolesUsuario",
+        "pageTitle": "Eliminar Roles Usuario",
+        "slug": "workflow/eliminarrolesusuario"
+      },
+      {
+        "type": "file",
         "label": "ObtenerMetadataDeTarea",
         "pageTitle": "Obtener Metadata De Tarea",
         "slug": "workflow/obtenermetadatadetarea"
@@ -4872,6 +4988,12 @@
         "label": "ObtenerRolesdeTarea",
         "pageTitle": "Obtener Roles de Tarea",
         "slug": "workflow/obtenerrolesdetarea"
+      },
+      {
+        "type": "file",
+        "label": "ObtenerRolesUsuario",
+        "pageTitle": "Obtener Roles Usuario",
+        "slug": "workflow/obtenerrolesusuario"
       },
       {
         "type": "file",

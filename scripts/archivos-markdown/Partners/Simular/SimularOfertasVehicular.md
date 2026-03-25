@@ -40,14 +40,14 @@ sdtDatosOferta | [sBTOfertaInput](#sbtofertainput) | Datos de la oferta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-simulacionUId | Long | Identificador único de la simulación.
-sdtOfertas | [sBTOfertaPrestamo](#sbtofertaprestamo) | Listado de ofertas del préstamo.
+:--------- | :--------- | :---------
+simulacionId | Long | Identificador único de la simulación.
+sdtOfertasPrestamo | [sBTOfertaPrestamo](#sbtofertaprestamo) | Listado de ofertas del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de producto.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].
@@ -105,7 +105,7 @@ Código | Descripción
             <bts:tipoGps>1</bts:tipoGps>
          </bts:sdtDatosVehiculo>
          <bts:sdtDatosOferta>
-            <bts:pizzarra>0</bts:pizzarra>
+            <bts:pizarra>0</bts:pizarra>
             <bts:fechaValor>2023-11-14</bts:fechaValor>
             <bts:productoUId>48</bts:productoUId>
             <bts:monto>8745</bts:monto>
@@ -194,7 +194,7 @@ curl -X POST \
           "tipoGps": 1
         },
         "sdtDatosOferta": {
-          "pizzarra": 0,
+          "pizarra": 0,
           "fechaValor": "2023-11-14",
           "productoUId": 48,
           "monto": 8745,
@@ -296,7 +296,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -335,7 +335,7 @@ curl -X POST \
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -351,7 +351,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
@@ -365,7 +365,7 @@ vendedorUId	 | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTSimulacionVeh son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 datosAdicionales | [sBTConcepto](#sbtconcepto) | Datos adicionales.
 entregaInicial | Double | Entrega inicial.
 estadoId | Short | Identificador del estado.
@@ -383,7 +383,7 @@ versionUId | Long | Identificador único de la versión.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -397,7 +397,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTOfertaInput son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 ballon | Double | Ballon.
 comisiones | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones.
 comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones.
@@ -419,7 +419,7 @@ tasa | Double | Tasa.
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
@@ -431,7 +431,7 @@ porcentaje | Double | Porcentaje de comisión.
 Los campos del tipo de dato estructurado sBTCuotaExtraordinaria son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 mes | Byte | Mes.
 porcentajeCuota | Double | Porcentaje de cuota.
 
@@ -441,7 +441,7 @@ porcentajeCuota | Double | Porcentaje de cuota.
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Codigo del seguro.
 descripcion | String | Descripción del seguro.
 importeFijo | Decimal | Importe fijo del seguro.
@@ -458,7 +458,7 @@ tipo | String | Tipo del seguro.
 Los campos del tipo de dato estructurado sBTOfertaPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de las cuotas.
 capital | Double | Capital del préstamo.
 cft | Double | CFT del préstamo.

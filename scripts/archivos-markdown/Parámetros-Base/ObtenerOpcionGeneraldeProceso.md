@@ -37,13 +37,13 @@ codigo | Int | Código de la opción general de procesos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOpcionGeneralDeProceso | [sBTOpcionGeneral](#sbtopciongeneral) | Datos de la opción general de procesos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de opción general.
 40001 | No existe la opción general con el identificador ingresado.
 ::: 
@@ -170,7 +170,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 Los campos del tipo de dato estructurado sBTOpcionGeneral son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la opción general de procesos. 
 identificador | Int | Código de la opción general de procesos. 
 valor | String | Valor de la opción general de procesos (S/N).

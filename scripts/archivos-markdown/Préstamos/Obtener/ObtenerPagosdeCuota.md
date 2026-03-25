@@ -37,13 +37,13 @@ numeroCuota | Int | Número de cuota.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPagoDeCuota | [sBTPagoDeCuota](#sbtpagodecuota) | Identificador único de movimiento [Asiento].
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el Identificador: [Número de Identificador].
 40001 | La cuota indicada no es válida.
@@ -205,7 +205,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPagoDeCuota son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalle | [sBTDetallePagoCuota](#sbtdetallepagocuota) | Listado de pagos de una cuota. 
 fechaUltimoPago | Date | Fecha de último pago de la cuota. 
 importePago | Double | Importe pagado. 
@@ -216,7 +216,7 @@ importePago | Double | Importe pagado.
 Los campos del tipo de dato estructurado sBTDetallePagoCuota son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de la cuota. 
 comisiones | Double | Comisiones de la cuota. 
 detalleConceptos | [sBTConcepto](#sbtconcepto) | Detalle de los conceptos adicionales. 
@@ -233,7 +233,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
 valor | Double | Importe. 

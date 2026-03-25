@@ -37,13 +37,13 @@ fecha | Date | Fecha valor del asiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar al menos una operación.
 30002 | Debe ingresar la fecha.
 30004 | No se recuperó la operación origen para el Identificador: [Número de Identificador].
@@ -197,7 +197,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosAsiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del movimiento. 
 importe1 | Double | Importe 1 del movimiento. 
 importe2 | Double | Importe 2 del movimiento. 

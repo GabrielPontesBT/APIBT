@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de instancia de documento digital.
 30003 | No se recibió el identificador de la operación.
 30021 | No se recuperó la operación para el identificador recibido.

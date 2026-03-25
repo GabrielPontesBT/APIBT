@@ -47,13 +47,13 @@ sucursalId | Int | Identificador de sucursal.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de identificador].
 30003 | No se recibió el identificador único de producto.

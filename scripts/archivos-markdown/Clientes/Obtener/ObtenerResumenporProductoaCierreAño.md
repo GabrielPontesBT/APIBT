@@ -37,13 +37,13 @@ anioConsulta | Short | Año de consulta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOperaciones | [sBTDetalleOperacion](#sbtdetalleoperacion) | Listado de detalle de operaciones.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la cuenta para la operación.
 :::
@@ -121,7 +121,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                   <moneda>$</moneda>
                   <papel>$</papel>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <saldo>0.00</saldo>
             </sBTDetalleOperacion>
@@ -132,7 +131,6 @@ curl -X POST \
                   <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
                   <moneda>$</moneda>
                   <papel>$</papel>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <saldo>15000.00</saldo>
             </sBTDetalleOperacion>
@@ -143,7 +141,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
                   <moneda>$</moneda>
                   <papel>$</papel>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <saldo>-415000.00</saldo>
             </sBTDetalleOperacion>
@@ -181,8 +178,7 @@ curl -X POST \
 						"productoUId": "93",
 						"nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
 						"moneda": "$",
-						"papel": "$",
-                  "otrosConceptos":""
+						"papel": "$"
 					},
 					"saldo": "0.00"
 				},
@@ -192,8 +188,7 @@ curl -X POST \
 						"productoUId": "132",
 						"nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
 						"moneda": "$",
-						"papel": "$",
-                  "otrosConceptos":""
+						"papel": "$"
 					},
 					"saldo": "15000.00"
 				},
@@ -203,8 +198,7 @@ curl -X POST \
 						"productoUId": "105",
 						"nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
 						"moneda": "$",
-						"papel": "$",
-                  "otrosConceptos":""
+						"papel": "$"
 					},
 					"saldo": "-415000.00"
 				}
@@ -234,8 +228,8 @@ curl -X POST \
 
 Los campos del tipo de dato estructurado sBTDetalleOperacion son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Decimal | Saldo.
@@ -246,7 +240,7 @@ saldo | Decimal | Saldo.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -259,7 +253,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

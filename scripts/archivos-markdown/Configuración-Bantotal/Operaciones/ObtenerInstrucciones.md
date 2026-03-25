@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtInstrucciones | [sBTEInstruccion](#sbteinstruccion) | Listado de instrucciones.
 
 @tab Errores
@@ -257,8 +257,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTEInstruccion son los siguientes: 
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 identificador | Short | Identificador de instrucción.
 descripcion | String | Descripción de instrucción.
 :::

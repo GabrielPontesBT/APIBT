@@ -39,7 +39,7 @@ plazo  | Int | Plazo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tipoTasa  | String | Tipo de tasa.
 tasa  | Double | Tasa.
 tasaMinima | Double | Tasa mínima.
@@ -49,7 +49,7 @@ fechaVigencia | Date | Fecha de vigencia
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar identificador de operación.
 30002 | Debe ingresar fecha.
 30003 | Debe ingresar importe.

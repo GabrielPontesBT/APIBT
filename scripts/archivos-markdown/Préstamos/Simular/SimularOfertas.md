@@ -45,14 +45,14 @@ sdtSimulacion | [sBTDatosSimulacion](#sbtdatossimulacion) | Datos necesarios par
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 simulacionUId | Long | Identificador único de la simulación.
 sdtOfertasPrestamo | [sBTOfertaPrestamo](#sbtofertaprestamo) | Colección de ofertas de préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
@@ -241,7 +241,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuotas | [sBTCuota](#sbtcuota) | Colección de cantidad de cuotas para simular. 
 fechaPrimerPago | Date | Fecha de primer pago. 
 monto | Double | Monto del préstamo. 
@@ -254,7 +254,7 @@ productoUId | Long | Identificador único del producto.
 Los campos del tipo de dato estructurado sBTCuota son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas. 
 :::
 
@@ -266,7 +266,7 @@ cantidadCuotas | Int | Cantidad de cuotas.
 Los campos del tipo de dato estructurado sBTOfertaPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de las cuotas. 
 capital | Double | Capital del préstamo. 
 cft | Double | CFT del préstamo. 

@@ -45,13 +45,13 @@ tarjetaUId | Long | Identificador único de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tarjeta | String | Tarjeta encriptada.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona.
 30002 | No se recibió el Identificador de Tarjeta.
 ::: 

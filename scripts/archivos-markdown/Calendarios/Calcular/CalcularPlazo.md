@@ -40,7 +40,7 @@ tipoVencimiento | String | Tipo de ajuste al vencimiento ('A': Hábil anterior, 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 plazo | Int | Plazo.
 
 @tab Errores

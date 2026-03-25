@@ -40,13 +40,13 @@ correlativo3 | Short | Correlativo 3.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCorrelativo | [sBTCorrelativoGuiaEspecial](#sbtcorrelativoguiaespecial) | Datos de la guía especial de proceso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió código de guía.
 40001 | No existe el registro.
 ::: 
@@ -193,7 +193,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 Los campos del tipo de dato estructurado sBTCorrelativoGuiaEspecial son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo1 | Short | Correlativo 1. 
 correlativo2 | Short | Correlativo 2. 
 correlativo3 | Short | Correlativo 3. 

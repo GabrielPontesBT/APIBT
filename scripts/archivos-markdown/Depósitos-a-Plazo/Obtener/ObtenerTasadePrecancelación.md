@@ -37,14 +37,14 @@ fecha | Date | Fecha.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tasa | Double | Tasa de precancelación.
 tipoTasa | String | Tipo de tasa.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

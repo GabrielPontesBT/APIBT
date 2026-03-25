@@ -36,13 +36,13 @@ ahorroUId | Long | Identificador único del ahorro.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDetalleAhorro | [sBTDetalleAhorro](#sbtdetalleahorro) | Datos del ahorro.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de la operación.
 30011 | No se recupero la operación para el identificador recibido.
 ::: 
@@ -225,7 +225,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleAhorro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 abono | Double | Abono.
 ahorroUId | Long | Identificador único del ahorro.
 clienteUId | Long | Identificador único del cliente.

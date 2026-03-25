@@ -42,13 +42,13 @@ modalidadIntereses | String | Modalidad de intereses. Se pueden enviar los sigui
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de préstamo.
 30002 | No se recibió el identificador único de operación de cobro.
 30003 | Debe ingresar importe.
@@ -78,7 +78,7 @@ Código | Descripción
 Este campo tiene dos opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 SP | Sin perdón.
 CP | Con perdón.
 :::

@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3 
 Correlativo 2 | 1 
 Valor específico 1 | Identificador del módulo a incluir. 
@@ -38,7 +38,7 @@ Valor específico 1 | Identificador del módulo a incluir.
 Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :----------- 
+:--------- | :--------- 
 Correlativo 1 | 3 
 Correlativo 2 | 2 
 Valor específico 1 | Módulo del tipo de operación a excluir. 
@@ -59,13 +59,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosPasivos | [sBTProductoPasivo](#sbtproductopasivo) | Listado de ahorros programados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador.
 40001 | No existe la cuenta consultada.
@@ -144,7 +144,6 @@ curl -X POST \
                   <nombre>AHORRO PROGRAMADO, Ahorro Programado</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <tipoProducto>AH</tipoProducto>
                <sucursal>Casa Matriz</sucursal>
@@ -161,7 +160,6 @@ curl -X POST \
                   <nombre>AHORRO PROGRAMADO, Ahorro Programado</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <tipoProducto>AH</tipoProducto>
                <sucursal>Sucursal Beta</sucursal>
@@ -209,8 +207,7 @@ curl -X POST \
                     "papel": "",
                     "moneda": "$",
                     "productoUId": "4",
-                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado",
-                    "otrosConceptos":""
+                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado"
                 },
                 "sucursal": "Casa Matriz"
             },
@@ -226,8 +223,7 @@ curl -X POST \
                     "papel": "",
                     "moneda": "$",
                     "productoUId": "1",
-                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado",
-                    "otrosConceptos":""
+                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado"
                 },
                 "sucursal": "Sucursal Beta"
             },
@@ -261,7 +257,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductoPasivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado. 
 idOperacionBT | String | Identificador String Bantotal (concatenación de todos los conceptos claves de la operación). 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
@@ -278,7 +274,7 @@ tipoProducto | String | Tipo de producto.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -291,7 +287,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

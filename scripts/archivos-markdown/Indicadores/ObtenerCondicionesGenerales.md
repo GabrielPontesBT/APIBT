@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCondicionesGenerales | [sBTCondicionesGenerales](#sbtcondicionesgenerales) | Listado de las Condiciones Generales.
 
 @tab Errores
@@ -186,7 +186,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCondicionesGenerales son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadPAE | Int | Cantidad PAE. 
 cantidadReglas | Int | Cantidad reglas. 
 debug | String | Opción debug. 

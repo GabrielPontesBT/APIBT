@@ -36,7 +36,7 @@ cuentaBT | Int | Cuenta Bantotal.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 tipoDocumento | String | Tipo de documento.
 numeroDocumento | String | Número de documento.
@@ -46,7 +46,7 @@ ejecutivo | String | Ejecutivo.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió la Cuenta BT.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

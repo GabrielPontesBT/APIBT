@@ -36,7 +36,7 @@ domicilioId | Byte | Identificador de tipo de domicilio.
 numeroTelefono | String | Número de teléfono.
 tipoTelefonoId | Short | Identificador de tipo de teléfono.
 modo | String | [Hidden: Valor fijo "UPD" para este método].
-telefonoId | Byte | Identificador correlativo de teléfono.
+telefonoId | Short | Identificador correlativo de teléfono.
 
 @tab Datos de Salida
 
@@ -45,7 +45,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cliente.
 30002 | No se recibió el identificador de Domicilio.
 30003 | No se recibió Teléfono.

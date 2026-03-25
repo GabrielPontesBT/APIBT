@@ -1,6 +1,5 @@
 ---
 title: Solicitar Precancelación
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -53,7 +52,7 @@ logPrecancelacion | int | Identificador del log de precancelación.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de préstamo.
 30002 | No se recuperó la operación para el Identificador: [Número de identificador].
 30003 | Debe ingresar importe.
@@ -85,7 +84,7 @@ Código | Descripción
 Este campo tiene dos opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 P | Parcial.
 T | Total.
 :::
@@ -99,7 +98,7 @@ T | Total.
 Este campo tiene dos opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 P | Plazo.
 C | Cuota.
 :::
@@ -113,7 +112,7 @@ C | Cuota.
 Este campo tiene dos opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 SP | Sin perdón.
 CP | Con perdón.
 :::

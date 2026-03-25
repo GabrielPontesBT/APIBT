@@ -37,13 +37,13 @@ documentoId | Long | Identificador de documento digital.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTVersionDocumentoDigital](#sbtversiondocumentodigital) | Versión de documento digital.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la cuenta.
 30002 | No se recibió el identificador de documento.
 30024 | No existe registro con el identificador indicado.
@@ -193,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivo | String | Documento digital codificado en Base 64. 
 documentoId | Long | Titulo del documento digital. 
 fechaEmision | Date | Fecha de emisión del documento digital. 

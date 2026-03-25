@@ -37,13 +37,13 @@ programaStandard | String | Nombre de programa Standard.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProgramaParticular | [sBTProgramaParticular](#sbtprogramaparticular) | Datos del programa particular.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de empresa.
 30002 | No se recibió el programa standard.
 40001 | No existe programa particular para el programa standard ingresado.
@@ -175,7 +175,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 Los campos del tipo de dato estructurado sBTProgramaParticular son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de la opción general de procesos. 
 programaParticular | String | Nombre de programa particular. 
 programaStandard | String | Nombre de programa standard. 

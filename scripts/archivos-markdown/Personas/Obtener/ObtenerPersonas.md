@@ -39,13 +39,13 @@ segundoApellido | String | Segundo apellido.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPersonas | [sBTPersonaBusqueda](#sbtpersonabusqueda) | Listado de datos de persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Campo primer nombre requerido.
 30003 | Campo primer apellido requerido.
 40001 | No se encontró persona(s) con el patron de búsqueda ingresado.
@@ -191,7 +191,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -280,7 +280,7 @@ curl -X POST \
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -296,7 +296,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaBusqueda son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaNacimiento |	Date | Fecha de nacimiento. 
 nroDocumento | String | Número de documento. 
 pais | String | Nombre del país. 

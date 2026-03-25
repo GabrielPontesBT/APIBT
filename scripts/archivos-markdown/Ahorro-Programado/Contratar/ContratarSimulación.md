@@ -36,13 +36,13 @@ sdtDatos | [sBTCrearSolicitudAhorro](#sbtcrearsolicitudahorro) | Datos de la sol
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 ahorroUId | Long | Identificador de ahorro.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la simulación.
 30002 | No se recibió el identificador del cliente.
 30009 | No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].
@@ -178,7 +178,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCrearSolicitudAhorro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador de cliente.
 cuentaDestinoUId | Long | Identificador de cuenta destino.
 cuentaOrigenUId | Long | Identificador de cuenta origen.

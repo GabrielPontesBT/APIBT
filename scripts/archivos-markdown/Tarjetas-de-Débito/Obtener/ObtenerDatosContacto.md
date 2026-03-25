@@ -1,6 +1,5 @@
 ---
 title: Obtener Datos de Contacto
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -37,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosContacto | [sBTDatosContacto](#sbtdatoscontacto) | Datos del contacto de tarjeta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de tarjeta de débito.
 30004 | No se recuperaron los datos de contacto para el Identificador de tarjeta.
 ::: 
@@ -174,7 +173,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosContacto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigoDomicilio | Byte | Identificador del tipo de domicilio.
 correoElectronico | String | Correo electrónico.
 numeroTelefono | String | Teléfono.

@@ -36,13 +36,13 @@ reglaId | Long | Código de regla de negocio.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtVariablesRegla | [sBTVariableRegla](#sbtvariableregla) | Listado de variables.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1011050 | No se recibió ID de Regla.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -214,7 +214,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVariableRegla son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de variable. 
 nombre | String | Descripción de variable. 
 tipoDato | String | Tipo de dato. 

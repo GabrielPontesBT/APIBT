@@ -36,7 +36,7 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtHobby | [sBTHobby](#sbthobby) | Datos del hobby.
 
 @tab Errores
@@ -136,7 +136,7 @@ curl -X POST \
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
-   "SdtsBTHobby": {
+   "sBTHobby": {
       "codigo": "24",
       "descripcion": "Football"
    },
@@ -167,7 +167,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTHobby son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de hobby. 
 descripcion | String | Descripción de hobby. 
 :::

@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtRoles | [sBTRolWF](#sbtrolwf) | Listado de roles de Workflow.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen roles ingresados en el sistema. 
 :::
 <!-- CIERRA LA TABLA DE DATOS -->
@@ -592,7 +592,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 Los campos del tipo de dato estructurado sBTRolWF son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código del rol.
 descripcion | String | Descripción del rol.
 :::

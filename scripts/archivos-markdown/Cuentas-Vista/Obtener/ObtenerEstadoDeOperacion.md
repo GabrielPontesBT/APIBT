@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoOperacion | [sBTEstadoOperacion](#sbtestadooperacion) | Listado de estados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de la operación.
 30002 | La operación ingresada no corresponde a una cuenta vista.
 30003 | No se recuperó la operación para el identificador ingresado.
@@ -177,7 +177,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código del estado.
 descripcion | String | Descripción del estado.
 permiteOperar | String | ¿Permite Operar?

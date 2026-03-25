@@ -1,5 +1,6 @@
 ---
 title: Crear Lista Cheques
+icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -42,13 +43,13 @@ fechaValor | Date | Fecha valor.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 listaUId | Long | Identificador de lista.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el identificador.
@@ -76,8 +77,8 @@ Código | Descripción
          </bts:Btinreq>
          <bts:clienteUId>12</bts:clienteUId>
          <bts:productoUId>17</bts:productoUId>
-         <bts:sListaCheques>
-            <bts:sBTDescuentoCheque>
+         <bts:sdtListaCheques>
+            <bts:sBTListaCheques>
                <bts:identificacion>1522156151</bts:identificacion>
                <bts:fechaEmision>2018-11-20</bts:fechaEmision>
                <bts:fechaVto>2020-12-20</bts:fechaVto>
@@ -90,8 +91,8 @@ Código | Descripción
                <bts:domicilio>DOMICILIO</bts:domicilio>
                <bts:telefono>098756022</bts:telefono>
                <bts:tasa>0</bts:tasa>
-            </bts:sBTDescuentoCheque>
-         </bts:sListaCheques>
+            </bts:sBTListaCheques>
+         </bts:sdtListaCheques>
          <bts:montoADescontar>1000</bts:montoADescontar>
          <bts:tasa>10</bts:tasa>
          <bts:porcentajeAforo>10</bts:porcentajeAforo>
@@ -121,8 +122,8 @@ curl -X POST \
 	"montoADescontar":1000,
 	"tasa":10,
 	"porcentajeAforo":10,
-	"sListaCheques": {
-      "sBTDescuentoCheque": {
+	"sdtListaCheques": {
+      "sBTListaCheques": {
          "identificacion": "1522156151",
          "fechaEmision": "2018-11-20",
          "fechaVto": "2020-12-20",
@@ -162,7 +163,7 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTDescuentoDocumentos.CrearLista</Servicio>
+            <Servicio>BTDescuentoDocumentos.CrearListaCheques</Servicio>
             <Fecha>2018-12-14</Fecha>
             <Hora>15:26:20</Hora>
             <Requerimiento>1</Requerimiento>
@@ -213,7 +214,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDescuentoCheque son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agencia | Int | Agencia. 
 banco | Int | Banco. 
 ciudad | String | Ciudad. 

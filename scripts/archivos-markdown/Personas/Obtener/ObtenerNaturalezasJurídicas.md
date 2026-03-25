@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtNaturalezas | [sBTNaturalezaJuridica](#sbtnaturalezajuridica) | Listado de naturalezas jurídicas.
 
 @tab Errores
@@ -158,7 +158,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -218,7 +218,7 @@ curl -X POST \
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -234,7 +234,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTNaturalezaJuridica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion	| String	| Descripción de naturaleza jurídica. 
 identificador | Long	| Identificador de naturaleza jurídica. 
 :::

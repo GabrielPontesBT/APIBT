@@ -38,13 +38,13 @@ stringAux | String | [Hidden: Valor fijo 'S' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de los productos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió Partner ni canal.
 30002 | El Partner no se encuentra habilitado.
 30003 | No existe Partner con ese identificador.
@@ -261,7 +261,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId | Int | Identificador del punto de venta.
 vendedorUId | Int | Identificador del vendedor.
@@ -275,7 +275,7 @@ vendedorUId | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTVehiculo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 datosAdicionales | [sBTConcepto](#sbtconcepto) | Listado de datos adicionales.		
 estadoId | Short | Identificador del estado.
 monedaPrecio | Short | Precio de la moneda.
@@ -288,7 +288,7 @@ versionUId | Long | Identificador de la versión.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -302,7 +302,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Moneda.
 nombre | String | Nombre.
 otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Listado de otros conceptos.
@@ -315,7 +315,7 @@ productoUId | Long | Identificador del producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

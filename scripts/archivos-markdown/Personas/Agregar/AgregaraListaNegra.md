@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Identificador de persona requerido.
 30002 | No existe persona con el identificador ingresado.
 40001 | Código Lista no puede ser vacío.

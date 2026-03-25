@@ -30,7 +30,7 @@ backtotop: false
 Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Valor incremental. 
 Correlativo 2 | Módulo. 
 Correlativo 3 | Tipo de operación. 
@@ -52,7 +52,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProducto | [sBTProducto](#sbtproducto) | Listado de productos.
 
 @tab Errores
@@ -127,14 +127,12 @@ curl -X POST \
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>104</productoUId>
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
          </sdtProducto>
          <Erroresnegocio></Erroresnegocio>
@@ -168,15 +166,13 @@ curl -X POST \
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "103",
-                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
-                "otrosConceptos":""
+                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "104",
-                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
-                "otrosConceptos":""
+                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
             }
         ]
     },
@@ -208,7 +204,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -221,7 +217,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

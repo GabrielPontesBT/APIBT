@@ -46,7 +46,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se recibió el identificador de la empresa originante.
 30003 | No se recibió el tipo de débito.

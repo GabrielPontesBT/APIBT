@@ -24,6 +24,11 @@
   font-weight: 700;
 }
 
+// Elimina la línea divisoria entre el header y el contenido
+::ng-deep .code-tabs .mat-mdc-tab-label-container {
+  border-bottom: none !important;
+}
+
 // TABS HOVER
 ::ng-deep .code-tabs .mdc-tab {
   &:hover {
@@ -73,22 +78,40 @@
   display: none !important;
 }
 
+// Animación de entrada del contenido al cambiar pestaña
+::ng-deep .code-tabs .mat-mdc-tab-body-active .mat-mdc-tab-body-content {
+  animation: tabFadeIn 600ms var(--ease-smooth);
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // BARRA DE TABS DE CÓDIGO
 .code-toggle {
   display: flex;
   align-items: center;
   background-color: var(--code-header);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-bottom: none !important;
   position: relative;
   overflow: hidden;
-  color: var(--text-color) !important;
   flex-shrink: 0; // para que no se achique
 
   button[mat-button] {
     padding: 0.4rem 0.75rem;
     background: none;
+    border: none !important;
     border-radius: 0.7rem 0.7rem 0 0;
     font-weight: 700;
+    color: var(--text-color) !important;
 
     &:not(.active):hover {
       background-color: var(--code-bg-darken);
@@ -104,12 +127,16 @@
 
   button[mat-icon-button] {
     margin-left: auto;
-    height: 2rem;
-    padding: 0;
+    align-self: stretch;
+    height: auto;
+    padding: 0 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.3rem;
+    border: none !important;
+    border-radius: 0;
+    background-color: var(--code-header);
+    color: var(--text-color);
     transition: background-color 0.2s ease;
 
     &:hover {

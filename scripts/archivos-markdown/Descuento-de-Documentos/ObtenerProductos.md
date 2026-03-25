@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de productos.
 
 @tab Errores
@@ -104,90 +104,78 @@ curl -X POST \
             <Device>ES</Device>
          </Btinreq>
          <sdtProductos>
-            <SdtsBTProducto>
+            <sBTProducto>
                <productoUId>12</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Cheques Persona USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>13</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Cheques Persona USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>14</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>15</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>16</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Facturas USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>17</productoUId>
                <nombre>COMPRA DE DOCUMENTOS, Compra Facturas USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>18</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>19</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>20</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>21</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>22</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Facturas USD</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
-            <SdtsBTProducto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>23</productoUId>
                <nombre>DESCUENTO DE DOCUMENTOS, Descuento Facturas USD</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </SdtsBTProducto>
+            </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -214,35 +202,31 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "sdtProductos": {
-      "SdtsBTProducto": [
+   "sdtProductos": {
+      "sBTProducto": [
          {
             "productoUId": "12",
             "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
             "moneda": "$",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "13",
             "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "14",
             "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
             "moneda": "$",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "15",
             "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "16",
@@ -254,50 +238,43 @@ curl -X POST \
             "productoUId": "17",
             "nombre": "COMPRA DE DOCUMENTOS, Compra Facturas USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "18",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
             "moneda": "$",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "19",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "20",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
             "moneda": "$",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "21",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "22",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
             "moneda": "$",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          },
          {
             "productoUId": "23",
             "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
             "moneda": "USD",
-            "papel": "",
-            "otrosConceptos":""
+            "papel": ""
          }
       ]
    },
@@ -329,7 +306,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -342,7 +319,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

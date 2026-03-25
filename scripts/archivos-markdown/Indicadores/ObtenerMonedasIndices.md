@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtMonedas | [sBTMonedaIndice](#sbtmonedaindice) | Listado de monedas en uso contable.
 
 @tab Errores
@@ -256,7 +256,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTMonedaIndice son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código identificador de moneda. 
 nombre | String | Nombre de moneda. 
 tipoCambio | String | Tipo Cambio. 

@@ -1,0 +1,59 @@
+{
+  "slug": "workflow/obtenerrolesusuario",
+  "pageTitle": "Obtener Roles Usuario",
+  "description": "Método para obtener los roles workflow que tiene asignado un usuario.",
+  "pubName": "BTWorkflow.ObtenerRolesUsuario",
+  "programa": "RBTPG583",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "usuario",
+      "Tipo": "String",
+      "Comentarios": "Usuario."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtRoles",
+      "Tipo": "sBTRolWF",
+      "Comentarios": "Listado de roles."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió usuario."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope\n\txmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n\t\t<bts:BTWorkflow.ObtenerRolesUsuario>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>GP</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>5FE07FD2DCE53B0DC365AA02</bts:Token>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:usuario>INSTALADOR</bts:usuario>\n\t\t</bts:BTWorkflow.ObtenerRolesUsuario>\n\t</soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRolesUsuario' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"usuario\": \"INSTALADOR\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope\n\txmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"\n\txmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n\txmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n\t<SOAP-ENV:Body>\n\t\t<BTWorkflow.ObtenerRolesUsuarioResponse\n\t\t\txmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t\t\t<Btinreq>\n\t\t\t\t<Device>GP</Device>\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t\t<Token>5FE07FD2DCE53B0DC365AA02</Token>\n\t\t\t</Btinreq>\n\t\t\t<sdtRoles>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>GXflow Public</descripcion>\n\t\t\t\t\t<codigo>0</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Operativo Sucursal</descripcion>\n\t\t\t\t\t<codigo>1</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Oficial Operaciones</descripcion>\n\t\t\t\t\t<codigo>2</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Digitador</descripcion>\n\t\t\t\t\t<codigo>4</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Autorizante</descripcion>\n\t\t\t\t\t<codigo>5</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Asesor de Créditos</descripcion>\n\t\t\t\t\t<codigo>6</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Gte. Microfinanzas</descripcion>\n\t\t\t\t\t<codigo>7</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Vendedor</descripcion>\n\t\t\t\t\t<codigo>41</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>Notarial</descripcion>\n\t\t\t\t\t<codigo>42</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t\t<sBTRolWF>\n\t\t\t\t\t<descripcion>GXflow Prototyper</descripcion>\n\t\t\t\t\t<codigo>9995</codigo>\n\t\t\t\t</sBTRolWF>\n\t\t\t</sdtRoles>\n\t\t\t<Erroresnegocio></Erroresnegocio>\n\t\t\t<Btoutreq>\n\t\t\t\t<Numero>36641</Numero>\n\t\t\t\t<Estado>OK</Estado>\n\t\t\t\t<Servicio>BTWorkflow.ObtenerRolesUsuario</Servicio>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Fecha>2025-11-10</Fecha>\n\t\t\t\t<Hora>17:24:02</Hora>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t</Btoutreq>\n\t\t</BTWorkflow.ObtenerRolesUsuarioResponse>\n\t</SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n   },\n   \"sdtRoles\": {\n      \"sBTRolWF\": [\n      {\n         \"descripcion\": \"GXflow Public\",\n         \"codigo\": 0\n      },\n      {\n         \"descripcion\": \"Operativo Sucursal\",\n         \"codigo\": 1\n      },\n      {\n         \"descripcion\": \"Oficial Operaciones\",\n         \"codigo\": 2\n      },\n      {\n         \"descripcion\": \"Digitador\",\n         \"codigo\": 4\n      },\n      {\n         \"descripcion\": \"Autorizante\",\n         \"codigo\": 5\n      },\n      {\n         \"descripcion\": \"Asesor de Créditos\",\n         \"codigo\": 6\n      },\n      {\n         \"descripcion\": \"Gte. Microfinanzas\",\n         \"codigo\": 7\n      },\n      {\n         \"descripcion\": \"Vendedor\",\n         \"codigo\": 41\n      },\n      {\n         \"descripcion\": \"Notarial\",\n         \"codigo\": 42\n      },\n      {\n         \"descripcion\": \"GXflow Prototyper\",\n         \"codigo\": 9995\n      }\n      ]\n   },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8418,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTWorkflow.EliminarRolesUsuario\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTRolWF",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del rol."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del rol."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

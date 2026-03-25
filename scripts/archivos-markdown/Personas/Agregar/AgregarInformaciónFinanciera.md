@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 40001 | Debe ingresar ingresos mensuales.
 40002 | Los ingresos mensuales deben ser mayor a [Importe parametrizado].
@@ -235,7 +235,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 Los campos del tipo de dato estructurado sBTPCOInformacionFinanciera son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 egresosMensuales | Double | Importe de egresos mensuales. 
 ingresosMensuales | Double | Importe de ingresos mensuales. 
 operacionesInternacionales | [sBTPCOOperacionesInternacionales](#sbtpcooperacionesinternacionales) | Datos de operaciones internacionales. 
@@ -254,7 +254,7 @@ totalPasivos | Double | Importe del total de pasivos.
 Los campos del tipo de dato estructurado sBTPCOOperacionesInternacionales son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 ciudad | String | Nombre de ciudad. 
 ciudadId | Short | Identificador de ciudad. 
 departamentoId | Int | Identificador de departamento. 

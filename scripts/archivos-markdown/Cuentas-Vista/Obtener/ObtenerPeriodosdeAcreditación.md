@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPeriodosDeAcreditacion | [sBTPeriodoDeAcreditacion](#sbtperiododeacreditacion) | Listado de períodos de acreditación.
 
 @tab Errores
@@ -99,34 +99,34 @@ No aplica.
             <Device/>
          </Btinreq>
          <sdtPeriodosDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Diario</descripcion>
                <valor>1</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Semanal</descripcion>
                <valor>5</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Quincenal</descripcion>
                <valor>15</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Mensual</descripcion>
                <valor>30</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Trimestral</descripcion>
                <valor>90</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Semestral</descripcion>
                <valor>180</valor>
-            </SdtsBTPeriodoDeAcreditacion>
-            <SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
+            <sBTPeriodoDeAcreditacion>
                <descripcion>Anual</descripcion>
                <valor>360</valor>
-            </SdtsBTPeriodoDeAcreditacion>
+            </sBTPeriodoDeAcreditacion>
          </sdtPeriodosDeAcreditacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -154,7 +154,7 @@ No aplica.
         "Device": ""
     },
     "sdtPeriodosDeAcreditacion": {
-        "SdtsBTPeriodoDeAcreditacion": [
+        "sBTPeriodoDeAcreditacion": [
             {
                 "descripcion": "Diario",
                 "valor": 1
@@ -213,7 +213,7 @@ No aplica.
 Los campos del tipo de dato estructurado sBTPeriodoDeAcreditacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del período. 
 valor | Int | Valor del período. 
 :::

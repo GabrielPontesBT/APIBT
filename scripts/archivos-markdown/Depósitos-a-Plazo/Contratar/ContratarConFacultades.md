@@ -1,6 +1,5 @@
 ---
 title: Contratar con Facultades
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -43,14 +42,14 @@ tipoIntegracionCuenta | String | Tipo de integración de la cuenta (Ej: Conjunta
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios  
-:--------- | :----------- | :-----------  
+:--------- | :--------- | :---------  
 operacionUId | Long | Identificador único de operación.
-transaccionUId | Long | Identificador único de movimiento. 
+movimientoUId | Long | Identificador único de movimiento. 
 
 @tab Errores
 
 Código | Descripción  
-:--------- | :-----------  
+:--------- | :---------  
 30001 | No se recibió el identificador de la Cuenta.  
 30002 | No se recibió el identificador de la Simulación.  
 30003 | No se recibió el identificador de la operación a utilizar para el débito.  
@@ -137,7 +136,7 @@ curl -X POST \
             <Token>6CD13C161EE607C42B83D501</Token>
          </Btinreq>
          <operacionUId>969</operacionUId>
-         <transaccionUId>167</transaccionUId>
+         <movimientoUId>167</movimientoUId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>35523</Numero>
@@ -164,7 +163,7 @@ curl -X POST \
       "Token": "6CD13C161EE607C42B83D501"
   },
   "opreacionUid": "969",
-  "transaccionUId": "167",
+  "movimientoUId": "167",
   "Erroresnegocio": "",
   "Btoutreq": {
     "Numero": "35523",

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPizarras | [sBTPizarra](#sbtpizarra) | Listado de pizarras.
 
 @tab Errores
@@ -297,8 +297,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPizarra son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 codigo | Int | Identificador de pizarra.
 descripcion | String | Nombre de la pizarra.
 :::

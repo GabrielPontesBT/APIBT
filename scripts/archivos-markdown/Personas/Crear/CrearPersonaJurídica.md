@@ -30,20 +30,20 @@ backtotop: false
 @tab Datos de Entrada
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPersonaJuridica | [sBTPersonaJuridica1](#sbtpersonajuridica1) | Datos de la persona jurídica.
 sdtIntegrantesJuridicosAlta | [sBTIntegranteJuridicoAlta](#sbtintegrantejuridicoalta) | Listado de personas físicas integrantes de la persona jurídica.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar al menos un integrante.
 30002 | Debe ingresar identificador de vínculo.
 30003 | No se pudo obtener identificador único de la persona.
@@ -313,7 +313,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaJuridica1 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 actividad | String | Nombre de actividad.
 actividadId | Long | Identificador de actividad.
 correoElectronico | String | Correo electrónico.
@@ -342,7 +342,7 @@ tipoDocumentoId | Short | Identificador del tipo de documento.
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 agrupador1 | String | Nombre agrupador 1.
 agrupador1Id | Short | Identificador agrupador 1.
 agrupador2 | String | Nombre agrupador 2.
@@ -378,7 +378,7 @@ ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clave | String | Identificador de información adicional.
 valor | String | Valor de información adicional.
 :::
@@ -391,7 +391,7 @@ valor | String | Valor de información adicional.
 Los campos del tipo de dato estructurado sBTIntegranteJuridicoAlta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 participacion | Double | porcentaje de participación del integrante.
 personaUId | Long | Identificador único de persona.
 vinculoId | Short | Identificador de vínculo.

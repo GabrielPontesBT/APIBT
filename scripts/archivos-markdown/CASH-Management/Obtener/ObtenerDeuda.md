@@ -45,7 +45,7 @@ sdtInfoDetalleCash | [sBTInfoDetalleCASH](#sbtinfodetallecash) | Listado de cabe
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030704 | Id de contrato cliente desconocido.
 1030706 | El convenio no está activo.
@@ -109,8 +109,8 @@ curl -X POST \
     "deudaId": 42525261,
     "sdtValorCampoCash": {
       "sBTValorCampoCash": {
-      "tag": "CSMD006IMP",
-      "valor": ""
+         "tag": "CSMD006IMP",
+         "valor": ""
       }
     }
   }'
@@ -211,12 +211,14 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 
 :::
+<!-- CIERRA SDT -->
 
+<!-- ABRE SDT -->
 ::: details sBTInfoDetalleCASH  
 
 ### sBTInfoDetalleCASH
@@ -225,10 +227,19 @@ valor | String | Valor del campo CASH.
 Los campos del tipo de dato estructurado sBTInfoDetalleCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalleOrden | Int | Detalle de la orden.
 ordenId | Long | Identificador de la orden.
-valoresDetalle | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de datos de valores de campos CASH.
+valoresDetalle | [sBTValorCampoCASH](#sbtvalorcampocash1) | Listado de datos de valores de campos CASH.
+
+### sBTValorCampoCASH1
+
+Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+tag | String | Tag del campo CASH.
+valor | String | Valor del campo CASH.
 
 :::
 <!-- CIERRA SDT -->

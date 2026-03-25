@@ -36,13 +36,13 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPlazos | [sBTPlazo](#sbtplazo) | Listado de plazos habilitados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del producto.
 30002 | No se recuperó el producto de ahorro para el identificador: [Número de identificador].
 40001 | Error de configuración: No se definió listado de plazos.
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPlazo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcion | String | Descripción extendida del plazo.
 tipo | String | Tipo de plazo (Diario: 'D', Mensual: 'M', Anual: 'A').
 valor | Int | Plazo.

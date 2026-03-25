@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosDigitales | [sBTDocumentoDigital](#sbtdocumentodigital) | Listado de Documentos Digitales.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30023 | No existe registro para el identificador único.
 30050 | La persona indicada no existe.
@@ -111,22 +111,22 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>0868626a064A8B5C60A82434</Token>
          </Btinreq>
-         <documentosDigitales>
+         <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
                <Titulo>C.I</Titulo>
                <FechaActualizacion>2017-03-30</FechaActualizacion>
                <FechaVencimiento>2018-03-30</FechaVencimiento>
                <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
-               <documentoId>83</documentoId>
+               <DocumentoId>83</DocumentoId>
             </sBTDocumentoDigital>
             <sBTDocumentoDigital>
                <Titulo>C.I 2</Titulo>
                <FechaActualizacion>2017-03-30</FechaActualizacion>
                <FechaVencimiento>2018-03-30</FechaVencimiento>
                <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
-               <documentoId>84</documentoId>
+               <DocumentoId>84</DocumentoId>
             </sBTDocumentoDigital>
-         </documentosDigitales>
+         </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>770</Numero>
@@ -144,7 +144,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -152,7 +152,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "documentosDigitales": {
+    "sdtDocumentosDigitales": {
         "sBTDocumentoDigital": [
             {
                 "Titulo": "C.I",
@@ -182,7 +182,7 @@ curl -X POST \
         "Hora": "16:17:09",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -198,11 +198,11 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-documentoId | Long | Identificador del documento digital. 
-fechaActualizacion | Date | Fecha de actualización del documento digital. 
-fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-titulo | String | Título del documento digital. 
+:--------- | :--------- | :--------- 
+DocumentoId | Long | Identificador del documento digital. 
+FechaActualizacion | Date | Fecha de actualización del documento digital. 
+FechaVencimiento | Date | Fecha de vencimiento del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Titulo | String | Título del documento digital. 
 :::
 <!-- CIERRA SDT -->

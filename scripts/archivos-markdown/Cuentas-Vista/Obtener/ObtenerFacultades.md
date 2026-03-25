@@ -36,14 +36,14 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtFacultades | [sBTFacultad](#sbtfacultad) | Listado de datos de facultades.
 sdtFirmantes | [sBTFacultadFirmantes](#sbtfacultadfirmantes) | Listado de datos de firmantes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación. 
 30002 | No se recuperó la operación para el Identificador: [Número de identificador]. 
 30003 | La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro. 
@@ -52,7 +52,7 @@ Código | Descripción
 
 ## **Ejemplos**
 
-<!-- ABRE EJEMPLO DE INVOCACIÓN -->
+<!-- ABRE EJEMPLO DE INVOC0ACIÓN -->
 ::: details Ejemplo de Invocación 
 ::: code-tabs #Formato
 
@@ -113,48 +113,48 @@ curl -X POST \
             <Device>GL</Device>
          </Btinreq>
          <sdtFacultades>
-            <SdtsBTFacultad>
+            <sBTFacultad>
                 <grupos></grupos>
                 <firmantes></firmantes>
                 <descripcion>Firma de Cheques</descripcion>
                 <tipo>Categoría</tipo>
                 <codigo>1</codigo>
-            </SdtsBTFacultad>
-            <SdtsBTFacultad>
+            </sBTFacultad>
+            <sBTFacultad>
                 <grupos>
-                    <SdtsBTFacultadGrupo>
+                    <sBTFacultadGrupo>
                         <moneda>$</moneda>
                         <codigoMoneda>0</codigoMoneda>
                         <vigenciaHasta>2022-10-04</vigenciaHasta>
                         <monto>99999990.00</monto>
                         <habilitado>S</habilitado>
                         <firmantes>
-                            <SdtsBTFacultadFirmante>
+                            <sBTFacultadFirmante>
                                 <potestad>Titular</potestad>
                                 <personaUId>161</personaUId>
                                 <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>
                                 <categoria/>
-                            </SdtsBTFacultadFirmante>
+                            </sBTFacultadFirmante>
                         </firmantes>
                         <codigoPapel>0</codigoPapel>
                         <papel>$</papel>
                         <numero>1</numero>
                         <vigenciaDesde>2020-01-02</vigenciaDesde>
-                    </SdtsBTFacultadGrupo>
+                    </sBTFacultadGrupo>
                 </grupos>
                 <firmantes></firmantes>
                 <descripcion>Retiro de cuentas vista</descripcion>
                 <tipo>Persona</tipo>
                 <codigo>2</codigo>
-            </SdtsBTFacultad>
+            </sBTFacultad>
         </sdtFacultades>
         <sdtFirmantes>
-            <SdtsBTFacultadFirmante>
+            <sBTFacultadFirmante>
                 <potestad>Titular</potestad>
                 <personaUId>161</personaUId>
                 <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>
                 <categoria/>
-            </SdtsBTFacultadFirmante>
+            </sBTFacultadFirmante>
         </sdtFirmantes>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -182,7 +182,7 @@ curl -X POST \
           "Device": "GL"
         },
         "sdtFacultades": {
-          "SdtsBTFacultad": [
+          "sBTFacultad": [
             {
               "grupos": "",
               "firmantes": "",
@@ -192,14 +192,14 @@ curl -X POST \
             },
             {
               "grupos": {
-                "SdtsBTFacultadGrupo": {
+                "sBTFacultadGrupo": {
                   "moneda": "$",
                   "codigoMoneda": 0,
                   "vigenciaHasta": "2022-10-04",
                   "monto": 99999990,
                   "habilitado": "S",
                   "firmantes": {
-                    "SdtsBTFacultadFirmante": {
+                    "sBTFacultadFirmante": {
                       "potestad": "Titular",
                       "personaUId": 161,
                       "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
@@ -220,7 +220,7 @@ curl -X POST \
           ]
         },
         "sdtFirmantes": {
-          "SdtsBTFacultadFirmante": {
+          "sBTFacultadFirmante": {
             "potestad": "Titular",
             "personaUId": 161,
             "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
@@ -253,7 +253,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTFacultad son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código. 
 descripcion | String | Descripción. 
 firmantes | [sBTFacultadFirmante](#sbtfacultadfirmante) | Listado de firmantes de la facultad. 
@@ -266,7 +266,7 @@ tipo | String | Tipo.
 Los campos del tipo de dato estructurado sBTFacultadGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigoMoneda | Int | Código de moneda. 
 codigoPapel | Long | Código de papel. 
 firmantes | [sBTFacultadFirmante](#sbtfacultadfirmante) | Listado de firmantes. 
@@ -287,7 +287,7 @@ vigenciaHasta | Date | Fecha de vigencia hasta.
 Los campos del tipo de dato estructurado sBTFacultadFirmante son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 categoria | String | Categoría. 
 nombre | String | Nombre. 
 personaUId | long | Identificador único de persona. 

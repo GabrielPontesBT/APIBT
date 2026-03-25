@@ -18,6 +18,11 @@
     font-weight: 700;
   }
 
+  // Elimina la línea divisoria entre el header y el contenido
+  .mat-mdc-tab-label-container {
+    border-bottom: none !important;
+  }
+
   // PESTAÑAS INACTIVAS
   .mdc-tab {
     &:hover {
@@ -49,5 +54,21 @@
   // Esconder indicador de tinta inferior
   .mdc-tab-indicator {
     display: none !important;
+  }
+
+  // Animación de entrada del contenido al cambiar pestaña
+  .mat-mdc-tab-body-active .mat-mdc-tab-body-content {
+    animation: tabFadeIn 600ms var(--ease-smooth);
+  }
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

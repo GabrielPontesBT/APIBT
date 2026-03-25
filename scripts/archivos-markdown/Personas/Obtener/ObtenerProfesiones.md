@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProfesiones | [sBTProfesion](#sbtprofesion) | Listado de profesiones.
 
 @tab Errores
@@ -274,7 +274,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProfesion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de profesión. 
 identificador | Short | Identificador de profesión. 
 :::

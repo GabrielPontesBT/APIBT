@@ -37,7 +37,7 @@ estado | Int | Identificador de estado.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCiudades | [sBTCiudad](#sbtciudad) | Listado de Ciudades.
 
 @tab Errores
@@ -177,7 +177,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCiudad son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de Ciudad.
 identificador | Int | Identificador de Ciudad.
 :::

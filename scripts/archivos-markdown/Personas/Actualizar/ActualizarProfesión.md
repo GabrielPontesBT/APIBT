@@ -35,14 +35,14 @@ personaUId | Long | Identificador único de persona.
 profesionId | Short | Identificador de profesión.
 fechaInicioProfesion | Date | Fecha de inicio de la profesión.
 
-@tab Datos de Salida
+@tab Datos de Entrada
 
 No aplica.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | El identificador no corresponde a una persona física.
 30003 | No se recibió fecha de inicio de profesión.

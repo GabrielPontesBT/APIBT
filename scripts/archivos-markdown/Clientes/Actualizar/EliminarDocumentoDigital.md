@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de instancia de documento digital.
 30004 | No se recibió el identificador de cliente.
 30013 | No existe registro para el identificador indicado.

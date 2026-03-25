@@ -36,13 +36,13 @@ sdtPartner | [sBTPartnerInReq](#sbtpartnerinreq) | Datos del usuario.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de los productos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió Partner ni canal.
 30002 | El Partner no se encuentra habilitado.
 30003 | No existe Partner con ese identificador.
@@ -100,7 +100,7 @@ curl -X POST \
       "vendedorUId": 56,
       "partnerUId": 23
    },
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -214,7 +214,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Hora": "17:08:56"
    }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId | Int | Identificador del punto de venta.
 vendedorUId | Int | Identificador del vendedor.
@@ -244,7 +244,7 @@ vendedorUId | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de moneda.
 nombre | String | Nombre de producto.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
@@ -256,7 +256,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

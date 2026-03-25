@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentasCliente | [sBTCuentaCliente](#sbtcuentacliente) | Listado de cuentas cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se pudo obtener identificador único de la cuenta.
 30015 | No se recibió identificador de cuenta a consultar.
@@ -90,7 +90,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "41",
+	"personaUId": "41"
 }'
 ```
 :::
@@ -147,7 +147,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -185,7 +185,7 @@ curl -X POST \
         "Hora": "15:56:11",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -201,7 +201,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuentaCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único de cuenta. 
 representativo | String | Indica si es titular representativo (S/N). 
 titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Datos de tipo de integrante. 
@@ -212,7 +212,7 @@ titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Datos de tipo de integra
 Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del integrante. 
 identificador | Int | Identificador del integrante. 
 :::

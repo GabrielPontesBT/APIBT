@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sCTPersona | [sCTPersona](#sctpersona) | Datos de cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador.
 ::: 
@@ -241,7 +241,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sCTPersona son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividad | String | Actividad laboral. 
 antiguedadLaboral | Short | Antigüedad laboral. 
 apellidos | String | Apellidos. 
@@ -269,7 +269,7 @@ telefono | String | Teléfono.
 Los campos del tipo de dato estructurado sCTDomicilio son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 barrio | String | Barrio. 
 codPostal | String | Código postal. 
 departamento | String | Departamento del domicilio. 
@@ -287,7 +287,7 @@ zona | String | Zona del domicilio.
 Los campos del tipo de dato estructurado sCTDocumento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaVencimiento | Date | Fecha de vencimiento del documento. 
 nombreTipoDocumento | String | Nombre del tipo de documento. 
 nroDocumento | String | Número de documento. 

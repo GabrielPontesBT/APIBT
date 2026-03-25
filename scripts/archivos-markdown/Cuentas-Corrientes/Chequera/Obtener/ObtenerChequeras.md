@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtChequeras | [sBTChequerasCC](#sbtchequerascc) | Listado de chequeras.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de Operación.
 30002 | No se recuperó la operación para el identificador.
 ::: 
@@ -175,7 +175,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTChequerasCC son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidad | Int | Cantidad de chequeras. 
 chequera | [sBTChequera](#sbtchequera) | Datos de Chequera. 
 productoUId | Long | Identificador único de producto. 
@@ -185,7 +185,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTChequera son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCheques | Short | Cantidad de cheques. 
 chequeInicial | Int | Número de cheque en el cual inicia la chequera. 
 chequesDisponibles | Short | Cantidad de cheques disponibles. 

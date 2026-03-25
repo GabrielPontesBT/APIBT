@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar Usuario.
 30002 | No existe Usuario.
 30003 | Debe ingresar Perfil.

@@ -37,13 +37,13 @@ chequeraId | Long | Identificador de solicitud de chequera.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCheques | [sBTCheque](#sbtcheque) | Listado de cheques.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 30002 | No se recibió identificador de chequera.
 30011 | No se recuperó la operación para el identificador recibido.
@@ -126,6 +126,7 @@ curl -X POST \
                <estado>1</estado>
                <descripcion>Pago</descripcion>
             </SdtsBTCheque>
+            ...
          </sdtCheques>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -164,6 +165,7 @@ curl -X POST \
 		  "estado": "1",
 		  "descripcion": "Pago"
 		},
+		...
 	  ]
 	},
 	"Btoutreq": {
@@ -191,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCheque son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 estado | Short | Estado del cheque. 
 numero | Int | Número de cheque. 

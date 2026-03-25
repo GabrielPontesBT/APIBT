@@ -1,6 +1,5 @@
 ---
 title: Obtener Domicilios 
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -39,12 +38,12 @@ personaUId | Long | Identificador único de persona.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sbtDomicilio | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
+sdtDomicilioCompleto | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | El identificador de la persona no es correcto.
 ::: 
@@ -63,14 +62,13 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTPersonas.ObtenerDomicilios>
          <bts:Btinreq>
- 		   <bts:Btinreq>
              <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Device>FC</bts:Device>
             <bts:Requerimiento>0</bts:Requerimiento>
             <bts:Token>6C363FC1CD2072DE525376D3</bts:Token>
          </bts:Btinreq>
-         <bts:PersonaUid>237</bts:PersonaUid>
+         <bts:personaUId>237</bts:personaUId>
       </bts:BTPersonas.ObtenerDomicilios>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -91,9 +89,8 @@ curl -X POST \
     "Canal": "BTDIGITAL",
     "Token": "6C363FC1CD2072DE525376D3"
   },
-   "PersonaUid": 237
-    }   
-
+   "personaUId": 237
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -114,8 +111,8 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>6C363FC1CD2072DE525376D3</Token>
          </Btinreq>
-         <sbtDomicilioCompleto>
-            <SdtsBTDomicilioCompleto>
+         <sdtDomicilioCompleto>
+            <sBTDomicilioCompleto>
                <coloniaId>0</coloniaId>
                <agrupador1Id>0</agrupador1Id>
                <agrupador5/>
@@ -144,8 +141,8 @@ curl -X POST \
                <localidad/>
                <tipoDomicilioId>1</tipoDomicilioId>
                <departamentoId>10</departamentoId>
-            </SdtsBTDomicilioCompleto>
-         </sbtDomicilioCompleto>
+            </sBTDomicilioCompleto>
+         </sdtDomicilioCompleto>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>34973</Numero>
@@ -168,7 +165,8 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \
-  -d '{
+  -d 
+{
 	"Btinreq": {
       "Device": "FC",
       "Usuario": "INSTALADOR",
@@ -176,8 +174,8 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Token": "6C363FC1CD2072DE525376D3"
 	},
-   "sbtDomicilioCompleto": {
-      "SdtsBTDomicilioCompleto": [
+   "sdtDomicilioCompleto": {
+      "sBTDomicilioCompleto": [
         {
             "coloniaId": 0,
             "agrupador1Id": 0,
@@ -222,7 +220,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Hora": "10:45:27"
    }
-}'
+}
 
 ```
 ::: 
@@ -239,7 +237,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios  
-:--------- | :----------- | :-----------  
+:--------- | :--------- | :---------  
 agrupador1 | String | Agrupador 1.  
 agrupador1Id | Short | Identificador del agrupador 1.  
 agrupador2 | String | Agrupador 2.  

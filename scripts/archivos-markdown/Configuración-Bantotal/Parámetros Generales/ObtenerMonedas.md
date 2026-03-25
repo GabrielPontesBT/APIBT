@@ -431,8 +431,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTMoneda son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 descripcion | String | Descripción de moneda.
 identificador | Short | Identificador de moneda.
 simbolo | String | Símbolo de moneda.

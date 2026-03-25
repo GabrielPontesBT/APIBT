@@ -36,13 +36,13 @@ listaUId | Long | Identificador de lista.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento (Asiento).
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de lista.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

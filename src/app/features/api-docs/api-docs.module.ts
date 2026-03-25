@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ApiDocsRoutingModule } from './api-docs-routing.module';
 
@@ -55,6 +56,7 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
     MatCardModule,
     MatIconModule,
     MatExpansionModule,
+    MatTooltipModule,
     ApiDocsRoutingModule
   ],
   exports: [

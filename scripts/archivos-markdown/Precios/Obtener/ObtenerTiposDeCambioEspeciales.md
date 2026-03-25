@@ -1,6 +1,5 @@
 ---
 title: Obtener Tipos de Cambio Especiales
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -194,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoDeCambioEspecial son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción.
 esInteractivo | Double | ¿Es interactiva? (S o N).
 identificador | Short | Identificador de la pizarra.

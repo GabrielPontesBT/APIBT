@@ -36,13 +36,13 @@ operacionUId | Long | Identificador de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSolicitudesChequeras | [sBTSolicitudesChequeras](#sbtsolicitudeschequeras) | Listado de chequeras.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de la operación.
 30002 | No existe la operación indicada.
 30003 | La operación ingresada no corresponde a una cuenta corriente.
@@ -303,7 +303,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSolicitudesChequeras son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosChequera | [sBTDatosChequera](#sbtdatoschequera) | Listado de chequeras.
 
 ### sBTDatosChequera
@@ -312,7 +312,7 @@ sdtDatosChequera | [sBTDatosChequera](#sbtdatoschequera) | Listado de chequeras.
 Los campos del tipo de dato estructurado sBTDatosChequera son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantidadLibretas | Short | Cantidad de libretas.
 chequeInicial | Int | Cheque inicial.
 empresa | Short | Empresa de la emisión de la chequera.

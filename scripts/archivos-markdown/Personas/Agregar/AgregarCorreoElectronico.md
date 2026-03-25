@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se ingresó el usuario del correo electrónico.
 30002 | Caracteres inválidos en el dominio.
 30003 | No se ingresó dominio.
@@ -176,7 +176,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCorreoElectronico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo | Int | Correlativo de correo electrónico.
 correoElectronico | String | Correo electrónico.
 :::

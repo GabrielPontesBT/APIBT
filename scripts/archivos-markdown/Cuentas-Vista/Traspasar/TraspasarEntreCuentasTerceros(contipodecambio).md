@@ -58,13 +58,13 @@ tipoDeCambio | Double | Cotización.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtResultadoTraspaso | [sBTResultadoTraspasoDatos](#sbtresultadotraspasodatos) | Resultado del traspaso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].
 30003 | No se recibió el identificador único de operación de origen.
@@ -225,7 +225,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del Traspaso. 
 importe | Double | Importe del Movimiento. 
 monedaId | Short | Identificador de Moneda.  
@@ -241,7 +241,7 @@ operacionUIdOrigen | Long | Identificador de operación de origen del traspaso.
 Los campos del tipo de dato estructurado sBTResultadoTraspasoDatos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idMovimiento | String | Identificador de Movimiento String. 
 movimientoUId |	Long | Identificador de Movimiento.  
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso.  

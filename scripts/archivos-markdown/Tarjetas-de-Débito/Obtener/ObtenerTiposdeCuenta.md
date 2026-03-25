@@ -34,8 +34,8 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtTiposDeCuenta | [sBTTipoDeCuenta](#sbttipodecuenta) | Listado de tipos de cuenta.
+:--------- | :--------- | :---------
+sdtTiposDeCuenta | [sBTTipoDeCuentaTD](#sbttipodecuentatd) | Listado de tipos de cuenta.
 
 @tab Errores
 
@@ -99,14 +99,14 @@ No aplica.
             <Device/>
          </Btinreq>
          <sdtTiposDeCuenta>
-            <SdtsBTTipoDeCuenta>
+            <sBTTipoDeCuentaTD>
                <descripcion>Preferencial</descripcion>
                <codigo>1</codigo>
-            </SdtsBTTipoDeCuenta>
-            <SdtsBTTipoDeCuenta>
+            </sBTTipoDeCuentaTD>
+            <sBTTipoDeCuentaTD>
                <descripcion>Normal</descripcion>
                <codigo>5</codigo>
-            </SdtsBTTipoDeCuenta>
+            </sBTTipoDeCuentaTD>
          </sdtTiposDeCuenta>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -134,7 +134,7 @@ No aplica.
         "Device": ""
     },
     "sdtTiposDeCuenta": {
-        "SdtsBTTipoDeCuenta": [
+        "sBTTipoDeCuentaTD": [
             {
                 "descripcion": "Preferencial",
                 "codigo": 1
@@ -165,15 +165,15 @@ No aplica.
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTTipoDeCuenta  
+::: details sBTTipoDeCuentaTD  
 
-### sBTTipoDeCuenta
+### sBTTipoDeCuentaTD
 
 ::: center 
-Los campos del tipo de dato estructurado sBTTipoDeCuenta son los siguientes: 
+Los campos del tipo de dato estructurado sBTTipoDeCuentaTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código del tipo de cuenta. 
 descripcion | String | Descripción del tipo de cuenta. 
 :::

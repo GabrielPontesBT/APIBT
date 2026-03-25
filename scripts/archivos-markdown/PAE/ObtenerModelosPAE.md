@@ -109,6 +109,7 @@ curl -X POST \
                <descripcion>Politicas - Solicitud</descripcion>
                <tipoModelo>P-Politicas</tipoModelo>
             </SdtsBTModeloPAE>
+            ...
          </sdtModelosPAE>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -142,6 +143,7 @@ curl -X POST \
             "descripcion": "Politicas - Solicitud", 
             "tipoModelo": "P-Politicas" 
         }, 
+        ...
         ] 
     }, 
     "Erroresnegocio": { 
@@ -171,7 +173,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTModeloPAE son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de modelo. 
 modeloId | Short | Código de modelo. 
 tipoModelo | String | Tipo de modelo. 

@@ -30,7 +30,7 @@ backtotop: false
 Se debe parametrizar en la guía de procesos 70101 de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :----------- 
+:--------- | :--------- 
 Correlativo | Valor incremental. 
 Valor específico | Código de instrucción habilitada. 
 Importe específico | 3. 
@@ -56,7 +56,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | No se recibió el identificador de la operación del depósito.
 30003 | No se recibió la instrucción al vencimiento.

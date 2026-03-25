@@ -38,13 +38,13 @@ numeroDocumento | String | Número de documento de la persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 existe | String | ¿Existe? (S/N).
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de país.
 30002 | No se recibió el identificador de tipo de documento.
 30003 | No se recibió el número de documento.

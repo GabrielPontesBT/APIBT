@@ -38,13 +38,13 @@ sdtOperaciones | [sBTOperacionId](#sbtoperacionid) | Listado de operaciones.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 montoCancelacion | Double | Monto de cancelación de la operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de solicitud.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recibió ninguna operación para ampliar.
@@ -110,7 +110,7 @@ curl -X POST \
 		"operacionUId": "1727"
       },
    },
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -169,7 +169,7 @@ curl -X POST \
       "Numero": "11003", 
       "Estado": "OK" 
    } 
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -185,7 +185,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTOperacionId son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 operacionUId | Long | Identificador único de operación.
 :::
 <!-- CIERRA SDT -->

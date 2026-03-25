@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTipoDocumentos | [sBTTipoDocumento](#sbttipodocumento) | Listado de tipos de documento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen Tipos de Documentos ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -254,7 +254,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoDocumento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de tipo de documento. 
 identificador | Short | Identificador de tipo de documento. 
 tipoPersona | String | Tipo de Persona (F/J). 

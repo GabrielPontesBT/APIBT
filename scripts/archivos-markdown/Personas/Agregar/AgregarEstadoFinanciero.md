@@ -1,6 +1,5 @@
 ---
 title: Agregar Estado Financiero
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -40,13 +39,13 @@ sdtConceptosEstadoFinanciero | [sBTDetallesEstadosFinancieros ](#sbtdetallesesta
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoFinanciero | [sBTEstadoFinanciero ](#sbtestadofinanciero) | Datos del estado financiero.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se recibió la fecha de elaboración.
 30003 | No se recibió el código de la moneda.
@@ -187,7 +186,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -215,7 +214,7 @@ curl -X POST \
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -231,13 +230,13 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoFinanciero son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-auditado | String | ¿Es auditado? (S/N).
-fechaDeElaborado | Date | Fecha de elaborado.
-fechaRegistro | Date | Fecha de registro. 
-id | int | Identificador de estado financiero.
-moneda | Short | Identificador de moneda.
-usuarioDeIngreso | String | Usuario de ingreso.
+:--------- | :--------- | :--------- 
+Auditado | String | ¿Es auditado? (S/N).
+FechadeElaborado | Date | Fecha de elaborado.
+FechaRegistro | Date | Fecha de registro. 
+Id | int | Identificador de estado financiero.
+Moneda | Short | Identificador de moneda.
+UsuariodeIngreso | String | Usuario de ingreso.
 :::
 
 ::: details sBTCondicionTributaria 
@@ -248,7 +247,7 @@ usuarioDeIngreso | String | Usuario de ingreso.
 Los campos del tipo de dato estructurado sBTCondicionTributaria son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 activo | String | ¿Está activo? (S/N).
 regimenTributario | String | Régimen tributario.
 RUC | String | RUC.
@@ -263,7 +262,7 @@ ventasAnuales | Double | Total de ventas anuales.
 Los campos del tipo de dato estructurado sBTDetallesEstadosFinancieros son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idConcepto | int | Identificador del concepto del estado financiero.
 valorConcepto | Double | Valor del concepto del estado financiero.
 :::

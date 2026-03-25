@@ -36,7 +36,7 @@ seguroUId | Long | Identificador único del seguro.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 montoAdeudado | Double | Monto adeudado.
 montoMinimo | Double | Monto mínimo.
 montoCancelacion | Double | Monto de cancelación.
@@ -44,7 +44,7 @@ montoCancelacion | Double | Monto de cancelación.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador de operación del seguro.
 30003 | No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].
 :::

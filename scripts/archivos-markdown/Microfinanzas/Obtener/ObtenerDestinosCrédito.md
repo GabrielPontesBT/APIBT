@@ -37,7 +37,7 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDestinosCredito | [sBTDestinoCredito](#sbtdestinocredito) | Listado de destinos de crédito.
 
 @tab Errores
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDestinoCredito son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de destino de crédito. 
 identificador | Short | Identificador de destino de crédito. 
 :::

@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar Usuario.
 30002 | No existe Usuario.
 30003 | Debe ingresar Perfil.
@@ -177,8 +177,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPerfilBT son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 FechaAlta | Date | Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil.
 FechaVencimiento | Date | Fecha de vencimiento del perfil para el usuario.
 Perfil | String | Identificador de perfil Bantotal.

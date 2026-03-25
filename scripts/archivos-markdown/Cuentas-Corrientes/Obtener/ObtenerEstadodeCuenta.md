@@ -38,7 +38,7 @@ cantidadMovimientos | Int | Cantidad de movimientos (Se puede parametrizar como 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoDeCuenta | [sBTEstadoCuentaCV](#sbtestadocuentacv) | Datos de estado de cuenta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -124,6 +124,7 @@ curl -X POST \
                   <arbitraje>0.000000</arbitraje>
                   <saldo>143750.00</saldo>
                </sBTMovimiento>
+               ...
             </movimientos>
             <fechaDesde>2018-07-11</fechaDesde>
          </sdtEstadoDeCuenta>
@@ -172,6 +173,7 @@ curl -X POST \
                     "arbitraje": "0.000000",
                     "fecha": "2018-10-09"
                 },
+                ...
             ]
         },
         "fechaDesde": "2018-07-11"
@@ -204,7 +206,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCuentaCV son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta. 
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de movimiento. 
@@ -217,7 +219,7 @@ saldoPartida | Double | Saldo inicial.
 Los campos del tipo de dato estructurado sBTMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 arbitraje | Double | Arbitraje de moneda. 
 concepto | String | Concepto de movimiento. 
 debitoCredito | String | Débito o Crédito (D/C). 

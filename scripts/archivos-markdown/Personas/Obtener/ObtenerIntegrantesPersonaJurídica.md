@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtIntegrantesJuridicos | [sBTIntegranteJuridico](#sbtintegrantejuridico) | Listado de integrantes jurídicos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 40001 | La persona jurídica no existe.
 ::: 
@@ -88,7 +88,7 @@ curl -X POST \
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
-    "personaUId": 10017,
+    "personaUId": 10017
 }'
 ```
 :::
@@ -111,7 +111,7 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtIntegrantesJuridicos>
-            <SdtsBTIntegranteJuridico>
+            <sBTIntegranteJuridico>
                <paisId>845</paisId>
                <pais>URUGUAY</pais>
                <tipoDocumentoId>1</tipoDocumentoId>
@@ -122,7 +122,7 @@ curl -X POST \
                <vinculo>Presidente</vinculo>
                <participacion>0.0000</participacion>
                <personaUId>1</personaUId>
-            </SdtsBTIntegranteJuridico>
+            </sBTIntegranteJuridico>
          </sdtIntegrantesJuridicos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -150,7 +150,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtIntegrantesJuridicos": {
-        "SdtsBTIntegranteJuridico": {
+        "sBTIntegranteJuridico": {
         "paisId": "845",
         "pais": "URUGUAY",
         "tipoDocumentoId": "1",
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIntegranteJuridico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre de la persona. 
 nroDocumento | String | Número de documento. 
 pais | String | Nombre del país. 

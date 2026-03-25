@@ -1,6 +1,5 @@
 ---
 title: Obtener Agrupadores de Domicilio
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -43,13 +42,13 @@ agrupadorId6 | Short | Identificador del nivel de agrupador 6.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtAgrupadores | [sBTAgrupadores](#sbtagrupadores) | Listado de agrupadores.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se encontraron agrupadores.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -245,7 +244,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAgrupadores son los siguientes: 
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 niveles | [sBTAgrupadorNiv1](#sbtagrupadorniv1) | Colección del primer subnivel de agrupación.
 
 ### sBTAgrupadorNiv1
@@ -254,7 +253,7 @@ niveles | [sBTAgrupadorNiv1](#sbtagrupadorniv1) | Colección del primer subnivel
 Los campos del tipo de dato estructurado sBTAgrupadorNiv1 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel2 | [sBTAgrupadorNiv2](#sbtagrupadorniv2) | Colección del segundo subnivel de agrupación.
@@ -265,7 +264,7 @@ subNivel2 | [sBTAgrupadorNiv2](#sbtagrupadorniv2) | Colección del segundo subni
 Los campos del tipo de dato estructurado sBTAgrupadorNiv2 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel3 | [sBTAgrupadorNiv3](#sbtagrupadorniv3) | Colección del tercer subnivel de agrupación.
@@ -276,7 +275,7 @@ subNivel3 | [sBTAgrupadorNiv3](#sbtagrupadorniv3) | Colección del tercer subniv
 Los campos del tipo de dato estructurado sBTAgrupadorNiv3 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel4 | [sBTAgrupadorNiv4](#sbtagrupadorniv4) | Colección del cuarto subnivel de agrupación.
@@ -287,7 +286,7 @@ subNivel4 | [sBTAgrupadorNiv4](#sbtagrupadorniv4) | Colección del cuarto subniv
 Los campos del tipo de dato estructurado sBTAgrupadorNiv4 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel | [sBTAgrupadorNiv5](#sbtagrupadorniv5) | Colección del quinto subnivel de agrupación.
@@ -298,7 +297,7 @@ subNivel | [sBTAgrupadorNiv5](#sbtagrupadorniv5) | Colección del quinto subnive
 Los campos del tipo de dato estructurado sBTAgrupadorNiv5 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel6 | [sBTAgrupadorNiv6](#sbtagrupadorniv6) | Colección del quinto subnivel de agrupación.
@@ -309,7 +308,7 @@ subNivel6 | [sBTAgrupadorNiv6](#sbtagrupadorniv6) | Colección del quinto subniv
 Los campos del tipo de dato estructurado sBTAgrupadorNiv6 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 ::: 

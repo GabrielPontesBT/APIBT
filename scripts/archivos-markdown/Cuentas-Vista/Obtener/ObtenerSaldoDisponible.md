@@ -36,7 +36,7 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 estado | Byte | Estado de la operación.
 saldoDisponible | Double | Saldo disponible de la operación.
 moneda | String | Signo de la moneda de la operación.
@@ -44,7 +44,7 @@ moneda | String | Signo de la moneda de la operación.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30002 | La operación ingresada no corresponde a una cuenta vista.
 30101 | No se recuperó la operación para el identificador recibido.

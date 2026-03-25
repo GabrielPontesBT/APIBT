@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEvolucionSaldo | [sBTEvolucionSaldos](#sbtevolucionsaldos) | Datos de la evolución de saldos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó Operación para el identificador: [Número de identificador].
 30003 | La operación ingresada no corresponde a una cuenta de ahorro.
@@ -124,6 +124,7 @@ curl -X POST \
                   <mes>8</mes>
                   <saldo>0.00</saldo>
                </sBTSaldoMensual>
+               ...
             </saldos>
          </sdtEvolucionSaldo>
          <Erroresnegocio></Erroresnegocio>
@@ -165,6 +166,7 @@ curl -X POST \
                     "mes": "8",
                     "anio": "2018"
                 },
+                ...
             ]
         }
     },
@@ -196,7 +198,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEvolucionSaldos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 productoUId | Long | Identificador único de producto. 
 saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual. 
  
@@ -206,7 +208,7 @@ saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual.
 Los campos del tipo de dato estructurado sBTSaldoMensual son los siguientes:  
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 anio | Short | Año. 
 mes | Byte | Mes. 
 saldo | Double | Saldo mensual. 

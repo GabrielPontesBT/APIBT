@@ -43,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona.
 30002 | No se recibió si la persona es un empleado de la institución o no.
 30003 | No existe registro para el identificador único.

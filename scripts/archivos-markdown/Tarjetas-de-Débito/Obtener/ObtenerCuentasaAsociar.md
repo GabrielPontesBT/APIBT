@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta de débito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentasAAsociar | [sBTCuentaAAsociarTD](#sbtcuentaaasociartd) | Lista de cuentas a asociar.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tarjeta de débito.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -117,7 +117,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, GENÉRICA</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta/>
@@ -129,7 +128,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta>PESOS</subCuenta>
@@ -141,7 +139,6 @@ curl -X POST \
                   <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta>PESOS</subCuenta>
@@ -181,8 +178,7 @@ curl -X POST \
 			  "productoUId": "133", 
 			  "nombre": "CUENTA CORRIENTE, GENÉRICA", 
 			  "moneda": "$", 
-			  "papel": "" ,
-           "otrosConceptos":""
+			  "papel": "" 
 			}, 
 			"sucursal": "Casa Matriz", 
 			"subCuenta": "" 
@@ -193,8 +189,7 @@ curl -X POST \
 			  "productoUId": "93", 
 			  "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física", 
 			  "moneda": "$", 
-			  "papel": "" ,
-           "otrosConceptos":""
+			  "papel": "" 
 			}, 
 			"sucursal": "Casa Matriz", 
 			"subCuenta": "PESOS" 
@@ -205,8 +200,7 @@ curl -X POST \
 			  "productoUId": "93", 
 			  "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física", 
 			  "moneda": "$", 
-			  "papel": "" ,
-           "otrosConceptos":""
+			  "papel": "" 
 			}, 
 			"sucursal": "Casa Matriz", 
 			"subCuenta": "PESOS" 
@@ -238,7 +232,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuentaAAsociarTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 subcuenta | String | Nombre de la cuenta. 
@@ -250,7 +244,7 @@ sucursal | String | Sucursal de la cuenta.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -263,7 +257,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

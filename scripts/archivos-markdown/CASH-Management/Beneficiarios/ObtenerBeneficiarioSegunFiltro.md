@@ -31,9 +31,9 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-contratoId | Short | Identificador del contrato.
-servicio | Short | Servicio CASH.
-clienteUId | String | Identificador único del cliente.
+contratoId | Int | Identificador del contrato.
+servicioId | Short | Servicio CASH.
+clienteUId | Long | Identificador único del cliente.
 agendaId | Short | Identificador de la agenda.
 sdtValorCampoCash | [sBTValorCampoCASH](#sbtvalorcampocash) | Lista de valores de campos CASH a buscar.
 
@@ -46,12 +46,12 @@ sdtBeneficiario | [sBTResumenBeneficiario](#sbtresumenbeneficiario) | Listado de
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030704 | Id de contrato cliente desconocido.
 1030709 | Se requiere identificación de cuenta cliente
 1030713 | El contrato no corresponde a la cuenta recibida.
-1030780 | No se recupero Beneficiario para la identificación recibida.
+1030780 | No se recuperó Beneficiario para la identificación recibida.
 
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -372,12 +372,14 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 
 :::
+<!-- CIERRA SDT -->
 
+<!-- ABRE SDT -->
 ::: details sBTResumenBeneficiario  
 
 ### sBTResumenBeneficiario
@@ -386,7 +388,7 @@ valor | String | Valor del campo CASH.
 Los campos del tipo de dato estructurado sBTResumenBeneficiario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 contrato | Int | Contrato.
 servicio | Short | Servicio.
 codAgenda | Short | Código de agenda.

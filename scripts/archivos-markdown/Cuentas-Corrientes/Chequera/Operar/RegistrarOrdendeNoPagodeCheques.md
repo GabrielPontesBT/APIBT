@@ -41,13 +41,13 @@ sdtCheques | [sBTCheque](#sbtcheque) | Listado de cheques.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 numeroDenuncia | Long | Identificador de la denuncia.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 30002 | No se recibió identificador de chequera.
 30003 | Debe ingresar el numero del cheque.
@@ -91,11 +91,11 @@ Código | Descripción
          <bts:tipoDenuncia>E</bts:tipoDenuncia>
          <bts:motivoDenuncia>P</bts:motivoDenuncia>
          <bts:sdtCheques>
-            <bts:SdtsBTCheque>
+            <bts:sBTCheque>
                <bts:numero>1327</bts:numero>
                <bts:estado>1</bts:estado>
                <bts:descripcion>Prueba</bts:descripcion>
-            </bts:SdtsBTCheque>
+            </bts:sBTCheque>
          </bts:sdtCheques>
       </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques>
    </soapenv:Body>
@@ -123,7 +123,7 @@ curl -X POST \
 	"tipoDenuncia": "E",
 	"motivoDenuncia": "P",
 	"sdtCheques": {
-	  "SdtsBTCheque": {
+	  "sBTCheque": {
 		"numero": "1327",
 		"estado": "1",
 		"descripcion": "Prueba"
@@ -201,7 +201,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCheque son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 estado | Short | Estado del cheque. 
 numero | Int | Número de cheque. 

@@ -39,7 +39,7 @@ monedaId | Short | Identificador de moneda.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 arbitrajeCompra | Double | Valor del arbitraje (Compra).
 arbitrajeVenta | Double | Valor del arbitraje (Venta).
 tipoCambioCompra | Double | Valor del tipo de cambio (Compra).
@@ -48,7 +48,7 @@ tipoCambioVenta | Double | Valor del tipo de cambio (Venta).
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar transacción Bantotal.
 30002 | Debe ingresar módulo Bantotal.
 30003 | La moneda ingresada no existe.

@@ -44,13 +44,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosTarjeta | [sBDProductoTarjeta](#sbdproductotarjeta) | Listado de tarjetas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente. 
 30002 | No se recuperó la cuenta para el Identificador. 
 ::: 
@@ -249,7 +249,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBDProductoTarjeta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 numeroTarjeta | String | Numero de tarjeta. 
 sucursal | String | Sucursal de la tarjeta. 
 tarjetaUId | Long | Identificador único de tarjeta de débito. 

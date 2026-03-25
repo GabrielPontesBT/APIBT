@@ -40,13 +40,13 @@ tipoTasaDestino | Short | Tipo de tasa destino [Hidden: Valor fijo '2' para este
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tasaDestino | Double | Tasa convertida.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar la tasa a convertir.
 30002 | Debe ingresar un tipo de año válido [1 - Comercial / 2 - Calendario].
 30003 | Debe ingresar un plazo.

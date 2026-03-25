@@ -42,13 +42,13 @@ datosSolicitud | [sBTSolicitudIndividual](#sbtsolicitudindividual) | Datos de la
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 solicitudUId | Long | Identificador de instancia Workflow.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de proceso.
 30002 | No se recibió el identificador de tarea.
 30003 | No se recibió el identificador del cliente.
@@ -116,12 +116,12 @@ curl -X POST \
     "usuarioIngreso": "INSTALADOR",
     "usuarioAsignacion": "INSTALADOR",
     "datosSolicitud": {
-        "clienteUId": "4",
-        "asesorId": "1",
-        "sucursalId": "1",
-        "origenCaptacion": "5",
+        "clienteUId": 4,
+        "asesorId": 1,
+        "sucursalId": 1,
+        "origenCaptacion": 5,
         "asunto": "SIN ASUNTO",
-        "comentario": "SOLICITUD DESDE API",
+        "comentario": "SOLICITUD DESDE API"
     }
 }'
 ```
@@ -170,7 +170,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "solicitudUId": "10847",
+      "solicitudUId": 10847,
       "Btoutreq": {
          "Canal": "BTDIGITAL",
          "Servicio": "BTMicrofinanzas.CrearSolicitudRenovacion",
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSolicitudIndividual son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 asesorId | Int | Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.
 asunto | String | Asunto de la solicitud.
 clienteUId | Long | Identificador único de cliente que solicita el préstamo.

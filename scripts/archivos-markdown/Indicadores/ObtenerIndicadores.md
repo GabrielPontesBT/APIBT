@@ -36,13 +36,13 @@ agrupadorId | Int | Identificador de agrupador.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtIndicadores | [sBTIndicador](#sbtindicador) | Listado de indicadores.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen Indicadores.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -182,7 +182,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIndicador son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Identificador de indicador. 
 descripcion | String | Descripción del indicador. 
 :::

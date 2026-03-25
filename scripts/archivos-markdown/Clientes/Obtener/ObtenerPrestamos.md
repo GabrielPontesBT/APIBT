@@ -43,7 +43,7 @@ sdtPrestamos | [sBTPrestamoItem](#sbtprestamoitem) | Listado de prestamos del cl
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cuenta.
 30002 | No se recuperó la cuenta para el Identificador: [Número de identificador].
 40001 | El cliente no tiene operaciones.
@@ -1089,15 +1089,15 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sbtprestamoitem  
+::: details sBTPrestamoItem  
 
 ### sBTPrestamoItem
 
 ::: center 
-Los campos del tipo de dato estructurado sbtprestamoitem son los siguientes: 
+Los campos del tipo de dato estructurado sBTPrestamoItem son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas.
 cantidadCuotasPagas | Int | Cantidad de cuotas del préstamo.
 capitalOriginal | Double | Capital original del préstamo.
@@ -1126,7 +1126,7 @@ valorCuota | Double | Valor de la cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -1139,7 +1139,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

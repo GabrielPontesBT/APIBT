@@ -112,6 +112,7 @@ curl -X POST \
                <descripcion>Botón Datos Pep's</descripcion>
                <reglaId>4</reglaId>
             </SdtsBTReglaNegocio>
+            ...
          </sdtReglasNegocio>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -148,6 +149,7 @@ curl -X POST \
             "descripcion": "Botón Datos Pep's", 
             "reglaId": "4" 
          },
+         ...
          ]
       },
       "Erroresnegocio": { 
@@ -177,7 +179,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTReglaNegocio son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de regla de negocio.
 reglaId | Long | Código de regla de negocio. 
 :::

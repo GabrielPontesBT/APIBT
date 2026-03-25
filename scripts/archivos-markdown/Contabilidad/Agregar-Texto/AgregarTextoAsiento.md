@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de movimiento.
 50001 | El código de texto ingresado no existe.
 50002 | Ya existe el texto ingresado.
@@ -174,7 +174,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTextoMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código del texto. 
 descripcion | String | Descripción del tipo de texto. 
 renglon | Short | Renglón. 

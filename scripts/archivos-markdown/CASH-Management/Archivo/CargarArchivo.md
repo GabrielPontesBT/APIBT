@@ -38,7 +38,7 @@ archivo | String | Nombre del archivo a subir.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 archivoId | Long | Identificador de archivo.
 estado | String | Estado del archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
@@ -46,7 +46,7 @@ cantidadLineas | Int | Cantidad de líneas del archivo.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El servicio no existe.
 1030702 | El archivo esta vacío.
 1030703 | No hay informacion en el archivo.

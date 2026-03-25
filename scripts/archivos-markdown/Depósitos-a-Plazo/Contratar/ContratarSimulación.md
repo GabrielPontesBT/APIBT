@@ -31,7 +31,7 @@ Este servicio se debe ejecutar para contratar simulaciones realizadas desde el s
 Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Módulo. 
 Correlativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). 
 Correlativo 3 | Valor incremental. 
@@ -54,15 +54,15 @@ clienteUId | Long | Identificador único de cliente.
 simulacionId | Long | Identificador único de la simulación.
 instruccionVTO | Short | Identificador de la instrucción al vencimiento
 cuentaUIdDestinoVTO | Long | Identificador único de la operación de la cuenta destino al vencimiento.
-InstruccionPP | Long | Identificador de la instrucción de pago periódico.
-cuentaUIdDestinoPP | Short | Identificador único de la operación de la cuenta destino del pago periódico.
+instruccionPP | Short | Identificador de la instrucción de pago periódico.
+cuentaUIdDestinoPP | Long | Identificador único de la operación de la cuenta destino del pago periódico.
 cuentaUIdDebito | Long | Identificador único de la operación de la cuenta de débito.
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios.
 operacionUId | Long | Identificador único de la operación.
 movimientoUId | Long | Identificador único de movimiento.
@@ -70,7 +70,7 @@ movimientoUId | Long | Identificador único de movimiento.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de la simulación.
 30003 | No se recibió la instrucción de acreditación al vencimiento.
@@ -95,7 +95,7 @@ Código | Descripción
 ### Valores
 
 Clave | Valor | Comentarios
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 CONTROL_MISMO_CLIENTE | [S,N] (Valor por omisión "N") | **[Opcional]** Permite indicar si el servicio controla que todos los datos de la simulación correspondan al clienteUId que invoco el servicio.
 
 :::
@@ -234,7 +234,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolista)  | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
@@ -246,7 +246,7 @@ valor | String | Valor de dato extendido.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

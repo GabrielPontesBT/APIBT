@@ -1,6 +1,5 @@
 ---
 title: Obtener Cronograma de Abonos
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -38,13 +37,13 @@ filtroAbono | Byte | Tipo de filtro de abono. Se pueden enviar los siguientes [v
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSituacionAhorro | [sBTSituacionAhorro ](#sbtsituacionahorro) | Datos de la situación del cronograma.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recibió el valor de filtroCuota.
 30011 | No se recupero la operación para el identificador recibido.
@@ -62,7 +61,7 @@ Código | Descripción
 Este campo tiene tres opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 1 | Plan original.
 2 | Abonos realizados.
 3 | Abonos pendientes.
@@ -439,7 +438,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSituacionAhorro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 abonos | [sBTAbono](#sbtabono) | Listado de abonos.
 capitalAhorro | Double | Capital.
 clienteUId | Long | Indentificador único del cliente.
@@ -459,7 +458,7 @@ total | Double | Total.
 Los campos del tipo de dato estructurado sBTAbono son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 abono | Double | Abono.
 capital | Double | Capital del abono.
 fechaPago | Date | Fecha de pago.

@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar usuario.
 30002 | No existe el usuario ingresado.
 30003 | No es posible eliminar el usuario. Existen datos relacionados de Perfil/Usuario.

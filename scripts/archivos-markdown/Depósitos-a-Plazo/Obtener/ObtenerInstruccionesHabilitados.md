@@ -30,7 +30,7 @@ backtotop: false
 Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Módulo. 
 Correlativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). 
 Correlativo 3 | Valor incremental. 
@@ -54,14 +54,14 @@ tipoProducto | String | Tipo de producto (VTO: Vencimiento, PP: Pago periódico)
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios.
 sdtCodigoInstrucciones | [sBTCodigoInstrucciones](#sbtcodigoinstrucciones) | Listado de códigos de instrucciones.
 
 @tab Errores 
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del Producto. 
 30006 | No existe registro para el producto indicado. 
 40001 | No existen Instrucciones ingresados en el sistema. 
@@ -285,7 +285,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
 lista | [sBTDatosLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
@@ -297,7 +297,7 @@ valor | String | Valor de dato extendido.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::
@@ -310,7 +310,7 @@ valor | String | Valor de información adicional.
 Los campos del tipo de dato estructurado sBTCodigoInstrucciones son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código. 
 datosExtendidos | [sBTDatoExtendido](#sbtdatoextendidosalida) | Listado de datos complementarios. 
 descripcion | String | Descripción. 
@@ -321,7 +321,7 @@ descripcion | String | Descripción.
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolistasalida) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
@@ -333,7 +333,7 @@ valor | String | Valor de dato extendido.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

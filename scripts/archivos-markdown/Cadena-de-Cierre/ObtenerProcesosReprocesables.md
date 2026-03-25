@@ -112,6 +112,7 @@ curl -X POST \
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
             </SdtsBTProcesoBatch>
+            ...
          </SdtsBTProcesoBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -148,6 +149,7 @@ curl -X POST \
           "parametrosExtendidos": "SI",
           "esReprocesable": "Reprocesar siempre"
         },
+        ...
       ]
     },
     "Erroresnegocio": {
@@ -177,7 +179,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProcesoBatch son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 esReprocesable | String | Descripción para reprocesamiento. 
 identificador | Int | Identificador de proceso batch. 

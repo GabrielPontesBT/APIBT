@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -155,7 +155,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Hora": "14:28:56"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -171,8 +171,8 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+:--------- | :--------- | :--------- 
+Clave | String | Identificador de información adicional. 
+Valor | String | Valor de información adicional. 
 :::
 <!-- CIERRA SDT -->

@@ -36,13 +36,13 @@ tipoMoneda | String | [Hidden: Valor fijo "USD" para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtMoneda | [sBTMoneda](#sbtmoneda) | Datos de la moneda.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen Monedas ingresadas en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -167,7 +167,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTMoneda son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de moneda.
 identificador | Short | Identificador de moneda.
 simbolo | String | Símbolo de moneda.

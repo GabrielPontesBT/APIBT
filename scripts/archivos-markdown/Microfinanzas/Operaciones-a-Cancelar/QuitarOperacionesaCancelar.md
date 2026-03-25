@@ -31,28 +31,28 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-solicitudUId | Long | Identificador de instancia Workflow
-clienteUId | Long | Identificador único del cliente
-sdtOperaciones | [sBTOperacionId](#sbtoperacionid) | Listado de operaciones
+solicitudUId | Long | Identificador de instancia Workflow.
+clienteUId | Long | Identificador único del cliente.
+sdtOperaciones | [sBTOperacion](#sbtoperacion) | Listado de operaciones.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-montoCancelacion | Double | Monto de cancelación de la operación
+:--------- | :--------- | :---------
+montoCancelacion | Double | Monto de cancelación de la operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
-30001 | No se recibió el identificador de solicitud
-30002 | No se recibió el identificador de cliente
-30003 | No se recibió ninguna operación para cancelar
-30004 | No se recuperó la cuenta para el identificador de cliente: [Número de identificador]
-30005 | No se recuperó la operación para el identificador: [Número de identificador]
-40001 | La solicitud ingresada no existe
-40002 | El cliente ingresado no corresponde con la solicitud
-40004 | No existe registro para la operación ingresada
+:--------- | :---------
+30001 | No se recibió el identificador de solicitud.
+30002 | No se recibió el identificador de cliente.
+30003 | No se recibió ninguna operación para cancelar.
+30004 | No se recuperó la cuenta para el identificador de cliente: [Número de identificador].
+30005 | No se recuperó la operación para el identificador: [Número de identificador].
+40001 | La solicitud ingresada no existe.
+40002 | El cliente ingresado no corresponde con la solicitud.
+40004 | No existe registro para la operación ingresada.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -67,7 +67,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:BTMicrofinanzas.QuitarOparacionesACancelar>
+      <bts:BTMicrofinanzas.QuitarOperacionesACancelar>
          <bts:Btinreq>
             <bts:Device>GP</bts:Device>
             <bts:Usuario>MINSTALADOR</bts:Usuario>
@@ -78,11 +78,11 @@ Código | Descripción
          <bts:solicitudUId>11887</bts:solicitudUId>
          <bts:clienteUId>862</bts:clienteUId>
          <bts:sdtOperaciones>
-            <bts:sBTOperacionId>
+            <bts:sBTOperacion>
                <bts:operacionUId>1725</bts:operacionUId>
-            </bts:sBTOperacionId>
+            </bts:sBTOperacion>
          </bts:sdtOperaciones>
-      </bts:BTMicrofinanzas.QuitarOparacionesACancelar>
+      </bts:BTMicrofinanzas.QuitarOperacionesACancelar>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -105,11 +105,11 @@ curl -X POST \
 	"solicitudUId": "11887",
 	"clienteUId": "862",
 	"sdtOperaciones": {
-	  "sBTOperacionId": {
+	  "sBTOperacion": {
 		"operacionUId": "1725"
       },
    },
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -122,7 +122,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTMicrofinanzas.QuitarOparacionesACancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTMicrofinanzas.QuitarOperacionesACancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>GP</Device>
             <Usuario>MINSTALADOR</Usuario>
@@ -141,7 +141,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Hora>14:56:43</Hora>
          </Btoutreq>
-      </BTMicrofinanzas.QuitarOparacionesACancelarResponse>
+      </BTMicrofinanzas.QuitarOperacionesACancelarResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -161,14 +161,14 @@ curl -X POST \
    },
    "Btoutreq": {
       "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.QuitarOparacionesACancelar",
+      "Servicio": "BTMicrofinanzas.QuitarOperacionesACancelar",
       "Fecha": "2021-10-28",
       "Hora": "15:39:53",
       "Requerimiento": "1",
       "Numero": "11003",
       "Estado": "OK"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -176,15 +176,15 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTOperacionId  
+::: details sBTOperacion 
 
-### sBTOperacionId
+### sBTOperacion
 
 ::: center 
-Los campos del tipo de dato estructurado sBTOperacionId son los siguientes: 
+Los campos del tipo de dato estructurado sBTOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 operacionUId | Long | identificador único de operación.
 :::
 <!-- CIERRA SDT -->

@@ -38,7 +38,7 @@ cantidadChequeras | Int | Cantidad de chequeras.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 moneda | String | Moneda de la cuenta.
 comision | Double | Importe de comisión a cobrar.
 impuestos | Double | Importe de impuestos a cobrar.
@@ -46,7 +46,7 @@ impuestos | Double | Importe de impuestos a cobrar.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 30002 | No se recibió un tipo de chequera.
 40001 | El tipo de chequera indicado no cobra comisión.
