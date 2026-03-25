@@ -36,14 +36,14 @@ solicitudUId | Long | Identificador de instancia Workflow.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-controlOK | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
-sdtValidacionesPoliticas | [sBTValidacionPoliticas](#sbtvalidacionpoliticas) | Listado de validación de políticas.
+:--------- | :--------- | :---------
+politicas | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
+sdtValidacionesPoliticas | [sBTValidacionPolitica](#sbtvalidacionpolitica) | Listado de validación de políticas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de solicitud.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -76,7 +76,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ValidarPoliticas \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ValidarPoliticas '\
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
@@ -89,7 +89,7 @@ curl -X POST \
          "Device": "GP"
       },
       "solicitudUId": "10972"
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -110,9 +110,9 @@ curl -X POST \
             <Token>1001009404CD285A89A23FBE</Token>
             <Device>GP</Device>
          </Btinreq>
-         <politicasOK>N</politicasOK>
+         <politicas>N</politicas>
          <sdtValidacionesPoliticas>
-            <ValidacionPolitica>
+            <sBTValidacionPolitica>
                <paisDocumentoId>320</paisDocumentoId>
                <paisDocumento>GUATEMALA</paisDocumento>
                <tipoDocumentoId>1</tipoDocumentoId>
@@ -159,7 +159,7 @@ curl -X POST \
                      <observacion/>
                   </SdtsBTPoliticaIncumplida>
                </politicas>
-            </ValidacionPolitica>
+            </sBTValidacionPolitica>
          </sdtValidacionesPoliticas>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -186,9 +186,9 @@ curl -X POST \
       "Token": "1001009404CD285A89A23FBE",
       "Device": "GP"
    },
-   "politicasOK": "N",
+   "politicas": "N",
    "sdtValidacionesPoliticas": {
-      "ValidacionPolitica": {
+      "sBTValidacionPolitica": {
       "paisDocumentoId": "320",
       "paisDocumento": "GUATEMALA",
       "tipoDocumentoId": "1",
@@ -238,7 +238,7 @@ curl -X POST \
       "Numero": "1400",
       "Estado": "OK"
    }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -254,7 +254,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValidacionPoliticas son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Estado. 
 estadoDsc | String | Descripción del estado. 
 observacion | String | Observación que aplique para una política. Por ejemplo, que haya sido autorizada en una etapa previa. 

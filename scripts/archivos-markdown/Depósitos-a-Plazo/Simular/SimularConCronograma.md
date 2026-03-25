@@ -30,7 +30,7 @@ backtotop: false
 Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Valor incremental. 
 Correlativo 2 | Módulo. 
 Correlativo 3 | Tipo de operación. 
@@ -61,14 +61,14 @@ sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos co
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 sBTSimulacionDepositoAPlazo | [sBTSimulacionDepositoAPlazo](#sbtsimulaciondepositoaplazo) | Datos de simulación del depósito. 
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente. 
 30002 | No se recibió el identificador del Producto. 
 30003 | No se recibió el capital del Producto. 
@@ -87,7 +87,7 @@ Código | Descripción
 ### Valores
 
 Clave | Valor | Comentarios
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 CAPITALIZA_INTERESES | [S,N] (Valor por omisión "N") | **[Opcional]** Permite simular un depósito a plazo con capitalización periódica de intereses.
 
 :::
@@ -173,7 +173,6 @@ curl -X POST \
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.</nombre>
                <moneda>S/.</moneda>
                <papel>$</papel>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <clienteUId>10009</clienteUId>
             <Sucursal>Sucursal Principal</Sucursal>
@@ -413,8 +412,7 @@ curl -X POST \
          "productoUId": 132, 
          "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.", 
          "moneda": "S/.", 
-         "papel": "$" ,
-         "otrosConceptos":""
+         "papel": "$" 
          }, 
          "clienteUId": 10009, 
          "Sucursal": "Sucursal Principal", 
@@ -640,7 +638,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
@@ -652,7 +650,7 @@ valor | String | Valor de dato extendido.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::
@@ -665,7 +663,7 @@ valor | String | Valor de información adicional.
 Los campos del tipo de dato estructurado sBTSimulacionDepositoAPlazo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital del cronograma. 
 clienteUId | Long | Identificador de cliente. 
 cronograma | [sBTCuotaPlanDeposito](#sbtcuotaplandeposito) | Cronograma del préstamo. 
@@ -693,7 +691,7 @@ valorNominal | Double | Valor nominal.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -706,7 +704,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -717,7 +715,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaPlanDeposito son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital. 
 fechaPago | Date | Fecha de pago. 
 impuestos | [sBTConcepto](#sbtconcepto) | Datos de impuestos. 

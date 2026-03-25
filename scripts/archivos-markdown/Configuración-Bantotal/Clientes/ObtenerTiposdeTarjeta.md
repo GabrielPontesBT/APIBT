@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTipos | [sBTTipoTarjeta](#sbttipotarjeta) | Listado de tipos de tarjeta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30011 | No existen Tipos de tarjeta ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -180,7 +180,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoTarjeta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de tipo de tarjeta.
 identificador | String | Identificador de tipo de tarjeta.
 :::

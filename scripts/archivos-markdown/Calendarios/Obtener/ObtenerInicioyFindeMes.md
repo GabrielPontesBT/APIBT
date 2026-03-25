@@ -32,20 +32,20 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 calendarioId | Short | Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central).
-mesConsulta | Short | Mes de consulta.
+mesConsulta | Byte | Mes de consulta.
 anioConsulta | Int | Año de consulta.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaHabilInicio | Date | Primera fecha hábil del mes.
 fechaHabilFin | Date | Última fecha hábil del mes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar mes a consultar.
 30002 | Debe ingresar año a consultar.
 ::: 

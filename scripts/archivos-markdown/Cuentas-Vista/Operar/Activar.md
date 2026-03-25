@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
-nuevoEstado | Short | Nuevo estado [Hidden: Valor fijo '0'].
+nuevoEstado | Byte | Nuevo estado [Hidden: Valor fijo '0'].
 fechaVencimientoEstado | Date | Fecha de vencimiento del estado.
 observaciones | String | Observaciones.
 
@@ -43,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el Identificador: [Número de Identificador].
 ::: 

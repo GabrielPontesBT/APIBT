@@ -42,7 +42,7 @@ sdtBeneficiarios | [sBTBeneficiario](#sbtbeneficiario) | Listado de los benefici
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador único de la operación.
 30003 | No se recuperó la operación origen para el Identificador: [Número de Identificador].
 30004 | La operación ingresada no corresponde a una cuenta vista.
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBeneficiario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 apellido | String | Apellido.
 correlativo | Short | Correlativo.
 nombre | String | Nombre.

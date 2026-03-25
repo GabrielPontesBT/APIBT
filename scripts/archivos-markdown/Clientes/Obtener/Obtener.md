@@ -1,6 +1,5 @@
 ---
 title: Obtener
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -37,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPersona | [sBTPersonaFisica](#sbtpersonafisica) | Datos de la persona física.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el identificador.
 
@@ -294,7 +293,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaFisica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 actividadLaboral | String | Descripción de actividad laboral.
 actividadLaboralId | Int | Identificador de la actividad laboral.
 clasificacionInterna | String | Descripción de la clasificación interna.
@@ -332,7 +331,7 @@ tipoDocumentoId | Short | Identificador del tipo de documento.
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 agrupador1 | String | Nombre agrupador 1.
 agrupador1Id | Short | Identificador agrupador 1.
 agrupador2 | String | Nombre agrupador 2.
@@ -368,7 +367,7 @@ ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

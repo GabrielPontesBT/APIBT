@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió código de grupo.
 30002 | No se recibió el identificador de cliente.
 30014 | No existe registro con el identificador indicado.

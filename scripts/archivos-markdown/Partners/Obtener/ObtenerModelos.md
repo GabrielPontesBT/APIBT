@@ -37,13 +37,13 @@ marcaUId | Long | Identificador de la marca.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtModelos | [sBTModelo](#sbtmodelo) | Listado de los modelos de una marca.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió Partner ni canal.
 30002 | El Partner no se encuentra habilitado.
 30003 | No existe Partner con ese identificador.
@@ -199,7 +199,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
@@ -213,7 +213,7 @@ vendedorUId	 | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTModelo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 carroceria | String | Carrocería.
 carroceriaId | Short | Identificador de la carrocería.
 gpsObligatorio | String | ¿Es el GPS obligatorio? (S/N)

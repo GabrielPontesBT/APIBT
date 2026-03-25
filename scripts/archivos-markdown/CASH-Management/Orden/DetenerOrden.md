@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030727 | Solo se pueden detener ordenes autorizadas.
 1030729 | No se recupero la orden para el identificador recibido.
 

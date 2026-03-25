@@ -40,7 +40,7 @@ sdtPerfiles | [sBTPerfil](#sbtperfil) | Listado de perfiles.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No existen Perfiles ingresadas en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

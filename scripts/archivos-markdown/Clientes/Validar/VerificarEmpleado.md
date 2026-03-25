@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 esEmpleado | String | ¿Es empleado de la institución? (S/N)
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30014 | No existe registro con el identificador indicado.
 30021 | La cuenta no existe.

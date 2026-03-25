@@ -36,14 +36,14 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 respuesta | String | Estado de la compra.
 codigo | Short | Código de la respuesta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de la operación.
 30011 | No se recupero el identificador para la operación recibida.
 40001 | No existe registro para el identificador indicado.

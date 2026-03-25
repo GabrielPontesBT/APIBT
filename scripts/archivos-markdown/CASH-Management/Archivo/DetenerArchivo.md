@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030711 | No se recuperó informacion para el identificador de archivo recibido.
 1030727 | Solo se pueden detener ordenes autorizadas.
 1030728 | No se recuperaron ordenes para el archivo recibido.

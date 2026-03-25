@@ -52,13 +52,13 @@ tipoOperacionBT | Short | Tipo de operación Bantotal.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió empresaId.
 30002 | No se recibió módulo.
 30003 | No se recibió sucursal.

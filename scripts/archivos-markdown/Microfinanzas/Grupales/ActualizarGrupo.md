@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40002 | El tipo de grupo no existe.
 40003 | Debe ingresar nombre de grupo.
 40013 | El grupo ingresado no existe.
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agencia | String | Agencia. 
 agenciaId | Int | Identificador de agencia. 
 asesor | String | Asesor del grupo. 

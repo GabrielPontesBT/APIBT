@@ -31,12 +31,12 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-bancoId | Long | Identificador de Banco.
+bancoId | Short | Identificador de Banco.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtAgencias | [sBTAgenciaBanco](#sbtagenciabanco) | Listado de las agencias.
 
 @tab Errores
@@ -177,7 +177,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAgenciaBanco son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 banco | Int | Identificador de banco.
 codPostal | String | Código postal.
 nombre | String | Nombre de la sucursal.

@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposGrupos | [sBTTipoGrupo](#sbttipogrupo) | Listado de tipos de grupos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No existen Tipos de Grupo ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipogrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Long | Código del tipo de grupo. 
 descripcion | String | Descripción del tipo de grupo.
 :::

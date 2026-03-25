@@ -37,13 +37,13 @@ sdtTraspaso | [sBTTraspaso](#sbttraspaso) | Datos del traspaso.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtResultadoTraspaso | [sBTResultadoTraspaso](#sbtresultadotraspaso) | Datos resultado del traspaso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de origen.
 30002 | No se recibió el identificador único de operación de destino.
 30003 | Debe ingresar importe.
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del traspaso. 
 importe | Double | Importe del movimiento. 
 monedaId | Short | Identificador de moneda. 
@@ -216,7 +216,7 @@ operacionUIdOrigen | Long | Identificador de operación de origen del traspaso.
 Los campos del tipo de dato estructurado sBTResultadoTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idMovimiento | String | Identificador de movimiento String. 
 movimientoUId | Long | Identificador de movimiento. 
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso. 

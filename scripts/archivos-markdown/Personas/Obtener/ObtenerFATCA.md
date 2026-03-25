@@ -36,14 +36,14 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 resultado | String | Resultado FATCA.
 sdtInformacionFATCA | [sBTPCOInformacionFATCA](#sbtpcoinformacionfatca) | Datos FATCA de la persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -206,7 +206,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 Los campos del tipo de dato estructurado sBTPCOInformacionFATCA son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigoTIN | String | Código TIN.
 ingresoBrutoEEUU | String | Recibe cualquier ingreso bruto procedente de una fuente en los EEUU (S/N).
 pagoFuenteEEUU | String | Recibe cualquier pago proveniente de fuentes dentro de los EEUU (S/N).
@@ -221,7 +221,7 @@ tieneGreenCard | String | Poseedor de la tarjeta verde o "Green Card" de los EEU
 Los campos del tipo de dato estructurado sBTPCOResidenciasFiscales son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigoTIN | String | Código TIN.
 correlativo | Short | Número de correlativo.
 pais | String | Nombre del país.

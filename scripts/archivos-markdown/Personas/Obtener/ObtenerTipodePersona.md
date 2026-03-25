@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tipoPersona | String | Tipo de Persona. (F/J)
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30013 | No existe registro para el identificador único.
 40001 | La persona no existe.

@@ -36,13 +36,13 @@ operacionUId | Long | Identificador de Subcuenta con acreditación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPeriodoAcreditacion | [sBTPeriodoDeAcreditacion](#sbtperiododeacreditacion) | Datos de la acreditación de la subcuenta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de Operacion.
 30003 | No se recuperó la Operacion para el Identificador: [Número de identificador].
 ::: 
@@ -105,10 +105,10 @@ Código | Descripción
             <Token>1136448858CD285A89A23FBE</Token>
             <Device/>
          </Btinreq>
-         <sdtperiodoAcreditacion>
+         <sdtPeriodoAcreditacion>
             <descripcion>Diario</descripcion>
             <valor>1</valor>
-         </sdtperiodoAcreditacion>
+         </sdtPeriodoAcreditacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -134,7 +134,7 @@ Código | Descripción
         "Token": "432782790CD285A89A23FBEE",
         "Device": ""
     },
-    "sdtperiodoAcreditacion": {
+    "sdtPeriodoAcreditacion": {
         "descripcion": "Diario",
         "valor": 1
     },
@@ -166,7 +166,7 @@ Código | Descripción
 Los campos del tipo de dato estructurado sBTPeriodoDeAcreditacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del periodo. 
 valor | Int | Valor del periodo. 
 :::

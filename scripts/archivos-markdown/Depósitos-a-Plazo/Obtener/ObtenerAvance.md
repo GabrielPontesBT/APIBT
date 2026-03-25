@@ -37,7 +37,7 @@ depositoUId | Long | Identificador único de operación de depósito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaAlta | Date | Fecha de alta del depósito.
 fechaVencimiento | Date | Fecha de vencimiento del depósito.
 plazoTranscurrido | Int | Plazo transcurrido del depósito.
@@ -47,7 +47,7 @@ porcentajeAvance | Double | Porcentaje de avance del depósito (según el plazo)
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la Cuenta.
 30002 | No se recibió el identificador del depósito.
 30003 | No existe registro con el identificador indicado.

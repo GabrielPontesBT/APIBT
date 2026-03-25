@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30011 | El país del documento adicional no es válido.
 30012 | El tipo de documento adicional no es válido.
@@ -187,7 +187,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaEmision | Date | Fecha de emisión del documento. 
 fechaVencimiento | Date | Fecha de vencimiento del documento. 
 nroDocumento | String | Número de documento. 

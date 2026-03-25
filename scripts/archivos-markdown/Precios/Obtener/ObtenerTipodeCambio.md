@@ -39,7 +39,7 @@ tipoCotizacion | String | Tipo de cotización. Se pueden enviar los siguientes [
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 precioOrigen | Double | Tipo de cambio de la moneda origen respecto a moneda nacional.
 precioDestino | Double | Tipo de cambio de la moneda destino respecto a moneda nacional.
 montoDestino | Double | Monto origen convertido a moneda destino.
@@ -47,7 +47,7 @@ montoDestino | Double | Monto origen convertido a moneda destino.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Moneda Origen y Moneda Destino no pueden ser la mismas.
 40001 | Error en la conversión de moneda: [Error generado por rutina RRG0006X].
 ::: 
@@ -61,7 +61,7 @@ Código | Descripción
 ::: center 
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 CC | Compra cierre.
 CD | Compra diaria.
 VC | Venta cierre.

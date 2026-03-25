@@ -1,0 +1,76 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerdebitoautomaticoprestamo",
+  "pageTitle": "Obtener Débito Automático de Préstamo",
+  "description": "Método para obtener si la cuenta de ahorro es un débito automático de un préstamo.",
+  "pubName": "BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo",
+  "programa": "RBTPG638",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCobroPrestamo",
+      "Tipo": "sBTCobroPrestamo",
+      "Comentarios": "Datos de cobro del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta de ahorro."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontraron registros para la operación ingresada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>ba1db0c9adCD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>81</bts:operacionUId>\n      </bts:BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro_v1?ObtenerDebitoAutomaticoDePrestamo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 78klf1dc-e332-95b4-1dl8-23ba149h2471' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"bts:Device\": \"AS\",\n      \"bts:Requerimiento\": {},\n      \"bts:Canal\": \"BTDIGITAL\",\n      \"bts:Usuario\": \"INSTALADOR\",\n      \"bts:Token\": \"jl1dv2s9advF271A85B22FCH\"\n\t},\n   \"bts:operacionUId\": \"83\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AS</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>ba1db0c9adCD285A89A23FBE</Token>\n         </Btinreq>\n         <sdtCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>510</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>511</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>512</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>513</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>514</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>515</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>516</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>S</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>517</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>518</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n            <sBTCobroPrestamo>\n               <operacionUId>519</operacionUId>\n               <cobroParcial>S</cobroParcial>\n               <admiteSobregiro>N</admiteSobregiro>\n            </sBTCobroPrestamo>\n         </sdtCobroPrestamo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>15842</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo</Servicio>\n            <Fecha>2025-11-24</Fecha>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>16:28:07</Hora>\n         </Btoutreq>\n      </BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"bts:Btinreq\": {\n      \"bts:Device\": \"AS\",\n      \"bts:Requerimiento\": {},\n      \"bts:Canal\": \"BTDIGITAL\",\n      \"bts:Usuario\": \"INSTALADOR\",\n      \"bts:Token\": \"jl1dv2s9advF271A85B22FCH\"\n\t},\n   \"sdtCobroPrestamo\": {\n      \"sBTCobroPrestamo\": [\n      {\n       \"operacionUId\": \"520\",\n       \"cobroParcial\": \"S\",\n       \"admiteSobregiro\": \"N\"\n      },\n      {\n       \"operacionUId\": \"521\",\n       \"cobroParcial\": \"S\",\n       \"admiteSobregiro\": \"N\"\n      }\n      ]\n   },\n    \"Btoutreq\": {\n         \"Numero\": \"15848\",\n         \"Estado\": \"OK\",\n         \"Servicio\": \"BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo\",\n         \"Requerimiento\": \"\",\n         \"Fecha\": \"2025-11-25\",\n         \"Hora\": \"09:17:26\",\n         \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCobroPrestamo",
+      "fields": [
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "admiteSobregiro",
+          "Tipo": "String",
+          "Comentarios": "¿Admite sobregiro? (S/N)."
+        },
+        {
+          "Nombre": "cobroParcial",
+          "Tipo": "String",
+          "Comentarios": "Cobro parcial (S/N)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

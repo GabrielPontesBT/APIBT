@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30000 | Parámetro modo incorrecto.
 30001 | Debe ingresar Usuario.
 30003 | No existe Usuario.
@@ -197,8 +197,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTUsuarioBT son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 Cajero | String | Indica si el usuario es cajero (S/N). 
 CantidadSesionesAbiertas | Short | Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal. 
 Email | String | Email del usuario. 

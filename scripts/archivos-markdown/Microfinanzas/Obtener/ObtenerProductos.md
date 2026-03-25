@@ -36,7 +36,7 @@ solicitudUId | Long | Identificador único de solicitud.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de productos.
 
 @tab Errores
@@ -108,62 +108,54 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtProductos>
-            <Producto>
+            <sBTProducto>
                <productoUId>1</productoUId>
                <nombre>AGRICOLA PLAN DE PAGOS K + I</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>2</productoUId>
                <nombre>AGRICOLA PLAN DE PAGOS LIBRE</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>3</productoUId>
                <nombre>AGRICOLA PP LIBRE RECUPERADOS</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>4</productoUId>
                <nombre>AGRICOLA CREDI - AGRO MENOR</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>21</productoUId>
                <nombre>CADENA DE VALOR CAFE DIF.</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>22</productoUId>
                <nombre>CADENA DE VALOR CREDI-BRÓCOLI</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>23</productoUId>
                <nombre>VIVIENDA HIPOTECARIO</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
-            <Producto>
+            </sBTProducto>
+            <sBTProducto>
                <productoUId>24</productoUId>
                <nombre>VIVIENDA HIPOTECARIO LIBRE</nombre>
                <moneda>Q</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
-            </Producto>
+            </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -182,84 +174,87 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtProductos": {
-          "Producto": [
-            {
-              "productoUId": "1",
-              "nombre": "AGRICOLA PLAN DE PAGOS K + I",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
+{
+   "Envelope": {
+      "Body": {
+         "BTMicrofinanzas.ObtenerProductosResponse": {
+            "Btinreq": {
+               "Canal": "BTDIGITAL",
+               "Requerimiento": "95",
+               "Usuario": "INSTALADOR",
+               "Token": "419385365CD285A89A23FBEE",
+               "Device": "GP"
             },
-            {
-              "productoUId": "2",
-              "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
+            "sdtProductos": {
+               "sBTProducto": [
+                  {
+                     "productoUId": "1",
+                     "nombre": "AGRICOLA PLAN DE PAGOS K + I",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "2",
+                     "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "3",
+                     "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "4",
+                     "nombre": "AGRICOLA CREDI - AGRO MENOR",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "21",
+                     "nombre": "CADENA DE VALOR CAFE DIF.",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "22",
+                     "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "23",
+                     "nombre": "VIVIENDA HIPOTECARIO",
+                     "moneda": "Q",
+                     "papel": ""
+                  },
+                  {
+                     "productoUId": "24",
+                     "nombre": "VIVIENDA HIPOTECARIO LIBRE",
+                     "moneda": "Q",
+                     "papel": ""
+                  }
+               ]
             },
-            {
-              "productoUId": "3",
-              "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
-            },
-            {
-              "productoUId": "4",
-              "nombre": "AGRICOLA CREDI - AGRO MENOR",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
-            },
-            {
-              "productoUId": "21",
-              "nombre": "CADENA DE VALOR CAFE DIF.",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
-            },
-            {
-              "productoUId": "22",
-              "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
-            },
-            {
-              "productoUId": "23",
-              "nombre": "VIVIENDA HIPOTECARIO",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
-            },
-            {
-              "productoUId": "24",
-              "nombre": "VIVIENDA HIPOTECARIO LIBRE",
-              "moneda": "Q",
-              "otrosConceptos":"",
-              "papel": "$"
+            "Erroresnegocio": "",
+            "Btoutreq": {
+               "Canal": "BTDIGITAL",
+               "Servicio": "BTMicrofinanzas.ObtenerProductos",
+               "Fecha": "2019-09-18",
+               "Hora": "15:56:50",
+               "Requerimiento": "95",
+               "Numero": "161",
+               "Estado": "OK"
             }
-          ]
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.ObtenerProductos",
-          "Fecha": "2019-09-18",
-          "Hora": "15:56:50",
-          "Requerimiento": "95",
-          "Numero": "161",
-          "Estado": "OK"
-        }
-}'
+         }
+      },
+      "_xmlns:SOAP-ENV": "http://schemas.xmlsoap.org/soap/envelope/",
+      "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+      "_xmlns:SOAP-ENC": "http://schemas.xmlsoap.org/soap/encoding/",
+      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+   }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -275,7 +270,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -288,7 +283,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

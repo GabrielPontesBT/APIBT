@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtServicios | [sBTConvServicioCASH](#sbtconvserviciocash) | Lista de servicios del contrato.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030705 | Cuenta cliente sin contrato vinculado.
 1030709 | Se requiere identificacion de cuenta cliente.
 ::: 
@@ -185,7 +185,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTConvServicioCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 contratoId | Long | Identificador del contrato CASH.
 descripcionServicio | String | Descripción de servicios.
 servicio | Short | Servicio CASH.

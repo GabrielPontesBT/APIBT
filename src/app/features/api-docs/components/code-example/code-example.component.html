@@ -1,4 +1,4 @@
-<mat-tab-group class="code-tabs" disableRipple>
+<mat-tab-group class="code-tabs" disableRipple animationDuration="0ms">
   @for (section of sections; track section) {
     <mat-tab [label]="getTabLabel(section)">
       <div class="code-toggle">
@@ -14,8 +14,10 @@
           (click)="switchView(section, 'json')">
           JSON
         </button>
-        <button mat-icon-button (click)="copyCode(section)">
-          <mat-icon>content_copy</mat-icon>
+        <button mat-icon-button (click)="copyCode(section)"
+          [matTooltip]="copiedSection === section ? '¡Copiado!' : 'Copiar'"
+          matTooltipPosition="left">
+          <mat-icon>{{ copiedSection === section ? 'check' : 'content_copy' }}</mat-icon>
         </button>
       </div>
       <!-- ENVOLVER con div para manejar el scroll -->

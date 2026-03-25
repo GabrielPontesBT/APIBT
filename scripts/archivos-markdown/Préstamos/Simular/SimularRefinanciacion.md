@@ -40,14 +40,14 @@ parmsAux | String | [Hidden: Valor fijo vacío para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSimulacionOutput | [sBTSimulacionOutput](#sbtsimulacionoutput) | Datos de salida de la simulación.
 montoPerdon | Double | Monto de perdón.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
 30003 | No se recibió el identificador de la simulación.
@@ -433,7 +433,6 @@ curl -X POST \
                <papel/>
                <productoUId>512</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Gastos</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <capital>20000.00</capital>
             <tipoAmortizacionCod>0</tipoAmortizacionCod>
@@ -664,8 +663,7 @@ curl -X POST \
             "moneda": "$",
             "papel": "",
             "productoUId": 512,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
-            "otrosConceptos":""
+            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
             },
             "capital": 20000,
             "tipoAmortizacionCod": 0,
@@ -745,7 +743,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSimulacionRefinanciacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 actividad | Long | Actividad.
 ballon | Double | Ballon.
 cantidadCuotas | Int | Cantidad de cuotas.
@@ -771,7 +769,7 @@ tasa | Double | Tasa.
 Los campos del tipo de dato estructurado sBTCuotaExtraordinaria son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 mes | Byte | Mes.
 porcentajeCuota | Double | Porcentaje de cuota.
 
@@ -781,7 +779,7 @@ porcentajeCuota | Double | Porcentaje de cuota.
 Los campos del tipo de dato estructurado sBTImportesCancelacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital.
 comisionCuota | Double | Monto total de comisión de cuota.
 comisionMora | Double | Monto total de comisión de mora.
@@ -807,7 +805,7 @@ totalSeguros | Double | Monto total para seguros.
 Los campos del tipo de dato estructurado sBTGraciaPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 aplicaSobre | String | Aplica sobre.
 aplicaSobreDsc | String | Descripción de aplicación de sobre.
 extiendePlazo | String | Extiende plazo.
@@ -821,7 +819,7 @@ periodoInicial | Int | Período inicial.
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes:
  
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código del seguro.
 descripcion | String | Descripción del seguro.
 importeFijo | Decimal | Importe fijo del seguro.
@@ -835,7 +833,7 @@ tipo | String | Tipo del seguro.
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
@@ -850,7 +848,7 @@ porcentaje | Double | Porcentaje de comisión.
 Los campos del tipo de dato estructurado sBTSimulacionOutput son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantidadCuotas | Int | Cantidad de cuotas.
 capital | Double | Capital.
 cft | Double | Costo financiero total.
@@ -923,7 +921,7 @@ tipoCuota | String | Tipo de la cuota (Capital/Interés).
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -936,7 +934,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

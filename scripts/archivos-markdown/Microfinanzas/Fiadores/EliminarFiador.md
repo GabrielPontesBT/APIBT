@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de solicitud.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recuperó la cuenta para el Identificador de cliente

@@ -37,13 +37,13 @@ sdtPersona | [sBTPersonaFisica](#sbtpersonafisica) | Datos de persona física.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | La Contraparte ya está relacionada al Partner: [Número del Partner] - [Nombre del Partner].
 30003 | No se pudo obtener identificador único de la cuenta.
 ::: 
@@ -301,7 +301,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
@@ -315,7 +315,7 @@ vendedorUId	 | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTPersonaFisica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividadLaboral | String | Descripción de actividad laboral.
 actividadLaboralId | Int | Identificador de la actividad laboral.
 clasificacionInterna | String | Descripción de la clasificación interna.
@@ -355,7 +355,7 @@ tipoDocumentoId | Short | Identificador del tipo de documento.
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agrupador1 | String | Nombre agrupador 1.
 agrupador1Id | Short | Identificador agrupador 1.
 agrupador2 | String | Nombre agrupador 2.

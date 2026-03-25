@@ -37,13 +37,13 @@ conceptoId | Long | Identificador del concepto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtValorCampo | [sBTValorCampo](#sbtvalorcampo) | Listado de conceptos del programa.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el nombre del programa.
 30002 | No se recibió el identificador del campo.
 ::: 
@@ -188,7 +188,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 identificador | Int | Identificador. 
 :::

@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrestamo | [sBTPrestamoCancelado](#sbtprestamocancelado) | Datos del préstamo cancelado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el Identificador: [Número de Identificador].
 30003 | El préstamo no se encuentra cancelado.
@@ -120,7 +120,6 @@ curl -X POST \
                <nombre>Amortización Automática TF</nombre>
                <moneda>$</moneda>
                <papel>$</papel>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <tipoProducto>AM</tipoProducto>
             <sucursal>Casa Matriz</sucursal>
@@ -235,8 +234,7 @@ curl -X POST \
 		"productoUId": "36",
 		"nombre": "Amortización Automática TF",
 		"moneda": "$",
-		"papel": "$",
-      "otrosConceptos":""
+		"papel": "$"
 	  },
 	  "tipoProducto": "AM",
 	  "sucursal": "Casa Matriz",
@@ -344,7 +342,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamoCancelado son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas del préstamo. 
 capitalOriginal | Double | Capital original del préstamo. 
 claseTasa | String | Clase de tasa. 
@@ -375,7 +373,7 @@ tipoTasa | String | Tipo de tasa.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -388,7 +386,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -399,7 +397,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaCancelada son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 diasMora | Short | Días de mora con los que se pago la cuota. 
 fechaPago | Date | Fecha de pago. 
 importePago | Double | Importe total pago de la cuota. 

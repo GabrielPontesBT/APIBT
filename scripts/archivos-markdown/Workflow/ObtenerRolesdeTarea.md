@@ -31,19 +31,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-procesoId | Int | Identificador de proceso Workflow.
+procesoId | Short | Identificador de proceso Workflow.
 tareaId | Int | Identificador de tarea Workflow.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtRoles | [sBTRolWF](#sbtrolwf) | Listado de roles de Workflow.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de proceso.
 30002 | No se recibió el identificador de tarea.
 40001 | El proceso ingresado no existe.
@@ -220,7 +220,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 Los campos del tipo de dato estructurado sBTRolWF son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código del rol.
 descripcion | String | Descripción del rol.
 :::

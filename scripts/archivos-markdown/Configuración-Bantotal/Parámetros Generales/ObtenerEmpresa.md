@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEmpresa | [sBTEmpresa](#sbtempresa) | Datos de la empresa.
 
 @tab Errores
@@ -206,7 +206,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEmpresa son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 casaCentral | [sBTSucursal](#sbtsucursal) | Datos sobre la sucursal indicada como casa central. 
 fechaApertura | Date | Fecha de apertura. 
 fechaBalance | Date | Fecha de balance. 
@@ -222,7 +222,7 @@ nombre | String | Nombre de la empresa.
 Los campos del tipo de dato estructurado sBTSucursal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de sucursal. 
 direccion | String | Dirección de sucursal. 
 identificador | Int | Identificador de sucursal. 
@@ -236,7 +236,7 @@ telefono | String | Teléfono de sucursal.
 Los campos del tipo de dato estructurado sBTMoneda son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de moneda. 
 identificador | Short | Identificador de moneda. 
 simbolo | String | Símbolo de moneda. 

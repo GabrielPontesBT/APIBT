@@ -37,13 +37,13 @@ sucursalId | Int | Identificador de Sucursal a consultar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaHabil | String | ¿Es hábil? (S/N)
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | La Sucursal no existe.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

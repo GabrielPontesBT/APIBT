@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOcupaciones | [sBTOcupacion](#sbtocupacion) | Listado de ocupaciones.
 
 @tab Errores
@@ -242,7 +242,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTOcupacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de ocupación. 
 identificador | Int | Identificador de ocupación. 
 :::

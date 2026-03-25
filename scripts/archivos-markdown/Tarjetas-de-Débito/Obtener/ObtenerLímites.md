@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de la tarjeta de débito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtLimites | [sBTLimiteTarjeta](#sbtlimitetarjeta) | Datos de los límites de la tarjeta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de tarjeta.
 40001 | No existe la tarjeta.
 ::: 
@@ -178,7 +178,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTLimiteTarjeta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Short | Código de límite. 
 limiteBandaMagnetica | Double | Monto límite en banda magnética. 
 limiteEMV | Double | Monto límite EMV. 

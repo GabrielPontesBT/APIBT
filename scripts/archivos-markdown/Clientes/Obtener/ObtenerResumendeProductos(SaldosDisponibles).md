@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtResumenProductos | [sCTInfoProductos](#sctinfoproductos) | Listado de productos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador.
 ::: 
@@ -257,7 +257,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sCTInfoProductos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuentasCorrientes | [sCTResumenProducto](#sctresumenproducto) | Cuentas corrientes. 
 cajasAhorros | [sCTResumenProducto](#sctresumenproducto) | Cajas de ahorro. 
 cofresSeguridad | [sCTResumenProducto](#sctresumenproducto) | Cofres de seguridad. 
@@ -272,7 +272,7 @@ clienteUId | Long | Identificador único de cliente.
 Los campos del tipo de dato estructurado sCTResumenProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidad | Int | Cantidad de operaciones. 
 descripcion | String | Descripción. 
 saldoMN | Double | Saldo disponible en moneda nacional. 

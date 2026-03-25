@@ -44,7 +44,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | No se recibió el identificador del ahorro.
 30003 | El monto indicado no puede ser menor que cero.

@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la tarjeta.
 30002 | No se recuperó la tarjeta de débito para el identificador: [Número de identificador]
 40001 | Error interno.

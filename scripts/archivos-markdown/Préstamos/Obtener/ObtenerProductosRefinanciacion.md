@@ -36,13 +36,13 @@ sdtOperacionesARefinanciar | [sBTPrestamos](#sBTPrestamos) | Datos de las operac
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sBTProducto) | Listados de los datos de producto.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
 30003 | No se indicaron operaciones a refinanciar.
@@ -130,21 +130,18 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>60</productoUId>
                <nombre>Crédito Francés REEST</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>UI</papel>
                <productoUId>61</productoUId>
                <nombre>Crédito Francés REEST</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>USD</moneda>
                <papel>$</papel>
                <productoUId>62</productoUId>
                <nombre>Crédito Francés REEST</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
@@ -178,22 +175,19 @@ curl -X POST \
             "moneda": "$",
             "papel": "$",
             "productoUId": 60,
-            "nombre": "Crédito Francés REEST",
-            "otrosConceptos":""
+            "nombre": "Crédito Francés REEST"
         },
         {
             "moneda": "$",
             "papel": "UI",
             "productoUId": 61,
-            "nombre": "Crédito Francés REEST",
-            "otrosConceptos":""
+            "nombre": "Crédito Francés REEST"
         },
         {
             "moneda": "USD",
             "papel": "$",
             "productoUId": 62,
-            "nombre": "Crédito Francés REEST",
-            "otrosConceptos":""
+            "nombre": "Crédito Francés REEST"
         }
         ]
     },
@@ -226,7 +220,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 fecha | Date | Fecha.
 operaciones | Long | Lista de idententificares de operaciones.
@@ -240,7 +234,7 @@ operaciones | Long | Lista de idententificares de operaciones.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -253,7 +247,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

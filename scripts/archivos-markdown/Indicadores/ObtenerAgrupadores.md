@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtAgrupadores | [sBTAgrupador](#sbtagrupador) | Listado de Agrupadores.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen Agrupadores.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -186,7 +186,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAgrupador son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Identificador del agrupador. 
 descripcion | String | Descripción del agrupador. 
 :::

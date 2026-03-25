@@ -30,19 +30,19 @@ backtotop: false
 @tab Datos de Entrada
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPersona | [sBTPersonaFisica](#sbtpersonafisica) | Datos de la persona física.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No se pudo obtener identificador único de la persona.
 40001 | Debe ingresar País del Documento.
 40002 | El País del Documento no existe.
@@ -327,7 +327,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaFisica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 actividadLaboral | String | Descripción de actividad laboral.
 actividadLaboralId | Int | Identificador de la actividad laboral.
 clasificacionInterna | String | Descripción de la clasificación interna.
@@ -365,7 +365,7 @@ tipoDocumentoId | Short | Identificador del tipo de documento.
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 agrupador1 | String | Nombre agrupador 1.
 agrupador1Id | Short | Identificador agrupador 1.
 agrupador2 | String | Nombre agrupador 2.
@@ -401,7 +401,7 @@ ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

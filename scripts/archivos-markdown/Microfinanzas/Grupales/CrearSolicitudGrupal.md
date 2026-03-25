@@ -41,13 +41,13 @@ sdtDatosSolicitud | [sBTSolicitudGrupal](#sbtsolicitudgrupal) | Datos de entrada
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 solicitudUId | Long | Identificador de instancia Workflow.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de proceso.
 30002 | No se recibió el identificador de tarea.
 30003 | No se recibió el identificador de grupo.
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSolicitudGrupal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 asesorId | Int | Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente. 
 grupoId | Int | Identificador de grupo que solicita el préstamo. 
 origenCaptacion | Int | Identificador de origen captación. 

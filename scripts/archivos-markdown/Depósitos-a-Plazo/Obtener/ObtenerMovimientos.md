@@ -38,13 +38,13 @@ cantidadMovimientos | Int | Cantidad de movimientos (Se puede parametrizar como 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoDeCuenta | [sBTEstadoCuentaCV](#sbtestadocuentacv) | Datos de estado de cuenta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación. 
 30002 | No se recuperó la operación para el identificador: [Número de identificador]. 
 30004 | No se recibió la cantidad de días. 
@@ -183,7 +183,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta. 
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Listado de movimientos. 
@@ -196,7 +196,7 @@ saldoPartida | Double | Saldo inicial.
 Los campos del tipo de dato estructurado sBTMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 arbitraje | Double | Arbitraje de moneda. 
 concepto | String | Concepto de movimiento. 
 debitoCredito | String | Débito o Crédito (D/C). 

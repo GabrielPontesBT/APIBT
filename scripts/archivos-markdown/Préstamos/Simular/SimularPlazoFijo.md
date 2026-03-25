@@ -36,13 +36,13 @@ sdtPrestamoPlazoFijo | [sBTPrestamoAltaPF](#sbtprestamoaltapf) | Datos de la sim
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSimulacion | [sBTSimulacionPrestamo](#sbtsimulacionprestamo) | Datos del préstamo simulado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el Identificador.
@@ -183,7 +183,6 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>0</productoUId>
                <nombre>PRÉSTAMOS CAPITAL DE TRABAJO, Plazo Fijo</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <cronograma>
                <sBTCuotaPrestamoAlta>
@@ -238,8 +237,7 @@ curl -X POST \
             "moneda": "$",
             "papel": "$",
             "productoUId": "0",
-            "nombre": "PRÉSTAMOS CAPITAL DE TRABAJO, Plazo Fijo",
-            "otrosConceptos":""
+            "nombre": "PRÉSTAMOS CAPITAL DE TRABAJO, Plazo Fijo"
         }
         "cronograma": {
             "sBTCuotaPrestamoAlta": [
@@ -279,7 +277,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamoAltaPF son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividad | Long | Código de actividad (Destino del crédito). 
 clienteUId | Long | Identificador único de cliente. 
 fechaVencimiento | Date | Fecha de Vencimiento (Obligatorio si no se carga plazo). 
@@ -298,7 +296,7 @@ tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra
 Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Capital del préstamo. 
 cronograma | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -322,7 +320,7 @@ valorCuota | Double | Valor cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -335,7 +333,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -345,7 +343,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
 importe | Double | Importe de la cuota. 
 :::

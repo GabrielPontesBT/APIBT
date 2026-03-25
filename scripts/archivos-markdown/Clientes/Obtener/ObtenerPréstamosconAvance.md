@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 1 
 Valor específico 1 | Identificador del módulo a incluir. 
@@ -38,7 +38,7 @@ Valor específico 1 | Identificador del módulo a incluir.
 Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 2 
 Valor específico 1 | Módulo del tipo de operación a excluir. 
@@ -59,13 +59,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrestamos | [sBTProgresoPrestamo](#sbtprogresoprestamo) | Listado de préstamos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de identificador].
 ::: 
@@ -143,7 +143,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amort. Libre UI_Empresa</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Sucursal Beta</sucursal>
                <estado>Cobro Judicial</estado>
@@ -161,7 +160,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <estado>Normal</estado>
@@ -179,7 +177,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <estado>Normal</estado>
@@ -224,8 +221,7 @@ curl -X POST \
                     "productoUId": 0, 
                     "nombre": "PRÉSTAMOS HIPOTECARIOS, Amort. Libre UI_Empresa", 
                     "moneda": "$", 
-                    "papel": "" ,
-                    "otrosConceptos":""
+                    "papel": "" 
                 }, 
                 "sucursal": "Sucursal Beta", 
                 "estado": "Cobro Judicial", 
@@ -242,8 +238,7 @@ curl -X POST \
                     "productoUId": 0, 
                     "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF", 
                     "moneda": "$", 
-                    "papel": "" ,
-                    "otrosConceptos":""
+                    "papel": "" 
                 }, 
                 "sucursal": "Casa Matriz", 
                 "estado": "Normal", 
@@ -260,8 +255,7 @@ curl -X POST \
                     "productoUId": 0, 
                     "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF", 
                     "moneda": "$", 
-                    "papel": "" ,
-                    "otrosConceptos":""
+                    "papel": "" 
                 }, 
                 "sucursal": "Casa Matriz", 
                 "estado": "Normal", 
@@ -300,7 +294,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProgresoPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Short | Cantidad de cuotas del préstamo. 
 cantidadCuotasPagas | Short | Cantidad de cuotas pagas del préstamo. 
 capitalCancelado | Double | Capital cancelado del préstamo. 
@@ -318,7 +312,7 @@ sucursal | String | Nombre de la sucursal de alta.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -331,7 +325,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

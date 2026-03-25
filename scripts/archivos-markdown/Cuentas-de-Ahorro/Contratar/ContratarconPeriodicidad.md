@@ -34,19 +34,19 @@ Nombre | Tipo | Comentarios
 clienteUId | Long | Identificador de Cliente.
 productoUId | Long | Identificador de Producto.
 nombreSubcuenta | String | Nombre de la Subcuenta.
-periodoAcreditacion | Long | Período de Acreditación de Intereses.
+periodoAcreditacion | Int | Período de Acreditación de Intereses.
 producto | String | [Hidden: Valor 'CA' por defecto].
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador de la subcuenta contratada.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cliente.
 30002 | No se recibió el identificador único de producto.
 30003 | El período de acreditación ingresado es inválido.

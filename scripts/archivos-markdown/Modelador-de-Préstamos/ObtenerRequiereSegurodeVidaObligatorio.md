@@ -37,13 +37,13 @@ parametro | Short | [Hidden: Valor '350' definido por defecto].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valor | String | Requiere o no seguro de vida obligatorio.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.
@@ -87,7 +87,6 @@ Código | Descripción
     },
     "productoUId": "105"
 }
-```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -108,7 +107,9 @@ Código | Descripción
             <Device/>
          </Btinreq>
          <valor>S</valor>
-         <Erroresnegocio></Erroresnegocio>
+         <Erroresnegocio>
+            <BTErrorNegocio>...</BTErrorNegocio>
+         </Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
             <Servicio>BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio</Servicio>

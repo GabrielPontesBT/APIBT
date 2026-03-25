@@ -42,7 +42,7 @@ sdtAcuerdosCliente | [sBTAcuerdoClienteCC](#sbtacuerdoclientecc)  | Listado de a
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30004 | No existe registro con el identificador indicado.
 30101 | No se recupero la operación para el identificador recibido.
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAcuerdoClienteCC son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción.
 fechaValor | Date | Fecha de inicio del acuerdo.
 fechaVencimiento | Date | Fecha del vencimiento.

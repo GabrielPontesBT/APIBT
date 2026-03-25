@@ -36,7 +36,7 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 paisDocumentoId | Short | Identificador del país de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
 numeroDocumento | String | Número de documento.
@@ -44,7 +44,7 @@ numeroDocumento | String | Número de documento.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No existe registro para el identificador de persona ingresado.
 ::: 

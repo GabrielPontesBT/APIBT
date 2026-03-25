@@ -262,7 +262,7 @@ curl -X POST \
                <descripcion>Carta de Descuentos ACP Empleados</descripcion> 
                <codigo>105</codigo> 
             </sBTTipoDocumentoDigital> 
-		 </sdtTiposDeDocumentoDigital>
+		   </sdtTiposDeDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>753</Numero>
@@ -487,7 +487,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTTipoDocumentoDigital son los siguientes:
 
-Nombre | Tipo | Comentarios
+Campo | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Long | Identificador de tipo de documento digital.
 descripcion | String | Descripción del tipo de documento digital.

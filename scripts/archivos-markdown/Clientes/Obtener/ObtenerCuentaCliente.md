@@ -31,19 +31,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-clienteUId | Short | Identificador único de cliente.
+clienteUId | Long | Identificador único de cliente.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 empresaId | Short | Identificador de la empresa del cliente.
-cuentaBT | Long | Identificador de la cuenta cliente.
+cuentaBT | Int | Identificador de la cuenta cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

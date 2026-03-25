@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

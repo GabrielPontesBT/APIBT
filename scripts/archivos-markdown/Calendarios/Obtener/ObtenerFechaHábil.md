@@ -37,7 +37,7 @@ fecha | Date | Fecha a consultar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaHabil | String | ¿Es hábil? (S/N)
 
 @tab Errores

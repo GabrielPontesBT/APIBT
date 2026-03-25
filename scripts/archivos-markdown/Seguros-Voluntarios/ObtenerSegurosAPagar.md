@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único del cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSegurosAPagar | [sBTProductosSeguro](#sbtproductosseguro) | Listado de seguros a pagar.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador de cuenta cliente.
 30003 | No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].
 :::
@@ -268,7 +268,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductosSeguro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 nroAfiliado | Int | Número del afiliado.
 operacionUId | Long | Identificador único de la operación.
 saldo | Double | Saldo.

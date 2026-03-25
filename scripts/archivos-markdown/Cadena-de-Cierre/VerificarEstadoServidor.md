@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No hay ningún servidor disponible para ejecutar la tarea.
 30004 | No hay ningún servidor disponible para ejecutar la tarea (con la capacidad Default).
 ::: 

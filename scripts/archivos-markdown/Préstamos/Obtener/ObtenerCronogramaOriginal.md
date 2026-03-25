@@ -36,13 +36,13 @@ operacionUId | Long | Identificador de la operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrestamoOriginal | [sBTPrestamoOriginal](#sbtprestamooriginal) | Información del préstamo original.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó préstamo para el identificador:
 ::: 
@@ -116,7 +116,6 @@ curl -X POST \
                <nombre>Amortización Automática TF</nombre> 
                <moneda>$</moneda> 
                <papel>$</papel> 
-               <otrosConceptos></otrosConceptos>
             </producto> 
             <sucursalId>1000</sucursalId> 
             <sucursal>Casa Matriz</sucursal> 
@@ -339,8 +338,7 @@ curl -X POST \
 		"productoUId": "105", 
 		"nombre": "Amortización Automática TF", 
 		"moneda": "$", 
-		"papel": "$" ,
-      "otrosConceptos":""
+		"papel": "$" 
 	  }, 
 	  "sucursalId": "1000", 
 	  "sucursal": "Casa Matriz", 
@@ -562,7 +560,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamoOriginal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Short | Cantidad de cuotas. 
 especie | String | Especie del préstamo. 
 fechaValor | Date | Fecha valor. 
@@ -592,7 +590,7 @@ totalSeguros | Double | Total de seguros.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -605,7 +603,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -616,7 +614,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTCuotaPrestamoOriginal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital. 
 comisiones | Double | Comisiones. 
 fechaDesde | Date | Fecha desde. 

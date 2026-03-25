@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar usuario a habilitar.
 30002 | Debe ingresar fecha desde.
 40003 | No se puede eliminar. Registro no existe.

@@ -40,13 +40,13 @@ modo | String | [Hidden: Valor fijo "INS" para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-telefonoId | Byte | Identificador correlativo de teléfono.
+:--------- | :--------- | :---------
+telefonoId | Short | Identificador correlativo de teléfono.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el identificador de Domicilio.
 30003 | No se recibió Teléfono.

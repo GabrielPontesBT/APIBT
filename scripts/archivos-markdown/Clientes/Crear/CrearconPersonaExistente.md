@@ -34,19 +34,20 @@ Nombre | Tipo | Comentarios
 personaUId | Long | Identificador único de la persona titular de la cuenta.
 sectorId | Short | Identificador de sector.
 clasificacionInternaId | Short | Identificador de clasificación interna.
-ejecutivoId | Short | Identificador de ejecutivo de cuenta.
+ejecutivoId | | Identificador de ejecutivo de cuenta.
 sdtDatosAdicionales | [sBTDatoLista](#sbtdatolista) | Listado de datos adicionales. Se pueden enviar los siguientes [valores.](#valores)
+sucursalId | Int | Identificador de sucursal.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cuenta creada.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se recibió el identificador del sector.
 30003 | No se recibió el identificador de la clasificación interna.
@@ -60,7 +61,7 @@ Código | Descripción
 ### Valores
 
 Clave | Valor | Comentarios
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 NOMBRE_CUENTA | [Nombre de la cuenta] | **[Opcional]** Permite indicar un nombre específico a la cuenta.
 
 :::
@@ -90,6 +91,7 @@ NOMBRE_CUENTA | [Nombre de la cuenta] | **[Opcional]** Permite indicar un nombre
          <bts:clasificacionInternaId>1</bts:clasificacionInternaId>
          <bts:ejecutivoId></bts:ejecutivoId>
          <bts:sdtDatosAdicionales></bts:sdtDatosAdicionales>
+         <bts:sucursalId>1</bts:sucursalId>
       </bts:BTClientes.CrearConPersonaExistente>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -114,7 +116,8 @@ curl -X POST \
 	"sectorId":"1",
 	"clasificacionInternaId":"1",
 	"ejecutivoId":"",
-   "sdtDatosAdicionales":""
+   "sdtDatosAdicionales":"",
+   "sucursalId":"1"
 }'
 ```
 :::
@@ -191,7 +194,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

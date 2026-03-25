@@ -31,18 +31,18 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjetaUId | Long | Identificador único de tarjeta.
+tarjetaId | Long | Identificador de tarjeta.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación de cuenta preferencial del cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la tarjeta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

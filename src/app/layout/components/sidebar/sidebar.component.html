@@ -26,7 +26,7 @@ sidebar.component.html
                 <span class="sidebar-label">{{ getNodeLabel(node) }}</span>
                 @if (getFlagCode(node)) {
                   <span class="sidebar-flag fi"
-                    [class]="'fi fi-' + getFlagCode(node)" [attr.aria-label]="node.label" role="img">
+                    [ngClass]="'fi-' + getFlagCode(node)" [attr.aria-label]="node.label" role="img">
                   </span>
                 }
               </span>

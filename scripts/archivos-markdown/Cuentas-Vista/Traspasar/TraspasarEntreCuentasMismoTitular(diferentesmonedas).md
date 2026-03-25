@@ -51,19 +51,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-clienteUId | Long | Identificador de cliente.
+personaUId | Long | Identificador único de persona.
 sdtTraspaso | [sBTTraspaso](#sbttraspaso) | Datos del Traspaso.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtResultadoTraspaso | [sBTResultadoTraspasoDatos](#sbtresultadotraspasodatos) | Resultado del traspaso.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de origen.
 30002 | No se recibió el identificador único de operación de destino.
 30004 | No se recuperó la operación origen para el Identificador: [Número de identificador].
@@ -94,7 +94,7 @@ Código | Descripción
                 <bts:Canal>BTDIGITAL</bts:Canal>
                 <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>
             </bts:Btinreq>
-            <bts:clienteUId>21</bts:clienteUId>
+            <bts:personaUId>21</bts:personaUId>
             <bts:sdtTraspaso>
                 <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>
                 <bts:operacionUIdDestino>282</bts:operacionUIdDestino>
@@ -123,7 +123,7 @@ curl -X POST \
         "Usuario": "MINSTALADOR",
         "Canal": "BTDIGITAL"
     },
-    "clienteUId": "21",
+    "personaUId": "21",
     "sdtTraspaso":
     {
         "operacionUIdOrigen": "281",
@@ -219,7 +219,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del Traspaso. 
 importe | Double | Importe del Movimiento. 
 monedaId | Short | Identificador de Moneda.  
@@ -235,7 +235,7 @@ operacionUIdOrigen | Long | Identificador de operación de origen del traspaso.
 Los campos del tipo de dato estructurado sBTResultadoTraspasoDatos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idMovimiento | String | Identificador de Movimiento String. 
 movimientoUId |	Long | Identificador de Movimiento.  
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso.  

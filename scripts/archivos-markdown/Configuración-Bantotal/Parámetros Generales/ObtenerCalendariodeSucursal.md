@@ -36,14 +36,14 @@ sucursalId | Int | Identificador de sucursal.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcionSucursal | String | Descripción de la sucursal.
 sdtCalendario | [sBTCalendario](#sbtcalendario) | Calendario de la sucursal.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de sucursal.
 40001 | No existe sucursal con el identificador ingresado.
 ::: 
@@ -173,7 +173,7 @@ curl -X GET \
 Los campos del tipo de dato estructurado sBTCalendario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del calendario.
 identificador | Short | Código del calendario.
 :::

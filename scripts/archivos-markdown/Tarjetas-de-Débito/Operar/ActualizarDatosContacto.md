@@ -1,6 +1,5 @@
 ---
 title: Actualizar Datos de Contacto
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -42,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de tarjeta de débito
 30001 | No se recibió código de domicilio a actualizar.
 30001 | No se recibió correo electrónico a actualizar.
@@ -189,7 +188,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosContacto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigoDomicilio | Byte | Identificador del tipo de domicilio.
 correoElectronico | String | Correo electrónico.
 numeroTelefono | String | Teléfono.

@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
-ejecutivoId | Short | Identificador de ejecutivo a modificar.
+ejecutivoId | Int | Identificador de ejecutivo a modificar.
 
 @tab Datos de Salida
 
@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió el Identificador del ejecutivo.
 30011 | El identificador de ejecutivo no es válido.

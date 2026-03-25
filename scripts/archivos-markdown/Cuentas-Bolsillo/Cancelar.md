@@ -38,13 +38,13 @@ operacionCobroUId | Long | Identificador único de la operación de cobro.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del cliente.
 30002 | La cuenta indicada no existe.
 30003 | No se recibió el identificador de la cuenta.
@@ -77,7 +77,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>7</bts:Requerimiento>
          </bts:Btinreq>
-         <bts:cuentaUId>322</bts:cuentaUId>
+         <bts:clienteUId>322</bts:clienteUId>
          <bts:bolsilloUId>18830</bts:bolsilloUId>
          <bts:operacionCobroUId>1133</bts:operacionCobroUId>
       </bts:BTCuentasBolsillo.Cancelar>
@@ -100,7 +100,7 @@ curl -X POST \
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1"
 	},
-    "cuentaUId": 322,
+    "clienteUId": 322,
     "bolsilloUId": 18830,
     "operacionCobroUId": 1133,
 }'

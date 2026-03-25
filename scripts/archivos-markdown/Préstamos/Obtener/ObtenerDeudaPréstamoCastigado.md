@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación simulada.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrestamoCastigado | [sBTPrestamoCastigado](#sbtprestamocastigado) | Datos del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 ::: 
@@ -179,7 +179,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamoCastigado son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 interes | Double | Interés generado. 
 interesSuspenso | Double | Interés suspenso. 
 mora | Double | Mora generada. 

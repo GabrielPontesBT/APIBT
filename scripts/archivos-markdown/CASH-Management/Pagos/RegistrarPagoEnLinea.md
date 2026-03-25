@@ -48,7 +48,7 @@ nroLineaOrden | Int | Número de línea de orden CASH.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030614 | Canal no habilitado para el servicio.
 1030615 | Canal no habilitado para el contrato.
 1030618 | El importe debe ser mayor a cero.

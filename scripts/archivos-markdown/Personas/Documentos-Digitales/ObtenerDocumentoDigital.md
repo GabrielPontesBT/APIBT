@@ -37,13 +37,13 @@ documentoId | Long | Identificador de documento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtDocumentosDigitales | [sBTVersionDocumentoDigital](#sbtversiondocumentodigital) | Datos de documento digital.
+:--------- | :--------- | :---------
+sdtDocumentoDigital | [sBTVersionDocumentoDigital](#sbtversiondocumentodigital) | Datos de documento digital.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la persona.
 30002 | No se recibió el identificador de documento.
 30024 | No existe registro para el identificador único.
@@ -116,7 +116,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>0868626a064A8B5C60A82434</Token>
          </Btinreq>
-         <sdtDocumentosDigitales>
+         <sdtDocumentoDigital>
             <sBTVersionDocumentoDigital>
                <FechaEmision>2010-10-10</FechaEmision>
                <Archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</Archivo>
@@ -126,7 +126,7 @@ curl -X POST \
                <Nombre>ejemplo</Nombre>
                <Instancia>115</Instancia>
             </sBTVersionDocumentoDigital>
-         </sdtDocumentosDigitales>
+         </sdtDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>881</Numero>
@@ -144,7 +144,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -152,7 +152,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "sdtDocumentosDigitales": {
+   "sdtDocumentoDigital": {
       "sBTVersionDocumentoDigital": [ {
           "FechaEmision": "2010-10-10",
           "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
@@ -175,7 +175,7 @@ curl -X POST \
        "Hora": "13:09:46",
        "Canal": "BTDIGITAL"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -191,14 +191,14 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-archivo | String | Documento digital codificado en base 64. 
+:--------- | :--------- | :--------- 
+Archivo | String | Documento digital codificado en base 64. 
 documentoId | Long | Identificador del documento digital. 
-fechaEmision | Date | Fecha de emisión del documento digital. 
-fechaVencimiento | Date | Fecha de Vencimiento del documento digital. 
-instancia | Long | Título del documento digital. 
-nombre | String | Nombre del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-version | Int | Número de versión del documento digital. 
+FechaEmision | Date | Fecha de emisión del documento digital. 
+FechaVencimiento | Date | Fecha de Vencimiento del documento digital. 
+Instancia | Long | Título del documento digital. 
+Nombre | String | Nombre del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Version | Int | Número de versión del documento digital. 
 :::
 <!-- CIERRA SDT -->

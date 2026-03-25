@@ -1,6 +1,5 @@
 ---
 title: Resimular Amortizable
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -45,7 +44,7 @@ sdtSimulacion | [sBTSimulacionOutput](#sbtsimulacionoutput) | Datos de salida de
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
@@ -988,7 +987,6 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>198</productoUId>
                <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <capital>1000000.0</capital>
             <tipoAmortizacionCod>3</tipoAmortizacionCod>
@@ -1963,8 +1961,7 @@ curl -X POST \
             "moneda": "$",
             "papel": "$",
             "productoUId": 198,
-            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-            "otrosConceptos":""
+            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
           },
           "capital": 1000000,
           "tipoAmortizacionCod": 3,
@@ -2044,18 +2041,18 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSimulacionUpdate son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 diaPago | Byte | Días de pago.
 fechaPrimerPago | Date | Fecha del primer pago.
-otrosConceptos | [sBTConcepto](#sbtconcepto) | Otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto1) | Otros conceptos.
 
-### sBTConcepto
+### sBTConcepto1
 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -2069,7 +2066,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTSimulacionOutput son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantidadCuotas | Int | Cantidad de cuotas.
 capital | Double | Capital.
 cft | Double | Costo financiero total.
@@ -2086,7 +2083,7 @@ impuestosDesembolso | Double | Impuestos de desembolso.
 montoDesembolso | Double | Monto de desembolso.
 nomSucursal | String | Nombre de la sucursal.
 operacionUid | Long | Identificador único de operación.
-otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto2) | Datos de otros conceptos.
 periodicidad | Int | Periodicidad.
 plazo | Int | Plazo.
 plus | Double | Tasa plus.
@@ -2108,12 +2105,22 @@ totalPrestamo | Double | Total de préstamo.
 totalSeguros | Double | Total de seguros.
 valorCuota | Double | Valor de la cuota.
 
+### sBTConcepto2
+
+Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+concepto | String | Concepto.
+texto | String | Texto.
+valor | Double | Importe.
+
 ### sBTCuotaSimulacion
 
 Los campos del tipo de dato estructurado sBTCuotaSimulacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 capital | Double | Monto de capital en la cuota.
 concepto | String | Concepto.
 cuota | Double | Importe total de la cuota.
@@ -2130,19 +2137,30 @@ tipoCuota | String | Tipo de la cuota (Capital/Interés).
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
-otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto3) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
 productoUId | Long | Identificador único de producto. 
+
+### sBTConcepto3
+
+::: center 
+Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :---------
+concepto | String | Concepto.
+texto | String | Texto.
+valor | Double | Importe.
 
 ### sBTSeguroPrestamo
 
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código del seguro.
 descripcion | String | Descripción del seguro.
 importeFijo | Decimal | Importe fijo del seguro.
@@ -2155,7 +2173,7 @@ tipo | String | Tipo del seguro.
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.

@@ -36,13 +36,13 @@ tipoGrupoId | Short | Tipo de grupos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtGrupos | [sBTGrupo](#sbtgrupo) | Listado de grupos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el tipo de grupo.
 30002 | No existen grupos para el tipo de grupo ingresado.
 ::: 
@@ -193,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código del grupo. 
 nombre | String | Descripción del grupo. 
 :::

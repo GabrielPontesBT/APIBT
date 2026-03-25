@@ -30,7 +30,7 @@ backtotop: false
 Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 1 
 Valor específico 1 | Identificador del módulo a incluir. 
@@ -38,12 +38,11 @@ Valor específico 1 | Identificador del módulo a incluir.
 Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 3
 Correlativo 2 | 2 
 Valor específico 1 | Módulo del tipo de operación a excluir. 
 Valor específico 2 | Tipo de operación a excluir.	 
-
 :::
 <!-- CIERRA CONFIGURACIÓN BACKEND -->
 
@@ -59,13 +58,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosPlazoFijoCancelados | [sBTProductoPlazoFijoCancelado](#sbtproductoplazofijocancelado) | Listado de plazos fijos cancelados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador.
 ::: 
@@ -134,7 +133,7 @@ curl -X POST \
             <Token>845cec4b724A8B5C60A82434</Token>
          </Btinreq>
          <sdtProductosPlazoFijoCancelados>
-            <SdtsBTProductoPlazoFijoCancelado>
+            <sBTProductoPlazoFijoCancelado>
                <operacionUId>73</operacionUId>
                <idOperacionFmt>0000000108_00000</idOperacionFmt>
                <idOperacionBT>00100102200000000000000029000000000108001</idOperacionBT>
@@ -143,7 +142,6 @@ curl -X POST \
                   <nombre>DPF Intransferible Mda. Nac.</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <fechaAlta>2016-10-26</fechaAlta>
@@ -157,7 +155,7 @@ curl -X POST \
                <tasaFinal>2.750000</tasaFinal>
                <tipoTasa/>
                <plazo>0</plazo>
-            </SdtsBTProductoPlazoFijoCancelado>
+            </sBTProductoPlazoFijoCancelado>
          </sdtProductosPlazoFijoCancelados>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -185,7 +183,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtProductosPlazoFijoCancelados": {
-		"SdtsBTProductoPlazoFijoCancelado": {
+		"sBTProductoPlazoFijoCancelado": {
 		  "operacionUId": "73",
 		  "idOperacionFmt": "0000000108_00000",
 		  "idOperacionBT": "00100102200000000000000029000000000108001",
@@ -193,8 +191,7 @@ curl -X POST \
 			"productoUId": "5",
 			"nombre": "DPF Intransferible Mda. Nac.",
 			"moneda": "$",
-			"papel": "",
-         "otrosConceptos":""
+			"papel": ""
 		  },
 		  "sucursal": "Casa Matriz",
 		  "fechaAlta": "2016-10-26",
@@ -238,7 +235,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductoPlazoFijoCancelado son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital del depósito. 
 fechaAlta | Date |	Fecha de alta del depósito. 
 fechaVencimiento | Date | Fecha de vencimiento del depósito. 
@@ -262,7 +259,7 @@ tipoTasa | String |	Descripción del tipo de tasa.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -275,7 +272,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

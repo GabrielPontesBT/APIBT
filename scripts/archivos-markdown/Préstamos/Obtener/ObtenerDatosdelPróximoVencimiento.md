@@ -38,13 +38,13 @@ modoConsulta | String | [Hidden: Valor fijo '' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProxVencimiento | [sBTProximoVto](#sbtproximovto) | Datos del próximo vencimiento del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó préstamo para el identificador: [Número de Identificador].
 30006 | La Fecha para Consultas es anterior a la de la Operación.
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProximoVto son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantCuoImpVenc | Int | Cantidad de cuotas impagas vencidas.
 cantCuoPagas | Int | Cantidad de cuotas pagas.
 cuotaVigente | Decimal | Cuota vigente.
@@ -207,8 +207,8 @@ otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

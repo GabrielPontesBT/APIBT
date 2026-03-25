@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de solicitud
 30011 | No es posible completar la tarea. Se debe validar políticas previamente
 30012 | No es posible completar la tarea. Existen políticas incumplidas

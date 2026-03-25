@@ -36,13 +36,13 @@ productoUId | Long | Identificador único de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPeriodos | [sBTPlazo](#sbtplazo) | Listado de períodos habilitados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del producto.
 30002 | No se recuperó el producto de ahorro para el identificador: [Número de identificador].
 40001 | Error de configuración: No se definió listado de períodos.
@@ -112,21 +112,21 @@ curl -X POST \
             <Token>f2f7be2ebc4A8B5C60A82434</Token>
          </Btinreq>
          <sdtPeriodos>
-            <sdtPeriodo>
+            <sBTPlazo>
                <Tipo>M</Tipo>
                <Descripcion>1 - Meses</Descripcion>
                <Valor>1</Valor>
-            </sdtPeriodo>
-            <sdtPeriodo>
+            </sBTPlazo>
+            <sBTPlazo>
                <Tipo>M</Tipo>
                <Descripcion>2 - Meses</Descripcion>
                <Valor>2</Valor>
-            </sdtPeriodo>
-            <sdtPeriodo>
+            </sBTPlazo>
+            <sBTPlazo>
                <Tipo>M</Tipo>
                <Descripcion>3 - Meses</Descripcion>
                <Valor>3</Valor>
-            </sdtPeriodo>
+            </sBTPlazo>
          </sdtPeriodos>
          <Erroresnegocio></Erroresnegocio>
 		 <Btoutreq>
@@ -154,7 +154,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtPeriodos": {
-        "sBTPeriodo": [
+        "sBTPlazo": [
             {
                 "Tipo": "M",
                 "Descripcion": "1 - Meses",
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPlazo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción extendida del período.
 tipo | String | Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A').
 valor | Int | Período.

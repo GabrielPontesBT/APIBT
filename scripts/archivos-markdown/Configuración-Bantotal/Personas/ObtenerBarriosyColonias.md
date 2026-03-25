@@ -38,7 +38,7 @@ ciudad | Int | Identificador de ciudad.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtBarrios | [sBTBarrio](#sbtbarrio) | Listado de barrios.
 
 @tab Errores
@@ -122,6 +122,7 @@ curl -X POST \
                <identificador>920</identificador> 
                <descripcion>Paso Molino</descripcion> 
             </sBTBarrio> 
+            ...
          </sdtBarrios> 
          <Erroresnegocio></Erroresnegocio> 
          <Btoutreq> 
@@ -256,7 +257,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBarrio son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripcion de barrio.
 identificador | Int | Identificador de barrio.
 :::

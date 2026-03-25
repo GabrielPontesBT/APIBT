@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 40015 | El registro no existe.
 ::: 
@@ -79,7 +79,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarCorreoElectronico=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarCorreoElectronico' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 9109670d-2d57-ee79-7754-63220119f31a' \
@@ -91,7 +91,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "PersonaUId": 41,
+    "personaUId": 41,
     "sdtCorreoElectronico": {
         "correoElectronico": "avs@gmail.com",
         "correlativo": 1
@@ -134,7 +134,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -154,7 +154,7 @@ curl -X POST \
       "Hora": "18:34:28",
       "Canal": "BTDIGITAL"
    }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -170,7 +170,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCorreoElectronico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo | Int | Correlativo de correo electrónico. 
 correoElectronico | String | Correo electrónico. 
 :::

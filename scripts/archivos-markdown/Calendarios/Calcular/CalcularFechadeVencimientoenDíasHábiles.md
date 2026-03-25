@@ -40,7 +40,7 @@ tipoVencimiento | String | Tipo de ajuste al vencimiento ('A': Hábil anterior, 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaVencimiento | Date | Fecha de vencimiento del plazo.
 
 @tab Errores
@@ -117,7 +117,7 @@ curl -X POST \
             <Token>573607534CD285A89A23FBEE</Token>
             <Device>N</Device>
          </Btinreq>
-         <fechaFin>2020-03-15</fechaFin>
+         <fechaVencimiento>2020-03-15</fechaVencimiento>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -143,7 +143,7 @@ curl -X POST \
       "Token": "573607534CD285A89A23FBEE", 
       "Device": "N" 
     }, 
-    "fechaFin": "2020-03-15", 
+    "fechaVencimiento": "2020-03-15", 
     "Erroresnegocio": { 
     }, 
     "Btoutreq": { 

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtActividades | [sBTActividad](#sbtactividad) | Listado de actividades.
 
 @tab Errores
@@ -104,18 +104,18 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>1EF0C356A692E3706CFA0201</Token>
          </Btinreq>
-         <sdtTipoActividad>
-            <SdtsBTActividad>
+         <sdtActividades>
+            <sBTActividad>
                <descripcion>Actividad Principal</descripcion>
                <identificador>1</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>Prueba</descripcion>
                <identificador>2</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-         </sdtTipoActividad>
+            </sBTActividad>
+         </sdtActividades>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>10261</Numero>
@@ -181,8 +181,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTActividad son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 descripcion | String | Descripción de actividad.
 identificador | Int | Identificador de actividad.
 identificadorEntidadReguladora | Long | Identificador de entidad reguladora.

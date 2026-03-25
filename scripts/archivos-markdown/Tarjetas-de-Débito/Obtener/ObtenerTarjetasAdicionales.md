@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtTarjetaDebitoAdicionales | [sBDTarjetaDebitoAdicional](#sbdtarjetadebitoadicional) | Datos de la tarjeta de débito.
+:--------- | :--------- | :---------
+sdtTarjetaDebitoAdicionales | [sBDTarjetasDebitoAdicionales](#sbdtarjetadebitoadicional) | Datos de la tarjeta de débito.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de tarjeta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -164,7 +164,17 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBDTarjetaDebitoAdicional  
+::: details sBTTarjetasDebitoAdicionales  
+
+### sBTTarjetasDebitoAdicionales
+
+::: center 
+Los campos del tipo de dato estructurado sBTTarjetasDebitoAdicionales son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+adicionales | [sBDTarjetaDebitoAdicional](#sbdtarjetadebitoadicional) | Listado de tarjetas de débito adicionales. 
+tarjetaUId | Long | Identificador único de tarjeta. 
 
 ### sBDTarjetaDebitoAdicional
 
@@ -172,7 +182,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBDTarjetaDebitoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado. 
 fechaVencimiento | Date | Fecha de vencimiento. 
 nombreTarjeta | String | Nombre de tarjeta. 

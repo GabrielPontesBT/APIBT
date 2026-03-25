@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único del cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtConsultaStopDebit | [sBTConsultaStopDebit](#sbtconsultastopdebit) | Datos del alta de Stop Debits.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se encontró un cliente para el identificador: [Número de identificador].
 ::: 
@@ -215,6 +215,7 @@ curl -X POST \
                 "correlativo": 2,
                 "estado": "AC"
             },
+            ...
         ]
     },
     "Erroresnegocio": {
@@ -245,7 +246,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTConsultaStopDebit son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo | Short | Correlativo del stop debit.
 estado | String | Estado del Stop Debit.
 fechaAlta | Date | Fecha de alta.
@@ -261,7 +262,7 @@ stopDebit | [sBTStopDebit](#sbtstopdebit) | Datos del Stop Debit.
 Los campos del tipo de dato estructurado sBTStopDebit son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único del cliente.
 empresaOriginante | String | Identificador de la empresa originante.
 fechaDesde | Date | Fecha desde para aplicar el Stop Debit.

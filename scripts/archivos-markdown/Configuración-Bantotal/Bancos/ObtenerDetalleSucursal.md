@@ -42,7 +42,7 @@ sdtDetalleSucursal | [sBTDetalleSucursal](#sbtdetallesucursal) | Detalle de la s
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de sucursal.
 41001 | La Sucursal no existe.
 
@@ -208,7 +208,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleSucursal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 barrio | String | Barrio.
 barrioId | Int | Identificador del barrio.
 calendarioId | Short | Identificador de calendario.

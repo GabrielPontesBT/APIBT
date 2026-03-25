@@ -36,13 +36,13 @@ numeroTelefono | String | Número de teléfono de la persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTitulares | [sBTTitularTelefono](#sbttitulartelefono) | Listado de titulares del teléfono.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el número de telefono.
 40001 | No existe número de celular.
 ::: 
@@ -176,7 +176,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTitularTelefono son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 datosAdicionales | [sBTDatoAdicional](#sbtdatoadicional) | Listado de datos adicionales.
 nombre | String | Nombre de la persona.
 personaUId | Long | Identificador único de la persona.
@@ -187,7 +187,7 @@ personaUId | Long | Identificador único de la persona.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalle | String | Detalle.
 :::
 <!-- CIERRA SDT -->

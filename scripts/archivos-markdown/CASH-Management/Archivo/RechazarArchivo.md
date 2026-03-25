@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030723 | No se encontraron ordenes para rechazar para el identificador recibido.
 1030724 | El estado de la orden, no permite rechazar.
 ::: 

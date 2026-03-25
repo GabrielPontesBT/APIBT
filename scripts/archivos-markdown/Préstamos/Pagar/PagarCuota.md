@@ -58,13 +58,13 @@ referencia | String | Referencia.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento [Asiento].
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación de préstamo.
 30002 | No se recibió el identificador de operación de cobro.
 30003 | Debe ingresar importe.
@@ -100,7 +100,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:operacionUId>321</bts:operacionUId>
          <bts:clienteUId>161</bts:clienteUId>
-         <bts:Importe>161</bts:Importe>
+         <bts:importe>161</bts:importe>
          <bts:operacionUId_cobro>281</bts:operacionUId_cobro>
          <bts:referencia>PagarCuota</bts:referencia>
       </bts:BTPrestamos.PagarCuota>
@@ -125,7 +125,7 @@ curl -X POST \
 	},
     "operacionUId": 342,
     "clienteUId": 161,
-    "Importe": 1000,
+    "importe": 1000,
     "operacionUId_cobro": 281,
     "referencia": "Cancelar"
 }'

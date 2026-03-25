@@ -37,13 +37,13 @@ parametro | Short | [Hidden: Valor '362' definido por defecto].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valor | String | Permite o no seguros del mismo tipo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.

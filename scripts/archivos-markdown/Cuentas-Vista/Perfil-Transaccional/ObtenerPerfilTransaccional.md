@@ -46,7 +46,7 @@ totalMontoRetiros | Double | Total de importes de retiros.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30021 | No se recuperó la operación para el Identificador: [Número de identificador].
 40001 | Producto a consultar no existe.
@@ -244,7 +244,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosPerfilTransaccional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 origenDeFondosId | Short | Identificador del origen de los fondos. 
 origenDeFondos | String | Origen de los fondos. 
 movimientosMensuales | [sBTPerfilTrnMovimientosMensuales](#sbtperfiltrnmovimientosmensuales) | Datos de los movimientos mensuales.
@@ -255,7 +255,7 @@ movimientosMensuales | [sBTPerfilTrnMovimientosMensuales](#sbtperfiltrnmovimient
 Los campos del tipo de dato estructurado sBTPerfilTrnMovimientosMensuales son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 enEfectivo | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Datos de los movimientos mensuales en efectivo.
 conCheque | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Datos de los movimientos mensuales con cheques.
 transferenciaLocal | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Datos de los movimientos mensuales de transferencias locales.
@@ -266,7 +266,7 @@ transferenciaInternacional | [sBTPerfilTrnDatosMovInternacionales](#sbtperfiltrn
 Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovimientos son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 montoRetiros | Double | Total de importes de retiros.
 montoDepositos | Double | Total de importes de depósitos.
 cantidadDepositos | int | Cantidad de movimientos de depósitos.
@@ -278,7 +278,7 @@ cantidadRetiros | int | Cantidad de movimientos de retiros.
 Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovInternacionales son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 montoRetiros | Double | Total de importes de retiros.
 montoDepositos | Double | Total de importes de depósitos.
 cantidadDepositos | int | Cantidad de movimientos de depósitos.

@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtAsesores | [sBTAsesor](#sbtasesor) | Listado de asesores.
 
 @tab Errores
@@ -247,7 +247,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAsesor son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Short | Identificador del asesor. 
 usuario | String | Nombre de usuario asesor. 
 :::

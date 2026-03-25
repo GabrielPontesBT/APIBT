@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030725 | No se encontro orden a autorizar.
 1030722 | El estado de la orden, no permite autorizar.
 ::: 

@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDocumentosAdicionales | [sBTDocumentoAdicional](#sbtdocumentoadicional) | Listado de documentos adicionales
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -184,7 +184,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDocumentoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaEmision | Date | Fecha de emisión del documento. 
 fechaVencimiento | Date | Fecha de vencimiento del documento. 
 nroDocumento | String | Número de documento. 

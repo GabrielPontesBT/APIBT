@@ -1,6 +1,5 @@
 ---
 title: Obtener Domicilios
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -38,12 +37,12 @@ clienteUId | Long | Identificador único de cliente.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sbtDomicilioCompleto | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
+sdtDomicilios | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la cuenta.
 30002 | El identificador de la cuenta no es correcto.
 ::: 
@@ -69,7 +68,7 @@ Código | Descripción
             <bts:Requerimiento>0</bts:Requerimiento>
             <bts:Token>6C363FC1CD2072DE525376D3</bts:Token>
          </bts:Btinreq>
-         <bts:clienteUID>322</bts:clienteUID>
+         <bts:clienteUId>322</bts:clienteUId>
       </bts:BTClientes.ObtenerDomicilios>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -90,9 +89,8 @@ curl -X POST \
          "bts:Requerimiento": "0",
          "bts:Token": "6C363FC1CD2072DE525376D3"
          },
-      "bts:clienteUID": "322"
-        } 
-
+      "clienteUId": "322"
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -113,8 +111,8 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>6C363FC1CD2072DE525376D3</Token>
          </Btinreq>
-         <SbtdomicilioCompleto>
-            <domicilioCompleto>
+         <sdtDomicilios>
+            <sBTDomicilioCompleto>
                <coloniaId>0</coloniaId>
                <agrupador1Id>3</agrupador1Id>
                <agrupador5/>
@@ -143,8 +141,8 @@ curl -X POST \
                <localidad/>
                <tipoDomicilioId>1</tipoDomicilioId>
                <departamentoId>1</departamentoId>
-            </domicilioCompleto>
-         </SbtdomicilioCompleto>
+            </sBTDomicilioCompleto>
+         </sdtDomicilios>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>34981</Numero>
@@ -175,8 +173,8 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Token": "6C363FC1CD2072DE525376D3"
 	},
-   "sbtDomicilioCompleto": {
-      "domicilioCompleto": [
+   "sdtDomicilios": {
+      "sBTDomicilioCompleto": [
         {
          "coloniaId": "0",
          "agrupador1Id": "3",
@@ -238,7 +236,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios  
-:--------- | :----------- | :-----------  
+:--------- | :--------- | :---------  
 agrupador1 | String | Agrupador 1.  
 agrupador1Id | Short | Identificador del agrupador 1.  
 agrupador2 | String | Agrupador 2.  

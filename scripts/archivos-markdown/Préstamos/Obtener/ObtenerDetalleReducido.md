@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación simulada.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrestamo | [sBTPrestamo](#sbtprestamo) | Datos del préstamo
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el identificador: [Número de Identificador].
 ::: 
@@ -67,7 +67,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>6453f934f94A8B5C60A82434</bts:Token>
          </bts:Btinreq>
-         <bts:OperacionUId>142</bts:OperacionUId>
+         <bts:operacionUId>142</bts:operacionUId>
       </bts:BTPrestamos.ObtenerDetalleReducido>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -88,7 +88,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "OperacionUId": 142
+    "operacionUId": 142
 }'
 ```
 :::
@@ -127,7 +127,6 @@ curl -X POST \
                <moneda/>
                <productoUId>0</productoUId>
                <nombre>Amort. - Capital F./Empr.- T/F</nombre>
-               <otrosConceptos></otrosConceptos>
             </producto>
             <idOperacionFmt>326-0</idOperacionFmt>
             <fechaValor>2018-05-18</fechaValor>
@@ -174,8 +173,7 @@ curl -X POST \
             "papel": "",
             "moneda": "",
             "productoUId": "0",
-            "nombre": "Amort. - Capital F./Empr.- T/F",
-            "otrosConceptos":""
+            "nombre": "Amort. - Capital F./Empr.- T/F"
         },
         "fechaValor": "2018-05-18",
         "fechaVencimiento": "2021-05-18",
@@ -209,7 +207,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadCuotas | Int | Cantidad de cuotas del préstamo. 
 cantidadCuotasImpagas | Int | Cantidad de cuotas impagas. 
 capitalOriginal | Double | Capital original del préstamo. 
@@ -233,7 +231,7 @@ tipoTasa | String | Tipo de tasa.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -246,7 +244,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

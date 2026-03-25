@@ -47,7 +47,7 @@ lineasCant | Int | Cantidad de líneas del archivo recibido.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030704 | Id de contrato cliente desconocido.
 1030713 | El contrato consultado no corresponde a la cuenta recibida.

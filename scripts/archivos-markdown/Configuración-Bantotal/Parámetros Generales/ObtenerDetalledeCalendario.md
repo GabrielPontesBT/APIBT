@@ -38,14 +38,14 @@ fechaFin | Date | Fecha de fin de visualización de calendario.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcionCalendario | String | Descripción del calendario.
 sdtDetalleCalendario | [sBTDiaCalendario](#sbtdiacalendario) | Detalle de la consulta del calendario.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de calendario.
 30002 | No se recibió fecha de inicio.
 30003 | No se recibió fecha de fin.
@@ -96,8 +96,8 @@ curl -X GET \
         "Token": "faa36bd33f4A8B5C60A82434"
     },
 	"calendarioId":1,
-	"calendarioId":"2020-10-01",
-	"calendarioId":"2020-10-31",
+	"fechaInicio":"2020-10-01",
+	"fechaFin":"2020-10-31",
 }'
 ```
 :::
@@ -120,16 +120,132 @@ curl -X GET \
             <Token>200f0b8b654A8B5C60A82434</Token>
          </Btinreq>
          <descripcionCalendario>Calendario 1</descripcionCalendario>
-         <sdtDetalleCalendario>
-            <sBTDiaCalendario>
-               <fecha>2020-10-01</fecha>
-               <habil>S</habil>
-            </sBTDiaCalendario>
-            <sBTDiaCalendario>
-               <fecha>2020-10-02</fecha>
-               <habil>S</habil>
-            </sBTDiaCalendario>
-         </sdtDetalleCalendario>
+         <sdtDetalleCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-01</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-02</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-03</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-04</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-05</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-06</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-07</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-08</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-09</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-10</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-11</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-12</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-13</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-14</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-15</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-16</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-17</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-18</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-19</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-20</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-21</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-22</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-23</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-24</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-25</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-26</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-27</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-28</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-29</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-30</fecha>  
+               <habil>S</habil>  
+            </sBTDiaCalendario>  
+            <sBTDiaCalendario>  
+               <fecha>2020-10-31</fecha>  
+               <habil>N</habil>  
+            </sBTDiaCalendario>  
+         </sdtDetalleCalendario> 
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>109132</Numero>
@@ -156,18 +272,134 @@ curl -X GET \
 		"Token": "200f0b8b654A8B5C60A82434"
 	},
 	"descripcionCalendario": "Calendario 1",
-	"sdtDetalleCalendario": {
-	  "sBTDiaCalendario": [
-		{
-		  "fecha": "2020-10-01",
-		  "habil": "S"
-		},
-		{
-		  "fecha": "2020-10-02",
-		  "habil": "S"
-		},
-	  ]
-	},
+	"sdtDetalleCalendario": {  
+	  "sBTDiaCalendario": [  
+		{  
+		  "fecha": "2020-10-01",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-02",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-03",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-04",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-05",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-06",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-07",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-08",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-09",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-10",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-11",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-12",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-13",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-14",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-15",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-16",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-17",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-18",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-19",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-20",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-21",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-22",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-23",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-24",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-25",  
+		  "habil": "N"  
+		},  
+		{  
+		  "fecha": "2020-10-26",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-27",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-28",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-29",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-30",  
+		  "habil": "S"  
+		},  
+		{  
+		  "fecha": "2020-10-31",  
+		  "habil": "N"  
+		}  
+	  ]  
+	},  
 	"Btoutreq": {
 	  "Numero": "109132",
 	  "Estado": "OK",
@@ -193,7 +425,7 @@ curl -X GET \
 Los campos del tipo de dato estructurado sBTDiaCalendario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fecha | Date | Día del calendario.
 habil | String | ¿Día hábil? (S/N)
 :::

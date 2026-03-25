@@ -36,7 +36,7 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProfesion | [sBTProfesion](#sbtprofesion) | Datos de la profesión.
 fechaInicioProfesion | Date | Fecha de inicio de la profesión.
 
@@ -169,7 +169,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProfesion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de profesión. 
 identificador | Short | Identificador de profesión. 
 :::

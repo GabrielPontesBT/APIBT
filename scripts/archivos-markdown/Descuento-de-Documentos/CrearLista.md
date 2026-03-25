@@ -1,5 +1,6 @@
 ---
 title: Crear Lista
+icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -42,13 +43,13 @@ fechaValor | Date | Fecha valor.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 listaUId | Long | Identificador de lista.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cuenta.
 30002 | No se recibió el identificador de producto.
 30003 | No se recuperó la cuenta para el identificador.
@@ -126,7 +127,8 @@ curl -X POST \
       "domicilio": "DOMICILIO",
       "telefono": "098756022",
       "tasa": "0"
-   }'
+   }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -202,7 +204,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDescuentoDocumento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 ciudad | String | Ciudad. 
 domicilio | String | Domicilio. 
 fechaEmision | Date |  Fecha de emisión del documento. 

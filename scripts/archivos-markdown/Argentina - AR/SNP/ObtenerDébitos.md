@@ -41,13 +41,13 @@ estado | String | Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDebitos | [sBTDebito](#sbtdebito) | Listado de débitos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se recibió el identificador de la empresa originante.
 30003 | No se recibió el tipo de débito.
@@ -220,7 +220,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDebito son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 CBU2 | String | CBU.
 monedaSigno | String | Signo de la moneda.
 estado | String | Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado).

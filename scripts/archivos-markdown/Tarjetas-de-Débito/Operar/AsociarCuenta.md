@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de tarjeta de débito. 
 30002 | No se recibió el Identificador de operación a asociar. 
 30003 | No se recibió el tipo de cuenta a asociar. 

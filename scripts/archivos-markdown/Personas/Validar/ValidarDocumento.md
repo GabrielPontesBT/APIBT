@@ -38,14 +38,14 @@ nroDocumento | String | Número de documento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valido | String | ¿Válido? (S/N).
 mensaje | String | Mensaje de salida cuando el documento no es válido.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de país.
 30002 | No se recibió el identificador de tipo de documento.
 30003 | No se recibió el número de documento.

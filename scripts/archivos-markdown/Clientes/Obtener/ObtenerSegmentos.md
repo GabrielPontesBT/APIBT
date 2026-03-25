@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSegmentos | [sBTSegmento](#sbtsegmento) | Listado de segmentos.
 
 @tab Errores
@@ -194,7 +194,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSegmento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del segmento. 
 identificador | Short | Identificador del segmento. 
 :::

@@ -38,13 +38,13 @@ numeroDocumento | String | Número de documento de la persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentas | [sBTCuentasCliente](#sbtcuentascliente) | Listado de cuentas de la persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del País de documento.
 30002 | No se recibió el identificador del Tipo de documento.
 30003 | No se recibió el número de documento.
@@ -73,8 +73,8 @@ Código | Descripción
             <bts:Token>419385365CD285A89A23FBEE</bts:Token>
             <bts:Device>GP</bts:Device>
          </bts:Btinreq>
-         <bts:paisDocumento>320</bts:paisDocumento>
-         <bts:tipoDocumento>1</bts:tipoDocumento>
+         <bts:paisDocumentoId>320</bts:paisDocumento>
+         <bts:tipoDocumentoId>1</bts:tipoDocumento>
          <bts:numeroDocumento>2131248150408</bts:numeroDocumento>
       </bts:BTMicrofinanzas.BuscarCliente>
    </soapenv:Body>
@@ -121,14 +121,14 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtCuentas>
-            <Cuenta>
+            <sBTCuentasCliente>
                <clienteUId>2</clienteUId>
                <titularidad>
                   <identificador>1</identificador>
                   <descripcion>Titular</descripcion>
                </titularidad>
                <representativo>S</representativo>
-            </Cuenta>
+            </sBTCuentasCliente>
          </sdtCuentas>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -147,7 +147,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -155,7 +155,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "sdtCuentas": {
+        "sBTCuentasCliente": {
           "Cuenta": {
             "clienteUId": "2",
             "titularidad": {
@@ -174,7 +174,7 @@ curl -X POST \
           "Numero": "128",
           "Estado": "OK"
         }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuentasCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único de cuenta. 
 representativo | String | Indica si es titular representativo (S/N).
 titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante. 
@@ -201,7 +201,7 @@ titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante.
 Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del integrante.
 identificador | Int | Identificador del integrante. 
 :::

@@ -37,13 +37,13 @@ fecha | Date | Fecha a consultar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtCuotaPrestamo | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
+:--------- | :--------- | :---------
+cronograma | [sBTCuotaPrestamo](#sbtcuotaprestamo) | Cronograma del préstamo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación. 
 30002 | No se recuperó la operación para el Identificador. 
 30003 | No se recibió fecha para consulta. 
@@ -114,7 +114,7 @@ curl -X POST \
             <Token>191631443CD285A89A23FBEE</Token>
             <Device>AC</Device>
          </Btinreq>
-         <sdtCuotaPrestamo>
+         <cronograma>
             <sBTCuotaPrestamo>
                <nroCuota>1</nroCuota>
                <fechaPago>2019-08-07</fechaPago>
@@ -326,7 +326,7 @@ curl -X POST \
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
             </sBTCuotaPrestamo>
-         </sdtCuotaPrestamo>
+         </cronograma>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -352,7 +352,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
 	}, 
-   "planPagos": { 
+   "cronograma": { 
         "sBTCuotaPrestamo": [ 
             { 
               "nroCuota": "1", 
@@ -581,7 +581,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuotaPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de la cuota. 
 comisiones | Double | Comisiones de la cuota. 
 concepto | String |  (Capital / Interés / Capital-Interés / Pago Mínimo / Cuota Fija). 
@@ -609,7 +609,7 @@ total | Double | Total de la cuota.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

@@ -43,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación origen.
 30002 | No existe registro con el identificador indicado.
 30003 | No se recibió el identificador de la operación destino.

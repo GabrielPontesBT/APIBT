@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de instancia de documento digital.
 30002 | No se recibió el identificador de la operación.
 30003 | La operación ingresada no corresponde a un depósito a plazo.

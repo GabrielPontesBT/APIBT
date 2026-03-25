@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se recibió el identificador único de la operación.
 30003 | No se recupero la operación para el identificador [Número de Identificador].
 30004 | Se tiene que ingresar al menos un beneficiario.
@@ -210,7 +210,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTBeneficiario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 numeroDocumento | String | Numero de documento del beneficiario. 
 parentesco | String | Parentesco del beneficiario.
 pais | String | País.

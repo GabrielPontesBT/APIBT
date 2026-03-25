@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEmpresas | [sBTEmpresaOriginante](#sbtempresaoriginante) | Listado de empresas originantes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se encontró un cliente para el identificador: [Número de identificador].
 40001 | No se encontraron empresas originantes para este cliente.
@@ -210,7 +210,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEmpresaOriginante son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | String | Identificador de la empresa originante.
 prestaciones | [sBTPrestacion](#sbtprestacion) | Listado de prestaciones.
 :::
@@ -221,7 +221,7 @@ prestaciones | [sBTPrestacion](#sbtprestacion) | Listado de prestaciones.
 Los campos del tipo de dato estructurado sBTPrestacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | String | Código identificador de la prestación.
 descripcion | String | Descripción de la prestación.
 :::

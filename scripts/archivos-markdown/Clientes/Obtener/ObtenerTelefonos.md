@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTelefonos | [sBTTelefono](#sbttelefono) | Listado de teléfonos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de cliente.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -216,7 +216,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTelefono son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Byte | Identificador correlativo de teléfono. 
 telefono | String | Número de teléfono 
 tipoDeDomicilio | String | Descripción de tipo de domicilio del teléfono. 

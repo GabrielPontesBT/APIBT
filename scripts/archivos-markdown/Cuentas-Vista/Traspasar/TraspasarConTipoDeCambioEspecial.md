@@ -1,6 +1,5 @@
 ---
 title: Traspasar con Tipo de Cambio Especial
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -66,7 +65,7 @@ sdtResultadoTraspaso | [sBTResultadoTraspaso](#sbtresultadotraspaso) | Resultado
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 31001 | No se recibió el identificador de cliente.
 31002 | No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].
 31003 | No se recibió el identificador único de operación de origen.
@@ -236,7 +235,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTraspasoMoneda son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto del Traspaso
 importeCredito | Double | Importe a acreditar.
 importeDebito | Double | Importe a debitar.
@@ -244,7 +243,9 @@ monedaId | Short | Identificador de Moneda.
 operacionUIdDestino | Long | Identificador de operación de origen del traspaso.
 operacionUIdOrigen | Long | Identificador de operación de destino del traspaso.
 :::
+<!-- CIERRA SDT -->
 
+<!-- ABRE SDT -->
 ::: details sBTResultadoTraspaso  
 
 ### sBTResultadoTraspaso
@@ -253,7 +254,7 @@ operacionUIdOrigen | Long | Identificador de operación de destino del traspaso.
 Los campos del tipo de dato estructurado sBTResultadoTraspaso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 idMovimiento | String | Identificador de Movimiento String.
 movimientoUId | Long | Identificador de Movimiento.
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso.

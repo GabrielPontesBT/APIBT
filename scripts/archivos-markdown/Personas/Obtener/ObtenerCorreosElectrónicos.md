@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCorreoElectronicos | [sBTCorreoElectronico](#sbtcorreoelectronico) | Listado de correos electrónicos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -174,7 +174,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCorreoElectronico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 correlativo | Int | Correlativo de correo electrónico. 
 correoElectronico | String | Correo electrónico.
 :::

@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación del préstamo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fecha_ultimo_pago | Date | Fecha de último pago.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de préstamo.
 30002 | No se recuperó la operación para el identificador: [Número de Identificador].
 ::: 

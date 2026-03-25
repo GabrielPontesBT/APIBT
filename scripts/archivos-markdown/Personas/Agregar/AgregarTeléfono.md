@@ -39,13 +39,13 @@ domicilioId | Byte | Identificador de tipo de domicilio.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-telefonoId | Byte | Identificador correlativo de teléfono.
+:--------- | :--------- | :---------
+telefonoId | Short | Identificador correlativo de teléfono.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona.
 30002 | Debe ingresar al menos un teléfono.
 30005 | No se recibió el tipo del teléfono.

@@ -32,10 +32,10 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 contratoId | Int | Identificador del contrato CASH del cliente.
-servicio | Short | Servicio de pago CASH.
+servicioId | Short | Servicio de pago CASH.
 clienteUId | Long | Identificador único de cliente.
 agendaId | Short | Identificador del tipo de agenda.
-beneficiarioDatos | [sBTValorCampoCASH](#sbtvalorcampocash) | Datos de Beneficiario con sus valores.
+sdtDatosBeneficiario | [sBTValorCampoCASH](#sbtvalorcampocash) | Datos de Beneficiario con sus valores.
 
 @tab Datos de Salida
 
@@ -45,12 +45,12 @@ contratoIdO | Int | Identificador del Contrato CASH.
 servicioIdO | Short | Servicio de Pago CASH.
 agendaIdO | Short | Identificador del tipo de agenda.
 beneficiarioId | String | Se devuelve el Id que identifica el Beneficiario.
-beneficiarioCorr | Int | Correlativo asignado en la Agenda al nuevo Beneficiario.
+beneficiarioCorrelativo | Int | Correlativo asignado en la Agenda al nuevo Beneficiario.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030701 | El Servicio no existe.
 1030704 | Id de contrato cliente desconocido.
 1030770 | No se recupero información para la cuenta recibida.
@@ -83,7 +83,7 @@ Código | Descripción
 			<bts:servicioId>240</bts:servicioId>
 			<bts:clienteUId></bts:clienteUId>
 			<bts:agendaId></bts:agendaId>
-			<bts:beneficiarioDatos>
+			<bts:sdtDatosBeneficiario>
 				<bts:sBTValorCampoCash>
 					<bts:tag>BENEF_ID</bts:tag>
 					<bts:valor>ABC123</bts:valor>
@@ -120,7 +120,7 @@ Código | Descripción
 					<bts:tag>MONEDA</bts:tag>
 					<bts:valor>$</bts:valor>
 				</bts:sBTValorCampoCash>
-			</bts:beneficiarioDatos>
+			</bts:sdtDatosBeneficiario>
 		</bts:BTCASHManagement.IngresarBeneficiario>
 	</soapenv:Body>
 </soapenv:Envelope>		
@@ -145,7 +145,7 @@ curl -X POST \
       "servicioId": 240,
       "clienteUId": "",
       "agendaId": "",
-      "beneficiarioDatos": {
+      "sdtDatosBeneficiario": {
          "sBTValorCampoCash": [
             {
                "tag": "BENEF_ID",
@@ -269,7 +269,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 

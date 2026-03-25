@@ -36,7 +36,7 @@ archivoId | Long | Identificador de archivo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 resumenCabezal | [sBTResumenCabezal](#sbtresumencabezal) | Resumen de información de un archivo.
 
 @tab Errores
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTResumenCabezal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivoId | Long | Identificador de Archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 contratoId | Int | Identificador del contrato CASH.

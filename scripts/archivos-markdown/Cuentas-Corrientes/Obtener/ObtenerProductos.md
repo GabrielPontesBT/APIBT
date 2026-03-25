@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Listado de productos.
 
 @tab Errores
@@ -110,56 +110,48 @@ curl -X POST \
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>42</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>43</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Jurídica</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>44</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Jurídica</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>45</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Físicas</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>46</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Físicas</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>47</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Jurídicas</nombre>
                <moneda>$</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>48</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Jurídicas</nombre>
                <moneda>USD</moneda>
                <papel/>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
@@ -193,57 +185,49 @@ curl -X POST \
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "41",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                "otrosConceptos":""
+                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "42",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                "otrosConceptos":""
+                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
             },
             {
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "43",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica",
-                "otrosConceptos":""
+                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "44",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica",
-                "otrosConceptos":""
+                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica"
             },
             {
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "45",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas",
-                "otrosConceptos":""
+                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "46",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas",
-                "otrosConceptos":""
+                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas"
             },
             {
                 "papel": "",
                 "moneda": "$",
                 "productoUId": "47",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas",
-                "otrosConceptos":""
+                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas"
             },
             {
                 "papel": "",
                 "moneda": "USD",
                 "productoUId": "48",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas",
-                "otrosConceptos":""
+                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas"
             }
         ]
     },
@@ -275,7 +259,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -288,7 +272,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

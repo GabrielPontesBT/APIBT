@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEvolucionSaldo | [sBTEvolucionSaldos](#sbtevolucionsaldos) | Datos de evolución de saldos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 30003 | La operación ingresada no corresponde a una cuenta corriente.
@@ -296,7 +296,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEvolucionSaldos son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 productoUId | Long | Identificador único de producto. 
 saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual. 
  
@@ -306,7 +306,7 @@ saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual.
 Los campos del tipo de dato estructurado sBTSaldoMensual son los siguientes:  
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 anio | Short | Año. 
 mes | Byte | Mes. 
 saldo | Double | Saldo mensual. 

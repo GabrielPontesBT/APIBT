@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtNivelesEducativos | [sBTNivelEducativo](#sbtniveleducativo) | Listado de niveles educativos.
 
 @tab Errores
@@ -83,6 +83,7 @@ curl -X POST \
         "Token": "bc8b678bc44A8B5C60A82434"
     }
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -103,34 +104,34 @@ curl -X POST \
             <Requerimiento>1</Requerimiento>
          </Btinreq>
          <sdtNivelesEducativos>
-            <SdtsBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Primario</descripcion>
                <codigo>1</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Secundario</descripcion>
                <codigo>2</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Terciario</descripcion>
                <codigo>3</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Universitario</descripcion>
                <codigo>4</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Post Grado</descripcion>
                <codigo>5</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>Analfabeto</descripcion>
                <codigo>6</codigo>
-            </SdtsBTNivelEducativo>
-            <SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
+            <sBTNivelEducativo>
                <descripcion>No corresponde</descripcion>
                <codigo>999</codigo>
-            </SdtsBTNivelEducativo>
+            </sBTNivelEducativo>
          </sdtNivelesEducativos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -158,7 +159,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtNivelesEducativos": {
-        "SdtsBTNivelEducativo": [
+        "sBTNivelEducativo": [
         {
             "descripcion": "Primario",
             "codigo": "1"
@@ -216,7 +217,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTNivelEducativo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de nivel educativo. 
 descripcion | String | Descripción de nivel educativo. 
 :::

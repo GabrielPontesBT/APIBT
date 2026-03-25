@@ -31,21 +31,21 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-mesConsulta | Short | Mes de consulta.
+mesConsulta | Byte | Mes de consulta.
 anioConsulta | Int | Año de consulta.
 sucursalId | Int | Identificador de sucursal.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaHabilInicio | Date | Primera fecha hábil del mes.
 fechaHabilFin | Date | Última fecha hábil del mes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar mes a consultar.
 30002 | Debe ingresar año a consultar.
 30003 | Debe ingresar identificador de sucursal.

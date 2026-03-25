@@ -43,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Excepción asignada a otro Usuario
 30011 | No se recibió el identificador de excepción.
 30012 | No se recibió Usuario.

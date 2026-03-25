@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCalendarios | [sBTCalendario](#sbtcalendario) | Colección de calendarios.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se encontraron calendarios en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -179,7 +179,7 @@ curl -X GET \
 Los campos del tipo de dato estructurado sBTCalendario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del calendario.
 identificador | Short | Código del calendario.
 :::

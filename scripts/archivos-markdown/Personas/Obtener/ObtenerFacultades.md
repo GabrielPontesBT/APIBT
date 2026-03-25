@@ -36,13 +36,13 @@ personasUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtFacultades | [sBTFacultadesPersona](#sbtfacultadespersona) | Listado de datos de facultades.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona. 
 30006 | No se recuperó la persona  para el Identificador: [Número de identificador]. 
 <!-- CIERRA TABLA DE DATOS -->
@@ -117,7 +117,6 @@ curl -X POST \
                      <moneda>$</moneda>
                      <productoUId>41</productoUId>
                      <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                   <descripcion>Retiro de cuentas vista</descripcion>
                   <operacionUId>1011</operacionUId>
@@ -190,8 +189,7 @@ curl -X POST \
                 "papel": "$",
                 "moneda": "$",
                 "productoUId": "41",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                "otrosConceptos":""
+                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
               },
               "descripcion": "Retiro de cuentas vista",
               "operacionUId": "1011",
@@ -260,7 +258,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTFacultadesPersona son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 sBTFacultadesCliente | [sBTFacultadPersonaCliente](#sbtfacultadpersonacliente) | Listado de datos de cliente. 
 sBTFacultadesOperacion | [sBTFacultadPersonaOperacion](#sbtfacultadpersonaoperacion) | Listado de datos de operación. 
 
@@ -269,7 +267,7 @@ sBTFacultadesOperacion | [sBTFacultadPersonaOperacion](#sbtfacultadpersonaoperac
 Los campos del tipo de dato estructurado sBTFacultadPersonaCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 categoria | String | Categoría. 
 clienteUId | Long | Identificador único del cliente. 
 codigo | Short | Código. 
@@ -283,7 +281,7 @@ tipo | String | Tipo.
 Los campos del tipo de dato estructurado sBTFacultadPersonaOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 categoria | String | Categoria. 
 codigo | Short | Código. 
 descripcion | String | Descripción. 
@@ -298,7 +296,7 @@ tipo | String | Tipo.
 Los campos del tipo de dato estructurado sBTFacultadGrupoPersona son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigoMoneda | Int | Código de moneda. 
 codigoPapel | Int | Código de papel. 
 moneda | String | Moneda. 
@@ -314,7 +312,7 @@ vigenciaHasta | Date | Fecha de vigencia hasta.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -327,7 +325,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

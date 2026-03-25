@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la cuenta.
 30002 | El identificador de la cuenta no es correcto.
 30011 | Código de domicilio no válido.
@@ -223,7 +223,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 agrupador1 | String | Nombre agrupador 1.
 agrupador1Id | Short | Identificador agrupador 1.
 agrupador2 | String | Nombre agrupador 2.

@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDatosCuentaCliente | [sBTDatosCuentaCliente](#sbtdatoscuentacliente) | Datos de la cuenta cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].
 40001 | No existe titular representativo para la cuenta.
@@ -69,7 +69,7 @@ Código | Descripción
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Token>8A7B3C4E6F4A275BC67245E5</bts:Token>
          </bts:Btinreq>
-         <bts:clienteUID>10010</bts:clienteUID>
+         <bts:clienteUId>10010</bts:clienteUId>
       </bts:BTCliente.ObtenerDatos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -90,7 +90,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-		"clienteUID": 10010
+		"clienteUId": 10010
 	}'
    ```
 :::
@@ -219,7 +219,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosCuentaCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividadLaboral | String | Descripción de la actividad laboral. 
 actividadLaboralId | Int | Identificador de la actividad laboral. 
 asesor | String | Nombre del asesor. 

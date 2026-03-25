@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar identificador de cliente.
 40001 | No se puede habilitar la cuenta porque está cerrada.
 40002 | La cuenta ya se encuentra habilitada.

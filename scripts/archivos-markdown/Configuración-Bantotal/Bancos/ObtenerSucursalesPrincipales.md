@@ -1,6 +1,5 @@
 ---
 title: Obtener Sucursales Principales
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -193,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSucursal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de sucursal. 
 direccion | String | Dirección de sucursal. 
 identificador | Int | Identificador de sucursal. 

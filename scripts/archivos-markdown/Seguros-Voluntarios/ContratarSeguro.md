@@ -30,7 +30,7 @@ backtotop: false
 @tab Datos de Entrada
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 seguroUId | Int | Identificador único del seguro.
 clienteUId | Long | Identificador único del cliente.
 importe | Double | Importe.
@@ -43,14 +43,14 @@ stringAux | String | [Hidden: Valor fijo vacío para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de la operación.
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se ingresó código de seguro.
 30002 | No se recibió el identificador del cliente.
 30003 | El importe ingresado no puede ser nulo.

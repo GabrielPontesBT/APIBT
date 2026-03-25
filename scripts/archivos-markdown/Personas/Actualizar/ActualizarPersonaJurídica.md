@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30013 | No existe registro para el identificador único.
 40001 | No existe persona con los datos ingresados.
@@ -253,36 +253,73 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaJuridica1 son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-actividad | String | Nombre de actividad. 
-actividadId | Long | Identificador de actividad. 
-apartamento | String | Apartamento. 
-barrio | String | Nombre de barrio. 
-barrioId | Int | Identificador de barrio. 
-calle | String | Calle. 
-codigoPostal | String | Código postal. 
-correoElectronico | String | Correo electrónico. 
-departamento | String | Nombre de departamento. 
-departamentoId | Int | Identificador de departamento. 
-fechaConstitucion | Date | Fecha de constitución. 
-localidad | String | Nombre de localidad. 
-localidadId | Int | Identificador de localidad. 
-naturalezaJuridica | String | Nombre de naturaleza jurídica. 
-naturalezaJuridicaId | Short | Identificador de naturaleza jurídica. 
-nombreReducido | String | Nombre reducido. 
-nroDocumento | String | Número de documento. 
-nroRegistro | Long | Número de registro. 
-numeroPuerta | String | Número de puerta. 
-pais | String | Nombre del país. 
-paisDomicilio | String | Nombre del país de domicilio. 
-paisDomicilioId | Short | Identificador del país de domicilio. 
-paisId | Short | Identificador del país. 
-piso | String | Piso. 
-razonSocial | String | Razón social. 
-telefonoFijo | String | Número de teléfono fijo. 
-tipoActividad | String | Nombre de tipo de actividad. 
-tipoActividadId | Long | Identificador de tipo de actividad. 
-tipoDocumento | String | Nombre del tipo de documento. 
-tipoDocumentoId | Short | Identificador del tipo de documento. 
+:--------- | :--------- | :---------
+actividad | String | Nombre de actividad.
+actividadId | Long | Identificador de actividad.
+correoElectronico | String | Correo electrónico.
+datosAdicionales | [sBTDatoLista](#sbtdatolista) | Listado de datos adicionales.
+domicilios | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Listado de los domicilios.
+fechaConstitucion | Date | Fecha de constitución.
+fechaExpiracion | Date | Fecha de expiración.
+naturalezaJuridica | String | Nombre de naturaleza jurídica.
+naturalezaJuridicaId | Short | Identificador de naturaleza jurídica.
+nombreReducido | String | Nombre reducido.
+nroDocumento | String | Número de documento.
+nroRegistro | Long | Número de registro.
+pais | String | Nombre del país.
+paisId | Short | Identificador del país.
+razonSocial | String | Razón social.
+telefonoCelular | String | Número de teléfono celular.
+telefonoFijo | String | Número de teléfono fijo.
+tipoActividad | String | Nombre de tipo de actividad.
+tipoActividadId | Long | Identificador de tipo de actividad.
+tipoDocumento | String | Nombre del tipo de documento.
+tipoDocumentoId | Short | Identificador del tipo de documento.
+
+### sBTDomicilioCompleto
+
+::: center 
+Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :---------
+agrupador1 | String | Nombre agrupador 1.
+agrupador1Id | Short | Identificador agrupador 1.
+agrupador2 | String | Nombre agrupador 2.
+agrupador2Id | Short | Identificador agrupador 2.
+agrupador3 | String | Nombre agrupador 3.
+agrupador3Id | Short | Identificador agrupador 3.
+agrupador4 | String | Nombre agrupador 4.
+agrupador4Id | Short | Identificador agrupador 4.
+agrupador5 | String | Nombre agrupador 5.
+agrupador5Id | Short | Identificador agrupador 5.
+barrio | String | Nombre del barrio.
+barrioId | int | Identificador del barrio.
+codigoPostal | String | Código postal.
+colonia | String | Colonia.
+coloniaId | int | Identificador de la colonia.
+departamento | String | Nombre del departamento.
+departamentoId | int | Identificador del departamento.
+detalleUbicacion | String | Detalle de la ubicación.
+direccion | String | Dirección.
+localidad | String | Nombre de la localidad.
+localidadId | int | Identificador de la localidad.
+pais | String | Nombre del país.
+paisId | Short | Identificador del país.
+tipoDomicilio | String | Descripción del tipo de domicilio.
+tipoDomicilioId | Byte | Identificador del tipo de domicilio.
+tipoVivienda | String | Descripción del tipo de vivienda.
+tipoViviendaId | String | Identificador del tipo de vivienda.
+ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+
+### sBTDatoLista
+
+::: center 
+Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :---------
+clave | String | Identificador de información adicional.
+valor | String | Valor de información adicional.
 :::
 <!-- CIERRA SDT -->

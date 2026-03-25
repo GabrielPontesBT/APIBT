@@ -37,7 +37,7 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cuentaDebito | Long | Operación de débito.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 moneda | Short | Moneda.
@@ -46,12 +46,12 @@ referencia | String | Referencia del pago o cobro.
 fechaPago | Date | Fecha de pago o cobro.
 estado | String | Estado del archivo.
 erroresPago | String | Lista de mensajes del cabezal de pago.
-detallePagos | [sBTDetallePago](#sbtdetallepago) | Lista de información del archivo con su estado y mensaje.
+sdtDetallePagos | [sBTDetallePago](#sbtdetallepago) | Lista de información del archivo con su estado y mensaje.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030712 | Se requiere cuenta para recuperar la información.
 1030713 | El contrato consultado no corresponde a la cuenta recibida.
 1030770 | No se recuperó información para la cuenta recibida.
@@ -131,7 +131,7 @@ curl -X POST \
          <fechaPago>2023-09-04</fechaPago>
          <estado>P<estado/>
          <erroresPago/>
-         <detallePagos/>
+         <sdtDetallePagos/>
          <Erroresnegocio>
             <BTErrorNegocio>
                <Severidad/>
@@ -171,7 +171,7 @@ curl -X POST \
     "fechaPago": "2023-09-04",
     "estado": "P",
     "erroresPago": "",
-    "detallePagos": "",
+    "sdtDetallePagos": "",
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
@@ -200,7 +200,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetallePago son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 beneficiarioBanco | String | Banco del Beneficiario.
 beneficiarioCuenta | String | Cuenta del Beneficiario.
 beneficiarioId | String | Identificador de Beneficiario.

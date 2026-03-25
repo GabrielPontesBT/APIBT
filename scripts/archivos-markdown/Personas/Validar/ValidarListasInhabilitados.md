@@ -33,7 +33,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 pais | Short | Identificador de país.
 tipoDocumento | Short | Identificador de tipo de documento.
-numeroDocumento | String | Número de documento.
+numeroDeDocumento | String | Número de documento.
 tipoPersona | String | Tipo de persona (Física / Jurídica).
 primerNombre | String | Primer nombre.
 segundoNombre | String | Segundo nombre.
@@ -44,13 +44,13 @@ razonSocial | String | Razón social
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-listaInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de lista de inhabilitados.
+:--------- | :--------- | :---------
+sdtListaInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de lista de inhabilitados.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se ingresó primer nombre de la persona.
 30002 | No se ingresó primer apellido de la persona.
 30003 | No se ingresó país de la persona.
@@ -163,7 +163,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -192,7 +192,7 @@ curl -X POST \
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -208,7 +208,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTListaInhabilitados son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 bloqueante | String | ¿Es bloqueante? (S/N).
 codigo | Short | Identificador de lista de inhabilitados.
 descripcion | String | Descripción de lista de inhabilitados.

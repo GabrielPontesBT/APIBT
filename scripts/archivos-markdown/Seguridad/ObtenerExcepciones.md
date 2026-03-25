@@ -36,13 +36,13 @@ usuario | String | Usuario.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-excepciones | [sBTExcepcion](#sbtexcepcion) | Listado de excepciones.
+:--------- | :--------- | :---------
+sdtExcepciones | [sBTExcepcion](#sbtexcepcion) | Listado de excepciones.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el usuario.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -109,7 +109,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>dac8c7fdec4A8B5C60A82434</Token>
          </Btinreq>
-         <excepciones>
+         <sdtExcepciones>
             <sBTExcepcion>
                <identificador>1853</identificador>
                <descripcion>Autorización T.Cbio./Arbitraje</descripcion>
@@ -120,7 +120,7 @@ curl -X POST \
                <nombreSucursal>Casa Matriz</nombreSucursal>
                <ligada>N</ligada>
             </sBTExcepcion>
-         </excepciones>
+         </sdtExcepciones>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>891</Numero>
@@ -146,7 +146,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "excepciones": {
+    "sdtExcepciones": {
       "sBTExcepcion": [
          {
          "nombreUsuario": "INSTALADOR",
@@ -187,8 +187,8 @@ curl -X POST \
 ::: center
 Los campos del tipo de dato estructurado sBTExcepcion son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 descripcion | String | Descripción de la excepción.
 descripcionMovimiento | String | Descripción del movimiento.
 identificador | Int | Identificador de excepción.

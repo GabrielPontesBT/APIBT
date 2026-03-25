@@ -38,13 +38,13 @@ fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoCuentaAhorro | [sBTEstadoCuentaAhorro](#sbtestadocuentaahorro) | Estado de cuenta del ahorro.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de la operación.
 30011 | No se recupero la operación para el identificador recibido.
 ::: 
@@ -86,14 +86,14 @@ curl -X POST \
   -H 'postman-token: 02100864-83c5-1642-ca5f-a8589b3524b4' \
   -d '{
 	"Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
-        "Canal": "BTDIGITAL",
-        "Token": "75e20bd1614A8B5C60A82434"
-    },
-    "ahorroUId": 205,
-	"fechaDesde": "2017-03-06",
+      "Device": "AV",
+      "Usuario": "MINSTALADOR",
+      "Requerimiento": "",
+      "Canal": "BTDIGITAL",
+      "Token": "75e20bd1614A8B5C60A82434"
+   },
+   "ahorroUId": 205,
+   "fechaDesde": "2017-03-06",
    "fechaHasta": "2017-11-30"
 }'
 ```
@@ -283,7 +283,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCuentaAhorro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 abonoActual | Double | Abono actual.
 ahorroUId | Long | Identificador único del ahorro.
 clienteUId | Long | Identificador único del cliente.
@@ -309,7 +309,7 @@ totalInteresesGenerados | Double | Total de intereses generados.
 Los campos del tipo de dato estructurado sBTMovimientoAhorro son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital de movimiento.
 concepto | String | Concepto de movimiento.
 fecha | Date | Fecha de movimiento.

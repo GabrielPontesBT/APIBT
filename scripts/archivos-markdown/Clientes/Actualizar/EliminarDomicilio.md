@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la cliente.
 30002 | El identificador de la cliente no es correcto.
 30011 | Código de domicilio no válido.

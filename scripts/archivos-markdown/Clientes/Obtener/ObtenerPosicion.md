@@ -47,7 +47,7 @@ sdtClasesActivos | [sBTClaseActivo](#sbtclaseactivo) | Datos de las clases de ac
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | Debe ingresar la fecha.
 30013 | No existe registro con la cuenta indicada.
@@ -226,7 +226,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTClaseActivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Long | Identificador de la clase de activo. 
 nombre | String | Nombre de la clase de activo. 
 porcentajeComposicion | Double | Porcentaje de composición de la clase de activo.

@@ -1,5 +1,6 @@
 ---
-title: Crear 
+title: Crear
+icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -18,7 +19,7 @@ backtotop: false
 
 **Nombre publicación:** BTClientes.Crear
 
-**Programa:** RBTPG027
+**Programa:** RBTPG596
 
 **Global/País:** Global
 :::
@@ -31,18 +32,18 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtPersona | [sBTPersona1](#sbtpersona1) | Datos de cliente.
+sdtPersona | [sBTPersonaFisica](#sbtpersonafisica) | Datos de la persona física.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No se pudo obtener identificador único de la cuenta.
 40001 | Debe ingresar País del Documento.
 40002 | El País del Documento no existe.
@@ -63,20 +64,13 @@ Código | Descripción
 40028 | Debe ingresar al menos un Teléfono.
 40029 | Email inválido.
 40030 | La persona se encuentra en la lista de Inhabilitados: [Descripción lista].
-40035 | Debe ingresar Segmento.
-40036 | El código de Segmento no existe.
-40037 | Debe ingresar clasificación interna.
-40038 | El código de clasificación interna no existe.
-40039 | Debe ingresar código de sector.
-40040 | El código de Sector no existe.
 40041 | Debe ingresar Actividad Laboral.
 40042 | El código de Actividad Laboral no existe.
 40043 | El País de la nacionalidad no existe.
 40044 | El sexo ingresado no es válido.
-40049 | Error al obtener el número de cuenta Bantotal.
 40051 | La persona ya existe.
 40101 | Código de domicilio no válido.
-40119 | Debe ingresar País del Domicilio
+40119 | Debe ingresar País del Domicilio.
 40120 | El País del Domicilio no existe.
 40121 | Debe ingresar Departamento.
 40122 | El Departamento no existe.
@@ -89,6 +83,7 @@ Código | Descripción
 40130 | El domicilio ingresado ya existe.
 40131 | El domicilio ingresado no existe.
 40132 | El número de puerta no puede superar los 5 dígitos.
+
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -105,117 +100,158 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTClientes.Crear>
          <bts:Btinreq>
-            <bts:Device>AV</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
-            <bts:Requerimiento></bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
-            <bts:Token>0306ebbd9c4A8B5C60A82434</bts:Token>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>FC</bts:Device>
+            <bts:Requerimiento>0</bts:Requerimiento>
+            <bts:Token>437DAC2305E671B72E8F8124</bts:Token>
          </bts:Btinreq>
          <bts:sdtPersona>
-            <bts:paisDocumentoId>845</bts:paisDocumentoId>
-            <bts:paisDocumento></bts:paisDocumento>
+            <bts:nroDocumento>52797003</bts:nroDocumento>
+            <bts:estadoCivil>Soltero/a</bts:estadoCivil>
+            <bts:fechaInicioActividad>2008-01-01</bts:fechaInicioActividad>
+            <bts:segundoNombre></bts:segundoNombre>
+            <bts:fechaVencimiento>2035-08-01</bts:fechaVencimiento>
+            <bts:segundoApellido></bts:segundoApellido>
+            <bts:fechaNacimiento>1975-02-01</bts:fechaNacimiento>
+            <bts:ingresos>100000.0</bts:ingresos>
+            <bts:telefonoCelular>099585858</bts:telefonoCelular>
             <bts:tipoDocumentoId>1</bts:tipoDocumentoId>
-            <bts:tipoDocumento></bts:tipoDocumento>
-            <bts:nroDocumento>27573084</bts:nroDocumento>
-            <bts:segundoNombre/>
-            <bts:sexo>M</bts:sexo>
-            <bts:estadoCivil>?</bts:estadoCivil>
-            <bts:nacionalidad></bts:nacionalidad>
-            <bts:ingresos>1500</bts:ingresos>
-            <bts:ocupacionId>1</bts:ocupacionId>
-            <bts:actividadLaboral></bts:actividadLaboral>
-            <bts:apartamento>13B</bts:apartamento>
-            <bts:localidad>10</bts:localidad>
-            <bts:barrio/>
-            <bts:sectorId>3</bts:sectorId>
+            <bts:actividadLaboral>10300 Extracción y aglomeración de turba</bts:actividadLaboral>
             <bts:clasificacionInternaId>1</bts:clasificacionInternaId>
-            <bts:telefonoCelular>091897718</bts:telefonoCelular>
-            <bts:departamentoId>10</bts:departamentoId>
+            <bts:sexo>F</bts:sexo>
+            <bts:primerNombre>ISABEL</bts:primerNombre>
+            <bts:clasificacionInterna>IFE - Actividades bursátiles</bts:clasificacionInterna>
+            <bts:paisDocumentoId>845</bts:paisDocumentoId>
+            <bts:telefonoFijo></bts:telefonoFijo>
+            <bts:primerApellido>PUIG</bts:primerApellido>
+            <bts:ocupacion>Asalariado</bts:ocupacion>
+            <bts:sector>Privado no Financiero</bts:sector>
+            <bts:paisDocumento>URUGUAY</bts:paisDocumento>
+            <bts:ocupacionId>1</bts:ocupacionId>
+            <bts:nacionalidad>URUGUAY</bts:nacionalidad>
+            <bts:domicilios>
+                <bts:SdtsBTDomicilioCompleto>
+                    <bts:coloniaId>0</bts:coloniaId>
+                    <bts:agrupador1Id>1</bts:agrupador1Id>
+                    <bts:agrupador5></bts:agrupador5>
+                    <bts:departamento>Montevideo</bts:departamento>
+                    <bts:agrupador4></bts:agrupador4>
+                    <bts:agrupador3Id>0</bts:agrupador3Id>
+                    <bts:detalleUbicacion></bts:detalleUbicacion>
+                    <bts:barrio>Barrio Coppola</bts:barrio>
+                    <bts:agrupador3></bts:agrupador3>
+                    <bts:agrupador2>1585</bts:agrupador2>
+                    <bts:agrupador1>rivera</bts:agrupador1>
+                    <bts:agrupador5Id>0</bts:agrupador5Id>
+                    <bts:tipoDomicilio>Residencia</bts:tipoDomicilio>
+                    <bts:ubicacionDesde>2006-01-01</bts:ubicacionDesde>
+                    <bts:direccion>AVENIDA RIVERA NO. PUERTA 1585</bts:direccion>
+                    <bts:colonia></bts:colonia>
+                    <bts:paisId>845</bts:paisId>
+                    <bts:tipoVivienda>Propietario</bts:tipoVivienda>
+                    <bts:pais>URUGUAY</bts:pais>
+                    <bts:agrupador2Id>1</bts:agrupador2Id>
+                    <bts:codigoPostal></bts:codigoPostal>
+                    <bts:tipoViviendaId>1</bts:tipoViviendaId>
+                    <bts:agrupador4Id>0</bts:agrupador4Id>
+                    <bts:barrioId>110</bts:barrioId>
+                    <bts:localidadId>10</bts:localidadId>
+                    <bts:localidad>Montevideo</bts:localidad>
+                    <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
+                    <bts:departamentoId>10</bts:departamentoId>
+                </bts:SdtsBTDomicilioCompleto>
+            </bts:domicilios>
+            <bts:sectorId>1</bts:sectorId>
+            <bts:correoElectronico>ipuig@dlya.com.uy</bts:correoElectronico>
+            <bts:actividadLaboralId>10300</bts:actividadLaboralId>
+            <bts:tipoDocumento>Cédula Identidad</bts:tipoDocumento>
             <bts:nacionalidadId>845</bts:nacionalidadId>
-            <bts:localidadId>10</bts:localidadId>
-            <bts:clasificacionInterna></bts:clasificacionInterna>
-            <bts:paisDomicilioId>845</bts:paisDomicilioId>
-            <bts:sector></bts:sector>
-            <bts:telefonoFijo>26004288</bts:telefonoFijo>
-            <bts:codigoPostal/>
-            <bts:primerNombre>ALEJANDRO</bts:primerNombre>
-            <bts:fechaNacimiento>1976-02-26</bts:fechaNacimiento>
-            <bts:actividadLaboralId>1112</bts:actividadLaboralId>
-            <bts:primerApellido>VAZQUEZ</bts:primerApellido>
             <bts:estadoCivilId>1</bts:estadoCivilId>
-            <bts:segundoApellido>SZENTANDRASI</bts:segundoApellido>
-            <bts:paisDocumento></bts:paisDocumento>
-            <bts:fechaInicioActividad/>
-            <bts:ocupacion></bts:ocupacion>
-            <bts:paisDomicilio></bts:paisDomicilio>
-            <bts:departamento></bts:departamento>
-            <bts:fechaVencimiento></bts:fechaVencimiento>
-            <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>
-            <bts:numeroPuerta>7216</bts:numeroPuerta>
-            <bts:calle>BAZZURRO</bts:calle>
-            <bts:barrioId></bts:barrioId>
-            <bts:direccion></bts:direccion>
-            <bts:referencia>EN LA ESQUINA</bts:referencia>
-            <bts:piso>123</bts:piso>
          </bts:sdtPersona>
       </bts:BTClientes.Crear>
    </soapenv:Body>
 </soapenv:Envelope>
+
 ```
 
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Crear=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Crear' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \
   -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtPersona": {
-      "paisDocumentoId": 845,
-      "tipoDocumentoId": 1,
-      "nroDocumento": "41875255",
-      "ingresos": "1500.00",
-      "nacionalidad": "URUGUAY",
-      "sexo": "M",
-      "clasificacionInternaId": 1,
+    "Btinreq": {
+      "Canal": "BTDIGITAL",
+      "Usuario": "INSTALADOR",
+      "Device": "FC",
+      "Requerimiento": "0",
+      "Token": "437DAC2305E671B72E8F8124"
+    },
+    "sdtPersona": {
+      "nroDocumento": 52797003,
+      "estadoCivil": "Soltero/a",
+      "fechaInicioActividad": "2008-01-01",
       "segundoNombre": "",
-      "telefonoCelular": "",
-      "departamentoId": 10,
-      "ocupacionId": "1",
-      "actividadLaboralId": 1112,
-      "nacionalidadId": 845,
-      "localidadId": "10",
-      "paisDomicilioId": 845,
-      "telefonoFijo": "26004288",
-      "codigoPostal": "",
-      "primerNombre": "aALEJANDRO",
-      "fechaNacimiento": "1976-02-26",
-      "primerApellido": "vVAZQUEZ",
-      "estadoCivilId": "1",
-      "segundoApellido": "SZENTANDRASI",
+      "fechaVencimiento": "2035-08-01",
+      "segundoApellido": "",
+      "fechaNacimiento": "1975-02-01",
+      "ingresos": 100000.0,
+      "telefonoCelular": "099585858",
+      "tipoDocumentoId": 1,
+      "actividadLaboral": "10300 Extracción y aglomeración de turba",
+      "clasificacionInternaId": 1,
+      "sexo": "F",
+      "primerNombre": "ISABEL",
+      "clasificacionInterna": "IFE - Actividades bursátiles",
+      "paisDocumentoId": 845,
+      "telefonoFijo": "",
+      "primerApellido": "PUIG",
+      "ocupacion": "Asalariado",
+      "sector": "Privado no Financiero",
       "paisDocumento": "URUGUAY",
-      "fechaInicioActividad": "1980-01-01",
-      "ocupacion": "Empleado",
-      "paisDomicilio": "URUGUAY",
-      "fechaVencimiento": "2025-01-01",
-      "correoElectronico": "AV@GMAIL.COM",
-      "numeroPuerta": "7216",
-      "calle": "BAZZURRO",
-      "apartamento": "13B",
-      "barrioId": 0,
-      "sectorId": 3,
-      "direccion": "",
-      "referencia": "EN LA ESQUINA",
-      "piso": "123"
-   }  
+      "ocupacionId": 1,
+      "nacionalidad": "URUGUAY",
+      "domicilios": {
+        "SdtsBTDomicilioCompleto": {
+          "coloniaId": 0,
+          "agrupador1Id": 1,
+          "agrupador5": "",
+          "departamento": "Montevideo",
+          "agrupador4": "",
+          "agrupador3Id": 0,
+          "detalleUbicacion": "",
+          "barrio": "Barrio Coppola",
+          "agrupador3": "",
+          "agrupador2": "1585",
+          "agrupador1": "rivera",
+          "agrupador5Id": 0,
+          "tipoDomicilio": "Residencia",
+          "ubicacionDesde": "2006-01-01",
+          "direccion": "AVENIDA RIVERA NO. PUERTA 1585",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "Propietario",
+          "pais": "URUGUAY",
+          "agrupador2Id": 1,
+          "codigoPostal": "",
+          "tipoViviendaId": 1,
+          "agrupador4Id": 0,
+          "barrioId": 110,
+          "localidadId": 10,
+          "localidad": "Montevideo",
+          "tipoDomicilioId": 1,
+          "departamentoId": 10
+        }
+      },
+      "sectorId": 1,
+      "correoElectronico": "ipuig@dlya.com.uy",
+      "actividadLaboralId": 10300,
+      "tipoDocumento": "Cédula Identidad",
+      "nacionalidadId": 845,
+      "estadoCivilId": 1
+    }
 }'
 ```
 :::
@@ -231,21 +267,21 @@ curl -X POST \
    <SOAP-ENV:Body>
       <BTClientes.CrearResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
-            <Device>AV</Device>
-            <Usuario>MINSTALADOR</Usuario>
-            <Requerimiento/>
+            <Device>FC</Device>
+            <Usuario>INSTALADOR</Usuario>
+            <Requerimiento>0</Requerimiento>
             <Canal>BTDIGITAL</Canal>
-            <Token>0306ebbd9c4A8B5C60A82434</Token>
+            <Token>437DAC2305E671B72E8F8124</Token>
          </Btinreq>
-         <clienteUId>181</clienteUId>
+         <clienteUId>400</clienteUId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
-            <Numero>770</Numero>
+            <Numero>36678</Numero>
             <Estado>OK</Estado>
-            <Servicio>BTClientes.Crear</Servicio>
-            <Fecha>2017-12-14</Fecha>
-            <Requerimiento/>
-            <Hora>18:17:10</Hora>
+            <Servicio>Prueba.Crear</Servicio>
+            <Requerimiento>0</Requerimiento>
+            <Fecha>2025-11-18</Fecha>
+            <Hora>12:16:37</Hora>
             <Canal>BTDIGITAL</Canal>
          </Btoutreq>
       </BTClientes.CrearResponse>
@@ -256,74 +292,119 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "clienteUId": "202",
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "835",
-        "Estado": "OK",
-        "Servicio": "BTClientes.Crear",
-        "Fecha": "2017-12-18",
-        "Requerimiento": "",
-        "Hora": "01:48:53",
-        "Canal": "BTDIGITAL"
-    }
-}'
+  "Btinreq": {
+    "Device": "FC",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "0",
+    "Canal": "BTDIGITAL",
+    "Token": "437DAC2305E671B72E8F8124"
+  },
+  "clienteUId": 400,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 36678,
+    "Estado": "OK",
+    "Servicio": "BTClientes.Crear",
+    "Requerimiento": "0",
+    "Fecha": "2025-11-18",
+    "Hora": "12:16:37",
+    "Canal": "BTDIGITAL"
+  }
+}
+'
 ```
-::: 
+:::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTPersona1  
+::: details sBTPersonaFisica  
 
-### sBTPersona1
+### sBTPersonaFisica
 
 ::: center 
-Los campos del tipo de dato estructurado sBTPersona1 son los siguientes: 
+Los campos del tipo de dato estructurado sBTPersonaFisica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-actividadLaboralId | Int | Identificador de actividad. 
-apartamento | String | Apartamento. 
-barrioId | Int | Identificador de localidad. 
-calle | String | Calle. 
-clasificacionInternaId | Short | Identificador de clasificación interna. 
-codigoPostal | String | Código postal. 
-correoElectronico | String | Correo electrónico. 
-departamentoId | Int | Identificador de departamento. 
-ejecutivoId | Int | Identificador del ejecutivo. 
-estadoCivil | String | Descripción de estado civil. 
-estadoCivilId | String | Identificador de estado civil. 
-fechaInicioActividad | Date | Fecha inicio actividad. 
-fechaNacimiento | Date | Fecha de nacimiento. 
-fechaVencimiento | Date | Fecha de vencimiento de documento. 
-ingresos | Double | Ingresos. 
-localidadId | Int | Identificador de localidad. 
-nacionalidadId | Short | Identificador de país. 
-nroDocumento | String | Número de documento. 
-numeroPuerta | String | Número de puerta. 
-ocupacionId | Int | Identificador de ocupación. 
-paisDocumentoId | Short | Identificador de país del documento. 
-paisDomicilioId | Short | Identificador de país de domicilio. 
-piso | String | Piso del domicilio. 
-primerApellido | String | Primer apellido. 
-primerNombre | String | Primer nombre. 
-sectorId | Short | Identificador de sector. 
-segundoApellido | String | Segundo apellido. 
-segundoNombre | String | Segundo nombre. 
-sexo | String | Sexo (M/F). 
-telefonoCelular | String | Teléfono celular. 
-telefonoFijo | String | Teléfono fijo. 
-tipoDocumentoId | Short | Identificador de tipo de documento. 
+:--------- | :--------- | :--------- 
+actividadLaboral | String | Descripción de actividad laboral.
+actividadLaboralId | Int | Identificador de la actividad laboral.
+clasificacionInterna | String | Descripción de la clasificación interna.
+clasificacionInternaId | Short | Identificador de la clasificación interna.
+correoElectronico | String | Correo electrónico.
+datosAdicionales | [sBTDatoLista](#sbtdatolista) | Listado de datos adicionales.
+domicilios | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Listado de los domicilios.
+estadoCivil | String | Descripción de estado civil.
+estadoCivilId | String | Identificador de estado civil.
+fechaInicioActividad | Date | Fecha de inicio de actividad.
+fechaNacimiento | Date | Fecha de nacimiento.
+fechaVencimiento | Date | Fecha de vencimiento.
+nacionalidad | String | Nombre del país de nacimiento.
+nacionalidadId | Short | Identificador del país de nacimiento.
+nroDocumento | String | Número de documento.
+ocupacion | String | Descripción de ocupación.
+ocupacionId | Int | Identificador de ocupación.
+paisDocumento | String | Nombre del país del documento.
+paisDocumentoId | Short | Identificador del país del documento.
+primerApellido | String | Primer apellido.
+primerNombre | String | Primer nombre.
+sector | String | Sector.
+sectorId | Short | Identificador del sector.
+segundoApellido | String | Segundo apellido.
+segundoNombre | String | Segundo nombre.	
+sexo | String | Sexo (M/F).
+sueldo | Double | Sueldo.
+telefonoCelular | String | Teléfono celular.
+telefonoFijo | String | Teléfono fijo.
+tipoDocumento | String | Nombre del tipo de documento.
+tipoDocumentoId | Short | Identificador del tipo de documento.
+
+### sBTDomicilioCompleto
+
+Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :---------
+agrupador1 | String | Nombre agrupador 1.
+agrupador1Id | Short | Identificador agrupador 1.
+agrupador2 | String | Nombre agrupador 2.
+agrupador2Id | Short | Identificador agrupador 2.
+agrupador3 | String | Nombre agrupador 3.
+agrupador3Id | Short | Identificador agrupador 3.
+agrupador4 | String | Nombre agrupador 4.
+agrupador4Id | Short | Identificador agrupador 4.
+agrupador5 | String | Nombre agrupador 5.
+agrupador5Id | Short | Identificador agrupador 5. 
+barrio | String | Nombre del barrio.
+barrioId | int | Identificador del barrio.
+codigoPostal | String | Código postal.
+colonia | String | Colonia.
+coloniaId | int | Identificador de la colonia.
+departamento | String | Nombre del departamento.
+departamentoId | int | Identificador del departamento.
+detalleUbicacion | String | Detalle de la ubicación.
+direccion | String | Dirección.
+localidad | String | Nombre de la localidad.
+localidadId | int | Identificador de la localidad.
+pais | String | Nombre del país.
+paisId | Short | Identificador del país.
+tipoDomicilio | String | Descripción del tipo de domicilio.
+tipoDomicilioId | Byte | Identificador del tipo de domicilio.
+tipoVivienda | String | Descripción del tipo de vivienda.
+tipoViviendaId | String | Identificador del tipo de vivienda.
+ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+
+### sBTDatoLista
+
+::: center 
+Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+clave | String | Identificador de información adicional. 
+valor | String | Valor de información adicional.  
 :::
 <!-- CIERRA SDT -->

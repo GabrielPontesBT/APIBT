@@ -1,6 +1,5 @@
 ---
 title: Obtener Motivos de Precancelación
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -44,7 +43,7 @@ sdtMotivosPrecancelacion | [sBTValorCampo](#sbtvalorcampo) | Listado de motivos 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único del producto.
 30002 | El identificador único del producto es incorrecto.
 30010 | No se ingresó el tipo de precancelación.
@@ -63,7 +62,7 @@ Código | Descripción
 Este campo tiene dos opciones:
 
 Valor | Comentarios
-:--------- | :-----------
+:--------- | :---------
 P | Parcial.
 T | Total.
 :::
@@ -197,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del campo.
 identificador | Long | Identificador del campo.
 :::

@@ -32,19 +32,19 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 bolsilloUId | Long | Identificador único del bolsillo.
-cantDias | Int | Cantidad de días.
-cantMov | Int | Cantidad de movimientos.
+cantidadDias | Int | Cantidad de días.
+cantidadMovimientos | Int | Cantidad de movimientos.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoDeCuenta | [sBTEstadoCuentaCV](#sbtestadocuentacv) | Datos de estado de cuenta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 30003 | La operación ingresada no corresponde a una cuenta bolsillo.
@@ -72,9 +72,9 @@ Código | Descripción
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Token>CC6345192D8633F531F01D1D</bts:Token>
          </bts:Btinreq>
-         <bts:BolsilloUID>18848</bts:BolsilloUID>
-         <bts:CantDias>4</bts:CantDias>
-         <bts:CantMov>3</bts:CantMov>
+         <bts:bolsilloUId>18848</bts:bolsilloUId>
+         <bts:cantidadDias>4</bts:cantidadDias>
+         <bts:cantidadMovimientos>3</bts:cantidadMovimientos>
       </bts:BTCuentasBolsillo.ObtenerMovimientos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -96,8 +96,8 @@ curl -X POST \
 	  "Requerimiento": "1"
 	},
     "bolsilloUId": 18848,
-    "cantDias": 281,
-    "cantMov": 281
+    "cantidadDias": 281,
+    "cantidadMovimientos": 281
 }'
 ```
 :::
@@ -217,7 +217,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCuentaCV son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta.
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta.
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de movimiento.
@@ -230,7 +230,7 @@ saldoPartida | Double | Saldo inicial.
 Los campos del tipo de dato estructurado sBTMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 arbitraje | Double | Arbitraje de moneda.
 concepto | String | Concepto de movimiento.
 datosAdicionales | [sBTDatoAdicional](#sbtdatoadicional) | Listado de datos adicionales.
@@ -252,7 +252,7 @@ tipoCambio | Double | Tipo de cambio de moneda.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalle | String | Detalle de dato adicional.
 :::
 <!-- CIERRA SDT -->

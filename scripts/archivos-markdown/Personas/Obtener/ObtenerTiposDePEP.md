@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-sdtTiposPEP | [sBTTipoPEP](#sbttipospep) | Listado de los tipos de PEP.
+:--------- | :--------- | :---------
+sdtTipoPEP | [sBTTipoPEP](#sbttipospep) | Listado de los tipos de PEP.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40002 | La guía 8260 no está parametrizada.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -83,7 +83,7 @@ curl -X POST \
         "Device": "GZ",
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
+    }
     }'
 ```
 :::
@@ -105,7 +105,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>9436BF7CB5B5BB404CC6E5A7</Token>
          </Btinreq>
-         <sdtTiposPEP>
+         <sdtTipoPEP>
             <sBTTipoPEP>
                <descripcion>Actividad Pública</descripcion>
                <identificador>1</identificador>
@@ -122,7 +122,7 @@ curl -X POST \
                <descripcion>Vinculado PEP</descripcion>
                <identificador>5</identificador>
             </sBTTipoPEP>
-         </sdtTiposPEP>
+         </sdtTipoPEP>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>20050</Numero>
@@ -140,7 +140,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -148,7 +148,7 @@ curl -X POST \
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    "sdtTiposPEP": {
+    "sdtTipoPEP": {
         "sBTTipoPEP": [
         {
             "descripcion": "Actividad Pública",
@@ -180,7 +180,7 @@ curl -X POST \
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -196,7 +196,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTiposPEP son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del tipo de PEP.
 identificador | Short | Identificador del tipo de PEP.
 :::

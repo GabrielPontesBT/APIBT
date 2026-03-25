@@ -36,7 +36,7 @@ productoUId | Long | Identificador único de producto
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtComisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones
 
 @tab Errores
@@ -173,7 +173,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión. 
 importe | Double | Importe de la comisión. 

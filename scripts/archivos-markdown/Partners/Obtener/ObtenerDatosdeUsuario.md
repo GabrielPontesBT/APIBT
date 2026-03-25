@@ -31,18 +31,18 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-usuarioUId | String | Identificador único de usuario.
+usuario | String | Identificador del usuario.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPartner | [sBTPartnerInReq](#sbtpartnerinreq) | Datos del usuario.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el usuario.
 30002 | Usuario no registrado en Bantotal.
 30003 | Usuario no registrado como vendedor.
@@ -68,7 +68,7 @@ Código | Descripción
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>
          </bts:Btinreq>
-         <bts:usuarioUId>INSTALADOR</bts:usuarioUId>
+         <bts:usuario>INSTALADOR</bts:usuario>
       </bts:BTPartners.ObtenerDatosUsuario>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -89,8 +89,8 @@ curl -X POST \
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1"
 	},
-	"usuarioUId": "INSTALADOR"
-}'
+	"usuario": "INSTALADOR"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -172,7 +172,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.

@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 40001 | La cuenta ingresada no existe.
 ::: 
@@ -173,7 +173,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

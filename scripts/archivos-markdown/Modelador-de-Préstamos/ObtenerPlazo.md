@@ -37,7 +37,7 @@ parametro | Short | [Hidden: Valor '410' definido por defecto].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 minimo | Long | Valor mínimo de plazo de cuotas.
 maximo | Long | Valor máximo de plazo de cuotas.
 valorPorDefecto | Long | Valor por defecto de plazo de cuotas.
@@ -47,7 +47,7 @@ sdtListaValores | [sBTValor](#sbtvalor) | Listado de valores posibles.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.
@@ -146,7 +146,7 @@ Código | Descripción
     "valorPorDefecto": 30,
     "tipo": "Valor",
     "sdtListaValores": {
-        "SdtsBTValor": []
+        "sBTValor": []
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
@@ -176,7 +176,7 @@ Código | Descripción
 Los campos del tipo de dato estructurado sBTValor son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 valor | Long | Valor de plazo de cuotas.
 :::
 <!-- CIERRA SDT -->

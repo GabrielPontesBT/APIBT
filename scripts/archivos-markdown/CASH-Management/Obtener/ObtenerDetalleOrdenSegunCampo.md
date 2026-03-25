@@ -1,6 +1,5 @@
 ---
 title: Obtener Detalle de Orden Según Campo
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -55,7 +54,7 @@ detallePagos | [sBTDetallePago](#sbtdetallepago) | Listado del detalle de pago.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030754 | El campo de búsqueda no existe en el servicio recibido.
 1030755 | No se encontró la orden para el campo/valor recibido.
 
@@ -276,7 +275,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 :::
@@ -289,7 +288,7 @@ valor | String | Valor del campo CASH.
 Los campos del tipo de dato estructurado sBTDetallePago son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 beneficiarioBanco | String | Banco del Beneficiario.
 beneficiarioCuenta | String | Cuenta del Beneficiario.
 beneficiarioId | String | Identificador de Beneficiario.

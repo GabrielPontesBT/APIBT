@@ -37,7 +37,7 @@ parametro | Short | [Hidden: Valor '409' definido por defecto].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 minimo | Long | Valor mínimo de cantidad de cuotas.
 maximo | Long | Valor máximo de cantidad de cuotas.
 valorPorDefecto | Long | Valor por defecto de cantidad de cuotas.
@@ -47,7 +47,7 @@ sdtListaValores | [sBTValor](#sbtvalor) | Listado de valores.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.
@@ -116,45 +116,45 @@ Código | Descripción
          <valorPorDefecto>0</valorPorDefecto>
          <tipo>Lista</tipo>
          <sdtListaValores>
-            <SdtsBTValor>
+            <sBTValor>
                <valor>6</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>10</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>12</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>15</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>18</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>20</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>24</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>36</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>60</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>90</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>120</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>180</valor>
-            </SdtsBTValor>
-            <SdtsBTValor>
+            </sBTValor>
+            <sBTValor>
                <valor>240</valor>
-            </SdtsBTValor>
+            </sBTValor>
          </sdtListaValores>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -186,7 +186,7 @@ Código | Descripción
     "valorPorDefecto": 0,
     "tipo": "Lista",
     "sdtListaValores": {
-        "SdtsBTValor": [
+        "sBTValor": [
             {
                 "valor": 6
             },
@@ -256,7 +256,7 @@ Código | Descripción
 Los campos del tipo de dato estructurado sBTValor son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 valor | Long | Valor de cantidad de cuotas.
 :::
 <!-- CIERRA SDT -->

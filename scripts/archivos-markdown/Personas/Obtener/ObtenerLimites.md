@@ -37,13 +37,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtLimites | [sBTLimiteCliente](#sbtlimitecliente) | Listado de límites.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 30002 | No se recuperó la persona para el identificador ingresado.
 ::: 
@@ -299,7 +299,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTLimiteCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcion | String | Descripción del estado.
 fechaVencimiento | Date | Fecha de vencimiento del límite.
 limiteDisponible | Double | Límite disponible para el cliente.

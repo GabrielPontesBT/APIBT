@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtClasificacionesInternas | [sBTClasificacionInterna](#sbtclasificacioninterna) | Listado de clasificaciones internas.
 
 @tab Errores
@@ -242,7 +242,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTClasificacionInterna son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Short | Identificador de clasificación interna. 
 descripcion | String | Descripción de clasificación interna.
 :::

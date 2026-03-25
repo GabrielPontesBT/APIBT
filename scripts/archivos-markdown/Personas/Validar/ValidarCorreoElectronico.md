@@ -36,13 +36,13 @@ correoElectronico | String | Correo electrónico.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 valido | String | ¿Es válido? (S/N).
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se ingresó el usuario del correo electrónico.
 30002 | Caracteres inválidos en el dominio.
 30003 | No se ingresó dominio.

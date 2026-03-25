@@ -32,18 +32,24 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 diasVtoCuota | Int | Días que faltan para el vencimiento de los préstamos.
+hiddenAux | String | [Hidden: parámetros auxiliares].
 actualiza | String | Habilita la actualización en la tabla SNG912 con los datos del préstamo [Hidden: Valor fijo 'S'].
+offset | Int | Página de registros a obtener.
+limit | Int | Tamaño de paginado.
+contarRegistros | String | ¿Retorna cantidad de registros? (S/N)
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
+quedanRegistros | String | ¿Existen más registros de los devueltos? (S/N)
+cantidadRegistros | Int | Cantidad de registros totales.
 sdtDatosPrestamos | [sBTDatosPrestamo](#sbtdatosprestamo) | Listado de los préstamos que están por vencer en determinados días.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No existe registro para el producto indicado.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -68,6 +74,10 @@ Código | Descripción
             <bts:Token>ad33e17b1199865B3A2E76CF</bts:Token>
          </bts:Btinreq>
          <bts:diasVtoCuota>2</bts:diasVtoCuota>
+         <bts:actualiza>N</bts:actualiza>
+         <bts:offset>1</bts:offset>
+         <bts:limit>10</bts:limit>
+         <bts:contarRegistros>N</bts:contarRegistros>
       </bts:BTPrestamos.ObtenerPrestamosAVencer>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -81,14 +91,18 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 1e026dc4-d252-eff9-4dce-9398f81a587e' \
   -d '{
-	"Btinreq": {
+  "Btinreq": {
     "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Device": "GZ",
     "Usuario": "Instalador",
     "Token": "ad33e17b1199865B3A2E76CF"
   },
-  "diasVtoCuota": 2
+  "diasVtoCuota": 2,
+  "actualiza": "N",
+  "offset": 1,
+  "limit": 10,
+  "contarRegistros": "N"
 }'
 ```
 :::
@@ -110,6 +124,8 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>ad33e17b1199865B3A2E76CF</Token>
          </Btinreq>
+         <quedanRegistros>S</quedanRegistros>
+         <cantidadRegistros></cantidadRegistros>
          <sdtDatosPrestamos>
             <sBTDatosPrestamo>
                <plazo>124</plazo>
@@ -123,7 +139,6 @@ curl -X POST \
                   <moneda>S/</moneda>
                   <productoUId>1</productoUId>
                   <nombre>PRÉSTAMO-Financiero 9</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <clienteUId>407</clienteUId>
                <fechaProximoVencimiento>2023-03-31</fechaProximoVencimiento>
@@ -176,7 +191,9 @@ curl -X POST \
     "Usuario": "Instalador",
     "Token": "d51ae0498699865B3A2E76CF"
 	},
-    "sdtDatosPrestamos": {
+   "quedanRegistros":"S",
+   "cantidadRegistros": 0,
+   "sdtDatosPrestamos": {
     "sBTDatosPrestamo": {
       "plazo": 124,
       "eventosPosteriores": "N",
@@ -188,8 +205,7 @@ curl -X POST \
         "papel": "$",
         "moneda": "S/",
         "productoUId": 1,
-        "nombre": "PRÉSTAMO-Financiero 9",
-        "otrosConceptos":""
+        "nombre": "PRÉSTAMO-Financiero 9"
       },
       "clienteUId": 407,
       "fechaProximoVencimiento": "2023-03-31",
@@ -246,7 +262,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantidadCuotas | Int | Cantidad de cuotas del préstamo.
 cantidadCuotasImpagas | Int | Cantidad de cuotas impagas.
 cantidadCuotasVencidas | Int | Cantidad de cuotas vencidas.
@@ -285,7 +301,7 @@ valorCuota | Double | Valor de la cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -298,7 +314,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -308,7 +324,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 detalle | String | Detalle de dato adicional.
 :::
 <!-- CIERRA SDT -->

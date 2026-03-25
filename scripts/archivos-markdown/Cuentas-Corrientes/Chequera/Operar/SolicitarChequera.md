@@ -32,20 +32,20 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación de subcuenta.
-tipoCheque | Double | Tipo de chequera a solicitar.
-cantidadLibretas | Double | Cantidad de libretas a solicitar.
+tipoCheque | Short | Tipo de chequera a solicitar.
+cantidadLibretas | Short | Cantidad de libretas a solicitar.
 datosSolicitud | [sBTSolicitudChequera](#sbtsolicitudchequera) | Datos de solicitud de chequera.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 chequeraId | Long | Identificador de la solicitud de chequera.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 40003 | El tipo de chequera a agregar es incorrecto.
 40004 | El tipo de chequera a agregar es incorrecto para el módulo.
@@ -197,7 +197,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSolicitudChequera son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 domicilio | String | Domicilio a enviar la chequera. 
 persona1Texto1 | String | Información persona 1. 
 persona1Texto2 | String | Información complementaria persona 1. 

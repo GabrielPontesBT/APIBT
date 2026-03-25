@@ -37,13 +37,13 @@ empresaOriginante | String | Identificador de la empresa originante.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtAdhesiones | [sBTAdhesion](#sbtadhesion) | Listado de adhesiones.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se encontró un cliente para el identificador: [Número de identificador].
 30003 | No se recibió empresa originante.
@@ -204,7 +204,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTAdhesion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 CBU1 | String | Primer bloque del CBU.
 CBU2 | String | Segundo bloque del CBU.
 clienteUId | Long | Identificador único del cliente.

@@ -36,13 +36,13 @@ modulo | Int | Módulo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPizarras | [sBTPizarra](#sbtpizarra) | Listado de pizarras.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No se encontraron pizarras de tasas para el módulo indicado.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -170,8 +170,8 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPizarra son los siguientes:
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 codigo | Int | Identificador de pizarra.
 descripcion | String | Nombre de la pizarra.
 :::

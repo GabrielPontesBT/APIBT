@@ -37,13 +37,13 @@ operacionUId | long | Identificador único de operación CC o CA.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 CBU | String | Clave Bancaria Uniforme.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 40001 | No se encontró CBU para la operación.

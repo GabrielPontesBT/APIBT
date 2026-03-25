@@ -38,13 +38,13 @@ fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoDeCuenta | [sBTEstadoCuentaDebito](#sbtestadocuentadebito) | Datos del estado de cuenta de la tarjeta de débito.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de tarjeta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -321,7 +321,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCuentaDebito son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 movimientos | [sBTMovimientoDebito](#sbtmovimientodebito) | Listado de movimientos.
 
 ### sBTMovimientoDebito
@@ -329,7 +329,7 @@ movimientos | [sBTMovimientoDebito](#sbtmovimientodebito) | Listado de movimient
 Los campos del tipo de dato estructurado sBTMovimientoDebito son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 banco | String | Nombre del banco. 
 codigoMovimiento | String | Código de movimiento. 
 concepto | String | Concepto del movimiento. 

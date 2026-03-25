@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtActividades | [sBTActividad](#sbtactividad) | Listado de actividades.
 
 @tab Errores
@@ -487,7 +487,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTActividad son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de actividad.
 identificador | Int | Identificador de actividad.
 identificadorEntidadReguladora | Long | Identificador de entidad reguladora.

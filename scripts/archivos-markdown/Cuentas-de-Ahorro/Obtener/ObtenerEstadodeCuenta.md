@@ -38,13 +38,13 @@ cantidadMovimientos | Int | Cantidad de movimientos (Se puede parametrizar como 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtEstadoDeCuenta | [sBTEstadoCuentaCV](#sbtestadocuentacv) | Datos de estado de cuenta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación. 
 30002 | No se recuperó operación para el identificador: [Número de identificador]. 
 30003 | La operación ingresada no corresponde a una cuenta de ahorro. 
@@ -242,7 +242,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstadoCuentaCV son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta. 
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de movimiento. 
@@ -255,7 +255,7 @@ saldoPartida | Double | Saldo inicial.
 Los campos del tipo de dato estructurado sBTMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 arbitraje | Double | Arbitraje de moneda. 
 concepto | String | Concepto de movimiento. 
 datosAdicionales | [sBTDatoAdicional](#sbtdatoadicional) | Listado de datos adicionales. 
@@ -277,7 +277,7 @@ tipoCambio | Double | Tipo de cambio de moneda.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalle | String | Detalle de dato adicional. 
 :::
 <!-- CIERRA SDT -->

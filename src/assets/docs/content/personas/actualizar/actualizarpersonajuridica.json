@@ -141,12 +141,12 @@
   ],
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ActualizarPersonaJuridica>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>IN</bts:Usuario>\r\n            <bts:Token>247d9cc0aD285A89A23FBE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>103</bts:personaUId>\r\n         <bts:sdtPersonaJuridica>\r\n            <bts:nroDocumento>219999990016</bts:nroDocumento>\r\n            <bts:fechaExpiracion>2030-31-31</bts:fechaExpiracion>\r\n            <bts:numeroPuerta>1</bts:numeroPuerta>\r\n            <bts:nombreReducido>prueba</bts:nombreReducido>\r\n            <bts:paisDomicilio></bts:paisDomicilio>\r\n            <bts:razonSocial>EMPRESA</bts:razonSocial>\r\n            <bts:departamento></bts:departamento>\r\n            <bts:nroRegistro></bts:nroRegistro>\r\n            <bts:naturalezaJuridica>1</bts:naturalezaJuridica>\r\n            <bts:barrio>1</bts:barrio>\r\n            <bts:apartamento></bts:apartamento>\r\n            <bts:tipoDocumentoId>2</bts:tipoDocumentoId>\r\n            <bts:tipoActividadId>1</bts:tipoActividadId>\r\n            <bts:fechaConstitucion>2020-01-01</bts:fechaConstitucion>\r\n            <bts:paisId>845</bts:paisId>\r\n            <bts:actividad></bts:actividad>\r\n            <bts:paisDomicilioId>845</bts:paisDomicilioId>\r\n            <bts:pais></bts:pais>\r\n            <bts:codigoPostal>91000</bts:codigoPostal>\r\n            <bts:tipoActividad></bts:tipoActividad>\r\n            <bts:barrioId>1</bts:barrioId>\r\n            <bts:localidad></bts:localidad>\r\n            <bts:localidadId>1008</bts:localidadId>\r\n            <bts:actividadId>1111</bts:actividadId>\r\n            <bts:calle>1</bts:calle>\r\n            <bts:tipoDocumento>2</bts:tipoDocumento>\r\n            <bts:naturalezaJuridicaId>1</bts:naturalezaJuridicaId>\r\n            <bts:departamentoId>2</bts:departamentoId>\r\n            <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>\r\n            <bts:telefonoFijo>3213342222</bts:telefonoFijo>\r\n            <bts:piso>123</bts:piso>\r\n         </bts:sdtPersonaJuridica>\r\n      </bts:BTPersonas.ActualizarPersonaJuridica>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarPersonaJuridica' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n   \"Btinreq\": {\r\n   \"Canal\": \"BTDIGITAL\",\r\n   \"Requerimiento\": \"1\",\r\n   \"Usuario\": \"IN\",\r\n   \"Token\": \"247d9cc0aD285A89A23FBE\",\r\n   \"Device\": \"MC\"\r\n   },\r\n   \"personaUId\": \"103\",\r\n    \"sdtPersonaJuridica\": {\r\n        \"nroDocumento\": \"219999990016\",\r\n        \"fechaExpiracion\": \"2030-31-31\",\r\n        \"numeroPuerta\": \"1\",\r\n        \"nombreReducido\": \"prueba\",\r\n        \"paisDomicilio\": \"\",\r\n        \"razonSocial\": \"EMPRESA\",\r\n        \"departamento\": \"\",\r\n        \"nroRegistro\": \"\",\r\n        \"naturalezaJuridica\": \"1\",\r\n        \"barrio\": \"1\",\r\n        \"apartamento\": \"\",\r\n        \"tipoDocumentoId\": \"2\",\r\n        \"tipoActividadId\": \"1\",\r\n        \"fechaConstitucion\": \"2020-01-01\",\r\n        \"paisId\": \"845\",\r\n        \"actividad\": \"\",\r\n        \"paisDomicilioId\": \"845\",\r\n        \"pais\": \"\",\r\n        \"codigoPostal\": \"91000\",\r\n        \"tipoActividad\": \"\",\r\n        \"barrioId\": \"1\",\r\n        \"localidad\": \"\",\r\n        \"localidadId\": \"1008\",\r\n        \"actividadId\": \"1111\",\r\n        \"calle\": \"1\",\r\n        \"tipoDocumento\": \"2\",\r\n        \"naturalezaJuridicaId\": \"1\",\r\n        \"departamentoId\": \"2\",\r\n        \"correoElectronico\": \"AV@GMAIL.COM\",\r\n        \"telefonoFijo\": \"3213342222\",\r\n        \"piso\": \"123\"\r\n    },\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarPersonaJuridica>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>IN</bts:Usuario>\n            <bts:Token>247d9cc0aD285A89A23FBE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>103</bts:personaUId>\n         <bts:sdtPersonaJuridica>\n            <bts:nroDocumento>219999990016</bts:nroDocumento>\n            <bts:fechaExpiracion>2030-31-31</bts:fechaExpiracion>\n            <bts:numeroPuerta>1</bts:numeroPuerta>\n            <bts:nombreReducido>prueba</bts:nombreReducido>\n            <bts:paisDomicilio></bts:paisDomicilio>\n            <bts:razonSocial>EMPRESA</bts:razonSocial>\n            <bts:departamento></bts:departamento>\n            <bts:nroRegistro></bts:nroRegistro>\n            <bts:naturalezaJuridica>1</bts:naturalezaJuridica>\n            <bts:barrio>1</bts:barrio>\n            <bts:apartamento></bts:apartamento>\n            <bts:tipoDocumentoId>2</bts:tipoDocumentoId>\n            <bts:tipoActividadId>1</bts:tipoActividadId>\n            <bts:fechaConstitucion>2020-01-01</bts:fechaConstitucion>\n            <bts:paisId>845</bts:paisId>\n            <bts:actividad></bts:actividad>\n            <bts:paisDomicilioId>845</bts:paisDomicilioId>\n            <bts:pais></bts:pais>\n            <bts:codigoPostal>91000</bts:codigoPostal>\n            <bts:tipoActividad></bts:tipoActividad>\n            <bts:barrioId>1</bts:barrioId>\n            <bts:localidad></bts:localidad>\n            <bts:localidadId>1008</bts:localidadId>\n            <bts:actividadId>1111</bts:actividadId>\n            <bts:calle>1</bts:calle>\n            <bts:tipoDocumento>2</bts:tipoDocumento>\n            <bts:naturalezaJuridicaId>1</bts:naturalezaJuridicaId>\n            <bts:departamentoId>2</bts:departamentoId>\n            <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>\n            <bts:telefonoFijo>3213342222</bts:telefonoFijo>\n            <bts:piso>123</bts:piso>\n         </bts:sdtPersonaJuridica>\n      </bts:BTPersonas.ActualizarPersonaJuridica>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarPersonaJuridica' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n   \"Btinreq\": {\n   \"Canal\": \"BTDIGITAL\",\n   \"Requerimiento\": \"1\",\n   \"Usuario\": \"IN\",\n   \"Token\": \"247d9cc0aD285A89A23FBE\",\n   \"Device\": \"MC\"\n   },\n   \"personaUId\": \"103\",\n    \"sdtPersonaJuridica\": {\n        \"nroDocumento\": \"219999990016\",\n        \"fechaExpiracion\": \"2030-31-31\",\n        \"numeroPuerta\": \"1\",\n        \"nombreReducido\": \"prueba\",\n        \"paisDomicilio\": \"\",\n        \"razonSocial\": \"EMPRESA\",\n        \"departamento\": \"\",\n        \"nroRegistro\": \"\",\n        \"naturalezaJuridica\": \"1\",\n        \"barrio\": \"1\",\n        \"apartamento\": \"\",\n        \"tipoDocumentoId\": \"2\",\n        \"tipoActividadId\": \"1\",\n        \"fechaConstitucion\": \"2020-01-01\",\n        \"paisId\": \"845\",\n        \"actividad\": \"\",\n        \"paisDomicilioId\": \"845\",\n        \"pais\": \"\",\n        \"codigoPostal\": \"91000\",\n        \"tipoActividad\": \"\",\n        \"barrioId\": \"1\",\n        \"localidad\": \"\",\n        \"localidadId\": \"1008\",\n        \"actividadId\": \"1111\",\n        \"calle\": \"1\",\n        \"tipoDocumento\": \"2\",\n        \"naturalezaJuridicaId\": \"1\",\n        \"departamentoId\": \"2\",\n        \"correoElectronico\": \"AV@GMAIL.COM\",\n        \"telefonoFijo\": \"3213342222\",\n        \"piso\": \"123\"\n    },\n}'"
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ActualizarPersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>MC</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>247d9cc0a3CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>107338</Numero>\r\n            <Servicio>BTPersonas.ActualizarPersonaJuridica</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2020-11-05</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>12:31:25</Hora>\r\n         </Btoutreq>\r\n      </BTPersonas.ActualizarPersonaJuridicaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{ \r\n\t \"Btinreq\": { \r\n\t\t\"Device\": \"MC\", \r\n\t\t\"Usuario\": \"INSTALADOR\", \r\n\t\t\"Requerimiento\": \"1\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Token\": \"247d9cc0a3CD285A89A23FBE\" \r\n\t }, \r\n\t \"Erroresnegocio\": null, \r\n\t \"Btoutreq\": { \r\n\t\t\"Numero\": \"107338\", \r\n\t\t\"Servicio\": \"BTPersonas.ActualizarPersonaJuridica\", \r\n\t\t\"Estado\": \"OK\", \r\n\t\t\"Fecha\": \"2020-11-05\", \r\n\t\t\"Requerimiento\": \"1\", \r\n\t\t\"Canal\": \"BTDIGITAL\", \r\n\t\t\"Hora\": \"12:31:25\" \r\n\t } \r\n }"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarPersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>247d9cc0a3CD285A89A23FBE</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>107338</Numero>\n            <Servicio>BTPersonas.ActualizarPersonaJuridica</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-11-05</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>12:31:25</Hora>\n         </Btoutreq>\n      </BTPersonas.ActualizarPersonaJuridicaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n\t \"Btinreq\": { \n\t\t\"Device\": \"MC\", \n\t\t\"Usuario\": \"INSTALADOR\", \n\t\t\"Requerimiento\": \"1\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"247d9cc0a3CD285A89A23FBE\" \n\t }, \n\t \"Erroresnegocio\": null, \n\t \"Btoutreq\": { \n\t\t\"Numero\": \"107338\", \n\t\t\"Servicio\": \"BTPersonas.ActualizarPersonaJuridica\", \n\t\t\"Estado\": \"OK\", \n\t\t\"Fecha\": \"2020-11-05\", \n\t\t\"Requerimiento\": \"1\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Hora\": \"12:31:25\" \n\t } \n }"
     }
   },
   "structuredTypes": [
@@ -164,44 +164,19 @@
           "Comentarios": "Identificador de actividad."
         },
         {
-          "Nombre": "apartamento",
-          "Tipo": "String",
-          "Comentarios": "Apartamento."
-        },
-        {
-          "Nombre": "barrio",
-          "Tipo": "String",
-          "Comentarios": "Nombre de barrio."
-        },
-        {
-          "Nombre": "barrioId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador de barrio."
-        },
-        {
-          "Nombre": "calle",
-          "Tipo": "String",
-          "Comentarios": "Calle."
-        },
-        {
-          "Nombre": "codigoPostal",
-          "Tipo": "String",
-          "Comentarios": "Código postal."
-        },
-        {
           "Nombre": "correoElectronico",
           "Tipo": "String",
           "Comentarios": "Correo electrónico."
         },
         {
-          "Nombre": "departamento",
-          "Tipo": "String",
-          "Comentarios": "Nombre de departamento."
+          "Nombre": "datosAdicionales",
+          "Tipo": "sBTDatoLista",
+          "Comentarios": "Listado de datos adicionales."
         },
         {
-          "Nombre": "departamentoId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador de departamento."
+          "Nombre": "domicilios",
+          "Tipo": "sBTDomicilioCompleto",
+          "Comentarios": "Listado de los domicilios."
         },
         {
           "Nombre": "fechaConstitucion",
@@ -209,14 +184,9 @@
           "Comentarios": "Fecha de constitución."
         },
         {
-          "Nombre": "localidad",
-          "Tipo": "String",
-          "Comentarios": "Nombre de localidad."
-        },
-        {
-          "Nombre": "localidadId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador de localidad."
+          "Nombre": "fechaExpiracion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de expiración."
         },
         {
           "Nombre": "naturalezaJuridica",
@@ -244,24 +214,9 @@
           "Comentarios": "Número de registro."
         },
         {
-          "Nombre": "numeroPuerta",
-          "Tipo": "String",
-          "Comentarios": "Número de puerta."
-        },
-        {
           "Nombre": "pais",
           "Tipo": "String",
           "Comentarios": "Nombre del país."
-        },
-        {
-          "Nombre": "paisDomicilio",
-          "Tipo": "String",
-          "Comentarios": "Nombre del país de domicilio."
-        },
-        {
-          "Nombre": "paisDomicilioId",
-          "Tipo": "Short",
-          "Comentarios": "Identificador del país de domicilio."
         },
         {
           "Nombre": "paisId",
@@ -269,14 +224,14 @@
           "Comentarios": "Identificador del país."
         },
         {
-          "Nombre": "piso",
-          "Tipo": "String",
-          "Comentarios": "Piso."
-        },
-        {
           "Nombre": "razonSocial",
           "Tipo": "String",
           "Comentarios": "Razón social."
+        },
+        {
+          "Nombre": "telefonoCelular",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono celular."
         },
         {
           "Nombre": "telefonoFijo",
@@ -302,6 +257,166 @@
           "Nombre": "tipoDocumentoId",
           "Tipo": "Short",
           "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDomicilioCompleto",
+      "fields": [
+        {
+          "Nombre": "agrupador1",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 1."
+        },
+        {
+          "Nombre": "agrupador1Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 1."
+        },
+        {
+          "Nombre": "agrupador2",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 2."
+        },
+        {
+          "Nombre": "agrupador2Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 2."
+        },
+        {
+          "Nombre": "agrupador3",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 3."
+        },
+        {
+          "Nombre": "agrupador3Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 3."
+        },
+        {
+          "Nombre": "agrupador4",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 4."
+        },
+        {
+          "Nombre": "agrupador4Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 4."
+        },
+        {
+          "Nombre": "agrupador5",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 5."
+        },
+        {
+          "Nombre": "agrupador5Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 5."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "colonia",
+          "Tipo": "String",
+          "Comentarios": "Colonia."
+        },
+        {
+          "Nombre": "coloniaId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la colonia."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "detalleUbicacion",
+          "Tipo": "String",
+          "Comentarios": "Detalle de la ubicación."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la localidad."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "tipoDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoDomicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoVivienda",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de vivienda."
+        },
+        {
+          "Nombre": "tipoViviendaId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del tipo de vivienda."
+        },
+        {
+          "Nombre": "ubicacionDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde que reside en ese domicilio."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
         }
       ]
     }

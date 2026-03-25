@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtRubrosBolsa | [sBTRubroBolsa](#sbtrubrobolsa) | Listado de rubros de bolsa.
 
 @tab Errores
@@ -122,7 +122,9 @@ curl -X POST \
                <nombreEmpresa>Finaxis</nombreEmpresa>
             </sBTRubroBolsa>
             <sBTRubroBolsa>
+               ...
             </sBTRubroBolsa>
+            ...
          </sdtRubrosBolsa>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -169,7 +171,9 @@ curl -X POST \
          "nombreEmpresa": "Finaxis"
       },
       {
+         ...
       },
+      ...
       ]
    },
    "Erroresnegocio": "",
@@ -198,7 +202,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTRubroBolsa son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuentaCliente | Int | Cuenta cliente. 
 descripcion | String | Nombre del rubro.   
 empresa | Int | Identificador de empresa. 

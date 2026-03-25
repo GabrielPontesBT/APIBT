@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTransaccionesEstados | [sBTTransaccionesEstados](#sbttransaccionesestados) | Listado de trasacciones.
 
 @tab Errores
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTransaccionesEstados son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 error | Int | Transacciones contabilizadas con error.                                                              
 exito | Int | Transacciones contabilizadas con éxito.                                                              
 otros | Int | Otros tipos de contabilización.                                                        

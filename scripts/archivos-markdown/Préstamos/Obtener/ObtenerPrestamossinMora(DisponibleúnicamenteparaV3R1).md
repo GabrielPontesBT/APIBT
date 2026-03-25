@@ -34,7 +34,7 @@ Nombre | Tipo | Comentarios
 diasMoraDesde | Int | [Hidden: Valor fijo '0' para este método]. 
 diasMoraHasta | Int | [Hidden: Valor fijo '0' para este método]. 
 stringAux | String | [Hidden: Valor fijo 'SIN_MORA' para este método]. 
-update912 | String | [Hidden: Valor fijo 'N' para este método]. 
+actualiza | String | [Hidden: Valor fijo 'N' para este método]. 
 offset | Int | Valor desde donde empieza a contar la cantidad de préstamos. 
 limit | int | Cantidad de préstamos que va a mostrar. 
 contarRegistros | Sting | ¿Cuenta el total de préstamos? (S/N). 
@@ -42,15 +42,15 @@ contarRegistros | Sting | ¿Cuenta el total de préstamos? (S/N).
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 quedanRegistros | String | ¿Quedan registros? (S/N). 
-countRegistros | Int | Muestra el total de préstamos sin mora. 
+cantidadRegistros | Int | Muestra el total de préstamos sin mora. 
 sdtDatosPrestamos | [sBTDatosPrestamo](#sbtdatosprestamo) | Listado de los préstamos sin mora. 
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No existe registro para el producto indicado. 
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -122,7 +122,7 @@ curl -X POST \
             <Token>45A5647518BC5FBB73003EA9</Token>
          </Btinreq>
          <quedanRegistros>S</quedanRegistros>
-         <countRegistros>154</countRegistros>
+         <cantidadRegistros>154</cantidadRegistros>
          <sdtDatosPrestamos>
             <sBTDatosPrestamo>
                <plazo>422</plazo>
@@ -137,7 +137,6 @@ curl -X POST \
                   <otrosConceptos></otrosConceptos>
                   <productoUId>72</productoUId>
                   <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <clienteUId>4</clienteUId>
                <fechaProximoVencimiento/>
@@ -178,7 +177,6 @@ curl -X POST \
                   <otrosConceptos></otrosConceptos>
                   <productoUId>72</productoUId>
                   <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <clienteUId>4</clienteUId>
                <fechaProximoVencimiento/>
@@ -219,7 +217,6 @@ curl -X POST \
                   <otrosConceptos></otrosConceptos>
                   <productoUId>72</productoUId>
                   <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <clienteUId>4</clienteUId>
                <fechaProximoVencimiento/>
@@ -260,7 +257,6 @@ curl -X POST \
                   <otrosConceptos></otrosConceptos>
                   <productoUId>72</productoUId>
                   <nombre>PRÉSTAMOS-Amortización Automática TF</nombre>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <clienteUId>4</clienteUId>
                <fechaProximoVencimiento/>
@@ -315,7 +311,7 @@ curl -X POST \
     "Token": "d51ae0498699865B3A2E76CF" 
 	}, 
     "quedanRegistros": "S", 
-    "countRegistros": 154, 
+    "cantidadRegistros": 154, 
     "sdtDatosPrestamos": { 
         "sBTDatosPrestamo": [ 
         { 
@@ -330,8 +326,7 @@ curl -X POST \
             "papel": "$", 
             "otrosConceptos": "", 
             "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF",
-            "otrosConceptos":""  
+            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
             }, 
             "clienteUId": 4, 
             "fechaProximoVencimiento": "", 
@@ -371,8 +366,7 @@ curl -X POST \
             "papel": "$", 
             "otrosConceptos": "", 
             "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF",
-            "otrosConceptos":""  
+            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
             }, 
             "clienteUId": 4, 
             "fechaProximoVencimiento": "", 
@@ -412,8 +406,7 @@ curl -X POST \
             "papel": "$", 
             "otrosConceptos": "", 
             "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF",
-            "otrosConceptos":""  
+            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
             }, 
             "clienteUId": 4, 
             "fechaProximoVencimiento": "", 
@@ -453,8 +446,7 @@ curl -X POST \
             "papel": "$", 
             "otrosConceptos": "", 
             "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF",
-            "otrosConceptos":""  
+            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
             }, 
             "clienteUId": 4, 
             "fechaProximoVencimiento": "", 
@@ -494,8 +486,7 @@ curl -X POST \
             "papel": "$", 
             "otrosConceptos": "", 
             "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF",
-            "otrosConceptos":"" 
+            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
             }, 
             "clienteUId": 4, 
             "fechaProximoVencimiento": "", 
@@ -553,7 +544,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosPrestamo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cantidadCuotas | Int | Cantidad de cuotas del préstamo.
 cantidadCuotasImpagas | Int | Cantidad de cuotas impagas.
 cantidadCuotasVencidas | Int | Cantidad de cuotas vencidas.
@@ -592,7 +583,7 @@ valorCuota | Double | Valor de la cuota.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -605,7 +596,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
@@ -615,7 +606,7 @@ valor | Double | Importe.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 detalle | String | Detalle de dato adicional.
 :::
 <!-- CIERRA SDT -->

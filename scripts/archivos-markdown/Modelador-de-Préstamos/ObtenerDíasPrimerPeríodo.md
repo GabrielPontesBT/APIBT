@@ -36,14 +36,14 @@ productoUId | Long | Identificador de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 minimo | Long | Mínimo de días posibles para el primer período.
 maximo | Long | Máximo de días posibles para el primer período.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.

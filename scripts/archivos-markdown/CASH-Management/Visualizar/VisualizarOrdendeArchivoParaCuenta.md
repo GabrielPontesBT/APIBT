@@ -37,13 +37,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 listaResumenOrdenes | [sBTResumenCabezal](#sbtresumencabezal) | Listados de resumen de ordenes.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030712 | Se requiere cuenta para recuperar la información. 
 1030770 | No se recuperó información para la cuenta recibida. 
 ::: 
@@ -266,7 +266,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTResumenCabezal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivoId | Long | Identificador de archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 contratoId | Int | Identificador del contrato CASH.

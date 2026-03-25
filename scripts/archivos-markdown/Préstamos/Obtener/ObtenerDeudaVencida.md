@@ -37,13 +37,13 @@ fechaDeCalculo | Date | Fecha a la que se calcula la deuda.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 deuda | Double | Deuda a la fecha.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recuperó la operación para el identificador: [Número de identificador].
 ::: 

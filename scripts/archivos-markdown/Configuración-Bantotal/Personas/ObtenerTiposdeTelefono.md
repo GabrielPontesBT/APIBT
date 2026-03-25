@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTiposTelefono | [sBTTipoTelefono](#sbttipotelefono) | Listado de tipos de teléfono.
 
 @tab Errores 
@@ -188,7 +188,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoTelefono son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción de tipo de teléfono.
 identificador | Long | Identificador de tipo de teléfono.
 :::

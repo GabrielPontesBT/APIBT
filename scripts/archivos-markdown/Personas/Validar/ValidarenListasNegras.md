@@ -43,14 +43,14 @@ nombreEmpresa | String | Nombre de empresa.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 existeEnLista | String | ¿Existe en lista? (S/N).
 sdtListasInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de listas negras.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se ingresó código de país.
 30002 | No se ingresó código de tipo de documento.
 30003 | No se ingresó número de documento.
@@ -135,7 +135,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>8ab636f8624A8B5C60A82434</Token>
          </Btinreq>
-         <ExisteEnLista>S</ExisteEnLista>
+         <existeEnLista>S</existeEnLista>
          <sdtListasInhabilitados>
             <sBTListaInhabilitados>
                <descripcion>La persona se encuentra en la lista de Inhabilitados: LAVADO DE DINERO.</descripcion>
@@ -160,7 +160,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -168,7 +168,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "ExisteEnLista": "S",
+    "existeEnLista": "S",
     "sdtListasInhabilitados": {
         "sBTListaInhabilitados": [ {
             "descripcion": "La persona se encuentra en la lista de Inhabilitados: LAVADO DE DINERO.",
@@ -188,7 +188,7 @@ curl -X POST \
         "Hora": "15:02:08",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -204,7 +204,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTListaInhabilitados son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 bloqueante | String | ¿Es bloqueante? (S/N). 
 codigo | Short | Identificador de lista negra. 
 descripcion | String | Descripción de lista negra. 

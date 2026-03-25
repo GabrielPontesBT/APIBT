@@ -36,7 +36,7 @@ fecha | Date | Fecha de procesos.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProcesosBatch | [sBTProcesoBatch](#sbtprocesobatch) | Listado de procesos con error.
 
 @tab Errores
@@ -469,7 +469,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProcesoBatch son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 esReprocesable | String | Descripción para reprocesamiento. 
 identificador | Int | Identificador de proceso batch. 

@@ -42,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador único de persona jurídica.
 30002 | No se recibió identificador único de integrante de persona jurídica.
 30003 | No se recibió identificador de vínculo del integrante de persona jurídica.
@@ -181,7 +181,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTIntegranteJuridicoAlta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 participacion | Double | Porcentaje de participación del integrante. 
 personaUId | Long | Identificador único de persona. 
 vinculoId | Short | Identificador de vínculo. 

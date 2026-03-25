@@ -38,13 +38,13 @@ subOrdinal | Short | Subordinal del movimiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtOrdinal | [sBTOrdinal](#sbtordinal) | Ordinales del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de movimiento.
 30103 | No existe registro para el identificador único.
 40001 | No existe el asiento.
@@ -117,19 +117,18 @@ curl -X POST \
             <Token>12420485CD285A89A23FBE</Token>
             <Device>MC</Device>
          </Btinreq>
-	     <sdtOrdinal>
-			  <operacionUId>10189</operacionUId>
-			  <idOperacionBT>0010000100021000000000000000002700003000000000000</idOperacionBT>
-			  <debeHaber>D</debeHaber> debitoCredito
-			  <importe>10000.00</importe>
-			  <producto>
-				 <productoUId>0</productoUId>  
-				 <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>
-				 <moneda>$</moneda>
-				 <papel>$</papel>
-             <otrosConceptos></otrosConceptos>
-			  </producto>
-	     </sdtOrdinal>
+         <sdtOrdinal>
+            <operacionUId>10189</operacionUId>
+            <idOperacionBT>0010000100021000000000000000002700003000000000000</idOperacionBT>
+            <debeHaber>D</debeHaber> debitoCredito
+            <importe>10000.00</importe>
+            <producto>
+               <productoUId>0</productoUId>  
+               <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>
+               <moneda>$</moneda>
+               <papel>$</papel>
+            </producto>
+         </sdtOrdinal>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -165,8 +164,7 @@ curl -X POST \
 		 "productoUId": "0", 
 		 "nombre": "CAJAS DE AHORRO, GENÉRICA", 
 		 "moneda": "$", 
-		 "papel": "$",
-       "otrosConceptos":"" 
+		 "papel": "$" 
 	  } 
    },
    "Erroresnegocio": null, 
@@ -195,7 +193,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTOrdinal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 debeHaber | String | Debe/Haber (Crédito: 'C', Débito: 'D'). 
 idOperacionBT | String | Identificador String Bantotal. 
 importe | Double | Importe. 
@@ -208,7 +206,7 @@ producto | [sBTProducto](#sbtproducto) | Datos del Producto.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -221,7 +219,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

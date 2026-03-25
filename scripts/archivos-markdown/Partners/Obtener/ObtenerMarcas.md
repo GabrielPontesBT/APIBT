@@ -36,13 +36,13 @@ sdtPartner | [sBTPartnerInReq](#sbtpartnerinreq)  | Datos del usuario.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtMarcas | [sBTMarca](#sbtmarca) | Colección de las marcas de vehículos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió Partner ni canal.
 30002 | El Partner no se encuentra habilitado.
 30003 | No existe Partner con ese identificador.
@@ -187,12 +187,13 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
 :::
+<!-- CIERRA SDT --> 
 
 ::: details sBTMarca  
 
@@ -201,8 +202,8 @@ vendedorUId	 | Int | Identificador del vendedor.
 ::: center 
 Los campos del tipo de dato estructurado sBTMarca son los siguientes: 
 
-Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+Campo | Tipo | Comentarios
+:--------- | :--------- | :---------
 marcaUId | Long | Identificador de la marca.
 nombreMarca | String | Nombre de la marca.
 tipoMarca | String | Tipo de marca.

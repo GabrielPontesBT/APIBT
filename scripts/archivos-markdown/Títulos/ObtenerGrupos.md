@@ -41,7 +41,7 @@ sdtGrupos | [sBTGrupo](#sbtgrupo) | Listado de grupos.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No hay grupos de papeles parametrizados.
 
 ::: 
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTGrupo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | int | Código del grupo.
 nombre | String | Descripción del grupo.
 

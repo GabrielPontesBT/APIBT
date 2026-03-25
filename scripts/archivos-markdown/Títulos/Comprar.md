@@ -36,14 +36,14 @@ sdtCompra | [sBTCompraTitulo](#sbtcompratitulo) | Datos del título a comprar.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de la operación.
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del mercado.
 30002 | El valor del campo compra tiene que ser C o V.
 30003 | El valor del campo ingresa tiene que ser I o V.
@@ -81,7 +81,7 @@ Código | Descripción
             <bts:Usuario>BANTOTAL</bts:Usuario>
             <bts:Token>D019598AFAA2ECCC4BA9BF31</bts:Token>
          </bts:Btinreq>
-         <bts:sdtComprarTitulo>
+         <bts:sdtCompra>
             <bts:plazo>3</bts:plazo>
             <bts:tasa>60</bts:tasa>
             <bts:fecha>2020-08-11</bts:fecha>
@@ -107,7 +107,7 @@ Código | Descripción
             <bts:ingresa>I</bts:ingresa>
             <bts:vigenciaHasta></bts:vigenciaHasta>
             <bts:tipoPrecio>L</bts:tipoPrecio>
-         </bts:sdtComprarTitulo>
+         </bts:sdtCompra>
       </bts:BTTitulos.ComprarTitulo>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -128,7 +128,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "sdtComprarTitulo": {
+   "sdtCompra": {
       "plazo": 3,
       "tasa": 60,
       "fecha": "2020-08-11",
@@ -233,7 +233,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCompraTitulo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único del cliente.
 comision | Short | Comisión.
 especie | Int | Identificador de especie.
@@ -259,7 +259,7 @@ vigenciaHasta | Date | Fecha de vigencia hasta.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

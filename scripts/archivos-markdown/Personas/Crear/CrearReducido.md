@@ -1,5 +1,6 @@
 ---
 title: Crear Reducido
+icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -18,7 +19,7 @@ backtotop: false
 
 **Nombre publicación:** BTPersonas.CrearReducido
 
-**Programa:** RBTPG534
+**Programa:** RBTPG585
 
 **Global/País:** Global
 :::
@@ -31,18 +32,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtPersona | [sBTPersona1](#sbtpersona1) | Datos de la persona.
+sdtPersona | [sBTPersonaFisica](#sbtpersonafisica) | Datos de la persona.
+elimAltaIncEnDomicilio | String | [Hidden: Valor fijo "N" para este método].
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar País del Documento.
 30002 | Debe ingresar Tipo de Documento.
 30003 | Debe ingresar Nro de Documento.
@@ -75,49 +77,67 @@ Código | Descripción
             <bts:Token>4C814AD45391BD0C360941C7</bts:Token>
          </bts:Btinreq>
          <bts:sdtPersona>
-            <bts:paisDocumentoId>845</bts:paisDocumentoId>
-            <bts:apartamento></bts:apartamento>
-            <bts:sectorId></bts:sectorId>
-            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>
-            <bts:ingresos></bts:ingresos>
-            <bts:nacionalidad></bts:nacionalidad>
-            <bts:ocupacionId>1</bts:ocupacionId>
-            <bts:sexo>M</bts:sexo>
-            <bts:barrio></bts:barrio>
+            <bts:nroDocumento>7896328</bts:nroDocumento>
             <bts:estadoCivil></bts:estadoCivil>
-            <bts:direccion></bts:direccion>
-            <bts:nroDocumento>52116335</bts:nroDocumento>
-            <bts:localidad></bts:localidad>
-            <bts:clasificacionInternaId></bts:clasificacionInternaId>
-            <bts:segundoNombre></bts:segundoNombre>
-            <bts:telefonoCelular></bts:telefonoCelular>
-            <bts:departamentoId></bts:departamentoId>
+            <bts:segundoNombre>Carlos</bts:segundoNombre>
+            <bts:fechaInicioActividad>2023-09-26</bts:fechaInicioActividad>
+            <bts:fechaVencimiento>2024-09-26</bts:fechaVencimiento>
+            <bts:segundoApellido>Gimenez</bts:segundoApellido>
+            <bts:fechaNacimiento>1998-09-26</bts:fechaNacimiento>
+            <bts:telefonoCelular>025874532</bts:telefonoCelular>
+            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>
             <bts:actividadLaboral></bts:actividadLaboral>
-            <bts:nacionalidadId></bts:nacionalidadId>
-            <bts:localidadId></bts:localidadId>
+            <bts:clasificacionInternaId>2</bts:clasificacionInternaId>
+            <bts:sexo>M</bts:sexo>
+            <bts:primerNombre>Luis</bts:primerNombre>
             <bts:clasificacionInterna></bts:clasificacionInterna>
-            <bts:paisDomicilioId></bts:paisDomicilioId>
-            <bts:sector></bts:sector>
-            <bts:telefonoFijo></bts:telefonoFijo>
-            <bts:referencia></bts:referencia>
-            <bts:codigoPostal></bts:codigoPostal>
-            <bts:primerNombre>Gonzalo</bts:primerNombre>
-            <bts:fechaNacimiento>1980-10-20</bts:fechaNacimiento>
-            <bts:actividadLaboralId></bts:actividadLaboralId>
-            <bts:primerApellido>Zanelli</bts:primerApellido>
-            <bts:estadoCivilId>1</bts:estadoCivilId>
-            <bts:segundoApellido></bts:segundoApellido>
-            <bts:paisDocumento></bts:paisDocumento>
-            <bts:fechaInicioActividad></bts:fechaInicioActividad>
+            <bts:paisDocumentoId>845</bts:paisDocumentoId>
+            <bts:telefonoFijo>874525</bts:telefonoFijo>
+            <bts:primerApellido>Gonzales</bts:primerApellido>
             <bts:ocupacion></bts:ocupacion>
-            <bts:paisDomicilio></bts:paisDomicilio>
-            <bts:departamento></bts:departamento>
-            <bts:fechaVencimiento></bts:fechaVencimiento>
-            <bts:correoElectronico>mail@mail.com</bts:correoElectronico>
-            <bts:numeroPuerta></bts:numeroPuerta>
-            <bts:calle></bts:calle>
-            <bts:barrioId></bts:barrioId>
+            <bts:sector></bts:sector>
+            <bts:paisDocumento></bts:paisDocumento>
+            <bts:ocupacionId>8</bts:ocupacionId>
+            <bts:nacionalidad></bts:nacionalidad>
+            <bts:sueldo>7845</bts:sueldo>
+            <bts:domicilios>
+               <bts:SdtsBTDomicilioCompleto>
+                  <bts:agrupador1Id>1</bts:agrupador1Id>
+                  <bts:coloniaId>3</bts:coloniaId>
+                  <bts:departamento></bts:departamento>
+                  <bts:agrupador5></bts:agrupador5>
+                  <bts:agrupador4></bts:agrupador4>
+                  <bts:agrupador3Id>1</bts:agrupador3Id>
+                  <bts:agrupador3></bts:agrupador3>
+                  <bts:barrio></bts:barrio>
+                  <bts:detalleUbicacion></bts:detalleUbicacion>
+                  <bts:agrupador2></bts:agrupador2>
+                  <bts:agrupador1></bts:agrupador1>
+                  <bts:agrupador5Id>3</bts:agrupador5Id>
+                  <bts:ubicacionDesde></bts:ubicacionDesde>
+                  <bts:tipoDomicilio></bts:tipoDomicilio>
+                  <bts:direccion></bts:direccion>
+                  <bts:colonia></bts:colonia>
+                  <bts:paisId>845</bts:paisId>
+                  <bts:tipoVivienda></bts:tipoVivienda>
+                  <bts:pais></bts:pais>
+                  <bts:agrupador2Id>2</bts:agrupador2Id>
+                  <bts:codigoPostal>7852</bts:codigoPostal>
+                  <bts:tipoViviendaId>1</bts:tipoViviendaId>
+                  <bts:agrupador4Id>1</bts:agrupador4Id>
+                  <bts:barrioId>2</bts:barrioId>
+                  <bts:localidad></bts:localidad>
+                  <bts:localidadId>2</bts:localidadId>
+                  <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
+                  <bts:departamentoId>1</bts:departamentoId>
+               </bts:SdtsBTDomicilioCompleto>
+            </bts:domicilios>
+            <bts:correoElectronico>juanLui@mail.com</bts:correoElectronico>
+            <bts:sectorId>2</bts:sectorId>
+            <bts:actividadLaboralId>3</bts:actividadLaboralId>
             <bts:tipoDocumento></bts:tipoDocumento>
+            <bts:nacionalidadId>4</bts:nacionalidadId>
+            <bts:estadoCivilId>1</bts:estadoCivilId>
          </bts:sdtPersona>
       </bts:BTPersonas.CrearReducido>
    </soapenv:Body>
@@ -141,50 +161,68 @@ curl -X POST \
 	},
    "personaUId":"2",
    "sdtPersona": {
-        "paisDocumentoId": 845,
-        "apartamento": "",
-        "sectorId": "",
-        "tipoDocumentoId": 1,
-        "ingresos": "",
-        "nacionalidad": "",
-        "ocupacionId": 1,
-        "sexo": "M",
-        "barrio": "",
-        "estadoCivil": "",
-        "direccion": "",
-        "nroDocumento": 52116335,
-        "localidad": "",
-        "clasificacionInternaId": "",
-        "segundoNombre": "",
-        "telefonoCelular": "",
-        "departamentoId": "",
-        "actividadLaboral": "",
-        "nacionalidadId": "",
-        "localidadId": "",
-        "clasificacionInterna": "",
-        "paisDomicilioId": "",
-        "sector": "",
-        "telefonoFijo": "",
-        "referencia": "",
-        "codigoPostal": "",
-        "primerNombre": "Gonzalo",
-        "fechaNacimiento": "1980-10-20",
-        "actividadLaboralId": "",
-        "primerApellido": "Zanelli",
-        "estadoCivilId": 1,
-        "segundoApellido": "",
-        "paisDocumento": "",
-        "fechaInicioActividad": "",
-        "ocupacion": "",
-        "paisDomicilio": "",
-        "departamento": "",
-        "fechaVencimiento": "",
-        "correoElectronico": "mail@mail.com",
-        "numeroPuerta": "",
-        "calle": "",
-        "barrioId": "",
-        "tipoDocumento": ""
-    }
+      "nroDocumento": 7896328,
+      "estadoCivil": "",
+      "segundoNombre": "Carlos",
+      "fechaInicioActividad": "2023-09-26",
+      "fechaVencimiento": "2024-09-26",
+      "segundoApellido": "Gimenez",
+      "fechaNacimiento": "1998-09-26",
+      "telefonoCelular": 25874532,
+      "tipoDocumentoId": 1,
+      "actividadLaboral": "",
+      "clasificacionInternaId": 2,
+      "sexo": "M",
+      "primerNombre": "Luis",
+      "clasificacionInterna": "",
+      "paisDocumentoId": 845,
+      "telefonoFijo": 874525,
+      "primerApellido": "Gonzales",
+      "ocupacion": "",
+      "sector": "",
+      "paisDocumento": "",
+      "ocupacionId": 8,
+      "nacionalidad": "",
+      "sueldo": 7845,
+      "domicilios": {
+         "SdtsBTDomicilioCompleto": {
+            "agrupador1Id": 1,
+            "coloniaId": 3,
+            "departamento": "",
+            "agrupador5": "",
+            "agrupador4": "",
+            "agrupador3Id": 1,
+            "agrupador3": "",
+            "barrio": "",
+            "detalleUbicacion": "",
+            "agrupador2": "",
+            "agrupador1": "",
+            "agrupador5Id": 3,
+            "ubicacionDesde": "",
+            "tipoDomicilio": "",
+            "direccion": "",
+            "colonia": "",
+            "paisId": 845,
+            "tipoVivienda": "",
+            "pais": "",
+            "agrupador2Id": 2,
+            "codigoPostal": 7852,
+            "tipoViviendaId": 1,
+            "agrupador4Id": 1,
+            "barrioId": 2,
+            "localidad": "",
+            "localidadId": 2,
+            "tipoDomicilioId": 1,
+            "departamentoId": 1
+         }
+      },
+      "correoElectronico": "juanLui@mail.com",
+      "sectorId": 2,
+      "actividadLaboralId": 3,
+      "tipoDocumento": "",
+      "nacionalidadId": 4,
+      "estadoCivilId": 1
+   }
 }'
 ```
 :::
@@ -253,51 +291,90 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTPersona1  
+::: details sBTPersonaFisica  
 
-### sBTPersona1
+### sBTPersonaFisica
 
 ::: center 
-Los campos del tipo de dato estructurado sBTPersona1 son los siguientes: 
+Los campos del tipo de dato estructurado sBTPersonaFisica son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
-actividadLaboral | String | Descripción de actividad laboral. 
-actividadLaboralId | Int | Identificador de actividad laboral. 
-apartamento | String | Apartamento. 
-barrio | String | Nombre de barrio. 
-barrioId | Int | Identificador de barrio. 
-calle | String | Calle. 
-codigoPostal | String | Código postal. 
-correoElectronico | String | Correo electrónico. 
-departamento | String | Nombre de departamento. 
-departamentoId | Int | Identificador de departamento. 
-estadoCivil | String | Descripción de estado civil. 
-estadoCivilId | String | Identificador de estado civil. 
-fechaInicioActividad | Date | Fecha inicio actividad. 
-fechaNacimiento | Date | Fecha de nacimiento. 
-fechaVencimiento | Date | Fecha de vencimiento de documento. 
-ingresos | Double | Ingresos. 
-localidad | String | Nombre de localidad. 
-localidadId | Int | Identificador de localidad. 
-nacionalidad | String | Nombre del país de nacimiento. 
-nacionalidadId | Short | Identificador del país de nacimiento. 
-nroDocumento | String | Número de documento. 
-numeroPuerta | String | Número de puerta. 
-ocupacion | String | Descripción de ocupación. 
-ocupacionId | Int | Identificador de ocupación. 
-paisDocumento | String | Nombre del país del documento. 
-paisDocumentoId | Short | Identificador del país del documento. 
-paisDomicilio | String | Nombre del país de domicilio. 
-paisDomicilioId | Short | Identificador del país de domicilio. 
-primerApellido | String | Primer apellido. 
-primerNombre | String | Primer nombre. 
-segundoApellido | String | Segundo apellido. 
-segundoNombre | String | Segundo nombre. 
-sexo | String | Sexo (M/F). 
-telefonoCelular | String | Teléfono celular. 
-telefonoFijo | String | Teléfono fijo. 
-tipoDocumento | String | Nombre del tipo de documento. 
-tipoDocumentoId | Short | Identificador del tipo de documento. 
+:--------- | :--------- | :---------
+actividadLaboral | String | Descripción de actividad laboral.
+actividadLaboralId | Int | Identificador de la actividad laboral.
+clasificacionInterna | String | Descripción de la clasificación interna.
+clasificacionInternaId | Short | Identificador de la clasificación interna.
+correoElectronico | String | Correo electrónico.
+datosAdicionales | [sBTDatoLista](#sbtdatolista) | Listado de datos adicionales.
+domicilios | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Listado de los domicilios.
+estadoCivil | String | Descripción de estado civil.
+estadoCivilId | String | Identificador de estado civil.
+fechaInicioActividad | Date | Fecha de inicio de actividad.
+fechaNacimiento | Date | Fecha de nacimiento.
+fechaVencimiento | Date | Fecha de vencimiento.
+nacionalidad | String | Nombre del país de nacimiento.
+nacionalidadId | Short | Identificador del país de nacimiento.
+nroDocumento | String | Número de documento.
+ocupacion | String | Descripción de ocupación.
+ocupacionId | Int | Identificador de ocupación.
+paisDocumento | String | Nombre del país del documento.
+paisDocumentoId | Short | Identificador del país del documento.
+primerApellido | String | Primer apellido.
+primerNombre | String | Primer nombre.
+sector | String | Sector.
+sectorId | Short | Identificador del sector.
+segundoApellido | String | Segundo apellido.
+segundoNombre | String | Segundo nombre.	
+sexo | String | Sexo (M/F).
+sueldo | Double | Sueldo.
+telefonoCelular | String | Teléfono celular.
+telefonoFijo | String | Teléfono fijo.
+tipoDocumento | String | Nombre del tipo de documento.
+tipoDocumentoId | Short | Identificador del tipo de documento.
+
+### sBTDomicilioCompleto
+
+Los campos del tipo de dato estructurado sBTDomicilioCompleto son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :---------
+agrupador1 | String | Nombre agrupador 1.
+agrupador1Id | Short | Identificador agrupador 1.
+agrupador2 | String | Nombre agrupador 2.
+agrupador2Id | Short | Identificador agrupador 2.
+agrupador3 | String | Nombre agrupador 3.
+agrupador3Id | Short | Identificador agrupador 3.
+agrupador4 | String | Nombre agrupador 4.
+agrupador4Id | Short | Identificador agrupador 4.
+agrupador5 | String | Nombre agrupador 5.
+agrupador5Id | Short | Identificador agrupador 5.
+barrio | String | Nombre del barrio.
+barrioId | int | Identificador del barrio.
+codigoPostal | String | Código postal.
+colonia | String | Colonia.
+coloniaId | int | Identificador de la colonia.
+departamento | String | Nombre del departamento.
+departamentoId | int | Identificador del departamento.
+detalleUbicacion | String | Detalle de la ubicación.
+direccion | String | Dirección.
+localidad | String | Nombre de la localidad.
+localidadId | int | Identificador de la localidad.
+pais | String | Nombre del país.
+paisId | Short | Identificador del país.
+tipoDomicilio | String | Descripción del tipo de domicilio.
+tipoDomicilioId | Byte | Identificador del tipo de domicilio.
+tipoVivienda | String | Descripción del tipo de vivienda.
+tipoViviendaId | String | Identificador del tipo de vivienda.
+ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+
+### sBTDatoLista
+
+::: center 
+Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
+
+Nombre | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
+clave | String | Identificador de información adicional. 
+valor | String | Valor de información adicional. 
 :::
 <!-- CIERRA SDT -->

@@ -37,13 +37,13 @@ generaCuotaInteres | Character | Indica si se generan cuotas de intereses. [Hidd
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSimulacion | [sBTSimulacionPrestamoLA](#sbtsimulacionprestamola) | Datos del préstamo simulado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente. 
 30002 | No se recibió el identificador de producto. 
 30003 | No se recuperó la cuenta para el Identificador. 
@@ -303,7 +303,6 @@ curl -X POST \
                <papel>$</papel> 
                <productoUId>0</productoUId> 
                <nombre>PRÉSTAMOS CONSUMO, Amortización Libre TF</nombre> 
-               <otrosConceptos></otrosConceptos>
             </producto> 
             <comisiones>0.00</comisiones> 
          </sdtSimulacion> 
@@ -338,8 +337,7 @@ curl -X POST \
             "productoUId": 0, 
             "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Irregular o Amort. Libre", 
             "moneda": "$", 
-            "papel": "$" ,
-            "otrosConceptos":""
+            "papel": "$" 
         }, 
         "fechaValor": "2016-08-15", 
         "fechaPrimerPago": "2019-01-10", 
@@ -523,7 +521,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosLibreAmortizacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 actividad | Long | Código de actividad (Destino del crédito). 
 cantidadCuotas | Long | Cantidad de cuotas del préstamo. 
 cuotasCapital | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cuotas de capital. 
@@ -539,7 +537,7 @@ tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra
 Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
 importe | Double | Importe de la cuota. 
 :::
@@ -552,7 +550,7 @@ importe | Double | Importe de la cuota.
 Los campos del tipo de dato estructurado sBTSimulacionPrestamoLA son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 capital | Double | Capital del préstamo. 
 comisiones | Double | Comisiones. 
 fechaPrimerPago | Date | Fecha de primer pago. 
@@ -575,7 +573,7 @@ totalPrestamo | Double | Total a pagar.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -588,7 +586,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

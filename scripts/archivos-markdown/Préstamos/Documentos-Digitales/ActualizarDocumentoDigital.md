@@ -53,7 +53,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de instancia de documento digital.
 30002 | No se recibió nombre.
 30003 | No se recibió el identificador de la operación.
@@ -89,8 +89,8 @@ Código | Descripción
          <bts:documentoId>118</bts:documentoId>
          <bts:nombreDelDocumento>ejemplo</bts:nombreDelDocumento>
          <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>
-         <bts:fechaDeEmision>2010-10-10</bts:fechaDeEmision>
-         <bts:fechaDeVencimiento>2020-10-10</bts:fechaDeVencimiento>
+         <bts:fechaEmision>2010-10-10</bts:fechaEmision>
+         <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
       </bts:BTPrestamos.ActualizarDocumentoDigital>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -115,8 +115,8 @@ curl -X POST \
     "documentoId":"118",
     "nombreDelDocumento":"ejemplo",
     "archivoCodificado":"RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-    "fechaDeEmision":"2010-10-10",
-    "fechaDeVencimiento": "2020-10-10"
+    "fechaEmision":"2010-10-10",
+    "fechaVencimiento": "2020-10-10"
 }'
 ```
 :::

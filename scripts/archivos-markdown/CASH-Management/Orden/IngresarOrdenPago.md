@@ -37,22 +37,22 @@ operacionUId_debito | Long | Operación de débito.
 moneda | Short | Identificador de moneda.
 importe | Double | Importe total.
 fecha | Date | Fecha de pago.
-listaCampoValor | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de valores de campos CASH.
+sdtListaCampos | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de valores de campos CASH.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 ordenId | Long | Identificador de orden CASH.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
-1030770 | No se recupero informacion para la cuenta recibida.
-1030771 | No se recibio importe para la orden.
-1030772 | No se recibio moneda para la orden.
-1030773 | No se recibio fecha para la orden.
+:--------- | :---------
+1030770 | No se recupero información para la cuenta recibida.
+1030771 | No se recibió importe para la orden.
+1030772 | No se recibió moneda para la orden.
+1030773 | No se recibió fecha para la orden.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -81,12 +81,12 @@ Código | Descripción
          <bts:moneda>101</bts:moneda>
          <bts:importe>1000</bts:importe>
          <bts:fecha>2019-11-06</bts:fecha>
-         <bts:listaCampoValor>
+         <bts:sdtListaCampos>
             <bts:sBTValorCampoCASH>
                <bts:tag>ORDENANTE_NOM</bts:tag>
                <bts:valor>Francisco Otheguy</bts:valor>
             </bts:sBTValorCampoCASH>
-         </bts:listaCampoValor>
+         </bts:sdtListaCampos>
       </bts:BTCASHManagement.IngresarOrdenPago>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -114,7 +114,7 @@ curl -X POST \
 	"moneda":101,
 	"importe":1000,
 	"fecha" : "2019-11-06",
-	"listaCampoValor": {
+	"sdtListaCampos": {
 		"sBTValorCampoCASH": [
 			{
 				"tag" : "ORDENANTE_NOM",
@@ -198,7 +198,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 :::

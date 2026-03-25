@@ -36,7 +36,7 @@ archivoId | Long | Identificador de archivo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 cuentaDebito | Long | Operación de débito.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 moneda | Short | Moneda.
@@ -50,7 +50,7 @@ detallePagos | [sBTDetallePago](#sbtdetallepago) | Lista de información del arc
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030711 | No se recuperó informacion para el identificador de archivo recibido.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -284,7 +284,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetallePago son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 beneficiarioBanco | String | Banco del Beneficiario.
 beneficiarioCuenta | String | Cuenta del Beneficiario.
 beneficiarioId | String | Identificador de Beneficiario.

@@ -36,13 +36,13 @@ nroTarjeta | String | Número de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tarjetaUId | Long | Identificador único de tarjeta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió la tarjeta de débito.
 30002 | No se recuperó el identificador para la tarjeta de débito: [Número de Tarjeta].
 ::: 

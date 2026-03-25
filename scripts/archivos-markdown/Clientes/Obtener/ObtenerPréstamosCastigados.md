@@ -30,7 +30,7 @@ backtotop: false
 Se debe parametrizar el módulo correspondiente a castigos ingresando en la guía especial 1041 los siguientes valores: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | 1 
 Correlativo 2 | 1 
 Valor específico 1 | Módulo correspondiente a castigos. 
@@ -52,13 +52,13 @@ correlativo | Int | Correlativo en el que se guardó el módulo correspondiente 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosPrestamos | [sBTProductoPrestamo](#sbtproductoprestamo) | Listado de préstamos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el identificador.
 ::: 
@@ -136,7 +136,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Sucursal Beta</sucursal>
                <saldo>87128.11</saldo>
@@ -177,8 +176,7 @@ curl -X POST \
                     "papel": "",
                     "moneda": "$",
                     "productoUId": "0",
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
-                    "otrosConceptos":""
+                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad"
                 },
                 "idOperacionBT": "0010000100101000000000000000002700000000000170003",
                 "operacionUId": "1",
@@ -215,7 +213,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductoPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado. 
 idOperacionBT | String | Identificador String Bantotal (concatenación de todos los conceptos claves de la operación). 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
@@ -230,7 +228,7 @@ sucursal | String | Nombre de la sucursal.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -243,7 +241,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe. 

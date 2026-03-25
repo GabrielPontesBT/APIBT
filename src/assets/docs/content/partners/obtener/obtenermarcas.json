@@ -46,60 +46,14 @@
   ],
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerMarcas>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\r\n            <bts:vendedorUId>0</bts:vendedorUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n         </bts:sdtPartner>\r\n      </bts:BTPartners.ObtenerMarcas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t  \"Device\": \"1\",\r\n\t  \"Usuario\": \"MINSTALADOR\",\r\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": \"1\"\r\n\t},\r\n\t\"sdtPartner\": {\r\n          \"puntoVentaUId\": 2,\r\n          \"vendedorUId\": 0,\r\n          \"partnerUId\": 1\r\n   }\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ObtenerMarcas>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\n            <bts:vendedorUId>0</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n      </bts:BTPartners.ObtenerMarcas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"sdtPartner\": {\n          \"puntoVentaUId\": 2,\n          \"vendedorUId\": 0,\n          \"partnerUId\": 1\n   }\n}'"
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ObtenerMarcasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\r\n         </Btinreq>\r\n         <sdtMarcas>\r\n            <sBTMarca>\r\n               <tipoMarcaId>1</tipoMarcaId>\r\n               <tipoMarca>Lujo</tipoMarca>\r\n               <marcaUId>1</marcaUId>\r\n               <nombreMarca>AUDI</nombreMarca>\r\n            </sBTMarca>\r\n         </sdtMarcas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16857</Numero>\r\n            <Servicio>BTPartners.ObtenerMarcas</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2023-10-27</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>11:57:14</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ObtenerMarcasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{\r\n   \"Btinreq\": {\r\n      \"Device\": \"1\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Token\": \"16c1cFC33CD93505A5382434\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Requerimiento\": \"1\"\r\n   },\r\n   \"sdtMarcas\": {\r\n        \"sBTMarca\": {\r\n        \"tipoMarcaId\": 1,\r\n        \"tipoMarca\": \"Lujo\",\r\n        \"marcaUId\": 1,\r\n        \"nombreMarca\": \"AUDI\"\r\n        }\r\n    },\r\n   \"Erroresnegocio\": \"\",\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"111399\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTPartners.ObtenerMarcas\",\r\n      \"Requerimiento\": \"1\",\r\n      \"Fecha\": \"2023-05-10\",\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Hora\": \"17:08:56\"\r\n   }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ObtenerMarcasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtMarcas>\n            <sBTMarca>\n               <tipoMarcaId>1</tipoMarcaId>\n               <tipoMarca>Lujo</tipoMarca>\n               <marcaUId>1</marcaUId>\n               <nombreMarca>AUDI</nombreMarca>\n            </sBTMarca>\n         </sdtMarcas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16857</Numero>\n            <Servicio>BTPartners.ObtenerMarcas</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-27</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>11:57:14</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPartners.ObtenerMarcasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"1\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cFC33CD93505A5382434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"sdtMarcas\": {\n        \"sBTMarca\": {\n        \"tipoMarcaId\": 1,\n        \"tipoMarca\": \"Lujo\",\n        \"marcaUId\": 1,\n        \"nombreMarca\": \"AUDI\"\n        }\n    },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Numero\": \"111399\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPartners.ObtenerMarcas\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-10\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"17:08:56\"\n   }\n}'"
     }
   },
-  "structuredTypes": [
-    {
-      "typeName": "sBTPartnerInReq",
-      "fields": [
-        {
-          "Nombre": "partnerUId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador del Partner."
-        },
-        {
-          "Nombre": "puntoVentaUId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador del punto de venta."
-        },
-        {
-          "Nombre": "vendedorUId",
-          "Tipo": "Int",
-          "Comentarios": "Identificador del vendedor."
-        }
-      ]
-    },
-    {
-      "typeName": "sBTMarca",
-      "fields": [
-        {
-          "Nombre": "marcaUId",
-          "Tipo": "Long",
-          "Comentarios": "Identificador de la marca."
-        },
-        {
-          "Nombre": "nombreMarca",
-          "Tipo": "String",
-          "Comentarios": "Nombre de la marca."
-        },
-        {
-          "Nombre": "tipoMarca",
-          "Tipo": "String",
-          "Comentarios": "Tipo de marca."
-        },
-        {
-          "Nombre": "tipoMarcaId",
-          "Tipo": "Short",
-          "Comentarios": "Identificador del tipo de marca."
-        }
-      ]
-    }
-  ],
+  "structuredTypes": [],
   "valuesTable": []
 }

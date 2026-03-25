@@ -38,13 +38,13 @@ sdtPersona | [sBTDatosBasicosPersona](#sbtdatosbasicospersona) | Datos del cóny
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 personaUIdConyuge | Long | Identificador único del cónyuge.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se recibió el código de estado civil.
 40001 | Debe ingresar País del Documento.
@@ -201,7 +201,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatosBasicosPersona son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nroDocumento | String | Número de documento. 
 paisDocumento | String | Nombre del país. 
 paisDocumentoId | Short | Identificador del país. 

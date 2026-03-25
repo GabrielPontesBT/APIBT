@@ -1,6 +1,5 @@
 ---
 title: Actualizar Textos
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -43,7 +42,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30011 | No se recupero la operación para el identificador recibido.
 40001 | No existe texto para el código [Número de identificador].
@@ -200,7 +199,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTextoOperacion son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código.
 descripcion | String | Descripción.
 renglon | Short | Renglón. 

@@ -34,13 +34,13 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtMotivosInhabilitacion | [sBTMotivoInhabilitacion](#sbtmotivoinhabilitacion) | Listado de motivos de inhabilitación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen motivos de inhabilitación.
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -105,20 +105,20 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>289a9ca6a299865B3A2E76CF</Token>
          </Btinreq>
-         <sbtMotivosInhabilitacion>
-            <SdtsBTMotivoInhabilitacion>
+         <sdtMotivosInhabilitacion>
+            <sBTMotivoInhabilitacion>
                <descripcion>Embargo</descripcion>
                <codigo>1</codigo>
-            </SdtsBTMotivoInhabilitacion>
-            <SdtsBTMotivoInhabilitacion>
+            </sBTMotivoInhabilitacion>
+            <sBTMotivoInhabilitacion>
                <descripcion>En Juicio</descripcion>
                <codigo>3</codigo>
-            </SdtsBTMotivoInhabilitacion>
-            <SdtsBTMotivoInhabilitacion>
+            </sBTMotivoInhabilitacion>
+            <sBTMotivoInhabilitacion>
                <descripcion>Retenciones</descripcion>
                <codigo>10</codigo>
-            </SdtsBTMotivoInhabilitacion>
-         </sbtMotivosInhabilitacion>
+            </sBTMotivoInhabilitacion>
+         </sdtMotivosInhabilitacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>1827</Numero>
@@ -138,38 +138,38 @@ curl -X POST \
 ```json
 '{
 	"Btinreq": {
-          "Device": 2,
-          "Usuario": "Instalador",
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Token": "289a9ca6a299865B3A2E76CF"
-        },
-        "sbtMotivosInhabilitacion": {
-          "SdtsBTMotivoInhabilitacion": [
-            {
-              "descripcion": "Embargo",
-              "codigo": 1
-            },
-            {
-              "descripcion": "En Juicio",
-              "codigo": 3
-            },
-            {
-              "descripcion": "Retenciones",
-              "codigo": 10
-            }
-          ]
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Numero": 1827,
-          "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
-          "Estado": "OK",
-          "Fecha": "2022-10-27",
-          "Requerimiento": 0,
-          "Hora": "09:39:20",
-          "Canal": "BTDIGITAL"
-        }
+      "Device": 2,
+      "Usuario": "Instalador",
+      "Requerimiento": 0,
+      "Canal": "BTDIGITAL",
+      "Token": "289a9ca6a299865B3A2E76CF"
+   },
+   "sdtMotivosInhabilitacion": {
+      "sBTMotivoInhabilitacion": [
+      {
+         "descripcion": "Embargo",
+         "codigo": 1
+      },
+      {
+         "descripcion": "En Juicio",
+         "codigo": 3
+      },
+      {
+         "descripcion": "Retenciones",
+         "codigo": 10
+      }
+      ]
+   },
+   "Erroresnegocio": "",
+   "Btoutreq": {
+      "Numero": 1827,
+      "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
+      "Estado": "OK",
+      "Fecha": "2022-10-27",
+      "Requerimiento": 0,
+      "Hora": "09:39:20",
+      "Canal": "BTDIGITAL"
+   }
 }'
 ```
 :::
@@ -186,7 +186,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTMotivoInhabilitacion son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 codigo | Long | Código del motivo de inhabilitación.
 descripcion | String | Descripción del motivo de inhabilitación.
 :::

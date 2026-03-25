@@ -30,7 +30,7 @@ backtotop: false
 Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Valor incremental. 
 Correlativo 2 | Módulo. 
 Correlativo 3 | Tipo de operación. 
@@ -57,17 +57,17 @@ plazo | Int | Plazo del DPF.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaAlta | Date | Fecha de alta.
 fechaVencimiento | Date | Fecha en que vencería el DPF.
 intereses | Double | Intereses.
 tasa | Double | Tasa.
-operacionUId | Long | Identificador único de operación de la simulación.
+simulacionUId | Long | Identificador único de operación de la simulación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | El monto es de ingreso obligatorio.
 30002 | El Plazo es de ingreso obligatorio.
 30003 | No se recibió el identificador de la Cuenta.

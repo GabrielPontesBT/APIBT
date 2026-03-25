@@ -41,13 +41,13 @@ fechaHastaF | Date | Fecha de pago o cobro, hasta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-listaArchivos | [sBTSituacionArchivo](#sbtsituacionarchivo) | Listado de archivos solicitado.
+:--------- | :--------- | :---------
+sdtListaArchivos | [sBTSituacionArchivo](#sbtsituacionarchivo) | Listado de archivos solicitado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030705 | Cuenta cliente sin contrato vinculado. 
 1030708 | Estado de archivo desconocido. 
 1030709 | Se requiere identificacion de cuenta cliente. 
@@ -128,7 +128,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>1e39d33c824A8B5C60A82434</Token>
          </Btinreq>
-         <listaArchivos>
+         <sdtListaArchivos>
             <sBTSituacionArchivo>
                <moneda>0</moneda>
                <nomArchivo>Archivo1</nomArchivo>
@@ -177,7 +177,7 @@ curl -X POST \
                <fechaPago>2018-01-03</fechaPago>
                <archivoId>110</archivoId>
             </sBTSituacionArchivo>
-         </listaArchivos>
+         </sdtListaArchivos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>7177</Numero>
@@ -203,7 +203,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "listaArchivos": {
+    "sdtListaArchivos": {
         "sBTSituacionArchivo": [
             {
                 "moneda": 0,
@@ -283,7 +283,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSituacionArchivo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 archivoId | Long | Identificador de archivo.
 cantidadLineas | Int | Cantidad de líneas del archivo.
 contratoId | Long | Identificador del contrato CASH.

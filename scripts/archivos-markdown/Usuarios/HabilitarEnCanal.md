@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió usuario.
 30002 | No se recibió canal.
 40001 | El canal ingresado mapea usuarios y no se encontró el usuario externo recibido.

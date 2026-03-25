@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de operación de préstamo.
 30002 | No se recuperó la operación para el identificador: [Número de Identificador].
 30003 | No se recibió el identificador único de operación de cobro.

@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de operación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 saldoBloqueado | Double | Total de saldo bloqueado.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | No se encontró el Id de Operación para la Cuenta Vista Bloqueada
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

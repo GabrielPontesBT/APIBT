@@ -41,7 +41,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador del cliente.
 30002 | No se encontró un cliente para el identificador: [Número de identificador].
 30003 | No se recibió correlativo del Stop Debit.

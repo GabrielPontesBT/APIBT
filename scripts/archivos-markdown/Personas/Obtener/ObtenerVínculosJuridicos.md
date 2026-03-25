@@ -36,13 +36,13 @@ tipo | String | Tipo de vínculo [Hidden: Valor fijo 'S' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtVinculos | [sBTVinculo](#sbtvinculo) | Listado de vínculos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No existen Vínculos ingresados en el sistema.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -230,7 +230,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTVinculo son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 descripcion | String | Descripción de vínculo.
 identificador | Short | Identificador de vínculo.
 tipo | String | Tipo de vínculo.

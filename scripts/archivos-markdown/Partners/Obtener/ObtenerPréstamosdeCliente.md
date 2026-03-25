@@ -37,13 +37,13 @@ clienteUId | Long | Identificador único del cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 prestamos | [sBTProductoPrestamo](#sbtproductoprestamo) | Listado de préstamos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de cuenta.
 30002 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
 30003 | No se recibió Partner ni canal.
@@ -136,7 +136,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Sucursal Beta</sucursal>
                <saldo>87128.11</saldo>
@@ -151,7 +150,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <saldo>124195.84</saldo>
@@ -166,7 +164,6 @@ curl -X POST \
                   <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>
                   <moneda>$</moneda>
                   <papel/>
-                  <otrosConceptos></otrosConceptos>
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <saldo>100000.00</saldo>
@@ -208,8 +205,7 @@ curl -X POST \
                "productoUId": 0,
                "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
                "moneda": "$",
-               "papel": "",
-               "otrosConceptos":""
+               "papel": ""
             },
             "sucursal": "Sucursal Beta",
             "saldo": 87128.11,
@@ -223,8 +219,7 @@ curl -X POST \
                "productoUId": 0,
                "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
                "moneda": "$",
-               "papel": "",
-               "otrosConceptos":""
+               "papel": ""
             },
             "sucursal": "Casa Matriz",
             "saldo": 124195.84,
@@ -238,8 +233,7 @@ curl -X POST \
                "productoUId": 0,
                "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
                "moneda": "$",
-               "papel": "",
-               "otrosConceptos":""
+               "papel": ""
             },
             "sucursal": "Casa Matriz",
             "saldo": 100000,
@@ -275,7 +269,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId | Int | Identificador del punto de venta.
 vendedorUId | Int | Identificador del vendedor.
@@ -289,7 +283,7 @@ vendedorUId | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTProductoPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Descripción de estado.
 idOperacionBT | String | Identificador String Bantotal (concatenación de todos los conceptos claves de la operación).
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación).
@@ -304,7 +298,7 @@ sucursal | String | Nombre de la sucursal.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -317,7 +311,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

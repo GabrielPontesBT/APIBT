@@ -36,13 +36,13 @@ movimientoUId | Long | Identificador único de movimiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtDetalleAsiento | [sBTDetalleAsiento](#sbtdetalleasiento) | Datos del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de movimiento.
 30103 | No existe registro para el identificador único.
 40001 | No existe el asiento.
@@ -133,7 +133,6 @@ curl -X POST \
                      <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>
                      <moneda>$</moneda>
                      <papel>$</papel>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                </sBTOrdinal>
                <sBTOrdinal>
@@ -146,7 +145,6 @@ curl -X POST \
                      <nombre>CUENTA CORRIENTE, GENÉRICA</nombre>
                      <moneda>USD</moneda>
                      <papel>$</papel>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                </sBTOrdinal>
                <sBTOrdinal>
@@ -159,7 +157,6 @@ curl -X POST \
                      <nombre>POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA</nombre>
                      <moneda>USD</moneda>
                      <papel>$</papel>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                </sBTOrdinal>
                <sBTOrdinal>
@@ -223,8 +220,7 @@ curl -X POST \
               "productoUId": "0", 
               "nombre": "CAJAS DE AHORRO, GENÉRICA", 
               "moneda": "$", 
-              "papel": "$",
-              "otrosConceptos":"" 
+              "papel": "$" 
             } 
           }, 
           { 
@@ -236,8 +232,7 @@ curl -X POST \
               "productoUId": "0", 
               "nombre": "CUENTA CORRIENTE, GENÉRICA", 
               "moneda": "USD", 
-              "papel": "$",
-              "otrosConceptos":"" 
+              "papel": "$" 
             } 
           }, 
           { 
@@ -249,8 +244,7 @@ curl -X POST \
               "productoUId": "0", 
               "nombre": "POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA", 
               "moneda": "USD", 
-              "papel": "$",
-              "otrosConceptos":"" 
+              "papel": "$" 
             } 
           }, 
           { 
@@ -262,8 +256,7 @@ curl -X POST \
               "productoUId": "0", 
               "nombre": "VALUACION MONEDA EXTRANJERA, VALUACION MONEDA EXTRANJERA", 
               "moneda": "$", 
-              "papel": "$",
-              "otrosConceptos":"" 
+              "papel": "$" 
             } 
           } 
         ] 
@@ -294,7 +287,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetalleAsiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 anulado | String | ¿Anulado? (S/N) 
 descripcion | String | Descripción del movimiento. 
 fechaContabilizacion | Date | Fecha de contabilización. 
@@ -313,7 +306,7 @@ usuarioIngreso | String | Usuario de ingreso del movimiento.
 Los campos del tipo de dato estructurado sBTOrdinal son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 debitoCredito | String | ¿Es débito o crédito? (Crédito: 'C', Débito: 'D'). 
 idOperacionBT | String | Identificador String Bantotal (concatenación de todos los conceptos claves de la operación). 
 importe | Double | Importe. 
@@ -326,7 +319,7 @@ producto | [sBTProducto](#sbtproducto) | Datos del Producto.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -339,7 +332,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

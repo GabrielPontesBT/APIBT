@@ -30,7 +30,7 @@ backtotop: false
 Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 
 
 Campo | Valor 
-:--------- | :-----------  
+:--------- | :---------  
 Correlativo 1 | Valor incremental. 
 Correlativo 2 | Módulo. 
 Correlativo 3 | Tipo de operación. 
@@ -55,7 +55,7 @@ tipoDeProducto | String | Tipo de producto (VTO: Vencimiento, PP: Pago periódic
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductosDepositoAPlazo | [sBTProductosDepositoAPlazo](#sbtproductosdepositoaplazo) | Listado de productos habilitados.
 
 @tab Errores
@@ -201,7 +201,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProductosDepositoAPlazo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
@@ -215,7 +215,7 @@ tipoDeDeposito | String | Tipo de depósito. (VTO: Vencimiento, PP: Pago periód
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolista) | Lista de datos 
 tipo | String | Tipo de dato extendido. 
@@ -227,7 +227,7 @@ valor | String | Valor de dato extendido.
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
 valor | String | Valor de información adicional. 
 :::

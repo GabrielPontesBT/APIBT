@@ -36,13 +36,13 @@ movimientoUId | Long | Identificador único de movimiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTextosMovimiento | [sBTTextoMovimiento](#sbttextomovimiento) | Listado de textos del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de movimiento. 
 40003 | No existe registro para el identificador único. 
 :::
@@ -177,7 +177,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTextoMovimiento son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código del texto. 
 descripcion | String | Descripción del tipo de texto. 
 renglon | Short | Renglón. 

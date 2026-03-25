@@ -36,19 +36,19 @@ chequeraId | Long | Identificador de solicitud de chequera.
 tipoDenunciante | String | Tipo de denunciante.
 tipoDenuncia | String | Tipo de denuncia.
 motivoDenuncia | String | Motivo de la denuncia.
-chequeDesde | Long | Número de cheque inicial de la chequera.
-chequeHasta | Long | Número de cheque final de la chequera.
+chequeDesde | Int | Número de cheque inicial de la chequera.
+chequeHasta | Int | Número de cheque final de la chequera.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-numeroDenuncia | Long | Identificador de la denuncia.
+:--------- | :--------- | :---------
+numeroDenuncia | Int | Identificador de la denuncia.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de operación.
 30002 | No se recibió identificador de chequera.
 30011 | No se recupero la operación para el identificador recibido.

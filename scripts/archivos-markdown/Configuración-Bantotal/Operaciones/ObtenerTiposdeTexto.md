@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTextos | [sBTTipoTexto](#sbttipotexto) | Listado de tipos de texto.
 
 @tab Errores
@@ -274,7 +274,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoTexto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion	| String	| Descripción de tipo de texto.
 identificador | Long | Identificador de tipo de texto.
 :::

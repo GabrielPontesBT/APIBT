@@ -59,13 +59,13 @@ fecha | Date | Fecha Valor del pago.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único de movimiento [Asiento].
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación de préstamo.
 30002 | No se recibió el identificador de operación de cobro.
 30004 | No se recuperó la operación para el Identificador: [Número de Identificador].

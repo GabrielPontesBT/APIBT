@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProcesosBatch | [sBTProcesoBatch](#sbtprocesobatch) | Colección de procesos de cadena de cierre.
 
 @tab Errores
@@ -112,6 +112,7 @@ curl -X POST \
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
             </SdtsBTProcesoBatch>
+            ...
          </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -148,6 +149,7 @@ curl -X POST \
           "parametrosExtendidos": "SI",
           "esReprocesable": "No reprocesar nunca"
         },
+        ...
       ]
     },
     "Erroresnegocio": {
@@ -177,7 +179,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProcesoBatch son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 esReprocesable | String | Descripción para reprocesamiento. 
 identificador | Int | Identificador de proceso batch. 

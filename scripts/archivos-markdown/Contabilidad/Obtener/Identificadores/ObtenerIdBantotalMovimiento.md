@@ -36,7 +36,7 @@ movimientoUId | Long | Identificador único de movimiento.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 empresa | Short | Identificador de empresa.
 sucursalId | Int | Identificador de sucursal.
 moduloId | Int | Identificador de módulo.
@@ -47,7 +47,7 @@ fechaContabilizacion | Date | Fecha de contabilización.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de movimiento.
 30002 | No existe registro para el identificador de movimiento ingresado.
 ::: 

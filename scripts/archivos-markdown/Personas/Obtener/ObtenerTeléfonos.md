@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTelefonos | [sBTTelefono](#sbttelefono) | Listado de Teléfonos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de persona.
 30013 | No existe registro para el identificador único.
 ::: 
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTelefono son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 identificador | Int | Identificador del tipo de teléfono. 
 telefono | String | Número de teléfono. 
 tipoDeDomicilio | String | Nombre del tipo de domicilio. 

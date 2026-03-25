@@ -294,7 +294,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTConvServicioCASH son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descServicio | String | Descripción de servicios.
 idContrato | Long | Identificador del contrato CASH.
 servicio | Short | Servicio CASH.

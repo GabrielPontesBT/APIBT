@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSesionesPorUsuario | [sBTSesionesPorUsuario](#sbtsesionesporusuario) | Colección de datos de sesiones por usuario.
 
 @tab Errores
@@ -183,7 +183,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSesionesPorUsuario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cantidadsesiones | Int | Cantidad de sesiones abiertas.
 usuario | String | Identificador de usuario.
 :::

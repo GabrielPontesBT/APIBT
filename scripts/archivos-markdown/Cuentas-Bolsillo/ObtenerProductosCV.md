@@ -36,13 +36,13 @@ operacionUId | Long | Identificador único de la operación de cuenta vista.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtProductos | [sBTProducto](#sbtproducto) | Datos de estado de cuenta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30003 | No se recibió el identificador de operación.
 40001 | No se pudo determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.
 40002 | No se recuperaron productos habilitados para la cuenta vista.
@@ -117,35 +117,30 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>512</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Gastos</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>511</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>USD</moneda>
                <papel>$</papel>
                <productoUId>531</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>451</productoUId>
                <nombre>,</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>532</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Viajes</nombre>
-               <otrosConceptos></otrosConceptos>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
@@ -179,36 +174,31 @@ curl -X POST \
             "moneda": "$",
             "papel": "$",
             "productoUId": 512,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
-            "otrosConceptos":""
+            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
         },
         {
             "moneda": "$",
             "papel": "$",
             "productoUId": 511,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-            "otrosConceptos":""
+            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro"
         },
         {
             "moneda": "USD",
             "papel": "$",
             "productoUId": 531,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-            "otrosConceptos":""
+            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro"
         },
         {
             "moneda": "$",
             "papel": "$",
             "productoUId": 451,
-            "nombre": ",",
-            "otrosConceptos":""
+            "nombre": ","
         },
         {
             "moneda": "$",
             "papel": "$",
             "productoUId": 532,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
-            "otrosConceptos":""
+            "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes"
         }
         ]
     },
@@ -237,7 +227,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -250,7 +240,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

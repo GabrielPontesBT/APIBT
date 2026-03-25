@@ -36,13 +36,13 @@ razonSocial | String | Razón social.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPersonasJuridicas | [sBTPersonaJuridica](#sbtpersonajuridica) | Listado de personas jurídicas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Campo Razón Social requerido.
 40001 | No se encontró ninguna persona jurídica con el patrón de búsqueda ingresado.
 :::
@@ -149,7 +149,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -167,7 +167,7 @@ curl -X POST \
                "tipoDocumento": "RUT",
                "nroDocumento": "214567892142",
                "razonSocial": "BANCO MODELO",
-               "fechaConstitucion": "2007-08-22",
+               "fechaConstitucion": "2007-08-22"
             },
             {
                "personaUId": "10015",
@@ -193,7 +193,7 @@ curl -X POST \
       "Hora": "15:54:29",
       "Canal": "BTDIGITAL"
    }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -209,7 +209,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPersonaJuridica son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaConstitucion | Date | Fecha de constitución. 
 nroDocumento | String | Número de documento. 
 pais | String | Nombre de país. 

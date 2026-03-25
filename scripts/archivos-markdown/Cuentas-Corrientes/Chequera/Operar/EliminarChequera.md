@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de chequera.
 40001 | La cuenta no esta habilitada.
 40002 | La chequera no se encuentra activa.

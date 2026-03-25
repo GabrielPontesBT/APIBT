@@ -36,7 +36,7 @@ sdtPartner | [sBTPartnerInReq](#sbtpartnerinreq)  | Datos del usuario.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPuntosVenta | [sBTPuntoVenta](#sbtpuntoventa) | Listado de los puntos de venta.
 
 @tab Errores
@@ -181,7 +181,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId | Int | Identificador del punto de venta.
 vendedorUId | Int | Identificador del vendedor.
@@ -195,7 +195,7 @@ vendedorUId | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTPuntoVenta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre.
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId | Int | Identificador del punto de venta.

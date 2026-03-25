@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtViviendas | [sBTTipoDeVivienda](#sbttipodevivienda) | Listado de viviendas.
 
 @tab Errores
@@ -205,7 +205,7 @@ No aplica.
 Los campos del tipo de dato estructurado sBTTipoDeVivienda son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Short | Código de vivienda.
 descripcion | String | Descripción de vivienda.
 :::

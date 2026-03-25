@@ -39,13 +39,13 @@ metaAhorro | Double | Monto de la meta de ahorro.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de la operación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador único de la Cuenta principal.
 30002 | No se recuperó la clave de operación para el Identificador: [Número de identificador].
 30003 | No se recibió el identificador único de producto.

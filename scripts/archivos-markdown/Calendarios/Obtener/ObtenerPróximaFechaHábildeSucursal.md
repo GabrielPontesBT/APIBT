@@ -38,13 +38,13 @@ sentido  | String | [Hidden: Valor fijo 'A' para este método].
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 fechaHabil | Date | Próxima fecha hábil.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar fecha a consultar.
 30002 | Debe ingresar identificador de sucursal.
 40001 | La Sucursal no existe.

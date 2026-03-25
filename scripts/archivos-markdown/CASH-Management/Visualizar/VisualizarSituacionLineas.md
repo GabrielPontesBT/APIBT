@@ -36,13 +36,13 @@ archivoId | Long | Identificador del archivo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 situacionLineas | [sBTSituacionLinea](#sbtsituacionlinea) | Listado de líneas del archivo con su estado y mensaje.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030711 | No se recuperó información para el identificador de archivo recibido.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -192,7 +192,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTSituacionLinea son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Estado de la línea.
 linea | String | Línea de texto.
 mensajesError | String | Lista de mensajes de la línea.

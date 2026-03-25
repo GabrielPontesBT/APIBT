@@ -43,7 +43,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recibió si el cliente es un empleado de la institución o no.
 30005 | El valor de empleado no es correcto.

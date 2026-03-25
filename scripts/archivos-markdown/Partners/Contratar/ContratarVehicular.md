@@ -39,13 +39,13 @@ sdtDatosVehiculo | [sBTDatosAltaVeh](#sbtdatosaltaveh) | Datos del vehículo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUId | Long | Identificador único del movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación de préstamo.
 30002 | No se recibió el identificador de cliente.
 30003 | No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].
@@ -221,7 +221,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTPartnerInReq son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
@@ -235,7 +235,7 @@ vendedorUId	 | Int | Identificador del vendedor.
 Los campos del tipo de dato estructurado sBTDatosAltaVeh son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 anioConstruccion | Short | Año de construcción.
 color | Int | Número del color.
 compraPara | Long | Propietario del vehículo.
@@ -250,7 +250,7 @@ placa | String | Placa.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

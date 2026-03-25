@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtInformacionFinanciera | [sBTPCOInformacionFinanciera](#sbtpcoinformacionfinanciera) | Datos de información financiera de la persona.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de persona.
 30002 | No existe el Registro.
 ::: 
@@ -211,7 +211,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 Los campos del tipo de dato estructurado sBTPCOInformacionFinanciera son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 egresosMensuales | Double | Importe de egresos mensuales. 
 ingresosMensuales | Double | Importe de ingresos mensuales. 
 operacionesInternacionales | [sBTPCOOperacionesInternacionales](#sbtpcooperacionesinternacionales) | Datos de operaciones internacionales. 
@@ -230,7 +230,7 @@ totalPasivos | Double | Importe del total de pasivos.
 Los campos del tipo de dato estructurado sBTPCOOperacionesInternacionales son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 ciudad | String | Nombre de ciudad. 
 ciudadId | Short | Identificador de ciudad. 
 moneda | String | Nombre de moneda 

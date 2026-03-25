@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030750 | No se encontro la orden a procesar.
 1030751 | Estado de la orden no permite procesar.
 1030752 | Fecha de proceso no corresponde a fecha actual.

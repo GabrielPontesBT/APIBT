@@ -37,13 +37,13 @@ fecha | Date | Fecha de anulación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 movimientoUIdAnulacion | Long | Identificador único de la anulación de movimiento.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de movimiento.
 30002 | No se recibió fecha de anulación.
 40003 | No se permite ingresar operaciones anteriores al último cierre.

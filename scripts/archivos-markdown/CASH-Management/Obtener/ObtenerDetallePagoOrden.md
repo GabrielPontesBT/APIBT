@@ -50,7 +50,7 @@ detallePagos | [sBTDetallePago](#sbtdetallepago) | Lista de información del arc
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030753 | No se encontró la orden para el identificador recibido.
 
 ::: 
@@ -238,7 +238,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDetallePago son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre del Beneficiario de Pago.
 beneficiarioId | String | Identificador de Beneficiario.
 beneficiarioCuenta | String | Cuenta del Beneficiario.

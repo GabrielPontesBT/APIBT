@@ -36,13 +36,13 @@ modeloId | Short | Código de modelo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtItems | [sBTItemPAE](#sbtitempae) | Listado de items de modelo PAE.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1011050 | No se recibió modelo de evaluación PAE.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -120,6 +120,7 @@ curl -X POST \
                <itemId>115</itemId>
                <nombre>MONTO_CRED_MN</nombre>
             </SdtsBTItemPAE>
+            ...
          </sdtItems>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -157,6 +158,7 @@ curl -X POST \
             "itemId": "115", 
             "nombre": "MONTO_CRED_MN" 
          },
+         ...
          ] 
       }, 
     "Erroresnegocio": { 
@@ -186,7 +188,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTItemPAE son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 itemId | Short | Código de item. 
 nombre | String | Nombre de item. 
 tipoDato | String | Descripción de tipo de dato. 

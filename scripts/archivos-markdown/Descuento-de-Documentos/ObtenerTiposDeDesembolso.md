@@ -1,6 +1,5 @@
 ---
 title: Obtener Tipos de Desembolso
-icon: /assets/image/nuevo.svg
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -41,7 +40,7 @@ sdtTiposDesembolso | [sBTTipoDesembolso](#sbttipodesembolso)  | Listado de tipos
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 40001 | No hay tipos de desembolsos parametrizados.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -291,7 +290,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTipoDesembolso son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción del tipo de desembolso.
 identificador | Short | Identificador del tipo de desembolso.
 modulo | Int | Modulo.

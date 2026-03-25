@@ -1,0 +1,115 @@
+{
+  "slug": "prestamos/cancelacion-anticipada/confirmarcancelacionanticipada",
+  "pageTitle": "Confirmar Cancelación Anticipada",
+  "description": "Método para confirmar la cancelación anticipada de una simulación.",
+  "pubName": "BTPrestamos.ConfirmarCancelacionAnticipada",
+  "programa": "RBTPG599",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "simulacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "operacionUIdCobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cobro."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    },
+    {
+      "Nombre": "controlarOperacionCobro",
+      "Tipo": "String",
+      "Comentarios": "Hidden: Controlar si recibe operación de cobro. Se pueden enviar los siguientes [valores.]"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de Movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación a contratar para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el identificador de la simulación."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la operación de cobro para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El cliente ingresado no coincide con el de la operación."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recibió una fecha para la operación."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La simulación no está vigente."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La simulación no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ConfirmarCancelacionAnticipada>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>4FB006D061BC0A5FEDF7BAE5</bts:Token>\n         </bts:Btinreq>\n         <bts:simulacionUId>97</bts:simulacionUId>\n         <bts:clienteUId>162</bts:clienteUId>\n         <bts:operacionUIdCobro>34</bts:operacionUIdCobro>\n         <bts:fecha>2025-07-22</bts:fecha>\n      </bts:BTPrestamos.ConfirmarCancelacionAnticipada>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ConfirmarCancelacionAnticipada' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"simulacionUId\": 97,\n   \"clienteUId\": 162,\n   \"operacionUIdCobro\": 34,\n   \"fecha\": \"2025-07-22\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ConfirmarCancelacionAnticipadaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>376B514438F7B0C7820AF342</Token>\n         </Btinreq>\n         <movimientoUId>23</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>36608</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.ConfirmarCancelacionAnticipada</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-11-04</Fecha>\n            <Hora>17:24:39</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ConfirmarCancelacionAnticipadaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n   },\n    \"movimientoUId\": 23,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8418,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.ConfirmarCancelacionAnticipada\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": [
+    {
+      "elementValName": "controlarOperacionCobro",
+      "listHeader": "Valor,Comentarios",
+      "fields": [
+        {
+          "Valor": "S",
+          "Comentarios": "Controla si se envío la operación de cobro."
+        },
+        {
+          "Valor": "X",
+          "Comentarios": "No se controla si se envío la operación de cobro."
+        }
+      ],
+      "description": ""
+    }
+  ]
+}

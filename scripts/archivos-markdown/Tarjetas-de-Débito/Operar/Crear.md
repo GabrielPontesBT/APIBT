@@ -38,7 +38,7 @@ nombreTarjeta | String | Nombre de tarjeta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 tarjetaUId | Long | Identificador único de tarjeta.
 numeroTarjeta | String | Número de tarjeta.
 fechaExpiracion | Date | Fecha de vencimiento.
@@ -48,7 +48,7 @@ estadoPlastico | String | Estado del plástico.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | Debe ingresar el identificador de cuenta.
 40001 | Tipo de tarjeta inexistente TDD015.
 40002 | El titular excede la cantidad máxima de tarjetas activas.

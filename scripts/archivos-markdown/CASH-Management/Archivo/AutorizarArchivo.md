@@ -40,7 +40,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030721 | No se encontraron ordenes para autorizar para el identificador recibido
 1030722 | El estado de la orden, no permite autorizar
 ::: 

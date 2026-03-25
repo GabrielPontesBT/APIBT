@@ -36,13 +36,13 @@ personaUId | Long | Identificador único de persona.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTarjetas | [sBDProductoTarjeta](#sbdproductotarjeta) | Listado de tarjetas de débito.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de persona.
 30002 | No se recuperó la persona para el identificador: [Número de identificador].
 ::: 
@@ -111,48 +111,48 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtTarjetas>
-            <SdtsBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000089</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001957</tarjetaUID>
                <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
-            <SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000132</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001942</tarjetaUID>
                <tipoTarjeta>MAESTRO PREEMBOZADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
-            <SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000098</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001982</tarjetaUID>
                <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
-            <SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000105</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001983</tarjetaUID>
                <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
-            <SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000141</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001943</tarjetaUID>
                <tipoTarjeta>MAESTRO PREEMBOZADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
-            <SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
+            <sBDProductoTarjeta>
                <sucursal>Sucursal Beta</sucursal>
                <numeroTarjeta>5010730101000000123</numeroTarjeta>
                <adicional>N</adicional>
                <tarjetaUID>2000001985</tarjetaUID>
                <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>
-            </SdtsBDProductoTarjeta>
+            </sBDProductoTarjeta>
          </sdtTarjetas>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -180,7 +180,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434" 
     }, 
     "sdtTarjetas": { 
-        "SdtsBDProductoTarjeta": [ 
+        "sBDProductoTarjeta": [ 
         { 
             "sucursal": "Sucursal Beta", 
             "numeroTarjeta": "5010730101000000089", 
@@ -252,11 +252,11 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBDProductoTarjeta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 adicional | String | Adicional.   
 numeroTarjeta | String | Número de tarjeta. 
 sucursal | String | Sucursal de la tarjeta. 
-tarjetaUId | Long | Identificador único de tarjeta de débito. 
+tarjetaUID | Long | Identificador único de tarjeta de débito. 
 tipoTarjeta | String | Tipo de tarjeta. 
 :::
 <!-- CIERRA SDT -->

@@ -47,7 +47,7 @@ No aplica.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 1030704 | Id de contrato cliente desconocido.
 1030706 | El contrato no esta activo.
 1030714 | El contrato consultado no corresponde al servicio recibido.
@@ -75,7 +75,7 @@ Código | Descripción
 ### Valores
  
 Valor | Comentarios
-:----------- | :-----------
+:--------- | :---------
 A | Alta.
 B | Baja.
 M | Modificación.

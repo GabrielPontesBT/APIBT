@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtInformacionAdicional | [sBTDatoLista](#sbtdatolista) | Información Adicional de datos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30013 | No existe registro para el identificador único.
 ::: 
@@ -182,7 +182,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 clave | String | Identificador de información adicional.
 valor | String | Valor de información adicional.
 :::

@@ -36,13 +36,13 @@ cuentaBT | Int | Número de cuenta Bantotal.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 existe | String | ¿Existe? (S/N).
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió la Cuenta BT.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->

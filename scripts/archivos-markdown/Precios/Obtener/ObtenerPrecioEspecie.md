@@ -36,13 +36,13 @@ especie | Long | Identificador de la especie.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 precio | Double | Cotización.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió una especie.
 40001 | La especie no es un índice.
 40002 | La especie no existe.

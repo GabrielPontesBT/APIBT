@@ -36,13 +36,13 @@ tarjetaUId | Long | Identificador único de tarjeta de débito.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTarjetaHabiente | [sBTTitularTarjeta](#sbttitulartarjeta) | Datos del titular de la tarjeta.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de tarjeta.
 40001 | No existe registro para el número de tarjeta.
 40002 | No existe registro de país.
@@ -177,7 +177,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTitularTarjeta son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 nombre | String | Nombre de la persona. 
 numeroDocumento | String | Número de documento. 
 paisDocumento | String | País del documento. 

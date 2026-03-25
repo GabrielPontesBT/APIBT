@@ -31,19 +31,19 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjetaUId | Long | Identificador único de tarjeta.
+tarjetaId | Long | Identificador de tarjeta.
 tipoDeCuenta | Short | Tipo de cuenta.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtCuentasAsociadasTD | [sBTCuentasAsociadasTD](#sbtcuentasasociadastd) | Listado de cuentas asociadas.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el Identificador de cuenta.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
@@ -67,8 +67,8 @@ Código | Descripción
             <bts:Token>B086B798299A7DB5B8310AAA</bts:Token>
             <bts:Device>GL</bts:Device>
          </bts:Btinreq>
-         <bts:tarjetaUID>2000001957</bts:tarjetaUID>
-         <bts:tipoDeCuenta>?</bts:tipoDeCuenta>
+         <bts:tarjetaId>2000001957</bts:tarjetaId>
+         <bts:tipoDeCuenta></bts:tipoDeCuenta>
       </bts:BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -89,8 +89,8 @@ curl -X POST \
           "Token": "B086B798299A7DB5B8310AAA",
           "Device": "GL"
         },
-        "tarjetaUID": 2000001957,
-        "tipoDeCuenta": "?"
+        "tarjetaId": 2000001957,
+        "tipoDeCuenta": ""
     }'
 ```
 :::
@@ -123,7 +123,6 @@ curl -X POST \
                      <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                      <moneda>S/.</moneda>
                      <papel/>
-                     <otrosConceptos></otrosConceptos>
                   </producto>
                   <sucursal>Sucursal Cusco</sucursal>
                   <simboloMoneda>S/.</simboloMoneda>
@@ -169,8 +168,7 @@ curl -X POST \
                 "productoUId": 93,
                 "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
                 "moneda": "S/.",
-                "papel": "",
-                "otrosConceptos":""
+                "papel": ""
               },
               "sucursal": "Sucursal Cusco",
               "simboloMoneda": "S/.",
@@ -207,7 +205,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTCuentasAsociadasTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 cuentas | [sBTCuentaAsociadaTD](#sbtcuentaasociadatd) | Datos cuenta asociada. 
 tarjetaUId | Long | Identificador único de tarjeta.. 
 
@@ -217,7 +215,7 @@ tarjetaUId | Long | Identificador único de tarjeta..
 Los campos del tipo de dato estructurado sBTCuentaAsociadaTD son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 estado | String | Estado. 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de Operación. 
@@ -234,7 +232,7 @@ tipoDeCuenta | Short | Tipo de cuenta.
 Los campos del tipo de dato estructurado sBTProducto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
@@ -247,7 +245,7 @@ productoUId | Long | Identificador único de producto.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

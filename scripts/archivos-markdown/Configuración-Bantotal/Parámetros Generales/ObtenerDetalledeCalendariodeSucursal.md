@@ -38,7 +38,7 @@ fechaFin | Date | Fecha fin de la consulta.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 calendarioId | Short | Identificador de calendario
 descripcionCalendario | String | Descripción del calendario
 sdtDetalleCalendario | [sBTDiaCalendario](#sbtdiacalendario) | Detalle de la consulta del calendario.
@@ -46,7 +46,7 @@ sdtDetalleCalendario | [sBTDiaCalendario](#sbtdiacalendario) | Detalle de la con
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se encontró un calendario para la sucursal indicada.
 30002 | No se recibió fecha de inicio.
 30003 | No se recibió fecha de fin.
@@ -436,7 +436,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDiaCalendario son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 fecha | Date | Día del calendario.
 habil | String | ¿Día hábil? (S/N)
 :::

@@ -36,13 +36,13 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtLimites | [sBTLimiteCliente](#sbtlimitecliente) | Listado de límites.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de cliente.
 30002 | No se encontró un cliente para el identificador recibido.
 ::: 
@@ -265,7 +265,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTLimiteCliente son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 limiteDisponible | Double | Límite disponible para el cliente. 
 limiteOtorgado | Double | Límite otorgado al cliente. 

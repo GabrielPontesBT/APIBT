@@ -34,7 +34,7 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtLimites | [sBTLimiteTarjeta](#sbtlimitetarjeta) | Listado de códigos de límite.
 
 @tab Errores
@@ -231,8 +231,8 @@ curl -X GET \
 ::: center 
 Los campos del tipo de dato estructurado sBTLimiteTarjeta son los siguientes: 
 
-Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+Campo | Tipo | Comentarios 
+:--------- | :--------- | :--------- 
 identificador | Short | Código de límite. 
 limiteBandaMagnetica | Double | Monto límite en banda magnética. 
 limiteEMV | Double | Monto límite EMV. 

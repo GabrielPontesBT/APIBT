@@ -36,13 +36,13 @@ chequeraId | Long | Identificador de la solicitud de chequera.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 estado | [sBTEstado](#sbtestado) | Estado de la chequera.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió identificador de chequera.
 40001 | No se encontró la chequera ingresada.
 ::: 
@@ -171,7 +171,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTEstado son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 descripcion | String | Estado actual de la solicitud de la chequera. 
 identificador | Int | Identificador del estado. 
 :::

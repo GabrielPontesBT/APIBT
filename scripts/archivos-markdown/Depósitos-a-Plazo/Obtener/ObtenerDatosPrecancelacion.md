@@ -37,13 +37,13 @@ fecha | Date | Fecha de la precancelación.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtPrecancelar | [sBTDatoPrecancelar](#sbtdatoprecancelar) | Datos de la precancelación.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de operación.
 30002 | No se recibió la fecha.
 40003 | La operación no corresponde a un depósito a plazo.
@@ -190,7 +190,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTDatoPrecancelar son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 tasaDescripcion | String | Descripción de la tasa. 
 fechaVencimiento | Date | Fecha de vencimiento. 
 datosAdicionales | [sBTDatoAdicional](#sbtdatoAdicional) | Listado de datos adicionales. 
@@ -204,7 +204,7 @@ tasaPrecancelacion | Double | Tasa de precancelación.
 Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes:
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 detalle | String | Detalle.
 
 :::

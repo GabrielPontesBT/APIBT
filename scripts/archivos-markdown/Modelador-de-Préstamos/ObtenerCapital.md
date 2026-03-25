@@ -36,7 +36,7 @@ productoUId | Long | Identificador de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 minimo | Double | Capital mínimo posible para el producto.
 maximo | Double | Capital máximo posible para el producto.
 valorPorDefecto | Double | Capital por defecto para el producto.
@@ -44,7 +44,7 @@ valorPorDefecto | Double | Capital por defecto para el producto.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.

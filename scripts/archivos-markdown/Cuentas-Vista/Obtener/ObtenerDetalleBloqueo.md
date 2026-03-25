@@ -36,17 +36,17 @@ idBloqueo | Long | Identificador de bloqueo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 clienteUId | Long | Identificador único de cliente.
-importe | Long | Importe bloqueado.
+importe | Double | Importe bloqueado.
 fechaVencimiento | Date | Fecha vencimiento de bloqueo.
 motivo | String | Motivo del bloqueo.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del bloqueo.
 40001 | No se pudo encontrar el registro correspondiente al Id de Bloqueo.
 ::: 

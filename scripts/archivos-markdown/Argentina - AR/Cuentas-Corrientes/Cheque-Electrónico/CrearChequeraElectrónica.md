@@ -37,13 +37,13 @@ cantidadCheques | Short | Cantidad de cheques.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 listaCheques | [sBTChequeElectronico](#sbtchequeelectronico) | Listado de cheques.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de la operación.
 30002 | No existe registro con el identificador indicado.
 ::: 
@@ -184,7 +184,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTChequeElectronico son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 beneficiario | String | Nombre del beneficiario. 
 cmc7 | Long | Identificador CMC7 de cheque electrónico.
 importe | Double | Importe. 

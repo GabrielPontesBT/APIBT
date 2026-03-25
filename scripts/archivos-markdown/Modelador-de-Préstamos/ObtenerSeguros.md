@@ -36,13 +36,13 @@ productoUId | Long | Identificador de producto.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtSeguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30002 | Existe registro con la cuenta indicada.
 30003 | No existe registro para el identificador único.
 30004 | No existe registro para el producto indicado.
@@ -181,7 +181,7 @@ Código | Descripción
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código del seguro. 
 descripcion | String | Descripción del seguro. 
 importeFijo | Decimal | Importe fijo del seguro. 

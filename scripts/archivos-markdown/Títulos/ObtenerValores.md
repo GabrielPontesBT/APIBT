@@ -36,13 +36,13 @@ grupoId | Byte | Identificador del grupo.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 sdtTitulos | [sBTTitulo](#sbttitulo) | Listado de títulos del cliente.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador del grupo.
 30002 | No se pudieron obtener los títulos con el identificador ingresado.
 ::: 
@@ -237,7 +237,7 @@ curl -X POST \
 Los campos del tipo de dato estructurado sBTTitulo son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 codigo | Int | Código del título.
 grupo | String | Nombre del grupo.
 grupoId | Byte | Identificador del grupo.
@@ -254,7 +254,7 @@ simbolo | String | Símbolo de moneda.
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
-:--------- | :----------- | :----------- 
+:--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.

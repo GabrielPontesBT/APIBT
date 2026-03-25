@@ -36,7 +36,7 @@ clienteUId | Long | Identificador único de cliente.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 simulacionUId | Long | 	Identificador único de la simulación.
 operacionUId | Long | Identificador único de la operación.
 entregaInicial | Double | Entrega inicial.
@@ -44,7 +44,7 @@ entregaInicial | Double | Entrega inicial.
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
+:--------- | :---------
 30001 | No se recibió el identificador de cliente.
 30002 | No se recuperó la cuenta para el Identificador: [Número de Identificador].
 30003 | No existen simulaciones para el cliente.
