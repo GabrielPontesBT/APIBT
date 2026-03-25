@@ -78,7 +78,7 @@ export class SearchService {
       // Escapa caracteres especiales de regex
       const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${escaped})`, 'gi');
-      result = result.replace(regex, '<strong>$1</strong>');
+      result = result.replace(regex, '$1');
     }
     return result;
   }
