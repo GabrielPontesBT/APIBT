@@ -150,3 +150,7 @@ Si se crea un nuevo componente y se quiere usar en el módulo de documentación:
 | TypeScript | 6.0 |
 | Node.js (recomendado) | 22 LTS |
 | zone.js | 0.16 |
+| fuse.js | 7.1+ |
+| prismjs | 1.30+ |
+| gray-matter | 4.0+ |
+| flag-icons | 7.5+ |
