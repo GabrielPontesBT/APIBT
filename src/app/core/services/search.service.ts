@@ -17,11 +17,12 @@ export interface SearchResult {
   url: string;
   snippet: string;
   pubName: string;
+  programa: string;
   breadcrumb: string;
   pageTitle: string;
-  // Versiones con términos resaltados en HTML (para [innerHTML])
   highlightedBreadcrumb: string;
   highlightedPubName: string;
+  highlightedPrograma: string;
 }
 
 @Injectable({
@@ -60,16 +61,12 @@ export class SearchService {
       .toLowerCase();
   }
 
-  private slugToBreadcrumb(slug: string): string {
-    return slug
-      .split('/')
-      .map(segment =>
-        segment
-          .split('-')
-          .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-          .join(' ')
-      )
-      .join(' > ');
+  private slugToBreadcrumb(slug: string, pageTitle: string): string {
+    const segments = slug.split('/');
+    const parents = segments.slice(0, -1).map(segment =>
+      segment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    );
+    return [...parents, pageTitle].join(' > ');
   }
 
   /** Envuelve las ocurrencias de los términos en <strong> para resaltado */
@@ -81,21 +78,23 @@ export class SearchService {
       // Escapa caracteres especiales de regex
       const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${escaped})`, 'gi');
-      result = result.replace(regex, '<strong>$1</strong>');
+      result = result.replace(regex, '$1');
     }
     return result;
   }
 
   private buildResult(page: PageIndex, terms: string[]): SearchResult {
-    const breadcrumb = this.slugToBreadcrumb(page.slug);
+    const breadcrumb = this.slugToBreadcrumb(page.slug, page.pageTitle);
     return {
       url: '/' + page.slug,
       snippet: '',
       pubName: page.pubName,
+      programa: page.programa,
       breadcrumb,
       pageTitle: page.pageTitle,
       highlightedBreadcrumb: this.highlight(breadcrumb, terms),
       highlightedPubName: this.highlight(page.pubName, terms),
+      highlightedPrograma: this.highlight(page.programa, terms),
     };
   }
 
@@ -127,18 +126,20 @@ export class SearchService {
       }
     }
 
-    // ── 2. Fuzzy search (Fuse.js) para tolerancia a errores de tipeo ──
+    // Si hay resultados exactos, devolverlos directamente
+    if (exactResults.length > 0) {
+      return exactResults;
+    }
+
+    // ── 2. Fuzzy search solo si no hubo ningún resultado exacto ──
     const fuzzyResults: SearchResult[] = [];
     if (this.fuse) {
       const fuseHits = this.fuse.search(query);
       for (const hit of fuseHits) {
-        if (!exactSlugs.has(hit.item.slug)) {
-          fuzzyResults.push(this.buildResult(hit.item, terms));
-        }
+        fuzzyResults.push(this.buildResult(hit.item, terms));
       }
     }
 
-    // Exactos primero, luego fuzzy
-    return [...exactResults, ...fuzzyResults];
+    return fuzzyResults;
   }
 }
