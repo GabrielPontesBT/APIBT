@@ -1,0 +1,32 @@
+@if (release) {
+  <app-page-header [title]="release.titulo"></app-page-header>
+  <div class="releases-wrap">
+    <div class="nov-grid">
+      @for (g of release.grupos; track g.titulo) {
+        <mat-card class="nov-card" appearance="outlined">
+          <div class="card-header">
+            <h3 class="card-title">{{ g.titulo }}</h3>
+          </div>
+          <ul class="card-list">
+            @for (it of g.items; track it.label) {
+              <li>
+                @if (it.path?.length) {
+                  <a [routerLink]="['/'].concat(it.path!)">{{ it.label }}</a>
+                } @else {
+                  <span class="card-list__text">{{ it.label }}</span>
+                }
+              </li>
+            }
+          </ul>
+        </mat-card>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="not-found">
+    <p>Release no encontrado.</p>
+  </div>
+}
+
+<app-chat-popup></app-chat-popup>
+<app-footer-space></app-footer-space>

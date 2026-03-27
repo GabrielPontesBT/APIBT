@@ -1,57 +1,129 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, NavigationEnd } from '@angular/router';
-import {
-  trigger, transition, style, animate, query, group
-} from '@angular/animations';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { trigger, transition } from '@angular/animations';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html', // sigue siendo SOLO <router-outlet>
-    styleUrls: ['./app.component.scss'],
-    animations: [
-        trigger('routeFadeSlide', [
-            transition('* <=> *', [
-                // versión simple (sin forzar position) para no tocar layout
-                group([
-                    query(':leave', [
-                        animate('140ms ease-out', style({ opacity: 0, transform: 'translateY(0.25rem)' }))
-                    ], { optional: true }),
-                    query(':enter', [
-                        style({ opacity: 0, transform: 'translateY(0.375rem)' }),
-                        animate('200ms 40ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-                    ], { optional: true }),
-                ]),
-            ]),
-        ]),
-    ],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('routeFadeSlide', [
+      transition('* <=> *', [])   // no-op, mantiene el trigger sin efectos visuales
+    ]),
+  ],
+  standalone: false
 })
-export class AppComponent {
-  // Dispara la animación en el host sin tocar el template
-  @HostBinding('@routeFadeSlide') routeAnimState = 'init';
+export class AppComponent implements OnInit {
 
-  constructor(private titleSvc: Title, private router: Router) {
-    // Cambiar el estado en cada navegación para forzar * => *
-    this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e: any) => {
-        this.routeAnimState = e.urlAfterRedirects ?? e.url ?? String(Date.now());
-      });
+  @HostBinding('@routeFadeSlide') routeAnimState = '/';
+
+  private animRunning = false;
+  private pendingOverlay: HTMLElement | null = null;
+  private pendingDir: 'push' | 'back' | null = null;
+  private prevUrl = '/';
+
+  constructor(private titleSvc: Title, private router: Router) { }
+
+  ngOnInit() {
+    this.prevUrl = this.router.url;
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        const nextUrl = event.url;
+        const wasHome = this.isRoot(this.prevUrl);
+        const willBeHome = this.isRoot(nextUrl);
+
+        if (wasHome !== willBeHome && !this.animRunning) {
+          this.animRunning = true;
+          this.pendingDir = wasHome ? 'push' : 'back';
+          this.pendingOverlay = this.createOverlay(this.pendingDir);
+        }
+      }
+
+      if (event instanceof NavigationEnd) {
+        const nextUrl = event.urlAfterRedirects;
+        this.routeAnimState = nextUrl;
+        this.prevUrl = nextUrl;
+
+        if (this.pendingOverlay) {
+          const overlay = this.pendingOverlay;
+          const dir = this.pendingDir!;
+          this.pendingOverlay = null;
+          this.pendingDir = null;
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              this.slideOverlayOut(overlay, dir);
+            });
+          });
+        }
+      }
+    });
+  }
+
+  private isRoot(url: string): boolean {
+    const u = (url || '').split('?')[0].split('#')[0];
+    return u === '/' || u === '';
+  }
+
+  private createOverlay(dir: 'push' | 'back'): HTMLElement {
+    const vw = window.innerWidth;
+    const bgColor = getComputedStyle(document.documentElement)
+      .getPropertyValue('--bg-color').trim() || '#f5f5f7';
+
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: ${bgColor};
+      z-index: 99999;
+      pointer-events: none;
+      will-change: transform;
+    `;
+
+    // Empieza fuera de pantalla
+    const startX = dir === 'push' ? vw : -vw;
+    overlay.style.transform = `translate3d(${startX}px, 0, 0)`;
+
+    document.body.appendChild(overlay);
+    overlay.getBoundingClientRect(); // fuerza reflow
+
+    // Slide IN cubriendo la página actual
+    overlay.style.transition = `transform 350ms cubic-bezier(0.4, 0, 0.2, 1)`;
+    overlay.style.transform = `translate3d(0, 0, 0)`;
+
+    return overlay;
+  }
+
+  private slideOverlayOut(overlay: HTMLElement, dir: 'push' | 'back'): void {
+    if (!overlay.parentElement) {
+      this.animRunning = false;
+      return;
+    }
+
+    const vw = window.innerWidth;
+    const exitX = dir === 'push' ? -vw : vw;
+
+    overlay.style.transition = `transform 350ms cubic-bezier(0.4, 0, 0.2, 1)`;
+    overlay.style.transform = `translate3d(${exitX}px, 0, 0)`;
+
+    overlay.addEventListener('transitionend', () => {
+      overlay.remove();
+      this.animRunning = false;
+    }, { once: true });
   }
 
   onActivate(component: unknown) {
-    const c: any = component as any;
-    let pageTitle: string | undefined =
+    const c = component as any;
+    const pageTitle =
       typeof c?.pageTitle === 'string' ? c.pageTitle :
-      typeof c?.pageTitle === 'function' ? c.pageTitle() : undefined;
-
-    if (!pageTitle && c?.constructor && typeof c.constructor.pageTitle === 'string') {
-      pageTitle = c.constructor.pageTitle;
-    }
-
+        typeof c?.title === 'string' ? c.title : undefined;
     if (!pageTitle) return;
-    setTimeout(() => this.titleSvc.setTitle(`API | ${pageTitle}`), 0);
+    this.titleSvc.setTitle(`API | ${pageTitle}`);
   }
 }

@@ -1,11 +1,14 @@
 @import 'variables';
 
+:host {
+  display: block;
+}
 
 // TÍTULO DE LA PÁGINA
 .header-content {
   position: fixed;
   top: var(--navbar-height);
-  left: var(--content-left-offset, var(--sidebar-offset));
+  left: var(--page-header-left-offset, var(--sidebar-offset));
   right: 0;
   z-index: 99;
   height: var(--title-height);

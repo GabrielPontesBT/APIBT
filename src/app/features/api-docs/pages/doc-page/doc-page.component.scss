@@ -6,7 +6,6 @@
 
 :host {
   display: block;
-  container-type: inline-size;
 }
 
 /* ================== ERROR STATE ================== */
@@ -85,13 +84,8 @@
 
 /* ================== Animaciones ================== */
 
-.fade-only { opacity: 0; animation: fadeOnly 300ms ease-out forwards; }
+.fade-only { opacity: 1; }
 .front { position: relative; z-index: 10; }
-
-@keyframes fadeOnly {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 
 /* ================== Responsive ================== */
 

@@ -6,7 +6,8 @@
  * para renderizarlo mediante los componentes visuales reutilizables del proyecto.
  */
 
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, OnInit } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable, of } from 'rxjs';
@@ -19,9 +20,22 @@ import { DocsService } from '../../services/docs.service';
     templateUrl: './doc-page.component.html',
     styleUrls: ['./doc-page.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+    standalone: false,
+    animations: [
+        trigger('fade', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('250ms ease-out', style({ opacity: 1 }))
+            ]),
+            transition(':leave', [
+                animate('150ms ease-in', style({ opacity: 0 }))
+            ])
+        ])
+    ]
 })
 export class DocPageComponent implements OnInit {
+
+  @HostBinding('@fade') fade = true;
   page$!: Observable<DocPage | null>;
 
   constructor(

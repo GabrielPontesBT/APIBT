@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { Release } from '../../../features/api-docs/pages/releases/releases.data';
+import { ReleasesService } from '../../../features/api-docs/services/releases.service';
 
 @Component({
     selector: 'app-navbar',
@@ -9,22 +11,57 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  isDarkMode = false;
+  isDarkMode = document.body.classList.contains('dark-mode');
   rotate = false;
+  releasesOpen = false;
+  releases: Release[] = [];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private releasesService: ReleasesService
+  ) {
+    this.releasesService.getReleases().subscribe(releases => {
+      this.releases = releases;
+    });
+  }
+
+  toggleReleases(event: MouseEvent): void {
+    event.stopPropagation();
+    this.releasesOpen = !this.releasesOpen;
+  }
+
+  closeReleases(): void {
+    this.releasesOpen = false;
+  }
+
+  @HostListener('document:click')
+  onDocumentClick(): void {
+    this.releasesOpen = false;
+  }
 
   toggleTheme() {
     this.rotate = true;
+    const html = document.documentElement;
+    const body = document.body;
 
-    setTimeout(() => {
+    const applyTheme = () => {
       this.isDarkMode = !this.isDarkMode;
-      document.body.classList.toggle('dark-mode', this.isDarkMode);
-    }, 100);
+      body.classList.toggle('dark-mode', this.isDarkMode);
+      html.classList.toggle('dark-mode', this.isDarkMode);
+    };
 
-    setTimeout(() => {
-      this.rotate = false;
-    }, 600);
+    // View Transitions API: toma un screenshot del estado actual, aplica el cambio
+    // y hace crossfade a nivel de compositor — todos los elementos simultáneamente.
+    if ((document as any).startViewTransition) {
+      html.classList.add('theme-view-transition');
+      (document as any).startViewTransition(applyTheme).finished.then(() => {
+        html.classList.remove('theme-view-transition');
+      });
+    } else {
+      applyTheme();
+    }
+
+    setTimeout(() => { this.rotate = false; }, 320);
   }
 
   goHome() {

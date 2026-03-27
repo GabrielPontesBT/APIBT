@@ -1,5 +1,9 @@
 @import 'variables';
 
+:host {
+  display: block;
+}
+
 .navbar {
   position: fixed;
   display: flex;
@@ -20,8 +24,8 @@
 
 .logo {
   vertical-align: middle;
-  height: calc( 3.25rem - .5rem);
-  margin-inline-end: .8rem;
+  height: calc(3.25rem - 0.5rem);
+  margin-inline-end: 0.8rem;
   margin-left: -1rem;
   transition: transform 0.4s ease;
   cursor: pointer;
@@ -31,10 +35,88 @@
   }
 }
 
+.logo--dark {
+  display: none;
+}
+
+:host-context(body.dark-mode) .logo--light {
+  display: none;
+}
+
+:host-context(body.dark-mode) .logo--dark {
+  display: block;
+}
+
 .right-section {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.releases-menu {
+  position: relative;
+}
+
+.releases-btn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 180ms var(--ease-smooth), color 180ms var(--ease-smooth);
+
+  &:hover, &.active {
+    background-color: var(--grey-hover);
+    color: var(--red-1);
+  }
+}
+
+.releases-arrow {
+  font-size: 18px;
+  transition: transform 220ms var(--ease-smooth);
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.releases-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 200px;
+  background: var(--bg-elements);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  z-index: 200;
+  animation: dropdownFade 320ms var(--ease-smooth);
+}
+
+.releases-item {
+  display: block;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    background-color: var(--red-2);
+    color: var(--red-1);
+    box-shadow: inset 2px 0 0 rgba(179, 35, 35, 0.22);
+  }
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .toggle-theme-button {

@@ -15,32 +15,27 @@ interface ChatEntry { role: string; content: string /* raw text */; }
 
 
 @Component({
-    selector: 'app-chat-popup',
-    templateUrl: './chat-popup.component.html',
-    styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
-    animations: [
-        trigger('popupFromButton', [
-            // Fallback para :enter (primer render)
-            transition(':enter', [
-                style({ opacity: 0, transform: 'scale(0)' }),
-                animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-            ]),
-            transition('open => closed', [
-                animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
-            ]),
-            transition('closed => open', [
-                style({ opacity: 0, transform: 'scale(0)' }),
-                animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-            ])
-        ]),
-        trigger('messageAnim', [
-            transition(':enter', [
-                style({ opacity: 0, transform: 'scale(0.95)' }),
-                animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' }))
-            ])
-        ])
-    ],
-    standalone: false
+  selector: 'app-chat-popup',
+  templateUrl: './chat-popup.component.html',
+  styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
+  animations: [
+    trigger('popupFromButton', [
+      transition('open => closed', [
+        animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
+      ]),
+      transition('closed => open', [
+        style({ opacity: 0, transform: 'scale(0)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+      ])
+    ]),
+    trigger('messageAnim', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.95)' }),
+        animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' }))
+      ])
+    ])
+  ],
+  standalone: false
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
@@ -61,7 +56,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   constructor(
     private chatService: ChatService,
     private sanitizer: DomSanitizer
-  ) {}
+  ) { }
 
   ngOnInit() {
     (window as any).copyCode = this.copyCode.bind(this);
@@ -71,61 +66,61 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private copyCode(button:any) {
-      const codeElement = button.parentElement.querySelector("code");
+  private copyCode(button: any) {
+    const codeElement = button.parentElement.querySelector("code");
 
-      if (!codeElement) {
-        console.error("Code element not found!");
-        return;
-      }
+    if (!codeElement) {
+      console.error("Code element not found!");
+      return;
+    }
 
-      let textToCopy = codeElement.innerText || codeElement.textContent;
+    let textToCopy = codeElement.innerText || codeElement.textContent;
 
-      if (!textToCopy) {
-        console.error("No text found in the code element.");
-        return;
-      }
+    if (!textToCopy) {
+      console.error("No text found in the code element.");
+      return;
+    }
 
-      textToCopy = textToCopy.replace(/\r?\n/g, '\n');
+    textToCopy = textToCopy.replace(/\r?\n/g, '\n');
 
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(textToCopy)
-          .then(() => {
-            // button.textContent = "Copiado";
-            // button.style.color = "var(--text-color)";
-            // button.style.backgroundImage = "none";
-            // setTimeout(() => {
-            //   button.textContent = "";
-            //   button.style.color = ""; // Restaurá el color original
-            //   button.style.backgroundImage = "var(--code-copy-icon)";
-            // }, 2000);
-          })
-          .catch(err => {
-            console.error("Failed to copy text: ", err);
-            alert("Failed to copy text. Please try again.");
-          });
-      } else {
-        const textarea = document.createElement("textarea");
-        textarea.value = textToCopy;
-        document.body.appendChild(textarea);
-        textarea.select();
-        try {
-          document.execCommand("copy");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
           // button.textContent = "Copiado";
           // button.style.color = "var(--text-color)";
           // button.style.backgroundImage = "none";
           // setTimeout(() => {
           //   button.textContent = "";
-          //   button.style.color = "";
+          //   button.style.color = ""; // Restaurá el color original
           //   button.style.backgroundImage = "var(--code-copy-icon)";
           // }, 2000);
-        } catch (err) {
-          console.error("Fallback: Failed to copy text: ", err);
+        })
+        .catch(err => {
+          console.error("Failed to copy text: ", err);
           alert("Failed to copy text. Please try again.");
-        }
-        document.body.removeChild(textarea);
+        });
+    } else {
+      const textarea = document.createElement("textarea");
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        // button.textContent = "Copiado";
+        // button.style.color = "var(--text-color)";
+        // button.style.backgroundImage = "none";
+        // setTimeout(() => {
+        //   button.textContent = "";
+        //   button.style.color = "";
+        //   button.style.backgroundImage = "var(--code-copy-icon)";
+        // }, 2000);
+      } catch (err) {
+        console.error("Fallback: Failed to copy text: ", err);
+        alert("Failed to copy text. Please try again.");
       }
+      document.body.removeChild(textarea);
     }
+  }
   ngAfterViewInit() {
     const c = document.querySelector('.chat-messages');
     if (c) {
@@ -221,8 +216,8 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private chunkProcess = (text:any) => {
-    if (this.readCode){
+  private chunkProcess = (text: any) => {
+    if (this.readCode) {
       return text
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -318,49 +313,49 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
 
 
   private formatMessage = (message) => {
-      // Procesar JSON
-      let formattedMessage = message;
+    // Procesar JSON
+    let formattedMessage = message;
 
-      if (!this.readCode) {
-        // Agregar un espacio en blanco después de "por favor", ya que siempre queda pegado a la siguiente palabra
-        formattedMessage = formattedMessage.replace(/(por favor\.)/gi, '$1 ');
+    if (!this.readCode) {
+      // Agregar un espacio en blanco después de "por favor", ya que siempre queda pegado a la siguiente palabra
+      formattedMessage = formattedMessage.replace(/(por favor\.)/gi, '$1 ');
 
-        // Agregar un único salto de línea después de cada punteo numerado
-        formattedMessage = formattedMessage.replace(/(\d+\.\s[^\n]+)/g, '$1\n');
+      // Agregar un único salto de línea después de cada punteo numerado
+      formattedMessage = formattedMessage.replace(/(\d+\.\s[^\n]+)/g, '$1\n');
 
-        // Eliminar cualquier acumulación de saltos de línea (deja solo uno)
-        formattedMessage = formattedMessage.replace(/\n+/g, '\n');
+      // Eliminar cualquier acumulación de saltos de línea (deja solo uno)
+      formattedMessage = formattedMessage.replace(/\n+/g, '\n');
 
-        // Convertir enlaces en Markdown a HTML
-        const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
-        formattedMessage = formattedMessage.replace(linkRegex, '<a href="$2" target="_blank">$1</a>');
+      // Convertir enlaces en Markdown a HTML
+      const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+      formattedMessage = formattedMessage.replace(linkRegex, '<a href="$2" target="_blank">$1</a>');
 
-        // Convertir encabezados (hasta ####)
-        formattedMessage = formattedMessage
-          .replace(/####\s*(.+?)(?:\n|$)/g, '<h3><strong>$1</strong></h3>')
-          .replace(/###\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
-          .replace(/##\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
-          .replace(/#\s*(.+?)(?:\n|$)/g, '<h1><strong>$1</strong></h1>');
+      // Convertir encabezados (hasta ####)
+      formattedMessage = formattedMessage
+        .replace(/####\s*(.+?)(?:\n|$)/g, '<h3><strong>$1</strong></h3>')
+        .replace(/###\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
+        .replace(/##\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
+        .replace(/#\s*(.+?)(?:\n|$)/g, '<h1><strong>$1</strong></h1>');
 
-        // Manejar negritas
-        formattedMessage = formattedMessage.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      // Manejar negritas
+      formattedMessage = formattedMessage.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
-        // Manejar listas con guiones
-        formattedMessage = formattedMessage.replace(/-\s(.+?)(?:\n|$)/g, '<li>$1</li>');
+      // Manejar listas con guiones
+      formattedMessage = formattedMessage.replace(/-\s(.+?)(?:\n|$)/g, '<li>$1</li>');
 
-        // Convertir saltos de línea a <br/> para HTML
-        formattedMessage = formattedMessage.replace(/\n/g, '<br/>');
+      // Convertir saltos de línea a <br/> para HTML
+      formattedMessage = formattedMessage.replace(/\n/g, '<br/>');
 
-      }
+    }
 
-      // Procesar JSON
-      formattedMessage = formattedMessage.replace(/((```json)|(<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><code class="language-json">))([\s\S]+?)/g, (match, p1, p2, p3, p4) => {
-        const escapedContent = p4
-          .replace(/&/g, '&') // Escapar `&`
-          .replace(/</g, '<') // Escapar `<`
-          .replace(/>/g, '>'); // Escapar `<`
-        this.readCode = true
-        return `<div class="mat-mdc-tab-body-content">
+    // Procesar JSON
+    formattedMessage = formattedMessage.replace(/((```json)|(<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><code class="language-json">))([\s\S]+?)/g, (match, p1, p2, p3, p4) => {
+      const escapedContent = p4
+        .replace(/&/g, '&') // Escapar `&`
+        .replace(/</g, '<') // Escapar `<`
+        .replace(/>/g, '>'); // Escapar `<`
+      this.readCode = true
+      return `<div class="mat-mdc-tab-body-content">
           <div class="chat-code-wrapper">
             <button class="mat-icon-button-chat" onclick="copyCode(this)">
               <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon>
@@ -368,15 +363,15 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
             <pre class="language-json">
               <code class="language-json">${escapedContent}`;
 
-      });
+    });
 
-      var regex = /```xml/;
-      if (regex.test(formattedMessage)){
-          //console.log("leo xml")
-          this.readCode = true
-      }
+    var regex = /```xml/;
+    if (regex.test(formattedMessage)) {
+      //console.log("leo xml")
+      this.readCode = true
+    }
 
-      // Procesar XML
+    // Procesar XML
     const start_xml_code = [
       `<div class="mat-mdc-tab-body-content">`,
       `  <div class="chat-code-wrapper">`,
@@ -385,51 +380,51 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       `    </button>`,
       `    <pre class="language-xml">`,
       `      <code class="language-xml">`
-].join('');
+    ].join('');
 
 
 
-      formattedMessage = formattedMessage.replace(/```xml/g, start_xml_code);
+    formattedMessage = formattedMessage.replace(/```xml/g, start_xml_code);
 
-      if (/```/.test(formattedMessage)) {
-        //console.log('fin xml');
-        //console.log('before replace:', formattedMessage);
+    if (/```/.test(formattedMessage)) {
+      //console.log('fin xml');
+      //console.log('before replace:', formattedMessage);
 
-        const replacement = `</code></pre></div></div>`;
+      const replacement = `</code></pre></div></div>`;
 
-        // split/join para forzar el reemplazo literal
-        formattedMessage = formattedMessage.split('```').join(replacement);
+      // split/join para forzar el reemplazo literal
+      formattedMessage = formattedMessage.split('```').join(replacement);
 
-        //console.log(' after replace:', formattedMessage);
-        this.readCode = false;
+      //console.log(' after replace:', formattedMessage);
+      this.readCode = false;
+    }
+
+    //Estilos para el código
+    formattedMessage = formattedMessage.replace(/("([^"]+)")(\s*:\s*)("[^"]*")/g, (match, key, keyName, colon, value) => {
+      // Elimina las comillas iniciales y finales del valor
+      const rawValue = value.slice(1, -1);
+
+      // Verifica si el valor ya tiene el formato aplicado
+      if (!rawValue.startsWith('<span class="token string">')) {
+        value = `<span class="token string">"${rawValue}"</span>`;
       }
 
-      //Estilos para el código
-      formattedMessage = formattedMessage.replace(/("([^"]+)")(\s*:\s*)("[^"]*")/g, (match, key, keyName, colon, value) => {
-        // Elimina las comillas iniciales y finales del valor
-        const rawValue = value.slice(1, -1);
-
-        // Verifica si el valor ya tiene el formato aplicado
-        if (!rawValue.startsWith('<span class="token string">')) {
-          value = `<span class="token string">"${rawValue}"</span>`;
-        }
-
-        return `${key}${colon}${value}`;
-      });
-      formattedMessage = formattedMessage.replace(/(?<!\<span class="token property">)(\&lt\;.*?\&gt\;)(?<!\<\/span>)/g, (match, p1, p2, p3) => {
-        return `<span class="token property">${p1}</span>`;
-      });
-      formattedMessage = formattedMessage.replace(/(?<!<span class="token property">)"([^"]+)":(?<!<\/span>)/g, (match, p1) => {
-        // `p1` es la clave JSON (sin comillas)
-        return `<span class="token property">"${p1}":</span>`;
-      });
-      formattedMessage = formattedMessage.replace(/(?<!div)(?<!pre)(?<!title)(?<!style)(?<!button)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
-        return `<span class="token string">${p1}"${p2}"</span>`;
-      });
+      return `${key}${colon}${value}`;
+    });
+    formattedMessage = formattedMessage.replace(/(?<!\<span class="token property">)(\&lt\;.*?\&gt\;)(?<!\<\/span>)/g, (match, p1, p2, p3) => {
+      return `<span class="token property">${p1}</span>`;
+    });
+    formattedMessage = formattedMessage.replace(/(?<!<span class="token property">)"([^"]+)":(?<!<\/span>)/g, (match, p1) => {
+      // `p1` es la clave JSON (sin comillas)
+      return `<span class="token property">"${p1}":</span>`;
+    });
+    formattedMessage = formattedMessage.replace(/(?<!div)(?<!pre)(?<!title)(?<!style)(?<!button)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
+      return `<span class="token string">${p1}"${p2}"</span>`;
+    });
 
     //console.log(' definitive replace:', formattedMessage);
-      return formattedMessage;
-    };
+    return formattedMessage;
+  };
 
   /** Handle copy button clicks */
   @HostListener('click', ['$event'])

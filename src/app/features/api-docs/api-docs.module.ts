@@ -7,6 +7,7 @@
  */
 
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -19,6 +20,7 @@ import { ApiDocsRoutingModule } from './api-docs-routing.module';
 
 import { HomeComponent } from './pages/home/home.component';
 import { DocPageComponent } from './pages/doc-page/doc-page.component';
+import { ReleasesPageComponent } from './pages/releases/releases-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 import { PageHeaderComponent } from './components/page-header/page-header.component';
@@ -36,6 +38,7 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
   declarations: [
     HomeComponent,
     DocPageComponent,
+    ReleasesPageComponent,
     SearchBoxComponent,
     PageHeaderComponent,
     InfoCardComponent,
@@ -50,6 +53,7 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     MatTabsModule,

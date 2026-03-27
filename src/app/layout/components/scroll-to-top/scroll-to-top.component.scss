@@ -1,12 +1,15 @@
+:host {
+  display: block;
+}
+
 .scroll-to-top {
   position: fixed !important;
-  bottom: calc(1rem + 2.5rem + 1.5rem);
-  right: 2.2rem;
+  bottom: 5rem;
+  right: 2.5rem;
   z-index: 100;
-
-  width: 3.25rem;
-  height: 3.25rem;
-  padding: .65rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
   border-width: 0;
   border-radius: 50%;
   background: var(--red-1);
@@ -16,11 +19,10 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-
-  // Estado inicial: invisible
   opacity: 0;
   transform: scale(0.85);
   pointer-events: none;
+
   transition:
     opacity     200ms ease-in-out,
     transform   200ms ease-in-out,

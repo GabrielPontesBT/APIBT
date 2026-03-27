@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap');
 @import "flag-icons/css/flag-icons.min.css";
 @import 'variables';
 
@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-color);
 }
 
 html,
@@ -31,15 +32,12 @@ body {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-family-body);
   font-size: 0.9rem;
   line-height: 1.5;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--red-1) var(--table-grey-columns);
-  transition:
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out;
 }
 
 img {
@@ -63,31 +61,116 @@ a {
 /* -------------------------------------------------------- */
 
 :root {
-  transition: all 0.4s ease-in-out;
+  view-transition-name: root;
 }
 
-/* -------------------------------------------------------- */
-/* EFECTO DE TRANSICIÓN DE TEMA */
-/* -------------------------------------------------------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
 
-body.theme-transition::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
+html.docs-view-transition-active::view-transition-old(root),
+html.docs-view-transition-active::view-transition-new(root) {
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  mix-blend-mode: normal;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+html.docs-view-transition-active::view-transition-group(root),
+html.docs-view-transition-active::view-transition-image-pair(root) {
+  animation-duration: 760ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   background-color: var(--bg-color);
-  pointer-events: none;
-  animation: smoothFade 0.6s ease;
 }
 
-@keyframes smoothFade {
-  0% {
-    opacity: 0.8;
+html.docs-view-transition-active::view-transition-group(root) {
+  animation-name: none;
+}
+
+html.docs-view-transition-active::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+html.docs-view-transition-active::view-transition-old(root) {
+  animation-duration: 240ms;
+  animation-name: routeFadeOut;
+}
+
+html.docs-view-transition-active::view-transition-new(root) {
+  animation-delay: 240ms;
+  animation-duration: 360ms;
+  animation-name: routeFadeIn;
+}
+
+@keyframes routeFadeOut {
+  from {
+    opacity: 1;
+    filter: blur(0);
   }
 
-  100% {
+  to {
     opacity: 0;
+    filter: blur(5px);
   }
+}
+
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+/* -------------------------------------------------------- */
+/* TRANSICIÓN DE TEMA (View Transitions API)               */
+/* -------------------------------------------------------- */
+
+/* Suprimir transiciones CSS individuales durante el View Transition para que
+   nada anime por su cuenta en paralelo al crossfade del overlay. */
+html.theme-view-transition *,
+html.theme-view-transition *::before,
+html.theme-view-transition *::after {
+  transition: none !important;
+}
+
+html.theme-view-transition::view-transition-old(root),
+html.theme-view-transition::view-transition-new(root) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+
+html.theme-view-transition::view-transition-old(root) {
+  animation-name: themeFadeOut;
+}
+
+html.theme-view-transition::view-transition-new(root) {
+  animation-name: themeFadeIn;
+}
+
+@keyframes themeFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes themeFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* -------------------------------------------------------- */
@@ -152,6 +235,11 @@ body.theme-transition::before {
 /* -------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
+  html.docs-view-transition-active::view-transition-old(root),
+  html.docs-view-transition-active::view-transition-new(root) {
+    animation: none !important;
+  }
+
   *,
   *::before,
   *::after {

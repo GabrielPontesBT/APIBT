@@ -6,11 +6,13 @@
   @if (!isHome) {
     <app-sidebar
       [collapsed]="sidebarCollapsed"
-    (toggleSidebar)="sidebarCollapsed = !sidebarCollapsed"></app-sidebar>
+      (toggleSidebar)="sidebarCollapsed = !sidebarCollapsed"></app-sidebar>
   }
 
   <main class="content-area" [class.content-area--home]="isHome">
-    <router-outlet (activate)="onChildActivate($event)"></router-outlet>
+    <div class="route-viewport">
+      <router-outlet (activate)="onChildActivate($event)"></router-outlet>
+    </div>
   </main>
 </div>
 

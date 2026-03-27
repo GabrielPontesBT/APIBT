@@ -1,0 +1,911 @@
+[
+  {
+    "id": "noviembre-2024",
+    "titulo": "Noviembre 2024",
+    "grupos": [
+      {
+        "titulo": "Ahorro Programado",
+        "items": [
+          {
+            "label": "Actualizar Documento Digital",
+            "path": [
+              "ahorro-programado",
+              "documentos-digitales",
+              "actualizardocumentodigital"
+            ]
+          },
+          {
+            "label": "Asociar Documento Digital",
+            "path": [
+              "ahorro-programado",
+              "documentos-digitales",
+              "asociardocumentodigital"
+            ]
+          },
+          {
+            "label": "Eliminar Documento Digital",
+            "path": [
+              "ahorro-programado",
+              "documentos-digitales",
+              "eliminardocumentodigital"
+            ]
+          },
+          {
+            "label": "Obtener Documento Digital",
+            "path": [
+              "ahorro-programado",
+              "documentos-digitales",
+              "obtenerdocumentodigital"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "CASH Management",
+        "items": [
+          {
+            "label": "Anular Pago de Deuda",
+            "path": [
+              "cash-management",
+              "pagos",
+              "anularpagodeuda"
+            ]
+          },
+          {
+            "label": "Cargar Beneficiarios",
+            "path": [
+              "cash-management",
+              "beneficiarios",
+              "cargarbeneficiarios"
+            ]
+          },
+          {
+            "label": "Contratar Débito Automático",
+            "path": [
+              "cash-management",
+              "contratar",
+              "contratardebitoautomatico"
+            ]
+          },
+          {
+            "label": "Detener Orden",
+            "path": [
+              "cash-management",
+              "orden",
+              "detenerorden"
+            ]
+          },
+          {
+            "label": "Ingresar Beneficiario",
+            "path": [
+              "cash-management",
+              "beneficiarios",
+              "ingresarbeneficiario"
+            ]
+          },
+          {
+            "label": "Obtener Beneficiario Según Filtro",
+            "path": [
+              "cash-management",
+              "beneficiarios",
+              "obtenerbeneficiarioseguncampo"
+            ]
+          },
+          {
+            "label": "Obtener Detalle de Pago de una Orden",
+            "path": [
+              "cash-management",
+              "obtener",
+              "obtenerdetallepagoorden"
+            ]
+          },
+          {
+            "label": "Obtener Deuda",
+            "path": [
+              "cash-management",
+              "obtener",
+              "obtenerdeuda"
+            ]
+          },
+          {
+            "label": "Obtener Resumen de una Orden",
+            "path": [
+              "cash-management",
+              "obtener",
+              "obtenerresumenorden"
+            ]
+          },
+          {
+            "label": "Obtener Valores de Orden Según Campo",
+            "path": [
+              "cash-management",
+              "obtener",
+              "obtenervaloresordenseguncampo"
+            ]
+          },
+          {
+            "label": "Pagar Deuda Desde Cuenta",
+            "path": [
+              "cash-management",
+              "pagos",
+              "pagardeudadesdecuenta"
+            ]
+          },
+          {
+            "label": "Registrar Pago de Deuda",
+            "path": [
+              "cash-management",
+              "pagos",
+              "registrarpagodeuda"
+            ]
+          },
+          {
+            "label": "Registrar Pago En Linea Desde Cuenta",
+            "path": [
+              "cash-management",
+              "pagos",
+              "registrarpagoenlineadesdecuenta"
+            ]
+          },
+          {
+            "label": "Registrar Pago En Linea",
+            "path": [
+              "cash-management",
+              "pagos",
+              "registrarpagoenlinea"
+            ]
+          },
+          {
+            "label": "Visualizar Lista de Órdenes con su Resumen",
+            "path": [
+              "cash-management",
+              "visualizar",
+              "visualizarlistaresumencabezalorden"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Clientes",
+        "items": [
+          {
+            "label": "Obtener Detalle de Posición",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtenerdetalleposicion"
+            ]
+          },
+          {
+            "label": "Obtener Posición",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtenerposicion"
+            ]
+          },
+          {
+            "label": "Obtener Préstamos Cancelados",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtenerprestamoscancelados"
+            ]
+          },
+          {
+            "label": "Obtener Préstamos",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtenerprestamos"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Configuración Bantotal",
+        "items": [
+          {
+            "label": "Obtener Detalle Sucursal",
+            "path": [
+              "configuracion-bantotal",
+              "bancos",
+              "obtenerdetallesucursal"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas Corrientes",
+        "items": [
+          {
+            "label": "Obtener Acuerdos",
+            "path": [
+              "cuentas-corrientes",
+              "obteneracuerdos"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas Vista",
+        "items": [
+          {
+            "label": "Actualizar Beneficiarios",
+            "path": [
+              "cuentas-vista",
+              "beneficiarios",
+              "actualizarbeneficiarios"
+            ]
+          },
+          {
+            "label": "Actualizar Perfil Transaccional",
+            "path": [
+              "cuentas-vista",
+              "perfil-transaccional",
+              "actualizarperfilTransaccional"
+            ]
+          },
+          {
+            "label": "Agregar Perfil Transaccional",
+            "path": [
+              "cuentas-vista",
+              "perfil-transaccional",
+              "agregarperfilTransaccional"
+            ]
+          },
+          {
+            "label": "Obtener Beneficiarios",
+            "path": [
+              "cuentas-vista",
+              "beneficiarios",
+              "obtenerbeneficiarios"
+            ]
+          },
+          {
+            "label": "Obtener Perfil Transaccional",
+            "path": [
+              "cuentas-vista",
+              "perfil-transaccional",
+              "obtenerperfilTransaccional"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Depósitos a Plazo",
+        "items": [
+          {
+            "label": "Actualizar Beneficiarios",
+            "path": [
+              "depositos-a-plazo",
+              "beneficiarios",
+              "actualizarbeneficiarios"
+            ]
+          },
+          {
+            "label": "Actualizar Documento Digital",
+            "path": [
+              "depositos-a-plazo",
+              "documentos-digitales",
+              "actualizardocumentodigital"
+            ]
+          },
+          {
+            "label": "Agregar Beneficiarios",
+            "path": [
+              "depositos-a-plazo",
+              "beneficiarios",
+              "agregarbeneficiarios"
+            ]
+          },
+          {
+            "label": "Asociar Documento Digital",
+            "path": [
+              "depositos-a-plazo",
+              "documentos-digitales",
+              "asociardocumentodigital"
+            ]
+          },
+          {
+            "label": "Eliminar Documento Digital",
+            "path": [
+              "depositos-a-plazo",
+              "documentos-digitales",
+              "eliminardocumentodigital"
+            ]
+          },
+          {
+            "label": "Obtener Beneficiarios",
+            "path": [
+              "depositos-a-plazo",
+              "beneficiarios",
+              "obtenerbeneficiarios"
+            ]
+          },
+          {
+            "label": "Obtener Datos Precancelación",
+            "path": [
+              "depositos-a-plazo",
+              "obtener",
+              "obtenerdatosprecancelacion"
+            ]
+          },
+          {
+            "label": "Obtener Documento Digital",
+            "path": [
+              "depositos-a-plazo",
+              "documentos-digitales",
+              "obtenerdocumentodigital"
+            ]
+          },
+          {
+            "label": "Precancelar",
+            "path": [
+              "depositos-a-plazo",
+              "precancelar"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Títulos",
+        "items": [
+          {
+            "label": "Obtener Grupos",
+            "path": [
+              "titulos",
+              "obtenergrupos"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Usuarios",
+        "items": [
+          {
+            "label": "Habilitar en Canal",
+            "path": [
+              "usuarios",
+              "habilitarencanal"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "noviembre-2025",
+    "titulo": "Noviembre 2025",
+    "grupos": [
+      {
+        "titulo": "Clientes",
+        "items": [
+          {
+            "label": "Crear (Nueva Versión)",
+            "path": [
+              "clientes",
+              "crear",
+              "crear"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Configuración Bantotal",
+        "items": [
+          {
+            "label": "Obtener Oficinas de Sucursal",
+            "path": [
+              "configuracion-bantotal",
+              "bancos",
+              "obteneroficinas sucursal"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas Corrientes",
+        "items": [
+          {
+            "label": "Obtener Sobregiros",
+            "path": [
+              "cuentas-corrientes",
+              "obtener",
+              "obtenersobregiros"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas de Ahorro",
+        "items": [
+          {
+            "label": "Obtener Débito Automático de Préstamo",
+            "path": [
+              "cuentas-de-ahorro",
+              "obtener",
+              "obtenerdebitoautomaticoprestamo"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas Vista",
+        "items": [
+          {
+            "label": "Obtener Instrucciones",
+            "path": [
+              "cuentas-vista",
+              "obtener",
+              "obtenerinstrucciones"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Descuento de Documentos",
+        "items": [
+          {
+            "label": "Crear Lista",
+            "path": [
+              "descuento-de-documentos",
+              "crearlista"
+            ]
+          },
+          {
+            "label": "Crear Lista Cheques",
+            "path": [
+              "descuento-de-documentos",
+              "crearlistacheques"
+            ]
+          },
+          {
+            "label": "Seleccionar Opción Desembolso",
+            "path": [
+              "descuento-de-documentos",
+              "seleccionaropciondesembolso"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Personas",
+        "items": [
+          {
+            "label": "Agregar Textos",
+            "path": [
+              "personas",
+              "textos",
+              "agregartextos"
+            ]
+          },
+          {
+            "label": "Actualizar Textos",
+            "path": [
+              "personas",
+              "textos",
+              "actualizartextos"
+            ]
+          },
+          {
+            "label": "Actualizar Reducido",
+            "path": [
+              "personas",
+              "actualizar",
+              "actualizarreducido"
+            ]
+          },
+          {
+            "label": "Crear Reducido (Nueva Versión)",
+            "path": [
+              "personas",
+              "crear",
+              "crearreducido"
+            ]
+          },
+          {
+            "label": "Eliminar Textos",
+            "path": [
+              "personas",
+              "textos",
+              "eliminartextos"
+            ]
+          },
+          {
+            "label": "Obtener Textos",
+            "path": [
+              "personas",
+              "textos",
+              "obtenertextos"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Precios",
+        "items": [
+          {
+            "label": "Obtener Cotizaciones de Pizarra Especial",
+            "path": [
+              "precios",
+              "obtener",
+              "obtenercotizacionespizarraespecial"
+            ]
+          },
+          {
+            "label": "Obtener Valores de Pizarra Por Módulo",
+            "path": [
+              "precios",
+              "obtener",
+              "obtenervaloresdepizarraapormodulo"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Préstamos",
+        "items": [
+          {
+            "label": "Confirmar Cancelación Anticipada",
+            "path": [
+              "prestamos",
+              "cancelacion-anticipada",
+              "confirmarcancelacionanticipada"
+            ]
+          },
+          {
+            "label": "Obtener Seguros Asociados",
+            "path": [
+              "prestamos",
+              "obtener",
+              "obtenersegurosasociados"
+            ]
+          },
+          {
+            "label": "Obtener Simulación Cancelación Anticipada",
+            "path": [
+              "prestamos",
+              "cancelacion-anticipada",
+              "obtenersimulacioncancanticipada"
+            ]
+          },
+          {
+            "label": "Simular Cancelación Anticipada",
+            "path": [
+              "prestamos",
+              "cancelacion-anticipada",
+              "simularcancelacionanticipada"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Workflow",
+        "items": [
+          {
+            "label": "Agregar Rol Usuario",
+            "path": [
+              "workflow",
+              "agregarrolesusuario"
+            ]
+          },
+          {
+            "label": "Eliminar Rol Usuario",
+            "path": [
+              "workflow",
+              "eliminarrolesusuario"
+            ]
+          },
+          {
+            "label": "Obtener Rol Usuario",
+            "path": [
+              "workflow",
+              "obtenerrolesusuario"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mayo-2025",
+    "titulo": "Mayo 2025",
+    "grupos": [
+      {
+        "titulo": "Ahorro Programado",
+        "items": [
+          {
+            "label": "Obtener Cronograma De Abonos",
+            "path": [
+              "ahorro-programado",
+              "obtener",
+              "obtenercronogramaabonos"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "CASH Management",
+        "items": [
+          {
+            "label": "Obtener Detalle Orden Según Campo",
+            "path": [
+              "cash-management",
+              "obtener",
+              "obtenerdetalleordenseguncampo"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Clientes",
+        "items": [
+          {
+            "label": "Actualizar (Nueva Versión)",
+            "path": [
+              "clientes",
+              "actualizar",
+              "actualizar"
+            ]
+          },
+          {
+            "label": "Obtener",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtener"
+            ]
+          },
+          {
+            "label": "Obtener Domicilios",
+            "path": [
+              "clientes",
+              "obtener",
+              "obtenerdomicilios"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Configuración Bantotal",
+        "items": [
+          {
+            "label": "Obtener Agrupadores De Domicilio",
+            "path": [
+              "configuracion-bantotal",
+              "personas",
+              "obteneragupadoresdomicilio"
+            ]
+          },
+          {
+            "label": "Obtener Sucursales Principales",
+            "path": [
+              "configuracion-bantotal",
+              "bancos",
+              "obtenersucursalesprincipales"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Cuentas Vista",
+        "items": [
+          {
+            "label": "Acreditar En Cuenta",
+            "path": [
+              "cuentas-vista",
+              "operar",
+              "acreditarencuenta"
+            ]
+          },
+          {
+            "label": "Debitar En Cuenta",
+            "path": [
+              "cuentas-vista",
+              "operar",
+              "debitarencuenta"
+            ]
+          },
+          {
+            "label": "Traspasar Con Tipo De Cambio Especial",
+            "path": [
+              "cuentas-vista",
+              "traspasar",
+              "traspasarcontiposdecambioespecial"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Depósitos a Plazo",
+        "items": [
+          {
+            "label": "Contratar Con Facultades",
+            "path": [
+              "depositos-a-plazo",
+              "contratar",
+              "contratarconfacultades"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Descuento de Documentos",
+        "items": [
+          {
+            "label": "Obtener Tipos De Desembolso",
+            "path": [
+              "descuento-de-documentos",
+              "obtenertiposdedesembolso"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Personas",
+        "items": [
+          {
+            "label": "Actualizar (Nueva Versión)",
+            "path": [
+              "personas",
+              "actualizar",
+              "actualizar"
+            ]
+          },
+          {
+            "label": "Actualizar Domicilio (Nueva Versión)",
+            "path": [
+              "personas",
+              "actualizar",
+              "actualizardomicilio"
+            ]
+          },
+          {
+            "label": "Agregar Domicilio (Nueva Versión)",
+            "path": [
+              "personas",
+              "agregar",
+              "agregardomicilio"
+            ]
+          },
+          {
+            "label": "Agregar Estado Financiero",
+            "path": [
+              "personas",
+              "agregar",
+              "agregarestadofinanciero"
+            ]
+          },
+          {
+            "label": "Obtener (Nueva Versión)",
+            "path": [
+              "personas",
+              "obtener",
+              "obtener"
+            ]
+          },
+          {
+            "label": "Obtener Domicilios (Nueva Versión)",
+            "path": [
+              "personas",
+              "obtener",
+              "obtenerdomicilios"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Precios",
+        "items": [
+          {
+            "label": "Obtener Tipos De Cambio Especiales",
+            "path": [
+              "precios",
+              "obtener",
+              "obtenertiposdecambioespeciales"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Préstamos",
+        "items": [
+          {
+            "label": "Actualizar Textos",
+            "path": [
+              "prestamos",
+              "textos",
+              "actualizartextos"
+            ]
+          },
+          {
+            "label": "Agregar Textos",
+            "path": [
+              "prestamos",
+              "textos",
+              "agregartextos"
+            ]
+          },
+          {
+            "label": "Eliminar Textos",
+            "path": [
+              "prestamos",
+              "textos",
+              "eliminartextos"
+            ]
+          },
+          {
+            "label": "Obtener Textos",
+            "path": [
+              "prestamos",
+              "textos",
+              "obtenertextos"
+            ]
+          },
+          {
+            "label": "Obtener Motivos De Precancelación",
+            "path": [
+              "prestamos",
+              "obtener",
+              "obtenermotivosprecancelacion"
+            ]
+          },
+          {
+            "label": "Resimular Amortizable",
+            "path": [
+              "prestamos",
+              "simular",
+              "resimularamortizable"
+            ]
+          },
+          {
+            "label": "Resimular Ampliación",
+            "path": [
+              "prestamos",
+              "simular",
+              "resimularampliacion"
+            ]
+          },
+          {
+            "label": "Resimular Refinanciación",
+            "path": [
+              "prestamos",
+              "simular",
+              "resimularrefinanciacion"
+            ]
+          },
+          {
+            "label": "Solicitar Precancelación",
+            "path": [
+              "prestamos",
+              "operar",
+              "solicitarprecancelacion"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Tarjetas de Débito",
+        "items": [
+          {
+            "label": "Actualizar Datos De Contacto",
+            "path": [
+              "tarjetas-de-debito",
+              "operar",
+              "actualizardatoscontacto"
+            ]
+          },
+          {
+            "label": "Obtener Datos De Contacto",
+            "path": [
+              "tarjetas-de-debito",
+              "obtener",
+              "obtenerdatoscontacto"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

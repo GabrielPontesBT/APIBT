@@ -6,7 +6,7 @@
  * rápidamente a una página desde el frontend.
  */
 
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SearchService, SearchResult } from '../../../../core/services/search.service';
@@ -21,6 +21,8 @@ const MAX_HISTORY  = 5;
   standalone: false
 })
 export class SearchBoxComponent {
+  @Output() searchFocused = new EventEmitter<void>();
+
   query         = '';
   results: SearchResult[] = [];
   searchDone    = false;

@@ -22,6 +22,8 @@
   --text-color-enviar: #fdfdfe;
   --title-underlined: 1px solid #eaecef;
   --font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family-body: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-heading: "Comfortaa", sans-serif;
 
   // COLORES DE FONDO
   --bg-color:    #f5f5f7;
@@ -73,7 +75,8 @@
     --col-width: calc((100vw - var(--sidebar-offset, 0px)) / 2); /* ancho de cada columna en API Docs */
 }
 
-body.dark-mode {
+body.dark-mode,
+html.dark-mode {
   // TEXTOS
   --text-color: #c9ced8;
   --text-color-negative: #2c3e50;

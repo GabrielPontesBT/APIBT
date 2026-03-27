@@ -28,7 +28,7 @@ search-box.component.html
       type="text"
       [(ngModel)]="query"
       (input)="search()"
-      (focus)="isFocused = true"
+      (focus)="isFocused = true; searchFocused.emit()"
       placeholder="Buscar..."
     />
   </div>

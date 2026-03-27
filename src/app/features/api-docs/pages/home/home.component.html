@@ -1,39 +1,34 @@
 <div class="home-page">
   <section class="home-banner">
-    <div class="home-banner__overlay">
-      <div class="home-banner__content">
-        <div class="home-banner__logo">
-          <img
-            src="assets/image/logo_negativo_Bantotal.png"
-            alt="Bantotal"
-            />
-          </div>
-
-          <div class="home-banner__text">
-            <h1>DOCUMENTACIÓN<br />API BANKING</h1>
-          </div>
-        </div>
+    <div class="home-banner__content">
+      <div class="home-banner__logo">
+        <img
+          src="assets/image/logo-Bantotal-blanco.png"
+          alt="Bantotal"
+        />
       </div>
-    </section>
 
-    <section class="home-content">
-      <div class="home-separator"></div>
-
-      <div class="home-cards">
-        @for (doc of docs; track doc) {
-          <a
-            class="home-card"
-            [routerLink]="doc.link"
-            >
-            <div class="home-card__title">
-              <span class="home-card__icon">›</span>
-              <span>{{ doc.title }}</span>
-            </div>
-            <div class="home-card__description">
-              {{ doc.description }}
-            </div>
-          </a>
-        }
+      <div class="home-banner__text">
+        <h1>DOCUMENTACION<br />API BANKING</h1>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <section class="home-content">
+    <div class="home-separator"></div>
+
+    <div class="home-cards">
+      @for (doc of docs; track doc) {
+        <a class="home-card" [routerLink]="doc.link">
+          <div class="home-card__title">
+            <span class="home-card__icon">›</span>
+            <span>{{ doc.title }}</span>
+          </div>
+          <div class="home-card__description">
+            {{ doc.description }}
+          </div>
+        </a>
+      }
+    </div>
+  </section>
+</div>

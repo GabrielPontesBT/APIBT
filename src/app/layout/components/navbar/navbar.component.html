@@ -1,13 +1,29 @@
 <nav class="navbar">
 
-  <img
-    class="logo"
-    (click)="goHome()"
-    [src]="isDarkMode ? 'assets/image/logo-Bantotal-blanco.png' : 'assets/image/logo-Bantotal-negro.png'"
-    alt="Logo"
-  >
+  <img class="logo logo--light" (click)="goHome()" src="assets/image/logo-Bantotal-negro.png" alt="Logo">
+  <img class="logo logo--dark"  (click)="goHome()" src="assets/image/logo-Bantotal-blanco.png" alt="Logo">
 
   <div class="right-section">
+
+    <div class="releases-menu" (click)="$event.stopPropagation()">
+      <button class="releases-btn" (click)="toggleReleases($event)"
+        [class.active]="releasesOpen">
+        Releases
+        <span class="material-icons releases-arrow"
+          [class.open]="releasesOpen">expand_more</span>
+      </button>
+      @if (releasesOpen) {
+        <div class="releases-dropdown">
+          @for (r of releases; track r.id) {
+            <a class="releases-item"
+              [routerLink]="['/releases', r.id]"
+              (click)="closeReleases()">
+              {{ r.titulo }}
+            </a>
+          }
+        </div>
+      }
+    </div>
 
     <button class="toggle-theme-button"
             [class.rotate]="rotate"
@@ -18,7 +34,7 @@
       </span>
     </button>
 
-    <app-search-box></app-search-box>
+    <app-search-box (searchFocused)="closeReleases()"></app-search-box>
 
   </div>
 </nav>
