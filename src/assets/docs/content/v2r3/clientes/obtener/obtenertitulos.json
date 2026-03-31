@@ -1,0 +1,122 @@
+{
+  "slug": "clientes/obtener/obtenertitulos",
+  "pageTitle": "Obtener Títulos",
+  "description": "Método para obtener los títulos de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerTitulos",
+  "programa": "RBTPG495",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTitulos",
+      "Tipo": "<a href=\"#sbttitulo\">sBTTitulo</a>",
+      "Comentarios": "Listado de títulos del cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se logró verificar al cliente con el identificador ingresado."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se pudieron obtener los títulos para el cliente ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerTitulos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>D019598AFAA2ECCC4BA9BF31</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>6</bts:clienteUId>\n      </bts:BTClientes.ObtenerTitulos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerTitulos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": 6,\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerTitulosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>be9fc8708b4A8B5C60A82434</Token>\n         </Btinreq>\n         <bts:sdtTitulos>\n            <sBTTitulo>\n               <bts:moneda>80</bts:moneda>\n               <bts:simbolo>$</bts:simbolo>\n               <bts:pais>URUGUAY</bts:pais>\n               <bts:grupoId>36</bts:grupoId>\n               <bts:codigo>1</bts:codigo>\n               <bts:nombre>Titulo2</bts:nombre>\n               <bts:precioActual>452</bts:precioActual>\n               <bts:otrosConceptos></bts:otrosConceptos>\n            </sBTTitulo>\n         </bts:sdtTitulos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>967</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerTitulos</Servicio>\n            <Fecha>2017-12-22</Fecha>\n            <Requerimiento/>\n            <Hora>12:26:12</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerTitulosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtTitulos\": {\n      \"sBTTitulo\": {\n      \"moneda\": 80,\n      \"simbolo\": \"$\",\n      \"pais\": \"URUGUAY\",\n      \"grupoId\": 36,\n      \"codigo\": 1,\n      \"nombre\": \"Titulo2\",\n      \"precioActual\": 452,\n      \"otrosConceptos\": \"\"\n      }\n   },\n    \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n    },\n   \"Btoutreq\": {\n      \"Numero\": \"987\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.CrearConCuentasAsociadas\",\n      \"Requerimiento\": \"\",\n      \"Fecha\": \"2017-12-22\",\n      \"Hora\": \"16:15:27\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTitulo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del titulo."
+        },
+        {
+          "Nombre": "grupo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del grupo."
+        },
+        {
+          "Nombre": "grupoId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del titulo."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Listado de otros conceptos."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "precioActual",
+          "Tipo": "Double",
+          "Comentarios": "Precio actual."
+        },
+        {
+          "Nombre": "simbolo",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

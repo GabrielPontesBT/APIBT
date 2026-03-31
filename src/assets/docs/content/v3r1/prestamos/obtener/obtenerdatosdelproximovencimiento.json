@@ -1,0 +1,120 @@
+{
+  "slug": "prestamos/obtener/obtenerdatosdelproximovencimiento",
+  "pageTitle": "Obtener Datos del Próximo Vencimiento",
+  "description": "Método para obtener los datos de próximo vencimiento de cuota.",
+  "pubName": "BTPrestamos.ObtenerDatosProxVencimiento",
+  "programa": "RBTPG526",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de préstamo."
+    },
+    {
+      "Nombre": "fechaConsulta",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de consulta."
+    },
+    {
+      "Nombre": "modoConsulta",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo '' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProxVencimiento",
+      "Tipo": "<a href=\"#sbtproximovto\">sBTProximoVto</a>",
+      "Comentarios": "Datos del próximo vencimiento del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó préstamo para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La Fecha para Consultas es anterior a la de la Operación."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "La Operación no es válida para la Solicitud realizada."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La Operación se encuentra cancelada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDatosProxVencimiento>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>9</bts:operacionUId>\n         <bts:fechaConsulta>2020-08-09</bts:fechaConsulta>\n      </bts:BTPrestamos.ObtenerDatosProxVencimiento>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDatosProxVencimiento' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"operacionUId\": 9,\n    \"fechaConsulta\": \"2020-08-09\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerDatosProxVencimientoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtProxVencimiento>\n            <otrosConceptos></otrosConceptos>\n            <fechaPrimerIncumplimiento>2020-05-09</fechaPrimerIncumplimiento>\n            <deudaVencida>41395.15</deudaVencida>\n            <cantCuoImpagas>12</cantCuoImpagas>\n            <monto>41395.15</monto>\n            <fechaProxVencimiento>2020-08-09</fechaProxVencimiento>\n            <cantCuoPagas>0</cantCuoPagas>\n            <fechaUltPago/>\n            <cantCuoImpVenc>4</cantCuoImpVenc>\n            <cuotaVigente>0.00</cuotaVigente>\n         </sdtProxVencimiento>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16849</Numero>\n            <Servicio>BTPrestamos.ObtenerDatosProxVencimiento</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-26</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>12:27:02</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ObtenerDatosProxVencimientoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"1\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cFC33CD93505A5382434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"sdtProxVencimiento\": {\n      \"otrosConceptos\": \"\",\n      \"fechaPrimerIncumplimiento\": \"2020-05-09\",\n      \"deudaVencida\": 41395.15,\n      \"cantCuoImpagas\": 12,\n      \"monto\": 41395.15,\n      \"fechaProxVencimiento\": \"2020-08-09\",\n      \"cantCuoPagas\": 0,\n      \"fechaUltPago\": \"\",\n      \"cantCuoImpVenc\": 4,\n      \"cuotaVigente\": 0\n   },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Numero\": \"111399\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPrestamos.ObtenerDatosProxVencimiento\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-10\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"17:08:56\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProximoVto",
+      "fields": [
+        {
+          "Nombre": "cantCuoImpVenc",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas impagas vencidas."
+        },
+        {
+          "Nombre": "cantCuoPagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas pagas."
+        },
+        {
+          "Nombre": "cuotaVigente",
+          "Tipo": "Decimal",
+          "Comentarios": "Cuota vigente."
+        },
+        {
+          "Nombre": "deudaVencida",
+          "Tipo": "Decimal",
+          "Comentarios": "Deuda vencida."
+        },
+        {
+          "Nombre": "fechaPrimerIncumplimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer incumplimiento."
+        },
+        {
+          "Nombre": "fechaProxVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "fechaUltPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Decimal",
+          "Comentarios": "Valor de información adicional."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

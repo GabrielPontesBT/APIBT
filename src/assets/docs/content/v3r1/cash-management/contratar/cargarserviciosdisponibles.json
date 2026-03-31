@@ -1,0 +1,73 @@
+{
+  "slug": "cash-management/contratar/cargarserviciosdisponibles",
+  "pageTitle": "Cargar Servicios Disponibles",
+  "description": "Método para obtener los servicios disponibles para el cliente.",
+  "pubName": "BTCASHManagement.CargarServiciosDisponibles",
+  "programa": "RBTPGC07",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtServicios",
+      "Tipo": "<a href=\"#sbtconvserviciocash\">sBTConvServicioCASH</a>",
+      "Comentarios": "Lista de servicios del contrato."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030705",
+      "Descripción": "Cuenta cliente sin contrato vinculado."
+    },
+    {
+      "Código": "1030709",
+      "Descripción": "Se requiere identificacion de cuenta cliente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.CargarServiciosDisponibles>\n        <bts:Btinreq>\n            <bts:Device>001</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>1e39d33c824A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n      </bts:BTCASHManagement.CargarServiciosDisponibles>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?CargarServiciosDisponibles=' \\\n  -H 'Cache-Control: no-cache' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Postman-Token: bf6451e8-330a-48c4-a537-af3b936653dd,c3f7702b-a97d-46c4-972f-b9b37d2a8027' \\\n\n  -d '{\n       \"Btinreq\": {\n\t\t\t\"Device\": \"001\",\n\t\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\t\"Requerimiento\": \"1\",\n\t\t\t\"Canal\": \"BTDIGITAL\",\n            \"Token\": \"1e39d33c824A8B5C60A82434\"\n        },\n        \"clienteUId\": \"1\"\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.CargarServiciosDisponiblesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>001</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1e39d33c824A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtServicios>\n            <sBTConvServicioCASH>\n               <descServicio>Pagos por Planilla</descServicio>\n               <tipoServicio>P</tipoServicio>\n               <servicio>1</servicio>\n               <idContrato>1</idContrato>\n            </sBTConvServicioCASH>\n         </sdtServicios>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>7161</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCASHManagement.CargarServiciosDisponibles</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2019-04-23</Fecha>\n            <Hora>18:32:37</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.CargarServiciosDisponiblesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"sdtServicios\": {                   \n        \"sBTConvServicioCASH\": [ \n\t\t\t{ \n\t\t\t\t\"descServicio\": \"Pagos por Planilla\",  \n\t\t\t\t\"tipoServicio\": \"P\",  \n\t\t\t\t\"servicio\": 1,  \n\t\t\t\t\"idContrato\": 1 \n\t\t\t} \n\t\t] \n\t},\n\t\"Erroresnegocio\": { \n\t\t\"BTErrorNegocio\": []    \n    },\n\n\t\"Btoutreq\": {\n\n\t  \"Numero\": 7168,\n\t  \"Estado\": \"OK\",\n\t  \"Servicio\": \"BTCASHManagement.CargarServiciosDisponibles\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Fecha\": \"2019-04-24\",\n\t  \"Hora\": \"12:43:25\",\n\t  \"Canal\": \"BTDIGITAL\"\n\t }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTConvServicioCASH",
+      "fields": [
+        {
+          "Nombre": "contratoId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador del contrato CASH."
+        },
+        {
+          "Nombre": "descripcionServicio",
+          "Tipo": "String",
+          "Comentarios": "Descripción de servicios."
+        },
+        {
+          "Nombre": "servicio",
+          "Tipo": "Short",
+          "Comentarios": "Servicio CASH."
+        },
+        {
+          "Nombre": "tipoServicio",
+          "Tipo": "String",
+          "Comentarios": "Tipo de servicio."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

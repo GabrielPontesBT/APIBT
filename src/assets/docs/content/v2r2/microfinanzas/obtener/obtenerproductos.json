@@ -1,0 +1,89 @@
+{
+  "slug": "microfinanzas/obtener/obtenerproductos",
+  "pageTitle": "Obtener Productos",
+  "description": "Método para obtener una lista de los productos de préstamos.",
+  "pubName": "BTMicrofinanzas.ObtenerProductos",
+  "programa": "RBTPG414",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de solicitud."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.ObtenerProductos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>419385365CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:solicitudUId>10862</bts:solicitudUId>\n      </bts:BTMicrofinanzas.ObtenerProductos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerProductos \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"solicitudUId\": \"10862\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.ObtenerProductosResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>95</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>419385365CD285A89A23FBEE</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <sdtProductos>\n            <Producto>\n               <productoUId>1</productoUId>\n               <nombre>AGRICOLA PLAN DE PAGOS K + I</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>2</productoUId>\n               <nombre>AGRICOLA PLAN DE PAGOS LIBRE</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>3</productoUId>\n               <nombre>AGRICOLA PP LIBRE RECUPERADOS</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>4</productoUId>\n               <nombre>AGRICOLA CREDI - AGRO MENOR</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>21</productoUId>\n               <nombre>CADENA DE VALOR CAFE DIF.</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>22</productoUId>\n               <nombre>CADENA DE VALOR CREDI-BRÓCOLI</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>23</productoUId>\n               <nombre>VIVIENDA HIPOTECARIO</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n            <Producto>\n               <productoUId>24</productoUId>\n               <nombre>VIVIENDA HIPOTECARIO LIBRE</nombre>\n               <moneda>Q</moneda>\n               <papel/>\n            </Producto>\n         </sdtProductos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.ObtenerProductos</Servicio>\n            <Fecha>2019-09-18</Fecha>\n            <Hora>15:56:50</Hora>\n            <Requerimiento>95</Requerimiento>\n            <Numero>161</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.ObtenerProductosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"sdtProductos\": {\n          \"Producto\": [\n            {\n              \"productoUId\": \"1\",\n              \"nombre\": \"AGRICOLA PLAN DE PAGOS K + I\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"2\",\n              \"nombre\": \"AGRICOLA PLAN DE PAGOS LIBRE\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"3\",\n              \"nombre\": \"AGRICOLA PP LIBRE RECUPERADOS\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"4\",\n              \"nombre\": \"AGRICOLA CREDI - AGRO MENOR\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"21\",\n              \"nombre\": \"CADENA DE VALOR CAFE DIF.\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"22\",\n              \"nombre\": \"CADENA DE VALOR CREDI-BRÓCOLI\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"23\",\n              \"nombre\": \"VIVIENDA HIPOTECARIO\",\n              \"moneda\": \"Q\"\n            },\n            {\n              \"productoUId\": \"24\",\n              \"nombre\": \"VIVIENDA HIPOTECARIO LIBRE\",\n              \"moneda\": \"Q\"\n            }\n          ]\n        },\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTMicrofinanzas.ObtenerProductos\",\n          \"Fecha\": \"2019-09-18\",\n          \"Hora\": \"15:56:50\",\n          \"Requerimiento\": \"95\",\n          \"Numero\": \"161\",\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

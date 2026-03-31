@@ -1,0 +1,48 @@
+{
+  "slug": "configuracion-bantotal/personas/obtenertiposdevivienda",
+  "pageTitle": "Obtener Tipos de Vivienda",
+  "description": "Método para obtener un listado de los tipos de vivienda ingresados en Bantotal.",
+  "pubName": "BTConfiguracionBantotal.ObtenerTiposDeVivienda",
+  "programa": "RBTPG374",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtViviendas",
+      "Tipo": "<a href=\"#sbttipodevivienda\">sBTTipoDeVivienda</a>",
+      "Comentarios": "Listado de viviendas."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerTiposDeVivienda>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1394857355CD285A89A23FBE</bts:Token>\n            <bts:Device>AV</bts:Device>\n         </bts:Btinreq>\n      </bts:BTConfiguracionBantotal.ObtenerTiposDeVivienda>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n         \"Canal\": \"BTDIGITAL\",\n         \"Requerimiento\": \"1\",\n         \"Usuario\": \"INSTALADOR\",\n         \"Token\": \"963643292CD285A89A23FBEE\",\n         \"Device\": \"AV\"\n      }\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerTiposDeViviendaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1394857355CD285A89A23FBE</Token>\n            <Device>AV</Device>\n         </Btinreq>\n         <sdtViviendas>\n            <tipoDeVivienda>\n               <codigo>1</codigo>\n               <descripcion>Propietario</descripcion>\n            </tipoDeVivienda>\n            <tipoDeVivienda>\n               <codigo>2</codigo>\n               <descripcion>Inquilino</descripcion>\n            </tipoDeVivienda>\n            <tipoDeVivienda>\n               <codigo>3</codigo>\n               <descripcion>BHU</descripcion>\n            </tipoDeVivienda>\n            <tipoDeVivienda>\n               <codigo>4</codigo>\n               <descripcion>Usufructo</descripcion>\n            </tipoDeVivienda>\n            <tipoDeVivienda>\n               <codigo>5</codigo>\n               <descripcion>Familiar</descripcion>\n            </tipoDeVivienda>\n            <tipoDeVivienda>\n               <codigo>6</codigo>\n               <descripcion>Otros</descripcion>\n            </tipoDeVivienda>\n         </sdtViviendas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerTiposDeVivienda</Servicio>\n            <Fecha>2021-11-15</Fecha>\n            <Hora>12:47:10</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8696</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerTiposDeViviendaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"963643292CD285A89A23FBEE\",\n        \"Device\": \"AV\"\n    },\n    \"sdtViviendas\": {\n        \"tipoDeVivienda\": [\n            {\n                \"codigo\": \"1\",\n                \"descripcion\": \"Propietario\"\n            },\n            {\n                \"codigo\": \"2\",\n                \"descripcion\": \"Inquilino\"\n            },\n            {\n                \"codigo\": \"3\",\n                \"descripcion\": \"BHU\"\n            },\n            {\n                \"codigo\": \"4\",\n                \"descripcion\": \"Usufructo\"\n            },\n            {\n                \"codigo\": \"5\",\n                \"descripcion\": \"Familiar\"\n            },\n            {\n                \"codigo\": \"6\",\n                \"descripcion\": \"Otros\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerTiposDeVivienda\",\n        \"Fecha\": \"2021-11-15\",\n        \"Hora\": \"11:21:59\",\n        \"Requerimiento\": \"1\",\n        \"Numero\": 8693,\n        \"Estado\": \"OK\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTipoDeVivienda",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código de vivienda."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de vivienda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

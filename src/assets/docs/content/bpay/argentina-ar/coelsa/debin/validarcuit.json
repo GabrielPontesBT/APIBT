@@ -1,0 +1,67 @@
+{
+  "slug": "argentina-ar/coelsa/debin/validarcuit",
+  "pageTitle": "Validar CUIT",
+  "description": "Método para validar un CUIT.",
+  "pubName": "BTCOELSAGestionDebin.ValidarCUIT",
+  "programa": "RBTPAR50",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "cuitIn",
+      "Tipo": "String",
+      "Comentarios": "Clave única de identificación tributaria de entrada."
+    },
+    {
+      "Nombre": "cbuIn",
+      "Tipo": "String",
+      "Comentarios": "Clave Bancaria Uniforme de entrada."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "cuitOut",
+      "Tipo": "String",
+      "Comentarios": "Clave única de identificación tributaria de salida."
+    },
+    {
+      "Nombre": "cbuOut",
+      "Tipo": "String",
+      "Comentarios": "Clave Bancaria Uniforme de salida."
+    },
+    {
+      "Nombre": "respCod",
+      "Tipo": "String",
+      "Comentarios": "Código respuesta."
+    },
+    {
+      "Nombre": "respDesc",
+      "Tipo": "String",
+      "Comentarios": "Descripción respuesta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió CUIT."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió CBU."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ValidarCUIT>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <bts:cuitIn>27107718990</bts:cuitIn>\n         <bts:cbuIn>4320001020003185180008</bts:cbuIn>\n      </bts:BTCOELSAGestionDebin.ValidarCUIT>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.ValidarCUITResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <cuitOut>27106619870</cuitOut>\n         <cbuOut>4320001020003185180017</cbuOut>\n         <respCod>00</respCod>\n         <respDesc>CBU-CUIT Válidos</respDesc>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.ValidarCUIT</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>17:28:13</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038937</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.ValidarCUITResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

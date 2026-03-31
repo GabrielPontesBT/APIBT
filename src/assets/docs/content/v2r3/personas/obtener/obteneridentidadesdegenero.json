@@ -1,0 +1,48 @@
+{
+  "slug": "personas/obtener/obteneridentidadesdegenero",
+  "pageTitle": "Obtener Identidades de Género",
+  "description": "Método para obtener un listado de las identidades de género ingresadas en el sistema.",
+  "pubName": "BTPersonas.ObtenerIdentidadesDeGenero",
+  "programa": "RBTPG380",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtIdentidadesDeGenero",
+      "Tipo": "<a href=\"#sbtidentidaddegenero\">sBTIdentidadDeGenero</a>",
+      "Comentarios": "Listado de identidades de género."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerIdentidadesDeGenero>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1394857355CD285A89A23FBE</bts:Token>\n            <bts:Device>AV</bts:Device>\n         </bts:Btinreq>\n      </bts:BTPersonas.ObtenerIdentidadesDeGenero>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n         \"Canal\": \"BTDIGITAL\",\n         \"Requerimiento\": \"1\",\n         \"Usuario\": \"INSTALADOR\",\n         \"Token\": \"963643292CD285A89A23FBEE\",\n         \"Device\": \"AV\"\n      }\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerIdentidadesDeGeneroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1394857355CD285A89A23FBE</Token>\n            <Device>AV</Device>\n         </Btinreq>\n         <sdtIdentidadesDeGenero>\n            <sBTIdentidadDeGenero>\n               <codigo>F</codigo>\n               <descripcion>Femenino</descripcion>\n            </sBTIdentidadDeGenero>\n            <sBTIdentidadDeGenero>\n               <codigo>M</codigo>\n               <descripcion>Masculino</descripcion>\n            </sBTIdentidadDeGenero>\n         </sdtIdentidadesDeGenero>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.ObtenerIdentidadesDeGenero</Servicio>\n            <Fecha>2021-11-15</Fecha>\n            <Hora>12:47:10</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8696</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.ObtenerIdentidadesDeGeneroResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"963643292CD285A89A23FBEE\",\n        \"Device\": \"AV\"\n    },\n    \"sdtIdentidadesDeGenero\": {\n        \"sBTIdentidadDeGenero\": [\n            {\n                \"codigo\": \"F\",\n                \"descripcion\": \"Femenino\"\n            },\n            {\n                \"codigo\": \"M\",\n                \"descripcion\": \"Masculino\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTPersonas.ObtenerIdentidadesDeGenero\",\n        \"Fecha\": \"2021-11-15\",\n        \"Hora\": \"11:21:59\",\n        \"Requerimiento\": \"1\",\n        \"Numero\": 8693,\n        \"Estado\": \"OK\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTIdentidadDeGenero",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código de identidad de género."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de identidad de género."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

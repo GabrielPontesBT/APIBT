@@ -1,0 +1,107 @@
+{
+  "slug": "clientes/obtener/obtenerintegrantes",
+  "pageTitle": "Obtener Integrantes",
+  "description": "Método para obtener los integrantes de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerIntegrantes",
+  "programa": "RBTPG139",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtIntegrantes",
+      "Tipo": "<a href=\"#sbtintegrante\">sBTIntegrante</a>",
+      "Comentarios": "Datos de integrantes del cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: ?"
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No existe el cliente seleccionado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerIntegrantes>\n         <bts:Btinreq>\n            <bts:Device>3</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>3</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>a5cd5311ae4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n      </bts:BTClientes.ObtenerIntegrantes>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIntegrantes=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"clienteUId\": \"21\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerIntegrantesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>3</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>3</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>034028176e4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtIntegrantes>\n            <sBTIntegrante>\n               <numeroDocumento>19126689</numeroDocumento>\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\n               <titularidad>\n                  <descripcion>Titular</descripcion>\n                  <identificador>1</identificador>\n               </titularidad>\n               <representativo>S</representativo>\n               <personaUId>141</personaUId>\n               <nombre>VAZQUEZZ SZENTANDRASI ALEJANDR</nombre>\n               <paisDocumento>URUGUAY</paisDocumento>\n            </sBTIntegrante>\n         </sdtIntegrantes>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>599</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerIntegrantes</Servicio>\n            <Fecha>2019-09-20</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>11:13:06</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerIntegrantesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtIntegrantes\": {\n        \"sBTIntegrante\": [\n            {\n\t\t\t\t\"numeroDocumento\": \"19126689\",\n\t\t\t\t\"tipoDocumento\": \"Cédula Identidad\",\n                \"titularidad\": {\n                    \"descripcion\": \"Titular\",\n                    \"identificador\": \"1\"\n                },\n                \"representativo\": \"S\",\n                \"personaUId\": \"141\",\n                \"nombre\": \"vVAZQUEZ SZENTANDRASI aALEJAND\",\n\t\t\t\t\"paisDocumento\": \"URUGUAY\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"85\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerIntegrantes\",\n        \"Requerimiento\": \"2\",\n        \"Fecha\": \"2018-05-04\",\n        \"Hora\": \"16:11:00\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTIntegrante",
+      "fields": [
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la persona."
+        },
+        {
+          "Nombre": "numeroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "paisDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país del documento."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "representativo",
+          "Tipo": "String",
+          "Comentarios": "Indica si es titular representativo (S/N)."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "titularidad",
+          "Tipo": "<a href=\"#sbttipointegrante\">sBTTipoIntegrante</a>",
+          "Comentarios": "Tipo de integrante."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTTipoIntegrante",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de integrante."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del tipo de integrante."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

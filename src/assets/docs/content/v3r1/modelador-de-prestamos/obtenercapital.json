@@ -1,0 +1,61 @@
+{
+  "slug": "modelador-de-prestamos/obtenercapital",
+  "pageTitle": "Obtener Capital",
+  "description": "Método para obtener capital mínimo, máximo y promedio de un producto de préstamo.",
+  "pubName": "BTModeladorPrestamos.ObtenerCapital",
+  "programa": "RBTPG352",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "minimo",
+      "Tipo": "Double",
+      "Comentarios": "Capital mínimo posible para el producto."
+    },
+    {
+      "Nombre": "maximo",
+      "Tipo": "Double",
+      "Comentarios": "Capital máximo posible para el producto."
+    },
+    {
+      "Nombre": "valorPorDefecto",
+      "Tipo": "Double",
+      "Comentarios": "Capital por defecto para el producto."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTModeladorPrestamos.ObtenerCapital>\n       <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>194002532CD285A89A23FBEE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:productoUId>105</bts:productoUId>\n      </bts:BTModeladorPrestamos.ObtenerCapital>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTModeladorPrestamos.ObtenerCapitalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>194002532CD285A89A23FBEE</Token>\n            <Device/>\n         </Btinreq>\n         <minimo>1</minimo>\n         <maximo>999999999999</maximo>\n         <valorPorDefecto>1000</valorPorDefecto>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTModeladorPrestamos.ObtenerCapital</Servicio>\n            <Fecha>2021-11-03</Fecha>\n            <Hora>18:13:56</Hora>\n            <Requerimiento/>\n            <Numero>8634</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTModeladorPrestamos.ObtenerCapitalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

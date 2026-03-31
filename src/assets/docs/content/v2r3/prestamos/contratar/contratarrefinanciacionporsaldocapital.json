@@ -1,0 +1,115 @@
+{
+  "slug": "prestamos/contratar/contratarrefinanciacionporsaldocapital",
+  "pageTitle": "Contratar Refinanciación por Saldo Capital",
+  "description": "Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.",
+  "pubName": "BTPrestamos.ContratarRefinanciacionSaldoCapital",
+  "programa": "RBTPG235",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de alta, teniendo en cuenta que: \n\n\t- El préstamo se almacena en el preformato 1 para pfdid = cero. La diferencia entre deuda total y saldo capital se almacena en el importe 2 \n\n\t- La cuenta vista de acreditación se almacena en el preformato 2 para pfdid = cero \n\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal \n\n\t- Las operaciones a cancelar se almacenan en el preformato 1 para pfdid > cero \n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \n\n3)\tSe debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro. Ademas cargar en el Auxiliar Numérico el ordinal de baja de préstamo.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "refinanciacionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la refinanciación simulada."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "accion",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'REFIS' para este método]."
+    },
+    {
+      "Nombre": "operacionUId_dif",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista de donde se cobrará la diferencia entre la deuda total de los préstamos a refinanciar y el capital del nuevo préstamo."
+    },
+    {
+      "Nombre": "operacionUId_cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista de donde se cobrará el préstamo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento [Asiento]."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de refinanciación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El identificador de refinanciación no es válido."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de operación de la cuenta vista."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta vista para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el identificador de operación de la instrucción de cobro."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recuperó la operación para el identificador [Número de Identificador]."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se recuperó la operación simulada con identificador."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "en adelante, errores de contabilización."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ContratarRefinanciacionSaldoCapital>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>18bdf2801e4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:refinanciacionId>122</bts:refinanciacionId>\n         <bts:clienteUId>221</bts:clienteUId>\n         <bts:operacionUId_dif>211</bts:operacionUId_dif>\n         <bts:operacionUId_cobro>211</bts:operacionUId_cobro>\n      </bts:BTPrestamos.ContratarRefinanciacionSaldoCapital>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarRefinanciacionSaldoCapital' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"refinanciacionId\":\"122\",\n\t\"clienteUId\":\"221\",\n\t\"operacionUId_dif\":\"211\",\n\t\"operacionUId_cobro\":\"211\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ContratarRefinanciacionSaldoCapitalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>18bdf2801e4A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>1536</movimientoUId>\n         <Btoutreq>\n            <Numero>4418</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.ContratarRefinanciacionSaldoCapital</Servicio>\n            <Fecha>2018-12-14</Fecha>\n            <Requerimiento/>\n            <Hora>15:46:01</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ContratarRefinanciacionSaldoCapitalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"1536\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"755\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.ContratarRefinanciacionSaldoCapital\",\n        \"Fecha\": \"2017-11-30\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"13:47:48\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

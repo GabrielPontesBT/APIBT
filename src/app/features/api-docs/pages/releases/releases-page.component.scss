@@ -2,6 +2,7 @@
 
 .releases-wrap {
   padding-top: var(--title-height);
+  padding-bottom: 3rem;
 }
 
 .nov-grid {
@@ -60,6 +61,7 @@
 
   &:hover {
     color: var(--red-1-darken);
+    text-decoration: underline;
   }
 }
 

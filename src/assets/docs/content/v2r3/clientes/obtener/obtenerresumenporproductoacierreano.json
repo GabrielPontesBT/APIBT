@@ -1,0 +1,103 @@
+{
+  "slug": "clientes/obtener/obtenerresumenporproductoacierreano",
+  "pageTitle": "Obtener Resumen por Producto a Cierre Año",
+  "description": "Método para obtener un resumen con el detalle de las operaciones de un cliente al cierre del año.",
+  "pubName": "BTClientes.ObtenerResumenPorProductoACierreAnio",
+  "programa": "RBTPG271",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "anioConsulta",
+      "Tipo": "Short",
+      "Comentarios": "Año de consulta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtOperaciones",
+      "Tipo": "<a href=\"#sbtdetalleoperacion\">sBTDetalleOperacion</a>",
+      "Comentarios": "Listado de detalle de operaciones."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para la operación."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerResumenPorProductoACierreAnio>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>244353514CD285A89A23FBEE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>10010</bts:clienteUId>\n         <bts:anioConsulta>2018</bts:anioConsulta>\n      </bts:BTClientes.ObtenerResumenPorProductoACierreAnio>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenPorProductoACierreAnio \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"MC\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"clienteUId\": \"1000\",\n        \"anioConsulta\":\"2018\"\n   }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerResumenPorProductoACierreAnioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>244353514CD285A89A23FBEE</Token>\n            <Device>MC</Device>\n         </Btinreq>\n         <sdtOperaciones>\n            <sBTDetalleOperacion>\n               <operacionUId>2</operacionUId>\n               <producto>\n                  <productoUId>93</productoUId>\n                  <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                  <moneda>$</moneda>\n                  <papel>$</papel>\n               </producto>\n               <saldo>0.00</saldo>\n            </sBTDetalleOperacion>\n            <sBTDetalleOperacion>\n               <operacionUId>7</operacionUId>\n               <producto>\n                  <productoUId>132</productoUId>\n                  <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>\n                  <moneda>$</moneda>\n                  <papel>$</papel>\n               </producto>\n               <saldo>15000.00</saldo>\n            </sBTDetalleOperacion>\n            <sBTDetalleOperacion>\n               <operacionUId>11</operacionUId>\n               <producto>\n                  <productoUId>105</productoUId>\n                  <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>\n                  <moneda>$</moneda>\n                  <papel>$</papel>\n               </producto>\n               <saldo>-415000.00</saldo>\n            </sBTDetalleOperacion>\n         </sdtOperaciones>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTClientes.ObtenerResumenPorProductoACierreAnio</Servicio>\n            <Fecha>2020-04-20</Fecha>\n            <Hora>14:06:20</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>7331</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTClientes.ObtenerResumenPorProductoACierreAnioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n\t\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\t\"Requerimiento\": \"1\",\n\t\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\t\"Token\": \"244353514CD285A89A23FBEE\",\n\t\t\t\"Device\": \"MC\"\n\t\t},\n\t\t\"sdtOperaciones\": {\n\t\t\t\"sBTDetalleOperacion\": [\n\t\t\t\t{\n\t\t\t\t\t\"operacionUId\": \"2\",\n\t\t\t\t\t\"producto\": {\n\t\t\t\t\t\t\"productoUId\": \"93\",\n\t\t\t\t\t\t\"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\",\n\t\t\t\t\t\t\"moneda\": \"$\",\n\t\t\t\t\t\t\"papel\": \"$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"saldo\": \"0.00\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"operacionUId\": \"7\",\n\t\t\t\t\t\"producto\": {\n\t\t\t\t\t\t\"productoUId\": \"132\",\n\t\t\t\t\t\t\"nombre\": \"DEPOSITOS A PLAZO FIJO, DPF Intransferible\",\n\t\t\t\t\t\t\"moneda\": \"$\",\n\t\t\t\t\t\t\"papel\": \"$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"saldo\": \"15000.00\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"operacionUId\": \"11\",\n\t\t\t\t\t\"producto\": {\n\t\t\t\t\t\t\"productoUId\": \"105\",\n\t\t\t\t\t\t\"nombre\": \"PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF\",\n\t\t\t\t\t\t\"moneda\": \"$\",\n\t\t\t\t\t\t\"papel\": \"$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"saldo\": \"-415000.00\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"Erroresnegocio\": \"\",\n\t\t\"Btoutreq\": {\n\t\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\t\"Servicio\": \"BTClientes.ObtenerResumenPorProductoACierreAnio\",\n\t\t\t\"Fecha\": \"2020-04-20\",\n\t\t\t\"Hora\": \"14:06:20\",\n\t\t\t\"Requerimiento\": \"1\",\n\t\t\t\"Numero\": \"7331\",\n\t\t\t\"Estado\": \"OK\"\n\t\t}\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "calendarios/obtener/obtenerfechahabil",
+  "pageTitle": "Obtener Fecha Hábil",
+  "description": "Método para obtener si la fecha ingresada es una fecha hábil.",
+  "pubName": "BTCalendarios.ObtenerFechaHabil",
+  "programa": "RBTPG293",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "calendarioId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central)."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha a consultar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "fechaHabil",
+      "Tipo": "String",
+      "Comentarios": "¿Es hábil? (S/N)"
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCalendarios.ObtenerFechaHabil>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>120320211555340000388219</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:fecha>2020-11-14</bts:fecha>\n      </bts:BTCalendarios.ObtenerFechaHabil>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabil' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"INSTALADOR\",\n\t  \"Token\": \"120320211555340000388219\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"calendarioId\": \"1\",\n\t\"fecha\": \"2020-11-14\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCalendarios.ObtenerFechaHabilResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>120320211555340000388219</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <fechaHabil>N</fechaHabil>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCalendarios.ObtenerFechaHabil</Servicio>\n            <Fecha>2021-03-12</Fecha>\n            <Hora>15:58:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10660</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCalendarios.ObtenerFechaHabilResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n \t\"Btinreq\": { \n\t  \"Device\": \"AC\", \n\t  \"Usuario\": \"INSTALADOR\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Token\": \"120320211555340000388219\" \n\t}, \n\t\"fechaHabil\": \"N\", \n\t\"Btoutreq\": { \n\t  \"Numero\": \"10660\", \n\t  \"Estado\": \"OK\", \n\t  \"Servicio\": \"BTCalendarios.ObtenerFechaHabil\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Fecha\": \"2021-03-12\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Hora\": \"15:58:02\" \n\t} \n }"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

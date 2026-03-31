@@ -1,0 +1,45 @@
+{
+  "slug": "cash-management/orden/procesarorden",
+  "pageTitle": "Procesar Orden",
+  "description": "Método para procesar una orden de pago.",
+  "pubName": "BTCASHManagement.ProcesarOrden",
+  "programa": "RBTPGC300",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de orden CASH."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "1030750",
+      "Descripción": "No se encontro la orden a procesar."
+    },
+    {
+      "Código": "1030751",
+      "Descripción": "Estado de la orden no permite procesar."
+    },
+    {
+      "Código": "1030752",
+      "Descripción": "Fecha de proceso no corresponde a fecha actual."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ProcesarOrden>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>311020191114150000216393</bts:Token>\n            <bts:Device>001</bts:Device>\n         </bts:Btinreq>\n         <bts:ordenId>123</bts:ordenId>\n      </bts:BTCASHManagement.ProcesarOrden>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/odwsbt_BTCASHManagement_v1?ProcesarOrden' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"ordenId\":123\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.ProcesarOrdenResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>MINSTALADOR</Usuario>\n            <Token>311020191114150000216393</Token>\n            <Device>001</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCASHManagement.ProcesarOrden</Servicio>\n            <Fecha>2019-10-31</Fecha>\n            <Hora>12:24:10</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>653</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCASHManagement.ProcesarOrdenResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 46,\n        \"Servicio\": \"BTCASHManagement.ProcesarOrden\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2019-10-24\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"20:55:06\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "personas/agregar/agregardatospep",
+  "pageTitle": "Agregar Datos PEP",
+  "description": "Método para agregar los datos de una persona expuesta políticamente.",
+  "pubName": "BTPersonas.AgregarDatosPEP",
+  "programa": "RBTPG146",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "esPEP",
+      "Tipo": "String",
+      "Comentarios": "Es persona políticamente expuesta? (S/N)."
+    },
+    {
+      "Nombre": "sdtDatosPEP",
+      "Tipo": "<a href=\"#sbtdatospep\">sBTDatosPEP</a>",
+      "Comentarios": "Datos de la PEP."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió si la persona es políticamente expuesta."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se pudo determinar si la persona es políticamente expuesta. (¿Es PEP? S / N)."
+    },
+    {
+      "Código": "50001",
+      "Descripción": "Fecha Inicio cargo PEP es de ingreso obligatorio."
+    },
+    {
+      "Código": "50002",
+      "Descripción": "Entidad es de ingreso obligatorio."
+    },
+    {
+      "Código": "50003",
+      "Descripción": "Cargo y Relación es de ingreso obligatorio."
+    },
+    {
+      "Código": "50004",
+      "Descripción": "Fecha Salida cargo PEP debe de ser mayor a Fecha Inicio cargo PEP."
+    },
+    {
+      "Código": "50005",
+      "Descripción": "Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.AgregarDatosPEP>\n           <Btinreq>\n              <Canal>BTDIGITAL</Canal>\n              <Device>AV</Device>\n              <Requerimiento />\n              <Token>1254960580EF744F35AE6963</Token>\n              <Usuario>INSTALADOR</Usuario>\n           </Btinreq>\n           <personaUId>3</personaUId> \n           <esPEP>S</esPEP>\n           <sdtDatosPEP>\n              <cargoRelacion>politic00</cargoRelacion>\n              <entidad>abc125</entidad>\n              <fechaInicio>2014-05-20</fechaInicio>\n              <fechaSalida />\n              <observacion>no corresponde</observacion>\n           </sdtDatosPEP>\n       </bts:BTPersonas.AgregarDatosPEP>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarDatosPEP' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n   \"Btinreq\": {\n        \"Device\": \"AV\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"1254960580EF744F35AE6963\"\n    },\n   \"personaUId\": \"3\",\n   \"esPEP\": \"S\",\n   \"sdtDatosPEP\": {\n      \"entidad\": \"abc125\",\n      \"cargoRelacion\": \"politic00\",\n      \"observacion\": \"no corresponde\",\n      \"fechaInicio\": \"2014-05-20\",\n      \"fechaSalida\": \"\"\n   }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.AgregarDatosPEPResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t\t  <Btinreq>\n\t\t\t  <Canal>BTDIGITAL</Canal>\n\t\t\t  <Device>AV</Device>\n\t\t\t  <Requerimiento />\n\t\t\t  <Token>1254960580EF744F35AE6963</Token>\n\t\t\t  <Usuario>INSTALADOR</Usuario>\n\t\t   </Btinreq>\n\t\t   <Erroresnegocio></Erroresnegocio>\n\t\t   <Btoutreq>\n\t\t\t  <Canal>BTDIGITAL</Canal>\n\t\t\t  <Estado>OK</Estado>\n\t\t\t  <Fecha>2020-07-30</Fecha>\n\t\t\t  <Hora>13:13:12</Hora>\n\t\t\t  <Numero>50199</Numero>\n\t\t\t  <Requerimiento />\n\t\t\t  <Servicio>BTPersonas.AgregarDatosPEP</Servicio>\n\t\t   </Btoutreq>\n      </BTPersonas.AgregarDatosPEPResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n    \"Btinreq\": { \n        \"Device\": \"AV\", \n        \"Usuario\": \"INSTALADOR\", \n        \"Requerimiento\": \"\", \n        \"Canal\": \"BTDIGITAL\", \n        \"Token\": \"1254960580EF744F35AE6963\" \n    }, \n    \"Erroresnegocio\": { \n        \"BTErrorNegocio\": [] \n    }, \n    \"Btoutreq\": { \n        \"Canal\": \"BTDIGITAL\", \n        \"Servicio\": \"BTPersonas.AgregarDatosPEP\", \n        \"Fecha\": \"2020-07-30\", \n        \"Hora\": \"13:13:12\", \n        \"Requerimiento\": \"\", \n        \"Numero\": 50199, \n        \"Estado\": \"OK\" \n    } \n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosPEP",
+      "fields": [
+        {
+          "Nombre": "cargoRelacion",
+          "Tipo": "String",
+          "Comentarios": "Cargo que ocupa."
+        },
+        {
+          "Nombre": "entidad",
+          "Tipo": "String",
+          "Comentarios": "Entidad."
+        },
+        {
+          "Nombre": "fechaInicio",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio."
+        },
+        {
+          "Nombre": "fechaSalida",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de salida."
+        },
+        {
+          "Nombre": "observacion",
+          "Tipo": "String",
+          "Comentarios": "Observación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

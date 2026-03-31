@@ -1,0 +1,149 @@
+{
+  "slug": "tarjetas-de-debito/operar/crearconcuentasasociadas",
+  "pageTitle": "Crear Con Cuentas Asociadas",
+  "description": "Método para dar de alta una tarjeta con cuentas asociadas.",
+  "pubName": "BTTarjetasDeDebito.CrearConCuentasAsociadas",
+  "programa": "RBTPG556",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "tipoTarjeta",
+      "Tipo": "String",
+      "Comentarios": "Tipo de tarjeta."
+    },
+    {
+      "Nombre": "nombreTarjeta",
+      "Tipo": "String",
+      "Comentarios": "Nombre de tarjeta."
+    },
+    {
+      "Nombre": "sdtIdOperaciones",
+      "Tipo": "<a href=\"#sbtidoperacion\">sBTIdOperacion</a>",
+      "Comentarios": "Listado de identificadores únicos de operaciones de las cuentas a asociar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    },
+    {
+      "Nombre": "numeroTarjeta",
+      "Tipo": "String",
+      "Comentarios": "Número de tarjeta."
+    },
+    {
+      "Nombre": "fechaExpiracion",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de vencimiento."
+    },
+    {
+      "Nombre": "estadoTarjeta",
+      "Tipo": "String",
+      "Comentarios": "Estado de la tarjeta."
+    },
+    {
+      "Nombre": "estadoPlastico",
+      "Tipo": "String",
+      "Comentarios": "Estado del plástico."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibieron los Identificadores de las operaciones a asociar."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La cuenta a asociar de la operacionUId [Número de Identificador] es incorrecta."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperó la operación para el identificador de operación: [Número de Identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Tipo de tarjeta inexistente TDD015."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El titular excede la cantidad máxima de tarjetas activas."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El titular no existe en FSD001."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "Cuenta de costo no pertenece al titular."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Cuenta de costo no existe en FSD011."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Código de domicilio inválido para el titular."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Cuenta a asociar a tarjeta no pertenece al titular."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "Número de tarjeta no es válido."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "TD nominada, no se debe informar TDD003TAR."
+    },
+    {
+      "Código": "40020",
+      "Descripción": "Funcionalidad inexistente en TDD025."
+    },
+    {
+      "Código": "40021",
+      "Descripción": "Funcionalidad inhabilitada en TDD025."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>165</bts:clienteUId>\n         <bts:tipoTarjeta>MNO</bts:tipoTarjeta>\n         <bts:nombreTarjeta>Test</bts:nombreTarjeta>\n         <bts:sdtIdOperaciones>\n            <bts:sBTIdOperacion>\n               <bts:idOperacion>2411</bts:idOperacion>\n            </bts:sBTIdOperacion>\n            <bts:sBTIdOperacion>\n               <bts:idOperacion>3251</bts:idOperacion>\n            </bts:sBTIdOperacion>\n         </bts:sdtIdOperaciones>\n      </bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?CrearConCuentasAsociadas' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": 165,\n    \"tipoTarjeta\": \"MNO\",\n    \"nombreTarjeta\": \"Test\",\n    \"sdtIdOperaciones\": {\n        \"sBTIdOperacion\": [\n        {\n            \"idOperacion\": 2411\n        },\n        {\n            \"idOperacion\": 3251\n        }\n        ]\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.CrearConCuentasAsociadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>be9fc8708b4A8B5C60A82434</Token>\n         </Btinreq>\n         <tarjetaUId>2000002072</tarjetaUId>\n         <numeroTarjeta>5010730101000001203</numeroTarjeta>\n         <fechaExpiracion>2028-10-31</fechaExpiracion>\n         <estadoTarjeta>INACTIVA</estadoTarjeta>\n         <estadoPlastico>A EMITIR</estadoPlastico>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>967</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.CrearConCuentasAsociadas</Servicio>\n            <Fecha>2017-12-22</Fecha>\n            <Requerimiento/>\n            <Hora>12:26:12</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.CrearConCuentasAsociadasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"tarjetaUId\": \"2000002073\",\n    \"numeroTarjeta\": \"5010730101000001211\",\n    \"fechaExpiracion\": \"2028-10-31\",\n    \"estadoTarjeta\": \"INACTIVA\",\n    \"estadoPlastico\": \"A EMITIR       \",\n    \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n    },\n   \"Btoutreq\": {\n      \"Numero\": \"987\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.CrearConCuentasAsociadas\",\n      \"Requerimiento\": \"\",\n      \"Fecha\": \"2017-12-22\",\n      \"Hora\": \"16:15:27\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTIdOperacion",
+      "fields": [
+        {
+          "Nombre": "idOperacion",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

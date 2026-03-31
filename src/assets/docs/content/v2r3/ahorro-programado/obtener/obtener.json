@@ -1,0 +1,198 @@
+{
+  "slug": "ahorro-programado/obtener/obtener",
+  "pageTitle": "Obtener",
+  "description": "Método para obtener los datos del ahorro.",
+  "pubName": "BTAhorroProgramado.Obtener",
+  "programa": "RBTPG256",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ahorroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del ahorro."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDetalleAhorro",
+      "Tipo": "<a href=\"#sbtdetalleahorro\">sBTDetalleAhorro</a>",
+      "Comentarios": "Datos del ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de la operación."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.Obtener>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>AC</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>f22e83a6eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:ahorroUId>205</bts:ahorroUId>\n      </bts:BTAhorroProgramado.Obtener>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ObtenerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>f22e83a6eb4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtDetalleAhorro>\n            <plazo>60</plazo>\n            <ahorroUId>205</ahorroUId>\n            <diaDeIncremento>9</diaDeIncremento>\n            <periodicidad>1</periodicidad>\n            <fechaAltaSolicitud>2017-03-06</fechaAltaSolicitud>\n            <periodosDeGraciaHabilitados>3</periodosDeGraciaHabilitados>\n            <fechaVencimiento>2017-05-08</fechaVencimiento>\n            <fechaProximaRenovacion>0000-00-00</fechaProximaRenovacion>\n            <clienteUId>61</clienteUId>\n            <montoMeta>0.00</montoMeta>\n            <intentosDeIncrementoUtilizados>0</intentosDeIncrementoUtilizados>\n            <productoUId>82</productoUId>\n            <periodosDeGraciaUtilizados>0</periodosDeGraciaUtilizados>\n            <tasaActual>10.200000</tasaActual>\n            <observacion/>\n            <tipoDeDia>Días Calendario</tipoDeDia>\n            <motivoMeta/>\n            <intentosDeIncrementoHabilitados>30</intentosDeIncrementoHabilitados>\n            <fechaMeta>0000-00-00</fechaMeta>\n            <tasaOriginal>10.200000</tasaOriginal>\n            <saldoActual>0.00</saldoActual>\n            <tipoTasa>Lineal Anual</tipoTasa>\n            <fechaProximoIncremento>2017-06-09</fechaProximoIncremento>\n            <renueva>No</renueva>\n            <operacionUIdOrigen>541</operacionUIdOrigen>\n            <operacionUIdDestino>541</operacionUIdDestino>\n            <estado>Cancelado</estado>\n            <abono>5000.00</abono>\n            <fechaValor>2017-03-09</fechaValor>\n         </sdtDetalleAhorro>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>9360</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTAhorroProgramado.Obtener</Servicio>\n            <Fecha>2019-11-19</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>11:44:25</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTAhorroProgramado.ObtenerResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDetalleAhorro",
+      "fields": [
+        {
+          "Nombre": "clienteid",
+          "Tipo": "Long",
+          "Comentarios": "identificador único del cliente."
+        },
+        {
+          "Nombre": "productoid",
+          "Tipo": "Long",
+          "Comentarios": "identificador único de producto."
+        },
+        {
+          "Nombre": "ahorroid",
+          "Tipo": "Long",
+          "Comentarios": "identificador único del ahorro."
+        },
+        {
+          "Nombre": "fechavencimiento",
+          "Tipo": "Date",
+          "Comentarios": "fecha del vencimiento del ahorro."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Short",
+          "Comentarios": "periodicidad (en días) del ahorro."
+        },
+        {
+          "Nombre": "diadeincremento",
+          "Tipo": "Short",
+          "Comentarios": "día en que se da el incremento."
+        },
+        {
+          "Nombre": "abono",
+          "Tipo": "Double",
+          "Comentarios": "abono."
+        },
+        {
+          "Nombre": "intentosdeincrementohabilitados",
+          "Tipo": "Short",
+          "Comentarios": "intentos de incremento habilitados."
+        },
+        {
+          "Nombre": "intentosdeincrementoutilizados",
+          "Tipo": "Short",
+          "Comentarios": "intentos de incremento utilizados."
+        },
+        {
+          "Nombre": "periodosdegraciautilizados",
+          "Tipo": "Short",
+          "Comentarios": "períodos de gracia utilizados."
+        },
+        {
+          "Nombre": "periodosdegraciahabilitados",
+          "Tipo": "Short",
+          "Comentarios": "períodos de gracia habilitados."
+        },
+        {
+          "Nombre": "tasaoriginal",
+          "Tipo": "Double",
+          "Comentarios": "tasa original."
+        },
+        {
+          "Nombre": "tasaactual",
+          "Tipo": "Double",
+          "Comentarios": "tasa actual."
+        },
+        {
+          "Nombre": "tipotasa",
+          "Tipo": "String",
+          "Comentarios": "tipo de tasa."
+        },
+        {
+          "Nombre": "saldoactual",
+          "Tipo": "Double",
+          "Comentarios": "saldo actual del ahorro."
+        },
+        {
+          "Nombre": "fechaproximoincremento",
+          "Tipo": "Date",
+          "Comentarios": "fecha del próximo incremento."
+        },
+        {
+          "Nombre": "fechaproximarenovacion",
+          "Tipo": "Date",
+          "Comentarios": "fecha del próximo incremento."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "estado del ahorro."
+        },
+        {
+          "Nombre": "renueva",
+          "Tipo": "String",
+          "Comentarios": "¿renueva? (s/n)."
+        },
+        {
+          "Nombre": "observacion",
+          "Tipo": "String",
+          "Comentarios": "observación."
+        },
+        {
+          "Nombre": "tipodedia",
+          "Tipo": "String",
+          "Comentarios": "tipo de día utilizado."
+        },
+        {
+          "Nombre": "operacionuidorigen",
+          "Tipo": "Long",
+          "Comentarios": "identificador único de la operación de orígen."
+        },
+        {
+          "Nombre": "operacionuiddestino",
+          "Tipo": "Long",
+          "Comentarios": "identificador único de la operación de destino."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Short",
+          "Comentarios": "plazo para el ahorro."
+        },
+        {
+          "Nombre": "fechaaltasolicitud",
+          "Tipo": "Date",
+          "Comentarios": "fecha de alta de la solicitud."
+        },
+        {
+          "Nombre": "fechavalor",
+          "Tipo": "Date",
+          "Comentarios": "fecha valor del ahorro."
+        },
+        {
+          "Nombre": "montometa",
+          "Tipo": "Double",
+          "Comentarios": "monto meta del ahorro."
+        },
+        {
+          "Nombre": "fechameta",
+          "Tipo": "Date",
+          "Comentarios": "fecha meta del ahorro."
+        },
+        {
+          "Nombre": "motivometa",
+          "Tipo": "String",
+          "Comentarios": "motivo de la meta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,46 +1,86 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin, map, Observable, of, shareReplay } from 'rxjs';
+import { forkJoin, map, Observable, of, shareReplay, switchMap } from 'rxjs';
 
+import { NavigationNode } from '../../../core/models/navigation-node.model';
+import { VersionService } from '../../../core/services/version.service';
 import {
-  mergeReleases,
   parseReleaseList,
   Release,
   ReleasePathMap
 } from '../pages/releases/releases.data';
 
+function buildSlugTitleMap(nodes: NavigationNode[], result = new Map<string, string>()): Map<string, string> {
+  for (const node of nodes) {
+    if (node.type === 'file' && node.slug && node.pageTitle) {
+      result.set(node.slug, node.pageTitle);
+    }
+    if (node.children) {
+      buildSlugTitleMap(node.children, result);
+    }
+  }
+  return result;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ReleasesService {
-  private readonly releases$: Observable<Release[]> = forkJoin({
-    curated: this.http.get<Release[]>('assets/releases/curated-releases.json'),
-    raw: this.http.get('assets/releases/listado_api_completa_por_release.txt', { responseType: 'text' }),
-    pathEntries: this.http.get<Array<{ key: string; path: string[] }>>('assets/releases/pubname-slugs.json')
-  }).pipe(
-    map(({ curated, raw, pathEntries }) => {
-      const pathMap: ReleasePathMap = Object.fromEntries(
-        pathEntries.map(entry => [entry.key, entry.path])
-      );
+  private cache = new Map<string, Observable<Release[]>>();
 
-      return mergeReleases(parseReleaseList(raw, pathMap), curated);
-    }),
-    shareReplay(1)
-  );
-
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private versionService: VersionService
+  ) {}
 
   getReleases(): Observable<Release[]> {
-    return this.releases$;
+    return this.versionService.activeVersion$.pipe(
+      switchMap(version => this.getReleasesForVersion(version))
+    );
   }
 
   getReleaseById(id: string): Observable<Release | null> {
-    if (!id) {
-      return of(null);
+    if (!id) return of(null);
+    return this.getReleases().pipe(
+      map(releases => releases.find(r => r.id === id) ?? null)
+    );
+  }
+
+  private getReleasesForVersion(version: string): Observable<Release[]> {
+    if (version === 'bpay') return of([]);
+
+    if (!this.cache.has(version)) {
+      const releases$ = forkJoin({
+        raw: this.http.get(`assets/releases/Releases-${version}.txt`, { responseType: 'text' }),
+        pathEntries: this.http.get<Array<{ key: string; path: string[] }>>(`assets/releases/pubname-slugs-${version}.json`),
+        sidebar: this.http.get<NavigationNode[]>(`assets/navigation/sidebar-${version}.json`)
+      }).pipe(
+        map(({ raw, pathEntries, sidebar }) => {
+          const pathMap: ReleasePathMap = Object.fromEntries(
+            pathEntries.map(entry => [entry.key, entry.path])
+          );
+          const slugTitleMap = buildSlugTitleMap(sidebar);
+          const releases = parseReleaseList(raw, pathMap);
+
+          for (const release of releases) {
+            for (const group of release.grupos) {
+              for (const item of group.items) {
+                if (item.path?.length) {
+                  const title = slugTitleMap.get(item.path.join('/'));
+                  if (title) item.label = title;
+                }
+              }
+            }
+          }
+
+          return releases;
+        }),
+        shareReplay(1)
+      );
+
+      this.cache.set(version, releases$);
     }
 
-    return this.releases$.pipe(
-      map(releases => releases.find(release => release.id === id) ?? null)
-    );
+    return this.cache.get(version)!;
   }
 }

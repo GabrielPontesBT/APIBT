@@ -1,0 +1,110 @@
+{
+  "slug": "cash-management/pagos/registrarpagodeuda",
+  "pageTitle": "Registrar Pago de Deuda",
+  "description": "Método para registrar el pago de una factura realizado en canal externo.",
+  "pubName": "BTCASHManagement.RegistrarPagoDeuda",
+  "programa": "RBTPGC62",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la orden."
+    },
+    {
+      "Nombre": "nroLineaOrden",
+      "Tipo": "Int",
+      "Comentarios": "Número de línea de orden CASH."
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "importePago",
+      "Tipo": "Double",
+      "Comentarios": "Importe pagado."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "transaccionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de transacción."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030610",
+      "Descripción": "Debe indicar el numero de la orden."
+    },
+    {
+      "Código": "1030611",
+      "Descripción": "Debe indicar el numero de linea en la orden."
+    },
+    {
+      "Código": "1030612",
+      "Descripción": "El valor recibido no corresponde a un numero de orden."
+    },
+    {
+      "Código": "1030614",
+      "Descripción": "Canal no habilitado para el servicio."
+    },
+    {
+      "Código": "1030615",
+      "Descripción": "Canal no habilitado para el contrato."
+    },
+    {
+      "Código": "1030616",
+      "Descripción": "Numero de linea de la orden no existe."
+    },
+    {
+      "Código": "1030617",
+      "Descripción": "Estado de la linea de la orden no permite pago."
+    },
+    {
+      "Código": "1030618",
+      "Descripción": "El importe debe ser mayor a cero."
+    },
+    {
+      "Código": "1030619",
+      "Descripción": "Código de Moneda desconocido."
+    },
+    {
+      "Código": "1030620",
+      "Descripción": "El importe del pago es inferior a la deuda."
+    },
+    {
+      "Código": "1030621",
+      "Descripción": "El importe del pago supera a la deuda."
+    },
+    {
+      "Código": "1030751",
+      "Descripción": "Estado de la orden no permite procesar."
+    },
+    {
+      "Código": "1030761",
+      "Descripción": "No se obtuvo Canal CASH para el canal que invoca."
+    },
+    {
+      "Código": "1039999",
+      "Descripción": "No se obtuvo Regla para determinar la Transacción a ejecutar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.RegistrarPagoDeuda>\n         <bts:Btinreq>\n            <Canal>AGENTECORRESPONSAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>4A287DE2D400320135CCA4E5</Token>\n         </bts:Btinreq>\n         <bts:ordenId>293</bts:ordenId>\n         <bts:nroLineaOrden>1</bts:nroLineaOrden>\n         <bts:moneda>0</bts:moneda>\n         <bts:importePago>100</bts:importePago>\n      </bts:BTCASHManagement.RegistrarPagoDeuda>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?RegistrarPagoDeuda=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"ordenId\": 293,\n    \"nroLineaOrden\": 1,\n    \"moneda\": 0,\n    \"importePago\": 100\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.RegistrarPagoDeudaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>AGENTECORRESPONSAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>4A287DE2D400320135CCA4E5</Token>\n         </Btinreq>\n         <transaccionId>95</transaccionId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-19</Fecha>\n            <Hora>11:12:48</Hora>\n            <Numero>26123</Numero>\n            <Servicio>BTCASHManagement.RegistrarPagoDeuda</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>AGENTECORRESPONSAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.RegistrarPagoDeudaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"transaccionId\": 95,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCASHManagement.RegistrarPagoDeuda\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

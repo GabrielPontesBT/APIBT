@@ -1,0 +1,143 @@
+{
+  "slug": "clientes/obtener/obtenerprestamoscancelados",
+  "pageTitle": "Obtener Préstamos Cancelados",
+  "description": "Método para obtener los productos de préstamo cancelados de un cliente.",
+  "pubName": "BTClientes.ObtenerPrestamosCancelados",
+  "programa": "RBTPG219",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPrestamos",
+      "Tipo": "<a href=\"#sbtprestamocancelado\">sBTPrestamoCancelado</a>",
+      "Comentarios": "Listado de préstamos cancelados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerPrestamosCancelados>\n         <bts:Btinreq>\n            <bts:Device>MC</bts:Device>\n            <bts:Token>b674899860CD285A89A23FBE</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>5</bts:clienteUId>\n      </bts:BTClientes.ObtenerPrestamosCancelados>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPrestamosCancelados \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\t \n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"324915377F955E77534D3E02\"\n\t},\n    \"clienteUId\": \"10010\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerPrestamosCanceladosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b674899860CD285A89A23FBE</Token>\n         </Btinreq>\n         <sdtPrestamos>\n            <sBTPrestamoCancelado>\n               <operacionUId>1</operacionUId>\n               <idOperacionFmt>0000000170-000</idOperacionFmt>\n               <idOperacionBT>0010000100101000000000000000002700000000000170003</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <sucursal>Sucursal Beta</sucursal>\n               <fechaValor>2019-01-15</fechaValor>\n               <fechaVencimiento>2020-01-15</fechaVencimiento>\n               <fechaCancelacion>2020-01-15</fechaCancelacion>\n            </sBTPrestamoCancelado>\n         </sdtPrestamos>\n         <Erroresnegocio/>\n         <Btoutreq>\n            <Numero>270</Numero>\n            <Servicio>BTClientes.ObtenerPrestamosCancelados</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-04-13</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>10:42:34</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerPrestamosCanceladosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n\t\"Btinreq\": { \n\t\t\"Device\": \"MC\", \n\t\t\"Usuario\": \"INSTALADOR\", \n\t\t\"Requerimiento\": \"1\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"b674899860CD285A89A23FBE\" \n\t}, \n\t\"sdtPrestamos\": { \n\t\t\"sBTPrestamoCancelado\": { \n\t\t\t\"operacionUId\": \"1\", \n\t\t\t\"idOperacionFmt\": \"0000000170-000\", \n\t\t\t\"idOperacionBT\": \"0010000100101000000000000000002700000000000170003\", \n\t\t\t\"producto\": { \n\t\t\t\t\"productoUId\": \"0\", \n\t\t\t\t\"nombre\": \"PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad\", \n\t\t\t\t\"moneda\": \"$\", \n\t\t\t\t\"papel\": \"\" \n\t\t\t}, \n\t\t\t\"sucursal\": \"Sucursal Beta\", \n\t\t\t\"fechaValor\": \"2019-01-15\", \n\t\t\t\"fechaVencimiento\": \"2020-01-15\", \n\t\t\t\"fechaCancelacion\": \"2020-01-15\" \n\t\t} \n\t}, \n\t\"Erroresnegocio\": \"\", \n\t\"Btoutreq\": { \n\t\t\"Numero\": \"270\", \n\t\t\"Servicio\": \"BTClientes.ObtenerPrestamosCancelados\", \n\t\t\"Estado\": \"OK\", \n\t\t\"Fecha\": \"2020-04-13\", \n\t\t\"Requerimiento\": \"1\", \n\t\t\"Hora\": \"10:42:34\", \n\t\t\"Canal\": \"BTDIGITAL\" \n\t}, \n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPrestamoCancelado",
+      "fields": [
+        {
+          "Nombre": "fechaCancelacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de cancelación."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor de la operación."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFMT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

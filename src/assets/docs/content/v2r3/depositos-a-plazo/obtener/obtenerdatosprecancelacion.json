@@ -1,0 +1,107 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenerdatosprecancelacion",
+  "pageTitle": "Obtener Datos de Precancelación",
+  "description": "Método para obtener la simulación de la precancelación de un depósito a plazo para una fecha dada.",
+  "pubName": "BTDepositosAPlazo.ObtenerDatosPrecancelacion",
+  "programa": "RBTPG636",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de la precancelación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPrecancelar",
+      "Tipo": "<a href=\"#sbtdatoprecancelar\">sBTDatoPrecancelar</a>",
+      "Comentarios": "Datos de la precancelación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió la fecha."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "La operación no corresponde a un depósito a plazo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ObtenerDatosPrecancelacion>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>853547DAE3BFB2C1EC0A3148</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>100</bts:operacionUId>\n         <bts:fecha>2024-11-11</bts:fecha>\n      </bts:BTDepositosAPlazo.ObtenerDatosPrecancelacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatosPrecancelacion=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": 100,\n   \"fecha\": \"2024-11-11\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ObtenerDatosPrecancelacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>MC</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>853547DAE3BFB2C1EC0A3148</Token>\n         </Btinreq>\n         <sdtPrecancelar>\n            <tasaDescripcion>Efectiva Anual</tasaDescripcion>\n            <fechaVencimiento>2020-06-19</fechaVencimiento>\n            <datosAdicionales>\n               <detalle/>\n            </datosAdicionales>\n            <plazo>90</plazo>\n            <valorInicial>12000.0</valorInicial>\n            <tasaOriginal>3.0</tasaOriginal>\n            <tasaPrecancelacion>3.0</tasaPrecancelacion>\n         </sdtPrecancelar>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-26</Fecha>\n            <Hora>16:19:41</Hora>\n            <Numero>30628</Numero>\n            <Servicio>BTDepositosAPlazo.ObtenerDatosPrecancelacion</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTDepositosAPlazo.ObtenerDatosPrecancelacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtPrecancelar\": {\n      \"tasaDescripcion\": \"Efectiva Anual\",\n      \"fechaVencimiento\": \"2020-06-19\",\n      \"datosAdicionales\": {\n         \"detalle\": \"\"\n      },\n      \"plazo\": 90,\n      \"valorInicial\": 12000,\n      \"tasaOriginal\": 3,\n      \"tasaPrecancelacion\": 3\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"3108\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTDepositosAPlazo.ObtenerDocumentoDigital\",\n        \"Fecha\": \"2018-11-21\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"12:09:09\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoPrecancelar",
+      "fields": [
+        {
+          "Nombre": "tasaDescripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la tasa."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtdatoAdicional\">sBTDatoAdicional</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "valorInicial",
+          "Tipo": "Double",
+          "Comentarios": "Valor inicial."
+        },
+        {
+          "Nombre": "tasaOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Tasa original."
+        },
+        {
+          "Nombre": "tasaPrecancelacion",
+          "Tipo": "Double",
+          "Comentarios": "Tasa de precancelación."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoAdicional",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "String",
+          "Comentarios": "Detalle."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

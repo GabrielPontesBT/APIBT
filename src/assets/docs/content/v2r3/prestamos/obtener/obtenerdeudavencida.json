@@ -1,0 +1,52 @@
+{
+  "slug": "prestamos/obtener/obtenerdeudavencida",
+  "pageTitle": "Obtener Deuda Vencida",
+  "description": "Método para obtener la deuda vencida de un préstamo a una determinada fecha.",
+  "pubName": "BTPrestamos.ObtenerDeudaVencida",
+  "programa": "RBTPG404",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    },
+    {
+      "Nombre": "fechaDeCalculo",
+      "Tipo": "Date",
+      "Comentarios": "Fecha a la que se calcula la deuda."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "deuda",
+      "Tipo": "Double",
+      "Comentarios": "Deuda a la fecha."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDeudaVencida>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>2062732190F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>12</bts:operacionUId>\n         <bts:fechaDeCalculo>2020-11-11</bts:fechaDeCalculo>\n      </bts:BTPrestamos.ObtenerDeudaVencida>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerDeudaVencidaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>2062732190F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <deuda>262752.52</deuda>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPrestamos.ObtenerDeudaVencida</Servicio>\n            <Fecha>2019-11-19</Fecha>\n            <Hora>16:56:39</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>6989</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPrestamos.ObtenerDeudaVencidaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

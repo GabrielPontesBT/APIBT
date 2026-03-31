@@ -1,0 +1,50 @@
+{
+  "slug": "usuarios/habilitarusuario",
+  "pageTitle": "Habilitar Usuario",
+  "description": "Método para habilitar un usuario que se encuentra inhabilitado.",
+  "pubName": "BTUsuarios.HabilitarUsuario",
+  "programa": "RBTPG394",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "usuario",
+      "Tipo": "String",
+      "Comentarios": "Identificador del usuario."
+    },
+    {
+      "Nombre": "fechaDesde",
+      "Tipo": "Date",
+      "Comentarios": "Fecha desde la que se encuentra inhabilitado."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar usuario a habilitar."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar fecha desde."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se puede eliminar. Registro no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.HabilitarUsuario>\n         <bts:Btinreq>\n            <bts:Device>GP</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>bc8b678bc44A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:usuario>GPONTES</bts:usuario>\n         <bts:fechaDesde>2022-01-01</bts:fechaDesde>\n      </bts:BTUsuarios.HabilitarUsuario>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarUsuario' \\\n    -H 'cache-control: no-cache' \\\n    -H 'content-type: application/json' \\\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n    -d '{\n    \"Btinreq\": {\n        \"Device\": \"GP\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\n    },\n   \"Usuario\": \"GPONTES\",\n   \"fechaDesde\": \"2022-01-01\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTUsuarios.HabilitarUsuarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GP</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>bc8b678bc44A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>839</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTUsuarios.HabilitarUsuario</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2022-05-12</Fecha>\n            <Hora>15:35:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTUsuarios.HabilitarUsuarioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"GP\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\n    },\n    \"Erroresnegocio\": {\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"839\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTUsuarios.HabilitarUsuario\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2022-05-12\",\n        \"Hora\": \"15:35:54\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

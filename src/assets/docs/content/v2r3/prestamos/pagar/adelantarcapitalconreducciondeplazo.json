@@ -1,0 +1,149 @@
+{
+  "slug": "prestamos/pagar/adelantarcapitalconreducciondeplazo",
+  "pageTitle": "Adelantar Capital Con Reducción De Plazo",
+  "description": "Método para realizar el pago de cuota de un préstamo con reducción de plazo.",
+  "pubName": "BTPrestamos.AdelantarCapitalConReduccionDePlazo",
+  "programa": "RBTPG555",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "operacionUId_Cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cobro."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'S' para este método]."
+    },
+    {
+      "Nombre": "modalidadIntereses",
+      "Tipo": "String",
+      "Comentarios": "Modalidad de intereses. Se pueden enviar los siguientes <a href=\"#valores\">valores</a>."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador único de operación de cobro."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se ingresó la modalidad de intereses."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "El valor del campo modalidadIntereses tiene que ser CP o SP."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "51002",
+      "Descripción": "La operación no existe."
+    },
+    {
+      "Código": "51003",
+      "Descripción": "La operación de cobro no existe."
+    },
+    {
+      "Código": "51012",
+      "Descripción": "La operación esta cancelada."
+    },
+    {
+      "Código": "51013",
+      "Descripción": "La operación de cobro esta cancelada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.AdelantarCapitalConReduccionDePlazo>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>212</bts:operacionUId>\n         <bts:clienteUId>61</bts:clienteUId>\n         <bts:importe>30</bts:importe>\n         <bts:operacionUId_Cobro>21</bts:operacionUId_Cobro>\n         <bts:referencia></bts:referencia>\n         <bts:modalidadIntereses>SP</bts:modalidadIntereses>\n      </bts:BTPrestamos.AdelantarCapitalConReduccionDePlazo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AdelantarCapitalConReduccionDePlazo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"operacionUId\": 212,\n    \"clienteUId\": 61,\n    \"importe\": 30,\n    \"operacionUId_Cobro\": 21,\n    \"referencia\": \"\",\n    \"modalidadIntereses\": \"SP\"\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.AdelantarCapitalConReduccionDePlazoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\n         </Btinreq>\n         <movimientoUId>67</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20604</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.AdelantarCapitalConReduccionDePlazo</Servicio>\n            <Fecha>2024-05-21</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>15:43:23</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.AdelantarCapitalConReduccionDePlazoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"movimientoUId\": 67,\n    \"Erroresnegocio\": \"\",\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.AdelantarCapitalConReduccionDePlazo\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": [
+    {
+      "elementValName": "modalidadIntereses",
+      "listHeader": "Valor,Comentarios",
+      "fields": [
+        {
+          "Valor": "SP",
+          "Comentarios": "Sin perdón."
+        },
+        {
+          "Valor": "CP",
+          "Comentarios": "Con perdón."
+        }
+      ],
+      "description": "Este campo tiene dos opciones:"
+    }
+  ]
+}

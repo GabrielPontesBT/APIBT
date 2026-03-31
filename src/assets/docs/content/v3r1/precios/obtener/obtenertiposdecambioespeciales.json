@@ -1,0 +1,53 @@
+{
+  "slug": "precios/obtener/obtenertiposdecambioespeciales",
+  "pageTitle": "Obtener Tipos de Cambio Especiales",
+  "description": "Método para obtener un listado de los tipos de cambio especiales.",
+  "pubName": "BTPrecios.ObtenerTiposDeCambioEspeciales",
+  "programa": "RBTPG568",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtTiposDeCambioEspecial",
+      "Tipo": "<a href=\"#sbttipodecambioespecial\">sBTTipoDeCambioEspecial</a>",
+      "Comentarios": "Listado de pizarras especiales parametrizadas."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <bts:BTPrecios.ObtenerTiposDeCambioEspeciales>\n            <bts:Btinreq>\n                <bts:Device>AV</bts:Device>\n                <bts:Usuario>MINSTALADOR</bts:Usuario>\n                <bts:Requerimiento></bts:Requerimiento>\n                <bts:Canal>BTDIGITAL</bts:Canal>\n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n            </bts:Btinreq>\n        </bts:BTPrecios.ObtenerTiposDeCambioEspeciales>\n    </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTiposDeCambioEspeciales \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n    \"Btinreq\": {\n        \"Requerimiento\": \"1\",\n        \"Device\": \"GP\",\n        \"Token\": \"b4ae55b35c4A8B5C60A82434\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAPENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAPENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <SOAP-ENV:Body>\n        <BTPrecios.ObtenerTiposDeCambioEspecialesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n            <Btinreq>\n                <Device>AV</Device>\n                <Usuario>MINSTALADOR</Usuario>\n                <Requerimiento/>\n                <Canal>BTDIGITAL</Canal>\n                <Token>268b6d23eb4A8B5C60A82434</Token>\n            </Btinreq>\n            <sdtTiposDeCambioEspecial>\n\t\t\t\t<sBTTipoDeCambioEspecial>\n\t\t\t\t\t<identificador>1</identificador>\n\t\t\t\t\t<descripcion>Pizarra Especial</descripcion> \n\t\t\t\t\t<esInteractivo>N</esInteractivo>\n\t\t\t\t</sBTTipoDeCambioEspecial>\n\t\t\t\t<sBTTipoDeCambioEspecial>\n\t\t\t\t\t<identificador>500</identificador>\n\t\t\t\t\t<descripcion>Mercado Libre</descripcion> \n\t\t\t\t\t<esInteractivo>N</esInteractivo>\n\t\t\t\t</sBTTipoDeCambioEspecial>\n\t\t\t\t<sBTTipoDeCambioEspecial>\n\t\t\t\t\t<identificador>501</identificador>\n\t\t\t\t\t<descripcion>Pizarra de Comisiones</descripcion> \n\t\t\t\t\t<esInteractivo>N</esInteractivo>\n\t\t\t\t</sBTTipoDeCambioEspecial>\n            </sdtTiposDeCambioEspecial>\n            <Erroresnegocio></Erroresnegocio>\n            <Btoutreq>\n                <Numero>864</Numero>\n                <Estado>OK</Estado>\n                <Servicio>BTPrecios.ObtenerTiposDeCambioEspeciales</Servicio>\n                <Requerimiento/>\n                <Fecha>2017-12-18</Fecha>\n                <Hora>17:07:19</Hora>\n                <Canal>BTDIGITAL</Canal>\n            </Btoutreq>\n        </BTPrecios.ObtenerTiposDeCambioEspecialesResponse>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Device\": \"AV\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n    },\n\t\"sdtTiposDeCambioEspecial\": {\n\t   \"sBTTipoDeCambioEspecial\": [\n\t\t  {\n\t\t\t\"identificador\": 1,\n\t\t\t\"descripcion\": \"Pizarra Especial\",\n\t\t\t\"esInteractivo\": \"N\"\n\t\t  },\n\t\t  {\n\t\t\t\"identificador\": 500,\n\t\t\t\"descripcion\": \"Mercado Libre\",\n\t\t\t\"esInteractivo\": \"N\"\n\t\t  },\n\t\t  {\n\t\t\t\"identificador\": 501,\n\t\t\t\"descripcion\": \"Pizarra de Comisiones\",\n\t\t\t\"esInteractivo\": \"N\"\n\t\t  }\n\t   ]\n\t},\n    \"Btoutreq\": {\n        \"Numero\": \"103\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrecios.ObtenerTiposDeCambioEspeciales\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-07-22\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"16:00:37\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTipoDeCambioEspecial",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "esInteractivo",
+          "Tipo": "Double",
+          "Comentarios": "¿Es interactiva? (S o N)."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la pizarra."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

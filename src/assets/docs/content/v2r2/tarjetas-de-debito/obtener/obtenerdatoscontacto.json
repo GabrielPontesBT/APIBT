@@ -1,0 +1,68 @@
+{
+  "slug": "tarjetas-de-debito/obtener/obtenerdatoscontacto",
+  "pageTitle": "Obtener Datos de Contacto",
+  "description": "Método para obtener los datos de contacto de una tarjeta de débito.",
+  "pubName": "BTTarjetasDeDebito.ObtenerDatosContacto",
+  "programa": "RBTPG634",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosContacto",
+      "Tipo": "<a href=\"#sbtdatoscontacto\">sBTDatosContacto</a>",
+      "Comentarios": "Datos del contacto de tarjeta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de tarjeta de débito."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperaron los datos de contacto para el Identificador de tarjeta."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ObtenerDatosContacto>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>A75742B0A52C1D7C89252EB0</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000002085</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.ObtenerDatosContacto>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerDatosContacto' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n   \"Btinreq\": {\n      \"Device\": \"AS\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Requerimiento\": \"\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"jh2c02c95a4A8B5C60A82434\"\n   },\n   \"tarjetaUId\": \"2000002085\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ObtenerDatosContactoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AS</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>E6B6A4E746ABD90893FEEF74</Token>\n         </Btinreq>\n         <sdtDatosContacto>\n            <codigoDomicilio>1</codigoDomicilio>\n            <correoElectronico>AJBantotal@HOTMAIL.COM.UY</correoElectronico>\n            <numeroTelefono>422306581</numeroTelefono>\n         </sdtDatosContacto>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n         <Numero>3103520</Numero>\n            <Servicio>BTTarjetasDeDebito.ActualizarInformacionContacto</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2025-05-26</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>15:03:32</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ObtenerDatosContactoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n   \"Btinreq\": {\n        \"Device\": \"AS\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"E6B6A4E746ABD90893FEEF74\"\n      },\n      \"sdtDatosContacto\": {\n            \"codigoDomicilio\": \"1\",\n            \"correoElectronico\": \"AJBantotal@HOTMAIL.COM.UY\",\n            \"numeroTelefono\": \"422306581\"\n        },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"3113620\",\n        \"Servicio\": \"BTTarjetasDeDebito.ObtenerDatosContacto\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2025-05-26\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"15:03:32\",\n        \"Canal\": \"BTDIGITAL\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosContacto",
+      "fields": [
+        {
+          "Nombre": "codigoDomicilio",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de domicilio."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "numeroTelefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

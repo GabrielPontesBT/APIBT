@@ -1,0 +1,126 @@
+{
+  "slug": "cuentas-vista/beneficiarios/obtenerbeneficiarios",
+  "pageTitle": "Obtener Beneficiarios",
+  "description": "Método para obtener los beneficiarios de una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerBeneficiarios",
+  "programa": "RBTPG630",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtBeneficiarios",
+      "Tipo": "<a href=\"#sbtbeneficiario\">sBTBeneficiario</a>",
+      "Comentarios": "Listado de los beneficiarios."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador único de la operación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la operación origen para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La operación ingresada no corresponde a una cuenta vista."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontraron beneficiaros para el identificador ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerBeneficiarios>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>54878527AF5867CA94C680B0</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>789</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerBeneficiarios>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerBeneficiarios=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"operacionUId\": 789\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerBeneficiariosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>54878527AF5867CA94C680B0</Token>\n         </Btinreq>\n         <sdtBeneficiarios>\n            <sBTBeneficiario>\n               <numeroDocumento>13348789</numeroDocumento>\n               <parentesco>Padre</parentesco>\n               <pais>URUGUAY</pais>\n               <tipoDocumentoId>1</tipoDocumentoId>\n               <participacion>100.0</participacion>\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\n               <paisDocumentoId>845</paisDocumentoId>\n               <personaUId>193</personaUId>\n               <correlativo>1</correlativo>\n               <telefono>64211</telefono>\n               <nombre>Prueba</nombre>\n               <parentescoId>41</parentescoId>\n               <apellido/>\n            </sBTBeneficiario>\n         </sdtBeneficiarios>\n         <Erroresnegocio/>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-22</Fecha>\n            <Hora>13:14:24</Hora>\n            <Numero>26946</Numero>\n            <Servicio>BTCuentasVista.ObtenerBeneficiarios</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerBeneficiariosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"sdtBeneficiarios\": {\n         \"sBTBeneficiario\": {\n         \"numeroDocumento\": 13348789,\n         \"parentesco\": \"Padre\",\n         \"pais\": \"URUGUAY\",\n         \"tipoDocumentoId\": 1,\n         \"participacion\": 100,\n         \"tipoDocumento\": \"Cédula Identidad\",\n         \"paisDocumentoId\": 845,\n         \"personaUId\": 193,\n         \"correlativo\": 1,\n         \"telefono\": 64211,\n         \"nombre\": \"Prueba\",\n         \"parentescoId\": 41,\n         \"apellido\": \"\"\n         }\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCuentasVista.ObtenerBeneficiarios\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTBeneficiario",
+      "fields": [
+        {
+          "Nombre": "apellido",
+          "Tipo": "String",
+          "Comentarios": "Apellido."
+        },
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "numeroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Numero de documento del beneficiario."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "País."
+        },
+        {
+          "Nombre": "paisDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país del documento."
+        },
+        {
+          "Nombre": "parentesco",
+          "Tipo": "String",
+          "Comentarios": "Parentesco del beneficiario."
+        },
+        {
+          "Nombre": "parentescoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del parentesco."
+        },
+        {
+          "Nombre": "participacion",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de participación del beneficiario."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la persona."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "personas/agregar/agregartelefono",
+  "pageTitle": "Agregar Teléfono",
+  "description": "Método para agregar el teléfono de una persona.",
+  "pubName": "BTPersonas.AgregarTelefono",
+  "programa": "RBTPG483",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "numeroTelefono",
+      "Tipo": "String",
+      "Comentarios": "Número de teléfono."
+    },
+    {
+      "Nombre": "tipoTelefonoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de teléfono."
+    },
+    {
+      "Nombre": "domicilioId",
+      "Tipo": "Byte",
+      "Comentarios": "Identificador de tipo de domicilio."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "telefonoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador correlativo de teléfono."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar al menos un teléfono."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el tipo del teléfono."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el código del domicilio."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No existe persona con los datos ingresados."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El número del teléfono es incorrecto (es muy corto)."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El número del teléfono es incorrecto (es muy largo)."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "El número del teléfono no acepta caracteres."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.AgregarTelefono>\n         <bts:Btinreq>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>A088577A8D1E89A20E6EF27D</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>61</bts:personaUId>\n         <bts:numeroTelefono>099274742</bts:numeroTelefono>\n         <bts:tipoTelefonoId>2</bts:tipoTelefonoId>\n         <bts:domicilioId>1</bts:domicilioId>\n      </bts:BTPersonas.AgregarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarTelefono' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"GP\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": \"61\",\n   \"numeroTelefono\": \"099274742\",\n   \"tipoTelefonoId\": \"2\",\n   \"domicilioId\": \"1\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.AgregarTelefonoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>A088577A8D1E89A20E6EF27D</Token>\n         </Btinreq>\n         <telefonoId>1</telefonoId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>10268</Numero>\n            <Servicio>BTPersonas.AgregarTelefono</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-05</Fecha>\n            <Hora>10:47:23</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.AgregarTelefonoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"AV\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"fa2c02c95a4A8B5C60A82434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"111397\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.AgregarTelefono\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2021-10-15\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"13:14:15\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

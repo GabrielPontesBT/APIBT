@@ -1,0 +1,86 @@
+{
+  "slug": "parametros-base/obteneropciongeneralpormodulo",
+  "pageTitle": "Obtener Opción General Por Módulo",
+  "description": "Método para obtener los datos de una opción general de un determinado módulo.",
+  "pubName": "BTParametrosBase.ObtenerOpcionGeneralPorModulo",
+  "programa": "RBTPG443",
+  "scope": "Institucional",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "empresaId",
+      "Tipo": "Short",
+      "Comentarios": "Código de empresa [Hidden]."
+    },
+    {
+      "Nombre": "modulo",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de módulo Bantotal."
+    },
+    {
+      "Nombre": "codigo",
+      "Tipo": "Int",
+      "Comentarios": "Código de la opción general de procesos."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtOpcionGeneralModulo",
+      "Tipo": "<a href=\"#sbtopciongeneral\">sBTOpcionGeneral</a>",
+      "Comentarios": "Datos de la opción general de procesos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el módulo."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió identificador de opción general."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El módulo ingresado no es correcto."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se encontró registro para la opción general ingresada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTParametrosBase.ObtenerOpcionGeneralPorModulo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>47D750A861C4243EDE981344</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:modulo>21</bts:modulo>\n         <bts:codigo>9</bts:codigo>\n      </bts:BTParametrosBase.ObtenerOpcionGeneralPorModulo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerOpcionGeneralPorModulo \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Device\": \"GP\",\n      \"Requerimiento\": \"1\",\n      \"Token\": \"200f0b8b654A8B5C60A82434\"\n    },\n   \"modulo\": 21,\n   \"codigo\": \"2850\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTParametrosBase.ObtenerOpcionGeneralPorModuloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>47D750A861C4243EDE981344</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <sdtOpcionGeneralModulo>\n            <identificador>9</identificador>\n            <descripcion>Ajustar fecha fin de mes PCC3</descripcion>\n            <valor>S</valor>\n         </sdtOpcionGeneralModulo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTParametrosBase.ObtenerOpcionGeneralPorModulo</Servicio>\n            <Fecha>2022-11-17</Fecha>\n            <Hora>11:24:03</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>458</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTParametrosBase.ObtenerOpcionGeneralPorModuloResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "' \n{ \n    \"Btinreq\": { \n\t  \"Device\": \"GP\", \n\t  \"Usuario\": \"INSTALADOR\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Token\": \"47D750A861C4243EDE981344\" \n\t}, \n\t\"sdtOpcionGeneralModulo\": { \n\t  \"descripcion\": \"Ajustar fecha fin de mes PCC3\", \n\t  \"identificador\": \"9\", \n\t  \"valor\": \"S\" \n\t}, \n\t\"Btoutreq\": { \n\t  \"Numero\": \"109140\", \n\t  \"Estado\": \"OK\", \n\t  \"Servicio\": \"BTParametrosBase.ObtenerOpcionGeneralPorModulo\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Fecha\": \"2020-11-24\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Hora\": \"13:29:43\" \n\t} \n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTOpcionGeneral",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la opción general de procesos."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Código de la opción general de procesos."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de la opción general de procesos (S/N)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

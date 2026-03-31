@@ -1,0 +1,328 @@
+{
+  "slug": "microfinanzas/simular/simularprestamoplazofijo",
+  "pageTitle": "Simular Plazo Fijo",
+  "description": "Método para simular el alta de un préstamo plazo fijo para un crédito individual.",
+  "pubName": "BTMicrofinanzas.SimularPlazoFijo",
+  "programa": "RBTPG424",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sBTSimulacionPlazoFijo",
+      "Tipo": "<a href=\"#sbtsimulacionplazofijo\">sBTSimulacionPlazoFijo</a>",
+      "Comentarios": "Datos de la simulación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSimulacion",
+      "Tipo": "<a href=\"#sbtsimulacionprestamo\">sBTSimulacionPrestamo</a>",
+      "Comentarios": "Datos del préstamo simulado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la solicitud."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de producto."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El producto indicado no es válido."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "El monto solicitado no puede ser 0."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "Debe ingresar plazo o fecha de vencimiento."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.SimularPlazoFijo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1571835133CD285A89A23FBE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTSimulacionPlazoFijo>\n            <bts:solicitudUId>10972</bts:solicitudUId>\n            <bts:clienteUId>2</bts:clienteUId>\n            <bts:productoUId>29</bts:productoUId>\n            <bts:fechaVencimiento/>\n            <bts:plazo>365</bts:plazo>\n            <bts:monto>35000</bts:monto>\n            <bts:pizarra/>\n            <bts:tasa/>\n            <bts:destinoCredito>28</bts:destinoCredito>\n            <bts:datosAdicionales/>\n         </bts:sBTSimulacionPlazoFijo>\n      </bts:BTMicrofinanzas.SimularPlazoFijo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularPlazoFijo \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"sBTSimulacionPlazoFijo\": {\n          \"solicitudUId\": \"10972\",\n          \"clienteUId\": \"2\",\n          \"productoUId\": \"29\",\n          \"plazo\": \"365\",\n          \"monto\": \"35000\",\n          \"destinoCredito\": \"28\"\n        }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.SimularPlazoFijoResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>95</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1571835133CD285A89A23FBE</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <sdtSimulacion>\n            <operacionUId>18</operacionUId>\n            <producto>\n               <productoUId>29</productoUId>\n               <nombre>PRÉSTAMOS SECTORIALES (PASIVO), Plazo Fijo</nombre>\n               <moneda/>\n               <papel>$</papel>\n            </producto>\n            <capital>35000.00</capital>\n            <valorCuota>40323.00</valorCuota>\n            <intereses>5323.00</intereses>\n            <tasa>15.000000</tasa>\n            <tasaEfectiva>0.000000</tasaEfectiva>\n            <tasaEfectivaAnual>14.985122</tasaEfectivaAnual>\n            <tasaNominalAnual>15.000000</tasaNominalAnual>\n            <totalPrestamo>40323.00</totalPrestamo>\n            <fechaValor>2020-10-20</fechaValor>\n            <fechaVencimiento>2021-10-20</fechaVencimiento>\n            <fechaPrimerPago>2021-10-20</fechaPrimerPago>\n            <plazo>365</plazo>\n            <otrosConceptos></otrosConceptos>\n            <cronograma>\n               <sBTCuotaPrestamoAlta>\n                  <fechaPago>2021-10-20</fechaPago>\n                  <importe>40323.00</importe>\n                  <redondeo>0.00</redondeo>\n               </sBTCuotaPrestamoAlta>\n            </cronograma>\n         </sdtSimulacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.SimularPlazoFijo</Servicio>\n            <Fecha>2019-10-18</Fecha>\n            <Hora>15:43:17</Hora>\n            <Requerimiento>95</Requerimiento>\n            <Numero>1317</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.SimularPlazoFijoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"sdtSimulacion\": {\n          \"operacionUId\": \"18\",\n          \"producto\": {\n            \"productoUId\": \"29\",\n            \"nombre\": \"PRÉSTAMOS SECTORIALES (PASIVO), Plazo Fijo\",\n            \"papel\": \"$\"\n          },\n          \"capital\": \"35000.00\",\n          \"valorCuota\": \"40323.00\",\n          \"intereses\": \"5323.00\",\n          \"tasa\": \"15.000000\",\n          \"tasaEfectiva\": \"0.000000\",\n          \"tasaEfectivaAnual\": \"14.985122\",\n          \"tasaNominalAnual\": \"15.000000\",\n          \"totalPrestamo\": \"40323.00\",\n          \"fechaValor\": \"2020-10-20\",\n          \"fechaVencimiento\": \"2021-10-20\",\n          \"fechaPrimerPago\": \"2021-10-20\",\n          \"plazo\": \"365\",\n          \"cronograma\": {\n            \"sBTCuotaPrestamoAlta\": {\n              \"fechaPago\": \"2021-10-20\",\n              \"importe\": \"40323.00\",\n              \"redondeo\": \"0.00\"\n            }\n          }\n        },\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTMicrofinanzas.SimularPlazoFijo\",\n          \"Fecha\": \"2019-10-18\",\n          \"Hora\": \"15:43:17\",\n          \"Requerimiento\": \"95\",\n          \"Numero\": \"1317\",\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSimulacionPlazoFijo",
+      "fields": [
+        {
+          "Nombre": "clienteUId*",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cliente."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Importe otros conceptos."
+        },
+        {
+          "Nombre": "destinoCredito",
+          "Tipo": "Long",
+          "Comentarios": "Código de destino del crédito."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de Vencimiento (Obligatorio si no se carga plazo)."
+        },
+        {
+          "Nombre": "monto*",
+          "Tipo": "Double",
+          "Comentarios": "Capital solicitado."
+        },
+        {
+          "Nombre": "pizarra",
+          "Tipo": "Short",
+          "Comentarios": "Tipo de pizarra. Si no se indica toma la preseteada para el producto."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo (Obligatorio si no se carga Fecha de Vencimiento)."
+        },
+        {
+          "Nombre": "productoUId*",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "solicitudUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de instancia Workflow."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa. Si no se indica toma la correspondiente al tipo de pizarra."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "string",
+          "Comentarios": "concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "string",
+          "Comentarios": "texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "double",
+          "Comentarios": "importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSimulacionPrestamo",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital del préstamo."
+        },
+        {
+          "Nombre": "cronograma",
+          "Tipo": "<a href=\"#sbtcuotasimulacion\">sBTCuotaSimulacion</a>",
+          "Comentarios": "Cronograma del préstamo."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
+          "Comentarios": "Importe otros conceptos."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "tasaEfectiva",
+          "Tipo": "Double",
+          "Comentarios": "Tasa efectiva."
+        },
+        {
+          "Nombre": "tasaEfectivaAnual",
+          "Tipo": "Double",
+          "Comentarios": "Tasa efectiva anual."
+        },
+        {
+          "Nombre": "tasaNominalAnual",
+          "Tipo": "Double",
+          "Comentarios": "Tasa nominal anual."
+        },
+        {
+          "Nombre": "totalPrestamo",
+          "Tipo": "Double",
+          "Comentarios": "Total a pagar."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConceptoSalida",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCuotaSimulacion",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Monto de capital en la cuota."
+        },
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "cuota",
+          "Tipo": "Double",
+          "Comentarios": "Importe total de la cuota."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago."
+        },
+        {
+          "Nombre": "impuestos",
+          "Tipo": "Double",
+          "Comentarios": "Monto de impuestos en la cuota."
+        },
+        {
+          "Nombre": "interes",
+          "Tipo": "Double",
+          "Comentarios": "Monto de intereses en la cuota."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Importe correspondiente a otros conceptos."
+        },
+        {
+          "Nombre": "seguros",
+          "Tipo": "Double",
+          "Comentarios": "Monto de seguros en la cuota."
+        },
+        {
+          "Nombre": "tipoCuota",
+          "Tipo": "String",
+          "Comentarios": "Tipo de la cuota (Capital/Interés)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "microfinanzas/grupales/habilitarintegrantedeungrupo",
+  "pageTitle": "Habilitar Integrante de Grupo",
+  "description": "Método para habilitar un integrante de un grupo de crédito.",
+  "pubName": "BTMicrofinanzas.HabilitarIntegranteGrupo",
+  "programa": "RBTPG437",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "grupoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió código de grupo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se puede habilitar el integrante."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.HabilitarIntegranteGrupo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1204799820CD285A89A23FBE</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:grupoId>1</bts:grupoId>\n         <bts:clienteUId>156</bts:clienteUId>\n      </bts:BTMicrofinanzas.HabilitarIntegranteGrupo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.HabilitarIntegranteGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1414147105CD285A89A23FBE</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.HabilitarIntegranteGrupo</Servicio>\n            <Fecha>2020-04-20</Fecha>\n            <Hora>16:59:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>5004</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.HabilitarIntegranteGrupoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

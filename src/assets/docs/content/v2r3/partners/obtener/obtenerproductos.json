@@ -1,0 +1,198 @@
+{
+  "slug": "partners/obtener/obtenerproductos",
+  "pageTitle": "Obtener Productos",
+  "description": "Método para retornar los productos de la concesionaria.",
+  "pubName": "BTPartners.ObtenerProductos",
+  "programa": "RBTPNV06",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "sdtVehiculo",
+      "Tipo": "<a href=\"#sbtvehiculo\">sBTVehiculo</a>",
+      "Comentarios": "Datos del vehículo."
+    },
+    {
+      "Nombre": "stringAux",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'S' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+      "Comentarios": "Listado de los productos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió Partner ni canal."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se recibió vendedor."
+    },
+    {
+      "Código": "30020",
+      "Descripción": "No se recibió identificador de la versión."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recibió estado del vehículo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ObtenerProductos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\n            <bts:vendedorUId>3</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n         <bts:sdtVehiculo>\n            <bts:monedaPrecio></bts:monedaPrecio>\n            <bts:estadoId>1</bts:estadoId>\n            <bts:datosAdicionales>\n               <bts:SdtsBTConcepto>\n                  <bts:texto></bts:texto>\n                  <bts:valor></bts:valor>\n                  <bts:concepto></bts:concepto>\n               </bts:SdtsBTConcepto>\n            </bts:datosAdicionales>\n            <bts:versionUId>1</bts:versionUId>\n            <bts:precio></bts:precio>\n         </bts:sdtVehiculo>\n      </bts:BTPartners.ObtenerProductos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerProductos' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n    \"sdtPartner\": {\n          \"puntoVentaUId\": 2,\n          \"vendedorUId\": 3,\n          \"partnerUId\": 1\n        },\n        \"sdtVehiculo\": {\n          \"monedaPrecio\": \"\",\n          \"estadoId\": 1,\n          \"datosAdicionales\": {\n            \"SdtsBTConcepto\": {\n              \"texto\": \"\",\n              \"valor\": \"\",\n              \"concepto\": \"\"\n            }\n          },\n          \"versionUId\": 1,\n          \"precio\": \"\"\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ObtenerProductosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtProductos>\n            <sBTProducto>\n               <moneda>CRC</moneda>\n               <papel>$</papel>\n               <otrosConceptos>\n                  <SdtsBTConcepto>\n                     <texto>N</texto>\n                     <valor>0.00</valor>\n                     <concepto>SOLICITA_BALLOON</concepto>\n                  </SdtsBTConcepto>\n               </otrosConceptos>\n               <productoUId>200</productoUId>\n               <nombre>Vehiculares</nombre>\n            </sBTProducto>\n            <sBTProducto>\n               <moneda>CRC</moneda>\n               <papel>$</papel>\n               <otrosConceptos>\n                  <SdtsBTConcepto>\n                     <texto>N</texto>\n                     <valor>0.00</valor>\n                     <concepto>SOLICITA_BALLOON</concepto>\n                  </SdtsBTConcepto>\n               </otrosConceptos>\n               <productoUId>198</productoUId>\n               <nombre>Amortización Automática TF</nombre>\n            </sBTProducto>\n         </sdtProductos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16867</Numero>\n            <Servicio>BTPartners.ObtenerProductos</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-27</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>13:47:58</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPartners.ObtenerProductosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"1\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cFC33CD93505A5382434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"sdtProductos\": {\n        \"sBTProducto\": [\n        {\n            \"moneda\": \"CRC\",\n            \"papel\": \"$\",\n            \"otrosConceptos\": {\n            \"SdtsBTConcepto\": {\n                \"texto\": \"N\",\n                \"valor\": 0,\n                \"concepto\": \"SOLICITA_BALLOON\"\n            }\n            },\n            \"productoUId\": 200,\n            \"nombre\": \"Vehiculares\"\n        },\n        {\n            \"moneda\": \"CRC\",\n            \"papel\": \"$\",\n            \"otrosConceptos\": {\n            \"SdtsBTConcepto\": {\n                \"texto\": \"N\",\n                \"valor\": 0,\n                \"concepto\": \"SOLICITA_BALLOON\"\n            }\n            },\n            \"productoUId\": 198,\n            \"nombre\": \"Amortización Automática TF\"\n        }\n        ]\n    },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Numero\": \"111399\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPartners.ObtenerProductos\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-10\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"17:08:56\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTVehiculo",
+      "fields": [
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "estadoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del estado."
+        },
+        {
+          "Nombre": "monedaPrecio",
+          "Tipo": "Short",
+          "Comentarios": "Precio de la moneda."
+        },
+        {
+          "Nombre": "precio",
+          "Tipo": "Double",
+          "Comentarios": "Precio."
+        },
+        {
+          "Nombre": "versionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la versión."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconceptosalida\">sBTConcepto</a>",
+          "Comentarios": "Listado de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador del producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConceptoSalida",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

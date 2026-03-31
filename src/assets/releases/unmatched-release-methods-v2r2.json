@@ -1,0 +1,98 @@
+[
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTPersonas.ActualizarTelefono"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTPrestamos.ObtenerPrestamosPorRangoMora"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTPrestamos.ObtenerPrestamosAVencer"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTPrestamos.ActualizarPrestamosConEvento"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTIndicadores.ObtenerSucursalesCajas"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTIndicadores.ObtenerCuadreMonedasSaldos"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTIndicadores.ObtenerRubrosBolsas"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTDepositosAPlazo.ObtenerPlazosHabilitados"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPartners.ObtenerPartners"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPartners.ObtieneVersiones"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPersonas.EvaluarPAE"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPersonas.CrearReducido"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPrestamos.ObtenerPrestamosSinMora"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPrestamos.ObtenerDetalleOfertaAmortizable"
+  },
+  {
+    "release": "Release Noviembre 2023",
+    "method": "BTPrestamos.ObtenerDatosProximoVencimiento"
+  },
+  {
+    "release": "Release Mayo 2024",
+    "method": "BTClientes.ActualizarInformacionEmpleado"
+  },
+  {
+    "release": "Release Mayo 2024",
+    "method": "BTPersonas.ActualizarInformacionEmpleado"
+  },
+  {
+    "release": "Release Noviembre 2024",
+    "method": "BTDepositosAPlazo.ActualizarBeneficiario"
+  },
+  {
+    "release": "Release Noviembre 2024",
+    "method": "BTDepositosAPlazo.AgregarBeneficiarios"
+  },
+  {
+    "release": "Release Noviembre 2024",
+    "method": "BTUsuarios.HablilitarEnCanal"
+  },
+  {
+    "release": "Release Mayo 2025",
+    "method": "BTAhorroProgramado.ObtenerSituacion"
+  },
+  {
+    "release": "Release Mayo 2025",
+    "method": "BTPrecios.ObtenerTiposDeCambioEspecial"
+  },
+  {
+    "release": "Release Noviembre 2025",
+    "method": "BTPersonas.ActualizarReducido"
+  },
+  {
+    "release": "Release Noviembre 2025",
+    "method": "BTPersonas.CrearReducido"
+  }
+]

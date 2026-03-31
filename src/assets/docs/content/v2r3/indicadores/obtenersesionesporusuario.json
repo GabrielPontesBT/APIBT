@@ -1,0 +1,48 @@
+{
+  "slug": "indicadores/obtenersesionesporusuario",
+  "pageTitle": "Obtener Sesiones Por Usuario",
+  "description": "Método para obtener la cantidad de sesiones abiertas por usuario.",
+  "pubName": "BTIndicadores.ObtenerSesionesPorUsuario",
+  "programa": "RBTPG711",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtSesionesPorUsuario",
+      "Tipo": "<a href=\"#sbtsesionesporusuario\">sBTSesionesPorUsuario</a>",
+      "Comentarios": "Colección de datos de sesiones por usuario."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTIndicadores.ObtenerSesionesPorUsuario>\n         <bts:Btinreq>\n            <bts:Device>MC</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>3</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>3483F7F3C05B0DDF791C90A3</bts:Token>\n         </bts:Btinreq>\n      </bts:BTIndicadores.ObtenerSesionesPorUsuario>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerSesionesPorUsuario' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTIndicadores.ObtenerSesionesPorUsuarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>MC</Device>\n            <Requerimiento>3</Requerimiento>\n            <Token>3483F7F3C05B0DDF791C90A3</Token>\n         </Btinreq>\n         <sdtSesionesPorUsuario>\n            <sBTSesionesPorUsuario>\n               <cantidadSesiones>438</cantidadSesiones>\n               <usuario>INSTALADOR</usuario>\n            </sBTSesionesPorUsuario>\n            <sBTSesionesPorUsuario>\n               <cantidadSesiones>5</cantidadSesiones>\n               <usuario>BANTOTAL</usuario>\n            </sBTSesionesPorUsuario>\n            <sBTSesionesPorUsuario>\n               <cantidadSesiones>1</cantidadSesiones>\n               <usuario>ASESOR</usuario>\n            </sBTSesionesPorUsuario>\n         </sdtSesionesPorUsuario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-05-31</Fecha>\n            <Hora>17:15:49</Hora>\n            <Numero>25899</Numero>\n            <Servicio>BTIndicadores.ObtenerSesionesPorUsuario</Servicio>\n            <Requerimiento>3</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTIndicadores.ObtenerSesionesPorUsuarioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},    \n\t\"sdtSesionesPorUsuario\": {\n\t\t\"sBTSesionesPorUsuario\": [\n\t\t\t{\n\t\t\t\t\"cantidadSesiones\": \"438\",\n\t\t\t\t\"usuario\": \"INSTALADOR\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"cantidadSesiones\": \"5\",\n\t\t\t\t\"usuario\": \"BANTOTAL\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"cantidadSesiones\": \"1\",\n\t\t\t\t\"usuario\": \"ASESOR\"\n\t\t\t}\n\t\t]\n\t},\n    \"Btoutreq\": {\n        \"Numero\": \"397\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTIndicadores.ObtenerSesionesPorUsuario\",\n        \"Fecha\": \"2018-05-02\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"18:40:30\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSesionesPorUsuario",
+      "fields": [
+        {
+          "Nombre": "cantidadsesiones",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de sesiones abiertas."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Identificador de usuario."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

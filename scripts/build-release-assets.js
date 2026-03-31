@@ -4,9 +4,8 @@ const path = require('path');
 const projectRoot = process.cwd();
 const docsRoot = path.join(projectRoot, 'src', 'assets', 'docs', 'content');
 const releasesRoot = path.join(projectRoot, 'src', 'assets', 'releases');
-const releaseListPath = path.join(releasesRoot, 'listado_api_completa_por_release.txt');
-const pubnameSlugMapPath = path.join(releasesRoot, 'pubname-slugs.json');
-const unmatchedPath = path.join(releasesRoot, 'unmatched-release-methods.json');
+
+const VERSIONS = ['v2r2', 'v2r3', 'v3r1'];
 
 function normalizeReleaseKey(value) {
   return String(value || '')
@@ -47,23 +46,24 @@ function getJsonFiles(dir) {
   return files;
 }
 
-function buildPubNameSlugEntries() {
+function buildPubNameSlugEntries(versionId) {
   const entries = [];
-  const files = getJsonFiles(docsRoot);
+  const versionDir = path.join(docsRoot, versionId);
+  if (!fs.existsSync(versionDir)) return entries;
+
+  const files = getJsonFiles(versionDir);
 
   for (const filePath of files) {
     try {
       const raw = fs.readFileSync(filePath, 'utf8');
       const json = JSON.parse(raw);
-      if (!json.pubName || !json.slug) {
-        continue;
-      }
+      if (!json.pubName || !json.slug) continue;
 
       entries.push({
         key: normalizeReleaseKey(json.pubName),
         path: String(json.slug).split('/')
       });
-    } catch (error) {
+    } catch {
       console.warn(`Skipping invalid JSON: ${filePath}`);
     }
   }
@@ -72,28 +72,22 @@ function buildPubNameSlugEntries() {
   return entries;
 }
 
-function buildUnmatchedList(pathMap) {
+function buildUnmatchedList(versionId, pathMap) {
+  const releaseListPath = path.join(releasesRoot, `Releases-${versionId}.txt`);
+  if (!fs.existsSync(releaseListPath)) return [];
+
   const raw = fs.readFileSync(releaseListPath, 'utf8');
   const unmatched = [];
   let currentRelease = '';
 
   for (const line of raw.split(/\r?\n/)) {
     const trimmed = line.trim();
-    if (!trimmed) {
-      continue;
-    }
-
-    if (/^Release\s+/i.test(trimmed)) {
-      currentRelease = trimmed;
-      continue;
-    }
+    if (!trimmed) continue;
+    if (/^Release\s+/i.test(trimmed)) { currentRelease = trimmed; continue; }
 
     const normalized = normalizeReleaseKey(trimmed);
     if (!pathMap.has(normalized)) {
-      unmatched.push({
-        release: currentRelease,
-        method: trimmed
-      });
+      unmatched.push({ release: currentRelease, method: trimmed });
     }
   }
 
@@ -103,15 +97,25 @@ function buildUnmatchedList(pathMap) {
 function main() {
   fs.mkdirSync(releasesRoot, { recursive: true });
 
-  const entries = buildPubNameSlugEntries();
-  fs.writeFileSync(pubnameSlugMapPath, JSON.stringify(entries, null, 2));
+  let totalEntries = 0;
+  let totalUnmatched = 0;
 
-  const pathMap = new Map(entries.map(entry => [entry.key, entry.path]));
-  const unmatched = buildUnmatchedList(pathMap);
-  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatched, null, 2));
+  for (const version of VERSIONS) {
+    const entries = buildPubNameSlugEntries(version);
+    const pubnameSlugMapPath = path.join(releasesRoot, `pubname-slugs-${version}.json`);
+    fs.writeFileSync(pubnameSlugMapPath, JSON.stringify(entries, null, 2));
 
-  console.log(`Generated ${entries.length} pubName -> slug entries.`);
-  console.log(`Found ${unmatched.length} unmatched release methods.`);
+    const pathMap = new Map(entries.map(e => [e.key, e.path]));
+    const unmatched = buildUnmatchedList(version, pathMap);
+    const unmatchedPath = path.join(releasesRoot, `unmatched-release-methods-${version}.json`);
+    fs.writeFileSync(unmatchedPath, JSON.stringify(unmatched, null, 2));
+
+    console.log(`[${version}] ${entries.length} entradas pubName→slug | ${unmatched.length} sin match`);
+    totalEntries += entries.length;
+    totalUnmatched += unmatched.length;
+  }
+
+  console.log(`\nTotal: ${totalEntries} entradas | ${totalUnmatched} sin match`);
 }
 
 main();

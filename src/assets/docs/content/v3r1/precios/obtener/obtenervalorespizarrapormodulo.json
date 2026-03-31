@@ -1,0 +1,128 @@
+{
+  "slug": "precios/obtener/obtenervalorespizarrapormodulo",
+  "pageTitle": "Obtener Valores de Pizarra Por Módulo",
+  "description": "Método para obtener los valores de una pizarra por Módulo.",
+  "pubName": "BTPrecios.ObtenerValoresPizarraPorModulo",
+  "programa": "RBTPG654",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "modulo",
+      "Tipo": "Int",
+      "Comentarios": "Módulo."
+    },
+    {
+      "Nombre": "tipoPizarra",
+      "Tipo": "Int",
+      "Comentarios": "Tipo de pizarra."
+    },
+    {
+      "Nombre": "papelId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de papel."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha a ser consultada."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "plazo",
+      "Tipo": "Int",
+      "Comentarios": "Plazo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtValorPizarra",
+      "Tipo": "<a href=\"#sbtvalorpizarra\">sBTValorPizarra</a>",
+      "Comentarios": "Datos de la pizarra."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar módulo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar la pizzara a ser consultada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar fecha."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontro el módulo ingresado."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se encontro pizarra con el Id ingresado."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se encontraron registros de tasas para la clave ingresada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerValoresPizarraPorModulo>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>10355d3c5fCD285A89A23FBE</bts:Token>\n            <bts:Requerimiento></bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:modulo>71</bts:modulo>\n         <bts:tipoPizarra>25</bts:tipoPizarra>\n         <bts:papelId>0</bts:papelId>\n         <bts:monedaId>80</bts:monedaId>\n         <bts:fecha>2025-11-13</bts:fecha>\n         <bts:importe>50000000</bts:importe>\n         <bts:plazo></bts:plazo>\n      </bts:BTPrecios.ObtenerValoresPizarraPorModulo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerValoresPizarraPorModulo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 78klf1dc-e332-95b4-1dl8-23ba149h2471' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AS\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"modulo\":\"22\",\n   \"tipoPizarra\":\"32\",\n   \"papelId\":\"0\",\n   \"monedaId\":\"0\",\n   \"fecha\":\"2025-11-13\",\n   \"importe\":\"49999.99\",\n   \"plazo\":\"\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrecios.ObtenerValoresPizarraPorModuloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AS</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento></Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>10355d3c5fCD285A89A23FBE</Token>\n         </Btinreq>\n         <sdtValorPizarra>\n            <sBTValorPizarra>\n               <tasa>20.000000</tasa>\n               <plazo>30</plazo>\n               <tipoTasa>Efectiva Anual</tipoTasa>\n               <tolerancia>0.0000</tolerancia>\n               <fechaVigencia>2025-11-13</fechaVigencia>\n            </sBTValorPizarra>\n            <sBTValorPizarra>\n               <tasa>25.000000</tasa>\n               <plazo>60</plazo>\n               <tipoTasa>Efectiva Anual</tipoTasa>\n               <tolerancia>0.0000</tolerancia>\n               <fechaVigencia>2025-11-13</fechaVigencia>\n            </sBTValorPizarra>\n            <sBTValorPizarra>\n               <tasa>30.000000</tasa>\n               <plazo>90</plazo>\n               <tipoTasa>Efectiva Anual</tipoTasa>\n               <tolerancia>0.0000</tolerancia>\n               <fechaVigencia>2025-11-13</fechaVigencia>\n            </sBTValorPizarra>\n         </sdtValorPizarra>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>15763</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrecios.ObtenerValoresPizarraPorModulo</Servicio>\n            <Requerimiento/>\n            <Fecha>2025-11-13</Fecha>\n            <Hora>15:26:57</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrecios.ObtenerValoresPizarraPorModuloResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AS\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtValorPizarra\": {\n      \"sBTValorPizarra\": [\n         {\n            \"tasa\": \"17.250000\",\n            \"plazo\": \"59\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         },\n         {\n            \"tasa\": \"17.500000\",\n            \"plazo\": \"89\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         },\n         {\n            \"tasa\": \"17.750000\",\n            \"plazo\": \"119\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         },\n         {\n            \"tasa\": \"18.000000\",\n            \"plazo\": \"179\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         },\n         {\n            \"tasa\": \"18.250000\",\n            \"plazo\": \"364\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         },\n         {\n            \"tasa\": \"18.500000\",\n            \"plazo\": \"99999\",\n            \"tipoTasa\": \"Nominal Anual\",\n            \"tolerancia\": \"2.0000\",\n            \"fechaVigencia\": \"2013-12-23\"\n         }\n      ]\n   },\n    \"Btoutreq\": {\n         \"Numero\": \"15764\",\n         \"Estado\": \"OK\",\n         \"Servicio\": \"BTPrecios.ObtenerValoresPizarraPorModulo\",\n         \"Requerimiento\": \"1\",\n         \"Fecha\": \"2025-11-13\",\n         \"Hora\": \"15:28:51\",\n         \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorPizarra",
+      "fields": [
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "tipoTasa",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tasa."
+        },
+        {
+          "Nombre": "tolerancia",
+          "Tipo": "Double",
+          "Comentarios": "Tolerancia."
+        },
+        {
+          "Nombre": "fechaVigencia",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de Vencimiento"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "cuentas-vista/documentos-digitales/obtenerdocumentosdigitales",
+  "pageTitle": "Obtener Documentos Digitales",
+  "description": "Método para obtener un listado de los documentos digitales asociados a una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerDocumentosDigitales",
+  "programa": "RBTPG199",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Si no se ingresa valor en el parámetro 'sucursalId', su valor se asume de la cuenta cliente. Si la opción general 3282 está activada se tomará la sucursal del usuario que ejecuta el servicio.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDocumentosDigitales",
+      "Tipo": "<a href=\"#sbtdocumentodigital\">sBTDocumentoDigital</a>",
+      "Comentarios": "Listado de documentos digitales."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La operación ingresada no corresponde a una cuenta vista."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerDocumentosDigitales>\n         <bts:Btinreq>\n\t\t  <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>1355f5da724A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>21</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerDocumentosDigitales>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerDocumentosDigitales=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": \"21\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerDocumentosDigitalesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1355f5da724A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtDocumentosDigitales>\n            <sBTDocumentoDigitalns:sBTDocumentoDigital xmlns:sBTDocumentoDigitalns=\"http://uy.com.dlya.bantotal/BTSOA/\" xmlns=\"ServiciosBT\">\n               <DocumentoId>87</DocumentoId>\n               <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>\n               <Titulo>Prueba Asociar Contrato</Titulo>\n               <FechaActualizacion>2020-10-10</FechaActualizacion>\n               <FechaVencimiento>2010-10-10</FechaVencimiento>\n            </sBTDocumentoDigitalns:sBTDocumentoDigital>\n         </sdtDocumentosDigitales>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>3090</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasVista.ObtenerDocumentosDigitales</Servicio>\n            <Fecha>2018-11-20</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>17:59:40</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerDocumentosDigitalesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtDocumentosDigitales\": {\n        \"sBTDocumentoDigital\": [\n            {\n                \"Titulo\": \"Prueba Asociar Contrato\",\n                \"FechaActualizacion\": \"2020-10-10\",\n                \"FechaVencimiento\": \"2010-10-10\",\n                \"TipoDocumentoDigital\": \"Contrato\",\n                \"DocumentoId\": \"87\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"3091\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasVista.ObtenerDocumentosDigitales\",\n        \"Fecha\": \"2018-11-20\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"18:01:45\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDocumentoDigital",
+      "fields": [
+        {
+          "Nombre": "documentoId",
+          "Tipo": "Long",
+          "Comentarios": "documentoId del documento digital."
+        },
+        {
+          "Nombre": "fechaActualizacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de actualización del documento digital."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del documento digital."
+        },
+        {
+          "Nombre": "tipoDocumentoDigital",
+          "Tipo": "String",
+          "Comentarios": "Tipo del documento digital."
+        },
+        {
+          "Nombre": "titulo",
+          "Tipo": "String",
+          "Comentarios": "Titulo del documento digital."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

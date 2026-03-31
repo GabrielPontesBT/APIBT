@@ -1,0 +1,154 @@
+{
+  "slug": "personas/agregar/agregarfatca",
+  "pageTitle": "Agregar FATCA",
+  "description": "Método para agregar la información FATCA de una persona.",
+  "pubName": "BTPersonas.AgregarFATCA",
+  "programa": "RBTPCO10",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "sdtInformacionFATCA",
+      "Tipo": "<a href=\"#sbtpcoinformacionfatca\">sBTPCOInformacionFATCA</a>",
+      "Comentarios": "Datos FATCA de la persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "resultado",
+      "Tipo": "String",
+      "Comentarios": "Resultado FATCA"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Error - Datos duplicados."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar al menos una Residencia Fiscal."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El país ingresado no es válido."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Ya existe el registro."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No se puede ingresar residencias fiscales."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "No existe el registro."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "No existe el país indicado."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "No existe el tipo de documento indicado."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "No debe ingresar correlativo para residencia."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Se ingresó la misma residencia dos veces."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.AgregarFATCA>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>d235ac28e6CD285A89A23FBE</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n         </bts:Btinreq>\n         <bts:personaUId>42</bts:personaUId>\n         <bts:sdtInformacionFATCA>\n            <bts:ingresoBrutoEEUU>N</bts:ingresoBrutoEEUU>\n            <bts:residenciasFiscales>\n               <bts:sBTPCOResidenciaFiscal>\n                  <bts:paisId>845</bts:paisId>\n                  <bts:pais></bts:pais>\n                  <bts:codigoTIN>UUUYYY</bts:codigoTIN>\n                  <bts:correlativo>1</bts:correlativo>\n               </bts:sBTPCOResidenciaFiscal>\n            </bts:residenciasFiscales>\n            <bts:permanencia183Dias>S</bts:permanencia183Dias>\n            <bts:tieneGreenCard>S</bts:tieneGreenCard>\n            <bts:residenciaMasPaises>S</bts:residenciaMasPaises>\n            <bts:codigoTIN>ABCDEF</bts:codigoTIN>\n            <bts:pagoFuenteEEUU>N</bts:pagoFuenteEEUU>\n         </bts:sdtInformacionFATCA>\n      </bts:BTPersonas.AgregarFATCA>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarFATCA \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"personaUId\": \"42\",\n   \"sdtInformacionFATCA\": {\n      \"ingresoBrutoEEUU\": \"N\",\n      \"permanencia183Dias\": \"S\",\n      \"tieneGreenCard\": \"S\",\n      \"residenciaMasPaises\": \"S\",\n      \"codigoTIN\": \"ABCDEF\",\n      \"pagoFuenteEEUU\": \"N\",\n      \"residenciasFiscales\": {\n         \"sBTPCOResidenciaFiscal\": {\n            \"paisId\": \"845\",\n            \"codigoTIN\": \"UUUYYY\",\n            \"correlativo\": \"1\"\n         }\n      },\n   }\n}\n'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.AgregarFATCAResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>d235ac28e6CD285A89A23FBE</Token>\n         </Btinreq>\n         <resultado>US Person</resultado>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2021</Numero>\n            <Servicio>BTPersonas.AgregarFATCA</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-03-09</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>12:47:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.AgregarFATCAResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"resultado\": \"US Person\",\n   \"Btoutreq\": {\n      \"Numero\": \"2021\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.AgregarFATCA\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2020-03-09\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"12:47:54\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPCOInformacionFATCA",
+      "fields": [
+        {
+          "Nombre": "codigoTIN",
+          "Tipo": "String",
+          "Comentarios": "Código TIN."
+        },
+        {
+          "Nombre": "ingresoBrutoEEUU",
+          "Tipo": "String",
+          "Comentarios": "Recibe cualquier ingreso bruto procedente de una fuente en los EEUU (S/N)."
+        },
+        {
+          "Nombre": "pagoFuenteEEUU",
+          "Tipo": "String",
+          "Comentarios": "Recibe cualquier pago proveniente de fuentes dentro de los EEUU (S/N)."
+        },
+        {
+          "Nombre": "permanencia183Dias",
+          "Tipo": "String",
+          "Comentarios": "Permanencia de más de 183 días en el último año (S/N)."
+        },
+        {
+          "Nombre": "residenciaMasPaises",
+          "Tipo": "String",
+          "Comentarios": "Residencia en más países."
+        },
+        {
+          "Nombre": "residenciasFiscales",
+          "Tipo": "<a href=\"#sbtpcoresidenciasfiscales\">sBTPCOResidenciasFiscales</a>",
+          "Comentarios": "Listado de residencias."
+        },
+        {
+          "Nombre": "tieneGreenCard",
+          "Tipo": "String",
+          "Comentarios": "Poseedor de la tarjeta verde o \"Green Card\" de los EEUU (S/N)."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPCOResidenciasFiscales",
+      "fields": [
+        {
+          "Nombre": "codigoTIN",
+          "Tipo": "String",
+          "Comentarios": "Código TIN."
+        },
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Short",
+          "Comentarios": "Número de correlativo."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de país."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

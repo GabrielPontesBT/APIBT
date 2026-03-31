@@ -1,35 +1,23 @@
 [
   {
     "release": "Release Noviembre 2018",
-    "method": "BTConfiguración.ObtenerTiposdeDocumentosDigitales"
+    "method": "BTConfiguracionBantotal.ObtenerTiposdeDocumentosDigitales"
   },
   {
     "release": "Release Noviembre 2018",
-    "method": "BTConfiguración.ObtenerAgenciasBanco"
+    "method": "BTDescuentoDocumentos.ConfirmarLista"
   },
   {
     "release": "Release Noviembre 2018",
-    "method": "BTDescuentoDocumentos.ContabilizarLista"
+    "method": "BTPrestamos.ModificarTasa"
   },
   {
-    "release": "Release Noviembre 2018",
-    "method": "BTPréstamos.ModificarTasa"
+    "release": "Release Mayo 2019",
+    "method": "BTConfiguracionBantotal.ObtenerTiposDeTarjeta"
   },
   {
-    "release": "Release Noviembre 2018",
-    "method": "BTTarjetasDebito.Crear"
-  },
-  {
-    "release": "Release Noviembre 2018",
-    "method": "BTTarjetasDebito.Activar"
-  },
-  {
-    "release": "Release Noviembre 2018",
-    "method": "BTTarjetasDebito.Denunciar"
-  },
-  {
-    "release": "Release Noviembre 2018",
-    "method": "BTClientes.ObtieneDomicilios"
+    "release": "Release Mayo 2019",
+    "method": "BTCuentasCorrientes.RegistrarOrdenDeNoPago"
   },
   {
     "release": "Release Mayo 2019",
@@ -37,35 +25,11 @@
   },
   {
     "release": "Release Mayo 2019",
-    "method": "BTConfiguración.ObtenerCodigosDeDomicilio"
+    "method": "BTPersonas.ObtenerNaturalezasJuridicas"
   },
   {
     "release": "Release Mayo 2019",
-    "method": "BTConfiguración.ObtenerTiposDeTarjeta"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTConfiguración.ObtenerTiposDeTelefono"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTConfiguración.ObtenerTiposDeTexto"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTConfiguración.ObtenerTiposListasNegras"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTPersonas.ObtenerNaturalezasJuridica"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTPréstamos.PagarCuotaFechaValor"
-  },
-  {
-    "release": "Release Mayo 2019",
-    "method": "BTCuentasCorrientes.RegistrarOrdenDeNoPago"
+    "method": "BTPrestamos.PagarCuotaFechaValor"
   },
   {
     "release": "Release Noviembre 2019",
@@ -77,11 +41,19 @@
   },
   {
     "release": "Release Mayo 2020",
-    "method": "BTMicrofinanzas.ActualizarIntegranteAGrupo"
+    "method": "BTCuentasVista.TraspasarCuentasTercerosDiferentesMoneda"
   },
   {
     "release": "Release Mayo 2020",
-    "method": "BTCuentasVista.TraspasarCuentasTercerosDiferentesMoneda"
+    "method": "BTMicrofinanzas.ActualizarIntegranteAGrupo"
+  },
+  {
+    "release": "Release Noviembre 2020",
+    "method": "BTClientes.ObtenerResumenDetalladoACierreAnio"
+  },
+  {
+    "release": "Release Noviembre 2020",
+    "method": "BTContabilidad.ObtenerInstruccionesTransaccion"
   },
   {
     "release": "Release Noviembre 2020",
@@ -90,22 +62,6 @@
   {
     "release": "Release Noviembre 2020",
     "method": "BTCuentasVista.Despaquetizar"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTPrestamos.CancelarCuotaTerceros"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTPrestamos.ObtenerIdentificadorUnico"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ObtenerMotivosBloqueo"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTPrecios.ObtenerCotizacionDeCierre"
   },
   {
     "release": "Release Noviembre 2020",
@@ -129,39 +85,19 @@
   },
   {
     "release": "Release Noviembre 2020",
-    "method": "BTLimites.Cancelar"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.Crear"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.Modificar"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.ObtenerDetalle"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.ObtenerDisponible"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.ObtenerLíneas"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.ObtenerOtorgado"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTLimites.ObtenerUtilizado"
-  },
-  {
-    "release": "Release Noviembre 2020",
     "method": "BTPersonas.DarFacultadesPersonaJuridica"
+  },
+  {
+    "release": "Release Noviembre 2020",
+    "method": "BTPrecios.ObtenerCotizacionDeCierre"
+  },
+  {
+    "release": "Release Noviembre 2020",
+    "method": "BTPrestamos.CancelarCuotaTerceros"
+  },
+  {
+    "release": "Release Noviembre 2020",
+    "method": "BTPrestamos.ObtenerIdentificadorUnico"
   },
   {
     "release": "Release Noviembre 2020",
@@ -169,87 +105,7 @@
   },
   {
     "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ActualizarCuentaPreferencial"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.BlanquearPIN"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.Bloquear"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ModificarLimite"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ObtenerCodigosDeLimites"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ObtenerCuentaPreferencial"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ObtenerIdentificadorUnico"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTTarjetasDebito.ObtenerLimites"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTContabilidad.ObtenerInstruccionesTransaccion"
-  },
-  {
-    "release": "Release Noviembre 2020",
-    "method": "BTClientes.ObtenerResumenDetalladoACierreAnio"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerFechaHabilAnterior"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerFechaHabilAnteriorSucursal"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerFechaHabilSucursal"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerInicioYFinMes"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerInicioYFinMesSucursal"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerProximaFechaHabil"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTCalendarios.ObtenerProximaFechaHabilSucursal"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrecios.ConvertirTasaAnualEfectivaALineal(1a2)"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrecios.ConvertirTasaAnualLinealAEfectiva(2a1)"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrecios.ConvertirTasaMensualEfectivaALineal(3a4)"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrecios.ConvertirTasaMensualLinealAEfectiva(4a3)"
+    "method": "BTTarjetasDeDebito.ObtenerMotivosBloqueo"
   },
   {
     "release": "Release Mayo 2021",
@@ -265,22 +121,6 @@
   },
   {
     "release": "Release Mayo 2021",
-    "method": "BTTarjetasDebito.ObtenerIdentificadorUnico"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrestamos.SimularDespeje(Capital y Cant.Cuotas)"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrestamos.SimularDespeje(F.Vto y Cant.Cuotas)"
-  },
-  {
-    "release": "Release Mayo 2021",
-    "method": "BTPrestamos.SimularDespeje(F.Vto y Tasa)"
-  },
-  {
-    "release": "Release Mayo 2021",
     "method": "BTPrestamos.SimularDespeje(F.Vto y V.Cuota(Balloon))"
   },
   {
@@ -289,19 +129,11 @@
   },
   {
     "release": "Release Noviembre 2021",
+    "method": "BTConfiguracionBantotal.ObtenerDetalleProducto"
+  },
+  {
+    "release": "Release Noviembre 2021",
     "method": "BTCuentasVista.ActualizarPeriodicidad"
-  },
-  {
-    "release": "Release Noviembre 2021",
-    "method": "BTSNP.ObtenerEmpresaPrestacion"
-  },
-  {
-    "release": "Release Noviembre 2021",
-    "method": "BTConfiguracionBantotal/BTParametrosBase.ObtenerDetalleProducto"
-  },
-  {
-    "release": "Release Noviembre 2021",
-    "method": "BTCuentasAhorro.ContratarConPeriodicidad"
   },
   {
     "release": "Release Noviembre 2021",
@@ -313,43 +145,27 @@
   },
   {
     "release": "Release Noviembre 2021",
-    "method": "BTTarjetaDebito.ObtenerTitular"
+    "method": "BTSNP.ObtenerEmpresaPrestacion"
   },
   {
     "release": "Release Noviembre 2021",
-    "method": "BTTarjetaDebito.ObtenerCuentasAAsociar"
+    "method": "BTTarjetasDeDebito.AgregarCuentaAsociada"
   },
   {
     "release": "Release Noviembre 2021",
-    "method": "BTTarjetaDebito.AgregarCuentaAsociada"
-  },
-  {
-    "release": "Release Noviembre 2021",
-    "method": "BTTarjetaDebito.ObtenerTiposDeCuenta"
-  },
-  {
-    "release": "Release Noviembre 2021",
-    "method": "BTTarjetaDebito.EliminarCuentaAsociada"
-  },
-  {
-    "release": "Release Mayo 2022",
-    "method": "BTClientes.EliminarIntegrante"
-  },
-  {
-    "release": "Release Mayo 2022",
-    "method": "BTPrestamos.ObtenerDetalleDePagos"
+    "method": "BTTarjetasDeDebito.ObtenerTitular"
   },
   {
     "release": "Release Mayo 2022",
     "method": "BTCadenaCierre.ObtenerDatelleEjecucion"
   },
   {
-    "release": "Release Noviembre 2022",
-    "method": "BTCashManagement.VisualizarOrdenDeArchivoPorCuenta"
+    "release": "Release Mayo 2022",
+    "method": "BTPrestamos.ObtenerDetalleDePagos"
   },
   {
     "release": "Release Noviembre 2022",
-    "method": "BTDepositosAPlazo.ContratarSimulacion"
+    "method": "BTCASHManagement.VisualizarOrdenDeArchivoPorCuenta"
   },
   {
     "release": "Release Noviembre 2022",
@@ -357,23 +173,11 @@
   },
   {
     "release": "Release Noviembre 2022",
-    "method": "BTDepositosAPlazo.SimularConCronograma"
-  },
-  {
-    "release": "Release Noviembre 2022",
-    "method": "BTDepositosAPlazo.ObtenerProductosHabilitados"
-  },
-  {
-    "release": "Release Noviembre 2022",
-    "method": "BTDepositosAPlazo.ObtenerInstruccionesHabilitadas"
-  },
-  {
-    "release": "Release Noviembre 2022",
     "method": "BTDepositosAPlazo.consultaPrecancelacion"
   },
   {
     "release": "Release Noviembre 2022",
-    "method": "BTPAE.score"
+    "method": "BTDepositosAPlazo.ObtenerInstruccionesHabilitadas"
   },
   {
     "release": "Release Noviembre 2022",
@@ -385,11 +189,11 @@
   },
   {
     "release": "Release Noviembre 2022",
-    "method": "BTPAE.Tipos de modelos de evaluación"
+    "method": "BTPAE.score"
   },
   {
     "release": "Release Noviembre 2022",
-    "method": "BTParametrosBase.opcion general por modulo"
+    "method": "BTPAE.Tipos de modelos de evaluación"
   },
   {
     "release": "Release Noviembre 2022",
@@ -397,7 +201,15 @@
   },
   {
     "release": "Release Noviembre 2022",
+    "method": "BTParametrosBase.opcion general por modulo"
+  },
+  {
+    "release": "Release Noviembre 2022",
     "method": "BTPersonas.ObtenerFacultades(gx9)"
+  },
+  {
+    "release": "Release Noviembre 2022",
+    "method": "BTPrestamos.Simular ingresando seguro"
   },
   {
     "release": "Release Noviembre 2022",
@@ -408,12 +220,16 @@
     "method": "BTWorkflow.ObtenerProcesos"
   },
   {
-    "release": "Release Noviembre 2022",
-    "method": "BTPrestamos.Simular ingresando seguro"
+    "release": "Release Mayo 2023",
+    "method": "BTCuentasVista.Liquidacion de cuentas"
   },
   {
     "release": "Release Mayo 2023",
-    "method": "BTCuentasVista.Liquidacion de cuentas"
+    "method": "BTIndicadores.ObtenerCuadreMonedasSaldos"
+  },
+  {
+    "release": "Release Mayo 2023",
+    "method": "BTIndicadores.ObtenerRubroBolsas"
   },
   {
     "release": "Release Mayo 2023",
@@ -437,19 +253,7 @@
   },
   {
     "release": "Release Mayo 2023",
-    "method": "BTIndicadores.ObtenerCuadreMonedasSaldos"
-  },
-  {
-    "release": "Release Mayo 2023",
-    "method": "BTIndicadores.ObtenerRubroBolsas"
-  },
-  {
-    "release": "Release Mayo 2023",
     "method": "BTPrestamos.Simular Ingresando Seguros (sin cliente)"
-  },
-  {
-    "release": "Release Noviembre 2023",
-    "method": "BTPrestamos.ObtenerDatosProximoVencimiento"
   },
   {
     "release": "Release Noviembre 2023",
@@ -485,23 +289,11 @@
   },
   {
     "release": "Release Noviembre 2023",
-    "method": "BTCash.ObtenerDetalleOrdenCuenta"
-  },
-  {
-    "release": "Release Noviembre 2023",
-    "method": "BTCash.ObtenerServicios"
-  },
-  {
-    "release": "Release Noviembre 2023",
-    "method": "BTCash.VisualizarOrdenArchivoCuenta"
-  },
-  {
-    "release": "Release Noviembre 2023",
-    "method": "BTPartners.ObtenerDetalleOfertaVehicular rbtpnv08"
+    "method": "BTPrestamos.ObtenerDatosProximoVencimiento"
   },
   {
     "release": "Release Mayo 2024",
-    "method": "BTCuentasVistas.ObtenerEstadoDeOperacion"
+    "method": "BTCuentasVista.ObtenerEstadoDeOperacion"
   },
   {
     "release": "Release Mayo 2024",
@@ -521,6 +313,14 @@
   },
   {
     "release": "Release Noviembre 2024",
+    "method": "BTClientes.ObtenerDetallePrestamos"
+  },
+  {
+    "release": "Release Noviembre 2024",
+    "method": "BTClientes.ObtenerDetallePrestamosCancelados"
+  },
+  {
+    "release": "Release Noviembre 2024",
     "method": "BTDepositosAPlazo.AgregarBeneficiarios"
   },
   {
@@ -528,11 +328,11 @@
     "method": "BTUsuarios.HablilitarEnCanal"
   },
   {
-    "release": "Release Noviembre 2024",
-    "method": "BTClientes.ObtenerDetallePrestamos"
+    "release": "Release Mayo 2025",
+    "method": "BTAhorroProgramado.ObtenerCronogramaAbonos"
   },
   {
-    "release": "Release Noviembre 2024",
-    "method": "BTClientes.ObtenerDetallePrestamosCancelados"
+    "release": "Release Mayo 2025",
+    "method": "BTCuentasVista.TraspasarConTiposDeCambioEspecial"
   }
 ]

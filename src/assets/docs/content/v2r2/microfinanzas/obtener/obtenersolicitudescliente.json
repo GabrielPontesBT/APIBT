@@ -1,0 +1,74 @@
+{
+  "slug": "microfinanzas/obtener/obtenersolicitudescliente",
+  "pageTitle": "Obtener Solicitudes Cliente",
+  "description": "Método para obtener un listado de las solicitudes activas de préstamos de un cliente.",
+  "pubName": "BTMicrofinanzas.ObtenerSolicitudesCliente",
+  "programa": "RBTPG416",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosInstancias",
+      "Tipo": "<a href=\"#sbtdatosinstancia\">sBTDatosInstancia</a>",
+      "Comentarios": "Listado de solicitudes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.ObtenerSolicitudesCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>419385365CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>3</bts:clienteUId>\n      </bts:BTMicrofinanzas.ObtenerSolicitudesCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerSolicitudesCliente \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": \"3\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.ObtenerSolicitudesClienteResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>95</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>419385365CD285A89A23FBEE</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <sdtDatosInstancias>\n            <sBTDatosInstancia>\n               <operacionUId>8</operacionUId>\n               <instancia>10844</instancia>\n               <capital>8000.00</capital>\n               <asesor>ETRIESGO</asesor>\n               <tarea>Solicitud</tarea>\n            </sBTDatosInstancia>\n            <sBTDatosInstancia>\n               <operacionUId>7</operacionUId>\n               <instancia>10856</instancia>\n               <capital>5000.00</capital>\n               <asesor>INSTALADOR</asesor>\n               <tarea>Solicitud</tarea>\n            </sBTDatosInstancia>\n         </sdtDatosInstancias>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.ObtenerSolicitudesCliente</Servicio>\n            <Fecha>2019-09-24</Fecha>\n            <Hora>14:27:00</Hora>\n            <Requerimiento>95</Requerimiento>\n            <Numero>245</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.ObtenerSolicitudesClienteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtDatosInstancias\": {\n      \"sBTDatosInstancia\": [\n      {\n         \"operacionUId\": \"8\",\n         \"instancia\": \"10844\",\n         \"capital\": \"8000.00\",\n         \"asesor\": \"ETRIESGO\",\n         \"tarea\": \"Solicitud\"\n      },\n      {\n         \"operacionUId\": \"7\",\n         \"instancia\": \"10856\",\n         \"capital\": \"5000.00\",\n         \"asesor\": \"INSTALADOR\",\n         \"tarea\": \"Solicitud\"\n      }\n      ]\n   },\n   \"Btoutreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Servicio\": \"BTMicrofinanzas.ObtenerSolicitudesCliente\",\n      \"Fecha\": \"2019-09-24\",\n      \"Hora\": \"14:27:00\",\n      \"Requerimiento\": \"95\",\n      \"Numero\": \"245\",\n      \"Estado\": \"OK\"\n   }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosInstancia",
+      "fields": [
+        {
+          "Nombre": "asesor",
+          "Tipo": "String",
+          "Comentarios": "Usuario asesor del crédito."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Decimal",
+          "Comentarios": "Importe capital del crédito."
+        },
+        {
+          "Nombre": "instancia",
+          "Tipo": "Long",
+          "Comentarios": "Número de instancia WorkFlow."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "tarea",
+          "Tipo": "String",
+          "Comentarios": "Tarea en la que se encuentra la instancia."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

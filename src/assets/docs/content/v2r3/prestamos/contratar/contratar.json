@@ -1,0 +1,118 @@
+{
+  "slug": "prestamos/contratar/contratar",
+  "pageTitle": "Contratar",
+  "description": "Método para contratar un préstamo amortizable.",
+  "pubName": "BTPrestamos.Contratar",
+  "programa": "RBTPG077",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de alta, teniendo en cuenta que: \n\n\t- El préstamo se almacena en el preformato 1. \n\n\t- La cuenta vista de acreditación se almacena en el preformato 2. \n\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \n\n3) Se debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro. \n\n4) Si la opción de procesos por módulo 3282 se encuentra activada, el servicio considera que se permiten cobros parciales.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "operacionUId_desembolso",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista donde se acreditará el monto solicitado."
+    },
+    {
+      "Nombre": "operacionUId_cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista de donde se cobrará el préstamo. En caso de no solicitarse una operación de cobro, enviar valor 999999999."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento [Asiento]."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de operación de Acreditación."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó el préstamo para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recibió el identificador único de operación de cobro."
+    },
+    {
+      "Código": "51001",
+      "Descripción": "No se recibió número de cliente."
+    },
+    {
+      "Código": "51002",
+      "Descripción": "La operación no existe."
+    },
+    {
+      "Código": "51003",
+      "Descripción": "La operación de cobro no existe."
+    },
+    {
+      "Código": "51005",
+      "Descripción": "Atención: No se pudo obtener el numerador para la transacción."
+    },
+    {
+      "Código": "51006",
+      "Descripción": "La operación esta cancelada."
+    },
+    {
+      "Código": "51007",
+      "Descripción": "La operación ya existe."
+    },
+    {
+      "Código": "51013",
+      "Descripción": "La operación de cobro esta cancelada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.Contratar>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>5453369fee4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>341</bts:operacionUId>\n         <bts:clienteUId>161</bts:clienteUId>\n         <bts:operacionUId_desembolso>281</bts:operacionUId_desembolso>\n         <bts:operacionUId_cobro>281</bts:operacionUId_cobro>\n      </bts:BTPrestamos.Contratar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?Contratar=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9d6db2ed-3171-3f9c-11d1-3ed6402467a1' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 342,\n    \"clienteUId\": 161,\n    \"operacionUId_desembolso\": 281,\n    \"operacionUId_cobro\": 281\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ContratarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>5453369fee4A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>101</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>752</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.Contratar</Servicio>\n            <Fecha>2017-11-30</Fecha>\n            <Requerimiento/>\n            <Hora>13:38:18</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ContratarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"102\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"755\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.Contratar\",\n        \"Fecha\": \"2017-11-30\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"13:47:48\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

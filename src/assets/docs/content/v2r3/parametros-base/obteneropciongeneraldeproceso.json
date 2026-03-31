@@ -1,0 +1,73 @@
+{
+  "slug": "parametros-base/obteneropciongeneraldeproceso",
+  "pageTitle": "Obtener Opción General de Proceso",
+  "description": "Método para obtener los datos de una determinada opción general de procesos.",
+  "pubName": "BTParametrosBase.ObtenerOpcionGeneralDeProceso",
+  "programa": "RBTPG286",
+  "scope": "Institucional",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "empresaId",
+      "Tipo": "Short",
+      "Comentarios": "Código de empresa [Hidden]."
+    },
+    {
+      "Nombre": "codigo",
+      "Tipo": "Int",
+      "Comentarios": "Código de la opción general de procesos."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtOpcionGeneralDeProceso",
+      "Tipo": "<a href=\"#sbtopciongeneral\">sBTOpcionGeneral</a>",
+      "Comentarios": "Datos de la opción general de procesos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de opción general."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe la opción general con el identificador ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTParametrosBase.ObtenerOpcionGeneralDeProceso>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MI</bts:Usuario>\n            <bts:Device>MC</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>200f0b8b654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:codigo>2850</bts:codigo>\n      </bts:BTParametrosBase.ObtenerOpcionGeneralDeProceso>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Usuario\": \"MI\",\n      \"Device\": \"MC\",\n      \"Requerimiento\": \"1\",\n      \"Token\": \"200f0b8b654A8B5C60A82434\"\n    },\n    \"codigo\": \"2850\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTParametrosBase.ObtenerOpcionGeneralDeProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>MI</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>200f0b8b654A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtOpcionGeneralDeProceso>\n            <descripcion>Debug's</descripcion>\n            <identificador>2850</identificador>\n            <valor>S</valor>\n         </sdtOpcionGeneralDeProceso>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>109140</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTParametrosBase.ObtenerOpcionGeneralDeProceso</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-11-24</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>13:29:43</Hora>\n         </Btoutreq>\n      </BTParametrosBase.ObtenerOpcionGeneralDeProcesoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"MC\",\n      \"Usuario\": \"MI\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"200f0b8b654A8B5C60A82434\"\n    },\n    \"sdtOpcionGeneralDeProceso\": {\n      \"descripcion\": \"Debug's\",\n      \"identificador\": \"2850\",\n      \"valor\": \"S\"\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"109140\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTParametrosBase.ObtenerOpcionGeneralDeProceso\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2020-11-24\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"13:29:43\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTOpcionGeneral",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la opción general de procesos."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Código de la opción general de procesos."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de la opción general de procesos (S/N)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

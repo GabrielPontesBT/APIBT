@@ -1,0 +1,133 @@
+{
+  "slug": "configuracion-bantotal/parametros-generales/obtenerempresa",
+  "pageTitle": "Obtener Empresa",
+  "description": "Método para obtener información de la empresa.",
+  "pubName": "BTConfiguracionBantotal.ObtenerEmpresa",
+  "programa": "RBTPG320",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtEmpresa",
+      "Tipo": "<a href=\"#sbtempresa\">sBTEmpresa</a>",
+      "Comentarios": "Datos de la empresa."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerEmpresa>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>558273287F955E77534D3E02</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n      </bts:BTConfiguracionBantotal.ObtenerEmpresa>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEmpresa' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"bts:Btinreq\": {\n\t  \"bts:Canal\": \"BTDIGITAL\",\n\t  \"bts:Requerimiento\": \"1\",\n\t  \"bts:Usuario\": \"BANTOTAL\",\n\t  \"bts:Token\": \"558273287F955E77534D3E02\",\n\t  \"bts:Device\": \"AC\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerEmpresaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>558273287F955E77534D3E02</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <sdtEmpresa>\n            <identificador>1</identificador>\n            <nombre/>\n            <casaCentral>\n               <identificador>1</identificador>\n               <descripcion>Sucursal Beta</descripcion>\n               <direccion>1022, Pedro Cosio 2141</direccion>\n               <telefono>15554454</telefono>\n               <latitud>0.00000000000000</latitud>\n               <longitud>0.00000000000000</longitud>\n            </casaCentral>\n            <monedaNacional>\n               <identificador>0</identificador>\n               <descripcion>PESOS</descripcion>\n               <simbolo>$</simbolo>\n            </monedaNacional>\n            <monedaDolar>\n               <identificador>2222</identificador>\n               <descripcion>DÓLAR ESTADOUNIDENSE</descripcion>\n               <simbolo>USD</simbolo>\n            </monedaDolar>\n            <fechaApertura>2020-03-05</fechaApertura>\n            <fechaCierre>2018-06-13</fechaCierre>\n            <fechaBalance>2014-06-30</fechaBalance>\n         </sdtEmpresa>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerEmpresa</Servicio>\n            <Fecha>2021-03-16</Fecha>\n            <Hora>12:05:55</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8027</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerEmpresaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n\t\"Btinreq\": {\n\t  \"Device\": \"AC\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Token\": \"558273287F955E77534D3E02\"\n\t},\n\t\"sdtEmpresa\": {\n\t\t\"identificador\": \"1\",\n\t\t\"nombre\": {\n\t\t\"-self-closing\": \"true\"\n\t\t},\n\t\t\"casaCentral\": {\n\t\t\"identificador\": \"1\",\n\t\t\"descripcion\": \"Sucursal Beta\",\n\t\t\"direccion\": \"1022, Pedro Cosio 2141\",\n\t\t\"telefono\": \"15554454\",\n\t\t\"latitud\": \"0.00000000000000\",\n\t\t\"longitud\": \"0.00000000000000\"\n\t\t},\n\t\t\"monedaNacional\": {\n\t\t\"identificador\": \"0\",\n\t\t\"descripcion\": \"PESOS\",\n\t\t\"simbolo\": \"$\"\n\t\t},\n\t\t\"monedaDolar\": {\n\t\t\"identificador\": \"2222\",\n\t\t\"descripcion\": \"DÓLAR ESTADOUNIDENSE\",\n\t\t\"simbolo\": \"USD\"\n\t\t},\n\t\t\"fechaApertura\": \"2020-03-05\",\n\t\t\"fechaCierre\": \"2018-06-13\",\n\t\t\"fechaBalance\": \"2014-06-30\"\n\t},\n\t\"Erroresnegocio\": {},\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerEmpresa\",\n\t  \"Fecha\": \"2021-03-15\",\n\t  \"Hora\": \"14:29:49\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"8025\",\n\t  \"Estado\": \"OK\"\n\t}\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEmpresa",
+      "fields": [
+        {
+          "Nombre": "casaCentral",
+          "Tipo": "<a href=\"#sbtsucursal\">sBTSucursal</a>",
+          "Comentarios": "Datos sobre la sucursal indicada como casa central."
+        },
+        {
+          "Nombre": "fechaApertura",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de apertura."
+        },
+        {
+          "Nombre": "fechaBalance",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de balance."
+        },
+        {
+          "Nombre": "fechaCierre",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de cierre."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la empresa."
+        },
+        {
+          "Nombre": "monedaDolar",
+          "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
+          "Comentarios": "Código moneda dolar."
+        },
+        {
+          "Nombre": "monedaNacional",
+          "Tipo": "<a href=\"#sbtmoneda\">sBTMoneda</a>",
+          "Comentarios": "Código moneda nacional."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la empresa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSucursal",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de sucursal."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección de sucursal."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "latitud",
+          "Tipo": "Long",
+          "Comentarios": "Latitud de sucursal."
+        },
+        {
+          "Nombre": "longitud",
+          "Tipo": "Long",
+          "Comentarios": "Longitud de sucursal."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono de sucursal."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTMoneda",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de moneda."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "simbolo",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

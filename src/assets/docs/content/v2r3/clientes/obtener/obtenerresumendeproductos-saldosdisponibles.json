@@ -1,0 +1,113 @@
+{
+  "slug": "clientes/obtener/obtenerresumendeproductos-saldosdisponibles",
+  "pageTitle": "Obtener Resumen de Productos (Saldos Disponibles)",
+  "description": "Método para obtener un resumen de los productos de un cliente y su saldo disponible correspondiente.",
+  "pubName": "BTClientes.ObtenerResumenProductosSD",
+  "programa": "RBTPG082",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtResumenProductos",
+      "Tipo": "<a href=\"#sctinfoproductos\">sCTInfoProductos</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerResumenProductos>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n      </bts:BTClientes.ObtenerResumenProductos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenProductos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 429ec47f-4843-8dca-c8f7-32c004addb68' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": \"4\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerResumenProductosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>268b6d23eb4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtResumenProductos>\n            <cuentasCorrientes>\n               <descripcion>Cuentas Corrientes</descripcion>\n               <cantidad>3</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>26799806.42</saldoMN>\n            </cuentasCorrientes>\n            <cajasAhorros>\n               <descripcion>Cajas de Ahorro</descripcion>\n               <cantidad>4</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>0.00</saldoMN>\n            </cajasAhorros>\n            <cofresSeguridad>\n               <descripcion>Cofres de Seguridad</descripcion>\n               <cantidad>0</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>0.00</saldoMN>\n            </cofresSeguridad>\n            <otros></otros>\n            <tarjetasCredito>\n               <descripcion/>\n               <cantidad>0</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>0.00</saldoMN>\n            </tarjetasCredito>\n            <tarjetasDebito>\n               <descripcion>Tarjetas de Débito</descripcion>\n               <cantidad>0</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>0.00</saldoMN>\n            </tarjetasDebito>\n            <plazosFijos>\n               <descripcion>Plazos Fijos</descripcion>\n               <cantidad>4</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>413217.36</saldoMN>\n            </plazosFijos>\n            <prestamos>\n               <descripcion>Préstamos</descripcion>\n               <cantidad>16</cantidad>\n               <saldoUSD>0.00</saldoUSD>\n               <saldoMN>2709617.59</saldoMN>\n            </prestamos>\n            <clienteUId>4</clienteUId>\n         </sdtResumenProductos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>841</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerResumenProductos</Servicio>\n            <Fecha>2017-12-18</Fecha>\n            <Requerimiento/>\n            <Hora>02:19:12</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerResumenProductosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtResumenProductos\": {\n        \"cuentasCorrientes\": {\n            \"descripcion\": \"Cuentas Corrientes\",\n            \"cantidad\": \"3\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"26799806.42\"\n        },\n        \"cajasAhorros\": {\n            \"descripcion\": \"Cajas de Ahorro\",\n            \"cantidad\": \"4\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"0.00\"\n        },\n        \"cofresSeguridad\": {\n            \"descripcion\": \"Cofres de Seguridad\",\n            \"cantidad\": \"0\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"0.00\"\n        },\n        \"otros\": {\n            \"sCTResumenProducto\": []\n        },\n        \"tarjetasCredito\": {\n            \"descripcion\": \"\",\n            \"cantidad\": \"0\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"0.00\"\n        },\n        \"tarjetasDebito\": {\n            \"descripcion\": \"Tarjetas de Débito\",\n            \"cantidad\": \"0\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"0.00\"\n        },\n        \"plazosFijos\": {\n            \"descripcion\": \"Plazos Fijos\",\n            \"cantidad\": \"4\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"413217.36\"\n        },\n        \"prestamos\": {\n            \"descripcion\": \"Préstamos\",\n            \"cantidad\": \"16\",\n            \"saldoUSD\": \"0.00\",\n            \"saldoMN\": \"2709617.59\"\n        },\n        \"clienteUId\": \"4\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"842\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerResumenProductos\",\n        \"Fecha\": \"2017-12-18\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"02:19:57\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sCTInfoProductos",
+      "fields": [
+        {
+          "Nombre": "cuentasCorrientes",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Cuentas corrientes."
+        },
+        {
+          "Nombre": "cajasAhorros",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Cajas de ahorro."
+        },
+        {
+          "Nombre": "cofresSeguridad",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Cofres de seguridad."
+        },
+        {
+          "Nombre": "tarjetasDebito",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Tarjetas de débito."
+        },
+        {
+          "Nombre": "plazosFijos",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Plazos fijos."
+        },
+        {
+          "Nombre": "prestamos",
+          "Tipo": "<a href=\"#sctresumenproducto\">sCTResumenProducto</a>",
+          "Comentarios": "Préstamos."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cliente."
+        }
+      ]
+    },
+    {
+      "typeName": "sCTResumenProducto",
+      "fields": [
+        {
+          "Nombre": "cantidad",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de operaciones."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "saldoMN",
+          "Tipo": "Double",
+          "Comentarios": "Saldo disponible en moneda nacional."
+        },
+        {
+          "Nombre": "saldoUSD",
+          "Tipo": "Double",
+          "Comentarios": "Saldo disponible en dólares."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

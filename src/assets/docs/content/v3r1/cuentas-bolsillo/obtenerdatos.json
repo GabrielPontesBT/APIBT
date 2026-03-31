@@ -1,0 +1,137 @@
+{
+  "slug": "cuentas-bolsillo/obtenerdatos",
+  "pageTitle": "Obtener Datos",
+  "description": "Método para obtener los datos de una cuenta bolsillo.",
+  "pubName": "BTCuentasBolsillo.ObtenerDatos",
+  "programa": "RBTPG616",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "bolsilloUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del bolsillo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtInformacionBolsillo",
+      "Tipo": "<a href=\"#sbtinfbolsillo\">sBTInfBolsillo</a>",
+      "Comentarios": "Información del bolsillo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta bolsillo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.ObtenerDatos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\n         </bts:Btinreq>\n         <bts:bolsilloUId>18843</bts:BolsilloUID>\n      </bts:BTCuentasBolsillo.ObtenerDatos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerDatos' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n    \"bolsilloUId\": 183\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasBolsillo.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>CC6345192D8633F531F01D1D</Token>\n         </Btinreq>\n         <sdtInformacionBolsillo>\n            <CuentaprincipalUID>19150</CuentaprincipalUID>\n            <FechaBaja>0001-01-01</FechaBaja>\n            <InstruccionUID>19150</InstruccionUID>\n            <Estado>0</Estado>\n            <FechaApert>2020-04-08</FechaApert>\n            <Saldo>910000.00</Saldo>\n            <OperacionBolsilloUID>18843</OperacionBolsilloUID>\n            <NombreProducto>CUENTAS BOLSILLO, Bolsillo Ahorro</NombreProducto>\n            <Parametros>\n               <HeredaCondiciones>N</HeredaCondiciones>\n               <MetaAhorro>990.00</MetaAhorro>\n               <Tasa>0.00</Tasa>\n               <PagaIntereses>S</PagaIntereses>\n            </Parametros>\n            <NombreSubcuenta>golozo</NombreSubcuenta>\n            <ProductoBolsilloId>511</ProductoBolsilloId>\n         </sdtInformacionBolsillo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>228462</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasBolsillo.ObtenerDatos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2023-10-31</Fecha>\n            <Hora>17:29:45</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasBolsillo.ObtenerDatosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"1\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"16c1cFC33CD93505A5382434\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\"\n    },\n    \"sdtInformacionBolsillo\": {\n        \"CuentaprincipalUID\": 19150,\n        \"FechaBaja\": \"0001-01-01\",\n        \"InstruccionUID\": 19150,\n        \"Estado\": 0,\n        \"FechaApert\": \"2020-04-08\",\n        \"Saldo\": 910000,\n        \"OperacionBolsilloUID\": 18843,\n        \"NombreProducto\": \"CUENTAS BOLSILLO, Bolsillo Ahorro\",\n        \"Parametros\": {\n            \"HeredaCondiciones\": \"N\",\n            \"MetaAhorro\": 990,\n            \"Tasa\": 0,\n            \"PagaIntereses\": \"S\"\n        },\n        \"NombreSubcuenta\": \"golozo\",\n        \"ProductoBolsilloId\": 511\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"111399\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasBolsillo.ObtenerDatos\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2023-05-10\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"15:10:52\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTInfBolsillo",
+      "fields": [
+        {
+          "Nombre": "cuentaPrincipalUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación principal."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "Byte",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "fechaApert",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de apertura."
+        },
+        {
+          "Nombre": "fechaBaja",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de la baja."
+        },
+        {
+          "Nombre": "instruccionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la instrucción."
+        },
+        {
+          "Nombre": "nombreProducto",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "nombreSubcuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la subcuenta."
+        },
+        {
+          "Nombre": "operacionBolsilloUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación de bolsillo."
+        },
+        {
+          "Nombre": "parametros",
+          "Tipo": "<a href=\"#sbtparambolsillo\">sBTParamBolsillo</a>",
+          "Comentarios": ""
+        },
+        {
+          "Nombre": "productoBolsilloId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador único del producto del bolsillo."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTParamBolsillo",
+      "fields": [
+        {
+          "Nombre": "heredaCondiciones",
+          "Tipo": "String",
+          "Comentarios": "¿Hereda condiciones? (S/N)."
+        },
+        {
+          "Nombre": "metaAhorro",
+          "Tipo": "Double",
+          "Comentarios": "Meta de ahorro de la cuenta."
+        },
+        {
+          "Nombre": "pagaIntereses",
+          "Tipo": "String",
+          "Comentarios": "¿Paga intereses? (S/N)."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

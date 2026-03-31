@@ -1,0 +1,129 @@
+{
+  "slug": "argentina-ar/coelsa/debin/vendedorconsulta",
+  "pageTitle": "Vendedor Consulta",
+  "description": "Método para consulta de datos referidos al vendedor.",
+  "pubName": "BTCOELSAGestionDebin.VendedorConsulta",
+  "programa": "RBTPAR58",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "cuit",
+      "Tipo": "String",
+      "Comentarios": "Documento."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "consultaVendedorRespuesta",
+      "Tipo": "<a href=\"#sbtvendedoresadheridosres\">sBTVendedoresAdheridosRes</a>",
+      "Comentarios": "Datos listados de un vendedor."
+    },
+    {
+      "Nombre": "ColeccionVendedorConsulta",
+      "Tipo": "<a href=\"#sdtsbtconsultavendedorcuenta_cuentaitem\">sBTConsultaVendedorCuenta_CuentaItem</a>",
+      "Comentarios": "Colección de datos del vendedor."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió CUIT."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConsultaVendedor>\n            <Btinreq>\n               <Canal>BTDIGITAL</Canal>\n               <Requerimiento>1</Requerimiento>\n               <Usuario>INSTALADOR</Usuario>\n               <Token>1095768874CD285A89A23FBE</Token>\n               <Device>ABC</Device>\n            </Btinreq>\n         <bts:Cuit>30716226308</bts:Cuit>\n      </bts:BTCOELSAGestionDebin.ConsultaVendedor>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.VendedorConsultaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <consultaVendedorRespuesta>\n            <Cuit>30716226308</Cuit>\n            <Titular>CREDICLARO SAS</Titular>\n            <Email/>\n            <Descripcion>VENDEDOR ENCONTRADO</Descripcion>\n            <Codigo>00</Codigo>\n         </consultaVendedorRespuesta>\n         <consultaVendedorCuenta>\n            <ColeccionVendedorConsulta>\n               <NombreFantasia/>\n               <Rubro>VARIOS</Rubro>\n               <Cbu>4320001010003005710010</Cbu>\n               <Banco>432</Banco>\n               <Sucursal>0001</Sucursal>\n               <Moneda>032</Moneda>\n               <Tipo>20</Tipo>\n               <Endpoint>0202</Endpoint>\n               <Alta>2024-08-21T00:00:00</Alta>\n            </ColeccionVendedorConsulta>\n         </consultaVendedorCuenta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.VendedorConsulta</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>12:51:56</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038865</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.VendedorConsultaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTVendedoresAdheridosRes",
+      "fields": [
+        {
+          "Nombre": "Cuit",
+          "Tipo": "String",
+          "Comentarios": "Clave única de identificación tributaria del vendedor."
+        },
+        {
+          "Nombre": "Titular",
+          "Tipo": "String",
+          "Comentarios": "Nombre del vendedor."
+        },
+        {
+          "Nombre": "Email",
+          "Tipo": "Short",
+          "Comentarios": "Email del vendedor."
+        },
+        {
+          "Nombre": "Descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "Codigo",
+          "Tipo": "String",
+          "Comentarios": "Código."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConsultaVendedorCuenta_CuentaItem",
+      "fields": [
+        {
+          "Nombre": "Tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo Cuenta Vendedor."
+        },
+        {
+          "Nombre": "Rubro",
+          "Tipo": "String",
+          "Comentarios": "Rubro."
+        },
+        {
+          "Nombre": "Moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "NombreFantasia",
+          "Tipo": "String",
+          "Comentarios": "Nombre Fantasía Vendedor."
+        },
+        {
+          "Nombre": "Cbu",
+          "Tipo": "String",
+          "Comentarios": "Clave Bancaria Uniforme del Vendedor."
+        },
+        {
+          "Nombre": "Banco",
+          "Tipo": "String",
+          "Comentarios": "Banco."
+        },
+        {
+          "Nombre": "Endpoint",
+          "Tipo": "String",
+          "Comentarios": "Endpoint."
+        },
+        {
+          "Nombre": "Sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal."
+        },
+        {
+          "Nombre": "Alta",
+          "Tipo": "String",
+          "Comentarios": "Fecha de Alta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

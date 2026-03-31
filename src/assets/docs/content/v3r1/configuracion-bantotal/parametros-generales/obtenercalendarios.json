@@ -1,0 +1,53 @@
+{
+  "slug": "configuracion-bantotal/parametros-generales/obtenercalendarios",
+  "pageTitle": "Obtener Calendarios",
+  "description": "Método para obtener los calendarios ingresados en el sistema.",
+  "pubName": "BTConfiguracionBantotal.ObtenerCalendarios",
+  "programa": "RBTPG284",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtCalendarios",
+      "Tipo": "<a href=\"#sbtcalendario\">sBTCalendario</a>",
+      "Comentarios": "Colección de calendarios."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se encontraron calendarios en el sistema."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerCalendarios>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MI</bts:Usuario>\n            <bts:Device>MC</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>200f0b88B5C60A82434</bts:Token>\n         </bts:Btinreq>\n      </bts:BTConfiguracionBantotal.ObtenerCalendarios>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X GET \\\n   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerCalendarios' \\\n   -H 'cache-control: no-cache' \\\n   -H 'content-type: application/json' \\\n   -d '{\n   \"Btinreq\": {\n        \"Device\": \"MC\",\n        \"Usuario\": \"MI\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"200f0b88B5C60A82434\"\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerCalendariosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>MI</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>200f0b88B5C60A82434</Token>\n         </Btinreq>\n         <sdtCalendarios>\n            <sBTCalendario>\n               <descripcion>Calendario 1</descripcion>\n               <identificador>1</identificador>\n            </sBTCalendario>\n            <sBTCalendario>\n               <descripcion>Calendario 2</descripcion>\n               <identificador>2</identificador>\n            </sBTCalendario>\n         </sdtCalendarios>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>109087</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTConfiguracionBantotal.ObtenerCalendarios</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-11-24</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>09:11:46</Hora>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerCalendariosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"MC\",\n        \"Usuario\": \"MI\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"200f0b88B5C60A82434\"\n    },\n    \"sdtCalendarios\": {\n\t\t\"sBTCalendario\": [\n\t\t\t{\n\t\t\t\t\"descripcion\":\"Calendario 1\",\n\t\t\t\t\"identificador\":1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"descripcion\":\"Calendario 2\",\n\t\t\t\t\"identificador\":2\n\t\t\t}\n\t\t]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 109092,\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerCalendarios\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2020-11-24\",\n        \"Requerimiento\": \"0\",\n        \"Hora\": \"14:13:38\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCalendario",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del calendario."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Código del calendario."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

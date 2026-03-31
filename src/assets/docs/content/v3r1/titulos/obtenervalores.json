@@ -1,0 +1,118 @@
+{
+  "slug": "titulos/obtenervalores",
+  "pageTitle": "Obtener Valores",
+  "description": "Método para obtener los títulos disponibles para un grupo y sus respectivos valores.",
+  "pubName": "BTTitulos.ObtenerValores",
+  "programa": "RBTPG494",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "grupoId",
+      "Tipo": "Byte",
+      "Comentarios": "Identificador del grupo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTitulos",
+      "Tipo": "<a href=\"#sbttitulo\">sBTTitulo</a>",
+      "Comentarios": "Listado de títulos del cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del grupo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se pudieron obtener los títulos con el identificador ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTitulos.ObtenerValores>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>6F467D9554D22BE00B36E963</bts:Token>\n         </bts:Btinreq>\n         <bts:grupoId>1</bts:grupoId>\n      </bts:BTTitulos.ObtenerValores>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerValores' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"grupoId\": 1,\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTitulos.ObtenerValoresResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>be9fc8708b4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtTitulo>\n            <sBTTitulo>\n\t\t\t\t\t<moneda>2222</moneda>\n\t\t\t\t\t<simbolo>USD</simbolo>\n\t\t\t\t\t<pais>UNITED STATES OF AMERICA (USA)</pais>\n\t\t\t\t\t<grupoId>1</grupoId>\n\t\t\t\t\t<grupo>Acción Ordinaria</grupo>\n\t\t\t\t\t<codigo>703</codigo>\n\t\t\t\t\t<nombre>APPLIED MICRO CIRCUITS CORP.</nombre>\n\t\t\t\t\t<precioActual>0.00</precioActual>\n\t\t\t\t\t<otrosConceptos>\n\t\t\t\t\t\t<SdtsBTConcepto>\n\t\t\t\t\t\t\t<texto>Fecha de vencimiento.</texto>\n\t\t\t\t\t\t\t<valor>0.00</valor>\n\t\t\t\t\t\t\t<concepto>31/12/99</concepto>\n\t\t\t\t\t\t</SdtsBTConcepto>\n\t\t\t\t\t</otrosConceptos>\n\t\t\t\t</sBTTitulo>\n\t\t\t\t<sBTTitulo>\n\t\t\t\t\t<moneda>2222</moneda>\n\t\t\t\t\t<simbolo>USD</simbolo>\n\t\t\t\t\t<pais>UNITED STATES OF AMERICA (USA)</pais>\n\t\t\t\t\t<grupoId>1</grupoId>\n\t\t\t\t\t<grupo>Acción Ordinaria</grupo>\n\t\t\t\t\t<codigo>704</codigo>\n\t\t\t\t\t<nombre>APPLE COMPUTER INC.COM</nombre>\n\t\t\t\t\t<precioActual>0.00</precioActual>\n\t\t\t\t\t<otrosConceptos>\n\t\t\t\t\t\t<SdtsBTConcepto>\n\t\t\t\t\t\t\t<texto>Fecha de vencimiento.</texto>\n\t\t\t\t\t\t\t<valor>0.00</valor>\n\t\t\t\t\t\t\t<concepto>31/12/99</concepto>\n\t\t\t\t\t\t</SdtsBTConcepto>\n\t\t\t\t\t</otrosConceptos>\n\t\t\t\t</sBTTitulo>\n         </sdtTitulo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>967</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTitulos.ObtenerValores</Servicio>\n            <Fecha>2017-12-22</Fecha>\n            <Requerimiento/>\n            <Hora>12:26:12</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTitulos.ObtenerValoresResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtTitulo\": {\n      \"sBTTitulo\": [\n      {\n         \"moneda\": 2222,\n         \"simbolo\": \"USD\",\n         \"pais\": \"UNITED STATES OF AMERICA (USA)\",\n         \"grupoId\": 1,\n         \"grupo\": \"Acción Ordinaria\",\n         \"codigo\": 703,\n         \"nombre\": \"APPLIED MICRO CIRCUITS CORP.\",\n         \"precioActual\": 0,\n         \"otrosConceptos\": {\n            \"SdtsBTConcepto\": {\n            \"texto\": \"Fecha de vencimiento.\",\n            \"valor\": 0,\n            \"concepto\": \"31/12/99\"\n            }\n         }\n      },\n      {\n         \"moneda\": 2222,\n         \"simbolo\": \"USD\",\n         \"pais\": \"UNITED STATES OF AMERICA (USA)\",\n         \"grupoId\": 1,\n         \"grupo\": \"Acción Ordinaria\",\n         \"codigo\": 704,\n         \"nombre\": \"APPLE COMPUTER INC.COM\",\n         \"precioActual\": 0,\n         \"otrosConceptos\": {\n            \"SdtsBTConcepto\": {\n            \"texto\": \"Fecha de vencimiento.\",\n            \"valor\": 0,\n            \"concepto\": \"31/12/99\"\n            }\n         }\n      }\n      ]\n   },\n    \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n    },\n   \"Btoutreq\": {\n      \"Numero\": \"786\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTTitulos.ObtenerValores\",\n      \"Fecha\": \"2017-12-15\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"16:35:22\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTitulo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del título."
+        },
+        {
+          "Nombre": "grupo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del grupo."
+        },
+        {
+          "Nombre": "grupoId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del título."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Listado de otros conceptos."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "precioActual",
+          "Tipo": "Double",
+          "Comentarios": "Precio actual."
+        },
+        {
+          "Nombre": "simbolo",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,157 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenerperiodoshabilitados",
+  "pageTitle": "Obtener Períodos Habilitados",
+  "description": "Método para obtener los períodos habilitados de un deposito a plazo.",
+  "pubName": "BTDepositosAPlazo.ObtenerPeriodosHabilitados",
+  "programa": "RBTPG492",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosExtendidos",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios."
+    },
+    {
+      "Nombre": "sdtPeriodos",
+      "Tipo": "<a href=\"#sbtperiodohabilitado\">sBTPeriodoHabilitado</a>",
+      "Comentarios": "Listado de períodos habilitados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del Producto."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El producto no corresponde a un producto de depósito a plazo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>45A5647518BC5FBB73003EA9</bts:Token>\n         </bts:Btinreq>\n         <bts:productoUId>184</bts:productoUId>\n      </bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerPeriodosHabilitados=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"GZ\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"productoUId\": 184\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ObtenerPeriodosHabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>45A5647518BC5FBB73003EA9</Token>\n         </Btinreq>\n         <sdtDatosExtendidos></sdtDatosExtendidos>\n         <sdtPeriodos>\n            <sBTPeriodoHabilitado>\n               <descripcion>Semanal</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>7</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Quincenal</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>14</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Mensual</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>30</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Bimestral</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>60</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Trimestral</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>90</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Cuatrimestral</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>120</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Quintumestral</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>150</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Semestral</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>180</periodo>\n            </sBTPeriodoHabilitado>\n            <sBTPeriodoHabilitado>\n               <descripcion>Anual</descripcion>\n               <datosExtendidos></datosExtendidos>\n               <periodo>360</periodo>\n            </sBTPeriodoHabilitado>\n         </sdtPeriodos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16830</Numero>\n            <Servicio>BTDepositosAPlazo.ObtenerPeriodosHabilitados</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-25</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>18:12:09</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTDepositosAPlazo.ObtenerPeriodosHabilitadosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"GZ\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtDatosExtendidos\": \"\",\n    \"sdtPeriodos\": {\n        \"sBTPeriodoHabilitado\": [\n        {\n            \"descripcion\": \"Semanal\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 7\n        },\n        {\n            \"descripcion\": \"Quincenal\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 14\n        },\n        {\n            \"descripcion\": \"Mensual\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 30\n        },\n        {\n            \"descripcion\": \"Bimestral\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 60\n        },\n        {\n            \"descripcion\": \"Trimestral\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 90\n        },\n        {\n            \"descripcion\": \"Cuatrimestral\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 120\n        },\n        {\n            \"descripcion\": \"Quintumestral\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 150\n        },\n        {\n            \"descripcion\": \"Semestral\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 180\n        },\n        {\n            \"descripcion\": \"Anual\",\n            \"datosExtendidos\": \"\",\n            \"periodo\": 360\n        }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"145\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTDepositosAPlazo.ObtenerPeriodosHabilitados\",\n        \"Fecha\": \"2023-03-01\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"12:04:07\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoExtendido",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Clave del dato extendido."
+        },
+        {
+          "Nombre": "lista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatosLista</a>",
+          "Comentarios": "Lista de datos."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de dato extendido."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de dato extendido."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPeriodoHabilitado",
+      "fields": [
+        {
+          "Nombre": "datosExtendidos",
+          "Tipo": "<a href=\"#sbtdatoextendidosalida\">sBTDatoExtendido</a>",
+          "Comentarios": "Listado de datos complementarios."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "periodo",
+          "Tipo": "Int",
+          "Comentarios": "Período."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoExtendidoSalida",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Clave del dato extendido."
+        },
+        {
+          "Nombre": "lista",
+          "Tipo": "<a href=\"#sbtdatolistasalida\">sBTDatosLista</a>",
+          "Comentarios": "Lista de datos."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de dato extendido."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de dato extendido."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoListaSalida",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

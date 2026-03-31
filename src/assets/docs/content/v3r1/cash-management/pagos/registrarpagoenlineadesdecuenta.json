@@ -1,0 +1,155 @@
+{
+  "slug": "cash-management/pagos/registrarpagoenlineadesdecuenta",
+  "pageTitle": "Registrar Pago En Linea Desde Cuenta",
+  "description": "Método para registrar el pago en linea de una factura, debitando desde la cuenta.",
+  "pubName": "BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta",
+  "programa": "RBTPGC67",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del contrato."
+    },
+    {
+      "Nombre": "servicio",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "deudaId",
+      "Tipo": "String",
+      "Comentarios": "Identificador de la deuda."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la moneda."
+    },
+    {
+      "Nombre": "importePago",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "sdtValoresCamposCash",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Lista de valores de campos CASH a buscar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "transaccionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de transacción."
+    },
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la orden."
+    },
+    {
+      "Nombre": "nroLineaOrden",
+      "Tipo": "Int",
+      "Comentarios": "Número de línea de orden CASH."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030614",
+      "Descripción": "Canal no habilitado para el servicio."
+    },
+    {
+      "Código": "1030615",
+      "Descripción": "Canal no habilitado para el contrato."
+    },
+    {
+      "Código": "1030618",
+      "Descripción": "El importe debe ser mayor a cero."
+    },
+    {
+      "Código": "1030619",
+      "Descripción": "Código de Moneda desconocido."
+    },
+    {
+      "Código": "1030701",
+      "Descripción": "El Servicio no existe."
+    },
+    {
+      "Código": "1030704",
+      "Descripción": "Id de contrato cliente desconocido."
+    },
+    {
+      "Código": "1030706",
+      "Descripción": "El contrato no esta activo."
+    },
+    {
+      "Código": "1030761",
+      "Descripción": "No se obtuvo Canal CASH para el canal que invoca."
+    },
+    {
+      "Código": "1030762",
+      "Descripción": "El servicio no es de recaudos."
+    },
+    {
+      "Código": "1030763",
+      "Descripción": "Debe indicar el identificador de la deuda."
+    },
+    {
+      "Código": "1030764",
+      "Descripción": "El servicio no es en linea, no se crea el cobro."
+    },
+    {
+      "Código": "1030765",
+      "Descripción": "La moneda del pago difiere con la del convenio."
+    },
+    {
+      "Código": "1030770",
+      "Descripción": "No se recupero información para la cuenta recibida."
+    },
+    {
+      "Código": "1030801",
+      "Descripción": "Saldo insuficiente para realizar el pago."
+    },
+    {
+      "Código": "1039999",
+      "Descripción": "No se determino módulo/transacción en la regla: [Número de regla]."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>54878527AF5867CA94C680B0</bts:Token>\n         </bts:Btinreq>\n         <bts:contratoId>8</bts:contratoId>\n         <bts:servicio>240</bts:servicio>\n         <bts:deudaId>4</bts:deudaId>\n         <bts:monedaId>0</bts:monedaId>\n         <bts:importePago>543</bts:importePago>\n         <bts:operacionUId>54</bts:operacionUId>\n         <bts:sdtValoresCamposCash>\n            <bts:sBTValorCampoCash>\n               <bts:tag></bts:tag>\n               <bts:valor></bts:valor>\n            </bts:sBTValorCampoCash>\n         </bts:sdtValoresCamposCash>\n      </bts:BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?RegistrarPagoEnLineaDesdeCuenta=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"contratoId\": 8,\n    \"serivicio\": 240,\n    \"deudaId\": 4,\n    \"monedaId\": 0,\n    \"importePago\": 543,\n    \"operacionUId\": 54,\n    \"sdtValoresCamposCash\": {\n      \"sBTValorCampoCash\": {\n         \"tag\": \"\",\n         \"valor\": \"\"\n      }\n    }\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.RegistrarPagoEnLineaDesdeCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>BANTOTAL</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>E362E52FED059AA3BF86A6E3</Token>\n         </Btinreq>\n         <transaccionId>124</transaccionId>\n         <ordenId>532</ordenId>\n         <nroLineaOrden>4</nroLineaOrden>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-08</Fecha>\n            <Hora>12:27:14</Hora>\n            <Numero>742</Numero>\n            <Servicio>BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.RegistrarPagoEnLineaDesdeCuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"transaccionId\": 124,\n    \"ordenId\": 532,\n    \"nroLineaOrden\": 4,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorCampoCASH",
+      "fields": [
+        {
+          "Nombre": "tag",
+          "Tipo": "String",
+          "Comentarios": "Tag del campo CASH."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor del campo CASH."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

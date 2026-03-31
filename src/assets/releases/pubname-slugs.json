@@ -224,62 +224,6 @@
     ]
   },
   {
-    "key": "BTCalendario.ObtenerFechaHabilAnterior",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerfechahabilanterior"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerFechaHabilAnteriorSucursal",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerfechahabilanteriordesucursal"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerFechaHabilSucursal",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerfechahabildesucursal"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerInicioYFinMes",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerinicioyfindemes"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerInicioYFinMesSucursal",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerinicioyfindemesdesucursal"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerProximaFechaHabil",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerproximafechahabil"
-    ]
-  },
-  {
-    "key": "BTCalendario.ObtenerProximaFechaHabilSucursal",
-    "path": [
-      "calendarios",
-      "obtener",
-      "obtenerproximafechahabildesucursal"
-    ]
-  },
-  {
     "key": "BTCalendarios.CalcularFechaVencimiento",
     "path": [
       "calendarios",
@@ -317,6 +261,62 @@
       "calendarios",
       "obtener",
       "obtenerfechahabil"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilAnterior",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabilanterior"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilAnteriorSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabilanteriordesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabildesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerInicioYFinMes",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerinicioyfindemes"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerInicioYFinMesSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerinicioyfindemesdesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerProximaFechaHabil",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerproximafechahabil"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerProximaFechaHabilSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerproximafechahabildesucursal"
     ]
   },
   {
@@ -752,7 +752,7 @@
     ]
   },
   {
-    "key": "BTClientes.EliminarIntegrantes",
+    "key": "BTClientes.EliminarIntegrante",
     "path": [
       "clientes",
       "actualizar",
@@ -2168,6 +2168,14 @@
     ]
   },
   {
+    "key": "BTCuentasVista.ObtenerInstrucciones",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerinstrucciones"
+    ]
+  },
+  {
     "key": "BTCuentasVista.ObtenerPaquete",
     "path": [
       "cuentas-vista",
@@ -2304,46 +2312,6 @@
     ]
   },
   {
-    "key": "BTCuentasVistas.ObtenerInstrucciones",
-    "path": [
-      "cuentas-vista",
-      "obtener",
-      "obtenerinstrucciones"
-    ]
-  },
-  {
-    "key": "BTDepositoAPlazo.ContratarSimulacion",
-    "path": [
-      "depositos-a-plazo",
-      "contratar",
-      "contratarsimulacion"
-    ]
-  },
-  {
-    "key": "BTDepositoAPlazo.ObtenerInstruccionesHabilitados",
-    "path": [
-      "depositos-a-plazo",
-      "obtener",
-      "obtenerinstruccioneshabilitados"
-    ]
-  },
-  {
-    "key": "BTDepositoAPlazo.ObtenerProductosHabilitados",
-    "path": [
-      "depositos-a-plazo",
-      "obtener",
-      "obtenerproductoshabilitados"
-    ]
-  },
-  {
-    "key": "BTDepositoAPlazo.SimularConCronograma",
-    "path": [
-      "depositos-a-plazo",
-      "simular",
-      "simularconcronograma"
-    ]
-  },
-  {
     "key": "BTDepositosAPlazo.ActualizarBeneficiarios",
     "path": [
       "depositos-a-plazo",
@@ -2381,6 +2349,14 @@
       "depositos-a-plazo",
       "contratar",
       "contratarconfacultades"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ContratarSimulacion",
+    "path": [
+      "depositos-a-plazo",
+      "contratar",
+      "contratarsimulacion"
     ]
   },
   {
@@ -2472,6 +2448,14 @@
     ]
   },
   {
+    "key": "BTDepositosAPlazo.ObtenerInstruccionesHabilitados",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerinstruccioneshabilitados"
+    ]
+  },
+  {
     "key": "BTDepositosAPlazo.ObtenerMovimientos",
     "path": [
       "depositos-a-plazo",
@@ -2496,6 +2480,14 @@
     ]
   },
   {
+    "key": "BTDepositosAPlazo.ObtenerProductosHabilitados",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerproductoshabilitados"
+    ]
+  },
+  {
     "key": "BTDepositosAPlazo.ObtenerTasaPrecancelacion",
     "path": [
       "depositos-a-plazo",
@@ -2516,6 +2508,14 @@
       "depositos-a-plazo",
       "simular",
       "simular"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.SimularConCronograma",
+    "path": [
+      "depositos-a-plazo",
+      "simular",
+      "simularconcronograma"
     ]
   },
   {
@@ -3814,11 +3814,11 @@
     ]
   },
   {
-    "key": "BTPersonas.ObtenerNaturalezasJuridicas",
+    "key": "BTPersonas.ObtenerNaturalezasJuridicass",
     "path": [
       "personas",
       "obtener",
-      "obtenernaturalezasjuridicas"
+      "ObtenerNaturalezasJuridicass"
     ]
   },
   {

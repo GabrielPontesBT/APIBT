@@ -1,0 +1,63 @@
+{
+  "slug": "clientes/obtener/obteneridentificadorunico",
+  "pageTitle": "Obtener Identificador Único",
+  "description": "Método para obtener el identificador único correspondiente a una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerIdentificadorUnico",
+  "programa": "RBTPG001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "cuentaBT",
+      "Tipo": "Int",
+      "Comentarios": "Cuenta Bantotal."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "tipoDocumento",
+      "Tipo": "String",
+      "Comentarios": "Tipo de documento."
+    },
+    {
+      "Nombre": "numeroDocumento",
+      "Tipo": "String",
+      "Comentarios": "Número de documento."
+    },
+    {
+      "Nombre": "nombre",
+      "Tipo": "String",
+      "Comentarios": "Nombre."
+    },
+    {
+      "Nombre": "ejecutivo",
+      "Tipo": "String",
+      "Comentarios": "Ejecutivo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió la Cuenta BT."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerIdentificadorUnico>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:cuentaBT>40</bts:cuentaBT>\n      </bts:BTClientes.ObtenerIdentificadorUnico>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIdentificadorUnico=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: fa21f66a-6048-8719-0d77-9750abc1c92e' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"cuentaBT\": 40\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerIdentificadorUnicoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>268b6d23eb4A8B5C60A82434</Token>\n         </Btinreq>\n         <clienteUId>81</clienteUId>\n         <tipoDocumento>CI</tipoDocumento>\n         <numeroDocumento>46600107</numeroDocumento>\n         <nombre>PEREZ SOSA JUAN</nombre>\n         <ejecutivo/>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>851</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerIdentificadorUnico</Servicio>\n            <Fecha>2017-12-18</Fecha>\n            <Requerimiento/>\n            <Hora>02:34:33</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerIdentificadorUnicoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": \"81\",\n    \"tipoDocumento\": \"CI\",\n    \"numeroDocumento\": \"46600107\",\n    \"nombre\": \"PEREZ SOSA JUAN\",\n    \"ejecutivo\": \"\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"852\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerIdentificadorUnico\",\n        \"Fecha\": \"2017-12-18\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"02:35:28\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

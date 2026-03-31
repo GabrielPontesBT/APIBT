@@ -1,0 +1,72 @@
+{
+  "slug": "personas/actualizar/actualizarregistroempleado",
+  "pageTitle": "Actualizar Registro Empleado",
+  "description": "Método para actualizar si una persona es empleado de la institución, así como la fecha de ingreso si corresponde.",
+  "pubName": "BTPersonas.ActualizarRegistroEmpleado",
+  "programa": "RBTPG536",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "empleado",
+      "Tipo": "String",
+      "Comentarios": "¿Es empleado de la institución? (S/N)."
+    },
+    {
+      "Nombre": "fechaAlta",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de ingreso."
+    },
+    {
+      "Nombre": "fechaBaja",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de baja"
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió si la persona es un empleado de la institución o no."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "El valor de empleado no es correcto."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La persona no existe."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se encontró una cuenta válida para la persona ingresada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarRegistroEmpleado>\n          <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>227</bts:personaUId>\n         <bts:empleado>S</bts:empleado>\n         <bts:fechaAlta>2024-01-01</bts:fechaAlta>\n         <bts:fechaBaja></bts:fechaBaja>\n      </bts:BTPersonas.ActualizarRegistroEmpleado>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarRegistroEmpleado' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"personaUId\": 227,\n    \"empleado\": \"S\",\n    \"fechaAlta\": \"2024-01-01\",\n    \"fechaBaja\": \"\"\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarRegistroEmpleadoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20208</Numero>\n            <Servicio>BTPersonas.ActualizarRegistroEmpleado</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2024-05-02</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>17:33:37</Hora>\n         </Btoutreq>\n      </BTPersonas.ActualizarRegistroEmpleadoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"Erroresnegocio\": \"\",\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.ActualizarRegistroEmpleado\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

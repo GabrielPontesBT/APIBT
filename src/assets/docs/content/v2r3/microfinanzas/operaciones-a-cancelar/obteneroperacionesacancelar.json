@@ -1,0 +1,109 @@
+{
+  "slug": "microfinanzas/operaciones-a-cancelar/obteneroperacionesacancelar",
+  "pageTitle": "Obtener Operaciones a Cancelar",
+  "description": "Método para obtener las operaciones seleccionadas a cancelar para una solicitud de créditos.",
+  "pubName": "BTMicrofinanzas.ObtenerOperacionesACancelar",
+  "programa": "RBTPG364",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de instancia Workflow."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtOperaciones",
+      "Tipo": "<a href=\"#sbtoperacionwf\">sBTOperacionWF</a>",
+      "Comentarios": "Listado de operaciones."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de solicitud."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La solicitud ingresada no existe."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El cliente ingresado no corresponde con la solicitud."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se encontraron operaciones para cancelar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.ObtenerOperacionesACancelar>\n         <bts:Btinreq>\n            <bts:Device>GP</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>dbfad05a474A8B5C60A82434</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:solicitudUId>11887</bts:solicitudUId>\n         <bts:clienteUId>862</bts:clienteUId>\n      </bts:BTMicrofinanzas.ObtenerOperacionesACancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?ObtenerOperacionesACancelar' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"GP\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"solicitudUId\": \"11887\",\n\t\"clienteUId\": \"862\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.ObtenerOperacionesACancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GP</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>dbfad05a474A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtOperaciones>\n            <sBTOperacionWF>\n               <fechaUltimoPago>2016-03-01</fechaUltimoPago>\n               <diasMora>1674</diasMora>\n               <saldo>-30340.61</saldo>\n               <fechaVencimiento>2016-01-02</fechaVencimiento>\n               <montoCancelacion>511820.42</montoCancelacion>\n               <operacionUId>1724</operacionUId>\n               <fechaValor>2020-03-13</fechaValor>\n            </sBTOperacionWF>\n            <sBTOperacionWF>\n               <fechaUltimoPago>2017-11-14</fechaUltimoPago>\n               <diasMora>0</diasMora>\n               <saldo>-15000.00</saldo>\n               <fechaVencimiento>2016-01-02</fechaVencimiento>\n               <montoCancelacion>0.00</montoCancelacion>\n               <operacionUId>1727</operacionUId>\n               <fechaValor>2020-03-13</fechaValor>\n            </sBTOperacionWF>\n         </sdtOperaciones>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>111406</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTMicrofinanzas.ObtenerOperacionesACancelar</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2021-10-18</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>09:09:54</Hora>\n         </Btoutreq>\n      </BTMicrofinanzas.ObtenerOperacionesACancelarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"GP\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cc9b534A8B5C60A82434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"sdtOperaciones\": {\n      \"sBTOperacionWF\": [\n      {\n         \"fechaUltimoPago\": \"2016-03-01\",\n         \"diasMora\": \"1674\",\n         \"saldo\": \"-30340.61\",\n         \"fechaVencimiento\": \"2016-01-02\",\n         \"montoCancelacion\": \"511820.42\",\n         \"operacionUId\": \"1724\",\n         \"fechaValor\": \"2020-03-13\"\n      },\n      {\n         \"fechaUltimoPago\": \"2017-11-14\",\n         \"diasMora\": \"0\",\n         \"saldo\": \"-15000.00\",\n         \"fechaVencimiento\": \"2016-01-02\",\n         \"montoCancelacion\": \"0.00\",\n         \"operacionUId\": \"1727\",\n         \"fechaValor\": \"2020-03-13\"\n      }\n      ]\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"111406\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTMicrofinanzas.ObtenerOperacionesACancelar\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2021-10-18\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"09:09:54\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTOperacionWF",
+      "fields": [
+        {
+          "Nombre": "diasMora",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora de la operación."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de la operación."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor de la operación."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de la operación."
+        },
+        {
+          "Nombre": "montoCancelacion",
+          "Tipo": "Double",
+          "Comentarios": "Monto de cancelación de la operación."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de la operación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

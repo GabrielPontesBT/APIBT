@@ -1,0 +1,130 @@
+{
+  "slug": "cash-management/obtener/obtenerresumenorden",
+  "pageTitle": "Obtener Resumen de una Orden",
+  "description": "Método para obtener el resumen de la información de la orden recibida.",
+  "pubName": "BTCASHManagement.ObtenerResumenOrden",
+  "programa": "RBTPGC24",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la orden."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtResumenCabezal",
+      "Tipo": "<a href=\"#sbtresumencabezal\">sBTResumenCabezal</a>",
+      "Comentarios": "Listado de cabezales de los resúmenes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030705",
+      "Descripción": "Cuenta cliente sin contrato vinculado."
+    },
+    {
+      "Código": "1030708",
+      "Descripción": "Estado de archivo desconocido."
+    },
+    {
+      "Código": "1030709",
+      "Descripción": "Se requiere identificación de cuenta cliente."
+    },
+    {
+      "Código": "1030712",
+      "Descripción": "Se requiere cuenta para recuperar la información."
+    },
+    {
+      "Código": "1030714",
+      "Descripción": "El contrato consultado no corresponde al servicio recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ObtenerResumenOrden>\n         <bts:Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </bts:Btinreq>\n         <bts:ordenId>345</bts:ordenId>\n      </bts:BTCASHManagement.ObtenerResumenOrden>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerResumenOrden=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"ordenId\": 345\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.ObtenerResumenOrdenResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </Btinreq>\n         <sdtResumenCabezal>\n            <moneda>0</moneda>\n            <cuentaDebito>825</cuentaDebito>\n            <estado>S</estado>\n            <nombreArchivo>Serv100Pcaja.txt</nombreArchivo>\n            <referencia/>\n            <cantidadLineas>2</cantidadLineas>\n            <ordenId>345</ordenId>\n            <servicio>100</servicio>\n            <contratoId>60</contratoId>\n            <importe>400.0</importe>\n            <mensajesError></mensajesError>\n            <archivoId>272</archivoId>\n            <fechaPago>2024-11-01</fechaPago>\n         </sdtResumenCabezal>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-18</Fecha>\n            <Hora>12:47:36</Hora>\n            <Numero>26014</Numero>\n            <Servicio>BTCASHManagement.ObtenerResumenOrden</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.ObtenerResumenOrdenResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"sdtResumenCabezal\": {\n         \"moneda\": 0,\n         \"cuentaDebito\": 825,\n         \"estado\": \"S\",\n         \"nombreArchivo\": \"Serv100Pcaja.txt\",\n         \"referencia\": \"\",\n         \"cantidadLineas\": 2,\n         \"ordenId\": 345,\n         \"servicio\": 100,\n         \"contratoId\": 60,\n         \"importe\": 400,\n         \"mensajesError\": \"\",\n         \"archivoId\": 272,\n         \"fechaPago\": \"2024-11-01\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCASHManagement.ObtenerResumenOrden\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTResumenCabezal",
+      "fields": [
+        {
+          "Nombre": "archivoId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de archivo."
+        },
+        {
+          "Nombre": "contratoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del contrato CASH."
+        },
+        {
+          "Nombre": "servicio",
+          "Tipo": "Short",
+          "Comentarios": "Servicio CASH."
+        },
+        {
+          "Nombre": "ordenId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de orden CASH."
+        },
+        {
+          "Nombre": "cuentaDebito",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la cuenta débito."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago o cobro."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del archivo."
+        },
+        {
+          "Nombre": "cantidadLineas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de líneas del archivo."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe total."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia del pago o cobro."
+        },
+        {
+          "Nombre": "nombreArchivo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del archivo."
+        },
+        {
+          "Nombre": "mensajesError",
+          "Tipo": "String",
+          "Comentarios": "Lista de mensajes de la línea."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

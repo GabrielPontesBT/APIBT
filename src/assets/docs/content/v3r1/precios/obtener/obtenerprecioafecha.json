@@ -1,0 +1,56 @@
+{
+  "slug": "precios/obtener/obtenerprecioafecha",
+  "pageTitle": "Obtener Precio a Fecha",
+  "description": "Método para obtener la cotización en moneda nacional de una especie en la fecha recibida.",
+  "pubName": "BTPrecios.ObtenerPrecioAFecha",
+  "programa": "RBTPG049",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "especie",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la especie."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha a consultar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "precio",
+      "Tipo": "Double",
+      "Comentarios": "Cotización."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió una especie."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La especie no es un índice."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La especie no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerPrecioAFecha>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>324915377F955E77534D3E02</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:especie>500</bts:especie>\n         <bts:fecha>2017-11-11</bts:fecha>\n      </bts:BTPrecios.ObtenerPrecioAFecha>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerPrecioAFecha=' \\\n  -H 'cache-control: no-cache,no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: d20f4b05-03a0-49c1-ba1f-d026339b8367,3f56f9d3-094e-474b-8730-6840899770d7' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"especie\": \"500\",\n   \"fecha\": \"2017-11-11\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrecios.ObtenerPrecioAFechaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>324915377F955E77534D3E02</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <precio>17282.89</precio>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPrecios.ObtenerPrecioAFecha</Servicio>\n            <Fecha>2019-11-19</Fecha>\n            <Hora>15:34:16</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>6957</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPrecios.ObtenerPrecioAFechaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"precio\": 17282.89,\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": 56,\n      \"Servicio\": \"BTPrecios.ObtenerPrecioAFecha\",\n      \"Estado\": \"OK\",\n      \"Fecha\": \"2019-10-25\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:51:52\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

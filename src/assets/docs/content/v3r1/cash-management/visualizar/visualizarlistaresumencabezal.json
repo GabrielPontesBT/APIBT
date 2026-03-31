@@ -1,0 +1,155 @@
+{
+  "slug": "cash-management/visualizar/visualizarlistaresumencabezal",
+  "pageTitle": "Visualizar Lista Resumen Cabezal",
+  "description": "Método para visualizar una lista del resumen de información de archivos.",
+  "pubName": "BTCASHManagement.VisualizarListaResumenCabezal",
+  "programa": "RBTPGC21",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la Cuenta Cliente."
+    },
+    {
+      "Nombre": "contratoF",
+      "Tipo": "Long",
+      "Comentarios": "Lista de identificadores de contratos CASH del cliente."
+    },
+    {
+      "Nombre": "servicioF",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "estadoF",
+      "Tipo": "String",
+      "Comentarios": "Estado del archivo."
+    },
+    {
+      "Nombre": "fechaDesdeF",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de pago o cobro, desde."
+    },
+    {
+      "Nombre": "fechaHastaF",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de pago o cobro, hasta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "listaArchivos",
+      "Tipo": "<a href=\"#sbtresumencabezal\">sBTResumenCabezal</a>",
+      "Comentarios": "Listado de cabezales solicitado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030705",
+      "Descripción": "Cuenta cliente sin contrato vinculado."
+    },
+    {
+      "Código": "1030708",
+      "Descripción": "Estado de archivo desconocido."
+    },
+    {
+      "Código": "1030709",
+      "Descripción": "Se requiere identificacion de cuenta cliente."
+    },
+    {
+      "Código": "1030712",
+      "Descripción": "Se requiere cuenta para recuperar la informacion."
+    },
+    {
+      "Código": "1030714",
+      "Descripción": "El contrato consultado no corresponde al servicio recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.VisualizarListaResumenCabezal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>311020191114150000216393</bts:Token>\n            <bts:Device>001</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:contratoF></bts:contratoF>\n         <bts:servicioF></bts:servicioF>\n         <bts:estadoF></bts:estadoF>\n         <bts:fechaDesdeF></bts:fechaDesdeF>\n         <bts:fechaHastaF></bts:fechaHastaF>\n      </bts:BTCASHManagement.VisualizarListaResumenCabezal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarListaResumenCabezal \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"clienteUId\":1,\n\t\"contratoF\": \n\t{},\n\t\"servicioF\":0,\n\t\"estadoF\" : \"\",\n\t\"fechaDesdeF\" : \"\",\n\t\"fechaHastaF\" : \"\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.VisualizarListaResumenCabezalResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>MINSTALADOR</Usuario>\n            <Token>311020191114150000216393</Token>\n            <Device>001</Device>\n         </Btinreq>\n         <listaArchivos>\n            <sBTResumenCabezal>\n               <archivoId>56</archivoId>\n               <contratoId>7</contratoId>\n               <servicio>20</servicio>\n               <ordenId>121</ordenId>\n               <cuentaDebito>1</cuentaDebito>\n               <fechaPago>2019-11-29</fechaPago>\n               <estado>N</estado>\n               <cantidadLineas>6</cantidadLineas>\n               <moneda>101</moneda>\n               <importe>2600.00</importe>\n               <referencia/>\n               <nombreArchivo>Servicio20_001.csv</nombreArchivo>\n               <mensajesError>\n                  <item>El monto total es distinto al importe del cabezal</item>\n               </mensajesError>\n            </sBTResumenCabezal>\n            <sBTResumenCabezal>\n               <archivoId>57</archivoId>\n               <contratoId>7</contratoId>\n               <servicio>20</servicio>\n               <ordenId>122</ordenId>\n               <cuentaDebito>1</cuentaDebito>\n               <fechaPago>2019-11-29</fechaPago>\n               <estado>N</estado>\n               <cantidadLineas>4</cantidadLineas>\n               <moneda>101</moneda>\n               <importe>2600.00</importe>\n               <referencia/>\n               <nombreArchivo>Servicio20_001.csv</nombreArchivo>\n               <mensajesError></mensajesError>\n            </sBTResumenCabezal>\n            <sBTResumenCabezal>\n               <archivoId>58</archivoId>\n               <contratoId>7</contratoId>\n               <servicio>20</servicio>\n               <ordenId>123</ordenId>\n               <cuentaDebito>1</cuentaDebito>\n               <fechaPago>2019-11-29</fechaPago>\n               <estado>P</estado>\n               <cantidadLineas>4</cantidadLineas>\n               <moneda>101</moneda>\n               <importe>2600.00</importe>\n               <referencia/>\n               <nombreArchivo>Servicio20_001.csv</nombreArchivo>\n               <mensajesError></mensajesError>\n            </sBTResumenCabezal>\n         </listaArchivos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCASHManagement.VisualizarListaResumenCabezal</Servicio>\n            <Fecha>2019-10-31</Fecha>\n            <Hora>15:47:53</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>670</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCASHManagement.VisualizarListaResumenCabezalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\n\t\"listaArchivos\": {\n\t\t\"sBTResumenCabezal\": [     \n\t\t\t{\n\t\t\t\t\"archivoId\": \"56\",\n\t\t\t\t\"contratoId\": \"7\",\n\t\t\t\t\"servicio\": \"20\",\n\t\t\t\t\"ordenId\": \"121\",\n\t\t\t\t\"cuentaDebito\": \"1\",\n\t\t\t\t\"fechaPago\": \"2019-11-29\",\n\t\t\t\t\"estado\": \"N\",\n\t\t\t\t\"cantidadLineas\": \"6\",\n\t\t\t\t\"moneda\": \"101\",\n\t\t\t\t\"importe\": \"2600.00\",\n\t\t\t\t\"referencia\": [],\n\t\t\t\t\"nombreArchivo\": \"Servicio20_001.csv\",\n\t\t\t\t\"mensajesError\":  \n\t\t\t\t{\n\t\t\t\t\t\"item\": \"El monto total es distinto al importe del cabezal\"\n\t\t\t\t}\n\t\t\t},     \n\t\t\t{\n\t\t\t\t\"archivoId\": \"57\",\n\t\t\t\t\"contratoId\": \"7\",\n\t\t\t\t\"servicio\": \"20\",\n\t\t\t\t\"ordenId\": \"122\",\n\t\t\t\t\"cuentaDebito\": \"1\",\n\t\t\t\t\"fechaPago\": \"2019-11-29\",\n\t\t\t\t\"estado\": \"N\",\n\t\t\t\t\"cantidadLineas\": \"4\",\n\t\t\t\t\"moneda\": \"101\",\n\t\t\t\t\"importe\": \"2600.00\",\n\t\t\t\t\"referencia\": [],\n\t\t\t\t\"nombreArchivo\": \"Servicio20_001.csv\",\n\t\t\t\t\"mensajesError\": []\n\t\t\t},     \n\t\t\t{\n\t\t\t\t\"archivoId\": \"58\",\n\t\t\t\t\"contratoId\": \"7\",\n\t\t\t\t\"servicio\": \"20\",\n\t\t\t\t\"ordenId\": \"123\",\n\t\t\t\t\"cuentaDebito\": \"1\",\n\t\t\t\t\"fechaPago\": \"2019-11-29\",\n\t\t\t\t\"estado\": \"P\",\n\t\t\t\t\"cantidadLineas\": \"4\",\n\t\t\t\t\"moneda\": \"101\",\n\t\t\t\t\"importe\": \"2600.00\",\n\t\t\t\t\"referencia\": [],\n\t\t\t\t\"nombreArchivo\": \"Servicio20_001.csv\",\n\t\t\t\t\"mensajesError\": []\n\t\t\t}\n\t\t]\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 46,\n        \"Servicio\": \"BTCASHManagement.VisualizarListaResumenCabezal\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2019-10-24\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"20:55:06\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTResumenCabezal",
+      "fields": [
+        {
+          "Nombre": "archivoId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de archivo."
+        },
+        {
+          "Nombre": "cantidadLineas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de líneas del archivo."
+        },
+        {
+          "Nombre": "contratoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del contrato CASH."
+        },
+        {
+          "Nombre": "cuentaDebito",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la cuenta débito."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del archivo."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago o cobro."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe total."
+        },
+        {
+          "Nombre": "mensajesError",
+          "Tipo": "String",
+          "Comentarios": "Lista de mensajes de la línea."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "nombreArchivo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del archivo."
+        },
+        {
+          "Nombre": "ordenId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de orden CASH."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia del pago o cobro."
+        },
+        {
+          "Nombre": "servicio",
+          "Tipo": "Short",
+          "Comentarios": "Servicio CASH."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

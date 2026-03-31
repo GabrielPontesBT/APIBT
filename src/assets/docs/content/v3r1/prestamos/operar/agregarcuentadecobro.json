@@ -1,0 +1,64 @@
+{
+  "slug": "prestamos/operar/agregarcuentadecobro",
+  "pageTitle": "Agregar Cuenta de Cobro",
+  "description": "Método para agregar una cuenta de cobro de un préstamo.",
+  "pubName": "BTPrestamos.AgregarCuentaDeCobro",
+  "programa": "RBTPG132",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación del préstamo."
+    },
+    {
+      "Nombre": "operacionUId_cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta de cobro."
+    },
+    {
+      "Nombre": "permite_sobregirar",
+      "Tipo": "String",
+      "Comentarios": "Define si la cuenta de cobro puede sobregirar o no (S/N)."
+    },
+    {
+      "Nombre": "permite_pago_parcial",
+      "Tipo": "String",
+      "Comentarios": "Define si se permiten pagos parciales de la cuenta de cobro (S/N)."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación de Préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador único de operación de cobro."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación de cobro para el Identificador: [Número de Identificador]."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.AgregarCuentaDeCobro>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>121</bts:operacionUId>\n         <bts:operacionUId_cobro>3</bts:operacionUId_cobro>\n         <bts:permite_sobregirar>S</bts:permite_sobregirar>\n         <bts:permite_pago_parcial>S</bts:permite_pago_parcial>\n      </bts:BTPrestamos.AgregarCuentaDeCobro>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AgregarCuentaDeCobro' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": 121,\n\t\"operacionUId_cobro\": 2,\n\t\"permite_sobregirar\": \"S\",\n\t\"permite_pago_parcial\": \"S\"\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.AgregarCuentaDeCobroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>0d2dc7b1654A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>100</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.AgregarCuentaDeCobro</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-05-04</Fecha>\n            <Hora>18:04:42</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.AgregarCuentaDeCobroResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"101\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.AgregarCuentaDeCobro\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-05-04\",\n        \"Hora\": \"18:07:15\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

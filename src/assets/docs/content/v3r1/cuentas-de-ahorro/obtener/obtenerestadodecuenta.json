@@ -1,0 +1,185 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerestadodecuenta",
+  "pageTitle": "Obtener Estado de Cuenta",
+  "description": "Método para obtener el estado de cuenta de un producto de cuenta de ahorro.",
+  "pubName": "BTCuentasDeAhorro.ObtenerEstadoDeCuenta",
+  "programa": "RBTPG004",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "cantidadDias",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de días para atrás (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor)."
+    },
+    {
+      "Nombre": "cantidadMovimientos",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de movimientos (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEstadoDeCuenta",
+      "Tipo": "<a href=\"#sbtestadocuentacv\">sBTEstadoCuentaCV</a>",
+      "Comentarios": "Datos de estado de cuenta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta de ahorro."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió la cantidad de días."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió la cantidad de movimientos."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasDeAhorro.ObtenerEstadoDeCuenta>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>281</bts:operacionUId>\n      </bts:BTCuentasDeAhorro.ObtenerEstadoDeCuenta>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerEstadoDeCuenta=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: c27aec65-f66f-b138-f9d3-15a243b6d5e4' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 281\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasDeAhorro.ObtenerEstadoDeCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>75e20bd1614A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtEstadoDeCuenta>\n            <saldoPartida>208750.00</saldoPartida>\n            <fechaHasta>2018-10-09</fechaHasta>\n            <productoUId>9</productoUId>\n            <movimientos>\n               <sBTMovimiento>\n                  <movimientoUId>135</movimientoUId>\n                  <fecha>2018-10-09</fecha>\n                  <hora>16:45:54</hora>\n                  <concepto/>\n                  <referencia/>\n                  <numeroCheque>0</numeroCheque>\n                  <debitoCredito>D</debitoCredito>\n                  <moneda/>\n                  <importe>5000.00</importe>\n                  <tipoCambio>0.000000</tipoCambio>\n                  <arbitraje>0.000000</arbitraje>\n                  <saldo>143750.00</saldo>\n               </sBTMovimiento>\n               <sBTMovimiento>\n                  <movimientoUId>216</movimientoUId>\n                  <fecha>2018-09-10</fecha>\n                  <hora>12:10:37</hora>\n                  <concepto/>\n                  <referencia/>\n                  <numeroCheque>0</numeroCheque>\n                  <debitoCredito>D</debitoCredito>\n                  <moneda/>\n                  <importe>5000.00</importe>\n                  <tipoCambio>0.000000</tipoCambio>\n                  <arbitraje>0.000000</arbitraje>\n                  <saldo>148750.00</saldo>\n               </sBTMovimiento>\n            </movimientos>\n            <fechaDesde>2018-07-11</fechaDesde>\n         </sdtEstadoDeCuenta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>927</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasDeAhorro.ObtenerEstadoDeCuenta</Servicio>\n            <Fecha>2017-12-21</Fecha>\n            <Requerimiento/>\n            <Hora>17:32:38</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasDeAhorro.ObtenerEstadoDeCuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtEstadoDeCuenta\": {\n        \"saldoPartida\": \"208750.00\",\n        \"fechaHasta\": \"2018-10-09\",\n        \"productoUId\": \"9\",\n        \"movimientos\": {\n            \"sBTMovimiento\": [\n                {\n                    \"moneda\": \"\",\n                    \"hora\": \"16:45:54\",\n                    \"referencia\": \"\",\n                    \"concepto\": \"\",\n                    \"movimientoUId\": \"135\",\n                    \"debitoCredito\": \"D\",\n                    \"saldo\": \"143750.00\",\n                    \"importe\": \"5000.00\",\n                    \"numeroCheque\": \"0\",\n                    \"tipoCambio\": \"0.000000\",\n                    \"arbitraje\": \"0.000000\",\n                    \"fecha\": \"2018-10-09\"\n                },\n                {\n                    \"moneda\": \"\",\n                    \"hora\": \"12:10:37\",\n                    \"referencia\": \"\",\n                    \"concepto\": \"\",\n                    \"movimientoUId\": \"216\",\n                    \"debitoCredito\": \"D\",\n                    \"saldo\": \"148750.00\",\n                    \"importe\": \"5000.00\",\n                    \"numeroCheque\": \"0\",\n                    \"tipoCambio\": \"0.000000\",\n                    \"arbitraje\": \"0.000000\",\n                    \"fecha\": \"2018-09-10\"\n                }\n            ]\n        },\n        \"fechaDesde\": \"2018-07-11\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"928\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasDeAhorro.ObtenerEstadoDeCuenta\",\n        \"Fecha\": \"2017-12-21\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"17:33:12\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEstadoCuentaCV",
+      "fields": [
+        {
+          "Nombre": "fechaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde la cual se emite el estado de cuenta."
+        },
+        {
+          "Nombre": "fechaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha hasta la cual se emite el estado de cuenta."
+        },
+        {
+          "Nombre": "movimientos",
+          "Tipo": "<a href=\"#sbtmovimiento\">sBTMovimiento</a>",
+          "Comentarios": "Datos de movimiento."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "saldoPartida",
+          "Tipo": "Double",
+          "Comentarios": "Saldo inicial."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTMovimiento",
+      "fields": [
+        {
+          "Nombre": "arbitraje",
+          "Tipo": "Double",
+          "Comentarios": "Arbitraje de moneda."
+        },
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto de movimiento."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtdatoadicional\">sBTDatoAdicional</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "debitoCredito",
+          "Tipo": "String",
+          "Comentarios": "Débito o Crédito (D/C).."
+        },
+        {
+          "Nombre": "fecha",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de movimiento."
+        },
+        {
+          "Nombre": "hora",
+          "Tipo": "String",
+          "Comentarios": "Hora de movimiento."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe de movimiento."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda"
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de movimiento."
+        },
+        {
+          "Nombre": "numeroCheque",
+          "Tipo": "Int",
+          "Comentarios": "Número de cheque"
+        },
+        {
+          "Nombre": "ordinal",
+          "Tipo": "Int",
+          "Comentarios": "Número de ordinal."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia.."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de cuenta vista."
+        },
+        {
+          "Nombre": "tipoCambio",
+          "Tipo": "Double",
+          "Comentarios": "Tipo de cambio de moneda."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoAdicional",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "String",
+          "Comentarios": "Detalle de dato adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

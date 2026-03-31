@@ -1,0 +1,356 @@
+[
+  {
+    "type": "folder",
+    "label": "Argentina AR",
+    "slug": "argentina-ar",
+    "children": [
+      {
+        "type": "folder",
+        "label": "COELSA",
+        "slug": "argentina-ar/coelsa",
+        "children": [
+          {
+            "type": "folder",
+            "label": "DEBIN",
+            "slug": "argentina-ar/coelsa/debin",
+            "children": [
+              {
+                "type": "file",
+                "label": "AdhesiónComprador",
+                "pageTitle": "Comprador Adhesión",
+                "slug": "argentina-ar/coelsa/debin/adhesioncomprador"
+              },
+              {
+                "type": "file",
+                "label": "BajaCuentaComprador",
+                "pageTitle": "Baja Cuenta Comprador",
+                "slug": "argentina-ar/coelsa/debin/bajacuentacomprador"
+              },
+              {
+                "type": "file",
+                "label": "BajaCuentaVendedor",
+                "pageTitle": "Baja Cuenta Vendedor",
+                "slug": "argentina-ar/coelsa/debin/bajacuentavendedor"
+              },
+              {
+                "type": "file",
+                "label": "ConfirmaDebito",
+                "pageTitle": "Confirmar Débito",
+                "slug": "argentina-ar/coelsa/debin/confirmadebito"
+              },
+              {
+                "type": "file",
+                "label": "ConsultaComprador",
+                "pageTitle": "Consultar Comprador",
+                "slug": "argentina-ar/coelsa/debin/consultacomprador"
+              },
+              {
+                "type": "file",
+                "label": "ConsultaCuentas",
+                "pageTitle": "Consultar Cuentas",
+                "slug": "argentina-ar/coelsa/debin/consultacuentas"
+              },
+              {
+                "type": "file",
+                "label": "ConsultaVendedoresAdheridos",
+                "pageTitle": "Consultar Vendedores Adheridos",
+                "slug": "argentina-ar/coelsa/debin/consultavendedoresadheridos"
+              },
+              {
+                "type": "file",
+                "label": "CuentaEspecialAlta",
+                "pageTitle": "Alta Cuenta Especial",
+                "slug": "argentina-ar/coelsa/debin/cuentaespecialalta"
+              },
+              {
+                "type": "file",
+                "label": "DebinAlta",
+                "pageTitle": "Alta DEBIN",
+                "slug": "argentina-ar/coelsa/debin/debinalta"
+              },
+              {
+                "type": "file",
+                "label": "DebinConsulta",
+                "pageTitle": "Consultar DEBIN",
+                "slug": "argentina-ar/coelsa/debin/debinconsulta"
+              },
+              {
+                "type": "file",
+                "label": "DebinEliminar",
+                "pageTitle": "Eliminar DEBIN",
+                "slug": "argentina-ar/coelsa/debin/debineliminar"
+              },
+              {
+                "type": "file",
+                "label": "DebinListado",
+                "pageTitle": "Listado DEBIN",
+                "slug": "argentina-ar/coelsa/debin/debinlistado"
+              },
+              {
+                "type": "file",
+                "label": "EnviarTransferencia",
+                "pageTitle": "Enviar Transferencia",
+                "slug": "argentina-ar/coelsa/debin/enviartransferencia"
+              },
+              {
+                "type": "file",
+                "label": "ValidarCUIT",
+                "pageTitle": "Validar CUIT",
+                "slug": "argentina-ar/coelsa/debin/validarcuit"
+              },
+              {
+                "type": "file",
+                "label": "VendedorAdhesion",
+                "pageTitle": "Vendedor Adhesion",
+                "slug": "argentina-ar/coelsa/debin/vendedoradhesion"
+              },
+              {
+                "type": "file",
+                "label": "VendedorConsulta",
+                "pageTitle": "Vendedor Consulta",
+                "slug": "argentina-ar/coelsa/debin/vendedorconsulta"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Colombia CO",
+    "slug": "colombia-co",
+    "children": [
+      {
+        "type": "folder",
+        "label": "ACH",
+        "slug": "colombia-co/ach",
+        "children": [
+          {
+            "type": "file",
+            "label": "ConsultaEstadoACH",
+            "pageTitle": "Consultar Estado Transferencia ACH",
+            "slug": "colombia-co/ach/consultaestadoach"
+          },
+          {
+            "type": "file",
+            "label": "ListaBancosACH",
+            "pageTitle": "Listado de Bancos ACH",
+            "slug": "colombia-co/ach/listabancosach"
+          },
+          {
+            "type": "file",
+            "label": "TransferenciaACH",
+            "pageTitle": "Alta Transferencia ACH",
+            "slug": "colombia-co/ach/transferenciaach"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Honduras HN",
+    "slug": "honduras-hn",
+    "children": [
+      {
+        "type": "folder",
+        "label": "ACH",
+        "slug": "honduras-hn/ach",
+        "children": [
+          {
+            "type": "folder",
+            "label": "Envío",
+            "slug": "honduras-hn/ach/envio",
+            "children": [
+              {
+                "type": "file",
+                "label": "ConfirmarACH",
+                "pageTitle": "Confirmar Transferencia Directa",
+                "slug": "honduras-hn/ach/envio/confirmarach"
+              },
+              {
+                "type": "file",
+                "label": "ConsultaEstadoACH",
+                "pageTitle": "Consultar Estado",
+                "slug": "honduras-hn/ach/envio/consultaestadoach"
+              },
+              {
+                "type": "file",
+                "label": "EnviarACHindirecto",
+                "pageTitle": "Enviar Transferencia Indirecta",
+                "slug": "honduras-hn/ach/envio/enviarachindirecto"
+              },
+              {
+                "type": "file",
+                "label": "SimularACHDirecto",
+                "pageTitle": "Simular Transferencia Directa",
+                "slug": "honduras-hn/ach/envio/simularachdirecto"
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "label": "Recepción",
+            "slug": "honduras-hn/ach/recepcion",
+            "children": [
+              {
+                "type": "file",
+                "label": "ActualizarPendiente",
+                "pageTitle": "Actualizar Pendiente",
+                "slug": "honduras-hn/ach/recepcion/actualizarpendiente"
+              },
+              {
+                "type": "file",
+                "label": "RecibirACH",
+                "pageTitle": "Recibir Transferencia",
+                "slug": "honduras-hn/ach/recepcion/recibirach"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "label": "LBTR",
+        "slug": "honduras-hn/lbtr",
+        "children": [
+          {
+            "type": "file",
+            "label": "ConfirmarLBTR",
+            "pageTitle": "Confirmar Transferencia",
+            "slug": "honduras-hn/lbtr/confirmarlbtr"
+          },
+          {
+            "type": "file",
+            "label": "ConsultaEstadoLBTR",
+            "pageTitle": "Consultar Estado Transferencia",
+            "slug": "honduras-hn/lbtr/consultaestadolbtr"
+          },
+          {
+            "type": "file",
+            "label": "SimularLBTR",
+            "pageTitle": "Solicitar Transferencia",
+            "slug": "honduras-hn/lbtr/simularlbtr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Paraguay PY",
+    "slug": "paraguay-py",
+    "children": [
+      {
+        "type": "folder",
+        "label": "SPI",
+        "slug": "paraguay-py/spi",
+        "children": [
+          {
+            "type": "folder",
+            "label": "Devolución",
+            "slug": "paraguay-py/spi/devolucion",
+            "children": [
+              {
+                "type": "file",
+                "label": "DevolucionFondos",
+                "pageTitle": "Devolución de Fondos",
+                "slug": "paraguay-py/spi/devolucion/devolucionfondos"
+              },
+              {
+                "type": "file",
+                "label": "RespuestaSolicitudRetorno",
+                "pageTitle": "Respuesta a Solicitud de Retorno de Fondos",
+                "slug": "paraguay-py/spi/devolucion/respuestasolicitudretorno"
+              },
+              {
+                "type": "file",
+                "label": "SolicitudRetornoFondos",
+                "pageTitle": "Solicitud de Retorno de Fondos",
+                "slug": "paraguay-py/spi/devolucion/solicitudretornofondos"
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "label": "Transferencias",
+            "slug": "paraguay-py/spi/transferencias",
+            "children": [
+              {
+                "type": "file",
+                "label": "ConsultaTransferencias",
+                "pageTitle": "Consulta Transferencias",
+                "slug": "paraguay-py/spi/transferencias/consultatransferencias"
+              },
+              {
+                "type": "file",
+                "label": "TransferenciasSPI",
+                "pageTitle": "Transferencias SPI",
+                "slug": "paraguay-py/spi/transferencias/transferenciasspi"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Perú PE",
+    "slug": "peru-pe",
+    "children": [
+      {
+        "type": "folder",
+        "label": "CCE",
+        "slug": "peru-pe/cce",
+        "children": [
+          {
+            "type": "folder",
+            "label": "Diferidas",
+            "slug": "peru-pe/cce/diferidas",
+            "children": [
+              {
+                "type": "file",
+                "label": "EnviarTransferencia",
+                "pageTitle": "Enviar Transferencia",
+                "slug": "peru-pe/cce/diferidas/enviartransferencia"
+              },
+              {
+                "type": "file",
+                "label": "ObtenerBancos",
+                "pageTitle": "Lista Entidades",
+                "slug": "peru-pe/cce/diferidas/obtenerbancos"
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "label": "TIN",
+            "slug": "peru-pe/cce/tin",
+            "children": [
+              {
+                "type": "file",
+                "label": "ConfirmarTransferencia",
+                "pageTitle": "Confirmar Transferencia",
+                "slug": "peru-pe/cce/tin/confirmartransferencia"
+              },
+              {
+                "type": "file",
+                "label": "ConsultaTIN",
+                "pageTitle": "Consultar",
+                "slug": "peru-pe/cce/tin/consultatin"
+              },
+              {
+                "type": "file",
+                "label": "RecepcionTIN",
+                "pageTitle": "Recepción Transferencias",
+                "slug": "peru-pe/cce/tin/recepciontin"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

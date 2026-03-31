@@ -1,0 +1,55 @@
+{
+  "slug": "descuento-de-documentos/seleccionaropciondesembolso",
+  "pageTitle": "Seleccionar Opción Desembolso",
+  "description": "Método para seleccionar una opción de desembolso.",
+  "pubName": "BTDescuentoDocumentos.SeleccionarOpcionDesembolso",
+  "programa": "RBTPG165",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "listaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de lista."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de desembolso."
+    },
+    {
+      "Nombre": "tipoDesembolso",
+      "Tipo": "Short",
+      "Comentarios": "Tipo de desembolso."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de lista."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió tipo de desembolso."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>\n\t\t<Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>GUAY.BANTOTAL</Usuario>\n            <Token>1485239356EB8880B52090F2</Token>\n            <Device>ES</Device>\n         </Btinreq>\n         <bts:listaUId>75</bts:listaUId>\n         <bts:operacionUId>12</bts:operacionUId>\n         <bts:tipoDesembolso>3</bts:tipoDesembolso>\n      </bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?SeleccionarOpcionDesembolso=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"listaUId\":75,\n\t\"operacionUId\":12,\n   \"tipoDesembolso\":3\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>GUAY.BANTOTAL</Usuario>\n            <Token>1485239356EB8880B52090F2</Token>\n            <Device>ES</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTDescuentoDocumentos.SeleccionarOpcionDesembolso</Servicio>\n            <Fecha>2018-12-14</Fecha>\n            <Hora>15:30:27</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1981</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},     \n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"727\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTDescuentoDocumentos.SeleccionarOpcionDesembolso\",\n        \"Fecha\": \"2017-11-24\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"15:59:42\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

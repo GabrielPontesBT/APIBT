@@ -1,0 +1,238 @@
+{
+  "slug": "clientes/obtener/obtenerperfil",
+  "pageTitle": "Obtener Perfil",
+  "description": "Método para obtener los datos de la persona titular de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerPerfil",
+  "programa": "RBTPG002",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sCTPersona",
+      "Tipo": "<a href=\"#sctpersona\">sCTPersona</a>",
+      "Comentarios": "Datos de cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerPerfil>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0306ebbd9c4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>181</bts:clienteUId>\n      </bts:BTClientes.Obtener>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPerfil=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": 181\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerPerfilResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.118</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>7d434761a1F955E77534D3E0</Token>\n         </Btinreq>\n         <sCTPersona>\n            <profesion/>\n            <estadoCivil/>\n            <domicilio>\n               <localidad>LOS CHILCOS</localidad>\n               <departamento>BUENOS AIRES</departamento>\n               <direccion>? 123 ?</direccion>\n               <pais>ARGENTINA, REPUBLICA</pais>\n               <barrio/>\n               <propietario/>\n               <longitud>0E-9.000000000</longitud>\n               <zona/>\n               <codPostal/>\n               <latitud>0E-9.000000000</latitud>\n            </domicilio>\n            <fechaNacimiento>1950-12-12</fechaNacimiento>\n            <apellidos>Prueba Pruebass</apellidos>\n            <personaUId>0</personaUId>\n            <sexo>Masculino</sexo>\n            <actividad>Familias y Personas Fisicas</actividad>\n            <telefono>55555555</telefono>\n            <ingresoMensual>0.00</ingresoMensual>\n            <email/>\n            <ocupacion/>\n            <hijos>0</hijos>\n            <documento>\n               <tipoDocumento>LIBRE</tipoDocumento>\n               <fechaVencimiento>0000-00-00</fechaVencimiento>\n               <nombreTipoDocumento>LIBRETA CIVICA</nombreTipoDocumento>\n               <nroDocumento>5832073</nroDocumento>\n               <pais>ARGENTINA, REPUBLICA</pais>\n            </documento>\n            <nacionalidad/>\n            <celular/>\n            <antiguedadLaboral>0</antiguedadLaboral>\n            <nivelEducativo/>\n            <nombres>Probando Pruebas</nombres>\n            <otrosIngresos>0.00</otrosIngresos>\n         </sCTPersona>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2181</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerPerfil</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2019-02-13</Fecha>\n            <Hora>16:02:01</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerPerfilResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sCTPersona\": {\n        \"profesion\": \"\",\n        \"estadoCivil\": \"Soltero/a\",\n        \"domicilio\": {\n            \"localidad\": \"\",\n            \"departamento\": \"BUENOS AIRES\",\n            \"direccion\": \"18 de Julio 25\",\n            \"pais\": \"ARGENTINA, REPUBLICA\",\n            \"barrio\": \"\",\n            \"propietario\": \"\",\n            \"longitud\": 0,\n            \"zona\": \"\",\n            \"codPostal\": \"\",\n            \"latitud\": 0\n        },\n        \"fechaNacimiento\": \"1901-01-01\",\n        \"apellidos\": \"Bengoechea Morena\",\n        \"personaUId\": 0,\n        \"sexo\": \"\",\n        \"actividad\": \"\",\n        \"telefono\": \"\",\n        \"ingresoMensual\": 0,\n        \"email\": \"\",\n        \"ocupacion\": \"\",\n        \"hijos\": 0,\n        \"documento\": {\n            \"tipoDocumento\": \"D.N.I\",\n            \"fechaVencimiento\": \"0000-00-00\",\n            \"nombreTipoDocumento\": \"D.N.I.\",\n            \"nroDocumento\": \"10001848\",\n            \"pais\": \"ARGENTINA, REPUBLICA\"\n        },\n        \"nacionalidad\": \"\",\n        \"celular\": \"\",\n        \"antiguedadLaboral\": 0,\n        \"nivelEducativo\": \"\",\n        \"nombres\": \"Pablo Javier\",\n        \"otrosIngresos\": 0\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 2207,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerPerfil\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2019-02-13\",\n        \"Hora\": \"16:34:42\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sCTPersona",
+      "fields": [
+        {
+          "Nombre": "actividad",
+          "Tipo": "String",
+          "Comentarios": "Actividad laboral."
+        },
+        {
+          "Nombre": "antiguedadLaboral",
+          "Tipo": "Short",
+          "Comentarios": "Antigüedad laboral."
+        },
+        {
+          "Nombre": "apellidos",
+          "Tipo": "String",
+          "Comentarios": "Apellidos."
+        },
+        {
+          "Nombre": "celular",
+          "Tipo": "String",
+          "Comentarios": "Celular."
+        },
+        {
+          "Nombre": "documento",
+          "Tipo": "<a href=\"#sctdocumento\">sCTDocumento</a>",
+          "Comentarios": "Datos del documento."
+        },
+        {
+          "Nombre": "domicilio",
+          "Tipo": "<a href=\"#sctdomicilio\">sCTDomicilio</a>",
+          "Comentarios": "Datos de domicilio."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Corre electrónico."
+        },
+        {
+          "Nombre": "estadoCivil",
+          "Tipo": "String",
+          "Comentarios": "Estado civil."
+        },
+        {
+          "Nombre": "fechaNacimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de nacimiento."
+        },
+        {
+          "Nombre": "hijos",
+          "Tipo": "Byte",
+          "Comentarios": "Cantidad de hijos."
+        },
+        {
+          "Nombre": "ingresoMensual",
+          "Tipo": "Double",
+          "Comentarios": "Ingreso mensual."
+        },
+        {
+          "Nombre": "nacionalidad",
+          "Tipo": "String",
+          "Comentarios": "Nacionalidad."
+        },
+        {
+          "Nombre": "nivelEducativo",
+          "Tipo": "String",
+          "Comentarios": "Nivel de educación."
+        },
+        {
+          "Nombre": "nombres",
+          "Tipo": "String",
+          "Comentarios": "Nombres."
+        },
+        {
+          "Nombre": "ocupacion",
+          "Tipo": "String",
+          "Comentarios": "Ocupación de la persona."
+        },
+        {
+          "Nombre": "otrosIngresos",
+          "Tipo": "Double",
+          "Comentarios": "Otros ingresos."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "profesion",
+          "Tipo": "String",
+          "Comentarios": "Profesión."
+        },
+        {
+          "Nombre": "sexo",
+          "Tipo": "String",
+          "Comentarios": "Sexo (M/F)."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono."
+        }
+      ]
+    },
+    {
+      "typeName": "sCTDomicilio",
+      "fields": [
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Barrio."
+        },
+        {
+          "Nombre": "codPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Departamento del domicilio."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "latitud",
+          "Tipo": "Double",
+          "Comentarios": "Latitud del domicilio."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Localidad del domicilio."
+        },
+        {
+          "Nombre": "longitud",
+          "Tipo": "Double",
+          "Comentarios": "Longitud del domicilio."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "País del domicilio."
+        },
+        {
+          "Nombre": "propietario",
+          "Tipo": "String",
+          "Comentarios": "Propietario del domicilio."
+        },
+        {
+          "Nombre": "zona",
+          "Tipo": "String",
+          "Comentarios": "Zona del domicilio."
+        }
+      ]
+    },
+    {
+      "typeName": "sCTDocumento",
+      "fields": [
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del documento."
+        },
+        {
+          "Nombre": "nombreTipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "País del documento."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Tipo del documento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

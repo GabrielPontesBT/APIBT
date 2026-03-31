@@ -1,0 +1,54 @@
+{
+  "slug": "clientes/actualizar/eliminardomicilio",
+  "pageTitle": "Eliminar Domicilio",
+  "description": "Método para eliminar los datos del domicilio de un cliente.",
+  "pubName": "BTClientes.EliminarDomicilio",
+  "programa": "RBTPG408",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "codigoDomicilio",
+      "Tipo": "Byte",
+      "Comentarios": "Código de domicilio."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El identificador de la cliente no es correcto."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "Código de domicilio no válido."
+    },
+    {
+      "Código": "31011",
+      "Descripción": "No existe el domicilio de la cliente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.EliminarDomicilio>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0868626a064A8B5C60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>10.12.10.159</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>22</bts:clienteUId>\n         <bts:codigoDomicilio>1</bts:codigoDomicilio>\n      </bts:BTClientes.EliminarDomicilio>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?EliminarDomicilio=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"clienteUId\": \"22\",\n    \"codigoDomicilio\": \"2\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.EliminarDomicilioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>0868626a064A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>920</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.EliminarDomicilio</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-11-13</Fecha>\n            <Hora>16:19:14</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.EliminarDomicilioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": 922,\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTClientes.EliminarDomicilio\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2018-11-13\",\n      \"Hora\": \"16:21:00\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

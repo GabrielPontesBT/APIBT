@@ -1,0 +1,58 @@
+{
+  "slug": "calendarios/calcular/calcularplazo",
+  "pageTitle": "Calcular Plazo",
+  "description": "Método para calcular el plazo entre una fecha de inicio y una fecha de fin dadas.",
+  "pubName": "BTCalendarios.CalcularPlazo",
+  "programa": "RBTPG338",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de sucursal."
+    },
+    {
+      "Nombre": "fechaInicio",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de inicio del plazo."
+    },
+    {
+      "Nombre": "fechaFin",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de fin del plazo."
+    },
+    {
+      "Nombre": "tipoDia",
+      "Tipo": "Byte",
+      "Comentarios": "[Hidden: Valor fijo 1 para este método]."
+    },
+    {
+      "Nombre": "tipoVencimiento",
+      "Tipo": "String",
+      "Comentarios": "Tipo de ajuste al vencimiento ('A': Hábil anterior, 'P': Hábil posterior, 'N': No ajusta)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "plazo",
+      "Tipo": "Int",
+      "Comentarios": "Plazo."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCalendarios.CalcularPlazo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>573607534CD285A89A23FBEE</bts:Token>\n            <bts:Device>N</bts:Device>\n         </bts:Btinreq>\n         <bts:sucursalId></bts:sucursalId>\n         <bts:fechaInicio>2020-02-15</bts:fechaInicio>\n         <bts:fechaFin>2020-03-12</bts:fechaFin>\n         <bts:tipoVencimiento>A</bts:tipoVencimiento>\n      </bts:BTCalendarios.CalcularPlazo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularPlazo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Token\": \"573607534CD285A89A23FBEE\",\n      \"Device\": \"N\"\n    },\n    \"sucursalId\": \"\",\n    \"fechaInicio\": \"2020-02-15\",\n    \"fechaFin\": \"2020-03-12\",\n    \"tipoVencimiento\": \"A\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCalendarios.CalcularPlazoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>573607534CD285A89A23FBEE</Token>\n            <Device>N</Device>\n         </Btinreq>\n         <plazo>27</plazo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCalendarios.CalcularPlazo</Servicio>\n            <Fecha>2021-04-07</Fecha>\n            <Hora>17:52:43</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8156</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCalendarios.CalcularPlazoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Token\": \"573607534CD285A89A23FBEE\",\n      \"Device\": \"N\"\n    },\n    \"plazo\": \"27\",\n    \"Erroresnegocio\": {\n    },\n    \"Btoutreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Servicio\": \"BTCalendarios.CalcularPlazo\",\n      \"Fecha\": \"2021-04-07\",\n      \"Hora\": \"17:52:43\",\n      \"Requerimiento\": \"1\",\n      \"Numero\": \"8156\",\n      \"Estado\": \"OK\"\n    }\n  }"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "partners/obtener/obtenerprestamosdecliente",
+  "pageTitle": "Obtener Préstamos de Cliente",
+  "description": "Método para obtener los préstamos de un cliente del Partner.",
+  "pubName": "BTPartners.ObtenerPrestamosCliente",
+  "programa": "RBTPN013",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "prestamos",
+      "Tipo": "<a href=\"#sbtproductoprestamo\">sBTProductoPrestamo</a>",
+      "Comentarios": "Listado de préstamos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió Partner ni canal."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "No se recibió vendedor."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ObtenerPrestamosCliente>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1222A10B1A106FB813BD7AE9</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\n            <bts:vendedorUId>0</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n         <bts:clienteUId>359</bts:clienteUId>\n      </bts:BTPartners.ObtenerPrestamosCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPrestamosCliente' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n   \"sdtPartner\": {\n      \"puntoVentaUId\": 2,\n      \"vendedorUId\": 0,\n      \"partnerUId\": 1\n   },\n   \"clienteUId\": 359\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ObtenerPrestamosClienteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1222A10B1A106FB813BD7AE9</Token>\n         </Btinreq>\n         <prestamos>\n            <sBTProductoPrestamo>\n               <operacionUId>1</operacionUId>\n               <idOperacionFmt>0000000170-000</idOperacionFmt>\n               <idOperacionBT>0010000100101000000000000000002700000000000170003</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <sucursal>Sucursal Beta</sucursal>\n               <saldo>87128.11</saldo>\n               <estado/>\n            </sBTProductoPrestamo>\n            <sBTProductoPrestamo>\n               <operacionUId>2</operacionUId>\n               <idOperacionFmt>0000000080-000</idOperacionFmt>\n               <idOperacionBT>0010100000101000000000000000002700000000000080001</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <sucursal>Casa Matriz</sucursal>\n               <saldo>124195.84</saldo>\n               <estado/>\n            </sBTProductoPrestamo>\n            <sBTProductoPrestamo>\n               <operacionUId>361</operacionUId>\n               <idOperacionFmt>0000000412-000</idOperacionFmt>\n               <idOperacionBT>0010100000101000000000000000002700000000000412003</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <sucursal>Casa Matriz</sucursal>\n               <saldo>100000.00</saldo>\n               <estado/>\n            </sBTProductoPrestamo>\n         </prestamos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPartners.ObtenerPrestamosCliente</Servicio>\n            <Fecha>2021-03-18</Fecha>\n            <Hora>10:03:41</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8032</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPartners.ObtenerPrestamosClienteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"prestamos\": {\n         \"sBTProductoPrestamo\": [\n         {\n            \"operacionUId\": 1,\n            \"idOperacionFmt\": \"0000000170-000\",\n            \"idOperacionBT\": 1.0000100101e+46,\n            \"producto\": {\n               \"productoUId\": 0,\n               \"nombre\": \"PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad\",\n               \"moneda\": \"$\",\n               \"papel\": \"\"\n            },\n            \"sucursal\": \"Sucursal Beta\",\n            \"saldo\": 87128.11,\n            \"estado\": \"\"\n         },\n         {\n            \"operacionUId\": 2,\n            \"idOperacionFmt\": \"0000000080-000\",\n            \"idOperacionBT\": 1.0100000101e+46,\n            \"producto\": {\n               \"productoUId\": 0,\n               \"nombre\": \"PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF\",\n               \"moneda\": \"$\",\n               \"papel\": \"\"\n            },\n            \"sucursal\": \"Casa Matriz\",\n            \"saldo\": 124195.84,\n            \"estado\": \"\"\n         },\n         {\n            \"operacionUId\": 361,\n            \"idOperacionFmt\": \"0000000412-000\",\n            \"idOperacionBT\": 1.0100000101e+46,\n            \"producto\": {\n               \"productoUId\": 0,\n               \"nombre\": \"PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad\",\n               \"moneda\": \"$\",\n               \"papel\": \"\"\n            },\n            \"sucursal\": \"Casa Matriz\",\n            \"saldo\": 100000,\n            \"estado\": \"\"\n         }\n         ]\n      },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"786\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPartners.ObtenerPrestamosCliente\",\n        \"Fecha\": \"2017-12-15\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"16:35:22\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProductoPrestamo",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

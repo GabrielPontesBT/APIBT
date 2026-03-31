@@ -1,0 +1,54 @@
+{
+  "slug": "usuarios/habilitarencanal",
+  "pageTitle": "Habilitar en Canal",
+  "description": "Método para habilitar un usuario para los servicios de un canal.",
+  "pubName": "BTUsuarios.HabilitarEnCanal",
+  "programa": "RBTPG563",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "usuario",
+      "Tipo": "String",
+      "Comentarios": "Identificador del usuario."
+    },
+    {
+      "Nombre": "canal",
+      "Tipo": "String",
+      "Comentarios": "Identificador del canal."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió usuario."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió canal."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El canal ingresado mapea usuarios y no se encontró el usuario externo recibido."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El usuario ingresado no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.HabilitarEnCanal>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:usuario>INSTALADOR</bts:usuario>\n         <bts:canal>BTDIGITAL</bts:canal>\n      </bts:BTUsuarios.HabilitarEnCanal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarEnCanal=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"usuario\": \"INSTALADOR\",\n    \"canal\": \"BTDIGITAL\"\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTUsuarios.HabilitarEnCanalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>BF79D7D88EC1865C343DAC53</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-30</Fecha>\n            <Hora>15:18:48</Hora>\n            <Numero>25039</Numero>\n            <Servicio>BTUsuarios.HabilitarEnCanal</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTUsuarios.HabilitarEnCanalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTUsuarios.HabilitarEnCanal\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

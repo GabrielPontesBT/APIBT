@@ -1,0 +1,44 @@
+{
+  "slug": "peru-pe/cce/diferidas/obtenerbancos",
+  "pageTitle": "Lista Entidades",
+  "description": "Método para listar bancos habilitados para recepcion de creditos.",
+  "pubName": "BTCCE.ObtenerBancos",
+  "programa": "RBTPPE284",
+  "scope": "Perú",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "idCamara",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Codigo de camara (MPE005)"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUID",
+      "Tipo": "<a href=\"#sbtlistabancox\">sBTListaBancox</a>",
+      "Comentarios": "Lista Bancos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió Id Camara."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n\t\t<bts:BTCCE.ObtenerBancos>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>1</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:IDCamara>1</bts:IDCamara>\n\t\t</bts:BTCCE.ObtenerBancos>\n\t</soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n\t<SOAP-ENV:Body>\n\t\t<BTCCE.ObtenerBancosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t\t\t<Btinreq>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\n\t\t\t\t<Device>1</Device>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Token>A60F0486A686F9C081A582A6</Token>\n\t\t\t</Btinreq>\n\t\t\t<ListaBancos>\n\t\t\t\t<Lista>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>1</CodBco>\n\t\t\t\t\t\t<NomBaco>Banco Central de Reserva Peru</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>2</CodBco>\n\t\t\t\t\t\t<NomBaco>Banco de Crédito del Perú</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>3</CodBco>\n\t\t\t\t\t\t<NomBaco>Interbank</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>7</CodBco>\n\t\t\t\t\t\t<NomBaco>Citibank del Perú S.A.</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>9</CodBco>\n\t\t\t\t\t\t<NomBaco>Scotiabank Perú S.A.A.</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t\t<SdtsbtListaBancox>\n\t\t\t\t\t\t<CodBco>11</CodBco>\n\t\t\t\t\t\t<NomBaco>BBVA Continental</NomBaco>\n\t\t\t\t\t</SdtsbtListaBancox>\n\t\t\t\t</Lista>\n\t\t\t</ListaBancos>\n\t\t\t<Erroresnegocio/>\n\t\t\t<Btoutreq>\n\t\t\t\t<Estado>OK</Estado>\n\t\t\t\t<Fecha>2025-04-29</Fecha>\n\t\t\t\t<Hora>06:21:19</Hora>\n\t\t\t\t<Numero>6140610</Numero>\n\t\t\t\t<Servicio>BTCCE.ObtenerBancos</Servicio>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t</Btoutreq>\n\t\t</BTCCE.ObtenerBancosResponse>\n\t</SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

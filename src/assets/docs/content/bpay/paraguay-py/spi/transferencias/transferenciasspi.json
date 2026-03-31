@@ -1,0 +1,226 @@
+{
+  "slug": "paraguay-py/spi/transferencias/transferenciasspi",
+  "pageTitle": "Transferencias SPI",
+  "description": "Método para el envío de transferencias por Sistema de pago Interbancario.",
+  "pubName": "BTTransferencias.Enviar",
+  "programa": "PBTPPY100",
+  "scope": "Paraguay",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUID",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Identificador Cuenta débito (BTSIO00Id)."
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Valor de moneda nacional(6900) ó dólar(1)."
+    },
+    {
+      "Nombre": "importeTransferencia",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Importe a enviar."
+    },
+    {
+      "Nombre": "bancoDestino",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Código de banco destino(FXSNP1Id)."
+    },
+    {
+      "Nombre": "cuentaDestino",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Cuenta de cliente a realizar crédito."
+    },
+    {
+      "Nombre": "tipoDocumentoBeneficiario",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Tipo documento del cliente crédito."
+    },
+    {
+      "Nombre": "documentoBeneficiario",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Numero de documento de cliente crédito."
+    },
+    {
+      "Nombre": "nombreBeneficiario",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nombre de cliente crédito."
+    },
+    {
+      "Nombre": "detalleTransferencia",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Motivo - mensaje a enviar en la transferencia."
+    },
+    {
+      "Nombre": "conceptoEntidadReceptora",
+      "Tipo": "String",
+      "Obligatoriedad": "O",
+      "Comentarios": "Campo utilizado en transferencias LBTR - ACH."
+    },
+    {
+      "Nombre": "codigoProposito",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Concepto del Servicio del Cliente del Traspasante (CSCT)."
+    },
+    {
+      "Nombre": "codigoInstrumento",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Código utilizado para indicar si es alias o normal."
+    },
+    {
+      "Nombre": "canal",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Canal de entrada: HB(HomeBanking) - MOBILE."
+    },
+    {
+      "Nombre": "modoEnvio",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Acción a realizar, VALIDAR, SIMULAR, TRANSFERIR."
+    },
+    {
+      "Nombre": "camara",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Tipo de cámara por donde se desea enviar la transferencia(SPI)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "camara",
+      "Tipo": "String",
+      "Comentarios": "Tipo de documento."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Documento Beneficiario."
+    },
+    {
+      "Nombre": "importeDebito",
+      "Tipo": "Double",
+      "Comentarios": "Nombre Beneficiario."
+    },
+    {
+      "Nombre": "cotizacion",
+      "Tipo": "Double",
+      "Comentarios": "Dirección Beneficiario."
+    },
+    {
+      "Nombre": "comision",
+      "Tipo": "Double",
+      "Comentarios": "Teléfono."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Identificador de instrucción."
+    },
+    {
+      "Nombre": "movimientoUID",
+      "Tipo": "Int",
+      "Comentarios": "Impuesto."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "10010",
+      "Descripción": "No se ingreso opercionUID."
+    },
+    {
+      "Código": "10011",
+      "Descripción": "No se ingreso moneda."
+    },
+    {
+      "Código": "10012",
+      "Descripción": "No se ingreso importe."
+    },
+    {
+      "Código": "10013",
+      "Descripción": "No se ingreso código de banco beneficiario."
+    },
+    {
+      "Código": "10014",
+      "Descripción": "No se ingreso cuenta de beneficiario."
+    },
+    {
+      "Código": "10015",
+      "Descripción": "No se ingreso tipo documento de beneficiario."
+    },
+    {
+      "Código": "10016",
+      "Descripción": "No se ingreso documento de beneficiario."
+    },
+    {
+      "Código": "10017",
+      "Descripción": "No se ingreso Nombre de beneficiario."
+    },
+    {
+      "Código": "10018",
+      "Descripción": "No se ingreso detalle de transferencia."
+    },
+    {
+      "Código": "10019",
+      "Descripción": "No se ingreso concepto para entidad receptora."
+    },
+    {
+      "Código": "10020",
+      "Descripción": "No se ingreso canal- (HB - MOBILE)"
+    },
+    {
+      "Código": "10021",
+      "Descripción": "No se ingreso modo(VALIDAR, SIMULAR, TRANSFERIR)."
+    },
+    {
+      "Código": "10022",
+      "Descripción": "Canal ingresado no es valido - (HB - MOBILE)"
+    },
+    {
+      "Código": "10023",
+      "Descripción": "Modo ingresado no es valido(VALIDAR, SIMULAR, TRANSFERIR)."
+    },
+    {
+      "Código": "10024",
+      "Descripción": "No se ingreso cámara."
+    },
+    {
+      "Código": "10025",
+      "Descripción": "Cámara ingresada no es valida(LBTR, SPI, AG-ACH, AG-LBTR)."
+    },
+    {
+      "Código": "10026",
+      "Descripción": "Código propósito no es valido(CSCT)."
+    },
+    {
+      "Código": "10027",
+      "Descripción": "Código de instrumento no es valido(001 - 002)."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"operacionUID\": \"5\",\n    \"moneda\": \"6900\",\n    \"importeTransferencia\": \"10000\",\n    \"bancoDestino\": \"12\",\n    \"cuentaDestino\": \"010143323888\",\n    \"tipoDocumentoBeneficiario\": \"1\",\n    \"documentoBeneficiario\": \"3546681\",\n    \"nombreBeneficiario\": \"DESTINATARIO\",\n    \"detalleTransferencia\": \"Detalle\",\n    \"conceptoEntidadReceptora\": \"Concepto\",\n    \"codigoProposito\": \"CSCT\",\n    \"codigoInstrumento\": \"001\",\n    \"canal\": \"MOBILE\",\n    \"modoEnvio\": \"TRANSFERIR\",\n    \"camara\": \"SPI\"\n}"
+    },
+    "response": {
+      "xml": "",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"camara\": \"SPI\",\n    \"estado\": \"PENDIENTE\",\n    \"importeDebito\": 10000,\n    \"cotizacion\": 0,\n    \"comision\": 0,\n    \"referencia\": \"TUFIPYPA02052535040002720550\",\n    \"movimientoUID\": 456,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2025-05-02\",\n        \"Hora\": \"09:44:07\",\n        \"Numero\": 14059,\n        \"Servicio\": \"BTTransferencias.Enviar\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

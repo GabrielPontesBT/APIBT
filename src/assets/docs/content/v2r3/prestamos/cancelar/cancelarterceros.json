@@ -1,0 +1,78 @@
+{
+  "slug": "prestamos/cancelar/cancelarterceros",
+  "pageTitle": "Cancelar Terceros",
+  "description": "Método para realizar la cancelación de un préstamo con una cuenta de cobro de terceros.",
+  "pubName": "BTPrestamos.CancelarTerceros",
+  "programa": "RBTPG830",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de Pago, teniendo en cuenta que: \n\n\t- El préstamo se almacena en el preformato 1. \n\n\t- La cuenta vista de cobro se almacena en el preformato 2. \n\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \n\n3) Se debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "operacionCobroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista donde se cobrará el préstamo."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento (asiento)."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la Contabilización."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.CancelarTerceros>\n         <bts:Btinreq>\n            <bts:Device>bms</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>b6275b301e4A8B5C60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n         </bts:Btinreq>\n         <bts:operacionUId>39</bts:operacionUId>\n         <bts:clienteUId>9</bts:clienteUId>\n         <bts:operacionCobroUId>850</bts:operacionCobroUId>\n         <bts:referencia>Cancelacion con terceros</bts:referencia>\n      </bts:BTPrestamos.CancelarTerceros>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?CancelarTerceros' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Device\": \"bms\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\n    },\n    \"operacionUId\": \"40\",\n    \"clienteUId\": \"9\",\n    \"operacionCobroUId\": \"865\",\n    \"referencia\": \"Paga cuota terceros\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.CancelarTercerosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>bms</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b6275b301e4A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>59</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1091</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.CancelarTerceros</Servicio>\n            <Fecha>2020-10-30</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>12:48:17</Hora>\n         </Btoutreq>\n      </BTPrestamos.CancelarTercerosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"bms\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\n    },\n    \"movimientoUId\": 62,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 1094,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.CancelarTerceros\",\n        \"Fecha\": \"2020-10-30\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"14:30:59\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

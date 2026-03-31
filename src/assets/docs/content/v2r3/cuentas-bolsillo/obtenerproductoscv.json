@@ -1,0 +1,102 @@
+{
+  "slug": "cuentas-bolsillo/obtenerproductoscv",
+  "pageTitle": "Obtener Productos CV",
+  "description": "Método para obtener un listado de los productos de cuenta bolsillo habilitados para una cuenta vista.",
+  "pubName": "BTCuentasBolsillo.ObtenerProductosCV",
+  "programa": "RBTPG619",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cuenta vista."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+      "Comentarios": "Datos de estado de cuenta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se pudo determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se recuperaron productos habilitados para la cuenta vista."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.ObtenerProductosCV>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>904</bts:operacionUId>\n      </bts:BTCuentasBolsillo.ObtenerProductosCV>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductosCV' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n    \"operacionUId\": 904\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasBolsillo.ObtenerProductosCVResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>CC6345192D8633F531F01D1D</Token>\n         </Btinreq>\n         <sdtProductos>\n            <sBTProducto>\n               <moneda>$</moneda>\n               <papel>$</papel>\n               <productoUId>512</productoUId>\n               <nombre>CUENTAS BOLSILLO, Bolsillo Gastos</nombre>\n            </sBTProducto>\n            <sBTProducto>\n               <moneda>$</moneda>\n               <papel>$</papel>\n               <productoUId>511</productoUId>\n               <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>\n            </sBTProducto>\n            <sBTProducto>\n               <moneda>USD</moneda>\n               <papel>$</papel>\n               <productoUId>531</productoUId>\n               <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>\n            </sBTProducto>\n            <sBTProducto>\n               <moneda>$</moneda>\n               <papel>$</papel>\n               <productoUId>451</productoUId>\n               <nombre>,</nombre>\n            </sBTProducto>\n            <sBTProducto>\n               <moneda>$</moneda>\n               <papel>$</papel>\n               <productoUId>532</productoUId>\n               <nombre>CUENTAS BOLSILLO, Bolsillo Viajes</nombre>\n            </sBTProducto>\n         </sdtProductos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>228483</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasBolsillo.ObtenerProductosCV</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2023-11-01</Fecha>\n            <Hora>08:52:59</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasBolsillo.ObtenerProductosCVResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"1\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"16c1cFC33CD93505A5382434\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\"\n    },\n    \"sdtProductos\": {\n        \"sBTProducto\": [\n        {\n            \"moneda\": \"$\",\n            \"papel\": \"$\",\n            \"productoUId\": 512,\n            \"nombre\": \"CUENTAS BOLSILLO, Bolsillo Gastos\"\n        },\n        {\n            \"moneda\": \"$\",\n            \"papel\": \"$\",\n            \"productoUId\": 511,\n            \"nombre\": \"CUENTAS BOLSILLO, Bolsillo Ahorro\"\n        },\n        {\n            \"moneda\": \"USD\",\n            \"papel\": \"$\",\n            \"productoUId\": 531,\n            \"nombre\": \"CUENTAS BOLSILLO, Bolsillo Ahorro\"\n        },\n        {\n            \"moneda\": \"$\",\n            \"papel\": \"$\",\n            \"productoUId\": 451,\n            \"nombre\": \",\"\n        },\n        {\n            \"moneda\": \"$\",\n            \"papel\": \"$\",\n            \"productoUId\": 532,\n            \"nombre\": \"CUENTAS BOLSILLO, Bolsillo Viajes\"\n        }\n        ]\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"111399\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasBolsillo.ObtenerProductosCV\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2023-05-10\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"15:10:52\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

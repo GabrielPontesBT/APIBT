@@ -1,0 +1,273 @@
+{
+  "slug": "argentina-ar/coelsa/debin/enviartransferencia",
+  "pageTitle": "Enviar Transferencia",
+  "description": "Método para enviar transferencias.",
+  "pubName": "BTCOELSAGestionDebin.EnviarTransferencia",
+  "programa": "RBTPAR48",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "EnviarTransferenciaIN",
+      "Tipo": "<a href=\"#sbtenviartransferencia\">sBTEnviarTransferencia</a>",
+      "Comentarios": "Datos de entrada para envío de transferencia."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "EnviarTransferenciaOut",
+      "Tipo": "<a href=\"#sbttransferenciaenviada\">sBTTransferenciaEnviada</a>",
+      "Comentarios": "Datos de respuesta al enviar transferencia."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de operación ni CBU."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió cantidad de cheques."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header />\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.EnviarTransferencia>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Device>10.12.10.40</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>0a8ca681b3464D4650046918</bts:Token>\n         </bts:Btinreq>\n         <bts:EnviarTransferenciaIN>\n            <bts:sucursalDebito>0099</bts:sucursalDebito>\n            <bts:plataforma></bts:plataforma>\n            <bts:IMSI></bts:IMSI>\n            <bts:bancoCredito>432</bts:bancoCredito>\n            <bts:tipoPersonaCredito></bts:tipoPersonaCredito>\n            <bts:longitud>0</bts:longitud>\n            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>\n            <bts:IMEI></bts:IMEI>\n            <bts:importeOperacion>101.00</bts:importeOperacion>\n            <bts:monedaOperacion>032</bts:monedaOperacion>\n            <bts:CBUDebito>0940099366000013940012</bts:CBUDebito>\n            <bts:titularCredito>COOP DE V C C Y SS PALMARES LT</bts:titularCredito>\n            <bts:titularDebito>OJEDA FELIX ANGEL</bts:titularDebito>\n            <bts:tipoOperacion>transferencia</bts:tipoOperacion>\n            <bts:descripcionOperacion></bts:descripcionOperacion>\n            <bts:bancoDebito>094</bts:bancoDebito>\n            <bts:sucursalCredito>0001</bts:sucursalCredito>\n            <bts:CUITDebito>20042039390</bts:CUITDebito>\n            <bts:CUITCredito>30694625114</bts:CUITCredito>\n            <bts:CBUCredito>4320001010003000470010</bts:CBUCredito>\n            <bts:precision>0</bts:precision>\n            <bts:conceptoOperacion>CUO</bts:conceptoOperacion>\n            <bts:tipoDispositivo>02</bts:tipoDispositivo>\n            <bts:latitud>0</bts:latitud>\n            <bts:IPCliente>127.0.0.1</bts:IPCliente>\n         </bts:EnviarTransferenciaIN>\n      </bts:BTCOELSAGestionDebin.EnviarTransferencia>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <SOAP-ENV:Body>\n        <BTCOELSAGestionDebin.EnviarTransferenciaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n            <Btinreq>\n                <Canal>BTDIGITAL</Canal>\n                <Usuario>IVRISSO</Usuario>\n                <Device>10.12.10.40</Device>\n                <Requerimiento>1</Requerimiento>\n                <Token>0a8ca681b3464D4650046918</Token>\n            </Btinreq>\n            <EnviarTransferenciaOut>\n                <FechaHoraEjecucion>2024-08-29T16:52:33.0209364-03:00</FechaHoraEjecucion>\n                <Transaccion>801</Transaccion>\n                <ReglasEvaulacion>1a,3b,9</ReglasEvaulacion>\n                <Trx_Origen />\n                <NumeroRelacion>1354</NumeroRelacion>\n                <FechaHoraNegocio>2024-08-29T00:00:00</FechaHoraNegocio>\n                <Terminal_Destino>001098400801135420240829</Terminal_Destino>\n                <PuntajeEvaluacion>1</PuntajeEvaluacion>\n                <Sucursal>98</Sucursal>\n                <DescripcionRespuesta>GARANTIA CORRECTA</DescripcionRespuesta>\n                <IdObjeto>X76V4MR2Z5OR8JE9DEZOL1</IdObjeto>\n                <CodigoRespuesta>00</CodigoRespuesta>\n                <DescripcionEstado>00</DescripcionEstado>\n                <Trx_Destino />\n                <CodigoEstado>EN CURSO</CodigoEstado>\n                <Modulo>400</Modulo>\n            </EnviarTransferenciaOut>\n            <Erroresnegocio></Erroresnegocio>\n            <Btoutreq>\n                <Estado>OK</Estado>\n                <Fecha>2024-08-29</Fecha>\n                <Hora>16:52:19</Hora>\n                <Numero>171360692</Numero>\n                <Servicio>BilleteraElectronica.EnviarTransferencia</Servicio>\n                <Requerimiento>1</Requerimiento>\n                <Canal>BTDIGITAL</Canal>\n            </Btoutreq>\n        </BTCOELSAGestionDebin.EnviarTransferenciaResponse>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEnviarTransferencia",
+      "fields": [
+        {
+          "Nombre": "TipoOperacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de Operación."
+        },
+        {
+          "Nombre": "ConceptoOperacion",
+          "Tipo": "String",
+          "Comentarios": "Concepto de Operación."
+        },
+        {
+          "Nombre": "DescripcionOperacion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de Operación."
+        },
+        {
+          "Nombre": "MonedaOperacion",
+          "Tipo": "String",
+          "Comentarios": "Moneda de Operación."
+        },
+        {
+          "Nombre": "ImporteOperacion",
+          "Tipo": "Double",
+          "Comentarios": "Importe Operación."
+        },
+        {
+          "Nombre": "CUITCredito",
+          "Tipo": "Double",
+          "Comentarios": "Clave única de identificación tributaria Crédito."
+        },
+        {
+          "Nombre": "BancoCredito",
+          "Tipo": "String",
+          "Comentarios": "Banco Crédito."
+        },
+        {
+          "Nombre": "SucursalCredito",
+          "Tipo": "String",
+          "Comentarios": "Sucursal Crédito."
+        },
+        {
+          "Nombre": "TitularCredito",
+          "Tipo": "String",
+          "Comentarios": "Titular Crédito."
+        },
+        {
+          "Nombre": "TipoProductoCredito",
+          "Tipo": "Short",
+          "Comentarios": "Tipo de Producto Crédito."
+        },
+        {
+          "Nombre": "tipoPersonaCredito",
+          "Tipo": "String",
+          "Comentarios": "tipo Persona Crédito."
+        },
+        {
+          "Nombre": "CBUCredito",
+          "Tipo": "Long",
+          "Comentarios": "Clave Bancaria Uniforme Crédito."
+        },
+        {
+          "Nombre": "CUITDebito",
+          "Tipo": "Long",
+          "Comentarios": "Clave única de identificación tributaria Débito."
+        },
+        {
+          "Nombre": "BancoDebito",
+          "Tipo": "String",
+          "Comentarios": "Banco Débito."
+        },
+        {
+          "Nombre": "SucursalDebito",
+          "Tipo": "String",
+          "Comentarios": "Sucursal Débito."
+        },
+        {
+          "Nombre": "TitularDebito",
+          "Tipo": "String",
+          "Comentarios": "Titular Débito."
+        },
+        {
+          "Nombre": "CBUDebito",
+          "Tipo": "String",
+          "Comentarios": "Clave Bancaria Uniforme Débito."
+        },
+        {
+          "Nombre": "IpCliente",
+          "Tipo": "String",
+          "Comentarios": "Ip Cliente."
+        },
+        {
+          "Nombre": "TipoDispositivo",
+          "Tipo": "String",
+          "Comentarios": "Tipo Dispositivo."
+        },
+        {
+          "Nombre": "Plataforma",
+          "Tipo": "String",
+          "Comentarios": "Plataforma."
+        },
+        {
+          "Nombre": "IMSI",
+          "Tipo": "String",
+          "Comentarios": "IMSI."
+        },
+        {
+          "Nombre": "IMEI",
+          "Tipo": "String",
+          "Comentarios": "IMEI."
+        },
+        {
+          "Nombre": "Latitud",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "Longitud",
+          "Tipo": "Double",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "Precision",
+          "Tipo": "Double",
+          "Comentarios": "Precisión."
+        },
+        {
+          "Nombre": "AliasOrigen",
+          "Tipo": "String",
+          "Comentarios": "Alias Origen."
+        },
+        {
+          "Nombre": "AliasDestino",
+          "Tipo": "String",
+          "Comentarios": "Alias Destino."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTTransferenciaEnviada",
+      "fields": [
+        {
+          "Nombre": "FechaHoraEjecucion",
+          "Tipo": "String",
+          "Comentarios": "Fecha Hora Ejecución."
+        },
+        {
+          "Nombre": "Transaccion",
+          "Tipo": "Int",
+          "Comentarios": "Transacción."
+        },
+        {
+          "Nombre": "ReglasEvaulacion",
+          "Tipo": "String",
+          "Comentarios": "Reglas de Evaluación."
+        },
+        {
+          "Nombre": "Trx_Origen",
+          "Tipo": "String",
+          "Comentarios": "Trx Origen."
+        },
+        {
+          "Nombre": "NumeroRelacion",
+          "Tipo": "Int",
+          "Comentarios": "Numero de Relación."
+        },
+        {
+          "Nombre": "Terminal_Destino",
+          "Tipo": "String",
+          "Comentarios": "Terminal Destino."
+        },
+        {
+          "Nombre": "FechaHoraNegocio",
+          "Tipo": "String",
+          "Comentarios": "Fecha Hora Negocio."
+        },
+        {
+          "Nombre": "PuntajeEvaluacion",
+          "Tipo": "Short",
+          "Comentarios": "Puntaje Evaluación."
+        },
+        {
+          "Nombre": "Sucursal",
+          "Tipo": "Int",
+          "Comentarios": "Sucursal."
+        },
+        {
+          "Nombre": "DescripcionRespuesta",
+          "Tipo": "String",
+          "Comentarios": "Descripción Respuesta."
+        },
+        {
+          "Nombre": "CodigoRespuesta",
+          "Tipo": "String",
+          "Comentarios": "Codigo de Respuesta."
+        },
+        {
+          "Nombre": "IdObjeto",
+          "Tipo": "String",
+          "Comentarios": "Id Objeto."
+        },
+        {
+          "Nombre": "DescripcionEstado",
+          "Tipo": "String",
+          "Comentarios": "Descripción Estado."
+        },
+        {
+          "Nombre": "Trx_Destino",
+          "Tipo": "String",
+          "Comentarios": "Trx Destino."
+        },
+        {
+          "Nombre": "CodigoEstado",
+          "Tipo": "String",
+          "Comentarios": "Código de estado."
+        },
+        {
+          "Nombre": "Modulo",
+          "Tipo": "Int",
+          "Comentarios": "Módulo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "depositos-a-plazo/contratar/contratarconfacultades",
+  "pageTitle": "Contratar con Facultades",
+  "description": "Método para contratar un depósito a plazo fijo dando de alta las facultades correspondientes.",
+  "pubName": "BTDepositosAPlazo.ContratarConFacultades",
+  "programa": "RBTPG573",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "simulacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "operacionUIdOrigen",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de donde se retira el monto del DPF."
+    },
+    {
+      "Nombre": "operacionUIdDestino",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de acreditación (Capital y/o intereses según instrucción)."
+    },
+    {
+      "Nombre": "instruccionAlVencimiento",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de instrucción al vencimiento."
+    },
+    {
+      "Nombre": "controlaMismoCliente",
+      "Tipo": "String",
+      "Comentarios": "¿Controla correspondencia de cuenta de débito contra cuenta cliente originante? [Hidden: Valores 'S'/'N']."
+    },
+    {
+      "Nombre": "tipoIntegracionCuenta",
+      "Tipo": "String",
+      "Comentarios": "Tipo de integración de la cuenta (Ej: Conjunta, Individual)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "transaccionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la Cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la Simulación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la operación a utilizar para el débito."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "La simulación ya no se encuentra habilitada para su contratación."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La simulación ingresada no pertenece al cliente ingresado."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "La operación del débito no pertenece al cliente ingresado."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "La operación de acreditación no pertenece al cliente ingresado."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "Error de configuración: No se definió control de CAC."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ContratarConFacultades>\n         <bts:Btinreq>\n            <bts:Device>FP</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>00C39357A152407BC2F8A995</bts:Token>\n         </bts:Btinreq>\n         <bts:simulacionUId>528</bts:simulacionUId>\n         <bts:clienteUId>322</bts:clienteUId>\n         <bts:operacionUIdOrigen>1128</bts:operacionUIdOrigen>\n         <bts:operacionUIdDestino>824</bts:operacionUIdDestino>\n         <bts:instruccionAlVencimiento>1</bts:instruccionAlVencimiento>\n         <bts:controlaMismoCliente>N</bts:controlaMismoCliente>\n         <bts:tipoIntegracionCuenta>A</bts:tipoIntegracionCuenta>\n      </bts:BTDepositosAPlazo.ContratarConFacultades>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarConFacultades=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: b80d8c23-883d-589a-228b-4009ae6eba1c' \\\n  -d '{\n    \"Btinreq\": {\n        \"Device\": \"FP\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"00C39357A152407BC2F8A995\"\n    },\n    \"simulacionUId\": \"528\",\n    \"clienteUId\": \"322\",\n    \"operacionUIdOrigen\": \"1128\",\n    \"operacionUIdDestino\": \"824\",\n    \"instruccionAlVencimiento\": \"1\",\n    \"controlaMismoCliente\": \"N\",\n    \"tipoIntegracionCuenta\": \"A\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ContratarConFacultadesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>FC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>6CD13C161EE607C42B83D501</Token>\n         </Btinreq>\n         <operacionUId>969</operacionUId>\n         <transaccionUId>167</transaccionUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>35523</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTDepositosAPlazo.ContratarConFacultades</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-05-21</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>17:50:29</Hora>\n         </Btoutreq>\n      </BTDepositosAPlazo.ContratarConFacultadesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n  \"Btinreq\": {\n      \"Device\": \"FC\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Requerimiento\": \"0\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6CD13C161EE607C42B83D501\"\n  },\n  \"opreacionUid\": \"969\",\n  \"transaccionUId\": \"167\",\n  \"Erroresnegocio\": \"\",\n  \"Btoutreq\": {\n    \"Numero\": \"35523\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTDepositosAPlazo.ContratarConFacultades\",\n    \"Requerimiento\": \"0\",\n    \"Fecha\": \"2025-05-21\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Hora\": \"17:50:29\"\n  },\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

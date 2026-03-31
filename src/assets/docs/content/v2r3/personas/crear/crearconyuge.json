@@ -1,0 +1,161 @@
+{
+  "slug": "personas/crear/crearconyuge",
+  "pageTitle": "Crear Cónyuge",
+  "description": "Método para crear una persona de forma reducida y asociarla en una relación de cónyuge con otra.",
+  "pubName": "BTPersonas.CrearConyuge",
+  "programa": "RBTPG396",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "estadoCivilId",
+      "Tipo": "String",
+      "Comentarios": "Identificador del estado civil."
+    },
+    {
+      "Nombre": "sdtPersona",
+      "Tipo": "<a href=\"#sbtdatosbasicospersona\">sBTDatosBasicosPersona</a>",
+      "Comentarios": "Datos del cónyuge."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "personaUIdConyuge",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cónyuge."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el código de estado civil."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar País del Documento."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El País del Documento no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Debe ingresar Tipo de Documento."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El Tipo de Documento no existe."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar Nro de Documento."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Número de Documento incorrecto."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar Primer Apellido."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "Debe ingresar Primer Nombre."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Debe ingresar Sexo."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Caracteres incorrectos en nombre/apellido."
+    },
+    {
+      "Código": "40051",
+      "Descripción": "La persona ya existe."
+    },
+    {
+      "Código": "70001",
+      "Descripción": "El estado civil ingresado no admite cónyuge."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.CrearConyuge>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>1</bts:personaUId>\n         <bts:estadoCivilId>2</bts:estadoCivilId>\n         <bts:sdtPersona>\n            <bts:paisDocumentoId>845</bts:paisDocumentoId>\n            <bts:paisDocumento></bts:paisDocumento>\n            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\n            <bts:tipoDocumento></bts:tipoDocumento>\n            <bts:nroDocumento>96900034</bts:nroDocumento>\n            <bts:primerApellido>CASTRO</bts:primerApellido>\n            <bts:segundoApellido></bts:segundoApellido>\n            <bts:primerNombre>MARCOS</bts:primerNombre>\n            <bts:segundoNombre></bts:segundoNombre>\n            <bts:sexo>M</bts:sexo>\n         </bts:sdtPersona>\n      </bts:BTPersonas.CrearConyuge>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?CrearConyuge=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 0ccca369-0793-d62f-ebc0-3033cc750dad' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"personaUId\": \"1\",\n\t\"estadoCivilId\": \"2\",\n\t\"sdtPersona\": {\n\t  \"paisDocumentoId\": \"845\",\n\t  \"tipoDocumentoId\": \"1\",\n\t  \"nroDocumento\": \"96900034\",\n\t  \"primerApellido\": \"CASTRO\",\n\t  \"primerNombre\": \"MARCOS\",\n\t  \"sexo\": \"M\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.CrearConyugeResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>879953578CD285A89A23FBEE</Token>\n            <Device>MC</Device>\n         </Btinreq>\n         <personaUIdConyuge>10023</personaUIdConyuge>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.CrearConyuge</Servicio>\n            <Fecha>2022-06-02</Fecha>\n            <Hora>16:25:37</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>6</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.CrearConyugeResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"personaUIdConyuge\": \"10023\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"827\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.CrearConyuge\",\n        \"Fecha\": \"2017-12-17\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"18:47:21\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosBasicosPersona",
+      "fields": [
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "paisDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "primerApellido",
+          "Tipo": "String",
+          "Comentarios": "Primer apellido."
+        },
+        {
+          "Nombre": "primerNombre",
+          "Tipo": "String",
+          "Comentarios": "Primer nombre."
+        },
+        {
+          "Nombre": "segundoApellido",
+          "Tipo": "String",
+          "Comentarios": "Segundo apellido."
+        },
+        {
+          "Nombre": "segundoNombre",
+          "Tipo": "String",
+          "Comentarios": "Segundo nombre."
+        },
+        {
+          "Nombre": "sexo",
+          "Tipo": "String",
+          "Comentarios": "Sexo (M/F)."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

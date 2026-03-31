@@ -1,0 +1,87 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerevoluciondesaldos",
+  "pageTitle": "Obtener Evolución de Saldos",
+  "description": "Método para obtener la evolución del saldo de un producto de cuenta de ahorro.",
+  "pubName": "BTCuentasDeAhorro.ObtenerEvolucionDeSaldos",
+  "programa": "RBTPG005",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEvolucionSaldo",
+      "Tipo": "<a href=\"#sbtevolucionsaldos\">sBTEvolucionSaldos</a>",
+      "Comentarios": "Datos de la evolución de saldos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó Operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta de ahorro."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasDeAhorro.ObtenerEvolucionDeSaldos>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>9</bts:operacionUId>\n      </bts:BTCuentasDeAhorro.ObtenerEvolucionDeSaldos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerEvolucionDeSaldos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 9\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasDeAhorro.ObtenerEvolucionDeSaldosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>75e20bd1614A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtEvolucionSaldo>\n            <productoUId>9</productoUId>\n            <saldos>\n               <sBTSaldoMensual>\n                  <anio>2018</anio>\n                  <mes>9</mes>\n                  <saldo>0.00</saldo>\n               </sBTSaldoMensual>\n               <sBTSaldoMensual>\n                  <anio>2018</anio>\n                  <mes>8</mes>\n                  <saldo>0.00</saldo>\n               </sBTSaldoMensual>\n               ...\n            </saldos>\n         </sdtEvolucionSaldo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>930</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasDeAhorro.ObtenerEvolucionDeSaldos</Servicio>\n            <Fecha>2017-12-21</Fecha>\n            <Requerimiento/>\n            <Hora>17:35:25</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasDeAhorro.ObtenerEvolucionDeSaldosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtEvolucionSaldo\": {\n        \"productoUId\": \"9\",\n        \"saldos\": {\n            \"sBTSaldoMensual\": [\n                {\n                    \"saldo\": \"0.00\",\n                    \"mes\": \"9\",\n                    \"anio\": \"2018\"\n                },\n                {\n                    \"saldo\": \"0.00\",\n                    \"mes\": \"8\",\n                    \"anio\": \"2018\"\n                },\n                ...\n            ]\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"931\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasDeAhorro.ObtenerEvolucionDeSaldos\",\n        \"Fecha\": \"2017-12-21\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"17:35:37\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEvolucionSaldos",
+      "fields": [
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "saldos",
+          "Tipo": "<a href=\"#sbtsaldomensual\">sBTSaldoMensual</a>",
+          "Comentarios": "Listado de saldo mensual."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSaldoMensual",
+      "fields": [
+        {
+          "Nombre": "anio",
+          "Tipo": "Short",
+          "Comentarios": "Año."
+        },
+        {
+          "Nombre": "mes",
+          "Tipo": "Byte",
+          "Comentarios": "Mes."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo mensual."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

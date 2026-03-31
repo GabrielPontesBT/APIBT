@@ -1,0 +1,83 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerproductos",
+  "pageTitle": "Obtener Productos",
+  "description": "Método para obtener un listado de los productos de cuenta de ahorro.",
+  "pubName": "BTCuentasDeAhorro.ObtenerProductos",
+  "programa": "RBTPG054",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \n   <SOAP-ENV:Body> \n      <BTCuentasDeAhorro.ObtenerProductos xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \n         <Btinreq> \n            <Device>AV</Device> \n            <Usuario>MINSTALADOR</Usuario> \n            <Requerimiento/> \n            <Canal>BTDIGITAL</Canal> \n            <Token>be9fc8708b4A8B5C60A82434</Token> \n         </Btinreq> \n      </BTCuentasDeAhorro.ObtenerProductos> \n   </SOAP-ENV:Body> \n</SOAP-ENV:Envelope>",
+      "json": "curl -X POST \\ \n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerProductos=' \\ \n  -H 'cache-control: no-cache' \\ \n  -H 'content-type: application/json' \\ \n  -H 'postman-token: 6bd8fd4d-69ed-56f1-79fc-8d458f726066' \\ \n  -d '{ \n\t\"Btinreq\": { \n\t\t\"Device\": \"AV\", \n\t\t\"Usuario\": \"MINSTALADOR\", \n\t\t\"Requerimiento\": \"\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \n\t}, \n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \n   <SOAP-ENV:Body> \n      <BTCuentasDeAhorro.ObtenerProductosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \n         <Btinreq> \n            <Device>AV</Device> \n            <Usuario>MINSTALADOR</Usuario> \n            <Requerimiento/> \n            <Canal>BTDIGITAL</Canal> \n            <Token>be9fc8708b4A8B5C60A82434</Token> \n         </Btinreq> \n         <sdtProductos> \n            <sBTProducto> \n               <productoUId>1</productoUId> \n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> \n               <moneda>$</moneda> \n               <papel/> \n            </sBTProducto> \n            <sBTProducto> \n               <productoUId>2</productoUId> \n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> \n               <moneda>USD</moneda> \n               <papel/> \n            </sBTProducto> \n            <sBTProducto> \n               <productoUId>3</productoUId> \n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> \n               <moneda>$</moneda> \n               <papel/> \n            </sBTProducto> \n            <sBTProducto> \n               <productoUId>4</productoUId> \n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> \n               <moneda>USD</moneda> \n               <papel/> \n            </sBTProducto> \n            ...\n         </sdtProductos> \n         <Erroresnegocio></Erroresnegocio> \n         <Btoutreq> \n            <Numero>988</Numero> \n            <Estado>OK</Estado> \n            <Servicio>BTCuentasDeAhorro.ObtenerProductos</Servicio> \n            <Requerimiento/> \n            <Fecha>2017-12-22</Fecha> \n            <Hora>17:52:40</Hora> \n            <Canal>BTDIGITAL</Canal> \n         </Btoutreq> \n      </BTCuentasDeAhorro.ObtenerProductosResponse> \n   </SOAP-ENV:Body> \n</SOAP-ENV:Envelope>",
+      "json": "'{ \n\t\"Btinreq\": { \n\t\t\"Device\": \"AV\", \n\t\t\"Usuario\": \"MINSTALADOR\", \n\t\t\"Requerimiento\": \"\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \n\t}, \n    \"sdtProductos\": { \n        \"sBTProducto\": [ \n            { \n                \"papel\": \"\", \n                \"moneda\": \"$\", \n                \"productoUId\": \"1\", \n                \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\" \n            }, \n            { \n                \"papel\": \"\", \n                \"moneda\": \"USD\", \n                \"productoUId\": \"2\", \n                \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\" \n            }, \n            ...\n        ] \n    }, \n    \"Erroresnegocio\": { \n        \"BTErrorNegocio\": [] \n    }, \n    \"Btoutreq\": { \n        \"Numero\": \"989\", \n        \"Estado\": \"OK\", \n        \"Servicio\": \"BTCuentasDeAhorro.ObtenerProductos\", \n        \"Requerimiento\": \"\", \n        \"Fecha\": \"2017-12-22\", \n        \"Hora\": \"17:55:13\", \n        \"Canal\": \"BTDIGITAL\" \n    } \n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "configuracion-bantotal/bancos/obtenerdetallesucursal",
+  "pageTitle": "Obtener Detalle de Sucursal",
+  "description": "Método para obtener el detalle de una sucursal.",
+  "pubName": "BTConfiguracionBantotal.ObtenerDetalleSucursal",
+  "programa": "RBTPG558",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de la sucursal."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDetalleSucursal",
+      "Tipo": "<a href=\"#sbtdetallesucursal\">sBTDetalleSucursal</a>",
+      "Comentarios": "Detalle de la sucursal."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de sucursal."
+    },
+    {
+      "Código": "41001",
+      "Descripción": "La Sucursal no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9060352790A5422FE377DB47</bts:Token>\n         </bts:Btinreq>\n         <bts:sucursalId>1</bts:sucursalId>\n      </bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDetalleSucursal=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n      \"Btinreq\": {\n            \"Requerimiento\": \"1\",\n            \"Device\": \"GZ\",\n            \"Canal\": \"BTDIGITAL\",\n            \"Usuario\": \"MINSTALADOR\",\n            \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n      },\n      \"sucursalId\": 1,\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerDetalleSucursalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>9060352790A5422FE377DB47</Token>\n         </Btinreq>\n         <sdtDetalleSucursal>\n            <oficinaPrincipal>Sucursal Ciudad de la Costa</oficinaPrincipal>\n            <nombre>Casa Matriz</nombre>\n            <oficinaPrincipalId>1000</oficinaPrincipalId>\n            <departamento/>\n            <barrio/>\n            <codigo>1</codigo>\n            <categoria/>\n            <calendarioId>1</calendarioId>\n            <ciudad/>\n            <nroPuerta>2141</nroPuerta>\n            <estadoId>1</estadoId>\n            <telefono>15554454</telefono>\n            <email/>\n            <codigoPostal>55000</codigoPostal>\n            <ciudadId>1022</ciudadId>\n            <barrioId>0</barrioId>\n            <categoriaId>0</categoriaId>\n            <calle>Pedro Cosio</calle>\n            <estado/>\n            <departamentoId>1</departamentoId>\n         </sdtDetalleSucursal>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-11</Fecha>\n            <Hora>15:16:27</Hora>\n            <Numero>24977</Numero>\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleSucursal</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerDetalleSucursalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"sdtDetalleSucursal\": {\n         \"oficinaPrincipal\": \"Sucursal Ciudad de la Costa\",\n         \"nombre\": \"Casa Matriz\",\n         \"oficinaPrincipalId\": 1000,\n         \"departamento\": \"\",\n         \"barrio\": \"\",\n         \"codigo\": 1,\n         \"categoria\": \"\",\n         \"calendarioId\": 1,\n         \"ciudad\": \"\",\n         \"nroPuerta\": 2141,\n         \"estadoId\": 1,\n         \"telefono\": 15554454,\n         \"email\": \"\",\n         \"codigoPostal\": 55000,\n         \"ciudadId\": 1022,\n         \"barrioId\": 0,\n         \"categoriaId\": 0,\n         \"calle\": \"Pedro Cosio\",\n         \"estado\": \"\",\n         \"departamentoId\": 1\n      },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleSucursal\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDetalleSucursal",
+      "fields": [
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "calendarioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de calendario."
+        },
+        {
+          "Nombre": "calle",
+          "Tipo": "String",
+          "Comentarios": "Calle."
+        },
+        {
+          "Nombre": "categoria",
+          "Tipo": "String",
+          "Comentarios": "Categoría."
+        },
+        {
+          "Nombre": "categoriaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la categoría."
+        },
+        {
+          "Nombre": "ciudad",
+          "Tipo": "String",
+          "Comentarios": "Ciudad."
+        },
+        {
+          "Nombre": "ciudadId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la ciudad."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "estadoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del estado."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "nroPuerta",
+          "Tipo": "Int",
+          "Comentarios": "Número de puerta."
+        },
+        {
+          "Nombre": "oficinaPrincipal",
+          "Tipo": "String",
+          "Comentarios": "Oficina principal."
+        },
+        {
+          "Nombre": "oficinaPrincipalId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la oficina principal."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono de la sucursal."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

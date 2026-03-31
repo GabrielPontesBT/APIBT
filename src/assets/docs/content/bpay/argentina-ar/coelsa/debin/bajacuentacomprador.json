@@ -1,0 +1,63 @@
+{
+  "slug": "argentina-ar/coelsa/debin/bajacuentacomprador",
+  "pageTitle": "Baja Cuenta Comprador",
+  "description": "Método para dar de baja a una cuenta de un comprador.",
+  "pubName": "BTCOELSAGestionDebin.CompradorCuentaBaja",
+  "programa": "RBTPAR55",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "CompradorBaja",
+      "Tipo": "<a href=\"#sbtcompradorbaja\">sBTCompradorBaja</a>",
+      "Comentarios": "Datos para dar de baja un comprador."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "compradorBajaRespuesta",
+      "Tipo": "<a href=\"#sbtrespdebin\">sBTRespDebin</a>",
+      "Comentarios": "Datos de respuesta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió CUIT."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió CBU de la cuenta."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.CompradorCuentaBaja>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>f65cf3d548464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:compradorBaja>\n            <bts:cuit>23112903879</bts:cuit>\n            <bts:ctaCBU>0940099312000605600019</bts:ctaCBU>\n         </bts:compradorBaja>\n      </bts:BTCOELSAGestionDebin.CompradorCuentaBaja>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.CompradorCuentaBajaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <compradorBajaRespuesta>\n            <descripcion>COMPRADOR DADO DE BAJA</descripcion>\n            <codigo>00</codigo>\n         </compradorBajaRespuesta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.CompradorCuentaBaja</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>15:50:42</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038922</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.CompradorCuentaBajaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCompradorBaja",
+      "fields": [
+        {
+          "Nombre": "cuit",
+          "Tipo": "String",
+          "Comentarios": "Clave única de identificación tributaria."
+        },
+        {
+          "Nombre": "ctaCBU",
+          "Tipo": "String",
+          "Comentarios": "Clave Bancaria Uniforme."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

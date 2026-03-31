@@ -1,0 +1,103 @@
+{
+  "slug": "microfinanzas/grupales/agregarintegranteagrupo",
+  "pageTitle": "Agregar Integrante a Grupo",
+  "description": "Método para agregar un integrante a un grupo de crédito.",
+  "pubName": "BTMicrofinanzas.AgregarIntegranteAGrupo",
+  "programa": "RBTPG433",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "grupoId",
+      "Tipo": "Int",
+      "Comentarios": "Código de grupo"
+    },
+    {
+      "Nombre": "sdtIntegranteGrupo",
+      "Tipo": "<a href=\"#sbtintegrantegrupo\">sBTIntegranteGrupo</a>",
+      "Comentarios": "Datos del integrante"
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de grupo"
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente"
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No existe registro con el identificador indicado"
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar un tipo de integrante válido para el grupo"
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Excedió la cantidad de integrantes Coordinador permitidos para el tipo de grupo"
+    },
+    {
+      "Código": "40008",
+      "Descripción": "La cuenta ya integra el grupo"
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1414147105CD285A89A23FBE</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:grupoId>3</bts:grupoId>\n         <bts:sdtIntegranteGrupo>\n            <bts:clienteUId>157</bts:clienteUId>\n            <bts:cuenta></bts:cuenta>\n            <bts:tipoIntegranteId>2</bts:tipoIntegranteId>\n            <bts:tipoIntegrante></bts:tipoIntegrante>\n            <bts:fechaAlta>2020-04-20</bts:fechaAlta>\n            <bts:fechaBaja></bts:fechaBaja>\n            <bts:vigente>S</bts:vigente>\n            <bts:identificacionAlternativa></bts:identificacionAlternativa>\n         </bts:sdtIntegranteGrupo>\n      </bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarIntegranteAGrupo=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"grupoId\": 3,\n\t\"sdtIntegranteGrupo\": {\n\t\t\"clienteUId\": \"157\",\n\t\t\"tipoIntegranteId\": \"2\",\n\t\t\"tipoIntegrante\": \"\",\n\t\t\"fechaAlta\": \"2020-04-20\",\n\t\t\"vigente\": \"S\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.AgregarIntegranteAGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1414147105CD285A89A23FBE</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.AgregarIntegranteAGrupo</Servicio>\n            <Fecha>2020-04-20</Fecha>\n            <Hora>16:59:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>5004</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.AgregarIntegranteAGrupoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"786\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTMicrofinanzas.AgregarIntegranteAGrupo\",\n        \"Fecha\": \"2017-12-15\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"16:35:22\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTIntegranteGrupo",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "cuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta."
+        },
+        {
+          "Nombre": "fechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del integrante."
+        },
+        {
+          "Nombre": "fechaBaja",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de baja del integrante."
+        },
+        {
+          "Nombre": "identificacionAlternativa",
+          "Tipo": "String",
+          "Comentarios": "Identificación alternativa del integrante."
+        },
+        {
+          "Nombre": "tipoIntegrante",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de integrante."
+        },
+        {
+          "Nombre": "tipoIntegranteId",
+          "Tipo": "Short",
+          "Comentarios": "Tipo de integrante a ser agregado."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

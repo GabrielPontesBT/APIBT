@@ -1,0 +1,64 @@
+{
+  "slug": "personas/obtener/obtenervinculosdeafinidad",
+  "pageTitle": "Obtener Vínculos de Afinidad",
+  "description": "Método para obtener un listado de los vínculos de afinidad registrados.",
+  "pubName": "BTPersonas.ObtenerVinculosAfinidad",
+  "programa": "RBTPG395",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tipo",
+      "Tipo": "String",
+      "Comentarios": "Tipo de vínculo [Hidden: Valor fijo 'A' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtVinculos",
+      "Tipo": "<a href=\"#sbtvinculo\">sBTVinculo</a>",
+      "Comentarios": "Listado de vínculos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No existen Vínculos ingresados en el sistema."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerVinculosAfinidad>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n      </bts:BTPersonas.ObtenerVinculosAfinidad>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerVinculosAfinidadResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>268b6d23eb4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtVinculos>\n            <sBTVinculo>\n               <identificador>40</identificador>\n               <descripcion>Cónyuge</descripcion>\n               <tipo>A</tipo>\n            </sBTVinculo>\n            <sBTVinculo>\n               <identificador>100</identificador>\n               <descripcion>Amigo</descripcion>\n               <tipo>A</tipo>\n            </sBTVinculo>\n         </sdtVinculos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>828</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.ObtenerVinculosAfinidad</Servicio>\n            <Fecha>2017-12-17</Fecha>\n            <Requerimiento/>\n            <Hora>18:47:35</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ObtenerVinculosAfinidadResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtVinculos\": {\n    \"sBTVinculo\": [\n      {\n        \"identificador\": \"40\",\n        \"descripcion\": \"Cónyuge\",\n        \"tipo\": \"A\"\n      },\n      {\n        \"identificador\": \"100\",\n        \"descripcion\": \"Amigo\",\n        \"tipo\": \"A\"\n      }\n     ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"827\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.ObtenerVinculosAfinidad\",\n        \"Fecha\": \"2017-12-17\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"18:47:21\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTVinculo",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de vínculo."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de vínculo."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de vínculo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

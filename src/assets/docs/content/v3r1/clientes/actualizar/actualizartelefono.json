@@ -1,0 +1,90 @@
+{
+  "slug": "clientes/actualizar/actualizartelefono",
+  "pageTitle": "Actualizar Teléfono",
+  "description": "Método para actualizar el teléfono de un cliente.",
+  "pubName": "BTClientes.ActualizarTelefono",
+  "programa": "RBTPG216",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "domicilioId",
+      "Tipo": "Byte",
+      "Comentarios": "Identificador de tipo de domicilio."
+    },
+    {
+      "Nombre": "numeroTelefono",
+      "Tipo": "String",
+      "Comentarios": "Número de teléfono."
+    },
+    {
+      "Nombre": "tipoTelefonoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de teléfono."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo \"UPD\" para este método]."
+    },
+    {
+      "Nombre": "telefonoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador correlativo de teléfono."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de Domicilio."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió Teléfono."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió Tipo de Teléfono."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No existe persona con los datos ingresados."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El número del teléfono es incorrecto (es muy corto)."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El número del teléfono es incorrecto (es muy largo)."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "El número del teléfono no acepta caracteres."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ActualizarTelefono>\n         <bts:Btinreq>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>A088577A8D1E89A20E6EF27D</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>61</bts:clienteUId>\n         <bts:domicilioId>1</bts:domicilioId>\n         <bts:numeroTelefono>099274742</bts:numeroTelefono>\n         <bts:tipoTelefonoId>2</bts:tipoTelefonoId>\n         <bts:telefonoId>1</bts:telefonoId>\n      </bts:BTClientes.ActualizarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarTelefono' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"AV\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"clienteUId\": \"61\",\n    \"domicilioId\": \"1\",\n    \"numeroTelefono\": \"099274742\",\n    \"tipoTelefonoId\": \"2\",  \n    \"telefonoId\": \"1\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ActualizarTelefonoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>A088577A8D1E89A20E6EF27D</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>10294</Numero>\n            <Servicio>BTClientes.ActualizarTelefono</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-05</Fecha>\n            <Hora>11:40:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ActualizarTelefonoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n   \"Btinreq\": { \n      \"Device\": \"AV\", \n      \"Usuario\": \"MINSTALADOR\", \n      \"Token\": \"fa2c02c95a4A8B5C60A82434\", \n      \"Canal\": \"BTDIGITAL\", \n      \"Requerimiento\": \"1\" \n   }, \n   \"Btoutreq\": { \n      \"Numero\": \"111397\", \n      \"Estado\": \"OK\", \n      \"Servicio\": \"BTClientes.ActualizarTelefono\", \n      \"Requerimiento\": \"1\", \n      \"Fecha\": \"2023-05-05\", \n      \"Canal\": \"BTDIGITAL\", \n      \"Hora\": \"11:45:24\" \n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "argentina-ar/coelsa/debin/debineliminar",
+  "pageTitle": "Eliminar DEBIN",
+  "description": "Método para eliminar un Debin.",
+  "pubName": "BTCOELSAGestionDebin.DebinEliminar",
+  "programa": "RBTPAR61",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "EliminarDebinReq",
+      "Tipo": "<a href=\"#sbteliminardebinreq\">sBTEliminarDebinReq</a>",
+      "Comentarios": "Datos para eliminar un Debin."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "eliminarDebinRespuesta",
+      "Tipo": "<a href=\"#sbtrespdebin\">sBTRespDebin</a>",
+      "Comentarios": "Datos de respuesta de Debin."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió ID de Debin."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió CUIT de Vendedor/Creador a eliminar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.EliminarDebin>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>02cb4baaac464D4650046918</Token>\n         </Btinreq>\n         <bts:EliminarDebinReq>\n            <bts:cuitVendedor>27337167255</bts:cuitVendedor>\n            <bts:idDebin>GWY7ZEPN6ZW0WR4NQ0M51O</bts:idDebin>\n         </bts:EliminarDebinReq>\n      </bts:BTCOELSAGestionDebin.EliminarDebin>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.DebinEliminarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <eliminarDebinRespuesta>\n            <descripcion>DEBIN ELIMINADO</descripcion>\n            <codigo>00</codigo>\n         </eliminarDebinRespuesta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.DebinEliminar</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>17:19:35</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038934</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.DebinEliminarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEliminarDebinReq",
+      "fields": [
+        {
+          "Nombre": "cuitVendedor",
+          "Tipo": "Short",
+          "Comentarios": "Clave única de identificación tributaria del vendedor."
+        },
+        {
+          "Nombre": "idDebin",
+          "Tipo": "Character",
+          "Comentarios": "Id de Debin."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

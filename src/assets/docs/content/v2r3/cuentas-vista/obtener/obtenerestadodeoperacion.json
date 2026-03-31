@@ -1,0 +1,76 @@
+{
+  "slug": "cuentas-vista/obtener/obtenerestadodeoperacion",
+  "pageTitle": "Obtener Estado De Operación",
+  "description": "Método para obtener el estado de una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerEstadoDeOperacion",
+  "programa": "RBTPG559",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEstadoOperacion",
+      "Tipo": "<a href=\"#sbtestadooperacion\">sBTEstadoOperacion</a>",
+      "Comentarios": "Listado de estados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de la operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "La operación ingresada no corresponde a una cuenta vista."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la operación para el identificador ingresado."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No fue posible recuperar el estado para la operación ingresada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerEstadoDeOperacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>844919B7576C42C91062EBB4</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>210</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerEstadoDeOperacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerEstadoDeOperacion' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t \"Btinreq\": {\n         \"Canal\": \"BTDIGITAL\",\n         \"Token\": \"fa2c02c95a4A8B5C60A76209\",\n         \"Usuario\": \"INSTALADOR\",\n         \"Requerimiento\": 1,\n         \"Device\": 1\n      },\n      \"operacionUId\": 150\n   }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerEstadoDeOperacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>844919B7576C42C91062EBB4</Token>\n         </Btinreq>\n         <sdtEstadoOperacion>\n            <descripcion>Normal</descripcion>\n            <permiteOperar>S</permiteOperar>\n            <codigo>0</codigo>\n         </sdtEstadoOperacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20534</Numero>\n            <Servicio>BTCuentasVista.ObtenerEstadoDeOperacion</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2024-05-20</Fecha>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>09:22:42</Hora>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerEstadoDeOperacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": 1,\n      \"Usuario\": \"INSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"fa2c02c95a4A8B5C60A76209\"\n   },\n   \"sdtEstadoOperacion\": {\n      \"sBTEstadoOperacion\": {\n         \"descripcion\": \"Normal\",\n         \"permiteOperar\": \"S\",\n         \"codigo\": 0\n      }\n   },\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": 20535,\n      \"Servicio\": \"BTCuentasVista.ObtenerEstadoDeOperacion\",\n      \"Estado\": \"OK\",\n      \"Fecha\": \"2024-05-20\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"11:42:12\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEstadoOperacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código del estado."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "permiteOperar",
+          "Tipo": "String",
+          "Comentarios": "¿Permite Operar?"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

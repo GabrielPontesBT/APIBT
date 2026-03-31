@@ -1,0 +1,87 @@
+{
+  "slug": "configuracion-bantotal/parametros-generales/obtenerdetalledecalendariodesucursal",
+  "pageTitle": "Obtener Detalle de Calendario de Sucursal",
+  "description": "Método para obtener el detalle de los días del calendario de una determinada sucursal.",
+  "pubName": "BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal",
+  "programa": "RBTPG323",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de la sucursal."
+    },
+    {
+      "Nombre": "fechaInicio",
+      "Tipo": "Date",
+      "Comentarios": "Fecha inicio de la consulta."
+    },
+    {
+      "Nombre": "fechaFin",
+      "Tipo": "Date",
+      "Comentarios": "Fecha fin de la consulta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "calendarioId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de calendario"
+    },
+    {
+      "Nombre": "descripcionCalendario",
+      "Tipo": "String",
+      "Comentarios": "Descripción del calendario"
+    },
+    {
+      "Nombre": "sdtDetalleCalendario",
+      "Tipo": "<a href=\"#sbtdiacalendario\">sBTDiaCalendario</a>",
+      "Comentarios": "Detalle de la consulta del calendario."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se encontró un calendario para la sucursal indicada."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió fecha de inicio."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió fecha de fin."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1749872094F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:sucursalId>1</bts:sucursalId>\n         <bts:fechaInicio>2020-11-11</bts:fechaInicio>\n         <bts:fechaFin>2020-12-12</bts:fechaFin>\n      </bts:BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerDetalleCalendarioDeSucursal' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"bts:Btinreq\": {\n\t  \"bts:Canal\": \"BTDIGITAL\",\n\t  \"bts:Requerimiento\": \"1\",\n\t  \"bts:Usuario\": \"BANTOTAL\",\n\t  \"bts:Token\": \"1749872094F955E77534D3E0\",\n\t  \"bts:Device\": \"AC\"\n\t},\n\t\"sucursalId\": 1,\n\t\"fechaInicio\": \"2020-11-11\",\n\t\"fechaFin\": \"2020-12-12\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1749872094F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <calendarioId>1</calendarioId>\n         <descripcionCalendario>Calendario 1</descripcionCalendario>\n         <sdtDetalleCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-11</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-12</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-13</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-14</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-15</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-16</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-17</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-18</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-19</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-20</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-21</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-22</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-23</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-24</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-25</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-26</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-27</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-28</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-29</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-11-30</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-01</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-02</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-03</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-04</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-05</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-06</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-07</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-08</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-09</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-10</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-11</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-12-12</fecha>\n               <habil>N</habil>\n            </sBTDiaCalendario>\n         </sdtDetalleCalendario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal</Servicio>\n            <Fecha>2021-03-15</Fecha>\n            <Hora>14:29:49</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8025</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n\t\"Btinreq\": {\n\t  \"Device\": \"AC\",\n\t  \"Usuario\": \"INSTALADOR\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Token\": \"120320211555340000388219\"\n\t},\n\t\"calendarioId\": \"1\",\n\t\"descripcionCalendario\": \"Calendario 1\",\n\t\"sdtDetalleCalendario\": {\n\t  \"sBTDiaCalendario\": [\n        {\n          \"fecha\": \"2020-11-11\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-12\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-13\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-14\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-15\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-16\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-17\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-18\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-19\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-20\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-21\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-22\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-23\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-24\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-25\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-26\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-27\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-11-28\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-29\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-11-30\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-01\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-02\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-03\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-04\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-05\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-12-06\",\n          \"habil\": \"N\"\n        },\n        {\n          \"fecha\": \"2020-12-07\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-08\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-09\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-10\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-11\",\n          \"habil\": \"S\"\n        },\n        {\n          \"fecha\": \"2020-12-12\",\n          \"habil\": \"N\"\n        }\n      ]\n    },\n\t\"Erroresnegocio\": {},\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal\",\n\t  \"Fecha\": \"2021-03-15\",\n\t  \"Hora\": \"14:29:49\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"8025\",\n\t  \"Estado\": \"OK\"\n\t}\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDiaCalendario",
+      "fields": [
+        {
+          "Nombre": "fecha",
+          "Tipo": "Date",
+          "Comentarios": "Día del calendario."
+        },
+        {
+          "Nombre": "habil",
+          "Tipo": "String",
+          "Comentarios": "¿Día hábil? (S/N)"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,148 @@
+{
+  "slug": "clientes/obtener/obtenercuentascorrientes-saldocontable",
+  "pageTitle": "Obtener Cuentas Corrientes (Saldo Contable)",
+  "description": "Método para obtener los productos de cuenta corriente que tiene contratado un cliente, junto con su saldo contable.",
+  "pubName": "BTClientes.ObtenerCuentasCorrientes",
+  "programa": "RBTPG008",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 1 \nCorrelativo 2 | 1 \nValor específico 1 | Identificador del módulo a incluir. \n\nSe pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 1 \nCorrelativo 2 | 2 \nValor específico 1 | Módulo del tipo de operación a excluir. \nValor específico 2 | Tipo de operación a excluir.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductosPasivos",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
+      "Comentarios": "Listado de cuentas corrientes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerCuentasCorrientes>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>845cec4b724A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n      </bts:BTClientes.ObtenerCuentasCorrientes>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerCuentasCorrientes=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: d1963f3a-531c-6f87-db06-4ea6bee01768' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": 4\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerCuentasCorrientesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>845cec4b724A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtProductosPasivos>\n            <sBTProductoPasivo>\n               <operacionUId>9</operacionUId>\n               <idOperacionFmt>000000027_001</idOperacionFmt>\n               <idOperacionBT>0010100000020000000000000000002700001000000000001</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <tipoProducto>CC</tipoProducto>\n               <sucursal>Casa Matriz</sucursal>\n               <subCuenta>PESOS</subCuenta>\n               <saldo>26675306.42</saldo>\n               <estado>Normal</estado>\n            </sBTProductoPasivo>\n            <sBTProductoPasivo>\n               <operacionUId>81</operacionUId>\n               <idOperacionFmt>000000027_004</idOperacionFmt>\n               <idOperacionBT>0010100000020000000000000000002700004000000000001</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <tipoProducto>CC</tipoProducto>\n               <sucursal>Casa Matriz</sucursal>\n               <subCuenta>Prueba CC</subCuenta>\n               <saldo>4500.00</saldo>\n               <estado>Cobro Administrativo</estado>\n            </sBTProductoPasivo>\n            <sBTProductoPasivo>\n               <operacionUId>61</operacionUId>\n               <idOperacionFmt>000000027_003</idOperacionFmt>\n               <idOperacionBT>0010100000020000000000000000002700003000000000001</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <tipoProducto>CC</tipoProducto>\n               <sucursal>Casa Matriz</sucursal>\n               <subCuenta/>\n               <saldo>120000.00</saldo>\n               <estado>Cobro Administrativo</estado>\n            </sBTProductoPasivo>\n         </sdtProductosPasivos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>781</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerCuentasCorrientes</Servicio>\n            <Fecha>2017-12-15</Fecha>\n            <Requerimiento/>\n            <Hora>12:58:50</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerCuentasCorrientesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtProductosPasivos\": {\n        \"sBTProductoPasivo\": [\n            {\n                \"tipoProducto\": \"CC\",\n                \"estado\": \"Normal\",\n                \"subCuenta\": \"PESOS\",\n                \"operacionUId\": \"9\",\n                \"saldo\": \"26675306.42\",\n                \"idOperacionFmt\": \"000000027_001\",\n                \"idOperacionBT\": \"0010100000020000000000000000002700001000000000001\",\n                \"producto\": {\n                    \"papel\": \"\",\n                    \"moneda\": \"$\",\n                    \"productoUId\": \"0\",\n                    \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\"\n                },\n                \"sucursal\": \"Casa Matriz\"\n            },\n            {\n                \"tipoProducto\": \"CC\",\n                \"estado\": \"Cobro Administrativo\",\n                \"subCuenta\": \"Prueba CC\",\n                \"operacionUId\": \"81\",\n                \"saldo\": \"4500.00\",\n                \"idOperacionFmt\": \"000000027_004\",\n                \"idOperacionBT\": \"0010100000020000000000000000002700004000000000001\",\n                \"producto\": {\n                    \"papel\": \"\",\n                    \"moneda\": \"$\",\n                    \"productoUId\": \"0\",\n                    \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\"\n                },\n                \"sucursal\": \"Casa Matriz\"\n            },\n            {\n                \"tipoProducto\": \"CC\",\n                \"estado\": \"Cobro Administrativo\",\n                \"subCuenta\": \"\",\n                \"operacionUId\": \"61\",\n                \"saldo\": \"120000.00\",\n                \"idOperacionFmt\": \"000000027_003\",\n                \"idOperacionBT\": \"0010100000020000000000000000002700003000000000001\",\n                \"producto\": {\n                    \"papel\": \"\",\n                    \"moneda\": \"$\",\n                    \"productoUId\": \"0\",\n                    \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\"\n                },\n                \"sucursal\": \"Casa Matriz\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"782\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerCuentasCorrientes\",\n        \"Fecha\": \"2017-12-15\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"13:02:32\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProductoPasivo",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo contable de la CC."
+        },
+        {
+          "Nombre": "subCuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la subcuenta."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

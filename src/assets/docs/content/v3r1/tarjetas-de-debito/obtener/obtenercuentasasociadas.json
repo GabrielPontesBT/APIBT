@@ -1,0 +1,154 @@
+{
+  "slug": "tarjetas-de-debito/obtener/obtenercuentasasociadas",
+  "pageTitle": "Obtener Cuentas Asociadas",
+  "description": "Método para obtener las cuentas a las que está asociada una tarjeta de débito.",
+  "pubName": "BTTarjetasDeDebito.ObtenerCuentasAsociadas",
+  "programa": "RBTPG017",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta de débito."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCuentasAsociadasTD",
+      "Tipo": "<a href=\"#sbdcuentasasociadastd\">sBDCuentasAsociadasTD</a>",
+      "Comentarios": "Listado de cuentas asociadas."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de tarjeta."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ObtenerCuentasAsociadas>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>3</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.ObtenerCuentasAsociadas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerCuentasAsociadas=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: bdcb7be8-1291-68f0-58ec-504b3f3e8fc5' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 3\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ObtenerCuentasAsociadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>be9fc8708b4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtCuentasAsociadasTD>\n            <cuentas>\n               <sBDCuentaAsociadaTD>\n                  <operacionUId>101</operacionUId>\n                  <idOperacionFmt>000000040_005</idOperacionFmt>\n                  <producto>\n                     <productoUId>0</productoUId>\n                     <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                     <moneda>$</moneda>\n                     <papel/>\n                  </producto>\n                  <sucursal>Casa Matriz</sucursal>\n                  <simboloMoneda>$</simboloMoneda>\n                  <subCuenta/>\n                  <saldo>100.00</saldo>\n                  <estado>Normal</estado>\n               </sBDCuentaAsociadaTD>\n            </cuentas>\n            <tarjetaUId>3</tarjetaUId>\n         </sdtCuentasAsociadasTD>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>975</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.ObtenerCuentasAsociadas</Servicio>\n            <Fecha>2017-12-22</Fecha>\n            <Requerimiento/>\n            <Hora>13:14:14</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ObtenerCuentasAsociadasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtCuentasAsociadasTD\": {\n      \"cuentas\": {\n         \"sBDCuentaAsociadaTD\": [ {\n            \"saldo\": \"100.00\",\n            \"simboloMoneda\": \"$\",\n            \"sucursal\": \"Casa Matriz\",\n            \"producto\": {\n               \"papel\": \"\",\n               \"moneda\": \"$\",\n               \"productoUId\": \"0\",\n               \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\"\n            },\n            \"operacionUId\": \"101\",\n            \"subCuenta\": \"\",\n            \"idOperacionFmt\": \"000000040_005\",\n            \"estado\": \"Normal\"\n         } ]\n      },\n      \"tarjetaUId\": \"3\"\n   },\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"976\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTTarjetasDeDebito.ObtenerCuentasAsociadas\",\n      \"Fecha\": \"2017-12-22\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"13:15:07\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBDCuentasAsociadasTD",
+      "fields": [
+        {
+          "Nombre": "cuentas",
+          "Tipo": "<a href=\"#sbdcuentaasociadatd\">sBDCuentaAsociadaTD</a>",
+          "Comentarios": "Datos de cuenta asociada."
+        },
+        {
+          "Nombre": "tarjetaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de tarjeta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBDCuentaAsociadaTD",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del producto."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de la cuenta."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        },
+        {
+          "Nombre": "subCuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la subcuenta."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,115 @@
+{
+  "slug": "clientes/actualizar/agregarintegrante",
+  "pageTitle": "Agregar Integrante",
+  "description": "Método para agregar un integrante a una cuenta cliente.",
+  "pubName": "BTClientes.AgregarIntegrante",
+  "programa": "RBTPG186",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "codigoDeTitularidad",
+      "Tipo": "Byte",
+      "Comentarios": "Código de titularidad."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió código de titularidad."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "30023",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30032",
+      "Descripción": "La persona tiene que haber sido ingresado con Alta Normal para poder integrar una cuenta."
+    },
+    {
+      "Código": "30033",
+      "Descripción": "Persona inhabilitada por Banco Central."
+    },
+    {
+      "Código": "30034",
+      "Descripción": "La persona seleccionada no tiene segmento asociado."
+    },
+    {
+      "Código": "30036",
+      "Descripción": "La persona se encuentra en la lista de inhabilitados: [Número de identificador]."
+    },
+    {
+      "Código": "30037",
+      "Descripción": "La persona se encuentra en la lista de inhabilitados: [Número de identificador]."
+    },
+    {
+      "Código": "30038",
+      "Descripción": "La persona seleccionada figura como fallecida."
+    },
+    {
+      "Código": "30039",
+      "Descripción": "Persona seleccionada no tiene domicilio legal."
+    },
+    {
+      "Código": "30040",
+      "Descripción": "Código de Titularidad Incorrecto."
+    },
+    {
+      "Código": "30041",
+      "Descripción": "La persona no tiene condición ante el impuesto."
+    },
+    {
+      "Código": "30042",
+      "Descripción": "La persona tiene alta inconclusa no puede asociarse."
+    },
+    {
+      "Código": "30043",
+      "Descripción": "La persona seleccionada no tiene actividad económica."
+    },
+    {
+      "Código": "30046",
+      "Descripción": "La cuenta [Número de identificador] tiene la misma integración que la cuenta actual."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.AgregarIntegrante>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>d19fba5fa44A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n         <bts:personaUId>61</bts:personaUId>\n         <bts:codigoDeTitularidad>1</bts:codigoDeTitularidad>\n      </bts:BTClientes.AgregarIntegrante>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?AgregarIntegrante=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": \"21\",\n    \"personaUId\": \"41\",\n    \"codigoDeTitularidad\": \"1\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.AgregarIntegranteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>d19fba5fa44A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2701</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.AgregarIntegrante</Servicio>\n            <Fecha>2018-10-26</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>12:48:44</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.AgregarIntegranteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"2719\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.AgregarIntegrante\",\n        \"Fecha\": \"2018-10-26\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"15:31:49\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

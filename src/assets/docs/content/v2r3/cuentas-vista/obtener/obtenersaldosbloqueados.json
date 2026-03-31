@@ -1,0 +1,73 @@
+{
+  "slug": "cuentas-vista/obtener/obtenersaldosbloqueados",
+  "pageTitle": "Obtener Saldos Bloqueados",
+  "description": "Método para obtener los saldos bloqueados de una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerSaldosBloqueados",
+  "programa": "RBTPG551",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSaldosBloqueados",
+      "Tipo": "<a href=\"#sbtbloqueosaldo\">sBTBloqueoSaldo</a>",
+      "Comentarios": "Listado de saldos bloqueados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se encontró el identificador de la operación para la cuenta vista bloqueada."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerSaldosBloqueados>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>213</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerSaldosBloqueados>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerSaldosBloqueados' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"operacionUId\": 213,\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerSaldosBloqueadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\n         </Btinreq>\n         <sdtSaldosBloqueados>\n            <sBTBloqueoSaldo>\n               <fechaVencimiento>2025-10-15T00:00:00</fechaVencimiento>\n               <motivo/>\n               <importe>50000.00</importe>\n               <bloqueoId>7</bloqueoId>\n            </sBTBloqueoSaldo>\n            <sBTBloqueoSaldo>\n               <fechaVencimiento>2025-10-15T00:00:00</fechaVencimiento>\n               <motivo/>\n               <importe>50000.00</importe>\n               <bloqueoId>8</bloqueoId>\n            </sBTBloqueoSaldo>\n         </sdtSaldosBloqueados>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20364</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasVista.ObtenerSaldosBloqueados</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2024-05-07</Fecha>\n            <Hora>17:56:50</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerSaldosBloqueadosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"sdtSaldosBloqueados\": {\n    \"sBTBloqueoSaldo\": [\n      {\n        \"fechaVencimiento\": \"2025-10-15T00:00:00\",\n        \"motivo\": \"\",\n        \"importe\": 50000,\n        \"bloqueoId\": 7\n      },\n      {\n        \"fechaVencimiento\": \"2025-10-15T00:00:00\",\n        \"motivo\": \"\",\n        \"importe\": 50000,\n        \"bloqueoId\": 8\n      }\n    ]\n  },\n    \"Erroresnegocio\": \"\",\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasVista.ObtenerSaldosBloqueados\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTBloqueoSaldo",
+      "fields": [
+        {
+          "Nombre": "bloqueoId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador del bloqueo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "motivo",
+          "Tipo": "String",
+          "Comentarios": "Motivo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

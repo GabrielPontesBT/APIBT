@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { Release } from '../../../features/api-docs/pages/releases/releases.data';
 import { ReleasesService } from '../../../features/api-docs/services/releases.service';
 
@@ -14,6 +15,7 @@ export class NavbarComponent {
   isDarkMode = document.body.classList.contains('dark-mode');
   rotate = false;
   releasesOpen = false;
+  isOnReleasePage = false;
   releases: Release[] = [];
 
   constructor(
@@ -22,6 +24,13 @@ export class NavbarComponent {
   ) {
     this.releasesService.getReleases().subscribe(releases => {
       this.releases = releases;
+    });
+
+    this.isOnReleasePage = this.router.url.startsWith('/releases/');
+    this.router.events.pipe(
+      filter((e): e is NavigationEnd => e instanceof NavigationEnd)
+    ).subscribe(e => {
+      this.isOnReleasePage = e.urlAfterRedirects.startsWith('/releases/');
     });
   }
 

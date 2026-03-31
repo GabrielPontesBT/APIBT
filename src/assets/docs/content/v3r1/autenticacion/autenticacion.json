@@ -1,0 +1,26 @@
+{
+  "slug": "autenticacion/autenticacion",
+  "pageTitle": "Autenticación",
+  "description": "",
+  "pubName": "",
+  "programa": "",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "",
+      "json": ""
+    },
+    "response": {
+      "xml": "",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

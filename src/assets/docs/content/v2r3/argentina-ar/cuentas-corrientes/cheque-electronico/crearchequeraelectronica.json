@@ -1,0 +1,83 @@
+{
+  "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/crearchequeraelectronica",
+  "pageTitle": "Crear Chequera Electrónica",
+  "description": "Método para crear una chequera electrónica.",
+  "pubName": "BTCuentasCorrientes.CrearChequeaElectronica",
+  "programa": "RBTPAR28",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de subcuenta."
+    },
+    {
+      "Nombre": "cantidadCheques",
+      "Tipo": "Short",
+      "Comentarios": "Cantidad de cheques."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "listaCheques",
+      "Tipo": "<a href=\"#sbtchequeelectronico\">sBTChequeElectronico</a>",
+      "Comentarios": "Listado de cheques."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe registro con el identificador indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.CrearChequeraElectronica>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Usuario>BA</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>ec8CE93AA1</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>15</bts:operacionUId>\n         <bts:cantidadCheques>1</bts:cantidadCheques>\n      </bts:BTCuentasCorrientes.CrearChequeraElectronica>\n   </soapenv:Body>\n</soapenv:Envelope></soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?CrearChequeaElectronica' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": \"15\",\n\t\"cantidadCheques\": \"1\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.CrearChequeraElectronicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10</Device>\n            <Usuario>BA</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>ec8CE93AA1</Token>\n         </Btinreq>\n         <listaCheques>\n            <sBTChequeElectronico>\n               <beneficiario/>\n               <numeroCheque>0</numeroCheque>\n               <importe>0.00</importe>\n               <numeroChequera>50245</numeroChequera>\n               <CMC7/>\n            </sBTChequeElectronico>\n         </listaCheques>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2565</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasCorrientes.CrearChequeaElectronica</Servicio>\n            <Fecha>2019-05-28</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>11:40:41</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasCorrientes.CrearChequeraElectronicaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"listaCheques\": {\n        \"sBTChequeElectronico\": {\n            \"beneficiario\": \"\",\n            \"numeroCheque\": \"0\",\n            \"importe\": \"0.00\",\n            \"numeroChequera\": \"50245\",\n            \"CMC7\": \"\"\n\t\t}\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8396,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasCorrientes.CrearChequeraElectronica\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTChequeElectronico",
+      "fields": [
+        {
+          "Nombre": "beneficiario",
+          "Tipo": "String",
+          "Comentarios": "Nombre del beneficiario."
+        },
+        {
+          "Nombre": "cmc7",
+          "Tipo": "Long",
+          "Comentarios": "Identificador CMC7 de cheque electrónico."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "numerocheque",
+          "Tipo": "Long",
+          "Comentarios": "Numero de cheque electrónico."
+        },
+        {
+          "Nombre": "numerochequera",
+          "Tipo": "Long",
+          "Comentarios": "Numero de chequera electrónica."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

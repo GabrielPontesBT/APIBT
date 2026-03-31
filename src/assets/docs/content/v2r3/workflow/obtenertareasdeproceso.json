@@ -1,0 +1,87 @@
+{
+  "slug": "workflow/obtenertareasdeproceso",
+  "pageTitle": "Obtener Tareas de Proceso",
+  "description": "Método para obtener las tareas de un determinado proceso de Workflow.",
+  "pubName": "BTWorkflow.ObtenerTareasDeProceso",
+  "programa": "RBTPG462",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "procesoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de proceso Workflow."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTareas",
+      "Tipo": "<a href=\"#sbttareawf\">sBTTareaWF</a>",
+      "Comentarios": "Listado de tareas Workflow."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de proceso."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El proceso ingresado no existe."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se encontraron tareas para el proceso ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTWorkflow.ObtenerTareasDeProceso>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>GP</bts:Device>\n            <bts:Token>151D0C3440510F1D04029085</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n         </bts:Btinreq>\n         <bts:procesoId>1</bts:procesoId>\n      </bts:BTWorkflow.ObtenerTareasDeProceso>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerTareasDeProceso \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n   \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Device\": \"GP\",\n      \"Requerimiento\": \"1\",\n      \"Token\": \"200f0b8b654A8B5C60A82434\"\n   },\n   \"procesoId\": \"1\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTWorkflow.ObtenerTareasDeProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Token>151D0C3440510F1D04029085</Token>\n            <Canal>BTDIGITAL</Canal>\n            <Device>GP</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n         </Btinreq>\n         <sdtTareas>\n            <sBTTareaWF>\n               <descripcion>Solicitud</descripcion>\n               <warning>0.00</warning>\n               <deadline>0.00</deadline>\n               <tareaId>3</tareaId>\n               <nombre>Solicitud</nombre>\n               <programaPostcondicional/>\n            </sBTTareaWF>\n            <sBTTareaWF>\n               <descripcion>Evaluación / Propuesta</descripcion>\n               <warning>0.00</warning>\n               <deadline>0.00</deadline>\n               <tareaId>7</tareaId>\n               <nombre>Evaluación / Propuesta</nombre>\n               <programaPostcondicional>ASNG449</programaPostcondicional>\n            </sBTTareaWF>\n            <sBTTareaWF>\n               <descripcion>Aprobación</descripcion>\n               <warning>0.00</warning>\n               <deadline>0.00</deadline>\n               <tareaId>11</tareaId>\n               <nombre>Aprobación</nombre>\n               <programaPostcondicional/>\n            </sBTTareaWF>\n            <sBTTareaWF>\n               <descripcion>Desembolso</descripcion>\n               <warning>0.00</warning>\n               <deadline>43200.00</deadline>\n               <tareaId>55</tareaId>\n               <nombre>Desembolso</nombre>\n               <programaPostcondicional/>\n            </sBTTareaWF>\n         </sdtTareas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Canal>BTDIGITAL</Canal>\n            <Fecha>2022-11-29</Fecha>\n            <Servicio>BTWorkflow.ObtenerTareasDeProceso</Servicio>\n            <Hora>14:57:20</Hora>\n            <Numero>225671</Numero>\n            <Requerimiento>1</Requerimiento>\n         </Btoutreq>\n      </BTWorkflow.ObtenerTareasDeProcesoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'\n{\n   \"Btinreq\": {\n      \"Device\": \"GP\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"47D750A861C4243EDE981344\"\n   },\n   \"sdtTareas\": {\n      \"sBTTareaWF\": [\n      {\n         \"descripcion\": \"Solicitud\",\n         \"warning\": \"0.00\",\n         \"deadline\": \"0.00\",\n         \"tareaId\": \"3\",\n         \"nombre\": \"Solicitud\",\n         \"programaPostcondicional\": \"\"\n      },\n      {\n         \"descripcion\": \"Evaluación / Propuesta\",\n         \"warning\": \"0.00\",\n         \"deadline\": \"0.00\",\n         \"tareaId\": \"7\",\n         \"nombre\": \"Evaluación / Propuesta\",\n         \"programaPostcondicional\": \"ASNG449\"\n      },\n      {\n         \"descripcion\": \"Aprobación\",\n         \"warning\": \"0.00\",\n         \"deadline\": \"0.00\",\n         \"tareaId\": \"11\",\n         \"nombre\": \"Aprobación\",\n         \"programaPostcondicional\": \"\"\n      },\n      {\n         \"descripcion\": \"Desembolso\",\n         \"warning\": \"0.00\",\n         \"deadline\": \"43200.00\",\n         \"tareaId\": \"55\",\n         \"nombre\": \"Desembolso\",\n         \"programaPostcondicional\": \"\"\n      }\n      ]\n   },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Estado\": \"OK\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Fecha\": \"2022-11-29\",\n      \"Servicio\": \"BTWorkflow.ObtenerTareasDeProceso\",\n      \"Hora\": \"14:57:20\",\n      \"Numero\": \"225671\",\n      \"Requerimiento\": \"1\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTareaWF",
+      "fields": [
+        {
+          "Nombre": "deadline",
+          "Tipo": "Double",
+          "Comentarios": "Tiempo de deadline."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la tarea."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la tarea."
+        },
+        {
+          "Nombre": "programaPostcondicional",
+          "Tipo": "String",
+          "Comentarios": "Programa postcondicional."
+        },
+        {
+          "Nombre": "tareaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de tarea Workflow."
+        },
+        {
+          "Nombre": "warning",
+          "Tipo": "Double",
+          "Comentarios": "Tiempo de warning."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

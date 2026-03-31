@@ -1,0 +1,134 @@
+{
+  "slug": "cash-management/obtener/obtenerdetallepagoorden",
+  "pageTitle": "Obtener Detalle de Pago de una Orden",
+  "description": "Método para obtener la información de las lineas del detalle del pago para una orden.",
+  "pubName": "BTCASHManagement.ObtenerDetallePagoOrden",
+  "programa": "RBTPGC23",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de la orden."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "cuentaDebito",
+      "Tipo": "Long",
+      "Comentarios": "Operación de débito."
+    },
+    {
+      "Nombre": "cantidadLineas",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de líneas del archivo."
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Short",
+      "Comentarios": "Moneda."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe total."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia del pago o cobro."
+    },
+    {
+      "Nombre": "fechaPago",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de pago o cobro."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Estado del archivo."
+    },
+    {
+      "Nombre": "erroresPago",
+      "Tipo": "String",
+      "Comentarios": "Lista de mensajes del cabezal de pago."
+    },
+    {
+      "Nombre": "detallePagos",
+      "Tipo": "<a href=\"#sbtdetallepago\">sBTDetallePago</a>",
+      "Comentarios": "Lista de información del archivo con su estado y mensaje."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030753",
+      "Descripción": "No se encontró la orden para el identificador recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ObtenerDetallePagoOrden>\n         <bts:Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </bts:Btinreq>\n         <bts:ordenId>345</bts:ordenId>\n      </bts:BTCASHManagement.ObtenerDetallePagoOrden>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetallePagoOrden=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"ordenId\": 345\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.ObtenerDetallePagoOrdenResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </Btinreq>\n         <cuentaDebito>825</cuentaDebito>\n         <cantidadLineas>2</cantidadLineas>\n         <moneda>0</moneda>\n         <importe>400.0</importe>\n         <referencia/>\n         <fechaPago>2024-11-01</fechaPago>\n         <estado>S</estado>\n         <erroresPago></erroresPago>\n         <detallePagos>\n            <sBTDetallePago>\n               <moneda>0</moneda>\n               <beneficiarioCuenta>Pago Caja</beneficiarioCuenta>\n               <estado>C</estado>\n               <beneficiarioBanco/>\n               <mensajesError/>\n               <beneficiarioId/>\n               <importe>100.0</importe>\n               <fechaPago>2024-11-01</fechaPago>\n               <nombre/>\n            </sBTDetallePago>\n            <sBTDetallePago>\n               <moneda>0</moneda>\n               <beneficiarioCuenta>Pago Caja</beneficiarioCuenta>\n               <estado>C</estado>\n               <beneficiarioBanco/>\n               <mensajesError/>\n               <beneficiarioId/>\n               <importe>300.0</importe>\n               <fechaPago>2024-11-01</fechaPago>\n               <nombre/>\n            </sBTDetallePago>\n         </detallePagos>\n         <Erroresnegocio/>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-18</Fecha>\n            <Hora>12:46:29</Hora>\n            <Numero>26013</Numero>\n            <Servicio>BTCASHManagement.ObtenerDetallePagoOrden</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.ObtenerDetallePagoOrdenResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n      \"cuentaDebito\": 825,\n      \"cantidadLineas\": 2,\n      \"moneda\": 0,\n      \"importe\": 400,\n      \"referencia\": \"\",\n      \"fechaPago\": \"2024-11-01\",\n      \"estado\": \"S\",\n      \"erroresPago\": \"\",\n      \"detallePagos\": {\n         \"sBTDetallePago\": [\n         {\n            \"moneda\": 0,\n            \"beneficiarioCuenta\": \"Pago Caja\",\n            \"estado\": \"C\",\n            \"beneficiarioBanco\": \"\",\n            \"mensajesError\": \"\",\n            \"beneficiarioId\": \"\",\n            \"importe\": 100,\n            \"fechaPago\": \"2024-11-01\",\n            \"nombre\": \"\"\n         },\n         {\n            \"moneda\": 0,\n            \"beneficiarioCuenta\": \"Pago Caja\",\n            \"estado\": \"C\",\n            \"beneficiarioBanco\": \"\",\n            \"mensajesError\": \"\",\n            \"beneficiarioId\": \"\",\n            \"importe\": 300,\n            \"fechaPago\": \"2024-11-01\",\n            \"nombre\": \"\"\n         }\n      ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCASHManagement.ObtenerDetallePagoOrden\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDetallePago",
+      "fields": [
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del Beneficiario de Pago."
+        },
+        {
+          "Nombre": "beneficiarioId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de Beneficiario."
+        },
+        {
+          "Nombre": "beneficiarioCuenta",
+          "Tipo": "String",
+          "Comentarios": "Cuenta del Beneficiario."
+        },
+        {
+          "Nombre": "beneficiarioBanco",
+          "Tipo": "String",
+          "Comentarios": "Banco del Beneficiario."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de Pago o Cobro."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado de la línea."
+        },
+        {
+          "Nombre": "mensajesError",
+          "Tipo": "String",
+          "Comentarios": "Lista de mensajes de la línea."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

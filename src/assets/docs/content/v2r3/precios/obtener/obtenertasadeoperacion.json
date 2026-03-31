@@ -1,0 +1,98 @@
+{
+  "slug": "precios/obtener/obtenertasadeoperacion",
+  "pageTitle": "Obtener Tasa de Operación",
+  "description": "Método para obtener la tasa de la operación junto con la fecha de vigencia.",
+  "pubName": "BTPrecios.ObtenerTasaOperacion",
+  "programa": "RBTPG318",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de operación."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de consulta."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Long",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "plazo",
+      "Tipo": "Int",
+      "Comentarios": "Plazo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "tipoTasa",
+      "Tipo": "String",
+      "Comentarios": "Tipo de tasa."
+    },
+    {
+      "Nombre": "tasa",
+      "Tipo": "Double",
+      "Comentarios": "Tasa."
+    },
+    {
+      "Nombre": "tasaMinima",
+      "Tipo": "Double",
+      "Comentarios": "Tasa mínima."
+    },
+    {
+      "Nombre": "tasaMaxima",
+      "Tipo": "Double",
+      "Comentarios": "Tasa máxima."
+    },
+    {
+      "Nombre": "fechaVigencia",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de vigencia"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar fecha."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Debe ingresar plazo."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    },
+    {
+      "Código": "50001",
+      "Descripción": "El registro no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerTasaOperacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1600460797F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>1</bts:operacionUId>\n         <bts:fecha>2020-11-11</bts:fecha>\n         <bts:importe>100000</bts:importe>\n         <bts:plazo>360</bts:plazo>\n      </bts:BTPrecios.ObtenerTasaOperacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaOperacion' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"bts:Btinreq\": {\n\t  \"bts:Canal\": \"BTDIGITAL\",\n\t  \"bts:Requerimiento\": \"1\",\n\t  \"bts:Usuario\": \"BANTOTAL\",\n\t  \"bts:Token\": \"1600460797F955E77534D3E0\",\n\t  \"bts:Device\": \"AC\"\n\t},\n\t\"operacionUId\": 10118,\n\t\"fecha\": \"2020-11-11\",\n\t\"importe\": 100000,\n\t\"plazo\": 360\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrecios.ObtenerTasaOperacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1600460797F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <tipoTasa>Efectiva Anual</tipoTasa>\n         <tasa>0.3</tasa>\n         <tasaMinima>0.3</tasaMinima>\n         <tasaMaxima>0.3</tasaMaxima>\n\t\t <fechaVigencia>2021-11-11</fechaVigencia>\t  \n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPrecios.ObtenerTasaOperacion</Servicio>\n            <Fecha>2021-03-18</Fecha>\n            <Hora>14:13:11</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8063</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPrecios.ObtenerTasaOperacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1600460797F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"tipoTasa\": \"Efectiva Anual\",\n\t\"tasa\": \"0.3\",\n\t\"tasaMinima\": \"0.3\",\n\t\"tasaMaxima\": \"0.3\",\n\t\"fechaVigencia\": \"2021-11-11\",\n\t\"Erroresnegocio\": {\n\t},\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTPrecios.ObtenerTasaOperacion\",\n\t  \"Fecha\": \"2021-03-18\",\n\t  \"Hora\": \"14:13:11\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"8063\",\n\t  \"Estado\": \"OK\"\n\t}\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

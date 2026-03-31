@@ -19,7 +19,7 @@
       color: var(--text-color);
       font-size: 1rem;
       font-family: var(--font-family);
-      padding: 1.5rem;
+      padding: 0.5rem 2rem;
       border-radius: var(--border-radius);
       font-weight: 700;
       box-shadow: none !important;
@@ -32,6 +32,10 @@
       .mat-expansion-indicator::after {
         color: var(--red-1);
         font-weight: 700;
+      }
+
+      .mat-expansion-indicator svg {
+        fill: var(--red-1);
       }
     }
 
@@ -47,7 +51,7 @@
     }
 
     .mat-icon {
-      color: var(--text-color);
+      color: var(--red-1);
       vertical-align: text-bottom;
     }
   }

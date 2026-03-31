@@ -1,0 +1,111 @@
+{
+  "slug": "cuentas-vista/operar/acreditarencuenta",
+  "pageTitle": "Acreditar en Cuenta",
+  "description": "Método para realizar una acreditación a una cuenta vista determinada.",
+  "pubName": "BTCuentasVista.AcreditarEnCuenta",
+  "programa": "RBTPG569",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de compra, teniendo en cuenta que:\n\n\t- La cuenta vista origen se almacena en el preformato 1.\n\t\t\n\t- Los diferentes importes se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.\n\t\n\t- Los diferentes conceptos se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.\n\t\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal.\n\t\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):\n\n\t- Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtDatosAcreditar",
+      "Tipo": "<a href=\"#sbtdatosacreditardebitar\">sBTDatosAcreditarDebitar</a>",
+      "Comentarios": "Datos de la acreditación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del movimiento realizado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar una operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar al menos un importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación origen para el Identificador: X."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta cliente origen para el Identificador: X."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.AcreditarEnCuenta>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1244265502F955E77534D3E0</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:sdtDatosAcreditar>\n            <bts:clienteUId>140</bts:clienteUId>\n            <bts:operacionUId>10140</bts:operacionUId>\n            <bts:importe1>1000</bts:importe1>\n            <bts:importe2>5220</bts:importe2>\n            <bts:importe3></bts:importe3>\n            <bts:importe4></bts:importe4>\n            <bts:concepto1>test</bts:concepto1>\n            <bts:concepto2></bts:concepto2>\n            <bts:concepto3></bts:concepto3>\n            <bts:concepto4></bts:concepto4>\n         </bts:sdtDatosAcreditar>\n      </bts:BTCuentasVista.AcreditarEnCuenta>\n   </soapenv:Body>",
+      "json": "curl -X POST \\ \n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?AcreditarEnCuenta=' \\ \n  -H 'cache-control: no-cache' \\ \n  -H 'content-type: application/json' \\ \n  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \\ \n  -d '{\n\"Btinreq\": { \n\t\t\"Device\": \"AV\", \n\t\t\"Usuario\": \"MINSTALADOR\", \n\t\t\"Requerimiento\": \"\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \n    }, \n\t\"sdtDatosAcreditar\": { \n\t\t\"operacionUId1\": \"10140\", \n\t\t\"operacionUId2\": \"10141\", \n\t\t\"operacionUId3\": \"\", \n\t\t\"operacionUId4\": \"\", \n\t\t\"operacionUId5\": \"\", \n\t\t\"importe1\": \"1000\", \n\t\t\"importe2\": \"5220\", \n\t\t\"importe3\": \"\", \n\t\t\"importe4\": \"\", \n\t\t\"importe5\": \"\", \n\t\t\"importe6\": \"\", \n\t\t\"importe7\": \"\", \n\t\t\"importe8\": \"\", \n\t\t\"concepto\": \"\" \n\t}    \n}' \ncurl -X POST \\ \n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?AcreditarEnCuenta=' \\ \n  -H 'cache-control: no-cache' \\ \n  -H 'content-type: application/json' \\ \n  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \\ \n  -d '{\n\"Btinreq\": { \n\t\t\"Device\": \"AV\", \n\t\t\"Usuario\": \"MINSTALADOR\", \n\t\t\"Requerimiento\": \"\", \n\t\t\"Canal\": \"BTDIGITAL\", \n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\" \n    }, \n\t\"sdtDatosAcreditar\": { \n\t\t\"clienteUId\": \"140\",\n\t\t\"operacionUId\": \"10140\", \n\t\t\"importe1\": \"1000\", \n\t\t\"importe2\": \"5220\", \n\t\t\"importe3\": \"\", \n\t\t\"importe4\": \"\", \n\t\t\"concepto1\": \"test\",\n\t\t\"concepto2\": \"\",\n\t\t\"concepto3\": \"\",\n\t\t\"concepto4\": \"\"\n\t}    \n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAPENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAPENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <SOAP-ENV:Body>\n        <BTCuentasVista.AcreditarEnCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n            <Btinreq>\n                <Device>AV</Device>\n                <Usuario>MINSTALADOR</Usuario>\n                <Requerimiento/>\n                <Canal>BTDIGITAL</Canal>\n                <Token>268b6d23eb4A8B5C60A82434</Token>\n            </Btinreq>\n            <movimientoUId>141</movimientoUId>\n            <Erroresnegocio></Erroresnegocio>\n            <Btoutreq>\n                <Numero>864</Numero>\n                <Estado>OK</Estado>\n                <Servicio>BTCuentasVista.AcreditarEnCuenta</Servicio>\n                <Requerimiento/>\n                <Fecha>2017-12-18</Fecha>\n                <Hora>17:07:19</Hora>\n                <Canal>BTDIGITAL</Canal>\n            </Btoutreq>\n        </BTCuentasVista.AcreditarEnCuentaResponse>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Device\": \"AV\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n    },\n    \"movimientoUId\": \"141\",\n    \"Btoutreq\": {\n        \"Numero\": \"103\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasVista.AcreditarEnCuenta\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-07-22\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"16:00:37\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosAcreditarDebitar",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cliente."
+        },
+        {
+          "Nombre": "concepto1",
+          "Tipo": "String",
+          "Comentarios": "Concepto 1 del movimiento."
+        },
+        {
+          "Nombre": "concepto2",
+          "Tipo": "String",
+          "Comentarios": "Concepto 2 del movimiento."
+        },
+        {
+          "Nombre": "concepto3",
+          "Tipo": "String",
+          "Comentarios": "Concepto 3 del movimiento."
+        },
+        {
+          "Nombre": "concepto4",
+          "Tipo": "String",
+          "Comentarios": "Concepto 4 del movimiento."
+        },
+        {
+          "Nombre": "importe1",
+          "Tipo": "Double",
+          "Comentarios": "Importe 1 del movimiento."
+        },
+        {
+          "Nombre": "importe2",
+          "Tipo": "Double",
+          "Comentarios": "Importe 2 del movimiento."
+        },
+        {
+          "Nombre": "importe3",
+          "Tipo": "Double",
+          "Comentarios": "Importe 3 del movimiento."
+        },
+        {
+          "Nombre": "importe4",
+          "Tipo": "Double",
+          "Comentarios": "Importe 4 del movimiento."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

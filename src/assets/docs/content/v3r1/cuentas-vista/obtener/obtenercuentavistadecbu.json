@@ -1,0 +1,47 @@
+{
+  "slug": "cuentas-vista/obtener/obtenercuentavistadecbu",
+  "pageTitle": "Obtener Cuenta Vista de CBU",
+  "description": "Método para obtener el identificador de operación de una cuenta vista a partir del CBU.",
+  "pubName": "BTCuentasVista.ObtenerCuentaVistaDeCBU",
+  "programa": "RBTPAR01",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "CBU",
+      "Tipo": "String",
+      "Comentarios": "Clave Bancaria Uniforme."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación CC o CA."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió CBU."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontró operación correspondiente al CBU."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerCuentaVistaDeCBU>\n\t\t<Btinreq>\n\t\t\t<Device>AV</Device>\n\t\t\t<Usuario>MINSTALADOR</Usuario>\n\t\t\t<Requerimiento></Requerimiento>\n\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t<Token>268b6d23eb4A8B5C60A82434</Token>\n\t\t</Btinreq>\n\t\t<CBU>3220001800000831740016</CBU>\n      </bts:BTCuentasVista.ObtenerCuentaVistaDeCBU>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerCuentaVistaDeCBUResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n\t\t\t<Device>AV</Device>\n\t\t\t<Usuario>MINSTALADOR</Usuario>\n\t\t\t<Requerimiento></Requerimiento>\n\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t<Token>268b6d23eb4A8B5C60A82434</Token>\n\t\t</Btinreq>\n\t\t<operacionUId>281</operacionUId>\n\t\t<Erroresnegocio></Erroresnegocio>\n\t\t<Btoutreq>\n\t\t\t<Numero>868</Numero>\n\t\t\t<Estado>OK</Estado>\n\t\t\t<Servicio>BTCuentasVista.ObtenerCuentaVistaDeCBU</Servicio>\n\t\t\t<Requerimiento></Requerimiento>\n\t\t\t<Fecha>2017-12-18</Fecha>\n\t\t\t<Hora>17:15:28</Hora>\n\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t</Btoutreq>\n      </BTCuentasVista.ObtenerCuentaVistaDeCBUResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

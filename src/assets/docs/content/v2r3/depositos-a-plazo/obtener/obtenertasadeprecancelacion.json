@@ -1,0 +1,53 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenertasadeprecancelacion",
+  "pageTitle": "Obtener Tasa de Precancelación",
+  "description": "Método para obtener la tasa de precancelación de un depósito a plazo.",
+  "pubName": "BTDepositosAPlazo.ObtenerTasaPrecancelacion",
+  "programa": "RBTPG292",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de operación del depósito a plazo."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "tasa",
+      "Tipo": "Double",
+      "Comentarios": "Tasa de precancelación."
+    },
+    {
+      "Nombre": "tipoTasa",
+      "Tipo": "String",
+      "Comentarios": "Tipo de tasa."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ObtenerTasaPrecancelacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>170320211539200000477790</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>2</bts:operacionUId>\n         <bts:fecha>2020-10-10</bts:fecha>\n      </bts:BTDepositosAPlazo.ObtenerTasaPrecancelacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ObtenerTasaPrecancelacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>170320211539200000477790</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <tasa>10.00</tasa>\n         <tipoTasa>Efectiva</tipoTasa>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTDepositosAPlazo.ObtenerTasaPrecancelacion</Servicio>\n            <Fecha>2021-03-17</Fecha>\n            <Hora>15:44:26</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10689</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTDepositosAPlazo.ObtenerTasaPrecancelacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

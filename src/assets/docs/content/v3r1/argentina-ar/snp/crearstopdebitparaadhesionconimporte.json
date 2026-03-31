@@ -1,0 +1,108 @@
+{
+  "slug": "argentina-ar/snp/crearstopdebitparaadhesionconimporte",
+  "pageTitle": "Crear Stop Debit para Adhesión con Importe",
+  "description": "Método para crear un stop debit con importe dada una adhesión.",
+  "pubName": "BTSNP.CrearStopDebitParaAdhesionConImporte",
+  "programa": "RBTPG345",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "prestacion",
+      "Tipo": "String",
+      "Comentarios": "Identificador de prestación."
+    },
+    {
+      "Nombre": "empresaOriginante",
+      "Tipo": "String",
+      "Comentarios": "Identificador de la empresa originante."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "idCliente",
+      "Tipo": "String",
+      "Comentarios": "Identificador del Cliente SNP."
+    },
+    {
+      "Nombre": "tipoDeDebito",
+      "Tipo": "Byte",
+      "Comentarios": "Tipo de débito (1=Abierto/2=Cerrado)."
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "montoMaximoDebito",
+      "Tipo": "String",
+      "Comentarios": "Monto máximo de débito (M=Mensual/F=Factura)."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe del Stop Debit."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la empresa originante."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el tipo de débito."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió la prestación."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el ID del cliente SNP."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se encontró un cliente para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El tipo de débito no es correcto."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El código de moneda no es válido."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El código de monto máximo de débito es incorrecto."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El monto no puede ser nulo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSNP.CrearStopDebitParaAdhesionConImporte>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>7649e27cf5F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>2</bts:clienteUId>\n         <bts:tipoDeDebito>1</bts:tipoDeDebito>\n         <bts:empresaOriginante>3050001626</bts:empresaOriginante>\n         <bts:prestacion>DEB RIO</bts:prestacion>\n         <bts:idCliente>2750101516490000004000</bts:idCliente>\n         <bts:moneda>80</bts:moneda>\n         <bts:montoMaximoDebito>F</bts:montoMaximoDebito>\n         <bts:importe>2000</bts:importe>\n      </bts:BTSNP.CrearStopDebitParaAdhesionConImporte>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearStopDebitParaAdhesionConImporte' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n    \"Btinreq\": {\n        \"Device\": \"AC\",\n        \"Usuario\": \"BANTOTAL\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"7649e27cf5F955E77534D3E0\"\n    },\n    \"clienteUId\": 2,\n    \"empresaOriginante\": \"3050001626\",\n    \"tipoDeDebito\": 1,\n    \"prestacion\": \"DEB RIO\",\n    \"idCliente\": \"2750101516490000004000\",\n    \"moneda\": 80,\n    \"montoMaximoDebito\": \"F\",\n    \"importe\": 2000\n  }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSNP.CrearStopDebitParaAdhesionConImporteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>7649e27cf5F955E77534D3E0</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1636</Numero>\n            <Servicio>BTSNP.CrearStopDebitParaAdhesionConImporte</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2021-06-18</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>11:21:07</Hora>\n         </Btoutreq>\n      </BTSNP.CrearStopDebitParaAdhesionConImporteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

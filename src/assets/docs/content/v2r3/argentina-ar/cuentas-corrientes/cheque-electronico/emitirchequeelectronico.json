@@ -1,0 +1,108 @@
+{
+  "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/emitirchequeelectronico",
+  "pageTitle": "Emitir Cheque Electrónico",
+  "description": "Método para emitir un cheque electrónico de una chequera. Si la chequera no existe, crea una.",
+  "pubName": "BTCuentasCorrientes.EmitirChequeElectronico",
+  "programa": "RBTPAR27",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de subcuenta."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "cantidadCheques",
+      "Tipo": "Short",
+      "Comentarios": "Cantidad de cheques a emitir."
+    },
+    {
+      "Nombre": "CUITBeneficiario",
+      "Tipo": "String",
+      "Comentarios": "CUIT del beneficiario."
+    },
+    {
+      "Nombre": "paisBeneficiarioId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de país del beneficiario."
+    },
+    {
+      "Nombre": "tipoDocumentoBeneficiarioId",
+      "Tipo": "Byte",
+      "Comentarios": "Identificador de tipo de documento del beneficiario."
+    },
+    {
+      "Nombre": "fechaPago",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de pago"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "listaCheques",
+      "Tipo": "<a href=\"#sbtchequeelectronico\">sBTChequeElectronico</a>",
+      "Comentarios": "Listado de cheques."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe registro con el identificador indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.EmitirChequeElectronico>\n         <bts:Btinreq>\n           <bts:Device>10</bts:Device>\n            <bts:Usuario>BA</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>ec8CE93AA1</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>15</bts:operacionUId>\n         <bts:cantidadCheques>1</bts:cantidadCheques>\n         <bts:importe>5000</bts:importe>\n         <bts:CUITBeneficiario>3435262644</bts:CUITBeneficiario>\n         <bts:paisBeneficiarioId>243</bts:paisBeneficiarioId>\n         <bts:tipoDocumentoBeneficiarioId>2</bts:tipoDocumentoBeneficiarioId>\n         <bts:fechaPago>2019-05-05</bts:fechaPago>\n      </bts:BTCuentasCorrientes.EmitirChequeElectronico>\n   </soapenv:Body>\n</soapenv:Envelope></soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?EmitirChequeElectronico' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": \"15\",\n\t\"cantidadCheques\": \"5\",\n\t\"importe\": \"5000\",\n\t\"CUITBeneficiario\": \"3435262644\",\n\t\"paisBeneficiarioId\": \"243\",\n\t\"tipoDocumentoBeneficiarioId\": \"2\",\n\t\"fechaPago\": \"2019-05-05\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.EmitirChequeElectronicoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10</Device>\n            <Usuario>BA</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>ec8CE93AA1</Token>\n         </Btinreq>\n         <listaCheques>\n            <sBTChequeElectronico>\n               <beneficiario>3435262644</beneficiario>\n               <numeroCheque>4009969</numeroCheque>\n               <importe>1000.00</importe>\n               <numeroChequera>50243</numeroChequera>\n               <CMC7>00110010030400996900000000747</CMC7>\n           </sBTChequeElectronico>\n            <sBTChequeElectronico>\n               <beneficiario>3435262644</beneficiario>\n               <numeroCheque>4009970</numeroCheque>\n               <importe>1000.00</importe>\n               <numeroChequera>50243</numeroChequera>\n               <CMC7>00110010030400997000000000747</CMC7>\n            </sBTChequeElectronico>\n            <sBTChequeElectronico>\n               <beneficiario>3435262644</beneficiario>\n               <numeroCheque>4009971</numeroCheque>\n               <importe>1000.00</importe>\n               <numeroChequera>50243</numeroChequera>\n               <CMC7>00110010030400997100000000747</CMC7>\n            </sBTChequeElectronico>\n            <sBTChequeElectronico>\n               <beneficiario>3435262644</beneficiario>\n               <numeroCheque>4009972</numeroCheque>\n               <importe>1000.00</importe>\n               <numeroChequera>50243</numeroChequera>\n               <CMC7>00110010030400997200000000747</CMC7>\n            </sBTChequeElectronico>\n            <sBTChequeElectronico>\n               <beneficiario>3435262644</beneficiario>\n               <numeroCheque>4009973</numeroCheque>\n               <importe>1000.00</importe>\n               <numeroChequera>50243</numeroChequera>\n               <CMC7>00110010030400997300000000747</CMC7>\n            </sBTChequeElectronico>\n         </listaCheques>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2565</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasCorrientes.EmitirChequeElectronico</Servicio>\n            <Fecha>2019-05-28</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>11:40:41</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasCorrientes.EmitirChequeElectronicoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"listaCheques\": {\n\t\t\"sBTChequeElectronico\": [\n\t\t\t{\n\t\t\t\t\"beneficiario\": \"3435262644\",\n\t\t\t\t\"NumeroCheque\": \"4009969\",\n\t\t\t\t\"importe\": \"1000.00\",\n\t\t\t\t\"numeroChequera\": \"50243\",\n\t\t\t\t\"CMC7\": \"00110010030400996900000000747\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"beneficiario\": \"3435262644\",\n\t\t\t\t\"numeroCheque\": \"4009970\",\n\t\t\t\t\"importe\": \"1000.00\",\n\t\t\t\t\"numeroChequera\": \"50243\",\n\t\t\t\t\"CMC7\": \"00110010030400997000000000747\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"beneficiario\": \"3435262644\",\n\t\t\t\t\"numeroCheque\": \"4009971\",\n\t\t\t\t\"importe\": \"1000.00\",\n\t\t\t\t\"numeroChequera\": \"50243\",\n\t\t\t\t\"CMC7\": \"00110010030400997100000000747\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"beneficiario\": \"3435262644\",\n\t\t\t\t\"numeroCheque\": \"4009972\",\n\t\t\t\t\"importe\": \"1000.00\",\n\t\t\t\t\"numeroChequera\": \"50243\",\n\t\t\t\t\"CMC7\": \"00110010030400997200000000747\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"beneficiario\": \"3435262644\",\n\t\t\t\t\"numeroCheque\": \"4009973\",\n\t\t\t\t\"importe\": \"1000.00\",\n\t\t\t\t\"numeroChequera\": \"50243\",\n\t\t\t\t\"CMC7\": \"00110010030400997300000000747\"\n\t\t\t}\n\t\t]\n\t}\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8396,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasCorrientes.EmitirChequeElectronico\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTChequeElectronico",
+      "fields": [
+        {
+          "Nombre": "beneficiario",
+          "Tipo": "String",
+          "Comentarios": "Nombre del beneficiario."
+        },
+        {
+          "Nombre": "CMC7",
+          "Tipo": "Long",
+          "Comentarios": "Identificador CMC7 de cheque electrónico."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "numerocheque",
+          "Tipo": "Long",
+          "Comentarios": "Numero de cheque electrónico."
+        },
+        {
+          "Nombre": "numerochequera",
+          "Tipo": "Long",
+          "Comentarios": "Numero de chequera electrónica."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "microfinanzas/grupales/inhabilitarintegrantedeungrupo",
+  "pageTitle": "Inhabilitar Integrante de Grupo",
+  "description": "Método para inhabilitar un integrante de un grupo de crédito.",
+  "pubName": "BTMicrofinanzas.InhabilitarIntegranteGrupo",
+  "programa": "RBTPG436",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "grupoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de grupo"
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente"
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió código de grupo"
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente"
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No existe registro con el identificador indicado"
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se puede dar de baja integrante porque el grupo conforma una instancia"
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.InhabilitarIntegranteGrupo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1204799820CD285A89A23FBE</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:grupoId>1</bts:grupoId>\n         <bts:clienteUId>156</bts:clienteUId>\n      </bts:BTMicrofinanzas.InhabilitarIntegranteGrupo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?InhabilitarIntegranteGrupo=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"grupoId\": 3,\n\t\"clienteUId\": \"156\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.InhabilitarIntegranteGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1414147105CD285A89A23FBE</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.InhabilitarIntegranteGrupo</Servicio>\n            <Fecha>2020-04-20</Fecha>\n            <Hora>16:59:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>5004</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.InhabilitarIntegranteGrupoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"786\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTMicrofinanzas.InhabilitarIntegranteGrupo\",\n        \"Fecha\": \"2017-12-15\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"16:35:22\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

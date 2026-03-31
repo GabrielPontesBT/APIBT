@@ -1,0 +1,82 @@
+{
+  "slug": "precios/obtener/obtenercotizacioncierre",
+  "pageTitle": "Obtener Cotización Cierre",
+  "description": "Método para obtener la cotización del cierre.",
+  "pubName": "BTPrecios.ObtenerCotizacionCierre",
+  "programa": "RBTPG841",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda. Si es vacío devuelve las cotizaciones de todas las monedas."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de cotización. Si es vacía devuelve cotización al día de hoy."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCotizaciones",
+      "Tipo": "<a href=\"#sbtcotizacion\">sBTCotizacion</a>",
+      "Comentarios": "Listado de cotizaciones."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "El identificador de moneda se corresponde con la moneda nacional."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó moneda para el identificador ingresado."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperaron monedas."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerCotizacionCierre>\n         <bts:Btinreq>\n            <bts:Token>f99a68ce154A8B5C60A82434</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>bms</bts:Device>\n         </bts:Btinreq>\n         <bts:monedaId>2</bts:monedaId>\n         <bts:fecha></bts:fecha>\n      </bts:BTPrecios.ObtenerCotizacionCierre>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionCierre' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -d '{\n    \"Btinreq\": {\n        \"Device\": \"bms\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"f99a68ce154A8B5C60A82434\"\n    },\n    \"monedaId\": \"2\",\n    \"fecha\": \"\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrecios.ObtenerCotizacionCierreResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>bms</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>f99a68ce154A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtCotizaciones>\n            <sBTCotizacion>\n               <venta>3.80</venta>\n               <monedaISO>U$S</monedaISO>\n               <compra>3.80</compra>\n               <identificador>2</identificador>\n            </sBTCotizacion>\n         </sdtCotizaciones>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1118</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrecios.ObtenerCotizacionCierre</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2020-11-06</Fecha>\n            <Hora>12:04:22</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrecios.ObtenerCotizacionCierreResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"bms\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"f99a68ce154A8B5C60A82434\"\n    },\n    \"sdtCotizaciones\": {\n        \"sBTCotizacion\": [\n            {\n                \"venta\": 3.8,\n                \"monedaISO\": \"U$S\",\n                \"compra\": 3.8,\n                \"identificador\": 2\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 1120,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrecios.ObtenerCotizacionCierre\",\n        \"Requerimiento\": \"0\",\n        \"Fecha\": \"2020-11-06\",\n        \"Hora\": \"12:14:00\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCotizacion",
+      "fields": [
+        {
+          "Nombre": "compra",
+          "Tipo": "Double",
+          "Comentarios": "Cotización Compra."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "monedaISO",
+          "Tipo": "String",
+          "Comentarios": "Código ISO de la moneda."
+        },
+        {
+          "Nombre": "venta",
+          "Tipo": "Double",
+          "Comentarios": "Cotización Venta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

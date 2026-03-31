@@ -1,0 +1,111 @@
+{
+  "slug": "paraguay-py/spi/devolucion/solicitudretornofondos",
+  "pageTitle": "Solicitud de Retorno de Fondos",
+  "description": "Método para el envío de una solicitud de retorno de fondos.",
+  "pubName": "BTSPIDevoluciones.SolicitudRetornoFondos",
+  "programa": "RBTPPY011",
+  "scope": "Paraguay",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "Canal",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Canal de envío."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Referencia de la transferencia original."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "razonCodigo",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Código de devolución."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "identificador",
+      "Tipo": "int",
+      "Comentarios": "Id de la bandeja de transferencias (MPE001)."
+    },
+    {
+      "Nombre": "referenciaGenerada",
+      "Tipo": "String",
+      "Comentarios": "Referencia del mensaje de devolución."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "0",
+      "Descripción": "OK."
+    },
+    {
+      "Código": "10000",
+      "Descripción": "No se ingreso canal."
+    },
+    {
+      "Código": "10001",
+      "Descripción": "No se ingreso Id de mensaje."
+    },
+    {
+      "Código": "10002",
+      "Descripción": "No se ingreso importe."
+    },
+    {
+      "Código": "10003",
+      "Descripción": "No se ingreso código."
+    },
+    {
+      "Código": "10006",
+      "Descripción": "No fue posible encontrar mensaje en MPEPYR {MPEPYNID}."
+    },
+    {
+      "Código": "10007",
+      "Descripción": "No se encontró registro en MPE001 ({ReferenciaOriginal})."
+    },
+    {
+      "Código": "10008",
+      "Descripción": "Estado de transferencia no permite solicitar devolución."
+    },
+    {
+      "Código": "10009",
+      "Descripción": "Fecha de transferencia no permite solicitar devolución."
+    },
+    {
+      "Código": "10010",
+      "Descripción": "Error al enviar {DescripciónDelError}."
+    },
+    {
+      "Código": "10011",
+      "Descripción": "Importe ingresado es mayor al originado: {ImporteOriginal}."
+    },
+    {
+      "Código": "10012",
+      "Descripción": "La referencia no coincide con el mensaje original."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSPIDevoluciones.SolicitudRetornoFondos>\n         <bts:Btinreq>\n            <bts:Device>ABC</bts:Device>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\n         </bts:Btinreq>\n         <bts:canal>WEB</bts:canal>\n         <bts:referencia>BGNBPYPX27052537200024217053</bts:referencia>\n         <bts:importe>1300</bts:importe>\n         <bts:razonCodigo>AC03</bts:razonCodigo>\n      </bts:BTSPIDevoluciones.SolicitudRetornoFondos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSPIDevoluciones.SolicitudRetornoFondosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>BANTOTAL1</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTINTERNO</Canal>\n            <Token>072C85F2036D7EBE3EC09EB5</Token>\n         </Btinreq>\n         <identificador>24191140</identificador>\n         <referenciaGenerada>BGNBPYPX30052560000024217118</referenciaGenerada>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>433583056</Numero>\n            <Servicio>BTSPIDevoluciones.SolicitudRetornoFondos</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2025-05-30</Fecha>\n            <Hora>16:40:28</Hora>\n            <Canal>BTINTERNO</Canal>\n         </Btoutreq>\n      </BTSPIDevoluciones.SolicitudRetornoFondosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

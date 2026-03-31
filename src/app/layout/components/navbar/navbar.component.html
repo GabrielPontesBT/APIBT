@@ -7,7 +7,7 @@
 
     <div class="releases-menu" (click)="$event.stopPropagation()">
       <button class="releases-btn" (click)="toggleReleases($event)"
-        [class.active]="releasesOpen">
+        [class.active]="releasesOpen || isOnReleasePage">
         Releases
         <span class="material-icons releases-arrow"
           [class.open]="releasesOpen">expand_more</span>
@@ -17,6 +17,7 @@
           @for (r of releases; track r.id) {
             <a class="releases-item"
               [routerLink]="['/releases', r.id]"
+              routerLinkActive="releases-item--active"
               (click)="closeReleases()">
               {{ r.titulo }}
             </a>

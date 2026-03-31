@@ -1,0 +1,143 @@
+{
+  "slug": "argentina-ar/snp/obtenerstopdebits",
+  "pageTitle": "Obtener Stop Debits",
+  "description": "Método para obtener los stop debits asociados a un cliente.",
+  "pubName": "BTSNP.ObtenerStopDebits",
+  "programa": "RBTPG343",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtConsultaStopDebit",
+      "Tipo": "<a href=\"#sbtconsultastopdebit\">sBTConsultaStopDebit</a>",
+      "Comentarios": "Datos del alta de Stop Debits."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se encontró un cliente para el identificador: [Número de identificador]."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSNP.ObtenerStopDebits>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>fbd47e2319F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n      </bts:BTSNP.ObtenerStopDebits>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerStopDebits' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{   \n\t\t\"Btinreq\": {\n\t\t\t\"Device\": \"AC\",\n\t\t\t\"Usuario\": \"BANTOTAL\",\n\t\t\t\"Requerimiento\": \"\",\n\t\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\t\"Token\": \"fbd47e2319F955E77534D3E0\"\n\t\t},\n\t\t\"clienteUId\": 2\n\t}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSNP.ObtenerStopDebitsResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>bc479c1c0eF955E77534D3E0</Token>\n         </Btinreq>\n         <sdtConsultaStopDebit>\n            <sBTConsultaStopDebit>\n               <montoMaximoDebito>M</montoMaximoDebito>\n               <fechaBaja>0001-01-01</fechaBaja>\n               <moneda>80</moneda>\n               <importe>1000.00</importe>\n               <fechaAlta>2021-06-14</fechaAlta>\n               <stopDebit>\n                  <prestacion>DEB RIO</prestacion>\n                  <referencia/>\n                  <empresaOriginante>3050001626</empresaOriginante>\n                  <clienteUId>4</clienteUId>\n                  <idCliente>5550101516490000005000</idCliente>\n                  <fechaDesde>0001-01-01</fechaDesde>\n                  <fechaVencimiento>0001-01-01</fechaVencimiento>\n                  <fechaHasta>0001-01-01</fechaHasta>\n                  <tipoDeDebito>1</tipoDeDebito>\n               </stopDebit>\n               <correlativo>1</correlativo>\n               <estado>AC</estado>\n            </sBTConsultaStopDebit>\n            <sBTConsultaStopDebit>\n               <montoMaximoDebito>F</montoMaximoDebito>\n               <fechaBaja>0001-01-01</fechaBaja>\n               <moneda>80</moneda>\n               <importe>1000.00</importe>\n               <fechaAlta>2021-06-14</fechaAlta>\n               <stopDebit>\n                  <prestacion>MERIDIO PE</prestacion>\n                  <referencia/>\n                  <empresaOriginante>3050005116</empresaOriginante>\n                  <clienteUId>4</clienteUId>\n                  <idCliente>1255162160500000000000</idCliente>\n                  <fechaDesde>0001-01-01</fechaDesde>\n                  <fechaVencimiento>0001-01-01</fechaVencimiento>\n                  <fechaHasta>0001-01-01</fechaHasta>\n                  <tipoDeDebito>1</tipoDeDebito>\n               </stopDebit>\n               <correlativo>2</correlativo>\n               <estado>AC</estado>\n            </sBTConsultaStopDebit>\n         </sdtConsultaStopDebit>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1639</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTSNP.ObtenerStopDebits</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2021-06-18</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>16:39:45</Hora>\n         </Btoutreq>\n      </BTSNP.ObtenerStopDebitsResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"AC\",\n        \"Usuario\": \"BANTOTAL\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"fbd47e2319F955E77534D3E0\"\n    },\n    \"sdtConsultaStopDebit\": {\n        \"sBTConsultaStopDebit\": [\n            {\n                \"montoMaximoDebito\": \"M\",\n                \"importe\": 1000,\n                \"moneda\": 2,\n                \"stopDebit\": {\n                    \"prestacion\": \"DEB RIO\",\n                    \"referencia\": \"\",\n                    \"empresaOriginante\": \"3050001626\",\n                    \"clienteUId\": 2,\n                    \"idCliente\": \"2750101459380000006000\",\n                    \"fechaDesde\": \"0001-01-01\",\n                    \"fechaVencimiento\": \"0001-01-01\",\n                    \"fechaHasta\": \"0001-01-01\",\n                    \"tipoDeDebito\": 1\n                },\n                \"correlativo\": 1,\n                \"estado\": \"AC\"\n            },\n            {\n                \"montoMaximoDebito\": \"F\",\n                \"importe\": 2000,\n                \"moneda\": 80,\n                \"stopDebit\": {\n                    \"prestacion\": \"DEB RIO\",\n                    \"referencia\": \"\",\n                    \"empresaOriginante\": \"3050001626\",\n                    \"clienteUId\": 2,\n                    \"idCliente\": \"2750101516490000004000\",\n                    \"fechaDesde\": \"0001-01-01\",\n                    \"fechaVencimiento\": \"0001-01-01\",\n                    \"fechaHasta\": \"0001-01-01\",\n                    \"tipoDeDebito\": 1\n                },\n                \"correlativo\": 2,\n                \"estado\": \"AC\"\n            },\n            ...\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 1638,\n        \"Servicio\": \"BTSNP.ObtenerStopDebits\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2021-06-18\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"16:05:58\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTConsultaStopDebit",
+      "fields": [
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo del stop debit."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del Stop Debit."
+        },
+        {
+          "Nombre": "fechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta."
+        },
+        {
+          "Nombre": "fechaBaja",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de baja."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe del Stop Debit."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "montoMaximoDebito",
+          "Tipo": "String",
+          "Comentarios": "Monto máximo de débito (m=mensual/f=factura)."
+        },
+        {
+          "Nombre": "stopDebit",
+          "Tipo": "<a href=\"#sbtstopdebit\">sBTStopDebit</a>",
+          "Comentarios": "Datos del Stop Debit."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTStopDebit",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "empresaOriginante",
+          "Tipo": "String",
+          "Comentarios": "Identificador de la empresa originante."
+        },
+        {
+          "Nombre": "fechaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde para aplicar el Stop Debit."
+        },
+        {
+          "Nombre": "fechaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha hasta para aplicar el Stop Debit."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento"
+        },
+        {
+          "Nombre": "idCliente",
+          "Tipo": "String",
+          "Comentarios": "Identificador del Cliente SNP."
+        },
+        {
+          "Nombre": "prestacion",
+          "Tipo": "String",
+          "Comentarios": "Identificador de prestación."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia del débito."
+        },
+        {
+          "Nombre": "tipoDeDebito",
+          "Tipo": "Byte",
+          "Comentarios": "Tipo de débito (1=Abierto/2=Cerrado)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

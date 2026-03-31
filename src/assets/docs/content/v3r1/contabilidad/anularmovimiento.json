@@ -1,0 +1,64 @@
+{
+  "slug": "contabilidad/anularmovimiento",
+  "pageTitle": "Anular Movimiento",
+  "description": "Método para anular un movimiento.",
+  "pubName": "BTContabilidad.AnularMovimiento",
+  "programa": "RBTPG237",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de anulación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUIdAnulacion",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la anulación de movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de movimiento."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió fecha de anulación."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se permite ingresar operaciones anteriores al último cierre."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "Usuario no autorizado a cambiar la Fecha Valor Contable."
+    },
+    {
+      "Código": "40071",
+      "Descripción": "La fecha valor contable no puede ser un feriado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTContabilidad.AnularMovimiento>\n         <bts:Btinreq>\n            <bts:Device>2</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>2</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>6461dd29c54A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:movimientoUId>250</bts:movimientoUId>\n         <bts:fecha>2018-08-10</bts:fecha>\n      </bts:BTContabilidad.AnularMovimiento>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AnularMovimiento' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": 245,\n    \"fecha\": 2018-08-10\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTContabilidad.AnularMovimientoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>2</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>2</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>6461dd29c54A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUIdAnulacion>28</movimientoUIdAnulacion>\n         <Erroresnegocio></Erroresnegocio>  \n         <Btoutreq>\n            <Numero>4444</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTContabilidad.AnularMovimiento</Servicio>\n            <Fecha>2018-12-14</Fecha>\n            <Requerimiento>2</Requerimiento>\n            <Hora>17:17:56</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTContabilidad.AnularMovimientoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"movimientoUIdAnulacion\":28,\n   \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"4445\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTContabilidad.AnularMovimiento\",\n        \"Fecha\": \"2018-12-14\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"17:22:04\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

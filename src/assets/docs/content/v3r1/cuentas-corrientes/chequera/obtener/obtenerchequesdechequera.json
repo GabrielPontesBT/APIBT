@@ -1,0 +1,81 @@
+{
+  "slug": "cuentas-corrientes/chequera/obtener/obtenerchequesdechequera",
+  "pageTitle": "Obtener Cheques de Chequera",
+  "description": "Método para obtener un listado de los cheques de una chequera.",
+  "pubName": "BTCuentasCorrientes.ObtenerChequesDeChequera",
+  "programa": "RBTPG142",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de subcuenta."
+    },
+    {
+      "Nombre": "chequeraId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de solicitud de chequera."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCheques",
+      "Tipo": "<a href=\"#sbtcheque\">sBTCheque</a>",
+      "Comentarios": "Listado de cheques."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió identificador de chequera."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "La chequera no pertenece a la operación."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.ObtenerChequesDeChequera>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1820366692F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10176</bts:operacionUId>\n         <bts:chequeraId>21</bts:chequeraId>\n      </bts:BTCuentasCorrientes.ObtenerChequesDeChequera>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerChequesDeChequera' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"operacionUId\": \"10176\",\n\t\"chequeraId\": \"21\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.ObtenerChequesDeChequeraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1820366692F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <sdtCheques>\n            <SdtsBTCheque>\n               <numero>1326</numero>\n               <estado>1</estado>\n               <descripcion>Pago</descripcion>\n            </SdtsBTCheque>\n            <SdtsBTCheque>\n               <numero>1327</numero>\n               <estado>1</estado>\n               <descripcion>Pago</descripcion>\n            </SdtsBTCheque>\n            ...\n         </sdtCheques>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasCorrientes.ObtenerChequesDeChequera</Servicio>\n            <Fecha>2020-11-13</Fecha>\n            <Hora>15:25:51</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>7904</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasCorrientes.ObtenerChequesDeChequeraResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"sdtCheques\": {\n\t  \"SdtsBTCheque\": [\n\t\t{\n\t\t  \"numero\": \"1326\",\n\t\t  \"estado\": \"1\",\n\t\t  \"descripcion\": \"Pago\"\n\t\t},\n\t\t{\n\t\t  \"numero\": \"1327\",\n\t\t  \"estado\": \"1\",\n\t\t  \"descripcion\": \"Pago\"\n\t\t},\n\t\t...\n\t  ]\n\t},\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTCuentasCorrientes.ObtenerChequesDeChequera\",\n\t  \"Fecha\": \"2020-11-13\",\n\t  \"Hora\": \"15:25:51\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"7904\",\n\t  \"Estado\": \"OK\"\n\t}\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCheque",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "Short",
+          "Comentarios": "Estado del cheque."
+        },
+        {
+          "Nombre": "numero",
+          "Tipo": "Int",
+          "Comentarios": "Número de cheque."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

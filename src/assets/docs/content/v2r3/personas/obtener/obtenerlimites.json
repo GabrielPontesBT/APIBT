@@ -1,0 +1,83 @@
+{
+  "slug": "personas/obtener/obtenerlimites",
+  "pageTitle": "Obtener Límites",
+  "description": "Método para obtener los límites de una persona.",
+  "pubName": "BTPersonas.ObtenerLimites",
+  "programa": "RBTPG560",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtLimites",
+      "Tipo": "<a href=\"#sbtlimitecliente\">sBTLimiteCliente</a>",
+      "Comentarios": "Listado de límites."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la persona para el identificador ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerLimites>\n         <bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>67579685BC9ACF711F22AF23</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>161</bts:personaUId>\n      </bts:BTPersonas.ObtenerLimites>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerLimites' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t \"Btinreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Token\": \"fa2c02c95a4A8B5C60A76209\",\n          \"Usuario\": \"INSTALADOR\",\n          \"Requerimiento\": 1,\n          \"Device\": 1\n        },\n        \"personaUId\": 150\n      }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerLimitesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>67579685BC9ACF711F22AF23</Token>\n         </Btinreq>\n         <sdtLimites>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Créditos Hipotecarios / $</descripcion>\n               <limiteDisponible>22000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>22000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Créditos Comercial PF / $</descripcion>\n               <limiteDisponible>25000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>25000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Créditos Comercial LP / $</descripcion>\n               <limiteDisponible>27000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>27000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Firmantes no calificados / $</descripcion>\n               <limiteDisponible>38000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>38000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Firmantes AAA / $</descripcion>\n               <limiteDisponible>27000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>27000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>2019-02-06</fechaVencimiento>\n               <descripcion>Línea_Firmantes Estado / $</descripcion>\n               <limiteDisponible>20000.00</limiteDisponible>\n               <moneda>$</moneda>\n               <limiteOtorgado>20000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>0001-01-01</fechaVencimiento>\n               <descripcion>Total / MN</descripcion>\n               <limiteDisponible>1000000.00</limiteDisponible>\n               <moneda/>\n               <limiteOtorgado>1000000.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n            <sBTLimiteCliente>\n               <fechaVencimiento>0001-01-01</fechaVencimiento>\n               <descripcion>Total / ME</descripcion>\n               <limiteDisponible>0.00</limiteDisponible>\n               <moneda/>\n               <limiteOtorgado>0.00</limiteOtorgado>\n               <limiteUtilizado>0.00</limiteUtilizado>\n            </sBTLimiteCliente>\n         </sdtLimites>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>229016</Numero>\n            <Servicio>BTPersonas.ObtenerLimites</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento/>\n            <Fecha>2024-05-30</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>12:37:57</Hora>\n         </Btoutreq>\n      </BTPersonas.ObtenerLimitesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n        \"Device\": 1,\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"fa2c02c95a4A8B5C60A76209\"\n      },\n      \"sdtLimites\": {\n      \"sBTLimiteCliente\": [\n      {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\",\n          \"descripcion\": \"Línea_Créditos Hipotecarios / $\",\n          \"limiteDisponible\": \"22000.00\",\n          \"limiteOtorgado\": \"22000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\", \n          \"descripcion\": \"Línea_Créditos Comercial PF / $\",\n          \"limiteDisponible\": \"25000.00\",\n          \"limiteOtorgado\": \"25000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\",\n          \"descripcion\": \"Línea_Créditos Comercial LP / $\",\n          \"limiteDisponible\": \"27000.00\",\n          \"limiteOtorgado\": \"27000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\",\n          \"descripcion\": \"Línea_Firmantes no calificados / $\",\n          \"limiteDisponible\": \"38000.00\",\n          \"limiteOtorgado\": \"38000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\",\n          \"descripcion\": \"Línea_Firmantes AAA / $\",\n          \"limiteDisponible\": \"27000.00\",\n          \"limiteOtorgado\": \"27000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"2019-02-06\",\n          \"moneda\":\"$\",\n          \"descripcion\": \"Línea_Firmantes Estado / $\",\n          \"limiteDisponible\": \"20000.00\",\n          \"limiteOtorgado\": \"20000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"0001-01-01\",\n          \"moneda\":\"\",\n          \"descripcion\": \"Total / MN\",\n          \"limiteDisponible\": \"1000000.00\",\n          \"limiteOtorgado\": \"1000000.00\",\n          \"limteUtilizado\": \"0.00\"\n        },\n        {\n          \"fechaVencimiento\": \"0001-01-01\",\n          \"moneda\":\"\",\n          \"descripcion\": \"Total / ME\",\n          \"limiteDisponible\": \"0.00\",\n          \"limiteOtorgado\": \"0.00\",\n          \"limteUtilizado\": \"0.00\"\n        }\n        ]\n      },\n      \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n      \"Btoutreq\": {\n        \"Numero\": 20535,\n        \"Servicio\": \"BTPersonas.ObtenerLimites\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2024-05-30\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"11:52:12\"\n      }\n      }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTLimiteCliente",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del límite."
+        },
+        {
+          "Nombre": "limiteDisponible",
+          "Tipo": "Double",
+          "Comentarios": "Límite disponible para el cliente."
+        },
+        {
+          "Nombre": "limiteOtorgado",
+          "Tipo": "Double",
+          "Comentarios": "Límite otorgado al cliente."
+        },
+        {
+          "Nombre": "limteUtilizado",
+          "Tipo": "Double",
+          "Comentarios": "Límite utilizado por el cliente."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

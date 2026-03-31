@@ -1,0 +1,83 @@
+{
+  "slug": "parametros-base/obtenercorrelativoguia",
+  "pageTitle": "Obtener Correlativo Guía",
+  "description": "Método para obtener los datos de un correlativo de una determinada guía de procesos.",
+  "pubName": "BTParametrosBase.ObtenerCorrelativoGuia",
+  "programa": "RBTPG053",
+  "scope": "Institucional",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "empresaId",
+      "Tipo": "Short",
+      "Comentarios": "Código de empresa [Hidden]."
+    },
+    {
+      "Nombre": "codigo",
+      "Tipo": "Long",
+      "Comentarios": "Código de la Guía de Procesos."
+    },
+    {
+      "Nombre": "correlativo",
+      "Tipo": "Short",
+      "Comentarios": "Correlativo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCorrelativo",
+      "Tipo": "<a href=\"#sbtcorrelativoguia\">sBTCorrelativoGuia</a>",
+      "Comentarios": "Datos de la guía de proceso."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió código de guía."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe el correlativo."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTParametrosBase.ObtenerCorrelativoGuia>\n         <bts:Btinreq>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>43f21ff61cCD285A89A23FBE</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:codigo>50</bts:codigo>\n         <bts:correlativo>1</bts:correlativo>\n      </bts:BTParametrosBase.ObtenerCorrelativoGuia>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"codigo\": \"50\",\n\t\"correlativo\": \"1\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTParametrosBase.ObtenerCorrelativoGuiaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>43f21ff61cCD285A89A23FBE</Token>\n         </Btinreq>\n         <sdtCorrelativo>\n            <descripcion>Depósitos Efectivo Ctas Vista</descripcion>\n            <importeEspecifico>5.00</importeEspecifico>\n            <valorEspecifico>50</valorEspecifico>\n            <correlativo>1</correlativo>\n         </sdtCorrelativo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>593</Numero>\n            <Servicio>BTParametrosBase.ObtenerCorrelativoGuia</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-03-11</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>11:51:13</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTParametrosBase.ObtenerCorrelativoGuiaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"sdtCorrelativo\": {\n\t  \"descripcion\": \"Depósitos Efectivo Ctas Vista\",\n\t  \"importeEspecifico\": \"5.00\",\n\t  \"valorEspecifico\": \"50\",\n\t  \"correlativo\": \"1\"\n\t},\n\t\"Btoutreq\": {\n\t  \"Numero\": \"593\",\n\t  \"Servicio\": \"BTParametrosBase.ObtenerCorrelativoGuia\",\n\t  \"Estado\": \"OK\",\n\t  \"Fecha\": \"2020-03-11\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Hora\": \"11:51:13\",\n\t  \"Canal\": \"BTDIGITAL\"\n\t}\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCorrelativoGuia",
+      "fields": [
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo de la guía."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del correlativo."
+        },
+        {
+          "Nombre": "importeEspecifico",
+          "Tipo": "Double",
+          "Comentarios": "Importe específico del correlativo."
+        },
+        {
+          "Nombre": "valorEspecifico",
+          "Tipo": "Long",
+          "Comentarios": "Valor específico del correlativo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

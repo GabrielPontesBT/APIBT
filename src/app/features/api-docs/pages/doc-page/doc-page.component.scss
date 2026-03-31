@@ -43,8 +43,6 @@
 
   > * { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
 
-  /* Anula el margin-bottom del último componente para evitar scroll espurio */
-  margin-bottom: -3rem;
 }
 
 /* DERECHA: fija, anclada desde 100vw - col-width hasta el borde derecho */

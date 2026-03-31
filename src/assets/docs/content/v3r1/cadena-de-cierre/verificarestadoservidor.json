@@ -1,0 +1,41 @@
+{
+  "slug": "cadena-de-cierre/verificarestadoservidor",
+  "pageTitle": "Verificar Estado del Servidor",
+  "description": "Método para verificar el estado del servidor de procesos.",
+  "pubName": "BTCadenaCierre.VerificarEstadoServidor",
+  "programa": "RBTPG535",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "capability",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo \"Default\" para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No hay ningún servidor disponible para ejecutar la tarea."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No hay ningún servidor disponible para ejecutar la tarea (con la capacidad Default)."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCadenaCierre.VerificarEstadoServidor>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\n         </bts:Btinreq>\n      </bts:BTCadenaCierre.VerificarEstadoServidor>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?VerificarEstadoServidor' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCadenaCierre.VerificarEstadoServidorResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>E1F15D391E5C8FAC4189A627</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20289</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCadenaCierre.VerificarEstadoServidor</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2024-05-06</Fecha>\n            <Hora>17:38:42</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCadenaCierre.VerificarEstadoServidorResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCadenaCierre.VerificarEstadoServidor\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

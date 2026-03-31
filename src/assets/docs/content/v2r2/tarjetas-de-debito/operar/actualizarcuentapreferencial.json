@@ -1,0 +1,79 @@
+{
+  "slug": "tarjetas-de-debito/operar/actualizarcuentapreferencial",
+  "pageTitle": "Actualizar Cuenta Preferencial",
+  "description": "Método para actualizar la cuenta preferencial de tarjeta de débito.",
+  "pubName": "BTTarjetasDeDebito.ActualizarCuentaPreferencial",
+  "programa": "RBTPG774",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "tarjetaId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de tarjeta."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de cuenta preferencial del cliente."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió identificador único de tarjeta."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió identificador único de cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de identificador]"
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La operación ingresada no pertenece al cliente."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La cuenta ingresada no pertenece al habiente de la tarjeta."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La cuenta ingresada no pertenece al habiente de la tarjeta."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No existe registro con el identificador indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BA</bts:Usuario>\n            <bts:Token>0211202010280000399672</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:tarjetaUId>109</bts:tarjetaId>\n         <bts:operacionUId>10</bts:operacionUId>\n      </bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ActualizarCuentaPreferencial' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"BA\",\n\t\t\"Token\": \"0211202010280000399672\",\n\t\t\"Device\": \"MC\"\n\t },\n\t \"clienteUId\": \"1\",\n\t \"tarjetaUId\": \"109\"\n\t \"operacionUId\": \"10\""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BA</Usuario>\n            <Token>0211202010280000399672</Token>\n            <Device>MC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTTarjetasDeDebito.ActualizarCuentaPreferencial</Servicio>\n            <Fecha>2020-11-02</Fecha>\n            <Hora>12:06:37</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10140</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n   \"Btinreq\": { \n      \"Canal\": \"BTDIGITAL\", \n      \"Requerimiento\": \"1\", \n      \"Usuario\": \"BA\", \n      \"Token\": \"0211202010280000399672\", \n      \"Device\": \"MC\" \n   }, \n   \"Erroresnegocio\": null, \n   \"Btoutreq\": { \n      \"Canal\": \"BTDIGITAL\", \n      \"Servicio\": \"BTTarjetasDeDebito.ActualizarCuentaPreferencial\", \n      \"Fecha\": \"2020-11-02\", \n      \"Hora\": \"12:06:37\", \n      \"Requerimiento\": \"1\", \n      \"Numero\": \"10140\", \n      \"Estado\": \"OK\" \n   } \n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

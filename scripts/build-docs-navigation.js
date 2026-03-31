@@ -1,10 +1,11 @@
 /**
  * build-docs-navigation.js
  *
- * Recorre la carpeta de archivos Markdown de documentación, construye un árbol
- * de navegación jerárquico basado en carpetas y archivos, y genera el archivo
- * src/assets/navigation/sidebar.json con labels visibles, slugs técnicos y,
- * para los documentos, el pageTitle real extraído del markdown o frontmatter.
+ * Para cada versión definida en VERSIONS, hace merge de shared/ + carpeta de
+ * versión (la versión tiene precedencia sobre shared) y genera un archivo
+ * sidebar-{id}.json en src/assets/navigation/.
+ *
+ * BPay no usa shared/ y genera su propio sidebar.
  */
 
 const fs = require('fs');
@@ -12,21 +13,26 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const MD_DIR = path.resolve(__dirname, './archivos-markdown');
-const OUT_FILE = path.resolve(ROOT_DIR, './src/assets/navigation/sidebar.json');
+const SHARED_DIR = path.resolve(__dirname, './shared');
+const NAV_OUT_DIR = path.resolve(ROOT_DIR, './src/assets/navigation');
+
+const VERSIONS = [
+  { id: 'v2r2', folder: 'V2R2', useShared: true },
+  { id: 'v2r3', folder: 'V2R3', useShared: true },
+  { id: 'v3r1', folder: 'V3R1', useShared: true },
+  { id: 'bpay', folder: 'BPay', useShared: false },
+];
+
+// ── Utilidades ────────────────────────────────────────────────────────────────
 
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
-  } else {
-    // No hacer nada
   }
 }
 
 function stripAccents(text) {
-  return String(text || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '');
+  return String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 function slugifySegment(text) {
@@ -38,78 +44,29 @@ function slugifySegment(text) {
 }
 
 function humanizeLabel(text) {
-  const baseText = String(text || '')
+  return String(text || '')
     .replace(/\.md$/i, '')
     .replace(/[-_]+/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim();
-
-  if (!baseText) {
-    return 'Sin título';
-  } else {
-    return baseText;
-  }
+    .trim() || 'Sin título';
 }
 
-function getEntryOrderPriority(entry) {
-  const name = String(entry.name || '')
-    .replace(/\.md$/i, '')
-    .trim()
-    .toLowerCase();
-
-  const priorityMap = {
-    novedades: 0
-  };
-
-  if (name in priorityMap) {
-    return priorityMap[name];
-  } else {
-    return 999;
-  }
-}
-
-function sortEntries(entries) {
-  return [...entries].sort((a, b) => {
-    const aIsDir = a.isDirectory() ? 0 : 1;
-    const bIsDir = b.isDirectory() ? 0 : 1;
-
-    if (aIsDir !== bIsDir) {
-      return aIsDir - bIsDir;
-    } else {
-      const aPriority = getEntryOrderPriority(a);
-      const bPriority = getEntryOrderPriority(b);
-
-      if (aPriority !== bPriority) {
-        return aPriority - bPriority;
-      } else {
-        return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
-      }
-    }
-  });
+function getEntryOrderPriority(name) {
+  const normalized = String(name || '').replace(/\.md$/i, '').trim().toLowerCase();
+  return normalized === 'novedades' ? 0 : 999;
 }
 
 function extractFirstHeading(content) {
   const match = String(content || '').match(/^#\s+(.+)$/m);
-
-  if (match) {
-    return match[1].trim();
-  } else {
-    return '';
-  }
+  return match ? match[1].trim() : '';
 }
 
 function buildTitleFromSlugSegment(text) {
-  const value = String(text || '').trim();
-
-  if (!value) {
-    return 'Sin título';
-  } else {
-    return value
-      .split(/[-_]/g)
-      .filter(Boolean)
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(' ');
-  }
+  return String(text || '').trim()
+    .split(/[-_]/g)
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ') || 'Sin título';
 }
 
 function getPageTitleFromMarkdown(filePath) {
@@ -117,127 +74,160 @@ function getPageTitleFromMarkdown(filePath) {
     const raw = fs.readFileSync(filePath, 'utf8');
     const parsed = matter(raw);
     const frontmatterTitle = parsed?.data?.title;
-    const headingTitle = extractFirstHeading(parsed?.content || '');
-
     if (frontmatterTitle && String(frontmatterTitle).trim()) {
       return String(frontmatterTitle).trim();
-    } else {
-      if (headingTitle) {
-        return headingTitle;
-      } else {
-        const fileBaseName = path.basename(filePath, '.md');
-        return buildTitleFromSlugSegment(fileBaseName);
-      }
     }
-  } catch (error) {
-    const fileBaseName = path.basename(filePath, '.md');
-    return buildTitleFromSlugSegment(fileBaseName);
+    const heading = extractFirstHeading(parsed?.content || '');
+    if (heading) return heading;
+    return buildTitleFromSlugSegment(path.basename(filePath, '.md'));
+  } catch {
+    return buildTitleFromSlugSegment(path.basename(filePath, '.md'));
   }
 }
 
-function buildTreeFromDirectory(dirPath, parentSlug = '') {
-  const entries = sortEntries(
-    fs.readdirSync(dirPath, { withFileTypes: true }).filter((entry) => {
-      if (entry.name.startsWith('.')) {
-        return false;
-      } else {
-        return true;
-      }
-    })
-  );
+// ── Merge de archivos ─────────────────────────────────────────────────────────
 
-  const children = [];
+/**
+ * Devuelve un Map de { relPath → absolutePath } con todos los archivos .md
+ * que conforman esta versión. Los archivos de versionDir sobreescriben sharedDir.
+ */
+function buildMergedFileMap(versionDir, useShared) {
+  const fileMap = new Map(); // relPath (unix) → absolutePath
 
-  entries.forEach((entry) => {
-    const entryPath = path.join(dirPath, entry.name);
-
-    if (entry.isDirectory()) {
-      const folderSlugSegment = slugifySegment(entry.name);
-      const folderSlug = parentSlug
-        ? `${parentSlug}/${folderSlugSegment}`
-        : folderSlugSegment;
-
-      const folderChildren = buildTreeFromDirectory(entryPath, folderSlug);
-
-      children.push({
-        type: 'folder',
-        label: humanizeLabel(entry.name),
-        slug: folderSlug,
-        children: folderChildren
-      });
-    } else {
-      if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
-        const fileBaseName = entry.name.replace(/\.md$/i, '');
-        const fileSlugSegment = slugifySegment(fileBaseName);
-        const fileSlug = parentSlug
-          ? `${parentSlug}/${fileSlugSegment}`
-          : fileSlugSegment;
-
-        children.push({
-          type: 'file',
-          label: humanizeLabel(fileBaseName),
-          pageTitle: getPageTitleFromMarkdown(entryPath),
-          slug: fileSlug
-        });
-      } else {
-        // No hacer nada
+  function walk(dir, baseDir) {
+    if (!fs.existsSync(dir)) return;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name.startsWith('.')) continue;
+      if (entry.name.toLowerCase() === 'readme.md') continue;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath, baseDir);
+      } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
+        const relPath = path.relative(baseDir, fullPath).replace(/\\/g, '/');
+        fileMap.set(relPath, fullPath);
       }
     }
+  }
+
+  if (useShared) walk(SHARED_DIR, SHARED_DIR);
+  walk(versionDir, versionDir); // versión sobreescribe shared
+
+  return fileMap;
+}
+
+// ── Construcción del árbol ────────────────────────────────────────────────────
+
+/**
+ * Construye el árbol de navegación a partir de un Map de relPath → absolutePath.
+ * Recrea la jerarquía de carpetas implícita en los paths relativos.
+ */
+function buildTreeFromFileMap(fileMap) {
+  // Agrupar por carpeta raíz de forma recursiva usando un árbol intermedio
+  const root = {}; // árbol de nodos intermedios
+
+  for (const [relPath, absPath] of fileMap.entries()) {
+    const parts = relPath.split('/');
+    let node = root;
+    for (let i = 0; i < parts.length - 1; i++) {
+      const part = parts[i];
+      if (!node[part]) node[part] = { __isDir: true, __children: {}, __name: part };
+      node = node[part].__children;
+    }
+    const fileName = parts[parts.length - 1];
+    node[fileName] = { __isDir: false, __name: fileName, __absPath: absPath, __relPath: relPath };
+  }
+
+  return convertToNavNodes(root, '');
+}
+
+function sortNodeEntries(entries) {
+  return [...entries].sort(([, a], [, b]) => {
+    const aIsDir = a.__isDir ? 0 : 1;
+    const bIsDir = b.__isDir ? 0 : 1;
+    if (aIsDir !== bIsDir) return aIsDir - bIsDir;
+    const aPrio = getEntryOrderPriority(a.__name);
+    const bPrio = getEntryOrderPriority(b.__name);
+    if (aPrio !== bPrio) return aPrio - bPrio;
+    return a.__name.localeCompare(b.__name, 'es', { sensitivity: 'base' });
   });
+}
+
+function convertToNavNodes(nodeMap, parentSlug) {
+  const children = [];
+  const sorted = sortNodeEntries(Object.entries(nodeMap));
+
+  for (const [, node] of sorted) {
+    if (node.__isDir) {
+      const folderSlugSegment = slugifySegment(node.__name);
+      const folderSlug = parentSlug ? `${parentSlug}/${folderSlugSegment}` : folderSlugSegment;
+      const folderChildren = convertToNavNodes(node.__children, folderSlug);
+      children.push({
+        type: 'folder',
+        label: humanizeLabel(node.__name),
+        slug: folderSlug,
+        children: folderChildren,
+      });
+    } else {
+      const fileBaseName = node.__name.replace(/\.md$/i, '');
+      const fileSlugSegment = slugifySegment(fileBaseName);
+      const fileSlug = parentSlug ? `${parentSlug}/${fileSlugSegment}` : fileSlugSegment;
+      children.push({
+        type: 'file',
+        label: humanizeLabel(fileBaseName),
+        pageTitle: getPageTitleFromMarkdown(node.__absPath),
+        slug: fileSlug,
+      });
+    }
+  }
 
   return children;
 }
 
 function removeEmptyFolders(nodes) {
   return nodes
-    .map((node) => {
+    .map(node => {
       if (node.type === 'folder') {
-        const cleanedChildren = removeEmptyFolders(node.children || []);
-
-        return {
-          ...node,
-          children: cleanedChildren
-        };
-      } else {
-        return node;
+        return { ...node, children: removeEmptyFolders(node.children || []) };
       }
+      return node;
     })
-    .filter((node) => {
-      if (node.type === 'folder') {
-        return Array.isArray(node.children) && node.children.length > 0;
-      } else {
-        return true;
-      }
-    });
+    .filter(node => node.type !== 'folder' || node.children.length > 0);
 }
 
-function writeSidebarJson(sidebarTree) {
-  const outDir = path.dirname(OUT_FILE);
-  ensureDir(outDir);
-  fs.writeFileSync(OUT_FILE, JSON.stringify(sidebarTree, null, 2), 'utf8');
-}
+// ── Main ──────────────────────────────────────────────────────────────────────
 
 function main() {
-  console.log('--------------------------------------------------');
-  console.log('Generando navegación de documentación...');
-  console.log(`Markdown source: ${MD_DIR}`);
-  console.log(`Output target  : ${OUT_FILE}`);
-  console.log('--------------------------------------------------');
+  console.log('='.repeat(50));
+  console.log('Generando sidebars por versión...');
+  console.log('='.repeat(50));
 
-  if (!fs.existsSync(MD_DIR)) {
-    console.error(`No existe la carpeta de origen: ${MD_DIR}`);
-    process.exit(1);
-  } else {
-    const sidebarTree = buildTreeFromDirectory(MD_DIR, '');
-    const cleanedSidebarTree = removeEmptyFolders(sidebarTree);
+  ensureDir(NAV_OUT_DIR);
 
-    writeSidebarJson(cleanedSidebarTree);
+  for (const version of VERSIONS) {
+    const versionDir = path.resolve(__dirname, version.folder);
+    const outFile = path.join(NAV_OUT_DIR, `sidebar-${version.id}.json`);
 
-    console.log('OK  sidebar.json generado correctamente');
-    console.log('--------------------------------------------------');
-    console.log('Proceso finalizado.');
-    console.log('--------------------------------------------------');
+    console.log(`\n[${version.id}] Procesando...`);
+
+    if (!fs.existsSync(versionDir)) {
+      console.warn(`  WARN: carpeta no encontrada: ${versionDir}`);
+      continue;
+    }
+
+    const fileMap = buildMergedFileMap(versionDir, version.useShared);
+    console.log(`  Archivos totales (shared + override): ${fileMap.size}`);
+
+    const tree = buildTreeFromFileMap(fileMap);
+    const cleanTree = removeEmptyFolders(tree);
+
+    fs.writeFileSync(outFile, JSON.stringify(cleanTree, null, 2), 'utf8');
+    console.log(`  OK → ${path.relative(ROOT_DIR, outFile)}`);
   }
+
+  console.log('\n' + '='.repeat(50));
+  console.log('Sidebars generados correctamente.');
+  console.log('='.repeat(50));
 }
 
 main();

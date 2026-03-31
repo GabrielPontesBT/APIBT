@@ -1,0 +1,166 @@
+{
+  "slug": "cuentas-vista/traspasar/traspasarentrecuentaspropias-contipodecambio",
+  "pageTitle": "Traspasar Entre Cuentas Propias (con tipo de cambio)",
+  "description": "Método para realizar un traspaso con cotización entre cuentas propias.",
+  "pubName": "BTCuentasVista.TraspasarCuentasPropiasConCotizacion",
+  "programa": "RBTPG263",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de traspaso, teniendo en cuenta que:\n\n   - La cuenta vista origen se almacena en el preformato 1.\n\n   - La cuenta vista destino en el preformato 2.\n\n   - El importe a transferir se almacena en el preformato 1.\n\n   - Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal.\n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):\n\n   - Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de cliente."
+    },
+    {
+      "Nombre": "sdtTraspaso",
+      "Tipo": "<a href=\"#sbttraspaso\">sBTTraspaso</a>",
+      "Comentarios": "Datos del Traspaso."
+    },
+    {
+      "Nombre": "tipoDeCambio",
+      "Tipo": "Double",
+      "Comentarios": "Cotización"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtResultadoTraspaso",
+      "Tipo": "<a href=\"#sbtresultadotraspasodatos\">sBTResultadoTraspasoDatos</a>",
+      "Comentarios": "Resultado del traspaso."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador único de operación de origen."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el identificador único de operación de destino."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "Debe ingresar tipo de cambio a aplicar."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la operación origen para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La operación origen no pertenece al cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recuperó la operación destino para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "La cuenta destino debe coincidir con la cuenta origen."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "La operación origen y operación destino no pueden ser iguales."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "51005",
+      "Descripción": "La moneda del traspaso debe coincidir con la moneda de la operación origen"
+    },
+    {
+      "Código": "51008",
+      "Descripción": "Error de configuración: No se definió transacción a ejecutar."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header/>    \n    <soapenv:Body>        \n        <bts:BTCuentasVista.TraspasarCuentasPropiasConCotizacion>  \n            <bts:Btinreq>        \n                <bts:Device>AV</bts:Device> \n                <bts:Usuario>MINSTALADOR</bts:Usuario> \n                <bts:Requerimiento></bts:Requerimiento> \n                <bts:Canal>BTDIGITAL</bts:Canal> \n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token> \n            </bts:Btinreq> \n            <bts:clienteUId>21</bts:clienteUId> \n            <bts:sdtTraspaso> \n                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> \n                <bts:importe>500</bts:importe> \n                <bts:operacionUIdDestino>282</bts:operacionUIdDestino> \n                <bts:monedaId></bts:monedaId>    \n                <bts:concepto>Traspaso</bts:concepto>     \n            </bts:sdtTraspaso>   \n            <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  \n        </bts:BTCuentasVista.TraspasarCuentasPropiasConCotizacion>  \n    </soapenv:Body> \n</soapenv:Envelope>",
+      "json": "curl -X POST \\ \n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarCuentasPropiasConCotizacion \\ \n  -H 'cache-control: no-cache' \\ \n  -H 'content-type: application/json' \\ \n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\ \n  -d '{ \n    \"Btinreq\": { \n        \"Requerimiento\": \"1\", \n        \"Device\": \"GP\", \n        \"Token\": \"b4ae55b35c4A8B5C60A82434\", \n        \"Usuario\": \"MINSTALADOR\", \n        \"Canal\": \"BTDIGITAL\" \n    }, \n    \"clienteUId\": \"21\", \n    \"sdtTraspaso\":  \n      { \n        \"operacionUIdOrigen\": \"281\", \n        \"importe\": \"500\", \n        \"operacionUIdDestino\": \"282\", \n        \"monedaId\": \"\", \n        \"concepto\": \"Traspaso\", \n      }, \n    \"tipoDeCambio\": \"31.5\" \n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAPENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAPENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">   \n    <SOAP-ENV:Body>       \n        <BTCuentasVista.TraspasarCuentasPropiasConCotizacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">  \n            <Btinreq>      \n                <Device>AV</Device>     \n                <Usuario>MINSTALADOR</Usuario>      \n                <Requerimiento/>        \n                <Canal>BTDIGITAL</Canal>        \n                <Token>268b6d23eb4A8B5C60A82434</Token>    \n            </Btinreq>      \n            <sdtResultadoTraspaso> \n                <operacionUIdOrigen>281</operacionUIdOrigen>            \n                <idMovimiento>0010000100050007003720180706</idMovimiento>  \n                <operacionUIdDestino>282</operacionUIdDestino>       \n                <saldoOperacionOrigen>7432900.28</saldoOperacionOrigen>     \n                <movimientoUId>141</movimientoUId>   \n            </sdtResultadoTraspaso>       \n            <Erroresnegocio></Erroresnegocio>  \n            <Btoutreq>           \n                <Numero>864</Numero>   \n                <Estado>OK</Estado>      \n                <Servicio>BTCuentasVista.TraspasarCuentasPropiasConCotizacion</Servicio> \n                <Requerimiento/>       \n                <Fecha>2017-12-18</Fecha> \n                <Hora>17:07:19</Hora>       \n                <Canal>BTDIGITAL</Canal>        \n            </Btoutreq>       \n        </BTCuentasVista.TraspasarCuentasPropiasConCotizacionResponse> \n    </SOAP-ENV:Body>  \n</SOAP-ENV:Envelope>",
+      "json": "'{ \n    \"Btinreq\": { \n        \"Device\": \"AV\", \n        \"Usuario\": \"MINSTALADOR\", \n        \"Requerimiento\": \"\", \n        \"Canal\": \"BTDIGITAL\", \n        \"Token\": \"fa2c02c95a4A8B5C60A82434\" \n    },         \n    \"sdtResultadoTraspaso\":  \n      { \n        \"operacionUIdOrigen\": \"281\", \n        \"idMovimiento\": \"0010000100050007003720180706\", \n        \"operacionUIdDestino\": \"282\", \n        \"saldoOperacionOrigen\": \"7432900.28\", \n        \"movimientoUId\": \"141\", \n      }, \n    \"Btoutreq\": { \n        \"Numero\": \"103\", \n        \"Estado\": \"OK\", \n        \"Servicio\": \"BTCuentasVista.TraspasarCuentasPropiasCot\", \n        \"Requerimiento\": \"1\", \n        \"Fecha\": \"2019-07-22\", \n        \"Canal\": \"BTDIGITAL\", \n        \"Hora\": \"16:00:37\" \n    } \n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTraspaso",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto del Traspaso."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe del Movimiento."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de Moneda."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de origen del traspaso."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTResultadoTraspasoDatos",
+      "fields": [
+        {
+          "Nombre": "idMovimiento",
+          "Tipo": "String",
+          "Comentarios": "Identificador de Movimiento String."
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de Movimiento."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de origen del traspaso."
+        },
+        {
+          "Nombre": "saldoOperacionOrigen",
+          "Tipo": "Double",
+          "Comentarios": "Saldo Actual de operación de origen."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

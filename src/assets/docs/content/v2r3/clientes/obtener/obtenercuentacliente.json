@@ -1,0 +1,48 @@
+{
+  "slug": "clientes/obtener/obtenercuentacliente",
+  "pageTitle": "Obtener Cuenta Cliente",
+  "description": "Método para obtener la empresa y número de cuenta de una cuenta cliente.",
+  "pubName": "BTClientes.ObtenerCuentaCliente",
+  "programa": "RBTPG211",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "empresaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la empresa del cliente."
+    },
+    {
+      "Nombre": "cuentaBT",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de la cuenta cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerCuentaCliente>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.118</bts:Device>\n            <bts:Token>3183d9a8b64A8B5C60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n      </bts:BTClientes.ObtenerCuentaCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerCuentaCliente' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"clienteUId\": \"21\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerCuentaClienteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.118</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>3183d9a8b64A8B5C60A82434</Token>\n         </Btinreq>\n         <empresaId>1</empresaId>\n         <cuentaBT>79</cuentaBT>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>3021</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerCuentaCliente</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-12-12</Fecha>\n            <Hora>12:10:23</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerCuentaClienteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"empresaId\": 1,\n    \"cuentaBT\": 79,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 3020,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerCuentaCliente\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-12-12\",\n        \"Hora\": \"12:09:15\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

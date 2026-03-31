@@ -1,0 +1,161 @@
+{
+  "slug": "cuentas-bolsillo/cashin",
+  "pageTitle": "Cash In",
+  "description": "Método para realizar un depósito en cuenta bolsillo.",
+  "pubName": "BTCuentasBolsillo.CashIn",
+  "programa": "RBTPG611",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "sdtTraspaso",
+      "Tipo": "<a href=\"#sbttraspaso\">sBTTraspaso</a>",
+      "Comentarios": "Datos del traspaso."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtResultadoTraspaso",
+      "Tipo": "<a href=\"#sbtresultadotraspaso\">sBTResultadoTraspaso</a>",
+      "Comentarios": "Datos resultado del traspaso."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación de origen."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador único de operación de destino."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación origen para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación destino para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La cuenta destino no pertenece al cliente [Número de identificador]."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación origen no pertenece al cliente."
+    },
+    {
+      "Código": "30020",
+      "Descripción": "El estado de la operación origen no permite operar."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "El estado de la operación destino no permite operar."
+    },
+    {
+      "Código": "30023",
+      "Descripción": "La cuenta origen y cuenta destino son diferentes."
+    },
+    {
+      "Código": "30024",
+      "Descripción": "La cuenta bolsillo no pertenece a la operación principal."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.CashIn>\n         <bts:Btinreq>\n           <bts:Device>FP</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>64d9fe0781F955E77534D3E0</bts:Token>\n            <bts:Requerimiento>10</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>5</bts:clienteUId>\n         <bts:sdtTraspaso>\n            <bts:operacionUIdOrigen>9</bts:operacionUIdOrigen>\n            <bts:importeCredito>100</bts:importeCredito>\n            <bts:importeDebito>100</bts:importeDebito>\n            <bts:importe>100</bts:importe>\n            <bts:operacionUIdDestino>8</bts:operacionUIdDestino>\n            <bts:monedaId>0</bts:monedaId>\n            <bts:concepto>cash in</bts:concepto>\n         </bts:sdtTraspaso>\n      </bts:BTCuentasBolsillo.CashIn>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashIn' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n    \"clienteUId\": 5,\n    \"sdtTraspaso\": {\n        \"operacionUIdOrigen\": 9,\n        \"importeCredito\": 100,\n        \"importeDebito\": 100,\n        \"importe\": 100,\n        \"operacionUIdDestino\": 8,\n        \"monedaId\": 0,\n        \"concepto\": \"cash in\"\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasBolsillo.CashInResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>FP</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>10</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>64d9fe0781F955E77534D3E0</Token>\n         </Btinreq>\n         <sdtResultadoTraspaso>\n            <operacionUIdOrigen>9</operacionUIdOrigen>\n            <idMovimiento>001001320010002820230731</idMovimiento>\n            <operacionUIdDestino>8</operacionUIdDestino>\n            <saldoOperacionOrigen>69919.00</saldoOperacionOrigen>\n            <movimientoUId>15</movimientoUId>\n         </sdtResultadoTraspaso>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>243</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasBolsillo.CashIn</Servicio>\n            <Requerimiento>10</Requerimiento>\n            <Fecha>2023-11-01</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>09:21:36</Hora>\n         </Btoutreq>\n      </BTCuentasBolsillo.CashInResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"1\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"16c1cFC33CD93505A5382434\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\"\n    },\n    \"sdtResultadoTraspaso\": {\n        \"operacionUIdOrigen\": 9,\n        \"idMovimiento\": 1.0013200100028202e+21,\n        \"operacionUIdDestino\": 8,\n        \"saldoOperacionOrigen\": 69919,\n        \"movimientoUId\": 15\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"111399\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasBolsillo.CashIn\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2023-05-10\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"15:10:52\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTraspaso",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto del Traspaso."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe del Movimiento."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de Moneda."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de origen del traspaso."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTResultadoTraspaso",
+      "fields": [
+        {
+          "Nombre": "idMovimiento",
+          "Tipo": "String",
+          "Comentarios": "Identificador de movimiento string."
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de movimiento."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación de origen del traspaso."
+        },
+        {
+          "Nombre": "saldoOperacionOrigen",
+          "Tipo": "Double",
+          "Comentarios": "Saldo actual de operación de origen."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

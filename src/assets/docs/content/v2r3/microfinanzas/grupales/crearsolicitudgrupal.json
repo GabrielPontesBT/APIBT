@@ -1,0 +1,138 @@
+{
+  "slug": "microfinanzas/grupales/crearsolicitudgrupal",
+  "pageTitle": "Crear Solicitud Grupal",
+  "description": "Método para crear una solicitud de crédito grupal.",
+  "pubName": "BTMicrofinanzas.CrearSolicitudGrupal",
+  "programa": "RBTPG438",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "procesoId",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Identificador de proceso Workflow]."
+    },
+    {
+      "Nombre": "tareaId",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Identificador de tarea Workflow]."
+    },
+    {
+      "Nombre": "usuarioIngreso",
+      "Tipo": "String",
+      "Comentarios": "Usuario que ingresa la solicitud. En caso de no especificarse, se asigna el usuario conectado."
+    },
+    {
+      "Nombre": "fechaIngreso",
+      "Tipo": "Date",
+      "Comentarios": "Fecha en la que se ingresa la solicitud. En caso de no especificarse, se asigna fecha apertura."
+    },
+    {
+      "Nombre": "usuarioAsignacion",
+      "Tipo": "String",
+      "Comentarios": "Usuario al que queda asignada la tarea de solicitud. En caso de no especificarse, se asigna al Asesor de créditos."
+    },
+    {
+      "Nombre": "sdtDatosSolicitud",
+      "Tipo": "<a href=\"#sbtsolicitudgrupal\">sBTSolicitudGrupal</a>",
+      "Comentarios": "Datos de entrada de la solicitud."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de instancia Workflow."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de proceso."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de tarea."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de grupo."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "El Grupo seleccionado no está vigente."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "El Tipo de Grupo no existe."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se pudo determinar el coordinador del grupo."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No se encontró registro en la FSD008 para la cuenta [Número de cuenta]."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "No se obtuvo el titular representativo de la cuenta [Número de cuenta]."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "No se pudo determinar la sucursal de la solicitud."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "No se pudo determinar el asesor de la solicitud."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "El código de campaña no existe."
+    },
+    {
+      "Código": "30019",
+      "Descripción": "El código de origen de captación no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.CrearSolicitudGrupal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>669747179CD285A89A23FBEE</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:usuarioIngreso>INSTALADOR</bts:usuarioIngreso>\n         <bts:fechaIngreso/>\n         <bts:usuarioAsignacion>INSTALADOR</bts:usuarioAsignacion>\n         <bts:sdtDatosSolicitud>\n            <bts:grupoId>34</bts:grupoId>\n            <bts:asesorId>92</bts:asesorId>\n            <bts:sucursalId/>\n            <bts:origenCaptacion>6</bts:origenCaptacion>\n         </bts:sdtDatosSolicitud>\n      </bts:BTMicrofinanzas.CrearSolicitudGrupal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudGrupal \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"669747179CD285A89A23FBEE\"\n\t},\n    \"usuarioIngreso\": \"INSTALADOR\",\n    \"usuarioAsignacion\": \"INSTALADOR\",\n    \"datosSolicitud\": {\n        \"grupoId\": \"34\",\n        \"asesorId\": \"92\",\n        \"sucursalId\": \"1\",\n        \"origenCaptacion\": \"6\"\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.CrearSolicitudGrupalResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>669747179CD285A89A23FBEE</Token>\n            <Device>1</Device>\n         </Btinreq>\n         <solicitudUId>10847</solicitudUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.CrearSolicitudGrupal</Servicio>\n            <Fecha>2020-09-10</Fecha>\n            <Hora>14:31:41</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>121</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.CrearSolicitudGrupalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"669747179CD285A89A23FBEE\"\n\t},\n    \"solicitudUId\": \"10847\",\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTMicrofinanzas.CrearSolicitudGrupal\",\n        \"Fecha\": \"2020-09-10\",\n        \"Hora\": \"14:31:41\",\n        \"Requerimiento\": \"1\",\n        \"Numero\": \"121\",\n        \"Estado\": \"OK\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSolicitudGrupal",
+      "fields": [
+        {
+          "Nombre": "asesorId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente."
+        },
+        {
+          "Nombre": "grupoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de grupo que solicita el préstamo."
+        },
+        {
+          "Nombre": "origenCaptacion",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de origen captación."
+        },
+        {
+          "Nombre": "sucursalId",
+          "Tipo": "Short",
+          "Comentarios": "Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

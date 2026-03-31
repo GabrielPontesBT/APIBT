@@ -1,0 +1,166 @@
+{
+  "slug": "peru-pe/cce/diferidas/enviartransferencia",
+  "pageTitle": "Enviar Transferencia",
+  "description": "Método para enviar transferencia.",
+  "pubName": "BTCCE.EnviarTransferencia",
+  "programa": "RBTPPE300",
+  "scope": "Perú",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "Canal",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Canal IB, APP"
+    },
+    {
+      "Nombre": "NombreTitular",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nombre titular"
+    },
+    {
+      "Nombre": "MismoTitular",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "M / O"
+    },
+    {
+      "Nombre": "Modo",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "S - Simular, C - Confirmacion"
+    },
+    {
+      "Nombre": "CuentaOrigen",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Cuenta origen"
+    },
+    {
+      "Nombre": "MdaMovimiento",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "1 Soles, 2 Dolares"
+    },
+    {
+      "Nombre": "ImpMovimiento",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Importe transferencia"
+    },
+    {
+      "Nombre": "TpoDocBeneficiario",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Tipo documento"
+    },
+    {
+      "Nombre": "NroDocBeneficiario",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nro documento"
+    },
+    {
+      "Nombre": "NombreBeneficiario",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nombre destinatario"
+    },
+    {
+      "Nombre": "BancoDestino",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Codigo banco destino"
+    },
+    {
+      "Nombre": "CCIDestino",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Cuenta destino"
+    },
+    {
+      "Nombre": "Concepto",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Referencia de la transferencia"
+    },
+    {
+      "Nombre": "TipoTranferencia",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "220, 222, 225..."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ITF",
+      "Tipo": "Double",
+      "Comentarios": "Impuesto."
+    },
+    {
+      "Nombre": "ComisionOrigen",
+      "Tipo": "Double",
+      "Comentarios": "Comision Entidad."
+    },
+    {
+      "Nombre": "ComisionDestino",
+      "Tipo": "Double",
+      "Comentarios": "Comision Interbancaria."
+    },
+    {
+      "Nombre": "IdMovimiento",
+      "Tipo": "Double",
+      "Comentarios": "Movimiento UID."
+    },
+    {
+      "Nombre": "ErrorNegocio",
+      "Tipo": "ErrorNegocio",
+      "Comentarios": "Coleccion de error."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió Canal."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió Id Camara."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió operación UID."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el importe."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el código de transacción."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el ID transferencia."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió el IDL de la transferencia."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n      <bts:BTCCE.EnvioDeTransferencia>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>29749514EBC672B9896D96EA</bts:Token>\n         </bts:Btinreq>\n         <bts:Canal>IB</bts:Canal>\n         <bts:TipoTransferencia>220</bts:TipoTransferencia>\n         <bts:NombreTitular>CLAUDIA BELEN</bts:NombreTitular>\n         <bts:MismoTitular>0</bts:MismoTitular>\n         <bts:Modo>T</bts:Modo>\n         <bts:NumeroCuentaOrigen>00118780400002</bts:NumeroCuentaOrigen>\n         <bts:MonedaMovimiento>1</bts:MonedaMovimiento>\n         <bts:ImporteMovimiento>20</bts:ImporteMovimiento>\n         <bts:TipoDocumento>1</bts:TipoDocumento>\n         <bts:NumeroDocumento>4447949</bts:NumeroDocumento>\n         <bts:NombreBeneficiario>JonaBernet</bts:NombreBeneficiario>\n         <bts:BancoDestino>2</bts:BancoDestino>\n         <bts:CCIDestino>00221511570144303928</bts:CCIDestino>\n         <bts:Concepto>Prueba Demo</bts:Concepto>\n      </bts:BTCCE.EnvioDeTransferencia>\n\t</soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n\t<SOAP-ENV:Body>\n\t\t<BTCCE.EnvioDeTransferenciaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>BANTOTAL</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>8234EA193DE7251CBF9B7E1A</Token>\n         </Btinreq>\n         <ITF>0.0</ITF>\n         <ComOri>3.0</ComOri>\n         <ComDes>7.0</ComDes>\n         <MovUId>246981</MovUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2025-05-29</Fecha>\n            <Hora>13:52:23</Hora>\n            <Numero>7468325</Numero>\n            <Servicio>BTCCE.EnvioDeTransferencia</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCCE.EnvioDeTransferenciaResponse>\n\t</SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

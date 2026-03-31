@@ -1,0 +1,5266 @@
+[
+  {
+    "key": "BTAhorroProgramado.ActualizarDocumentoDigital",
+    "path": [
+      "ahorro-programado",
+      "documentos-digitales",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.AsociarDocumentoDigital",
+    "path": [
+      "ahorro-programado",
+      "documentos-digitales",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ContratarSimulacion",
+    "path": [
+      "ahorro-programado",
+      "contratar",
+      "contratarsimulacion"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.Crear",
+    "path": [
+      "ahorro-programado",
+      "contratar",
+      "crear"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.EliminarDocumentoDigital",
+    "path": [
+      "ahorro-programado",
+      "documentos-digitales",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ModificarCuentaDestino",
+    "path": [
+      "ahorro-programado",
+      "modificar",
+      "modificarcuentadestino"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ModificarCuentaOrigen",
+    "path": [
+      "ahorro-programado",
+      "modificar",
+      "modificarcuentaorigen"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ModificarFechaDeAbono",
+    "path": [
+      "ahorro-programado",
+      "modificar",
+      "modificarfechadeabono"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ModificarMetaDeAhorro",
+    "path": [
+      "ahorro-programado",
+      "modificar",
+      "modificarmetadeahorro"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ModificarMontoDeAbono",
+    "path": [
+      "ahorro-programado",
+      "modificar",
+      "modificarmontodeabono"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.Obtener",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtener"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerCronogramaDeAbonos",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenercronogramaabonos"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenercuentasdestinohabilitadas"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenercuentasorigenhabilitadas"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerDocumentoDigital",
+    "path": [
+      "ahorro-programado",
+      "documentos-digitales",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerDocumentosDigitales",
+    "path": [
+      "ahorro-programado",
+      "documentos-digitales",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerEstadoDeCuenta",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenerestadodecuenta"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerPeriodosHabilitados",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenerperiodoshabilitados"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerPlazosHabilitados",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenerplazoshabilitados"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerProductos",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.Simular",
+    "path": [
+      "ahorro-programado",
+      "contratar",
+      "simular"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerDetalleEjecucion",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerdetalledeejecucion"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerDetalleProceso",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerdetalledeproceso"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerProcesosConError",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerprocesosconerror"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerProcesosCriticos",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerprocesoscriticos"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerProcesosDiarios",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerprocesosdiarios"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerProcesosMensuales",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerprocesosmensuales"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.ObtenerProcesosReprocesables",
+    "path": [
+      "cadena-de-cierre",
+      "obtenerprocesosreprocesables"
+    ]
+  },
+  {
+    "key": "BTCadenaCierre.VerificarEstadoServidor",
+    "path": [
+      "cadena-de-cierre",
+      "verificarestadoservidor"
+    ]
+  },
+  {
+    "key": "BTCalendarios.CalcularFechaVencimiento",
+    "path": [
+      "calendarios",
+      "calcular",
+      "calcularfechadevencimiento"
+    ]
+  },
+  {
+    "key": "BTCalendarios.CalcularFechaVencimientoDiasHabiles",
+    "path": [
+      "calendarios",
+      "calcular",
+      "calcularfechadevencimientoendiashabiles"
+    ]
+  },
+  {
+    "key": "BTCalendarios.CalcularPlazo",
+    "path": [
+      "calendarios",
+      "calcular",
+      "calcularplazo"
+    ]
+  },
+  {
+    "key": "BTCalendarios.CalcularPlazoDiasHabiles",
+    "path": [
+      "calendarios",
+      "calcular",
+      "calcularplazoendiashabiles"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabil",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabil"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilAnterior",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabilanterior"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilAnteriorSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabilanteriordesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerFechaHabilSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerfechahabildesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerInicioYFinMes",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerinicioyfindemes"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerInicioYFinMesSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerinicioyfindemesdesucursal"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerProximaFechaHabil",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerproximafechahabil"
+    ]
+  },
+  {
+    "key": "BTCalendarios.ObtenerProximaFechaHabilSucursal",
+    "path": [
+      "calendarios",
+      "obtener",
+      "obtenerproximafechahabildesucursal"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.AltaAutomaticaContrato",
+    "path": [
+      "cash-management",
+      "contratar",
+      "altaautomaticacontrato"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.AnularPagoDeuda",
+    "path": [
+      "cash-management",
+      "pagos",
+      "anularpagodeuda"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.AutorizarArchivo",
+    "path": [
+      "cash-management",
+      "archivo",
+      "autorizararchivo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.AutorizarOrden",
+    "path": [
+      "cash-management",
+      "orden",
+      "autorizarorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.CargarArchivo",
+    "path": [
+      "cash-management",
+      "archivo",
+      "cargararchivo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.CargarArchivoDato",
+    "path": [
+      "cash-management",
+      "archivo",
+      "cargararchivorecibidocomodato"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.CargarBeneficiarios",
+    "path": [
+      "cash-management",
+      "beneficiarios",
+      "cargarbeneficiarios"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.CargarServiciosDisponibles",
+    "path": [
+      "cash-management",
+      "contratar",
+      "cargarserviciosdisponibles"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ContratarDebitoAutomatico",
+    "path": [
+      "cash-management",
+      "contratar",
+      "contratardebitoautomatico"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.DetenerArchivo",
+    "path": [
+      "cash-management",
+      "archivo",
+      "detenerarchivo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.DetenerOrden",
+    "path": [
+      "cash-management",
+      "orden",
+      "detenerorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.IngresarBeneficiario",
+    "path": [
+      "cash-management",
+      "beneficiarios",
+      "ingresarbeneficiario"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.IngresarOrdenPago",
+    "path": [
+      "cash-management",
+      "orden",
+      "ingresarordenpago"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerBeneficiarioSegunFiltro",
+    "path": [
+      "cash-management",
+      "beneficiarios",
+      "obtenerbeneficiariosegunfiltro"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerDetalleOrdenCuenta",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerdetalledeordendecuenta"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerDetalleOrdenSegunCampo",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerdetalleordenseguncampo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerDetallePago",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerdetalledepago"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerDetallePagoOrden",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerdetallepagoorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerDeuda",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerdeuda"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerResumenOrden",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerresumenorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerServicios",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenerservicios"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerValoresOrden",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenervaloresorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ObtenerValoresOrdenSegunCampo",
+    "path": [
+      "cash-management",
+      "obtener",
+      "obtenervaloresordenseguncampo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.PagarDeudaDesdeCuenta",
+    "path": [
+      "cash-management",
+      "pagos",
+      "pagardeudadesdecuenta"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.ProcesarOrden",
+    "path": [
+      "cash-management",
+      "orden",
+      "procesarorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.RechazarArchivo",
+    "path": [
+      "cash-management",
+      "archivo",
+      "rechazararchivo"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.RechazarOrden",
+    "path": [
+      "cash-management",
+      "orden",
+      "rechazarorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.RegistrarPagoDeuda",
+    "path": [
+      "cash-management",
+      "pagos",
+      "registrarpagodeuda"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.RegistrarPagoEnLinea",
+    "path": [
+      "cash-management",
+      "pagos",
+      "registrarpagoenlinea"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta",
+    "path": [
+      "cash-management",
+      "pagos",
+      "registrarpagoenlineadesdecuenta"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarListaResumenCabezal",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarlistaresumencabezal"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarListaResumenCabezalOrden",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarlistaresumencabezalorden"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarOrdenArchivoCuenta",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarordendearchivoparacuenta"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarResultadoProcesamiento",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarresultadoprocesamiento"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarResumenCabezal",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarresumencabezal"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarSituacionArchivos",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarsituacionarchivos"
+    ]
+  },
+  {
+    "key": "BTCASHManagement.VisualizarSituacionLineas",
+    "path": [
+      "cash-management",
+      "visualizar",
+      "visualizarsituacionlineas"
+    ]
+  },
+  {
+    "key": "BTClientes.Actualizar",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizar"
+    ]
+  },
+  {
+    "key": "BTClientes.ActualizarDocumentoDigital",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTClientes.ActualizarDomicilio",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizardomicilio"
+    ]
+  },
+  {
+    "key": "BTClientes.ActualizarInformacionAdicional",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTClientes.ActualizarRegistroEmpleado",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizarregistroempleado"
+    ]
+  },
+  {
+    "key": "BTClientes.ActualizarTelefono",
+    "path": [
+      "clientes",
+      "actualizar",
+      "actualizartelefono"
+    ]
+  },
+  {
+    "key": "BTClientes.AgregarDomicilio",
+    "path": [
+      "clientes",
+      "actualizar",
+      "agregardomicilio"
+    ]
+  },
+  {
+    "key": "BTClientes.AgregarInformacionAdicional",
+    "path": [
+      "clientes",
+      "actualizar",
+      "agregarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTClientes.AgregarIntegrante",
+    "path": [
+      "clientes",
+      "actualizar",
+      "agregarintegrante"
+    ]
+  },
+  {
+    "key": "BTClientes.AgregarTelefono",
+    "path": [
+      "clientes",
+      "actualizar",
+      "agregartelefono"
+    ]
+  },
+  {
+    "key": "BTClientes.AsociarDocumentoDigital",
+    "path": [
+      "clientes",
+      "actualizar",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTClientes.Crear",
+    "path": [
+      "clientes",
+      "crear",
+      "crear"
+    ]
+  },
+  {
+    "key": "BTClientes.CrearConPersonaExistente",
+    "path": [
+      "clientes",
+      "crear",
+      "crearconpersonaexistente"
+    ]
+  },
+  {
+    "key": "BTClientes.CrearParaPersonaJuridica",
+    "path": [
+      "clientes",
+      "crear",
+      "crearparapersonajuridica"
+    ]
+  },
+  {
+    "key": "BTClientes.EliminarDocumentoDigital",
+    "path": [
+      "clientes",
+      "actualizar",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTClientes.EliminarDomicilio",
+    "path": [
+      "clientes",
+      "actualizar",
+      "eliminardomicilio"
+    ]
+  },
+  {
+    "key": "BTClientes.EliminarInformacionAdicional",
+    "path": [
+      "clientes",
+      "actualizar",
+      "eliminarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTClientes.EliminarIntegrantes",
+    "path": [
+      "clientes",
+      "actualizar",
+      "eliminarintegrante"
+    ]
+  },
+  {
+    "key": "BTClientes.Habilitar",
+    "path": [
+      "clientes",
+      "actualizar",
+      "habilitar"
+    ]
+  },
+  {
+    "key": "BTClientes.Inhabilitar",
+    "path": [
+      "clientes",
+      "actualizar",
+      "inhabilitar"
+    ]
+  },
+  {
+    "key": "BTClientes.ModificarEjecutivo",
+    "path": [
+      "clientes",
+      "actualizar",
+      "modificarejecutivo"
+    ]
+  },
+  {
+    "key": "BTClientes.Obtener",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtener"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerAhorrosProgramados",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerahorrosprogramados"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerBolsillos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerbolsillos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerClasificacionesInternas",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerclasificacionesinternas"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerCuentaCliente",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenercuentacliente"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerCuentasAhorro",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenercuentasdeahorro-saldocontable"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerCuentasAhorroSD",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenercuentasdeahorro-saldodisponible"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerCuentasCorrientes",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenercuentascorrientes-saldocontable"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerCuentasCorrientesSD",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenercuentascorrientes-saldodisponible"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerDatos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerDetallePosicion",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerdetalleposicion"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerDocumentoDigital",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerDocumentosDigitales",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerDomicilios",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerdomicilios"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerFacultades",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerfacultades"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerIdentificadorUnico",
+    "path": [
+      "clientes",
+      "obtener",
+      "obteneridentificadorunico"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerInformacionAdicional",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerIntegrantes",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerintegrantes"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerLimites",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerlimites"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerMotivosInhabilitacion",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenermotivosinhabilitacion"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPerfil",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerperfil"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPlazosFijos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerplazosfijos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPlazosFijosCancelados",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerplazosfijoscancelados"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPlazosFijosConAvance",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerplazosfijosconavance"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPosicion",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerposicion"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPrestamos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerprestamos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPrestamosCancelados",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerprestamoscancelados"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPrestamosCastigados",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerprestamoscastigados"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerPrestamosConAvance",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerprestamosconavance"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerResumenPorProductoACierreAnio",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerresumenporproductoacierreano"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerResumenProductos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerresumendeproductos-saldoscontables"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerResumenProductosACierreAnio",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerresumendeproductos-cierredeano"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerResumenProductosSD",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerresumendeproductos-saldosdisponibles"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerRiesgoCredito",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenerriesgodecredito"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerSaldosProducto",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenersaldosdeotrosproductos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerSectores",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenersectores"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerSegmentos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenersegmentos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerTarjetasDebito",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenertarjetasdedebito"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerTelefonos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenertelefonos"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerTiposDeIntegracion",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenertiposdeintegracion"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerTitularRepresentativo",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenertitularrepresentativo"
+    ]
+  },
+  {
+    "key": "BTClientes.ObtenerTitulos",
+    "path": [
+      "clientes",
+      "obtener",
+      "obtenertitulos"
+    ]
+  },
+  {
+    "key": "BTClientes.ValidarExistencia",
+    "path": [
+      "clientes",
+      "validar",
+      "validarexistencia"
+    ]
+  },
+  {
+    "key": "BTClientes.VerificarEmpleado",
+    "path": [
+      "clientes",
+      "validar",
+      "verificarempleado"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerActividades",
+    "path": [
+      "configuracion-bantotal",
+      "clientes",
+      "obteneractividades"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerActividadesPorTipo",
+    "path": [
+      "configuracion-bantotal",
+      "clientes",
+      "obteneractividadesportipo"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerAgenciasBanco",
+    "path": [
+      "configuracion-bantotal",
+      "bancos",
+      "obteneragenciasbanco"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerBancos",
+    "path": [
+      "configuracion-bantotal",
+      "bancos",
+      "obtenerbancos"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerBarriosColonias",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenerbarriosycolonias"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerCalendarioDeSucursal",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenercalendariodesucursal"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerCalendarios",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenercalendarios"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerCiudadesLocalidades",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenerciudadesylocalidades"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerCodigosDeDomicilio",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenercodigosdedomicilio"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenerdetalledecalendario"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenerdetalledecalendariodesucursal"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerDetalleSucursal",
+    "path": [
+      "configuracion-bantotal",
+      "bancos",
+      "obtenerdetallesucursal"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerDolarUSA",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenerdolarusa"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerEjecutivos",
+    "path": [
+      "configuracion-bantotal",
+      "clientes",
+      "obtenerejecutivos"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerEmpresa",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenerempresa"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerEstados",
+    "path": [
+      "configuracion-bantotal",
+      "operaciones",
+      "obtenerestados"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenerestados-provinciasydepartamentos"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerFechaDeSistema",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenerfechadesistema"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerImpuestos",
+    "path": [
+      "configuracion-bantotal",
+      "obtenerimpuestos"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerInstrucciones",
+    "path": [
+      "configuracion-bantotal",
+      "operaciones",
+      "obtenerinstrucciones"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerMenues",
+    "path": [
+      "configuracion-bantotal",
+      "seguridad",
+      "obtenermenus"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerMonedaNacional",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenermonedanacional"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerMonedas",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenermonedas"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerOficinasSucursal",
+    "path": [
+      "configuracion-bantotal",
+      "bancos",
+      "obteneroficinassucursal"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerPaises",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenerpaises"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerPaquetes",
+    "path": [
+      "configuracion-bantotal",
+      "operaciones",
+      "obtenerpaquetes"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerPerfiles",
+    "path": [
+      "configuracion-bantotal",
+      "seguridad",
+      "obtenerperfiles"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerPizarraPorModulo",
+    "path": [
+      "configuracion-bantotal",
+      "precios",
+      "obtenerpizarrapormodulo"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerPizarras",
+    "path": [
+      "configuracion-bantotal",
+      "precios",
+      "obtenerpizarras"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerSucursales",
+    "path": [
+      "configuracion-bantotal",
+      "parametros-generales",
+      "obtenersucursales"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerSucursalesPrincipales",
+    "path": [
+      "configuracion-bantotal",
+      "bancos",
+      "obtenersucursalesprincipales"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposDeActividad",
+    "path": [
+      "configuracion-bantotal",
+      "clientes",
+      "obtenertiposdeactividad"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales",
+    "path": [
+      "configuracion-bantotal",
+      "obtenertiposdedocumentodigital"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposDeTelefono",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenertiposdetelefono"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposDeTexto",
+    "path": [
+      "configuracion-bantotal",
+      "operaciones",
+      "obtenertiposdetexto"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposDeVivienda",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenertiposdevivienda"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposListasNegras",
+    "path": [
+      "configuracion-bantotal",
+      "personas",
+      "obtenertiposdelistasnegras"
+    ]
+  },
+  {
+    "key": "BTConfiguracionBantotal.ObtenerTiposTarjeta",
+    "path": [
+      "configuracion-bantotal",
+      "clientes",
+      "obtenertiposdetarjeta"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ActualizarCondicionImpositiva",
+    "path": [
+      "contabilidad",
+      "condicion-impositiva",
+      "actualizarcondicionimpositiva"
+    ]
+  },
+  {
+    "key": "BTContabilidad.AgregarTextoAsiento",
+    "path": [
+      "contabilidad",
+      "agregar-texto",
+      "agregartextoasiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.AgregarTextoOrdinal",
+    "path": [
+      "contabilidad",
+      "agregar-texto",
+      "agregartextoordinal"
+    ]
+  },
+  {
+    "key": "BTContabilidad.AnularMovimiento",
+    "path": [
+      "contabilidad",
+      "anularmovimiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.CrearCondicionImpositiva",
+    "path": [
+      "contabilidad",
+      "condicion-impositiva",
+      "crearcondicionimpositiva"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerClienteDeOperacion",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenerclientedeunaoperacion"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerCondicionImpositiva",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenercondicionimpositiva"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerDetalleMovimiento",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenerdetalledemovimiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerDetalleOrdinal",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenerdetalledeordinal"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdBantotalMovimiento",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridbantotalmovimiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdBantotalOperacion",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridbantotaloperacion"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdBantotalProducto",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridbantotalproducto"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdentificadorUnicoMovimiento",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridentificadorunicodemovimiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdentificadorUnicoOperacion",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridentificadorunicodeoperacion"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIdentificadorUnicoProducto",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "identificadores",
+      "obteneridentificadorunicodeproducto"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerIntegrantesOperacion",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenerintegrantesdeoperacion"
+    ]
+  },
+  {
+    "key": "BTContabilidad.ObtenerTextosMovimiento",
+    "path": [
+      "contabilidad",
+      "obtener",
+      "obtenertextosdemovimiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.RegistrarAsiento",
+    "path": [
+      "contabilidad",
+      "registrar-asiento",
+      "registrarasiento"
+    ]
+  },
+  {
+    "key": "BTContabilidad.RegistrarAsientoFechaValor",
+    "path": [
+      "contabilidad",
+      "registrar-asiento",
+      "registrarasientofechavalor"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.Cancelar",
+    "path": [
+      "cuentas-bolsillo",
+      "cancelar"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.CashIn",
+    "path": [
+      "cuentas-bolsillo",
+      "cashin"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.CashOut",
+    "path": [
+      "cuentas-bolsillo",
+      "cashout"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.Contratar",
+    "path": [
+      "cuentas-bolsillo",
+      "contratar"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.ObtenerDatos",
+    "path": [
+      "cuentas-bolsillo",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.ObtenerMovimientos",
+    "path": [
+      "cuentas-bolsillo",
+      "obtenermovimientos"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.ObtenerProductos",
+    "path": [
+      "cuentas-bolsillo",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTCuentasBolsillo.ObtenerProductosCV",
+    "path": [
+      "cuentas-bolsillo",
+      "obtenerproductoscv"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.AnularChequeElectronico",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "anularchequeelectronico"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.AsignarIdChequeElectronico",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "asignaridachequeelectronico"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ContratarConFacultades",
+    "path": [
+      "cuentas-corrientes",
+      "contratar",
+      "contratarproductoconaltadefacultades"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ContratarConPeriodicidad",
+    "path": [
+      "cuentas-corrientes",
+      "contratar",
+      "contratarconperiodicidad"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ContratarProducto",
+    "path": [
+      "cuentas-corrientes",
+      "contratar",
+      "contratarproducto"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.CrearChequeaElectronica",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "crearchequeraelectronica"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "depositarchequeelectronicodeotrobanco"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "depositarchequeelectronicoencustodia"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.DepositarChequeElectronicoPropio",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "depositarchequeelectronicodebancopropio"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.EliminarChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "operar",
+      "eliminarchequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.EmitirChequeElectronico",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "emitirchequeelectronico"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.EmitirChequeElectronicoDeChequera",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "emitirchequeelectronicodechequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.HabilitarChequeElectronico",
+    "path": [
+      "argentina-ar",
+      "cuentas-corrientes",
+      "cheque-electronico",
+      "habilitarchequeelectronico"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerAcuerdos",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obteneracuerdos"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenerchequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerChequeras",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenerchequeras"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerChequesDeChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenerchequesdechequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerComisionChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenercomisionchequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerDatos",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerEstadoDeCheque",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenerestadodechequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerEstadoDeCuenta",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obtenerestadodecuenta"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerEvolucionDeSaldos",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obtenerevoluciondesaldos"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerProductos",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerSobregiros",
+    "path": [
+      "cuentas-corrientes",
+      "obtener",
+      "obtenersobregiros"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerSolicitudesChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenersolicitudesdechequeras"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerTiposDeChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenertiposdechequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "obtener",
+      "obtenertiposdechequeraporproducto"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "operar",
+      "registrarordendenopagodechequera"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "operar",
+      "registrarordendenopagodecheques"
+    ]
+  },
+  {
+    "key": "BTCuentasCorrientes.SolicitarChequera",
+    "path": [
+      "cuentas-corrientes",
+      "chequera",
+      "operar",
+      "solicitarchequera"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ContratarConFacultades",
+    "path": [
+      "cuentas-de-ahorro",
+      "contratar",
+      "contratarproductoconaltadefacultades"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ContratarConPeriodicidad",
+    "path": [
+      "cuentas-de-ahorro",
+      "contratar",
+      "contratarconperiodicidad"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ContratarProducto",
+    "path": [
+      "cuentas-de-ahorro",
+      "contratar",
+      "contratarproducto"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ObtenerDatos",
+    "path": [
+      "cuentas-de-ahorro",
+      "obtener",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo",
+    "path": [
+      "cuentas-de-ahorro",
+      "obtener",
+      "obtenerdebitoautomaticoprestamo"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ObtenerEstadoDeCuenta",
+    "path": [
+      "cuentas-de-ahorro",
+      "obtener",
+      "obtenerestadodecuenta"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ObtenerEvolucionDeSaldos",
+    "path": [
+      "cuentas-de-ahorro",
+      "obtener",
+      "obtenerevoluciondesaldos"
+    ]
+  },
+  {
+    "key": "BTCuentasDeAhorro.ObtenerProductos",
+    "path": [
+      "cuentas-de-ahorro",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.AcreditarEnCuenta",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "acreditarencuenta"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.Activar",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "activar"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ActualizarBeneficiarios",
+    "path": [
+      "cuentas-vista",
+      "beneficiarios",
+      "actualizarbeneficiarios"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ActualizarDocumentoDigital",
+    "path": [
+      "cuentas-vista",
+      "documentos-digitales",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ActualizarPeriodoDeAcreditacion",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "actualizarperiododeacreditacion"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.AsociarDocumentoDigital",
+    "path": [
+      "cuentas-vista",
+      "documentos-digitales",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.BloquearSaldo",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "bloquearsaldo"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.Cancelar",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "cancelar"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.DebitarEnCuenta",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "debitarencuenta"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.DesbloquearSaldo",
+    "path": [
+      "cuentas-vista",
+      "operar",
+      "desbloquearsaldo"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.EliminarDocumentoDigital",
+    "path": [
+      "cuentas-vista",
+      "documentos-digitales",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerBeneficiarios",
+    "path": [
+      "cuentas-vista",
+      "beneficiarios",
+      "obtenerbeneficiarios"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerBolsillos",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerbolsillos"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerCBUdeCuentaVista",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenercbudecuentavista"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerCuentaVistaDeCBU",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenercuentavistadecbu"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerDetalleBloqueo",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerdetallebloqueo"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerDocumentoDigital",
+    "path": [
+      "cuentas-vista",
+      "documentos-digitales",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerDocumentosDigitales",
+    "path": [
+      "cuentas-vista",
+      "documentos-digitales",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerestadodecuentaporperiodo"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerEstadoDeOperacion",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerestadodeoperacion"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerFacultades",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerfacultades"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerInstrucciones",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerinstrucciones"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerPaquete",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerpaquete"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerPeriodoDeAcreditacion",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerperiododeacreditacion"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerPeriodosDeAcreditacion",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenerperiodosdeacreditacion"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerSaldoBloqueado",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenersaldobloqueado"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerSaldoDisponible",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenersaldodisponible"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerSaldosBloqueados",
+    "path": [
+      "cuentas-vista",
+      "obtener",
+      "obtenersaldosbloqueados"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarConTipoDeCambioEspecial",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarcontipodecambioespecial"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasMismoTitular",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasdelamismapersona"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasPropiasConCotizacion",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentaspropias-contipodecambio"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedas",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentaspropias-diferentesmonedas"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasTerceros",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasterceros"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasTercerosConCotizacion",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasterceros-contipodecambio"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarCuentasTercerosDiferentesMonedas",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasterceros-diferentesmonedas"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarEntreCuentasPropias",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentaspropias"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarMismoTitularConCotizacion",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasmismotitular-contipodecambio"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.TraspasarMismoTitularDiferentesMonedas",
+    "path": [
+      "cuentas-vista",
+      "traspasar",
+      "traspasarentrecuentasmismotitular-diferentesmonedas"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ActualizarBeneficiarios",
+    "path": [
+      "depositos-a-plazo",
+      "beneficiarios",
+      "actualizarbeneficiarios"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ActualizarDocumentoDigital",
+    "path": [
+      "depositos-a-plazo",
+      "documentos-digitales",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.AsociarDocumentoDigital",
+    "path": [
+      "depositos-a-plazo",
+      "documentos-digitales",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.Contratar",
+    "path": [
+      "depositos-a-plazo",
+      "contratar",
+      "contratar"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ContratarConFacultades",
+    "path": [
+      "depositos-a-plazo",
+      "contratar",
+      "contratarconfacultades"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ContratarSimulacion",
+    "path": [
+      "depositos-a-plazo",
+      "contratar",
+      "contratarsimulacion"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.EliminarDocumentoDigital",
+    "path": [
+      "depositos-a-plazo",
+      "documentos-digitales",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion",
+    "path": [
+      "depositos-a-plazo",
+      "modificar",
+      "modificarcuentadestinodeacreditacionperiodica"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ModificarCuentaDestinoVencimiento",
+    "path": [
+      "depositos-a-plazo",
+      "modificar",
+      "modificarcuentadestinoalvencimiento"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ModificarInstruccion",
+    "path": [
+      "depositos-a-plazo",
+      "modificar",
+      "modificarinstruccion"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerAvance",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obteneravance"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerBeneficiarios",
+    "path": [
+      "depositos-a-plazo",
+      "beneficiarios",
+      "obtenerbeneficiarios"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerDatos",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerDatosPrecancelacion",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerdatosprecancelacion"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerDocumentoDigital",
+    "path": [
+      "depositos-a-plazo",
+      "documentos-digitales",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerDocumentosDigitales",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerInstruccion",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerinstruccion"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerInstruccionesHabilitados",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerinstruccioneshabilitados"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerMovimientos",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenermovimientos"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerPeriodosHabilitados",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerperiodoshabilitados"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerProductos",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerProductosHabilitados",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenerproductoshabilitados"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.ObtenerTasaPrecancelacion",
+    "path": [
+      "depositos-a-plazo",
+      "obtener",
+      "obtenertasadeprecancelacion"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.Precancelar",
+    "path": [
+      "depositos-a-plazo",
+      "precancelar"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.Simular",
+    "path": [
+      "depositos-a-plazo",
+      "simular",
+      "simular"
+    ]
+  },
+  {
+    "key": "BTDepositosAPlazo.SimularConCronograma",
+    "path": [
+      "depositos-a-plazo",
+      "simular",
+      "simularconcronograma"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.ConfirmarLista",
+    "path": [
+      "descuento-de-documentos",
+      "confirmarlista"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.CrearLista",
+    "path": [
+      "descuento-de-documentos",
+      "crearlista"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.CrearListaCheques",
+    "path": [
+      "descuento-de-documentos",
+      "crearlistacheques"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.ObtenerProductos",
+    "path": [
+      "descuento-de-documentos",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.ObtenerTiposDeDesembolso",
+    "path": [
+      "descuento-de-documentos",
+      "obtenertiposdedesembolso"
+    ]
+  },
+  {
+    "key": "BTDescuentoDocumentos.SeleccionarOpcionDesembolso",
+    "path": [
+      "descuento-de-documentos",
+      "seleccionaropciondesembolso"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerAgrupadores",
+    "path": [
+      "indicadores",
+      "obteneragrupadores"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerCierreSaldosPorMoneda",
+    "path": [
+      "indicadores",
+      "obtenercierredesaldospormoneda"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerCondicionesGenerales",
+    "path": [
+      "indicadores",
+      "obtenercondicionesgenerales"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerIndicadores",
+    "path": [
+      "indicadores",
+      "obtenerindicadores"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerMetodosMasEjecutados",
+    "path": [
+      "indicadores",
+      "obtenermetodosmasejecutados"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerMonedasIndices",
+    "path": [
+      "indicadores",
+      "obtenermonedasindices"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerRubrosBolsa",
+    "path": [
+      "indicadores",
+      "obtenerrubrosbolsa"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerServiciosMasEjecutados",
+    "path": [
+      "indicadores",
+      "obtenerserviciosmasejecutados"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerSesionesPorUsuario",
+    "path": [
+      "indicadores",
+      "obtenersesionesporusuario"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerSucursalesCajas",
+    "path": [
+      "indicadores",
+      "obtenersucursalescajas"
+    ]
+  },
+  {
+    "key": "BTIndicadores.ObtenerTransaccionesEstados",
+    "path": [
+      "indicadores",
+      "obtenertransaccionesporestados"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ActualizarGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "actualizargrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ActualizarIntegranteGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "actualizarintegrantedegrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.AgregarFiador",
+    "path": [
+      "microfinanzas",
+      "fiadores",
+      "agregarfiador"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.AgregarGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "agregargrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.AgregarIntegranteAGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "agregarintegranteagrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.AgregarOperacionesACancelar",
+    "path": [
+      "microfinanzas",
+      "operaciones-a-cancelar",
+      "agregaroperacionesacancelar"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.BuscarCliente",
+    "path": [
+      "microfinanzas",
+      "buscarcliente"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.CompletarTarea",
+    "path": [
+      "microfinanzas",
+      "completartarea"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.CrearSolicitudAmpliacion",
+    "path": [
+      "microfinanzas",
+      "crear-solicitud",
+      "crearsolicitudampliacion"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.CrearSolicitudGrupal",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "crearsolicitudgrupal"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.CrearSolicitudIndividual",
+    "path": [
+      "microfinanzas",
+      "crear-solicitud",
+      "crearsolicitudindividual"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.CrearSolicitudRenovacion",
+    "path": [
+      "microfinanzas",
+      "crear-solicitud",
+      "crearsolicitudrenovacion"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.EliminarFiador",
+    "path": [
+      "microfinanzas",
+      "fiadores",
+      "eliminarfiador"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.HabilitarIntegranteGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "habilitarintegrantedeungrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.InhabilitarIntegranteGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "inhabilitarintegrantedeungrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerAsesores",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenerasesores"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerCampanias",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenercampanas"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerDestinosCredito",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenerdestinoscredito"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerDetalleGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "obtenerdetallegrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerGrupos",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "obtenergrupos"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerIntegrantesGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "obtenerintegrantesdegrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerOperacionesACancelar",
+    "path": [
+      "microfinanzas",
+      "operaciones-a-cancelar",
+      "obteneroperacionesacancelar"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerOperacionesCliente",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obteneroperacionescliente"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerOrigenesCaptacion",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenerorigenesdecaptacion"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerProductos",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerSolicitudesCliente",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenersolicitudescliente"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerTiposAval",
+    "path": [
+      "microfinanzas",
+      "obtener",
+      "obtenertiposaval"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerTiposDeIntegrante",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "obtenertiposdeintegrante"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ObtenerTiposGrupo",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "obtenertiposdegrupo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.QuitarOperacionesACancelar",
+    "path": [
+      "microfinanzas",
+      "operaciones-a-cancelar",
+      "quitaroperacionesacancelar"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.SimularAmortizable",
+    "path": [
+      "microfinanzas",
+      "simular",
+      "simularprestamoamortizable"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.SimularAmortizableGrupal",
+    "path": [
+      "microfinanzas",
+      "grupales",
+      "simularprestamoamortizablegrupal"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.SimularLibreAmortizacion",
+    "path": [
+      "microfinanzas",
+      "simular",
+      "simularlibreamortizacion"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.SimularPlazoFijo",
+    "path": [
+      "microfinanzas",
+      "simular",
+      "simularprestamoplazofijo"
+    ]
+  },
+  {
+    "key": "BTMicrofinanzas.ValidarPoliticas",
+    "path": [
+      "microfinanzas",
+      "validarpoliticas"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerCantidadCuotas",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenercantidadcuotas"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerCapital",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenercapital"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerComisiones",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenercomisiones"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerComisionesCuota",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenercomisionesporcuota"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerDiasPrimerPeriodo",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerdiasprimerperiodo"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerPeriodoEntreCuotas",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerperiodoentrecuotas"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerPermiteSegurosDelMismoTipo",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerpermitesegurosdelmismotipo"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerPlazo",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerplazo"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerrequieresegurodevidaobligatorio"
+    ]
+  },
+  {
+    "key": "BTModeladorPrestamos.ObtenerSeguros",
+    "path": [
+      "modelador-de-prestamos",
+      "obtenerseguros"
+    ]
+  },
+  {
+    "key": "BTPAE.ObtenerItemsModelo",
+    "path": [
+      "pae",
+      "obteneritemsmodelo"
+    ]
+  },
+  {
+    "key": "BTPAE.ObtenerModelosPAE",
+    "path": [
+      "pae",
+      "obtenermodelospae"
+    ]
+  },
+  {
+    "key": "BTPAE.ObtenerScores",
+    "path": [
+      "pae",
+      "obtenerscores"
+    ]
+  },
+  {
+    "key": "BTPAE.ObtenerTiposDeModelos",
+    "path": [
+      "pae",
+      "obtenertiposdemodelos"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerCorrelativoGuia",
+    "path": [
+      "parametros-base",
+      "obtenercorrelativoguia"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerCorrelativoGuiaEspecial",
+    "path": [
+      "parametros-base",
+      "obtenercorrelativoguiaespecial"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerGuiaDeProceso",
+    "path": [
+      "parametros-base",
+      "obtenerguiadeproceso"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerGuiaEspecialDeProceso",
+    "path": [
+      "parametros-base",
+      "obtenerguiaespecialdeproceso"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerOpcionGeneralDeProceso",
+    "path": [
+      "parametros-base",
+      "obteneropciongeneraldeproceso"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerOpcionGeneralPorModulo",
+    "path": [
+      "parametros-base",
+      "obteneropciongeneralpormodulo"
+    ]
+  },
+  {
+    "key": "BTParametrosBase.ObtenerProgramaParticular",
+    "path": [
+      "parametros-base",
+      "obtenerprogramaparticular"
+    ]
+  },
+  {
+    "key": "BTPartner.ObtenerPartners",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerpartners"
+    ]
+  },
+  {
+    "key": "BTPartners.ContratarPrestamo",
+    "path": [
+      "partners",
+      "contratar",
+      "contratarprestamo"
+    ]
+  },
+  {
+    "key": "BTPartners.ContratarVehicular",
+    "path": [
+      "partners",
+      "contratar",
+      "contratarvehicular"
+    ]
+  },
+  {
+    "key": "BTPartners.CrearCliente",
+    "path": [
+      "partners",
+      "crear",
+      "crearcliente"
+    ]
+  },
+  {
+    "key": "BTPartners.CrearPersonaCliente",
+    "path": [
+      "partners",
+      "crear",
+      "crearpersonacliente"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerDatosUsuario",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerdatosdeusuario"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerDetalleOfertaAmortizable",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerdetalledeofertaamortizable"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerDetalleOfertaVehicular",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerdetalleofertavehicular"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerMarcas",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenermarcas"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerModelos",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenermodelos"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerPrestamosCliente",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerprestamosdecliente"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerProductos",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerProductosPartner",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerproductosdelpartner"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerPuntosDeVenta",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerpuntosdeventa"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerVendedores",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenervendedores"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerVersiones",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerversiones"
+    ]
+  },
+  {
+    "key": "BTPartners.SimularOfertas",
+    "path": [
+      "partners",
+      "simular",
+      "simularofertas"
+    ]
+  },
+  {
+    "key": "BTPartners.SimularOfertasVehicular",
+    "path": [
+      "partners",
+      "simular",
+      "simularofertasvehicular"
+    ]
+  },
+  {
+    "key": "BTPartners.SimularPrestamo",
+    "path": [
+      "partners",
+      "simular",
+      "simularprestamo"
+    ]
+  },
+  {
+    "key": "BTPartners.SimularVehicular",
+    "path": [
+      "partners",
+      "simular",
+      "simularvehicular"
+    ]
+  },
+  {
+    "key": "BTPersonas.Actualizar",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizar"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarCelular",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarcelular"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarContacto",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarcontacto"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarConyuge",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarconyuge"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarCorreoElectronico",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarcorreoelectronico"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarDocumentoDigital",
+    "path": [
+      "personas",
+      "documentos-digitales",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarDomicilio",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizardomicilio"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarFATCA",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarfatca"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarInformacionAdicional",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarInformacionFinanciera",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarinformacionfinanciera"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarIntegrantePersonaJuridica",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarintegrantedepersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarPersonaJuridica",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarpersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarProfesion",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarprofesion"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarReducido",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarreducido"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarReferencia",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarreferencia"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarRegistroEmpleado",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarregistroempleado"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarTelefono",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizartelefono"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarTextos",
+    "path": [
+      "personas",
+      "textos",
+      "actualizartextos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ActualizarVictimaHechoViolento",
+    "path": [
+      "personas",
+      "actualizar",
+      "actualizarvictimahechoviolento"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarAListaNegra",
+    "path": [
+      "personas",
+      "agregar",
+      "agregaralistanegra"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarContacto",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarcontacto"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarCorreoElectronico",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarcorreoelectronico"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarDatosPEP",
+    "path": [
+      "personas",
+      "agregar",
+      "agregardatospep"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarDocumentoAdicional",
+    "path": [
+      "personas",
+      "agregar",
+      "agregardocumentoadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarDomicilio",
+    "path": [
+      "personas",
+      "agregar",
+      "agregardomicilio"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarFATCA",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarfatca"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarInformacionAdicional",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarInformacionFinanciera",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarinformacionfinanciera"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarIntegrantePersonaJuridica",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarintegranteapersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarPersonaVinculada",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarpersonavinculada"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarReferencia",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarreferencia"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarTelefono",
+    "path": [
+      "personas",
+      "agregar",
+      "agregartelefono"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarTextos",
+    "path": [
+      "personas",
+      "textos",
+      "agregartextos"
+    ]
+  },
+  {
+    "key": "BTPersonas.AgregarVictimaHechoViolento",
+    "path": [
+      "personas",
+      "agregar",
+      "agregarvictimahechoviolento"
+    ]
+  },
+  {
+    "key": "BTPersonas.AsociarDocumentoDigital",
+    "path": [
+      "personas",
+      "documentos-digitales",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPersonas.Crear",
+    "path": [
+      "personas",
+      "crear",
+      "crear"
+    ]
+  },
+  {
+    "key": "BTPersonas.CrearConyuge",
+    "path": [
+      "personas",
+      "crear",
+      "crearconyuge"
+    ]
+  },
+  {
+    "key": "BTPersonas.CrearPersonaJuridica",
+    "path": [
+      "personas",
+      "crear",
+      "crearpersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.CrearReducido",
+    "path": [
+      "personas",
+      "crear",
+      "crearreducido"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarConyuge",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminarconyuge"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarDocumentoAdicional",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminardocumentoadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarDocumentoDigital",
+    "path": [
+      "personas",
+      "documentos-digitales",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarDomicilio",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminardomicilio"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarInformacionAdicional",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarIntegrantePersonaJuridica",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminarintegrantedepersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarPersonaVinculada",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminarpersonavinculada"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarProfesion",
+    "path": [
+      "personas",
+      "eliminar",
+      "eliminarprofesion"
+    ]
+  },
+  {
+    "key": "BTPersonas.EliminarTextos",
+    "path": [
+      "personas",
+      "textos",
+      "eliminartextos"
+    ]
+  },
+  {
+    "key": "BTPersonas.EvaluarPAE",
+    "path": [
+      "personas",
+      "validar",
+      "evaluarpae"
+    ]
+  },
+  {
+    "key": "BTPersonas.ModificarDocumentoAdicional",
+    "path": [
+      "personas",
+      "actualizar",
+      "modificardocumentoadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.Obtener",
+    "path": [
+      "personas",
+      "obtener",
+      "obtener"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerConcepto",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerconcepto"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerContactos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenercontactos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerConyuge",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerconyuge"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerCorreosElectronicos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenercorreoselectronicos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerCuentasCliente",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenercuentascliente"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerDatosPEP",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerdatospep"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerDocumentoDigital",
+    "path": [
+      "personas",
+      "documentos-digitales",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerDocumentosAdicionales",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerdocumentosadicionales"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerDocumentosDigitales",
+    "path": [
+      "personas",
+      "documentos-digitales",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerDomicilios",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerdomicilios"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerEstadoCiviles",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerestadosciviles"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerFacultades",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerfacultades"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerFATCA",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerfatca"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerHobbies",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerhobbies"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerHobby",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerhobby"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerIdBantotal",
+    "path": [
+      "personas",
+      "obtener",
+      "obteneridbantotal"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerIdentidadesDeGenero",
+    "path": [
+      "personas",
+      "obtener",
+      "obteneridentidadesdegenero"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerIdentificadorUnico",
+    "path": [
+      "personas",
+      "obtener",
+      "obteneridentificadorunico"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerInformacionAdicional",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerInformacionFinanciera",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerinformacionfinanciera"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerIntegrantesPersonaJuridica",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerintegrantespersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerLimites",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerlimites"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerNaturalezasJuridicas",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenernaturalezasjuridicas"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerNivelesEducativos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerniveleseducativos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerOcupaciones",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerocupaciones"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerPersonaJuridica",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerpersonajuridica"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerPersonas",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerpersonas"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerPersonasJuridicas",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerpersonasjuridicas"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerPersonasVinculadas",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerpersonasvinculadas"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerProfesion",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerprofesion"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerProfesiones",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerprofesiones"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerReferencias",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenerreferencias"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTarjetasDeDebito",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenertarjetasdedebito"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTelefonos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenertelefonos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTextos",
+    "path": [
+      "personas",
+      "textos",
+      "obtenertextos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTipoDePersona",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenertipodepersona"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTiposdeDocumento",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenertiposdedocumento"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerTitularesDelTelefono",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenertitularesdeltelefono"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerVictimaHechoViolento",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenervictimahechoviolento"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerVinculos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenervinculos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerVinculosAfinidad",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenervinculosdeafinidad"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerVinculosConsanguinidad",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenervinculosdeconsanguinidad"
+    ]
+  },
+  {
+    "key": "BTPersonas.ObtenerVinculosJuridicos",
+    "path": [
+      "personas",
+      "obtener",
+      "obtenervinculosjuridicos"
+    ]
+  },
+  {
+    "key": "BTPersonas.ValidarCorreoElectronico",
+    "path": [
+      "personas",
+      "validar",
+      "validarcorreoelectronico"
+    ]
+  },
+  {
+    "key": "BTPersonas.ValidarDocumento",
+    "path": [
+      "personas",
+      "validar",
+      "validardocumento"
+    ]
+  },
+  {
+    "key": "BTPersonas.ValidarEnListasNegras",
+    "path": [
+      "personas",
+      "validar",
+      "validarenlistasnegras"
+    ]
+  },
+  {
+    "key": "BTPersonas.ValidarExistencia",
+    "path": [
+      "personas",
+      "validar",
+      "validarexistencia"
+    ]
+  },
+  {
+    "key": "BTPersonas.ValidarListasInhabilitados",
+    "path": [
+      "personas",
+      "validar",
+      "validarlistasinhabilitados"
+    ]
+  },
+  {
+    "key": "BTPersonas.VerificarEmpleado",
+    "path": [
+      "personas",
+      "validar",
+      "verificarempleado"
+    ]
+  },
+  {
+    "key": "BTPrecios.ConvertirTasaAnualEfectivaALineal",
+    "path": [
+      "precios",
+      "convertir",
+      "convertirtasaanualefectivaalineal"
+    ]
+  },
+  {
+    "key": "BTPrecios.ConvertirTasaAnualLinealAEfectiva",
+    "path": [
+      "precios",
+      "convertir",
+      "convertirtasaanuallinealaefectiva"
+    ]
+  },
+  {
+    "key": "BTPrecios.ConvertirTasaMensualEfectivaALineal",
+    "path": [
+      "precios",
+      "convertir",
+      "convertirtasamensualefectivaalineal"
+    ]
+  },
+  {
+    "key": "BTPrecios.ConvertirTasaMensualLinealAEfectiva",
+    "path": [
+      "precios",
+      "convertir",
+      "convertirtasamensuallinealaefectiva"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerCotizacion",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenercotizacion"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerCotizacionAFecha",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenercotizacionafecha"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerCotizacionCierre",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenercotizacioncierre"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerCotizacionesPizarraEspecial",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenercotizacionespizarraespecial"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerPizarraEspecialPorTransaccion",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenerpizarraespecialportransaccion"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerPrecioAFecha",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenerprecioafecha"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerPrecioEspecie",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenerprecioespecie"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerTasaCliente",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenertasaparacliente"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerTasaOperacion",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenertasadeoperacion"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerTasaProducto",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenertasaparaproducto"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerTipoCambio",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenertipodecambio"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerTiposDeCambioEspeciales",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenertiposdecambioespeciales"
+    ]
+  },
+  {
+    "key": "BTPrecios.ObtenerValoresPizarraPorModulo",
+    "path": [
+      "precios",
+      "obtener",
+      "obtenervalorespizarrapormodulo"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AbonarACuenta",
+    "path": [
+      "prestamos",
+      "operar",
+      "abonaracuenta"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ActualizarDocumentoDigital",
+    "path": [
+      "prestamos",
+      "documentos-digitales",
+      "actualizardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ActualizarInformacionAdicional",
+    "path": [
+      "prestamos",
+      "operar",
+      "actualizarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ActualizarTextos",
+    "path": [
+      "prestamos",
+      "textos",
+      "actualizartextos"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AdelantarCapitalConReduccionDeCuota",
+    "path": [
+      "prestamos",
+      "pagar",
+      "adelantarcapitalconreducciondecuota"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AdelantarCapitalConReduccionDePlazo",
+    "path": [
+      "prestamos",
+      "pagar",
+      "adelantarcapitalconreducciondeplazo"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AgregarCuentaDeCobro",
+    "path": [
+      "prestamos",
+      "operar",
+      "agregarcuentadecobro"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AgregarInformacionAdicional",
+    "path": [
+      "prestamos",
+      "operar",
+      "agregarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AgregarTextos",
+    "path": [
+      "prestamos",
+      "textos",
+      "agregartextos"
+    ]
+  },
+  {
+    "key": "BTPrestamos.AsociarDocumentoDigital",
+    "path": [
+      "prestamos",
+      "documentos-digitales",
+      "asociardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPrestamos.Cancelar",
+    "path": [
+      "prestamos",
+      "cancelar",
+      "cancelar"
+    ]
+  },
+  {
+    "key": "BTPrestamos.CancelarAFecha",
+    "path": [
+      "prestamos",
+      "cancelar",
+      "cancelarafecha"
+    ]
+  },
+  {
+    "key": "BTPrestamos.CancelarAFechaTerceros",
+    "path": [
+      "prestamos",
+      "cancelar",
+      "cancelarafechaterceros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.CancelarTerceros",
+    "path": [
+      "prestamos",
+      "cancelar",
+      "cancelarterceros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.Contratar",
+    "path": [
+      "prestamos",
+      "contratar",
+      "contratar"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ContratarAmpliacion",
+    "path": [
+      "prestamos",
+      "contratar",
+      "contratarampliacion"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ContratarRefinanciacionDeudaTotal",
+    "path": [
+      "prestamos",
+      "contratar",
+      "contratarrefinanciacionpordeudatotal"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ContratarRefinanciacionSaldoCapital",
+    "path": [
+      "prestamos",
+      "contratar",
+      "contratarrefinanciacionporsaldocapital"
+    ]
+  },
+  {
+    "key": "BTPrestamos.EliminarCuentaDeCobro",
+    "path": [
+      "prestamos",
+      "operar",
+      "eliminarcuentadecobro"
+    ]
+  },
+  {
+    "key": "BTPrestamos.EliminarDocumentoDigital",
+    "path": [
+      "prestamos",
+      "documentos-digitales",
+      "eliminardocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPrestamos.EliminarInformacionAdicional",
+    "path": [
+      "prestamos",
+      "operar",
+      "eliminarinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPrestamos.EliminarTextos",
+    "path": [
+      "prestamos",
+      "textos",
+      "eliminartextos"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCronograma",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercronograma"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCronogramaAFecha",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercronogramaafecha"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCronogramaConPagosAFecha",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercronogramaconpagosafecha"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCronogramaEnEspecie",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercronogramaenespecie"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCronogramaOriginal",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercronogramaoriginal"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerCuentasDeCobro",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenercuentadecobro"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDatosProxVencimiento",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdatosdelproximovencimiento"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalle",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetalle"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalleAFecha",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetalleafecha"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalleCancelacionTotal",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetalledecancelaciontotal"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalleOferta",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetalledeoferta"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetallePagoPrestamo",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetallepagoprestamo"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetallePrestamoCancelado",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetalledeprestamocancelado"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalleReducido",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetallereducido"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDetalleSimulacion",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdetallesimulacion"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDeuda",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdeuda"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDeudaPrestamoCastigado",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdeudaprestamocastigado"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDeudaVencida",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerdeudavencida"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDocumentoDigital",
+    "path": [
+      "prestamos",
+      "documentos-digitales",
+      "obtenerdocumentodigital"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerDocumentosDigitales",
+    "path": [
+      "prestamos",
+      "documentos-digitales",
+      "obtenerdocumentosdigitales"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerFechaDeIncumplimiento",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerfechadeincumplimiento"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerFechasPago",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerfechasdepago"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerFechaUltimoPago",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerfechadeultimopago"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerInformacionAdicional",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerinformacionadicional"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerMontoCancelacion",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenermontodecancelacion"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerPagos",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerpagosdeunprestamo"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerPagosCuota",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerpagosdecuota"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerProductos",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenerproductos"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerSegurosAsociados",
+    "path": [
+      "prestamos",
+      "obtener",
+      "obtenersegurosasociados"
+    ]
+  },
+  {
+    "key": "BTPrestamos.ObtenerTextos",
+    "path": [
+      "prestamos",
+      "textos",
+      "obtenertextos"
+    ]
+  },
+  {
+    "key": "BTPrestamos.PagarCuota",
+    "path": [
+      "prestamos",
+      "pagar",
+      "pagarcuota"
+    ]
+  },
+  {
+    "key": "BTPrestamos.PagarCuotaAFecha",
+    "path": [
+      "prestamos",
+      "pagar",
+      "pagarcuotaafecha"
+    ]
+  },
+  {
+    "key": "BTPrestamos.PagarCuotaAFechaTerceros",
+    "path": [
+      "prestamos",
+      "pagar",
+      "pagarcuotaafechaterceros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.PagarCuotaTerceros",
+    "path": [
+      "prestamos",
+      "pagar",
+      "pagarcuotaterceros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.Simular",
+    "path": [
+      "prestamos",
+      "simular",
+      "simular"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularAmortizableSinCliente",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularamortizablesincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularAmpliacion",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularampliacion"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularAmpliacionIngresandoSeguros",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularampliacioningresandoseguros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoCapitalCantCuotas",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandocapitalycantidaddecuotas"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoCapitalCantCuotasSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandocapitalycantidaddecuotassincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoFechaVtoCantCuotas",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandofechadevencimientoycantidaddecuotas"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandofechadevencimientoycantidaddecuotassincliente-copia"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandofechadevencimientoycantidaddecuotassincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoFechaVtoTasa",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandofechadevencimientoytasa"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularDespejandoFechaVtoTasaSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simulardespejandofechadevencimientoytasasincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularIngresandoBalloon",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularingresandoballoon"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularIngresandoBalloonSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularingresandoballoonsincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularIngresandoSeguros",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularingresandoseguros"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularIngresandoSegurosSC",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularingresandosegurossincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularLibreAmortizacion",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularlibreamortizacion"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularLibreAmortizacionSinCliente",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularlibreamortizacionsincliente"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularOfertas",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularofertas"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularPlazoFijo",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularplazofijo"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularRefinanciacionDeudaTotal",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularrefinanciacionpordeudatotal"
+    ]
+  },
+  {
+    "key": "BTPrestamos.SimularRefinanciacionSaldoCapital",
+    "path": [
+      "prestamos",
+      "simular",
+      "simularrefinanciacionporsaldocapital"
+    ]
+  },
+  {
+    "key": "BTReglasNegocio.EvaluarReglaNegocio",
+    "path": [
+      "reglas-de-negocio",
+      "evaluarregladenegocio"
+    ]
+  },
+  {
+    "key": "BTReglasNegocio.ObtenerReglasNegocio",
+    "path": [
+      "reglas-de-negocio",
+      "obtenerreglasdenegocio"
+    ]
+  },
+  {
+    "key": "BTReglasNegocio.ObtenerVariablesRegla",
+    "path": [
+      "reglas-de-negocio",
+      "obtenervariablesregla"
+    ]
+  },
+  {
+    "key": "BTReglasNegocio.ValidarDatosReglaNegocio",
+    "path": [
+      "reglas-de-negocio",
+      "validardatosregladenegocio"
+    ]
+  },
+  {
+    "key": "BTSeguridad.AutorizarExcepcion",
+    "path": [
+      "seguridad",
+      "autorizarexcepcion"
+    ]
+  },
+  {
+    "key": "BTSeguridad.ObtenerDetalleExcepcion",
+    "path": [
+      "seguridad",
+      "obtenerdetalledeexcepcion"
+    ]
+  },
+  {
+    "key": "BTSeguridad.ObtenerExcepciones",
+    "path": [
+      "seguridad",
+      "obtenerexcepciones"
+    ]
+  },
+  {
+    "key": "BTSeguridad.RechazarExcepcion",
+    "path": [
+      "seguridad",
+      "rechazarexcepcion"
+    ]
+  },
+  {
+    "key": "BTSeguridad.RegistrarDispositivo",
+    "path": [
+      "seguridad",
+      "registrardispositivo"
+    ]
+  },
+  {
+    "key": "BTSNP.ConsultarDebitos",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "obtenerdebitos"
+    ]
+  },
+  {
+    "key": "BTSNP.CrearAdhesion",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "crearadhesion"
+    ]
+  },
+  {
+    "key": "BTSNP.CrearStopDebit",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "crearstopdebit"
+    ]
+  },
+  {
+    "key": "BTSNP.CrearStopDebitParaAdhesionConImporte",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "crearstopdebitparaadhesionconimporte"
+    ]
+  },
+  {
+    "key": "BTSNP.EliminarStopDebit",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "eliminarstopdebit"
+    ]
+  },
+  {
+    "key": "BTSNP.ObtenerAdhesiones",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "obteneradhesiones"
+    ]
+  },
+  {
+    "key": "BTSNP.ObtenerEmpresasOriginantes",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "obtenerempresasoriginantes"
+    ]
+  },
+  {
+    "key": "BTSNP.ObtenerStopDebits",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "obtenerstopdebits"
+    ]
+  },
+  {
+    "key": "BTSNP.ReversarDebitos",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "reversardebitos"
+    ]
+  },
+  {
+    "key": "BTSNP.SolicitarBajaDeAdhesion",
+    "path": [
+      "argentina-ar",
+      "snp",
+      "solicitarbajadeadhesion"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.Activar",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "activar"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ActualizarCuentaPreferencial",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "actualizarcuentapreferencial"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ActualizarDatosContacto",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "actualizardatoscontacto"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.AsociarCuenta",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "asociarcuenta"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.BlanquearPIN",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "blanquearpin"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.Bloquear",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "bloquear"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.BloquearDesdeRED",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "bloqueardesdered"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.Crear",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "crear"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.CrearConCuentasAsociadas",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "crearconcuentasasociadas"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.Denunciar",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "denunciar"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.DenunciarDesdeRED",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "denunciardesdered"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.Desbloquear",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "desbloquear"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.DesbloquearDesdeRED",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "desbloqueardesdered"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.EliminarCuentaAsociada",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "eliminarcuentaasociada"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ModificarLimite",
+    "path": [
+      "tarjetas-de-debito",
+      "operar",
+      "modificarlimite"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerCodigosDeLimites",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenercodigosdelimites"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerCuentaPreferencial",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenercuentapreferencial"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerCuentasAAsociar",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenercuentasaasociar"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerCuentasAsociadas",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenercuentasasociadas"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenercuentasasociadasportipo"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerDatos",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenerdatos"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerDatosContacto",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenerdatoscontacto"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerIdentificadorUnico",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obteneridentificadorunico"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerLimites",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenerlimites"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerMovimientos",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenermovimientos"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerTarjeta",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenertarjeta"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerTarjetaHabiente",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenertarjetahabiente"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerTarjetasAdicionales",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenertarjetasadicionales"
+    ]
+  },
+  {
+    "key": "BTTarjetasDeDebito.ObtenerTiposDeCuenta",
+    "path": [
+      "tarjetas-de-debito",
+      "obtener",
+      "obtenertiposdecuenta"
+    ]
+  },
+  {
+    "key": "BTTitulos.Comprar",
+    "path": [
+      "titulos",
+      "comprar"
+    ]
+  },
+  {
+    "key": "BTTitulos.ObtenerEstadoCompra",
+    "path": [
+      "titulos",
+      "obtenerestadocompra"
+    ]
+  },
+  {
+    "key": "BTTitulos.ObtenerGrupos",
+    "path": [
+      "titulos",
+      "obtenergrupos"
+    ]
+  },
+  {
+    "key": "BTTitulos.ObtenerValores",
+    "path": [
+      "titulos",
+      "obtenervalores"
+    ]
+  },
+  {
+    "key": "BTUsuarios.AgregarPerfil",
+    "path": [
+      "usuarios",
+      "agregarperfil"
+    ]
+  },
+  {
+    "key": "BTUsuarios.Crear",
+    "path": [
+      "usuarios",
+      "crear"
+    ]
+  },
+  {
+    "key": "BTUsuarios.EliminarPerfil",
+    "path": [
+      "usuarios",
+      "eliminarperfil"
+    ]
+  },
+  {
+    "key": "BTUsuarios.EliminarUsuario",
+    "path": [
+      "usuarios",
+      "eliminarusuario"
+    ]
+  },
+  {
+    "key": "BTUsuarios.HabilitarEnCanal",
+    "path": [
+      "usuarios",
+      "habilitarencanal"
+    ]
+  },
+  {
+    "key": "BTUsuarios.HabilitarUsuario",
+    "path": [
+      "usuarios",
+      "habilitarusuario"
+    ]
+  },
+  {
+    "key": "BTUsuarios.InhabilitarUsuario",
+    "path": [
+      "usuarios",
+      "inhabilitarusuario"
+    ]
+  },
+  {
+    "key": "BTUsuarios.Modificar",
+    "path": [
+      "usuarios",
+      "modificar"
+    ]
+  },
+  {
+    "key": "BTUsuarios.Obtener",
+    "path": [
+      "usuarios",
+      "obtener"
+    ]
+  },
+  {
+    "key": "BTUsuarios.ObtenerPerfiles",
+    "path": [
+      "usuarios",
+      "obtenerperfiles"
+    ]
+  },
+  {
+    "key": "BTUsuarios.ObtenerUsuarios",
+    "path": [
+      "usuarios",
+      "obtenerusuarios"
+    ]
+  },
+  {
+    "key": "BTUsuarios.ObtenerUsuariosParaPerfil",
+    "path": [
+      "usuarios",
+      "obtenerusuariosparaperfil"
+    ]
+  },
+  {
+    "key": "BTWorkflow.ObtenerMetadataDeTarea",
+    "path": [
+      "workflow",
+      "obtenermetadatadetarea"
+    ]
+  },
+  {
+    "key": "BTWorkflow.ObtenerProcesosHabilitados",
+    "path": [
+      "workflow",
+      "obtenerprocesoshabilitados"
+    ]
+  },
+  {
+    "key": "BTWorkflow.ObtenerRoles",
+    "path": [
+      "workflow",
+      "obtenerroles"
+    ]
+  },
+  {
+    "key": "BTWorkflow.ObtenerRolesDeTarea",
+    "path": [
+      "workflow",
+      "obtenerrolesdetarea"
+    ]
+  },
+  {
+    "key": "BTWorkflow.ObtenerTareasDeProceso",
+    "path": [
+      "workflow",
+      "obtenertareasdeproceso"
+    ]
+  }
+]

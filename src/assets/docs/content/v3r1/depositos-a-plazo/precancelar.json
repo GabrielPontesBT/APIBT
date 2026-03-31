@@ -1,0 +1,81 @@
+{
+  "slug": "depositos-a-plazo/precancelar",
+  "pageTitle": "Precancelar",
+  "description": "Método para precancelar una operación de un depósito a plazo.",
+  "pubName": "BTDepositosAPlazo.Precancelar",
+  "programa": "RBTPG637",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de cancelación teniendo en cuenta que:\n   \n   - Tenga asociada la RTE PRT006 en el ordinal de la operación.\n   \n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T).",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "cuentaAcreditacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de cuenta vista de cobro."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la operación origen para el Identificador ingresado."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La operación recuperada no tiene relación con la cuenta."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el identificador de operación de acreditación."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La operación a precancelar y de acreditación no pueden ser la misma."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la operación de acreditación para el Identificador ingresado."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La operación de acreditación no tiene relación con la cuenta."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.Precancelar>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>853547DAE3BFB2C1EC0A3148</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n         <bts:operacionUId>100</bts:operacionUId>\n         <bts:cuentaAcreditacionUId>12</bts:cuentaAcreditacionUId>\n      </bts:BTDepositosAPlazo.Precancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatosPrecancelacion=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"clienteUId\": 4,\n\t\"operacionUId\": 100,\n   \"cuentaAcreditacionUId\": 12\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.PrecancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>MC</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>853547DAE3BFB2C1EC0A3148</Token>\n         </Btinreq>\n         <movimientoUId>14</movimientoUId>\n         </Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-26</Fecha>\n            <Hora>16:19:56</Hora>\n            <Numero>30629</Numero>\n            <Servicio>BTDepositosAPlazo.Precancelar</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTDepositosAPlazo.PrecancelarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": 14,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"3108\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTDepositosAPlazo.ObtenerDocumentoDigital\",\n        \"Fecha\": \"2018-11-21\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"12:09:09\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

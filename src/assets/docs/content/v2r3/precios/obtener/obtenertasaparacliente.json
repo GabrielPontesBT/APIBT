@@ -1,0 +1,123 @@
+{
+  "slug": "precios/obtener/obtenertasaparacliente",
+  "pageTitle": "Obtener Tasa Para Cliente",
+  "description": "Método para obtener la tasa parametrizada al cliente para el producto indicado, junto con la fecha de vigencia.",
+  "pubName": "BTPrecios.ObtenerTasaCliente",
+  "programa": "RBTPG319",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del cliente."
+    },
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del producto."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha del consulta."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Long",
+      "Comentarios": "Importe a calcular."
+    },
+    {
+      "Nombre": "plazo",
+      "Tipo": "Int",
+      "Comentarios": "Plazo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "tipoTasa",
+      "Tipo": "String",
+      "Comentarios": "Tipo de tasa."
+    },
+    {
+      "Nombre": "tasa",
+      "Tipo": "Double",
+      "Comentarios": "Tasa."
+    },
+    {
+      "Nombre": "tasaMinima",
+      "Tipo": "Double",
+      "Comentarios": "Tasa mínima."
+    },
+    {
+      "Nombre": "tasaMaxima",
+      "Tipo": "Double",
+      "Comentarios": "Tasa máxima."
+    },
+    {
+      "Nombre": "fechaVigencia",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de vigencia"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar identificador de producto."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar fecha."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Debe ingresar plazo."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "No se recibió identificador de cuenta a consultar."
+    },
+    {
+      "Código": "41003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "41004",
+      "Descripción": "No existe registro para el producto indicado."
+    },
+    {
+      "Código": "50001",
+      "Descripción": "El registro no existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerTasaCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1600460797F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>10014</bts:clienteUId>\n         <bts:productoUId>96</bts:productoUId>\n         <bts:fecha>2021-11-11</bts:fecha>\n         <bts:importe>10000</bts:importe>\n         <bts:plazo>360</bts:plazo>\n      </bts:BTPrecios.ObtenerTasaCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaCliente' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"bts:Btinreq\": {\n\t  \"bts:Canal\": \"BTDIGITAL\",\n\t  \"bts:Requerimiento\": \"1\",\n\t  \"bts:Usuario\": \"BANTOTAL\",\n\t  \"bts:Token\": \"1600460797F955E77534D3E0\",\n\t  \"bts:Device\": \"AC\"\n\t},\n\t\"clienteUId\": 10014,\n\t\"productoUId\": 96,\n\t\"fecha\": \"2021-11-11\",\n\t\"importe\": 10000,\n\t\"plazo\": 360\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrecios.ObtenerTasaClienteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1600460797F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <tipoTasa>Efectiva Anual</tipoTasa>\n         <tasa>0.04</tasa>\n         <tasaMinima>0.04</tasaMinima>\n         <tasaMaxima>0.04</tasaMaxima>\n\t\t <fechaVigencia>2021-11-11</fechaVigencia>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPrecios.ObtenerTasaCliente</Servicio>\n            <Fecha>2021-03-18</Fecha>\n            <Hora>13:49:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8050</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPrecios.ObtenerTasaClienteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1600460797F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"tipoTasa\": \"Efectiva Anual\",\n\t\"tasa\": \"0.04\",\n\t\"tasaMinima\": \"0.04\",\n\t\"tasaMaxima\": \"0.04\",\n\t\"fechaVigencia\": \"2021-11-11\",\n\t\"Erroresnegocio\": {},\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTPrecios.ObtenerTasaCliente\",\n\t  \"Fecha\": \"2021-03-18\",\n\t  \"Hora\": \"13:49:02\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"8050\",\n\t  \"Estado\": \"OK\"\n\t}\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

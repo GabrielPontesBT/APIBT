@@ -12,8 +12,15 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const MD_DIR = path.resolve(__dirname, './archivos-markdown');
+const SHARED_DIR = path.resolve(__dirname, './shared');
 const OUT_DIR = path.resolve(ROOT_DIR, './src/assets/docs/content');
+
+const VERSIONS = [
+  { id: 'v2r2', folder: 'V2R2', useShared: true },
+  { id: 'v2r3', folder: 'V2R3', useShared: true },
+  { id: 'v3r1', folder: 'V3R1', useShared: true },
+  { id: 'bpay', folder: 'BPay', useShared: false },
+];
 
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
@@ -33,6 +40,7 @@ function cleanDir(dirPath) {
 }
 
 function walkMarkdownFiles(dirPath) {
+  if (!fs.existsSync(dirPath)) return [];
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
 
   return entries.flatMap((entry) => {
@@ -48,6 +56,28 @@ function walkMarkdownFiles(dirPath) {
       }
     }
   });
+}
+
+/**
+ * Devuelve un Map de { relPath → absolutePath } para una versión,
+ * haciendo merge de shared/ + carpeta de versión.
+ */
+function buildMergedFileMap(versionDir, useShared) {
+  const fileMap = new Map();
+
+  function addFromDir(dir, baseDir) {
+    if (!fs.existsSync(dir)) return;
+    const files = walkMarkdownFiles(dir);
+    for (const absPath of files) {
+      const relPath = path.relative(baseDir, absPath).replace(/\\/g, '/');
+      fileMap.set(relPath, absPath);
+    }
+  }
+
+  if (useShared) addFromDir(SHARED_DIR, SHARED_DIR);
+  addFromDir(versionDir, versionDir); // versión sobreescribe shared
+
+  return fileMap;
 }
 
 function stripAccents(text) {
@@ -69,14 +99,13 @@ function slugifySegment(text) {
     .replace(/^-+|-+$/g, '');
 }
 
-function buildSlugFromFile(mdFilePath) {
-  const relativePath = path.relative(MD_DIR, mdFilePath);
-  const parts = relativePath.replace(/\.md$/i, '').split(path.sep);
+function buildSlugFromRelPath(relPath) {
+  const parts = relPath.replace(/\.md$/i, '').split('/');
   return parts.map((part) => slugifySegment(part)).join('/');
 }
 
-function getOutputJsonPath(slug) {
-  return path.join(OUT_DIR, `${slug}.json`);
+function getOutputJsonPath(versionId, slug) {
+  return path.join(OUT_DIR, versionId, `${slug}.json`);
 }
 
 function extractBlock(content, start, end) {
@@ -113,6 +142,10 @@ function stripMarkdownLinks(text) {
   return String(text || '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
 }
 
+function markdownLinksToHtml(text) {
+  return String(text || '').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
 function parseTable(md) {
   const lines = String(md || '')
     .split('\n')
@@ -128,7 +161,7 @@ function parseTable(md) {
       .filter((header) => header);
 
     return lines.slice(2).map((line) => {
-      const cols = line.split('|').map((col) => col.trim());
+      const cols = line.split('|').map((col) => markdownLinksToHtml(col.trim()));
       const obj = {};
 
       headers.forEach((header, index) => {
@@ -447,11 +480,11 @@ function buildPageTitle(frontmatterData, content, slug) {
   }
 }
 
-function buildDocJson(mdFilePath) {
+function buildDocJson(mdFilePath, relPath) {
   const raw = fs.readFileSync(mdFilePath, 'utf8');
   const parsed = matter(raw);
   const content = parsed.content || '';
-  const slug = buildSlugFromFile(mdFilePath);
+  const slug = buildSlugFromRelPath(relPath);
 
   const pageTitle = buildPageTitle(parsed.data || {}, content, slug);
   const methodMeta = extractMethodMeta(content);
@@ -480,49 +513,52 @@ function buildDocJson(mdFilePath) {
   };
 }
 
-function writeDocJson(docJson) {
-  const outPath = getOutputJsonPath(docJson.slug);
-  const outDir = path.dirname(outPath);
-
-  ensureDir(outDir);
+function writeDocJson(versionId, docJson) {
+  const outPath = getOutputJsonPath(versionId, docJson.slug);
+  ensureDir(path.dirname(outPath));
   fs.writeFileSync(outPath, JSON.stringify(docJson, null, 2), 'utf8');
 }
 
 function main() {
-  console.log('--------------------------------------------------');
-  console.log('Generando contenido JSON de documentación...');
-  console.log(`Markdown source: ${MD_DIR}`);
-  console.log(`Output target  : ${OUT_DIR}`);
-  console.log('--------------------------------------------------');
+  console.log('='.repeat(50));
+  console.log('Generando contenido JSON por versión...');
+  console.log(`Output target: ${OUT_DIR}`);
+  console.log('='.repeat(50));
 
-  if (!fs.existsSync(MD_DIR)) {
-    console.error(`No existe la carpeta de origen: ${MD_DIR}`);
-    process.exit(1);
-  } else {
-    cleanDir(OUT_DIR);
+  cleanDir(OUT_DIR);
 
-    const mdFiles = walkMarkdownFiles(MD_DIR);
+  for (const version of VERSIONS) {
+    const versionDir = path.resolve(__dirname, version.folder);
+    console.log(`\n[${version.id}] Procesando...`);
 
-    if (mdFiles.length === 0) {
-      console.warn('No se encontraron archivos .md para procesar.');
-    } else {
-      mdFiles.forEach((mdFilePath) => {
-        try {
-          const docJson = buildDocJson(mdFilePath);
-          writeDocJson(docJson);
-          console.log(`OK  ${docJson.slug}`);
-        } catch (error) {
-          console.error(`ERROR procesando ${mdFilePath}`);
-          console.error(error);
-        }
-      });
+    if (!fs.existsSync(versionDir)) {
+      console.warn(`  WARN: carpeta no encontrada: ${versionDir}`);
+      continue;
     }
 
-    console.log('--------------------------------------------------');
-    console.log(`Documentos procesados: ${mdFiles.length}`);
-    console.log('Proceso finalizado.');
-    console.log('--------------------------------------------------');
+    const fileMap = buildMergedFileMap(versionDir, version.useShared);
+    console.log(`  Archivos totales (shared + override): ${fileMap.size}`);
+
+    let ok = 0;
+    let errors = 0;
+
+    for (const [relPath, absPath] of fileMap.entries()) {
+      try {
+        const docJson = buildDocJson(absPath, relPath);
+        writeDocJson(version.id, docJson);
+        ok++;
+      } catch (error) {
+        console.error(`  ERROR procesando ${relPath}: ${error.message}`);
+        errors++;
+      }
+    }
+
+    console.log(`  OK: ${ok} documentos  |  Errores: ${errors}`);
   }
+
+  console.log('\n' + '='.repeat(50));
+  console.log('Proceso finalizado.');
+  console.log('='.repeat(50));
 }
 
 main();

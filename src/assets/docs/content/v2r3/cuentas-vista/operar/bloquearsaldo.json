@@ -1,0 +1,93 @@
+{
+  "slug": "cuentas-vista/operar/bloquearsaldo",
+  "pageTitle": "Bloquear Saldo",
+  "description": "Método para realizar un bloqueo de saldo.",
+  "pubName": "BTCuentasVista.BloquearSaldo",
+  "programa": "RBTPG090",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe a bloquear."
+    },
+    {
+      "Nombre": "fechaVencimiento",
+      "Tipo": "Date",
+      "Comentarios": "Fecha vencimiento de bloqueo."
+    },
+    {
+      "Nombre": "motivo",
+      "Tipo": "String",
+      "Comentarios": "Motivo del bloqueo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "idBloqueo",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de bloqueo."
+    },
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento."
+    },
+    {
+      "Nombre": "saldo",
+      "Tipo": "Double",
+      "Comentarios": "Saldo disponible de la operación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la Operación a bloquear."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se encontró el Id de Operación para la Cuenta Vista a bloquear."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador del Cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se encontró el Id del Cliente."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La Cuenta Vista a bloquear no pertenece al Cliente."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.BloquearSaldo>\n         <bts:Btinreq>\n            <bts:Device>3</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>3</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>b1848faff14A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>3</bts:operacionUId>\n         <bts:clienteUId>61</bts:clienteUId>\n         <bts:importe>5</bts:importe>\n         <bts:fechaVencimiento>2018-05-14</bts:fechaVencimiento>\n         <bts:motivo>Motivo Bloqueo 01</bts:motivo>\n      </bts:BTCuentasVista.BloquearSaldo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.BloquearSaldoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>3</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>3</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b1848faff14A8B5C60A82434</Token>\n         </Btinreq>\n         <idBloqueo>18</idBloqueo>\n         <movimientoUId>4</movimientoUId>\n         <saldo>4924.0</saldo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>194</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasVista.BloquearSaldo</Servicio>\n            <Fecha>2018-05-08</Fecha>\n            <Requerimiento>3</Requerimiento>\n            <Hora>14:59:44</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.BloquearSaldoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

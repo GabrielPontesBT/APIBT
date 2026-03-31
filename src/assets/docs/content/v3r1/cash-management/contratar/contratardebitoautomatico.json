@@ -1,0 +1,132 @@
+{
+  "slug": "cash-management/contratar/contratardebitoautomatico",
+  "pageTitle": "Contratar Débito Automático",
+  "description": "Método para contratar la afiliación a un débito automático.",
+  "pubName": "BTCASHManagement.ContratarDebitoAutomatico",
+  "programa": "RBTPGC90",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del contrato."
+    },
+    {
+      "Nombre": "servicio",
+      "Tipo": "Short",
+      "Comentarios": "Código de Servicio CASH."
+    },
+    {
+      "Nombre": "operacionUId_debito",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de débito."
+    },
+    {
+      "Nombre": "clienteID",
+      "Tipo": "String",
+      "Comentarios": "Identificador de cliente."
+    },
+    {
+      "Nombre": "dia1",
+      "Tipo": "Byte",
+      "Comentarios": "Dia 1 para intento de pago."
+    },
+    {
+      "Nombre": "montoMax",
+      "Tipo": "Double",
+      "Comentarios": "Monto máximo a debitar."
+    },
+    {
+      "Nombre": "alias",
+      "Tipo": "String",
+      "Comentarios": "Alias o comentarios."
+    },
+    {
+      "Nombre": "accion",
+      "Tipo": "String",
+      "Comentarios": "Tipo de acción. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "1030704",
+      "Descripción": "Id de contrato cliente desconocido."
+    },
+    {
+      "Código": "1030706",
+      "Descripción": "El contrato no esta activo."
+    },
+    {
+      "Código": "1030714",
+      "Descripción": "El contrato consultado no corresponde al servicio recibido."
+    },
+    {
+      "Código": "1030760",
+      "Descripción": "No se pudo dar de alta el contrato."
+    },
+    {
+      "Código": "1030770",
+      "Descripción": "No se recupero información para la cuenta recibida."
+    },
+    {
+      "Código": "1030790",
+      "Descripción": "Acción desconocida para el alta de débito automático."
+    },
+    {
+      "Código": "1030791",
+      "Descripción": "Se requiere identificador de deuda para el alta de débito automático."
+    },
+    {
+      "Código": "1030792",
+      "Descripción": "No se identifica servicio de débito automático."
+    },
+    {
+      "Código": "1030793",
+      "Descripción": "No existe el contrato de débito automático la acción no puede realizarse."
+    },
+    {
+      "Código": "1030794",
+      "Descripción": "Estado del contrato de débito automático impide la acción."
+    },
+    {
+      "Código": "1030795",
+      "Descripción": "Acción no permitida para la afiliación."
+    },
+    {
+      "Código": "1030796",
+      "Descripción": "Valor incorrecto para primer dia de pago"
+    },
+    {
+      "Código": "1030797",
+      "Descripción": "Debe indicar valor para monto máximo de pago."
+    },
+    {
+      "Código": "1030798",
+      "Descripción": "En servicio online debe indicar valor para primer dia de pago."
+    },
+    {
+      "Código": "1030799",
+      "Descripción": "Existe afiliación activa para el identificador de cliente recibido."
+    },
+    {
+      "Código": "1030800",
+      "Descripción": "Para la cuenta recibida no es posible la afiliación."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ContratarDebitoAutomatico>\n         <bts:Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </bts:Btinreq>\n         <bts:contratoId>22</bts:contratoId>\n         <bts:servicio>500</bts:servicio>\n         <bts:operacionUId_debito>831</bts:operacionUId_debito>\n         <bts:clienteID>383</bts:clienteID>\n         <bts:dia1></bts:dia1>\n         <bts:montoMax>20000</bts:montoMax>\n         <bts:alias>ID0000001</bts:alias>\n         <bts:accion>A</bts:accion>\n      </bts:BTCASHManagement.ContratarDebitoAutomatico>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ContratarDebitoAutomatico=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"contratoId\": 22,\n    \"servicio\": 500,\n    \"operacionUId_debito\": 831,\n    \"clienteID\": 383,\n    \"dia1\": \"\",\n    \"montoMax\": 20000,\n    \"alias\": \"ID0000001\",\n    \"accion\": \"A\"\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCASHManagement.ContratarDebitoAutomaticoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-11-18</Fecha>\n            <Hora>14:50:16</Hora>\n            <Numero>26035</Numero>\n            <Servicio>BTCASHManagement.ContratarDebitoAutomatico</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCASHManagement.ContratarDebitoAutomaticoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCASHManagement.ContratarDebitoAutomatico\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

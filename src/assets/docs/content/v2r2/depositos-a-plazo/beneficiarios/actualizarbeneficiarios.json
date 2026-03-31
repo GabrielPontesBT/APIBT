@@ -1,0 +1,161 @@
+{
+  "slug": "depositos-a-plazo/beneficiarios/actualizarbeneficiarios",
+  "pageTitle": "Actualizar Beneficiarios",
+  "description": "Método para actualizar el listado de beneficiarios de un depósito a plazo. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.",
+  "pubName": "BTDepositosAPlazo.ActualizarBeneficiarios",
+  "programa": "RBTPG622",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "sdtBeneficiarios",
+      "Tipo": "<a href=\"#sbtbeneficiario\">sBTBeneficiario</a>",
+      "Comentarios": "Listado de beneficiarios del depósito a plazo."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador único de la operación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recupero la operación para el identificador [Número de Identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Se tiene que ingresar al menos un beneficiario."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Debe ingresar identificador único de la persona o número de documento completo, pero no ambos."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el porcentaje de participación para la persona ingresada."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió el identificador de parentesco para la persona ingresada."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar País del Documento."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El País del Documento no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El identificador de parentesco [Número de Identificador] no es correcto."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El Tipo de Documento no existe."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar Nro de Documento."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "La sumatoria de porcentajes de beneficiarios supera el 100%."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "El porcentaje de participación acumulado difiere del 100%."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ActualizarBeneficiarios>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9060352790A5422FE377DB47</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>791</bts:operacionUId>\n         <bts:sdtBeneficiarios>\n            <bts:sBTBeneficiario>\n               <bts:numeroDocumento></bts:numeroDocumento>\n               <bts:parentesco></bts:parentesco>\n               <bts:pais></bts:pais>\n               <bts:tipoDocumentoId></bts:tipoDocumentoId>\n               <bts:participacion>100</bts:participacion>\n               <bts:tipoDocumento></bts:tipoDocumento>\n               <bts:paisDocumentoId></bts:paisDocumentoId>\n               <bts:personaUId>229</bts:personaUId>\n               <bts:correlativo></bts:correlativo>\n               <bts:telefono></bts:telefono>\n               <bts:nombre></bts:nombre>\n               <bts:parentescoId>43</bts:parentescoId>\n               <bts:apellido></bts:apellido>\n            </bts:sBTBeneficiario>\n         </bts:sdtBeneficiarios>\n      </bts:BTDepositosAPlazo.ActualizarBeneficiarios>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ActualizarBeneficiarios=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n      \"Btinreq\": {\n            \"Requerimiento\": \"1\",\n            \"Device\": \"GZ\",\n            \"Canal\": \"BTDIGITAL\",\n            \"Usuario\": \"MINSTALADOR\",\n            \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n      },\n      \"operacionUId\": 791,\n      \"sdtBeneficiarios\": {\n         \"sBTBeneficiario\": {\n         \"numeroDocumento\": \"\",\n         \"parentesco\": \"\",\n         \"pais\": \"\",\n         \"tipoDocumentoId\": \"\",\n         \"participacion\": 100,\n         \"tipoDocumento\": \"\",\n         \"paisDocumentoId\": \"\",\n         \"personaUId\": 229,\n         \"correlativo\": \"\",\n         \"telefono\": \"\",\n         \"nombre\": \"\",\n         \"parentescoId\": 43,\n         \"apellido\": \"\"\n         }\n      }\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ActualizarBeneficiariosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>9060352790A5422FE377DB47</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-10</Fecha>\n            <Hora>17:06:36</Hora>\n            <Numero>24976</Numero>\n            <Servicio>BTDepositosAPlazo.ActualizarBeneficiarios</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTDepositosAPlazo.ActualizarBeneficiariosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTDepositosAPlazo.ActualizarBeneficiarios\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTBeneficiario",
+      "fields": [
+        {
+          "Nombre": "numeroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Numero de documento del beneficiario."
+        },
+        {
+          "Nombre": "parentesco",
+          "Tipo": "String",
+          "Comentarios": "Parentesco del beneficiario."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "País."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        },
+        {
+          "Nombre": "participacion",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de participación del beneficiario."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Tipo de documento."
+        },
+        {
+          "Nombre": "paisDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país del documento."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la persona."
+        },
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "parentescoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del parentesco."
+        },
+        {
+          "Nombre": "apellido",
+          "Tipo": "String",
+          "Comentarios": "Apellido."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "cuentas-corrientes/obtener/obteneracuerdos",
+  "pageTitle": "Obtener Acuerdos",
+  "description": "Método para obtener los acuerdos de sobregiro de una cuenta corriente.",
+  "pubName": "BTCuentasCorrientes.ObtenerAcuerdos",
+  "programa": "RBTPG632",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtAcuerdosCliente",
+      "Tipo": "<a href=\"#sbtacuerdoclientecc\">sBTAcuerdoClienteCC</a>",
+      "Comentarios": "Listado de acuerdos del cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "30101",
+      "Descripción": "No se recupero la operación para el identificador recibido."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.ObtenerAcuerdos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>BF79D7D88EC1865C343DAC53</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n      </bts:BTCuentasCorrientes.ObtenerAcuerdos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerAcuerdos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"clienteUId\": 1,\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.ObtenerAcuerdosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>BF79D7D88EC1865C343DAC53</Token>\n         </Btinreq>\n         <sdtAcuerdosCliente>\n            <sBTAcuerdoClienteCC>\n               <moneda>$</moneda>\n               <limiteUtilizado>-3647.62</limiteUtilizado>\n               <limiteOtorgado>50000.0</limiteOtorgado>\n               <limiteDisponible>46352.38</limiteDisponible>\n               <descripcion/>\n               <operacionUId>828</operacionUId>\n               <tasa>6.7</tasa>\n               <operacionUIdCuentaVista>41</operacionUIdCuentaVista>\n               <fechaValor>2028-05-11</fechaValor>\n               <fechaVencimiento>2030-05-11</fechaVencimiento>\n               <tipoTasa>1</tipoTasa>\n               <plazo>180</plazo>\n               <tasaActualizada>0.0</tasaActualizada>\n            </sBTAcuerdoClienteCC>\n            <sBTAcuerdoClienteCC>\n               <moneda>$</moneda>\n               <limiteUtilizado>-3647.62</limiteUtilizado>\n               <limiteOtorgado>60000.0</limiteOtorgado>\n               <limiteDisponible>56352.38</limiteDisponible>\n               <descripcion/>\n               <operacionUId>829</operacionUId>\n               <tasa>6.7</tasa>\n               <operacionUIdCuentaVista>41</operacionUIdCuentaVista>\n               <fechaValor>2028-05-11</fechaValor>\n               <fechaVencimiento>2030-05-11</fechaVencimiento>\n               <tipoTasa>1</tipoTasa>\n               <plazo>30</plazo>\n               <tasaActualizada>0.0</tasaActualizada>\n            </sBTAcuerdoClienteCC>\n         </sdtAcuerdosCliente>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-30</Fecha>\n            <Hora>15:18:48</Hora>\n            <Numero>25039</Numero>\n            <Servicio>BTCuentasCorrientes.ObtenerAcuerdos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasCorrientes.ObtenerAcuerdosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n   \"sdtAcuerdosCliente\": {\n      \"sBTAcuerdoClienteCC\": [\n      {\n         \"moneda\": \"$\",\n         \"limiteUtilizado\": -3647.62,\n         \"limiteOtorgado\": 50000,\n         \"limiteDisponible\": 46352.38,\n         \"descripcion\": \"\",\n         \"operacionUId\": 828,\n         \"tasa\": 6.7,\n         \"operacionUIdCuentaVista\": 41,\n         \"fechaValor\": \"2028-05-11\",\n         \"fechaVencimiento\": \"2030-05-11\",\n         \"tipoTasa\": 1,\n         \"plazo\": 180,\n         \"tasaActualizada\": 0\n      },\n      {\n         \"moneda\": \"$\",\n         \"limiteUtilizado\": -3647.62,\n         \"limiteOtorgado\": 60000,\n         \"limiteDisponible\": 56352.38,\n         \"descripcion\": \"\",\n         \"operacionUId\": 829,\n         \"tasa\": 6.7,\n         \"operacionUIdCuentaVista\": 41,\n         \"fechaValor\": \"2028-05-11\",\n         \"fechaVencimiento\": \"2030-05-11\",\n         \"tipoTasa\": 1,\n         \"plazo\": 30,\n         \"tasaActualizada\": 0\n      }\n      ]\n   },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCuentasCorrientes.ObtenerAcuerdos\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTAcuerdoClienteCC",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio del acuerdo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del vencimiento."
+        },
+        {
+          "Nombre": "limiteDisponible",
+          "Tipo": "Double",
+          "Comentarios": "Limite disponible."
+        },
+        {
+          "Nombre": "limiteOtorgado",
+          "Tipo": "Double",
+          "Comentarios": "Limite otorgado."
+        },
+        {
+          "Nombre": "limiteUtilizado",
+          "Tipo": "Double",
+          "Comentarios": "Limite utilizado."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación."
+        },
+        {
+          "Nombre": "operacionUIdCuentaVista",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación de la cuenta vista."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "tasaActualizada",
+          "Tipo": "Double",
+          "Comentarios": "Tasa actualizada."
+        },
+        {
+          "Nombre": "tipoTasa",
+          "Tipo": "Byte",
+          "Comentarios": "Tipo de tasa."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "cadena-de-cierre/obtenerprocesosmensuales",
+  "pageTitle": "Obtener Procesos Mensuales",
+  "description": "Método para obtener un listado de los procesos mensuales de la cadena de cierre.",
+  "pubName": "BTCadenaCierre.ObtenerProcesosMensuales",
+  "programa": "RBTPG502",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtProcesosBatch",
+      "Tipo": "<a href=\"#sbtprocesobatch\">sBTProcesoBatch</a>",
+      "Comentarios": "Colección de procesos de cadena de cierre."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCadenaCierre.ObtenerProcesosMensuales>\n        <bts:Btinreq>\n            <bts:Device>mc</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>6964034201CD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n      </bts:BTCadenaCierre.ObtenerProcesosMensuales>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ProcesosMensuales' \\\n    -H 'cache-control: no-cache' \\\n    -H 'content-type: application/json' \\\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n    -d '{\n    \"Btinreq\": {\n        \"Device\": \"GP\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\n    },\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCadenaCierre.ObtenerProcesosMensualesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>mc</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>6964034201CD285A89A23FBE</Token>\n         </Btinreq>\n         <sdtProcesosBatch>\n            <SdtsBTProcesoBatch>\n               <identificador>2900</identificador>\n               <nombre>PCC00094</nombre>\n               <descripcion>Cobro de Comision Inact. CC/CA</descripcion>\n               <periodicidad>MENSUAL</periodicidad>\n               <parametrosExtendidos>SI</parametrosExtendidos>\n               <esReprocesable>No reprocesar nunca</esReprocesable>\n            </SdtsBTProcesoBatch>\n            ...\n         </sdtProcesosBatch>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>42086</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCadenaCierre.ObtenerProcesosMensuales</Servicio>\n            <Fecha>2022-06-01</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>13:09:29</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCadenaCierre.ObtenerProcesosMensualesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n      \"Device\": \"mc\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6964034201CD285A89A23FBE\"\n    },\n    \"sdtProcesosBatch\": {\n      \"SdtsBTProcesoBatch\": [\n        {\n          \"identificador\": \"2900\",\n          \"nombre\": \"PCC00094\",\n          \"descripcion\": \"Cobro de Comision Inact. CC/CA\",\n          \"periodicidad\": \"MENSUAL\",\n          \"parametrosExtendidos\": \"SI\",\n          \"esReprocesable\": \"No reprocesar nunca\"\n        },\n        ...\n      ]\n    },\n    \"Erroresnegocio\": {\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"42086\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTCadenaCierre.ObtenerProcesosMensuales\",\n      \"Fecha\": \"2022-06-01\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:09:29\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n  },"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProcesoBatch",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "esReprocesable",
+          "Tipo": "String",
+          "Comentarios": "Descripción para reprocesamiento."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de proceso batch."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del proceso."
+        },
+        {
+          "Nombre": "parametrosExtendidos",
+          "Tipo": "String",
+          "Comentarios": "¿Utiliza parámetros extendidos? (SI / NO)"
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "String",
+          "Comentarios": "Periodicidad."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

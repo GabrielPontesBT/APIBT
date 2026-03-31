@@ -1,0 +1,56 @@
+{
+  "slug": "titulos/obtenerestadocompra",
+  "pageTitle": "Obtener Estado de Compra",
+  "description": "Método para obtener el estado de la compra de un título.",
+  "pubName": "BTTitulos.ObtenerEstadoCompra",
+  "programa": "RBTPG497",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "respuesta",
+      "Tipo": "String",
+      "Comentarios": "Estado de la compra."
+    },
+    {
+      "Nombre": "codigo",
+      "Tipo": "Short",
+      "Comentarios": "Código de la respuesta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de la operación."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recupero el identificador para la operación recibida."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe registro para el identificador indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTitulos.ObtenerEstadoCompra>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>6F467D9554D22BE00B36E963</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>44</bts:operacionUId>\n      </bts:BTTitulos.ObtenerEstadoCompra>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTitulos.ObtenerEstadoCompraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>BANTOTAL</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>BEAC462EA5486D1445DEC75E</Token>\n         </Btinreq>\n         <respuesta>La concertación aún no fue enviada.</respuesta>\n         <codigo>3</codigo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-06-04</Fecha>\n            <Hora>12:38:06</Hora>\n            <Numero>301</Numero>\n            <Servicio>BTTitulos.ObtenerEstadoCompra</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTitulos.ObtenerEstadoCompraResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

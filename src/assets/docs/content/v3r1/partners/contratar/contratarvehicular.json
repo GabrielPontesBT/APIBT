@@ -1,0 +1,183 @@
+{
+  "slug": "partners/contratar/contratarvehicular",
+  "pageTitle": "Contratar Vehicular",
+  "description": "Método para contratar un préstamo vehicular.",
+  "pubName": "BTPartners.ContratarVehicular",
+  "programa": "RBTPNV10",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "sdtDatosVehiculo",
+      "Tipo": "<a href=\"#sbtdatosaltaveh\">sBTDatosAltaVeh</a>",
+      "Comentarios": "Datos del vehículo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó el préstamo para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se obtuvo la persona para el identificador [Número de Identificador]."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se obtuvo el fiador para el identificador [Número de Identificador]."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "No se recibió vendedor."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ContratarVehicular>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\n            <bts:vendedorUId>1</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n         <bts:operacionUId>123</bts:operacionUId>\n         <bts:clienteUId>342</bts:clienteUId>\n         <bts:sdtDatosVehiculo>\n            <bts:color>1</bts:color>\n            <bts:datosAdicionales>\n               <bts:SdtsBTConcepto>\n                  <bts:texto></bts:texto>\n                  <bts:valor></bts:valor>\n                  <bts:concepto></bts:concepto>\n               </bts:SdtsBTConcepto>\n            </bts:datosAdicionales>\n            <bts:placa>AAA</bts:placa>\n            <bts:fiadores>\n               <bts:Long></bts:Long>\n            </bts:fiadores>\n            <bts:numeroMotor>23</bts:numeroMotor>\n            <bts:compraPara>62</bts:compraPara>\n            <bts:anioConstruccion>2003</bts:anioConstruccion>\n         </bts:sdtDatosVehiculo>\n      </bts:BTPartners.ContratarVehicular>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ContratarVehicular' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"sdtPartner\": {\n          \"puntoVentaUId\": 1,\n          \"vendedorUId\": 1,\n          \"partnerUId\": 1\n        },\n        \"operacionUId\": 123,\n        \"clienteUId\": 342,\n        \"sdtDatosVehiculo\": {\n          \"color\": 1,\n          \"datosAdicionales\": {\n            \"SdtsBTConcepto\": {\n              \"texto\": \"\",\n              \"valor\": \"\",\n              \"concepto\": \"\"\n            }\n          },\n          \"placa\": \"AAA\",\n          \"fiadores\": {\n            \"Long\": \"\"\n          },\n          \"numeroMotor\": 23,\n          \"compraPara\": 62,\n          \"anioConstruccion\": 2003\n        }\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ContratarVehicularResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b6a06c447cCD285A89A23FBE</Token>\n         </Btinreq>\n         <bts:movimientoUId>36</bts:movimientoUId>\n         <Btoutreq>\n            <Numero>269</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPartners.ContratarVehicular</Servicio>\n            <Fecha>2024-05-07</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>12:42:48</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPartners.ContratarVehicularResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"movimientoUId\": 36,\n    \"Erroresnegocio\": \"\",\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPartners.ContratarVehicular\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatosAltaVeh",
+      "fields": [
+        {
+          "Nombre": "anioConstruccion",
+          "Tipo": "Short",
+          "Comentarios": "Año de construcción."
+        },
+        {
+          "Nombre": "color",
+          "Tipo": "Int",
+          "Comentarios": "Número del color."
+        },
+        {
+          "Nombre": "compraPara",
+          "Tipo": "Long",
+          "Comentarios": "Propietario del vehículo."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros datos."
+        },
+        {
+          "Nombre": "fiadores",
+          "Tipo": "Long",
+          "Comentarios": "Listado de fiadores."
+        },
+        {
+          "Nombre": "numeroMotor",
+          "Tipo": "String",
+          "Comentarios": "Número del motor."
+        },
+        {
+          "Nombre": "placa",
+          "Tipo": "String",
+          "Comentarios": "Placa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

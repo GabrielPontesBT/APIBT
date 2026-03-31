@@ -1,0 +1,58 @@
+{
+  "slug": "prestamos/obtener/obtenerproductos",
+  "pageTitle": "Obtener Productos",
+  "description": "Método para obtener un listado de los productos de préstamos.",
+  "pubName": "BTPrestamos.ObtenerProductos",
+  "programa": "RBTPG078",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtProductos",
+      "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerProductos>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>7f582501004A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n      </bts:BTPrestamos.ObtenerProductos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerProductos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 20394f02-93fd-01a3-c079-81b84239bc48' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerProductosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>7f582501004A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtProductos>\n            <sBTProducto>\n               <productoUId>61</productoUId>\n               <nombre>Amortización Automática TF</nombre>\n               <moneda>$</moneda>\n               <papel/>\n            </sBTProducto>\n            ...\n         </sdtProductos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>723</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.ObtenerProductos</Servicio>\n            <Fecha>2017-11-24</Fecha>\n            <Requerimiento/>\n            <Hora>13:09:53</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ObtenerProductosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtProductos\": {\n        \"sBTProducto\": [\n            {\n                \"papel\": \"\",\n                \"moneda\": \"$\",\n                \"productoUId\": \"61\",\n                \"nombre\": \"Amortización Automática TF\"\n            },\n            ...\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"724\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.ObtenerProductos\",\n        \"Fecha\": \"2017-11-24\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"13:13:45\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

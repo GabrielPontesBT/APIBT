@@ -1,0 +1,82 @@
+{
+  "slug": "argentina-ar/snp/obtenerempresasoriginantes",
+  "pageTitle": "Obtener Empresas Originantes",
+  "description": "Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.",
+  "pubName": "BTSNP.ObtenerEmpresasOriginantes",
+  "programa": "RBTPG325",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEmpresas",
+      "Tipo": "<a href=\"#sbtempresaoriginante\">sBTEmpresaOriginante</a>",
+      "Comentarios": "Listado de empresas originantes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se encontró un cliente para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontraron empresas originantes para este cliente."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSNP.ObtenerEmpresasOriginantes>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>fbd47e2319F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>4</bts:clienteUId>\n      </bts:BTSNP.ObtenerEmpresasOriginantes>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{   \n\t\t\"Btinreq\": {\n\t\t\t\"Device\": \"AC\",\n\t\t\t\"Usuario\": \"BANTOTAL\",\n\t\t\t\"Requerimiento\": \"\",\n\t\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\t\"Token\": \"fbd47e2319F955E77534D3E0\"\n\t\t},\n\t\t\"clienteUId\": 4\n\t}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSNP.ObtenerEmpresasOriginantesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>fbd47e2319F955E77534D3E0</Token>\n         </Btinreq>\n         <sdtEmpresas>\n            <sBTEmpresaOriginante>\n               <identificador>3050001626</identificador>\n               <prestaciones>\n                  <sBTPrestacion>\n                     <descripcion>ACE SEGUROS S.A.</descripcion>\n                     <codigo>DEB RIO</codigo>\n                  </sBTPrestacion>\n               </prestaciones>\n            </sBTEmpresaOriginante>\n            <sBTEmpresaOriginante>\n               <identificador>3050005116</identificador>\n               <prestaciones>\n                  <sBTPrestacion>\n                     <descripcion>LA MERIDIONAL</descripcion>\n                     <codigo>MERIDIO PE</codigo>\n                  </sBTPrestacion>\n               </prestaciones>\n            </sBTEmpresaOriginante>\n         </sdtEmpresas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1628</Numero>\n            <Servicio>BTSNP.ObtenerEmpresasOriginantes</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2021-06-18</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>11:10:46</Hora>\n         </Btoutreq>\n      </BTSNP.ObtenerEmpresasOriginantesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"AC\",\n        \"Usuario\": \"BANTOTAL\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"fbd47e2319F955E77534D3E0\"\n    },\n    \"sdtEmpresas\": {\n        \"sBTEmpresaOriginante\": [\n            {\n                \"identificador\": \"3050001626\",\n                \"prestaciones\": {\n                    \"sBTPrestacion\": [\n                        {\n                            \"descripcion\": \"ACE SEGUROS S.A.\",\n                            \"codigo\": \"DEB RIO\"\n                        }\n                    ]\n                }\n            },\n            {\n                \"identificador\": \"3050005116\",\n                \"prestaciones\": {\n                    \"sBTPrestacion\": [\n                        {\n                            \"descripcion\": \"LA MERIDIONAL\",\n                            \"codigo\": \"MERIDIO PE\"\n                        }\n                    ]\n                }\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 1608,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTSNP.ObtenerEmpresasOriginantes\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2021-06-16\",\n        \"Hora\": \"16:19:38\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEmpresaOriginante",
+      "fields": [
+        {
+          "Nombre": "identificador",
+          "Tipo": "String",
+          "Comentarios": "Identificador de la empresa originante."
+        },
+        {
+          "Nombre": "prestaciones",
+          "Tipo": "<a href=\"#sbtprestacion\">sBTPrestacion</a>",
+          "Comentarios": "Listado de prestaciones."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPrestacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "String",
+          "Comentarios": "Código identificador de la prestación."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la prestación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

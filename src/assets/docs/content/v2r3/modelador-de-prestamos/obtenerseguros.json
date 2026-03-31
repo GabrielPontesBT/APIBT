@@ -1,0 +1,87 @@
+{
+  "slug": "modelador-de-prestamos/obtenerseguros",
+  "pageTitle": "Obtener Seguros",
+  "description": "Método para obtener los seguros disponibles de un producto de préstamo.",
+  "pubName": "BTModeladorPrestamos.ObtenerSeguros",
+  "programa": "RBTPG351",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSeguros",
+      "Tipo": "<a href=\"#sbtseguroprestamo\">sBTSeguroPrestamo</a>",
+      "Comentarios": "Listado de seguros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTModeladorPrestamos.ObtenerSeguros>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>194002532CD285A89A23FBEE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:productoUId>105</bts:productoUId>\n      </bts:BTModeladorPrestamos.ObtenerSeguros>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1511184612CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"productoUId\": \"105\"\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTModeladorPrestamos.ObtenerSegurosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>194002532CD285A89A23FBEE</Token>\n            <Device/>\n         </Btinreq>\n         <sdtSeguros>\n            <SdtsBTSeguroPrestamo>\n               <codigo>100</codigo>\n               <descripcion>ALICO - Vida %s/cap. inicial</descripcion>\n               <tipo>VIDA</tipo>\n               <modificable>S</modificable>\n               <importeFijo>100.00</importeFijo>\n               <porcentaje>0.1000</porcentaje>\n            </SdtsBTSeguroPrestamo>\n         </sdtSeguros>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTModeladorPrestamos.ObtenerSeguros</Servicio>\n            <Fecha>2021-11-03</Fecha>\n            <Hora>18:12:34</Hora>\n            <Requerimiento/>\n            <Numero>8633</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTModeladorPrestamos.ObtenerSegurosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1511184612CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"sdtSeguros\": {\n        \"SdtsBTSeguroPrestamo\": [\n            {\n                \"codigo\": 100,\n                \"descripcion\": \"ALICO - Vida %s/cap. inicial\",\n                \"tipo\": \"VIDA\",\n                \"modificable\": \"S\",\n                \"importeFijo\": 100.00,\n                \"porcentaje\": 0.1000\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerSeguros\",\n        \"Fecha\": \"2021-11-03\",\n        \"Hora\": \"17:44:10\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8619,\n        \"Estado\": \"OK\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSeguroPrestamo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del seguro."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del seguro."
+        },
+        {
+          "Nombre": "importeFijo",
+          "Tipo": "Decimal",
+          "Comentarios": "Importe fijo del seguro."
+        },
+        {
+          "Nombre": "modificable",
+          "Tipo": "String",
+          "Comentarios": "Indica si es modificable."
+        },
+        {
+          "Nombre": "porcentaje",
+          "Tipo": "Decimal",
+          "Comentarios": "Porcentaje del seguro."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo del seguro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

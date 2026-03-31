@@ -1,0 +1,199 @@
+{
+  "slug": "prestamos/simular/simularofertas",
+  "pageTitle": "Simular Ofertas",
+  "description": "Método para simular ofertas de préstamos.",
+  "pubName": "BTPrestamos.SimularOfertas",
+  "programa": "RBTPG124",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Si la opción general de procesos 3281 se encuentra activada, el servicio considera la sucursal del usuario de conexión, caso contrario, simula con la sucursal de la cuenta cliente.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "sdtSimulacion",
+      "Tipo": "<a href=\"#sbtdatossimulacion\">sBTDatosSimulacion</a>",
+      "Comentarios": "Datos necesarios para la simulación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "simulacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "sdtOfertasPrestamo",
+      "Tipo": "<a href=\"#sbtofertaprestamo\">sBTOfertaPrestamo</a>",
+      "Comentarios": "Colección de ofertas de préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de producto."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El Identificador único de Producto es incorrecto"
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió Lista de cuotas a simular."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el Monto de Capital desde el origen."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularOfertas>\n         <bts:Btinreq>\n            <bts:Device>AC</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>52005b89a6F955E77534D3E0</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:sdtSimulacion>\n            <bts:fechaPrimerPago>2020-05-05</bts:fechaPrimerPago>\n            <bts:monto>1000</bts:monto>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:productoUId>43</bts:productoUId>\n            <bts:cuotas>\n               <bts:sBTCuota>\n                  <bts:cantidadCuotas>12</bts:cantidadCuotas>\n               </bts:sBTCuota>\n            </bts:cuotas>\n         </bts:sdtSimulacion>\n      </bts:BTPrestamos.SimularOfertas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularOfertas=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 02100864-83c5-1642-ca5f-a8589b3524b4' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"324915377F955E77534D3E02\"\n\t},\n    \"clienteUId\": \"1\",\n\t\"sdtSimulacion\": {\n\t\t\"fechaPrimerPago\": \"2020-05-05\",\n\t\t\"monto\": \"1000\",\n\t\t\"periodoCuotas\": \"30\",\n\t\t\"productoUId\": \"43\",\n\t\t\"cuotas\": {\n\t\t  \"sBTCuota\": {  \n\t\t\t\"cantidadCuotas\": \"12\"  \n\t\t\t}\n\t\t}\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.SimularOfertasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>52005b89a6F955E77534D3E0</Token>\n         </Btinreq>\n         <simulacionUId>39</simulacionUId>\n         <sdtOfertasPrestamo>\n            <sBTOfertaPrestamo>\n               <otrosConceptos>0.00</otrosConceptos>\n               <fechaValor>2019-11-25</fechaValor>\n               <capital>1000.00</capital>\n               <totalComisiones>0.00</totalComisiones>\n               <valorCuota>101.81</valorCuota>\n               <cantidadCuotas>12</cantidadCuotas>\n               <tasa>23.000000</tasa>\n               <totalSeguros>0.00</totalSeguros>\n               <fechaPrimerPago>2020-05-05</fechaPrimerPago>\n               <totalIntereses>221.74</totalIntereses>\n               <fechaVencimiento>2021-04-05</fechaVencimiento>\n               <tea>25.590075</tea>\n               <plazo>497</plazo>\n               <totalAPagar>1221.74</totalAPagar>\n               <totalImpuestos>0.00</totalImpuestos>\n               <cft>25.030000</cft>\n            </sBTOfertaPrestamo>\n         </sdtOfertasPrestamo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>677</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.SimularOfertas</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-04-23</Fecha>\n            <Hora>16:17:04</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.SimularOfertasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n    \"Btinreq\": { \n        \"Canal\": \"BTDIGITAL\", \n        \"Requerimiento\": \"\", \n        \"Usuario\": \"BANTOTAL\", \n        \"Token\": \"324915377F955E77534D3E02\", \n        \"Device\": \"AC\" \n    },\n\t\"simulacionUId\": 39, \n\t\"sdtOfertasPrestamo\": { \n\t\t\"sBTOfertaPrestamo\": { \n\t\t  \"otrosConceptos\": \"0.00\", \n\t\t  \"fechaValor\": \"2019-11-25\", \n\t\t  \"capital\": \"1000.00\", \n\t\t  \"totalComisiones\": \"0.00\", \n\t\t  \"valorCuota\": \"101.81\", \n\t\t  \"cantidadCuotas\": \"12\", \n\t\t  \"tasa\": \"23.000000\", \n\t\t  \"totalSeguros\": \"0.00\", \n\t\t  \"fechaPrimerPago\": \"2020-05-05\", \n\t\t  \"totalIntereses\": \"221.74\", \n\t\t  \"fechaVencimiento\": \"2021-04-05\", \n\t\t  \"tea\": \"25.590075\", \n\t\t  \"plazo\": \"497\", \n\t\t  \"totalAPagar\": \"1221.74\", \n\t\t  \"totalImpuestos\": \"0.00\", \n\t\t  \"cft\": \"25.030000\" \n\t\t} \n\t},\n    \"Erroresnegocio\": { \n        \"BTErrorNegocio\": [] \n    }, \n    \"Btoutreq\": { \n        \"Canal\": \"BTDIGITAL\", \n        \"Servicio\": \"BTPrestamos.SimularOfertas\", \n        \"Fecha\": \"2019-11-19\", \n        \"Hora\": \"13:05:22\", \n        \"Requerimiento\": \"\", \n        \"Numero\": 6924, \n        \"Estado\": \"OK\" \n    } \n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosSimulacion",
+      "fields": [
+        {
+          "Nombre": "cuotas",
+          "Tipo": "<a href=\"#sbtcuota\">sBTCuota</a>",
+          "Comentarios": "Colección de cantidad de cuotas para simular."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Double",
+          "Comentarios": "Monto del préstamo."
+        },
+        {
+          "Nombre": "periodoCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Período entre cuotas."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCuota",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTOfertaPrestamo",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de las cuotas."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital del préstamo."
+        },
+        {
+          "Nombre": "cft",
+          "Tipo": "Double",
+          "Comentarios": "CFT del préstamo."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Monto para otros conceptos."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo para el préstamo."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa del préstamo."
+        },
+        {
+          "Nombre": "tea",
+          "Tipo": "Double",
+          "Comentarios": "TEA del préstamo."
+        },
+        {
+          "Nombre": "totalAPagar",
+          "Tipo": "Double",
+          "Comentarios": "Total a pagar."
+        },
+        {
+          "Nombre": "totalComisiones",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para comisiones."
+        },
+        {
+          "Nombre": "totalImpuestos",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para impuestos."
+        },
+        {
+          "Nombre": "totalIntereses",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para intereses."
+        },
+        {
+          "Nombre": "totalSeguros",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para seguros."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor cuota."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

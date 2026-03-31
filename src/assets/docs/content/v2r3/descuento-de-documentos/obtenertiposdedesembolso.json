@@ -1,0 +1,113 @@
+{
+  "slug": "descuento-de-documentos/obtenertiposdedesembolso",
+  "pageTitle": "Obtener Tipos de Desembolso",
+  "description": "Método para obtener los tipos de desembolso.",
+  "pubName": "BTDescuentoDocumentos.ObtenerTiposDeDesembolso",
+  "programa": "RBTPG578",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtTiposDesembolso",
+      "Tipo": "<a href=\"#sbttipodesembolso\">sBTTipoDesembolso</a>",
+      "Comentarios": "Listado de tipos de desembolso."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No hay tipos de desembolsos parametrizados."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDescuentoDocumentos.ObtenerTiposDeDesembolso>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>A7F3401198A610A75018BA88</bts:Token>\n         </bts:Btinreq>\n      </bts:BTDescuentoDocumentos.ObtenerTiposDeDesembolso>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ObtenerTiposDeDesembolso=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"GZ\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"INSTALADOR\",\n          \"Token\": \"BE98B0157319F32A4ACF3501\"\n    },\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDescuentoDocumentos.ObtenerTiposDeDesembolsoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>A7F3401198A610A75018BA88</Token>\n         </Btinreq>\n         <sdtTiposDesembolso>\n            <sBTTipoDesembolso>\n               <papelDesembolso>0</papelDesembolso>\n               <simboloMonedaDesembolso>$</simboloMonedaDesembolso>\n               <referencia/>\n               <descripcion>Cuentas Corrientes:</descripcion>\n               <rubro>0</rubro>\n               <simboloPapelDesembolso>$</simboloPapelDesembolso>\n               <monedaDesembolso>0</monedaDesembolso>\n               <pideCuenta>4</pideCuenta>\n               <modulo>20</modulo>\n               <pideOperacion>S</pideOperacion>\n               <tipo>0</tipo>\n               <pideSucursal>N</pideSucursal>\n               <pideCheque>N</pideCheque>\n               <identificador>1</identificador>\n            </sBTTipoDesembolso>\n            <sBTTipoDesembolso>\n               <papelDesembolso>0</papelDesembolso>\n               <simboloMonedaDesembolso>$</simboloMonedaDesembolso>\n               <referencia/>\n               <descripcion>Cuenta Ahorros</descripcion>\n               <rubro>0</rubro>\n               <simboloPapelDesembolso>$</simboloPapelDesembolso>\n               <monedaDesembolso>0</monedaDesembolso>\n               <pideCuenta>4</pideCuenta>\n               <modulo>21</modulo>\n               <pideOperacion>S</pideOperacion>\n               <tipo>0</tipo>\n               <pideSucursal>N</pideSucursal>\n               <pideCheque>N</pideCheque>\n               <identificador>2</identificador>\n            </sBTTipoDesembolso>\n            <sBTTipoDesembolso>\n               <papelDesembolso>0</papelDesembolso>\n               <simboloMonedaDesembolso>$</simboloMonedaDesembolso>\n               <referencia/>\n               <descripcion>Efectivo</descripcion>\n               <rubro>101002001</rubro>\n               <simboloPapelDesembolso>$</simboloPapelDesembolso>\n               <monedaDesembolso>0</monedaDesembolso>\n               <pideCuenta>0</pideCuenta>\n               <modulo>0</modulo>\n               <pideOperacion>N</pideOperacion>\n               <tipo>0</tipo>\n               <pideSucursal>N</pideSucursal>\n               <pideCheque>N</pideCheque>\n               <identificador>3</identificador>\n            </sBTTipoDesembolso>\n            <sBTTipoDesembolso>\n               <papelDesembolso>0</papelDesembolso>\n               <simboloMonedaDesembolso>$</simboloMonedaDesembolso>\n               <referencia/>\n               <descripcion>Cuenta Corresponsal:</descripcion>\n               <rubro>0</rubro>\n               <simboloPapelDesembolso>$</simboloPapelDesembolso>\n               <monedaDesembolso>0</monedaDesembolso>\n               <pideCuenta>4</pideCuenta>\n               <modulo>93</modulo>\n               <pideOperacion>S</pideOperacion>\n               <tipo>0</tipo>\n               <pideSucursal>N</pideSucursal>\n               <pideCheque>N</pideCheque>\n               <identificador>4</identificador>\n            </sBTTipoDesembolso>\n         </sdtTiposDesembolso>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>34720</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTDescuentoDocumentos.ObtenerTiposDeDesembolso</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-03-25</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>16:35:48</Hora>\n         </Btoutreq>\n      </BTDescuentoDocumentos.ObtenerTiposDeDesembolsoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n   \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Device\": \"GZ\",\n      \"Requerimiento\": \"1\",\n      \"Token\": \"BE98B0157319F32A4ACF3501\"\n   },\n   \"sdtTiposDesembolso\": {\n      \"sBTTipoDesembolso\": [\n         {\n            \"papelDesembolso\": 0,\n            \"simboloMonedaDesembolso\": \"$\",\n            \"referencia\": \"\",\n            \"descripcion\": \"Cuentas Corrientes:\",\n            \"rubro\": 0,\n            \"simboloPapelDesembolso\": \"$\",\n            \"monedaDesembolso\": 0,\n            \"pideCuenta\": 4,\n            \"modulo\": 20,\n            \"pideOperacion\": \"S\",\n            \"tipo\": 0,\n            \"pideSucursal\": \"N\",\n            \"pideCheque\": \"N\",\n            \"identificador\": 1\n         },\n         {\n            \"papelDesembolso\": 0,\n            \"simboloMonedaDesembolso\": \"$\",\n            \"referencia\": \"\",\n            \"descripcion\": \"Cuenta Ahorros\",\n            \"rubro\": 0,\n            \"simboloPapelDesembolso\": \"$\",\n            \"monedaDesembolso\": 0,\n            \"pideCuenta\": 4,\n            \"modulo\": 21,\n            \"pideOperacion\": \"S\",\n            \"tipo\": 0,\n            \"pideSucursal\": \"N\",\n            \"pideCheque\": \"N\",\n            \"identificador\": 2\n         },\n         {\n            \"papelDesembolso\": 0,\n            \"simboloMonedaDesembolso\": \"$\",\n            \"referencia\": \"\",\n            \"descripcion\": \"Efectivo\",\n            \"rubro\": 101002001,\n            \"simboloPapelDesembolso\": \"$\",\n            \"monedaDesembolso\": 0,\n            \"pideCuenta\": 0,\n            \"modulo\": 0,\n            \"pideOperacion\": \"N\",\n            \"tipo\": 0,\n            \"pideSucursal\": \"N\",\n            \"pideCheque\": \"N\",\n            \"identificador\": 3\n         },\n         {\n            \"papelDesembolso\": 0,\n            \"simboloMonedaDesembolso\": \"$\",\n            \"referencia\": \"\",\n            \"descripcion\": \"Cuenta Corresponsal:\",\n            \"rubro\": 0,\n            \"simboloPapelDesembolso\": \"$\",\n            \"monedaDesembolso\": 0,\n            \"pideCuenta\": 4,\n            \"modulo\": 93,\n            \"pideOperacion\": \"S\",\n            \"tipo\": 0,\n            \"pideSucursal\": \"N\",\n            \"pideCheque\": \"N\",\n            \"identificador\": 4\n         }\n      ]\n   },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Estado\": \"OK\",\n      \"Fecha\": \"2024-11-07\",\n      \"Hora\": \"13:16:44\",\n      \"Numero\": \"25167\",\n      \"Servicio\": \"BTDescuentoDocumentos.ObtenerTiposDeDesembolso\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTipoDesembolso",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de desembolso."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de desembolso."
+        },
+        {
+          "Nombre": "modulo",
+          "Tipo": "Int",
+          "Comentarios": "Modulo."
+        },
+        {
+          "Nombre": "monedaDesembolso",
+          "Tipo": "Short",
+          "Comentarios": "Moneda del tipo de desembolso."
+        },
+        {
+          "Nombre": "papelDesembolso",
+          "Tipo": "Int",
+          "Comentarios": "Papel del tipo de desembolso."
+        },
+        {
+          "Nombre": "pideCheque",
+          "Tipo": "String",
+          "Comentarios": "¿Pide cheque? (S = Si / N = No)."
+        },
+        {
+          "Nombre": "pideCuenta",
+          "Tipo": "String",
+          "Comentarios": "¿Pide cuenta? (S = Si / N = No)."
+        },
+        {
+          "Nombre": "pideOperacion",
+          "Tipo": "String",
+          "Comentarios": "¿Pide operación? (S = Si / N = No)."
+        },
+        {
+          "Nombre": "pideSucursal",
+          "Tipo": "String",
+          "Comentarios": "¿Pide sucursal? (S = Si / N = No)."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia."
+        },
+        {
+          "Nombre": "rubro",
+          "Tipo": "Long",
+          "Comentarios": "Rubro."
+        },
+        {
+          "Nombre": "simboloMonedaDesembolso",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda del tipo de desembolso."
+        },
+        {
+          "Nombre": "simboloPapelDesembolso",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel del tipo de desembolso."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "Byte",
+          "Comentarios": "Tipo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

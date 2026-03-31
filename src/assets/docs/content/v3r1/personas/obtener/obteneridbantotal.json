@@ -1,0 +1,57 @@
+{
+  "slug": "personas/obtener/obteneridbantotal",
+  "pageTitle": "Obtener Id Bantotal",
+  "description": "Método para obtener la clave de identificación Bantotal de una persona.",
+  "pubName": "BTPersonas.ObtenerIdBantotal",
+  "programa": "RBTPG367",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "paisDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador del país de documento."
+    },
+    {
+      "Nombre": "tipoDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador del tipo de documento."
+    },
+    {
+      "Nombre": "numeroDocumento",
+      "Tipo": "String",
+      "Comentarios": "Número de documento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe registro para el identificador de persona ingresado."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerIdBantotal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>281020211424260000881155</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>1</bts:personaUId>\n      </bts:BTPersonas.ObtenerIdBantotal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerIdBantotalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>MINSTALADOR</Usuario>\n            <Token>281020211424260000881155</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <paisDocumentoId>845</paisDocumentoId>\n         <tipoDocumentoId>1</tipoDocumentoId>\n         <numeroDocumento>49670628</numeroDocumento>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.ObtenerIdBantotal</Servicio>\n            <Fecha>2021-10-29</Fecha>\n            <Hora>11:25:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>11009</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.ObtenerIdBantotalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

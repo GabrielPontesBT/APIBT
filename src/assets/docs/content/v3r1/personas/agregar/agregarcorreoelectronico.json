@@ -1,0 +1,86 @@
+{
+  "slug": "personas/agregar/agregarcorreoelectronico",
+  "pageTitle": "Agregar Correo Electrónico",
+  "description": "Método para agregar un correo electrónico a una persona.",
+  "pubName": "BTPersonas.AgregarCorreoElectronico",
+  "programa": "RBTPG722",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la persona."
+    },
+    {
+      "Nombre": "sdtCorreoElectronico",
+      "Tipo": "<a href=\"#sbtcorreoelectronico\">sBTCorreoElectronico</a>",
+      "Comentarios": "Datos del correo electrónico."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se ingresó el usuario del correo electrónico."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Caracteres inválidos en el dominio."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se ingresó dominio."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Dominio inválido."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el identificador único de persona."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "El correo electrónico ya existe (Correlativo [Número del correlativo])."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "60001",
+      "Descripción": "El registro ya existe."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.AgregarCorreoElectronico>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>41</bts:personaUId>\n         <bts:sdtCorreoElectronico>           \n            <bts:correoElectronico>AABB@GMAIL.COM</bts:correoElectronico>\n            <bts:correlativo>1</bts:correlativo>\n         </bts:sdtCorreoElectronico>\n      </bts:BTPersonas.AgregarCorreoElectronico>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarCorreoElectronico' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"personaUId\": 227,\n    \"sdtCorreoElectronico\": {\n        \"correoElectronico\": \"AABB@GMAIL.COM\",\n        \"correlativo\": 1\n    }\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.AgregarCorreoElectronicoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>20275</Numero>\n            <Servicio>BTPersonas.AgregarCorreoElectronico</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2024-05-06</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>15:39:36</Hora>\n         </Btoutreq>\n      </BTPersonas.AgregarCorreoElectronicoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"Instalador\",\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 249703,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.AgregarCorreoElectronico\",\n        \"Requerimiento\": 0,\n        \"Fecha\": \"2023-10-10\",\n        \"Hora\": \"17:11:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCorreoElectronico",
+      "fields": [
+        {
+          "Nombre": "correlativo",
+          "Tipo": "Int",
+          "Comentarios": "Correlativo de correo electrónico."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

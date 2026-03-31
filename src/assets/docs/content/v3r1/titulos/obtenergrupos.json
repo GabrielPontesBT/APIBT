@@ -1,0 +1,53 @@
+{
+  "slug": "titulos/obtenergrupos",
+  "pageTitle": "Obtener Grupos",
+  "description": "Método para obtener los grupos de papeles parametrizados.",
+  "pubName": "BTTitulos.ObtenerGrupos",
+  "programa": "RBTPG626",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtGrupos",
+      "Tipo": "<a href=\"#sbtgrupo\">sBTGrupo</a>",
+      "Comentarios": "Listado de grupos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No hay grupos de papeles parametrizados."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTitulos.ObtenerGrupos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>D798D921DBD49B4BB5706756</bts:Token>\n         </bts:Btinreq>\n      </bts:BTTitulos.ObtenerGrupos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerGrupos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n    \"Btinreq\": {\n          \"Requerimiento\": \"1\",\n          \"Device\": \"AC\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTitulos.ObtenerGruposResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>D798D921DBD49B4BB5706756</Token>\n         </Btinreq>\n         <sdtGrupos>\n            <sBTGrupo>\n               <codigo>1</codigo>\n               <nombre>Acción Ordinaria</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>2</codigo>\n               <nombre>Bono</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>3</codigo>\n               <nombre>Títulos a Descuento</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>4</codigo>\n               <nombre>Fondo</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>5</codigo>\n               <nombre>Acción Preferida</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>6</codigo>\n               <nombre>ETF</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>7</codigo>\n               <nombre>Nota Estructurada</nombre>\n            </sBTGrupo>\n            <sBTGrupo>\n               <codigo>91</codigo>\n               <nombre>Bono Caja Bancaria</nombre>\n            </sBTGrupo>\n         </sdtGrupos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-23</Fecha>\n            <Hora>14:44:10</Hora>\n            <Numero>24989</Numero>\n            <Servicio>BTTitulos.ObtenerGrupos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTitulos.ObtenerGruposResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"sdtGrupos\": {\n      \"sBTGrupo\": [\n         {\n            \"codigo\": 1,\n            \"nombre\": \"Acción Ordinaria\"\n         },\n         {\n            \"codigo\": 2,\n            \"nombre\": \"Bono\"\n         },\n         {\n            \"codigo\": 3,\n            \"nombre\": \"Títulos a Descuento\"\n         },\n         {\n            \"codigo\": 4,\n            \"nombre\": \"Fondo\"\n         },\n         {\n            \"codigo\": 5,\n            \"nombre\": \"Acción Preferida\"\n         },\n         {\n            \"codigo\": 6,\n            \"nombre\": \"ETF\"\n         },\n         {\n            \"codigo\": 7,\n            \"nombre\": \"Nota Estructurada\"\n         },\n         {\n            \"codigo\": 91,\n            \"nombre\": \"Bono Caja Bancaria\"\n         }\n      ]\n   },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTTitulos.ObtenerGrupos\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTGrupo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "int",
+          "Comentarios": "Código del grupo."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Descripción del grupo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

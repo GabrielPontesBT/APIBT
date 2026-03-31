@@ -1,0 +1,162 @@
+{
+  "slug": "argentina-ar/snp/obtenerdebitos",
+  "pageTitle": "Obtener Débitos",
+  "description": "Método para obtener los débitos de una adhesión, dado el estado ingresado.",
+  "pubName": "BTSNP.ConsultarDebitos",
+  "programa": "RBTPG335",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "prestacion",
+      "Tipo": "String",
+      "Comentarios": "Identificador de prestación."
+    },
+    {
+      "Nombre": "empresaOriginante",
+      "Tipo": "String",
+      "Comentarios": "Identificador de la empresa originante."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "idCliente",
+      "Tipo": "String",
+      "Comentarios": "Identificador del Cliente SNP."
+    },
+    {
+      "Nombre": "tipoDeDebito",
+      "Tipo": "Byte",
+      "Comentarios": "Tipo de débito (1=Abierto/2=Cerrado)."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDebitos",
+      "Tipo": "<a href=\"#sbtdebito\">sBTDebito</a>",
+      "Comentarios": "Listado de débitos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la empresa originante."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el tipo de débito."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió la prestación."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el ID del cliente SNP."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se encontró un cliente para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El tipo de débito no es correcto."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El estado recibido no es correcto."
+    }
+  ],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSNP.ConsultarDebitos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>7649e27cf5F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>2</bts:clienteUId>\n         <bts:empresaOriginante>3050001626</bts:empresaOriginante>\n         <bts:tipoDeDebito>1</bts:tipoDeDebito>\n         <bts:prestacion>DEB RIO</bts:prestacion>\n         <bts:idCliente>2750101598490000002000</bts:idCliente>\n         <bts:estado>RC</bts:estado>\n      </bts:BTSNP.ConsultarDebitos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ConsultarDebitos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\t\"Btinreq\": {\n\t\t\t\"Device\": \"AC\",\n\t\t\t\"Usuario\": \"BANTOTAL\",\n\t\t\t\"Requerimiento\": \"\",\n\t\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\t\"Token\": \"7649e27cf5F955E77534D3E0\"\n\t\t},\n\t\t\"clienteUId\": 2,\n\t\t\"empresaOriginante\": \"3050001626\",\n\t\t\"tipoDeDebito\": 1,\n\t\t\"prestacion\": \"DEB RIO\",\n\t\t\"idCliente\": \"2750101598490000002000\",\n\t\t\"estado\": \"RC\"\n  }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSNP.ConsultarDebitosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AC</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>7649e27cf5F955E77534D3E0</Token>\n         </Btinreq>\n         <sdtDebitos>\n            <sBTDebito>\n               <CBU2>80010000898653</CBU2>\n               <monedaSigno>$</monedaSigno>\n               <estado>RC</estado>\n               <prestacion>DEB RIO</prestacion>\n               <referencia>015984900000216</referencia>\n               <empresaOriginante>3050001626</empresaOriginante>\n               <clienteUId>2</clienteUId>\n               <idCliente>2750101598490000002000</idCliente>\n               <importe>5355.62</importe>\n               <monedaId>80</monedaId>\n               <fechaVencimiento>2019-11-20</fechaVencimiento>\n               <tipoDeDebito>1</tipoDeDebito>\n            </sBTDebito>\n         </sdtDebitos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1631</Numero>\n            <Servicio>BTSNP.ConsultarDebitos</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2021-06-18</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>11:13:50</Hora>\n         </Btoutreq>\n      </BTSNP.ConsultarDebitosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"AC\",\n        \"Usuario\": \"BANTOTAL\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"7649e27cf5F955E77534D3E0\"\n    },\n    \"sdtDebitos\": {\n        \"sBTDebito\": [\n            {\n                \"CBU2\": 80010000898653,\n                \"monedaSigno\": \"$\",\n                \"estado\": \"RC\",\n                \"prestacion\": \"DEB RIO\",\n                \"referencia\": \"015984900000216\",\n                \"empresaOriginante\": \"3050001626\",\n                \"clienteUId\": 2,\n                \"idCliente\": \"2750101598490000002000\",\n                \"importe\": 5355.62,\n                \"monedaId\": 80,\n                \"fechaVencimiento\": \"2019-11-20\",\n                \"tipoDeDebito\": 1\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 1625,\n        \"Servicio\": \"BTSNP.ConsultarDebitos\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2021-06-17\",\n        \"Requerimiento\": \"\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"17:46:44\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDebito",
+      "fields": [
+        {
+          "Nombre": "CBU2",
+          "Tipo": "String",
+          "Comentarios": "CBU."
+        },
+        {
+          "Nombre": "monedaSigno",
+          "Tipo": "String",
+          "Comentarios": "Signo de la moneda."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado)."
+        },
+        {
+          "Nombre": "prestacion",
+          "Tipo": "String",
+          "Comentarios": "Identificador de prestación."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia del débito."
+        },
+        {
+          "Nombre": "empresaOriginante",
+          "Tipo": "String",
+          "Comentarios": "Identificador de la empresa originante."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "idCliente",
+          "Tipo": "String",
+          "Comentarios": "Identificador del Cliente SNP."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la moneda."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "tipoDeDebito",
+          "Tipo": "Byte",
+          "Comentarios": "Tipo de débito (1=Abierto/2=Cerrado)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

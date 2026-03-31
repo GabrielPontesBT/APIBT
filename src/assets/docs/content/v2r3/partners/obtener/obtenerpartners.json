@@ -1,0 +1,48 @@
+{
+  "slug": "partners/obtener/obtenerpartners",
+  "pageTitle": "Obtener Partners",
+  "description": "Método para obtener los Partners.",
+  "pubName": "BTPartner.ObtenerPartners",
+  "programa": "RBTPN003",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtPartners",
+      "Tipo": "<a href=\"#sbtpartner\">sBTPartner</a>",
+      "Comentarios": "Listado de los Partners."
+    }
+  ],
+  "errors": [],
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ObtenerPartners>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n      </bts:BTPartners.ObtenerPartners>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPartners' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ObtenerPartnersResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtPartners>\n            <sBTPartner>\n               <partnerUId>1</partnerUId>\n               <nombre>Concesionario 1</nombre>\n            </sBTPartner>\n            <sBTPartner>\n               <partnerUId>2</partnerUId>\n               <nombre>Concesionario 2</nombre>\n            </sBTPartner>\n            <sBTPartner>\n               <partnerUId>3</partnerUId>\n               <nombre>Concesionario 3</nombre>\n            </sBTPartner>\n            <sBTPartner>\n               <partnerUId>4</partnerUId>\n               <nombre>Concesionario 4</nombre>\n            </sBTPartner>\n            <sBTPartner>\n               <partnerUId>5</partnerUId>\n               <nombre>No Vehicular 1</nombre>\n            </sBTPartner>\n         </sdtPartners>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16859</Numero>\n            <Servicio>BTPartners.ObtenerPartners</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-27</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>12:30:10</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPartners.ObtenerPartnersResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"1\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cFC33CD93505A5382434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"sdtPartners\": {\n        \"sBTPartner\": [\n        {\n            \"partnerUId\": 1,\n            \"nombre\": \"Concesionario 1\"\n        },\n        {\n            \"partnerUId\": 2,\n            \"nombre\": \"Concesionario 2\"\n        },\n        {\n            \"partnerUId\": 3,\n            \"nombre\": \"Concesionario 3\"\n        },\n        {\n            \"partnerUId\": 4,\n            \"nombre\": \"Concesionario 4\"\n        },\n        {\n            \"partnerUId\": 5,\n            \"nombre\": \"No Vehicular 1\"\n        }\n        ]\n    },\n   \"Erroresnegocio\": \"\",\n   \"Btoutreq\": {\n      \"Numero\": \"111399\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPartners.ObtenerPartners\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-10\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"17:08:56\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartner",
+      "fields": [
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del Partner."
+        },
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}
