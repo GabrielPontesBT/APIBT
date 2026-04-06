@@ -117,7 +117,6 @@ export class SearchService {
         page.pubName,
         page.programa,
         page.scope,
-        page.searchableText
       ].join(' '));
 
       if (terms.every(term => haystack.includes(term))) {
