@@ -7,7 +7,29 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Se debe parametrizar el módulo correspondiente a castigos ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 1 \nCorrelativo 2 | 1 \nValor específico 1 | Módulo correspondiente a castigos. \nValor específico 2 | 67 (Estado de operación castigada).",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Se debe parametrizar el módulo correspondiente a castigos ingresando en la guía especial 1041 los siguientes valores:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "1"
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "1"
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Módulo correspondiente a castigos."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "67 (Estado de operación castigada)."
+        }
+      ]
+    }
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",

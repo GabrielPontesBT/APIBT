@@ -7,7 +7,41 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | Módulo. \nCorrelativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). \nCorrelativo 3 | Valor incremental. \nValor específico 1 | Moneda (El valor 9999 indica todas las monedas). \nValor específico 2 | Papel (El valor 999999 indica todos los papeles). \nValor específico 3 | Código de instrucción a habilitar. \nImporte específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses).",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "Módulo."
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "Tipo de operación (El valor 999 indica todos los tipos de operación)."
+        },
+        {
+          "Campo": "Correlativo 3",
+          "Valor": "Valor incremental."
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Moneda (El valor 9999 indica todas las monedas)."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "Papel (El valor 999999 indica todos los papeles)."
+        },
+        {
+          "Campo": "Valor específico 3",
+          "Valor": "Código de instrucción a habilitar."
+        },
+        {
+          "Campo": "Importe específico 1",
+          "Valor": "Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses)."
+        }
+      ]
+    }
+  ],
   "inputData": [
     {
       "Nombre": "productoUId",

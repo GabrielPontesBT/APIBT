@@ -187,6 +187,11 @@ function buildKeywords(doc) {
   return uniqueStrings(rawKeywords.map((value) => normalizeWhitespace(value)));
 }
 
+function extractVersion(filePath) {
+  const relative = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
+  return relative.split('/')[0] || '';
+}
+
 function buildSearchEntry(doc, filePath) {
   const searchableText = buildSearchableText(doc);
   const relativeFilePath = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
@@ -200,6 +205,7 @@ function buildSearchEntry(doc, filePath) {
     scope: normalizeWhitespace(doc.scope),
     keywords: buildKeywords(doc),
     searchableText,
+    version: extractVersion(filePath),
     sourceFile: relativeFilePath
   };
 }

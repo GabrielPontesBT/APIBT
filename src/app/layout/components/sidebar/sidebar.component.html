@@ -16,7 +16,7 @@ sidebar.component.html
         @if (isFolder(node)) {
           <button type="button" class="sidebar-node sidebar-folder"
             [class.active-branch]="isFolderInActivePath(node)" [attr.aria-expanded]="isExpanded(node)"
-            [attr.aria-label]="'Expandir carpeta ' + node.label" [attr.data-slug]="node.slug"
+            [attr.aria-label]="(isExpanded(node) ? 'Colapsar carpeta ' : 'Expandir carpeta ') + node.label" [attr.data-slug]="node.slug"
             (click)="toggleFolder(node, nodes)">
             <span class="sidebar-node__content">
               <span class="sidebar-icon material-icons" aria-hidden="true">
@@ -35,9 +35,10 @@ sidebar.component.html
         }
         @if (isFile(node)) {
           <a class="sidebar-node sidebar-file" [class.active]="isNodeActive(node)"
+            [attr.aria-current]="isNodeActive(node) ? 'page' : null"
             [attr.data-slug]="node.slug" [routerLink]="['/', node.slug]">
             <span class="sidebar-node__content">
-              <span class="sidebar-file__dash" aria-hidden="true">–</span>
+              <span class="sidebar-file__dash" aria-hidden="true">·</span>
               <span class="sidebar-label">
                 {{ node.pageTitle || node.label }}
               </span>

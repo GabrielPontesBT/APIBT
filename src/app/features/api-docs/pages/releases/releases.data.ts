@@ -28,6 +28,7 @@ const RELEASE_MODULE_LABELS: Record<string, string> = {
   BTConfiguracionBantotal: 'Configuración Bantotal',
   BTContabilidad: 'Contabilidad',
   BTCuentasAhorro: 'Cuentas de Ahorro',
+  BTCuentasDeAhorro: 'Cuentas de Ahorro',
   BTCuentasBolsillo: 'Cuentas Bolsillo',
   BTCuentasCorrientes: 'Cuentas Corrientes',
   BTCuentasVista: 'Cuentas Vista',

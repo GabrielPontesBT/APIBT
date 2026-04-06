@@ -7,7 +7,45 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | Valor incremental. \nCorrelativo 2 | Módulo. \nCorrelativo 3 | Tipo de operación. \nValor específico 1 | Moneda. \nValor específico 2 | Papel. \nImporte específico 1 | Tipo de día para el cálculo del plazo (1 - Comercial, 2 - Calendario). \nImporte específico 2 | Tipo de año para el cálculo de intereses (1 - Comercial, 2 - Calendario).\nImporte específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste día anterior, 2 - Ajuste día posterior).",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "Valor incremental."
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "Módulo."
+        },
+        {
+          "Campo": "Correlativo 3",
+          "Valor": "Tipo de operación."
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Moneda."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "Papel."
+        },
+        {
+          "Campo": "Importe específico 1",
+          "Valor": "Tipo de día para el cálculo del plazo (1 - Comercial, 2 - Calendario)."
+        },
+        {
+          "Campo": "Importe específico 2",
+          "Valor": "Tipo de año para el cálculo de intereses (1 - Comercial, 2 - Calendario)."
+        },
+        {
+          "Campo": "Importe específico 3",
+          "Valor": "Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste día anterior, 2 - Ajuste día posterior)."
+        }
+      ]
+    }
+  ],
   "inputData": [],
   "outputData": [
     {

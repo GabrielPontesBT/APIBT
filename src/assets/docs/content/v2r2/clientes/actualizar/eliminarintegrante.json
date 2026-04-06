@@ -2,7 +2,7 @@
   "slug": "clientes/actualizar/eliminarintegrante",
   "pageTitle": "Eliminar Integrante",
   "description": "Método para eliminar un integrante de una cuenta cliente.",
-  "pubName": "BTClientes.EliminarIntegrantes",
+  "pubName": "BTClientes.EliminarIntegrante",
   "programa": "RBTPG386",
   "scope": "Global",
   "hasBackendConfig": false,

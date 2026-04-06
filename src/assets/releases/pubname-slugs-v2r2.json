@@ -728,7 +728,7 @@
     ]
   },
   {
-    "key": "BTClientes.EliminarIntegrantes",
+    "key": "BTClientes.EliminarIntegrante",
     "path": [
       "clientes",
       "actualizar",
@@ -2384,7 +2384,7 @@
     ]
   },
   {
-    "key": "BTDepositosAPlazo.ObtenerInstruccionesHabilitados",
+    "key": "BTDepositosAPlazo.ObtenerInstruccionesHabilitadas",
     "path": [
       "depositos-a-plazo",
       "obtener",
@@ -2991,14 +2991,6 @@
     ]
   },
   {
-    "key": "BTPartner.ObtenerPartners",
-    "path": [
-      "partners",
-      "obtener",
-      "obtenerpartners"
-    ]
-  },
-  {
     "key": "BTPartners.ContratarPrestamo",
     "path": [
       "partners",
@@ -3068,6 +3060,14 @@
       "partners",
       "obtener",
       "obtenermodelos"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerPartners",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerpartners"
     ]
   },
   {

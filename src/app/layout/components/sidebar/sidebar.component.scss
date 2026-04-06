@@ -61,7 +61,7 @@
 .sidebar-container {
   width: 100%;
   height: 100%;
-  background-color: var(--bg-elements);
+  //background-color: var(--bg-elements);
   overflow-y: auto;
   overflow-x: hidden;
   font-family: var(--font-family);
@@ -102,19 +102,18 @@
     box-shadow 180ms ease;
 }
 
-// El contenido interno es el que hace zoom — el contenedor no se mueve
+// El contenido interno se desplaza levemente al hover — más predecible que scale
 .sidebar-node__content {
   display: flex;
   align-items: center;
   gap: 0.55rem;
   width: 100%;
-  padding: 0.55rem 0.85rem;
-  transform-origin: left center;
-  transition: transform 200ms cubic-bezier(0.34, 1.3, 0.64, 1);
+  padding: 0.55rem 0.85rem 0.55rem var(--level-pad, 0.85rem);
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .sidebar-node:hover .sidebar-node__content {
-  transform: scale(1.03);
+  transform: translateX(3px);
 }
 
 .sidebar-node:hover {
@@ -131,11 +130,15 @@
   display: flex;
 }
 
+
 .sidebar-file__dash {
   flex-shrink: 0;
-  margin-right: 0.15rem;
+  margin-right: 0.3rem;
   color: var(--red-1);
   opacity: 0.7;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
   transition:
     color 220ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -159,7 +162,7 @@
 }
 
 .sidebar-file.active .sidebar-node__content {
-  transform: scale(1.03);
+  transform: translateX(3px);
 }
 
 .sidebar-file.active .sidebar-label {
@@ -169,6 +172,7 @@
 .sidebar-file.active .sidebar-file__dash {
   opacity: 1;
 }
+
 
 // Al hacer hover sobre el activo, se mantiene igual
 .sidebar-file.active:hover {
@@ -247,24 +251,13 @@
 
 .sidebar-item--expanded,
 .sidebar-item--active-branch {
-  background-color: $sidebar-branch-bg;
+  background-color: rgba(179, 35, 35, 0.035);
   box-shadow:
     inset 0 6px 6px -6px rgba(179, 35, 35, 0.16),
     inset 0 -6px 6px -6px rgba(179, 35, 35, 0.12);
   transition:
     background-color 320ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Paneles anidados */
-.sidebar-item--expanded .sidebar-item--expanded,
-.sidebar-item--expanded .sidebar-item--active-branch,
-.sidebar-item--active-branch .sidebar-item--expanded,
-.sidebar-item--active-branch .sidebar-item--active-branch {
-  background-color: $sidebar-branch-bg-deep;
-  box-shadow:
-    inset 0 6px 6px -6px rgba(179, 35, 35, 0.12),
-    inset 0 -6px 6px -6px rgba(179, 35, 35, 0.08);
 }
 
 /* ----------------------------- */
@@ -302,11 +295,8 @@
   background-color: transparent;
   border-left: none;
   box-shadow: none;
-}
-
-/* Hijos dentro de panel expandido con indentación suave */
-.sidebar-children__inner > .sidebar-list > .sidebar-item > .sidebar-node .sidebar-node__content {
-  padding-left: 1rem;
+  // Acumula el indent por nivel: cada __inner anidado suma 0.5rem al valor del padre
+  --level-pad: calc(var(--level-pad, 0.85rem) + 0.5rem);
 }
 
 /* ----------------------------- */

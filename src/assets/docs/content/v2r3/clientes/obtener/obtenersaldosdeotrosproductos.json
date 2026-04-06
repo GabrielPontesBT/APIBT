@@ -7,7 +7,25 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 1000 \nCorrelativo 2 | Valor del segundo parámetro del servicio. \nValor específico 1 | Identificador del módulo a incluir.",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "1000"
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "Valor del segundo parámetro del servicio."
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Identificador del módulo a incluir."
+        }
+      ]
+    }
+  ],
   "inputData": [
     {
       "Nombre": "cuentaUId",

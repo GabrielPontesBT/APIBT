@@ -15,5 +15,6 @@ export interface SearchIndexEntry {
   scope: string;
   keywords: string[];
   searchableText: string;
+  version: string;
   sourceFile: string;
 }

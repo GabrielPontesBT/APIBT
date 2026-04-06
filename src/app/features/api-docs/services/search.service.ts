@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, of, shareReplay } from 'rxjs';
 import { SearchIndexEntry } from '../../../core/models/search-index-entry.model';
+import { VersionService } from '../../../core/services/version.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ import { SearchIndexEntry } from '../../../core/models/search-index-entry.model'
 export class SearchService {
   private searchIndex$?: Observable<SearchIndexEntry[]>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private versionService: VersionService) {}
 
   getSearchIndex(): Observable<SearchIndexEntry[]> {
     if (!this.searchIndex$) {
@@ -37,9 +38,11 @@ export class SearchService {
     if (!normalizedQuery) {
       return of([]);
     } else {
+      const activeVersion = this.versionService.activeVersion;
       return this.getSearchIndex().pipe(
         map((entries) => {
           return entries
+            .filter((entry) => !entry.version || entry.version === activeVersion)
             .map((entry) => ({
               entry,
               score: this.calculateScore(entry, normalizedQuery)

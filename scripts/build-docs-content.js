@@ -142,11 +142,19 @@ function stripMarkdownLinks(text) {
   return String(text || '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
 }
 
-function markdownLinksToHtml(text) {
-  return String(text || '').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+function markdownLinksToHtml(text, baseRelPath) {
+  return String(text || '').replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+    if (baseRelPath && href.toLowerCase().endsWith('.md')) {
+      const dir = path.dirname(baseRelPath).replace(/\\/g, '/');
+      const resolved = path.posix.normalize(`${dir}/${href}`);
+      const slug = buildSlugFromRelPath(resolved);
+      return `<a href="/${slug}">${label}</a>`;
+    }
+    return `<a href="${href}">${label}</a>`;
+  });
 }
 
-function parseTable(md) {
+function parseTable(md, relPath) {
   const lines = String(md || '')
     .split('\n')
     .map((line) => line.trim())
@@ -161,7 +169,7 @@ function parseTable(md) {
       .filter((header) => header);
 
     return lines.slice(2).map((line) => {
-      const cols = line.split('|').map((col) => markdownLinksToHtml(col.trim()));
+      const cols = line.split('|').map((col) => markdownLinksToHtml(col.trim(), relPath));
       const obj = {};
 
       headers.forEach((header, index) => {
@@ -173,7 +181,7 @@ function parseTable(md) {
   }
 }
 
-function extractMethodMeta(content) {
+function extractMethodMeta(content, relPath) {
   const block = extractBlockWithAlternatives(content, [
     {
       start: '<!-- ABRE DATOS DEL MÉTODO -->',
@@ -199,7 +207,7 @@ function extractMethodMeta(content) {
     const scopeMatch = block.match(/\*\*Global\/País:\*\*\s*(.+)/i);
 
     return {
-      description: normalizeWhitespace(descriptionMatch ? descriptionMatch[1].replace(/:::$/, '').trim() : ''),
+      description: markdownLinksToHtml(normalizeWhitespace(descriptionMatch ? descriptionMatch[1].replace(/:::$/, '').trim() : ''), relPath),
       pubName: normalizeWhitespace(pubNameMatch ? pubNameMatch[1] : ''),
       programa: normalizeWhitespace(programaMatch ? programaMatch[1] : ''),
       scope: normalizeWhitespace(scopeMatch ? scopeMatch[1] : '')
@@ -207,7 +215,7 @@ function extractMethodMeta(content) {
   }
 }
 
-function extractApiTabs(content) {
+function extractApiTabs(content, relPath) {
   const block = extractBlockWithAlternatives(content, [
     {
       start: '<!-- ABRE TABLA DE DATOS -->',
@@ -235,10 +243,10 @@ function extractApiTabs(content) {
       match = tabRegex.exec(block);
     }
 
-    const inputData = parseTable(sections['Datos de Entrada'] || '');
-    const outputData = parseTable(sections['Datos de Salida'] || '');
+    const inputData = parseTable(sections['Datos de Entrada'] || '', relPath);
+    const outputData = parseTable(sections['Datos de Salida'] || '', relPath);
     const errorsBlock = sections['Errores'] || '';
-    const errors = errorsBlock.includes('No aplica') ? [] : parseTable(errorsBlock);
+    const errors = errorsBlock.includes('No aplica') ? [] : parseTable(errorsBlock, relPath);
 
     return {
       inputData,
@@ -297,7 +305,51 @@ function extractExamples(content) {
   };
 }
 
-function extractBackendConfig(content) {
+function parseBackendGroups(block, relPath) {
+  const groups = [];
+  const lines = block.split('\n');
+
+  let currentTitle = [];
+  let tableLines = [];
+  let inTable = false;
+
+  const flushGroup = () => {
+    if (tableLines.length >= 2) {
+      const datos = parseTable(tableLines.join('\n'), relPath);
+      if (datos.length > 0) {
+        groups.push({ titulo: currentTitle.join(' ').trim(), datos });
+      }
+    }
+    currentTitle = [];
+    tableLines = [];
+    inTable = false;
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      if (inTable) flushGroup();
+      continue;
+    }
+
+    if (!inTable && line.includes('|')) {
+      inTable = true;
+    }
+
+    if (inTable) {
+      tableLines.push(line);
+    } else {
+      currentTitle.push(line);
+    }
+  }
+
+  if (inTable) flushGroup();
+
+  return groups;
+}
+
+function extractBackendConfig(content, relPath) {
   let block = extractBlockWithAlternatives(content, [
     {
       start: '<!-- ABRE CONFIGURACIÓN BACKEND -->',
@@ -312,23 +364,24 @@ function extractBackendConfig(content) {
   if (!block) {
     return {
       hasBackendConfig: false,
-      backendText: ''
-    };
-  } else {
-    const infoTag = '::: info Configuración Backend';
-    const infoIndex = block.indexOf(infoTag);
-
-    if (infoIndex >= 0) {
-      block = block.slice(infoIndex + infoTag.length).trim();
-    } else {
-      // No hacer nada
-    }
-
-    return {
-      hasBackendConfig: true,
-      backendText: block.replaceAll(':::', '').trim()
+      backendText: '',
+      backendData: []
     };
   }
+
+  const infoTag = '::: info Configuración Backend';
+  const infoIndex = block.indexOf(infoTag);
+  if (infoIndex >= 0) {
+    block = block.slice(infoIndex + infoTag.length).trim();
+  }
+
+  block = block.replaceAll(':::', '').trim();
+
+  return {
+    hasBackendConfig: true,
+    backendText: block,
+    backendData: parseBackendGroups(block, relPath)
+  };
 }
 
 function extractSdts(content) {
@@ -487,10 +540,10 @@ function buildDocJson(mdFilePath, relPath) {
   const slug = buildSlugFromRelPath(relPath);
 
   const pageTitle = buildPageTitle(parsed.data || {}, content, slug);
-  const methodMeta = extractMethodMeta(content);
-  const apiTabs = extractApiTabs(content);
+  const methodMeta = extractMethodMeta(content, relPath);
+  const apiTabs = extractApiTabs(content, relPath);
   const examples = extractExamples(content);
-  const backendConfig = extractBackendConfig(content);
+  const backendConfig = extractBackendConfig(content, relPath);
   const structuredTypes = extractSdts(content);
   const valuesTable = extractValues(content);
 
@@ -503,7 +556,7 @@ function buildDocJson(mdFilePath, relPath) {
     scope: methodMeta.scope || 'Global',
     hasBackendConfig: backendConfig.hasBackendConfig,
     backendText: backendConfig.backendText,
-    backendData: [],
+    backendData: backendConfig.backendData,
     inputData: apiTabs.inputData,
     outputData: apiTabs.outputData,
     errors: apiTabs.errors,

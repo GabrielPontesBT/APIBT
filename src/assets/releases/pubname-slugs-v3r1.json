@@ -3070,14 +3070,6 @@
     ]
   },
   {
-    "key": "BTPartner.ObtenerPartners",
-    "path": [
-      "partners",
-      "obtener",
-      "obtenerpartners"
-    ]
-  },
-  {
     "key": "BTPartners.ContratarPrestamo",
     "path": [
       "partners",
@@ -3147,6 +3139,14 @@
       "partners",
       "obtener",
       "obtenermodelos"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerPartners",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerpartners"
     ]
   },
   {

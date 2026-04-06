@@ -7,7 +7,46 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 2\nCorrelativo 2 | 1 \nValor específico 1 | Identificador del módulo a incluir. \n\nSe pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | 1 \nCorrelativo 2 | 2 \nValor específico 1 | Módulo del tipo de operación a excluir. \nValor específico 2 | Tipo de operación a excluir.",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "2"
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "1"
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Identificador del módulo a incluir."
+        }
+      ]
+    },
+    {
+      "titulo": "Se pueden parametrizar tipos de operación a excluir ingresando en la guía especial 1041 los siguientes valores:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "1"
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "2"
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Módulo del tipo de operación a excluir."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "Tipo de operación a excluir."
+        }
+      ]
+    }
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",

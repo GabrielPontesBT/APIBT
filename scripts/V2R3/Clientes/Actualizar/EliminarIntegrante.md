@@ -16,7 +16,7 @@ backtotop: false
 <!-- ABRE DATOS DEL MÉTODO -->
 ::: note Método para eliminar un integrante de una cuenta cliente.
 
-**Nombre publicación:** BTClientes.EliminarIntegrantes
+**Nombre publicación:** BTClientes.EliminarIntegrante
 
 **Programa:** RBTPG386
 

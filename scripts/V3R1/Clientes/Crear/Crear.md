@@ -114,7 +114,7 @@ Código | Descripción
             <bts:fechaVencimiento>2035-08-01</bts:fechaVencimiento>
             <bts:segundoApellido></bts:segundoApellido>
             <bts:fechaNacimiento>1975-02-01</bts:fechaNacimiento>
-            <bts:ingresos>100000.0</bts:ingresos>
+            <bts:sueldo>100000.0</bts:sueldo>
             <bts:telefonoCelular>099585858</bts:telefonoCelular>
             <bts:tipoDocumentoId>1</bts:tipoDocumentoId>
             <bts:actividadLaboral>10300 Extracción y aglomeración de turba</bts:actividadLaboral>
@@ -162,6 +162,12 @@ Código | Descripción
                     <bts:departamentoId>10</bts:departamentoId>
                 </bts:SdtsBTDomicilioCompleto>
             </bts:domicilios>
+            <bts:datosAdicionales>
+                <bts:SdtsBTDatoLista>
+                    <bts:clave>dato1</bts:clave>
+                    <bts:valor>valor1</bts:valor>
+                </bts:SdtsBTDatoLista>
+            </bts:datosAdicionales>
             <bts:sectorId>1</bts:sectorId>
             <bts:correoElectronico>ipuig@dlya.com.uy</bts:correoElectronico>
             <bts:actividadLaboralId>10300</bts:actividadLaboralId>
@@ -197,7 +203,7 @@ curl -X POST \
       "fechaVencimiento": "2035-08-01",
       "segundoApellido": "",
       "fechaNacimiento": "1975-02-01",
-      "ingresos": 100000.0,
+      "sueldo": 100000.0,
       "telefonoCelular": "099585858",
       "tipoDocumentoId": 1,
       "actividadLaboral": "10300 Extracción y aglomeración de turba",
@@ -214,36 +220,46 @@ curl -X POST \
       "ocupacionId": 1,
       "nacionalidad": "URUGUAY",
       "domicilios": {
-        "SdtsBTDomicilioCompleto": {
-          "coloniaId": 0,
-          "agrupador1Id": 1,
-          "agrupador5": "",
-          "departamento": "Montevideo",
-          "agrupador4": "",
-          "agrupador3Id": 0,
-          "detalleUbicacion": "",
-          "barrio": "Barrio Coppola",
-          "agrupador3": "",
-          "agrupador2": "1585",
-          "agrupador1": "rivera",
-          "agrupador5Id": 0,
-          "tipoDomicilio": "Residencia",
-          "ubicacionDesde": "2006-01-01",
-          "direccion": "AVENIDA RIVERA NO. PUERTA 1585",
-          "colonia": "",
-          "paisId": 845,
-          "tipoVivienda": "Propietario",
-          "pais": "URUGUAY",
-          "agrupador2Id": 1,
-          "codigoPostal": "",
-          "tipoViviendaId": 1,
-          "agrupador4Id": 0,
-          "barrioId": 110,
-          "localidadId": 10,
-          "localidad": "Montevideo",
-          "tipoDomicilioId": 1,
-          "departamentoId": 10
-        }
+        "SdtsBTDomicilioCompleto": [
+          {
+            "coloniaId": 0,
+            "agrupador1Id": 1,
+            "agrupador5": "",
+            "departamento": "Montevideo",
+            "agrupador4": "",
+            "agrupador3Id": 0,
+            "detalleUbicacion": "",
+            "barrio": "Barrio Coppola",
+            "agrupador3": "",
+            "agrupador2": "1585",
+            "agrupador1": "rivera",
+            "agrupador5Id": 0,
+            "tipoDomicilio": "Residencia",
+            "ubicacionDesde": "2006-01-01",
+            "direccion": "AVENIDA RIVERA NO. PUERTA 1585",
+            "colonia": "",
+            "paisId": 845,
+            "tipoVivienda": "Propietario",
+            "pais": "URUGUAY",
+            "agrupador2Id": 1,
+            "codigoPostal": "",
+            "tipoViviendaId": 1,
+            "agrupador4Id": 0,
+            "barrioId": 110,
+            "localidadId": 10,
+            "localidad": "Montevideo",
+            "tipoDomicilioId": 1,
+            "departamentoId": 10
+          }
+        ]
+      },
+      "datosAdicionales": {
+        "SdtsBTDatoLista": [
+          {
+            "clave": "dato1",
+            "valor": "valor1"
+          }
+        ]
       },
       "sectorId": 1,
       "correoElectronico": "ipuig@dlya.com.uy",

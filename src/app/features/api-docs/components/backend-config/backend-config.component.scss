@@ -11,6 +11,11 @@
   background: var(--bg-elements);
   border-radius: var(--border-radius);
 
+  .icon-text-container {
+    display: flex;
+    align-items: center;
+  }
+
   .custom-icon {
     background-image: url(exclamation.svg);
     background-size: contain;
@@ -25,7 +30,6 @@
 
   h2 {
     font-weight: 600 !important;
-    display: inline-block;
     font-size: 1.25rem;
     margin: 0;
     color: var(--text-color);

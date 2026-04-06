@@ -1,6 +1,23 @@
 @import '~prismjs/themes/prism.css';
 @import 'variables';
 
+// Sobreescribe la selección de Prism (que define un azul) para mantener gris uniforme
+pre[class*="language-"]::selection,
+pre[class*="language-"] *::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] *::selection {
+  background: #d0d0d0 !important;
+  text-shadow: none !important;
+}
+
+:host-context(body.dark-mode) pre[class*="language-"]::selection,
+:host-context(body.dark-mode) pre[class*="language-"] *::selection,
+:host-context(body.dark-mode) code[class*="language-"]::selection,
+:host-context(body.dark-mode) code[class*="language-"] *::selection {
+  background: #666 !important;
+  text-shadow: none !important;
+}
+
 // CONTENEDOR PRINCIPAL
 ::ng-deep .code-tabs {
   //margin: 0rem 40px;
@@ -119,6 +136,7 @@
 
     &.active {
       background-color: var(--code-bg);
+      border-top: var(--red-border);
       &:hover {
         cursor: default;
       }
@@ -137,10 +155,14 @@
     border-radius: 0;
     background-color: var(--code-header);
     color: var(--text-color);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 
     &:hover {
       background-color: var(--code-bg-darken);
+    }
+
+    &.copied {
+      color: #50a14f;
     }
   }
 }
@@ -178,7 +200,7 @@
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 
   scrollbar-width: thin;
-  scrollbar-color: var(--red-1) var(--table-columns);
+  scrollbar-color: var(--table-header) var(--table-columns);
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -186,12 +208,24 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--red-1);
+    background-color: var(--table-header);
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-track {
     background-color: var(--table-columns);
+  }
+
+  :host-context(.dark-mode) & {
+    scrollbar-color: #555 var(--code-bg);
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #555;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--code-bg);
+    }
   }
 }
 
@@ -203,8 +237,9 @@
   margin: 0;
   min-width: max-content;
   scrollbar-width: thin !important;
-  overflow: visible
+  overflow: visible;
 }
+
 
 // NÚMEROS VERDES
 :host ::ng-deep .token.number {

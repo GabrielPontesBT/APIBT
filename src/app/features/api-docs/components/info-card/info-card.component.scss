@@ -8,8 +8,8 @@
   margin: var(--margin-info);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  border-left: var(--red-border);
-  border-right: var(--red-border);
+  //border-left: var(--red-border);
+  //border-right: var(--red-border);
   line-height: var(--line-height) !important;
   color: var(--text-color);
   font-family: var(--font-family);
@@ -35,6 +35,10 @@
   border-radius: var(--border-radius);
   background: var(--table-columns);
   border: 1px solid var(--border-color);
+
+  strong {
+    color: var(--red-1);
+  }
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
   "slug": "partners/obtener/obtenerpartners",
   "pageTitle": "Obtener Partners",
   "description": "Método para obtener los Partners.",
-  "pubName": "BTPartner.ObtenerPartners",
+  "pubName": "BTPartners.ObtenerPartners",
   "programa": "RBTPN003",
   "scope": "Global",
   "hasBackendConfig": false,

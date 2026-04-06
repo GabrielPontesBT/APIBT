@@ -1,5 +1,4 @@
 import { Component, Input, HostListener, OnChanges, SimpleChanges } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
 
 interface StructuredType {
   typeName: string;
@@ -20,7 +19,7 @@ export class StructuredDataComponent implements OnChanges {
   /** Guarda qué panel (por id lowercase) está abierto */
   expandedMap: Record<string, boolean> = {};
 
-  constructor(private viewport: ViewportScroller) {}
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['types']) {
@@ -52,8 +51,9 @@ export class StructuredDataComponent implements OnChanges {
 
     // Scroll suave justo después de la animación de Material
     setTimeout(() => {
-      this.viewport.scrollToAnchor(fragment);
-    }, 250);
+      const panel = document.getElementById(fragment);
+      panel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 350);
   }
 
   /**
@@ -64,9 +64,12 @@ export class StructuredDataComponent implements OnChanges {
     const id = typeName.toLowerCase();
     this.expandedMap[id] = expanded;
     if (expanded) {
+      const panel = document.getElementById(id);
+      panel?.focus({ preventScroll: true });
       setTimeout(() => {
-        this.viewport.scrollToAnchor(id);
-      }, 250);
+        panel?.focus({ preventScroll: true });
+        panel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 350);
     }
   }
 }

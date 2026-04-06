@@ -7,7 +7,25 @@
   "scope": "Global",
   "hasBackendConfig": true,
   "backendText": "Se debe parametrizar en la guía de procesos 70101 de la siguiente manera: \n\nCampo | Valor \n:--------- | :--------- \nCorrelativo | Valor incremental. \nValor específico | Código de instrucción habilitada. \nImporte específico | 3.",
-  "backendData": [],
+  "backendData": [
+    {
+      "titulo": "Se debe parametrizar en la guía de procesos 70101 de la siguiente manera:",
+      "datos": [
+        {
+          "Campo": "Correlativo",
+          "Valor": "Valor incremental."
+        },
+        {
+          "Campo": "Valor específico",
+          "Valor": "Código de instrucción habilitada."
+        },
+        {
+          "Campo": "Importe específico",
+          "Valor": "3."
+        }
+      ]
+    }
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",

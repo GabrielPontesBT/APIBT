@@ -16,7 +16,7 @@ backtotop: false
 <!-- ABRE DATOS DEL MÉTODO -->
 ::: note Método para obtener los Partners.
 
-**Nombre publicación:** BTPartner.ObtenerPartners
+**Nombre publicación:** BTPartners.ObtenerPartners
 
 **Programa:** RBTPN003
 

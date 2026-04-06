@@ -16,7 +16,7 @@ backtotop: false
 <!-- ABRE DATOS DEL MÉTODO -->
 ::: note Método para obtener un listado de las instrucciones de un producto.
 
-**Nombre publicación:** BTDepositosAPlazo.ObtenerInstruccionesHabilitados
+**Nombre publicación:** BTDepositosAPlazo.ObtenerInstruccionesHabilitadas
 
 **Programa:** RBTPG455
 

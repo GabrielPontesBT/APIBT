@@ -15,6 +15,7 @@
           JSON
         </button>
         <button mat-icon-button (click)="copyCode(section)"
+          [class.copied]="copiedSection === section"
           [matTooltip]="copiedSection === section ? '¡Copiado!' : 'Copiar'"
           matTooltipPosition="left">
           <mat-icon>{{ copiedSection === section ? 'check' : 'content_copy' }}</mat-icon>
@@ -22,12 +23,7 @@
       </div>
       <!-- ENVOLVER con div para manejar el scroll -->
       <div class="code-scroll">
-        <pre>
-          <code
-            [innerHTML]="highlightedCode[section][view[section]]"
-            [class]="'language-' + view[section]">
-          </code>
-        </pre>
+        <pre><code [innerHTML]="highlightedCode[section][view[section]]" [class]="'language-' + view[section]"></code></pre>
       </div>
     </mat-tab>
   }

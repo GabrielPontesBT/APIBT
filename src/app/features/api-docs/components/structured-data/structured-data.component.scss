@@ -4,15 +4,16 @@
 // SDT - ESTRUCTURAS DE DATOS Y ALGORITMOS
 
 ::ng-deep .mat-accordion-BT {
-  margin: 1rem 0 0;
+  //margin: 1rem 0 0;
   font-family: var(--font-family);
 
   .mat-expansion-panel {
-    margin: var(--margin-info);
+    margin: 1.5rem 0 0 0 !important;
     background: var(--bg-elements);
     border-radius: var(--border-radius) !important;
     box-shadow: var(--box-shadow) !important;
     transition: box-shadow 0s ease-in-out !important;
+    scroll-margin-top: var(--top-offset-y);
 
     .mat-expansion-panel-header {
       background: var(--bg-elements);
@@ -42,6 +43,10 @@
     .mat-expansion-panel-body {
       background: var(--bg-elements);
       padding: 0rem 2rem 2rem 2rem !important;
+
+      p {
+        margin-top: 0;
+      }
     }
 
     .mat-expansion-panel-content {

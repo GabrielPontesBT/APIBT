@@ -1,8 +1,8 @@
 <mat-card class="info-card">
   <div class="info-card_content">
     @if (description) {
-      <div class="info-card_description">
-        <span><strong>{{ description }}</strong></span>
+      <div class="info-card_description" (click)="onDescriptionClick($event)">
+        <span><strong [innerHTML]="description"></strong></span>
       </div>
     }
 

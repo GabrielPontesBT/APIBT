@@ -4,6 +4,7 @@
     @for (sdt of types; track sdt) {
       <mat-expansion-panel
         [attr.id]="sdt.typeName.toLowerCase()"
+        [attr.tabindex]="-1"
         [expanded]="expandedMap[sdt.typeName.toLowerCase()] || false"
         (expandedChange)="onExpansionChange($event, sdt.typeName)">
         <mat-expansion-panel-header>

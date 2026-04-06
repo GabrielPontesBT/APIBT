@@ -135,7 +135,6 @@ BTCuentasBolsillo.ObtenerProductos
 BTCuentasBolsillo.ObtenerProductosCV
 BTCuentasVista.ObtenerBolsillos
 BTDepositosAPlazo.ObtenerPeriodosHabilitados
-BTPartner.ObtenerPartners
 BTPartners.ContratarPrestamo
 BTPartners.CrearCliente
 BTPartners.CrearPersonaCliente
@@ -144,6 +143,7 @@ BTPartners.ObtenerDetalleOfertaAmortizable
 BTPartners.ObtenerDetalleOfertaVehicular
 BTPartners.ObtenerMarcas
 BTPartners.ObtenerModelos
+BTPartners.ObtenerPartners
 BTPartners.ObtenerPrestamosCliente
 BTPartners.ObtenerProductos
 BTPartners.ObtenerProductosPartner
@@ -225,9 +225,9 @@ BTCASHManagement.RegistrarPagoEnLinea
 BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta
 BTCASHManagement.VisualizarListaResumenCabezalOrden
 BTClientes.ObtenerDetallePosicion
+BTClientes.ObtenerPosicion
 BTClientes.ObtenerPrestamos
 BTClientes.ObtenerPrestamosCancelados
-BTClientes.ObtenerPosicion
 BTConfiguracionBantotal.ObtenerDetalleSucursal
 BTCuentasCorrientes.ObtenerAcuerdos
 BTCuentasVista.ActualizarBeneficiarios
@@ -281,8 +281,8 @@ BTTarjetasDeDebito.ObtenerDatosContacto
 Release Noviembre 2025
 BTClientes.Crear
 BTConfiguracionBantotal.ObtenerOficinasSucursal
-BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo
 BTCuentasCorrientes.ObtenerSobregiros
+BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo
 BTCuentasVista.ObtenerInstrucciones
 BTDescuentoDocumentos.CrearLista
 BTDescuentoDocumentos.CrearListaCheques

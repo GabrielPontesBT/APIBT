@@ -1,7 +1,7 @@
 {
   "slug": "depositos-a-plazo/contratar/contratar",
   "pageTitle": "Contratar",
-  "description": "Método para contratar un depósito a plazo. \nEste servicio se debe ejecutar para contratar simulaciones realizadas desde el servicio [Simular](../Simular/Simular.md)",
+  "description": "Método para contratar un depósito a plazo. \nEste servicio se debe ejecutar para contratar simulaciones realizadas desde el servicio <a href=\"/depositos-a-plazo/simular/simular\">Simular</a>",
   "pubName": "BTDepositosAPlazo.Contratar",
   "programa": "RBTPG094",
   "scope": "Global",

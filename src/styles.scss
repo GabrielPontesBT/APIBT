@@ -20,6 +20,21 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-color);
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-1) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--red-1);
+  border-radius: 10px;
 }
 
 html,
@@ -37,7 +52,20 @@ body {
   line-height: 1.5;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--red-1) var(--table-grey-columns);
+  scrollbar-color: var(--red-1) transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--red-1);
+  border-radius: 2px;
 }
 
 img {
@@ -219,6 +247,28 @@ html.theme-view-transition::view-transition-new(root) {
 
 .mat-drawer-content {
   background-color: var(--bg-color);
+}
+
+.code-scroll ::selection,
+.code-scroll *::selection,
+.code-scroll pre::selection,
+.code-scroll pre *::selection,
+.code-scroll code::selection,
+.code-scroll code *::selection {
+  background-color: #d0d0d0 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+body.dark-mode .code-scroll ::selection,
+body.dark-mode .code-scroll *::selection,
+body.dark-mode .code-scroll pre::selection,
+body.dark-mode .code-scroll pre *::selection,
+body.dark-mode .code-scroll code::selection,
+body.dark-mode .code-scroll code *::selection {
+  background-color: #666 !important;
+  color: inherit !important;
+  text-shadow: none !important;
 }
 
 .mat-mdc-tab-body-content {
