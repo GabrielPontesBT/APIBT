@@ -98,11 +98,11 @@ curl -X POST \
 	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
 	-d '{
 	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
+	  "Device": "GZ",
+	  "Usuario": "INSTALADOR",
+	  "Token": "1222A10B1A106FB813BD7AE9",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": "0"
 	},
     "sdtPartner": {
       "puntoVentaUId": 3,
@@ -158,22 +158,22 @@ curl -X POST \
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "0306ebbd9c4A8B5C60A82434"
 	},
-    "clienteUId": "202",
+    "clienteUId": 181,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "835",
+        "Numero": 770,
         "Estado": "OK",
         "Servicio": "BTPartners.CrearCliente",
-        "Fecha": "2017-12-18",
+        "Fecha": "2017-12-14",
         "Requerimiento": "",
-        "Hora": "01:48:53",
+        "Hora": "18:17:10",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
