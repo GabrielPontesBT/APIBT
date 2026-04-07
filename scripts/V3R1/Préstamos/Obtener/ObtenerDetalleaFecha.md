@@ -85,13 +85,13 @@ curl -X POST \
   -H 'postman-token: 9c3f1bf5-3274-9009-5a4a-9b755b8652a9' \
   -d '{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Device": "AC",
+		"Usuario": "BANTOTAL",
+		"Requerimiento": "1",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "324915377F955E77534D3E02"
 	},
-    "operacionUId": 142,
+    "operacionUId": 15,
 	"fecha": "2018-11-15"
 }'
 ```
@@ -193,89 +193,89 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Requerimiento": "1",
+		"Usuario": "BANTOTAL",
+		"Token": "324915377F955E77534D3E02",
+		"Device": "AC"
 	},
     "sdtPrestamo": {
-        "interesVigente": "6812.75",
-        "deudaTotalVencida": "17614.00",
-        "tipoTasaMora": "Lineal Anual",
-        "cuotasPagasConRetaso": "0",
-        "sucursal": "Sucursal Beta",
-        "diasMoraPromedio": "0",
-        "plus": "0.000000",
-        "actividad": "01112 Trigo",
-        "tasaOriginal": "10.000000",
-        "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "diasMora": "83",
-        "cantidadCuotas": "37",
-        "estado": "Normal",
-        "capitalOriginal": "180000.00",
-        "tipoDia": "Meses Calendario",
-        "fechaPrimerPago": "2018-07-18",
         "claseTasa": "",
-        "tipoAmortizacion": "Leasing",
-        "simboloMoneda": "$",
-        "operacionUId": "142",
-        "fechaPrimerCuotaImpaga": "2018-07-18",
-        "valorCuota": "0.00",
-        "diasRevision": "0",
-        "precioOriginal": "0.000000",
-        "tasaVigente": "10.000000",
-        "tasaMoraVigente": "0.000000",
-        "interesDevengado": "0.00",
-        "interesSuspenso": "0.00",
-        "deudaCancelacionTotal": "213849.01",
-        "plazo": "1096",
         "tipoTasa": "Lineal Anual",
-        "interesMora": "154.45",
-        "saldoCapital": "174180.15",
-        "precioActual": "0.000000",
-        "cantidadCuotasVencidas": "3",
-        "producto": {
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": "0",
-            "nombre": "LEASING, Amort. - Capital F./Empr.- T/F"
-        },
-        "fechaUltimoPago": "2018-05-18",
-        "interesMoraDevengado": "0.00",
-        "idOperacionFmt": "326-0",
-        "fechaProximoVencimiento": "2018-10-18",
-        "fechaValor": "2018-05-18",
-        "tasaMoraOriginal": "10.000000",
-        "tasaEfectiva": "0.000000",
-        "totalImpuestos": "0.00",
-        "coeficienteIVA": "0.000000",
-        "periodicidad": "30",
-        "resultadoInteresNormalDevengado": "0.00",
-        "fechaVencimiento": "2021-05-18",
-        "cantidadCuotasImpagas": "36",
-        "cuentaContable": "Ds.P/Arrend.Financ.No Reaj.Res.",
+        "tipoDia": "Meses Calendario",
         "tipoAno": "360 Días",
-        "interesPunitorio": "0.00",
+        "tasaOriginal": 19.000000,
+        "tasaVigente": 19.000000,
+        "plus": 0.000000,
+        "tasaEfectiva": 0.000000,
+        "diasRevision": 0,
+        "tipoTasaMora": "Lineal Anual",
+        "tasaMoraOriginal": 19.000000,
+        "tasaMoraVigente": 0.000000,
+        "tasaPunitorios": 0.000000,
+        "operacionUId": 15,
+        "idOperacionFmt": "189-0",
+        "idOperacionBT": "0010000100103000000000000000002700000000000189001",
+        "producto": {
+            "productoUId": 0,
+            "nombre": "PRÉSTAMOS CONSUMO, Amortización Automática TF",
+            "moneda": "$",
+            "papel": "$"
+        },
         "tipoProducto": "AM",
-        "tasaPunitorios": "0.000000",
-        "deudaTotalAFecha": "23433.85"
+        "sucursal": "Sucursal Beta",
+        "simboloMoneda": "$",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "cuentaContable": "Consumo reajustables",
+        "actividad": "01112 Trigo",
+        "estado": "Normal",
+        "precioOriginal": 0.000000,
+        "precioActual": 0.000000,
+        "coeficienteIVA": 22.000000,
+        "capitalOriginal": 12000.00,
+        "saldoCapital": 12000.00,
+        "valorCuota": 1231.74,
+        "fechaValor": "2018-09-25",
+        "fechaVencimiento": "2019-09-25",
+        "interesDevengado": 0.00,
+        "interesMoraDevengado": 0.00,
+        "resultadoInteresNormalDevengado": 0.00,
+        "interesSuspenso": 0.00,
+        "deudaCancelacionTotal": 14793.06,
+        "deudaTotalAFecha": 2475.64,
+        "cantidadCuotasVencidas": 1,
+        "deudaTotalVencida": 1243.90,
+        "interesVigente": 313.03,
+        "interesMora": 9.97,
+        "interesPunitorio": 0.00,
+        "totalImpuestos": 287.27,
+        "periodicidad": 30,
+        "plazo": 365,
+        "diasMora": 21,
+        "diasMoraPromedio": 0,
+        "cantidadCuotas": 12,
+        "cantidadCuotasImpagas": 12,
+        "cuotasPagasConRetaso": 0,
+        "fechaPrimerPago": "2018-10-25",
+        "fechaProximoVencimiento": "2018-11-26",
+        "fechaPrimerCuotaImpaga": "2018-10-25",
+        "fechaUltimoPago": "0000-00-00"
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "951",
-        "Estado": "OK",
+        "Canal": "BTDIGITAL",
         "Servicio": "BTPrestamos.ObtenerDetalleAFecha",
-        "Fecha": "2017-12-21",
-        "Requerimiento": "",
-        "Hora": "18:34:34",
-        "Canal": "BTDIGITAL"
+        "Fecha": "2019-11-19",
+        "Hora": "16:03:15",
+        "Requerimiento": "1",
+        "Numero": 6975,
+        "Estado": "OK"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

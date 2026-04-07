@@ -145,7 +145,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "72e34bcd9d4A8B5C60A82434"
 	},
-    "sdtPrestamo": {
+    "sdtAmpliacion": {
         "clienteUId": 221,
         "productoUId": 61,
         "fechaPrimerPago": "",
@@ -154,11 +154,10 @@ curl -X POST \
         "periodoCuotas": 30,
 		"tasa": 0,
 		"pizarra": 0,
-		"actividad": 11200,
+		"actividad": 1111,
 		"operaciones": {
-			"item":541		 
+			"item": 541
 		}
-
     }
 }'
 ```
@@ -272,7 +271,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",
@@ -280,87 +279,87 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Token": "72e34bcd9d4A8B5C60A82434"
     },
-    "ampliacionId": "122",
-    "deudaTotalCancelacion":"30216.45",
+    "ampliacionId": 122,
+    "deudaTotalCancelacion": 30216.45,
     "sdtSimulacion": {
-      "otrosConceptos": {
-      },
+      "otrosConceptos": "",
       "cronograma": {
         "sBTCuotaPrestamoAlta": [
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-01-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-02-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-03-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-04-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-05-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-06-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-07-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-08-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-09-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-10-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-11-12"
           },
           {
-            "importe": "2228.53",
+            "importe": 2228.53,
             "fechaPago": "2019-12-12"
           }
         ]
       },
       "fechaValor": "2020-03-13",
-      "capital": "37524.00",
-      "tasaEfectiva": "0.000000",
-      "intereses": "2541.18",
-      "tasaNominalAnual": "23.000000",
-      "totalPrestamo": "26742.34",
-      "valorCuota": "2228.53",
-      "tasaEfectivaAnual": "25.590075",
-      "operacionUId": "1",
-      "tasa": "23.000000",
+      "capital": 37524.00,
+      "tasaEfectiva": 0,
+      "intereses": 2541.18,
+      "tasaNominalAnual": 23,
+      "totalPrestamo": 26742.34,
+      "valorCuota": 2228.53,
+      "tasaEfectivaAnual": 25.590075,
+      "operacionUId": 1,
+      "tasa": 23,
       "fechaPrimerPago": "2020-04-13",
       "fechaVencimiento": "2021-03-13",
-      "plazo": "0",
+      "plazo": 0,
       "producto": {
         "papel": "$",
         "moneda": "$",
-        "productoUId": "61",
+        "productoUId": 61,
         "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
       }
     },
     "Erroresnegocio": {
+      "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "623",
+      "Numero": 623,
       "Estado": "OK",
       "Servicio": "BTPrestamos.SimularAmpliacion",
       "Fecha": "2019-11-20",
@@ -368,7 +367,7 @@ curl -X POST \
       "Hora": "09:23:04",
       "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -391,6 +390,7 @@ clienteUId | Long | Identificador único de cliente.
 fechaPrimerPago | Date | Fecha de primer pago. 
 monto | Double | Capital solicitado. 
 operaciones | Long | Lista de identificadores de operaciones a cancelar. 
+periodoCuotas | Int | Período entre cuotas. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 plazo | Int | Plazo de la operación. 
 productoUId | Long | Identificador único de producto. 
