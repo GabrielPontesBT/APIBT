@@ -86,7 +86,7 @@ curl -X POST \
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "6453f934f94A8B5C60A82434"
 	},
     "OperacionUId": 142
 }'
@@ -190,90 +190,90 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "75e20bd1614A8B5C60A82434"
 	},
     "sdtPrestamo": {
-        "interesVigente": "6812.75",
-        "deudaTotalVencida": "17614.00",
+        "interesVigente": 6812.75,
+        "deudaTotalVencida": 17614.00,
         "tipoTasaMora": "Lineal Anual",
-        "cuotasPagasConRetaso": "0",
+        "cuotasPagasConRetaso": 0,
         "sucursal": "Sucursal Beta",
-        "diasMoraPromedio": "0",
-        "plus": "0.000000",
+        "diasMoraPromedio": 0,
+        "plus": 0.000000,
         "actividad": "01112 Trigo",
-        "tasaOriginal": "10.000000",
+        "tasaOriginal": 10.000000,
         "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "diasMora": "83",
-        "cantidadCuotas": "37",
+        "diasMora": 83,
+        "cantidadCuotas": 37,
         "estado": "Normal",
-        "capitalOriginal": "180000.00",
+        "capitalOriginal": 180000.00,
         "tipoDia": "Meses Calendario",
         "fechaPrimerPago": "2018-07-18",
         "claseTasa": "",
         "tipoAmortizacion": "Leasing",
         "simboloMoneda": "$",
-        "operacionUId": "142",
+        "operacionUId": 142,
         "fechaPrimerCuotaImpaga": "2018-07-18",
-        "valorCuota": "0.00",
-        "diasRevision": "0",
-        "precioOriginal": "0.000000",
-        "tasaVigente": "10.000000",
-        "tasaMoraVigente": "0.000000",
-        "interesDevengado": "0.00",
-        "interesSuspenso": "0.00",
-        "deudaCancelacionTotal": "213849.01",
-        "plazo": "1096",
+        "valorCuota": 0.00,
+        "diasRevision": 0,
+        "precioOriginal": 0.000000,
+        "tasaVigente": 10.000000,
+        "tasaMoraVigente": 0.000000,
+        "interesDevengado": 0.00,
+        "interesSuspenso": 0.00,
+        "deudaCancelacionTotal": 213849.01,
+        "plazo": 1096,
         "tipoTasa": "Lineal Anual",
-        "interesMora": "154.45",
-        "saldoCapital": "174180.15",
-        "precioActual": "0.000000",
-        "cantidadCuotasVencidas": "3",
+        "interesMora": 154.45,
+        "saldoCapital": 174180.15,
+        "precioActual": 0.000000,
+        "cantidadCuotasVencidas": 3,
         "producto": {
             "papel": "$",
             "moneda": "$",
-            "productoUId": "0",
+            "productoUId": 0,
             "nombre": "LEASING, Amort. - Capital F./Empr.- T/F",
-            "otrosConceptos":""
+            "otrosConceptos": ""
         },
         "fechaUltimoPago": "2018-05-18",
-        "interesMoraDevengado": "0.00",
+        "interesMoraDevengado": 0.00,
         "idOperacionFmt": "326-0",
         "fechaProximoVencimiento": "2018-10-18",
         "fechaValor": "2018-05-18",
-        "tasaMoraOriginal": "10.000000",
-        "tasaEfectiva": "0.000000",
-        "totalImpuestos": "0.00",
-        "coeficienteIVA": "0.000000",
-        "periodicidad": "30",
-        "resultadoInteresNormalDevengado": "0.00",
+        "tasaMoraOriginal": 10.000000,
+        "tasaEfectiva": 0.000000,
+        "totalImpuestos": 0.00,
+        "coeficienteIVA": 0.000000,
+        "periodicidad": 30,
+        "resultadoInteresNormalDevengado": 0.00,
         "fechaVencimiento": "2021-05-18",
-        "cantidadCuotasImpagas": "36",
+        "cantidadCuotasImpagas": 36,
         "cuentaContable": "Ds.P/Arrend.Financ.No Reaj.Res.",
         "tipoAno": "360 Días",
-        "interesPunitorio": "0.00",
+        "interesPunitorio": 0.00,
         "tipoProducto": "AM",
-        "tasaPunitorios": "0.000000",
-        "deudaTotalAFecha": "23433.85"
+        "tasaPunitorios": 0.000000,
+        "deudaTotalAFecha": 23433.85
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "951",
+        "Numero": 950,
         "Estado": "OK",
         "Servicio": "BTPrestamos.ObtenerDetalle",
         "Fecha": "2017-12-21",
         "Requerimiento": "",
-        "Hora": "18:34:34",
+        "Hora": "18:33:21",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

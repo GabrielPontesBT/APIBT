@@ -114,15 +114,15 @@ curl -X POST \
 	"Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Token": "b6275b301e4A8B5C60A82434"
     },
-    "operacionUId": "40",
-    "clienteUId": "9",
-    "importe": "950",
-    "operacionCobroUId": "865",
-    "referencia": "Paga cuota terceros"
+    "operacionUId": 39,
+    "clienteUId": 9,
+    "importe": 1000,
+    "operacionCobroUId": 800,
+    "referencia": "Una cuenta de terceros"
 }'
 ```
 :::
@@ -166,22 +166,22 @@ curl -X POST \
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Token": "b6275b301e4A8B5C60A82434"
     },
-    "movimientoUId": 61,
+    "movimientoUId": 58,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 1093,
+        "Numero": 1090,
         "Estado": "OK",
         "Servicio": "BTPrestamos.PagarCuotaTerceros",
         "Fecha": "2020-10-30",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Hora": "14:29:28"
+        "Hora": "12:46:32"
     }
 }
 ```

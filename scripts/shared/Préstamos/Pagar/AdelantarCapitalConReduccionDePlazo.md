@@ -126,8 +126,8 @@ curl -X POST \
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "operacionUId": 212,
     "clienteUId": 61,
@@ -174,26 +174,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "movimientoUId": 67,
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20604,
         "Estado": "OK",
         "Servicio": "BTPrestamos.AdelantarCapitalConReduccionDePlazo",
+        "Fecha": "2024-05-21",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Hora": "15:43:23",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -126,9 +126,9 @@ curl -X POST \
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "5453369fee4A8B5C60A82434"
 	},
-    "operacionUId": 342,
+    "operacionUId": 341,
     "clienteUId": 161,
     "operacionUId_desembolso": 281,
     "operacionUId_cobro": 281
@@ -171,28 +171,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "5453369fee4A8B5C60A82434"
 	},
-    "movimientoUId": "102",
+    "movimientoUId": 101,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "755",
+        "Numero": 752,
         "Estado": "OK",
         "Servicio": "BTPrestamos.Contratar",
         "Fecha": "2017-11-30",
         "Requerimiento": "",
-        "Hora": "13:47:48",
+        "Hora": "13:38:18",
         "Canal": "BTDIGITAL"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

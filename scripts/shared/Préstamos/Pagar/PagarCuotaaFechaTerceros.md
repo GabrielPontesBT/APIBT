@@ -120,15 +120,15 @@ curl -X POST \
   -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \
   -d '{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Requerimiento": "1",
+		"Usuario": "INSTALADOR",
+		"Token": "191631443CD285A89A23FBEE",
+		"Device": "AC"
 	},
-    "operacionUId": 342,
-    "clienteUId": 161,
-    "operacionCobroUId": 281,
+    "operacionUId": 37675,
+    "clienteUId": 1600,
+    "operacionCobroUId": 59,
     "referencia": "Prueba",
     "importe": 1000,
     "fecha": "2019-07-26"
@@ -171,28 +171,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Requerimiento": "1",
+		"Usuario": "INSTALADOR",
+		"Token": "191631443CD285A89A23FBEE",
+		"Device": "AC"
 	},
-    "movimientoUId": "1807",
+    "movimientoUId": 1807,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "120425",
-        "Estado": "OK",
+        "Canal": "BTDIGITAL",
         "Servicio": "BTPrestamos.PagarCuotaAFechaTerceros",
-        "Requerimiento": "",
         "Fecha": "2019-07-26",
         "Hora": "12:04:55",
-        "Canal": "BTDIGITAL"
+        "Requerimiento": "1",
+        "Numero": 120425,
+        "Estado": "OK"
     }
-}'
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
