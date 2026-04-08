@@ -179,58 +179,68 @@ curl -X POST \
          "diaPago": 14,
          "ballon": "",
          "cuotasExtraordinarias": {
-         "SdtsBTCuotaExtraordinaria": {
-            "mes": "",
-            "porcentajeCuota": ""
-         }
+            "SdtsBTCuotaExtraordinaria": [
+               {
+                  "mes": "",
+                  "porcentajeCuota": ""
+               }
+            ]
          },
          "pizarra": 0,
          "fechaVencimiento": "2025-11-14",
          "periodoCuotas": 35,
          "fechaPrimerPago": "2023-11-14",
          "comisiones": {
-         "SdtsBTComisionPrestamo": {
-            "porcentaje": "",
-            "descripcion": "",
-            "importe": "",
-            "codigo": ""
-         }
+            "SdtsBTComisionPrestamo": [
+               {
+                  "porcentaje": "",
+                  "descripcion": "",
+                  "importe": "",
+                  "codigo": ""
+               }
+            ]
          },
          "valorCuota": 0,
          "productoUId": 78,
          "actividad": "",
          "periodosGracia": {
-         "SdtsBTGraciaPrestamo": {
-            "aplicaSobre": "",
-            "numeroPeriodos": "",
-            "extiendePlazo": "",
-            "mes": "",
-            "periodoInicial": "",
-            "aplicaSobreDsc": ""
-         }
+            "SdtsBTGraciaPrestamo": [
+               {
+                  "aplicaSobre": "",
+                  "numeroPeriodos": "",
+                  "extiendePlazo": "",
+                  "mes": "",
+                  "periodoInicial": "",
+                  "aplicaSobreDsc": ""
+               }
+            ]
          },
          "operacionUId": 1568,
          "monto": 15543,
          "seguros": {
-         "SdtsBTSeguroPrestamo": {
-            "porcentaje": 0.1,
-            "descripcion": "",
-            "tipo": "",
-            "importe": 100,
-            "codigo": 100
-         }
+            "SdtsBTSeguroPrestamo": [
+               {
+                  "porcentaje": 0.1,
+                  "descripcion": "",
+                  "tipo": "",
+                  "importe": 100,
+                  "codigo": 100
+               }
+            ]
          },
          "comisionesCuota": {
-         "SdtsBTComisionPrestamo": {
-            "porcentaje": "",
-            "descripcion": "",
-            "importe": "",
-            "codigo": ""
-         }
+            "SdtsBTComisionPrestamo": [
+               {
+                  "porcentaje": "",
+                  "descripcion": "",
+                  "importe": "",
+                  "codigo": ""
+               }
+            ]
          },
          "fechaValor": "2023-11-14",
          "cantidadCuotas": 6
-      }
+      
 }'
 ```
 :::
