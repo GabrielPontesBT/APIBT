@@ -75,13 +75,13 @@ Código | Descripción
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.AgregarPerfilTransaccional>
-         <Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>GP</Device>
-            <Requerimiento>1</Requerimiento>
-            <Token>1EA88623CBDC6645284505C9</Token>
-         </Btinreq>
+         <bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>GP</bts:Device>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Token>1EA88623CBDC6645284505C9</bts:Token>
+         </bts:Btinreq>
          <bts:operacionUId>1</bts:operacionUId>
          <bts:sdtPerfilTransaccional>
             <bts:origenDeFondosId>1</bts:origenDeFondosId>

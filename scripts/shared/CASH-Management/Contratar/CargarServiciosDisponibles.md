@@ -114,10 +114,10 @@ curl -X POST \
          </Btinreq>
          <sdtServicios>
             <sBTConvServicioCASH>
-               <descServicio>Pagos por Planilla</descServicio>
+               <descripcionServicio>Pagos por Planilla</descripcionServicio>
                <tipoServicio>P</tipoServicio>
                <servicio>1</servicio>
-               <idContrato>1</idContrato>
+               <contratoId>1</contratoId>
             </sBTConvServicioCASH>
          </sdtServicios>
          <Erroresnegocio></Erroresnegocio>

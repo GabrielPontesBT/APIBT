@@ -103,41 +103,41 @@ curl -X GET \
             <Device>AC</Device>
          </Btinreq>
          <sdtLimites>
-            <SdtsBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>1</identificador>
                <moneda>0</moneda>
                <limiteEMV>30000.00</limiteEMV>
                <limiteBandaMagnetica>15000.00</limiteBandaMagnetica>
                <limiteNoPresencial>10000.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
-            <SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>2</identificador>
                <moneda>0</moneda>
                <limiteEMV>12850.00</limiteEMV>
                <limiteBandaMagnetica>13000.00</limiteBandaMagnetica>
                <limiteNoPresencial>8000.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
-            <SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>3</identificador>
                <moneda>0</moneda>
                <limiteEMV>0.00</limiteEMV>
                <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>
                <limiteNoPresencial>0.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
-            <SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>4</identificador>
                <moneda>0</moneda>
                <limiteEMV>0.00</limiteEMV>
                <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>
                <limiteNoPresencial>10000.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
-            <SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>5</identificador>
                <moneda>0</moneda>
                <limiteEMV>50000.00</limiteEMV>
                <limiteBandaMagnetica>30000.00</limiteBandaMagnetica>
                <limiteNoPresencial>10000.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
          </sdtLimites>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -165,7 +165,7 @@ curl -X GET \
         "Token": "352296800F955E77534D3E02" 
     }, 
 	"sdtLimites": { 
-		"SdtsBTLimiteTarjeta": [ 
+		"sBTLimiteTarjeta": [ 
 		  { 
 			"identificador": "1", 
 			"moneda": "0", 

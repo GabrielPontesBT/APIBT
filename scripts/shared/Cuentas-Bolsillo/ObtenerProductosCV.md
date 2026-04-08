@@ -117,30 +117,35 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>512</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Gastos</nombre>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>511</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <moneda>USD</moneda>
                <papel>$</papel>
                <productoUId>531</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Ahorro</nombre>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>451</productoUId>
                <nombre>,</nombre>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>$</papel>
                <productoUId>532</productoUId>
                <nombre>CUENTAS BOLSILLO, Bolsillo Viajes</nombre>
+               <otrosConceptos/>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>

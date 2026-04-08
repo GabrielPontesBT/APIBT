@@ -83,8 +83,6 @@ Código | Descripción
          <bts:clienteUId>5</bts:clienteUId>
          <bts:sdtTraspaso>
             <bts:operacionUIdOrigen>9</bts:operacionUIdOrigen>
-            <bts:importeCredito>100</bts:importeCredito>
-            <bts:importeDebito>100</bts:importeDebito>
             <bts:importe>100</bts:importe>
             <bts:operacionUIdDestino>8</bts:operacionUIdDestino>
             <bts:monedaId>0</bts:monedaId>

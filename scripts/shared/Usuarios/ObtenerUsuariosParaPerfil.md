@@ -111,36 +111,36 @@ curl -X POST \
             <Requerimiento>1</Requerimiento>
          </Btinreq>
          <sdtUsuarios>
-            <SdtsBTDetalleUsuario>
+            <sBTDetalleUsuario>
                <empresa>1</empresa>
                <usuario>GERENTE</usuario>
                <nombre>GERENTE</nombre>
                <ultimoAvisoActividad>2018-03-21, 12:51:10</ultimoAvisoActividad>
-            </SdtsBTDetalleUsuario>
-            <SdtsBTDetalleUsuario>
+            </sBTDetalleUsuario>
+            <sBTDetalleUsuario>
                <empresa>1 - BTV2R3 Uruguay</empresa>
                <usuario>BANTOTAL</usuario>
                <nombre>BANTOTAL</nombre>
                <ultimoAvisoActividad>2022-05-26, 13:46:09</ultimoAvisoActividad>
-            </SdtsBTDetalleUsuario>
-            <SdtsBTDetalleUsuario>
+            </sBTDetalleUsuario>
+            <sBTDetalleUsuario>
                <empresa>1</empresa>
                <usuario>COLOCACION</usuario>
                <nombre>COLOCACION</nombre>
                <ultimoAvisoActividad>2018-02-26, 17:03:16</ultimoAvisoActividad>
-            </SdtsBTDetalleUsuario>
-            <SdtsBTDetalleUsuario>
+            </sBTDetalleUsuario>
+            <sBTDetalleUsuario>
                <empresa>1</empresa>
                <usuario>CAJERO</usuario>
                <nombre>CAJERO</nombre>
                <ultimoAvisoActividad>2022-05-26, 13:40:24</ultimoAvisoActividad>
-            </SdtsBTDetalleUsuario>
-            <SdtsBTDetalleUsuario>
+            </sBTDetalleUsuario>
+            <sBTDetalleUsuario>
                <empresa>1</empresa>
                <usuario>OPERADOR</usuario>
                <nombre>OPERADOR</nombre>
                <ultimoAvisoActividad>2001-01-01, 15:29:13</ultimoAvisoActividad>
-            </SdtsBTDetalleUsuario>
+            </sBTDetalleUsuario>
          </sdtUsuarios>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -168,7 +168,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434" 
     }, 
     "sdtUsuarios": { 
-        "SdtsBTDetalleUsuario": [ 
+        "sBTDetalleUsuario": [ 
         { 
             "empresa": "1", 
             "usuario": "GERENTE", 

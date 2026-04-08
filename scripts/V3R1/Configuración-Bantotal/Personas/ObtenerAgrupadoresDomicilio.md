@@ -128,35 +128,35 @@ curl -X POST \
          </Btinreq>
          <sdtAgrupadores>
             <niveles>
-               <SdtsBTAgrupadorNiv1_it>
+               <sBTAgrupadorNiv1_it>
                   <codigo>1</codigo>
                   <descripcion>Avenida</descripcion>
                   <subNivel2>
-                     <SdtsBTAgrupadorNiv2_it>
+                     <sBTAgrupadorNiv2_it>
                         <codigo>1</codigo>
                         <descripcion>No. Puerta</descripcion>
                         <subNivel3>
-                           <SdtsBTAgrupadorNiv3_it>
+                           <sBTAgrupadorNiv3_it>
                               <codigo>1</codigo>
                               <descripcion>Piso</descripcion>
                               <subNivel4>
-                                 <SdtsBTAgrupadorNiv4_it>
+                                 <sBTAgrupadorNiv4_it>
                                     <codigo>1</codigo>
                                     <descripcion>Esquina</descripcion>
                                     <subNivel5>
-                                       <SdtsBTAgrupadorNiv5_it>
+                                       <sBTAgrupadorNiv5_it>
                                           <codigo>1</codigo>
                                           <descripcion>Niv5</descripcion>
                                           <subNivel6></subNivel6>
-                                       </SdtsBTAgrupadorNiv5_it>
+                                       </sBTAgrupadorNiv5_it>
                                     </subNivel5>
-                                 </SdtsBTAgrupadorNiv4_it>
+                                 </sBTAgrupadorNiv4_it>
                               </subNivel4>
-                           </SdtsBTAgrupadorNiv3_it>
+                           </sBTAgrupadorNiv3_it>
                         </subNivel3>
-                     </SdtsBTAgrupadorNiv2_it>
+                     </sBTAgrupadorNiv2_it>
                   </subNivel2>
-               </SdtsBTAgrupadorNiv1_it>
+               </sBTAgrupadorNiv1_it>
             </niveles>
          </sdtAgrupadores>
          <Erroresnegocio></Erroresnegocio>

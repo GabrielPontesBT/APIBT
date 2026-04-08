@@ -104,78 +104,78 @@ curl -X POST \
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
          <sdtProcesosBatch>
-            <SdtsBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>1</identificador>
                <nombre>PCAPD08</nombre>
                <descripcion>Paralelizador Cadena de cierre</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>10</identificador>
                <nombre>PCADENA</nombre>
                <descripcion>MENSAJE INICIO2</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>NO</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>20</identificador>
                <nombre>PCADENA</nombre>
                <descripcion>PCADENA</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>NO</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>69</identificador>
                <nombre>PCLE252</nombre>
                <descripcion>Generación de C. Gerencia</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>80</identificador>
                <nombre>PCF0030</nombre>
                <descripcion>Cobro de Cajas de Seguridad</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>90</identificador>
                <nombre>PCF0040</nombre>
                <descripcion>Devengado de Comisiones Adel.</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>92</identificador>
                <nombre>POCDE000</nombre>
                <descripcion>Depura FOCDE02 y FOCDE03</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>93</identificador>
                <nombre>POCDE002</nombre>
                <descripcion>Busca Indicios OCODEí</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>97</identificador>
                <nombre>PB098541</nombre>
                <descripcion>Acredita recaudaciones Cash</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
          </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -202,7 +202,7 @@ curl -X POST \
       "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": {
-      "SdtsBTProcesoBatch": [
+      "sBTProcesoBatch": [
         {
           "identificador": "1",
           "nombre": "PCAPD08",

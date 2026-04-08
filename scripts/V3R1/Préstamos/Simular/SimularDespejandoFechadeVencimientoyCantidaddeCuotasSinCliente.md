@@ -153,31 +153,31 @@ curl -X POST \
             <valorCuota>5000.00</valorCuota>
             <otrosConceptos></otrosConceptos>
             <cronograma>
-               <SdtsBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2020-11-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2020-12-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-01-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-02-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>1756.77</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-03-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
             </cronograma>
             <totalPrestamo>21785.37</totalPrestamo>
             <capital>20000.00</capital>
@@ -231,7 +231,7 @@ curl -X POST \
       "valorCuota": "5000.00", 
       "otrosConceptos": "", 
       "cronograma": { 
-         "SdtsBTCuotaPrestamoAlta": [ 
+         "sBTCuotaPrestamoAlta": [ 
             { 
             "importe": "5000.00", 
             "redondeo": "0.00", 

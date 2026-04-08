@@ -93,11 +93,11 @@ Código | Descripción
             <bts:precio>1000</bts:precio>
             <bts:cuentaUId>221</bts:cuentaUId>
             <bts:otrosConceptos>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:otrosConceptos>
             <bts:valorNominal>0</bts:valorNominal>
             <bts:solicita>P</bts:solicita>
@@ -140,7 +140,7 @@ curl -X POST \
       "precio": 1000,
       "cuentaUId": 221,
       "otrosConceptos": {
-      "SdtsBTConcepto": {
+      "sBTConcepto": {
          "texto": "",
          "valor": "",
          "concepto": ""

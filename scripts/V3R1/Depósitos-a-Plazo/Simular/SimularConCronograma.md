@@ -190,194 +190,194 @@ curl -X POST \
             <Periodicidad>30</Periodicidad>
             <Intereses>2132.71</Intereses>
             <Impuestos>
-               <SdtsBTConcepto>
+               <sBTConcepto>
                   <concepto>GANANCIA</concepto>
                   <valor>106.65</valor>
                   <texto>Impuestos a las ganancias Totales</texto>
-               </SdtsBTConcepto>
+               </sBTConcepto>
             </Impuestos>
             <otrosConceptos></otrosConceptos>
             <Cronograma>
-               <SdtsBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-05-23</FechaPago>
                   <Plazo>32</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>189.62</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>9.48</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-06-23</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-07-25</FechaPago>
                   <Plazo>32</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>189.62</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>9.48</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-08-25</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-09-26</FechaPago>
                   <Plazo>31</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>183.67</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>9.18</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-10-26</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-11-28</FechaPago>
                   <Plazo>32</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>189.62</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>9.48</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2022-12-28</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2023-01-30</FechaPago>
                   <Plazo>32</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>189.62</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>9.48</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2023-02-28</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2023-03-31</FechaPago>
                   <Plazo>30</Plazo>
                   <TipoCuota>I</TipoCuota>
                   <Capital>0.00</Capital>
                   <Interes>177.72</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>8.89</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
-               <SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
+               <sBTCuotaPlanDeposito>
                   <FechaPago>2023-04-21</FechaPago>
                   <Plazo>21</Plazo>
                   <TipoCuota>M</TipoCuota>
                   <Capital>20000.00</Capital>
                   <Interes>124.24</Interes>
                   <Impuestos>
-                     <SdtsBTConcepto>
+                     <sBTConcepto>
                         <concepto>GANANCIA</concepto>
                         <valor>6.21</valor>
                         <texto>Impuestos a las ganancias</texto>
-                     </SdtsBTConcepto>
+                     </sBTConcepto>
                   </Impuestos>
                   <OtrosConceptos></OtrosConceptos>
-               </SdtsBTCuotaPlanDeposito>
+               </sBTCuotaPlanDeposito>
             </Cronograma>
          </sBTSimulacionDepositoAPlazo>
          <Erroresnegocio></Erroresnegocio>
@@ -430,7 +430,7 @@ curl -X POST \
          "Periodicidad": 30, 
          "Intereses": 2132.71, 
          "Impuestos": { 
-         "SdtsBTConcepto": { 
+         "sBTConcepto": { 
             "concepto": "GANANCIA", 
             "valor": 106.65, 
             "texto": "Impuestos a las ganancias Totales" 
@@ -438,7 +438,7 @@ curl -X POST \
          }, 
          "otrosConceptos": "", 
          "Cronograma": { 
-         "SdtsBTCuotaPlanDeposito": [ 
+         "sBTCuotaPlanDeposito": [ 
             { 
                "FechaPago": "2022-05-23", 
                "Plazo": 32, 
@@ -446,7 +446,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 189.62, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 9.48, 
                   "texto": "Impuestos a las ganancias" 
@@ -461,7 +461,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -476,7 +476,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 189.62, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 9.48, 
                   "texto": "Impuestos a las ganancias" 
@@ -491,7 +491,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -506,7 +506,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 183.67, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 9.18, 
                   "texto": "Impuestos a las ganancias" 
@@ -521,7 +521,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -536,7 +536,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 189.62, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 9.48, 
                   "texto": "Impuestos a las ganancias" 
@@ -551,7 +551,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -566,7 +566,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 189.62, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 9.48, 
                   "texto": "Impuestos a las ganancias" 
@@ -581,7 +581,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -596,7 +596,7 @@ curl -X POST \
                "Capital": 0, 
                "Interes": 177.72, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 8.89, 
                   "texto": "Impuestos a las ganancias" 
@@ -611,7 +611,7 @@ curl -X POST \
                "Capital": 20000, 
                "Interes": 124.24, 
                "Impuestos": { 
-               "SdtsBTConcepto": { 
+               "sBTConcepto": { 
                   "concepto": "GANANCIA", 
                   "valor": 6.21, 
                   "texto": "Impuestos a las ganancias" 

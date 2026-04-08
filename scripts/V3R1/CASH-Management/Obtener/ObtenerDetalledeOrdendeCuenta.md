@@ -129,7 +129,7 @@ curl -X POST \
          <importe>82</importe>
          <referencia/>
          <fechaPago>2023-09-04</fechaPago>
-         <estado>P<estado/>
+         <estado>P</estado>
          <erroresPago/>
          <sdtDetallePagos/>
          <Erroresnegocio>

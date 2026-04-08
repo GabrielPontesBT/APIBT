@@ -111,18 +111,18 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>be9fc8708b4A8B5C60A82434</Token>
          </Btinreq>
-         <bts:sdtTitulos>
+         <sdtTitulos>
             <sBTTitulo>
-               <bts:moneda>80</bts:moneda>
-               <bts:simbolo>$</bts:simbolo>
-               <bts:pais>URUGUAY</bts:pais>
-               <bts:grupoId>36</bts:grupoId>
-               <bts:codigo>1</bts:codigo>
-               <bts:nombre>Titulo2</bts:nombre>
-               <bts:precioActual>452</bts:precioActual>
-               <bts:otrosConceptos></bts:otrosConceptos>
+               <moneda>80</moneda>
+               <simbolo>$</simbolo>
+               <pais>URUGUAY</pais>
+               <grupoId>36</grupoId>
+               <codigo>1</codigo>
+               <nombre>Titulo2</nombre>
+               <precioActual>452</precioActual>
+               <otrosConceptos/>
             </sBTTitulo>
-         </bts:sdtTitulos>
+         </sdtTitulos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>967</Numero>

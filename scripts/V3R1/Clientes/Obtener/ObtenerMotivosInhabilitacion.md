@@ -97,7 +97,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <Prueba.ObtenerMotivosInhabilitacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTClientes.ObtenerMotivosInhabilitacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>2</Device>
             <Usuario>Instalador</Usuario>
@@ -122,14 +122,14 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>1827</Numero>
-            <Servicio>Prueba.ObtenerMotivosInhabilitacion</Servicio>
+            <Servicio>BTClientes.ObtenerMotivosInhabilitacion</Servicio>
             <Estado>OK</Estado>
             <Fecha>2022-10-27</Fecha>
             <Requerimiento>0</Requerimiento>
             <Hora>09:39:20</Hora>
             <Canal>BTDIGITAL</Canal>
          </Btoutreq>
-      </Prueba.ObtenerMotivosInhabilitacionResponse>
+      </BTClientes.ObtenerMotivosInhabilitacionResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -163,7 +163,7 @@ curl -X POST \
    "Erroresnegocio": "",
    "Btoutreq": {
       "Numero": 1827,
-      "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
+      "Servicio": "BTClientes.ObtenerMotivosInhabilitacion",
       "Estado": "OK",
       "Fecha": "2022-10-27",
       "Requerimiento": 0,

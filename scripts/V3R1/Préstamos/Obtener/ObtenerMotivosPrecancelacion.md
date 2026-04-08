@@ -80,17 +80,17 @@ T | Total.
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:prueba.ObtenerMotivosPreCancelacion>
-         <Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>GZ</Device>
-            <Requerimiento>0</Requerimiento>
-            <Token>A1F224CC3030A4926AB6945F</Token>
-         </Btinreq>
+      <bts:BTPrestamos.ObtenerMotivosPrecancelacion>
+         <bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>GZ</bts:Device>
+            <bts:Requerimiento>0</bts:Requerimiento>
+            <bts:Token>A1F224CC3030A4926AB6945F</bts:Token>
+         </bts:Btinreq>
          <bts:productoUId>120</bts:productoUId>
          <bts:tipoPrecancelacion>T</bts:tipoPrecancelacion>
-      </bts:prueba.ObtenerMotivosPreCancelacion>
+      </bts:BTPrestamos.ObtenerMotivosPrecancelacion>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -125,7 +125,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <prueba.ObtenerMotivosPreCancelacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTPrestamos.ObtenerMotivosPrecancelacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Canal>BTDIGITAL</Canal>
             <Usuario>INSTALADOR</Usuario>
@@ -145,11 +145,11 @@ curl -X POST \
             <Fecha>2025-04-02</Fecha>
             <Hora>15:56:52</Hora>
             <Numero>64542</Numero>
-            <Servicio>prueba.ObtenerMotivosPreCancelacion</Servicio>
+            <Servicio>BTPrestamos.ObtenerMotivosPrecancelacion</Servicio>
             <Requerimiento>0</Requerimiento>
             <Canal>BTDIGITAL</Canal>
          </Btoutreq>
-      </prueba.ObtenerMotivosPreCancelacionResponse>
+      </BTPrestamos.ObtenerMotivosPrecancelacionResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```

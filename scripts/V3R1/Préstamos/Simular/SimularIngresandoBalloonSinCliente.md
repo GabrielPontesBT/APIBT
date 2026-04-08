@@ -153,16 +153,16 @@ curl -X POST \
             <valorCuota>15544.58</valorCuota> 
             <otrosConceptos></otrosConceptos> 
             <cronograma> 
-               <SdtsBTCuotaPrestamoAlta> 
+               <sBTCuotaPrestamoAlta> 
                   <importe>15544.58</importe> 
                   <redondeo>0.00</redondeo> 
                   <fechaPago>2020-11-13</fechaPago> 
-               </SdtsBTCuotaPrestamoAlta> 
-               <SdtsBTCuotaPrestamoAlta> 
+               </sBTCuotaPrestamoAlta> 
+               <sBTCuotaPrestamoAlta> 
                   <importe>5000.00</importe> 
                   <redondeo>0.00</redondeo> 
                   <fechaPago>2020-11-14</fechaPago> 
-               </SdtsBTCuotaPrestamoAlta> 
+               </sBTCuotaPrestamoAlta> 
             </cronograma> 
             <totalPrestamo>20573.18</totalPrestamo> 
             <capital>20000.00</capital> 
@@ -216,7 +216,7 @@ curl -X POST \
       "valorCuota": "15544.58", 
       "otrosConceptos": "", 
       "cronograma": { 
-         "SdtsBTCuotaPrestamoAlta": [ 
+         "sBTCuotaPrestamoAlta": [ 
             { 
                "importe": "15544.58", 
                "redondeo": "0.00", 

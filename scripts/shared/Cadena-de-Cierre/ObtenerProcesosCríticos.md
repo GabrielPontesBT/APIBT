@@ -104,38 +104,38 @@ curl -X POST \
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
          <sdtProcesosBatch>
-            <SdtsBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>1500</identificador>
                <nombre>PPP92005</nombre>
                <descripcion>Cobrador de prestamos</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>1551</identificador>
                <nombre>PDETCADA</nombre>
                <descripcion>Detiene cadena error tipo A</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>80001</identificador>
                <nombre>PDETCADA</nombre>
                <descripcion>Detiene cadena con Tipo A</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
-            </SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>80300</identificador>
                <nombre>PEPECA</nombre>
                <descripcion>CAIDA</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
          </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -163,7 +163,7 @@ curl -X POST \
       "Token": "6964034201CD285A89A23FBE" 
     }, 
     "sdtProcesosBatch": { 
-      "SdtsBTProcesoBatch": [ 
+      "sBTProcesoBatch": [ 
         { 
           "identificador": "1500", 
           "nombre": "PPP92005", 

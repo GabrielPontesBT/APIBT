@@ -131,13 +131,13 @@ CP | Con perdón.
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.SolicitarPrecancelacion>
-         <Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>GZ</Device>
-            <Requerimiento>0</Requerimiento>
-            <Token>3D61565504E071EF8B946737</Token>
-         </Btinreq>
+         <bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>GZ</bts:Device>
+            <bts:Requerimiento>0</bts:Requerimiento>
+            <bts:Token>3D61565504E071EF8B946737</bts:Token>
+         </bts:Btinreq>
          <bts:operacionUId>167</bts:operacionUId>
          <bts:clienteUId>5</bts:clienteUId>
          <bts:importe>5000</bts:importe>

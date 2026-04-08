@@ -132,35 +132,35 @@ curl -X POST \
                <sBTMovimientoAhorro>
                   <saldoAhorro>1000.00</saldoAhorro>
                   <fecha>2017-03-06</fecha>
-                  <interes>0.00</interes>
+                  <intereses>0.00</intereses>
                   <capital>1000.00</capital>
                   <concepto>Depósito inicial</concepto>
                </sBTMovimientoAhorro>
                <sBTMovimientoAhorro>
                   <saldoAhorro>6000.00</saldoAhorro>
                   <fecha>2017-04-10</fecha>
-                  <interes>0.00</interes>
+                  <intereses>0.00</intereses>
                   <capital>5000.00</capital>
                   <concepto>Incremento de ahorro</concepto>
                </sBTMovimientoAhorro>
                <sBTMovimientoAhorro>
                   <saldoAhorro>6016.77</saldoAhorro>
                   <fecha>2017-05-08</fecha>
-                  <interes>16.77</interes>
+                  <intereses>16.77</intereses>
                   <capital>6000.00</capital>
                   <concepto>Renovación del ahorro</concepto>
                </sBTMovimientoAhorro>
                <sBTMovimientoAhorro>
                   <saldoAhorro>11016.77</saldoAhorro>
                   <fecha>2017-05-09</fecha>
-                  <interes>0.00</interes>
+                  <intereses>0.00</intereses>
                   <capital>5000.00</capital>
                   <concepto>Incremento de ahorro</concepto>
                </sBTMovimientoAhorro>
                <sBTMovimientoAhorro>
                   <saldoAhorro>11200.75</saldoAhorro>
                   <fecha>2017-11-30</fecha>
-                  <interes>183.98</interes>
+                  <intereses>183.98</intereses>
                   <capital>11055.89</capital>
                   <concepto>Acreditación del ahorro</concepto>
                </sBTMovimientoAhorro>

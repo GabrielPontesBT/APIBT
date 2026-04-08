@@ -122,7 +122,7 @@ curl -X POST \
          <sdtEstadoDeCuenta>
             <saldoPartida>0.00</saldoPartida>
             <fechaHasta>2020-04-30</fechaHasta>
-            <productoUID>512</productoUID>
+            <productoUId>512</productoUId>
             <movimientos>
                <sBTMovimiento>
                   <moneda/>

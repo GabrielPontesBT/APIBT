@@ -109,30 +109,30 @@ curl -X POST \
             <Token>86b12d9cbaCD285A89A23FBE</Token>
          </Btinreq>
          <Variableregla>
-            <SdtsBTVariableRegla>
+            <sBTVariableRegla>
                <tipoDato>E-Entero</tipoDato>
                <descripcion>Moneda</descripcion>
                <variableId>1</variableId>
                <nombre>MONEDA</nombre>
-            </SdtsBTVariableRegla>
-            <SdtsBTVariableRegla>
+            </sBTVariableRegla>
+            <sBTVariableRegla>
                <tipoDato>N-Numerico</tipoDato>
                <descripcion>Importe</descripcion>
                <variableId>2</variableId>
                <nombre>IMPORTE</nombre>
-            </SdtsBTVariableRegla>
-            <SdtsBTVariableRegla>
+            </sBTVariableRegla>
+            <sBTVariableRegla>
                <tipoDato>N-Numerico</tipoDato>
                <descripcion>Tipo de Cambio</descripcion>
                <variableId>3</variableId>
                <nombre>TCCOMPRA</nombre>
-            </SdtsBTVariableRegla>
-            <SdtsBTVariableRegla>
+            </sBTVariableRegla>
+            <sBTVariableRegla>
                <tipoDato>N-Numerico</tipoDato>
                <descripcion>Tipo de Cambio Vta</descripcion>
                <variableId>4</variableId>
                <nombre>TCVTA</nombre>
-            </SdtsBTVariableRegla>
+            </sBTVariableRegla>
          </Variableregla>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -160,7 +160,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtVariablesRegla": {
-        "SdtsBTVariableRegla": [
+        "sBTVariableRegla": [
         {
             "tipoDato": "E-Entero",
             "descripcion": "Moneda",

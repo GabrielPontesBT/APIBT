@@ -61,7 +61,6 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTClientes.ObtenerDomicilios>
          <bts:Btinreq>
- 		  <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Device>FC</bts:Device>

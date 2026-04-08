@@ -91,11 +91,11 @@ Código | Descripción
             <bts:precio>33</bts:precio>
             <bts:monedaPrecio>1</bts:monedaPrecio>
             <bts:datosAdicionales>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:datosAdicionales>
             <bts:versionUId>2</bts:versionUId>
             <bts:kitMantenimiento>1</bts:kitMantenimiento>
@@ -109,54 +109,54 @@ Código | Descripción
             <bts:diaPago>14</bts:diaPago>
             <bts:ballon></bts:ballon>
             <bts:cuotasExtraordinarias>
-               <bts:SdtsBTCuotaExtraordinaria>
+               <bts:sBTCuotaExtraordinaria>
                   <bts:mes></bts:mes>
                   <bts:porcentajeCuota></bts:porcentajeCuota>
-               </bts:SdtsBTCuotaExtraordinaria>
+               </bts:sBTCuotaExtraordinaria>
             </bts:cuotasExtraordinarias>
             <bts:pizarra>0</bts:pizarra>
             <bts:fechaVencimiento>2025-11-14</bts:fechaVencimiento>
             <bts:periodoCuotas>35</bts:periodoCuotas>
             <bts:fechaPrimerPago>2023-11-14</bts:fechaPrimerPago>
             <bts:comisiones>
-               <bts:SdtsBTComisionPrestamo>
+               <bts:sBTComisionPrestamo>
                   	<porcentaje></porcentaje>
                	<descripcion></descripcion>
                	<importe></importe>
                	<codigo></codigo>
-               </bts:SdtsBTComisionPrestamo>
+               </bts:sBTComisionPrestamo>
             </bts:comisiones>
             <bts:valorCuota>0.00</bts:valorCuota>
             <bts:productoUId></bts:productoUId>
             <bts:actividad></bts:actividad>
             <bts:periodosGracia>
-               <bts:SdtsBTGraciaPrestamo>
+               <bts:sBTGraciaPrestamo>
                   <bts:aplicaSobre></bts:aplicaSobre>
                   <bts:numeroPeriodos></bts:numeroPeriodos>
                   <bts:extiendePlazo></bts:extiendePlazo>
                   <bts:mes></bts:mes>
                   <bts:periodoInicial></bts:periodoInicial>
                   <bts:aplicaSobreDsc></bts:aplicaSobreDsc>
-               </bts:SdtsBTGraciaPrestamo>
+               </bts:sBTGraciaPrestamo>
             </bts:periodosGracia>
             <bts:operacionUId>1568</bts:operacionUId>
             <bts:monto>15543</bts:monto>
             <bts:seguros>
-               <bts:SdtsBTSeguroPrestamo>
+               <bts:sBTSeguroPrestamo>
                   <bts:porcentaje>0.1000</bts:porcentaje>
                   <bts:descripcion></bts:descripcion>
                   <bts:tipo></bts:tipo>
                   <bts:importe>100.00</bts:importe>
                   <bts:codigo>100</bts:codigo>
-               </bts:SdtsBTSeguroPrestamo>
+               </bts:sBTSeguroPrestamo>
             </bts:seguros>
             <bts:comisionesCuota>
-               <bts:SdtsBTComisionPrestamo>
+               <bts:sBTComisionPrestamo>
                   <bts:porcentaje></bts:porcentaje>
                   <bts:descripcion></bts:descripcion>
                   <bts:importe></bts:importe>
                   <bts:codigo></bts:codigo>
-               </bts:SdtsBTComisionPrestamo>
+               </bts:sBTComisionPrestamo>
             </bts:comisionesCuota>
             <bts:fechaValor>2023-11-14</bts:fechaValor>
             <bts:cantidadCuotas>6</bts:cantidadCuotas>
@@ -193,7 +193,7 @@ curl -X POST \
         "precio": 33,
         "monedaPrecio": 1,
         "datosAdicionales": {
-        "SdtsBTConcepto": {
+        "sBTConcepto": {
             "texto": "",
             "valor": "",
             "concepto": ""
@@ -211,7 +211,7 @@ curl -X POST \
         "diaPago": 14,
         "ballon": "",
         "cuotasExtraordinarias": {
-        "SdtsBTCuotaExtraordinaria": {
+        "sBTCuotaExtraordinaria": {
             "mes": "",
             "porcentajeCuota": ""
         }
@@ -221,7 +221,7 @@ curl -X POST \
         "periodoCuotas": 35,
         "fechaPrimerPago": "2023-11-14",
         "comisiones": {
-        "SdtsBTComisionPrestamo": {
+        "sBTComisionPrestamo": {
             "porcentaje": "",
             "descripcion": "",
             "importe": "",
@@ -232,7 +232,7 @@ curl -X POST \
         "productoUId": "",
         "actividad": "",
         "periodosGracia": {
-        "SdtsBTGraciaPrestamo": {
+        "sBTGraciaPrestamo": {
             "aplicaSobre": "",
             "numeroPeriodos": "",
             "extiendePlazo": "",
@@ -244,7 +244,7 @@ curl -X POST \
         "operacionUId": 1568,
         "monto": 15543,
         "seguros": {
-        "SdtsBTSeguroPrestamo": {
+        "sBTSeguroPrestamo": {
             "porcentaje": 0.1,
             "descripcion": "",
             "tipo": "",
@@ -253,7 +253,7 @@ curl -X POST \
         }
         },
         "comisionesCuota": {
-        "SdtsBTComisionPrestamo": {
+        "sBTComisionPrestamo": {
             "porcentaje": "",
             "descripcion": "",
             "importe": "",

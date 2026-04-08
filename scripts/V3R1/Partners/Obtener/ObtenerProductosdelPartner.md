@@ -126,11 +126,11 @@ curl -X POST \
                <moneda>CRC</moneda>
                <papel>$</papel>
                <otrosConceptos>
-                  <SdtsBTConcepto>
+                  <sBTConcepto>
                      <texto>N</texto>
                      <valor>0.00</valor>
                      <concepto>SOLICITA_BALLOON</concepto>
-                  </SdtsBTConcepto>
+                  </sBTConcepto>
                </otrosConceptos>
                <productoUId>200</productoUId>
                <nombre>Vehiculares</nombre>
@@ -139,11 +139,11 @@ curl -X POST \
                <moneda>CRC</moneda>
                <papel>$</papel>
                <otrosConceptos>
-                  <SdtsBTConcepto>
+                  <sBTConcepto>
                      <texto>N</texto>
                      <valor>0.00</valor>
                      <concepto>SOLICITA_BALLOON</concepto>
-                  </SdtsBTConcepto>
+                  </sBTConcepto>
                </otrosConceptos>
                <productoUId>198</productoUId>
                <nombre>Amortización Automática TF</nombre>
@@ -180,7 +180,7 @@ curl -X POST \
             "moneda": "CRC",
             "papel": "$",
             "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
                 "texto": "N",
                 "valor": 0,
                 "concepto": "SOLICITA_BALLOON"
@@ -193,7 +193,7 @@ curl -X POST \
             "moneda": "CRC",
             "papel": "$",
             "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
                 "texto": "N",
                 "valor": 0,
                 "concepto": "SOLICITA_BALLOON"

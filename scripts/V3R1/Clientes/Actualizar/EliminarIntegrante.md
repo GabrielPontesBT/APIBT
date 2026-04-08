@@ -74,9 +74,9 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
          </bts:Btinreq>
+         <bts:clienteUId>1</bts:clienteUId>
+         <bts:personaUId>853</bts:personaUId>
       </bts:BTClientes.EliminarIntegrante>
-      <bts:clienteUId>1</bts:clienteUId>
-      <bts:personaUId>853</bts:personaUId>
    </soapenv:Body>
 </soapenv:Envelope>
 ```

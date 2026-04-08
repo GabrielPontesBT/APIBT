@@ -167,7 +167,7 @@ curl -X POST \
       "descripcion": "Cuenta Persona",
       "vigente": "S",
       "productos": {
-         "SdtsBTProductoPaquete": [
+         "sBTProductoPaquete": [
             {
             "productoUId": "154",
             "moneda": "PESOS",

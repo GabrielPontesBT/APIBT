@@ -51,19 +51,21 @@ No aplica.
 
 @tab XML
 ```xml
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
-   <SOAP-ENV:Body> 
-      <BTCuentasDeAhorro.ObtenerProductos xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
-         <Btinreq> 
-            <Device>AV</Device> 
-            <Usuario>MINSTALADOR</Usuario> 
-            <Requerimiento/> 
-            <Canal>BTDIGITAL</Canal> 
-            <Token>be9fc8708b4A8B5C60A82434</Token> 
-         </Btinreq> 
-      </BTCuentasDeAhorro.ObtenerProductos> 
-   </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope> 
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bts:BTCuentasDeAhorro.ObtenerProductos>
+         <bts:Btinreq>
+            <bts:Device>AV</bts:Device>
+            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:Requerimiento></bts:Requerimiento>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>
+         </bts:Btinreq>
+      </bts:BTCuentasDeAhorro.ObtenerProductos>
+   </soapenv:Body>
+</soapenv:Envelope>
+
 ```
 
 @tab JSON

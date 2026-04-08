@@ -89,6 +89,7 @@ Código | Descripción
          <bts:fecha>2022-11-24</bts:fecha>
       </bts:BTContabilidad.RegistrarAsientoFechaValor>
    </soapenv:Body>
+</soapenv:Envelope>
 ``` 
 @tab JSON
 ```json

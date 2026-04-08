@@ -119,7 +119,7 @@ Código | Descripción
             <bts:telefonoFijo>3213342222</bts:telefonoFijo>
             <bts:telefonoCelular>05985423</bts:telefonoCelular>
             <bts:domicilios>
-               <bts:SdtsBTDomicilioCompleto>
+               <bts:sBTDomicilioCompleto>
                   <bts:agrupador1Id>1</bts:agrupador1Id>
                   <bts:coloniaId>3</bts:coloniaId>
                   <bts:departamento></bts:departamento>
@@ -148,7 +148,7 @@ Código | Descripción
                   <bts:localidadId>2</bts:localidadId>
                   <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
                   <bts:departamentoId>1</bts:departamentoId>
-               </bts:SdtsBTDomicilioCompleto>
+               </bts:sBTDomicilioCompleto>
             </bts:domicilios>
          </bts:sdtPersonaJuridica>
          <bts:sdtIntegrantesJuridicosAlta>
@@ -200,7 +200,7 @@ curl -X POST \
       "telefonoFijo": 3213342222,
       "telefonoCelular": 5985423,
       "domicilios": {
-         "SdtsBTDomicilioCompleto": {
+         "sBTDomicilioCompleto": {
             "agrupador1Id": 1,
             "coloniaId": 3,
             "departamento": "",

@@ -111,13 +111,13 @@ curl -X POST \
             <Device>AC</Device>
          </Btinreq>
          <sdtLimites>
-            <SdtsBTLimiteTarjeta>
+            <sBTLimiteTarjeta>
                <identificador>1</identificador>
                <moneda>0</moneda>
                <limiteEMV>30000.00</limiteEMV>
                <limiteBandaMagnetica>15000.00</limiteBandaMagnetica>
                <limiteNoPresencial>10000.00</limiteNoPresencial>
-            </SdtsBTLimiteTarjeta>
+            </sBTLimiteTarjeta>
          </sdtLimites>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -145,7 +145,7 @@ curl -X POST \
 	  "Device": "AC"
 	},
 	"sdtLimites": {
-	  "SdtsBTLimiteTarjeta": {
+	  "sBTLimiteTarjeta": {
 		"identificador": "1",
 		"moneda": "0",
 		"limiteEMV": "30000.00",

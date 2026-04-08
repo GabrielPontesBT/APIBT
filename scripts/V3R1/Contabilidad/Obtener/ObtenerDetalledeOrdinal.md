@@ -120,13 +120,14 @@ curl -X POST \
          <sdtOrdinal>
             <operacionUId>10189</operacionUId>
             <idOperacionBT>0010000100021000000000000000002700003000000000000</idOperacionBT>
-            <debeHaber>D</debeHaber> debitoCredito
+            <debeHaber>D</debeHaber>
             <importe>10000.00</importe>
             <producto>
                <productoUId>0</productoUId>  
                <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>
                <moneda>$</moneda>
                <papel>$</papel>
+               <otrosConceptos/>
             </producto>
          </sdtOrdinal>
          <Erroresnegocio></Erroresnegocio>

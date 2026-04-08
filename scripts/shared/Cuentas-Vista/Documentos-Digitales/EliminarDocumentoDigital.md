@@ -109,11 +109,11 @@ curl -X POST \
    <SOAP-ENV:Body>
       <BTCuentasVista.EliminarDocumentoDigitalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
-		    <bts:Device>10.12.10.159</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
-            <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Canal>BTDIGITAL</bts:Canal>
-            <bts:Token>b98a5858014A8B5C60A82434</bts:Token>
+            <Device>10.12.10.159</Device>
+            <Usuario>MINSTALADOR</Usuario>
+            <Requerimiento>1</Requerimiento>
+            <Canal>BTDIGITAL</Canal>
+            <Token>b98a5858014A8B5C60A82434</Token>
          </Btinreq>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

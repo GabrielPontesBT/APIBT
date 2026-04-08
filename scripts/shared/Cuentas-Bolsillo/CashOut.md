@@ -83,8 +83,6 @@ Código | Descripción
          <bts:clienteUId>5</bts:clienteUId>
          <bts:sdtTraspaso>
             <bts:operacionUIdOrigen>8</bts:operacionUIdOrigen>
-            <bts:importeCredito>100</bts:importeCredito>
-            <bts:importeDebito>100</bts:importeDebito>
             <bts:importe>100</bts:importe>
             <bts:operacionUIdDestino>9</bts:operacionUIdDestino>
             <bts:monedaId>0</bts:monedaId>
@@ -133,7 +131,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTCuentasBolsillo.CashOutResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
+      <BTCuentasBolsillo.CashOutResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>FP</Device>
             <Usuario>BANTOTAL</Usuario>

@@ -104,14 +104,14 @@ curl -X POST \
             <Token>86b12d9cbaCD285A89A23FBE</Token>
          </Btinreq>
          <sdtReglasNegocio>
-            <SdtsBTReglaNegocio>
+            <sBTReglaNegocio>
                <descripcion>Tipo de Cambio</descripcion>
                <reglaId>1</reglaId>
-            </SdtsBTReglaNegocio>
-            <SdtsBTReglaNegocio>
+            </sBTReglaNegocio>
+            <sBTReglaNegocio>
                <descripcion>Botón Datos Pep's</descripcion>
                <reglaId>4</reglaId>
-            </SdtsBTReglaNegocio>
+            </sBTReglaNegocio>
             ...
          </sdtReglasNegocio>
          <Erroresnegocio></Erroresnegocio>
@@ -140,7 +140,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtReglasNegocio": {
-         "SdtsBTReglaNegocio": [
+         "sBTReglaNegocio": [
          { 
             "descripcion": "Tipo de Cambio", 
             "reglaId": "1" 

@@ -56,7 +56,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital>
+      <bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales>
          <bts:Btinreq>
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
@@ -64,7 +64,7 @@ Código | Descripción
             <bts:Usuario>MINSTALADOR</bts:Usuario>
             <bts:Device>10.12.10.159</bts:Device>
          </bts:Btinreq>
-      </bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital>
+      </bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -72,7 +72,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposDeDocumentoDigital=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposDeDocumentosDigitales=' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \
@@ -97,7 +97,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigitalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitalesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>10.12.10.159</Device>
             <Usuario>MINSTALADOR</Usuario>
@@ -267,13 +267,13 @@ curl -X POST \
          <Btoutreq>
             <Numero>753</Numero>
             <Estado>OK</Estado>
-            <Servicio>BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital</Servicio>
+            <Servicio>BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales</Servicio>
             <Requerimiento>1</Requerimiento>
             <Fecha>2018-11-12</Fecha>
             <Hora>15:08:14</Hora>
             <Canal>BTDIGITAL</Canal>
          </Btoutreq>
-      </BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigitalResponse>
+      </BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitalesResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -466,7 +466,7 @@ curl -X POST \
    "Btoutreq": {
       "Numero": 754,
       "Estado": "OK",
-      "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital",
+      "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales",
       "Requerimiento": "1",
       "Fecha": "2018-11-12",
       "Hora": "15:10:56",

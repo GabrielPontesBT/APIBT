@@ -112,12 +112,14 @@ curl -X POST \
                <nombre>AHORRO PROGRAMADO, Ahorro Casa</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>42</productoUId>
                <nombre>AHORRO PROGRAMADO, Ahorro Casa</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>

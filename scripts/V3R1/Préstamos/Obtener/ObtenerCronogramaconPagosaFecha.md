@@ -120,21 +120,21 @@ curl -X POST \
                 <importePago>292.6</importePago>
                 <subsidios>0</subsidios>
                 <detalleConceptos>
-                    <SdtsBTConcepto>
+                    <sBTConcepto>
                         <texto></texto>
                         <valor>0</valor>
                         <concepto>Impuesto al Interés</concepto>
-                    </SdtsBTConcepto>
-                    <SdtsBTConcepto>
+                    </sBTConcepto>
+                    <sBTConcepto>
                         <texto></texto>
                         <valor>0</valor>
                         <concepto>Impuesto a la Mora</concepto>
-                    </SdtsBTConcepto>
-                    <SdtsBTConcepto>
+                    </sBTConcepto>
+                    <sBTConcepto>
                         <texto></texto>
                         <valor>0</valor>
                         <concepto>Impuesto a las Comisiones</concepto>
-                    </SdtsBTConcepto>
+                    </sBTConcepto>
                 </detalleConceptos>
                 <fechaVencimiento></fechaVencimiento>
                 <intereses>0</intereses>
@@ -187,7 +187,7 @@ curl -X POST \
                 "importePago": 292.6,
                 "subsidios": 0,
                 "detalleConceptos": {
-                    "SdtsBTConcepto": [
+                    "sBTConcepto": [
                         {
                             "texto": "",
                             "valor": 0,
