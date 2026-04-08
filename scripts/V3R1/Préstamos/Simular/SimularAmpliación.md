@@ -156,7 +156,7 @@ curl -X POST \
 		"pizarra": 0,
 		"actividad": 1111,
 		"operaciones": {
-			"item": 541
+			"item": [541]
 		}
     }
 }'
@@ -389,7 +389,7 @@ cantidadCuotas | Int | Cantidad de cuotas.
 clienteUId | Long | Identificador único de cliente. 
 fechaPrimerPago | Date | Fecha de primer pago. 
 monto | Double | Capital solicitado. 
-operaciones | Long | Lista de identificadores de operaciones a cancelar. 
+operaciones | [Long] | Lista de identificadores de operaciones a cancelar. 
 periodoCuotas | Int | Período entre cuotas. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 plazo | Int | Plazo de la operación. 
