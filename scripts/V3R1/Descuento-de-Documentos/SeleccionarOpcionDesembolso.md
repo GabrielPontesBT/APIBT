@@ -62,13 +62,13 @@ Código | Descripción
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>
-		<Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Requerimiento>1</Requerimiento>
-            <Usuario>GUAY.BANTOTAL</Usuario>
-            <Token>1485239356EB8880B52090F2</Token>
-            <Device>ES</Device>
-         </Btinreq>
+		<bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Usuario>GUAY.BANTOTAL</bts:Usuario>
+            <bts:Token>1485239356EB8880B52090F2</bts:Token>
+            <bts:Device>ES</bts:Device>
+         </bts:Btinreq>
          <bts:listaUId>75</bts:listaUId>
          <bts:operacionUId>12</bts:operacionUId>
          <bts:tipoDesembolso>3</bts:tipoDesembolso>

@@ -68,7 +68,7 @@ Código | Descripción
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Token>CC6345192D8633F531F01D1D</bts:Token>
          </bts:Btinreq>
-         <bts:bolsilloUId>18843</bts:BolsilloUID>
+         <bts:bolsilloUId>18843</bts:bolsilloUId>
       </bts:BTCuentasBolsillo.ObtenerDatos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -112,22 +112,22 @@ curl -X POST \
             <Token>CC6345192D8633F531F01D1D</Token>
          </Btinreq>
          <sdtInformacionBolsillo>
-            <CuentaprincipalUID>19150</CuentaprincipalUID>
-            <FechaBaja>0001-01-01</FechaBaja>
-            <InstruccionUID>19150</InstruccionUID>
-            <Estado>0</Estado>
-            <FechaApert>2020-04-08</FechaApert>
-            <Saldo>910000.00</Saldo>
-            <OperacionBolsilloUID>18843</OperacionBolsilloUID>
-            <NombreProducto>CUENTAS BOLSILLO, Bolsillo Ahorro</NombreProducto>
-            <Parametros>
-               <HeredaCondiciones>N</HeredaCondiciones>
-               <MetaAhorro>990.00</MetaAhorro>
-               <Tasa>0.00</Tasa>
-               <PagaIntereses>S</PagaIntereses>
-            </Parametros>
-            <NombreSubcuenta>golozo</NombreSubcuenta>
-            <ProductoBolsilloId>511</ProductoBolsilloId>
+            <cuentaPrincipalUId>19150</cuentaPrincipalUId>
+            <fechaBaja>0001-01-01</fechaBaja>
+            <instruccionUId>19150</instruccionUId>
+            <estado>0</estado>
+            <fechaApert>2020-04-08</fechaApert>
+            <saldo>910000.00</saldo>
+            <operacionBolsilloUId>18843</operacionBolsilloUId>
+            <nombreProducto>CUENTAS BOLSILLO, Bolsillo Ahorro</nombreProducto>
+            <parametros>
+               <heredaCondiciones>N</heredaCondiciones>
+               <metaAhorro>990.00</metaAhorro>
+               <tasa>0.00</tasa>
+               <pagaIntereses>S</pagaIntereses>
+            </parametros>
+            <nombreSubcuenta>golozo</nombreSubcuenta>
+            <productoBolsilloId>511</productoBolsilloId>
          </sdtInformacionBolsillo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

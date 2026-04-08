@@ -126,16 +126,16 @@ curl -X POST \
          <cantidadPendientes>2</cantidadPendientes>
          <estado>Z</estado>
          <situacionLineas>
-            <sBTSituacionLineas>
+            <sBTSituacionLinea>
                <mensajesError></mensajesError>
                <linea>DAYANARA PAEZ,3-34-1593,7,001020110000771009,3,13.00,32,REF*TXT**PAGO ultima DE QUINCENA \</linea>
                <estado>V</estado>
-            </sBTSituacionLineas>
-            <sBTSituacionLineas>
+            </sBTSituacionLinea>
+            <sBTSituacionLinea>
                <mensajesError></mensajesError>
                <linea>BETZAIRA LIMA,8-766-1860,7,025021110000479001,3,12.00,32,REF*TXT**PAGO DE QUINCENA \</linea>
                <estado>V</estado>
-            </sBTSituacionLineas>
+            </sBTSituacionLinea>
          </situacionLineas>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

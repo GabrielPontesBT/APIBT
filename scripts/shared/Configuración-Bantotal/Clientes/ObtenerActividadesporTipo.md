@@ -111,171 +111,171 @@ curl -X POST \
             <Token>1EF0C356A692E3706CFA0201</Token>
          </Btinreq>
          <sdtActividades>
-            <SdtsBTActividad>
+            <sBTActividad>
                <descripcion>Arroz</descripcion>
                <identificador>1111</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01112 Trigo</descripcion>
                <identificador>1112</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01113 Oleaginosos</descripcion>
                <identificador>1113</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01114 Cebada</descripcion>
                <identificador>1114</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01120 Cultivo de hortalizas y legumbres, especialidades hort</descripcion>
                <identificador>1120</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01131 Fruticultura (excepto viticultura), plantas cuyas hoja</descripcion>
                <identificador>1131</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01132 Viticultura</descripcion>
                <identificador>1132</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01133 Otros cultivos</descripcion>
                <identificador>1133</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01211 Explotación ganadera (excepto lechería)</descripcion>
                <identificador>1211</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01212 Explotacion lechera</descripcion>
                <identificador>1212</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01221 Avicultura</descripcion>
                <identificador>1221</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01222 Cria de otros animales</descripcion>
                <identificador>1222</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01300 Cultivo de productos agrícolas en combinación con la c</descripcion>
                <identificador>1300</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01401 Servicios agrícolas</descripcion>
                <identificador>1401</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01402 Servicios ganaderos (excepto actividades veterinarias)</descripcion>
                <identificador>1402</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>01500 Caza ordinaria y mediante trampas, y repoblación de an</descripcion>
                <identificador>1500</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>02000 Silvicultura, extracción de madera y actividades de se</descripcion>
                <identificador>2000</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>05000 Pesca, explotación de criaderos de peces y granjas pis</descripcion>
                <identificador>5000</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>10100 Extracción y aglomeración de carbón de piedra</descripcion>
                <identificador>10100</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>10200 Extracción y aglomeración de lignito</descripcion>
                <identificador>10200</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>10300 Extracción y aglomeración de turba</descripcion>
                <identificador>10300</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>11100 Extracción de petróleo crudo y gas natural</descripcion>
                <identificador>11100</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>11200 Actividades de servicios relacionadas con la extracció</descripcion>
                <identificador>11200</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>12000 Extracción de minerales de uranio y torio</descripcion>
                <identificador>12000</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>13100 Extracción de minerales de hierro</descripcion>
                <identificador>13100</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>13200 Extracción de minerales metalíferos no ferrosos, excep</descripcion>
                <identificador>13200</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>14100 Extracción de piedra, arena y arcilla</descripcion>
                <identificador>14100</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>14210 Extracción de minerales para la fabricación de abonos</descripcion>
                <identificador>14210</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>14220 Extracción de sal</descripcion>
                <identificador>14220</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>14290 Explotación de otras minas y canteras n.c.p.</descripcion>
                <identificador>14290</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>15110 Producción, procesamiento y conservación de carney pro</descripcion>
                <identificador>15110</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>15120 Elaboración y conservación de pescado y productos de p</descripcion>
                <identificador>15120</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
-            <SdtsBTActividad>
+            </sBTActividad>
+            <sBTActividad>
                <descripcion>15130 Elaboración y conservación de frutas, legumbres y hort</descripcion>
                <identificador>15130</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
-            </SdtsBTActividad>
+            </sBTActividad>
          </sdtActividades>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

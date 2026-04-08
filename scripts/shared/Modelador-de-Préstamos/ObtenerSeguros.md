@@ -107,14 +107,14 @@ Código | Descripción
             <Device/>
          </Btinreq>
          <sdtSeguros>
-            <SdtsBTSeguroPrestamo>
+            <sBTSeguroPrestamo>
                <codigo>100</codigo>
                <descripcion>ALICO - Vida %s/cap. inicial</descripcion>
                <tipo>VIDA</tipo>
                <modificable>S</modificable>
                <importeFijo>100.00</importeFijo>
                <porcentaje>0.1000</porcentaje>
-            </SdtsBTSeguroPrestamo>
+            </sBTSeguroPrestamo>
          </sdtSeguros>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -142,7 +142,7 @@ Código | Descripción
         "Device": ""
     },
     "sdtSeguros": {
-        "SdtsBTSeguroPrestamo": [
+        "sBTSeguroPrestamo": [
             {
                 "codigo": 100,
                 "descripcion": "ALICO - Vida %s/cap. inicial",

@@ -131,7 +131,7 @@ Código | Descripción
             <nacionalidad>URUGUAY</nacionalidad>
             <bts:comentarioCorreo>Correo Personal</bts:comentarioCorreo>
             <bts:domicilios>
-               <bts:SdtsBTDomicilioCompleto>
+               <bts:sBTDomicilioCompleto>
                   <bts:coloniaId>1</bts:coloniaId>
                   <bts:agrupador1Id>3</bts:agrupador1Id>
                   <bts:agrupador5></bts:agrupador5>
@@ -160,12 +160,12 @@ Código | Descripción
                   <bts:localidad>Montevideo</bts:localidad>
                   <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
                   <bts:departamentoId>10</bts:departamentoId>
-               </bts:SdtsBTDomicilioCompleto>
+               </bts:sBTDomicilioCompleto>
             </bts:domicilios>
             <bts:datosAdicionales>
-               <bts:SdtsBTDatoAdicional>
+               <bts:sBTDatoAdicional>
                   <bts:detalle></bts:detalle>
-               </bts:SdtsBTDatoAdicional>
+               </bts:sBTDatoAdicional>
             </bts:datosAdicionales>
             <bts:correoElectronico>JULIOB@GMAIL.COM</bts:correoElectronico>
             <bts:sectorId>1</bts:sectorId>
@@ -221,7 +221,7 @@ curl -X POST \
           "nacionalidad": "URUGUAY", 
           "comentarioCorreo": "Correo Personal",
           "domicilios": {
-            "SdtsBTDomicilioCompleto": {
+            "sBTDomicilioCompleto": {
               "coloniaId": 1,
               "agrupador1Id": 3,
               "agrupador5": "",
@@ -253,7 +253,7 @@ curl -X POST \
             }
           },
           "datosAdicionales": {
-            "SdtsBTDatoAdicional": {
+            "sBTDatoAdicional": {
               "detalle": ""
             }
           },

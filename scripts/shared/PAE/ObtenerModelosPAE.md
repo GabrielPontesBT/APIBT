@@ -104,11 +104,11 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <sdtModelosPAE>
-            <SdtsBTModeloPAE>
+            <sBTModeloPAE>
                <modeloID>1</modeloID>
                <descripcion>Politicas - Solicitud</descripcion>
                <tipoModelo>P-Politicas</tipoModelo>
-            </SdtsBTModeloPAE>
+            </sBTModeloPAE>
             ...
          </sdtModelosPAE>
          <Erroresnegocio></Erroresnegocio>
@@ -137,7 +137,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtModelosPAE": {
-        "SdtsBTModeloPAE": [
+        "sBTModeloPAE": [
         { 
             "modeloID": "1", 
             "descripcion": "Politicas - Solicitud", 

@@ -115,7 +115,7 @@ curl -X POST \
          <sdtCuentasAsociadasTD>
             <tarjetaUId>2000001957</tarjetaUId>
             <cuentas>
-               <SdtsBTCuentaAsociadaTD>
+               <sBTCuentaAsociadaTD>
                   <operacionUId>10216</operacionUId>
                   <idOperacionFmt>000000040_008</idOperacionFmt>
                   <producto>
@@ -130,7 +130,7 @@ curl -X POST \
                   <tipoDeCuenta>1</tipoDeCuenta>
                   <saldo>10003628.81</saldo>
                   <estado>CUENTAS INACTIVAS</estado>
-               </SdtsBTCuentaAsociadaTD>
+               </sBTCuentaAsociadaTD>
             </cuentas>
          </sdtCuentasAsociadasTD>
          <Erroresnegocio></Erroresnegocio>
@@ -161,7 +161,7 @@ curl -X POST \
         "sdtCuentasAsociadasTD": {
           "tarjetaUId": 2000001957,
           "cuentas": {
-            "SdtsBTCuentaAsociadaTD": {
+            "sBTCuentaAsociadaTD": {
               "operacionUId": 10216,
               "idOperacionFmt": "000000040_008",
               "producto": {

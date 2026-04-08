@@ -68,6 +68,7 @@ Código | Descripción
             <bts:Token>172681201999865B3A2E76CF</bts:Token>
             <bts:Device>1</bts:Device>
          </bts:Btinreq>
+         <bts:calendarioId>0</bts:calendarioId>
          <bts:fecha>2021-03-26</bts:fecha>
       </bts:BTCalendarios.ObtenerProximaFechaHabil>
    </soapenv:Body>

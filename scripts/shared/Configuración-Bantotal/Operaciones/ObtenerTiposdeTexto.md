@@ -106,59 +106,59 @@ curl -X POST \
          <sdtTextos>
             <sBTTipoTexto>
                <descripcion>OPERACIONES REFINANCIADAS:</descripcion>
-               <Identificador>2</Identificador>
+               <identificador>2</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>INGRESE N° CUENTA SFB</descripcion>
-               <Identificador>3</Identificador>
+               <identificador>3</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE Y APELLIDO TITULARES</descripcion>
-               <Identificador>4</Identificador>
+               <identificador>4</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE</descripcion>
-               <Identificador>5</Identificador>
+               <identificador>5</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>TIPO Y NUMERO DE DOCUMENTO</descripcion>
-               <Identificador>6</Identificador>
+               <identificador>6</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>DOMICILIO</descripcion>
-               <Identificador>7</Identificador>
+               <identificador>7</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>BAJA DE MULTA 50%</descripcion>
-               <Identificador>8</Identificador>
+               <identificador>8</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>BARRIO</descripcion>
-               <Identificador>9</Identificador>
+               <identificador>9</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>COMENTARIO SOBRE APERTURA</descripcion>
-               <Identificador>10</Identificador>
+               <identificador>10</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE DEL BENEFICIARIO:</descripcion>
-               <Identificador>11</Identificador>
+               <identificador>11</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>MOTIVOS DEL EMBARGO</descripcion>
-               <Identificador>12</Identificador>
+               <identificador>12</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>JUZGADO:</descripcion>
-               <Identificador>13</Identificador>
+               <identificador>13</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>DEMANDANTE</descripcion>
-               <Identificador>14</Identificador>
+               <identificador>14</identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>FECHA INICIO DE MORA DD/MM</descripcion>
-               <Identificador>16</Identificador>
+               <identificador>16</identificador>
             </sBTTipoTexto>
          </sdtTextos>
          <Erroresnegocio></Erroresnegocio>

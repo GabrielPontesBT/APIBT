@@ -132,14 +132,14 @@ curl -X POST \
             <comisiones>650.84</comisiones>
             <valorCuota>263.74</valorCuota>
             <otrosConceptos>
-               <SdtsBTConcepto>
+               <sBTConcepto>
                   <texto/>
                   <valor>10.00</valor>
                   <concepto>COMIS_DESEMB</concepto>
-               </SdtsBTConcepto>
+               </sBTConcepto>
             </otrosConceptos>
             <cronograma>
-               <SdtsBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>90.52</otrosConceptos>
                   <capital>75.76</capital>
                   <impuestos>5.609999999999999</impuestos>
@@ -149,8 +149,8 @@ curl -X POST \
                   <cuota>301.90</cuota>
                   <fechaPago>2020-02-02</fechaPago>
                   <seguros>112.85000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>84.28999999999999</otrosConceptos>
                   <capital>77.06</capital>
                   <impuestos>5.32</impuestos>
@@ -160,8 +160,8 @@ curl -X POST \
                   <cuota>295.35</cuota>
                   <fechaPago>2020-03-02</fechaPago>
                   <seguros>112.82000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>77.96</otrosConceptos>
                   <capital>78.38</capital>
                   <impuestos>5.03</impuestos>
@@ -171,8 +171,8 @@ curl -X POST \
                   <cuota>288.69</cuota>
                   <fechaPago>2020-04-02</fechaPago>
                   <seguros>112.78</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>71.52</otrosConceptos>
                   <capital>79.73</capital>
                   <impuestos>4.73</impuestos>
@@ -182,8 +182,8 @@ curl -X POST \
                   <cuota>281.92</cuota>
                   <fechaPago>2020-05-02</fechaPago>
                   <seguros>112.75</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>64.97</otrosConceptos>
                   <capital>81.1</capital>
                   <impuestos>4.43</impuestos>
@@ -193,8 +193,8 @@ curl -X POST \
                   <cuota>275.03</cuota>
                   <fechaPago>2020-06-02</fechaPago>
                   <seguros>112.71000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>58.3</otrosConceptos>
                   <capital>82.49000000000001</capital>
                   <impuestos>4.12</impuestos>
@@ -204,8 +204,8 @@ curl -X POST \
                   <cuota>268.01</cuota>
                   <fechaPago>2020-07-02</fechaPago>
                   <seguros>112.67</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>51.519999999999996</otrosConceptos>
                   <capital>83.9</capital>
                   <impuestos>3.81</impuestos>
@@ -215,8 +215,8 @@ curl -X POST \
                   <cuota>260.89</cuota>
                   <fechaPago>2020-08-02</fechaPago>
                   <seguros>112.64</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>44.62</otrosConceptos>
                   <capital>85.34</capital>
                   <impuestos>3.5</impuestos>
@@ -226,8 +226,8 @@ curl -X POST \
                   <cuota>253.64</cuota>
                   <fechaPago>2020-09-02</fechaPago>
                   <seguros>112.60000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>37.61</otrosConceptos>
                   <capital>86.81</capital>
                   <impuestos>3.17</impuestos>
@@ -237,8 +237,8 @@ curl -X POST \
                   <cuota>246.26</cuota>
                   <fechaPago>2020-10-02</fechaPago>
                   <seguros>112.56</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>30.47</otrosConceptos>
                   <capital>88.3</capital>
                   <impuestos>2.85</impuestos>
@@ -248,8 +248,8 @@ curl -X POST \
                   <cuota>238.76</cuota>
                   <fechaPago>2020-11-02</fechaPago>
                   <seguros>112.52000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>23.22</otrosConceptos>
                   <capital>89.81</capital>
                   <impuestos>2.5100000000000002</impuestos>
@@ -259,8 +259,8 @@ curl -X POST \
                   <cuota>231.13</cuota>
                   <fechaPago>2020-12-02</fechaPago>
                   <seguros>112.48</seguros>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>15.84</otrosConceptos>
                   <capital>91.32000000000001</capital>
                   <impuestos>2.18</impuestos>
@@ -270,7 +270,7 @@ curl -X POST \
                   <cuota>223.35</cuota>
                   <fechaPago>2021-01-02</fechaPago>
                   <seguros>112.44000000000001</seguros>
-               </SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
             </cronograma>
             <totalPrestamo>3164.93</totalPrestamo>
             <capital>1000.00</capital>
@@ -324,14 +324,14 @@ curl -X POST \
           "comisiones": 650.84, 
           "valorCuota": 263.74, 
           "otrosConceptos": { 
-            "SdtsBTConcepto": { 
+            "sBTConcepto": { 
               "texto": "", 
               "valor": 10, 
               "concepto": "COMIS_DESEMB" 
             } 
           }, 
           "cronograma": { 
-            "SdtsBTCuotaSimulacion": [ 
+            "sBTCuotaSimulacion": [ 
               { 
                 "otrosConceptos": 90.52, 
                 "capital": 75.76, 

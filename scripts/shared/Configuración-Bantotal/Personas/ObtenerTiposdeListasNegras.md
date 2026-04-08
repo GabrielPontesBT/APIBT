@@ -107,28 +107,28 @@ curl -X POST \
          </Btinreq>
          <sdtTiposListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion>LAVADO DE DINERO</Descripcion>
-               <Codigo>1</Codigo>
+               <descripcion>LAVADO DE DINERO</descripcion>
+               <codigo>1</codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion>LISTA DEL BANCO</Descripcion>
-               <Codigo>2</Codigo>
+               <descripcion>LISTA DEL BANCO</descripcion>
+               <codigo>2</codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion>LISTA DE CLIENTES INDESEABLES</Descripcion>
-               <Codigo>3</Codigo>
+               <descripcion>LISTA DE CLIENTES INDESEABLES</descripcion>
+               <codigo>3</codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion>INHABILITADOS CAMBIOS</Descripcion>
-               <Codigo>4</Codigo>
+               <descripcion>INHABILITADOS CAMBIOS</descripcion>
+               <codigo>4</codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion>TERRORISTA</Descripcion>
-               <Codigo>16</Codigo>
+               <descripcion>TERRORISTA</descripcion>
+               <codigo>16</codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <Descripcion/>
-               <Codigo>18</Codigo>
+               <descripcion/>
+               <codigo>18</codigo>
             </sBTTipoListaNegra>
          </sdtTiposListaNegra>
          <Erroresnegocio></Erroresnegocio>

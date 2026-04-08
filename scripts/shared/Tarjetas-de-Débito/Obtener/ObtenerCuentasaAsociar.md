@@ -110,7 +110,7 @@ curl -X POST \
             <Device>MC</Device>
          </Btinreq>
          <sdtCuentasAAsociar>
-            <SdtsBTCuentaAAsociarTD>
+            <sBTCuentaAAsociarTD>
                <operacionUId>10212</operacionUId>
                <producto>
                   <productoUId>133</productoUId>
@@ -120,8 +120,8 @@ curl -X POST \
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta/>
-            </SdtsBTCuentaAAsociarTD>
-            <SdtsBTCuentaAAsociarTD>
+            </sBTCuentaAAsociarTD>
+            <sBTCuentaAAsociarTD>
                <operacionUId>10213</operacionUId>
                <producto>
                   <productoUId>93</productoUId>
@@ -131,8 +131,8 @@ curl -X POST \
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta>PESOS</subCuenta>
-            </SdtsBTCuentaAAsociarTD>
-            <SdtsBTCuentaAAsociarTD>
+            </sBTCuentaAAsociarTD>
+            <sBTCuentaAAsociarTD>
                <operacionUId>10214</operacionUId>
                <producto>
                   <productoUId>93</productoUId>
@@ -142,7 +142,7 @@ curl -X POST \
                </producto>
                <sucursal>Casa Matriz</sucursal>
                <subCuenta>PESOS</subCuenta>
-            </SdtsBTCuentaAAsociarTD>
+            </sBTCuentaAAsociarTD>
          </sdtCuentasAAsociar>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -171,7 +171,7 @@ curl -X POST \
 	    "Requerimiento": "1" 
     }, 
 	"sdtCuentasAAsociar": { 
-		"SdtsBTCuentaAAsociarTD": [ 
+		"sBTCuentaAAsociarTD": [ 
 		  { 
 			"operacionUId": "10212", 
 			"producto": { 

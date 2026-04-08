@@ -120,7 +120,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTCuentasBolsillo.ContratarResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
+      <BTCuentasBolsillo.ContratarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>1</Device>
             <Usuario>INSTALADOR</Usuario>

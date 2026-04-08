@@ -111,7 +111,7 @@ curl -X POST \
          </Btinreq>
          <sdtFacultades>
             <facultadesOperacion>
-               <SdtsBTFacultadPersonaOperacion>
+               <sBTFacultadPersonaOperacion>
                   <producto>
                      <papel>$</papel>
                      <moneda>$</moneda>
@@ -134,10 +134,10 @@ curl -X POST \
                   </grupo>
                   <codigo>2</codigo>
                   <categoria>-</categoria>
-               </SdtsBTFacultadPersonaOperacion>
+               </sBTFacultadPersonaOperacion>
             </facultadesOperacion>
             <facultadesCliente>
-               <SdtsBTFacultadPersonaCliente>
+               <sBTFacultadPersonaCliente>
                   <clienteUId>340</clienteUId>
                   <descripcion>Firma de Cheques</descripcion>
                   <potestad>Titular</potestad>
@@ -154,7 +154,7 @@ curl -X POST \
                   </grupo>
                   <codigo>4</codigo>
                   <categoria>A</categoria>
-               </SdtsBTFacultadPersonaCliente>
+               </sBTFacultadPersonaCliente>
             </facultadesCliente>
          </sdtFacultades>
          <Erroresnegocio></Erroresnegocio>
@@ -184,7 +184,7 @@ curl -X POST \
         },
         "sdtFacultades": {
           "facultadesOperacion": {
-            "SdtsBTFacultadPersonaOperacion": {
+            "sBTFacultadPersonaOperacion": {
               "producto": {
                 "papel": "$",
                 "moneda": "$",
@@ -212,7 +212,7 @@ curl -X POST \
             }
           },
           "facultadesCliente": {
-            "SdtsBTFacultadPersonaCliente": {
+            "sBTFacultadPersonaCliente": {
               "clienteUId": "340",
               "descripcion": "Firma de Cheques",
               "potestad": "Titular",

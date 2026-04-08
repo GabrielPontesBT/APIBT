@@ -116,16 +116,16 @@ curl -X POST \
             <Device>AC</Device>
          </Btinreq>
          <sdtCheques>
-            <SdtsBTCheque>
+            <sBTCheque>
                <numero>1326</numero>
                <estado>1</estado>
                <descripcion>Pago</descripcion>
-            </SdtsBTCheque>
-            <SdtsBTCheque>
+            </sBTCheque>
+            <sBTCheque>
                <numero>1327</numero>
                <estado>1</estado>
                <descripcion>Pago</descripcion>
-            </SdtsBTCheque>
+            </sBTCheque>
             ...
          </sdtCheques>
          <Erroresnegocio></Erroresnegocio>
@@ -154,7 +154,7 @@ curl -X POST \
 	  "Device": "AC"
 	},
 	"sdtCheques": {
-	  "SdtsBTCheque": [
+	  "sBTCheque": [
 		{
 		  "numero": "1326",
 		  "estado": "1",

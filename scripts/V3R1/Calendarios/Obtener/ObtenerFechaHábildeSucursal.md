@@ -59,7 +59,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>
+      <bts:BTCalendarios.ObtenerFechaHabilSucursal>
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
@@ -69,7 +69,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:fecha>2020-11-14</bts:fecha>
          <bts:sucursalId>1000</bts:sucursalId>
-      </bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>
+      </bts:BTCalendarios.ObtenerFechaHabilSucursal>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -104,7 +104,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTCalendarios.ObtenerFechaHabilSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Canal>BTDIGITAL</Canal>
             <Requerimiento>1</Requerimiento>
@@ -116,14 +116,14 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTConfiguracionBantotal.ObtenerFechaHabilSucursal</Servicio>
+            <Servicio>BTCalendarios.ObtenerFechaHabilSucursal</Servicio>
             <Fecha>2021-03-12</Fecha>
             <Hora>15:58:02</Hora>
             <Requerimiento>1</Requerimiento>
             <Numero>10660</Numero>
             <Estado>OK</Estado>
          </Btoutreq>
-      </BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse>
+      </BTCalendarios.ObtenerFechaHabilSucursalResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -142,7 +142,7 @@ curl -X POST \
 	"Btoutreq": { 
 	  "Numero": "10660", 
 	  "Estado": "OK", 
-	  "Servicio": "BTConfiguracionBantotal.ObtenerFechaHabilSucursal", 
+	  "Servicio": "BTCalendarios.ObtenerFechaHabilSucursal", 
 	  "Requerimiento": "1", 
 	  "Fecha": "2021-03-12", 
 	  "Canal": "BTDIGITAL", 

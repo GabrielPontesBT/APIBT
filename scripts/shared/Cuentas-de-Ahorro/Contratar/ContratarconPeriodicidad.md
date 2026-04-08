@@ -65,7 +65,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
     <soapenv:Body>
-      <bts:BTCuentasCorrientes.ContratarConPeriodicidad>
+      <bts:BTCuentasDeAhorro.ContratarConPeriodicidad>
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento></bts:Requerimiento>
@@ -77,7 +77,7 @@ Código | Descripción
          <bts:productoUId>94</bts:productoUId>
          <bts:nombreSubcuenta>Caja de Ahorro</bts:nombreSubcuenta>
          <bts:periodoAcreditacion>1</bts:periodoAcreditacion>
-      </bts:BTCuentasCorrientes.ContratarConPeriodicidad>
+      </bts:BTCuentasDeAhorro.ContratarConPeriodicidad>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -120,7 +120,7 @@ Código | Descripción
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTCuentasCorrientes.ContratarConPeriodicidad</Servicio>
+            <Servicio>BTCuentasDeAhorro.ContratarConPeriodicidad</Servicio>
             <Fecha>2021-10-29</Fecha>
             <Hora>12:27:21</Hora>
             <Requerimiento/>
@@ -148,7 +148,7 @@ Código | Descripción
     },
     "Btoutreq": {
         "Canal": "BTDIGITAL",
-        "Servicio": "BTCuentasCorrientes.ContratarConPeriodicidad",
+        "Servicio": "BTCuentasDeAhorro.ContratarConPeriodicidad",
         "Fecha": "2021-10-29",
         "Hora": "12:21:44",
         "Requerimiento": "",

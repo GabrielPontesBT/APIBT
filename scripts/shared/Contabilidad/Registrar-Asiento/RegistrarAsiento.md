@@ -96,6 +96,7 @@ Código | Descripción
          </bts:sdtDatosAsiento>
       </bts:BTContabilidad.RegistrarAsiento>
    </soapenv:Body>
+</soapenv:Envelope>
 ``` 
 
 @tab JSON

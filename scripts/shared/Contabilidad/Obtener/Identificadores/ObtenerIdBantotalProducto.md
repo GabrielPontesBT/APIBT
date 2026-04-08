@@ -117,11 +117,11 @@ curl -X POST \
             <Token>A917FB55555C334FB65C4E0C</Token>
             <Canal>BTDIGITAL</Canal>
          </Btinreq>
-         <empresa>1</empresa>
-         <modulo>101</modulo>
-         <tipoOperacion>3</tipoOperacion>
-         <moneda>0</moneda>
-         <papel>50</papel>
+         <empresaId>1</empresaId>
+         <moduloId>101</moduloId>
+         <tipoOperacionBT>3</tipoOperacionBT>
+         <monedaId>0</monedaId>
+         <papelId>50</papelId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Requerimiento>0</Requerimiento>

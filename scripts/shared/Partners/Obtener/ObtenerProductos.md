@@ -83,11 +83,11 @@ Código | Descripción
             <bts:monedaPrecio></bts:monedaPrecio>
             <bts:estadoId>1</bts:estadoId>
             <bts:datosAdicionales>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:datosAdicionales>
             <bts:versionUId>1</bts:versionUId>
             <bts:precio></bts:precio>
@@ -121,7 +121,7 @@ curl -X POST \
           "monedaPrecio": "",
           "estadoId": 1,
           "datosAdicionales": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
               "texto": "",
               "valor": "",
               "concepto": ""
@@ -156,11 +156,11 @@ curl -X POST \
                <moneda>CRC</moneda>
                <papel>$</papel>
                <otrosConceptos>
-                  <SdtsBTConcepto>
+                  <sBTConcepto>
                      <texto>N</texto>
                      <valor>0.00</valor>
                      <concepto>SOLICITA_BALLOON</concepto>
-                  </SdtsBTConcepto>
+                  </sBTConcepto>
                </otrosConceptos>
                <productoUId>200</productoUId>
                <nombre>Vehiculares</nombre>
@@ -169,11 +169,11 @@ curl -X POST \
                <moneda>CRC</moneda>
                <papel>$</papel>
                <otrosConceptos>
-                  <SdtsBTConcepto>
+                  <sBTConcepto>
                      <texto>N</texto>
                      <valor>0.00</valor>
                      <concepto>SOLICITA_BALLOON</concepto>
-                  </SdtsBTConcepto>
+                  </sBTConcepto>
                </otrosConceptos>
                <productoUId>198</productoUId>
                <nombre>Amortización Automática TF</nombre>
@@ -210,7 +210,7 @@ curl -X POST \
             "moneda": "CRC",
             "papel": "$",
             "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
                 "texto": "N",
                 "valor": 0,
                 "concepto": "SOLICITA_BALLOON"
@@ -223,7 +223,7 @@ curl -X POST \
             "moneda": "CRC",
             "papel": "$",
             "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
                 "texto": "N",
                 "valor": 0,
                 "concepto": "SOLICITA_BALLOON"

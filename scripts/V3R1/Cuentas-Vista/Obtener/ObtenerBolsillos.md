@@ -103,7 +103,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTCuentasVista.ObtenerBolsillosResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
+      <BTCuentasVista.ObtenerBolsillosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>FP</Device>
             <Usuario>BANTOTAL</Usuario>
@@ -113,34 +113,25 @@ curl -X POST \
          </Btinreq>
          <sdtInformacionBolsillos>
             <sBTInfRBolsillo>
-               <OperacionBolsilloUID>8</OperacionBolsilloUID>
-               <FechaBaja>0000-00-00</FechaBaja>
-               <ProductoBolsilloId>32</ProductoBolsilloId>
-               <NombreProducto>Cuentas Bolsillo, Bolsillos de Ahorro</NombreProducto>
-               <Estado>0</Estado>
-               <Saldo>21981.00</Saldo>
-               <FechaApertura>0000-00-00</FechaApertura>
-               <Nombresubcuenta/>
+               <operacionBolsilloUId>8</operacionBolsilloUId>
+               <productoBolsilloId>32</productoBolsilloId>
+               <nombreProducto>Cuentas Bolsillo, Bolsillos de Ahorro</nombreProducto>
+               <estado>0</estado>
+               <saldo>21981.00</saldo>
             </sBTInfRBolsillo>
             <sBTInfRBolsillo>
-               <OperacionBolsilloUID>11</OperacionBolsilloUID>
-               <FechaBaja>0000-00-00</FechaBaja>
-               <ProductoBolsilloId>32</ProductoBolsilloId>
-               <NombreProducto>Cuentas Bolsillo, Bolsillos de Ahorro</NombreProducto>
-               <Estado>0</Estado>
-               <Saldo>4000.00</Saldo>
-               <FechaApertura>0000-00-00</FechaApertura>
-               <Nombresubcuenta/>
+               <operacionBolsilloUId>11</operacionBolsilloUId>
+               <productoBolsilloId>32</productoBolsilloId>
+               <nombreProducto>Cuentas Bolsillo, Bolsillos de Ahorro</nombreProducto>
+               <estado>0</estado>
+               <saldo>4000.00</saldo>
             </sBTInfRBolsillo>
             <sBTInfRBolsillo>
-               <OperacionBolsilloUID>10</OperacionBolsilloUID>
-               <FechaBaja>0000-00-00</FechaBaja>
-               <ProductoBolsilloId>33</ProductoBolsilloId>
-               <NombreProducto>Cuentas Bolsillo, Bolsillos Imprevistos</NombreProducto>
-               <Estado>0</Estado>
-               <Saldo>4000.00</Saldo>
-               <FechaApertura>0000-00-00</FechaApertura>
-               <Nombresubcuenta/>
+               <operacionBolsilloUId>10</operacionBolsilloUId>
+               <productoBolsilloId>33</productoBolsilloId>
+               <nombreProducto>Cuentas Bolsillo, Bolsillos Imprevistos</nombreProducto>
+               <estado>0</estado>
+               <saldo>4000.00</saldo>
             </sBTInfRBolsillo>
          </sdtInformacionBolsillos>
          <Erroresnegocio></Erroresnegocio>

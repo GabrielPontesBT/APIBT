@@ -61,7 +61,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      <bts:BTCliente.ObtenerDatos>
+      <bts:BTClientes.ObtenerDatos>
          <bts:Btinreq>
             <bts:Requerimiento>0</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
@@ -70,7 +70,7 @@ Código | Descripción
             <bts:Token>8A7B3C4E6F4A275BC67245E5</bts:Token>
          </bts:Btinreq>
          <bts:clienteUId>10010</bts:clienteUId>
-      </bts:BTCliente.ObtenerDatos>
+      </bts:BTClientes.ObtenerDatos>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -104,7 +104,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <BTPrueba.ObtenerDatosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTClientes.ObtenerDatosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Canal>BTDIGITAL</Canal>
             <Requerimiento>0</Requerimiento>
@@ -143,14 +143,14 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTPrueba.ObtenerDatos</Servicio>
+            <Servicio>BTClientes.ObtenerDatos</Servicio>
             <Fecha>2022-11-15</Fecha>
             <Hora>14:04:48</Hora>
             <Requerimiento>0</Requerimiento>
             <Numero>438</Numero>
             <Estado>OK</Estado>
          </Btoutreq>
-      </BTPrueba.ObtenerDatosResponse>
+      </BTClientes.ObtenerDatosResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```

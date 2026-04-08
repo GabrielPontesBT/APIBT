@@ -138,7 +138,7 @@ Código | Descripción
             <nacionalidad>URUGUAY</nacionalidad>
             <comentarioCorreo/>
             <domicilios>
-               <SdtsBTDomicilioCompleto>
+               <sBTDomicilioCompleto>
                   <coloniaId>0</coloniaId>
                   <agrupador1Id>1</agrupador1Id>
                   <agrupador5/>
@@ -167,7 +167,7 @@ Código | Descripción
                   <localidadId>1022</localidadId>
                   <tipoDomicilioId>1</tipoDomicilioId>
                   <departamentoId>1</departamentoId>
-               </SdtsBTDomicilioCompleto>
+               </sBTDomicilioCompleto>
             </domicilios>
             <correoElectronico>mail@mail.com</correoElectronico>
             <sectorId>0</sectorId>
@@ -225,7 +225,7 @@ curl -X POST \
       "nacionalidad": "URUGUAY",
       "comentarioCorreo": "",
       "domicilios": {
-      "SdtsBTDomicilioCompleto": {
+      "sBTDomicilioCompleto": {
          "coloniaId": 0,
          "agrupador1Id": 1,
          "agrupador5": "",

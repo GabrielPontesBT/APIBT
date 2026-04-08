@@ -68,11 +68,11 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerDeuda>
          <bts:Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>1</Device>
-            <Requerimiento>1</Requerimiento>
-            <Token>F971DE0C3D4C96A5ABC22DAD</Token>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>1</bts:Device>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>
          </bts:Btinreq>
          <bts:contratoId>13</bts:contratoId>
          <bts:servicio>600</bts:servicio>
@@ -139,10 +139,10 @@ curl -X POST \
                <detalleOrden>2</detalleOrden>
                <ordenId>293</ordenId>
                <valoresDetalle>
-                  <SdtsBTValorCampoCASH>
+                  <sBTValorCampoCASH>
                      <tag>CSMD006IMP</tag>
                      <valor>100.00</valor>
-                  </SdtsBTValorCampoCASH>
+                  </sBTValorCampoCASH>
                </valoresDetalle>
             </BTInfoDetalleCASH>
          </sdtInfoDetalleCash>
@@ -176,7 +176,7 @@ curl -X POST \
          "detalleOrden": 2,
          "ordenId": 293,
          "valoresDetalle": {
-            "SdtsBTValorCampoCASH": {
+            "sBTValorCampoCASH": {
                "tag": "CSMD006IMP",
                "valor": 100
             }

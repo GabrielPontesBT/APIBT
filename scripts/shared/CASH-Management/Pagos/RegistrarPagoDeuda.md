@@ -78,11 +78,11 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTCASHManagement.RegistrarPagoDeuda>
          <bts:Btinreq>
-            <Canal>AGENTECORRESPONSAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>1</Device>
-            <Requerimiento>1</Requerimiento>
-            <Token>4A287DE2D400320135CCA4E5</Token>
+            <bts:Canal>AGENTECORRESPONSAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>1</bts:Device>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Token>4A287DE2D400320135CCA4E5</bts:Token>
          </bts:Btinreq>
          <bts:ordenId>293</bts:ordenId>
          <bts:nroLineaOrden>1</bts:nroLineaOrden>

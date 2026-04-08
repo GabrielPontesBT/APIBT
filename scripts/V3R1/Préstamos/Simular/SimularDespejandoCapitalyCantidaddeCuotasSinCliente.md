@@ -153,66 +153,66 @@ curl -X POST \
             <valorCuota>5000.00</valorCuota>
             <otrosConceptos></otrosConceptos>
             <cronograma>
-               <SdtsBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2020-11-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2020-12-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-01-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-02-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-03-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-04-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-05-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-06-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-07-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-08-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-09-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
-               <SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
                   <importe>5000.00</importe>
                   <redondeo>0.00</redondeo>
                   <fechaPago>2021-10-13</fechaPago>
-               </SdtsBTCuotaPrestamoAlta>
+               </sBTCuotaPrestamoAlta>
             </cronograma>
             <totalPrestamo>60072.78</totalPrestamo>
             <capital>50895.94</capital>
@@ -266,7 +266,7 @@ curl -X POST \
         "valorCuota": "5000.00", 
         "otrosConceptos": "", 
         "cronograma": { 
-         "SdtsBTCuotaPrestamoAlta": [ 
+         "sBTCuotaPrestamoAlta": [ 
                { 
                "importe": "5000.00", 
                "redondeo": "0.00", 

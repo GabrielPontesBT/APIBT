@@ -92,11 +92,11 @@ Código | Descripción
             <bts:precio>33</bts:precio>
             <bts:monedaPrecio>1</bts:monedaPrecio>
             <bts:datosAdicionales>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:datosAdicionales>
             <bts:versionUId>2</bts:versionUId>
             <bts:kitMantenimiento>1</bts:kitMantenimiento>
@@ -110,12 +110,12 @@ Código | Descripción
             <bts:productoUId>48</bts:productoUId>
             <bts:monto>8745</bts:monto>
             <bts:comisionesCuota>
-               <bts:SdtsBTComisionPrestamo>
+               <bts:sBTComisionPrestamo>
                   <bts:porcentaje></bts:porcentaje>
                   <bts:descripcion></bts:descripcion>
                   <bts:importe></bts:importe>
                   <bts:codigo></bts:codigo>
-               </bts:SdtsBTComisionPrestamo>
+               </bts:sBTComisionPrestamo>
             </bts:comisionesCuota>
             <bts:periodoCuotas>35</bts:periodoCuotas>
             <bts:diaPago>14</bts:diaPago>
@@ -126,27 +126,27 @@ Código | Descripción
             </bts:cuotas>
             <bts:fechaPrimerPago>2023-11-14</bts:fechaPrimerPago>
             <bts:cuotasExtraordinarias>
-               <bts:SdtsBTCuotaExtraordinaria>
+               <bts:sBTCuotaExtraordinaria>
                   <bts:mes></bts:mes>
                   <bts:porcentajeCuota></bts:porcentajeCuota>
-               </bts:SdtsBTCuotaExtraordinaria>
+               </bts:sBTCuotaExtraordinaria>
             </bts:cuotasExtraordinarias>
             <bts:seguros>
-               <bts:SdtsBTSeguroPrestamo>
+               <bts:sBTSeguroPrestamo>
                   <bts:porcentaje></bts:porcentaje>
                   <bts:descripcion></bts:descripcion>
                   <bts:tipo></bts:tipo>
                   <bts:importe></bts:importe>
                   <bts:codigo></bts:codigo>
-               </bts:SdtsBTSeguroPrestamo>
+               </bts:sBTSeguroPrestamo>
             </bts:seguros>
             <bts:comisiones>
-               <bts:SdtsBTComisionPrestamo>
+               <bts:sBTComisionPrestamo>
                   <bts:porcentaje></bts:porcentaje>
                   <bts:descripcion></bts:descripcion>
                   <bts:importe></bts:importe>
                   <bts:codigo></bts:codigo>
-               </bts:SdtsBTComisionPrestamo>
+               </bts:sBTComisionPrestamo>
             </bts:comisiones>
          </bts:sdtDatosOferta>
       </bts:BTPartners.SimularOfertasVehicular>
@@ -181,7 +181,7 @@ curl -X POST \
           "precio": 33,
           "monedaPrecio": 1,
           "datosAdicionales": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
               "texto": "",
               "valor": "",
               "concepto": ""
@@ -199,7 +199,7 @@ curl -X POST \
           "productoUId": 48,
           "monto": 8745,
           "comisionesCuota": {
-            "SdtsBTComisionPrestamo": {
+            "sBTComisionPrestamo": {
               "porcentaje": "",
               "descripcion": "",
               "importe": "",
@@ -215,13 +215,13 @@ curl -X POST \
           },
           "fechaPrimerPago": "2023-11-14",
           "cuotasExtraordinarias": {
-            "SdtsBTCuotaExtraordinaria": {
+            "sBTCuotaExtraordinaria": {
               "mes": "",
               "porcentajeCuota": ""
             }
           },
           "seguros": {
-            "SdtsBTSeguroPrestamo": {
+            "sBTSeguroPrestamo": {
               "porcentaje": "",
               "descripcion": "",
               "tipo": "",
@@ -230,7 +230,7 @@ curl -X POST \
             }
           },
           "comisiones": {
-            "SdtsBTComisionPrestamo": {
+            "sBTComisionPrestamo": {
               "porcentaje": "",
               "descripcion": "",
               "importe": "",
