@@ -137,48 +137,48 @@ curl -X POST \
                <codigo>2</codigo>
                <descripcion>Cancelar y Acreditar al vto.</descripcion>
                <datosExtendidos>
-                  <SdtsBTDatoExtendido>
+                  <sBTDatoExtendido>
                      <Clave>TIPO_PRODUCTO</Clave>
                      <Tipo>D</Tipo>
                      <Valor>VTO</Valor>
                      <Lista></Lista>
-                  </SdtsBTDatoExtendido>
+                  </sBTDatoExtendido>
                </datosExtendidos>
             </Instruccion>
             <Instruccion>
                <codigo>6</codigo>
                <descripcion>Renovación Automática</descripcion>
                <datosExtendidos>
-                  <SdtsBTDatoExtendido>
+                  <sBTDatoExtendido>
                      <Clave>TIPO_PRODUCTO</Clave>
                      <Tipo>D</Tipo>
                      <Valor>VTO</Valor>
                      <Lista></Lista>
-                  </SdtsBTDatoExtendido>
+                  </sBTDatoExtendido>
                </datosExtendidos>
             </Instruccion>
             <Instruccion>
                <codigo>7</codigo>
                <descripcion>Acreditación</descripcion>
                <datosExtendidos>
-                  <SdtsBTDatoExtendido>
+                  <sBTDatoExtendido>
                      <Clave>TIPO_PRODUCTO</Clave>
                      <Tipo>D</Tipo>
                      <Valor>PP</Valor>
                      <Lista></Lista>
-                  </SdtsBTDatoExtendido>
+                  </sBTDatoExtendido>
                </datosExtendidos>
             </Instruccion>
             <Instruccion>
                <codigo>8</codigo>
                <descripcion>Capitalización Periódica Int.</descripcion>
                <datosExtendidos>
-                  <SdtsBTDatoExtendido>
+                  <sBTDatoExtendido>
                      <Clave>TIPO_PRODUCTO</Clave>
                      <Tipo>D</Tipo>
                      <Valor>PP</Valor>
                      <Lista></Lista>
-                  </SdtsBTDatoExtendido>
+                  </sBTDatoExtendido>
                </datosExtendidos>
             </Instruccion>
          </Instrucciones>
@@ -213,7 +213,7 @@ curl -X POST \
               "codigo": 2,
               "descripcion": "Cancelar y Acreditar al vto.",
               "datosExtendidos": {
-                "SdtsBTDatoExtendido": {
+                "sBTDatoExtendido": {
                   "Clave": "TIPO_PRODUCTO",
                   "Tipo": "D",
                   "Valor": "VTO",
@@ -225,7 +225,7 @@ curl -X POST \
               "codigo": 6,
               "descripcion": "Renovación Automática",
               "datosExtendidos": {
-                "SdtsBTDatoExtendido": {
+                "sBTDatoExtendido": {
                   "Clave": "TIPO_PRODUCTO",
                   "Tipo": "D",
                   "Valor": "VTO",
@@ -237,7 +237,7 @@ curl -X POST \
               "codigo": 7,
               "descripcion": "Acreditación",
               "datosExtendidos": {
-                "SdtsBTDatoExtendido": {
+                "sBTDatoExtendido": {
                   "Clave": "TIPO_PRODUCTO",
                   "Tipo": "D",
                   "Valor": "PP",
@@ -249,7 +249,7 @@ curl -X POST \
               "codigo": 8,
               "descripcion": "Capitalización Periódica Int.",
               "datosExtendidos": {
-                "SdtsBTDatoExtendido": {
+                "sBTDatoExtendido": {
                   "Clave": "TIPO_PRODUCTO",
                   "Tipo": "D",
                   "Valor": "PP",

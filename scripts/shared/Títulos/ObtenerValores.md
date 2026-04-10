@@ -121,11 +121,11 @@ curl -X POST \
 					<nombre>APPLIED MICRO CIRCUITS CORP.</nombre>
 					<precioActual>0.00</precioActual>
 					<otrosConceptos>
-						<SdtsBTConcepto>
+						<sBTConcepto>
 							<texto>Fecha de vencimiento.</texto>
 							<valor>0.00</valor>
 							<concepto>31/12/99</concepto>
-						</SdtsBTConcepto>
+						</sBTConcepto>
 					</otrosConceptos>
 				</sBTTitulo>
 				<sBTTitulo>
@@ -138,11 +138,11 @@ curl -X POST \
 					<nombre>APPLE COMPUTER INC.COM</nombre>
 					<precioActual>0.00</precioActual>
 					<otrosConceptos>
-						<SdtsBTConcepto>
+						<sBTConcepto>
 							<texto>Fecha de vencimiento.</texto>
 							<valor>0.00</valor>
 							<concepto>31/12/99</concepto>
-						</SdtsBTConcepto>
+						</sBTConcepto>
 					</otrosConceptos>
 				</sBTTitulo>
          </sdtTitulo>
@@ -183,7 +183,7 @@ curl -X POST \
          "nombre": "APPLIED MICRO CIRCUITS CORP.",
          "precioActual": 0,
          "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
             "texto": "Fecha de vencimiento.",
             "valor": 0,
             "concepto": "31/12/99"
@@ -200,7 +200,7 @@ curl -X POST \
          "nombre": "APPLE COMPUTER INC.COM",
          "precioActual": 0,
          "otrosConceptos": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
             "texto": "Fecha de vencimiento.",
             "valor": 0,
             "concepto": "31/12/99"

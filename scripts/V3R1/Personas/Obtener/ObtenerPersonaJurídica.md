@@ -210,7 +210,7 @@ curl -X POST \
         "piso": "123"
     },
     "sdtIntegrantesJuridicos": {
-        "SdtsBTIntegranteJuridico": {
+        "sBTIntegranteJuridico": {
             "nroDocumento": "27928980",
             "vinculoId": "1",
             "pais": "URUGUAY",

@@ -134,13 +134,13 @@ curl -X POST \
             <sBTDetalleClaseActivo>
                <nombreElemento>Depósitos a plazo fijo</nombreElemento>
                <datosSinManejoEspecie>
-                  <SdtsBTDatoSinManejoEspecie>
+                  <sBTDatoSinManejoEspecie>
                      <signo>$</signo>
                      <monedaId>0</monedaId>
                      <total>5263.16</total>
                      <cantidadOperaciones>2</cantidadOperaciones>
                      <totalOrigen>200000.00</totalOrigen>
-                  </SdtsBTDatoSinManejoEspecie>
+                  </sBTDatoSinManejoEspecie>
                </datosSinManejoEspecie>
                <porcentajeComposicion>1.00</porcentajeComposicion>
                <datosConManejoEspecie></datosConManejoEspecie>
@@ -149,13 +149,13 @@ curl -X POST \
             <sBTDetalleClaseActivo>
                <nombreElemento>Cuenta Corrientes</nombreElemento>
                <datosSinManejoEspecie>
-                  <SdtsBTDatoSinManejoEspecie>
+                  <sBTDatoSinManejoEspecie>
                      <signo>USD</signo>
                      <monedaId>2222</monedaId>
                      <total>496723.14</total>
                      <cantidadOperaciones>2</cantidadOperaciones>
                      <totalOrigen>522143.27</totalOrigen>
-                  </SdtsBTDatoSinManejoEspecie>
+                  </sBTDatoSinManejoEspecie>
                </datosSinManejoEspecie>
                <porcentajeComposicion>99.00</porcentajeComposicion>
                <datosConManejoEspecie></datosConManejoEspecie>
@@ -193,7 +193,7 @@ curl -X POST \
          {
             "nombreElemento": "Depósitos a plazo fijo",
             "datosSinManejoEspecie": {
-               "SdtsBTDatoSinManejoEspecie": {
+               "sBTDatoSinManejoEspecie": {
                "signo": "$",
                "monedaId": 0,
                "total": 5263.16,
@@ -208,7 +208,7 @@ curl -X POST \
          {
             "nombreElemento": "Cuenta Corrientes",
             "datosSinManejoEspecie": {
-               "SdtsBTDatoSinManejoEspecie": {
+               "sBTDatoSinManejoEspecie": {
                "signo": "USD",
                "monedaId": 2222,
                "total": 496723.14,

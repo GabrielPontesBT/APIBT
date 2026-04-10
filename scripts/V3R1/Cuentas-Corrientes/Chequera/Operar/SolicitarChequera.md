@@ -87,7 +87,7 @@ Código | Descripción
             <bts:persona3Texto1></bts:persona3Texto1>  
             <bts:persona3Texto2></bts:persona3Texto2>  
             <bts:domicilio>Avenida Italia 2145</bts:domicilio>
-            <bts:sucuraslDeRetiroId></bts:sucuraslDeRetiroId>
+            <bts:sucursalDeRetiroId></bts:sucursalDeRetiroId>
          </bts:datosSolicitud>
       </bts:BTCuentasCorrientes.SolicitarChequera>
    </soapenv:Body>

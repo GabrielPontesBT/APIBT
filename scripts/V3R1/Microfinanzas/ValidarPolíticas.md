@@ -128,7 +128,7 @@ curl -X POST \
                <tipoIntegranteDsc/>
                <nroEjecucion>394</nroEjecucion>
                <politicas>
-                  <SdtsBTPoliticaIncumplida>
+                  <sBTPoliticaIncumplida>
                      <politicaId>354</politicaId>
                      <politica>Edad del solicitante es mayor a la máxima permitida.</politica>
                      <restriccion>B</restriccion>
@@ -137,8 +137,8 @@ curl -X POST \
                      <estadoDsc/>
                      <nroAutorizacion>0</nroAutorizacion>
                      <observacion/>
-                  </SdtsBTPoliticaIncumplida>
-                  <SdtsBTPoliticaIncumplida>
+                  </sBTPoliticaIncumplida>
+                  <sBTPoliticaIncumplida>
                      <politicaId>363</politicaId>
                      <politica>Cliente excede el N° máximo de solicitudes en trámite.</politica>
                      <restriccion>A</restriccion>
@@ -147,8 +147,8 @@ curl -X POST \
                      <estadoDsc/>
                      <nroAutorizacion>0</nroAutorizacion>
                      <observacion/>
-                  </SdtsBTPoliticaIncumplida>
-                  <SdtsBTPoliticaIncumplida>
+                  </sBTPoliticaIncumplida>
+                  <sBTPoliticaIncumplida>
                      <politicaId>366</politicaId>
                      <politica>Existen Documentos Obligatorios No Recibidos.</politica>
                      <restriccion>A</restriccion>
@@ -157,7 +157,7 @@ curl -X POST \
                      <estadoDsc/>
                      <nroAutorizacion>0</nroAutorizacion>
                      <observacion/>
-                  </SdtsBTPoliticaIncumplida>
+                  </sBTPoliticaIncumplida>
                </politicas>
             </sBTValidacionPolitica>
          </sdtValidacionesPoliticas>
@@ -203,7 +203,7 @@ curl -X POST \
       "tipoIntegrante": "T",
       "nroEjecucion": "394",
       "politicas": {
-         "SdtsBTPoliticaIncumplida": [
+         "sBTPoliticaIncumplida": [
             {
             "politicaId": "354",
             "politica": "Edad del solicitante es mayor a la máxima permitida.",

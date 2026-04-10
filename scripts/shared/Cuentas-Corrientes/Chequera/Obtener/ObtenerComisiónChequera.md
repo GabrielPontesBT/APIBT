@@ -124,7 +124,8 @@ curl -X POST \
             <Token>64b082f7a84A8B5C60A82434</Token>
          </Btinreq>
          <moneda>$</moneda>
-         <importeComision>5000.0</importeComision>
+         <comision>5000.0</comision>
+         <impuestos>0.0</impuestos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>420</Numero>

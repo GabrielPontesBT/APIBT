@@ -127,9 +127,9 @@ curl -X POST \
          </Btinreq>
          <cantidadResultados>1</cantidadResultados>
          <sdtRetornos>
-            <SdtsBTRetorno>
+            <sBTRetorno>
                <retorno>3</retorno>
-            </SdtsBTRetorno>
+            </sBTRetorno>
          </sdtRetornos>
          <resultado>VERDADERO</resultado>
          <Erroresnegocio></Erroresnegocio>
@@ -159,7 +159,7 @@ curl -X POST \
     }, 
     "cantidadResultados": "1", 
     "sdtRetornos": { 
-        "SdtsBTRetorno": { 
+        "sBTRetorno": { 
             "retorno": "3" 
         } 
     }, 

@@ -104,14 +104,14 @@ curl -X POST \
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
          <sdtProcesosBatch>
-            <SdtsBTProcesoBatch>
+            <sBTProcesoBatch>
                <identificador>2900</identificador>
                <nombre>PCC00094</nombre>
                <descripcion>Cobro de Comision Inact. CC/CA</descripcion>
                <periodicidad>MENSUAL</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>No reprocesar nunca</esReprocesable>
-            </SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
             ...
          </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
@@ -140,7 +140,7 @@ curl -X POST \
       "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": {
-      "SdtsBTProcesoBatch": [
+      "sBTProcesoBatch": [
         {
           "identificador": "2900",
           "nombre": "PCC00094",

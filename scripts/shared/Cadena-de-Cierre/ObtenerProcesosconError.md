@@ -108,158 +108,158 @@ curl -X POST \
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
          <sdtProcesosBatch> 
-            <SdtsBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1725</identificador> 
                <nombre>PNU00011</nombre> 
                <descripcion>Ajuste cotización de Unidades</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1725</identificador> 
                <nombre>PNU00011</nombre> 
                <descripcion>Ajuste cotización de Unidades</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1730</identificador> 
                <nombre>PDP00004</nombre> 
                <descripcion>Pago Intereses Periódicos</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1730</identificador> 
                <nombre>PDP00004</nombre> 
                <descripcion>Pago Intereses Periódicos</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1730</identificador> 
                <nombre>PDP00004</nombre> 
                <descripcion>Pago Intereses Periódicos</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1730</identificador> 
                <nombre>PDP00004</nombre> 
                <descripcion>Pago Intereses Periódicos</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1740</identificador> 
                <nombre>PPP6361</nombre> 
                <descripcion>Pasaje a Castigos</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1745</identificador> 
                <nombre>PDP00001</nombre> 
                <descripcion>Renovación Automática</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>1750</identificador> 
                <nombre>PNU00009</nombre> 
                <descripcion>Ajuste de Operaciones  Cancela</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>Reprocesar siempre</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3100</identificador> 
                <nombre>PCC00032</nombre> 
                <descripcion>Actualiza movimientos FSH021</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3700</identificador> 
                <nombre>PNU00006</nombre> 
                <descripcion>Ajuste saldos Corresponsales</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3725</identificador> 
                <nombre>PNU00007</nombre> 
                <descripcion>Tit.ajuste de v.e. y cupon</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3750</identificador> 
                <nombre>PNU00117</nombre> 
                <descripcion>Resultados a Moneda FVC</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3800</identificador> 
                <nombre>PNU00217</nombre> 
                <descripcion>Pasaje Resultados M/E a M/N</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>3900</identificador> 
                <nombre>PNU00003</nombre> 
                <descripcion>Ajuste Posición de Monedas</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>4000</identificador> 
                <nombre>PNU00004</nombre> 
                <descripcion>Ajuste Valuación Monedas</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>4400</identificador> 
                <nombre>PSID0001</nombre> 
                <descripcion>Expando Rubros Campo Lista</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>4500</identificador> 
                <nombre>PSID0003</nombre> 
                <descripcion>Calcula saldos para campos ti</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
-            <SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
+            <sBTProcesoBatch> 
                <identificador>4600</identificador> 
                <nombre>PSID0002</nombre> 
                <descripcion>Acumula Saldos Campo Acumulado</descripcion> 
                <periodicidad>DIARIA</periodicidad> 
                <parametrosExtendidos>SI</parametrosExtendidos> 
                <esReprocesable>No reprocesar nunca</esReprocesable> 
-            </SdtsBTProcesoBatch> 
+            </sBTProcesoBatch> 
          </sdtProcesosBatch> 
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -287,7 +287,7 @@ curl -X POST \
       "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": { 
-      "SdtsBTProcesoBatch": [ 
+      "sBTProcesoBatch": [ 
         { 
           "identificador": "1725", 
           "nombre": "PNU00011", 

@@ -109,34 +109,34 @@ curl -X POST \
                <descripcion>Cuenta Persona</descripcion>
                <vigente>S</vigente>
                <productos>
-                  <SdtsBTProductoPaquete>
+                  <sBTProductoPaquete>
                      <productoUId>154</productoUId>
                      <nombre/>
                      <moneda>PESOS</moneda>
                      <papel>Billete</papel>
                      <cantidad>0</cantidad>
-                  </SdtsBTProductoPaquete>
-                  <SdtsBTProductoPaquete>
+                  </sBTProductoPaquete>
+                  <sBTProductoPaquete>
                      <productoUId>93</productoUId>
                      <nombre>Cuenta corriente P.Física</nombre>
                      <moneda>PESOS</moneda>
                      <papel>Billete</papel>
                      <cantidad>1</cantidad>
-                  </SdtsBTProductoPaquete>
-                  <SdtsBTProductoPaquete>
+                  </sBTProductoPaquete>
+                  <sBTProductoPaquete>
                      <productoUId>134</productoUId>
                      <nombre>Caja de Ahorro P.Física</nombre>
                      <moneda>DÓLAR ESTADOUNIDENSE</moneda>
                      <papel>Billete</papel>
                      <cantidad>1</cantidad>
-                  </SdtsBTProductoPaquete>
-                  <SdtsBTProductoPaquete>
+                  </sBTProductoPaquete>
+                  <sBTProductoPaquete>
                      <productoUId>155</productoUId>
                      <nombre>TARJETA DE DEBITO</nombre>
                      <moneda>PESOS</moneda>
                      <papel>Billete</papel>
                      <cantidad>0</cantidad>
-                  </SdtsBTProductoPaquete>
+                  </sBTProductoPaquete>
                </productos>
             </sBTPaquete>
          </sdtPaquetes>
@@ -171,7 +171,7 @@ curl -X POST \
          "descripcion": "Cuenta Persona",
          "vigente": "S",
          "productos": {
-            "SdtsBTProductoPaquete": [
+            "sBTProductoPaquete": [
                {
                "productoUId": "154",
                "moneda": "PESOS",

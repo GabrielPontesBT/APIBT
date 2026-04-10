@@ -131,7 +131,7 @@ Código | Descripción
             <bts:ocupacionId>1</bts:ocupacionId>
             <bts:nacionalidad>URUGUAY</bts:nacionalidad>
             <bts:domicilios>
-                <bts:SdtsBTDomicilioCompleto>
+                <bts:sBTDomicilioCompleto>
                     <bts:coloniaId>0</bts:coloniaId>
                     <bts:agrupador1Id>1</bts:agrupador1Id>
                     <bts:agrupador5></bts:agrupador5>
@@ -160,13 +160,13 @@ Código | Descripción
                     <bts:localidad>Montevideo</bts:localidad>
                     <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
                     <bts:departamentoId>10</bts:departamentoId>
-                </bts:SdtsBTDomicilioCompleto>
+                </bts:sBTDomicilioCompleto>
             </bts:domicilios>
             <bts:datosAdicionales>
-                <bts:SdtsBTDatoLista>
+                <bts:sBTDatoLista>
                     <bts:clave>dato1</bts:clave>
                     <bts:valor>valor1</bts:valor>
-                </bts:SdtsBTDatoLista>
+                </bts:sBTDatoLista>
             </bts:datosAdicionales>
             <bts:sectorId>1</bts:sectorId>
             <bts:correoElectronico>ipuig@dlya.com.uy</bts:correoElectronico>
@@ -220,7 +220,7 @@ curl -X POST \
       "ocupacionId": 1,
       "nacionalidad": "URUGUAY",
       "domicilios": {
-        "SdtsBTDomicilioCompleto": [
+        "sBTDomicilioCompleto": [
           {
             "coloniaId": 0,
             "agrupador1Id": 1,
@@ -254,7 +254,7 @@ curl -X POST \
         ]
       },
       "datosAdicionales": {
-        "SdtsBTDatoLista": [
+        "sBTDatoLista": [
           {
             "clave": "dato1",
             "valor": "valor1"
@@ -294,7 +294,7 @@ curl -X POST \
          <Btoutreq>
             <Numero>36678</Numero>
             <Estado>OK</Estado>
-            <Servicio>Prueba.Crear</Servicio>
+            <Servicio>BTClientes.Crear</Servicio>
             <Requerimiento>0</Requerimiento>
             <Fecha>2025-11-18</Fecha>
             <Hora>12:16:37</Hora>

@@ -125,42 +125,9 @@ curl -X POST \
 @tab XML
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <SOAP-ENV:Body>
-      <BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
-         <Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>1</Device>
-            <Requerimiento>1</Requerimiento>
-            <Token>F971DE0C3D4C96A5ABC22DAD</Token>
-         </Btinreq>
-         <ordenId>354</ordenId>
-         <numeroLineaOrden>1</numeroLineaOrden>
-         <valoresCampoCASH>
-            <sBTValorCampoCASH>
-               <tag/>
-               <valor/>
-            </sBTValorCampoCASH>
-         </valoresCampoCASH>
-         <Erroresnegocio/>
-         <Btoutreq>
-            <Estado>OK</Estado>
-            <Fecha>2024-11-19</Fecha>
-            <Hora>09:01:15</Hora>
-            <Numero>26093</Numero>
-            <Servicio>BTCASHManagement.ObtenerValoresOrdenSegunCampo</Servicio>
-            <Requerimiento>1</Requerimiento>
-            <Canal>BTDIGITAL</Canal>
-         </Btoutreq>
-      </BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse>
-   </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-
-
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<SOAP-ENV:Body>
 		<BTCASHManagement.ObtenerDetalleOrdenSegunCampoResponse
-			xmlns=http://uy.com.dlya.bantotal/BTSOA/>
+			xmlns="http://uy.com.dlya.bantotal/BTSOA/">
 			<Btinreq>
 				<Device>1</Device>
 				<Usuario>INSTALADOR</Usuario>

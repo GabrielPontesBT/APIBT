@@ -110,16 +110,16 @@ curl -X POST \
             <Token>86b12d9cbaCD285A89A23FBE</Token>
          </Btinreq>
          <sdtItems>
-            <SdtsBTItemPAE>
+            <sBTItemPAE>
                <tipoDato>N-Numerico</tipoDato>
                <itemId>105</itemId>
                <nombre>ANTIG_LABORAL</nombre>
-            </SdtsBTItemPAE>
-            <SdtsBTItemPAE>
+            </sBTItemPAE>
+            <sBTItemPAE>
                <tipoDato>N-Numerico</tipoDato>
                <itemId>115</itemId>
                <nombre>MONTO_CRED_MN</nombre>
-            </SdtsBTItemPAE>
+            </sBTItemPAE>
             ...
          </sdtItems>
          <Erroresnegocio></Erroresnegocio>
@@ -147,7 +147,7 @@ curl -X POST \
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtItems": {
-         "SdtsBTItemPAE": [ 
+         "sBTItemPAE": [ 
          { 
             "tipoDato": "N-Numerico", 
             "itemId": "105", 

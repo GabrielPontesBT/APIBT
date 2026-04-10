@@ -78,11 +78,11 @@ Código | Descripción
          <bts:sdtSimulacionUpdate>
             <bts:fechaPrimerPago>2023-06-21</bts:fechaPrimerPago>
             <bts:otrosConceptos>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:otrosConceptos>
             <bts:diaPago></bts:diaPago>
             <bts:clienteUid>370</bts:clienteUid>
@@ -111,7 +111,7 @@ curl -X POST \
       "sdtSimulacionUpdate": {
          "fechaPrimerPago": "2023-06-21",
          "otrosConceptos": {
-         "SdtsBTConcepto": {
+         "sBTConcepto": {
             "texto": "",
             "valor": "",
             "concepto": ""
@@ -150,18 +150,18 @@ curl -X POST \
             <precio>0.0</precio>
             <tipoAmortizacionDsc>Francés con Seg.e Impu.</tipoAmortizacionDsc>
             <cronograma>
-               <SdtsBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>68207.76</capital>
                   <impuestos>0.0</impuestos>
                   <detalleComisiones>
-                     <SdtsBTComisionPrestamo>
+                     <sBTComisionPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>F.H.A.</descripcion>
                         <importe>508.57</importe>
                         <modificable/>
                         <codigo>200</codigo>
-                     </SdtsBTComisionPrestamo>
+                     </sBTComisionPrestamo>
                   </detalleComisiones>
                   <nroCuota>1</nroCuota>
                   <intereses>0.0</intereses>
@@ -172,27 +172,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-06-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>-25300.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>450.0</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>0</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>-24850.0</seguros>
                   <comisiones>508.57</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>38517.74</capital>
                   <impuestos>0.0</impuestos>
@@ -206,27 +206,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-07-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>419.31</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1519.31</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>38693.37</capital>
                   <impuestos>0.0</impuestos>
@@ -240,27 +240,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-08-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>401.97</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1501.97</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>38869.79</capital>
                   <impuestos>0.0</impuestos>
@@ -274,27 +274,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-09-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>384.56</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1484.56</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39047.02</capital>
                   <impuestos>0.0</impuestos>
@@ -308,27 +308,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-10-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>367.07</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1467.07</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39225.06</capital>
                   <impuestos>0.0</impuestos>
@@ -342,27 +342,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-11-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>349.5</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1449.5</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39403.91</capital>
                   <impuestos>0.0</impuestos>
@@ -376,27 +376,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2023-12-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>331.85</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1431.85</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39583.57</capital>
                   <impuestos>0.0</impuestos>
@@ -410,27 +410,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-01-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>314.12</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1414.12</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39764.06</capital>
                   <impuestos>0.0</impuestos>
@@ -444,27 +444,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-02-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>296.3</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1396.3</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>39945.37</capital>
                   <impuestos>0.0</impuestos>
@@ -478,27 +478,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-03-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>278.41</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1378.41</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>40127.51</capital>
                   <impuestos>0.0</impuestos>
@@ -512,27 +512,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-04-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>260.43</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1360.43</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>40310.46</capital>
                   <impuestos>0.0</impuestos>
@@ -546,27 +546,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-05-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>242.38</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1342.38</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>40494.26</capital>
                   <impuestos>0.0</impuestos>
@@ -580,27 +580,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-06-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>224.24</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1324.24</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>40678.91</capital>
                   <impuestos>0.0</impuestos>
@@ -614,27 +614,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-07-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>206.01</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1306.01</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>40864.38</capital>
                   <impuestos>0.0</impuestos>
@@ -648,27 +648,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-08-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>187.71</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1287.71</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41050.71</capital>
                   <impuestos>0.0</impuestos>
@@ -682,27 +682,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-09-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>169.32</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1269.32</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41237.88</capital>
                   <impuestos>0.0</impuestos>
@@ -716,27 +716,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-10-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>150.85</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1250.85</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41425.91</capital>
                   <impuestos>0.0</impuestos>
@@ -750,27 +750,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-11-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>132.29</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1232.29</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41614.79</capital>
                   <impuestos>0.0</impuestos>
@@ -784,27 +784,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2024-12-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>113.65</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1213.65</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41804.54</capital>
                   <impuestos>0.0</impuestos>
@@ -818,27 +818,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2025-01-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>94.92</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1194.92</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>41995.15</capital>
                   <impuestos>0.0</impuestos>
@@ -852,27 +852,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2025-02-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>76.11</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1176.11</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>42186.64</capital>
                   <impuestos>0.0</impuestos>
@@ -886,27 +886,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2025-03-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>57.21</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1157.21</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>42378.99</capital>
                   <impuestos>0.0</impuestos>
@@ -920,27 +920,27 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2025-04-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>38.23</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1138.23</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
-               <SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
+               <sBTCuotaSimulacion>
                   <otrosConceptos>0.0</otrosConceptos>
                   <capital>42572.22</capital>
                   <impuestos>0.0</impuestos>
@@ -954,26 +954,26 @@ curl -X POST \
                   <cuota>43866.33</cuota>
                   <fechaPago>2025-05-21</fechaPago>
                   <detalleSeguros>
-                     <SdtsBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR - Vida - Variante 1</descripcion>
                         <importe>1100.0</importe>
                         <tipo>VIDA</tipo>
                         <codigo>100</codigo>
-                     </SdtsBTSeguroPrestamo>
-                     <SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
+                     <sBTSeguroPrestamo>
                         <porcentaje>0.0</porcentaje>
                         <descripcion>SANCOR- Desempleo %saldos</descripcion>
                         <importe>19.16</importe>
                         <tipo>DESEMPLEO</tipo>
                         <codigo>200</codigo>
-                     </SdtsBTSeguroPrestamo>
+                     </sBTSeguroPrestamo>
                   </detalleSeguros>
                   <plazo>30</plazo>
                   <detalleConceptos></detalleConceptos>
                   <seguros>1119.16</seguros>
                   <comisiones>0.0</comisiones>
-               </SdtsBTCuotaSimulacion>
+               </sBTCuotaSimulacion>
             </cronograma>
             <comisionesDesembolso>10000.0</comisionesDesembolso>
             <segurosDesembolso>0.0</segurosDesembolso>
@@ -995,13 +995,13 @@ curl -X POST \
             <tipoAmortizacionCod>3</tipoAmortizacionCod>
             <totalIntereses>46717.75</totalIntereses>
             <seguros>
-               <SdtsBTSeguroPrestamo>
+               <sBTSeguroPrestamo>
                   <porcentaje>0.0</porcentaje>
                   <descripcion>SANCOR- Desempleo %saldos</descripcion>
                   <importe>5565.6</importe>
                   <tipo>DESEMPLEO</tipo>
                   <codigo>200</codigo>
-               </SdtsBTSeguroPrestamo>
+               </sBTSeguroPrestamo>
             </seguros>
             <fechaValor>2025-05-30</fechaValor>
             <tasaEfectiva>0.0</tasaEfectiva>
@@ -1015,30 +1015,30 @@ curl -X POST \
             <redondeo>0.0</redondeo>
             <montoDesembolso>990000.0</montoDesembolso>
             <comisiones>
-               <SdtsBTComisionPrestamo>
+               <sBTComisionPrestamo>
                   <porcentaje>0.0</porcentaje>
                   <descripcion>Hipotecario - Importe Fijo</descripcion>
                   <importe>0.0</importe>
                   <modificable/>
                   <codigo>141</codigo>
-               </SdtsBTComisionPrestamo>
-               <SdtsBTComisionPrestamo>
+               </sBTComisionPrestamo>
+               <sBTComisionPrestamo>
                   <porcentaje>0.0</porcentaje>
                   <descripcion>F.H.A.</descripcion>
                   <importe>10000.0</importe>
                   <modificable/>
                   <codigo>200</codigo>
-               </SdtsBTComisionPrestamo>
+               </sBTComisionPrestamo>
             </comisiones>
             <totalComisiones>10508.57</totalComisiones>
             <comisionesCuota>
-               <SdtsBTComisionPrestamo>
+               <sBTComisionPrestamo>
                   <porcentaje>0.0</porcentaje>
                   <descripcion>F.H.A.</descripcion>
                   <importe>508.57</importe>
                   <modificable/>
                   <codigo>200</codigo>
-               </SdtsBTComisionPrestamo>
+               </sBTComisionPrestamo>
             </comisionesCuota>
          </sdtSimulacion>
          <Erroresnegocio></Erroresnegocio>
@@ -1075,13 +1075,13 @@ curl -X POST \
           "precio": 0,
           "tipoAmortizacionDsc": "Francés con Seg.e Impu.",
           "cronograma": {
-            "SdtsBTCuotaSimulacion": [
+            "sBTCuotaSimulacion": [
               {
                 "otrosConceptos": 0,
                 "capital": 68207.76,
                 "impuestos": 0,
                 "detalleComisiones": {
-                  "SdtsBTComisionPrestamo": {
+                  "sBTComisionPrestamo": {
                     "porcentaje": 0,
                     "descripcion": "F.H.A.",
                     "importe": 508.57,
@@ -1098,7 +1098,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-06-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1134,7 +1134,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-07-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1170,7 +1170,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-08-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1206,7 +1206,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-09-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1242,7 +1242,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-10-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1278,7 +1278,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-11-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1314,7 +1314,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2023-12-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1350,7 +1350,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-01-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1386,7 +1386,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-02-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1422,7 +1422,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-03-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1458,7 +1458,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-04-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1494,7 +1494,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-05-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1530,7 +1530,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-06-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1566,7 +1566,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-07-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1602,7 +1602,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-08-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1638,7 +1638,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-09-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1674,7 +1674,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-10-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1710,7 +1710,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-11-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1746,7 +1746,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2024-12-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1782,7 +1782,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2025-01-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1818,7 +1818,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2025-02-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1854,7 +1854,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2025-03-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1890,7 +1890,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2025-04-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1926,7 +1926,7 @@ curl -X POST \
                 "cuota": 43866.33,
                 "fechaPago": "2025-05-21",
                 "detalleSeguros": {
-                  "SdtsBTSeguroPrestamo": [
+                  "sBTSeguroPrestamo": [
                     {
                       "porcentaje": 0,
                       "descripcion": "SANCOR - Vida - Variante 1",
@@ -1970,7 +1970,7 @@ curl -X POST \
           "tipoAmortizacionCod": 3,
           "totalIntereses": 46717.75,
           "seguros": {
-            "SdtsBTSeguroPrestamo": {
+            "sBTSeguroPrestamo": {
               "porcentaje": 0,
               "descripcion": "SANCOR- Desempleo %saldos",
               "importe": 5565.6,
@@ -1990,7 +1990,7 @@ curl -X POST \
           "redondeo": 0,
           "montoDesembolso": 990000,
           "comisiones": {
-            "SdtsBTComisionPrestamo": [
+            "sBTComisionPrestamo": [
               {
                 "porcentaje": 0,
                 "descripcion": "Hipotecario - Importe Fijo",
@@ -2009,7 +2009,7 @@ curl -X POST \
           },
           "totalComisiones": 10508.57,
           "comisionesCuota": {
-            "SdtsBTComisionPrestamo": {
+            "sBTComisionPrestamo": {
               "porcentaje": 0,
               "descripcion": "F.H.A.",
               "importe": 508.57,

@@ -103,17 +103,17 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
-         <SdtsBTProcesoBatch>
-            <SdtsBTProcesoBatch>
+         <sdtProcesosBatch>
+            <sBTProcesoBatch>
                <identificador>69</identificador>
                <nombre>PCLE252</nombre>
                <descripcion>Generación de C. Gerencia</descripcion>
                <periodicidad>DIARIA</periodicidad>
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
-            </SdtsBTProcesoBatch>
+            </sBTProcesoBatch>
             ...
-         </SdtsBTProcesoBatch>
+         </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>42133</Numero>
@@ -139,8 +139,8 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Token": "6964034201CD285A89A23FBE"
     },
-    "SdtsBTProcesoBatch": {
-      "SdtsBTProcesoBatch": [
+    "sdtProcesosBatch": {
+      "sBTProcesoBatch": [
         {
           "identificador": "69",
           "nombre": "PCLE252",

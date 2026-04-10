@@ -96,11 +96,11 @@ M | Modificación.
    <soapenv:Body>
       <bts:BTCASHManagement.ContratarDebitoAutomatico>
          <bts:Btinreq>
-            <Canal>BTDIGITAL</Canal>
-            <Usuario>INSTALADOR</Usuario>
-            <Device>1</Device>
-            <Requerimiento>1</Requerimiento>
-            <Token>F971DE0C3D4C96A5ABC22DAD</Token>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:Device>1</bts:Device>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>
          </bts:Btinreq>
          <bts:contratoId>22</bts:contratoId>
          <bts:servicio>500</bts:servicio>

@@ -101,7 +101,7 @@ Código | Descripción
             <bts:nacionalidad></bts:nacionalidad>
             <bts:sueldo>7845</bts:sueldo>
             <bts:domicilios>
-               <bts:SdtsBTDomicilioCompleto>
+               <bts:sBTDomicilioCompleto>
                   <bts:agrupador1Id>1</bts:agrupador1Id>
                   <bts:coloniaId>3</bts:coloniaId>
                   <bts:departamento></bts:departamento>
@@ -130,7 +130,7 @@ Código | Descripción
                   <bts:localidadId>2</bts:localidadId>
                   <bts:tipoDomicilioId>1</bts:tipoDomicilioId>
                   <bts:departamentoId>1</bts:departamentoId>
-               </bts:SdtsBTDomicilioCompleto>
+               </bts:sBTDomicilioCompleto>
             </bts:domicilios>
             <bts:correoElectronico>juanLui@mail.com</bts:correoElectronico>
             <bts:sectorId>2</bts:sectorId>
@@ -185,7 +185,7 @@ curl -X POST \
       "nacionalidad": "",
       "sueldo": 7845,
       "domicilios": {
-         "SdtsBTDomicilioCompleto": {
+         "sBTDomicilioCompleto": {
             "agrupador1Id": 1,
             "coloniaId": 3,
             "departamento": "",

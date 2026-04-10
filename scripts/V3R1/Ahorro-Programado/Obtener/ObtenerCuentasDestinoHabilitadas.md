@@ -139,10 +139,11 @@ curl -X POST \
                   <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>
                   <moneda>$</moneda>
                   <papel/>
+                  <otrosConceptos/>
                </producto>
                <tipoProducto>CA</tipoProducto>
                <sucursal>Casa Matriz</sucursal>
-               <subCuenta>Mi account 1</subCuenta>
+               <subcuenta>Mi account 1</subcuenta>
                <saldo>10000000.00</saldo>
                <estado>Normal</estado>
             </sBTProductoPasivo>
@@ -155,10 +156,11 @@ curl -X POST \
                   <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>
                   <moneda>$</moneda>
                   <papel/>
+                  <otrosConceptos/>
                </producto>
                <tipoProducto>CA</tipoProducto>
                <sucursal>Casa Matriz</sucursal>
-               <subCuenta>Mi account 2</subCuenta>
+               <subcuenta>Mi account 2</subcuenta>
                <saldo>0.00</saldo>
                <estado>Normal</estado>
             </sBTProductoPasivo>

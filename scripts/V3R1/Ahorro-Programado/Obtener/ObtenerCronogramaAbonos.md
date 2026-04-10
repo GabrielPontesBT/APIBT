@@ -143,7 +143,7 @@ curl -X POST \
             <clienteUId>4</clienteUId>
             <operacionUId>94</operacionUId>
             <abonos>
-               <SdtsBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>1</numeroAbono>
                   <capital>1000.0</capital>
@@ -151,10 +151,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-02-28</fechaPago>
-                  <interes>8.49</interes>
+                  <intereses>8.49</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>2</numeroAbono>
                   <capital>2000.0</capital>
@@ -162,10 +162,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-03-31</fechaPago>
-                  <interes>16.44</interes>
+                  <intereses>16.44</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>3</numeroAbono>
                   <capital>3000.0</capital>
@@ -173,10 +173,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-04-30</fechaPago>
-                  <interes>24.66</interes>
+                  <intereses>24.66</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>4</numeroAbono>
                   <capital>4000.0</capital>
@@ -184,10 +184,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-05-30</fechaPago>
-                  <interes>33.97</interes>
+                  <intereses>33.97</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>5</numeroAbono>
                   <capital>5000.0</capital>
@@ -195,10 +195,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-06-30</fechaPago>
-                  <interes>41.1</interes>
+                  <intereses>41.1</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>6</numeroAbono>
                   <capital>6000.0</capital>
@@ -206,10 +206,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-07-30</fechaPago>
-                  <interes>54.25</interes>
+                  <intereses>54.25</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>7</numeroAbono>
                   <capital>7000.0</capital>
@@ -217,10 +217,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-09-01</fechaPago>
-                  <interes>113.15</interes>
+                  <intereses>113.15</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>8</numeroAbono>
                   <capital>8000.0</capital>
@@ -228,10 +228,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-10-30</fechaPago>
-                  <interes>70.14</interes>
+                  <intereses>70.14</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>9</numeroAbono>
                   <capital>9000.0</capital>
@@ -239,10 +239,10 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2025-12-01</fechaPago>
-                  <interes>147.95</interes>
+                  <intereses>147.95</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
-               <SdtsBTAbono>
+               </sBTAbono>
+               <sBTAbono>
                   <abono>1000.0</abono>
                   <numeroAbono>10</numeroAbono>
                   <capital>10000.0</capital>
@@ -250,9 +250,9 @@ curl -X POST \
                   <tasa>10.0</tasa>
                   <TAE>0.0</TAE>
                   <fechaPago>2026-01-30</fechaPago>
-                  <interes>65.75</interes>
+                  <intereses>65.75</intereses>
                   <plazo>0</plazo>
-               </SdtsBTAbono>
+               </sBTAbono>
             </abonos>
             <total>10575.9</total>
             <producto>AHORRO ANUAL</producto>
@@ -293,7 +293,7 @@ curl -X POST \
           "clienteUId": 4,
           "operacionUId": 94,
           "abonos": {
-            "SdtsBTAbono": [
+            "sBTAbono": [
               {
                 "abono": 1000,
                 "numeroAbono": 1,

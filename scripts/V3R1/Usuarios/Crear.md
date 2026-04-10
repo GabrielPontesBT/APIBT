@@ -86,10 +86,10 @@ Código | Descripción
             <bts:numeroCaja>1</bts:numeroCaja>
             <bts:programaInicial>HEJECUTA</bts:programaInicial>
             <bts:roles>
-               <bts:SdtsBTRolWF>
+               <bts:sBTRolWF>
                	<bts:codigo>6</bts:codigo>
             		<bts:descripcion>Asesor de Créditos</bts:descripcion>
-               </bts:SdtsBTRolWF>
+               </bts:sBTRolWF>
             </bts:roles>
             <bts:sucursal>1</bts:sucursal>
             <bts:telefono>26012777</bts:telefono>
@@ -127,7 +127,7 @@ curl -X POST \
       "numeroCaja": "1",
       "programaInicial": "HEJECUTA",
       "roles": {
-         "SdtsBTRolWF": {
+         "sBTRolWF": {
                "codigo": "6",
                "descripcion": "Asesor de Créditos"
          }

@@ -137,7 +137,7 @@ curl -X POST \
             <nacionalidad>URUGUAY</nacionalidad>
             <comentarioCorreo/>
             <domicilios>
-               <SdtsBTDomicilioCompleto>
+               <sBTDomicilioCompleto>
                   <coloniaId>0</coloniaId>
                   <agrupador1Id>1</agrupador1Id>
                   <agrupador5/>
@@ -166,7 +166,7 @@ curl -X POST \
                   <localidad>Montevideo</localidad>
                   <tipoDomicilioId>1</tipoDomicilioId>
                   <departamentoId>10</departamentoId>
-               </SdtsBTDomicilioCompleto>
+               </sBTDomicilioCompleto>
             </domicilios>
             <datosAdicionales></datosAdicionales>
             <correoElectronico>alucia@gmail.com</correoElectronico>
@@ -227,7 +227,7 @@ curl -X POST \
          "nacionalidad": "URUGUAY",
          "comentarioCorreo": "",
          "domicilios": {
-            "SdtsBTDomicilioCompleto": {
+            "sBTDomicilioCompleto": {
                "coloniaId": "0",
                "agrupador1Id": "1",
                "agrupador5": "",

@@ -106,69 +106,69 @@ curl -X POST \
          <sdtServicios>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>15</servicio>
-               <descripcionServicio>Transferencias Individuales</descripcionServicio>
+               <descServicio>Transferencias Individuales</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>20</servicio>
-               <descripcionServicio>Nomina</descripcionServicio>
+               <descServicio>Nomina</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>50</servicio>
-               <descripcionServicio>Proveedores</descripcionServicio>
+               <descServicio>Proveedores</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>101</servicio>
-               <descripcionServicio>Debitos Automaticos</descripcionServicio>
+               <descServicio>Debitos Automaticos</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>301</servicio>
-               <descripcionServicio>Cobro masivos de prestamos</descripcionServicio>
+               <descServicio>Cobro masivos de prestamos</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>P</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>302</servicio>
-               <descripcionServicio>Cob.indiv.prestamos</descripcionServicio>
+               <descServicio>Cob.indiv.prestamos</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>C</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>500</servicio>
-               <descripcionServicio>Recaudaciones por Debito Automatico</descripcionServicio>
+               <descServicio>Recaudaciones por Debito Automatico</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>C</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>505</servicio>
-               <descripcionServicio>Recaudaciones por Canales</descripcionServicio>
+               <descServicio>Recaudaciones por Canales</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>C</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>515</servicio>
-               <descripcionServicio>Recaudaciones por Caja(Codigo de Barras)</descripcionServicio>
+               <descServicio>Recaudaciones por Caja(Codigo de Barras)</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>C</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>516</servicio>
-               <descripcionServicio>Recaudaciones T.C. (Codigo de Barras)</descripcionServicio>
+               <descServicio>Recaudaciones T.C. (Codigo de Barras)</descServicio>
             </sBTConvServicioCASH>
             <sBTConvServicioCASH>
                <tipoServicio>C</tipoServicio>
-               <contratoId>0</contratoId>
+               <idContrato>0</idContrato>
                <servicio>520</servicio>
-               <descripcionServicio>Recaudos con Base</descripcionServicio>
+               <descServicio>Recaudos con Base</descServicio>
             </sBTConvServicioCASH>
          </sdtServicios>
          <Erroresnegocio></Erroresnegocio>

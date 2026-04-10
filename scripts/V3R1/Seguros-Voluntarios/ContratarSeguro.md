@@ -138,8 +138,8 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>89B4F6D7BEFB0C7F653DB37A</Token>
          </Btinreq>
-         <bts:operacionUId>754</bts:operacionUId>
-         <bts:movimientoUId>76</bts:movimientoUId>
+         <operacionUId>754</operacionUId>
+         <movimientoUId>76</movimientoUId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>20473</Numero>

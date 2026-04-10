@@ -110,48 +110,56 @@ curl -X POST \
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>42</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>43</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Jurídica</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>44</productoUId>
                <nombre>CUENTA CORRIENTE, Cuenta corriente P.Jurídica</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>45</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Físicas</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>46</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Físicas</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>47</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Jurídicas</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
             <sBTProducto>
                <productoUId>48</productoUId>
                <nombre>CUENTAS VISTA, Depósitos Vista P. Jurídicas</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos/>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>

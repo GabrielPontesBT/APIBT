@@ -90,11 +90,11 @@ Código | Descripción
          <bts:sdtDatosVehiculo>
             <bts:color>1</bts:color>
             <bts:datosAdicionales>
-               <bts:SdtsBTConcepto>
+               <bts:sBTConcepto>
                   <bts:texto></bts:texto>
                   <bts:valor></bts:valor>
                   <bts:concepto></bts:concepto>
-               </bts:SdtsBTConcepto>
+               </bts:sBTConcepto>
             </bts:datosAdicionales>
             <bts:placa>AAA</bts:placa>
             <bts:fiadores>
@@ -134,7 +134,7 @@ curl -X POST \
         "sdtDatosVehiculo": {
           "color": 1,
           "datosAdicionales": {
-            "SdtsBTConcepto": {
+            "sBTConcepto": {
               "texto": "",
               "valor": "",
               "concepto": ""
@@ -169,7 +169,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b6a06c447cCD285A89A23FBE</Token>
          </Btinreq>
-         <bts:movimientoUId>36</bts:movimientoUId>
+         <movimientoUId>36</movimientoUId>
          <Btoutreq>
             <Numero>269</Numero>
             <Estado>OK</Estado>

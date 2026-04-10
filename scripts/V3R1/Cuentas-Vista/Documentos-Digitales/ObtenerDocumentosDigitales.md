@@ -126,7 +126,7 @@ curl -X POST \
                <Titulo>Prueba Asociar Contrato</Titulo>
                <FechaActualizacion>2020-10-10</FechaActualizacion>
                <FechaVencimiento>2010-10-10</FechaVencimiento>
-            </sBTDocumentoDigita>
+            </sBTDocumentoDigital>
          </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

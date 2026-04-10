@@ -75,10 +75,10 @@ Código | Descripción
          </bts:Btinreq>
          <bts:sdtSolicitudSimulacionAhorroProgramado>
             <bts:abono>10000</bts:abono>
-            <bts:productoUid>82</bts:productoUid>
+            <bts:productoUId>82</bts:productoUId>
             <bts:montoTotalAhorrar>0</bts:montoTotalAhorrar>
-            <bts:clienteUid>61</bts:clienteUid>
-            <bts:personaUid>22</bts:personaUid>
+            <bts:clienteUId>61</bts:clienteUId>
+            <bts:personaUId>22</bts:personaUId>
             <bts:diaIncremento>5</bts:diaIncremento>
             <bts:depositoInicial>1000</bts:depositoInicial>
             <bts:fechaInicioAhorro></bts:fechaInicioAhorro>
@@ -141,7 +141,7 @@ curl -X POST \
          <sdtSimulacionAhorroProgramado>
             <fechaInicio>2021-01-05</fechaInicio>
             <cronograma>  
-               <SdtsBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>8.49</interes>  
@@ -149,8 +149,8 @@ curl -X POST \
                   <plazo>31</plazo>  
                   <fechaPago>2021-01-05</fechaPago>  
                   <capital>1000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>84.38</interes>  
@@ -158,8 +158,8 @@ curl -X POST \
                   <plazo>59</plazo>  
                   <fechaPago>2021-02-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>178.36</interes>  
@@ -167,8 +167,8 @@ curl -X POST \
                   <plazo>90</plazo>  
                   <fechaPago>2021-03-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>254.79</interes>  
@@ -176,8 +176,8 @@ curl -X POST \
                   <plazo>120</plazo>  
                   <fechaPago>2021-04-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>370.68</interes>  
@@ -185,8 +185,8 @@ curl -X POST \
                   <plazo>153</plazo>  
                   <fechaPago>2021-05-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>391.23</interes>  
@@ -194,8 +194,8 @@ curl -X POST \
                   <plazo>181</plazo>  
                   <fechaPago>2021-06-07</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>518.08</interes>  
@@ -203,8 +203,8 @@ curl -X POST \
                   <plazo>212</plazo>  
                   <fechaPago>2021-07-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>622.47</interes>  
@@ -212,8 +212,8 @@ curl -X POST \
                   <plazo>244</plazo>  
                   <fechaPago>2021-08-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>643.56</interes>  
@@ -221,8 +221,8 @@ curl -X POST \
                   <plazo>273</plazo>  
                   <fechaPago>2021-09-06</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>772.88</interes>  
@@ -230,8 +230,8 @@ curl -X POST \
                   <plazo>304</plazo>  
                   <fechaPago>2021-10-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>857.81</interes>  
@@ -239,8 +239,8 @@ curl -X POST \
                   <plazo>335</plazo>  
                   <fechaPago>2021-11-05</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
-               <SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
+               <sBTCuotaAhorro>  
                   <tasa>10.00</tasa>  
                   <impuestos>0.00</impuestos>  
                   <interes>760.27</interes>  
@@ -248,13 +248,13 @@ curl -X POST \
                   <plazo>360</plazo>  
                   <fechaPago>2021-12-06</fechaPago>  
                   <capital>10000.00</capital>  
-               </SdtsBTCuotaAhorro>  
+               </sBTCuotaAhorro>  
             </cronograma> 
             <simulacionId>741</simulacionId>
             <depositoInicial>1000.00</depositoInicial>
             <tasaOriginal>10.00</tasaOriginal>
             <totalIntereses>5463.00</totalIntereses>
-            <Abono>10000.00</Abono>
+            <abono>10000.00</abono>
             <totalAhorro>111000.00</totalAhorro>
             <fechaVencimiento>2021-12-31</fechaVencimiento>
             <plazo>360</plazo>
@@ -296,7 +296,7 @@ curl -X POST \
         "sdtSimulacionAhorroProgramado": {
           "fechaInicio": "2021-01-05",
           "cronograma": {  
-            "SdtsBTCuotaAhorro": [  
+            "sBTCuotaAhorro": [  
               {  
                 "tasa": 10,  
                 "impuestos": 0,  
