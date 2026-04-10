@@ -131,39 +131,45 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarInformacionFinanciera \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "42",
-	"totalPasivos": "450000.00",
-	"origenRecursos": "C",
-	"totalIngresosMensuales": "550015.00",
-	"egresosMensuales": "380000.00",
-	"otrosIngresosMensuales": "450015.00",
-	"ingresosMensuales": "100000.00",
-	"totalActivos": "950000.00",
-	"sdtInformacionFinanciera": {
-	  "otrosIngresosMensualesDesc": "Alquileres",
-	  "operacionesInternacionales": {
-		"tipoProducto": "CDT",
-		"ciudadId": "1465",
-		"nombreEntidad": "Nombre Entidad Prueba",
-		"monto": "884561.00",
-		"operaMonedaExtranjera": "S",
-		"numeroProducto": "AAALLL",
-		"tipoOperacion": "Inversiones",
-		"monedaId": "801",
-		"paisId": "845"
-	  },   
-	}
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarInformacionFinanciera' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "042638a184CD285A89A23FBE",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "personaUId": 42,
+    "sdtInformacionFinanciera": {
+        "paisOrigenRecursos": "",
+        "otrosIngresosMensualesDesc": "Alquileres",
+        "operacionesInternacionales": {
+            "tipoProducto": "CDT",
+            "moneda": "",
+            "ciudadId": 1465,
+            "nombreEntidad": "Nombre Entidad Prueba",
+            "monto": 884561.00,
+            "pais": "",
+            "ciudad": "",
+            "operaMonedaExtranjera": "S",
+            "numeroProducto": "AAALLL",
+            "tipoOperacion": "Inversiones",
+            "monedaId": 801,
+            "paisId": 845
+        },
+        "totalPasivos": 450000.00,
+        "origenRecursos": "C",
+        "totalIngresosMensuales": 550015.00,
+        "egresosMensuales": 380000.00,
+        "otrosIngresosMensuales": 450015.00,
+        "ingresosMensuales": 100000.00,
+        "totalActivos": 950000.00,
+        "paisOrigenRecursosId": ""
+    }
 }'
 ```
 :::
@@ -203,22 +209,25 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"Btoutreq": {
-	  "Numero": "2098",
-	  "Servicio": "BTPersonas.AgregarInformacionFinanciera",
-	  "Estado": "OK",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-03-10",
-	  "Hora": "08:54:28",
-	  "Canal": "BTDIGITAL"
-	}
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "042638a184CD285A89A23FBE"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 2098,
+        "Servicio": "BTPersonas.AgregarInformacionFinanciera",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2020-03-10",
+        "Hora": "08:54:28",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

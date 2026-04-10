@@ -105,7 +105,7 @@ curl -X POST \
 		"Btinreq": {
 			"Device": "AC",
 			"Usuario": "BANTOTAL",
-			"Requerimiento": "",
+			"Requerimiento": 1,
 			"Canal": "BTDIGITAL",
 			"Token": "e8c844e3a0F955E77534D3E0"
 		},
@@ -158,7 +158,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "fbd47e2319F955E77534D3E0"
     },
@@ -170,7 +170,7 @@ curl -X POST \
         "Servicio": "BTSNP.ReversarDebito",
         "Estado": "OK",
         "Fecha": "2021-06-17",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Hora": "18:04:41"
     }

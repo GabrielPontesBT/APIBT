@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Cronograma a Fecha
 breadcrumb: false
 pageInfo: false
@@ -87,7 +87,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AC",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "191631443CD285A89A23FBEE"
 	},
@@ -347,7 +347,7 @@ curl -X POST \
 {
 	"Btinreq": {
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "INSTALADOR",
 		"Token": "191631443CD285A89A23FBEE",
 		"Device": "AC"
@@ -575,7 +575,7 @@ curl -X POST \
         "Servicio": "BTPrestamos.ObtenerCronogramaAFecha",
         "Fecha": "2019-07-26",
         "Hora": "11:35:37",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Numero": 120420,
         "Estado": "OK"
     }

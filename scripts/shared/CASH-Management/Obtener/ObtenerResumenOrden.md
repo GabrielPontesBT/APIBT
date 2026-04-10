@@ -80,20 +80,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerResumenOrden=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerResumenOrden' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "F971DE0C3D4C96A5ABC22DAD"
     },
     "ordenId": 345
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -149,38 +149,38 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "F971DE0C3D4C96A5ABC22DAD"
     },
     "sdtResumenCabezal": {
-         "moneda": 0,
-         "cuentaDebito": 825,
-         "estado": "S",
-         "nombreArchivo": "Serv100Pcaja.txt",
-         "referencia": "",
-         "cantidadLineas": 2,
-         "ordenId": 345,
-         "servicio": 100,
-         "contratoId": 60,
-         "importe": 400,
-         "mensajesError": "",
-         "archivoId": 272,
-         "fechaPago": "2024-11-01"
+        "moneda": 0,
+        "cuentaDebito": 825,
+        "estado": "S",
+        "nombreArchivo": "Serv100Pcaja.txt",
+        "referencia": "",
+        "cantidadLineas": 2,
+        "ordenId": 345,
+        "servicio": 100,
+        "contratoId": 60,
+        "importe": 400.0,
+        "mensajesError": "",
+        "archivoId": 272,
+        "fechaPago": "2024-11-01"
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.ObtenerResumenOrden",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-11-18",
+        "Hora": "12:47:36",
+        "Numero": 26014,
+        "Servicio": "BTCASHManagement.ObtenerResumenOrden",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

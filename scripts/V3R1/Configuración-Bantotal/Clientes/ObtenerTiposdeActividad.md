@@ -80,9 +80,8 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "fa2c02c95a4A8B5C60A82434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-
+	  "Requerimiento": 1
+	}
 }'
 ```
 :::
@@ -138,30 +137,30 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cc9b534A8B5C60A82434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
    "sdtActividades": {
       "sBTActividad": [             
          { 
                "descripcion": "Actividad Principal",
-               "identificador": "1",
-               "identificadorEntidadReguladora": "0"
+               "identificador": 1,
+               "identificadorEntidadReguladora": 0
          },
          { 
                "descripcion": "Prueba",
-               "identificador": "2",
-               "identificadorEntidadReguladora": "0"
-         },
+               "identificador": 2,
+               "identificadorEntidadReguladora": 0
+         }
       ] 
    },
    "Erroresnegocio": {
       "BTErrorNegocio": []
    },
    "Btoutreq": {
-      "Numero": "111598",
+      "Numero": 111598,
       "Estado": "OK",
       "Servicio": "BTConfiguracionBantotal.ObtenerActividadesPorTipo",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2023-05-04",
       "Canal": "BTDIGITAL",
       "Hora": "16:20:35"

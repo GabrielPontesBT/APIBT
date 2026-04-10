@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Personas Jurídicas
 breadcrumb: false
 pageInfo: false
@@ -84,7 +84,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GP",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "1839023315CD285A89A23FBE"
 	},
@@ -149,51 +149,51 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Device": "GP",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "1839023315CD285A89A23FBE"
 	},
    "sdtPersonasJuridicas": {
         "sBTPersonaJuridica": [
             {
-               "personaUId": "10014",
-               "paisId": "845",
+               "personaUId": 10014,
+               "paisId": 845,
                "pais": "URUGUAY",
-               "tipoDocumentoId": "2",
+               "tipoDocumentoId": 2,
                "tipoDocumento": "RUT",
                "nroDocumento": "214567892142",
                "razonSocial": "BANCO MODELO",
                "fechaConstitucion": "2007-08-22"
             },
             {
-               "personaUId": "10015",
-               "paisId": "845",
+               "personaUId": 10015,
+               "paisId": 845,
                "pais": "URUGUAY",
-               "tipoDocumentoId": "99",
+               "tipoDocumentoId": 99,
                "tipoDocumento": "Inst. Financiera",
                "nroDocumento": "47885203",
                "razonSocial": "PROPIO BANCO",
-               "fechaConstitucion": "0000-00-00",
-            },
+               "fechaConstitucion": "0000-00-00"
+            }
         ]
     },
    "Erroresnegocio": {
       "BTErrorNegocio": []
    },
    "Btoutreq": {
-      "Numero": "80",
+      "Numero": 7532,
       "Estado": "OK",
       "Servicio": "BTPersonas.ObtenerPersonasJuridicas",
-      "Fecha": "2018-05-04",
-      "Requerimiento": "1",
-      "Hora": "15:54:29",
+      "Fecha": "2020-10-20",
+      "Requerimiento": 1,
+      "Hora": "12:53:17",
       "Canal": "BTDIGITAL"
    }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

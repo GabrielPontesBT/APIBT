@@ -93,11 +93,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId": "1018",
+	"operacionUId": 1018
 }'
 ```
 :::
@@ -149,18 +149,20 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtDocumentosDigitales": {
-        "sBTDocumentoDigital": {
-            "documentoId": "265",
-            "fechaActualizacion": "2015-01-01",
-            "fechaVencimiento": "",
-            "tipoDocumentoDigital": "Plan de Pagos",
-            "titulo": "PRUEBA GABO",
-        }
+        "sBTDocumentoDigital": [
+            {
+                "documentoId": 265,
+                "fechaActualizacion": "2015-01-01",
+                "fechaVencimiento": "",
+                "tipoDocumentoDigital": "Plan de Pagos",
+                "titulo": "PRUEBA GABO"
+            }
+        ]
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
@@ -169,7 +171,7 @@ curl -X POST \
         "Numero": 823,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2018-11-12",
         "Hora": "17:47:27",
         "Canal": "BTDIGITAL"

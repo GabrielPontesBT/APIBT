@@ -92,7 +92,7 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerProductosHabilitados' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
@@ -163,19 +163,21 @@ curl -X POST \
           "Token": "30F74741A02C318CEFD55684",
           "Device": "GL"
         },
-        "sBTProductosDepositoAPlazo": {
-          "Producto": {
-            "Producto": {
+        "sdtProductosDepositoAPlazo": {
+          "sBTProductosDepositoAPlazo": [
+            {
               "productoUId": 132,
               "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.",
               "moneda": "S/.",
-              "papel": "$"
-            },
-            "tipoDeDeposito": "PP",
-            "DatosExtendidos": ""
-          }
+              "papel": "$",
+              "tipoDeDeposito": "PP",
+              "datosExtendidos": ""
+            }
+          ]
         },
-        "Erroresnegocio": "",
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        },
         "Btoutreq": {
           "Canal": "BTDIGITAL",
           "Servicio": "BTDepositosAPlazo.ObtenerProductosHabilitados",

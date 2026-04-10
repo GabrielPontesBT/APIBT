@@ -73,19 +73,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"productoUId": "48"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "e85b0edaecCD285A89A23FBE",
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GP",
+        "Requerimiento": 1
+    },
+    "productoUId": 48
 }'
 ```
 :::
@@ -138,38 +138,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "e85b0edaecCD285A89A23FBE"
     },
     "sdtComisiones": {
         "sBTComisionPrestamo": [
-        {
-            "porcentaje": "0.0000",
-            "descripcion": "Comision por venta seguro",
-            "importe": "0.00",
-            "codigo": "137"
-        },
-        {
-            "porcentaje": "0.0000",
-            "descripcion": "MiAuto - Otorgamiento",
-            "importe": "0.00",
-            "codigo": "300"
-        }
+            {
+                "porcentaje": 0.0000,
+                "descripcion": "Comision por venta seguro",
+                "importe": 0.00,
+                "codigo": 137
+            },
+            {
+                "porcentaje": 0.0000,
+                "descripcion": "MiAuto - Otorgamiento",
+                "importe": 0.00,
+                "codigo": 300
+            }
         ]
     },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": "111399",
-        "Estado": "OK",
+        "Numero": 13113,
         "Servicio": "BTModeladorPrestamos.ObtenerComisiones",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-23",
+        "Hora": "09:21:39",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

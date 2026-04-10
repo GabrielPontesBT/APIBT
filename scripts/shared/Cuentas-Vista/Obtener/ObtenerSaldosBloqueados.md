@@ -81,15 +81,15 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
-    "operacionUId": 213,
-    }'
+    "operacionUId": 213
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -142,37 +142,39 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "sdtSaldosBloqueados": {
-    "sBTBloqueoSaldo": [
-      {
-        "fechaVencimiento": "2025-10-15T00:00:00",
-        "motivo": "",
-        "importe": 50000,
-        "bloqueoId": 7
-      },
-      {
-        "fechaVencimiento": "2025-10-15T00:00:00",
-        "motivo": "",
-        "importe": 50000,
-        "bloqueoId": 8
-      }
-    ]
-  },
-    "Erroresnegocio": "",
+        "sBTBloqueoSaldo": [
+            {
+                "fechaVencimiento": "2025-10-15T00:00:00",
+                "motivo": "",
+                "importe": 50000.00,
+                "bloqueoId": 7
+            },
+            {
+                "fechaVencimiento": "2025-10-15T00:00:00",
+                "motivo": "",
+                "importe": 50000.00,
+                "bloqueoId": 8
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20364,
         "Estado": "OK",
         "Servicio": "BTCuentasVista.ObtenerSaldosBloqueados",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Fecha": "2024-05-07",
+        "Hora": "17:56:50",
         "Canal": "BTDIGITAL"
     }
 }'

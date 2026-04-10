@@ -87,14 +87,14 @@ curl -X POST \
   -d '{
     "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "Instalador",
       "Token": "172681201999865B3A2E76CF",
       "Device": "1"
     },
     "fecha": "2021-03-26",
-    "sucursalId": "1000"
-  },
+    "sucursalId": 1000
+  }
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -136,7 +136,7 @@ curl -X POST \
 { 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Usuario": "Instalador", 
       "Token": "172681201999865B3A2E76CF", 
       "Device": "1" 
@@ -149,8 +149,8 @@ curl -X POST \
       "Servicio": "BTCalendarios.ObtenerProximaFechaHabilSucursal", 
       "Fecha": "2021-03-24", 
       "Hora": "10:24:19", 
-      "Requerimiento": "1", 
-      "Numero": "8101", 
+      "Requerimiento": 1, 
+      "Numero": 8101, 
       "Estado": "OK" 
     } 
 }

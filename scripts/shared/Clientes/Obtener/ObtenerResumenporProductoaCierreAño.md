@@ -78,21 +78,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenPorProductoACierreAnio \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerResumenPorProductoACierreAnio' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Device": "MC",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "clienteUId": "1000",
-        "anioConsulta":"2018"
-   }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "244353514CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "clienteUId": 10010,
+    "anioConsulta": 2018
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -164,56 +164,58 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-			"Canal": "BTDIGITAL",
-			"Requerimiento": "1",
-			"Usuario": "INSTALADOR",
-			"Token": "244353514CD285A89A23FBEE",
-			"Device": "MC"
-		},
-		"sdtOperaciones": {
-			"sBTDetalleOperacion": [
-				{
-					"operacionUId": "2",
-					"producto": {
-						"productoUId": "93",
-						"nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-						"moneda": "$",
-						"papel": "$"
-					},
-					"saldo": "0.00"
-				},
-				{
-					"operacionUId": "7",
-					"producto": {
-						"productoUId": "132",
-						"nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
-						"moneda": "$",
-						"papel": "$"
-					},
-					"saldo": "15000.00"
-				},
-				{
-					"operacionUId": "11",
-					"producto": {
-						"productoUId": "105",
-						"nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-						"moneda": "$",
-						"papel": "$"
-					},
-					"saldo": "-415000.00"
-				}
-			]
-		},
-		"Erroresnegocio": "",
-		"Btoutreq": {
-			"Canal": "BTDIGITAL",
-			"Servicio": "BTClientes.ObtenerResumenPorProductoACierreAnio",
-			"Fecha": "2020-04-20",
-			"Hora": "14:06:20",
-			"Requerimiento": "1",
-			"Numero": "7331",
-			"Estado": "OK"
-		}
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "244353514CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "sdtOperaciones": {
+        "sBTDetalleOperacion": [
+            {
+                "operacionUId": 2,
+                "producto": {
+                    "productoUId": 93,
+                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+                    "moneda": "$",
+                    "papel": "$"
+                },
+                "saldo": 0.00
+            },
+            {
+                "operacionUId": 7,
+                "producto": {
+                    "productoUId": 132,
+                    "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
+                    "moneda": "$",
+                    "papel": "$"
+                },
+                "saldo": 15000.00
+            },
+            {
+                "operacionUId": 11,
+                "producto": {
+                    "productoUId": 105,
+                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+                    "moneda": "$",
+                    "papel": "$"
+                },
+                "saldo": -415000.00
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTClientes.ObtenerResumenPorProductoACierreAnio",
+        "Fecha": "2020-04-20",
+        "Hora": "14:06:20",
+        "Requerimiento": 1,
+        "Numero": 7331,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

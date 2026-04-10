@@ -174,7 +174,7 @@ curl -X POST \
   -d '{
    "Btinreq": {
    "Canal": "BTDIGITAL",
-   "Requerimiento": "1",
+   "Requerimiento": 1,
    "Usuario": "INSTALADOR",
    "Token": "247d9cc0a3CD285A89A23FBE",
    "Device": "MC"
@@ -283,18 +283,18 @@ curl -X POST \
 	 "Btinreq": { 
 		"Device": "MC", 
 		"Usuario": "INSTALADOR", 
-		"Requerimiento": "1", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Token": "247d9cc0a3CD285A89A23FBE" 
 	 }, 
-	 "clienteUId": "783", 
+	 "clienteUId": 783, 
 	 "Erroresnegocio": null, 
 	 "Btoutreq": { 
-		"Numero": "107338", 
+		"Numero": 107338, 
 		"Servicio": "BTClientes.CrearParaPersonaJuridica", 
 		"Estado": "OK", 
 		"Fecha": "2020-11-05", 
-		"Requerimiento": "1", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Hora": "12:31:25" 
 	 } 

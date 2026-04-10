@@ -83,22 +83,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ConvertirTasaMensualEfectivaALineal=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ConvertirTasaMensualEfectivaALineal' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "2081397563CD285A89A23FBE"
-	},
-	"tasaOrigen": "10",
-	"tipoAnio": "2",
-	"plazo": "30"
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "2081397563CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "tasaOrigen": 10,
+    "tipoAnio": 2,
+    "plazo": 365
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -137,26 +137,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "2081397563CD285A89A23FBE",
-	  "Device": "GP"
-	},
-	"tasaDestino": "17.820237",
-	"Erroresnegocio": {},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTPrecios.ConvertirTasaMensualEfectivaALineal",
-	  "Fecha": "2021-02-03",
-	  "Hora": "11:57:30",
-	  "Requerimiento": "1",
-	  "Numero": "7967",
-	  "Estado": "OK"
-	}
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "2081397563CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "tasaDestino": 17.820237,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPrecios.ConvertirTasaMensualEfectivaALineal",
+        "Fecha": "2021-02-03",
+        "Hora": "16:53:51",
+        "Requerimiento": 1,
+        "Numero": 7969,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

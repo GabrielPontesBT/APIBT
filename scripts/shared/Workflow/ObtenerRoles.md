@@ -71,19 +71,20 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \ 
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRoles \ 
--H 'cache-control: no-cache' \ 
--H 'content-type: application/json' \ 
--d '{ 
-    "Btinreq": { 
-      "Canal": "BTDIGITAL", 
-      "Usuario": "INSTALADOR", 
-      "Device": "GP", 
-      "Requerimiento": "1", 
-      "Token": "200f0b8b654A8B5C60A82434" 
-    }, 
-}' 
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerRoles' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "151D0C3440510F1D04029085",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```  
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN --> 
@@ -339,244 +340,247 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-   "Device": "GP", 
-   "Usuario": "INSTALADOR", 
-   "Requerimiento": "1", 
-   "Canal": "BTDIGITAL", 
-   "Token": "47D750A861C4243EDE981344" 
- }, 
-   "sdtRoles": { 
-      "sBTRolWF": [ 
-      { 
-         "descripcion": "Public", 
-         "codigo": "0" 
-      }, 
-      { 
-         "descripcion": "Operativo Sucursal", 
-         "codigo": "1" 
-      }, 
-      { 
-         "descripcion": "Oficial Operaciones", 
-         "codigo": "2" 
-      }, 
-      { 
-         "descripcion": "Gerente de Sucursal", 
-         "codigo": "3" 
-      }, 
-      { 
-         "descripcion": "Digitador", 
-         "codigo": "4" 
-      }, 
-      { 
-         "descripcion": "Call Center", 
-         "codigo": "5" 
-      }, 
-      { 
-         "descripcion": "Asesor de Créditos", 
-         "codigo": "6" 
-      }, 
-      { 
-         "descripcion": "Gte. Microfinanzas", 
-         "codigo": "7" 
-      }, 
-      { 
-         "descripcion": "Gerente Consumo", 
-         "codigo": "8" 
-      }, 
-      { 
-         "descripcion": "Gerente Comercial", 
-         "codigo": "9" 
-      }, 
-      { 
-         "descripcion": "Comité de Crédito", 
-         "codigo": "10" 
-      }, 
-      { 
-         "descripcion": "Asistente Plataforma", 
-         "codigo": "11" 
-      }, 
-      { 
-         "descripcion": "Encargado Créditos", 
-         "codigo": "12" 
-      }, 
-      { 
-         "descripcion": "Gerente Nal.Créditos", 
-         "codigo": "13" 
-      }, 
-      { 
-         "descripcion": "Subgerente Créditos", 
-         "codigo": "14" 
-      }, 
-      { 
-         "descripcion": "Gerente de Agencia", 
-         "codigo": "15" 
-      }, 
-      { 
-         "descripcion": "Operativo Agencia", 
-         "codigo": "16" 
-      }, 
-      { 
-         "descripcion": "Invisible", 
-         "codigo": "17" 
-      }, 
-      { 
-         "descripcion": "Contable", 
-         "codigo": "18" 
-      }, 
-      { 
-         "descripcion": "Alta Producto", 
-         "codigo": "19" 
-      }, 
-      { 
-         "descripcion": "Aprobador General", 
-         "codigo": "20" 
-      }, 
-      { 
-         "descripcion": "Validador", 
-         "codigo": "21" 
-      }, 
-      { 
-         "descripcion": "Control LisNegras", 
-         "codigo": "22" 
-      }, 
-      { 
-         "descripcion": "Analista Junior", 
-         "codigo": "23" 
-      }, 
-      { 
-         "descripcion": "Analista Senior", 
-         "codigo": "24" 
-      }, 
-      { 
-         "descripcion": "Ejecutivo Cuenta", 
-         "codigo": "25" 
-      }, 
-      { 
-         "descripcion": "Ingreso_C", 
-         "codigo": "26" 
-      }, 
-      { 
-         "descripcion": "Confirm_C", 
-         "codigo": "27" 
-      }, 
-      { 
-         "descripcion": "CRV-COMERCIAL", 
-         "codigo": "28" 
-      }, 
-      { 
-         "descripcion": "CRV-ANALISTA", 
-         "codigo": "29" 
-      }, 
-      { 
-         "descripcion": "CRV-ESTAMENTO", 
-         "codigo": "30" 
-      }, 
-      { 
-         "descripcion": "CRV-OPERACIONES.2", 
-         "codigo": "31" 
-      }, 
-      { 
-         "descripcion": "CRV-OPERACIONES.3", 
-         "codigo": "32" 
-      }, 
-      { 
-         "descripcion": "CRV-OPERACIONES.M", 
-         "codigo": "33" 
-      }, 
-      { 
-         "descripcion": "CRV-OPERACIONES.1", 
-         "codigo": "34" 
-      }, 
-      { 
-         "descripcion": "CRV-OPERACIONES.REF", 
-         "codigo": "35" 
-      }, 
-      { 
-         "descripcion": "Vendedor", 
-         "codigo": "36" 
-      }, 
-      { 
-         "descripcion": "Notarial", 
-         "codigo": "37" 
-      }, 
-      { 
-         "descripcion": "Sistema", 
-         "codigo": "38" 
-      }, 
-      { 
-         "descripcion": "ALR_RespSuc", 
-         "codigo": "39" 
-      }, 
-      { 
-         "descripcion": "ALR_ComPrev", 
-         "codigo": "40" 
-      }, 
-      { 
-         "descripcion": "ALR_OfCump", 
-         "codigo": "41" 
-      }, 
-      { 
-         "descripcion": "ALR_ComRos", 
-         "codigo": "42" 
-      }, 
-      { 
-         "descripcion": "Analista Regional", 
-         "codigo": "43" 
-      }, 
-      { 
-         "descripcion": "Jefe Nal. de Riesgos", 
-         "codigo": "44" 
-      }, 
-      { 
-         "descripcion": "Gerente Nacional", 
-         "codigo": "45" 
-      }, 
-      { 
-         "descripcion": "Analista de Riesgos", 
-         "codigo": "46" 
-      }, 
-      { 
-         "descripcion": "Vicep. de Riesgos", 
-         "codigo": "47" 
-      }, 
-      { 
-         "descripcion": "Analista Intermedio", 
-         "codigo": "48" 
-      }, 
-      { 
-         "descripcion": "Gerente de Negocios", 
-         "codigo": "49" 
-      }, 
-      { 
-         "descripcion": "Jefe de Negocios", 
-         "codigo": "50" 
-      }, 
-      { 
-         "descripcion": "Asesor Crédito", 
-         "codigo": "51" 
-      }, 
-      { 
-         "descripcion": "Plataforma", 
-         "codigo": "52" 
-      }, 
-      { 
-         "descripcion": "Asistente Operativo", 
-         "codigo": "53" 
-      } 
-      ] 
-   }, 
-   "Btoutreq": { 
-      "Numero": "109140", 
-      "Estado": "OK", 
-      "Servicio": "BTWorkflow.ObtenerRoles", 
-      "Requerimiento": "1", 
-      "Fecha": "2020-11-24", 
-      "Canal": "BTDIGITAL", 
-      "Hora": "13:29:43" 
-   } 
-}
+'{
+    "Btinreq": {
+        "Token": "151D0C3440510F1D04029085",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    },
+    "sdtRoles": {
+        "sBTRolWF": [
+            {
+                "descripcion": "Public",
+                "codigo": 0
+            },
+            {
+                "descripcion": "Operativo Sucursal",
+                "codigo": 1
+            },
+            {
+                "descripcion": "Oficial Operaciones",
+                "codigo": 2
+            },
+            {
+                "descripcion": "Gerente de Sucursal",
+                "codigo": 3
+            },
+            {
+                "descripcion": "Digitador",
+                "codigo": 4
+            },
+            {
+                "descripcion": "Call Center",
+                "codigo": 5
+            },
+            {
+                "descripcion": "Asesor de Créditos",
+                "codigo": 6
+            },
+            {
+                "descripcion": "Gte. Microfinanzas",
+                "codigo": 7
+            },
+            {
+                "descripcion": "Gerente Consumo",
+                "codigo": 8
+            },
+            {
+                "descripcion": "Gerente Comercial",
+                "codigo": 9
+            },
+            {
+                "descripcion": "Comité de Crédito",
+                "codigo": 10
+            },
+            {
+                "descripcion": "Asistente Plataforma",
+                "codigo": 11
+            },
+            {
+                "descripcion": "Encargado Créditos",
+                "codigo": 12
+            },
+            {
+                "descripcion": "Gerente Nal.Créditos",
+                "codigo": 13
+            },
+            {
+                "descripcion": "Subgerente Créditos",
+                "codigo": 14
+            },
+            {
+                "descripcion": "Gerente de Agencia",
+                "codigo": 15
+            },
+            {
+                "descripcion": "Operativo Agencia",
+                "codigo": 16
+            },
+            {
+                "descripcion": "Invisible",
+                "codigo": 17
+            },
+            {
+                "descripcion": "Contable",
+                "codigo": 18
+            },
+            {
+                "descripcion": "Alta Producto",
+                "codigo": 19
+            },
+            {
+                "descripcion": "Aprobador General",
+                "codigo": 20
+            },
+            {
+                "descripcion": "Validador",
+                "codigo": 21
+            },
+            {
+                "descripcion": "Control LisNegras",
+                "codigo": 22
+            },
+            {
+                "descripcion": "Analista Junior",
+                "codigo": 23
+            },
+            {
+                "descripcion": "Analista Senior",
+                "codigo": 24
+            },
+            {
+                "descripcion": "Ejecutivo Cuenta",
+                "codigo": 25
+            },
+            {
+                "descripcion": "Ingreso_C",
+                "codigo": 26
+            },
+            {
+                "descripcion": "Confirm_C",
+                "codigo": 27
+            },
+            {
+                "descripcion": "CRV-COMERCIAL",
+                "codigo": 28
+            },
+            {
+                "descripcion": "CRV-ANALISTA",
+                "codigo": 29
+            },
+            {
+                "descripcion": "CRV-ESTAMENTO",
+                "codigo": 30
+            },
+            {
+                "descripcion": "CRV-OPERACIONES.2",
+                "codigo": 31
+            },
+            {
+                "descripcion": "CRV-OPERACIONES.3",
+                "codigo": 32
+            },
+            {
+                "descripcion": "CRV-OPERACIONES.M",
+                "codigo": 33
+            },
+            {
+                "descripcion": "CRV-OPERACIONES.1",
+                "codigo": 34
+            },
+            {
+                "descripcion": "CRV-OPERACIONES.REF",
+                "codigo": 35
+            },
+            {
+                "descripcion": "Vendedor",
+                "codigo": 36
+            },
+            {
+                "descripcion": "Notarial",
+                "codigo": 37
+            },
+            {
+                "descripcion": "Sistema",
+                "codigo": 38
+            },
+            {
+                "descripcion": "ALR_RespSuc",
+                "codigo": 39
+            },
+            {
+                "descripcion": "ALR_ComPrev",
+                "codigo": 40
+            },
+            {
+                "descripcion": "ALR_OfCump",
+                "codigo": 41
+            },
+            {
+                "descripcion": "ALR_ComRos",
+                "codigo": 42
+            },
+            {
+                "descripcion": "Analista Regional",
+                "codigo": 43
+            },
+            {
+                "descripcion": "Jefe Nal. de Riesgos",
+                "codigo": 44
+            },
+            {
+                "descripcion": "Gerente Nacional",
+                "codigo": 45
+            },
+            {
+                "descripcion": "Analista de Riesgos",
+                "codigo": 46
+            },
+            {
+                "descripcion": "Vicep. de Riesgos",
+                "codigo": 47
+            },
+            {
+                "descripcion": "Analista Intermedio",
+                "codigo": 48
+            },
+            {
+                "descripcion": "Gerente de Negocios",
+                "codigo": 49
+            },
+            {
+                "descripcion": "Jefe de Negocios",
+                "codigo": 50
+            },
+            {
+                "descripcion": "Asesor Crédito",
+                "codigo": 51
+            },
+            {
+                "descripcion": "Plataforma",
+                "codigo": 52
+            },
+            {
+                "descripcion": "Asistente Operativo",
+                "codigo": 53
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Fecha": "2022-11-29",
+        "Servicio": "BTWorkflow.ObtenerRoles",
+        "Hora": "12:46:03",
+        "Numero": 225657,
+        "Requerimiento": 1
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

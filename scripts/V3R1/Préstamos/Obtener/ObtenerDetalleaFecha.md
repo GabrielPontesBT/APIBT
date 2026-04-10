@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Detalle a Fecha
 breadcrumb: false
 pageInfo: false
@@ -87,7 +87,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AC",
 		"Usuario": "BANTOTAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "324915377F955E77534D3E02"
 	},
@@ -196,7 +196,7 @@ curl -X POST \
 {
 	"Btinreq": {
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "BANTOTAL",
 		"Token": "324915377F955E77534D3E02",
 		"Device": "AC"
@@ -271,7 +271,7 @@ curl -X POST \
         "Servicio": "BTPrestamos.ObtenerDetalleAFecha",
         "Fecha": "2019-11-19",
         "Hora": "16:03:15",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Numero": 6975,
         "Estado": "OK"
     }

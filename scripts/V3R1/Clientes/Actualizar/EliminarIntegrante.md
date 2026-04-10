@@ -92,7 +92,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
@@ -140,17 +140,17 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "Erroresnegocio": {
     },
     "Btoutreq": {
-        "Numero": "839",
+        "Numero": 839,
         "Estado": "OK",
         "Servicio": "BTClientes.EliminarIntegrante",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2022-05-12",
         "Hora": "15:35:54",
         "Canal": "BTDIGITAL"

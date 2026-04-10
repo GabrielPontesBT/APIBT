@@ -71,17 +71,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X GET \
-   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -d '{
-   "Btinreq": {
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEstados' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
         "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Token": "f99a68ce154A8B5C60A82434",
+        "Usuario": "MINSTALADOR"
     }
 }'
 ```
@@ -178,13 +179,13 @@ curl -X GET \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Token": "f99a68ce154A8B5C60A82434"
     },
     "sdtEstados": {
         "sBTEstadoOperacion": [
@@ -249,15 +250,15 @@ curl -X GET \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 1104,
+        "Numero": 1098,
         "Servicio": "BTConfiguracionBantotal.ObtenerEstados",
         "Estado": "OK",
-        "Fecha": "2020-11-02",
-        "Requerimiento": "0",
-        "Hora": "14:13:38",
+        "Fecha": "2020-10-30",
+        "Requerimiento": 0,
+        "Hora": "18:32:26",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

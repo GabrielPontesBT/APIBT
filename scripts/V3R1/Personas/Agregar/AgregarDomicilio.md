@@ -1,4 +1,4 @@
----
+﻿---
 title: Agregar Domicilio
 breadcrumb: false
 pageInfo: false
@@ -114,7 +114,7 @@ curl -X POST \
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "07FA51224D38D18C61F15934"
   },
@@ -129,7 +129,7 @@ curl -X POST \
           "detalleUbicacion": "",
           "barrio": "",
           "agrupador3": "Apto",
-          "agrupador2": 1,
+          "agrupador2": "1",
           "agrupador1": "Calle",
           "agrupador5Id": "",
           "tipoDomicilio": "",
@@ -140,7 +140,7 @@ curl -X POST \
           "tipoVivienda": "",
           "pais": "",
           "agrupador2Id": 1,
-          "codigoPostal": "",
+          "codigoPostal": "12800",
           "tipoViviendaId": 1,
           "agrupador4Id": "",
           "barrioId": 10,
@@ -148,8 +148,8 @@ curl -X POST \
           "localidad": "",
           "tipoDomicilioId": 4,
           "departamentoId": 10
-         }   
-      }
+         }
+      }'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

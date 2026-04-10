@@ -144,86 +144,86 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?CrearPersonaCliente' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-   "sdtPartner": {
-      "puntoVentaUId": 3,
-      "vendedorUId": 56,
-      "partnerUId": 23
-   },
-   "sdtPersona": {
-      "nroDocumento": 7896328,
-      "estadoCivil": "",
-      "segundoNombre": "Carlos",
-      "fechaInicioActividad": "2023-09-26",
-      "fechaVencimiento": "2024-09-26",
-      "segundoApellido": "Gimenez",
-      "fechaNacimiento": "1998-09-26",
-      "telefonoCelular": 25874532,
-      "tipoDocumentoId": 1,
-      "actividadLaboral": "",
-      "clasificacionInternaId": 2,
-      "sexo": "M",
-      "primerNombre": "Luis",
-      "clasificacionInterna": "",
-      "paisDocumentoId": 845,
-      "telefonoFijo": 874525,
-      "primerApellido": "Gonzales",
-      "ocupacion": "",
-      "sector": "",
-      "paisDocumento": "",
-      "ocupacionId": 8,
-      "nacionalidad": "",
-      "sueldo": 7845,
-      "domicilios": {
-         "sBTDomicilioCompleto": {
-            "agrupador1Id": 1,
-            "coloniaId": 3,
-            "departamento": "",
-            "agrupador5": "",
-            "agrupador4": "",
-            "agrupador3Id": 1,
-            "agrupador3": "",
-            "barrio": "",
-            "detalleUbicacion": "",
-            "agrupador2": "",
-            "agrupador1": "",
-            "agrupador5Id": 3,
-            "ubicacionDesde": "",
-            "tipoDomicilio": "",
-            "direccion": "",
-            "colonia": "",
-            "paisId": 845,
-            "tipoVivienda": "",
-            "pais": "",
-            "agrupador2Id": 2,
-            "codigoPostal": 7852,
-            "tipoViviendaId": 1,
-            "agrupador4Id": 1,
-            "barrioId": 2,
-            "localidad": "",
-            "localidadId": 2,
-            "tipoDomicilioId": 1,
-            "departamentoId": 1
-         }
-      },
-      "correoElectronico": "juanLui@mail.com",
-      "sectorId": 2,
-      "actividadLaboralId": 3,
-      "tipoDocumento": "",
-      "nacionalidadId": 4,
-      "estadoCivilId": 1
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?CrearPersonaCliente' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "1222A10B1A106FB813BD7AE9"
+    },
+    "sdtPartner": {
+        "puntoVentaUId": 3,
+        "vendedorUId": 56,
+        "partnerUId": 23
+    },
+    "sdtPersona": {
+        "nroDocumento": 7896328,
+        "estadoCivil": "",
+        "segundoNombre": "Carlos",
+        "fechaInicioActividad": "2023-09-26",
+        "fechaVencimiento": "2024-09-26",
+        "segundoApellido": "Gimenez",
+        "fechaNacimiento": "1998-09-26",
+        "telefonoCelular": 25874532,
+        "tipoDocumentoId": 1,
+        "actividadLaboral": "",
+        "clasificacionInternaId": 2,
+        "sexo": "M",
+        "primerNombre": "Luis",
+        "clasificacionInterna": "",
+        "paisDocumentoId": 845,
+        "telefonoFijo": 874525,
+        "primerApellido": "Gonzales",
+        "ocupacion": "",
+        "sector": "",
+        "paisDocumento": "",
+        "ocupacionId": 8,
+        "nacionalidad": "",
+        "sueldo": 7845,
+        "domicilios": {
+            "sBTDomicilioCompleto": {
+                "agrupador1Id": 1,
+                "coloniaId": 3,
+                "departamento": "",
+                "agrupador5": "",
+                "agrupador4": "",
+                "agrupador3Id": 1,
+                "agrupador3": "",
+                "barrio": "",
+                "detalleUbicacion": "",
+                "agrupador2": "",
+                "agrupador1": "",
+                "agrupador5Id": 3,
+                "ubicacionDesde": "",
+                "tipoDomicilio": "",
+                "direccion": "",
+                "colonia": "",
+                "paisId": 845,
+                "tipoVivienda": "",
+                "pais": "",
+                "agrupador2Id": 2,
+                "codigoPostal": 7852,
+                "tipoViviendaId": 1,
+                "agrupador4Id": 1,
+                "barrioId": 2,
+                "localidad": "",
+                "localidadId": 2,
+                "tipoDomicilioId": 1,
+                "departamentoId": 1
+            }
+        },
+        "correoElectronico": "juanLui@mail.com",
+        "sectorId": 2,
+        "actividadLaboralId": 3,
+        "tipoDocumento": "",
+        "nacionalidadId": 4,
+        "estadoCivilId": 1
+    }
 }'
 ```
 :::
@@ -263,27 +263,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "clienteUId": "202",
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.CrearPersonaCliente",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "DF1F942C6EC60E8B95BBEA69"
+    },
+    "clienteUId": 181,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 770,
+        "Estado": "OK",
+        "Servicio": "BTPartners.CrearPersonaCliente",
+        "Fecha": "2017-12-14",
+        "Requerimiento": 0,
+        "Hora": "18:17:10",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

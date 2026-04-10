@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Productos
 breadcrumb: false
 pageInfo: false
@@ -81,11 +81,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "solicitudUId": "10862"
+        "solicitudUId": 10862
 }'
 ```
 :::
@@ -174,87 +174,79 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Envelope": {
-      "Body": {
-         "BTMicrofinanzas.ObtenerProductosResponse": {
-            "Btinreq": {
-               "Canal": "BTDIGITAL",
-               "Requerimiento": "95",
-               "Usuario": "INSTALADOR",
-               "Token": "419385365CD285A89A23FBEE",
-               "Device": "GP"
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 95,
+        "Usuario": "INSTALADOR",
+        "Token": "419385365CD285A89A23FBEE",
+        "Device": "GP"
+    },
+    "sdtProductos": {
+        "sBTProducto": [
+            {
+                "productoUId": 1,
+                "nombre": "AGRICOLA PLAN DE PAGOS K + I",
+                "moneda": "Q",
+                "papel": ""
             },
-            "sdtProductos": {
-               "sBTProducto": [
-                  {
-                     "productoUId": "1",
-                     "nombre": "AGRICOLA PLAN DE PAGOS K + I",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "2",
-                     "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "3",
-                     "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "4",
-                     "nombre": "AGRICOLA CREDI - AGRO MENOR",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "21",
-                     "nombre": "CADENA DE VALOR CAFE DIF.",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "22",
-                     "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "23",
-                     "nombre": "VIVIENDA HIPOTECARIO",
-                     "moneda": "Q",
-                     "papel": ""
-                  },
-                  {
-                     "productoUId": "24",
-                     "nombre": "VIVIENDA HIPOTECARIO LIBRE",
-                     "moneda": "Q",
-                     "papel": ""
-                  }
-               ]
+            {
+                "productoUId": 2,
+                "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
+                "moneda": "Q",
+                "papel": ""
             },
-            "Erroresnegocio": "",
-            "Btoutreq": {
-               "Canal": "BTDIGITAL",
-               "Servicio": "BTMicrofinanzas.ObtenerProductos",
-               "Fecha": "2019-09-18",
-               "Hora": "15:56:50",
-               "Requerimiento": "95",
-               "Numero": "161",
-               "Estado": "OK"
+            {
+                "productoUId": 3,
+                "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
+                "moneda": "Q",
+                "papel": ""
+            },
+            {
+                "productoUId": 4,
+                "nombre": "AGRICOLA CREDI - AGRO MENOR",
+                "moneda": "Q",
+                "papel": ""
+            },
+            {
+                "productoUId": 21,
+                "nombre": "CADENA DE VALOR CAFE DIF.",
+                "moneda": "Q",
+                "papel": ""
+            },
+            {
+                "productoUId": 22,
+                "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
+                "moneda": "Q",
+                "papel": ""
+            },
+            {
+                "productoUId": 23,
+                "nombre": "VIVIENDA HIPOTECARIO",
+                "moneda": "Q",
+                "papel": ""
+            },
+            {
+                "productoUId": 24,
+                "nombre": "VIVIENDA HIPOTECARIO LIBRE",
+                "moneda": "Q",
+                "papel": ""
             }
-         }
-      },
-      "_xmlns:SOAP-ENV": "http://schemas.xmlsoap.org/soap/envelope/",
-      "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-      "_xmlns:SOAP-ENC": "http://schemas.xmlsoap.org/soap/encoding/",
-      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
-   }
-}
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.ObtenerProductos",
+        "Fecha": "2019-09-18",
+        "Hora": "15:56:50",
+        "Requerimiento": 95,
+        "Numero": 161,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

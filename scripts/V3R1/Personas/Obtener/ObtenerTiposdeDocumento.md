@@ -80,7 +80,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
@@ -173,7 +173,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -182,47 +182,47 @@ curl -X POST \
             {
                 "tipoPersona": "F",
                 "descripcion": "Cédula Identidad",
-                "identificador": "1"
+                "identificador": 1
             },
             {
                 "tipoPersona": "J",
                 "descripcion": "RUT",
-                "identificador": "2"
+                "identificador": 2
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "Pasaporte",
-                "identificador": "3"
+                "identificador": 3
             },
             {
                 "tipoPersona": "A",
                 "descripcion": "NRE",
-                "identificador": "4"
+                "identificador": 4
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "LEN(ARG.LIBR.ENROLAM",
-                "identificador": "6"
+                "identificador": 6
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "CIA(ARGENT.C.DE ID.)",
-                "identificador": "7"
+                "identificador": 7
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "CI (BRASIL C.DE ID.)",
-                "identificador": "8"
+                "identificador": 8
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "CPF(BRAS.CONTR.R.PER",
-                "identificador": "9"
+                "identificador": 9
             },
             {
                 "tipoPersona": "F",
                 "descripcion": "CIP(PARAG.C.DE ID.)",
-                "identificador": "10"
+                "identificador": 10
             }
         ]
     },
@@ -230,12 +230,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "825",
+        "Numero": 826,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerTiposdeDocumento",
         "Fecha": "2017-12-17",
-        "Requerimiento": "",
-        "Hora": "18:44:49",
+        "Requerimiento": 0,
+        "Hora": "18:45:06",
         "Canal": "BTDIGITAL"
     }
 }'

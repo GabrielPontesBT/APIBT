@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerRubrosBolsa' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-   "Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerRubrosBolsa' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    }
 }'
 ```
 :::
@@ -143,49 +143,48 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-  "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtRubrosBolsa": {
-      "sBTRubroBolsa": [
-      {
-         "moneda": 0,
-         "cuentaCliente": 0,
-         "signoMoneda": "$",
-         "ocurrencias": 9,
-         "descripcion": "Mon.Y Bill.En Empresa-Ventanilla",
-         "subOperacion": 400,
-         "rubro": 101002001,
-         "papel": 0,
-         "nombreSucursal": "Casa Matriz",
-         "nombrePapel": "Billete",
-         "empresa": 1,
-         "tipoOperacion": 0,
-         "operacion": 0,
-         "sucursal": 1,
-         "nombreEmpresa": "Finaxis"
-      },
-      {
-         ...
-      },
-      ...
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11987,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerRubrosBolsa",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "13:55:55"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtRubrosBolsa": {
+        "sBTRubroBolsa": [
+            {
+                "moneda": 0,
+                "cuentaCliente": 0,
+                "signoMoneda": "$",
+                "ocurrencias": 9,
+                "descripcion": "Mon.Y Bill.En Empresa-Ventanilla",
+                "subOperacion": 400,
+                "rubro": 101002001,
+                "papel": 0,
+                "nombreSucursal": "Casa Matriz",
+                "nombrePapel": "Billete",
+                "empresa": 1,
+                "tipoOperacion": 0,
+                "operacion": 0,
+                "sucursal": 1,
+                "nombreEmpresa": "Finaxis"
+            },
+            "..."
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11987,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerRubrosBolsa",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "13:55:55"
+    }
 }'
 ```
 :::

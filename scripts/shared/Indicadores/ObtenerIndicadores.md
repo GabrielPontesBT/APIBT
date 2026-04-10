@@ -75,19 +75,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerIndicadores' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-   "Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
-   },
-   "agrupadorId": 100
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerIndicadores' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    },
+    "agrupadorId": 100
 }'
 ```
 :::
@@ -136,36 +136,38 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtIndicadores": {
-      "sBTIndicador": [
-      {
-         "descripcion": "Condiciones generales",
-         "codigo": 105
-      },
-      {
-         "descripcion": "Información de Cotizaciones",
-         "codigo": 106
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11989,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerIndicadores",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "14:45:13"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtIndicadores": {
+        "sBTIndicador": [
+            {
+                "descripcion": "Condiciones generales",
+                "codigo": 105
+            },
+            {
+                "descripcion": "Información de Cotizaciones",
+                "codigo": 106
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11989,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerIndicadores",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "14:45:13"
+    }
 }'
 ```
 ::: 

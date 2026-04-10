@@ -77,22 +77,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ActualizarCondicionImpositiva=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ActualizarCondicionImpositiva' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "2081397563CD285A89A23FBE"
-	},
-	"personaUId": 10003,
-	"codigoImpuesto": 1,
-	"codigoCondicion": 2
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "761768101CD285A89A23FBEE",
+        "Device": "GP"
+    },
+    "personaUId": 10003,
+    "codigoImpuesto": 1,
+    "codigoCondicion": 2
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -130,26 +130,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "761768101CD285A89A23FBEE",
-	  "Device": "GP"
-	},
-	"Erroresnegocio": {
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTContabilidad.ActualizarCondicionImpositiva",
-	  "Fecha": "2021-02-05",
-	  "Hora": "13:37:57",
-	  "Requerimiento": "1",
-	  "Numero": "7984",
-	  "Estado": "OK"
-	}
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "761768101CD285A89A23FBEE",
+        "Device": "GP"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTContabilidad.ActualizarCondicionImpositiva",
+        "Fecha": "2021-02-05",
+        "Hora": "13:37:57",
+        "Requerimiento": 1,
+        "Numero": 7984,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

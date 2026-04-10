@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Refinanciación
 breadcrumb: false
 pageInfo: false
@@ -497,7 +497,7 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
    "sdtSimulacionOutput": {
       "cft": 28.21,

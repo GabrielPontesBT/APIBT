@@ -82,16 +82,16 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "B086B798299A7DB5B8310AAA",
-          "Device": "GL"
-        },
-        "tarjetaId": 2000001957,
-        "tipoDeCuenta": ""
-    }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "B086B798299A7DB5B8310AAA",
+        "Device": "GL"
+    },
+    "tarjetaId": 2000001957,
+    "tipoDeCuenta": ""
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -151,44 +151,46 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "B086B798299A7DB5B8310AAA",
-          "Device": "GL"
-        },
-        "sdtCuentasAsociadasTD": {
-          "tarjetaUId": 2000001957,
-          "cuentas": {
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "B086B798299A7DB5B8310AAA",
+        "Device": "GL"
+    },
+    "sdtCuentasAsociadasTD": {
+        "tarjetaUId": 2000001957,
+        "cuentas": {
             "sBTCuentaAsociadaTD": {
-              "operacionUId": 10216,
-              "idOperacionFmt": "000000040_008",
-              "producto": {
-                "productoUId": 93,
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                "moneda": "S/.",
-                "papel": ""
-              },
-              "sucursal": "Sucursal Cusco",
-              "simboloMoneda": "S/.",
-              "subCuenta": "",
-              "tipoDeCuenta": 1,
-              "saldo": 10003628.81,
-              "estado": "CUENTAS INACTIVAS"
+                "operacionUId": 10216,
+                "idOperacionFmt": 40008,
+                "producto": {
+                    "productoUId": 93,
+                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+                    "moneda": "S/.",
+                    "papel": ""
+                },
+                "sucursal": "Sucursal Cusco",
+                "simboloMoneda": "S/.",
+                "subCuenta": "",
+                "tipoDeCuenta": 1,
+                "saldo": 10003628.81,
+                "estado": "CUENTAS INACTIVAS"
             }
-          }
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo",
-          "Fecha": "2022-11-30",
-          "Hora": "17:25:57",
-          "Requerimiento": 1,
-          "Numero": 513,
-          "Estado": "OK"
         }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo",
+        "Fecha": "2022-11-30",
+        "Hora": "17:25:57",
+        "Requerimiento": 1,
+        "Numero": 513,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

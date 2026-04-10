@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Campañas
 breadcrumb: false
 pageInfo: false
@@ -87,11 +87,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "clienteUId": "3",
+   "clienteUId": 3,
    "fecha": "2019-01-01"
 }'
 ```
@@ -137,41 +137,35 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Envelope": {
-      "Body": {
-         "BTMicrofinanzas.ObtenerCampaniasResponse": {
-            "Btinreq": {
-               "Canal": "BTINTERNO",
-               "Requerimiento": "95",
-               "Usuario": "INSTALADOR",
-               "Token": "419385365CD285A89A23FBEE",
-               "Device": "GP"
-            },
-            "sdtCampanias": {
-               "sBTCampania": {
-                  "codigo": "1",
-                  "descripcion": "Campaña Uno"
-               }
-            },
-            "Erroresnegocio": "",
-            "Btoutreq": {
-               "Canal": "BTDIGITAL",
-               "Servicio": "BTMicrofinanzas.ObtenerCampanias",
-               "Fecha": "2019-09-25",
-               "Hora": "10:06:27",
-               "Requerimiento": "95",
-               "Numero": "246",
-               "Estado": "OK"
+'{
+    "Btinreq": {
+        "Canal": "BTINTERNO",
+        "Requerimiento": 95,
+        "Usuario": "INSTALADOR",
+        "Token": "419385365CD285A89A23FBEE",
+        "Device": "GP"
+    },
+    "sdtCampanias": {
+        "sBTCampania": [
+            {
+                "codigo": 1,
+                "descripcion": "Campaña Uno"
             }
-         }
-      },
-      "_xmlns:SOAP-ENV": "http://schemas.xmlsoap.org/soap/envelope/",
-      "_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-      "_xmlns:SOAP-ENC": "http://schemas.xmlsoap.org/soap/encoding/",
-      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
-   }
-}
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.ObtenerCampanias",
+        "Fecha": "2019-09-25",
+        "Hora": "10:06:27",
+        "Requerimiento": 95,
+        "Numero": 246,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

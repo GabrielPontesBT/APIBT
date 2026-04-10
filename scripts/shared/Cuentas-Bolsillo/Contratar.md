@@ -91,18 +91,18 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Contratar' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Contratar' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Token": "3E7C0C38BBBB8ECFE4C31B86",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 7
+    },
     "cuentaPrincipalUId": 1137,
     "productoUId": 511,
     "nombreSubCuenta": "Contratacion",
@@ -146,23 +146,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 7,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "3E7C0C38BBBB8ECFE4C31B86"
     },
     "operacionUId": 19170,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 228493,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.Contratar",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Requerimiento": 7,
+        "Fecha": "2023-11-01",
+        "Hora": "10:23:59",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosReprocesables' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosReprocesables' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    },
+        "Token": "6964034201CD285A89A23FBE"
+    }
 }'
 ```
 :::
@@ -131,39 +131,37 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-      "Device": "mc",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6964034201CD285A89A23FBE"
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": {
-      "sBTProcesoBatch": [
-        {
-          "identificador": "69",
-          "nombre": "PCLE252",
-          "descripcion": "Generación de C. Gerencia",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "Reprocesar siempre"
-        },
-        ...
-      ]
+        "sBTProcesoBatch": {
+            "identificador": 69,
+            "nombre": "PCLE252",
+            "descripcion": "Generación de C. Gerencia",
+            "periodicidad": "DIARIA",
+            "parametrosExtendidos": "SI",
+            "esReprocesable": "Reprocesar siempre"
+        }
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "42133",
-      "Estado": "OK",
-      "Servicio": "BTCadenaCierre.ObtenerProcesosReprocesables",
-      "Fecha": "2022-06-01",
-      "Requerimiento": "1",
-      "Hora": "13:14:51",
-      "Canal": "BTDIGITAL"
+        "Numero": 42133,
+        "Estado": "OK",
+        "Servicio": "BTCadenaCierre.ObtenerProcesosReprocesables",
+        "Fecha": "2022-06-01",
+        "Requerimiento": 1,
+        "Hora": "13:14:51",
+        "Canal": "BTDIGITAL"
     }
-  },
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

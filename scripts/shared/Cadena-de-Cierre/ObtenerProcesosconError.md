@@ -73,19 +73,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosConError' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosConError' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    }, 
-    "fecha":"2018-05-07",
+        "Token": "6964034201CD285A89A23FBE"
+    },
+    "fecha": "2018-05-07"
 }'
 ```
 :::
@@ -278,182 +278,183 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-      "Device": "mc",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6964034201CD285A89A23FBE"
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6964034201CD285A89A23FBE"
     },
-    "sdtProcesosBatch": { 
-      "sBTProcesoBatch": [ 
-        { 
-          "identificador": "1725", 
-          "nombre": "PNU00011", 
-          "descripcion": "Ajuste cotización de Unidades", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1725", 
-          "nombre": "PNU00011", 
-          "descripcion": "Ajuste cotización de Unidades", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1730", 
-          "nombre": "PDP00004", 
-          "descripcion": "Pago Intereses Periódicos", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1730", 
-          "nombre": "PDP00004", 
-          "descripcion": "Pago Intereses Periódicos", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1730", 
-          "nombre": "PDP00004", 
-          "descripcion": "Pago Intereses Periódicos", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1730", 
-          "nombre": "PDP00004", 
-          "descripcion": "Pago Intereses Periódicos", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "1740", 
-          "nombre": "PPP6361", 
-          "descripcion": "Pasaje a Castigos", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "1745", 
-          "nombre": "PDP00001", 
-          "descripcion": "Renovación Automática", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "1750", 
-          "nombre": "PNU00009", 
-          "descripcion": "Ajuste de Operaciones  Cancela", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "Reprocesar siempre" 
-        }, 
-        { 
-          "identificador": "3100", 
-          "nombre": "PCC00032", 
-          "descripcion": "Actualiza movimientos FSH021", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "3700", 
-          "nombre": "PNU00006", 
-          "descripcion": "Ajuste saldos Corresponsales", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "3725", 
-          "nombre": "PNU00007", 
-          "descripcion": "Tit.ajuste de v.e. y cupon", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "3750", 
-          "nombre": "PNU00117", 
-          "descripcion": "Resultados a Moneda FVC", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "3800", 
-          "nombre": "PNU00217", 
-          "descripcion": "Pasaje Resultados M/E a M/N", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "3900", 
-          "nombre": "PNU00003", 
-          "descripcion": "Ajuste Posición de Monedas", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "4000", 
-          "nombre": "PNU00004", 
-          "descripcion": "Ajuste Valuación Monedas", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "4400", 
-          "nombre": "PSID0001", 
-          "descripcion": "Expando Rubros Campo Lista", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "4500", 
-          "nombre": "PSID0003", 
-          "descripcion": "Calcula saldos para campos ti", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        }, 
-        { 
-          "identificador": "4600", 
-          "nombre": "PSID0002", 
-          "descripcion": "Acumula Saldos Campo Acumulado", 
-          "periodicidad": "DIARIA", 
-          "parametrosExtendidos": "SI", 
-          "esReprocesable": "No reprocesar nunca" 
-        } 
-      ] 
+    "sdtProcesosBatch": {
+        "sBTProcesoBatch": [
+            {
+                "identificador": 1725,
+                "nombre": "PNU00011",
+                "descripcion": "Ajuste cotización de Unidades",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1725,
+                "nombre": "PNU00011",
+                "descripcion": "Ajuste cotización de Unidades",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1730,
+                "nombre": "PDP00004",
+                "descripcion": "Pago Intereses Periódicos",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1730,
+                "nombre": "PDP00004",
+                "descripcion": "Pago Intereses Periódicos",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1730,
+                "nombre": "PDP00004",
+                "descripcion": "Pago Intereses Periódicos",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1730,
+                "nombre": "PDP00004",
+                "descripcion": "Pago Intereses Periódicos",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 1740,
+                "nombre": "PPP6361",
+                "descripcion": "Pasaje a Castigos",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 1745,
+                "nombre": "PDP00001",
+                "descripcion": "Renovación Automática",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 1750,
+                "nombre": "PNU00009",
+                "descripcion": "Ajuste de Operaciones  Cancela",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 3100,
+                "nombre": "PCC00032",
+                "descripcion": "Actualiza movimientos FSH021",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 3700,
+                "nombre": "PNU00006",
+                "descripcion": "Ajuste saldos Corresponsales",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 3725,
+                "nombre": "PNU00007",
+                "descripcion": "Tit.ajuste de v.e. y cupon",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 3750,
+                "nombre": "PNU00117",
+                "descripcion": "Resultados a Moneda FVC",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 3800,
+                "nombre": "PNU00217",
+                "descripcion": "Pasaje Resultados M/E a M/N",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 3900,
+                "nombre": "PNU00003",
+                "descripcion": "Ajuste Posición de Monedas",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 4000,
+                "nombre": "PNU00004",
+                "descripcion": "Ajuste Valuación Monedas",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 4400,
+                "nombre": "PSID0001",
+                "descripcion": "Expando Rubros Campo Lista",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 4500,
+                "nombre": "PSID0003",
+                "descripcion": "Calcula saldos para campos ti",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 4600,
+                "nombre": "PSID0002",
+                "descripcion": "Acumula Saldos Campo Acumulado",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            }
+        ]
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "42155",
-      "Estado": "OK",
-      "Servicio": "BTCadenaCierre.ObtenerProcesosConError",
-      "Fecha": "2022-06-01",
-      "Requerimiento": "1",
-      "Hora": "13:36:10",
-      "Canal": "BTDIGITAL"
+        "Numero": 42155,
+        "Estado": "OK",
+        "Servicio": "BTCadenaCierre.ObtenerProcesosConError",
+        "Fecha": "2022-06-01",
+        "Requerimiento": 1,
+        "Hora": "13:36:10",
+        "Canal": "BTDIGITAL"
     }
-  },
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -96,23 +96,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashIn' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashIn' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "FP",
+        "Canal": "BTDIGITAL",
+        "Usuario": "BANTOTAL",
+        "Token": "64d9fe0781F955E77534D3E0",
+        "Requerimiento": 10
+    },
     "clienteUId": 5,
     "sdtTraspaso": {
         "operacionUIdOrigen": 9,
-        "importeCredito": 100,
-        "importeDebito": 100,
         "importe": 100,
         "operacionUIdDestino": 8,
         "monedaId": 0,
@@ -163,32 +161,32 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Device": "FP",
+        "Usuario": "BANTOTAL",
+        "Requerimiento": 10,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "64d9fe0781F955E77534D3E0"
     },
     "sdtResultadoTraspaso": {
         "operacionUIdOrigen": 9,
-        "idMovimiento": 1.0013200100028202e+21,
+        "idMovimiento": 1001320010002820230731,
         "operacionUIdDestino": 8,
-        "saldoOperacionOrigen": 69919,
+        "saldoOperacionOrigen": 69919.00,
         "movimientoUId": 15
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 243,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.CashIn",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
+        "Requerimiento": 10,
+        "Fecha": "2023-11-01",
         "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Hora": "09:21:36"
     }
 }'
 ```

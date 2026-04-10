@@ -136,27 +136,27 @@ CONTROL_MISMO_CLIENTE | [S,N] (Valor por omisión "N") | **[Opcional]** Permite 
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarSimulacion' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "clienteUId": 10009,
-        "simulacionId": 93,
-        "InstruccionVTO": 6,
-        "cuentaUIdDestinoVTO": "",
-        "InstruccionPP": 7,
-        "cuentaUIdDestinoPP": 10120,
-        "cuentaUIdDebito": 10120,
-        "sBTDatosExtendidos": ""
-      }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "30F74741A02C318CEFD55684",
+        "Device": "GL"
+    },
+    "clienteUId": 10009,
+    "simulacionId": 93,
+    "InstruccionVTO": 6,
+    "cuentaUIdDestinoVTO": "",
+    "InstruccionPP": 7,
+    "cuentaUIdDestinoPP": 10120,
+    "cuentaUIdDebito": 10120,
+    "sBTDatosExtendidos": ""
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -198,26 +198,28 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "sBTDatosExtendidos": "",
-        "operacionUId": 15,
-        "movimientoUId": 15,
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTDepositosAPlazo.ContratarSimulacion",
-          "Fecha": "2022-11-29",
-          "Hora": "11:35:46",
-          "Requerimiento": 1,
-          "Numero": 507,
-          "Estado": "OK"
-        }
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "30F74741A02C318CEFD55684",
+        "Device": "GL"
+    },
+    "sBTDatosExtendidos": "",
+    "operacionUId": 15,
+    "movimientoUId": 15,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTDepositosAPlazo.ContratarSimulacion",
+        "Fecha": "2022-11-29",
+        "Hora": "11:35:46",
+        "Requerimiento": 1,
+        "Numero": 507,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

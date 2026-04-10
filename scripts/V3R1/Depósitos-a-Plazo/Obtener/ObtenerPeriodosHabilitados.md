@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Períodos Habilitados
 breadcrumb: false
 pageInfo: false
@@ -86,7 +86,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -181,7 +181,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -239,12 +239,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "145",
+        "Numero": 16830,
         "Estado": "OK",
         "Servicio": "BTDepositosAPlazo.ObtenerPeriodosHabilitados",
-        "Fecha": "2023-03-01",
-        "Requerimiento": "1",
-        "Hora": "12:04:07",
+        "Fecha": "2023-10-25",
+        "Requerimiento": 1,
+        "Hora": "18:12:09",
         "Canal": "BTDIGITAL"
     }
 }'

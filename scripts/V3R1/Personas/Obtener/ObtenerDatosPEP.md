@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Datos PEP
 breadcrumb: false
 pageInfo: false
@@ -84,7 +84,7 @@ curl -X POST \
   	"Btinreq": {
 		"Device": "GP",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "2081397563CD285A89A23FBE"
 	},
@@ -135,10 +135,10 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "MINSTALADOR",
 	  "Token": "110220211247090000683511",
 	  "Device": "GP"
@@ -149,20 +149,21 @@ curl -X POST \
       "entidad": "Presidencia",
       "fechaInicio": "2010-01-01",
       "fechaSalida": "2015-01-01",
-      "observacion":"",
+      "observacion": ""
    },
 	"Erroresnegocio": {
+		"BTErrorNegocio": []
 	},
 	"Btoutreq": {
 	  "Canal": "BTDIGITAL",
 	  "Servicio": "BTPersonas.ObtenerDatosPEP",
 	  "Fecha": "2021-02-11",
 	  "Hora": "12:48:16",
-	  "Requerimiento": "1",
-	  "Numero": "10595",
+	  "Requerimiento": 1,
+	  "Numero": 10595,
 	  "Estado": "OK"
 	}
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

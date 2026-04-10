@@ -91,24 +91,24 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDetallePosicion=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDetallePosicion' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "BANTOTAL",
+        "Token": "E362E52FED059AA3BF86A6E3"
     },
     "clienteUId": 341,
     "monedaId": 2222,
     "fecha": "2020-08-06",
     "identificadorClaseActivo": 10,
     "numeradorConsulta": 12928
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -181,58 +181,58 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "BANTOTAL",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "E362E52FED059AA3BF86A6E3"
     },
     "totalGeneral": 527406.43,
-      "sdtDetalleClaseActivo": {
-         "sBTDetalleClaseActivo": [
-         {
-            "nombreElemento": "Depósitos a plazo fijo",
-            "datosSinManejoEspecie": {
-               "sBTDatoSinManejoEspecie": {
-               "signo": "$",
-               "monedaId": 0,
-               "total": 5263.16,
-               "cantidadOperaciones": 2,
-               "totalOrigen": 200000
-               }
+    "sdtDetalleClaseActivo": {
+        "sBTDetalleClaseActivo": [
+            {
+                "nombreElemento": "Depósitos a plazo fijo",
+                "datosSinManejoEspecie": {
+                    "sBTDatoSinManejoEspecie": {
+                        "signo": "$",
+                        "monedaId": 0,
+                        "total": 5263.16,
+                        "cantidadOperaciones": 2,
+                        "totalOrigen": 200000.00
+                    }
+                },
+                "porcentajeComposicion": 1.00,
+                "datosConManejoEspecie": "",
+                "total": 5263.16
             },
-            "porcentajeComposicion": 1,
-            "datosConManejoEspecie": "",
-            "total": 5263.16
-         },
-         {
-            "nombreElemento": "Cuenta Corrientes",
-            "datosSinManejoEspecie": {
-               "sBTDatoSinManejoEspecie": {
-               "signo": "USD",
-               "monedaId": 2222,
-               "total": 496723.14,
-               "cantidadOperaciones": 2,
-               "totalOrigen": 522143.27
-               }
-            },
-            "porcentajeComposicion": 99,
-            "datosConManejoEspecie": "",
-            "total": 522143.27
-         }
-         ]
-      },
+            {
+                "nombreElemento": "Cuenta Corrientes",
+                "datosSinManejoEspecie": {
+                    "sBTDatoSinManejoEspecie": {
+                        "signo": "USD",
+                        "monedaId": 2222,
+                        "total": 496723.14,
+                        "cantidadOperaciones": 2,
+                        "totalOrigen": 522143.27
+                    }
+                },
+                "porcentajeComposicion": 99.00,
+                "datosConManejoEspecie": "",
+                "total": 522143.27
+            }
+        ]
+    },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTClientes.ObtenerDetallePosicion",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-10-08",
+        "Hora": "12:46:22",
+        "Numero": 744,
+        "Servicio": "BTClientes.ObtenerDetallePosicion",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

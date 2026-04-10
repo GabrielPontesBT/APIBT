@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Deuda
 breadcrumb: false
 pageInfo: false
@@ -98,7 +98,7 @@ curl -X POST \
   -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
+          "Requerimiento": 1,
           "Device": "AC",
           "Canal": "BTDIGITAL",
           "Usuario": "MINSTALADOR",
@@ -106,12 +106,14 @@ curl -X POST \
     },
     "contratoId": 13,
     "servicio": 600,
-    "deudaId": 42525261,
+    "deudaId": "42525261",
     "sdtValorCampoCash": {
-      "sBTValorCampoCash": {
-         "tag": "CSMD006IMP",
-         "valor": ""
-      }
+      "sBTValorCampoCash": [
+         {
+            "tag": "CSMD006IMP",
+            "valor": ""
+         }
+      ]
     }
   }'
 ```
@@ -167,21 +169,25 @@ curl -X POST \
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "6fc29caa9d4A8B5C60A82434"
     },
     "sdtInfoDetalleCash": {
-      "BTInfoDetalleCASH": {
-         "detalleOrden": 2,
-         "ordenId": 293,
-         "valoresDetalle": {
-            "sBTValorCampoCASH": {
-               "tag": "CSMD006IMP",
-               "valor": 100
+      "BTInfoDetalleCASH": [
+         {
+            "detalleOrden": 2,
+            "ordenId": 293,
+            "valoresDetalle": {
+               "sBTValorCampoCASH": [
+                  {
+                     "tag": "CSMD006IMP",
+                     "valor": "100.00"
+                  }
+               ]
             }
          }
-      }
+      ]
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
@@ -191,7 +197,7 @@ curl -X POST \
       "Estado": "OK",
       "Servicio": "BTCASHManagement.ObtenerDeuda",
       "Fecha": "2021-01-29",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }

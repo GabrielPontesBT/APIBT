@@ -1,4 +1,4 @@
----
+﻿---
 title: Agregar Estado Financiero
 breadcrumb: false
 pageInfo: false
@@ -115,7 +115,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -130,15 +130,15 @@ curl -X POST \
         },
         "sdtCondicionTributaria": {
           "VentasAnuales": 1,
-          "RUC": 1,
+          "RUC": "1",
           "Activo": "S",
-          "RegimenTributario": 12
+          "RegimenTributario": "12"
         },
         "sdtConceptosEstadoFinanciero": {
-          "sBTConceptoEstadoFinanciero": {
+          "sBTConceptoEstadoFinanciero": [{
             "idConcepto": 1,
-            "valorConcepto": ""
-          }
+            "valorConcepto": 0.0
+          }]
         }
 	}'
 ```
@@ -186,11 +186,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -206,15 +206,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "401",
+        "Numero": 35226,
         "Estado": "OK",
         "Servicio": "BTPersonas.AgregarEstadoFinanciero",
-        "Fecha": "2018-05-03",
-        "Requerimiento": "1",
-        "Hora": "11:10:49",
+        "Fecha": "2025-05-14",
+        "Requerimiento": 0,
+        "Hora": "14:53:41",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,4 +1,4 @@
----
+﻿---
 title: Contratar Préstamo
 breadcrumb: false
 pageInfo: false
@@ -108,7 +108,7 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "3JPL6DC33CD84655A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
    "sdtPartner": {
       "puntoVentaUId": 3,
@@ -162,21 +162,21 @@ curl -X POST \
    "Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
     },
-	"movimientoUId": "142",
+    "movimientoUId": 141,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "868",
+        "Numero": 864,
         "Estado": "OK",
         "Servicio": "BTPartners.ContratarPrestamo",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2017-12-18",
-        "Hora": "17:15:28",
+        "Hora": "17:07:19",
         "Canal": "BTDIGITAL"
     }
 }

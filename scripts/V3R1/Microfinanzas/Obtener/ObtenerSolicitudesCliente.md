@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Solicitudes Cliente
 breadcrumb: false
 pageInfo: false
@@ -83,11 +83,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "clienteUId": "3"
+    "clienteUId": 3
 }'
 ```
 :::
@@ -146,37 +146,40 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "sdtDatosInstancias": {
-      "sBTDatosInstancia": [
-      {
-         "operacionUId": "8",
-         "instancia": "10844",
-         "capital": "8000.00",
-         "asesor": "ETRIESGO",
-         "tarea": "Solicitud"
-      },
-      {
-         "operacionUId": "7",
-         "instancia": "10856",
-         "capital": "5000.00",
-         "asesor": "INSTALADOR",
-         "tarea": "Solicitud"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.ObtenerSolicitudesCliente",
-      "Fecha": "2019-09-24",
-      "Hora": "14:27:00",
-      "Requerimiento": "95",
-      "Numero": "245",
-      "Estado": "OK"
-   }
+    "sdtDatosInstancias": {
+        "sBTDatosInstancia": [
+            {
+                "operacionUId": 8,
+                "instancia": 10844,
+                "capital": 8000.00,
+                "asesor": "ETRIESGO",
+                "tarea": "Solicitud"
+            },
+            {
+                "operacionUId": 7,
+                "instancia": 10856,
+                "capital": 5000.00,
+                "asesor": "INSTALADOR",
+                "tarea": "Solicitud"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.ObtenerSolicitudesCliente",
+        "Fecha": "2019-09-24",
+        "Hora": "14:27:00",
+        "Requerimiento": 95,
+        "Numero": 245,
+        "Estado": "OK"
+    }
 }
 ```
 ::: 

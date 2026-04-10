@@ -1,4 +1,4 @@
----
+﻿---
 title: Validar en Listas Negras
 breadcrumb: false
 pageInfo: false
@@ -102,12 +102,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "paisDocumentoId": "80",
-    "tipoDocumentoId": "1",
+    "paisDocumentoId": 80,
+    "tipoDocumentoId": 1,
     "numeroDocumento": "23330162449",
     "primerNombre": "SERVICES",
     "segundoNombre": "TEST",
@@ -160,13 +160,13 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
-		"Device": "AV",
+		"Device": "10.12.10.159",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "8ab636f8624A8B5C60A82434"
 	},
     "existeEnLista": "S",
     "sdtListasInhabilitados": {
@@ -180,15 +180,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 163,
+        "Numero": 158,
         "Estado": "OK",
         "Servicio": "BTPersonas.ValidarEnListasNegras",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2018-10-29",
-        "Hora": "15:02:08",
+        "Hora": "13:56:35",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

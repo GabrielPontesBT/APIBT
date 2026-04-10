@@ -76,18 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerIdentificadorUnico' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerIdentificadorUnico' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-        "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Token": "f99a68ce154A8B5C60A82434",
         "Canal": "BTDIGITAL",
-        "Token": "f99a68ce154A8B5C60A82434"
+        "Requerimiento": 0,
+        "Usuario": "MINSTALADOR",
+        "Device": "bms"
     },
-    "nroTarjeta": "4517720800000029"
+    "nroTarjeta": 4517720800000029
 }'
 ```
 :::
@@ -127,11 +128,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Token": "f99a68ce154A8B5C60A82434"
     },
@@ -140,15 +141,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 1122,
+        "Numero": 1121,
         "Estado": "OK",
         "Servicio": "BTTarjetasDeDebito.ObtenerIdentificadorUnico",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Fecha": "2020-11-06",
-        "Hora": "12:23:58",
+        "Hora": "12:19:59",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

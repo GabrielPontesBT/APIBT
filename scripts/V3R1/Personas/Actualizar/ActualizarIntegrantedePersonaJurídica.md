@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Integrante de Persona Jurídica
 breadcrumb: false
 pageInfo: false
@@ -98,16 +98,16 @@ curl -X POST \
   -d '{
 	 "Btinreq": {
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "IN",
 		"Token": "14298073CD285A89A23FBE",
 		"Device": "MC"
 	 },
-	 "personaJuridicaUId": "2",
+	 "personaJuridicaUId": 2,
 	 "sdtIntegranteAlta": {
-		 "personaUId": "1",
-		 "vinculoId": "1",
-		 "participacion": "50",
+		 "personaUId": 1,
+		 "vinculoId": 1,
+		 "participacion": 50
 	 }
    }'
 ```
@@ -147,25 +147,25 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "IN",
 		"Token": "14298073CD285A89A23FBE",
 		"Device": "MC"
 	},
-	"Erroresnegocio": null,
+	"Erroresnegocio": {"BTErrorNegocio": []},
 	"Btoutreq": {
 		"Canal": "BTDIGITAL",
 		"Servicio": "BTPersonas.ActualizarIntegrantePersonaJuridica",
 		"Fecha": "2020-11-02",
 		"Hora": "12:06:37",
-		"Requerimiento": "1",
-		"Numero": "10140",
+		"Requerimiento": 1,
+		"Numero": 10140,
 		"Estado": "OK"
 	}
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

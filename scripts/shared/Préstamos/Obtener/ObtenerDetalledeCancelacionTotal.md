@@ -97,19 +97,19 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "b6a06c447cCD285A89A23FBE"
     },
-    "operacionUId": 227,
+    "operacionUId": 56,
     "fecha": "",
     "perdonaIntereses": "S",
     "cancelacionTotal": "S",
     "expresadoEn": "M"
-    }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -187,62 +187,64 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "b6a06c447cCD285A89A23FBE"
     },
     "sdtConceptosPrestamo": {
-    "totalSeguros": 0,
-    "fecha": "2024-01-06",
-    "otrosSeguros": 0,
-    "detalleSeguros": "",
-    "detalleConceptos": {
-      "sBTConcepto": [
-        {
-          "texto": "Impuesto Canon",
-          "valor": 10676.119999999999,
-          "concepto": "IMPUESTO_CANON"
+        "totalSeguros": 0.00,
+        "fecha": "2024-01-06",
+        "otrosSeguros": 0.00,
+        "detalleSeguros": "",
+        "detalleConceptos": {
+            "sBTConcepto": [
+                {
+                    "texto": "Impuesto Canon",
+                    "valor": 10676.119999999999,
+                    "concepto": "IMPUESTO_CANON"
+                },
+                {
+                    "texto": "Total Interes Punitorio",
+                    "valor": 3231.39,
+                    "concepto": "PUNITORIO"
+                }
+            ]
         },
-        {
-          "texto": "Total Interes Punitorio",
-          "valor": 3231.39,
-          "concepto": "PUNITORIO"
-        }
-      ]
+        "totalComisiones": 0.00,
+        "intereses": 656.41,
+        "precio": 0.00,
+        "impuestoComision": 0.00,
+        "porcentaje": 0.00,
+        "otrosConceptos": 0.00,
+        "impuestoInteres": 2169.47,
+        "impuestoMora": 2174.47,
+        "tipoCambio": 1.00,
+        "interesMora": 7123.25,
+        "deudaTotal": 25429.44,
+        "capital": 10074.45,
+        "seguroIncendio": 0.00,
+        "comisionMora": 0.00,
+        "impuestoComisionMora": 0.00,
+        "seguroVehicular": 0.00,
+        "perdon": 0.00,
+        "totalImpuestos": 4343.94,
+        "comisionesCuota": 0.00,
+        "seguroVida": 0.00,
+        "signoImportes": "$"
     },
-    "totalComisiones": 0,
-    "intereses": 656.41,
-    "precio": 0,
-    "impuestoComision": 0,
-    "porcentaje": 0,
-    "otrosConceptos": 0,
-    "impuestoInteres": 2169.47,
-    "impuestoMora": 2174.47,
-    "tipoCambio": 1,
-    "interesMora": 7123.25,
-    "deudaTotal": 25429.44,
-    "capital": 10074.45,
-    "seguroIncendio": 0,
-    "comisionMora": 0,
-    "impuestoComisionMora": 0,
-    "seguroVehicular": 0,
-    "perdon": 0,
-    "totalImpuestos": 4343.94,
-    "comisionesCuota": 0,
-    "seguroVida": 0,
-    "signoImportes": "$"
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
-    "Erroresnegocio": "",
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 269,
         "Estado": "OK",
         "Servicio": "BTPrestamos.ObtenerDetalleCancelacionTotal",
+        "Fecha": "2024-05-07",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Hora": "12:42:48",
         "Canal": "BTDIGITAL"
     }
 }'

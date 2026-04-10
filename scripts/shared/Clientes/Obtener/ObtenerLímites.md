@@ -76,20 +76,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerLimites' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerLimites' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "MINSTALADOR",
-		"Token": "d77f406def4A8B5C60A82434",
-		"Device": "AC"
-	 },
-	 "clienteUId": "61"
-}
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "AC",
+        "Canal": "BTDIGITAL",
+        "Usuario": "MINSTALADOR",
+        "Token": "d77f406def4A8B5C60A82434"
+    },
+    "clienteUId": 61
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -177,79 +177,79 @@ curl -X POST \
 
 @tab JSON
 ```json
- {
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "MINSTALADOR",
-		"Token": "d77f406def4A8B5C60A82434",
-		"Device": "AC"
-	 },
-	"sdtLimites": {
-	  "sBTLimiteCliente": [
-		{
-		  "descripcion": "Línea_Créditos Hipotecarios / $",
-		  "limiteDisponible": "2116165.69",
-		  "limiteOtorgado": "2500000.00",
-		  "limteUtilizado": "383834.30999999994"
-		},
-		{
-		  "descripcion": "Línea_Créditos Comercial PF / $",
-		  "limiteDisponible": "2500000.00",
-		  "limiteOtorgado": "2500000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Línea_Créditos Comercial LP / $",
-		  "limiteDisponible": "2500000.00",
-		  "limiteOtorgado": "2500000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Línea_Firmantes no calificados / $",
-		  "limiteDisponible": "500000.00",
-		  "limiteOtorgado": "500000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Línea_Firmantes AAA / $",
-		  "limiteDisponible": "500000.00",
-		  "limiteOtorgado": "500000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Línea_Firmantes Estado / $",
-		  "limiteDisponible": "500000.00",
-		  "limiteOtorgado": "500000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Total / MN",
-		  "limiteDisponible": "3000000.00",
-		  "limiteOtorgado": "3000000.00",
-		  "limteUtilizado": "0.00"
-		},
-		{
-		  "descripcion": "Total / ME",
-		  "limiteDisponible": "0.00",
-		  "limiteOtorgado": "0.00",
-		  "limteUtilizado": "0.00"
-		}
-	  ]
-	},
+'{
+    "Btinreq": {
+        "Device": "AC",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "d77f406def4A8B5C60A82434"
+    },
+    "sdtLimites": {
+        "sBTLimiteCliente": [
+            {
+                "descripcion": "Línea_Créditos Hipotecarios / $",
+                "limiteDisponible": 2116165.69,
+                "limiteOtorgado": 2500000.00,
+                "limteUtilizado": 383834.30999999994
+            },
+            {
+                "descripcion": "Línea_Créditos Comercial PF / $",
+                "limiteDisponible": 2500000.00,
+                "limiteOtorgado": 2500000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Línea_Créditos Comercial LP / $",
+                "limiteDisponible": 2500000.00,
+                "limiteOtorgado": 2500000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Línea_Firmantes no calificados / $",
+                "limiteDisponible": 500000.00,
+                "limiteOtorgado": 500000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Línea_Firmantes AAA / $",
+                "limiteDisponible": 500000.00,
+                "limiteOtorgado": 500000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Línea_Firmantes Estado / $",
+                "limiteDisponible": 500000.00,
+                "limiteOtorgado": 500000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Total / MN",
+                "limiteDisponible": 3000000.00,
+                "limiteOtorgado": 3000000.00,
+                "limteUtilizado": 0.00
+            },
+            {
+                "descripcion": "Total / ME",
+                "limiteDisponible": 0.00,
+                "limiteOtorgado": 0.00,
+                "limteUtilizado": 0.00
+            }
+        ]
+    },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
-	"Btoutreq": {
-	  "Numero": "10329",
-	  "Estado": "OK",
-	  "Servicio": "BTClientes.ObtenerLimites",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-11-09",
-	  "Hora": "18:15:06",
-	  "Canal": "BTDIGITAL"
-	}
- }
+    "Btoutreq": {
+        "Numero": 10329,
+        "Estado": "OK",
+        "Servicio": "BTClientes.ObtenerLimites",
+        "Requerimiento": 1,
+        "Fecha": "2020-11-09",
+        "Hora": "18:15:06",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

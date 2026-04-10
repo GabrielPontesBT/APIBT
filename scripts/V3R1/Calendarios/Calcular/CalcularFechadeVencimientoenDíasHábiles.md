@@ -87,13 +87,13 @@ curl -X POST \
   -d '{
   "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "INSTALADOR",
       "Token": "573607534CD285A89A23FBEE",
       "Device": "N"
     },
     "sucursalId": "",
-    "plazo": "30",
+    "plazo": 30,
     "fechaInicio": "2020-02-15",
     "tipoVencimiento": "A"
 }'
@@ -138,7 +138,7 @@ curl -X POST \
 { 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Usuario": "INSTALADOR", 
       "Token": "573607534CD285A89A23FBEE", 
       "Device": "N" 
@@ -151,8 +151,8 @@ curl -X POST \
       "Servicio": "BTCalendarios.CalcularFechaVencimientoDiasHabiles", 
       "Fecha": "2021-04-07", 
       "Hora": "17:52:43", 
-      "Requerimiento": "1", 
-      "Numero": "8156", 
+      "Requerimiento": 1, 
+      "Numero": 8156, 
       "Estado": "OK" 
     } 
   }

@@ -78,7 +78,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "432782790CD285A89A23FBEE",
         "Device": ""
@@ -129,7 +129,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "432782790CD285A89A23FBEE",
         "Device": ""
@@ -146,7 +146,7 @@ Código | Descripción
         "Servicio": "BTCuentasVista.ObtenerPeriodoDeAcreditacion",
         "Fecha": "2021-11-01",
         "Hora": "12:40:20",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Numero": 8478,
         "Estado": "OK"
     }

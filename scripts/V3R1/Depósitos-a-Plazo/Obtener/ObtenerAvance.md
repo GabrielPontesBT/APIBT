@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Avance
 breadcrumb: false
 pageInfo: false
@@ -94,12 +94,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "clienteUId": "10003",
-   "depositoUId": "10121"
+   "clienteUId": 10003,
+   "depositoUId": 10121
 }'
 ```
 :::
@@ -147,23 +147,23 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "fechaAlta": "2016-07-29",
    "fechaVencimiento": "2016-08-29",
-   "plazoTranscurrido": "17",
-   "plazoTotal": "31",
-   "porcentajeAvance": "54.84",
+   "plazoTranscurrido": 17,
+   "plazoTotal": 31,
+   "porcentajeAvance": 54.84,
    "Erroresnegocio": {
       "BTErrorNegocio": []
    },
    "Btoutreq": {
-      "Numero": "6689",
+      "Numero": 6689,
       "Estado": "OK",
       "Servicio": "BTDepositosAPlazo.ObtenerAvance",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2019-08-22",
       "Hora": "15:23:05",
       "Canal": "BTDIGITAL"

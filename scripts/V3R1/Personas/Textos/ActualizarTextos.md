@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Textos
 icon: /assets/image/nuevo.svg
 breadcrumb: false
@@ -106,26 +106,27 @@ curl -X POST \
     "Canal": "BTDIGITAL",
     "Usuario": "INSTALADOR",
     "Device": "FC",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Token": "D2868674D8C3483A48324170"
   },
-  "personaUId": "143",
-  "sBTTextoPersona": [
-    {
-      "renglon": "1",
-      "texto": "Rodriguez",
-      "descripcion": "APELLIDO DE CONYUGE:",
-      "codigo": "491"
-    },
-    {
-      "renglon": "1",
-      "texto": "Facundo",
-      "descripcion": "NOMBRE DEL BENEFICIARIO:",
-      "codigo": "11"
-    }
-  ]
-}
-'
+  "personaUId": 143,
+  "sdtTextos": {
+    "sBTTextoPersona": [
+      {
+        "renglon": 1,
+        "texto": "Rodriguez",
+        "descripcion": "APELLIDO DE CONYUGE:",
+        "codigo": 491
+      },
+      {
+        "renglon": 1,
+        "texto": "Facundo",
+        "descripcion": "NOMBRE DEL BENEFICIARIO:",
+        "codigo": 11
+      }
+    ]
+  }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -163,25 +164,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "D2868674D8C3483A48324170"
   },
-  "Erroresnegocio": "",
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
   "Btoutreq": {
-    "Numero": "36634",
+    "Numero": 36634,
     "Estado": "OK",
     "Servicio": "BTPersonas.ActualizarTextos",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Fecha": "2025-11-07",
     "Hora": "15:12:57",
     "Canal": "BTDIGITAL"
   }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Información Financiera
 breadcrumb: false
 pageInfo: false
@@ -138,33 +138,38 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "42",
-	"totalPasivos": "450000.00",
-	"origenRecursos": "C",
-	"totalIngresosMensuales": "550015.00",
-	"egresosMensuales": "380000.00",
-	"otrosIngresosMensuales": "450015.00",
-	"ingresosMensuales": "100000.00",
-	"totalActivos": "950000.00",
+	"personaUId": 42,
 	"sdtInformacionFinanciera": {
+	  "paisOrigenRecursos": "",
 	  "otrosIngresosMensualesDesc": "Alquileres",
-	  "operacionesInternacionales": {
+	  "operacionesInternacionales": [{
 		"tipoProducto": "CDT",
-		"ciudadId": "1465",
+		"moneda": "",
+		"ciudadId": 1465,
 		"nombreEntidad": "Nombre Entidad Prueba",
-		"monto": "884561.00",
+		"monto": 884561.00,
+		"pais": "",
+		"ciudad": "",
 		"operaMonedaExtranjera": "S",
 		"numeroProducto": "AAALLL",
 		"tipoOperacion": "Inversiones",
-		"monedaId": "801",
-		"paisId": "845"
-	 },
-    }
-}'
+		"monedaId": 801,
+		"paisId": 845
+	  }],
+	  "totalPasivos": 450000.00,
+	  "origenRecursos": "C",
+	  "totalIngresosMensuales": 550015.00,
+	  "egresosMensuales": 380000.00,
+	  "otrosIngresosMensuales": 450015.00,
+	  "ingresosMensuales": 100000.00,
+	  "totalActivos": 950000.00,
+	  "paisOrigenRecursosId": ""
+	}
+}''
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -206,15 +211,16 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
+        "Erroresnegocio": {"BTErrorNegocio": []},
         "Btoutreq": {
-          "Numero": "2098",
+          "Numero": 2098,
           "Servicio": "BTPersonas.ActualizarInformacionFinanciera",
           "Estado": "OK",
-          "Requerimiento": "1",
+          "Requerimiento": 1,
           "Fecha": "2020-03-10",
           "Hora": "08:54:28",
           "Canal": "BTDIGITAL"

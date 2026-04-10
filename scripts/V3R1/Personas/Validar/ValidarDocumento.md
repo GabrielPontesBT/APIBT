@@ -89,14 +89,14 @@ curl -X POST \
   -d '{
 	"Btinreq": {
 		"Device": "GZ",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "E1F15D391E5C8FAC4189A627"
 	},
-   "paisDocumentoId":845,
-   "tipoDocumentoId":1,
-   "numeroDocumento":"52116325"
+   "paisDocumentoId": 845,
+   "tipoDocumentoId": 1,
+   "numeroDocumento": "52116325"
 }'
 ```
 :::
@@ -140,10 +140,10 @@ curl -X POST \
 '{
 	"Btinreq": {
 		"Device": "GZ",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "E1F15D391E5C8FAC4189A627"
 	},
    "valido": "S",
    "mensajeValido": "",
@@ -151,12 +151,12 @@ curl -X POST \
        "BTErrorNegocio": []
    },
    "Btoutreq": {
-       "Numero": "835",
+       "Numero": 16884,
        "Estado": "OK",
        "Servicio": "BTPersonas.ValidarDocumento",
-       "Fecha": "2023-12-18",
-       "Requerimiento": "",
-       "Hora": "01:48:53",
+       "Fecha": "2023-10-30",
+       "Requerimiento": 0,
+       "Hora": "15:04:42",
        "Canal": "BTDIGITAL"
    }
 }'

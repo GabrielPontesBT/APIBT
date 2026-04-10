@@ -84,17 +84,17 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Requerimiento": 1,
-          "Device": "GP",
-          "Token": "2772EB28927EAC58EF950EBA",
-          "Usuario": "INSTALADOR",
-          "Canal": "BTDIGITAL"
-        },
-        "operacionUId": 1215,
-        "fechaFencimientoEstado": "",
-        "observaciones": "Cuenta Activa"
-    }'
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "2772EB28927EAC58EF950EBA",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    },
+    "operacionUId": 1215,
+    "fechaFencimientoEstado": "",
+    "observaciones": "Cuenta Activa"
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -133,23 +133,25 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-          "Token": "2772EB28927EAC58EF950EBA",
-          "Canal": "BTDIGITAL",
-          "Device": "GP",
-          "Usuario": "INSTALADOR",
-          "Requerimiento": 1
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Estado": "OK",
-          "Canal": "BTDIGITAL",
-          "Fecha": "2022-12-01",
-          "Servicio": "BTCuentasVista.CambiarEstado",
-          "Hora": "14:44:52",
-          "Numero": 225689,
-          "Requerimiento": 1
-        }
+    "Btinreq": {
+        "Token": "2772EB28927EAC58EF950EBA",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Fecha": "2022-12-01",
+        "Servicio": "BTCuentasVista.CambiarEstado",
+        "Hora": "14:44:52",
+        "Numero": 225689,
+        "Requerimiento": 1
+    }
 }'
 ```
 ::: 

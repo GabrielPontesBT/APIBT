@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Documentos Digitales
 breadcrumb: false
 pageInfo: false
@@ -93,11 +93,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId": "1018",
+	"operacionUId": 1018
 }'
 ```
 :::
@@ -149,29 +149,31 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtDocumentosDigitales": {
-        "sBTDocumentosDigitales": {
-            "Titulo": "PRUEBA GABO",
-            "FechaActualizacion": "2015-01-01",
-            "FechaVencimiento": "",
-            "TipoDocumentoDigital": "Plan de Pagos",
-            "DocumentoId": "265"
-        }
+        "sBTDocumentosDigitales": [
+            {
+                "Titulo": "PRUEBA",
+                "FechaActualizacion": "2015-01-01",
+                "FechaVencimiento": "",
+                "TipoDocumentoDigital": "Plan de Pagos",
+                "DocumentoId": 265
+            }
+        ]
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 823,
+        "Numero": 12028,
         "Estado": "OK",
         "Servicio": "BTDepositosAPlazo.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
-        "Fecha": "2018-11-12",
-        "Hora": "17:47:27",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-23",
+        "Hora": "12:50:30",
         "Canal": "BTDIGITAL"
     }
 }'

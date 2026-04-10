@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Tipo de Persona
 breadcrumb: false
 pageInfo: false
@@ -85,12 +85,13 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "personaUId": "61"
+    "personaUId": 61
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -132,7 +133,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -141,12 +142,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "7882",
+        "Numero": 7881,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerTipoDePersona",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2019-01-10",
-        "Hora": "10:18:48",
+        "Hora": "10:11:44",
         "Canal": "BTDIGITAL"
     }
 }'

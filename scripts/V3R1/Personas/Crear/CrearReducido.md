@@ -155,20 +155,19 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "personaUId":"2",
    "sdtPersona": {
-      "nroDocumento": 7896328,
+      "nroDocumento": "7896328",
       "estadoCivil": "",
       "segundoNombre": "Carlos",
       "fechaInicioActividad": "2023-09-26",
       "fechaVencimiento": "2024-09-26",
       "segundoApellido": "Gimenez",
       "fechaNacimiento": "1998-09-26",
-      "telefonoCelular": 25874532,
+      "telefonoCelular": "025874532",
       "tipoDocumentoId": 1,
       "actividadLaboral": "",
       "clasificacionInternaId": 2,
@@ -176,7 +175,7 @@ curl -X POST \
       "primerNombre": "Luis",
       "clasificacionInterna": "",
       "paisDocumentoId": 845,
-      "telefonoFijo": 874525,
+      "telefonoFijo": "874525",
       "primerApellido": "Gonzales",
       "ocupacion": "",
       "sector": "",
@@ -185,7 +184,7 @@ curl -X POST \
       "nacionalidad": "",
       "sueldo": 7845,
       "domicilios": {
-         "sBTDomicilioCompleto": {
+         "sBTDomicilioCompleto": [{
             "agrupador1Id": 1,
             "coloniaId": 3,
             "departamento": "",
@@ -206,7 +205,7 @@ curl -X POST \
             "tipoVivienda": "",
             "pais": "",
             "agrupador2Id": 2,
-            "codigoPostal": 7852,
+            "codigoPostal": "7852",
             "tipoViviendaId": 1,
             "agrupador4Id": 1,
             "barrioId": 2,
@@ -214,7 +213,7 @@ curl -X POST \
             "localidadId": 2,
             "tipoDomicilioId": 1,
             "departamentoId": 1
-         }
+         }]
       },
       "correoElectronico": "juanLui@mail.com",
       "sectorId": 2,
@@ -266,7 +265,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -275,12 +274,12 @@ curl -X POST \
        "BTErrorNegocio": []
    },
    "Btoutreq": {
-       "Numero": "835",
+       "Numero": 228443,
        "Estado": "OK",
-       "Servicio": "BTPersonas.CrearReducidoResponse",
-       "Fecha": "2017-12-18",
-       "Requerimiento": "",
-       "Hora": "01:48:53",
+       "Servicio": "BTPersonas.CrearReducido",
+       "Fecha": "2023-10-27",
+       "Requerimiento": 0,
+       "Hora": "11:12:09",
        "Canal": "BTDIGITAL"
    }
 }'

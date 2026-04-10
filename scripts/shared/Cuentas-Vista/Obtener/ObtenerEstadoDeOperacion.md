@@ -78,20 +78,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerEstadoDeOperacion' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	 "Btinreq": {
-         "Canal": "BTDIGITAL",
-         "Token": "fa2c02c95a4A8B5C60A76209",
-         "Usuario": "INSTALADOR",
-         "Requerimiento": 1,
-         "Device": 1
-      },
-      "operacionUId": 150
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerEstadoDeOperacion' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Token": "844919B7576C42C91062EBB4",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Device": "1"
+    },
+    "operacionUId": 210
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -134,33 +134,31 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "fa2c02c95a4A8B5C60A76209"
-   },
-   "sdtEstadoOperacion": {
-      "sBTEstadoOperacion": {
-         "descripcion": "Normal",
-         "permiteOperar": "S",
-         "codigo": 0
-      }
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": 20535,
-      "Servicio": "BTCuentasVista.ObtenerEstadoDeOperacion",
-      "Estado": "OK",
-      "Fecha": "2024-05-20",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Hora": "11:42:12"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "844919B7576C42C91062EBB4"
+    },
+    "sdtEstadoOperacion": {
+        "descripcion": "Normal",
+        "permiteOperar": "S",
+        "codigo": 0
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 20534,
+        "Servicio": "BTCuentasVista.ObtenerEstadoDeOperacion",
+        "Estado": "OK",
+        "Fecha": "2024-05-20",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Hora": "09:22:42"
+    }
 }'
 ```
 ::: 

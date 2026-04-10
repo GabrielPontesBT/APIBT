@@ -88,15 +88,15 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Device": "papa",
-          "Usuario": "INSTALADOR",
-          "Token": "A917FB55555C334FB65C4E0C"
-        },
-        "productoUId": 187
-      }'
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "papa",
+        "Usuario": "INSTALADOR",
+        "Token": "A917FB55555C334FB65C4E0C"
+    },
+    "productoUId": 187
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -140,29 +140,31 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-        "Btinreq": {
-          "Requerimiento": 0,
-          "Device": "papa",
-          "Usuario": "INSTALADOR",
-          "Token": "A917FB55555C334FB65C4E0C",
-          "Canal": "BTDIGITAL"
-        },
-        "empresa": 1,
-        "modulo": 101,
-        "tipoOperacion": 3,
-        "moneda": 0,
-        "papel": 50,
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Requerimiento": 0,
-          "Estado": "OK",
-          "Fecha": "2022-10-27",
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTContabilidad.ObtenerIdBantotalProducto",
-          "Hora": "14:46:26",
-          "Numero": 225416
-        }
-      }'
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Device": "papa",
+        "Usuario": "INSTALADOR",
+        "Token": "A917FB55555C334FB65C4E0C",
+        "Canal": "BTDIGITAL"
+    },
+    "empresaId": 1,
+    "moduloId": 101,
+    "tipoOperacionBT": 3,
+    "monedaId": 0,
+    "papelId": 50,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Requerimiento": 0,
+        "Estado": "OK",
+        "Fecha": "2022-10-27",
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTContabilidad.ObtenerIdBantotalProducto",
+        "Hora": "14:46:26",
+        "Numero": 225416
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

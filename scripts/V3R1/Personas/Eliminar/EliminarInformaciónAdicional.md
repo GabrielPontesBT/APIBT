@@ -1,4 +1,4 @@
----
+﻿---
 title: Eliminar Información Adicional
 breadcrumb: false
 pageInfo: false
@@ -92,14 +92,14 @@ curl -X POST \
 	  "Usuario": "INSTALADOR",
 	  "Token": "e2db881814CD285A89A23FBE",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 0
 	},
 	"personaUId": 12217,
         "sdtInformacionAdicional": {
-          "sBTDatoLista": {
+          "sBTDatoLista": [{
             "clave": "SCORE",
             "valor": ""
-          }
+          }]
         }
 }'
 ```
@@ -139,25 +139,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
+'{ 
    "Btinreq": { 
-      "Device": "1", 
-      "Usuario": "MINSTALADOR", 
-      "Token": "16c1cFC33CD93505A5382434", 
+      "Device": "GZ", 
+      "Usuario": "INSTALADOR", 
+      "Token": "e2db881814CD285A89A23FBE", 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1" 
+      "Requerimiento": 0 
    }, 
-
+   "Erroresnegocio": {
+      "BTErrorNegocio": []
+   },
    "Btoutreq": { 
-      "Numero": "111399", 
+      "Numero": 589696, 
       "Estado": "OK", 
       "Servicio": "BTPersonas.EliminarInformacionAdicional", 
-      "Requerimiento": "1", 
+      "Requerimiento": 0, 
       "Fecha": "2023-10-10", 
       "Canal": "BTDIGITAL", 
-      "Hora": "12:21:52" 
+      "Hora": "17:40:47" 
    }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

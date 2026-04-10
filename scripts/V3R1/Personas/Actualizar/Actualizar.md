@@ -190,20 +190,20 @@ curl -X POST \
 	"Btinreq": {
           "Device": "AS",
           "Usuario": "INSTALADOR",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Canal": "BTDIGITAL",
           "Token": "571F9E08C47490ACEBE3A263"
         },
         "personaUId": 219,
         "sdtPersona": {
-          "nroDocumento": 13348799,
+          "nroDocumento": "13348799",
           "estadoCivil": "Soltero/a",
           "segundoNombre": "Batista",
           "fechaInicioActividad": "2021-03-15",
           "fechaVencimiento": "2045-01-01",
           "segundoApellido": "Rodriguez",
           "fechaNacimiento": "1890-01-20",
-          "telefonoCelular": 99876531,
+          "telefonoCelular": "099876531",
           "tipoDocumentoId": 1,
           "actividadLaboral": "92410 Actividades deportivas",
           "clasificacionInternaId": 1,
@@ -211,7 +211,7 @@ curl -X POST \
           "clasificacionInterna": "",
           "primerNombre": "JULIO",
           "paisDocumentoId": 845,
-          "telefonoFijo": 24044040,
+          "telefonoFijo": "24044040",
           "primerApellido": "ALVAREZ",
           "ocupacion": "Pensionado",
           "sector": "",
@@ -221,7 +221,7 @@ curl -X POST \
           "nacionalidad": "URUGUAY", 
           "comentarioCorreo": "Correo Personal",
           "domicilios": {
-            "sBTDomicilioCompleto": {
+            "sBTDomicilioCompleto": [{
               "coloniaId": 1,
               "agrupador1Id": 3,
               "agrupador5": "",
@@ -230,8 +230,8 @@ curl -X POST \
               "agrupador3Id": 1,
               "detalleUbicacion": "ENFRENTE A PANADERIA",
               "barrio": "",
-              "agrupador3": 4,
-              "agrupador2": 1190,
+              "agrupador3": "4",
+              "agrupador2": "1190",
               "agrupador1": "Maldonado",
               "agrupador5Id": "",
               "tipoDomicilio": "",
@@ -242,7 +242,7 @@ curl -X POST \
               "tipoVivienda": "Inquilino",
               "pais": "",
               "agrupador2Id": 1,
-              "codigoPostal": 19870,
+              "codigoPostal": "19870",
               "tipoViviendaId": 2,
               "agrupador4Id": 1,
               "barrioId": 140,
@@ -250,12 +250,12 @@ curl -X POST \
               "localidad": "Montevideo",
               "tipoDomicilioId": 1,
               "departamentoId": 10
-            }
+            }]
           },
           "datosAdicionales": {
-            "sBTDatoAdicional": {
+            "sBTDatoAdicional": [{
               "detalle": ""
-            }
+            }]
           },
           "correoElectronico": "JULIOB@GMAIL.COM",
           "sectorId": 1,
@@ -264,8 +264,7 @@ curl -X POST \
           "nacionalidadId": 845,
           "estadoCivilId": 1
         }
-      }
-    }
+      }'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -307,16 +306,16 @@ curl -X POST \
 	"Btinreq": {
           "Device": "AS",
           "Usuario": "INSTALADOR",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Canal": "BTDIGITAL",
           "Token": "571F9E08C47490ACEBE3A263"
         },
-        "Erroresnegocio": "",
+        "Erroresnegocio": {"BTErrorNegocio": []},
         "Btoutreq": {
           "Numero": 35461,
           "Estado": "OK",
           "Servicio": "BTPersonas.Actualizar",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Fecha": "2025-05-20",
           "Canal": "BTDIGITAL",
           "Hora": "09:35:42"

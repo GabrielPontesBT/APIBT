@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Personas
 breadcrumb: false
 pageInfo: false
@@ -91,7 +91,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -191,11 +191,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -203,68 +203,55 @@ curl -X POST \
 		"sBTPersonaBusqueda": [
 			{
 				"segundoApellido": "SZENTANDRASI",
-				"nroDocumento": "43496418",
+				"nroDocumento": "27573084",
 				"primerApellido": "VAZQUEZ",
 				"pais": "URUGUAY",
-				"tipoDocumentoId": "1",
+				"tipoDocumentoId": 1,
 				"tipoDocumento": "Cédula Identidad",
 				"primerNombre": "ALEJANDRO",
 				"segundoNombre": "",
-				"fechaNacimiento": "1976-02-26",
-				"personaUId": "23",
-				"paisId": "845"
+				"fechaNacimiento": "1956-02-26",
+				"personaUId": 43,
+				"paisId": 845
 			},
 			{
 				"segundoApellido": "SZENTANDRASI",
-				"nroDocumento": "43496419",
+				"nroDocumento": "11380673",
 				"primerApellido": "VAZQUEZ",
 				"pais": "URUGUAY",
-				"tipoDocumentoId": "1",
+				"tipoDocumentoId": 1,
 				"tipoDocumento": "Cédula Identidad",
 				"primerNombre": "ALEJANDRO",
 				"segundoNombre": "",
-				"fechaNacimiento": "1976-02-26",
-				"personaUId": "46",
-				"paisId": "845"
+				"fechaNacimiento": "1966-02-26",
+				"personaUId": 44,
+				"paisId": 845
 			},
 			{
 				"segundoApellido": "SZENTANDRASI",
-				"nroDocumento": "27511184",
+				"nroDocumento": "27512189",
 				"primerApellido": "VAZQUEZ",
 				"pais": "URUGUAY",
-				"tipoDocumentoId": "1",
+				"tipoDocumentoId": 1,
 				"tipoDocumento": "Cédula Identidad",
 				"primerNombre": "ALEJANDRO",
 				"segundoNombre": "",
 				"fechaNacimiento": "1976-02-26",
-				"personaUId": "21",
-				"paisId": "845"
-			},
-			{
-				"segundoApellido": "SZENTANDRASI",
-				"nroDocumento": "27510189",
-				"primerApellido": "VAZQUEZ",
-				"pais": "URUGUAY",
-				"tipoDocumentoId": "1",
-				"tipoDocumento": "Cédula Identidad",
-				"primerNombre": "ALEJANDRO",
-				"segundoNombre": "",
-				"fechaNacimiento": "1976-02-26",
-				"personaUId": "49",
-				"paisId": "845"
+				"personaUId": 48,
+				"paisId": 845
 			},
 			{
 				"segundoApellido": "SZENTANDRASI",
 				"nroDocumento": "27510989",
 				"primerApellido": "VAZQUEZ",
 				"pais": "URUGUAY",
-				"tipoDocumentoId": "1",
+				"tipoDocumentoId": 1,
 				"tipoDocumento": "Cédula Identidad",
 				"primerNombre": "ALEJANDRO",
 				"segundoNombre": "",
-				"fechaNacimiento": "1976-02-26",
-				"personaUId": "50",
-				"paisId": "845"
+				"fechaNacimiento": "1986-02-26",
+				"personaUId": 50,
+				"paisId": 845
 			}
 		]
 	},
@@ -272,15 +259,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8396,
+        "Numero": 8477,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerPersonas",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Requerimiento": 1,
+        "Fecha": "2019-05-08",
+        "Hora": "16:54:26",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

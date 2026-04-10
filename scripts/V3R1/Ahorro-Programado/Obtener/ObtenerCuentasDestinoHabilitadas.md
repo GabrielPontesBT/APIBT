@@ -100,7 +100,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -186,7 +186,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -195,15 +195,15 @@ curl -X POST \
             {
                 "tipoProducto": "CA",
                 "estado": "Normal",
-                "subCuenta": "Mi account 1",
-                "operacionUId": "21",
-                "saldo": "10000000.00",
+                "subcuenta": "Mi account 1",
+                "operacionUId": 21,
+                "saldo": 10000000.00,
                 "idOperacionFmt": "000000028_001",
                 "idOperacionBT": "0010010210000000000000028001000000000001",
                 "producto": {
                     "papel": "",
                     "moneda": "$",
-                    "productoUId": "0",
+                    "productoUId": 0,
                     "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
                 },
                 "sucursal": "Casa Matriz"
@@ -211,15 +211,15 @@ curl -X POST \
             {
                 "tipoProducto": "CA",
                 "estado": "Normal",
-                "subCuenta": "Mi account 2",
-                "operacionUId": "81",
-                "saldo": "0.00",
+                "subcuenta": "Mi account 2",
+                "operacionUId": 81,
+                "saldo": 0.00,
                 "idOperacionFmt": "000000028_002",
                 "idOperacionBT": "0010010210000000000000028002000000000001",
                 "producto": {
                     "papel": "",
                     "moneda": "$",
-                    "productoUId": "0",
+                    "productoUId": 0,
                     "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
                 },
                 "sucursal": "Casa Matriz"
@@ -230,11 +230,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "404",
+        "Numero": 404,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "11:57:10",
         "Canal": "BTDIGITAL"
     }

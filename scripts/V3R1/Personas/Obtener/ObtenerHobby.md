@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Hobby
 breadcrumb: false
 pageInfo: false
@@ -81,7 +81,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
@@ -128,30 +128,31 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
    "sBTHobby": {
-      "codigo": "24",
+      "codigo": 24,
       "descripcion": "Football"
    },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
+        "Numero": 8856,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerHobby",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
+        "Requerimiento": 1,
+        "Fecha": "2022-05-31",
+        "Hora": "16:03:29",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

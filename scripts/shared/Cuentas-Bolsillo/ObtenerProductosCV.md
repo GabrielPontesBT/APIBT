@@ -77,18 +77,18 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductosCV' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductosCV' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "CC6345192D8633F531F01D1D"
+    },
     "operacionUId": 904
 }'
 ```
@@ -165,56 +165,64 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "CC6345192D8633F531F01D1D"
     },
     "sdtProductos": {
         "sBTProducto": [
-        {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 512,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
-        },
-        {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 511,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro"
-        },
-        {
-            "moneda": "USD",
-            "papel": "$",
-            "productoUId": 531,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro"
-        },
-        {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 451,
-            "nombre": ","
-        },
-        {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 532,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes"
-        }
+            {
+                "moneda": "$",
+                "papel": "$",
+                "productoUId": 512,
+                "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
+                "otrosConceptos": ""
+            },
+            {
+                "moneda": "$",
+                "papel": "$",
+                "productoUId": 511,
+                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+                "otrosConceptos": ""
+            },
+            {
+                "moneda": "USD",
+                "papel": "$",
+                "productoUId": 531,
+                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+                "otrosConceptos": ""
+            },
+            {
+                "moneda": "$",
+                "papel": "$",
+                "productoUId": 451,
+                "nombre": ",",
+                "otrosConceptos": ""
+            },
+            {
+                "moneda": "$",
+                "papel": "$",
+                "productoUId": 532,
+                "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
+                "otrosConceptos": ""
+            }
         ]
     },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 228483,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.ObtenerProductosCV",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Requerimiento": 0,
+        "Fecha": "2023-11-01",
+        "Hora": "08:52:59",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

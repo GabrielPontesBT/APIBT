@@ -210,7 +210,7 @@ curl -X POST \
          "Numero": "15848",
          "Estado": "OK",
          "Servicio": "BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo",
-         "Requerimiento": "",
+         "Requerimiento": 1,
          "Fecha": "2025-11-25",
          "Hora": "09:17:26",
          "Canal": "BTDIGITAL"

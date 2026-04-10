@@ -69,17 +69,18 @@ No aplica.
 
 @tab JSON
 ```json
-curl -X GET \
-   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerCodigosDeLimites' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -d '{
-   "Btinreq": {
-        "Device": "AC",
-        "Usuario": "BANTOTAL",
-        "Requerimiento": "1",
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerCodigosDeLimites' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Token": "352296800F955E77534D3E02"
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "352296800F955E77534D3E02",
+        "Device": "AC"
     }
 }'
 ```
@@ -156,66 +157,65 @@ curl -X GET \
 
 @tab JSON
 ```json
-{ 
-	"Btinreq": { 
-        "Device": "AC", 
-        "Usuario": "BANTOTAL", 
-        "Requerimiento": "1", 
-        "Canal": "BTDIGITAL", 
-        "Token": "352296800F955E77534D3E02" 
-    }, 
-	"sdtLimites": { 
-		"sBTLimiteTarjeta": [ 
-		  { 
-			"identificador": "1", 
-			"moneda": "0", 
-			"limiteEMV": "30000.00", 
-			"limiteBandaMagnetica": "15000.00", 
-			"limiteNoPresencial": "10000.00" 
-		  }, 
-		  { 
-			"identificador": "2", 
-			"moneda": "0", 
-			"limiteEMV": "12850.00", 
-			"limiteBandaMagnetica": "13000.00", 
-			"limiteNoPresencial": "8000.00" 
-		  }, 
-		  { 
-			"identificador": "3", 
-			"moneda": "0", 
-			"limiteEMV": "0.00", 
-			"limiteBandaMagnetica": "30000.00", 
-			"limiteNoPresencial": "0.00" 
-		  }, 
-		  { 
-			"identificador": "4", 
-			"moneda": "0", 
-			"limiteEMV": "0.00", 
-			"limiteBandaMagnetica": "30000.00", 
-			"limiteNoPresencial": "10000.00" 
-		  }, 
-		  { 
-			"identificador": "5", 
-			"moneda": "0", 
-			"limiteEMV": "50000.00", 
-			"limiteBandaMagnetica": "30000.00", 
-			"limiteNoPresencial": "10000.00" 
-		  } 
-		] 
-	} 
-    , 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-	"Btoutreq": { 
-		"Canal": "BTDIGITAL", 
-		"Servicio": "BTTarjetasDeDebito.ObtenerCodigosDeLimites", 
-		"Fecha": "2020-11-12", 
-		"Hora": "16:55:23", 
-		"Requerimiento": "1", 
-		"Numero": "7833", 
-		"Estado": "OK" 
-	} 
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "352296800F955E77534D3E02",
+        "Device": "AC"
+    },
+    "sdtLimites": {
+        "sBTLimiteTarjeta": [
+            {
+                "identificador": 1,
+                "moneda": 0,
+                "limiteEMV": 30000.00,
+                "limiteBandaMagnetica": 15000.00,
+                "limiteNoPresencial": 10000.00
+            },
+            {
+                "identificador": 2,
+                "moneda": 0,
+                "limiteEMV": 12850.00,
+                "limiteBandaMagnetica": 13000.00,
+                "limiteNoPresencial": 8000.00
+            },
+            {
+                "identificador": 3,
+                "moneda": 0,
+                "limiteEMV": 0.00,
+                "limiteBandaMagnetica": 30000.00,
+                "limiteNoPresencial": 0.00
+            },
+            {
+                "identificador": 4,
+                "moneda": 0,
+                "limiteEMV": 0.00,
+                "limiteBandaMagnetica": 30000.00,
+                "limiteNoPresencial": 10000.00
+            },
+            {
+                "identificador": 5,
+                "moneda": 0,
+                "limiteEMV": 50000.00,
+                "limiteBandaMagnetica": 30000.00,
+                "limiteNoPresencial": 10000.00
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTTarjetasDeDebito.ObtenerCodigosDeLimites",
+        "Fecha": "2020-11-12",
+        "Hora": "16:55:23",
+        "Requerimiento": 1,
+        "Numero": 7833,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

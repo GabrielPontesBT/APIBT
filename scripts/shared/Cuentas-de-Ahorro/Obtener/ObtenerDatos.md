@@ -85,7 +85,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -161,7 +161,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -202,7 +202,7 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTCuentasDeAhorro.ObtenerDatos",
         "Fecha": "2017-12-18",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "10:43:47",
         "Canal": "BTDIGITAL"
     }

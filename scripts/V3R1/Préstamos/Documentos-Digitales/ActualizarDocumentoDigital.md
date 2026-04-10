@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Documento Digital
 breadcrumb: false
 pageInfo: false
@@ -107,7 +107,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -159,7 +159,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -170,7 +170,7 @@ curl -X POST \
         "Numero": 872,
         "Estado": "OK",
         "Servicio": "BTPrestamos.ActualizarDocumentoDigital",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2018-11-13",
         "Hora": "13:02:09",
         "Canal": "BTDIGITAL"

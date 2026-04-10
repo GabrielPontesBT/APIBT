@@ -72,7 +72,7 @@ No aplica.
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1518870407CD285A89A23FBE",
         "Device": ""
@@ -128,7 +128,7 @@ No aplica.
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1518870407CD285A89A23FBE",
         "Device": ""
@@ -153,7 +153,7 @@ No aplica.
         "Servicio": "BTTarjetasDeDebito.ObtenerTiposDeCuenta",
         "Fecha": "2021-10-29",
         "Hora": "13:37:58",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Numero": 8449,
         "Estado": "OK"
     }

@@ -112,22 +112,22 @@ curl -X POST \
   -d '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "BANTOTAL",
 	  "Token": "1820366692F955E77534D3E0",
 	  "Device": "AC"
 	},
-	"operacionUId": "10176",
-	"chequeraId": "21",
+	"operacionUId": 10176,
+	"chequeraId": 21,
 	"tipoDenunciante": "A",
 	"tipoDenuncia": "E",
 	"motivoDenuncia": "P",
 	"sdtCheques": {
-	  "sBTCheque": {
-		"numero": "1327",
-		"estado": "1",
+	  "sBTCheque": [{
+		"numero": 1327,
+		"estado": 1,
 		"descripcion": "Prueba"
-	  }
+	  }]
 	}
 }'
 ```
@@ -170,19 +170,19 @@ curl -X POST \
 '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "BANTOTAL",
 	  "Token": "1820366692F955E77534D3E0",
 	  "Device": "AC"
 	},
-	"numeroDenuncia": "2",
+	"numeroDenuncia": 2,
 	"Btoutreq": {
 	  "Canal": "BTDIGITAL",
 	  "Servicio": "BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques",
 	  "Fecha": "2020-11-13",
 	  "Hora": "11:47:13",
-	  "Requerimiento": "1",
-	  "Numero": "7899",
+	  "Requerimiento": 1,
+	  "Numero": 7899,
 	  "Estado": "NEG_ERROR"
 	}
 }'

@@ -79,19 +79,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"codigo": "50",
-	"correlativo": "1"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase?ObtenerCorrelativoGuia' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL",
+        "Token": "43f21ff61cCD285A89A23FBE",
+        "Requerimiento": 1,
+        "Device": "1"
+    },
+    "codigo": 50,
+    "correlativo": 1
 }'
 ```
 :::
@@ -137,28 +138,31 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtCorrelativo": {
-	  "descripcion": "Depósitos Efectivo Ctas Vista",
-	  "importeEspecifico": "5.00",
-	  "valorEspecifico": "50",
-	  "correlativo": "1"
-	},
-	"Btoutreq": {
-	  "Numero": "593",
-	  "Servicio": "BTParametrosBase.ObtenerCorrelativoGuia",
-	  "Estado": "OK",
-	  "Fecha": "2020-03-11",
-	  "Requerimiento": "1",
-	  "Hora": "11:51:13",
-	  "Canal": "BTDIGITAL"
-	}
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "43f21ff61cCD285A89A23FBE"
+    },
+    "sdtCorrelativo": {
+        "descripcion": "Depósitos Efectivo Ctas Vista",
+        "importeEspecifico": 5.00,
+        "valorEspecifico": 50,
+        "correlativo": 1
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 593,
+        "Servicio": "BTParametrosBase.ObtenerCorrelativoGuia",
+        "Estado": "OK",
+        "Fecha": "2020-03-11",
+        "Requerimiento": 1,
+        "Hora": "11:51:13",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

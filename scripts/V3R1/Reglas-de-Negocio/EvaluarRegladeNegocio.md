@@ -1,4 +1,4 @@
----
+﻿---
 title: Evaluar Regla de Negocio
 breadcrumb: false
 pageInfo: false
@@ -91,18 +91,18 @@ curl -X POST \
     -d '{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
-    "reglaId": "4",
+    "reglaId": 4,
     "sdtVariables": {
-        "sBTVariable": {
+        "sBTVariable": [{
             "valor": "S",
             "nombre": "CHECKAUX2"
-        },
-    },
+        }]
+    }
 }'
 ```
 :::
@@ -143,28 +143,29 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "c2cfd09eff4A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
     "resultado": "VERDADERO",
     "retorno": "3",
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "44659",
+        "Numero": 44659,
         "Estado": "OK",
         "Servicio": "BTReglasNegocio.EvaluarReglaNegocio",
         "Fecha": "2022-06-02",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "10:27:36",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

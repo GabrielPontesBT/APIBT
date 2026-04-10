@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuariosParaPerfil' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuariosParaPerfil' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "20130357454A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "20130357454A8B5C60A82434",
+        "Device": "GP"
     },
-    "perfil": "CAJERO",
+    "usuario": "CAJERO"
 }'
 ```
 :::
@@ -159,60 +159,61 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "GP", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": "1", 
-        "Canal": "BTDIGITAL", 
-        "Token": "c2cfd09eff4A8B5C60A82434" 
-    }, 
-    "sdtUsuarios": { 
-        "sBTDetalleUsuario": [ 
-        { 
-            "empresa": "1", 
-            "usuario": "GERENTE", 
-            "nombre": "GERENTE", 
-            "ultimoAvisoActividad": "2018-03-21, 12:51:10" 
-        }, 
-        { 
-            "empresa": "1 - BTV2R3 Uruguay", 
-            "usuario": "BANTOTAL", 
-            "nombre": "BANTOTAL", 
-            "ultimoAvisoActividad": "2022-05-26, 13:46:09" 
-        }, 
-        { 
-            "empresa": "1", 
-            "usuario": "COLOCACION", 
-            "nombre": "COLOCACION", 
-            "ultimoAvisoActividad": "2018-02-26, 17:03:16" 
-        }, 
-        { 
-            "empresa": "1", 
-            "usuario": "CAJERO", 
-            "nombre": "CAJERO", 
-            "ultimoAvisoActividad": "2022-05-26, 13:40:24" 
-        }, 
-        { 
-            "empresa": "1", 
-            "usuario": "OPERADOR", 
-            "nombre": "OPERADOR", 
-            "ultimoAvisoActividad": "2001-01-01, 15:29:13" 
-        } 
-        ] 
-    }, 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Numero": "839", 
-        "Estado": "OK", 
-        "Servicio": "BTPersonas.ObtenerUsuariosParaPerfil", 
-        "Requerimiento": "1", 
-        "Fecha": "2022-05-12", 
-        "Hora": "15:35:54", 
-        "Canal": "BTDIGITAL" 
-    } 
-}
+'{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "MINSTALADOR",
+        "Token": "c2cfd09eff4A8B5C60A82434",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "sdtUsuarios": {
+        "sBTDetalleUsuario": [
+            {
+                "empresa": 1,
+                "usuario": "GERENTE",
+                "nombre": "GERENTE",
+                "ultimoAvisoActividad": "2018-03-21, 12:51:10"
+            },
+            {
+                "empresa": "1 - BTV2R3 Uruguay",
+                "usuario": "BANTOTAL",
+                "nombre": "BANTOTAL",
+                "ultimoAvisoActividad": "2022-05-26, 13:46:09"
+            },
+            {
+                "empresa": 1,
+                "usuario": "COLOCACION",
+                "nombre": "COLOCACION",
+                "ultimoAvisoActividad": "2018-02-26, 17:03:16"
+            },
+            {
+                "empresa": 1,
+                "usuario": "CAJERO",
+                "nombre": "CAJERO",
+                "ultimoAvisoActividad": "2022-05-26, 13:40:24"
+            },
+            {
+                "empresa": 1,
+                "usuario": "OPERADOR",
+                "nombre": "OPERADOR",
+                "ultimoAvisoActividad": "2001-01-01, 15:29:13"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 16576,
+        "Hora": "12:36:58",
+        "Fecha": "2022-05-26",
+        "Servicio": "BTPersonas.ObtenerUsuariosParaPerfil",
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

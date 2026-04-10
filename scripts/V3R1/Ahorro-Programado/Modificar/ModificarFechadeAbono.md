@@ -93,7 +93,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -142,7 +142,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -150,11 +150,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "406",
+        "Numero": 406,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ModificarFechaDeAbono",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "13:24:23",
         "Canal": "BTDIGITAL"
     }

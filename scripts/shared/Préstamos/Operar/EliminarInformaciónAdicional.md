@@ -83,25 +83,25 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "e2db881814CD285A89A23FBE",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	 "operacionUId": 202,
-        "sdtInformacionAdicional": {
-          "sBTDatoLista": {
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "e2db881814CD285A89A23FBE"
+    },
+    "operacionUId": 2,
+    "sdtInformacionAdicional": {
+        "sBTDatoLista": {
             "clave": "CUENTA_ST",
             "valor": ""
-          }
         }
+    }
 }'
 ```
 :::
@@ -140,24 +140,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-      "Device": "1", 
-      "Usuario": "INSTALADOR", 
-      "Token": "e2db881814CD285A89A23FBE", 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": "1" 
-   }, 
-
-   "Btoutreq": { 
-      "Numero": "111399", 
-      "Estado": "OK", 
-      "Servicio": "BTPrestamos.EliminarInformacionAdicional", 
-      "Requerimiento": "1", 
-      "Fecha": "2023-10-11", 
-      "Canal": "BTDIGITAL", 
-      "Hora": "17:08:56" 
-   }
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "e2db881814CD285A89A23FBE"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 589871,
+        "Estado": "OK",
+        "Servicio": "BTPrestamos.EliminarInformacionAdicional",
+        "Fecha": "2023-10-11",
+        "Requerimiento": 0,
+        "Hora": "08:55:31",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

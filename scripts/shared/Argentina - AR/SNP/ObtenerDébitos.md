@@ -100,7 +100,7 @@ curl -X POST \
 		"Btinreq": {
 			"Device": "AC",
 			"Usuario": "BANTOTAL",
-			"Requerimiento": "",
+			"Requerimiento": 1,
 			"Canal": "BTDIGITAL",
 			"Token": "7649e27cf5F955E77534D3E0"
 		},
@@ -168,7 +168,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "7649e27cf5F955E77534D3E0"
     },
@@ -198,7 +198,7 @@ curl -X POST \
         "Servicio": "BTSNP.ConsultarDebitos",
         "Estado": "OK",
         "Fecha": "2021-06-17",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Hora": "17:46:44"
     }

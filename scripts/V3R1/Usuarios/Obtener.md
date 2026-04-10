@@ -84,7 +84,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AC",
 		"Usuario": "BANTOTAL",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "2062732190F955E77534D3E0"
 	},
@@ -166,7 +166,7 @@ curl -X POST \
 '{
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "BANTOTAL",
         "Token": "2062732190F955E77534D3E0",
         "Device": "AC"
@@ -217,7 +217,7 @@ curl -X POST \
         "Servicio": "BTUsuarios.Obtener",
         "Fecha": "2019-11-19",
         "Hora": "17:21:59",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Numero": 6992,
         "Estado": "OK"
     }

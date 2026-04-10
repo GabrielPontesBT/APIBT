@@ -96,7 +96,7 @@ curl -X POST \
     },
     "paisId": 604,
     "tipoDocumentoId": 1,
-    "numeroDocumento": 10587456
+    "numeroDocumento": "10587456"
     }'
 ```
 :::
@@ -145,7 +145,9 @@ curl -X POST \
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     "existe": "S",
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
         "Numero": 249703,
         "Estado": "OK",

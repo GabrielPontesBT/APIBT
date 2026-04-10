@@ -79,21 +79,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerCondicionImpositiva=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerCondicionImpositiva' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  	"Btinreq": {
-		"Device": "GZ",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "2081397563CD285A89A23FBE"
-	},
-	"personaUId": 202,
-	"codigoImpuesto": 1,
-  }'
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "E1F15D391E5C8FAC4189A627"
+    },
+    "personaUId": 202,
+    "codigoImpuesto": 1
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -132,27 +132,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "761768101CD285A89A23FBEE",
-	  "Device": "GP"
-	},
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "E1F15D391E5C8FAC4189A627"
+    },
     "codigoCondicion": 1,
-	"Erroresnegocio": {
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTContabilidad.ObtenerCondicionImpositiva",
-	  "Fecha": "2021-02-05",
-	  "Hora": "13:37:57",
-	  "Requerimiento": "1",
-	  "Numero": "7984",
-	  "Estado": "OK"
-	}
-}
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 16883,
+        "Estado": "OK",
+        "Servicio": "BTContabilidad.ObtenerCondicionImpositiva",
+        "Requerimiento": 0,
+        "Fecha": "2023-10-30",
+        "Hora": "14:20:13",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

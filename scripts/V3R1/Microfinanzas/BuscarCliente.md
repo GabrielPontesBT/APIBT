@@ -1,4 +1,4 @@
----
+﻿---
 title: Buscar Cliente
 breadcrumb: false
 pageInfo: false
@@ -92,12 +92,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "paisDocumento": "320",
-        "tipoDocumento": "1",
+        "paisDocumentoId": 320,
+        "tipoDocumentoId": 1,
         "numeroDocumento": "2131248150408"
 }'
 ```
@@ -151,29 +151,34 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "sBTCuentasCliente": {
-          "Cuenta": {
-            "clienteUId": "2",
-            "titularidad": {
-              "identificador": "1",
-              "descripcion": "Titular"
-            },
-            "representativo": "S"
-          }
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.BuscarCliente",
-          "Fecha": "2019-09-11",
-          "Hora": "11:32:30",
-          "Requerimiento": "95",
-          "Numero": "128",
-          "Estado": "OK"
-        }
+    "sdtCuentas": {
+        "sBTCuentasCliente": [
+            {
+                "clienteUId": 2,
+                "titularidad": {
+                    "identificador": 1,
+                    "descripcion": "Titular"
+                },
+                "representativo": "S"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.BuscarCliente",
+        "Fecha": "2019-09-11",
+        "Hora": "11:32:30",
+        "Requerimiento": 95,
+        "Numero": 128,
+        "Estado": "OK"
+    }
 }
 ```
 ::: 

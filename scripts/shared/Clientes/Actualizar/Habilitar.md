@@ -81,14 +81,14 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "f3fced1925CD285A89A23FBE"
-	},
-	"clienteUId": 882,
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "f3fced1925CD285A89A23FBE",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    },
+    "clienteUId": 882
 }'
 ```
 :::
@@ -128,19 +128,19 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	 "Btinreq": {
+    "Btinreq": {
         "Device": "GP",
         "Token": "f3fced1925CD285A89A23FBE",
         "Canal": "BTDIGITAL",
         "Usuario": "INSTALADOR",
-        "Requerimiento": "1"
+        "Requerimiento": 1
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Requerimiento": "1",
-        "Numero": "16651",
+        "Requerimiento": 1,
+        "Numero": 16651,
         "Servicio": "BTClientes.Habilitar",
         "Hora": "08:58:44",
         "Canal": "BTDIGITAL",

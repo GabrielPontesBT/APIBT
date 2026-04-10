@@ -83,21 +83,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuiaEspecial \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"codigo": "73",
-	"correlativo1": "50",
-	"correlativo2": "539",
-	"correlativo3": ""
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase?ObtenerCorrelativoGuiaEspecial' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL",
+        "Token": "43f21ff61cCD285A89A23FBE",
+        "Requerimiento": 1,
+        "Device": "1"
+    },
+    "codigo": 73,
+    "correlativo1": 50,
+    "correlativo2": 539,
+    "correlativo3": ""
 }'
 ```
 :::
@@ -149,34 +150,37 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtCorrelativo": {
-	  "correlativo3": "0",
-	  "correlativo2": "539",
-	  "descripcion": "Prima sin cuenta",
-	  "correlativo1": "50",
-	  "valorEspecifico3": "0",
-	  "valorEspecifico2": "0",
-	  "valorEspecifico1": "0",
-	  "importeEspecifico3": "0.00",
-	  "importeEspecifico2": "0.00",
-	  "importeEspecifico1": "0.00"
-	},
-	"Btoutreq": {
-	  "Numero": "596",
-	  "Servicio": "BTParametrosBase.ObtenerCorrelativoGuiaEspecial",
-	  "Estado": "OK",
-	  "Fecha": "2020-03-11",
-	  "Requerimiento": "1",
-	  "Hora": "12:04:38",
-	  "Canal": "BTDIGITAL"
-	}
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "43f21ff61cCD285A89A23FBE"
+    },
+    "sdtCorrelativo": {
+        "correlativo3": 0,
+        "correlativo2": 539,
+        "descripcion": "Prima sin cuenta",
+        "correlativo1": 50,
+        "valorEspecifico3": 0,
+        "valorEspecifico2": 0,
+        "valorEspecifico1": 0,
+        "importeEspecifico3": 0.00,
+        "importeEspecifico2": 0.00,
+        "importeEspecifico1": 0.00
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 596,
+        "Servicio": "BTParametrosBase.ObtenerCorrelativoGuiaEspecial",
+        "Estado": "OK",
+        "Fecha": "2020-03-11",
+        "Requerimiento": 1,
+        "Hora": "12:04:38",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

@@ -83,7 +83,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -141,7 +141,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -164,7 +164,7 @@ curl -X POST \
       "Estado": "OK",
       "Servicio": "BTPersonas.ObtenerDocumentosAdicionales",
       "Fecha": "2018-05-04",
-      "Requerimiento": "",
+      "Requerimiento": 1,
       "Hora": "15:42:08",
       "Canal": "BTDIGITAL"
    }

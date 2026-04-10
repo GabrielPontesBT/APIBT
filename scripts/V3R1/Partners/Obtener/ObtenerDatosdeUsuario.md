@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Datos de Usuario
 breadcrumb: false
 pageInfo: false
@@ -87,10 +87,10 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "3JPL6DC33CD84655A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
 	"usuario": "INSTALADOR"
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -139,23 +139,25 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
    "sdtPartner": {
           "puntoVentaUId": 2,
           "vendedorUId": 0,
           "partnerUId": 1
    },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.ObtenerDatosUsuario",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 16856,
+        "Estado": "OK",
+        "Servicio": "BTPartners.ObtenerDatosUsuario",
+        "Requerimiento": 1,
+        "Fecha": "2023-10-27",
+        "Canal": "BTDIGITAL",
+        "Hora": "11:38:47"
+    }
 }'
 ```
 ::: 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Ampliación Ingresando Seguros
 breadcrumb: false
 pageInfo: false
@@ -150,7 +150,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "72e34bcd9d4A8B5C60A82434"
 	},
@@ -295,7 +295,7 @@ curl -X POST \
 	"Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "72e34bcd9d4A8B5C60A82434"
    },
@@ -387,7 +387,7 @@ curl -X POST \
       "Estado": "OK",
       "Servicio": "BTPrestamos.SimularAmpliacionIngresandoSeguros",
       "Fecha": "2019-11-20",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Hora": "09:23:04",
       "Canal": "BTDIGITAL"
     }

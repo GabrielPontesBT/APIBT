@@ -85,10 +85,10 @@ curl -X POST \
     "Canal": "BTDIGITAL",
     "Usuario": "INSTALADOR",
     "Device": "FC",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Token": "D2868674D8C3483A48324170"
   },
-  "sucursalId": "3",
+  "sucursalId": 3
 }
 '
 ```
@@ -150,11 +150,12 @@ curl -X POST \
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "D2868674D8C3483A48324170"
   },
-  "sdtOficinas": [
+  "sdtOficinas": {
+    "sBTSucursal": [
     {
       "telefono": "15554454",
       "descripcion": "Casa Matriz",
@@ -171,13 +172,14 @@ curl -X POST \
       "latitud": 0.0,
       "longitud": 0.0
     }
-  ],
+    ]
+  },
   "Erroresnegocio": "",
   "Btoutreq": {
-    "Numero": "36634",
+    "Numero": 36634,
     "Estado": "OK",
     "Servicio": "BTConfiguracionBantotal.ObtenerOficinasSucursal",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Fecha": "2025-11-07",
     "Hora": "15:12:57",
     "Canal": "BTDIGITAL"

@@ -119,7 +119,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "dc7d30c0044A8B5C60A82434"
 	},
@@ -171,7 +171,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "dc7d30c0044A8B5C60A82434"
 	},
@@ -183,7 +183,7 @@ curl -X POST \
         "Numero": 758,
         "Estado": "OK",
         "Servicio": "BTPrestamos.PagarCuota",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2017-12-05",
         "Hora": "13:32:15",
         "Canal": "BTDIGITAL"

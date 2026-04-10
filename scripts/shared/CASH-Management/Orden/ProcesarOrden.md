@@ -83,7 +83,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -130,7 +130,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -142,7 +142,7 @@ curl -X POST \
         "Servicio": "BTCASHManagement.ProcesarOrden",
         "Estado": "OK",
         "Fecha": "2019-10-24",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "20:55:06",
         "Canal": "BTDIGITAL"
     }

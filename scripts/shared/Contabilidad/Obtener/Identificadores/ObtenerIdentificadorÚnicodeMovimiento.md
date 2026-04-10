@@ -92,22 +92,23 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoMovimiento' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdentificadorUnicoMovimiento' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
         "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Token": "f99a68ce154A8B5C60A82434",
+        "Usuario": "MINSTALADOR"
     },
-    "empresaId": "1",
-    "sucursalId": "1",
-    "moduloId": "18",
-    "transaccionId": "402",
-    "relacion": "1",
+    "empresaId": 1,
+    "sucursalId": 1,
+    "moduloId": 18,
+    "transaccionId": 402,
+    "relacion": 1,
     "fechaContabilizacion": "2013-01-02"
 }'
 ```
@@ -148,28 +149,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "bms", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": "0", 
-        "Canal": "BTDIGITAL", 
-        "Token": "faa36bd33f4A8B5C60A82434" 
-    }, 
-    "movimientoUId": 1, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Numero": 1105, 
-        "Servicio": "BTContabilidad.ObtenerIdentificadorUnicoMovimiento", 
-        "Estado": "OK", 
-        "Fecha": "2020-11-02", 
-        "Requerimiento": "0", 
-        "Hora": "18:08:09", 
-        "Canal": "BTDIGITAL" 
-    } 
-}
+'{
+    "Btinreq": {
+        "Device": "bms",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "f99a68ce154A8B5C60A82434"
+    },
+    "movimientoUId": 1,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1100,
+        "Servicio": "BTContabilidad.ObtenerIdentificadorUnicoMovimiento",
+        "Estado": "OK",
+        "Fecha": "2020-10-30",
+        "Requerimiento": 0,
+        "Hora": "19:20:12",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

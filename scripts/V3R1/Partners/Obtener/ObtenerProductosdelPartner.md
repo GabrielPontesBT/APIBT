@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Productos del Partner
 breadcrumb: false
 pageInfo: false
@@ -93,14 +93,14 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "3JPL6DC33CD84655A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-   "sdtPartner": {
-      "puntoVentaUId": 3,
-      "vendedorUId": 56,
-      "partnerUId": 23
-   },
-}
+    "sdtPartner": {
+        "puntoVentaUId": 3,
+        "vendedorUId": 56,
+        "partnerUId": 23
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -172,48 +172,54 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
-   "sdtProductos": {
+    "sdtProductos": {
         "sBTProducto": [
-        {
-            "moneda": "CRC",
-            "papel": "$",
-            "otrosConceptos": {
-            "sBTConcepto": {
-                "texto": "N",
-                "valor": 0,
-                "concepto": "SOLICITA_BALLOON"
-            }
+            {
+                "moneda": "CRC",
+                "papel": "$",
+                "otrosConceptos": {
+                    "sBTConcepto": [
+                        {
+                            "texto": "N",
+                            "valor": 0.00,
+                            "concepto": "SOLICITA_BALLOON"
+                        }
+                    ]
+                },
+                "productoUId": 200,
+                "nombre": "Vehiculares"
             },
-            "productoUId": 200,
-            "nombre": "Vehiculares"
-        },
-        {
-            "moneda": "CRC",
-            "papel": "$",
-            "otrosConceptos": {
-            "sBTConcepto": {
-                "texto": "N",
-                "valor": 0,
-                "concepto": "SOLICITA_BALLOON"
+            {
+                "moneda": "CRC",
+                "papel": "$",
+                "otrosConceptos": {
+                    "sBTConcepto": [
+                        {
+                            "texto": "N",
+                            "valor": 0.00,
+                            "concepto": "SOLICITA_BALLOON"
+                        }
+                    ]
+                },
+                "productoUId": 198,
+                "nombre": "Amortización Automática TF"
             }
-            },
-            "productoUId": 198,
-            "nombre": "Amortización Automática TF"
-        }
         ]
     },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.ObtenerProductosPartner",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 770,
+        "Estado": "OK",
+        "Servicio": "BTPartners.ObtenerProductosPartner",
+        "Requerimiento": 1,
+        "Fecha": "2017-12-14",
+        "Canal": "BTDIGITAL",
+        "Hora": "18:17:10"
+    }
 }
 ```
 :::

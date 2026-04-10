@@ -134,7 +134,7 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTPrestamos.ActualizarPrestamosConEvento",
         "Fecha": "2017-12-21",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "12:27:52",
         "Canal": "BTDIGITAL"
     }

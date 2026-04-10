@@ -77,20 +77,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleMovimiento' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerDetalleMovimiento' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	 "Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "IN",
-		"Token": "12420485CD285A89A23FBE",
-		"Device": "MC"
-	 },
-	 "movimientoUId": "8"
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "IN",
+        "Token": "12420485CD285A89A23FBE",
+        "Device": "MC"
+    },
+    "movimientoUId": 8
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -190,88 +190,91 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
-      "Usuario": "IN", 
-      "Token": "12420485CD285A89A23FBE", 
-      "Device": "MC" 
-    }, 
-    "sdtDetalleAsiento": { 
-      "sucursalId": "1", 
-      "descripcion": "CAJA, Traspaso entre Cuentas", 
-      "usuarioIngreso": "BANTOTAL", 
-      "usuarioConfirmacion": "BANTOTAL", 
-      "fechaContabilizacion": "2018-10-15", 
-      "hora": "13:08:23", 
-      "fechaValor": "2018-10-15", 
-	  "anulado": "N", 
-      "movimientoUIdOriginal": "8", 
-      "movimientoUIdAnulacion": "0", 
-      "ordinales": { 
-        "sBTOrdinal": [ 
-          { 
-            "operacionUId": "10189", 
-            "idOperacionBT": "0010000100021000000000000000002700003000000000000", 
-            "debitoCredito": "D", 
-            "importe": "10000.00", 
-            "producto": { 
-              "productoUId": "0", 
-              "nombre": "CAJAS DE AHORRO, GENÉRICA", 
-              "moneda": "$", 
-              "papel": "$" 
-            } 
-          }, 
-          { 
-            "operacionUId": "10191", 
-            "idOperacionBT": "0010000100020222200000000000002700002000000000000", 
-            "debitoCredito": "C", 
-            "importe": "25.00", 
-            "producto": { 
-              "productoUId": "0", 
-              "nombre": "CUENTA CORRIENTE, GENÉRICA", 
-              "moneda": "USD", 
-              "papel": "$" 
-            } 
-          }, 
-          { 
-            "operacionUId": "10192", 
-            "idOperacionBT": "0010000100496222200000000000000000000000000000000", 
-            "debitoCredito": "D", 
-            "importe": "25.00", 
-            "producto": { 
-              "productoUId": "0", 
-              "nombre": "POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA", 
-              "moneda": "USD", 
-              "papel": "$" 
-            } 
-          }, 
-          { 
-            "operacionUId": "10193", 
-            "idOperacionBT": "0010000100497000000000000000000000000000000000000", 
-            "debitoCredito": "C", 
-            "importe": "10000.00", 
-            "producto": { 
-              "productoUId": "0", 
-              "nombre": "VALUACION MONEDA EXTRANJERA, VALUACION MONEDA EXTRANJERA", 
-              "moneda": "$", 
-              "papel": "$" 
-            } 
-          } 
-        ] 
-      } 
-    }, 
-    "Btoutreq": { 
-      "Canal": "BTDIGITAL", 
-      "Servicio": "BTContabilidad.ObtenerDetalleMovimiento", 
-      "Fecha": "2020-10-29", 
-      "Hora": "16:13:11", 
-      "Requerimiento": "1", 
-      "Numero": "7704", 
-      "Estado": "OK" 
-    } 
-  }
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "IN",
+        "Token": "12420485CD285A89A23FBE",
+        "Device": "MC"
+    },
+    "sdtDetalleAsiento": {
+        "sucursalId": 1,
+        "descripcion": "CAJA, Traspaso entre Cuentas",
+        "usuarioIngreso": "BANTOTAL",
+        "usuarioConfirmacion": "BANTOTAL",
+        "fechaContabilizacion": "2018-10-15",
+        "hora": "13:08:23",
+        "fechaValor": "2018-10-15",
+        "anulado": "N",
+        "movimientoUIdOriginal": 8,
+        "movimientoUIdAnulacion": 0,
+        "ordinales": {
+            "sBTOrdinal": [
+                {
+                    "operacionUId": 10189,
+                    "idOperacionBT": 10000100021000000000000000002700003000000000000,
+                    "debitoCredito": "D",
+                    "importe": 10000.00,
+                    "producto": {
+                        "productoUId": 0,
+                        "nombre": "CAJAS DE AHORRO, GENÉRICA",
+                        "moneda": "$",
+                        "papel": "$"
+                    }
+                },
+                {
+                    "operacionUId": 10191,
+                    "idOperacionBT": 10000100020222200000000000002700002000000000000,
+                    "debitoCredito": "C",
+                    "importe": 25.00,
+                    "producto": {
+                        "productoUId": 0,
+                        "nombre": "CUENTA CORRIENTE, GENÉRICA",
+                        "moneda": "USD",
+                        "papel": "$"
+                    }
+                },
+                {
+                    "operacionUId": 10192,
+                    "idOperacionBT": 10000100496222200000000000000000000000000000000,
+                    "debitoCredito": "D",
+                    "importe": 25.00,
+                    "producto": {
+                        "productoUId": 0,
+                        "nombre": "POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA",
+                        "moneda": "USD",
+                        "papel": "$"
+                    }
+                },
+                {
+                    "operacionUId": 10193,
+                    "idOperacionBT": 10000100497000000000000000000000000000000000000,
+                    "debitoCredito": "C",
+                    "importe": 10000.00,
+                    "producto": {
+                        "productoUId": 0,
+                        "nombre": "VALUACION MONEDA EXTRANJERA, VALUACION MONEDA EXTRANJERA",
+                        "moneda": "$",
+                        "papel": "$"
+                    }
+                }
+            ]
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTContabilidad.ObtenerDetalleMovimiento",
+        "Fecha": "2020-10-29",
+        "Hora": "16:13:11",
+        "Requerimiento": 1,
+        "Numero": 7704,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

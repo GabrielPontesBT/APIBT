@@ -88,15 +88,15 @@ curl -X POST \
   -d '{
     "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "Instalador",
       "Token": "172681201999865B3A2E76CF",
       "Device": "1"
     },
-	"calendarioId": "1",
-    "mesConsulta": "11",
-    "anioConsulta": "2020"
-  },
+    "calendarioId": 1,
+    "mesConsulta": 11,
+    "anioConsulta": 2020
+  }
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -139,7 +139,7 @@ curl -X POST \
  {
     "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "Instalador",
       "Token": "172681201999865B3A2E76CF",
       "Device": "1"
@@ -153,8 +153,8 @@ curl -X POST \
       "Servicio": "BTCalendarios.ObtenerInicioYFinMes",
       "Fecha": "2021-03-23",
       "Hora": "17:35:57",
-      "Requerimiento": "1",
-      "Numero": "8086",
+      "Requerimiento": 1,
+      "Numero": 8086,
       "Estado": "OK"
     }
   }

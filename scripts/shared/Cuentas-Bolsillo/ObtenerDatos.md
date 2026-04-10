@@ -77,19 +77,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerDatos' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-    "bolsilloUId": 183
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerDatos' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "CC6345192D8633F531F01D1D"
+    },
+    "bolsilloUId": 18843
 }'
 ```
 :::
@@ -146,40 +146,43 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "CC6345192D8633F531F01D1D"
     },
     "sdtInformacionBolsillo": {
-        "CuentaprincipalUID": 19150,
-        "FechaBaja": "0001-01-01",
-        "InstruccionUID": 19150,
-        "Estado": 0,
-        "FechaApert": "2020-04-08",
-        "Saldo": 910000,
-        "OperacionBolsilloUID": 18843,
-        "NombreProducto": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-        "Parametros": {
-            "HeredaCondiciones": "N",
-            "MetaAhorro": 990,
-            "Tasa": 0,
-            "PagaIntereses": "S"
+        "cuentaPrincipalUId": 19150,
+        "fechaBaja": "0001-01-01",
+        "instruccionUId": 19150,
+        "estado": 0,
+        "fechaApert": "2020-04-08",
+        "saldo": 910000.00,
+        "operacionBolsilloUId": 18843,
+        "nombreProducto": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+        "parametros": {
+            "heredaCondiciones": "N",
+            "metaAhorro": 990.00,
+            "tasa": 0.00,
+            "pagaIntereses": "S"
         },
-        "NombreSubcuenta": "golozo",
-        "ProductoBolsilloId": 511
+        "nombreSubcuenta": "golozo",
+        "productoBolsilloId": 511
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 228462,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.ObtenerDatos",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Requerimiento": 0,
+        "Fecha": "2023-10-31",
+        "Hora": "17:29:45",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

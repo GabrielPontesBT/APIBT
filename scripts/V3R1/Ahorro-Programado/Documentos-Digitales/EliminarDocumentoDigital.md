@@ -88,12 +88,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId": "21",
-	"documentoId": "87",
+	"operacionUId": 21,
+	"documentoId": 87
 }'
 ```
 :::
@@ -136,7 +136,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -144,11 +144,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "3109",
+        "Numero": 3109,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.EliminarDocumentoDigital",
         "Fecha": "2018-11-21",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "12:11:36",
         "Canal": "BTDIGITAL"
     }

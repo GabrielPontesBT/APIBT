@@ -85,7 +85,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -164,7 +164,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -173,32 +173,32 @@ curl -X POST \
             {
                 "Tipo": "D",
                 "Descripcion": "15 - Dias",
-                "Valor": "15"
+                "Valor": 15
             },
             {
                 "Tipo": "D",
                 "Descripcion": "30 - Dias",
-                "Valor": "30"
+                "Valor": 30
             },
             {
                 "Tipo": "D",
                 "Descripcion": "60 - Dias",
-                "Valor": "60"
+                "Valor": 60
             },
             {
                 "Tipo": "D",
                 "Descripcion": "90 - Dias",
-                "Valor": "90"
+                "Valor": 90
             },
             {
                 "Tipo": "D",
                 "Descripcion": "180 - Dias",
-                "Valor": "180"
+                "Valor": 180
             },
             {
                 "Tipo": "D",
                 "Descripcion": "360 - Dias",
-                "Valor": "360"
+                "Valor": 360
             }
         ]
     },
@@ -206,11 +206,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "401",
+        "Numero": 401,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerPlazosHabilitados",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }

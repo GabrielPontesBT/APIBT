@@ -113,32 +113,37 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarVictimaHechoViolento \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "42",
-	"esVictima": "S",
-	"sdtVictimaHechoViolento": {
-	  "entidadId": "3",
-	  "inspeccionPolicia": "Golpes",
-	  "sitio": "Casa",
-	  "municipioId": "421",
-	  "tipoId": "3",
-	  "vereda": "Av Italia",
-	  "fechaCertificacion": "2020-08-20",
-	  "fechaVencimiento": "2021-08-20",
-	  "corregimiento": "No tiene",
-	  "departamentoId": "8",
-	  "fechaHecho": "2020-06-20"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarVictimaHechoViolento' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "042638a184CD285A89A23FBE",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "personaUId": 42,
+    "esVictima": "S",
+    "sdtVictimaHechoViolento": {
+        "entidadId": 3,
+        "municipio": "",
+        "departamento": "",
+        "inspeccionPolicia": "Golpes",
+        "sitio": "Casa",
+        "municipioId": 421,
+        "tipoId": 3,
+        "vereda": "Av Italia",
+        "entidad": "",
+        "tipo": "",
+        "fechaCertificacion": "2020-08-20",
+        "fechaVencimiento": "2021-08-20",
+        "corregimiento": "No tiene",
+        "departamentoId": 8,
+        "fechaHecho": "2020-06-20"
+    }
 }'
 ```
 :::
@@ -178,22 +183,25 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "Btoutreq": {
-      "Numero": "2073",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.AgregarVictimaHechoViolento",
-      "Fecha": "2020-03-10",
-      "Requerimiento": "1",
-      "Hora": "07:51:55",
-      "Canal": "BTDIGITAL"
-   }
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "042638a184CD285A89A23FBE"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 2073,
+        "Estado": "OK",
+        "Servicio": "BTPersonas.AgregarVictimaHechoViolento",
+        "Fecha": "2020-03-10",
+        "Requerimiento": 1,
+        "Hora": "07:51:55",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

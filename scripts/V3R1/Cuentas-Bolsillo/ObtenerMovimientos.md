@@ -93,7 +93,7 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cFC33CD93505A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
     "bolsilloUId": 18848,
     "cantidadDias": 281,
@@ -166,14 +166,14 @@ curl -X POST \
         "Usuario": "MINSTALADOR",
         "Token": "16c1cFC33CD93505A5382434",
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Requerimiento": 1
     },
     "sdtEstadoDeCuenta": {
         "saldoPartida": 0,
         "fechaHasta": "2020-04-30",
         "productoUID": 512,
         "movimientos": {
-        "sBTMovimiento": {
+        "sBTMovimiento": [{
             "moneda": "",
             "hora": "16:39:10",
             "referencia": "",
@@ -188,15 +188,15 @@ curl -X POST \
             "tipoCambio": 0,
             "arbitraje": 0,
             "fecha": "2020-04-30"
-        }
+        }]
         },
         "fechaDesde": "2020-04-26"
     },
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 111399,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.ObtenerMovimientos",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2023-05-10",
         "Canal": "BTDIGITAL",
         "Hora": "15:10:52"

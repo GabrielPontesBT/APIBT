@@ -108,26 +108,27 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoOperacion' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdentificadorUnicoOperacion' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
         "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Token": "f99a68ce154A8B5C60A82434",
+        "Usuario": "MINSTALADOR"
     },
-    "empresaId": "1",
-    "moduloId": "20",
-    "sucursalId": "100",
-    "monedaId": "80",
-    "papelId": "0",
-    "cuentaBT": "43",
-    "operacionBT": "0",
-    "subOperacionBT": "8",
-    "tipoOperacionBT": "48"
+    "empresaId": 1,
+    "moduloId": 20,
+    "sucursalId": 100,
+    "monedaId": 80,
+    "papelId": 0,
+    "cuentaBT": 43,
+    "operacionBT": 0,
+    "subOperacionBT": 8,
+    "tipoOperacionBT": 48
 }'
 ```
 :::
@@ -167,28 +168,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "bms", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": "0", 
-        "Canal": "BTDIGITAL", 
-        "Token": "faa36bd33f4A8B5C60A82434" 
-    }, 
-    "operacionUId": 1, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Numero": 1110, 
-        "Servicio": "BTContabilidad.ObtenerIdentificadorUnicoOperacion", 
-        "Estado": "OK", 
-        "Fecha": "2020-11-03", 
-        "Requerimiento": "0", 
-        "Hora": "10:12:26", 
-        "Canal": "BTDIGITAL" 
-    } 
-}
+'{
+    "Btinreq": {
+        "Device": "bms",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "f99a68ce154A8B5C60A82434"
+    },
+    "operacionUId": 1,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1102,
+        "Servicio": "BTContabilidad.ObtenerIdentificadorUnicoOperacion",
+        "Estado": "OK",
+        "Fecha": "2020-10-30",
+        "Requerimiento": 0,
+        "Hora": "20:27:14",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -78,20 +78,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerDatos' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerFacultades' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Device": "papa",
-          "Usuario": "INSTALADOR",
-          "Token": "BC79E967434CDFE2512C069E"
-        },
-        "operacionUId": 1138
-	}'
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "papa",
+        "Usuario": "INSTALADOR",
+        "Token": "BC79E967434CDFE2512C069E"
+    },
+    "operacionUId": 1138
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -174,69 +174,71 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "sdtFacultades": {
-          "sBTFacultad": [
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "30F74741A02C318CEFD55684",
+        "Device": "GL"
+    },
+    "sdtFacultades": {
+        "sBTFacultad": [
             {
-              "grupos": "",
-              "firmantes": "",
-              "descripcion": "Firma de Cheques",
-              "tipo": "Categoría",
-              "codigo": 1
+                "grupos": "",
+                "firmantes": "",
+                "descripcion": "Firma de Cheques",
+                "tipo": "Categoría",
+                "codigo": 1
             },
             {
-              "grupos": {
-                "sBTFacultadGrupo": {
-                  "moneda": "$",
-                  "codigoMoneda": 0,
-                  "vigenciaHasta": "2022-10-04",
-                  "monto": 99999990,
-                  "habilitado": "S",
-                  "firmantes": {
-                    "sBTFacultadFirmante": {
-                      "potestad": "Titular",
-                      "personaUId": 161,
-                      "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
-                      "categoria": ""
+                "grupos": {
+                    "sBTFacultadGrupo": {
+                        "moneda": "$",
+                        "codigoMoneda": 0,
+                        "vigenciaHasta": "2022-10-04",
+                        "monto": 99999990.00,
+                        "habilitado": "S",
+                        "firmantes": {
+                            "sBTFacultadFirmante": {
+                                "potestad": "Titular",
+                                "personaUId": 161,
+                                "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
+                                "categoria": ""
+                            }
+                        },
+                        "codigoPapel": 0,
+                        "papel": "$",
+                        "numero": 1,
+                        "vigenciaDesde": "2020-01-02"
                     }
-                  },
-                  "codigoPapel": 0,
-                  "papel": "$",
-                  "numero": 1,
-                  "vigenciaDesde": "2020-01-02"
-                }
-              },
-              "firmantes": "",
-              "descripcion": "Retiro de cuentas vista",
-              "tipo": "Persona",
-              "codigo": 2
+                },
+                "firmantes": "",
+                "descripcion": "Retiro de cuentas vista",
+                "tipo": "Persona",
+                "codigo": 2
             }
-          ]
-        },
-        "sdtFirmantes": {
-          "sBTFacultadFirmante": {
+        ]
+    },
+    "sdtFirmantes": {
+        "sBTFacultadFirmante": {
             "potestad": "Titular",
             "personaUId": 161,
             "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
             "categoria": ""
-          }
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTCuentasVista.ObtenerFacultades",
-          "Fecha": "2022-11-29",
-          "Hora": "10:23:37",
-          "Requerimiento": 1,
-          "Numero": 486,
-          "Estado": "OK"
         }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTCuentasVista.ObtenerFacultades",
+        "Fecha": "2022-11-29",
+        "Hora": "10:23:37",
+        "Requerimiento": 1,
+        "Numero": 486,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ProcesosDiarios' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosDiarios' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    },
+        "Token": "6964034201CD285A89A23FBE"
+    }
 }'
 ```
 :::
@@ -194,101 +194,103 @@ curl -X POST \
 
 @tab JSON
 ```json
-"Btinreq": {
-      "Device": "mc",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6964034201CD285A89A23FBE"
+'{
+    "Btinreq": {
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": {
-      "sBTProcesoBatch": [
-        {
-          "identificador": "1",
-          "nombre": "PCAPD08",
-          "descripcion": "Paralelizador Cadena de cierre",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "10",
-          "nombre": "PCADENA",
-          "descripcion": "MENSAJE INICIO2",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "NO",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "20",
-          "nombre": "PCADENA",
-          "descripcion": "PCADENA",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "NO",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "69",
-          "nombre": "PCLE252",
-          "descripcion": "Generación de C. Gerencia",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "Reprocesar siempre"
-        },
-        {
-          "identificador": "80",
-          "nombre": "PCF0030",
-          "descripcion": "Cobro de Cajas de Seguridad",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "90",
-          "nombre": "PCF0040",
-          "descripcion": "Devengado de Comisiones Adel.",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "Reprocesar siempre"
-        },
-        {
-          "identificador": "92",
-          "nombre": "POCDE000",
-          "descripcion": "Depura FOCDE02 y FOCDE03",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "93",
-          "nombre": "POCDE002",
-          "descripcion": "Busca Indicios OCODEí",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        {
-          "identificador": "97",
-          "nombre": "PB098541",
-          "descripcion": "Acredita recaudaciones Cash",
-          "periodicidad": "DIARIA",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        }
-      ]
+        "sBTProcesoBatch": [
+            {
+                "identificador": 1,
+                "nombre": "PCAPD08",
+                "descripcion": "Paralelizador Cadena de cierre",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 10,
+                "nombre": "PCADENA",
+                "descripcion": "MENSAJE INICIO2",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "NO",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 20,
+                "nombre": "PCADENA",
+                "descripcion": "PCADENA",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "NO",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 69,
+                "nombre": "PCLE252",
+                "descripcion": "Generación de C. Gerencia",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 80,
+                "nombre": "PCF0030",
+                "descripcion": "Cobro de Cajas de Seguridad",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 90,
+                "nombre": "PCF0040",
+                "descripcion": "Devengado de Comisiones Adel.",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "Reprocesar siempre"
+            },
+            {
+                "identificador": 92,
+                "nombre": "POCDE000",
+                "descripcion": "Depura FOCDE02 y FOCDE03",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 93,
+                "nombre": "POCDE002",
+                "descripcion": "Busca Indicios OCODEí",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            },
+            {
+                "identificador": 97,
+                "nombre": "PB098541",
+                "descripcion": "Acredita recaudaciones Cash",
+                "periodicidad": "DIARIA",
+                "parametrosExtendidos": "SI",
+                "esReprocesable": "No reprocesar nunca"
+            }
+        ]
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "42085",
-      "Estado": "OK",
-      "Servicio": "BTCadenaCierre.ObtenerProcesosDiarios",
-      "Fecha": "2022-06-01",
-      "Requerimiento": "1",
-      "Hora": "12:38:02",
-      "Canal": "BTDIGITAL"
+        "Numero": 42085,
+        "Estado": "OK",
+        "Servicio": "BTCadenaCierre.ObtenerProcesosDiarios",
+        "Fecha": "2022-06-01",
+        "Requerimiento": 1,
+        "Hora": "12:38:02",
+        "Canal": "BTDIGITAL"
     }
-  },
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

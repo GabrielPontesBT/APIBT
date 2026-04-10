@@ -94,7 +94,7 @@ curl -X POST \
    "Btinreq": {
       "Device": "AS",
       "Usuario": "INSTALADOR",
-      "Requerimiento": "",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "jh2c02c95a4A8B5C60A82434"
    },
@@ -151,7 +151,7 @@ curl -X POST \
    "Btinreq": {
         "Device": "AS",
         "Usuario": "INSTALADOR",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "E6B6A4E746ABD90893FEEF74"
       },

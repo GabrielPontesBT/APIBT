@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Referencias
 breadcrumb: false
 pageInfo: false
@@ -85,11 +85,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId":"51"
+	"personaUId": 51
 }'
 ```
 :::
@@ -142,41 +142,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"sdtReferencias": {
-		"sBTReferencia": {
-			"vinculoId": "3",
+		"sBTReferencia": [{
+			"vinculoId": 3,
 			"domicilio3": "",
 			"domicilio2": "",
 			"domicilio1": "18 de Julio 1234",
 			"tipoId": "P",
-			"correlativo": "1",
+			"correlativo": 1,
 			"tipo": "Personal",
 			"telefono": "1234 5678",
 			"nombre": "Rodolfo Rías",
 			"vinculo": "Director"
-		}
+		}]
 	},
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8396,
+        "Numero": 8484,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerReferencias",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Requerimiento": 1,
+        "Fecha": "2019-05-08",
+        "Hora": "17:29:11",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

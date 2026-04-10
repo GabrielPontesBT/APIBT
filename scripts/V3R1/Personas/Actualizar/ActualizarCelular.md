@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Celular
 breadcrumb: false
 pageInfo: false
@@ -87,11 +87,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId":"61",
+	"personaUId": 61,
 	"celular":"097277590"
 }'
 ```
@@ -135,7 +135,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -143,12 +143,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "3119",
+        "Numero": 3117,
         "Estado": "OK",
-        "Servicio": "BTPersonas.ActualizaCelular",
+        "Servicio": "BTPersonas.ActualizarCelular",
         "Fecha": "2018-11-21",
-        "Requerimiento": "1",
-        "Hora": "15:34:50",
+        "Requerimiento": 1,
+        "Hora": "15:22:31",
         "Canal": "BTDIGITAL"
     }
 }'

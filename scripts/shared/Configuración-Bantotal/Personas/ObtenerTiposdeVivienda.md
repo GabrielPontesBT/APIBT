@@ -69,15 +69,20 @@ No aplica.
 
 @tab JSON
 ```json
-{
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposDeVivienda' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-         "Canal": "BTDIGITAL",
-         "Requerimiento": "1",
-         "Usuario": "INSTALADOR",
-         "Token": "963643292CD285A89A23FBEE",
-         "Device": "AV"
-      }
-}
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "1394857355CD285A89A23FBE",
+        "Device": "AV"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -141,38 +146,38 @@ No aplica.
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
-        "Token": "963643292CD285A89A23FBEE",
+        "Token": "1394857355CD285A89A23FBE",
         "Device": "AV"
     },
     "sdtViviendas": {
         "tipoDeVivienda": [
             {
-                "codigo": "1",
+                "codigo": 1,
                 "descripcion": "Propietario"
             },
             {
-                "codigo": "2",
+                "codigo": 2,
                 "descripcion": "Inquilino"
             },
             {
-                "codigo": "3",
+                "codigo": 3,
                 "descripcion": "BHU"
             },
             {
-                "codigo": "4",
+                "codigo": 4,
                 "descripcion": "Usufructo"
             },
             {
-                "codigo": "5",
+                "codigo": 5,
                 "descripcion": "Familiar"
             },
             {
-                "codigo": "6",
+                "codigo": 6,
                 "descripcion": "Otros"
             }
         ]
@@ -184,12 +189,12 @@ No aplica.
         "Canal": "BTDIGITAL",
         "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeVivienda",
         "Fecha": "2021-11-15",
-        "Hora": "11:21:59",
-        "Requerimiento": "1",
-        "Numero": 8693,
+        "Hora": "12:47:10",
+        "Requerimiento": 1,
+        "Numero": 8696,
         "Estado": "OK"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

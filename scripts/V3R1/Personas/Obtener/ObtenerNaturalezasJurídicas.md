@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Naturalezas Jurídicas
 breadcrumb: false
 pageInfo: false
@@ -78,7 +78,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
@@ -158,11 +158,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -170,39 +170,39 @@ curl -X POST \
 		"sBTNaturalezaJuridica": [
 			{
 				"descripcion": "Sociedad Anónima",
-				"identificador": "1"
+				"identificador": 1
 			},
 			{
 				"descripcion": "Sociedad de Hecho",
-				"identificador": "4"
+				"identificador": 4
 			},
 			{
 				"descripcion": "Soc.Comandita p/Acciones",
-				"identificador": "5"
+				"identificador": 5
 			},
 			{
 				"descripcion": "Sociedad Colectiva",
-				"identificador": "8"
+				"identificador": 8
 			},
 			{
 				"descripcion": "Cooperativa",
-				"identificador": "9"
+				"identificador": 9
 			},
 			{
 				"descripcion": "Ente Público",
-				"identificador": "10"
+				"identificador": 10
 			},
 			{
 				"descripcion": "Sociedad Extranjera",
-				"identificador": "11"
+				"identificador": 11
 			},
 			{
 				"descripcion": "Unipersonal",
-				"identificador": "17"
+				"identificador": 17
 			},
 			{
 				"descripcion": "No corresponde",
-				"identificador": "99"
+				"identificador": 99
 			}
 		]
 	},
@@ -210,15 +210,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8396,
+        "Numero": 8514,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerNaturalezasJuridicas",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Requerimiento": 1,
+        "Fecha": "2019-05-09",
+        "Hora": "11:43:07",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

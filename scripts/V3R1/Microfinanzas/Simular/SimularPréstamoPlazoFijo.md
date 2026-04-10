@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Plazo Fijo
 breadcrumb: false
 pageInfo: false
@@ -100,18 +100,18 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "sdtSimulacionPlazoFijo": {
-          "solicitudUId": "10972",
-          "clienteUId": "2",
-          "productoUId": "29",
-          "plazo": "365",
-          "monto": "35000",
-          "destinoCredito": "28"
-        }
+    "sdtSimulacionPlazoFijo": {
+        "solicitudUId": 10972,
+        "clienteUId": 2,
+        "productoUId": 29,
+        "plazo": 365,
+        "monto": 35000,
+        "destinoCredito": 28
+    }
 }'
 ```
 :::
@@ -183,46 +183,55 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "sdtSimulacion": {
-          "operacionUId": "18",
-          "producto": {
-            "productoUId": "29",
+    "sdtSimulacion": {
+        "operacionUId": 18,
+        "producto": {
+            "productoUId": 29,
             "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Plazo Fijo",
+            "moneda": "",
             "papel": "$"
-          },
-          "capital": "35000.00",
-          "valorCuota": "40323.00",
-          "intereses": "5323.00",
-          "tasa": "15.000000",
-          "tasaEfectiva": "0.000000",
-          "tasaEfectivaAnual": "14.985122",
-          "tasaNominalAnual": "15.000000",
-          "totalPrestamo": "40323.00",
-          "fechaValor": "2020-10-20",
-          "fechaVencimiento": "2021-10-20",
-          "fechaPrimerPago": "2021-10-20",
-          "plazo": "365",
-          "cronograma": {
-            "sBTCuotaPrestamoAlta": {
-              "fechaPago": "2021-10-20",
-              "importe": "40323.00",
-              "redondeo": "0.00"
-            }
-          }
         },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.SimularPlazoFijo",
-          "Fecha": "2019-10-18",
-          "Hora": "15:43:17",
-          "Requerimiento": "95",
-          "Numero": "1317",
-          "Estado": "OK"
+        "capital": 35000.00,
+        "valorCuota": 40323.00,
+        "intereses": 5323.00,
+        "tasa": 15.000000,
+        "tasaEfectiva": 0.000000,
+        "tasaEfectivaAnual": 14.985122,
+        "tasaNominalAnual": 15.000000,
+        "totalPrestamo": 40323.00,
+        "fechaValor": "2020-10-20",
+        "fechaVencimiento": "2021-10-20",
+        "fechaPrimerPago": "2021-10-20",
+        "plazo": 365,
+        "otrosConceptos": {
+            "sBTConcepto": []
+        },
+        "cronograma": {
+            "sBTCuotaPrestamoAlta": [
+                {
+                    "fechaPago": "2021-10-20",
+                    "importe": 40323.00,
+                    "redondeo": 0.00
+                }
+            ]
         }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.SimularPlazoFijo",
+        "Fecha": "2019-10-18",
+        "Hora": "15:43:17",
+        "Requerimiento": 95,
+        "Numero": 1317,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

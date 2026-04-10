@@ -1,4 +1,4 @@
----
+﻿---
 title: Validar Datos Regla de Negocio
 breadcrumb: false
 pageInfo: false
@@ -92,18 +92,18 @@ curl -X POST \
     -d '{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
-    "reglaId": "4",
+    "reglaId": 4,
     "sdtVariables": {
-        "sBTVariable": {
+        "sBTVariable": [{
             "valor": "S",
             "nombre": "CHECKAUX2"
-        },
-    },
+        }]
+    }
 }'
 ```
 :::
@@ -149,33 +149,34 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "GP", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": "1", 
-        "Canal": "BTDIGITAL", 
-        "Token": "c2cfd09eff4A8B5C60A82434" 
-    }, 
-    "cantidadResultados": "1", 
-    "sdtRetornos": { 
-        "sBTRetorno": { 
-            "retorno": "3" 
-        } 
-    }, 
-    "resultado": "VERDADERO", 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Numero": "45114", 
-        "Estado": "OK", 
-        "Servicio": "BTReglasNegocio.ValidarDatosReglaNegocio", 
-        "Fecha": "2022-06-02", 
-        "Requerimiento": "1", 
-        "Hora": "12:28:57", 
-        "Canal": "BTDIGITAL" 
-    } 
-}
+'{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "86b12d9cbaCD285A89A23FBE"
+    },
+    "cantidadResultados": 1,
+    "sdtRetornos": {
+        "sBTRetorno": [{
+            "retorno": "3"
+        }]
+    },
+    "resultado": "VERDADERO",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 45114,
+        "Estado": "OK",
+        "Servicio": "BTReglasNegocio.ValidarDatosReglaNegocio",
+        "Fecha": "2022-06-02",
+        "Requerimiento": 1,
+        "Hora": "12:28:57",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -73,18 +73,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?ObtenerScores \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-  "Btinreq": {
-      "Requerimiento": 13,
-      "Device": "FP",
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Token": "3789c5608bCD285A89A23FBE"
-  },
-  "modeloEvaluacionId": 101
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerScores' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "FP",
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Token": "3789c5608bCD285A89A23FBE"
+    },
+    "modeloEvaluacionId": 101
 }'
 ```
 :::
@@ -142,52 +143,45 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 
 @tab JSON
 ```json
-{
-  "Envelope": {
-    "Body": {
-      "BTPAE.ObtenerScoresResponse": {
-        "Btinreq": {
-          "Device": "FP",
-          "Usuario": "INSTALADOR",
-          "Requerimiento": 1,
-          "Canal": "BTDIGITAL",
-          "Token": "3789c5608bCD285A89A23FBE"
-        },
-        "sdtScoresPAE": {
-          "sBTScorePAE": [
-            {
-              "valorScoreRango": -0.409,
-              "tipoRestriccion": "",
-              "idPolitica": 0,
-              "codigoModelo": 101,
-              "desdeNumerico": 0,
-              "hastaFecha": "0001-01-01",
-              "hastaNumerico": 25,
-              "valorPolitica": "",
-              "mensajeIncumPolitica": "",
-              "correlativo": 1,
-              "desdeCaracter": "",
-              "codigoItem": 1,
-              "desdeFecha": "0001-01-01",
-              "hastaCaracter": ""
-            },
-            ...
-          ]
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Numero": 31107,
-          "Estado": "OK",
-          "Servicio": "BTPAE.ObtenerScores",
-          "Requerimiento": 1,
-          "Fecha": "2022-11-29",
-          "Hora": "12:32:04",
-          "Canal": "BTDIGITAL"
+'{
+    "Btinreq": {
+        "Device": "FP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "3789c5608bCD285A89A23FBE"
+    },
+    "sdtScoresPAE": {
+        "sBTScorePAE": {
+            "valorScoreRango": -0.409,
+            "tipoRestriccion": "",
+            "idPolitica": 0,
+            "codigoModelo": 101,
+            "desdeNumerico": 0,
+            "hastaFecha": "0001-01-01",
+            "hastaNumerico": 25,
+            "valorPolitica": "",
+            "mensajeIncumPolitica": "",
+            "correlativo": 1,
+            "desdeCaracter": "",
+            "codigoItem": 1,
+            "desdeFecha": "0001-01-01",
+            "hastaCaracter": ""
         }
-      }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 31107,
+        "Estado": "OK",
+        "Servicio": "BTPAE.ObtenerScores",
+        "Requerimiento": 1,
+        "Fecha": "2022-11-29",
+        "Hora": "12:32:04",
+        "Canal": "BTDIGITAL"
     }
-  }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -81,14 +81,14 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \
   -d '{
-      "bts:Btinreq": {
-         "bts:Canal": "BTDIGITAL",
-         "bts:Usuario": "INSTALADOR",
-         "bts:Device": "FC",
-         "bts:Requerimiento": "0",
-         "bts:Token": "6C363FC1CD2072DE525376D3"
+      "Btinreq": {
+         "Canal": "BTDIGITAL",
+         "Usuario": "INSTALADOR",
+         "Device": "FC",
+         "Requerimiento": 0,
+         "Token": "6C363FC1CD2072DE525376D3"
          },
-      "clienteUId": "322"
+      "clienteUId": 322
 }'
 ```
 :::
@@ -175,34 +175,34 @@ curl -X POST \
    "sdtDomicilios": {
       "sBTDomicilioCompleto": [
         {
-         "coloniaId": "0",
-         "agrupador1Id": "3",
+         "coloniaId": 0,
+         "agrupador1Id": 3,
          "agrupador5": "",
          "departamento": "Artigas",
          "agrupador4": "",
-         "agrupador3Id": "0",
+         "agrupador3Id": 0,
          "detalleUbicacion": "",
          "barrio": "",
          "agrupador3": "",
          "agrupador2": "259",
          "agrupador1": "LECUEDER",
-         "agrupador5Id": "0",
+         "agrupador5Id": 0,
          "tipoDomicilio": "Residencia",
          "ubicacionDesde": "",
          "direccion": "CALLE LECUEDER NO. PUERTA 259",
          "colonia": "",
-         "paisId": "845",
+         "paisId": 845,
          "tipoVivienda": "",
          "pais": "URUGUAY",
-         "agrupador2Id": "1",
+         "agrupador2Id": 1,
          "codigoPostal": "",
          "tipoViviendaId": "",
-         "agrupador4Id": "0",
-         "barrioId": "1",
-         "localidadId": "1022",
+         "agrupador4Id": 0,
+         "barrioId": 1,
+         "localidadId": 1022,
          "localidad": "",
-         "tipoDomicilioId": "1",
-         "departamentoId": "1"
+         "tipoDomicilioId": 1,
+         "departamentoId": 1
          }
       ]
    },
@@ -210,10 +210,10 @@ curl -X POST \
          "BTErrorNegocio": []
    },
    "Btoutreq": {
-      "Numero": "34981",
+      "Numero": 34981,
       "Estado": "OK",
       "Servicio": "BTClientes.ObtenerDomicilios",
-      "Requerimiento": "0",
+      "Requerimiento": 0,
       "Fecha": "2025-04-30",
       "Canal": "BTDIGITAL",
       "Hora": "11:02:11"

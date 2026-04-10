@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Cónyuge
 breadcrumb: false
 pageInfo: false
@@ -90,11 +90,11 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cc9b534A8B5C60A82434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-	"personaUId": "1",
-	"conyugeUId": "3",
-	"estadoCivilId" : "2"
+	"personaUId": 1,
+	"conyugeUId": 3,
+	"estadoCivilId": "2"
 }'
 ```
 :::
@@ -133,23 +133,22 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
+'{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 
 	    "Token": "16c1cc9b534A8B5C60A82434", 
 	    "Canal": "BTDIGITAL", 
-	    "Requerimiento": "1" 
+	    "Requerimiento": 1 
     }, 
-    "Erroresnegocio": { 
-    }, 
+    "Erroresnegocio": {"BTErrorNegocio": []}, 
     "Btoutreq": { 
         "Canal": "BTDIGITAL", 
         "Servicio": "BTPersonas.ActualizarConyugeResponse", 
-        "Fecha": "2021-10-28", 
-        "Hora": "15:39:53", 
-        "Requerimiento": "1", 
-        "Numero": "11003", 
+        "Fecha": "2021-11-08", 
+        "Hora": "15:41:46", 
+        "Requerimiento": 1, 
+        "Numero": 8673, 
         "Estado": "OK" 
     }
 }'

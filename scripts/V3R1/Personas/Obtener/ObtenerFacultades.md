@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Facultades
 breadcrumb: false
 pageInfo: false
@@ -87,7 +87,7 @@ curl -X POST \
           "Usuario": "INSTALADOR",
           "Token": "5f7c5e6a6f99865B3A2E76CF"
         },
-        "personaUId": 183
+        "personasUId": 183
 	}'
 ```
 :::
@@ -178,68 +178,68 @@ curl -X POST \
 	"Btinreq": {
           "Device": "GZ",
           "Usuario": "Instalador",
-          "Requerimiento": "0",
+          "Requerimiento": 0,
           "Canal": "BTDIGITAL",
           "Token": "5f7c5e6a6f99865B3A2E76CF"
         },
         "sdtFacultades": {
           "facultadesOperacion": {
-            "sBTFacultadPersonaOperacion": {
+            "sBTFacultadPersonaOperacion": [{
               "producto": {
                 "papel": "$",
                 "moneda": "$",
-                "productoUId": "41",
+                "productoUId": 41,
                 "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
               },
               "descripcion": "Retiro de cuentas vista",
-              "operacionUId": "1011",
+              "operacionUId": 1011,
               "tipo": "Persona",
               "potestad": "Titular",
               "grupo": {
-                "numero": "1",
-                "monto": "0.00",
+                "numero": 1,
+                "monto": 0.00,
                 "moneda": "$",
                 "papel": "$",
-                "vigenciaHasta": {
-                  "-self-closing": "true"
-                },
-                "codigoMoneda": "0",
+                "vigenciaHasta": "",
+                "codigoMoneda": 0,
                 "vigenciaDesde": "2018-11-05",
-                "codigoPapel": "0"
+                "codigoPapel": 0
               },
-              "codigo": "2",
+              "codigo": 2,
               "categoria": "-"
-            }
+            }]
           },
           "facultadesCliente": {
-            "sBTFacultadPersonaCliente": {
-              "clienteUId": "340",
+            "sBTFacultadPersonaCliente": [{
+              "clienteUId": 340,
               "descripcion": "Firma de Cheques",
               "potestad": "Titular",
               "tipo": "Categoría",
               "grupo": {
-                "numero": "1",
-                "monto": "2000000.00",
+                "numero": 1,
+                "monto": 2000000.00,
                 "moneda": "$",
                 "papel": "$",
                 "vigenciaHasta": "2022-09-23",
-                "codigoMoneda": "0",
+                "codigoMoneda": 0,
                 "vigenciaDesde": "2018-12-10",
-                "codigoPapel": "0"
+                "codigoPapel": 0
               },
-              "codigo": "4",
+              "codigo": 4,
               "categoria": "A"
-            }
+            }]
           }
         },
-        "Erroresnegocio": "",
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        },
         "Btoutreq": {
           "Canal": "BTDIGITAL",
           "Servicio": "BTPersonas.ObtenerFacultades",
-          "Fecha": "2022-11-29",
-          "Hora": "10:23:37",
-          "Requerimiento": 1,
-          "Numero": 486,
+          "Fecha": "2023-03-27",
+          "Hora": "11:40:36",
+          "Requerimiento": 0,
+          "Numero": 2957,
           "Estado": "OK"
         }
 }'

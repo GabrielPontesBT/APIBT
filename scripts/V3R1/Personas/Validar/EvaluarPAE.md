@@ -104,19 +104,19 @@ curl -X POST \
   -d '{
 	"Btinreq": {
 		"Device": "GZ",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "E1F15D391E5C8FAC4189A627"
 	},
    "modeloId": 23,
    "personaUId": 62,
    "productoUId": 3,
    "sdtValores": {
-      "sBTPAEValorItem": {
-      "itemValor": "",
-      "itemNombre": ""
-      }
+      "sBTPAEValorItem": [{
+         "itemValor": "",
+         "itemNombre": ""
+      }]
    }
 }'
 ```
@@ -160,31 +160,31 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Device": "GZ",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "E1F15D391E5C8FAC4189A627"
 	},
-   "valor": 10000,
-   "mensaje": {},
-   "sdtPoliticas": {},
+   "valor": 10000.0,
+   "mensaje": "",
+   "sdtPoliticas": "",
    "numeroEjecucion": 2,
    "Erroresnegocio": {
        "BTErrorNegocio": []
    },
    "Btoutreq": {
-       "Numero": "835",
+       "Numero": 16893,
        "Estado": "OK",
        "Servicio": "BTPersonas.EvaluarPAE",
-       "Fecha": "2017-12-18",
-       "Requerimiento": "",
-       "Hora": "01:48:53",
+       "Fecha": "2023-10-31",
+       "Requerimiento": 0,
+       "Hora": "08:50:51",
        "Canal": "BTDIGITAL"
    }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

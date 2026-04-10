@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Cronograma Original
 breadcrumb: false
 pageInfo: false
@@ -328,7 +328,7 @@ curl -X POST \
 { 
 	"Btinreq": { 
 	  "Canal": "BTDIGITAL", 
-	  "Requerimiento": "1", 
+	  "Requerimiento": 1, 
 	  "Usuario": "BANTOTAL", 
 	  "Token": "480647346F955E77534D3E02", 
 	  "Device": "AC" 
@@ -540,7 +540,7 @@ curl -X POST \
 	  "Servicio": "BTPrestamos.ObtenerCronogramaOriginal", 
 	  "Fecha": "2021-03-18", 
 	  "Hora": "10:03:41", 
-	  "Requerimiento": "1", 
+	  "Requerimiento": 1, 
 	  "Numero": "8032", 
 	  "Estado": "OK" 
 	} 

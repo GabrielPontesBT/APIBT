@@ -73,21 +73,21 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarIntegrantePersonaJuridica' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarIntegrantePersonaJuridica' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	 "Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "INSTALADOR",
-		"Token": "1429807273CD285A89A23FBE",
-		"Device": "MC"
-	 },
-	 "personaJuridicaUId": "2",
-	 "personaIntegranteUId": "1"
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "1429807273CD285A89A23FBE",
+        "Device": "MC"
+    },
+    "personaJuridicaUId": 2,
+    "personaIntegranteUId": 1
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -125,25 +125,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-	 "Btinreq": { 
-		"Canal": "BTDIGITAL", 
-		"Requerimiento": "1", 
-		"Usuario": "INSTALADOR", 
-		"Token": "1429807273CD285A89A23FBE", 
-		"Device": "MC" 
-	 }, 
-	 "Erroresnegocio": null, 
-	 "Btoutreq": { 
-		"Canal": "BTDIGITAL", 
-		"Servicio": "BTPersonas.EliminarIntegrantePersonaJuridica", 
-		"Fecha": "2020-11-02", 
-		"Hora": "12:06:37", 
-		"Requerimiento": "1", 
-		"Numero": "10140", 
-		"Estado": "OK" 
-	 } 
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "1429807273CD285A89A23FBE",
+        "Device": "MC"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPersonas.EliminarIntegrantePersonaJuridica",
+        "Fecha": "2020-11-02",
+        "Hora": "12:06:37",
+        "Requerimiento": 1,
+        "Numero": 10140,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Motivos de Precancelación
 breadcrumb: false
 pageInfo: false
@@ -104,7 +104,7 @@ curl -X POST \
   -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
+          "Requerimiento": 1,
           "Device": "GZ",
           "Canal": "BTDIGITAL",
           "Usuario": "MINSTALADOR",
@@ -160,7 +160,7 @@ curl -X POST \
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "6fc29caa9d4A8B5C60A82434"
     },
@@ -176,7 +176,7 @@ curl -X POST \
       "Estado": "OK",
       "Servicio": "BTPrestamos.ObtenerMotivosPreCancelacion",
       "Fecha": "2021-01-29",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }

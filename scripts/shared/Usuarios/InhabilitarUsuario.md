@@ -80,21 +80,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?InhabilitarUsuario' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?InhabilitarUsuario' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
-   "Usuario": "GPONTES",
-   "fechaDesde": "2022-01-01",
-   "fechaHasta": "2022-06-01"
+    "usuario": "GPONTES",
+    "fechaDesde": "2022-01-01",
+    "fechaHasta": "2022-06-01"
 }'
 ```
 :::
@@ -133,26 +133,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "GP", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": "1", 
-        "Canal": "BTDIGITAL", 
-        "Token": "bc8b678bc44A8B5C60A82434" 
-    }, 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Numero": "839", 
-        "Estado": "OK", 
-        "Servicio": "BTUsuarios.InhabilitarUsuario", 
-        "Requerimiento": "1", 
-        "Fecha": "2022-05-12", 
-        "Hora": "15:35:54", 
-        "Canal": "BTDIGITAL" 
-    } 
-}
+'{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "bc8b678bc44A8B5C60A82434"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 838,
+        "Estado": "OK",
+        "Servicio": "BTUsuarios.InhabilitarUsuario",
+        "Requerimiento": 1,
+        "Fecha": "2022-05-12",
+        "Hora": "15:35:43",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

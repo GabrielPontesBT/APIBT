@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Valores de Pizarra Por Módulo
 icon: /assets/image/nuevo.svg
 breadcrumb: false
@@ -102,17 +102,17 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AS",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "10355d3c5fCD285A89A23FBE"
 	},
-   "modulo":"22",
-   "tipoPizarra":"32",
-   "papelId":"0",
-   "monedaId":"0",
-   "fecha":"2025-11-13",
-   "importe":"49999.99",
-   "plazo":""
+   "modulo": 71,
+   "tipoPizarra": 25,
+   "papelId": 0,
+   "monedaId": 80,
+   "fecha": "2025-11-13",
+   "importe": 50000000,
+   "plazo": 0
 }'
 ```
 :::
@@ -178,65 +178,47 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AS",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "10355d3c5fCD285A89A23FBE"
 	},
    "sdtValorPizarra": {
       "sBTValorPizarra": [
          {
-            "tasa": "17.250000",
-            "plazo": "59",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
+            "tasa": 20.0,
+            "plazo": 30,
+            "tipoTasa": "Efectiva Anual",
+            "tolerancia": 0.0,
+            "fechaVigencia": "2025-11-13"
          },
          {
-            "tasa": "17.500000",
-            "plazo": "89",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
+            "tasa": 25.0,
+            "plazo": 60,
+            "tipoTasa": "Efectiva Anual",
+            "tolerancia": 0.0,
+            "fechaVigencia": "2025-11-13"
          },
          {
-            "tasa": "17.750000",
-            "plazo": "119",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
-         },
-         {
-            "tasa": "18.000000",
-            "plazo": "179",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
-         },
-         {
-            "tasa": "18.250000",
-            "plazo": "364",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
-         },
-         {
-            "tasa": "18.500000",
-            "plazo": "99999",
-            "tipoTasa": "Nominal Anual",
-            "tolerancia": "2.0000",
-            "fechaVigencia": "2013-12-23"
+            "tasa": 30.0,
+            "plazo": 90,
+            "tipoTasa": "Efectiva Anual",
+            "tolerancia": 0.0,
+            "fechaVigencia": "2025-11-13"
          }
       ]
    },
-    "Btoutreq": {
-         "Numero": "15764",
-         "Estado": "OK",
-         "Servicio": "BTPrecios.ObtenerValoresPizarraPorModulo",
-         "Requerimiento": "1",
-         "Fecha": "2025-11-13",
-         "Hora": "15:28:51",
-         "Canal": "BTDIGITAL"
-    }
+   "Erroresnegocio": {
+      "BTErrorNegocio": []
+   },
+   "Btoutreq": {
+      "Numero": 15763,
+      "Estado": "OK",
+      "Servicio": "BTPrecios.ObtenerValoresPizarraPorModulo",
+      "Requerimiento": 0,
+      "Fecha": "2025-11-13",
+      "Hora": "15:26:57",
+      "Canal": "BTDIGITAL"
+   }
 }'
 ```
 :::

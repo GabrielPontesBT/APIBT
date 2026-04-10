@@ -89,22 +89,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPosicion=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPosicion' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "BANTOTAL",
+        "Token": "D567A28912FF8C29016DD5EC"
     },
     "clienteUId": 341,
     "monedaId": 2222,
     "fecha": "2020-08-06"
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -167,48 +167,48 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "BANTOTAL",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "E362E52FED059AA3BF86A6E3"
     },
     "totalGeneral": 950333.58,
     "totalDisponible": 950333.58,
     "numeradorConsulta": 12928,
     "sdtClasesActivos": {
-         "sBTClaseActivo": [
-         {
-            "porcentajeComposicion": 55.5,
-            "identificador": 10,
-            "total": 527406.43,
-            "nombre": "Depósitos y Mandatos"
-         },
-         {
-            "porcentajeComposicion": 23.24,
-            "identificador": 11,
-            "total": 220867,
-            "nombre": "Monetario y Renta Fija"
-         },
-         {
-            "porcentajeComposicion": 21.26,
-            "identificador": 12,
-            "total": 202060.15,
-            "nombre": "Renta Variable"
-         }
-         ]
+        "sBTClaseActivo": [
+            {
+                "porcentajeComposicion": 55.50,
+                "identificador": 10,
+                "total": 527406.43,
+                "nombre": "Depósitos y Mandatos"
+            },
+            {
+                "porcentajeComposicion": 23.24,
+                "identificador": 11,
+                "total": 220867.00,
+                "nombre": "Monetario y Renta Fija"
+            },
+            {
+                "porcentajeComposicion": 21.26,
+                "identificador": 12,
+                "total": 202060.15,
+                "nombre": "Renta Variable"
+            }
+        ]
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTClientes.ObtenerPosicion",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-10-08",
+        "Hora": "12:27:14",
+        "Numero": 742,
+        "Servicio": "BTClientes.ObtenerPosicion",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

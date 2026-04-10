@@ -75,19 +75,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPizarraPorModulo' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPizarraPorModulo' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '
-  	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "480647346F955E77534D3E02",
-	  "bts:Device": "AC"
-	},
-	"modulo": 20,
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "480647346F955E77534D3E02",
+        "Device": "AC"
+    },
+    "modulo": 20
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -131,31 +132,33 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "480647346F955E77534D3E02",
-	  "Device": "AC"
-	},
-	"sdtPizarras": {
-	  "sBTPizarra": {
-		"codigo": "99998",
-		"descripcion": "Pizarra Atrib. Exten"
-	  }
-	},
-	"Erroresnegocio": {},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTConfiguracionBantotal.ObtenerPizarraPorModulo",
-	  "Fecha": "2021-03-18",
-	  "Hora": "10:49:45",
-	  "Requerimiento": "1",
-	  "Numero": "8033",
-	  "Estado": "OK"
-	}
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "480647346F955E77534D3E02",
+        "Device": "AC"
+    },
+    "sdtPizarras": {
+        "sBTPizarra": {
+            "codigo": 99998,
+            "descripcion": "Pizarra Atrib. Exten"
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTConfiguracionBantotal.ObtenerPizarraPorModulo",
+        "Fecha": "2021-03-18",
+        "Hora": "10:49:45",
+        "Requerimiento": 1,
+        "Numero": 8033,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

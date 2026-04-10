@@ -110,18 +110,18 @@ curl -X POST \
   -d '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "BANTOTAL",
 	  "Token": "1820366692F955E77534D3E0",
 	  "Device": "AC"
 	},
-	"operacionUId": "10176",
-	"chequeraId": "21",
+	"operacionUId": 10176,
+	"chequeraId": 21,
 	"tipoDenunciante": "A",
 	"tipoDenuncia": "E",
 	"motivoDenuncia": "P",
-	"chequeDesde": "1326",
-	"chequeHasta": "1350"
+	"chequeDesde": 1326,
+	"chequeHasta": 1350
 }'
 ```
 :::
@@ -164,19 +164,19 @@ curl -X POST \
 '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "BANTOTAL",
 	  "Token": "1820366692F955E77534D3E0",
 	  "Device": "AC"
 	},
-	"numeroDenuncia": "1",
+	"numeroDenuncia": 1,
 	"Btoutreq": {
 	  "Canal": "BTDIGITAL",
 	  "Servicio": "BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera",
 	  "Fecha": "2020-11-13",
 	  "Hora": "11:20:03",
-	  "Requerimiento": "1",
-	  "Numero": "7888",
+	  "Requerimiento": 1,
+	  "Numero": 7888,
 	  "Estado": "OK"
 	}
 }'

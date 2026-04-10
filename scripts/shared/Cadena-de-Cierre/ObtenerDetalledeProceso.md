@@ -73,19 +73,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    }, 
-    "identificador":"93",
+        "Token": "6964034201CD285A89A23FBE"
+    },
+    "identificador": 93
 }'
 ```
 :::
@@ -132,34 +132,35 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-      "Device": "mc", 
-      "Usuario": "INSTALADOR", 
-      "Requerimiento": "1", 
-      "Canal": "BTDIGITAL", 
-      "Token": "6964034201CD285A89A23FBE" 
-    }, 
-    "sBTProcesoBatch": { 
-      "identificador": "93", 
-      "nombre": "POCDE002", 
-      "descripcion": "Busca Indicios OCODEí", 
-      "periodicidad": "DIARIA", 
-      "parametrosExtendidos": "SI", 
-      "esReprocesable": "No reprocesar nunca" 
-    }, 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-      "Numero": "42156", 
-      "Estado": "OK", 
-      "Servicio": "BTCadenaCierre.ObtenerDetalleProceso", 
-      "Fecha": "2022-06-01", 
-      "Requerimiento": "1", 
-      "Hora": "13:44:21", 
-      "Canal": "BTDIGITAL" 
-    } 
-  }, 
+'{
+    "Btinreq": {
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6964034201CD285A89A23FBE"
+    },
+    "sBTProcesoBatch": {
+        "identificador": 93,
+        "nombre": "POCDE002",
+        "descripcion": "Busca Indicios OCODEí",
+        "periodicidad": "DIARIA",
+        "parametrosExtendidos": "SI",
+        "esReprocesable": "No reprocesar nunca"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 42156,
+        "Estado": "OK",
+        "Servicio": "BTCadenaCierre.ObtenerDetalleProceso",
+        "Fecha": "2022-06-01",
+        "Requerimiento": 1,
+        "Hora": "13:44:21",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

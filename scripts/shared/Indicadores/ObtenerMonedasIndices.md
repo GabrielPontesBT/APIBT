@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerMonedasIndices' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-   "Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerMonedasIndices' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    }
 }'
 ```
 :::
@@ -169,77 +169,79 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtMonedas": {
-      "sBTMonedaIndice": [
-      {
-         "tipoCambio": "N",
-         "codigo": 0,
-         "nombre": "Pesos"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 105,
-         "nombre": "DOLAR AUSTRALIANO"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 500,
-         "nombre": "PESOS ARGENTINOS"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 1111,
-         "nombre": "EURO"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 2222,
-         "nombre": "DÓLAR ESTADOUNIDENSE"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 2225,
-         "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 3600,
-         "nombre": "YENS"
-      }
-      ]
-   },
-   "sdtIndices": {
-      "sBTMonedaIndice": [
-      {
-         "tipoCambio": "N",
-         "codigo": 0,
-         "nombre": "Billete"
-      },
-      {
-         "tipoCambio": "N",
-         "codigo": 50,
-         "nombre": "Unidad de Valor Adquisitivo"
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11991,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerMonedasIndices",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "15:09:29"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtMonedas": {
+        "sBTMonedaIndice": [
+            {
+                "tipoCambio": "N",
+                "codigo": 0,
+                "nombre": "Pesos"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 105,
+                "nombre": "DOLAR AUSTRALIANO"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 500,
+                "nombre": "PESOS ARGENTINOS"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 1111,
+                "nombre": "EURO"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 2222,
+                "nombre": "DÓLAR ESTADOUNIDENSE"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 2225,
+                "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 3600,
+                "nombre": "YENS"
+            }
+        ]
+    },
+    "sdtIndices": {
+        "sBTMonedaIndice": [
+            {
+                "tipoCambio": "N",
+                "codigo": 0,
+                "nombre": "Billete"
+            },
+            {
+                "tipoCambio": "N",
+                "codigo": 50,
+                "nombre": "Unidad de Valor Adquisitivo"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11991,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerMonedasIndices",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "15:09:29"
+    }
 }'
 ```
 ::: 

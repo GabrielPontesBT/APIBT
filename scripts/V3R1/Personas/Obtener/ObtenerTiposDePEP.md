@@ -140,7 +140,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -172,15 +172,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20050,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerTiposDePEP",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Fecha": "2024-04-22",
+        "Hora": "18:43:51",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

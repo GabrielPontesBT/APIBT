@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Reducido
 icon: /assets/image/nuevo.svg
 breadcrumb: false
@@ -194,13 +194,13 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"personaUId": 255,
    "sdtPersona": {
-      "nroDocumento": 72116339,
+      "nroDocumento": "72116339",
       "estadoCivil": "Soltero/a",
       "fechaInicioActividad": "",
       "segundoNombre": "",
@@ -225,7 +225,7 @@ curl -X POST \
       "nacionalidad": "URUGUAY",
       "comentarioCorreo": "",
       "domicilios": {
-      "sBTDomicilioCompleto": {
+      "sBTDomicilioCompleto": [{
          "coloniaId": 0,
          "agrupador1Id": 1,
          "agrupador5": "",
@@ -254,11 +254,11 @@ curl -X POST \
          "localidadId": 1022,
          "tipoDomicilioId": 1,
          "departamentoId": 1
-      }
+      }]
       },
       "correoElectronico": "mail@mail.com",
       "sectorId": 0,
-      "datosAdicionales": "",
+      "datosAdicionales": {"sBTDatoLista": []},
       "actividadLaboralId": 0,
       "tipoDocumento": "Cédula Identidad",
       "nacionalidadId": 845,
@@ -306,7 +306,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
    },
@@ -314,12 +314,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8418,
+        "Numero": 36608,
         "Estado": "OK",
         "Servicio": "BTPersonas.ActualizarReducido",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Requerimiento": 0,
+        "Fecha": "2025-11-04",
+        "Hora": "17:24:39",
         "Canal": "BTDIGITAL"
     }
 }'

@@ -87,9 +87,9 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "9aaec33a3bCD285A89A23FBE"
 	},
     "operacionUId" : 8892,
     "fecha" : "2022-11-16"
@@ -176,9 +176,9 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "75e20bd1614A8B5C60A82434"
 	},
     "cronograma": {
         "sBTCuotaPrestamo": [
@@ -205,7 +205,7 @@ curl -X POST \
                         }
                     ]
                 },
-                "fechaVencimiento": "\n\t\t",
+                "fechaVencimiento": "",
                 "intereses": 0,
                 "estadoDsc": "",
                 "comisiones": 0,
@@ -230,12 +230,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "901",
+        "Numero": 898,
         "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerCronograma",
+        "Servicio": "BTPrestamos.ObtenerCronogramaConPagosAFechaResponse",
         "Fecha": "2017-12-21",
-        "Requerimiento": "",
-        "Hora": "12:27:52",
+        "Requerimiento": 0,
+        "Hora": "11:44:49",
         "Canal": "BTDIGITAL"
     }
 }'

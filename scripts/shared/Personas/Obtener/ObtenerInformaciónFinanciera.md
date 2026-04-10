@@ -76,18 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerInformacionFinanciera \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "21"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerInformacionFinanciera' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "098705dd29CD285A89A23FBE",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "personaUId": 21
 }'
 ```
 :::
@@ -153,48 +154,51 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtInformacionFinanciera": {
-		"paisOrigenRecursos": "URUGUAY",
-		"otrosIngresosMensualesDesc": "Alquileres",
-		"totalPasivos": "450000.00",
-		"origenRecursos": "C",
-		"totalIngresosMensuales": "450030.00",
-		"egresosMensuales": "380000.00",
-		"otrosIngresosMensuales": "450015.00",
-		"ingresosMensuales": "15.00",
-		"totalActivos": "950000.00",
-		"paisOrigenRecursosId": "845",
-		"operacionesInternacionales": {
-			  "tipoProducto": "Producto",
-			  "moneda": "FRANCO FRANCES EFECTIVO",
-			  "ciudadId": "1465",
-			  "nombreEntidad": "Nombre Entidad",
-			  "monto": "884561.00",
-			  "pais": "URUGUAY",
-			  "ciudad": "Colonia Nicolich",
-			  "operaMonedaExtranjera": "S",
-			  "numeroProducto": "AAALLL",
-			  "tipoOperacion": "Compra",
-			  "monedaId": "801",
-			  "paisId": "845"
-		},
-	},
-	"Btoutreq": {
-	  "Numero": "1729",
-	  "Estado": "OK",
-	  "Servicio": "BTPersonas.ObtenerInformacionFinanciera",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-03-05",
-	  "Canal": "BTDIGITAL",
-	  "Hora": "13:10:51"
-	}
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "098705dd29CD285A89A23FBE"
+    },
+    "sdtInformacionFinanciera": {
+        "paisOrigenRecursos": "URUGUAY",
+        "otrosIngresosMensualesDesc": "Alquileres",
+        "operacionesInternacionales": {
+            "tipoProducto": "Producto",
+            "moneda": "FRANCO FRANCES EFECTIVO",
+            "ciudadId": 1465,
+            "nombreEntidad": "Nombre Entidad",
+            "monto": 884561.00,
+            "pais": "URUGUAY",
+            "ciudad": "Colonia Nicolich",
+            "operaMonedaExtranjera": "S",
+            "numeroProducto": "AAALLL",
+            "tipoOperacion": "Compra",
+            "monedaId": 801,
+            "paisId": 845
+        },
+        "totalPasivos": 450000.00,
+        "origenRecursos": "C",
+        "totalIngresosMensuales": 450030.00,
+        "egresosMensuales": 380000.00,
+        "otrosIngresosMensuales": 450015.00,
+        "ingresosMensuales": 15.00,
+        "totalActivos": 950000.00,
+        "paisOrigenRecursosId": 845
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1803,
+        "Servicio": "BTPersonas.ObtenerInformacionFinanciera",
+        "Estado": "OK",
+        "Fecha": "2020-03-06",
+        "Requerimiento": 1,
+        "Hora": "08:36:34",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

@@ -97,7 +97,7 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerInstruccionesHabilitadas' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
@@ -207,17 +207,17 @@ curl -X POST \
           "Token": "30F74741A02C318CEFD55684",
           "Device": "GL"
         },
-        "Instrucciones": {
-          "Instruccion": [
+        "sdtCodigoInstrucciones": {
+          "sBTCodigoInstrucciones": [
             {
               "codigo": 2,
               "descripcion": "Cancelar y Acreditar al vto.",
               "datosExtendidos": {
                 "sBTDatoExtendido": {
-                  "Clave": "TIPO_PRODUCTO",
-                  "Tipo": "D",
-                  "Valor": "VTO",
-                  "Lista": ""
+                  "clave": "TIPO_PRODUCTO",
+                  "tipo": "D",
+                  "valor": "VTO",
+                  "lista": ""
                 }
               }
             },
@@ -226,10 +226,10 @@ curl -X POST \
               "descripcion": "Renovación Automática",
               "datosExtendidos": {
                 "sBTDatoExtendido": {
-                  "Clave": "TIPO_PRODUCTO",
-                  "Tipo": "D",
-                  "Valor": "VTO",
-                  "Lista": ""
+                  "clave": "TIPO_PRODUCTO",
+                  "tipo": "D",
+                  "valor": "VTO",
+                  "lista": ""
                 }
               }
             },
@@ -238,10 +238,10 @@ curl -X POST \
               "descripcion": "Acreditación",
               "datosExtendidos": {
                 "sBTDatoExtendido": {
-                  "Clave": "TIPO_PRODUCTO",
-                  "Tipo": "D",
-                  "Valor": "PP",
-                  "Lista": ""
+                  "clave": "TIPO_PRODUCTO",
+                  "tipo": "D",
+                  "valor": "PP",
+                  "lista": ""
                 }
               }
             },
@@ -250,16 +250,18 @@ curl -X POST \
               "descripcion": "Capitalización Periódica Int.",
               "datosExtendidos": {
                 "sBTDatoExtendido": {
-                  "Clave": "TIPO_PRODUCTO",
-                  "Tipo": "D",
-                  "Valor": "PP",
-                  "Lista": ""
+                  "clave": "TIPO_PRODUCTO",
+                  "tipo": "D",
+                  "valor": "PP",
+                  "lista": ""
                 }
               }
             }
           ]
         },
-        "Erroresnegocio": "",
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        },
         "Btoutreq": {
           "Canal": "BTDIGITAL",
           "Servicio": "BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas",

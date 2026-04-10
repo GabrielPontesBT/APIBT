@@ -681,7 +681,9 @@ curl -X POST \
           "seguros": 0, 
           "comisiones": 118.13 
         }, 
-        "Erroresnegocio": "", 
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        }, 
         "Btoutreq": { 
           "Numero": 155926, 
           "Estado": "OK", 

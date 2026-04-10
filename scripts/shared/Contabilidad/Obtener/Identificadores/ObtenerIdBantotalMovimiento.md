@@ -81,19 +81,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalMovimiento' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"movimientoUId": "2"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalMovimiento' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "281020211424260000881155",
+        "Device": "GP"
+    },
+    "movimientoUId": 2
 }'
 ```
 :::
@@ -138,31 +138,32 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-	    "Device": "GP", 
-	    "Usuario": "MINSTALADOR", 
-	    "Token": "16c1cc9b534A8B5C60A82434", 
-	    "Canal": "BTDIGITAL", 
-	    "Requerimiento": "1" 
-    }, 
-    "empresa": "1", 
-    "sucursalId": "1", 
-    "moduloId": "21", 
-    "transaccionId": "750", 
-    "relacion": "30", 
-    "fechaContabilizacion": "2020-05-11", 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTContabilidad.ObtenerIdBantotalMovimiento", 
-        "Fecha": "2021-10-28", 
-        "Hora": "15:39:53", 
-        "Requerimiento": "1", 
-        "Numero": "11003", 
-        "Estado": "OK" 
-    } 
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "281020211424260000881155",
+        "Device": "GP"
+    },
+    "empresa": 1,
+    "sucursalId": 1,
+    "moduloId": 21,
+    "transaccionId": 750,
+    "relacion": 30,
+    "fechaContabilizacion": "2020-05-11",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTContabilidad.ObtenerIdBantotalMovimiento",
+        "Fecha": "2021-10-28",
+        "Hora": "15:39:53",
+        "Requerimiento": 1,
+        "Numero": 11003,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

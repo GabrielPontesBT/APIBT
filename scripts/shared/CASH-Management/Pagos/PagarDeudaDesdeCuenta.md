@@ -99,24 +99,24 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?PagarDeudaDesdeCuenta=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?PagarDeudaDesdeCuenta' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "F971DE0C3D4C96A5ABC22DAD"
     },
     "ordenId": 293,
     "nroLineaOrden": 1,
     "monedaId": 0,
     "importePago": 100,
     "operacionUId": 835
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -157,24 +157,24 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "F971DE0C3D4C96A5ABC22DAD"
     },
     "transaccionId": 98,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.PagarDeudaDesdeCuenta",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-11-19",
+        "Hora": "11:36:57",
+        "Numero": 26133,
+        "Servicio": "BTCASHManagement.PagarDeudaDesdeCuenta",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

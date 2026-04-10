@@ -70,17 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?ObtenerTiposDeModelos \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-  "Btinreq": {
-      "Requerimiento": 13,
-      "Device": "FP",
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Token": "3789c5608bCD285A89A23FBE"
-  },
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerTiposDeModelos' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 10,
+        "Device": "FP",
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Token": "3789c5608bCD285A89A23FBE"
+    }
 }'
 ```
 :::
@@ -151,65 +152,61 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 
 @tab JSON
 ```json
-{
-  "Envelope": {
-    "Body": {
-      "BTPAE.ObtenerTiposDeModelosResponse": {
-        "Btinreq": {
-          "Device": "FP",
-          "Usuario": "INSTALADOR",
-          "Requerimiento": 10,
-          "Canal": "BTDIGITAL",
-          "Token": "3789c5608bCD285A89A23FBE"
-        },
-        "sdtTModelosPAE": {
-          "sBTTModeloPAE": [
+'{
+    "Btinreq": {
+        "Device": "FP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 10,
+        "Canal": "BTDIGITAL",
+        "Token": "3789c5608bCD285A89A23FBE"
+    },
+    "sdtTModelosPAE": {
+        "sBTTModeloPAE": [
             {
-              "descripcion": "Lineal",
-              "programaEvaluacion": "",
-              "tipoModelo": 1,
-              "categoriaModelo": 1
+                "descripcion": "Lineal",
+                "programaEvaluacion": "",
+                "tipoModelo": 1,
+                "categoriaModelo": 1
             },
             {
-              "descripcion": "Logístico",
-              "programaEvaluacion": "",
-              "tipoModelo": 2,
-              "categoriaModelo": 5
+                "descripcion": "Logístico",
+                "programaEvaluacion": "",
+                "tipoModelo": 2,
+                "categoriaModelo": 5
             },
             {
-              "descripcion": "Mínimo Puntaje",
-              "programaEvaluacion": "",
-              "tipoModelo": 3,
-              "categoriaModelo": 2
+                "descripcion": "Mínimo Puntaje",
+                "programaEvaluacion": "",
+                "tipoModelo": 3,
+                "categoriaModelo": 2
             },
             {
-              "descripcion": "Máximo Puntaje",
-              "programaEvaluacion": "",
-              "tipoModelo": 4,
-              "categoriaModelo": 3
+                "descripcion": "Máximo Puntaje",
+                "programaEvaluacion": "",
+                "tipoModelo": 4,
+                "categoriaModelo": 3
             },
             {
-              "descripcion": "Ejecución de algoritmo externo",
-              "programaEvaluacion": "PAISPRU",
-              "tipoModelo": 5,
-              "categoriaModelo": 4
+                "descripcion": "Ejecución de algoritmo externo",
+                "programaEvaluacion": "PAISPRU",
+                "tipoModelo": 5,
+                "categoriaModelo": 4
             }
-          ]
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Numero": 31103,
-          "Estado": "OK",
-          "Servicio": "BTPAE.ObtenerTiposDeModelos",
-          "Fecha": "2022-11-29",
-          "Requerimiento": 10,
-          "Canal": "BTDIGITAL",
-          "Hora": "10:38:28"
-        }
-      }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 31103,
+        "Estado": "OK",
+        "Servicio": "BTPAE.ObtenerTiposDeModelos",
+        "Fecha": "2022-11-29",
+        "Requerimiento": 10,
+        "Canal": "BTDIGITAL",
+        "Hora": "10:38:28"
     }
-  }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

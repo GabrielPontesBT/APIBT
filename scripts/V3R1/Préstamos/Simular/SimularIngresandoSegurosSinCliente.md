@@ -103,29 +103,31 @@ curl -X POST \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
 	"Btinreq": {
+      "Device": "GP",
       "Canal": "BTDIGITAL",
-      "Usuario": "MINSTALADOR",
-      "Device": "GL",
-      "Requerimiento": 1,
-      "Token": "01D45E9964612A4C8CCB1055"
+      "Token": "387E2B35D9F43B80C31D1FF0",
+      "Usuario": "INSTALADOR",
+      "Requerimiento": 1
    },
    "sdtPrestamoAlta": {
-      "plazoTotal": "300",
-      "productoUId": "71",
-      "monto": "20000",
-      "actividad": "1111",
-      "valorCuota": "5000",
-      "periodoCuotas": "30",
-      "cantidadCuotas": "",
-      "tasa": "",
+      "plazoTotal": 300,
+      "productoUId": 71,
+      "monto": 20000,
+      "actividad": 1111,
+      "valorCuota": 5000.0,
+      "periodoCuotas": 30,
+      "cantidadCuotas": 0,
+      "tasa": 0.0,
       "fechaPrimerPago": "2020-11-13",
-      "pizarra": ""
+      "pizarra": 0
    },
    "sinSeguros": "N",
    "sdtSeguros": {
-      "sBTSeguroSimulacion": {
-      "codigo": "100"
-      }
+      "sBTSeguroSimulacion": [
+         {
+            "codigo": 100
+         }
+      ]
    }
 }'
 ```
@@ -262,117 +264,121 @@ curl -X POST \
 ```json
 '{
 	"Btinreq": {
-      "Device": "AV",
-      "Usuario": "MINSTALADOR",
+      "Device": "GP",
+      "Usuario": "INSTALADOR",
       "Requerimiento": 1,
       "Canal": "BTDIGITAL",
-      "Token": "72e34bcd9d4A8B5C60A82434"
+      "Token": "387E2B35D9F43B80C31D1FF0"
    },
    "sdtSimulacionPrestamo": {
-      "cft": "28.210000",
-      "plazo": "360",
-      "tasa": "23.000000",
-      "impuestos": "452.410000",
-      "tasaEfectiva": "0.000000",
+      "cft": 28.21,
+      "plazo": 360,
+      "tasa": 23.0,
+      "impuestos": 452.41,
+      "tasaEfectiva": 0.0,
       "fechaVencimiento": "2021-10-13",
       "producto": {
-      "papel": "$",
-      "moneda": "$",
-      "productoUId": "71",
-      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-      "otrosConceptos":""
+         "papel": "$",
+         "moneda": "$",
+         "productoUId": 71,
+         "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+         "otrosConceptos": ""
       },
-      "intereses": "2027.72",
+      "intereses": 2027.72,
       "fechaPrimerPago": "2020-11-13",
-      "comisiones": "0.000000",
-      "valorCuota": "5000.00",
+      "comisiones": 0.0,
+      "valorCuota": 5000.0,
       "otrosConceptos": {
-      "sBTConcepto": {
-         "texto": "SANCOR - Vida - Variante 1",
-         "valor": "1440.00",
-         "concepto": "100"
-      }
+         "sBTConcepto": [
+            {
+               "texto": "SANCOR - Vida - Variante 1",
+               "valor": 1440.0,
+               "concepto": "100"
+            }
+         ]
       },
       "cronograma": {
-      "sBTCuotaPrestamoAlta": [
-         {
-            "importe": "5000.00",
-            "redondeo": "0.00",
-            "fechaPago": "2020-11-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2020-12-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-01-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-02-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-03-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-04-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-05-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-06-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-07-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-08-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-09-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-10-13"
-         }
-      ]
+         "sBTCuotaPrestamoAlta": [
+            {
+               "importe": 5000.0,
+               "redondeo": 0.0,
+               "fechaPago": "2020-11-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2020-12-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-01-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-02-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-03-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-04-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-05-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-06-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-07-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-08-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-09-13"
+            },
+            {
+               "importe": 1719.44,
+               "redondeo": 0.0,
+               "fechaPago": "2021-10-13"
+            }
+         ]
       },
-      "totalPrestamo": "23942.44",
-      "capital": "20000.00",
-      "operacionUId": "1",
-      "tasaEfectivaAnual": "23.000000",
-      "seguros": "1440.000000",
-      "tasaNominalAnual": "20.881010",
+      "totalPrestamo": 23942.44,
+      "capital": 20000.0,
+      "operacionUId": 1,
+      "tasaEfectivaAnual": 23.0,
+      "seguros": 1440.0,
+      "tasaNominalAnual": 20.88101,
       "fechaValor": "2020-10-13"
    },
-   "Erroresnegocio": "",
+   "Erroresnegocio": {
+      "BTErrorNegocio": []
+   },
    "Btoutreq": {
-      "Numero": 623,
+      "Numero": 11921,
       "Estado": "OK",
-      "Servicio": "BTPrestamos.SimularIngresandoSeguros",
-      "Fecha": "2019-11-20",
+      "Servicio": "BTPrestamos.SimularIngresandoSegurosSC",
+      "Fecha": "2023-05-19",
       "Requerimiento": 1,
-      "Hora": "09:23:04",
+      "Hora": "12:42:21",
       "Canal": "BTDIGITAL"
    }
 }'

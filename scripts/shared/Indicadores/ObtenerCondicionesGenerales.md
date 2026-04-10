@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCondicionesGenerales' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-      "Btinreq": {
-         "Device": 1,
-         "Canal": "BTDIGITAL",
-         "Token": "959C2E0AEF210ABC0D8AA8F7",
-         "Usuario": "INSTALADOR",
-         "Requerimiento": "?"
-      }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCondicionesGenerales' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    }
 }'
 ```
 :::
@@ -136,40 +136,42 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtCondicionesGenerales": {
-      "parametrosGeneralesWF": "NO",
-      "reglasNegocio": "SI",
-      "debug": "SI",
-      "opcionPAE": "NO",
-      "fechaCierreCanales": "2022-10-12",
-      "fechaCierre": "2020-10-12",
-      "fechaAperturaCanales": "2022-10-13",
-      "empresasIguales": "NO",
-      "opcionWorkFlow": "SI",
-      "cantidadPAE": 21,
-      "opcion7x24": "SI",
-      "fechaApertura": "2020-10-13",
-      "cantidadReglas": 294,
-      "periodo7x24": ""
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11990,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerCondicionesGenerales",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "14:55:00"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtCondicionesGenerales": {
+        "parametrosGeneralesWF": "NO",
+        "reglasNegocio": "SI",
+        "debug": "SI",
+        "opcionPAE": "NO",
+        "fechaCierreCanales": "2022-10-12",
+        "fechaCierre": "2020-10-12",
+        "fechaAperturaCanales": "2022-10-13",
+        "empresasIguales": "NO",
+        "opcionWorkFlow": "SI",
+        "cantidadPAE": 21,
+        "opcion7x24": "SI",
+        "fechaApertura": "2020-10-13",
+        "cantidadReglas": 294,
+        "periodo7x24": ""
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11990,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerCondicionesGenerales",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "14:55:00"
+    }
 }'
 ```
 ::: 

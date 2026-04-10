@@ -77,18 +77,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase?ObtenerOpcionGeneralDeProceso' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "MI",
-      "Device": "MC",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "MI",
+        "Device": "MC",
+        "Requerimiento": 1,
+        "Token": "200f0b8b654A8B5C60A82434"
     },
-    "codigo": "2850"
+    "codigo": 2850
 }'
 ```
 :::
@@ -134,25 +135,28 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 ```json
 '{
     "Btinreq": {
-      "Device": "MC",
-      "Usuario": "MI",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "200f0b8b654A8B5C60A82434"
+        "Device": "MC",
+        "Usuario": "MI",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "200f0b8b654A8B5C60A82434"
     },
     "sdtOpcionGeneralDeProceso": {
-      "descripcion": "Debug's",
-      "identificador": "2850",
-      "valor": "S"
+        "descripcion": "Debug's",
+        "identificador": 2850,
+        "valor": "S"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "109140",
-      "Estado": "OK",
-      "Servicio": "BTParametrosBase.ObtenerOpcionGeneralDeProceso",
-      "Requerimiento": "1",
-      "Fecha": "2020-11-24",
-      "Canal": "BTDIGITAL",
-      "Hora": "13:29:43"
+        "Numero": 109140,
+        "Estado": "OK",
+        "Servicio": "BTParametrosBase.ObtenerOpcionGeneralDeProceso",
+        "Requerimiento": 1,
+        "Fecha": "2020-11-24",
+        "Canal": "BTDIGITAL",
+        "Hora": "13:29:43"
     }
 }'
 ```

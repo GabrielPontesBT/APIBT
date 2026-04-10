@@ -76,11 +76,11 @@ curl -X POST \
 	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
 	-d '{
    "Btinreq": {
-      "Device": 1,
+      "Device": "1",
       "Canal": "BTDIGITAL",
       "Token": "959C2E0AEF210ABC0D8AA8F7",
       "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
+      "Requerimiento": 1
    }
 }'
 ```
@@ -241,32 +241,156 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
    "Btinreq": {
-      "Device": 1,
+      "Device": "1",
       "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "959C2E0AEF210ABC0D8AA8F7"
    },
    "sdtSucursalesCajas": {
       "cajasCerradas": 0,
-      "porcentajeCajasA": 100,
+      "porcentajeCajasA": 100.00,
       "listadoCajasA": {
-      "sBTCaja": [
-         {
-            "usuario": "ASESOR",
-            "nombre": "ASESOR",
-            "indicador": 400,
-            "sucursalId": 1
-         },
-         ...
-      ]
+         "sBTCaja": [
+            {
+               "usuario": "ASESOR",
+               "nombre": "ASESOR",
+               "indicador": 400,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "BANTOTAL",
+               "nombre": "BANTOTAL",
+               "indicador": 111,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "CAJERO",
+               "nombre": "CAJERO",
+               "indicador": 402,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "CAPTACCONF",
+               "nombre": "CAPTACCONF",
+               "indicador": 350,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "CAPTACION",
+               "nombre": "CAPTACION",
+               "indicador": 401,
+               "sucursalId": 1000
+            },
+            {
+               "usuario": "EJECCUENTA",
+               "nombre": "EJECCUENTA",
+               "indicador": 23,
+               "sucursalId": 1000
+            },
+            {
+               "usuario": "GERENTE",
+               "nombre": "GERENTE",
+               "indicador": 400,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "INSTALADOR",
+               "nombre": "INSTALADOR",
+               "indicador": 400,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "INSTALADORBANTOTAL",
+               "nombre": "INSTALADOR BANTOTAL2",
+               "indicador": 5000,
+               "sucursalId": 1000
+            },
+            {
+               "usuario": "JEFE",
+               "nombre": "JEFE",
+               "indicador": 400,
+               "sucursalId": 1
+            },
+            {
+               "usuario": "SEGURIDAD",
+               "nombre": "SEGURIDAD",
+               "indicador": 55,
+               "sucursalId": 1000
+            },
+            {
+               "usuario": "TESORSUC",
+               "nombre": "TESORSUC",
+               "indicador": 403,
+               "sucursalId": 1000
+            },
+            {
+               "usuario": "USUARIOBIT",
+               "nombre": "",
+               "indicador": 17,
+               "sucursalId": 1
+            }
+         ]
       },
-      ...
+      "listadoSucursalesC": {
+         "sBTSucursal": [
+            {
+               "telefono": "",
+               "descripcion": "Sucursal 25634",
+               "direccion": "",
+               "identificador": 25634,
+               "longitud": 0,
+               "latitud": 0
+            }
+         ]
+      },
+      "cajasAbiertas": 13,
+      "listadoSucursalesA": {
+         "sBTSucursal": [
+            {
+               "telefono": "",
+               "descripcion": "Casa Matriz",
+               "direccion": "",
+               "identificador": 1,
+               "longitud": 0,
+               "latitud": 0
+            },
+            {
+               "telefono": "",
+               "descripcion": "Sucursal Ciudad de la Costa",
+               "direccion": "",
+               "identificador": 1000,
+               "longitud": 0,
+               "latitud": 0
+            }
+         ]
+      },
+      "sucursalesCerradas": 1,
+      "sucursalesAbiertas": 2,
+      "porcentajeSucursalesC": 33.33,
+      "totalCajas": 13,
+      "porcentajeSucursalesA": 66.66,
+      "porcentajeCajasC": 0.00,
+      "totalSucursales": 3,
+      "listadoCajasC": {
+         "sBTCaja": []
+      }
    },
-   ...
-}
+   "Erroresnegocio": {
+      "BTErrorNegocio": []
+   },
+   "Btoutreq": {
+      "Numero": 11992,
+      "Estado": "OK",
+      "Servicio": "BTIndicadores.ObtenerSucursalesCajas",
+      "Requerimiento": 1,
+      "Fecha": "2023-05-22",
+      "Canal": "BTDIGITAL",
+      "Hora": "15:20:16"
+   }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

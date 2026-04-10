@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ProcesosMensuales' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosMensuales' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    },
+        "Token": "6964034201CD285A89A23FBE"
+    }
 }'
 ```
 :::
@@ -131,39 +131,37 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-      "Device": "mc",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6964034201CD285A89A23FBE"
+        "Device": "mc",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6964034201CD285A89A23FBE"
     },
     "sdtProcesosBatch": {
-      "sBTProcesoBatch": [
-        {
-          "identificador": "2900",
-          "nombre": "PCC00094",
-          "descripcion": "Cobro de Comision Inact. CC/CA",
-          "periodicidad": "MENSUAL",
-          "parametrosExtendidos": "SI",
-          "esReprocesable": "No reprocesar nunca"
-        },
-        ...
-      ]
+        "sBTProcesoBatch": {
+            "identificador": 2900,
+            "nombre": "PCC00094",
+            "descripcion": "Cobro de Comision Inact. CC/CA",
+            "periodicidad": "MENSUAL",
+            "parametrosExtendidos": "SI",
+            "esReprocesable": "No reprocesar nunca"
+        }
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "42086",
-      "Estado": "OK",
-      "Servicio": "BTCadenaCierre.ObtenerProcesosMensuales",
-      "Fecha": "2022-06-01",
-      "Requerimiento": "1",
-      "Hora": "13:09:29",
-      "Canal": "BTDIGITAL"
+        "Numero": 42086,
+        "Estado": "OK",
+        "Servicio": "BTCadenaCierre.ObtenerProcesosMensuales",
+        "Fecha": "2022-06-01",
+        "Requerimiento": 1,
+        "Hora": "13:09:29",
+        "Canal": "BTDIGITAL"
     }
-  },
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

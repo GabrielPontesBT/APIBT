@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Bolsillos
 breadcrumb: false
 pageInfo: false
@@ -87,9 +87,9 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cFC33CD93505A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-   "operacionUId": 9,
+   "operacionUId": 9
 }'
 ```
 :::
@@ -157,47 +157,38 @@ curl -X POST \
         "Usuario": "MINSTALADOR", 
         "Token": "16c1cFC33CD93505A5382434", 
         "Canal": "BTDIGITAL", 
-        "Requerimiento": "1" 
+        "Requerimiento": 1 
     }, 
     "sdtInformacionBolsillos": { 
       "sBTInfRBolsillo": [ 
          { 
-         "OperacionBolsilloUID": 8, 
-         "FechaBaja": "0000-00-00", 
-         "ProductoBolsilloId": 32, 
-         "NombreProducto": "Cuentas Bolsillo, Bolsillos de Ahorro", 
-         "Estado": 0, 
-         "Saldo": 21981, 
-         "FechaApertura": "0000-00-00", 
-         "Nombresubcuenta": "" 
+            "operacionBolsilloUId": 8, 
+            "productoBolsilloId": 32, 
+            "nombreProducto": "Cuentas Bolsillo, Bolsillos de Ahorro", 
+            "estado": 0, 
+            "saldo": 21981 
          }, 
          { 
-         "OperacionBolsilloUID": 11, 
-         "FechaBaja": "0000-00-00", 
-         "ProductoBolsilloId": 32, 
-         "NombreProducto": "Cuentas Bolsillo, Bolsillos de Ahorro", 
-         "Estado": 0, 
-         "Saldo": 4000, 
-         "FechaApertura": "0000-00-00", 
-         "Nombresubcuenta": "" 
+            "operacionBolsilloUId": 11, 
+            "productoBolsilloId": 32, 
+            "nombreProducto": "Cuentas Bolsillo, Bolsillos de Ahorro", 
+            "estado": 0, 
+            "saldo": 4000 
          }, 
          { 
-         "OperacionBolsilloUID": 10, 
-         "FechaBaja": "0000-00-00", 
-         "ProductoBolsilloId": 33, 
-         "NombreProducto": "Cuentas Bolsillo, Bolsillos Imprevistos", 
-         "Estado": 0, 
-         "Saldo": 4000, 
-         "FechaApertura": "0000-00-00", 
-         "Nombresubcuenta": "" 
+            "operacionBolsilloUId": 10, 
+            "productoBolsilloId": 33, 
+            "nombreProducto": "Cuentas Bolsillo, Bolsillos Imprevistos", 
+            "estado": 0, 
+            "saldo": 4000 
          } 
       ] 
    }, 
     "Btoutreq": { 
-        "Numero": "111399", 
+        "Numero": 238, 
         "Estado": "OK", 
         "Servicio": "BTCuentasVista.ObtenerBolsillos", 
-        "Requerimiento": "1", 
+        "Requerimiento": 1, 
         "Fecha": "2023-05-10", 
         "Canal": "BTDIGITAL", 
         "Hora": "15:10:52" 

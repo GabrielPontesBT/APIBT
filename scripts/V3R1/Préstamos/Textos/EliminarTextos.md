@@ -1,4 +1,4 @@
----
+﻿---
 title: Eliminar Textos
 breadcrumb: false
 pageInfo: false
@@ -159,7 +159,7 @@ curl -X POST \
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "6fc29caa9d4A8B5C60A82434"
     },
@@ -172,7 +172,7 @@ curl -X POST \
       "Estado": "OK",
       "Servicio": "BTPrestamos.EliminarTextos",
       "Fecha": "2021-01-29",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }

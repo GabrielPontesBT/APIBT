@@ -78,21 +78,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo_v1?ObtenerTasaPrecancelacion' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerTasaPrecancelacion' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "INSTALADOR",
-	  "bts:Token": "170320211539200000477790",
-	  "bts:Device": "AC"
-	},
-	"operacionUId": 2,
-	"fecha": 2020-10-10
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "170320211539200000477790",
+        "Device": "AC"
+    },
+    "operacionUId": 2,
+    "fecha": "2020-10-10"
+}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -131,30 +132,29 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-	"Btinreq": { 
-	  "Canal": "BTDIGITAL", 
-	  "Requerimiento": "1", 
-	  "Usuario": "INSTALADOR", 
-	  "Token": "170320211539200000477790", 
-	  "Device": "AC" 
-	}, 
-	"apellidoMatrimonio": { 
-	  "-self-closing": "true" 
-	}, 
-	"tipoTasa":Efectiva, 
-	"tasa":10.00, 
-	"Erroresnegocio": { 
-	}, 
-	"Btoutreq": { 
-	  "Canal": "BTDIGITAL", 
-	  "Servicio": "BTDepositosAPlazo.ObtenerTasaPrecancelacion", 
-	  "Fecha": "2021-03-17", 
-	  "Hora": "15:44:26", 
-	  "Requerimiento": "1", 
-	  "Numero": "10689", 
-	  "Estado": "OK" 
-	} 
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "170320211539200000477790",
+        "Device": "AC"
+    },
+    "tasa": 10.00,
+    "tipoTasa": "Efectiva",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTDepositosAPlazo.ObtenerTasaPrecancelacion",
+        "Fecha": "2021-03-17",
+        "Hora": "15:44:26",
+        "Requerimiento": 1,
+        "Numero": 10689,
+        "Estado": "OK"
+    }
+}'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,4 +1,4 @@
----
+﻿---
 title: Validar Listas Inhabilitados
 breadcrumb: false
 pageInfo: false
@@ -103,12 +103,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"pais":"845",
-	"tipoDocumento":"1",
+	"pais": 845,
+	"tipoDocumento": 1,
 	"numeroDeDocumento":"27511184",
 	"tipoPersona":"",
 	"primerNombre":"",
@@ -163,36 +163,36 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
-		"Device": "AV",
+		"Device": "10",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "ccbe8f2A82434"
 	},
 	"sdtListaInhabilitados": {
-		"sBTListaInhabilitados": {
+		"sBTListaInhabilitados": [{
 			"descripcion": "LAVADO DE DINERO",
 			"fechaHasta": "0000-00-00",
 			"fechaDesde": "2016-06-13",
-			"codigo": "1",
+			"codigo": 1,
 			"bloqueante": "S"
-		}
+		}]
 	},
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8396,
+        "Numero": 8508,
         "Estado": "OK",
         "Servicio": "BTPersonas.ValidarListasInhabilitados",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Requerimiento": 1,
+        "Fecha": "2019-05-09",
+        "Hora": "10:32:18",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

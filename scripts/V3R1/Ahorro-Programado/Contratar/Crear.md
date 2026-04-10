@@ -138,7 +138,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -201,20 +201,20 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "ahorroUId": "102",
+    "ahorroUId": 102,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "397",
+        "Numero": 397,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.Crear",
         "Fecha": "2018-05-02",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "18:40:30",
         "Canal": "BTDIGITAL"
     }

@@ -1,4 +1,4 @@
----
+﻿---
 title: Eliminar Textos
 icon: /assets/image/nuevo.svg
 breadcrumb: false
@@ -99,22 +99,21 @@ curl -X POST \
     "Canal": "BTDIGITAL",
     "Usuario": "INSTALADOR",
     "Device": "FC",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Token": "D2868674D8C3483A48324170"
   },
-  "personaUId": "143",
-  "sbtTextos": [
-    {
-      "renglon": "1",
-      "texto": "",
-      "descripcion": "",
-      "codigo": "11"
-    }
-  ]
-}
-
-
-'
+  "personaUId": 143,
+  "sbtTextos": {
+    "sBTTextoPersona": [
+      {
+        "renglon": 1,
+        "texto": "",
+        "descripcion": "",
+        "codigo": 11
+      }
+    ]
+  }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -152,25 +151,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "D2868674D8C3483A48324170"
   },
-  "Erroresnegocio": {},
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
   "Btoutreq": {
-    "Numero": "36636",
+    "Numero": 36636,
     "Estado": "OK",
     "Servicio": "BTPersonas.EliminarTextos",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Fecha": "2025-11-07",
     "Hora": "15:46:54",
     "Canal": "BTDIGITAL"
   }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

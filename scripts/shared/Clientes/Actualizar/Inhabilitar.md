@@ -85,20 +85,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Inhabilitar \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?Inhabilitar' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "47D750A861C4243EDE981344",
+        "Device": "GP"
     },
-   "clienteUId": 10009,
-   "motivo": 3,
-   "justificacion": "Prueba"
+    "clienteUId": 10009,
+    "motivo": 3,
+    "justificacion": "Prueba"
 }'
 ```
 :::
@@ -139,24 +140,24 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTClientes_
 ```json
 '{
     "Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "INSTALADOR",
-	  "Requerimiento": "1",
-	  "Canal": "BTDIGITAL",
-	  "Token": "47D750A861C4243EDE981344"
-	},
-	"Erroresnegocio": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "47D750A861C4243EDE981344",
+        "Device": "GP"
+    },
+    "Erroresnegocio": {
         "BTErrorNegocio": []
-	},
-	"Btoutreq": {
-	  "Numero": "109140",
-	  "Estado": "OK",
-	  "Servicio": "BTClientes.Inhabilitar",
-	  "Requerimiento": "1",
-	  "Fecha": "2022-11-17",
-	  "Canal": "BTDIGITAL",
-	  "Hora": "11:46:15"
-	}
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTClientes.Inhabilitar",
+        "Fecha": "2022-11-17",
+        "Hora": "11:46:15",
+        "Requerimiento": 1,
+        "Numero": 463,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

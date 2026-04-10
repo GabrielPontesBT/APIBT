@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Integrantes Persona Jurídica
 breadcrumb: false
 pageInfo: false
@@ -84,7 +84,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
@@ -141,40 +141,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtIntegrantesJuridicos": {
-        "sBTIntegranteJuridico": {
-        "paisId": "845",
+        "sBTIntegranteJuridico": [{
+        "paisId": 845,
         "pais": "URUGUAY",
-        "tipoDocumentoId": "1",
+        "tipoDocumentoId": 1,
         "tipoDocumento": "Cédula Identidad",
         "nroDocumento": "27928980",
         "nombre": "PRANKA VISENTIN ERIKA",
-        "vinculoId": "1",
+        "vinculoId": 1,
         "vinculo": "Presidente",
-        "participacion": "0.0000",
-        "personaUId": "1"
-        }
+        "participacion": 0.0,
+        "personaUId": 1
+        }]
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
+        "Numero": 8862,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerIntegrantesPersonaJuridica",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
+        "Requerimiento": 1,
+        "Fecha": "2022-05-31",
+        "Hora": "16:29:14",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

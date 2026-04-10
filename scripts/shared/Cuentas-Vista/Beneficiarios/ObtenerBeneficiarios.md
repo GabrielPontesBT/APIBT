@@ -78,20 +78,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerBeneficiarios=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerBeneficiarios' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "54878527AF5867CA94C680B0"
     },
     "operacionUId": 789
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -148,37 +148,40 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "54878527AF5867CA94C680B0"
     },
     "sdtBeneficiarios": {
-         "sBTBeneficiario": {
-         "numeroDocumento": 13348789,
-         "parentesco": "Padre",
-         "pais": "URUGUAY",
-         "tipoDocumentoId": 1,
-         "participacion": 100,
-         "tipoDocumento": "Cédula Identidad",
-         "paisDocumentoId": 845,
-         "personaUId": 193,
-         "correlativo": 1,
-         "telefono": 64211,
-         "nombre": "Prueba",
-         "parentescoId": 41,
-         "apellido": ""
-         }
+        "sBTBeneficiario": {
+            "numeroDocumento": 13348789,
+            "parentesco": "Padre",
+            "pais": "URUGUAY",
+            "tipoDocumentoId": 1,
+            "participacion": 100.0,
+            "tipoDocumento": "Cédula Identidad",
+            "paisDocumentoId": 845,
+            "personaUId": 193,
+            "correlativo": 1,
+            "telefono": 64211,
+            "nombre": "Prueba",
+            "parentescoId": 41,
+            "apellido": ""
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCuentasVista.ObtenerBeneficiarios",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-11-22",
+        "Hora": "13:14:24",
+        "Numero": 26946,
+        "Servicio": "BTCuentasVista.ObtenerBeneficiarios",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

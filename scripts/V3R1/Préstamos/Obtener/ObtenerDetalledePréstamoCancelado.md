@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Detalle de Préstamo Cancelado
 breadcrumb: false
 pageInfo: false
@@ -85,7 +85,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -221,7 +221,7 @@ curl -X POST \
 '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "BANTOTAL",
 	  "Token": "1576177365F955E77534D3E0",
 	  "Device": "AC"
@@ -322,7 +322,7 @@ curl -X POST \
 	  "Servicio": "BTPrestamos.ObtenerDetallePrestamoCancelado",
 	  "Fecha": "2019-08-13",
 	  "Hora": "10:04:44",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Numero": "6656",
 	  "Estado": "OK"
 	}

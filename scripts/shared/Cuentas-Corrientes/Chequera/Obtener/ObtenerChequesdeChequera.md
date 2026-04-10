@@ -80,20 +80,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerChequesDeChequera' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerChequesDeChequera' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1820366692F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"operacionUId": "10176",
-	"chequeraId": "21"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "operacionUId": 10176,
+    "chequeraId": 21
 }'
 ```
 :::
@@ -146,37 +146,39 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1820366692F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"sdtCheques": {
-	  "sBTCheque": [
-		{
-		  "numero": "1326",
-		  "estado": "1",
-		  "descripcion": "Pago"
-		},
-		{
-		  "numero": "1327",
-		  "estado": "1",
-		  "descripcion": "Pago"
-		},
-		...
-	  ]
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTCuentasCorrientes.ObtenerChequesDeChequera",
-	  "Fecha": "2020-11-13",
-	  "Hora": "15:25:51",
-	  "Requerimiento": "1",
-	  "Numero": "7904",
-	  "Estado": "OK"
-	}
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "sdtCheques": {
+        "sBTCheque": [
+            {
+                "numero": 1326,
+                "estado": 1,
+                "descripcion": "Pago"
+            },
+            {
+                "numero": 1327,
+                "estado": 1,
+                "descripcion": "Pago"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTCuentasCorrientes.ObtenerChequesDeChequera",
+        "Fecha": "2020-11-13",
+        "Hora": "15:25:51",
+        "Requerimiento": 1,
+        "Numero": 7904,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 
