@@ -20,11 +20,13 @@ code[class*="language-"] *::selection {
 
 // CONTENEDOR PRINCIPAL
 ::ng-deep .code-tabs {
-  //margin: 0rem 40px;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   font-family: var(--font-family);
-  height: calc(100vh - 200px);
+  width: 100%;
+  height: 100%;
+  max-height: min(100%, var(--code-example-max-height, 720px));
+  min-height: min(420px, 100%);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -255,4 +257,39 @@ code[class*="language-"] *::selection {
 .code-container {
   max-height: 200px;
   overflow-y: auto;
+}
+
+@container app-content (max-width: 980px) {
+  ::ng-deep .code-tabs {
+    height: min(62vh, 560px);
+  }
+}
+
+@container app-content (max-width: 1280px) {
+  ::ng-deep .code-tabs .mat-mdc-tab-body-wrapper {
+    padding: 1.5rem;
+  }
+
+  .code-toggle {
+    button[mat-button] {
+      padding: 0.35rem 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    button[mat-icon-button] {
+      padding: 0 0.6rem;
+    }
+  }
+
+  ::ng-deep pre[class*="language-"],
+  ::ng-deep code[class*="language-"] {
+    font-size: 0.62rem !important;
+  }
+}
+
+@container app-content (max-width: 760px) {
+  ::ng-deep .code-tabs {
+    height: auto;
+    min-height: 360px;
+  }
 }

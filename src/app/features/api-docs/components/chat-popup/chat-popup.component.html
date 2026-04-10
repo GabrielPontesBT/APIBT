@@ -1,19 +1,29 @@
-<!-- Ícono flotante -->
+<!-- Botón flotante tipo pill -->
 <div class="chat-bubble" (click)="toggleChat()">
-  <img src="../../../../../assets/image/chat-icon.png" class="chat-img" />
+  <div class="chat-bubble-inner">
+    <span class="chat-bubble-text">Asistente IA</span>
+    <div class="chat-bubble-icon-wrapper">
+      <img src="../../../../../assets/image/chat-icon.png" class="chat-img" />
+    </div>
+  </div>
 </div>
 
-<!-- Popup flotante arriba del botón -->
+<!-- Panel deslizante desde abajo -->
 @if (renderChat) {
-  <div
-    class="chat-popup"
-    [@popupFromButton]="showChat ? 'open' : 'closed'"
-    (@popupFromButton.done)="onAnimationDone($event)">
-    @if (showChat) {
-      <button class="clear-history-button" title="Borrar historial" (click)="clearChatHistory()">
-        <span class="material-icons">history</span>
-      </button>
-    }
+  <div class="chat-sheet" [@slideUp]>
+
+    <div class="sheet-header">
+      <span class="sheet-title">Asistente IA</span>
+      <div class="sheet-actions">
+        <button class="sheet-btn" title="Minimizar" (click)="toggleChat()">
+          <span class="material-icons">expand_more</span>
+        </button>
+        <button class="sheet-btn" title="Borrar historial" (click)="clearChatHistory()">
+          <span class="material-icons">history</span>
+        </button>
+      </div>
+    </div>
+
     <div class="chat-messages" #chatMessages>
       @for (m of messagesHTML; track m) {
         <div
@@ -23,11 +33,16 @@
         </div>
       }
     </div>
+
     <div class="chat-input">
-      <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading"
-        placeholder="Escribe un mensaje..." />
-        <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
+      <div class="chat-input-wrapper">
+        <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading"
+          placeholder="Escribe un mensaje..." />
+        <button class="send-btn" (click)="sendMessage()" [disabled]="loading">
+          <span class="material-icons">send</span>
+        </button>
       </div>
-      <span class="chat-popup-punta"></span>
     </div>
-  }
+
+  </div>
+}

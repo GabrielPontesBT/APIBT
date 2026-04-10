@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -14,10 +14,12 @@ export class LayoutComponent implements OnDestroy {
 
   isHome = false;
   sidebarCollapsed = false;
+  isCompactViewport = false;
   private sub!: Subscription;
   private readonly transitionClass = 'docs-view-transition-active';
 
   constructor(private title: Title, private router: Router) {
+    this.updateViewportState();
     this.updateIsHome(this.router.url);
 
     this.sub = this.router.events
@@ -41,6 +43,9 @@ export class LayoutComponent implements OnDestroy {
 
         if (event instanceof NavigationEnd) {
           this.updateIsHome(event.urlAfterRedirects);
+          if (this.isCompactViewport && !this.isHome) {
+            this.sidebarCollapsed = true;
+          }
         }
 
         if (
@@ -59,9 +64,33 @@ export class LayoutComponent implements OnDestroy {
     this.isHome = this.isHomeRoute(url);
   }
 
+  private updateViewportState(): void {
+    const nextCompact = window.innerWidth < 1024;
+
+    if (nextCompact !== this.isCompactViewport) {
+      this.isCompactViewport = nextCompact;
+      this.sidebarCollapsed = nextCompact;
+    }
+  }
+
   private isHomeRoute(url: string): boolean {
     const clean = (url || '').split('?')[0].split('#')[0];
     return clean === '/' || clean === '';
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updateViewportState();
+  }
+
+  toggleSidebar(): void {
+    this.sidebarCollapsed = !this.sidebarCollapsed;
+  }
+
+  closeSidebarOverlay(): void {
+    if (this.isCompactViewport) {
+      this.sidebarCollapsed = true;
+    }
   }
 
   ngOnDestroy() {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import Fuse from 'fuse.js';
+import { VersionService } from './version.service';
 
 interface PageIndex {
   slug: string;
@@ -11,6 +11,14 @@ interface PageIndex {
   scope: string;
   keywords: string[];
   searchableText: string;
+  version: string;
+}
+
+interface NavNode {
+  type: string;
+  slug: string;
+  label: string;
+  children?: NavNode[];
 }
 
 export interface SearchResult {
@@ -30,64 +38,102 @@ export interface SearchResult {
 })
 export class SearchService {
   private pages: PageIndex[] = [];
-  private fuse!: Fuse<PageIndex>;
-  private indexUrl = 'assets/docs/search-index.json';
+  private slugLabelMap = new Map<string, string>();
 
-  constructor(private http: HttpClient) {
-    this.http.get<PageIndex[]>(this.indexUrl).subscribe({
-      next: pages => {
-        this.pages = pages;
-        this.fuse = new Fuse(pages, {
-          keys: [
-            { name: 'pageTitle',      weight: 0.4 },
-            { name: 'pubName',        weight: 0.3 },
-            { name: 'programa',       weight: 0.2 },
-            { name: 'scope',          weight: 0.1 },
-          ],
-          threshold: 0.35,       // 0 = exacto, 1 = todo coincide
-          includeScore: true,
-          ignoreLocation: true,
-          useExtendedSearch: false,
-        });
-      },
+  constructor(private http: HttpClient, private versionService: VersionService) {
+    this.http.get<PageIndex[]>('assets/docs/search-index.json').subscribe({
+      next: pages => { this.pages = pages; },
       error: err => console.error('No se pudo cargar search-index.json', err)
+    });
+
+    this.versionService.activeVersion$.subscribe(version => {
+      this.slugLabelMap.clear();
+      this.http.get<NavNode[]>(`assets/navigation/sidebar-${version}.json`).subscribe({
+        next: tree => this.buildSlugLabelMap(tree),
+        error: () => {}
+      });
     });
   }
 
-  private normalizeText(text: string): string {
-    return text
+  private buildSlugLabelMap(nodes: NavNode[]): void {
+    for (const node of nodes) {
+      if (node.slug && node.label) {
+        this.slugLabelMap.set(node.slug, node.label);
+      }
+      if (node.children?.length) {
+        this.buildSlugLabelMap(node.children);
+      }
+    }
+  }
+
+  private normalize(text: string): string {
+    return String(text || '')
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
+      .toLowerCase()
+      .trim();
   }
 
   private slugToBreadcrumb(slug: string, pageTitle: string): string {
     const segments = slug.split('/');
-    const parents = segments.slice(0, -1).map(segment =>
-      segment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-    );
+    const parents: string[] = [];
+
+    for (let i = 1; i < segments.length; i++) {
+      const partialSlug = segments.slice(0, i).join('/');
+      const mapped = this.slugLabelMap.get(partialSlug);
+      if (mapped) {
+        // Quitar sufijo de código de país si existe (ej: "Argentina AR" → "Argentina")
+        parents.push(mapped.replace(/\s[A-Z]{2}$/, '').trim());
+      } else {
+        // Fallback: capitalizar desde el slug
+        const cleaned = segments[i - 1].replace(/-[a-z]{2}$/i, '');
+        parents.push(cleaned.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
+      }
+    }
+
     return [...parents, pageTitle].join(' > ');
   }
 
-  /** Envuelve las ocurrencias de los términos en <strong> para resaltado */
   private highlight(text: string, terms: string[]): string {
     if (!text) return '';
     let result = text;
     for (const term of terms) {
       if (!term) continue;
-      // Escapa caracteres especiales de regex
       const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${escaped})`, 'gi');
-      result = result.replace(regex, '$1');
+      result = result.replace(regex, '<strong>$1</strong>');
     }
     return result;
   }
 
+  private extractSnippet(text: string, terms: string[], contextLen = 80): string {
+    if (!text) return '';
+    const normalizedText = this.normalize(text);
+    let bestIndex = -1;
+    for (const term of terms) {
+      const idx = normalizedText.indexOf(term);
+      if (idx !== -1 && (bestIndex === -1 || idx < bestIndex)) {
+        bestIndex = idx;
+      }
+    }
+    if (bestIndex === -1) return '';
+    const start = Math.max(0, bestIndex - contextLen / 2);
+    const end = Math.min(text.length, bestIndex + contextLen);
+    const raw = (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+    return this.highlight(raw, terms);
+  }
+
   private buildResult(page: PageIndex, terms: string[]): SearchResult {
     const breadcrumb = this.slugToBreadcrumb(page.slug, page.pageTitle);
+
+    const snippetSource =
+      this.extractSnippet(page.description, terms) ||
+      this.extractSnippet(page.searchableText, terms) ||
+      this.extractSnippet(page.pubName, terms);
+
     return {
       url: '/' + page.slug,
-      snippet: '',
+      snippet: snippetSource,
       pubName: page.pubName,
       programa: page.programa,
       breadcrumb,
@@ -99,46 +145,26 @@ export class SearchService {
   }
 
   search(query: string): SearchResult[] {
-    if (!this.pages.length || !query.trim()) {
-      return [];
-    }
+    if (!this.pages.length || !query.trim()) return [];
 
-    const terms = this.normalizeText(query).split(/\s+/).filter(t => t);
+    const activeVersion = this.versionService.activeVersion;
+    const terms = this.normalize(query).split(/\s+/).filter(t => t.length > 0);
 
-    // ── 1. Búsqueda exacta por substring (campos clave + searchableText) ──
-    const exactSlugs = new Set<string>();
-    const exactResults: SearchResult[] = [];
-
-    for (const page of this.pages) {
-      const slugText = page.slug.replace(/\//g, ' ').replace(/-/g, ' ');
-      const haystack = this.normalizeText([
-        slugText,
-        page.pageTitle,
-        page.pubName,
-        page.programa,
-        page.scope,
-      ].join(' '));
-
-      if (terms.every(term => haystack.includes(term))) {
-        exactSlugs.add(page.slug);
-        exactResults.push(this.buildResult(page, terms));
-      }
-    }
-
-    // Si hay resultados exactos, devolverlos directamente
-    if (exactResults.length > 0) {
-      return exactResults;
-    }
-
-    // ── 2. Fuzzy search solo si no hubo ningún resultado exacto ──
-    const fuzzyResults: SearchResult[] = [];
-    if (this.fuse) {
-      const fuseHits = this.fuse.search(query);
-      for (const hit of fuseHits) {
-        fuzzyResults.push(this.buildResult(hit.item, terms));
-      }
-    }
-
-    return fuzzyResults;
+    return this.pages
+      .filter(page => page.version === activeVersion)
+      .filter(page => {
+        const slugText = page.slug.replace(/\//g, ' ').replace(/-/g, ' ');
+        const haystack = this.normalize([
+          slugText,
+          page.pageTitle,
+          page.pubName,
+          page.programa,
+          page.scope,
+          page.description,
+          page.searchableText,
+        ].join(' '));
+        return terms.every(term => haystack.includes(term));
+      })
+      .map(page => this.buildResult(page, terms));
   }
 }

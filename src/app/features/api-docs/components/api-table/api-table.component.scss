@@ -1,7 +1,7 @@
 @import 'variables';
 
-* {
-  color: var(--text-color) !important;
+:host {
+  color: var(--text-color);
 }
 
 a {
@@ -31,16 +31,15 @@ table {
 
   tbody {
     border: 1px solid var(--border-color);
-    tr {
-      &:nth-child(even) {
-        background: #f1f1f1;
-      }
-    }
     td, th {
       background: var(--table-columns);
       padding: 0.6rem 1rem;
       color: var(--text-color);
       border: 1px solid var(--border-color);
+    }
+    tr:nth-child(even) td,
+    tr:nth-child(even) th {
+      background: var(--grey-1);
     }
   }
 

@@ -12,7 +12,7 @@
     background: var(--bg-elements);
     border-radius: var(--border-radius) !important;
     box-shadow: var(--box-shadow) !important;
-    transition: box-shadow 0s ease-in-out !important;
+    transition: box-shadow var(--duration-base) var(--ease-smooth);
 
     .mat-expansion-panel-header {
       background: var(--bg-elements);

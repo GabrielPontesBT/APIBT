@@ -6,11 +6,13 @@ doc-page.component.html
 -->
 
 @if (page$ | async; as page) {
+  @let hasExamples = !!(page.examples.invocation.xml || page.examples.invocation.json || page.examples.response.xml || page.examples.response.json);
+  @let hasTabs = !!(page.inputData.length || page.outputData.length || page.errors.length);
   <app-page-header
     class="fade-only front"
     [title]="page.pageTitle">
   </app-page-header>
-  <div class="content">
+  <div class="content" [class.content--full]="!hasExamples">
     <div class="content-left">
       <app-info-card
         class="fade-only"
@@ -26,15 +28,17 @@ doc-page.component.html
           [backendData]="page.backendData || []">
         </app-backend-config>
       }
-      <app-api-tabs
-        class="fade-only"
-        [inputCols]="['Nombre', 'Tipo', 'Comentarios']"
-        [inputData]="page.inputData"
-        [outputCols]="['Nombre', 'Tipo', 'Comentarios']"
-        [outputData]="page.outputData"
-        [errorCols]="['Código', 'Descripción']"
-        [errors]="page.errors">
-      </app-api-tabs>
+      @if (hasTabs) {
+        <app-api-tabs
+          class="fade-only"
+          [inputCols]="['Nombre', 'Tipo', 'Comentarios']"
+          [inputData]="page.inputData"
+          [outputCols]="['Nombre', 'Tipo', 'Comentarios']"
+          [outputData]="page.outputData"
+          [errorCols]="['Código', 'Descripción']"
+          [errors]="page.errors">
+        </app-api-tabs>
+      }
       @if (page.valuesTable && page.valuesTable.length > 0) {
         <app-vals-data
           class="fade-only"
@@ -46,9 +50,11 @@ doc-page.component.html
         [types]="page.structuredTypes">
       </app-structured-data>
     </div>
-    <div class="content-right fade-only" appAnchorScroll>
-      <app-code-example [examples]="page.examples"></app-code-example>
-    </div>
+    @if (hasExamples) {
+      <div class="content-right fade-only" appAnchorScroll>
+        <app-code-example [examples]="page.examples"></app-code-example>
+      </div>
+    }
   </div><!-- .content -->
   <app-chat-popup></app-chat-popup>
   <app-footer-space></app-footer-space>

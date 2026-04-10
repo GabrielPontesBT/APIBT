@@ -30,15 +30,15 @@
   transform: translateY(-50%);
   width: 24px;
   height: 48px;
-  background: var(--bg-elements);
-  border: 1px solid var(--grey-1);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
   border-left: none;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  clip-path: inset(0 -20px 0 0);
   color: var(--red-1);
   padding: 0;
   transition: background-color 180ms ease;
@@ -67,8 +67,34 @@
   font-family: var(--font-family);
   scrollbar-color: var(--red-1) var(--grey-hover);
   scrollbar-width: thin;
-  box-shadow: 2px 15px 15px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 8px 0 15px rgba(0, 0, 0, 0.15);
+  clip-path: inset(0 -30px -30px 0);
   scroll-behavior: smooth;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: var(--red-1);
+  border-radius: 10px;
+}
+
+.sidebar-container::-webkit-scrollbar-button:single-button,
+.sidebar-container::-webkit-scrollbar-button:start:decrement,
+.sidebar-container::-webkit-scrollbar-button:end:increment,
+.sidebar-container::-webkit-scrollbar-button:vertical:start:decrement,
+.sidebar-container::-webkit-scrollbar-button:vertical:end:increment {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 0;
 }
 
 .sidebar-list {
@@ -215,6 +241,7 @@
 
 .sidebar-flag {
   flex-shrink: 0;
+  margin-left: auto;
   width: 1.9em;
   height: 1.2rem;
   border-radius: 5px;
@@ -315,7 +342,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .sidebar-container {
     box-shadow: none;
     border-right: 0;

@@ -19,13 +19,13 @@ interface ChatEntry { role: string; content: string /* raw text */; }
   templateUrl: './chat-popup.component.html',
   styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
   animations: [
-    trigger('popupFromButton', [
-      transition('open => closed', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
+    trigger('slideUp', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(100%)' }),
+        animate('520ms cubic-bezier(0.4, 0, 0.6, 1)', style({ opacity: 1, transform: 'translateY(0)' }))
       ]),
-      transition('closed => open', [
-        style({ opacity: 0, transform: 'scale(0)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+      transition(':leave', [
+        animate('350ms cubic-bezier(0.4, 0, 0.6, 1)', style({ opacity: 0, transform: 'translateY(100%)' }))
       ])
     ]),
     trigger('messageAnim', [
@@ -130,21 +130,12 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   }
 
   toggleChat() {
-    if (!this.renderChat) {
-      this.renderChat = true;
-      this.showChat = true;
+    this.renderChat = !this.renderChat;
+    if (this.renderChat) {
       setTimeout(() => {
         this.inputRef?.nativeElement.focus();
         this.scrollToBottom();
       }, 0);
-    } else {
-      this.showChat = !this.showChat;
-    }
-  }
-
-  onAnimationDone(event: any) {
-    if (event.toState === 'closed') {
-      this.renderChat = false;
     }
   }
 

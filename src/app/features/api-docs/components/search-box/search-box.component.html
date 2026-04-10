@@ -71,7 +71,9 @@ search-box.component.html
           <button (click)="goTo(r.url)" class="link-button"
             [innerHTML]="safeHtml(r.highlightedBreadcrumb)">
           </button>
-          <p class="snippet" [innerHTML]="safeHtml(r.highlightedPubName)"></p>
+          @if (r.snippet) {
+            <p class="snippet" [innerHTML]="safeHtml(r.snippet)"></p>
+          }
         </li>
       }
     </ul>

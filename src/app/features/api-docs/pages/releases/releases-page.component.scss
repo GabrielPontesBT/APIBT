@@ -8,13 +8,9 @@
 .nov-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin: 0 4rem;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  margin-inline: clamp(1.5rem, 4vw, 4rem);
 }
-
-@media (max-width: 1200px) { .nov-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 900px)  { .nov-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .nov-grid { grid-template-columns: 1fr; } }
 
 .nov-card {
   display: flex;
@@ -26,6 +22,11 @@
   font-family: var(--font-family);
   border: none !important;
   gap: 10px;
+  transition: box-shadow var(--duration-base) var(--ease-smooth);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
 }
 
 .card-header {
@@ -75,4 +76,42 @@
   text-align: center;
   color: var(--text-color);
   opacity: 0.5;
+}
+
+@container app-content (max-width: 1280px) {
+  .releases-wrap {
+    font-size: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+}
+
+@container app-content (max-width: 1100px) {
+  .nov-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@container app-content (max-width: 760px) {
+  .nov-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container app-content (max-width: 900px) {
+  .releases-wrap {
+    padding-bottom: 2rem;
+  }
+
+  .nov-grid {
+    margin-inline: 1rem;
+  }
+}
+
+@container app-content (max-width: 560px) {
+  .nov-grid {
+    grid-template-columns: 1fr;
+  }
 }

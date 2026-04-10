@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Release } from '../../../features/api-docs/pages/releases/releases.data';
 import { ReleasesService } from '../../../features/api-docs/services/releases.service';
+import { VersionService } from '../../../core/services/version.service';
 
 @Component({
     selector: 'app-navbar',
@@ -17,13 +18,20 @@ export class NavbarComponent {
   releasesOpen = false;
   isOnReleasePage = false;
   releases: Release[] = [];
+  showReleases = true;
 
   constructor(
     private router: Router,
-    private releasesService: ReleasesService
+    private releasesService: ReleasesService,
+    private versionService: VersionService
   ) {
     this.releasesService.getReleases().subscribe(releases => {
       this.releases = releases;
+    });
+
+    this.versionService.activeVersion$.subscribe(version => {
+      this.showReleases = version !== 'bpay';
+      if (!this.showReleases) this.releasesOpen = false;
     });
 
     this.isOnReleasePage = this.router.url.startsWith('/releases/');

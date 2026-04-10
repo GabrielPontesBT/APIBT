@@ -6,7 +6,15 @@
   @if (!isHome) {
     <app-sidebar
       [collapsed]="sidebarCollapsed"
-      (toggleSidebar)="sidebarCollapsed = !sidebarCollapsed"></app-sidebar>
+      (toggleSidebar)="toggleSidebar()"></app-sidebar>
+  }
+
+  @if (!isHome && isCompactViewport && !sidebarCollapsed) {
+    <button
+      type="button"
+      class="sidebar-backdrop"
+      aria-label="Cerrar sidebar"
+      (click)="closeSidebarOverlay()"></button>
   }
 
   <main class="content-area" [class.content-area--home]="isHome">

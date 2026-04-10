@@ -5,6 +5,7 @@
 
   <div class="right-section">
 
+    @if (showReleases) {
     <div class="releases-menu" (click)="$event.stopPropagation()">
       <button class="releases-btn" (click)="toggleReleases($event)"
         [class.active]="releasesOpen || isOnReleasePage">
@@ -25,6 +26,7 @@
         </div>
       }
     </div>
+    }
 
     <button class="toggle-theme-button"
             [class.rotate]="rotate"

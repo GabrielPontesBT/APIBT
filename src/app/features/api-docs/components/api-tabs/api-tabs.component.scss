@@ -72,3 +72,16 @@
     transform: translateY(0);
   }
 }
+
+@container app-content (max-width: 1280px) {
+  .mat-mdc-tab-group.api-tabs {
+    .mat-mdc-tab-body-wrapper {
+      padding: 1.5rem;
+    }
+
+    .mdc-tab {
+      min-width: 0;
+      padding-inline: 0.5rem;
+    }
+  }
+}

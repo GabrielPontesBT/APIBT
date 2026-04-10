@@ -37,7 +37,7 @@
 
   pre {
     background: transparent;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: var(--font-family);
     padding: 0;
     border-radius: var(--border-radius) / 2;
     overflow-x: auto;
@@ -45,5 +45,11 @@
     white-space: pre-wrap;       // <-- clave
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+}
+
+@container app-content (max-width: 1280px) {
+  .backend-card {
+    padding: 1.5rem;
   }
 }

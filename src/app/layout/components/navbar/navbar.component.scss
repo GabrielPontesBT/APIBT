@@ -8,7 +8,7 @@
   position: fixed;
   display: flex;
   box-sizing: border-box;
-  box-shadow: 0 8px 15px (rgba(0, 0, 0, .15));
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 
   align-items: center;
   justify-content: space-between;
@@ -91,9 +91,12 @@
   top: calc(100% + 6px);
   right: 0;
   min-width: 200px;
-  background: var(--bg-elements);
+  background: color-mix(in oklab, var(--bg-elements) 50%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 2px 12px rgba(0,0,0,0.2);
   overflow: hidden;
   z-index: 200;
   animation: dropdownFade 320ms var(--ease-smooth);
@@ -110,7 +113,40 @@
   &:hover, &--active {
     background-color: var(--red-2);
     color: var(--red-1);
-    box-shadow: inset 2px 0 0 rgba(179, 35, 35, 0.22);
+    box-shadow: inset 2px 0 0 color-mix(in oklab, var(--red-1) 22%, transparent);
+  }
+}
+
+@media (max-width: 1440px) {
+  .releases-btn,
+  .releases-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .navbar {
+    padding: 0.65rem 1rem;
+  }
+
+  .logo {
+    height: 2.2rem;
+    margin-left: 0;
+    margin-inline-end: 0.4rem;
+  }
+
+  .right-section {
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  app-search-box {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .releases-btn {
+    padding: 0.25rem 0.45rem;
   }
 }
 

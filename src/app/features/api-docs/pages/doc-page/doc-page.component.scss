@@ -25,53 +25,57 @@
 /* ================== LAYOUT ================== */
 
 .content {
+  --content-right-bottom-gap: 3rem;
+  --code-example-max-height: 720px;
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 2.4vw, 3rem);
   width: 100%;
   padding-top: var(--title-height);
 }
 
-/* IZQUIERDA: ancho = col-width, gaps internos */
 .content-left {
   width: var(--col-width);
+  flex: 0 0 var(--col-width);
   box-sizing: border-box;
   min-width: 0;
-
-  padding-left:   var(--margin-gap-x);
-  padding-right:  var(--margin-gap-half-x);
-  padding-bottom: calc(200px - var(--top-offset-y));
-  transition: width 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  padding-left: clamp(1.5rem, 4vw, var(--margin-gap-x));
+  padding-right: clamp(0.75rem, 1.6vw, var(--margin-gap-half-x));
+  padding-bottom: calc(
+    100vh - var(--top-offset-y) -
+    min(
+      calc(100vh - var(--top-offset-y) - var(--content-right-bottom-gap)),
+      var(--code-example-max-height)
+    )
+  );
 
   > * { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
-
 }
 
-/* DERECHA: fija, anclada desde 100vw - col-width hasta el borde derecho */
 .content-right {
   position: fixed;
   top: var(--top-offset-y);
   left: calc(100vw - var(--col-width));
   right: 0;
   width: auto;
-  height: calc(100vh - var(--top-offset-y));
+  min-width: 0;
+  height: calc(100vh - var(--top-offset-y) - var(--content-right-bottom-gap));
   box-sizing: border-box;
   overflow: visible;
   z-index: 10;
-  pointer-events: none;
   display: flex;
   flex-direction: column;
-  transition: left 320ms cubic-bezier(0.22, 1, 0.36, 1);
-
-  padding-left:  var(--margin-gap-half-x);
-  padding-right: var(--margin-gap-x);
+  padding-left: clamp(0.75rem, 1.6vw, var(--margin-gap-half-x));
+  padding-right: clamp(1.5rem, 4vw, var(--margin-gap-x));
 
   > * { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
 
   app-code-example {
     flex: 1;
+    min-height: 0;
+    height: 100%;
     display: block;
     overflow: visible;
-    pointer-events: auto;
 
     > *:first-child {
       height: 100%;
@@ -81,26 +85,70 @@
   }
 }
 
-/* ================== Animaciones ================== */
+/* Cuando no hay columna de código, el contenido ocupa todo el ancho */
+.content--full .content-left {
+  width: 100%;
+  flex-basis: 100%;
+  padding-right: clamp(1.5rem, 4vw, var(--margin-gap-x));
+}
+
+.content--full .content-right {
+  display: none;
+}
 
 .fade-only { opacity: 1; }
 .front { position: relative; z-index: 10; }
 
 /* ================== Responsive ================== */
 
-@container (max-width: 800px) {
+@container app-content (max-width: 980px) {
+  .content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .content-left {
     width: 100%;
-    padding-right: var(--margin-gap-x);
+    flex-basis: auto;
+    padding-bottom: clamp(1.25rem, 3vw, 1.75rem);
+    padding-right: clamp(1.5rem, 4vw, var(--margin-gap-x));
   }
 
   .content-right {
     position: static;
-    width: 100%;
-    height: auto;
     left: auto;
     right: auto;
-    pointer-events: auto;
-    padding-left: var(--margin-gap-x);
+    width: 100%;
+    height: auto;
+    padding-left: clamp(1.5rem, 4vw, var(--margin-gap-x));
+    padding-right: clamp(1.5rem, 4vw, var(--margin-gap-x));
+    padding-bottom: clamp(1.25rem, 3vw, 1.75rem);
+    max-width: none;
+  }
+}
+
+@container app-content (max-width: 1280px) {
+  .content {
+    font-size: 0.8rem;
+    --content-right-bottom-gap: 2.5rem;
+  }
+
+  .content-right {
+    padding-right: clamp(2rem, 4.5vw, 3rem);
+  }
+}
+
+@container app-content (max-width: 760px) {
+  .content-left,
+  .content-right {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1280px),
+       (resolution: 1.5dppx) and (min-width: 1280px) {
+  .content {
+    --content-right-bottom-gap: 2.5rem;
   }
 }

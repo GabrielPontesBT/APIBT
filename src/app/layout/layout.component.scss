@@ -4,6 +4,28 @@
   display: block;
   min-height: 100vh;
   background-color: var(--bg-color);
+  --sidebar-visible-width: var(--sidebar-offset);
+  // Default: 1 columna → centro del área de contenido visible
+  --scroll-left: calc(var(--sidebar-visible-width) / 2 + 50vw);
+}
+
+:host:has(.sidebar-collapsed) {
+  --sidebar-visible-width: 0px;
+}
+
+// 2 columnas con sidebar visible: viewport >= 1240px garantiza que
+// el contenedor (viewport - 260px) >= 980px (breakpoint del container query)
+@media (min-width: 1240px) {
+  :host:not(:has(.sidebar-collapsed)) {
+    --scroll-left: calc(var(--sidebar-visible-width) + (100vw - var(--sidebar-visible-width)) / 4);
+  }
+}
+
+// 2 columnas con sidebar colapsada: el contenedor = viewport > 980px
+@media (min-width: 1024px) {
+  :host:has(.sidebar-collapsed) {
+    --scroll-left: 25vw;
+  }
 }
 
 .main-container {
@@ -36,7 +58,8 @@ app-sidebar {
   left: 0;
   width: var(--sidebar-offset);
   height: calc(100vh - var(--navbar-height));
-  z-index: 100;
+  z-index: 176;
+  background-color: var(--bg-color);
   transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -61,20 +84,54 @@ app-sidebar {
 .content-area--home {
   margin-left: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
-@media (max-width: 1024px) {
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 1023.98px) {
+  .main-container,
+  .main-container.sidebar-collapsed {
+    --page-header-left-offset: 0;
+    --content-left-offset: 0;
+    --col-width: 50vw;
+  }
+
   app-sidebar {
-    position: relative;
-    top: 0;
+    position: fixed;
+    top: var(--navbar-height);
     left: 0;
-    width: 100%;
-    height: auto;
+    width: min(22rem, calc(100vw - 2.5rem));
+    height: calc(100vh - var(--navbar-height));
+    max-height: none;
+    z-index: 190;
+    box-shadow: 10px 0 24px rgba(0, 0, 0, 0.16);
+  }
+
+  .main-container.sidebar-collapsed app-sidebar {
+    transform: translateX(-100%);
   }
 
   .content-area {
     margin-left: 0;
     width: 100%;
+    min-height: calc(100vh - var(--navbar-height));
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: var(--navbar-height) 0 0 0;
+    z-index: 185;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: rgb(0 0 0 / 0.18);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    cursor: pointer;
   }
 }
 
@@ -96,4 +153,6 @@ app-sidebar {
   min-height: inherit;
   background-color: var(--bg-color);
   isolation: isolate;
+  container-type: inline-size;
+  container-name: app-content;
 }

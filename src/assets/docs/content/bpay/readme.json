@@ -1,10 +1,10 @@
 {
   "slug": "readme",
   "pageTitle": "Servicios de BPay",
-  "description": "",
+  "description": "<strong>Soluciones de Pagos Digitales</strong><ul><li>Nuestra unidad de negocios especializada en pagos ofrece soluciones de software avanzadas para la integración, gestión y procesamiento de transacciones interbancarias.</li><li>Desarrollamos APIs robustas y personalizables que permiten automatizar pagos, optimizar la interoperatividad entre instituciones financieras y cumplir con los más altos estándares de seguridad.</li><li>Nuestro enfoque garantiza eficiencia, escalabilidad y soporte técnico especializado para adaptarse a las necesidades de cada cliente.</li></ul>",
   "pubName": "",
   "programa": "",
-  "scope": "Global",
+  "scope": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
