@@ -106,12 +106,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId":"21",
-    "documentoId":"86",
+	"operacionUId": 21,
+    "documentoId": 86,
     "nombre":"Prueba actualizar",
     "archivoCodificado":"RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
     "fechaEmision":"2010-10-10",
@@ -158,7 +158,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -166,11 +166,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "3103",
+        "Numero": 3103,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ActualizarDocumentoDigital",
         "Fecha": "2018-11-21",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "12:00:07",
         "Canal": "BTDIGITAL"
     }

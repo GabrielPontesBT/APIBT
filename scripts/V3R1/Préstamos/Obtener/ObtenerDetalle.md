@@ -84,7 +84,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
 		"Token": "6453f934f94A8B5C60A82434"
 	},
@@ -190,11 +190,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
 		"Token": "75e20bd1614A8B5C60A82434"
 	},
@@ -269,11 +269,11 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTPrestamos.ObtenerDetalle",
         "Fecha": "2017-12-21",
-        "Requerimiento": "",
+        "Requerimiento": 0,
         "Hora": "18:33:21",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

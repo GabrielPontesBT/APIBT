@@ -72,18 +72,18 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerAgrupadores' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1"
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerAgrupadores' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    }
 }'
 ```
 :::
@@ -136,40 +136,42 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtAgrupadores": {
-      "sBTAgrupador": [
-      {
-         "descripcion": "Condiciones Generales",
-         "codigo": 100
-      },
-      {
-         "descripcion": "Cajas y Sucursales",
-         "codigo": 200
-      },
-      {
-         "descripcion": "Contabilidad",
-         "codigo": 300
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11988,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerAgrupadores",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "13:56:18"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtAgrupadores": {
+        "sBTAgrupador": [
+            {
+                "descripcion": "Condiciones Generales",
+                "codigo": 100
+            },
+            {
+                "descripcion": "Cajas y Sucursales",
+                "codigo": 200
+            },
+            {
+                "descripcion": "Contabilidad",
+                "codigo": 300
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11988,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerAgrupadores",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "13:56:18"
+    }
 }'
 ```
 ::: 

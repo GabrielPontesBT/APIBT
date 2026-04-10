@@ -97,7 +97,7 @@ curl -X POST \
       "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "e8c844e3a0F955E77534D3E0"
     },
@@ -148,7 +148,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "e8c844e3a0F955E77534D3E0"
     },
@@ -160,7 +160,7 @@ curl -X POST \
         "Servicio": "BTSNP.SolicitarBajaDeAdhesion",
         "Estado": "OK",
         "Fecha": "2021-06-17",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Hora": "12:27:59"
     }

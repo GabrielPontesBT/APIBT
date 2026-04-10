@@ -82,11 +82,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -139,19 +140,19 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtVinculos": {
     "sBTVinculo": [
       {
-        "identificador": "40",
+        "identificador": 40,
         "descripcion": "Cónyuge",
         "tipo": "A"
       },
       {
-        "identificador": "100",
+        "identificador": 100,
         "descripcion": "Amigo",
         "tipo": "A"
       }
@@ -161,12 +162,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "827",
+        "Numero": 828,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerVinculosAfinidad",
         "Fecha": "2017-12-17",
-        "Requerimiento": "",
-        "Hora": "18:47:21",
+        "Requerimiento": 0,
+        "Hora": "18:47:35",
         "Canal": "BTDIGITAL"
     }
 }'

@@ -94,7 +94,7 @@ curl -X POST \
     "Btinreq": {
       "Usuario": "INSTALADOR",
       "Device": "GP",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Token": "C5DFB132EC9DE80A8063A90E",
       "Canal": "BTDIGITAL"
     },
@@ -180,7 +180,7 @@ curl -X POST \
   "Btinreq": {
     "Device": "GP",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "1",
+    "Requerimiento": 1,
     "Canal": "BTDIGITAL",
     "Token": "C5DFB132EC9DE80A8063A90E"
   },
@@ -222,7 +222,7 @@ curl -X POST \
     "Numero": 35054,
     "Estado": "OK",
     "Servicio": "BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio",
-    "Requerimiento": "1",
+    "Requerimiento": 1,
     "Fecha": "2025-04-30",
     "Canal": "BTDIGITAL",
     "Hora": "16:39:16"

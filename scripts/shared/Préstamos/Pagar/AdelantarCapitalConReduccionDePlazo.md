@@ -122,7 +122,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
@@ -135,7 +135,7 @@ curl -X POST \
     "operacionUId_Cobro": 21,
     "referencia": "",
     "modalidadIntereses": "SP"
-    }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -174,8 +174,8 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
+'{
+    "Btinreq": {
         "Device": "GZ",
         "Usuario": "INSTALADOR",
         "Requerimiento": 0,
@@ -195,7 +195,7 @@ curl -X POST \
         "Hora": "15:43:23",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

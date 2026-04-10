@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerInformacionAdicional' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"operacionUId": "101",
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerInformacionAdicional' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Token": "D6F899CBE6D99B71A5E627F1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "operacionUId": 61
 }'
 ```
 :::
@@ -137,35 +137,38 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "27c9bFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtInformacionAdicional": {
-      "sBTDatoLista": [
-      {
-         "clave": "Impuesto s/Intereses en Cuota",
-         "valor": "S"
-      },
-      {
-          "clave": "Renovar a 30 dias",
-          "valor": "N"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.ObtenerInformacionAdicional",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-16",
-      "Canal": "BTDIGITAL",
-      "Hora": "16:01:52"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "976EB9CBE6D99B71A5E627F1"
+    },
+    "sdtInformacionAdicional": {
+        "sBTDatoLista": [
+            {
+                "clave": "Impuesto s/Intereses en Cuota",
+                "valor": "S"
+            },
+            {
+                "clave": "Renovar a 30 dias",
+                "valor": "N"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11261,
+        "Servicio": "BTPrestamos.ObtenerInformacionAdicional",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-16",
+        "Hora": "15:48:08",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

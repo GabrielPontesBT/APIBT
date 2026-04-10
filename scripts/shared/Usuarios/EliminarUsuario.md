@@ -77,19 +77,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?EliminarUsuario' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?EliminarUsuario' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "20130357454A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "20130357454A8B5C60A82434",
+        "Device": "GP"
     },
-   "usuario": "GPONTES",
+    "usuario": "GPONTES"
 }'
 ```
 :::
@@ -128,26 +128,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
+'{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "20130357454A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "20130357454A8B5C60A82434",
+        "Device": "GP"
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
-        "Estado": "OK",
+        "Canal": "BTDIGITAL",
         "Servicio": "BTUsuarios.EliminarUsuario",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
-        "Canal": "BTDIGITAL"
+        "Fecha": "2022-05-17",
+        "Hora": "15:29:02",
+        "Requerimiento": 1,
+        "Numero": 8843,
+        "Estado": "OK"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

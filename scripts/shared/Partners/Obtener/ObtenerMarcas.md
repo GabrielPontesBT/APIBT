@@ -83,23 +83,23 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"sdtPartner": {
-          "puntoVentaUId": 2,
-          "vendedorUId": 0,
-          "partnerUId": 1
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "DF1F942C6EC60E8B95BBEA69"
+    },
+    "sdtPartner": {
+        "puntoVentaUId": 2,
+        "vendedorUId": 0,
+        "partnerUId": 1
+    }
 }'
 ```
 :::
@@ -146,32 +146,34 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtMarcas": {
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "DF1F942C6EC60E8B95BBEA69"
+    },
+    "sdtMarcas": {
         "sBTMarca": {
-        "tipoMarcaId": 1,
-        "tipoMarca": "Lujo",
-        "marcaUId": 1,
-        "nombreMarca": "AUDI"
+            "tipoMarcaId": 1,
+            "tipoMarca": "Lujo",
+            "marcaUId": 1,
+            "nombreMarca": "AUDI"
         }
     },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.ObtenerMarcas",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 16857,
+        "Servicio": "BTPartners.ObtenerMarcas",
+        "Estado": "OK",
+        "Fecha": "2023-10-27",
+        "Requerimiento": 0,
+        "Hora": "11:57:14",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

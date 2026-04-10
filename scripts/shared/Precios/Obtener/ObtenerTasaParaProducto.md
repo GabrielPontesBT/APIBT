@@ -90,22 +90,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaProducto' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ObtenerTasaProducto' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "1600460797F955E77534D3E0",
-	  "bts:Device": "AC"
-	},
-	"productoUId": 10118,
-	"fecha": "2020-11-11",
-	"importe": 1000,
-	"plazo": 30
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1600460797F955E77534D3E0",
+        "Device": "AC"
+    },
+    "productoUId": 133,
+    "fecha": "2020-11-11",
+    "importe": 1000,
+    "plazo": 30
 }'
 ```
 :::
@@ -149,30 +149,32 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1600460797F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"tipoTasa": "Efectiva Anual",
-	"tasa": "0.04",
-	"tasaMinima": "0.04",
-	"tasaMaxima": "0.04",
-	"fechaVigencia": "2021-11-11",
-	"Erroresnegocio": {},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTPrecios.ObtenerTasaProducto",
-	  "Fecha": "2021-03-18",
-	  "Hora": "12:32:27",
-	  "Requerimiento": "1",
-	  "Numero": "8042",
-	  "Estado": "OK"
-	}
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1600460797F955E77534D3E0",
+        "Device": "AC"
+    },
+    "tipoTasa": "Efectiva Anual",
+    "tasa": 0.04,
+    "tasaMinima": 0.04,
+    "tasaMaxima": 0.04,
+    "fechaVigencia": "2021-11-11",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPrecios.ObtenerTasaProducto",
+        "Fecha": "2021-03-18",
+        "Hora": "12:32:27",
+        "Requerimiento": 1,
+        "Numero": 8042,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

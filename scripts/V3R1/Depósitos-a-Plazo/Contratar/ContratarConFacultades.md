@@ -1,4 +1,4 @@
----
+﻿---
 title: Contratar con Facultades
 breadcrumb: false
 pageInfo: false
@@ -103,15 +103,15 @@ curl -X POST \
     "Btinreq": {
         "Device": "FP",
         "Usuario": "INSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "00C39357A152407BC2F8A995"
     },
-    "simulacionUId": "528",
-    "clienteUId": "322",
-    "operacionUIdOrigen": "1128",
-    "operacionUIdDestino": "824",
-    "instruccionAlVencimiento": "1",
+    "simulacionUId": 528,
+    "clienteUId": 322,
+    "operacionUIdOrigen": 1128,
+    "operacionUIdDestino": 824,
+    "instruccionAlVencimiento": 1,
     "controlaMismoCliente": "N",
     "tipoIntegracionCuenta": "A"
 }'
@@ -158,22 +158,24 @@ curl -X POST \
   "Btinreq": {
       "Device": "FC",
       "Usuario": "INSTALADOR",
-      "Requerimiento": "0",
+      "Requerimiento": 0,
       "Canal": "BTDIGITAL",
       "Token": "6CD13C161EE607C42B83D501"
   },
-  "opreacionUid": "969",
-  "movimientoUId": "167",
-  "Erroresnegocio": "",
+  "operacionUId": 969,
+  "movimientoUId": 167,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
   "Btoutreq": {
-    "Numero": "35523",
+    "Numero": 35523,
     "Estado": "OK",
     "Servicio": "BTDepositosAPlazo.ContratarConFacultades",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Fecha": "2025-05-21",
     "Canal": "BTDIGITAL",
     "Hora": "17:50:29"
-  },
+  }
 }'
 ```
 ::: 

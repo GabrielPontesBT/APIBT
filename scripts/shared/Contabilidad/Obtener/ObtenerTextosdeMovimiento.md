@@ -76,20 +76,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerTextosMovimiento' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerTextosMovimiento' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	 "Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "BA",
-		"Token": "0211202010280000399672",
-		"Device": "MC"
-	 },
-	 "movimientoUId": "1"
-  }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BA",
+        "Token": "0211202010280000399672",
+        "Device": "MC"
+    },
+    "movimientoUId": 1
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -135,33 +135,35 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
-      "Usuario": "BA",
-      "Token": "0211202010280000399672",
-      "Device": "MC"
-   },
-   "sdtTextosMovimiento": {
-      "sBTTextoMovimiento": {
-         "codigo": "2",
-         "descripcion": "MOTIVOS DEL EMBARGO",
-         "renglon": "1",
-         "texto": "MOTIVOS DEL EMBARGO"
-      }
-   },
-   "Erroresnegocio": null,
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTContabilidad.ObtenerTextosMovimiento",
-      "Fecha": "2020-11-02",
-      "Hora": "12:27:51",
-      "Requerimiento": "1",
-      "Numero": "10143",
-      "Estado": "OK"
-   }
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BA",
+        "Token": "0211202010280000399672",
+        "Device": "MC"
+    },
+    "sdtTextosMovimiento": {
+        "sBTTextoMovimiento": {
+            "codigo": 2,
+            "descripcion": "MOTIVOS DEL EMBARGO",
+            "renglon": 1,
+            "texto": "MOTIVOS DEL EMBARGO"
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTContabilidad.ObtenerTextosMovimiento",
+        "Fecha": "2020-11-02",
+        "Hora": "12:27:51",
+        "Requerimiento": 1,
+        "Numero": 10143,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

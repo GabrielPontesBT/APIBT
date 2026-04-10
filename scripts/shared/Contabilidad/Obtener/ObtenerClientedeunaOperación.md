@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerClienteDeOperacion' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerClienteDeOperacion' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "0d3a8212b3F955E77534D3E0",
-	  "bts:Device": "AC"
-	},
-	"bts:operacionUId": "787"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "0d3a8212b3F955E77534D3E0",
+        "Device": "AC"
+    },
+    "operacionUId": 787
 }'
 ```
 :::
@@ -128,25 +128,28 @@ curl -X POST \
 
 @tab JSON
 ```json
- { 
- 	"Btinreq": { 
-	  "Device": "AC", 
-	  "Usuario": "BANTOTAL", 
-	  "Requerimiento": "1", 
-	  "Canal": "BTDIGITAL", 
-	  "Token": "0d3a8212b3F955E77534D3E0" 
-	}, 
-	"clienteUId": "822", 
-	"Btoutreq": { 
-	  "Numero": "110086", 
-	  "Estado": "OK", 
-	  "Servicio": "BTContabilidad.ObtenerClienteDeOperacion", 
-	  "Requerimiento": "1", 
-	  "Fecha": "2021-02-18", 
-	  "Canal": "BTDIGITAL", 
-	  "Hora": "14:37:54" 
-	} 
- }
+'{
+    "Btinreq": {
+        "Device": "AC",
+        "Usuario": "BANTOTAL",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "0d3a8212b3F955E77534D3E0"
+    },
+    "clienteUId": 822,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 110086,
+        "Estado": "OK",
+        "Servicio": "BTContabilidad.ObtenerClienteDeOperacion",
+        "Requerimiento": 1,
+        "Fecha": "2021-02-18",
+        "Canal": "BTDIGITAL",
+        "Hora": "14:37:54"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

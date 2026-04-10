@@ -81,7 +81,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
@@ -179,7 +179,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -187,52 +187,52 @@ curl -X POST \
         "sBTVinculo": [
             {
                 "descripcion": "Presidente",
-                "identificador": "1",
+                "identificador": 1,
                 "tipo": ""
             },
             {
                 "descripcion": "Vicepresidente",
-                "identificador": "2",
+                "identificador": 2,
                 "tipo": ""
             },
             {
                 "descripcion": "Director",
-                "identificador": "3",
+                "identificador": 3,
                 "tipo": ""
             },
             {
                 "descripcion": "Secretario",
-                "identificador": "4",
+                "identificador": 4,
                 "tipo": ""
             },
             {
                 "descripcion": "Tesorero",
-                "identificador": "5",
+                "identificador": 5,
                 "tipo": ""
             },
             {
                 "descripcion": "Prosecretario",
-                "identificador": "6",
+                "identificador": 6,
                 "tipo": ""
             },
             {
                 "descripcion": "Protesorero",
-                "identificador": "7",
+                "identificador": 7,
                 "tipo": ""
             },
             {
                 "descripcion": "Socio",
-                "identificador": "8",
+                "identificador": 8,
                 "tipo": ""
             },
             {
                 "descripcion": "Gerente",
-                "identificador": "9",
+                "identificador": 9,
                 "tipo": ""
             },
             {
                 "descripcion": "Apoderado",
-                "identificador": "10",
+                "identificador": 10,
                 "tipo": ""
             }
         ]
@@ -241,12 +241,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "827",
+        "Numero": 828,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerVinculos",
         "Fecha": "2017-12-17",
-        "Requerimiento": "",
-        "Hora": "18:47:21",
+        "Requerimiento": 0,
+        "Hora": "18:47:35",
         "Canal": "BTDIGITAL"
     }
 }'

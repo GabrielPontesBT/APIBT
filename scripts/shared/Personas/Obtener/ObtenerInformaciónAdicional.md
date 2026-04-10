@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerInformacionAdicional' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"personaUId": "101",
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerInformacionAdicional' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Token": "CC0FC33CD93505A538306C08",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "personaUId": 101
 }'
 ```
 :::
@@ -141,40 +141,43 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtInformacionAdicional": {
-      "sBTDatoLista": [
-      {
-         "clave": "HSNGCPF1_TXTAUX2",
-         "valor": ""
-      },
-      {
-          "clave": "PER_PAIS_ADICIONAL",
-          "valor": "845"
-      },
-	  {
-          "clave": "SUJOBLIGADO",
-          "valor": "N"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.ObtenerInformacionAdicional",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-09",
-      "Canal": "BTDIGITAL",
-      "Hora": "11:21:52"
-   }
-}
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "CC0FC33CD93505A538306C08"
+    },
+    "sdtInformacionAdicional": {
+        "sBTDatoLista": [
+            {
+                "clave": "HSNGCPF1_TXTAUX2",
+                "valor": ""
+            },
+            {
+                "clave": "PER_PAIS_ADICIONAL",
+                "valor": 845
+            },
+            {
+                "clave": "SUJOBLIGADO",
+                "valor": "N"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 10475,
+        "Servicio": "BTPersonas.ObtenerInformacionAdicional",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-09",
+        "Hora": "10:24:57",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

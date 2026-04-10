@@ -80,20 +80,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ModificarLimite' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ModificarLimite' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "1820366692F955E77534D3E0",
-	  "bts:Device": "AC"
-	},
-	"bts:tarjetaUId": "2000002050",
-	"bts:codigoDeLimiteId": "1"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "tarjetaUId": 2000002050,
+    "codigoDeLimiteId": 1
 }'
 ```
 :::
@@ -133,22 +133,25 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1820366692F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTTarjetasDeDebito.ModificarLimite",
-	  "Fecha": "2020-11-13",
-	  "Hora": "16:37:24",
-	  "Requerimiento": "1",
-	  "Numero": "7917",
-	  "Estado": "OK"
-	}
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTTarjetasDeDebito.ModificarLimite",
+        "Fecha": "2020-11-13",
+        "Hora": "16:37:24",
+        "Requerimiento": 1,
+        "Numero": 7917,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

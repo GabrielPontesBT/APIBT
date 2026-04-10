@@ -85,7 +85,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -149,7 +149,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -158,17 +158,17 @@ curl -X POST \
             {
                 "Tipo": "M",
                 "Descripcion": "1 - Meses",
-                "Valor": "1"
+                "Valor": 1
             },
             {
                 "Tipo": "M",
                 "Descripcion": "2 - Meses",
-                "Valor": "2"
+                "Valor": 2
             },
             {
                 "Tipo": "M",
                 "Descripcion": "3 - Meses",
-                "Valor": "3"
+                "Valor": 3
             }
         ]
     },
@@ -176,11 +176,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "401",
+        "Numero": 401,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerPeriodosHabilitados",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }

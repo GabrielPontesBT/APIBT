@@ -73,19 +73,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisionesCuota' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"productoUId": "51"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisionesCuota' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "e85b0edaecCD285A89A23FBE",
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GP",
+        "Requerimiento": 1
+    },
+    "productoUId": 51
 }'
 ```
 :::
@@ -132,30 +132,33 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Device": "1", 
-        "Usuario": "MINSTALADOR", 
-        "Token": "16c1cFC33CD93505A5382434", 
-        "Canal": "BTDIGITAL", 
-        "Requerimiento": "1" 
-    }, 
-    "sdtComisionesCuota": { 
-        "sBTComisionPrestamo": { 
-        "porcentaje": "0.0000", 
-        "descripcion": "Portes", 
-        "importe": "0.00", 
-        "codigo": "251" 
-        } 
-    }, 
-    "Btoutreq": { 
-        "Numero": "111399", 
-        "Estado": "OK", 
-        "Servicio": "BTModeladorPrestamos.ObtenerComisionesCuota", 
-        "Requerimiento": "1", 
-        "Fecha": "2023-05-10", 
-        "Canal": "BTDIGITAL", 
-        "Hora": "15:10:52" 
+'{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "e85b0edaecCD285A89A23FBE"
+    },
+    "sdtComisionesCuota": {
+        "sBTComisionPrestamo": {
+            "porcentaje": 0.0000,
+            "descripcion": "Portes",
+            "importe": 0.00,
+            "codigo": 251
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 13117,
+        "Servicio": "BTModeladorPrestamos.ObtenerComisionesCuota",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-23",
+        "Hora": "10:15:42",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

@@ -75,18 +75,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerVariablesRegla' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerVariablesRegla' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
+    "reglaId": 1
 }'
 ```
 :::
@@ -151,54 +152,55 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "c2cfd09eff4A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
-    "sdtVariablesRegla": {
+    "Variableregla": {
         "sBTVariableRegla": [
-        {
-            "tipoDato": "E-Entero",
-            "descripcion": "Moneda",
-            "variableId": "1",
-            "nombre": "MONEDA"
-        },
-        {
-            "tipoDato": "N-Numerico",
-            "descripcion": "Importe",
-            "variableId": "2",
-            "nombre": "IMPORTE"
-        },
-        {
-            "tipoDato": "N-Numerico",
-            "descripcion": "Tipo de Cambio",
-            "variableId": "3",
-            "nombre": "TCCOMPRA"
-        },
-        {
-            "tipoDato": "N-Numerico",
-            "descripcion": "Tipo de Cambio Vta",
-            "variableId": "4",
-            "nombre": "TCVTA"
-        }
+            {
+                "tipoDato": "E-Entero",
+                "descripcion": "Moneda",
+                "variableId": 1,
+                "nombre": "MONEDA"
+            },
+            {
+                "tipoDato": "N-Numerico",
+                "descripcion": "Importe",
+                "variableId": 2,
+                "nombre": "IMPORTE"
+            },
+            {
+                "tipoDato": "N-Numerico",
+                "descripcion": "Tipo de Cambio",
+                "variableId": 3,
+                "nombre": "TCCOMPRA"
+            },
+            {
+                "tipoDato": "N-Numerico",
+                "descripcion": "Tipo de Cambio Vta",
+                "variableId": 4,
+                "nombre": "TCVTA"
+            }
         ]
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "44445",
+        "Numero": 44445,
         "Estado": "OK",
         "Servicio": "BTReglasNegocio.ObtenerVariablesRegla",
         "Fecha": "2022-06-02",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "10:05:38",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

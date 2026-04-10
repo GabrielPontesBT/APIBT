@@ -117,38 +117,38 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "sdtPartner": {
-          "puntoVentaUId": 1,
-          "vendedorUId": 1,
-          "partnerUId": 1
-        },
-        "operacionUId": 123,
-        "clienteUId": 342,
-        "sdtDatosVehiculo": {
-          "color": 1,
-          "datosAdicionales": {
+        "puntoVentaUId": 1,
+        "vendedorUId": 1,
+        "partnerUId": 1
+    },
+    "operacionUId": 123,
+    "clienteUId": 342,
+    "sdtDatosVehiculo": {
+        "color": 1,
+        "datosAdicionales": {
             "sBTConcepto": {
-              "texto": "",
-              "valor": "",
-              "concepto": ""
+                "texto": "",
+                "valor": "",
+                "concepto": ""
             }
-          },
-          "placa": "AAA",
-          "fiadores": {
+        },
+        "placa": "AAA",
+        "fiadores": {
             "Long": ""
-          },
-          "numeroMotor": 23,
-          "compraPara": 62,
-          "anioConstruccion": 2003
-        }
-    }'  
+        },
+        "numeroMotor": 23,
+        "compraPara": 62,
+        "anioConstruccion": 2003
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -187,22 +187,24 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "b6a06c447cCD285A89A23FBE"
     },
     "movimientoUId": 36,
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 269,
         "Estado": "OK",
         "Servicio": "BTPartners.ContratarVehicular",
+        "Fecha": "2024-05-07",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Hora": "12:42:48",
         "Canal": "BTDIGITAL"
     }
 }'

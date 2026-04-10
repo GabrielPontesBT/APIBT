@@ -188,14 +188,14 @@ curl -X POST \
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
    "sdtPersona": {
-      "nroDocumento": 7896328,
+      "nroDocumento": "7896328",
       "estadoCivil": "",
       "segundoNombre": "Carlos",
       "fechaInicioActividad": "2023-09-26",
       "fechaVencimiento": "2024-09-26",
       "segundoApellido": "Gimenez",
       "fechaNacimiento": "1998-09-26",
-      "telefonoCelular": 25874532,
+      "telefonoCelular": "025874532",
       "tipoDocumentoId": 1,
       "actividadLaboral": "",
       "clasificacionInternaId": 2,
@@ -203,7 +203,7 @@ curl -X POST \
       "primerNombre": "Luis",
       "clasificacionInterna": "",
       "paisDocumentoId": 845,
-      "telefonoFijo": 874525,
+      "telefonoFijo": "874525",
       "primerApellido": "Gonzales",
       "ocupacion": "",
       "sector": "",
@@ -212,7 +212,7 @@ curl -X POST \
       "nacionalidad": "",
       "sueldo": 7845,
       "domicilios": {
-         "sBTDomicilioCompleto": {
+         "sBTDomicilioCompleto": [{
             "agrupador1Id": 1,
             "coloniaId": 3,
             "departamento": "",
@@ -233,7 +233,7 @@ curl -X POST \
             "tipoVivienda": "",
             "pais": "",
             "agrupador2Id": 2,
-            "codigoPostal": 7852,
+            "codigoPostal": "7852",
             "tipoViviendaId": 1,
             "agrupador4Id": 1,
             "barrioId": 2,
@@ -241,7 +241,7 @@ curl -X POST \
             "localidadId": 2,
             "tipoDomicilioId": 1,
             "departamentoId": 1
-         }
+         }]
       },
       "correoElectronico": "juanLui@mail.com",
       "sectorId": 2,
@@ -289,28 +289,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
-        "Usuario": "BANTOTAL",
-        "Token": "324915377F955E77534D3E02",
-        "Device": "AC"
+        "Requerimiento": 0,
+        "Usuario": "INSTALADOR",
+        "Token": "1222A10B1A106FB813BD7AE9",
+        "Device": "GZ"
     },
-    "personaUId": "181",
+    "personaUId": 181,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
         "Canal": "BTDIGITAL",
         "Servicio": "BTPersonas.Crear",
-        "Fecha": "2019-11-19",
-        "Hora": "13:05:22",
-        "Requerimiento": "",
-        "Numero": 6924,
+        "Fecha": "2017-12-14",
+        "Hora": "18:17:10",
+        "Requerimiento": 0,
+        "Numero": 770,
         "Estado": "OK"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

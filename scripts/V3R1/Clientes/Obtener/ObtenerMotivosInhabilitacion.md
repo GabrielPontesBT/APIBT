@@ -77,14 +77,14 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Usuario": "Instalador",
-          "Token": "289a9ca6a299865B3A2E76CF",
-          "Device": 2,
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 0
-        }
-	}'
+    "Btinreq": {
+        "Usuario": "Instalador",
+        "Token": "289a9ca6a299865B3A2E76CF",
+        "Device": "2",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 0
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -137,39 +137,41 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-      "Device": 2,
-      "Usuario": "Instalador",
-      "Requerimiento": 0,
-      "Canal": "BTDIGITAL",
-      "Token": "289a9ca6a299865B3A2E76CF"
-   },
-   "sdtMotivosInhabilitacion": {
-      "sBTMotivoInhabilitacion": [
-      {
-         "descripcion": "Embargo",
-         "codigo": 1
-      },
-      {
-         "descripcion": "En Juicio",
-         "codigo": 3
-      },
-      {
-         "descripcion": "Retenciones",
-         "codigo": 10
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 1827,
-      "Servicio": "BTClientes.ObtenerMotivosInhabilitacion",
-      "Estado": "OK",
-      "Fecha": "2022-10-27",
-      "Requerimiento": 0,
-      "Hora": "09:39:20",
-      "Canal": "BTDIGITAL"
-   }
+    "Btinreq": {
+        "Device": "2",
+        "Usuario": "Instalador",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "289a9ca6a299865B3A2E76CF"
+    },
+    "sdtMotivosInhabilitacion": {
+        "sBTMotivoInhabilitacion": [
+            {
+                "descripcion": "Embargo",
+                "codigo": 1
+            },
+            {
+                "descripcion": "En Juicio",
+                "codigo": 3
+            },
+            {
+                "descripcion": "Retenciones",
+                "codigo": 10
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1827,
+        "Servicio": "BTClientes.ObtenerMotivosInhabilitacion",
+        "Estado": "OK",
+        "Fecha": "2022-10-27",
+        "Requerimiento": 0,
+        "Hora": "09:39:20",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

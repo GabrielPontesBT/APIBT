@@ -178,11 +178,11 @@ curl -X POST \
       "Token": "8e3a8ef2dd99865B3A2E76CF"
    },
    "sdtPersonaJuridica": {
-      "nroDocumento": 219999990016,
+      "nroDocumento": "219999990016",
       "nombreReducido": "prueba",
       "razonSocial": "EMPRESA",
       "nroRegistro": "",
-      "naturalezaJuridica": 1,
+      "naturalezaJuridica": "1",
       "tipoDocumentoId": 2,
       "tipoActividadId": 1,
       "fechaConstitucion": "2020-01-01",
@@ -192,13 +192,13 @@ curl -X POST \
       "pais": "",
       "tipoActividad": "",
       "actividadId": 1111,
-      "tipoDocumento": 2,
+      "tipoDocumento": "2",
       "naturalezaJuridicaId": 1,
       "correoElectronico": "AV@GMAIL.COM",
-      "telefonoFijo": 3213342222,
-      "telefonoCelular": 5985423,
+      "telefonoFijo": "3213342222",
+      "telefonoCelular": "05985423",
       "domicilios": {
-         "sBTDomicilioCompleto": {
+         "sBTDomicilioCompleto": [{
             "agrupador1Id": 1,
             "coloniaId": 3,
             "departamento": "",
@@ -219,7 +219,7 @@ curl -X POST \
             "tipoVivienda": "",
             "pais": "",
             "agrupador2Id": 2,
-            "codigoPostal": 7852,
+            "codigoPostal": "7852",
             "tipoViviendaId": 1,
             "agrupador4Id": 1,
             "barrioId": 2,
@@ -227,15 +227,15 @@ curl -X POST \
             "localidadId": 2,
             "tipoDomicilioId": 1,
             "departamentoId": 1
-         }
+         }]
       }
    },
    "sdtIntegrantesJuridicosAlta": {
-      "sBTIntegranteJuridicoAlta": {
+      "sBTIntegranteJuridicoAlta": [{
          "vinculoId": 1,
          "personaUId": 141,
-         "participacion": ""
-      }
+         "participacion": 0.0
+      }]
    }
 }'
 ```
@@ -276,28 +276,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
-        "Usuario": "BANTOTAL",
-        "Token": "324915377F955E77534D3E02",
-        "Device": "AC"
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "247d9cc0a3CD285A89A23FBE",
+        "Device": "MC"
     },
-    "personaUId": "161",
+    "personaUId": 161,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
         "Canal": "BTDIGITAL",
         "Servicio": "BTPersonas.CrearPersonaJuridica",
-        "Fecha": "2019-11-19",
-        "Hora": "13:05:22",
-        "Requerimiento": "",
-        "Numero": 6924,
+        "Fecha": "2017-12-14",
+        "Hora": "18:17:10",
+        "Requerimiento": 0,
+        "Numero": 770,
         "Estado": "OK"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

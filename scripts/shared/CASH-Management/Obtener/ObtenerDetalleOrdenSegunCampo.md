@@ -95,25 +95,25 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetalleOrdenSegunCampo=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetalleOrdenSegunCampo' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "E0193ABA3B6E2D5976E40FA3"
     },
     "contratoId": 2,
     "servicioId": 200,
     "sdtValorCampoBusqueda": {
-         "tag": "CTABENEF",
-         "valor": 2800001
-      }
-  }'
+        "tag": "CTABENEF",
+        "valor": 2800001
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -181,50 +181,50 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "E0193ABA3B6E2D5976E40FA3"
     },
     "ordenId": 452,
-      "numeroLineaOrden": 1,
-      "cuentaDebito": 194,
-      "cantidadLineas": 1,
-      "moneda": 0,
-      "importe": 1231,
-      "referencia": "",
-      "fechaPago": "2025-05-27",
-      "estado": "Z",
-      "erroresPago": {
+    "numeroLineaOrden": 1,
+    "cuentaDebito": 194,
+    "cantidadLineas": 1,
+    "moneda": 0,
+    "importe": 1231.0,
+    "referencia": "",
+    "fechaPago": "2025-05-27",
+    "estado": "Z",
+    "erroresPago": {
         "item": "Atención. No se obtuvo transacción para devolución."
-      },
-      "detallePagos": {
+    },
+    "detallePagos": {
         "sBTDetallePago": {
-          "moneda": 0,
-          "beneficiarioCuenta": 28001,
-          "estado": "X",
-          "beneficiarioBanco": "Pionero Bantotal",
-          "importe": 1231,
-          "beneficiarioId": "",
-          "mensajesError": {
-            "item": "Error en ejecución de Proceso. Cancelación."
-          },
-          "fechaPago": "2025-05-27",
-          "nombre": "SOSA ANA"
+            "moneda": 0,
+            "beneficiarioCuenta": 28001,
+            "estado": "X",
+            "beneficiarioBanco": "Pionero Bantotal",
+            "importe": 1231.0,
+            "beneficiarioId": "",
+            "mensajesError": {
+                "item": "Error en ejecución de Proceso. Cancelación."
+            },
+            "fechaPago": "2025-05-27",
+            "nombre": "SOSA ANA"
         }
-      },
+    },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.ObtenerDetalleOrdenSegunCampo",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Numero": 35123,
+        "Estado": "OK",
+        "Servicio": "BTCASHManagement.ObtenerDetalleOrdenSegunCampo",
+        "Requerimiento": 1,
+        "Fecha": "2025-05-07",
+        "Canal": "BTDIGITAL",
+        "Hora": "17:27:58"
     }
 }'
 ```

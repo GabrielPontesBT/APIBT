@@ -78,9 +78,9 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "7f582501004A8B5C60A82434"
 	}
 }'
 ```
@@ -132,7 +132,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -141,7 +141,7 @@ curl -X POST \
             {
                 "papel": "",
                 "moneda": "$",
-                "productoUId": "61",
+                "productoUId": 61,
                 "nombre": "Amortización Automática TF"
             },
             ...
@@ -151,12 +151,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "724",
+        "Numero": 723,
         "Estado": "OK",
         "Servicio": "BTPrestamos.ObtenerProductos",
         "Fecha": "2017-11-24",
-        "Requerimiento": "",
-        "Hora": "13:13:45",
+        "Requerimiento": 0,
+        "Hora": "13:09:53",
         "Canal": "BTDIGITAL"
     }
 }'

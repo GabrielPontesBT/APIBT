@@ -102,35 +102,36 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarFATCA \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "personaUId": "42",
-   "sdtInformacionFATCA": {
-      "ingresoBrutoEEUU": "N",
-      "permanencia183Dias": "S",
-      "tieneGreenCard": "S",
-      "residenciaMasPaises": "S",
-      "codigoTIN": "ABCDEF",
-      "pagoFuenteEEUU": "N",
-      "residenciasFiscales": {
-         "sBTPCOResidenciaFiscal": {
-            "paisId": "845",
-            "codigoTIN": "UUUYYY",
-            "correlativo": "1"
-         }
-      },
-   }
-}
-'
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarFATCA' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Token": "d235ac28e6CD285A89A23FBE",
+        "Canal": "BTDIGITAL"
+    },
+    "personaUId": 42,
+    "sdtInformacionFATCA": {
+        "ingresoBrutoEEUU": "N",
+        "residenciasFiscales": {
+            "sBTPCOResidenciaFiscal": {
+                "paisId": 845,
+                "pais": "",
+                "codigoTIN": "UUUYYY",
+                "correlativo": 1
+            }
+        },
+        "permanencia183Dias": "S",
+        "tieneGreenCard": "S",
+        "residenciaMasPaises": "S",
+        "codigoTIN": "ABCDEF",
+        "pagoFuenteEEUU": "N"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -170,23 +171,26 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "resultado": "US Person",
-   "Btoutreq": {
-      "Numero": "2021",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.AgregarFATCA",
-      "Requerimiento": "1",
-      "Fecha": "2020-03-09",
-      "Canal": "BTDIGITAL",
-      "Hora": "12:47:54"
-   }
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "d235ac28e6CD285A89A23FBE"
+    },
+    "resultado": "US Person",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 2021,
+        "Servicio": "BTPersonas.AgregarFATCA",
+        "Estado": "OK",
+        "Fecha": "2020-03-09",
+        "Requerimiento": 1,
+        "Hora": "12:47:54",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

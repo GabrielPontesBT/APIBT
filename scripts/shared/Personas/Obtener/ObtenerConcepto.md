@@ -86,7 +86,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -144,7 +144,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -168,7 +168,7 @@ curl -X POST \
        "Estado": "OK",
        "Servicio": "BTPersonas.ObtenerConcepto",
        "Fecha": "2023-12-18",
-       "Requerimiento": "",
+       "Requerimiento": 1,
        "Hora": "01:48:53",
        "Canal": "BTDIGITAL"
    }

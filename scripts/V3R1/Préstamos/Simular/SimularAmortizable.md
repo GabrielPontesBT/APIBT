@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Amortizable
 breadcrumb: false
 pageInfo: false
@@ -479,7 +479,7 @@ curl -X POST \
 {
    "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "BANTOTAL",
       "Token": "52005b89a6F955E77534D3E0",
       "Device": "AC"
@@ -693,7 +693,7 @@ curl -X POST \
       "Servicio": "BTPrestamos.SimularAmortizable",
       "Fecha": "2020-04-23",
       "Hora": "16:17:04",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Numero": 677,
       "Estado": "OK"
    }

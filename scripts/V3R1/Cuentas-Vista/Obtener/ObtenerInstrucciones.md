@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Instrucciones
 icon: /assets/image/nuevo.svg
 breadcrumb: false
@@ -87,7 +87,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -184,7 +184,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -244,12 +244,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 8418,
+        "Numero": 36546,
         "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerSobregiros",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
+        "Servicio": "BTCuentasVista.ObtenerInstrucciones",
+        "Requerimiento": 1,
+        "Fecha": "2025-10-31",
+        "Hora": "16:31:55",
         "Canal": "BTDIGITAL"
     }
 }'

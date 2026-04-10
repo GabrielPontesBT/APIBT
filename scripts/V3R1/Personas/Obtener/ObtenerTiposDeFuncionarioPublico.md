@@ -83,8 +83,8 @@ curl -X POST \
         "Device": "GZ",
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
-    }'
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -149,19 +149,19 @@ curl -X POST \
         {
             "descripcion": "PEP Extranjero",
             "identificador": 2
-        },
+        }
         ]
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20051,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerTiposDeFuncionarioPublico",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Fecha": "2024-04-23",
+        "Hora": "09:54:54",
         "Canal": "BTDIGITAL"
     }
 }'

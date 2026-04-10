@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Documentos Digitales
 breadcrumb: false
 pageInfo: false
@@ -85,11 +85,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "22"
+	"personaUId": 22
 }'
 ```
 :::
@@ -144,11 +144,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -174,15 +174,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 773,
+        "Numero": 770,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2018-11-12",
-        "Hora": "16:17:09",
+        "Hora": "16:15:12",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

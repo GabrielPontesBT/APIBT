@@ -114,18 +114,18 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?PagarCuotaAFechaTerceros=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?PagarCuotaAFechaTerceros' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "INSTALADOR",
-		"Token": "191631443CD285A89A23FBEE",
-		"Device": "AC"
-	},
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "191631443CD285A89A23FBEE",
+        "Device": "AC"
+    },
     "operacionUId": 37675,
     "clienteUId": 1600,
     "operacionCobroUId": 59,
@@ -171,14 +171,14 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "INSTALADOR",
-		"Token": "191631443CD285A89A23FBEE",
-		"Device": "AC"
-	},
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "191631443CD285A89A23FBEE",
+        "Device": "AC"
+    },
     "movimientoUId": 1807,
     "Erroresnegocio": {
         "BTErrorNegocio": []
@@ -188,11 +188,11 @@ curl -X POST \
         "Servicio": "BTPrestamos.PagarCuotaAFechaTerceros",
         "Fecha": "2019-07-26",
         "Hora": "12:04:55",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Numero": 120425,
         "Estado": "OK"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

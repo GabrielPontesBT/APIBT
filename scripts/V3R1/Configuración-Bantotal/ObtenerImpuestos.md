@@ -75,12 +75,12 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
   -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "558273287F955E77534D3E02",
-	  "bts:Device": "AC"
+	"Btinreq": {
+	  "Canal": "BTDIGITAL",
+	  "Requerimiento": 1,
+	  "Usuario": "BANTOTAL",
+	  "Token": "558273287F955E77534D3E02",
+	  "Device": "AC"
 	}
 }'
 ```
@@ -194,7 +194,7 @@ curl -X POST \
  { 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Usuario": "INSTALADOR", 
       "Token": "670752960CD285A89A23FBEE", 
       "Device": "BTDIGITAL" 
@@ -202,22 +202,22 @@ curl -X POST \
    "sdtImpuestos": { 
       "sBTImpuesto": [ 
          { 
-            "codigo": "1", 
+            "codigo": 1, 
             "descripcion": "I.V.A.", 
             "condiciones": { 
                "sBTImpuestoCondicion": [ 
                   { 
-                     "codigo": "1", 
+                     "codigo": 1, 
                      "descripcion": "Gravado", 
                      "tipo": "A" 
                   }, 
                   { 
-                     "codigo": "2", 
+                     "codigo": 2, 
                      "descripcion": "Responsable Inscripto", 
                      "tipo": "J" 
                   }, 
                   { 
-                     "codigo": "4", 
+                     "codigo": 4, 
                      "descripcion": "Exento o  No Alcanzado", 
                      "tipo": "A" 
                   } 
@@ -225,17 +225,17 @@ curl -X POST \
             } 
          }, 
          { 
-            "":, 
-            "": "Ingresos Brutos Percepciones", 
+            "codigo": 2, 
+            "descripcion": "Ingresos Brutos Percepciones", 
             "condiciones": { 
                "sBTImpuestoCondicion": [ 
                   { 
-                     "codigo": "1", 
+                     "codigo": 1, 
                      "descripcion": "Gravado", 
                      "tipo": null 
                   }, 
                   { 
-                     "codigo": "2", 
+                     "codigo": 2, 
                      "descripcion": "Responsable Inscripto", 
                      "tipo": null 
                   } 
@@ -243,17 +243,17 @@ curl -X POST \
             } 
          }, 
          { 
-            "codigo": "4", 
+            "codigo": 4, 
             "descripcion": "Impuesto de Sellos", 
             "condiciones": { 
                "sBTImpuestoCondicion": [ 
                   { 
-                     "codigo": "1", 
+                     "codigo": 1, 
                      "descripcion": "Gravado", 
                      "tipo": null 
                   }, 
                   { 
-                     "codigo": "2", 
+                     "codigo": 2, 
                      "descripcion": "Exento", 
                      "tipo": null 
                   } 
@@ -261,17 +261,17 @@ curl -X POST \
             } 
          }, 
          { 
-            "codigo": "5", 
+            "codigo": 5, 
             "descripcion": "Ret. Impuesto a las Ganancias", 
             "condiciones": { 
                "sBTImpuestoCondicion": [ 
                   { 
-                     "codigo": "1", 
+                     "codigo": 1, 
                      "descripcion": "Gravado", 
                      "tipo": null 
                   }, 
                   { 
-                     "codigo": "4", 
+                     "codigo": 4, 
                      "descripcion": "Excento", 
                      "tipo": null 
                   } 
@@ -286,8 +286,8 @@ curl -X POST \
       "Servicio": "BTConfiguracionBantotal.ObtenerImpuestos", 
       "Fecha": "2021-05-27", 
       "Hora": "11:58:08", 
-      "Requerimiento": "1", 
-      "Numero": "8353", 
+      "Requerimiento": 1, 
+      "Numero": 8353, 
       "Estado": "OK" 
    } 
 }

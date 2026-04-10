@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTelefonos' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"personaUId": "189",
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTelefonos' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Token": "A088577A8D1E89A20E6EF27D",
+        "Canal": "BTDIGITAL",
+        "Device": "1"
+    },
+    "personaUId": 189
 }'
 ```
 :::
@@ -141,39 +141,42 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "fa2c02c95a4A8B5C60A82434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtTelefonos": {
-      "sBTTelefono": [
-      {
-         "telefono": "23786543",
-         "tipoDeDomicilioId": "1",
-         "identificador": "1",
-         "tipoDeDomicilio": "Residencia"
-      },
-      {
-          "telefono": "096154763",
-         "tipoDeDomicilioId": "1",
-         "identificador": "2",
-         "tipoDeDomicilio": "Residencia"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.ObtenerTelefonos",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-05",
-      "Canal": "BTDIGITAL",
-      "Hora": "12:21:52"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "A088577A8D1E89A20E6EF27D"
+    },
+    "sdtTelefonos": {
+        "sBTTelefono": [
+            {
+                "telefono": 23786543,
+                "tipoDeDomicilioId": 1,
+                "identificador": 1,
+                "tipoDeDomicilio": "Residencia"
+            },
+            {
+                "telefono": 96154763,
+                "tipoDeDomicilioId": 1,
+                "identificador": 2,
+                "tipoDeDomicilio": "Residencia"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 10341,
+        "Servicio": "BTPersonas.ObtenerTelefonos",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-05",
+        "Hora": "12:21:52",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

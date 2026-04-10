@@ -82,20 +82,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?ObtenerOperacionesCliente' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"solicitudUId": "11887",
-	"clienteUId": "862"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?ObtenerOperacionesCliente' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "MINSTALADOR",
+        "Token": "16c1cc9b534A8B5C60A82434",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "solicitudUId": 11887,
+    "clienteUId": 862
 }'
 ```
 :::
@@ -154,45 +154,48 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "GP",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cc9b534A8B5C60A82434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtOperaciones": {
-      "sBTOperacionWF": [
-      {
-         "fechaUltimoPago": "2016-03-01",
-         "diasMora": "1674",
-         "saldo": "30340.61",
-         "fechaVencimiento": "2016-01-02",
-         "montoCancelacion": "511820.42",
-         "operacionUId": "1724",
-         "fechaValor": "2020-03-13"
-      },
-      {
-         "fechaUltimoPago": "2017-11-14",
-         "diasMora": "0",
-         "saldo": "15000.00",
-         "fechaVencimiento": "2016-01-02",
-         "montoCancelacion": "0.00",
-         "operacionUId": "1727",
-         "fechaValor": "2020-03-13"
-      }
-      ]
-   },
-   "Btoutreq": {
-      "Numero": "111397",
-      "Estado": "OK",
-      "Servicio": "BTMicrofinanzas.ObtenerOperacionesCliente",
-      "Requerimiento": "1",
-      "Fecha": "2021-10-15",
-      "Canal": "BTDIGITAL",
-      "Hora": "13:14:15"
-   }
+'{
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "16c1cc9b534A8B5C60A82434"
+    },
+    "sdtOperaciones": {
+        "sBTOperacionWF": [
+            {
+                "fechaUltimoPago": "2016-03-01",
+                "diasMora": 1674,
+                "saldo": 30340.61,
+                "fechaVencimiento": "2016-01-02",
+                "montoCancelacion": 511820.42,
+                "operacionUId": 1724,
+                "fechaValor": "2020-03-13"
+            },
+            {
+                "fechaUltimoPago": "2017-11-14",
+                "diasMora": 0,
+                "saldo": 15000.00,
+                "fechaVencimiento": "2016-01-02",
+                "montoCancelacion": 0.00,
+                "operacionUId": 1727,
+                "fechaValor": "2020-03-13"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 111397,
+        "Estado": "OK",
+        "Servicio": "BTMicrofinanzas.ObtenerOperacionesCliente",
+        "Requerimiento": 1,
+        "Fecha": "2021-10-15",
+        "Canal": "BTDIGITAL",
+        "Hora": "13:14:15"
+    }
 }'
 ```
 ::: 

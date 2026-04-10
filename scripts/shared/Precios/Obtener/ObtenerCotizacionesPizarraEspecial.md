@@ -81,19 +81,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionesPizarraEspecial' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ObtenerCotizacionesPizarraEspecial' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  "Btinreq": {
-    "Canal": "BTDIGITAL",
-    "Usuario": "INSTALADOR",
-    "Device": "FC",
-    "Requerimiento": "0",
-    "Token": "D2868674D8C3483A48324170"
-  },
-  "identificadorPizarra": "10"
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "9F85C7F7E7515863B688E0F4"
+    },
+    "identificadorPizarra": 10
 }'
 ```
 :::
@@ -454,349 +454,349 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-  "Btinreq": {
-    "Device": "FC",
-    "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
-    "Canal": "BTDIGITAL",
-    "Token": "D2868674D8C3483A48324170"
-  },
-  "sdtMoneda": {
-      "descripcion": "DÓLAR ESTADOUNIDENSE",
-      "identificador": 2222,
-      "simbolo": "USD"
-   },
-   "compra": 20,
-   "venta": 21,
-   "sdtCotizacionesPizarra": {
-      "sBTCotizacionPizarra": [
-      {
-         "arbitrajeCompra": 1.2,
-         "moneda": {
-            "descripcion": "DOLAR AUSTRALIANO",
-            "identificador": 105,
-            "simbolo": "AUD"
-         },
-         "tipoCambioVenta": 26.25,
-         "tipoCambioCompra": 16.67,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0.8
-      },
-      {
-         "arbitrajeCompra": 3.6,
-         "moneda": {
-            "descripcion": "PESOS ARGENTINOS",
-            "identificador": 500,
-            "simbolo": "ARS"
-         },
-         "tipoCambioVenta": 8.75,
-         "tipoCambioCompra": 5.56,
-         "arbitrajeCentral": 3,
-         "arbitrajeVenta": 2.4
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "PESO ARG. BILL",
-            "identificador": 501,
-            "simbolo": "AR$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 3.6,
-         "moneda": {
-            "descripcion": "REAL",
-            "identificador": 1000,
-            "simbolo": "BRL"
-         },
-         "tipoCambioVenta": 8.75,
-         "tipoCambioCompra": 5.56,
-         "arbitrajeCentral": 3,
-         "arbitrajeVenta": 2.4
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "REAL BILLETE",
-            "identificador": 1001,
-            "simbolo": "BR$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 1.04,
-         "moneda": {
-            "descripcion": "EURO",
-            "identificador": 1111,
-            "simbolo": "EUR"
-         },
-         "tipoCambioVenta": 32.76,
-         "tipoCambioCompra": 20.8,
-         "arbitrajeCentral": 1.3,
-         "arbitrajeVenta": 1.56
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "EURO BILLETE",
-            "identificador": 1115,
-            "simbolo": "EU$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "Colon Costarricesense",
-            "identificador": 1123,
-            "simbolo": "CRC"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "PESOS CHILENOS",
-            "identificador": 1300,
-            "simbolo": "CL$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 1.2,
-         "moneda": {
-            "descripcion": "DÓLAR NEOZELANDÉS",
-            "identificador": 1490,
-            "simbolo": "NZD"
-         },
-         "tipoCambioVenta": 26.25,
-         "tipoCambioCompra": 16.67,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0.8
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "RAND SUDAFRICANO",
-            "identificador": 1620,
-            "simbolo": "ZAR"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "CORONAS DANESAS",
-            "identificador": 1800,
-            "simbolo": "DKK"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0.8,
-         "moneda": {
-            "descripcion": "DÓLAR ESTADOUNIDENSE - BILLETE",
-            "identificador": 2225,
-            "simbolo": "U$D"
-         },
-         "tipoCambioVenta": 25.2,
-         "tipoCambioCompra": 16,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 1.2
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "DÓLAR FONDO",
-            "identificador": 2230,
-            "simbolo": "USF"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 1.2,
-         "moneda": {
-            "descripcion": "DÓLAR CANADIENSE",
-            "identificador": 2309,
-            "simbolo": "CAD"
-         },
-         "tipoCambioVenta": 26.25,
-         "tipoCambioCompra": 16.67,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0.8
-      },
-      {
-         "arbitrajeCompra": 0.8,
-         "moneda": {
-            "descripcion": "LIBRAS ESTERLINAS",
-            "identificador": 2700,
-            "simbolo": "GBP"
-         },
-         "tipoCambioVenta": 25.2,
-         "tipoCambioCompra": 16,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 1.2
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "LIBRAS EST. BILL",
-            "identificador": 2701,
-            "simbolo": "GB$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 2.4,
-         "moneda": {
-            "descripcion": "YENS",
-            "identificador": 3600,
-            "simbolo": "JPY"
-         },
-         "tipoCambioVenta": 13.13,
-         "tipoCambioCompra": 8.33,
-         "arbitrajeCentral": 2,
-         "arbitrajeVenta": 1.6
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "CORONA NORUEGA",
-            "identificador": 4600,
-            "simbolo": "NOK"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "GUARANÍ TR.",
-            "identificador": 4800,
-            "simbolo": "PYG"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "GUARANÍ",
-            "identificador": 4801,
-            "simbolo": "PY$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 1,
-         "moneda": {
-            "descripcion": "CORONAS SUECAS",
-            "identificador": 5800,
-            "simbolo": "SEK"
-         },
-         "tipoCambioVenta": 26,
-         "tipoCambioCompra": 20,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 1
-      },
-      {
-         "arbitrajeCompra": 1.2,
-         "moneda": {
-            "descripcion": "FRANCOS SUIZOS",
-            "identificador": 5900,
-            "simbolo": "CHF"
-         },
-         "tipoCambioVenta": 26.25,
-         "tipoCambioCompra": 16.67,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0.8
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "FR. SUIZO BILL.",
-            "identificador": 5901,
-            "simbolo": "CH$"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "BOLIVAR",
-            "identificador": 6200,
-            "simbolo": "VEF"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      },
-      {
-         "arbitrajeCompra": 0,
-         "moneda": {
-            "descripcion": "ONZA TROY ORO",
-            "identificador": 9000,
-            "simbolo": "ORO"
-         },
-         "tipoCambioVenta": 0,
-         "tipoCambioCompra": 0,
-         "arbitrajeCentral": 1,
-         "arbitrajeVenta": 0
-      }
-      ]
-   },
-  "Erroresnegocio": "",
-  "Btoutreq": {
-    "Numero": "36637",
-    "Estado": "OK",
-    "Servicio": "BTPersonas.ObtenerTextos",
-    "Requerimiento": "0",
-    "Fecha": "2025-11-07",
-    "Hora": "15:51:35",
-    "Canal": "BTDIGITAL"
-  }
-}
-
-'
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "9F85C7F7E7515863B688E0F4"
+    },
+    "sdtMoneda": {
+        "descripcion": "DÓLAR ESTADOUNIDENSE",
+        "identificador": 2222,
+        "simbolo": "USD"
+    },
+    "compra": 20.0,
+    "venta": 21.0,
+    "sdtCotizacionesPizarra": {
+        "sBTCotizacionPizarra": [
+            {
+                "arbitrajeCompra": 1.2,
+                "moneda": {
+                    "descripcion": "DOLAR AUSTRALIANO",
+                    "identificador": 105,
+                    "simbolo": "AUD"
+                },
+                "tipoCambioVenta": 26.25,
+                "tipoCambioCompra": 16.67,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.8
+            },
+            {
+                "arbitrajeCompra": 3.6,
+                "moneda": {
+                    "descripcion": "PESOS ARGENTINOS",
+                    "identificador": 500,
+                    "simbolo": "ARS"
+                },
+                "tipoCambioVenta": 8.75,
+                "tipoCambioCompra": 5.56,
+                "arbitrajeCentral": 3.0,
+                "arbitrajeVenta": 2.4
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "PESO ARG. BILL",
+                    "identificador": 501,
+                    "simbolo": "AR$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 3.6,
+                "moneda": {
+                    "descripcion": "REAL",
+                    "identificador": 1000,
+                    "simbolo": "BRL"
+                },
+                "tipoCambioVenta": 8.75,
+                "tipoCambioCompra": 5.56,
+                "arbitrajeCentral": 3.0,
+                "arbitrajeVenta": 2.4
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "REAL BILLETE",
+                    "identificador": 1001,
+                    "simbolo": "BR$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 1.04,
+                "moneda": {
+                    "descripcion": "EURO",
+                    "identificador": 1111,
+                    "simbolo": "EUR"
+                },
+                "tipoCambioVenta": 32.76,
+                "tipoCambioCompra": 20.8,
+                "arbitrajeCentral": 1.3,
+                "arbitrajeVenta": 1.56
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "EURO BILLETE",
+                    "identificador": 1115,
+                    "simbolo": "EU$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "Colon Costarricesense",
+                    "identificador": 1123,
+                    "simbolo": "CRC"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "PESOS CHILENOS",
+                    "identificador": 1300,
+                    "simbolo": "CL$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 1.2,
+                "moneda": {
+                    "descripcion": "DÓLAR NEOZELANDÉS",
+                    "identificador": 1490,
+                    "simbolo": "NZD"
+                },
+                "tipoCambioVenta": 26.25,
+                "tipoCambioCompra": 16.67,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.8
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "RAND SUDAFRICANO",
+                    "identificador": 1620,
+                    "simbolo": "ZAR"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "CORONAS DANESAS",
+                    "identificador": 1800,
+                    "simbolo": "DKK"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.8,
+                "moneda": {
+                    "descripcion": "DÓLAR ESTADOUNIDENSE - BILLETE",
+                    "identificador": 2225,
+                    "simbolo": "U$D"
+                },
+                "tipoCambioVenta": 25.2,
+                "tipoCambioCompra": 16.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 1.2
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "DÓLAR FONDO",
+                    "identificador": 2230,
+                    "simbolo": "USF"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 1.2,
+                "moneda": {
+                    "descripcion": "DÓLAR CANADIENSE",
+                    "identificador": 2309,
+                    "simbolo": "CAD"
+                },
+                "tipoCambioVenta": 26.25,
+                "tipoCambioCompra": 16.67,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.8
+            },
+            {
+                "arbitrajeCompra": 0.8,
+                "moneda": {
+                    "descripcion": "LIBRAS ESTERLINAS",
+                    "identificador": 2700,
+                    "simbolo": "GBP"
+                },
+                "tipoCambioVenta": 25.2,
+                "tipoCambioCompra": 16.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 1.2
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "LIBRAS EST. BILL",
+                    "identificador": 2701,
+                    "simbolo": "GB$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 2.4,
+                "moneda": {
+                    "descripcion": "YENS",
+                    "identificador": 3600,
+                    "simbolo": "JPY"
+                },
+                "tipoCambioVenta": 13.13,
+                "tipoCambioCompra": 8.33,
+                "arbitrajeCentral": 2.0,
+                "arbitrajeVenta": 1.6
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "CORONA NORUEGA",
+                    "identificador": 4600,
+                    "simbolo": "NOK"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "GUARANÍ TR.",
+                    "identificador": 4800,
+                    "simbolo": "PYG"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "GUARANÍ",
+                    "identificador": 4801,
+                    "simbolo": "PY$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 1.0,
+                "moneda": {
+                    "descripcion": "CORONAS SUECAS",
+                    "identificador": 5800,
+                    "simbolo": "SEK"
+                },
+                "tipoCambioVenta": 26.0,
+                "tipoCambioCompra": 20.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 1.0
+            },
+            {
+                "arbitrajeCompra": 1.2,
+                "moneda": {
+                    "descripcion": "FRANCOS SUIZOS",
+                    "identificador": 5900,
+                    "simbolo": "CHF"
+                },
+                "tipoCambioVenta": 26.25,
+                "tipoCambioCompra": 16.67,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.8
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "FR. SUIZO BILL.",
+                    "identificador": 5901,
+                    "simbolo": "CH$"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "BOLIVAR",
+                    "identificador": 6200,
+                    "simbolo": "VEF"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            },
+            {
+                "arbitrajeCompra": 0.0,
+                "moneda": {
+                    "descripcion": "ONZA TROY ORO",
+                    "identificador": 9000,
+                    "simbolo": "ORO"
+                },
+                "tipoCambioVenta": 0.0,
+                "tipoCambioCompra": 0.0,
+                "arbitrajeCentral": 1.0,
+                "arbitrajeVenta": 0.0
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 36717,
+        "Estado": "OK",
+        "Servicio": "BTPrecios.ObtenerCotizacionesPizarraEspecial",
+        "Requerimiento": 0,
+        "Fecha": "2025-11-20",
+        "Hora": "11:37:22",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

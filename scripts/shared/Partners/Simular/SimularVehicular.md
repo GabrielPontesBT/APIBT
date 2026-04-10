@@ -174,12 +174,12 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "sdtPartner": {
         "puntoVentaUId": 1,
@@ -193,11 +193,11 @@ curl -X POST \
         "precio": 33,
         "monedaPrecio": 1,
         "datosAdicionales": {
-        "sBTConcepto": {
-            "texto": "",
-            "valor": "",
-            "concepto": ""
-        }
+            "sBTConcepto": {
+                "texto": "",
+                "valor": "",
+                "concepto": ""
+            }
         },
         "versionUId": 2,
         "kitMantenimiento": 1,
@@ -207,63 +207,63 @@ curl -X POST \
     },
     "sdtDatosSimulacion": {
         "plazo": 0,
-        "tasa": 36,
+        "tasa": 36.000000,
         "diaPago": 14,
         "ballon": "",
         "cuotasExtraordinarias": {
-        "sBTCuotaExtraordinaria": {
-            "mes": "",
-            "porcentajeCuota": ""
-        }
+            "sBTCuotaExtraordinaria": {
+                "mes": "",
+                "porcentajeCuota": ""
+            }
         },
         "pizarra": 0,
         "fechaVencimiento": "2025-11-14",
         "periodoCuotas": 35,
         "fechaPrimerPago": "2023-11-14",
         "comisiones": {
-        "sBTComisionPrestamo": {
-            "porcentaje": "",
-            "descripcion": "",
-            "importe": "",
-            "codigo": ""
-        }
+            "sBTComisionPrestamo": {
+                "porcentaje": "",
+                "descripcion": "",
+                "importe": "",
+                "codigo": ""
+            }
         },
-        "valorCuota": 0,
+        "valorCuota": 0.00,
         "productoUId": "",
         "actividad": "",
         "periodosGracia": {
-        "sBTGraciaPrestamo": {
-            "aplicaSobre": "",
-            "numeroPeriodos": "",
-            "extiendePlazo": "",
-            "mes": "",
-            "periodoInicial": "",
-            "aplicaSobreDsc": ""
-        }
+            "sBTGraciaPrestamo": {
+                "aplicaSobre": "",
+                "numeroPeriodos": "",
+                "extiendePlazo": "",
+                "mes": "",
+                "periodoInicial": "",
+                "aplicaSobreDsc": ""
+            }
         },
         "operacionUId": 1568,
         "monto": 15543,
         "seguros": {
-        "sBTSeguroPrestamo": {
-            "porcentaje": 0.1,
-            "descripcion": "",
-            "tipo": "",
-            "importe": 100,
-            "codigo": 100
-        }
+            "sBTSeguroPrestamo": {
+                "porcentaje": 0.1000,
+                "descripcion": "",
+                "tipo": "",
+                "importe": 100.00,
+                "codigo": 100
+            }
         },
         "comisionesCuota": {
-        "sBTComisionPrestamo": {
-            "porcentaje": "",
-            "descripcion": "",
-            "importe": "",
-            "codigo": ""
-        }
+            "sBTComisionPrestamo": {
+                "porcentaje": "",
+                "descripcion": "",
+                "importe": "",
+                "codigo": ""
+            }
         },
         "fechaValor": "2023-11-14",
         "cantidadCuotas": 6
     }
-    }'  
+}'
 ```
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -497,240 +497,227 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtSimulacionOutput": {
-      "cft": 28.21,
-      "plus": 0,
-      "nomSucursal": {
-      "#text": "Casa Matriz",
-      "nomSucursal": "",
-      "otrosConceptos": "",
-      "tasaNominalAnual": 30,
-      "precio": 7282.89,
-      "tipoAmortizacionDsc": {
-         "#text": "Leasing",
-         "tipoAmortizacionDsc": "",
-         "cronograma": {
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "1222A10B1A106FB813BD7AE9"
+    },
+    "sdtSimulacionOutput": {
+        "cft": 28.21,
+        "plus": 0.000000,
+        "nomSucursal": "Casa Matriz",
+        "otrosConceptos": "",
+        "tasaNominalAnual": 30.000000,
+        "precio": 7282.89,
+        "tipoAmortizacionDsc": "Leasing",
+        "cronograma": {
             "sBTCuotaSimulacion": [
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-05-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-06-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-07-06",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-08-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-09-07",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-10-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-11-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2020-12-07",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2021-01-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2021-02-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.67,
-               "fechaPago": "2021-03-05",
-               "seguros": 0
-            },
-            {
-               "otrosConceptos": 0,
-               "capital": 0,
-               "impuestos": 0,
-               "intereses": 0,
-               "concepto": "",
-               "tipoCuota": "",
-               "cuota": 268.6,
-               "fechaPago": "2021-04-05",
-               "seguros": 0
-            }
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-05-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-06-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-07-06",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-08-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-09-07",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-10-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-11-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2020-12-07",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2021-01-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2021-02-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.67,
+                    "fechaPago": "2021-03-05",
+                    "seguros": 0.00
+                },
+                {
+                    "otrosConceptos": 0.00,
+                    "capital": 0.00,
+                    "impuestos": 0.00,
+                    "intereses": 0.00,
+                    "concepto": "",
+                    "tipoCuota": "",
+                    "cuota": 268.60,
+                    "fechaPago": "2021-04-05",
+                    "seguros": 0.00
+                }
             ]
-         },
-         "comisionesDesembolso": 0,
-         "segurosDesembolso": 0,
-         "cantidadCuotas": 7,
-         "impuestosDesembolso": 0,
-         "fechaPrimerPago": {
-            "#text": "2020-05-05",
-            "fechaPrimerPago": "",
-            "operacionUId": 156,
-            "valorCuota": 268.67,
-            "diasRevision": 0,
-            "totalSeguros": 0,
-            "plazo": 497,
-            "producto": {
+        },
+        "comisionesDesembolso": 0.00,
+        "segurosDesembolso": 0.00,
+        "cantidadCuotas": 7,
+        "impuestosDesembolso": 0.00,
+        "fechaPrimerPago": "2020-05-05",
+        "operacionUId": 156,
+        "valorCuota": 268.67,
+        "diasRevision": 0,
+        "totalSeguros": 0.00,
+        "plazo": 497,
+        "producto": {
             "moneda": "$",
             "papel": "",
             "productoUId": 512,
             "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
-            },
-            "capital": 20000,
-            "tipoAmortizacionCod": 0,
-            "totalIntereses": 2613.64,
-            "seguros": {
+        },
+        "capital": 20000.00,
+        "tipoAmortizacionCod": 0,
+        "totalIntereses": 2613.64,
+        "seguros": {
             "codigo": 100,
             "descripcion": "ALICO - Vida %s/cap. inicial",
             "tipo": "VIDA",
             "modificable": "S",
-            "importeFijo": 100,
-            "porcentaje": 0.1
-            },
-            "fechaValor": {
-            "#text": "2018-05-15",
-            "fechaValor": "",
-            "tasaEfectiva": 0,
-            "totalImpuestos": 0,
-            "coeficienteIVA": 0,
-            "periodicidad": 30,
-            "tasaEfectivaAnual": 25.590075,
-            "totalPrestamo": 3223.97,
-            "fechaVencimiento": {
-               "#text": "2025-04-05",
-               "fechaVencimiento": "",
-               "tasa": 0,
-               "redondeo": 0,
-               "montoDesembolso": 3154.93,
-               "comisiones": {
-                  "sBTComisionPrestamo": [
-                  {
-                     "porcentaje": 0,
-                     "descripcion": "Comision por venta seguro",
-                     "importe": 0,
-                     "codigo": 137
-                  },
-                  {
-                     "porcentaje": 0,
-                     "descripcion": "MiAuto - Otorgamiento",
-                     "importe": 0,
-                     "codigo": 300
-                  }
-                  ]
-               },
-               "totalComisiones": 0,
-               "comisionesCuota": ""
-            },
-            "Erroresnegocio": "",
-            "Btoutreq": {
-               "Canal": "BTDIGITAL",
-               "Servicio": "BTPartners.SimularVehicular",
-               "Fecha": "2021-03-18",
-               "Hora": "10:03:41",
-               "Requerimiento": 1,
-               "Numero": 8032,
-               "Estado": "OK"
-            }
-            }
-         }
-      }
-      }
-   }
+            "importeFijo": 100.00,
+            "porcentaje": 0.1000
+        },
+        "fechaValor": "2018-05-15",
+        "tasaEfectiva": 0.000000,
+        "totalImpuestos": 0.00,
+        "coeficienteIVA": 0.000000,
+        "periodicidad": 30,
+        "tasaEfectivaAnual": 25.590075,
+        "totalPrestamo": 3223.97,
+        "fechaVencimiento": "2025-04-05",
+        "tasa": 0.000000,
+        "redondeo": 0.00,
+        "montoDesembolso": 3154.93,
+        "comisiones": {
+            "sBTComisionPrestamo": [
+                {
+                    "porcentaje": 0.0000,
+                    "descripcion": "Comision por venta seguro",
+                    "importe": 0.00,
+                    "codigo": 137
+                },
+                {
+                    "porcentaje": 0.0000,
+                    "descripcion": "MiAuto - Otorgamiento",
+                    "importe": 0.00,
+                    "codigo": 300
+                }
+            ]
+        },
+        "totalComisiones": 0.00,
+        "comisionesCuota": ""
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPartners.SimularVehicular",
+        "Fecha": "2021-03-18",
+        "Hora": "10:03:41",
+        "Requerimiento": 1,
+        "Numero": 8032,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

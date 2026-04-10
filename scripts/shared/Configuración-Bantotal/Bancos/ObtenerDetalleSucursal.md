@@ -77,20 +77,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDetalleSucursal=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDetalleSucursal' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-      "Btinreq": {
-            "Requerimiento": "1",
-            "Device": "GZ",
-            "Canal": "BTDIGITAL",
-            "Usuario": "MINSTALADOR",
-            "Token": "6fc29caa9d4A8B5C60A82434"
-      },
-      "sucursalId": 1,
-  }'
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "9060352790A5422FE377DB47"
+    },
+    "sucursalId": 1
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -152,45 +152,45 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "9060352790A5422FE377DB47"
     },
     "sdtDetalleSucursal": {
-         "oficinaPrincipal": "Sucursal Ciudad de la Costa",
-         "nombre": "Casa Matriz",
-         "oficinaPrincipalId": 1000,
-         "departamento": "",
-         "barrio": "",
-         "codigo": 1,
-         "categoria": "",
-         "calendarioId": 1,
-         "ciudad": "",
-         "nroPuerta": 2141,
-         "estadoId": 1,
-         "telefono": 15554454,
-         "email": "",
-         "codigoPostal": 55000,
-         "ciudadId": 1022,
-         "barrioId": 0,
-         "categoriaId": 0,
-         "calle": "Pedro Cosio",
-         "estado": "",
-         "departamentoId": 1
-      },
+        "oficinaPrincipal": "Sucursal Ciudad de la Costa",
+        "nombre": "Casa Matriz",
+        "oficinaPrincipalId": 1000,
+        "departamento": "",
+        "barrio": "",
+        "codigo": 1,
+        "categoria": "",
+        "calendarioId": 1,
+        "ciudad": "",
+        "nroPuerta": 2141,
+        "estadoId": 1,
+        "telefono": 15554454,
+        "email": "",
+        "codigoPostal": 55000,
+        "ciudadId": 1022,
+        "barrioId": 0,
+        "categoriaId": 0,
+        "calle": "Pedro Cosio",
+        "estado": "",
+        "departamentoId": 1
+    },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTConfiguracionBantotal.ObtenerDetalleSucursal",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-10-11",
+        "Hora": "15:16:27",
+        "Numero": 24977,
+        "Servicio": "BTConfiguracionBantotal.ObtenerDetalleSucursal",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

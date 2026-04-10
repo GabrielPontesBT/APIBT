@@ -88,12 +88,12 @@ curl -X POST \
   -d '{
 	 "Btinreq": {
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "IN",
 		"Token": "12420485CD285A89A23FBE",
 		"Device": "MC"
 	 },
-	 "movimientoUId": "8",
+	 "movimientoUId": 8,
 	 "ordinal":1,
 	 "subOrdinal":1
   }'
@@ -150,19 +150,19 @@ curl -X POST \
 { 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Usuario": "IN", 
       "Token": "12420485CD285A89A23FBE", 
       "Device": "MC" 
    },
 	"sdtOrdinal":  
 	{ 
-	  "operacionUId": "10189", 
+	  "operacionUId": 10189, 
 	  "idOperacionBT": "0010000100021000000000000000002700003000000000000", 
 	  "debeHaber": "D", 
-	  "importe": "10000.00", 
+	  "importe": 10000.00, 
 	  "producto": { 
-		 "productoUId": "0", 
+		 "productoUId": 0, 
 		 "nombre": "CAJAS DE AHORRO, GENÉRICA", 
 		 "moneda": "$", 
 		 "papel": "$" 
@@ -174,8 +174,8 @@ curl -X POST \
       "Servicio": "BTContabilidad.ObtenerDetalleOrdinal", 
       "Fecha": "2020-10-29", 
       "Hora": "16:13:11", 
-      "Requerimiento": "1", 
-      "Numero": "7704", 
+      "Requerimiento": 1, 
+      "Numero": 7704, 
       "Estado": "OK" 
    }
 }

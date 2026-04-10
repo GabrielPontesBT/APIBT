@@ -156,7 +156,7 @@ curl -X POST \
    "Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "0306ebbd9c4A8B5C60A82434"
 	},
@@ -169,7 +169,7 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTPartners.CrearCliente",
         "Fecha": "2017-12-14",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "18:17:10",
         "Canal": "BTDIGITAL"
     }

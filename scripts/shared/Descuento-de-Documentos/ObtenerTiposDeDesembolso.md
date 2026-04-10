@@ -72,19 +72,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ObtenerTiposDeDesembolso=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ObtenerTiposDeDesembolso' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "GZ",
-          "Canal": "BTDIGITAL",
-          "Usuario": "INSTALADOR",
-          "Token": "BE98B0157319F32A4ACF3501"
-    },
-  }'
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "A7F3401198A610A75018BA88"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -189,91 +189,93 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GZ",
-      "Requerimiento": "1",
-      "Token": "BE98B0157319F32A4ACF3501"
-   },
-   "sdtTiposDesembolso": {
-      "sBTTipoDesembolso": [
-         {
-            "papelDesembolso": 0,
-            "simboloMonedaDesembolso": "$",
-            "referencia": "",
-            "descripcion": "Cuentas Corrientes:",
-            "rubro": 0,
-            "simboloPapelDesembolso": "$",
-            "monedaDesembolso": 0,
-            "pideCuenta": 4,
-            "modulo": 20,
-            "pideOperacion": "S",
-            "tipo": 0,
-            "pideSucursal": "N",
-            "pideCheque": "N",
-            "identificador": 1
-         },
-         {
-            "papelDesembolso": 0,
-            "simboloMonedaDesembolso": "$",
-            "referencia": "",
-            "descripcion": "Cuenta Ahorros",
-            "rubro": 0,
-            "simboloPapelDesembolso": "$",
-            "monedaDesembolso": 0,
-            "pideCuenta": 4,
-            "modulo": 21,
-            "pideOperacion": "S",
-            "tipo": 0,
-            "pideSucursal": "N",
-            "pideCheque": "N",
-            "identificador": 2
-         },
-         {
-            "papelDesembolso": 0,
-            "simboloMonedaDesembolso": "$",
-            "referencia": "",
-            "descripcion": "Efectivo",
-            "rubro": 101002001,
-            "simboloPapelDesembolso": "$",
-            "monedaDesembolso": 0,
-            "pideCuenta": 0,
-            "modulo": 0,
-            "pideOperacion": "N",
-            "tipo": 0,
-            "pideSucursal": "N",
-            "pideCheque": "N",
-            "identificador": 3
-         },
-         {
-            "papelDesembolso": 0,
-            "simboloMonedaDesembolso": "$",
-            "referencia": "",
-            "descripcion": "Cuenta Corresponsal:",
-            "rubro": 0,
-            "simboloPapelDesembolso": "$",
-            "monedaDesembolso": 0,
-            "pideCuenta": 4,
-            "modulo": 93,
-            "pideOperacion": "S",
-            "tipo": 0,
-            "pideSucursal": "N",
-            "pideCheque": "N",
-            "identificador": 4
-         }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Estado": "OK",
-      "Fecha": "2024-11-07",
-      "Hora": "13:16:44",
-      "Numero": "25167",
-      "Servicio": "BTDescuentoDocumentos.ObtenerTiposDeDesembolso",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL"
-   }
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "A7F3401198A610A75018BA88"
+    },
+    "sdtTiposDesembolso": {
+        "sBTTipoDesembolso": [
+            {
+                "papelDesembolso": 0,
+                "simboloMonedaDesembolso": "$",
+                "referencia": "",
+                "descripcion": "Cuentas Corrientes:",
+                "rubro": 0,
+                "simboloPapelDesembolso": "$",
+                "monedaDesembolso": 0,
+                "pideCuenta": 4,
+                "modulo": 20,
+                "pideOperacion": "S",
+                "tipo": 0,
+                "pideSucursal": "N",
+                "pideCheque": "N",
+                "identificador": 1
+            },
+            {
+                "papelDesembolso": 0,
+                "simboloMonedaDesembolso": "$",
+                "referencia": "",
+                "descripcion": "Cuenta Ahorros",
+                "rubro": 0,
+                "simboloPapelDesembolso": "$",
+                "monedaDesembolso": 0,
+                "pideCuenta": 4,
+                "modulo": 21,
+                "pideOperacion": "S",
+                "tipo": 0,
+                "pideSucursal": "N",
+                "pideCheque": "N",
+                "identificador": 2
+            },
+            {
+                "papelDesembolso": 0,
+                "simboloMonedaDesembolso": "$",
+                "referencia": "",
+                "descripcion": "Efectivo",
+                "rubro": 101002001,
+                "simboloPapelDesembolso": "$",
+                "monedaDesembolso": 0,
+                "pideCuenta": 0,
+                "modulo": 0,
+                "pideOperacion": "N",
+                "tipo": 0,
+                "pideSucursal": "N",
+                "pideCheque": "N",
+                "identificador": 3
+            },
+            {
+                "papelDesembolso": 0,
+                "simboloMonedaDesembolso": "$",
+                "referencia": "",
+                "descripcion": "Cuenta Corresponsal:",
+                "rubro": 0,
+                "simboloPapelDesembolso": "$",
+                "monedaDesembolso": 0,
+                "pideCuenta": 4,
+                "modulo": 93,
+                "pideOperacion": "S",
+                "tipo": 0,
+                "pideSucursal": "N",
+                "pideCheque": "N",
+                "identificador": 4
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 34720,
+        "Estado": "OK",
+        "Servicio": "BTDescuentoDocumentos.ObtenerTiposDeDesembolso",
+        "Requerimiento": 0,
+        "Fecha": "2025-03-25",
+        "Canal": "BTDIGITAL",
+        "Hora": "16:35:48"
+    }
 }'
 ```
 ::: 

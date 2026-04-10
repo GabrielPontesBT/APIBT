@@ -88,7 +88,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -137,7 +137,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -150,7 +150,7 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTCASHManagement.AltaAutomaticaContrato",
         "Fecha": "2018-12-14",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "17:00:28",
         "Canal": "BTDIGITAL"
     }

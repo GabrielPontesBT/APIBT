@@ -88,7 +88,7 @@ curl -X POST \
 	"Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "75e20bd1614A8B5C60A82434"
    },
@@ -193,7 +193,7 @@ curl -X POST \
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "MINSTALADOR", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Canal": "BTDIGITAL", 
         "Token": "2a721032f94A8B5C60A82434" 
     }, 
@@ -214,35 +214,35 @@ curl -X POST \
                 { 
                     "saldoAhorro": 1000, 
                     "fecha": "2017-03-06", 
-                    "interes": 0, 
+                    "intereses": 0, 
                     "capital": 1000, 
                     "concepto": "Depósito inicial" 
                 }, 
                 { 
                     "saldoAhorro": 6000, 
                     "fecha": "2017-04-10", 
-                    "interes": 0, 
+                    "intereses": 0, 
                     "capital": 5000, 
                     "concepto": "Incremento de ahorro" 
                 }, 
                 { 
                     "saldoAhorro": 6016.77, 
                     "fecha": "2017-05-08", 
-                    "interes": 16.77, 
+                    "intereses": 16.77, 
                     "capital": 6000, 
                     "concepto": "Renovación del ahorro" 
                 }, 
                 { 
                     "saldoAhorro": 11016.77, 
                     "fecha": "2017-05-09", 
-                    "interes": 0, 
+                    "intereses": 0, 
                     "capital": 5000, 
                     "concepto": "Incremento de ahorro" 
                 }, 
                 { 
                     "saldoAhorro": 11200.75, 
                     "fecha": "2017-11-30", 
-                    "interes": 183.98, 
+                    "intereses": 183.98, 
                     "capital": 11055.89, 
                     "concepto": "Acreditación del ahorro" 
                 } 
@@ -263,7 +263,7 @@ curl -X POST \
         "Estado": "OK", 
         "Servicio": "BTAhorroProgramado.ObtenerEstadoDeCuenta", 
         "Fecha": "2019-11-19", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Hora": "11:26:34", 
         "Canal": "BTDIGITAL" 
     } 

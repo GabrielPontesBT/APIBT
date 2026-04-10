@@ -78,18 +78,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerProgramaParticular \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase?ObtenerProgramaParticular' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Token": "7d3fb9540aCD285A89A23FBE",
+        "Requerimiento": 1
     },
-   "programaStandard": "BLOCKING1"
+    "programaStandard": "BLOCKING1"
 }'
 ```
 :::
@@ -137,28 +138,31 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 ```json
 '{
     "Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "INSTALADOR",
-	  "Requerimiento": "1",
-	  "Canal": "BTDIGITAL",
-	  "Token": "47D750A861C4243EDE981344"
-	},
-	"sdtProgramaParticular": {
-	  "descripcion": "PRUEBA BLOQUEO",
-	  "programaParticular": "10834",
-     "programaStandard": "BLOCKING1",
-     "valorCaracteres": 11,
-     "valorNumerico": 25
-	},
-	"Btoutreq": {
-	  "Numero": "109140",
-	  "Estado": "OK",
-	  "Servicio": "BTParametrosBase.ObtenerProgramaParticular",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-11-24",
-	  "Canal": "BTDIGITAL",
-	  "Hora": "13:29:43"
-	}
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "7d3fb9540aCD285A89A23FBE"
+    },
+    "sdtProgramaParticular": {
+        "descripcion": "PRUEBA BLOQUEO",
+        "programaParticular": 10834,
+        "programaStandard": "BLOCKING1",
+        "valorCaracteres": 11,
+        "valorNumerico": 25
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1895,
+        "Servicio": "BTParametrosBase.ObtenerProgramaParticular",
+        "Estado": "OK",
+        "Fecha": "2022-11-22",
+        "Requerimiento": 1,
+        "Hora": "09:25:20",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

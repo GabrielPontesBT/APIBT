@@ -87,7 +87,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc479c1c0eF955E77534D3E0"
     },
@@ -135,7 +135,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc479c1c0eF955E77534D3E0"
     },
@@ -147,7 +147,7 @@ curl -X POST \
         "Servicio": "BTSNP.EliminarStopDebit",
         "Estado": "OK",
         "Fecha": "2021-06-17",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Hora": "15:31:42"
     }

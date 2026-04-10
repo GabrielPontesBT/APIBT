@@ -85,7 +85,7 @@ curl -X POST \
 		"Btinreq": {
 			"Device": "AC",
 			"Usuario": "BANTOTAL",
-			"Requerimiento": "",
+			"Requerimiento": 1,
 			"Canal": "BTDIGITAL",
 			"Token": "fbd47e2319F955E77534D3E0"
 		},
@@ -152,7 +152,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "fbd47e2319F955E77534D3E0"
     },
@@ -189,7 +189,7 @@ curl -X POST \
         "Numero": 1608,
         "Estado": "OK",
         "Servicio": "BTSNP.ObtenerEmpresasOriginantes",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2021-06-16",
         "Hora": "16:19:38",
         "Canal": "BTDIGITAL"

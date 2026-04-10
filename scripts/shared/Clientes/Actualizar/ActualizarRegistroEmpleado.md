@@ -89,18 +89,18 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Usuario": "INSTALADOR",
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "clienteUId": 227,
     "empleado": "S",
     "fechaAlta": "2024-01-01",
     "fechaBaja": ""
-    }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -139,22 +139,24 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": 249703,
-        "Estado": "OK",
+        "Numero": 20208,
         "Servicio": "BTClientes.ActualizarRegistroEmpleado",
+        "Estado": "OK",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
-        "Canal": "BTDIGITAL"
+        "Fecha": "2024-05-02",
+        "Canal": "BTDIGITAL",
+        "Hora": "17:33:37"
     }
 }'
 ```

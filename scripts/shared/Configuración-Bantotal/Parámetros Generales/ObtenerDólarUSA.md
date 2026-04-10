@@ -74,18 +74,18 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDolarUSA=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDolarUSA' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: e023a871-d995-ad63-255b-99f4d8773111' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "669747179CD285A89A23FBEE"
-	}
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "669747179CD285A89A23FBEE",
+        "Device": "1"
+    }
 }'
 ```
 :::
@@ -131,24 +131,27 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "669747179CD285A89A23FBEE"
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "669747179CD285A89A23FBEE",
+        "Device": "1"
     },
     "sdtMoneda": {
-        "identificador": "2222",
+        "identificador": 2222,
         "descripcion": "DÓLAR ESTADOUNIDENSE",
         "simbolo": "USD"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
         "Canal": "BTDIGITAL",
         "Servicio": "BTConfiguracionBantotal.ObtenerDolarUSA",
         "Fecha": "2020-10-23",
         "Hora": "16:23:31",
-        "Requerimiento": "1",
-        "Numero": "7535",
+        "Requerimiento": 1,
+        "Numero": 7535,
         "Estado": "OK"
     }
 }'

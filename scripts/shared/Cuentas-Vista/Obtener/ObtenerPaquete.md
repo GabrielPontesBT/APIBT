@@ -75,19 +75,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerPaquete=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerPaquete' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "1752711512CD285A89A23FBE"
-	},
-   "paqueteId": "1"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "1752711512CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "paqueteId": 1
 }'
 ```
 :::
@@ -155,54 +155,55 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "1752711512CD285A89A23FBE"
-	},
-   "sdtPaquete": {
-      "codigo": "1",
-      "descripcion": "Cuenta Persona",
-      "vigente": "S",
-      "productos": {
-         "sBTProductoPaquete": [
-            {
-            "productoUId": "154",
-            "moneda": "PESOS",
-            "papel": "Billete",
-            "cantidad": "0"
-            },
-            {
-            "productoUId": "93",
-            "nombre": "Cuenta corriente P.Física",
-            "moneda": "PESOS",
-            "papel": "Billete",
-            "cantidad": "1"
-            },
-            {
-            "productoUId": "134",
-            "nombre": "Caja de Ahorro P.Física",
-            "moneda": "DÓLAR ESTADOUNIDENSE",
-            "papel": "Billete",
-            "cantidad": "1"
-            },
-         ]
-      }
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "790",
-      "Estado": "OK",
-      "Servicio": "BTCuentasVista.ObtenerPaquete",
-      "Fecha": "2021-03-02",
-      "Requerimiento": "1",
-      "Hora": "15:53:26",
-      "Canal": "BTDIGITAL"
-   }
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "1752711512CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "sdtPaquete": {
+        "codigo": 1,
+        "descripcion": "Cuenta Persona",
+        "vigente": "S",
+        "productos": {
+            "sBTProductoPaquete": [
+                {
+                    "productoUId": 154,
+                    "nombre": "",
+                    "moneda": "PESOS",
+                    "papel": "Billete",
+                    "cantidad": 0
+                },
+                {
+                    "productoUId": 93,
+                    "nombre": "Cuenta corriente P.Física",
+                    "moneda": "PESOS",
+                    "papel": "Billete",
+                    "cantidad": 1
+                },
+                {
+                    "productoUId": 134,
+                    "nombre": "Caja de Ahorro P.Física",
+                    "moneda": "DÓLAR ESTADOUNIDENSE",
+                    "papel": "Billete",
+                    "cantidad": 1
+                }
+            ]
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTCuentasVista.ObtenerPaquete",
+        "Fecha": "2021-03-02",
+        "Hora": "15:53:26",
+        "Requerimiento": 1,
+        "Numero": 8020,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

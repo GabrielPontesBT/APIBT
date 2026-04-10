@@ -1,4 +1,4 @@
----
+﻿---
 title: Agregar Información Adicional
 breadcrumb: false
 pageInfo: false
@@ -90,14 +90,14 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "9CBE6DC33CD93505A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
 	"personaUId": 204,
         "sdtInformacionAdicional": {
-          "sBTDatoLista": {
+          "sBTDatoLista": [{
             "Clave": "Código TIN",
-            "Valor": 1256
-          }
+            "Valor": "1256"
+          }]
         }
 }'
 ```
@@ -137,25 +137,25 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
+'{ 
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
-
+   "Erroresnegocio": {"BTErrorNegocio": []},
    "Btoutreq": {
-      "Numero": "111399",
+      "Numero": 10762,
       "Estado": "OK",
       "Servicio": "BTPersonas.AgregarInformacionAdicional",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2023-05-10",
       "Canal": "BTDIGITAL",
-      "Hora": "14:28:56"
+      "Hora": "12:46:32"
    }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

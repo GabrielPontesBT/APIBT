@@ -77,18 +77,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerTareasDeProceso \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
-   },
-   "procesoId": "1"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerTareasDeProceso' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "151D0C3440510F1D04029085",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    },
+    "procesoId": 1
 }'
 ```
 :::
@@ -161,61 +162,62 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 
 @tab JSON
 ```json
-'
-{
-   "Btinreq": {
-      "Device": "GP",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "47D750A861C4243EDE981344"
-   },
-   "sdtTareas": {
-      "sBTTareaWF": [
-      {
-         "descripcion": "Solicitud",
-         "warning": "0.00",
-         "deadline": "0.00",
-         "tareaId": "3",
-         "nombre": "Solicitud",
-         "programaPostcondicional": ""
-      },
-      {
-         "descripcion": "Evaluación / Propuesta",
-         "warning": "0.00",
-         "deadline": "0.00",
-         "tareaId": "7",
-         "nombre": "Evaluación / Propuesta",
-         "programaPostcondicional": "ASNG449"
-      },
-      {
-         "descripcion": "Aprobación",
-         "warning": "0.00",
-         "deadline": "0.00",
-         "tareaId": "11",
-         "nombre": "Aprobación",
-         "programaPostcondicional": ""
-      },
-      {
-         "descripcion": "Desembolso",
-         "warning": "0.00",
-         "deadline": "43200.00",
-         "tareaId": "55",
-         "nombre": "Desembolso",
-         "programaPostcondicional": ""
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Estado": "OK",
-      "Canal": "BTDIGITAL",
-      "Fecha": "2022-11-29",
-      "Servicio": "BTWorkflow.ObtenerTareasDeProceso",
-      "Hora": "14:57:20",
-      "Numero": "225671",
-      "Requerimiento": "1"
-   }
+'{
+    "Btinreq": {
+        "Token": "151D0C3440510F1D04029085",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    },
+    "sdtTareas": {
+        "sBTTareaWF": [
+            {
+                "descripcion": "Solicitud",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "tareaId": 3,
+                "nombre": "Solicitud",
+                "programaPostcondicional": ""
+            },
+            {
+                "descripcion": "Evaluación / Propuesta",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "tareaId": 7,
+                "nombre": "Evaluación / Propuesta",
+                "programaPostcondicional": "ASNG449"
+            },
+            {
+                "descripcion": "Aprobación",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "tareaId": 11,
+                "nombre": "Aprobación",
+                "programaPostcondicional": ""
+            },
+            {
+                "descripcion": "Desembolso",
+                "warning": 0.00,
+                "deadline": 43200.00,
+                "tareaId": 55,
+                "nombre": "Desembolso",
+                "programaPostcondicional": ""
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Fecha": "2022-11-29",
+        "Servicio": "BTWorkflow.ObtenerTareasDeProceso",
+        "Hora": "14:57:20",
+        "Numero": 225671,
+        "Requerimiento": 1
+    }
 }'
 ```
 :::

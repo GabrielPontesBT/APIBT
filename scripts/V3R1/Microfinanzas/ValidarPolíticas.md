@@ -1,4 +1,4 @@
----
+﻿---
 title: Validar Políticas
 breadcrumb: false
 pageInfo: false
@@ -83,13 +83,13 @@ curl -X POST \
   -d '{
       "Btinreq": {
          "Canal": "BTDIGITAL",
-         "Requerimiento": "95",
+         "Requerimiento": 95,
          "Usuario": "INSTALADOR",
          "Token": "1001009404CD285A89A23FBE",
          "Device": "GP"
       },
-      "solicitudUId": "10972"
-}
+      "solicitudUId": 10972
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -181,63 +181,78 @@ curl -X POST \
 '{
    "Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "95",
+      "Requerimiento": 95,
       "Usuario": "INSTALADOR",
       "Token": "1001009404CD285A89A23FBE",
       "Device": "GP"
    },
    "politicas": "N",
-   "sdtValidacionesPoliticas": {
-      "sBTValidacionPolitica": {
-      "paisDocumentoId": "320",
-      "paisDocumento": "GUATEMALA",
-      "tipoDocumentoId": "1",
-      "tipoDocumento": "DPI",
-      "numeroDocumento": "2131248150408",
-      "nombre": "ROQUEL POYON MARÍA",
-      "correlativo": "1",
-      "modeloId": "951",
-      "modeloEvaluacion": "Politicas - Solicitud Individual",
-      "relacion": "1",
-      "relCorrelativo": "0",
-      "tipoIntegrante": "T",
-      "nroEjecucion": "394",
-      "politicas": {
-         "sBTPoliticaIncumplida": [
+    "sdtValidacionesPoliticas": {
+        "sBTValidacionPolitica": [
             {
-            "politicaId": "354",
-            "politica": "Edad del solicitante es mayor a la máxima permitida.",
-            "restriccion": "B",
-            "restriccionDsc": "Bloqueante",
-            "nroAutorizacion": "0"
-            },
-            {
-            "politicaId": "363",
-            "politica": "Cliente excede el N° máximo de solicitudes en trámite.",
-            "restriccion": "A",
-            "restriccionDsc": "Alerta",
-            "nroAutorizacion": "0"
-            },
-            {
-            "politicaId": "366",
-            "politica": "Existen Documentos Obligatorios No Recibidos.",
-            "restriccion": "A",
-            "restriccionDsc": "Alerta",
-            "nroAutorizacion": "0"
+                "paisDocumentoId": 320,
+                "paisDocumento": "GUATEMALA",
+                "tipoDocumentoId": 1,
+                "tipoDocumento": "DPI",
+                "numeroDocumento": "2131248150408",
+                "nombre": "ROQUEL POYON MARÍA",
+                "correlativo": 1,
+                "modeloId": 951,
+                "modeloEvaluacion": "Politicas - Solicitud Individual",
+                "relacion": 1,
+                "relCorrelativo": 0,
+                "tipoIntegrante": "T",
+                "tipoIntegranteDsc": "",
+                "nroEjecucion": 394,
+                "politicas": {
+                    "sBTPoliticaIncumplida": [
+                        {
+                            "politicaId": 354,
+                            "politica": "Edad del solicitante es mayor a la máxima permitida.",
+                            "restriccion": "B",
+                            "restriccionDsc": "Bloqueante",
+                            "estado": "",
+                            "estadoDsc": "",
+                            "nroAutorizacion": 0,
+                            "observacion": ""
+                        },
+                        {
+                            "politicaId": 363,
+                            "politica": "Cliente excede el N° máximo de solicitudes en trámite.",
+                            "restriccion": "A",
+                            "restriccionDsc": "Alerta",
+                            "estado": "",
+                            "estadoDsc": "",
+                            "nroAutorizacion": 0,
+                            "observacion": ""
+                        },
+                        {
+                            "politicaId": 366,
+                            "politica": "Existen Documentos Obligatorios No Recibidos.",
+                            "restriccion": "A",
+                            "restriccionDsc": "Alerta",
+                            "estado": "",
+                            "estadoDsc": "",
+                            "nroAutorizacion": 0,
+                            "observacion": ""
+                        }
+                    ]
+                }
             }
-         ]
-      }
-      }
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.ValidarPoliticas",
-      "Fecha": "2019-11-01",
-      "Hora": "13:56:51",
-      "Requerimiento": "95",
-      "Numero": "1400",
-      "Estado": "OK"
-   }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.ValidarPoliticas",
+        "Fecha": "2019-11-01",
+        "Hora": "13:56:51",
+        "Requerimiento": 95,
+        "Numero": 1400,
+        "Estado": "OK"
+    }
 }
 ```
 :::

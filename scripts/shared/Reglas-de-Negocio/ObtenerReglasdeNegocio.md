@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerReglasNegocio' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerReglasNegocio' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    },
+        "Token": "86b12d9cbaCD285A89A23FBE"
+    }
 }'
 ```
 :::
@@ -131,39 +131,39 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
-        "Token": "c2cfd09eff4A8B5C60A82434"
+        "Token": "86b12d9cbaCD285A89A23FBE"
     },
     "sdtReglasNegocio": {
-         "sBTReglaNegocio": [
-         { 
-            "descripcion": "Tipo de Cambio", 
-            "reglaId": "1" 
-         }, 
-         { 
-            "descripcion": "Botón Datos Pep's", 
-            "reglaId": "4" 
-         },
-         ...
-         ]
-      },
-      "Erroresnegocio": { 
-      }, 
-      "Btoutreq": { 
-         "Numero": "43439", 
-         "Estado": "OK", 
-         "Servicio": "BTReglasNegocio.ObtenerReglasNegocio", 
-         "Fecha": "2022-06-02", 
-         "Requerimiento": "1", 
-         "Hora": "07:56:48", 
-         "Canal": "BTDIGITAL" 
-    } 
-}
+        "sBTReglaNegocio": [
+            {
+                "descripcion": "Tipo de Cambio",
+                "reglaId": 1
+            },
+            {
+                "descripcion": "Botón Datos Pep's",
+                "reglaId": 4
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 43439,
+        "Estado": "OK",
+        "Servicio": "BTReglasNegocio.ObtenerReglasNegocio",
+        "Fecha": "2022-06-02",
+        "Requerimiento": 1,
+        "Hora": "07:56:48",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

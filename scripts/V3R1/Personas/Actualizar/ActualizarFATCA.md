@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar FATCA
 breadcrumb: false
 pageInfo: false
@@ -108,11 +108,11 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "42",
+	"personaUId": 42,
 	"sdtInformacionFATCA": {
 	  "ingresoBrutoEEUU": "N",
 	  "permanencia183Dias": "N",
@@ -121,9 +121,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	  "codigoTIN": "ABCDEF",
 	  "pagoFuenteEEUU": "N",
 	  "residenciasFiscales": {
-		"sBTPCOResidenciaFiscal": {
-		}
-	  },
+		"sBTPCOResidenciaFiscal": []
+	  }
 	}
 }'
 ```
@@ -168,16 +167,17 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "resultado": "NON US Person",
+   "Erroresnegocio": {"BTErrorNegocio": []},
    "Btoutreq": {
-      "Numero": "2064",
+      "Numero": 2064,
       "Estado": "OK",
       "Servicio": "BTPersonas.ActualizarFATCA",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2020-03-10",
       "Canal": "BTDIGITAL",
       "Hora": "07:31:11"

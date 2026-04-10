@@ -106,7 +106,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -279,7 +279,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -302,7 +302,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-02-28",
-                "interes": 8.49,
+                "intereses": 8.49,
                 "plazo": 0
               },
               {
@@ -313,7 +313,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-03-31",
-                "interes": 16.44,
+                "intereses": 16.44,
                 "plazo": 0
               },
               {
@@ -324,7 +324,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-04-30",
-                "interes": 24.66,
+                "intereses": 24.66,
                 "plazo": 0
               },
               {
@@ -335,7 +335,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-05-30",
-                "interes": 33.97,
+                "intereses": 33.97,
                 "plazo": 0
               },
               {
@@ -346,7 +346,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-06-30",
-                "interes": 41.1,
+                "intereses": 41.1,
                 "plazo": 0
               },
               {
@@ -357,7 +357,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-07-30",
-                "interes": 54.25,
+                "intereses": 54.25,
                 "plazo": 0
               },
               {
@@ -368,7 +368,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-09-01",
-                "interes": 113.15,
+                "intereses": 113.15,
                 "plazo": 0
               },
               {
@@ -379,7 +379,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-10-30",
-                "interes": 70.14,
+                "intereses": 70.14,
                 "plazo": 0
               },
               {
@@ -390,7 +390,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2025-12-01",
-                "interes": 147.95,
+                "intereses": 147.95,
                 "plazo": 0
               },
               {
@@ -401,7 +401,7 @@ curl -X POST \
                 "tasa": 10,
                 "TAE": 0,
                 "fechaPago": "2026-01-30",
-                "interes": 65.75,
+                "intereses": 65.75,
                 "plazo": 0
               }
             ]
@@ -414,11 +414,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "401",
+        "Numero": 401,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerCronogramaDeAbonos",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }

@@ -81,19 +81,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerOpcionGeneralPorModulo \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase?ObtenerOpcionGeneralPorModulo' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "47D750A861C4243EDE981344",
+        "Device": "GP"
     },
-   "modulo": 21,
-   "codigo": "2850"
+    "modulo": 21,
+    "codigo": 9
 }'
 ```
 :::
@@ -137,29 +138,31 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 
 @tab JSON
 ```json
-' 
-{ 
-    "Btinreq": { 
-	  "Device": "GP", 
-	  "Usuario": "INSTALADOR", 
-	  "Requerimiento": "1", 
-	  "Canal": "BTDIGITAL", 
-	  "Token": "47D750A861C4243EDE981344" 
-	}, 
-	"sdtOpcionGeneralModulo": { 
-	  "descripcion": "Ajustar fecha fin de mes PCC3", 
-	  "identificador": "9", 
-	  "valor": "S" 
-	}, 
-	"Btoutreq": { 
-	  "Numero": "109140", 
-	  "Estado": "OK", 
-	  "Servicio": "BTParametrosBase.ObtenerOpcionGeneralPorModulo", 
-	  "Requerimiento": "1", 
-	  "Fecha": "2020-11-24", 
-	  "Canal": "BTDIGITAL", 
-	  "Hora": "13:29:43" 
-	} 
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "47D750A861C4243EDE981344",
+        "Device": "GP"
+    },
+    "sdtOpcionGeneralModulo": {
+        "identificador": 9,
+        "descripcion": "Ajustar fecha fin de mes PCC3",
+        "valor": "S"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTParametrosBase.ObtenerOpcionGeneralPorModulo",
+        "Fecha": "2022-11-17",
+        "Hora": "11:24:03",
+        "Requerimiento": 1,
+        "Numero": 458,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

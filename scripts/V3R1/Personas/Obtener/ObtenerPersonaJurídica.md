@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Persona Jurídica
 breadcrumb: false
 pageInfo: false
@@ -78,11 +78,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "GP",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "1839023315CD285A89A23FBE"
 	},
-   "personaUId": "303"
+   "personaUId": 303
 }'
 ```
 :::
@@ -168,74 +168,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Device": "GP",
+		"Usuario": "INSTALADOR",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "3578f1ef27CD285A89A23FBE"
 	},
    "personaJuridica": {
         "nroDocumento": "214567892142",
-        "numeroPuerta": "0",
+        "numeroPuerta": 0,
         "nombreReducido": "BANCO MODELO",
         "paisDomicilio": "URUGUAY",
         "razonSocial": "BANCO MODELO",
         "departamento": "Montevideo",
-        "nroRegistro": "78940",
+        "nroRegistro": 78940,
         "naturalezaJuridica": "Sociedad Anónima",
         "barrio": "Centro",
         "apartamento": "",
-        "tipoDocumentoId": "2",
-        "tipoActividadId": "1",
-        "piso": "",
-        "paisId": "845",
+        "tipoDocumentoId": 2,
+        "tipoActividadId": 1,
+        "piso": "123",
+        "paisId": 845,
         "fechaConstitucion": "2007-08-22",
         "actividad": "",
-        "paisDomicilioId": "845",
+        "paisDomicilioId": 845,
         "pais": "URUGUAY",
         "codigoPostal": "",
         "tipoActividad": "Actividad Principal",
-        "barrioId": "330",
-        "localidadId": "10",
+        "barrioId": 330,
+        "localidadId": 10,
         "localidad": "Montevideo",
         "correoElectronico": "1",
-        "actividadId": "0",
+        "actividadId": 0,
         "calle": "",
-        "naturalezaJuridicaId": "1",
+        "naturalezaJuridicaId": 1,
         "tipoDocumento": "RUT",
-        "departamentoId": "10",
-        "telefonoFijo": "3213342222",
-        "piso": "123"
+        "departamentoId": 10,
+        "telefonoFijo": "3213342222"
     },
     "sdtIntegrantesJuridicos": {
-        "sBTIntegranteJuridico": {
+        "sBTIntegranteJuridico": [{
             "nroDocumento": "27928980",
-            "vinculoId": "1",
+            "vinculoId": 1,
             "pais": "URUGUAY",
-            "tipoDocumentoId": "1",
-            "participacion": "100.00",
+            "tipoDocumentoId": 1,
+            "participacion": 100.0,
             "tipoDocumento": "Cédula Identidad",
-            "personaUId": "141",
-            "paisId": "845",
+            "personaUId": 141,
+            "paisId": 845,
             "nombre": "PRANKA VISENTIN ERIKA VERONICA",
             "vinculo": "Presidente"
-        }
+        }]
     },
    "Erroresnegocio": {
       "BTErrorNegocio": []
    },
    "Btoutreq": {
-      "Numero": "80",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.ObtenerPersonasJuridicas",
-      "Fecha": "2018-05-04",
-      "Requerimiento": "1",
-      "Hora": "15:54:29",
+      "Numero": 16624,
+      "Estado": "BTS_PLAT_ERROR",
+      "Servicio": "BTPersonas.ObtenerPersonaJuridica",
+      "Fecha": "2022-06-23",
+      "Requerimiento": 1,
+      "Hora": "14:57:38",
       "Canal": "BTDIGITAL"
    }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Tipos de Documento Digital
 breadcrumb: false
 pageInfo: false
@@ -80,7 +80,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -284,7 +284,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -467,7 +467,7 @@ curl -X POST \
       "Numero": 754,
       "Estado": "OK",
       "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2018-11-12",
       "Hora": "15:10:56",
       "Canal": "BTDIGITAL"

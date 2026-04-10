@@ -103,11 +103,11 @@ curl -X POST \
    "Btinreq": {
         "Device": "AV",
         "Usuario": "INSTALADOR",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "1254960580EF744F35AE6963"
     },
-   "personaUId": "3",
+   "personaUId": 3,
    "esPEP": "S",
    "sdtDatosPEP": {
       "entidad": "abc125",
@@ -119,7 +119,7 @@ curl -X POST \
       "tipoPEPId": 1, 
       "tipoFuncionarioPublicoId": 1, 
       "tipoPEP": "",
-      "tipoFuncionarioPublico": "",
+      "tipoFuncionarioPublico": ""
    }
 }'
 ```
@@ -159,11 +159,11 @@ curl -X POST \
 ```
 @tab JSON
 ```json
-{ 
+'{ 
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "INSTALADOR", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Canal": "BTDIGITAL", 
         "Token": "1254960580EF744F35AE6963" 
     }, 
@@ -175,11 +175,11 @@ curl -X POST \
         "Servicio": "BTPersonas.AgregarDatosPEP", 
         "Fecha": "2020-07-30", 
         "Hora": "13:13:12", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Numero": 50199, 
         "Estado": "OK" 
     } 
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

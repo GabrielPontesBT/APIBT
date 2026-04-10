@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Ofertas
 breadcrumb: false
 pageInfo: false
@@ -148,7 +148,7 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "3JPL6DC33CD84655A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
    "sdtPartner": {
       "puntoVentaUId": 2,
@@ -162,43 +162,24 @@ curl -X POST \
       "productoUId": 48,
       "monto": 8745,
       "comisionesCuota": {
-      "sBTComisionPrestamo": {
-         "porcentaje": "",
-         "descripcion": "",
-         "importe": "",
-         "codigo": ""
-      }
+          "sBTComisionPrestamo": []
       },
       "periodoCuotas": 35,
       "diaPago": 14,
-      "ballon": "",
+      "ballon": 0,
       "tasa": 36,
       "cuotas": {
-      "Int": ""
+          "Int": []
       },
       "fechaPrimerPago": "2023-11-14",
       "cuotasExtraordinarias": {
-      "sBTCuotaExtraordinaria": {
-         "mes": "",
-         "porcentajeCuota": ""
-      }
+          "sBTCuotaExtraordinaria": []
       },
       "seguros": {
-      "sBTSeguroPrestamo": {
-         "porcentaje": "",
-         "descripcion": "",
-         "tipo": "",
-         "importe": "",
-         "codigo": ""
-      }
+          "sBTSeguroPrestamo": []
       },
       "comisiones": {
-      "sBTComisionPrestamo": {
-         "porcentaje": "",
-         "descripcion": "",
-         "importe": "",
-         "codigo": ""
-      }
+          "sBTComisionPrestamo": []
       }
    }
 }'
@@ -266,39 +247,43 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
    "simulacionId": 256,
-   "sdtOfertasPrestamo": {
-      "sBTOfertaPrestamo": {
-      "otrosConceptos": 0,
-      "fechaValor": "2019-11-25",
-      "capital": 1000,
-      "totalComisiones": 0,
-      "valorCuota": 101.81,
-      "cantidadCuotas": 12,
-      "tasa": 23,
-      "totalSeguros": 0,
-      "fechaPrimerPago": "2020-05-05",
-      "totalIntereses": 221.74,
-      "fechaVencimiento": "2021-04-05",
-      "tea": 25.590075,
-      "plazo": 497,
-      "totalAPagar": 1221.74,
-      "totalImpuestos": 0,
-      "cft": 25.03
-      }
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.SimularOfertas",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+    "sdtOfertasPrestamo": {
+        "sBTOfertaPrestamo": [
+            {
+                "otrosConceptos": 0.00,
+                "fechaValor": "2019-11-25",
+                "capital": 1000.00,
+                "totalComisiones": 0.00,
+                "valorCuota": 101.81,
+                "cantidadCuotas": 12,
+                "tasa": 23.000000,
+                "totalSeguros": 0.00,
+                "fechaPrimerPago": "2020-05-05",
+                "totalIntereses": 221.74,
+                "fechaVencimiento": "2021-04-05",
+                "tea": 25.590075,
+                "plazo": 497,
+                "totalAPagar": 1221.74,
+                "totalImpuestos": 0.00,
+                "cft": 25.03
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 770,
+        "Estado": "OK",
+        "Servicio": "BTPartners.SimularOfertas",
+        "Requerimiento": 1,
+        "Fecha": "2017-12-14",
+        "Canal": "BTDIGITAL",
+        "Hora": "18:17:10"
+    }
 }
 ```
 :::

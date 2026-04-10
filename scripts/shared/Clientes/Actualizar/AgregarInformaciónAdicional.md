@@ -81,25 +81,25 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTclientes?AgregarInformacionAdicional' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"clienteUId": "61",
-      "sdtInformacionAdicional": {
-      "sBTDatoLista": {
-		"clave": "Integrantes",
-		"valor": "2",
-	}
-	}
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?AgregarInformacionAdicional' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Token": "976EB9CBE6D99B71A5E627F1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "clienteUId": 61,
+    "sdtInformacionAdicional": {
+        "sBTDatoLista": {
+            "clave": "Integrantes",
+            "valor": 2
+        }
+    }
 }'
 ```
 :::
@@ -138,24 +138,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTClientes.AgregarInformacionAdicional",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "14:43:52"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "976EB9CBE6D99B71A5E627F1"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 10777,
+        "Servicio": "BTClientes.AgregarInformacionAdicional",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-10",
+        "Hora": "14:38:41",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

@@ -87,7 +87,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1040992103CD285A89A23FBE",
         "Device": ""
@@ -137,7 +137,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1040992103CD285A89A23FBE",
         "Device": ""
@@ -151,7 +151,7 @@ Código | Descripción
         "Servicio": "BTCuentasDeAhorro.ContratarConPeriodicidad",
         "Fecha": "2021-10-29",
         "Hora": "12:21:44",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Numero": 8440,
         "Estado": "OK"
     }

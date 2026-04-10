@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Contacto
 breadcrumb: false
 pageInfo: false
@@ -100,17 +100,17 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId":"21",
+	"personaUId": 21,
 	"sdtContacto": {
-		"vinculoId": "3",
+		"vinculoId": 3,
 		"domicilio3": "",
 		"domicilio2": "",
 		"domicilio1": "18 de Julio 1234",
-		"correlativo": "3",
+		"correlativo": 3,
 		"telefono": "1234 5678",
 		"nombre": "Rodolfo Rías",
 		"vinculo": ""
@@ -157,7 +157,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -165,12 +165,12 @@ curl -X POST \
 		"BTErrorNegocio": []
     },
     "Btoutreq": {
-		"Numero": 8396,
+		"Numero": 8529,
 		"Estado": "OK",
-  	    "Servicio": "BTPersonas.ActualizarContacto",
-		"Requerimiento": "1",
-		"Fecha": "2019-05-07",
-		"Hora": "15:54:44",
+		"Servicio": "BTPersonas.ActualizarContacto",
+		"Requerimiento": 1,
+		"Fecha": "2019-05-09",
+		"Hora": "13:42:53",
 		"Canal": "BTDIGITAL"
    }
 }'

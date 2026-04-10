@@ -79,18 +79,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionCierre' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ObtenerCotizacionCierre' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-        "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Token": "f99a68ce154A8B5C60A82434",
         "Canal": "BTDIGITAL",
-        "Token": "f99a68ce154A8B5C60A82434"
+        "Requerimiento": 0,
+        "Usuario": "MINSTALADOR",
+        "Device": "bms"
     },
-    "monedaId": "2",
+    "monedaId": 2,
     "fecha": ""
 }'
 ```
@@ -138,37 +139,35 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Token": "f99a68ce154A8B5C60A82434"
     },
     "sdtCotizaciones": {
-        "sBTCotizacion": [
-            {
-                "venta": 3.8,
-                "monedaISO": "U$S",
-                "compra": 3.8,
-                "identificador": 2
-            }
-        ]
+        "sBTCotizacion": {
+            "venta": 3.80,
+            "monedaISO": "U$S",
+            "compra": 3.80,
+            "identificador": 2
+        }
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 1120,
+        "Numero": 1118,
         "Estado": "OK",
         "Servicio": "BTPrecios.ObtenerCotizacionCierre",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Fecha": "2020-11-06",
-        "Hora": "12:14:00",
+        "Hora": "12:04:22",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

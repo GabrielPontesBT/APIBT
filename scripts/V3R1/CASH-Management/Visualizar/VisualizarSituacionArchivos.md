@@ -1,4 +1,4 @@
----
+﻿---
 title: Visualizar Situación Archivos
 breadcrumb: false
 pageInfo: false
@@ -97,7 +97,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -199,7 +199,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -262,7 +262,7 @@ curl -X POST \
         "Numero": 7185,
         "Estado": "OK",
         "Servicio": "BTCASHManagement.VisualizarSituacionArchivos",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2019-04-24",
         "Hora": "17:02:11",
         "Canal": "BTDIGITAL"

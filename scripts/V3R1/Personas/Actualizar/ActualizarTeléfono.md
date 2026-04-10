@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Teléfono
 breadcrumb: false
 pageInfo: false
@@ -98,13 +98,13 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cc9b534A8B5C60A82434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-	"personaUId": "61",
+	"personaUId": 61,
    "numeroTelefono": "099274742",
-   "tipoTelefonoId": "2",
-   "domicilioId": "1",
-   "telefonoId": "1"
+   "tipoTelefonoId": 2,
+   "domicilioId": 1,
+   "telefonoId": 1
 }'
 ```
 :::
@@ -143,22 +143,23 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
+'{
    "Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",
       "Token": "fa2c02c95a4A8B5C60A82434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
+   "Erroresnegocio": {"BTErrorNegocio": []},
    "Btoutreq": {
-      "Numero": "111397",
+      "Numero": 10294,
       "Estado": "OK",
       "Servicio": "BTPersonas.ActualizarTelefono",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2023-05-05",
       "Canal": "BTDIGITAL",
-      "Hora": "11:45:24"
+      "Hora": "11:40:54"
    }
 }'
 ```

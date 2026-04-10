@@ -75,20 +75,20 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabil' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios?ObtenerFechaHabil' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "120320211555340000388219",
-	  "Device": "AC"
-	},
-	"calendarioId": "1",
-	"fecha": "2020-11-14"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "120320211555340000388219",
+        "Device": "AC"
+    },
+    "calendarioId": 1,
+    "fecha": "2020-11-14"
 }'
 ```
 :::
@@ -128,25 +128,28 @@ curl -X POST \
 
 @tab JSON
 ```json
- { 
- 	"Btinreq": { 
-	  "Device": "AC", 
-	  "Usuario": "INSTALADOR", 
-	  "Requerimiento": "1", 
-	  "Canal": "BTDIGITAL", 
-	  "Token": "120320211555340000388219" 
-	}, 
-	"fechaHabil": "N", 
-	"Btoutreq": { 
-	  "Numero": "10660", 
-	  "Estado": "OK", 
-	  "Servicio": "BTCalendarios.ObtenerFechaHabil", 
-	  "Requerimiento": "1", 
-	  "Fecha": "2021-03-12", 
-	  "Canal": "BTDIGITAL", 
-	  "Hora": "15:58:02" 
-	} 
- }
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "120320211555340000388219",
+        "Device": "AC"
+    },
+    "fechaHabil": "N",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTCalendarios.ObtenerFechaHabil",
+        "Fecha": "2021-03-12",
+        "Hora": "15:58:02",
+        "Requerimiento": 1,
+        "Numero": 10660,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

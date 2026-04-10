@@ -86,9 +86,9 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 0,
 		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
+		"Token": "75e20bd1614A8B5C60A82434"
 	},
     "operacionUId": 142
 }'
@@ -134,21 +134,21 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "deuda": "23433.85",
+    "deuda": 23433.85,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "918",
+        "Numero": 916,
         "Estado": "OK",
         "Servicio": "BTPrestamos.ObtenerDeuda",
         "Fecha": "2017-12-21",
-        "Requerimiento": "",
-        "Hora": "17:05:42",
+        "Requerimiento": 0,
+        "Hora": "17:05:07",
         "Canal": "BTDIGITAL"
     }
 }'

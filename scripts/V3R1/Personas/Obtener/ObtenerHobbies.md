@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Hobbies
 breadcrumb: false
 pageInfo: false
@@ -80,7 +80,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     }
@@ -304,210 +304,211 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
     "sdtHobbies": { 
         "sBTHobby": [ 
         { 
-            "codigo": "1", 
+            "codigo": 1, 
             "descripcion": "Aeromodelismo" 
         }, 
         { 
-            "codigo": "2", 
+            "codigo": 2, 
             "descripcion": "Ajedrez" 
         }, 
         { 
-            "codigo": "3", 
+            "codigo": 3, 
             "descripcion": "Arte" 
         }, 
         { 
-            "codigo": "4", 
+            "codigo": 4, 
             "descripcion": "Arte Gráfico" 
         }, 
         { 
-            "codigo": "5", 
+            "codigo": 5, 
             "descripcion": "Automovilismo" 
         }, 
         { 
-            "codigo": "6", 
+            "codigo": 6, 
             "descripcion": "Automodelismo" 
         }, 
         { 
-            "codigo": "7", 
+            "codigo": 7, 
             "descripcion": "Baile" 
         }, 
         { 
-            "codigo": "8", 
+            "codigo": 8, 
             "descripcion": "Basquetball" 
         }, 
         { 
-            "codigo": "9", 
+            "codigo": 9, 
             "descripcion": "Bolos" 
         }, 
         { 
-            "codigo": "10", 
+            "codigo": 10, 
             "descripcion": "Camping" 
         }, 
         { 
-            "codigo": "11", 
+            "codigo": 11, 
             "descripcion": "Carpintería" 
         }, 
         { 
-            "codigo": "12", 
+            "codigo": 12, 
             "descripcion": "Caza" 
         }, 
         { 
-            "codigo": "13", 
+            "codigo": 13, 
             "descripcion": "Ciclismo" 
         }, 
         { 
-            "codigo": "14", 
+            "codigo": 14, 
             "descripcion": "Cine" 
         }, 
         { 
-            "codigo": "15", 
+            "codigo": 15, 
             "descripcion": "Coleccionista" 
         }, 
         { 
-            "codigo": "16", 
+            "codigo": 16, 
             "descripcion": "Computadores" 
         }, 
         { 
-            "codigo": "17", 
+            "codigo": 17, 
             "descripcion": "Decoración" 
         }, 
         { 
-            "codigo": "18", 
+            "codigo": 18, 
             "descripcion": "Dep.Aventura" 
         }, 
         { 
-            "codigo": "19", 
+            "codigo": 19, 
             "descripcion": "Dep.Náuticos" 
         }, 
         { 
-            "codigo": "20", 
+            "codigo": 20, 
             "descripcion": "Deportes" 
         }, 
         { 
-            "codigo": "21", 
+            "codigo": 21, 
             "descripcion": "Dibujar" 
         }, 
         { 
-            "codigo": "22", 
+            "codigo": 22, 
             "descripcion": "Ecología" 
         }, 
         { 
-            "codigo": "23", 
+            "codigo": 23, 
             "descripcion": "Equitación" 
         }, 
         { 
-            "codigo": "24", 
+            "codigo": 24, 
             "descripcion": "Football" 
         }, 
         { 
-            "codigo": "25", 
+            "codigo": 25, 
             "descripcion": "Fotografía" 
         }, 
         { 
-            "codigo": "26", 
+            "codigo": 26, 
             "descripcion": "Golf" 
         }, 
         { 
-            "codigo": "27", 
+            "codigo": 27, 
             "descripcion": "Idiomas" 
         }, 
         { 
-            "codigo": "28", 
+            "codigo": 28, 
             "descripcion": "Jardinería" 
         }, 
         { 
-            "codigo": "29", 
+            "codigo": 29, 
             "descripcion": "Lectura" 
         }, 
         { 
-            "codigo": "30", 
+            "codigo": 30, 
             "descripcion": "Montañismo" 
         }, 
         { 
-            "codigo": "31", 
+            "codigo": 31, 
             "descripcion": "Motociclismo" 
         }, 
         { 
-            "codigo": "32", 
+            "codigo": 32, 
             "descripcion": "Música" 
         }, 
         { 
-            "codigo": "33", 
+            "codigo": 33, 
             "descripcion": "Natación" 
         }, 
         { 
-            "codigo": "34", 
+            "codigo": 34, 
             "descripcion": "Pasatiempos" 
         }, 
         { 
-            "codigo": "35", 
+            "codigo": 35, 
             "descripcion": "Pasear" 
         }, 
         { 
-            "codigo": "36", 
+            "codigo": 36, 
             "descripcion": "Pesca" 
         }, 
         { 
-            "codigo": "37", 
+            "codigo": 37, 
             "descripcion": "Pintar" 
         }, 
         { 
-            "codigo": "38", 
+            "codigo": 38, 
             "descripcion": "Rugby" 
         }, 
         { 
-            "codigo": "39", 
+            "codigo": 39, 
             "descripcion": "Squash" 
         }, 
         { 
-            "codigo": "40", 
+            "codigo": 40, 
             "descripcion": "Taekwondo" 
         }, 
         { 
-            "codigo": "41", 
+            "codigo": 41, 
             "descripcion": "Teatro" 
         }, 
         { 
-            "codigo": "42", 
+            "codigo": 42, 
             "descripcion": "Tenis" 
         }, 
         { 
-            "codigo": "43", 
+            "codigo": 43, 
             "descripcion": "Tenis de mesa" 
         }, 
         { 
-            "codigo": "44", 
+            "codigo": 44, 
             "descripcion": "Viajar" 
         }, 
         { 
-            "codigo": "99", 
+            "codigo": 99, 
             "descripcion": "Otros" 
         } 
         ] 
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
+        "Numero": 8856,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerHobbies",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
+        "Requerimiento": 1,
+        "Fecha": "2022-05-31",
+        "Hora": "16:03:29",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

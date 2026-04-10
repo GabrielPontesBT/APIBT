@@ -89,7 +89,7 @@ curl -X POST \
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    "personaUId": 227,
+    "personaUId": 227
     }'
 ```
 :::
@@ -142,12 +142,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20275,
         "Estado": "OK",
         "Servicio": "BTPersonas.VerificarEmpleado",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Fecha": "2024-05-06",
+        "Hora": "15:39:36",
         "Canal": "BTDIGITAL"
     }
 }'

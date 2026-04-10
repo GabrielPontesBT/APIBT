@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Cuentas Cliente
 breadcrumb: false
 pageInfo: false
@@ -86,11 +86,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "41"
+	"personaUId": 41
 }'
 ```
 :::
@@ -147,28 +147,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtCuentasCliente": {
         "sBTCuentaCliente": [ {
-            "clienteUId": "21",
+            "clienteUId": 21,
             "titularidad": {
                "descripcion": "Titular",
-               "identificador": "1"
+               "identificador": 1
             },
             "representativo": "N"
          },
          {
-            "clienteUId": "242",
+            "clienteUId": 242,
             "titularidad": {
                "descripcion": "Vice Presidente",
-               "identificador": "4"
+               "identificador": 4
             },
             "representativo": "N"
          } ]
@@ -177,15 +177,15 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "2722",
+        "Numero": 2724,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerCuentasCliente",
         "Fecha": "2018-10-26",
-        "Requerimiento": "1",
-        "Hora": "15:56:11",
+        "Requerimiento": 1,
+        "Hora": "15:58:01",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

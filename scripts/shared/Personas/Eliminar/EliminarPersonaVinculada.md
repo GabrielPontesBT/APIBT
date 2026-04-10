@@ -83,21 +83,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarPersonaVinculada' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"personaUId": "1",
-	"personaVinculadaUId": "3",
-	"vinculoId": "53"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarPersonaVinculada' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "101560665CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "personaUId": 1,
+    "personaVinculadaUId": 3,
+    "vinculoId": 53
 }'
 ```
 :::
@@ -136,24 +136,25 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-	    "Device": "GP", 
-	    "Usuario": "MINSTALADOR", 
-	    "Token": "16c1cc9b534A8B5C60A82434", 
-	    "Canal": "BTDIGITAL", 
-	    "Requerimiento": "1" 
-    }, 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTPersonas.EliminarPersonaVinculadaResponse", 
-        "Fecha": "2021-10-28", 
-        "Hora": "15:39:53", 
-        "Requerimiento": "1", 
-        "Numero": "11003", 
-        "Estado": "OK" 
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "101560665CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPersonas.EliminarPersonaVinculada",
+        "Fecha": "2021-11-08",
+        "Hora": "15:41:46",
+        "Requerimiento": 1,
+        "Numero": 8673,
+        "Estado": "OK"
     }
 }'
 ```

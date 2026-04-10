@@ -78,21 +78,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarEnCanal=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarEnCanal' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "0d2dc7b1654A8B5C60A82434"
     },
     "usuario": "INSTALADOR",
     "canal": "BTDIGITAL"
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -132,23 +132,23 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "BF79D7D88EC1865C343DAC53"
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTUsuarios.HabilitarEnCanal",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-10-30",
+        "Hora": "15:18:48",
+        "Numero": 25039,
+        "Servicio": "BTUsuarios.HabilitarEnCanal",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

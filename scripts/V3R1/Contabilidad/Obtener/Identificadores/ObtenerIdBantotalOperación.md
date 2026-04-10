@@ -94,9 +94,9 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cc9b534A8B5C60A82434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-	"operacionUId": "3"
+	"operacionUId": 3
 }'
 ```
 :::
@@ -150,17 +150,17 @@ curl -X POST \
 	    "Usuario": "MINSTALADOR", 
 	    "Token": "16c1cc9b534A8B5C60A82434", 
 	    "Canal": "BTDIGITAL", 
-	    "Requerimiento": "1" 
+	    "Requerimiento": 1 
     }, 
-    "empresa": "1", 
-    "sucursalId": "1", 
-    "moduloId": "522", 
-    "monedaId": "2225", 
-    "papelId": "0", 
-    "cuenta": "29", 
-    "operacionId": "80", 
-    "subOperacionId": "0", 
-    "tipoOperacionId": "3", 
+    "empresa": 1, 
+    "sucursalId": 1, 
+    "moduloId": 522, 
+    "monedaId": 2225, 
+    "papelId": 0, 
+    "cuenta": 29, 
+    "operacionId": 80, 
+    "subOperacionId": 0, 
+    "tipoOperacionId": 3, 
     "Erroresnegocio": { 
     }, 
     "Btoutreq": { 
@@ -168,8 +168,8 @@ curl -X POST \
         "Servicio": "BTContabilidad.ObtenerIdBantotalOperacion", 
         "Fecha": "2021-10-28", 
         "Hora": "15:39:53", 
-        "Requerimiento": "1", 
-        "Numero": "11003", 
+        "Requerimiento": 1, 
+        "Numero": 11003, 
         "Estado": "OK" 
     } 
 }'

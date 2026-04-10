@@ -411,7 +411,7 @@ curl -X POST \
           "depositoInicial": 1000,
           "tasaOriginal": 10,
           "totalIntereses": 5463,
-          "Abono": 10000,
+          "abono": 10000,
           "totalAhorro": 111000,
           "fechaVencimiento": "2021-12-31",
           "plazo": 360,

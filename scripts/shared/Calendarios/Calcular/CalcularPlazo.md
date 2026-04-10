@@ -80,17 +80,17 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularPlazo' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios?CalcularPlazo' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
-      "Usuario": "INSTALADOR",
-      "Token": "573607534CD285A89A23FBEE",
-      "Device": "N"
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "573607534CD285A89A23FBEE",
+        "Device": "N"
     },
     "sucursalId": "",
     "fechaInicio": "2020-02-15",
@@ -135,27 +135,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
-      "Usuario": "INSTALADOR",
-      "Token": "573607534CD285A89A23FBEE",
-      "Device": "N"
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "573607534CD285A89A23FBEE",
+        "Device": "N"
     },
-    "plazo": "27",
+    "plazo": 27,
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTCalendarios.CalcularPlazo",
-      "Fecha": "2021-04-07",
-      "Hora": "17:52:43",
-      "Requerimiento": "1",
-      "Numero": "8156",
-      "Estado": "OK"
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTCalendarios.CalcularPlazo",
+        "Fecha": "2021-04-07",
+        "Hora": "17:52:43",
+        "Requerimiento": 1,
+        "Numero": 8156,
+        "Estado": "OK"
     }
-  }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -122,7 +122,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -182,25 +182,25 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtResultadoTraspaso": {
-        "operacionUIdOrigen": "281",
+        "operacionUIdOrigen": 281,
         "idMovimiento": "00100001000500075000000003820180809",
-        "operacionUIdDestino": "282",
-        "saldoOperacionOrigen": "7432400.28",
-        "movimientoUId": "142"
+        "operacionUIdDestino": 282,
+        "saldoOperacionOrigen": 7432400.28,
+        "movimientoUId": 142
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "868",
+        "Numero": 868,
         "Estado": "OK",
         "Servicio": "BTCuentasVista.TraspasarEntreCuentasPropias",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2017-12-18",
         "Hora": "17:15:28",
         "Canal": "BTDIGITAL"

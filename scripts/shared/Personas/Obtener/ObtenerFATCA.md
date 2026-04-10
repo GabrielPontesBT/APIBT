@@ -76,18 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerFATCA \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "41"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerFATCA' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Token": "bbf6bf228fCD285A89A23FBE",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "personaUId": 41
 }'
 ```
 :::
@@ -150,46 +151,50 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtInformacionFATCA": {
-      "ingresoBrutoEEUU": "N",
-      "permanencia183Dias": "S",
-      "residenciaMasPaises": "S",
-      "tieneGreenCard": "S",
-      "codigoTIN": "ABCDEF",
-      "pagoFuenteEEUU": "N",
-      "residenciasFiscales": {
-         "sBTPCOResidenciaFiscal": [
-         {
-            "paisId": "53",
-            "pais": "ARABIA SAUDITA",
-            "codigoTIN": "AAASSS",
-            "correlativo": "1"
-         },
-         {
-            "paisId": "845",
-            "pais": "URUGUAY",
-            "codigoTIN": "UUUYYY",
-            "correlativo": "2"
-         }
-         ]
-      },
-   },
-   "Btoutreq": {
-      "Numero": "1729",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.ObtenerFATCA",
-      "Requerimiento": "1",
-      "Fecha": "2020-03-05",
-      "Canal": "BTDIGITAL",
-      "Hora": "13:10:51"
-   },
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "bbf6bf228fCD285A89A23FBE"
+    },
+    "resultado": "US Person",
+    "sdtInformacionFATCA": {
+        "ingresoBrutoEEUU": "N",
+        "residenciasFiscales": {
+            "sBTPCOResidenciaFiscal": [
+                {
+                    "paisId": 53,
+                    "pais": "ARABIA SAUDITA",
+                    "codigoTIN": "AAASSS",
+                    "correlativo": 1
+                },
+                {
+                    "paisId": 845,
+                    "pais": "URUGUAY",
+                    "codigoTIN": "UUUYYY",
+                    "correlativo": 2
+                }
+            ]
+        },
+        "permanencia183Dias": "S",
+        "residenciaMasPaises": "S",
+        "tieneGreenCard": "S",
+        "codigoTIN": "ABCDEF",
+        "pagoFuenteEEUU": "N"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 1729,
+        "Servicio": "BTPersonas.ObtenerFATCA",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2020-03-05",
+        "Hora": "13:10:51",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

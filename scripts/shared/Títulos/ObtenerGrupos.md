@@ -74,19 +74,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerGrupos=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerGrupos' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-  }'
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "D798D921DBD49B4BB5706756"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -160,59 +160,59 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "GZ",
+        "Requerimiento": 0,
+        "Token": "D798D921DBD49B4BB5706756"
     },
     "sdtGrupos": {
-      "sBTGrupo": [
-         {
-            "codigo": 1,
-            "nombre": "Acción Ordinaria"
-         },
-         {
-            "codigo": 2,
-            "nombre": "Bono"
-         },
-         {
-            "codigo": 3,
-            "nombre": "Títulos a Descuento"
-         },
-         {
-            "codigo": 4,
-            "nombre": "Fondo"
-         },
-         {
-            "codigo": 5,
-            "nombre": "Acción Preferida"
-         },
-         {
-            "codigo": 6,
-            "nombre": "ETF"
-         },
-         {
-            "codigo": 7,
-            "nombre": "Nota Estructurada"
-         },
-         {
-            "codigo": 91,
-            "nombre": "Bono Caja Bancaria"
-         }
-      ]
-   },
+        "sBTGrupo": [
+            {
+                "codigo": 1,
+                "nombre": "Acción Ordinaria"
+            },
+            {
+                "codigo": 2,
+                "nombre": "Bono"
+            },
+            {
+                "codigo": 3,
+                "nombre": "Títulos a Descuento"
+            },
+            {
+                "codigo": 4,
+                "nombre": "Fondo"
+            },
+            {
+                "codigo": 5,
+                "nombre": "Acción Preferida"
+            },
+            {
+                "codigo": 6,
+                "nombre": "ETF"
+            },
+            {
+                "codigo": 7,
+                "nombre": "Nota Estructurada"
+            },
+            {
+                "codigo": 91,
+                "nombre": "Bono Caja Bancaria"
+            }
+        ]
+    },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTTitulos.ObtenerGrupos",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-10-23",
+        "Hora": "14:44:10",
+        "Numero": 24989,
+        "Servicio": "BTTitulos.ObtenerGrupos",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

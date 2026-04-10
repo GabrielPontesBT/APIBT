@@ -81,7 +81,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
@@ -143,7 +143,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -152,13 +152,13 @@ curl -X POST \
             {
                 "papel": "",
                 "moneda": "$",
-                "productoUId": "41",
+                "productoUId": 41,
                 "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
             },
             {
                 "papel": "",
                 "moneda": "USD",
-                "productoUId": "42",
+                "productoUId": 42,
                 "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
             }
         ]
@@ -167,11 +167,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "399",
+        "Numero": 399,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerProductos",
         "Fecha": "2018-05-03",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "10:40:16",
         "Canal": "BTDIGITAL"
     }

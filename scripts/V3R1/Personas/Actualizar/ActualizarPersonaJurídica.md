@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Persona Jurídica
 breadcrumb: false
 pageInfo: false
@@ -142,12 +142,12 @@ curl -X POST \
   -d '{
    "Btinreq": {
    "Canal": "BTDIGITAL",
-   "Requerimiento": "1",
+   "Requerimiento": 1,
    "Usuario": "IN",
    "Token": "247d9cc0aD285A89A23FBE",
    "Device": "MC"
    },
-   "personaUId": "103",
+   "personaUId": 103,
     "sdtPersonaJuridica": {
         "nroDocumento": "219999990016",
         "fechaExpiracion": "2030-31-31",
@@ -160,28 +160,28 @@ curl -X POST \
         "naturalezaJuridica": "1",
         "barrio": "1",
         "apartamento": "",
-        "tipoDocumentoId": "2",
-        "tipoActividadId": "1",
+        "tipoDocumentoId": 2,
+        "tipoActividadId": 1,
         "fechaConstitucion": "2020-01-01",
-        "paisId": "845",
+        "paisId": 845,
         "actividad": "",
-        "paisDomicilioId": "845",
+        "paisDomicilioId": 845,
         "pais": "",
         "codigoPostal": "91000",
         "tipoActividad": "",
-        "barrioId": "1",
+        "barrioId": 1,
         "localidad": "",
-        "localidadId": "1008",
-        "actividadId": "1111",
+        "localidadId": 1008,
+        "actividadId": 1111,
         "calle": "1",
         "tipoDocumento": "2",
-        "naturalezaJuridicaId": "1",
-        "departamentoId": "2",
+        "naturalezaJuridicaId": 1,
+        "departamentoId": 2,
         "correoElectronico": "AV@GMAIL.COM",
         "telefonoFijo": "3213342222",
         "piso": "123"
-    },
-}'
+    }
+}''
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -219,25 +219,25 @@ curl -X POST \
 
 @tab JSON
 ```json
- { 
-	 "Btinreq": { 
+'{
+	"Btinreq": { 
 		"Device": "MC", 
 		"Usuario": "INSTALADOR", 
-		"Requerimiento": "1", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Token": "247d9cc0a3CD285A89A23FBE" 
-	 }, 
-	 "Erroresnegocio": null, 
-	 "Btoutreq": { 
-		"Numero": "107338", 
+	}, 
+	"Erroresnegocio": {"BTErrorNegocio": []},
+	"Btoutreq": { 
+		"Numero": 107338, 
 		"Servicio": "BTPersonas.ActualizarPersonaJuridica", 
 		"Estado": "OK", 
 		"Fecha": "2020-11-05", 
-		"Requerimiento": "1", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Hora": "12:31:25" 
-	 } 
- }
+	} 
+}'
 ``` 
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

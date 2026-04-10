@@ -86,21 +86,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetas' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjeta' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "BANTOTAL",
-          "Token": "933853107F955E77534D3E02",
-          "Device": "GL"
-        },
-        "personaUID": 679,
-        "tarjetaUID": 2000001751
-    }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "933853107F955E77534D3E02",
+        "Device": "GL"
+    },
+    "personaUID": 679,
+    "tarjetaUID": 2000001751
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -140,24 +140,26 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "BANTOTAL",
-          "Token": "933853107F955E77534D3E02",
-          "Device": "GL"
-        },
-        "Tarjeta": "Z0YQCOAcMVX8Z40fu1vi/zbnphu39GQ4bbgWcnjXc7k=",
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTTarjetasDeDebito.ObtenerTarjeta",
-          "Fecha": "2022-11-30",
-          "Hora": "15:37:32",
-          "Requerimiento": 1,
-          "Numero": 887444,
-          "Estado": "OK"
-        }
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "933853107F955E77534D3E02",
+        "Device": "GL"
+    },
+    "Tarjeta": "Z0YQCOAcMVX8Z40fu1vi/zbnphu39GQ4bbgWcnjXc7k=",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTTarjetasDeDebito.ObtenerTarjeta",
+        "Fecha": "2022-11-30",
+        "Hora": "15:37:32",
+        "Requerimiento": 1,
+        "Numero": 887444,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

@@ -99,25 +99,26 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudGrupal \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?CrearSolicitudGrupal' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "669747179CD285A89A23FBEE"
-	},
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "669747179CD285A89A23FBEE",
+        "Device": "1"
+    },
     "usuarioIngreso": "INSTALADOR",
+    "fechaIngreso": "",
     "usuarioAsignacion": "INSTALADOR",
-    "datosSolicitud": {
-        "grupoId": "34",
-        "asesorId": "92",
-        "sucursalId": "1",
-        "origenCaptacion": "6"
+    "sdtDatosSolicitud": {
+        "grupoId": 34,
+        "asesorId": 92,
+        "sucursalId": "",
+        "origenCaptacion": 6
     }
 }'
 ```
@@ -159,21 +160,24 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "669747179CD285A89A23FBEE"
-	},
-    "solicitudUId": "10847",
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "669747179CD285A89A23FBEE",
+        "Device": "1"
+    },
+    "solicitudUId": 10847,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
         "Canal": "BTDIGITAL",
         "Servicio": "BTMicrofinanzas.CrearSolicitudGrupal",
         "Fecha": "2020-09-10",
         "Hora": "14:31:41",
-        "Requerimiento": "1",
-        "Numero": "121",
+        "Requerimiento": 1,
+        "Numero": 121,
         "Estado": "OK"
     }
 }'

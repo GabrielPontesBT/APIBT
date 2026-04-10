@@ -82,7 +82,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
@@ -150,29 +150,29 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtVinculos": {
       "sBTVinculo": [
         {
-          "identificador": "1",
+          "identificador": 1,
           "descripcion": "Madre",
           "tipo": "C"
         },
         {
-          "identificador": "2",
+          "identificador": 2,
           "descripcion": "Padre",
           "tipo": "C"
         },
         {
-          "identificador": "3",
+          "identificador": 3,
           "descripcion": "Hijo",
           "tipo": "C"
         },
         {
-          "identificador": "4",
+          "identificador": 4,
           "descripcion": "Abuelo",
           "tipo": "C"
         }
@@ -182,12 +182,12 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "827",
+        "Numero": 828,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerVinculosConsanguinidad",
         "Fecha": "2017-12-17",
-        "Requerimiento": "",
-        "Hora": "18:47:21",
+        "Requerimiento": 0,
+        "Hora": "18:47:35",
         "Canal": "BTDIGITAL"
     }
 }'

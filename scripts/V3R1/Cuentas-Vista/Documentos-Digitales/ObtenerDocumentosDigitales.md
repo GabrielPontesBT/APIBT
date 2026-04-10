@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Documentos Digitales
 breadcrumb: false
 pageInfo: false
@@ -93,11 +93,11 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId": "21",
+	"operacionUId": 21
 }'
 ```
 :::
@@ -149,18 +149,18 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "sdtDocumentosDigitales": {
         "sBTDocumentoDigital": [
             {
-                "Titulo": "Prueba Asociar Contrato",
-                "FechaActualizacion": "2020-10-10",
-                "FechaVencimiento": "2010-10-10",
-                "TipoDocumentoDigital": "Contrato",
-                "DocumentoId": "87"
+                "titulo": "Prueba Asociar Contrato",
+                "fechaActualizacion": "2020-10-10",
+                "fechaVencimiento": "2010-10-10",
+                "tipoDocumentoDigital": "Contrato",
+                "documentoId": 87
             }
         ]
     },
@@ -168,11 +168,11 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "3091",
+        "Numero": 3090,
         "Estado": "OK",
         "Servicio": "BTCuentasVista.ObtenerDocumentosDigitales",
         "Fecha": "2018-11-20",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "18:01:45",
         "Canal": "BTDIGITAL"
     }

@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Guía Especial de Proceso
 breadcrumb: false
 pageInfo: false
@@ -84,11 +84,11 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"codigo": "73"
+	"codigo": 73
 }'
 ```
 :::
@@ -157,47 +157,50 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"sdtGuiaEspecialDeProceso": {
-	  "sBTCorrelativoGuiaEspecial": [
-		{
-		  "correlativo3": "0",
-		  "correlativo2": "539",
-		  "descripcion": "Prima sin cuenta",
-		  "correlativo1": "50",
-		  "valorEspecifico3": "0",
-		  "valorEspecifico2": "0",
-		  "valorEspecifico1": "0",
-		  "importeEspecifico3": "0.00",
-		  "importeEspecifico2": "0.00",
-		  "importeEspecifico1": "0.00"
-		},
-		{
-		  "correlativo3": "0",
-		  "correlativo2": "125",
-		  "descripcion": "No genera prima",
-		  "correlativo1": "163",
-		  "valorEspecifico3": "0",
-		  "valorEspecifico2": "0",
-		  "valorEspecifico1": "0",
-		  "importeEspecifico3": "0.00",
-		  "importeEspecifico2": "0.00",
-		  "importeEspecifico1": "0.00"
-		}
-	  ]
-	},
-	"Btoutreq": {
-		"Numero": "592",
-		"Servicio": "BTParametrosBase.ObtenerGuiaEspecialDeProceso",
-		"Estado": "OK",
-		"Fecha": "2020-03-11",
-		"Requerimiento": "1",
-		"Hora": "11:37:51",
-		"Canal": "BTDIGITAL"
-	}
+    "sdtGuiaEspecialDeProceso": {
+        "sBTCorrelativoGuiaEspecial": [
+            {
+                "correlativo3": 0,
+                "correlativo2": 539,
+                "descripcion": "Prima sin cuenta",
+                "correlativo1": 50,
+                "valorEspecifico3": 0,
+                "valorEspecifico2": 0,
+                "valorEspecifico1": 0,
+                "importeEspecifico3": 0.00,
+                "importeEspecifico2": 0.00,
+                "importeEspecifico1": 0.00
+            },
+            {
+                "correlativo3": 0,
+                "correlativo2": 125,
+                "descripcion": "No genera prima",
+                "correlativo1": 163,
+                "valorEspecifico3": 0,
+                "valorEspecifico2": 0,
+                "valorEspecifico1": 0,
+                "importeEspecifico3": 0.00,
+                "importeEspecifico2": 0.00,
+                "importeEspecifico1": 0.00
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 592,
+        "Servicio": "BTParametrosBase.ObtenerGuiaEspecialDeProceso",
+        "Estado": "OK",
+        "Fecha": "2020-03-11",
+        "Requerimiento": 1,
+        "Hora": "11:37:51",
+        "Canal": "BTDIGITAL"
+    }
 }
 ```
 :::

@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerModelosPAE' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerModelosPAE' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
-    },
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "12106639094A8B5C60A82434",
+        "Device": "GP"
+    }
 }'
 ```
 :::
@@ -128,36 +128,34 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "c2cfd09eff4A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "12106639094A8B5C60A82434",
+        "Device": "GP"
     },
     "sdtModelosPAE": {
-        "sBTModeloPAE": [
-        { 
-            "modeloID": "1", 
-            "descripcion": "Politicas - Solicitud", 
-            "tipoModelo": "P-Politicas" 
-        }, 
-        ...
-        ] 
-    }, 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTPAE.ObtenerModelosPAE", 
-        "Fecha": "2022-06-01", 
-        "Hora": "15:38:59", 
-        "Requerimiento": "1", 
-        "Numero": "8881", 
-        "Estado": "OK" 
-    } 
-}
+        "sBTModeloPAE": {
+            "modeloID": 1,
+            "descripcion": "Politicas - Solicitud",
+            "tipoModelo": "P-Politicas"
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPAE.ObtenerModelosPAE",
+        "Fecha": "2022-06-01",
+        "Hora": "15:38:59",
+        "Requerimiento": 1,
+        "Numero": 8881,
+        "Estado": "OK"
+    }
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

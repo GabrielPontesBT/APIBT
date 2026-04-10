@@ -91,13 +91,13 @@ curl -X GET \
    "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
         "Token": "faa36bd33f4A8B5C60A82434"
     },
 	"calendarioId":1,
 	"fechaInicio":"2020-10-01",
-	"fechaFin":"2020-10-31",
+	"fechaFin":"2020-10-31"
 }'
 ```
 :::
@@ -267,7 +267,7 @@ curl -X GET \
     "Btinreq": {
 		"Device": "MC",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "200f0b8b654A8B5C60A82434"
 	},
@@ -401,10 +401,10 @@ curl -X GET \
 	  ]  
 	},  
 	"Btoutreq": {
-	  "Numero": "109132",
+	  "Numero": 109132,
 	  "Estado": "OK",
 	  "Servicio": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Fecha": "2020-11-24",
 	  "Canal": "BTDIGITAL",
 	  "Hora": "10:41:08"

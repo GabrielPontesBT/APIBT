@@ -77,23 +77,23 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPuntosDeVenta' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPuntosDeVenta' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "DF1F942C6EC60E8B95BBEA69"
+    },
     "sdtPartner": {
         "puntoVentaUId": 2,
         "vendedorUId": 3,
         "partnerUId": 1
-    },
+    }
 }'
 ```
 :::
@@ -139,31 +139,33 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtPuntosVenta": {
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "DF1F942C6EC60E8B95BBEA69"
+    },
+    "sdtPuntosVenta": {
         "sBTPuntoVenta": {
-        "puntoVentaUId": 2,
-        "partnerUId": 1,
-        "nombre": "Punto de Venta 2"
+            "puntoVentaUId": 2,
+            "partnerUId": 1,
+            "nombre": "Punto de Venta 2"
         }
     },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPartners.ObtenerPuntosDeVenta",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 16872,
+        "Servicio": "BTPartners.ObtenerPuntosDeVenta",
+        "Estado": "OK",
+        "Fecha": "2023-10-27",
+        "Requerimiento": 0,
+        "Hora": "17:13:11",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

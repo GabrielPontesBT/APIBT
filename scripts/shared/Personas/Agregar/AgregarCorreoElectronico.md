@@ -90,19 +90,19 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "AV",
+        "Usuario": "MINSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "268b6d23eb4A8B5C60A82434"
     },
-    "personaUId": 227,
+    "personaUId": 41,
     "sdtCorreoElectronico": {
         "correoElectronico": "AABB@GMAIL.COM",
         "correlativo": 1
     }
-    }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -141,24 +141,24 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+        "Token": "9436BF7CB5B5BB404CC6E5A7"
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 249703,
-        "Estado": "OK",
+        "Numero": 20275,
         "Servicio": "BTPersonas.AgregarCorreoElectronico",
+        "Estado": "OK",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
-        "Canal": "BTDIGITAL"
+        "Fecha": "2024-05-06",
+        "Canal": "BTDIGITAL",
+        "Hora": "15:39:36"
     }
 }'
 ```

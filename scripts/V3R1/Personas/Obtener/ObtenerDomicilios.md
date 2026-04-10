@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Domicilios 
 breadcrumb: false
 pageInfo: false
@@ -85,7 +85,7 @@ curl -X POST \
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "6C363FC1CD2072DE525376D3"
   },
@@ -160,13 +160,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDomicilios=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 44ba1342-ce61-303e-bd55-62945147dfe0' \
-  -d 
-{
+'{
 	"Btinreq": {
       "Device": "FC",
       "Usuario": "INSTALADOR",
@@ -220,8 +214,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Hora": "10:45:27"
    }
-}
-
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

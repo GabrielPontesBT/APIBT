@@ -524,7 +524,7 @@ curl -X POST \
         "Estado": "OK", 
         "Servicio": "BTPrestamos.ObtenerPrestamosSinMora", 
         "Fecha": "2023-10-25", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Hora": "12:27:52", 
         "Canal": "BTDIGITAL" 
     } 

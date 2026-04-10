@@ -110,7 +110,7 @@ curl -X POST \
 	"Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc479c1c0eF955E77534D3E0"
     },
@@ -167,7 +167,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc479c1c0eF955E77534D3E0"
     },
@@ -178,7 +178,7 @@ curl -X POST \
         "Numero": 1618,
         "Estado": "OK",
         "Servicio": "BTSNP.CrearStopDebit",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2021-06-16",
         "Hora": "16:46:14",
         "Canal": "BTDIGITAL"

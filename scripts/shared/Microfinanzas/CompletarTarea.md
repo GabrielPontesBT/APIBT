@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CompletarTarea \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?CompletarTarea' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-   "bts:Btinreq": {
-      "bts:Canal": "BTDIGITAL",
-      "bts:Requerimiento": "95",
-      "bts:Usuario": "INSTALADOR",
-      "bts:Token": "1130594463CD285A89A23FBE",
-      "bts:Device": "GP"
-   },
-   "solicitudUId": "11109"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 95,
+        "Usuario": "INSTALADOR",
+        "Token": "1130594463CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "solicitudUId": 11109
 }'
 ```
 :::
@@ -128,22 +128,25 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "95",
-      "Usuario": "INSTALADOR",
-      "Token": "1130594463CD285A89A23FBE",
-      "Device": "GP"
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.CompletarTarea",
-      "Fecha": "2019-11-05",
-      "Hora": "15:16:15",
-      "Requerimiento": "95",
-      "Numero": "1591",
-      "Estado": "OK"
-   }
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 95,
+        "Usuario": "INSTALADOR",
+        "Token": "1130594463CD285A89A23FBE",
+        "Device": "GP"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.CompletarTarea",
+        "Fecha": "2019-11-05",
+        "Hora": "15:16:15",
+        "Requerimiento": 95,
+        "Numero": 1591,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

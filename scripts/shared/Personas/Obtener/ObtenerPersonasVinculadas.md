@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasVinculadas' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "GP",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"personaUId": "1",
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasVinculadas' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "120109606CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "personaUId": 1
 }'
 ```
 :::
@@ -147,44 +147,47 @@ curl -X POST \
 ```
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-	    "Device": "GP", 
-	    "Usuario": "MINSTALADOR", 
-	    "Token": "16c1cc9b534A8B5C60A82434", 
-	    "Canal": "BTDIGITAL", 
-	    "Requerimiento": "1" 
-    }, 
-    "sdtPersonasVinculadas": { 
-      "sBTPersonaVinculada": [ 
-      { 
-         "personaUId": "3", 
-         "nombre": "PEREZ MANRIQUE JORGE", 
-         "vinculo": { 
-            "identificador": "41", 
-            "descripcion": "Padre", 
-            "tipo": "C" 
-         } 
-      }, 
-      { 
-         "personaUId": "2", 
-         "nombre": "ABARCA CARLOS", 
-         "vinculo": { 
-            "identificador": "43", 
-            "descripcion": "Hijo", 
-            "tipo": "C" 
-         } 
-      } 
-      ] 
-    },   
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTPersonas.ObtenerPersonasVinculadasResponse", 
-        "Fecha": "2021-10-28", 
-        "Hora": "15:39:53", 
-        "Requerimiento": "1", 
-        "Numero": "11003", 
-        "Estado": "OK" 
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "INSTALADOR",
+        "Token": "120109606CD285A89A23FBEE",
+        "Device": "MC"
+    },
+    "sdtPersonasVinculadas": {
+        "sBTPersonaVinculada": [
+            {
+                "personaUId": 3,
+                "nombre": "PEREZ MANRIQUE JORGE",
+                "vinculo": {
+                    "identificador": 41,
+                    "descripcion": "Padre",
+                    "tipo": "C"
+                }
+            },
+            {
+                "personaUId": 2,
+                "nombre": "ABARCA CARLOS",
+                "vinculo": {
+                    "identificador": 43,
+                    "descripcion": "Hijo",
+                    "tipo": "C"
+                }
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPersonas.ObtenerPersonasVinculadas",
+        "Fecha": "2021-11-30",
+        "Hora": "11:04:47",
+        "Requerimiento": 1,
+        "Numero": 8767,
+        "Estado": "OK"
     }
 }'
 ```

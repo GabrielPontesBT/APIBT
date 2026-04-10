@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Cuenta Preferencial
 breadcrumb: false
 pageInfo: false
@@ -99,7 +99,7 @@ curl -X POST \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
   -d '{
 		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Usuario": "BA",
 		"Token": "0211202010280000399672",
 		"Device": "MC"
@@ -148,7 +148,7 @@ curl -X POST \
 { 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Usuario": "BA", 
       "Token": "0211202010280000399672", 
       "Device": "MC" 
@@ -159,7 +159,7 @@ curl -X POST \
       "Servicio": "BTTarjetasDeDebito.ActualizarCuentaPreferencial", 
       "Fecha": "2020-11-02", 
       "Hora": "12:06:37", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Numero": "10140", 
       "Estado": "OK" 
    } 

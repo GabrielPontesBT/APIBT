@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Profesión
 breadcrumb: false
 pageInfo: false
@@ -88,13 +88,13 @@ curl -X POST \
   	"Btinreq": {
 		"Device": "GP",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "2081397563CD285A89A23FBE"
 	},
 	"personaUId": 10003,
 	"profesionId": 1000,
-	"fechaInicioProfesion": 2012-03-01
+	"fechaInicioProfesion": "2012-03-01"
   }'
 ```
 :::
@@ -133,26 +133,25 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "INSTALADOR",
 	  "Token": "761768101CD285A89A23FBEE",
 	  "Device": "GP"
 	},
-	"Erroresnegocio": {
-	},
+	"Erroresnegocio": {"BTErrorNegocio": []},
 	"Btoutreq": {
 	  "Canal": "BTDIGITAL",
 	  "Servicio": "BTPersonas.ActualizarProfesion",
 	  "Fecha": "2021-02-05",
 	  "Hora": "13:37:57",
-	  "Requerimiento": "1",
-	  "Numero": "7984",
+	  "Requerimiento": 1,
+	  "Numero": 7984,
 	  "Estado": "OK"
 	}
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

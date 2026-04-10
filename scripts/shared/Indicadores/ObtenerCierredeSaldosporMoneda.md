@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCierreSaldosPorMoneda' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-   "Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCierreSaldosPorMoneda' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    }
 }'
 ```
 :::
@@ -164,70 +164,72 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "7424D284FA89585C01D4EA34"
-   },
-   "sdtBalanceMonedaSaldos": {
-      "sBTBalanceMonedaSaldo": [
-      {
-         "saldo": 1002305670465.91,
-         "signo": "$",
-         "codigo": 0,
-         "nombre": "Pesos"
-      },
-      {
-         "saldo": 0,
-         "signo": "AUD",
-         "codigo": 105,
-         "nombre": "DOLAR AUSTRALIANO"
-      },
-      {
-         "saldo": 10000,
-         "signo": "ARS",
-         "codigo": 500,
-         "nombre": "PESOS ARGENTINOS"
-      },
-      {
-         "saldo": 1000616680.88,
-         "signo": "EUR",
-         "codigo": 1111,
-         "nombre": "EURO"
-      },
-      {
-         "saldo": 2111507066.93,
-         "signo": "USD",
-         "codigo": 2222,
-         "nombre": "DÓLAR ESTADOUNIDENSE"
-      },
-      {
-         "saldo": 0,
-         "signo": "U$D",
-         "codigo": 2225,
-         "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
-      },
-      {
-         "saldo": 0,
-         "signo": "JPY",
-         "codigo": 3600,
-         "nombre": "YENS"
-      }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 12040,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerCierreSaldosPorMoneda",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-23",
-      "Canal": "BTDIGITAL",
-      "Hora": "15:14:49"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "7424D284FA89585C01D4EA34"
+    },
+    "sdtBalanceMonedaSaldos": {
+        "sBTBalanceMonedaSaldo": [
+            {
+                "saldo": 1002305670465.91,
+                "signo": "$",
+                "codigo": 0,
+                "nombre": "Pesos"
+            },
+            {
+                "saldo": 0.00,
+                "signo": "AUD",
+                "codigo": 105,
+                "nombre": "DOLAR AUSTRALIANO"
+            },
+            {
+                "saldo": 10000.00,
+                "signo": "ARS",
+                "codigo": 500,
+                "nombre": "PESOS ARGENTINOS"
+            },
+            {
+                "saldo": 1000616680.88,
+                "signo": "EUR",
+                "codigo": 1111,
+                "nombre": "EURO"
+            },
+            {
+                "saldo": 2111507066.93,
+                "signo": "USD",
+                "codigo": 2222,
+                "nombre": "DÓLAR ESTADOUNIDENSE"
+            },
+            {
+                "saldo": 0.00,
+                "signo": "U$D",
+                "codigo": 2225,
+                "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
+            },
+            {
+                "saldo": 0.00,
+                "signo": "JPY",
+                "codigo": 3600,
+                "nombre": "YENS"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 12040,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerCierreSaldosPorMoneda",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-23",
+        "Canal": "BTDIGITAL",
+        "Hora": "15:14:49"
+    }
 }'
 ```
 ::: 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Detalle de Operaciones a Refinanciar
 breadcrumb: false
 pageInfo: false
@@ -202,7 +202,7 @@ curl -X POST \
    "Btinreq": {
       "Device": "GP",
       "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Canal": "BTDIGITAL",
       "Token": "c2cfd09eff4A8B5C60A82434"
    },

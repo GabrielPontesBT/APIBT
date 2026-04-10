@@ -98,12 +98,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId": "21",
-	"documentoId": "87",
+	"operacionUId": 21,
+	"documentoId": 87
 }'
 ```
 :::
@@ -155,28 +155,28 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "sdtDocumentoDigital": {
          "archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-         "documentoId": "87",
+         "documentoId": 87,
          "fechaEmision": "2020-10-10",
          "fechaVencimiento": "2010-10-10",
          "nombre": "Prueba Asociar Contrato",
          "tipoDocumentoDigital": "Contrato",
-         "version": "1",
+         "version": 1
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "3108",
+        "Numero": 3108,
         "Estado": "OK",
         "Servicio": "BTAhorroProgramado.ObtenerDocumentoDigital",
         "Fecha": "2018-11-21",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Hora": "12:09:09",
         "Canal": "BTDIGITAL"
     }

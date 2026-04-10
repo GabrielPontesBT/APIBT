@@ -89,23 +89,23 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarTelefono' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "AV",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cc9b534A8B5C60A82434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"clienteUId": "61",
-    "domicilioId": "1",
-    "numeroTelefono": "099274742",
-    "tipoTelefonoId": "2",  
-    "telefonoId": "1"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarTelefono' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Token": "A088577A8D1E89A20E6EF27D",
+        "Canal": "BTDIGITAL",
+        "Device": "1"
+    },
+    "clienteUId": 61,
+    "domicilioId": 1,
+    "numeroTelefono": 99274742,
+    "tipoTelefonoId": 2,
+    "telefonoId": 1
 }'
 ```
 :::
@@ -144,23 +144,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-      "Device": "AV", 
-      "Usuario": "MINSTALADOR", 
-      "Token": "fa2c02c95a4A8B5C60A82434", 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": "1" 
-   }, 
-   "Btoutreq": { 
-      "Numero": "111397", 
-      "Estado": "OK", 
-      "Servicio": "BTClientes.ActualizarTelefono", 
-      "Requerimiento": "1", 
-      "Fecha": "2023-05-05", 
-      "Canal": "BTDIGITAL", 
-      "Hora": "11:45:24" 
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "A088577A8D1E89A20E6EF27D"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 10294,
+        "Servicio": "BTClientes.ActualizarTelefono",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-05",
+        "Hora": "11:40:54",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

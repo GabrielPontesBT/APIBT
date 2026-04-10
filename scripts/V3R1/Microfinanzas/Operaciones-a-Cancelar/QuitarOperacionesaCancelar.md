@@ -1,4 +1,4 @@
----
+﻿---
 title: Quitar Operaciones a Cancelar
 breadcrumb: false
 pageInfo: false
@@ -100,16 +100,18 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cc9b534A8B5C60A82434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
-	"solicitudUId": "11887",
-	"clienteUId": "862",
+	"solicitudUId": 11887,
+	"clienteUId": 862,
 	"sdtOperaciones": {
-	  "sBTOperacion": {
-		"operacionUId": "1725"
-      },
-   },
-}
+	  "sBTOperacion": [
+		{
+			"operacionUId": 1725
+		}
+	  ]
+	}
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -154,20 +156,21 @@ curl -X POST \
       "Usuario": "MINSTALADOR",
       "Token": "16c1cc9b534A8B5C60A82434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
-   "montoCancelacion": "511820.42",
-   "Erroresnegocio": {
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.QuitarOperacionesACancelar",
-      "Fecha": "2021-10-28",
-      "Hora": "15:39:53",
-      "Requerimiento": "1",
-      "Numero": "11003",
-      "Estado": "OK"
-   }
+    "montoCancelacion": 511820.42,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.QuitarOparacionesACancelar",
+        "Fecha": "2021-10-15",
+        "Hora": "14:56:43",
+        "Requerimiento": 1,
+        "Numero": 111401,
+        "Estado": "OK"
+    }
 }
 ```
 ::: 

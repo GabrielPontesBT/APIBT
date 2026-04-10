@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerTransaccionesEstados' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-   "Btinreq": {
-      "Device": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?"
-   }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerTransaccionesEstados' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0
+    }
 }'
 ```
 :::
@@ -138,42 +138,44 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": 1,
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "?",
-      "Canal": "BTDIGITAL",
-      "Token": "959C2E0AEF210ABC0D8AA8F7"
-   },
-   "sdtTransaccionesEstados": {
-      "transaccionM": 0,
-      "transaccionL": 3,
-      "transaccionH": 0,
-      "otros": 54,
-      "transaccionE": 31,
-      "transaccionB": 42,
-      "transaccionX": 0,
-      "transaccionA": 0,
-      "exito": 17,
-      "error": 31,
-      "transaccionS": 17,
-      "transaccionR": 0,
-      "transaccionSP": 0,
-      "sucursalParametros": 0,
-      "transaccionP": 9,
-      "transaccionN": 0
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 11993,
-      "Estado": "OK",
-      "Servicio": "BTIndicadores.ObtenerTransaccionesEstados",
-      "Requerimiento": "?",
-      "Fecha": "2023-05-22",
-      "Canal": "BTDIGITAL",
-      "Hora": "15:37:04"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "959C2E0AEF210ABC0D8AA8F7"
+    },
+    "sdtTransaccionesEstados": {
+        "transaccionM": 0,
+        "transaccionL": 3,
+        "transaccionH": 0,
+        "otros": 54,
+        "transaccionE": 31,
+        "transaccionB": 42,
+        "transaccionX": 0,
+        "transaccionA": 0,
+        "exito": 17,
+        "error": 31,
+        "transaccionS": 17,
+        "transaccionR": 0,
+        "transaccionSP": 0,
+        "sucursalParametros": 0,
+        "transaccionP": 9,
+        "transaccionN": 0
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 11993,
+        "Estado": "OK",
+        "Servicio": "BTIndicadores.ObtenerTransaccionesEstados",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-22",
+        "Canal": "BTDIGITAL",
+        "Hora": "15:37:04"
+    }
 }'
 ```
 ::: 

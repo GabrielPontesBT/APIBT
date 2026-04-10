@@ -67,21 +67,22 @@ No aplica.
 </soapenv:Envelope> 
 ``` 
 
-@tab JSON 
-```json 
-curl -X POST \ 
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerProcesosHabilitados \ 
--H 'cache-control: no-cache' \ 
--H 'content-type: application/json' \ 
--d '{ 
-    "Btinreq": { 
-        "Requerimiento": 2, 
-        "Device": "FP", 
-        "Canal": "BTDIGITAL", 
-        "Usuario": "INSTALADOR", 
-        "Token": "3789c5608bCD285A89A23FBE" 
-    }, 
-}' 
+@tab JSON
+```json
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerProcesosHabilitados' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 2,
+        "Device": "FP",
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Token": "3789c5608bCD285A89A23FBE"
+    }
+}'
 ``` 
 ::: 
 <!-- CIERRA EJEMPLO DE INVOCACIÓN --> 
@@ -209,121 +210,123 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 </SOAP-ENV:Envelope> 
 ``` 
 
-@tab JSON 
-```json 
-'{ 
-  "Btinreq": { 
-      "Device": "GP", 
-      "Usuario": "INSTALADOR", 
-      "Requerimiento": "1", 
-      "Canal": "BTDIGITAL", 
-      "Token": "47D750A861C4243EDE981344" 
-  }, 
-  "sBTProcesosWF": { 
-      "sBTProcesoWF": [ 
-        { 
-          "idProceso": 3, 
-          "descripcion": "", 
-          "fechaActualizacion": "2014-05-26", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2014-07-28", 
-          "idVersion": 1, 
-          "nombre": "ALTA PRODUCTO" 
-        }, 
-        { 
-          "idProceso": 6, 
-          "descripcion": "", 
-          "fechaActualizacion": "2013-08-06", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2013-08-06", 
-          "idVersion": 1, 
-          "nombre": "LIM_CAJA_SUC" 
-        }, 
-        { 
-          "idProceso": 8, 
-          "descripcion": "", 
-          "fechaActualizacion": "2014-07-21", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2014-07-21", 
-          "idVersion": 1, 
-          "nombre": "Aplicaciones_Móviles" 
-        }, 
-        { 
-          "idProceso": 9, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-09-09", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2015-09-09", 
-          "idVersion": 1, 
-          "nombre": "ALTA_MOD_CONTRATO" 
-        }, 
-        { 
-          "idProceso": 10, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-09-14", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2013-02-26", 
-          "idVersion": 2, 
-          "nombre": "Créditos Individuales" 
-        }, 
-        { 
-          "idProceso": 11, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-09-14", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2013-02-26", 
-          "idVersion": 1, 
-          "nombre": "Créditos Grupales" 
-        }, 
-        { 
-          "idProceso": 12, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-09-14", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2013-02-26", 
-          "idVersion": 1, 
-          "nombre": "Creditos Retorno" 
-        }, 
-        { 
-          "idProceso": 13, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-09-14", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2013-02-26", 
-          "idVersion": 1, 
-          "nombre": "Créditos Nuevos Reducido" 
-        }, 
-        { 
-          "idProceso": 14, 
-          "descripcion": "", 
-          "fechaActualizacion": "2015-05-13", 
-          "warning": 0, 
-          "deadline": 0, 
-          "fechaCreacion": "2015-05-06", 
-          "idVersion": 1, 
-          "nombre": "FLUJO_ALERTAS" 
-        } 
-      ] 
-  }, 
-  "Erroresnegocio": "", 
-  "Btoutreq": { 
-      "Numero": 31109, 
-      "Estado": "OK", 
-      "Servicio": "BTWorkflow.ObtenerProcesosHabilitados", 
-      "Requerimiento": 2, 
-      "Fecha": "2022-11-29", 
-      "Hora": "13:04:36", 
-      "Canal": "BTDIGITAL" 
-  } 
-}' 
+@tab JSON
+```json
+'{
+    "Btinreq": {
+        "Device": "FP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 2,
+        "Canal": "BTDIGITAL",
+        "Token": "3789c5608bCD285A89A23FBE"
+    },
+    "sBTProcesosWF": {
+        "sBTProcesoWF": [
+            {
+                "idProceso": 3,
+                "descripcion": "",
+                "fechaActualizacion": "2014-05-26",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2014-07-28",
+                "idVersion": 1,
+                "nombre": "ALTA PRODUCTO"
+            },
+            {
+                "idProceso": 6,
+                "descripcion": "",
+                "fechaActualizacion": "2013-08-06",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2013-08-06",
+                "idVersion": 1,
+                "nombre": "LIM_CAJA_SUC"
+            },
+            {
+                "idProceso": 8,
+                "descripcion": "",
+                "fechaActualizacion": "2014-07-21",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2014-07-21",
+                "idVersion": 1,
+                "nombre": "Aplicaciones_Móviles"
+            },
+            {
+                "idProceso": 9,
+                "descripcion": "",
+                "fechaActualizacion": "2015-09-09",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2015-09-09",
+                "idVersion": 1,
+                "nombre": "ALTA_MOD_CONTRATO"
+            },
+            {
+                "idProceso": 10,
+                "descripcion": "",
+                "fechaActualizacion": "2015-09-14",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2013-02-26",
+                "idVersion": 2,
+                "nombre": "Créditos Individuales"
+            },
+            {
+                "idProceso": 11,
+                "descripcion": "",
+                "fechaActualizacion": "2015-09-14",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2013-02-26",
+                "idVersion": 1,
+                "nombre": "Créditos Grupales"
+            },
+            {
+                "idProceso": 12,
+                "descripcion": "",
+                "fechaActualizacion": "2015-09-14",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2013-02-26",
+                "idVersion": 1,
+                "nombre": "Creditos Retorno"
+            },
+            {
+                "idProceso": 13,
+                "descripcion": "",
+                "fechaActualizacion": "2015-09-14",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2013-02-26",
+                "idVersion": 1,
+                "nombre": "Créditos Nuevos Reducido"
+            },
+            {
+                "idProceso": 14,
+                "descripcion": "",
+                "fechaActualizacion": "2015-05-13",
+                "warning": 0.00,
+                "deadline": 0.00,
+                "fechaCreacion": "2015-05-06",
+                "idVersion": 1,
+                "nombre": "FLUJO_ALERTAS"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 31109,
+        "Estado": "OK",
+        "Servicio": "BTWorkflow.ObtenerProcesosHabilitados",
+        "Requerimiento": 2,
+        "Fecha": "2022-11-29",
+        "Hora": "13:04:36",
+        "Canal": "BTDIGITAL"
+    }
+}'
 ``` 
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA --> 

@@ -90,21 +90,21 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Device": "GL",
-          "Requerimiento": 1,
-          "Token": "01D45E9964612A4C8CCB1055"
-        },
-        "sdtDatos": {
-          "simulacionId": 741,
-          "cuentaDestinoUid": 661,
-          "motivoAhorro": "Prueba",
-          "cuentaOrigenUid": 661,
-          "clienteUid": 61
-        }
-    }'
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Usuario": "MINSTALADOR",
+        "Device": "GL",
+        "Requerimiento": 1,
+        "Token": "01D45E9964612A4C8CCB1055"
+    },
+    "sdtDatos": {
+        "simulacionId": 741,
+        "cuentaDestinoUid": 661,
+        "motivoAhorro": "Prueba",
+        "cuentaOrigenUid": 661,
+        "clienteUid": 61
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -144,7 +144,7 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
+    "Btinreq": {
         "Canal": "BTDIGITAL",
         "Usuario": "MINSTALADOR",
         "Device": "GL",
@@ -152,7 +152,9 @@ curl -X POST \
         "Token": "01D45E9964612A4C8CCB1055"
     },
     "ahorroUId": 1102,
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
         "Estado": "OK",
         "Fecha": "2022-11-29",

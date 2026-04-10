@@ -79,19 +79,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerSegurosAsociados=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerSegurosAsociados' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 9c3f1bf5-3274-9009-5a4a-9b755b8652a9' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  "Btinreq": {
-    "Canal": "BTDIGITAL",
-    "Usuario": "INSTALADOR",
-    "Device": "FC",
-    "Requerimiento": 0,
-    "Token": "554DC597B08D07B49154AFFC"
-  },
-  "OperacionUId": 1059
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Usuario": "INSTALADOR",
+        "Device": "FC",
+        "Requerimiento": 0,
+        "Token": "554DC597B08D07B49154AFFC"
+    },
+    "operacionUId": 1059
 }'
 ```
 :::
@@ -151,43 +151,47 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-  "Btinreq": {
-    "Device": "FC",
-    "Usuario": "INSTALADOR",
-    "Requerimiento": 0,
-    "Canal": "BTDIGITAL",
-    "Token": "554DC597B08D07B49154AFFC"
-  },
-  "sdtSegurosAsociados": [
-    {
-      "extraPrima": 0.0,
-      "descripcion": "SANCOR - Vida - Variante 1",
-      "importe": 720.0,
-      "codigo": 100
+    "Btinreq": {
+        "Device": "FC",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "554DC597B08D07B49154AFFC"
     },
-    {
-      "extraPrima": 0.0,
-      "descripcion": "SANCOR- Desempleo %saldos",
-      "importe": 36.65,
-      "codigo": 200
+    "sdtSegurosAsociados": {
+        "sBTSeguroAsociado": [
+            {
+                "extraPrima": 0.0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 720.0,
+                "codigo": 100
+            },
+            {
+                "extraPrima": 0.0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 36.65,
+                "codigo": 200
+            },
+            {
+                "extraPrima": 0.0,
+                "descripcion": "Sobre saldos",
+                "importe": 653.4,
+                "codigo": 700
+            }
+        ]
     },
-    {
-      "extraPrima": 0.0,
-      "descripcion": "Sobre saldos",
-      "importe": 653.4,
-      "codigo": 700
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 36897,
+        "Estado": "OK",
+        "Servicio": "BTPrestamos.ObtenerSegurosAsociados",
+        "Requerimiento": 0,
+        "Fecha": "2025-11-26",
+        "Hora": "09:52:55",
+        "Canal": "BTDIGITAL"
     }
-  ],
-  "Erroresnegocio": "",
-  "Btoutreq": {
-    "Numero": 36897,
-    "Estado": "OK",
-    "Servicio": "BTPrestamos.ObtenerSegurosAsociados",
-    "Requerimiento": 0,
-    "Fecha": "2025-11-26",
-    "Hora": "09:52:55",
-    "Canal": "BTDIGITAL"
-  }
 }'
 ```
 ::: 

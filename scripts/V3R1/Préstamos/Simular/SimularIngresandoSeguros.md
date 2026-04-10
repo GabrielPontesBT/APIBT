@@ -119,9 +119,11 @@ curl -X POST \
         },
         "sinSeguros": "N",
         "sdtSeguros": {
-          "sBTSegurosSimulacion": {
-            "codigo": 100
-          }
+          "sBTSegurosSimulacion": [
+            {
+              "codigo": 100
+            }
+          ]
         }
     }'
 ```
@@ -250,11 +252,13 @@ curl -X POST \
         },
         "sdtSimulacionPrestamo": {
           "otrosConceptos": {
-            "sBTConceptos": {
-              "concepto": 100,
-              "valor": 1500,
-              "texto": "Seguro vida"
-            }
+            "sBTConceptos": [
+              {
+                "concepto": "100",
+                "valor": 1500.0,
+                "texto": "Seguro vida"
+              }
+            ]
           },
           "cronograma": {
             "sBTCuotaPrestamoAlta": [
@@ -309,15 +313,15 @@ curl -X POST \
             ]
           },
           "fechaValor": "2018-12-11",
-          "capital": 10000,
-          "tasaEfectiva": 0,
+          "capital": 10000.0,
+          "tasaEfectiva": 0.0,
           "intereses": 1288.18,
-          "tasaNominalAnual": 23,
+          "tasaNominalAnual": 23.0,
           "totalPrestamo": 14328.15,
           "valorCuota": 1194.01,
           "tasaEfectivaAnual": 25.590075,
           "operacionUId": 1,
-          "tasa": 23,
+          "tasa": 23.0,
           "fechaPrimerPago": "2019-01-12",
           "fechaVencimiento": "2019-12-12",
           "plazo": 361,
@@ -329,7 +333,9 @@ curl -X POST \
             "otrosConceptos":""
           }
         },
-        "Erroresnegocio": "",
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        },
         "Btoutreq": {
           "Numero": 623,
           "Estado": "OK",

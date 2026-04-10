@@ -88,7 +88,7 @@ curl -X POST \
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    "numeroTelefono": 99099890
+    "numeroTelefono": "099099890"
     }'
 ```
 :::
@@ -143,20 +143,22 @@ curl -X POST \
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     "sdtTitulares": {
-          "sBTTitularTelefono": {
-            "datosAdicionales": "",
+          "sBTTitularTelefono": [{
+            "datosAdicionales": {"sBTDatoAdicional": []},
             "personaUId": 227,
             "nombre": "RIVERA PERALTA FLORENCIA"
-        }
+        }]
     },
-    "Erroresnegocio": "",
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
     "Btoutreq": {
-        "Numero": 249703,
+        "Numero": 20054,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerTitularesDelTelefono",
         "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
+        "Fecha": "2024-04-23",
+        "Hora": "11:00:04",
         "Canal": "BTDIGITAL"
     }
 }'

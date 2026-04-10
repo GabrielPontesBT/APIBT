@@ -104,21 +104,22 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?CancelarTerceros' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?CancelarTerceros' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
+    "Btinreq": {
         "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Requerimiento": 0,
+        "Token": "b6275b301e4A8B5C60A82434",
+        "Usuario": "MINSTALADOR"
     },
-    "operacionUId": "40",
-    "clienteUId": "9",
-    "operacionCobroUId": "865",
-    "referencia": "Paga cuota terceros"
+    "operacionUId": 39,
+    "clienteUId": 9,
+    "operacionCobroUId": 850,
+    "referencia": "Cancelacion con terceros"
 }'
 ```
 :::
@@ -158,28 +159,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
+        "Token": "b6275b301e4A8B5C60A82434"
     },
-    "movimientoUId": 62,
+    "movimientoUId": 59,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": 1094,
+        "Numero": 1091,
         "Estado": "OK",
         "Servicio": "BTPrestamos.CancelarTerceros",
         "Fecha": "2020-10-30",
-        "Requerimiento": "0",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Hora": "14:30:59"
+        "Hora": "12:48:17"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

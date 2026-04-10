@@ -326,7 +326,7 @@ curl -X POST \
 '{ 
     "Btinreq": { 
         "Canal": "BTDIGITAL", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Usuario": "BANTOTAL", 
         "Token": "1017966210F955E77534D3E0", 
         "Device": "AC" 
@@ -500,7 +500,7 @@ curl -X POST \
         "Servicio": "BTPrestamos.SimularLibreAmortizacionSinCliente", 
         "Fecha": "2019-11-20", 
         "Hora": "11:19:16", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Numero": 7035, 
         "Estado": "OK" 
     } 

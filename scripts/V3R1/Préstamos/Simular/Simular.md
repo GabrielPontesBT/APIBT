@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular
 breadcrumb: false
 pageInfo: false
@@ -133,21 +133,21 @@ curl -X POST \
   -d '{
 	"Btinreq": {
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Usuario": "MINSTALADOR",
       "Token": "72e34bcd9d4A8B5C60A82434",
       "Device": "AV"
     },
     "sdtPrestamo": {
       "fechaPrimerPago": "2019-01-12",
-      "monto": "10000",
-      "tasa": "0",
-      "periodoCuotas": "30",
-      "cantidadCuotas": "12",
-      "productoUId": "61",
-      "pizarra": "0",
-      "clienteUId": "4",
-      "actividad": "11200"
+      "monto": 10000,
+      "tasa": 0,
+      "periodoCuotas": 30,
+      "cantidadCuotas": 12,
+      "productoUId": 61,
+      "pizarra": 0,
+      "clienteUId": 4,
+      "actividad": 11200
     }
 }'
 ```
@@ -263,93 +263,93 @@ curl -X POST \
 	"Btinreq": {
 	  "Device": "AV",
 	  "Usuario": "MINSTALADOR",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Canal": "BTDIGITAL",
 	  "Token": "72e34bcd9d4A8B5C60A82434"
 	},
 	"sdtSimulacion": {
-	  "otrosConceptos": {
-	  },
+	  "otrosConceptos": "",
 	  "cronograma": {
 		"sBTCuotaPrestamoAlta": [
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-01-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-02-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-03-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-04-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-05-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-06-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-07-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-08-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-09-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-10-12"
 		  },
 		  {
-			"importe": "1194.01",
+			"importe": 1194.01,
 			"fechaPago": "2019-11-12"
 		  },
 		  {
-			"importe": "1194.04",
+			"importe": 1194.04,
 			"fechaPago": "2019-12-12"
 		  }
 		]
 	  },
 	  "fechaValor": "2018-12-11",
-	  "capital": "10000.00",
-	  "tasaEfectiva": "0.000000",
-	  "intereses": "1288.18",
-	  "tasaNominalAnual": "23.000000",
-	  "totalPrestamo": "14328.15",
-	  "valorCuota": "1194.01",
-	  "tasaEfectivaAnual": "25.590075",
-	  "operacionUId": "1",
-	  "tasa": "23.000000",
+	  "capital": 10000.0,
+	  "tasaEfectiva": 0.0,
+	  "intereses": 1288.18,
+	  "tasaNominalAnual": 23.0,
+	  "totalPrestamo": 14328.15,
+	  "valorCuota": 1194.01,
+	  "tasaEfectivaAnual": 25.590075,
+	  "operacionUId": 1,
+	  "tasa": 23.0,
 	  "fechaPrimerPago": "2019-01-12",
 	  "fechaVencimiento": "2019-12-12",
-	  "plazo": "361",
+	  "plazo": 361,
 	  "producto": {
 		"papel": "$",
 		"moneda": "$",
-		"productoUId": "61",
+		"productoUId": 61,
 		"nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
 	  }
 	},
 	"Erroresnegocio": {
+		"BTErrorNegocio": []
 	},
 	"Btoutreq": {
-	  "Numero": "623",
+	  "Numero": 623,
 	  "Estado": "OK",
 	  "Servicio": "BTPrestamos.Simular",
 	  "Fecha": "2019-11-20",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Hora": "09:23:04",
 	  "Canal": "BTDIGITAL"
 	}

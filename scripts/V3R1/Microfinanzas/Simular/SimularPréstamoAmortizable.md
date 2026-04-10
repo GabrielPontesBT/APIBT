@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Amortizable
 breadcrumb: false
 pageInfo: false
@@ -98,22 +98,22 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "sdtSimulacionAmortizable": {
-          "solicitudUId": "10896",
-          "clienteUId": "7",
-          "productoUId": "23",
-          "fechaPrimerPago": "2020-12-21",
-          "cantidadCuotas": "3",
-          "periodoCuotas": "30",
-          "monto": "30000",
-          "pizarra": "0",
-          "tasa": "0",
-          "destinoCredito": "33"
-        }
+    "sdtSimulacionAmortizable": {
+        "solicitudUId": 10896,
+        "clienteUId": 7,
+        "productoUId": 23,
+        "fechaPrimerPago": "2020-12-21",
+        "cantidadCuotas": 3,
+        "periodoCuotas": 30,
+        "monto": 30000,
+        "pizarra": 0,
+        "tasa": 0,
+        "destinoCredito": 33
+    }
 }'
 ```
 :::
@@ -195,59 +195,65 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "sdtSimulacion": {
-          "operacionUId": "15",
-          "producto": {
-            "productoUId": "23",
+    "sdtSimulacion": {
+        "operacionUId": 15,
+        "producto": {
+            "productoUId": 23,
             "nombre": "HIPOTECARIOS VIVIENDA, VIVIENDA HIPOTECARIO",
             "moneda": "Q",
             "papel": "$"
-          },
-          "capital": "30000.00",
-          "valorCuota": "10783.16",
-          "intereses": "2349.48",
-          "tasa": "30.000000",
-          "tasaEfectiva": "0.000000",
-          "tasaEfectivaAnual": "34.488882",
-          "tasaNominalAnual": "30.000000",
-          "totalPrestamo": "32349.48",
-          "fechaValor": "2020-10-20",
-          "fechaVencimiento": "2021-02-20",
-          "fechaPrimerPago": "2020-12-21",
-          "plazo": "123",
-          "cronograma": {
-            "sBTCuotaPrestamoAlta": [
-              {
-                "fechaPago": "2020-12-21",
-                "importe": "10783.16",
-                "redondeo": "0.00"
-              },
-              {
-                "fechaPago": "2021-01-21",
-                "importe": "10783.16",
-                "redondeo": "0.00"
-              },
-              {
-                "fechaPago": "2021-02-20",
-                "importe": "10783.16",
-                "redondeo": "0.00"
-              }
-            ]
-          }
         },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.SimularAmortizable",
-          "Fecha": "2019-10-18",
-          "Hora": "15:48:00",
-          "Requerimiento": "95",
-          "Numero": "1319",
-          "Estado": "OK"
+        "capital": 30000.00,
+        "valorCuota": 10783.16,
+        "intereses": 2349.48,
+        "tasa": 30.000000,
+        "tasaEfectiva": 0.000000,
+        "tasaEfectivaAnual": 34.488882,
+        "tasaNominalAnual": 30.000000,
+        "totalPrestamo": 32349.48,
+        "fechaValor": "2020-10-20",
+        "fechaVencimiento": "2021-02-20",
+        "fechaPrimerPago": "2020-12-21",
+        "plazo": 123,
+        "otrosConceptos": {
+            "sBTConcepto": []
+        },
+        "cronograma": {
+            "sBTCuotaPrestamoAlta": [
+                {
+                    "fechaPago": "2020-12-21",
+                    "importe": 10783.16,
+                    "redondeo": 0.00
+                },
+                {
+                    "fechaPago": "2021-01-21",
+                    "importe": 10783.16,
+                    "redondeo": 0.00
+                },
+                {
+                    "fechaPago": "2021-02-20",
+                    "importe": 10783.16,
+                    "redondeo": 0.00
+                }
+            ]
         }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.SimularAmortizable",
+        "Fecha": "2019-10-18",
+        "Hora": "15:48:00",
+        "Requerimiento": 95,
+        "Numero": 1319,
+        "Estado": "OK"
+    }
 }'
 ```
 :::

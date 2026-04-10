@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerBolsillos' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "INSTALADOR",
-	  "Token": "e2db881814CD285A89A23FBE",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	"clienteUId": 322,
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerBolsillos' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Token": "CC6345192D8633F531F01D1D"
+    },
+    "clienteUId": 322
 }'
 ```
 :::
@@ -146,44 +146,44 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "INSTALADOR",
-      "Token": "e2db881814CD285A89A23FBE",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-   "sdtProductosPasivos": {
-      "sBTProductoPasivo": [
-      {
-         "tipoProducto": "CB",
-         "estado": "Normal",
-         "subCuenta": "",
-         "operacionUId": 18766,
-         "saldo": 910000,
-         "idOperacionFmt": "000000029_010",
-         "idOperacionBT": 1.0100000221e+46,
-         "producto": {
-            "moneda": "$",
-            "papel": "",
-            "productoUId": 512,
-            "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
-         },
-         "sucursal": "Sucursal Ciudad de la Costa"
-      },
-      ...
-      ]
-   },
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTClientes.ObtenerBolsillos",
-      "Requerimiento": "1",
-      "Fecha": "2023-10-11",
-      "Canal": "BTDIGITAL",
-      "Hora": "15:10:52"
-   }
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "CC6345192D8633F531F01D1D"
+    },
+    "sdtProductosPasivos": {
+        "sBTProductoPasivo": {
+            "tipoProducto": "CB",
+            "estado": "Normal",
+            "subCuenta": "",
+            "operacionUId": 18766,
+            "saldo": 910000.00,
+            "idOperacionFmt": 29010,
+            "idOperacionBT": 10100000221000000000000000002900010000000000002,
+            "producto": {
+                "moneda": "$",
+                "papel": "",
+                "productoUId": 512,
+                "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
+            },
+            "sucursal": "Sucursal Ciudad de la Costa"
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 228501,
+        "Estado": "OK",
+        "Servicio": "BTClientes.ObtenerBolsillos",
+        "Requerimiento": 0,
+        "Fecha": "2023-11-01",
+        "Hora": "11:31:01",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 :::

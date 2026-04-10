@@ -70,18 +70,18 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEmpresa' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEmpresa' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "558273287F955E77534D3E02",
-	  "bts:Device": "AC"
-	}
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "558273287F955E77534D3E02",
+        "Device": "AC"
+    }
 }'
 ```
 :::
@@ -145,52 +145,52 @@ curl -X POST \
 
 @tab JSON
 ```json
- {
-	"Btinreq": {
-	  "Device": "AC",
-	  "Usuario": "BANTOTAL",
-	  "Requerimiento": "1",
-	  "Canal": "BTDIGITAL",
-	  "Token": "558273287F955E77534D3E02"
-	},
-	"sdtEmpresa": {
-		"identificador": "1",
-		"nombre": {
-		"-self-closing": "true"
-		},
-		"casaCentral": {
-		"identificador": "1",
-		"descripcion": "Sucursal Beta",
-		"direccion": "1022, Pedro Cosio 2141",
-		"telefono": "15554454",
-		"latitud": "0.00000000000000",
-		"longitud": "0.00000000000000"
-		},
-		"monedaNacional": {
-		"identificador": "0",
-		"descripcion": "PESOS",
-		"simbolo": "$"
-		},
-		"monedaDolar": {
-		"identificador": "2222",
-		"descripcion": "DÓLAR ESTADOUNIDENSE",
-		"simbolo": "USD"
-		},
-		"fechaApertura": "2020-03-05",
-		"fechaCierre": "2018-06-13",
-		"fechaBalance": "2014-06-30"
-	},
-	"Erroresnegocio": {},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTConfiguracionBantotal.ObtenerEmpresa",
-	  "Fecha": "2021-03-15",
-	  "Hora": "14:29:49",
-	  "Requerimiento": "1",
-	  "Numero": "8025",
-	  "Estado": "OK"
-	}
-}
+'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "558273287F955E77534D3E02",
+        "Device": "AC"
+    },
+    "sdtEmpresa": {
+        "identificador": 1,
+        "nombre": "",
+        "casaCentral": {
+            "identificador": 1,
+            "descripcion": "Sucursal Beta",
+            "direccion": "1022, Pedro Cosio 2141",
+            "telefono": 15554454,
+            "latitud": 0.00000000000000,
+            "longitud": 0.00000000000000
+        },
+        "monedaNacional": {
+            "identificador": 0,
+            "descripcion": "PESOS",
+            "simbolo": "$"
+        },
+        "monedaDolar": {
+            "identificador": 2222,
+            "descripcion": "DÓLAR ESTADOUNIDENSE",
+            "simbolo": "USD"
+        },
+        "fechaApertura": "2020-03-05",
+        "fechaCierre": "2018-06-13",
+        "fechaBalance": "2014-06-30"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTConfiguracionBantotal.ObtenerEmpresa",
+        "Fecha": "2021-03-16",
+        "Hora": "12:05:55",
+        "Requerimiento": 1,
+        "Numero": 8027,
+        "Estado": "OK"
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

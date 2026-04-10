@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Víctima Hecho Violento
 breadcrumb: false
 pageInfo: false
@@ -113,23 +113,23 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"personaUId": "42",
+	"personaUId": 42,
 	"esVictima": "S",
 	"sdtVictimaHechoViolento": {
-	  "entidadId": "3",
+	  "entidadId": 3,
 	  "inspeccionPolicia": "Golpes",
 	  "sitio": "Casa",
-	  "municipioId": "421",
-	  "tipoId": "3",
+	  "municipioId": 421,
+	  "tipoId": 3,
 	  "vereda": "Av Italia",
 	  "fechaCertificacion": "2021-10-20",
 	  "fechaVencimiento": "2022-08-20",
 	  "corregimiento": "No tiene",
-	  "departamentoId": "8",
+	  "departamentoId": 8,
 	  "fechaHecho": "2021-06-20"
 	}
 }'
@@ -174,15 +174,16 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
+        "Erroresnegocio": {"BTErrorNegocio": []},
         "Btoutreq": {
-          "Numero": "2089",
+          "Numero": 2089,
           "Servicio": "BTPersonas.ActualizarVictimaHechoViolento",
           "Estado": "OK",
-          "Requerimiento": "1",
+          "Requerimiento": 1,
           "Fecha": "2020-03-10",
           "Hora": "08:29:11",
           "Canal": "BTDIGITAL"

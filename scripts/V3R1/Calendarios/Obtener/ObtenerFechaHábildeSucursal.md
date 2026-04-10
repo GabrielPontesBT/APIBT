@@ -84,13 +84,13 @@ curl -X POST \
   -d '{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
+	  "Requerimiento": 1,
 	  "Usuario": "INSTALADOR",
 	  "Token": "120320211555340000388219",
 	  "Device": "AC"
 	},
 	"fecha": "2020-11-14",
-	"sucursalId": "1000"
+	"sucursalId": 1000
 }'
 ```
 :::
@@ -134,16 +134,16 @@ curl -X POST \
  	"Btinreq": { 
 	  "Device": "AC", 
 	  "Usuario": "INSTALADOR", 
-	  "Requerimiento": "1", 
+	  "Requerimiento": 1, 
 	  "Canal": "BTDIGITAL", 
 	  "Token": "120320211555340000388219" 
 	}, 
 	"fechaHabil": "N", 
 	"Btoutreq": { 
-	  "Numero": "10660", 
+	  "Numero": 10660, 
 	  "Estado": "OK", 
 	  "Servicio": "BTCalendarios.ObtenerFechaHabilSucursal", 
-	  "Requerimiento": "1", 
+	  "Requerimiento": 1, 
 	  "Fecha": "2021-03-12", 
 	  "Canal": "BTDIGITAL", 
 	  "Hora": "15:58:02" 

@@ -76,19 +76,20 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X GET \
-   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerCalendarioDeSucursal' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -d '{
-   "Btinreq": {
-        "Device": "MC",
-        "Usuario": "MI",
-        "Requerimiento": "1",
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerCalendarioDeSucursal' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
         "Canal": "BTDIGITAL",
+        "Usuario": "MI",
+        "Device": "MC",
+        "Requerimiento": 1,
         "Token": "200f0b88B5C60A82434"
     },
-	"sucursalId":1000
+    "sucursalId": 1000
 }'
 ```
 :::
@@ -132,32 +133,32 @@ curl -X GET \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "MC",
-        "Usuario": "MI",
-        "Requerimiento": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "200f0b88B5C60A82434"
     },
-	"descripcionSucursal":"Sucursal Ciudad de la Costa",
+    "descripcionSucursal": "Sucursal Ciudad de la Costa",
     "sdtCalendario": {
-        "descripcion":"Calendario 1",
-        "identificador":1
+        "descripcion": "Calendario 1",
+        "identificador": 1
     },
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
         "Numero": 109092,
-        "Servicio": "BTConfiguracionBantotal.ObtenerCalendarioDeSucursal",
         "Estado": "OK",
+        "Servicio": "BTConfiguracionBantotal.ObtenerCalendarioDeSucursal",
+        "Requerimiento": 1,
         "Fecha": "2020-11-24",
-        "Requerimiento": "0",
-        "Hora": "14:13:38",
-        "Canal": "BTDIGITAL"
+        "Canal": "BTDIGITAL",
+        "Hora": "09:20:38"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

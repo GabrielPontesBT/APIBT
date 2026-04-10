@@ -1,4 +1,4 @@
----
+﻿---
 title: Acreditar en Cuenta
 breadcrumb: false
 pageInfo: false
@@ -118,7 +118,7 @@ curl -X POST \
 "Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
@@ -148,15 +148,15 @@ curl -X POST \
 "Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
+		"Requerimiento": 1, 
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
 	"sdtDatosAcreditacion": { 
-		"clienteUId": "140",
-		"operacionUId": "10140", 
-		"importe1": "1000", 
-		"importe2": "5220", 
+		"clienteUId": 140,
+		"operacionUId": 10140, 
+		"importe1": 1000, 
+		"importe2": 5220, 
 		"importe3": "", 
 		"importe4": "", 
 		"concepto1": "test",
@@ -210,16 +210,16 @@ curl -X POST \
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "fa2c02c95a4A8B5C60A82434"
     },
-    "movimientoUId": "141",
+    "movimientoUId": 141,
     "Btoutreq": {
-        "Numero": "103",
+        "Numero": 864,
         "Estado": "OK",
         "Servicio": "BTCuentasVista.AcreditarEnCuenta",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2019-07-22",
         "Canal": "BTDIGITAL",
         "Hora": "16:00:37"

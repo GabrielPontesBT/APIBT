@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Guía de Proceso
 breadcrumb: false
 pageInfo: false
@@ -84,11 +84,11 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"codigo": "50"
+	"codigo": 50
 }'
 ```
 :::
@@ -151,41 +151,44 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"sdtGuiaDeProceso": {
-	  "sBTCorrelativoGuia": [
-		{
-		  "descripcion": "Depósitos Efectivo Ctas Vista",
-		  "importeEspecifico": "5.00",
-		  "valorEspecifico": "50",
-		  "correlativo": "1"
-		},
-		{
-		  "descripcion": "Depósitos Cheques otros Bancos",
-		  "importeEspecifico": "20.00",
-		  "valorEspecifico": "50",
-		  "correlativo": "2"
-		},
-		{
-		  "descripcion": "Retiros Cuentas Vista",
-		  "importeEspecifico": "25.00",
-		  "valorEspecifico": "50",
-		  "correlativo": "3"
-		}
-	  ]
-	},
-	"Btoutreq": {
-	  "Numero": "2064",
-	  "Estado": "OK",
-	  "Servicio": "BTParametrosBase.ObtenerGuiaDeProceso",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-03-10",
-	  "Canal": "BTDIGITAL",
-	  "Hora": "07:31:11"
-	}
+    "sdtGuiaDeProceso": {
+        "sBTCorrelativoGuia": [
+            {
+                "descripcion": "Depósitos Efectivo Ctas Vista",
+                "importeEspecifico": 5.00,
+                "valorEspecifico": 50,
+                "correlativo": 1
+            },
+            {
+                "descripcion": "Depósitos Cheques otros Bancos",
+                "importeEspecifico": 20.00,
+                "valorEspecifico": 50,
+                "correlativo": 2
+            },
+            {
+                "descripcion": "Retiros Cuentas Vista",
+                "importeEspecifico": 25.00,
+                "valorEspecifico": 50,
+                "correlativo": 3
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 584,
+        "Estado": "OK",
+        "Servicio": "BTParametrosBase.ObtenerGuiaDeProceso",
+        "Requerimiento": 1,
+        "Fecha": "2020-03-11",
+        "Canal": "BTDIGITAL",
+        "Hora": "09:36:54"
+    }
 }
 ```
 :::

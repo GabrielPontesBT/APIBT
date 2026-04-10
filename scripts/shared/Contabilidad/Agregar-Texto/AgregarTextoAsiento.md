@@ -82,24 +82,24 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AgregarTextoAsiento' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AgregarTextoAsiento' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "12106639094A8B5C60A82434",
+        "Device": "GP"
     },
-    "movimientoUId": "36",
+    "movimientoUId": 36,
     "textoMovimiento": {
-        "codigo": "20",
+        "codigo": 20,
         "descripcion": "Prueba",
-        "renglon": "1",
-        "texto": "Prueba",
+        "renglon": 1,
+        "texto": "Prueba"
     }
 }'
 ```
@@ -139,26 +139,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Token": "bc8b678bc44A8B5C60A82434"
+        "Requerimiento": 1,
+        "Usuario": "MINSTALADOR",
+        "Token": "12106639094A8B5C60A82434",
+        "Device": "GP"
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
-        "Estado": "OK",
+        "Canal": "BTDIGITAL",
         "Servicio": "BTContabilidad.AgregarTextoAsiento",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
-        "Canal": "BTDIGITAL"
+        "Fecha": "2022-06-01",
+        "Hora": "11:19:14",
+        "Requerimiento": 1,
+        "Numero": 8866,
+        "Estado": "OK"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

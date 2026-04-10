@@ -84,21 +84,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?AnularPagoDeuda=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?AnularPagoDeuda' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
     "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "1",
-          "Canal": "AGENTECORRESPONSAL",
-          "Usuario": "INSTALADOR",
-          "Token": "4A287DE2D400320135CCA4E5"
+        "Canal": "AGENTECORRESPONSAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "4A287DE2D400320135CCA4E5"
     },
     "ordenId": 293,
     "nroLineaOrden": 1
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -139,24 +139,24 @@ curl -X POST \
 ```json
 '{
     "Btinreq": {
-      "Device": "1",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "AGENTECORRESPONSAL",
-      "Token": "4A287DE2D400320135CCA4E5"
+        "Canal": "AGENTECORRESPONSAL",
+        "Usuario": "INSTALADOR",
+        "Device": "1",
+        "Requerimiento": 1,
+        "Token": "4A287DE2D400320135CCA4E5"
     },
     "transaccionId": 97,
     "Erroresnegocio": {
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.AnularPagoDeuda",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        "Estado": "OK",
+        "Fecha": "2024-11-19",
+        "Hora": "11:16:08",
+        "Numero": 26124,
+        "Servicio": "BTCASHManagement.AnularPagoDeuda",
+        "Requerimiento": 1,
+        "Canal": "AGENTECORRESPONSAL"
     }
 }'
 ```

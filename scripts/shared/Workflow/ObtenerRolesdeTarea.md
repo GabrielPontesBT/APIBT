@@ -81,19 +81,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRolesDeTarea \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "200f0b8b654A8B5C60A82434"
-   },
-   "procesoId": "1",
-   "tareaId": "11"
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerRolesDeTarea' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "151D0C3440510F1D04029085",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    },
+    "procesoId": 1,
+    "tareaId": 11
 }'
 ```
 :::
@@ -159,51 +160,53 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 @tab JSON
 ```json
 '{
-   "Btinreq": {
-      "Device": "GP",
-      "Usuario": "INSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "47D750A861C4243EDE981344"
-   },
-   "sdtRoles": {
-      "sBTRolWF": [
-         {
-            "descripcion": "Gerente de Sucursal",
-            "codigo": "3"
-         },
-         {
-            "descripcion": "Asesor de Créditos",
-            "codigo": "6"
-         },
-         {
-            "descripcion": "Gte. Microfinanzas",
-            "codigo": "7"
-         },
-         {
-            "descripcion": "Gerente Consumo",
-            "codigo": "8"
-         },
-         {
-            "descripcion": "Gerente Comercial",
-            "codigo": "9"
-         },
-         {
-            "descripcion": "Comité de Crédito",
-            "codigo": "10"
-         }
-      ]
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Estado": "OK",
-      "Canal": "BTDIGITAL",
-      "Fecha": "2022-11-29",
-      "Servicio": "BTWorkflow.ObtenerRolesDeTarea",
-      "Hora": "13:11:02",
-      "Numero": "225658",
-      "Requerimiento": "1"
-   }
+    "Btinreq": {
+        "Token": "151D0C3440510F1D04029085",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    },
+    "sdtRoles": {
+        "sBTRolWF": [
+            {
+                "descripcion": "Gerente de Sucursal",
+                "codigo": 3
+            },
+            {
+                "descripcion": "Asesor de Créditos",
+                "codigo": 6
+            },
+            {
+                "descripcion": "Gte. Microfinanzas",
+                "codigo": 7
+            },
+            {
+                "descripcion": "Gerente Consumo",
+                "codigo": 8
+            },
+            {
+                "descripcion": "Gerente Comercial",
+                "codigo": 9
+            },
+            {
+                "descripcion": "Comité de Crédito",
+                "codigo": 10
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Fecha": "2022-11-29",
+        "Servicio": "BTWorkflow.ObtenerRolesDeTarea",
+        "Hora": "13:11:02",
+        "Numero": 225658,
+        "Requerimiento": 1
+    }
 }'
 ```
 :::

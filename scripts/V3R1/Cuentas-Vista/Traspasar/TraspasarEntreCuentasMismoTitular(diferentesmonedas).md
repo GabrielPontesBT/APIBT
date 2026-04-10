@@ -1,4 +1,4 @@
----
+﻿---
 title: Traspasar Entre Cuentas Mismo Titular (diferentes monedas)
 breadcrumb: false
 pageInfo: false
@@ -117,22 +117,22 @@ curl -X POST \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
   -d '{
     "Btinreq": {
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Device": "GP",
         "Token": "b4ae55b35c4A8B5C60A82434",
         "Usuario": "MINSTALADOR",
         "Canal": "BTDIGITAL"
     },
-    "personaUId": "21",
+    "personaUId": 21,
     "sdtTraspaso":
     {
-        "operacionUIdOrigen": "281",
-        "importeDebito": "5000",
-        "importeCredito": "500",
-        "operacionUIdDestino": "282",
+        "operacionUIdOrigen": 281,
+        "importeDebito": 5000,
+        "importeCredito": 500,
+        "operacionUIdDestino": 282,
         "monedaId": "",
-        "concepto": "Traspaso",
-    },
+        "concepto": "Traspaso"
+    }
 }'
 ```
 :::
@@ -182,23 +182,23 @@ curl -X POST \
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "fa2c02c95a4A8B5C60A82434"
     },
     "sdtResultadoTraspaso":
     {
-        "operacionUIdOrigen": "281",
+        "operacionUIdOrigen": 281,
         "idMovimiento": "0010000100050007003720180706",
-        "operacionUIdDestino": "282",
-        "saldoOperacionOrigen": "7432900.28",
-        "movimientoUId": "141",
+        "operacionUIdDestino": 282,
+        "saldoOperacionOrigen": 7432900.28,
+        "movimientoUId": 141
     },
     "Btoutreq": {
-        "Numero": "103",
+        "Numero": 864,
         "Estado": "OK",
         "Servicio": "BTCuentasVista.TraspasarMismoTitularDiferentesMonedas",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2019-07-22",
         "Canal": "BTDIGITAL",
         "Hora": "16:00:37"

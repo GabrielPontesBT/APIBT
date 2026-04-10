@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Domicilio
 breadcrumb: false
 pageInfo: false
@@ -115,7 +115,7 @@ curl -X POST \
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "6C363FC1CD2072DE525376D3"
   },
@@ -149,8 +149,8 @@ curl -X POST \
           "localidad": "?",
           "tipoDomicilioId": 1,
           "departamentoId": 10
-         }   
-      }
+         }
+      }'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

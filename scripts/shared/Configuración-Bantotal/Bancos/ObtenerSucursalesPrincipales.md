@@ -71,19 +71,19 @@ No aplica.
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerSucursalesPrincipales=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerSucursalesPrincipales' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-      "Btinreq": {
-      "Usuario": "INSTALADOR",
-      "Device": "GP",
-      "Requerimiento": "1",
-      "Token": "6B4647555001A737F61D4995",
-      "Canal": "BTDIGITAL"
+    "Btinreq": {
+        "Usuario": "INSTALADOR",
+        "Device": "GP",
+        "Requerimiento": 1,
+        "Token": "6B4647555001A737F61D4995",
+        "Canal": "BTDIGITAL"
     }
-  }'
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -140,43 +140,46 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-  "Btinreq": {
-    "Device": "GP",
-    "Usuario": "INSTALADOR",
-    "Requerimiento": "1",
-    "Canal": "BTDIGITAL",
-    "Token": "6B4647555001A737F61D4995"
-  },
-  "sdtSucursalesPrincipales": [
-    {
-      "telefono": "15554454",
-      "descripcion": "Casa Matriz",
-      "identificador": 1,
-      "direccion": "1022, Pedro Cosio 2141",
-      "latitud": -30.407849,
-      "longitud": -56.474655
+    "Btinreq": {
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "6B4647555001A737F61D4995"
     },
-    {
-      "telefono": "25182777 int.127",
-      "descripcion": "Sucursal Ciudad de la Costa",
-      "identificador": 1000,
-      "direccion": "10, Pedro Cosio 2141",
-      "latitud": 0.0,
-      "longitud": 0.0
+    "sdtSucursalesPrincipales": {
+        "sBTSucursal": [
+            {
+                "telefono": 15554454,
+                "descripcion": "Casa Matriz",
+                "identificador": 1,
+                "direccion": "1022, Pedro Cosio 2141",
+                "latitud": -30.407849,
+                "longitud": -56.474655
+            },
+            {
+                "telefono": "25182777 int.127",
+                "descripcion": "Sucursal Ciudad de la Costa",
+                "identificador": 1000,
+                "direccion": "10, Pedro Cosio 2141",
+                "latitud": 0.0,
+                "longitud": 0.0
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 35110,
+        "Estado": "OK",
+        "Servicio": "BTConfiguracionBantotal.ObtenerSucursalesPrincipales",
+        "Requerimiento": 1,
+        "Fecha": "2025-05-05",
+        "Canal": "BTDIGITAL",
+        "Hora": "15:58:51"
     }
-  ],
-  "Erroresnegocio": "",
-  "Btoutreq": {
-    "Numero": 35110,
-    "Estado": "OK",
-    "Servicio": "BTConfiguracionBantotal.ObtenerSucursalesPrincipales",
-    "Requerimiento": "1",
-    "Fecha": "2025-05-05",
-    "Canal": "BTDIGITAL",
-    "Hora": "15:58:51"
-  }
-}
-'
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

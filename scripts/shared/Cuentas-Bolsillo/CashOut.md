@@ -96,23 +96,21 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashOut' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashOut' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 10,
+        "Canal": "BTDIGITAL",
+        "Usuario": "BANTOTAL",
+        "Token": "364730bc6eF955E77534D3E0",
+        "Device": "FP"
+    },
     "clienteUId": 5,
     "sdtTraspaso": {
-        "operacionUIdOrigen": 9,
-        "importeCredito": 100,
-        "importeDebito": 100,
+        "operacionUIdOrigen": 8,
         "importe": 100,
         "operacionUIdDestino": 9,
         "monedaId": 0,
@@ -163,17 +161,17 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
+        "Device": "FP",
+        "Usuario": "BANTOTAL",
+        "Requerimiento": 10,
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Token": "364730bc6eF955E77534D3E0"
     },
     "sdtResultadoTraspaso": {
         "operacionUIdOrigen": 8,
-        "idMovimiento": 001001320020000520230731,
+        "idMovimiento": 1001320020000520230731,
         "operacionUIdDestino": 9,
         "saldoOperacionOrigen": 21981.00,
         "movimientoUId": 16
@@ -182,13 +180,13 @@ curl -X POST \
         "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "111399",
-        "Estado": "OK",
+        "Numero": 254,
         "Servicio": "BTCuentasBolsillo.CashOut",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
+        "Estado": "OK",
+        "Fecha": "2023-11-01",
+        "Requerimiento": 10,
+        "Hora": "09:48:58",
+        "Canal": "BTDIGITAL"
     }
 }'
 ```

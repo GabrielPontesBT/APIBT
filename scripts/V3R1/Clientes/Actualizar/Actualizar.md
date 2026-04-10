@@ -198,7 +198,7 @@ curl -X POST \
 	"Btinreq": {
           "Device": "AS",
           "Usuario": "INSTALADOR",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Canal": "BTDIGITAL",
           "Token": "8301C31B4F2699A90D39F77E"
         },
@@ -315,7 +315,7 @@ curl -X POST \
 	"Btinreq": {
           "Device": "AS",
           "Usuario": "INSTALADOR",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Canal": "BTDIGITAL",
           "Token": "8301C31B4F2699A90D39F77E"
         },
@@ -324,7 +324,7 @@ curl -X POST \
           "Numero": 35494,
           "Estado": "OK",
           "Servicio": "BTClientes.Actualizar",
-          "Requerimiento": "",
+          "Requerimiento": 1,
           "Fecha": "2025-05-20",
           "Canal": "BTDIGITAL",
           "Hora": "11:27:47"

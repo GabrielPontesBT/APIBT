@@ -324,11 +324,11 @@ curl -X POST \
           "comisiones": 650.84, 
           "valorCuota": 263.74, 
           "otrosConceptos": { 
-            "sBTConcepto": { 
+            "sBTConcepto": [{ 
               "texto": "", 
-              "valor": 10, 
+              "valor": 10.0, 
               "concepto": "COMIS_DESEMB" 
-            } 
+            }] 
           }, 
           "cronograma": { 
             "sBTCuotaSimulacion": [ 
@@ -475,7 +475,9 @@ curl -X POST \
           "montoDesembolso": 3154.93, 
           "fechaValor": "2020-01-02" 
         }, 
-        "Erroresnegocio": "", 
+        "Erroresnegocio": {
+          "BTErrorNegocio": []
+        }, 
         "Btoutreq": { 
           "Estado": "OK", 
           "Canal": "BTDIGITAL", 

@@ -76,19 +76,19 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerLimites' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerLimites' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1820366692F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"tarjetaUId": "2000002050"
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "tarjetaUId": 2000002050
 }'
 ```
 :::
@@ -137,31 +137,34 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1",
-	  "Usuario": "BANTOTAL",
-	  "Token": "1820366692F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"sdtLimites": {
-	  "sBTLimiteTarjeta": {
-		"identificador": "1",
-		"moneda": "0",
-		"limiteEMV": "30000.00",
-		"limiteBandaMagnetica": "15000.00",
-		"limiteNoPresencial": "10000.00"
-	  }
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTTarjetasDeDebito.ObtenerLimites",
-	  "Fecha": "2020-11-13",
-	  "Hora": "15:48:52",
-	  "Requerimiento": "1",
-	  "Numero": "7910",
-	  "Estado": "OK"
-	}
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1,
+        "Usuario": "BANTOTAL",
+        "Token": "1820366692F955E77534D3E0",
+        "Device": "AC"
+    },
+    "sdtLimites": {
+        "sBTLimiteTarjeta": {
+            "identificador": 1,
+            "moneda": 0,
+            "limiteEMV": 30000.00,
+            "limiteBandaMagnetica": 15000.00,
+            "limiteNoPresencial": 10000.00
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTTarjetasDeDebito.ObtenerLimites",
+        "Fecha": "2020-11-13",
+        "Hora": "15:48:52",
+        "Requerimiento": 1,
+        "Numero": 7910,
+        "Estado": "OK"
+    }
 }'
 ```
 ::: 

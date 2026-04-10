@@ -1,4 +1,4 @@
----
+﻿---
 title: Crear Solicitud Ampliación
 breadcrumb: false
 pageInfo: false
@@ -109,7 +109,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -166,20 +166,23 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "solicitudUId": 10847,
-      "Btoutreq": {
-         "Canal": "BTDIGITAL",
-         "Servicio": "BTMicrofinanzas.CrearSolicitudAmpliacion",
-         "Fecha": "2019-09-10",
-         "Hora": "14:31:41",
-         "Requerimiento": "95",
-         "Numero": "121",
-         "Estado": "OK"
-      }
+    "solicitudUId": 10847,
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTMicrofinanzas.CrearSolicitudAmpliacion",
+        "Fecha": "2019-09-10",
+        "Hora": "14:31:41",
+        "Requerimiento": 95,
+        "Numero": 121,
+        "Estado": "OK"
+    }
 }'   
 ```
 ::: 

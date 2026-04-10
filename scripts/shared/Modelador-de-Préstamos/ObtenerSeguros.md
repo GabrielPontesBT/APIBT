@@ -79,7 +79,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1511184612CD285A89A23FBE",
         "Device": ""
@@ -136,7 +136,7 @@ Código | Descripción
 {
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Usuario": "INSTALADOR",
         "Token": "1511184612CD285A89A23FBE",
         "Device": ""
@@ -161,7 +161,7 @@ Código | Descripción
         "Servicio": "BTModeladorPrestamos.ObtenerSeguros",
         "Fecha": "2021-11-03",
         "Hora": "17:44:10",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Numero": 8619,
         "Estado": "OK"
     }

@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Niveles Educativos
 breadcrumb: false
 pageInfo: false
@@ -78,7 +78,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     }
@@ -150,11 +150,11 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "c2cfd09eff4A8B5C60A82434"
     },
@@ -162,46 +162,47 @@ curl -X POST \
         "sBTNivelEducativo": [
         {
             "descripcion": "Primario",
-            "codigo": "1"
+            "codigo": 1
         },
         {
             "descripcion": "Secundario",
-            "codigo": "2"
+            "codigo": 2
         },
         {
             "descripcion": "Terciario",
-            "codigo": "3"
+            "codigo": 3
         },
         {
             "descripcion": "Universitario",
-            "codigo": "4"
+            "codigo": 4
         },
         {
             "descripcion": "Post Grado",
-            "codigo": "5"
+            "codigo": 5
         },
         {
             "descripcion": "Analfabeto",
-            "codigo": "6"
+            "codigo": 6
         },
         {
             "descripcion": "No corresponde",
-            "codigo": "999"
+            "codigo": 999
         }
         ]
     },
     "Erroresnegocio": {
+        "BTErrorNegocio": []
     },
     "Btoutreq": {
-        "Numero": "839",
+        "Numero": 16576,
         "Estado": "OK",
         "Servicio": "BTPersonas.ObtenerNivelesEducativos",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
+        "Requerimiento": 1,
+        "Fecha": "2022-05-26",
+        "Hora": "12:36:58",
         "Canal": "BTDIGITAL"
     }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

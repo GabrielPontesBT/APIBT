@@ -98,11 +98,11 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cFC33CD93505A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
     "clienteUId": 322,
     "bolsilloUId": 18830,
-    "operacionCobroUId": 1133,
+    "operacionCobroUId": 1133
 }'
 ```
 :::
@@ -148,14 +148,14 @@ curl -X POST \
         "Usuario": "MINSTALADOR",
         "Token": "16c1cFC33CD93505A5382434",
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
+        "Requerimiento": 1
     },
     "movimientoUId":1843,
     "Btoutreq": {
-        "Numero": "111399",
+        "Numero": 111399,
         "Estado": "OK",
         "Servicio": "BTCuentasBolsillo.Cancelar",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2023-05-10",
         "Canal": "BTDIGITAL",
         "Hora": "15:10:52"

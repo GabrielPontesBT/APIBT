@@ -84,7 +84,7 @@ curl -X POST \
 "Btinreq": {
    "Device": "AV",
    "Usuario": "MINSTALADOR",
-   "Requerimiento": "",
+   "Requerimiento": 1,
    "Canal": "BTDIGITAL",
    "Token": "75e20bd1614A8B5C60A82434"
 },
@@ -162,14 +162,14 @@ curl -X POST \
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "MINSTALADOR", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Canal": "BTDIGITAL", 
         "Token": "75e20bd1614A8B5C60A82434" 
     }, 
     "sdtDetalleAhorro": { 
         "plazo": 60, 
         "ahorroUId": 205, 
-        "diaDeIncremento": 9, 
+        "diadeIncremento": 9, 
         "periodicidad": 1, 
         "fechaAltaSolicitud": "2017-03-06", 
         "periodosDeGraciaHabilitados": 3, 
@@ -191,8 +191,8 @@ curl -X POST \
         "tipoTasa": "Lineal Anual", 
         "fechaProximoIncremento": "2017-06-09", 
         "renueva": "No", 
-        "operacionUIdOrigen": 541, 
-        "operacionUIdDestino": 541, 
+        "operacionUIdorigen": 541, 
+        "operacionUIddestino": 541, 
         "estado": "Cancelado", 
         "abono": 0, 
         "fechaValor": "2017-03-09" 
@@ -205,7 +205,7 @@ curl -X POST \
         "Estado": "OK", 
         "Servicio": "BTAhorroProgramado.Obtener", 
         "Fecha": "2019-11-19", 
-        "Requerimiento": "", 
+        "Requerimiento": 1, 
         "Hora": "11:46:44", 
         "Canal": "BTDIGITAL" 
     } 

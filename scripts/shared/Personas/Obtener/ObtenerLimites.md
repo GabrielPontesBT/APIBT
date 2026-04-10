@@ -77,20 +77,20 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerLimites' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	 "Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Token": "fa2c02c95a4A8B5C60A76209",
-          "Usuario": "INSTALADOR",
-          "Requerimiento": 1,
-          "Device": 1
-        },
-        "personaUId": 150
-      }
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerLimites' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "67579685BC9ACF711F22AF23"
+    },
+    "personaUId": 161
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -195,94 +195,94 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-        "Device": 1,
+'{
+    "Btinreq": {
+        "Device": "1",
         "Usuario": "INSTALADOR",
-        "Requerimiento": "1",
+        "Requerimiento": 0,
         "Canal": "BTDIGITAL",
-        "Token": "fa2c02c95a4A8B5C60A76209"
-      },
-      "sdtLimites": {
-      "sBTLimiteCliente": [
-      {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$",
-          "descripcion": "Línea_Créditos Hipotecarios / $",
-          "limiteDisponible": "22000.00",
-          "limiteOtorgado": "22000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$", 
-          "descripcion": "Línea_Créditos Comercial PF / $",
-          "limiteDisponible": "25000.00",
-          "limiteOtorgado": "25000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$",
-          "descripcion": "Línea_Créditos Comercial LP / $",
-          "limiteDisponible": "27000.00",
-          "limiteOtorgado": "27000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$",
-          "descripcion": "Línea_Firmantes no calificados / $",
-          "limiteDisponible": "38000.00",
-          "limiteOtorgado": "38000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$",
-          "descripcion": "Línea_Firmantes AAA / $",
-          "limiteDisponible": "27000.00",
-          "limiteOtorgado": "27000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "2019-02-06",
-          "moneda":"$",
-          "descripcion": "Línea_Firmantes Estado / $",
-          "limiteDisponible": "20000.00",
-          "limiteOtorgado": "20000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "0001-01-01",
-          "moneda":"",
-          "descripcion": "Total / MN",
-          "limiteDisponible": "1000000.00",
-          "limiteOtorgado": "1000000.00",
-          "limteUtilizado": "0.00"
-        },
-        {
-          "fechaVencimiento": "0001-01-01",
-          "moneda":"",
-          "descripcion": "Total / ME",
-          "limiteDisponible": "0.00",
-          "limiteOtorgado": "0.00",
-          "limteUtilizado": "0.00"
-        }
+        "Token": "67579685BC9ACF711F22AF23"
+    },
+    "sdtLimites": {
+        "sBTLimiteCliente": [
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Créditos Hipotecarios / $",
+                "limiteDisponible": 22000.00,
+                "moneda": "$",
+                "limiteOtorgado": 22000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Créditos Comercial PF / $",
+                "limiteDisponible": 25000.00,
+                "moneda": "$",
+                "limiteOtorgado": 25000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Créditos Comercial LP / $",
+                "limiteDisponible": 27000.00,
+                "moneda": "$",
+                "limiteOtorgado": 27000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Firmantes no calificados / $",
+                "limiteDisponible": 38000.00,
+                "moneda": "$",
+                "limiteOtorgado": 38000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Firmantes AAA / $",
+                "limiteDisponible": 27000.00,
+                "moneda": "$",
+                "limiteOtorgado": 27000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "2019-02-06",
+                "descripcion": "Línea_Firmantes Estado / $",
+                "limiteDisponible": 20000.00,
+                "moneda": "$",
+                "limiteOtorgado": 20000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "0001-01-01",
+                "descripcion": "Total / MN",
+                "limiteDisponible": 1000000.00,
+                "moneda": "",
+                "limiteOtorgado": 1000000.00,
+                "limiteUtilizado": 0.00
+            },
+            {
+                "fechaVencimiento": "0001-01-01",
+                "descripcion": "Total / ME",
+                "limiteDisponible": 0.00,
+                "moneda": "",
+                "limiteOtorgado": 0.00,
+                "limiteUtilizado": 0.00
+            }
         ]
-      },
-      "Erroresnegocio": {
+    },
+    "Erroresnegocio": {
         "BTErrorNegocio": []
-      "Btoutreq": {
-        "Numero": 20535,
+    },
+    "Btoutreq": {
+        "Numero": 229016,
         "Servicio": "BTPersonas.ObtenerLimites",
         "Estado": "OK",
+        "Requerimiento": 0,
         "Fecha": "2024-05-30",
-        "Requerimiento": "1",
         "Canal": "BTDIGITAL",
-        "Hora": "11:52:12"
-      }
-      }
+        "Hora": "12:37:57"
+    }
 }'
 ```
 :::

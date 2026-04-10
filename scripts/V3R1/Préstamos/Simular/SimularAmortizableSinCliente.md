@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Amortizable Sin Cliente
 breadcrumb: false
 pageInfo: false
@@ -128,7 +128,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -257,7 +257,7 @@ curl -X POST \
 '{
     "Btinreq": {
         "Canal": "BTDIGITAL",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Usuario": "BANTOTAL",
         "Token": "1017966210F955E77534D3E0",
         "Device": "AC"
@@ -346,7 +346,7 @@ curl -X POST \
         "Servicio": "BTPrestamos.SimularAmortizableSinCliente",
         "Fecha": "2019-11-20",
         "Hora": "11:44:44",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Numero": 7048,
         "Estado": "OK"
     }

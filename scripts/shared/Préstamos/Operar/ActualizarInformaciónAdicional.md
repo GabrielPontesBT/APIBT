@@ -82,25 +82,25 @@ Código | Descripción
 @tab JSON
 ```json
 curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ActualizarInformacionAdicional' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-	 "operacionUId": 202,
-        "sdtInformacionAdicional": {
-          "sBTDatoLista": {
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ActualizarInformacionAdicional' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Token": "D06C78346B58598896F7D739",
+        "Canal": "BTDIGITAL",
+        "Requerimiento": 1
+    },
+    "operacionUId": 202,
+    "sdtInformacionAdicional": {
+        "sBTDatoLista": {
             "clave": "Impuesto s/Intereses en Cuota",
             "valor": "N"
-          }
         }
+    }
 }'
 ```
 :::
@@ -139,24 +139,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
-   "Btinreq": {
-      "Device": "1",
-      "Usuario": "MINSTALADOR",
-      "Token": "16c1cFC33CD93505A5382434",
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
-   },
-
-   "Btoutreq": {
-      "Numero": "111399",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.ActualizarInformacionAdicional",
-      "Requerimiento": "1",
-      "Fecha": "2023-05-10",
-      "Canal": "BTDIGITAL",
-      "Hora": "17:08:56"
-   }
+'{
+    "Btinreq": {
+        "Device": "1",
+        "Usuario": "MINSTALADOR",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL",
+        "Token": "D06C78346B58598896F7D739"
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 10762,
+        "Servicio": "BTPrestamos.ActualizarInformacionAdicional",
+        "Estado": "OK",
+        "Requerimiento": 1,
+        "Fecha": "2023-05-16",
+        "Hora": "16:28:12",
+        "Canal": "BTDIGITAL"
+    }
 }'
 ```
 ::: 

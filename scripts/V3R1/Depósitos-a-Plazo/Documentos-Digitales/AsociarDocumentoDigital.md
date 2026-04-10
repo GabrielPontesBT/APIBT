@@ -1,4 +1,4 @@
----
+﻿---
 title: Asociar Documento Digital 
 breadcrumb: false
 pageInfo: false
@@ -109,12 +109,12 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-	"operacionUId":"21",
-    "tipoDocumentoId":"3",
+	"operacionUId": 21,
+    "tipoDocumentoId": 3,
     "nombre":"Prueba Asociar Contrato",
     "archivoCodificado":"RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
     "fechaEmision":"2010-10-10",
@@ -162,7 +162,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -174,7 +174,7 @@ curl -X POST \
         "Numero": 3089,
         "Estado": "OK",
         "Servicio": "BTDepositosAPlazo.AsociarDocumentoDigital",
-        "Requerimiento": "1",
+        "Requerimiento": 1,
         "Fecha": "2018-11-20",
         "Hora": "17:59:33",
         "Canal": "BTDIGITAL"

@@ -78,23 +78,24 @@ Código | Descripción
 </soapenv:Envelope> 
 ``` 
 
-@tab JSON 
-```json 
-curl -X POST \ 
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerMetadataDeTarea \ 
--H 'cache-control: no-cache' \ 
--H 'content-type: application/json' \ 
--d '{ 
-    "Btinreq": { 
-        "Canal": "BTDIGITAL", 
-        "Usuario": "INSTALADOR", 
-        "Device": "GP", 
-        "Requerimiento": "1", 
-        "Token": "200f0b8b654A8B5C60A82434" 
-    }, 
-    "procesoId": "1", 
-    "tareaId": "11" 
-}' 
+@tab JSON
+```json
+curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerMetadataDeTarea' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+    "Btinreq": {
+        "Requerimiento": 1,
+        "Device": "GP",
+        "Token": "151D0C3440510F1D04029085",
+        "Usuario": "INSTALADOR",
+        "Canal": "BTDIGITAL"
+    },
+    "procesoId": 1,
+    "tareaId": 11
+}'
 ``` 
 ::: 
 <!-- CIERRA EJEMPLO DE INVOCACIÓN --> 
@@ -156,55 +157,57 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 </SOAP-ENV:Envelope> 
 ``` 
 
-@tab JSON 
-```json 
-'{ 
-    "Btinreq": { 
-        "Device": "GP", 
-        "Usuario": "INSTALADOR", 
-        "Requerimiento": "1", 
-        "Canal": "BTDIGITAL", 
-        "Token": "47D750A861C4243EDE981344" 
-    }, 
-    "sdtMetadatas": { 
-        "sBTMetadataWF": [ 
-        { 
-            "valor": "S", 
-            "nombre": "CONSULTA" 
-        }, 
-        { 
-            "valor": "EVAPOLIAPR", 
-            "nombre": "ETQEVAPOLI" 
-        }, 
-        { 
-            "valor": "602", 
-            "nombre": "EXPRESION" 
-        }, 
-        { 
-            "valor": "6", 
-            "nombre": "MODELOPOLITICAS" 
-        }, 
-        { 
-            "valor": "RNG_98", 
-            "nombre": "TEMA" 
-        }, 
-        { 
-            "valor": "3", 
-            "nombre": "TEMAPOLITICAS" 
-        } 
-        ] 
-    }, 
-    "Erroresnegocio": "", 
-    "Btoutreq": { 
-        "Estado": "OK", 
-        "Canal": "BTDIGITAL", 
-        "Fecha": "2022-11-29", 
-        "Servicio": "BTWorkflow.ObtenerMetadataDeTarea", 
-        "Hora": "13:34:13", 
-        "Numero": "225661", 
-        "Requerimiento": "1" 
-    } 
-}' 
+@tab JSON
+```json
+'{
+    "Btinreq": {
+        "Token": "151D0C3440510F1D04029085",
+        "Canal": "BTDIGITAL",
+        "Device": "GP",
+        "Usuario": "INSTALADOR",
+        "Requerimiento": 1
+    },
+    "sdtMetadatas": {
+        "sBTMetadataWF": [
+            {
+                "valor": "S",
+                "nombre": "CONSULTA"
+            },
+            {
+                "valor": "EVAPOLIAPR",
+                "nombre": "ETQEVAPOLI"
+            },
+            {
+                "valor": 602,
+                "nombre": "EXPRESION"
+            },
+            {
+                "valor": 6,
+                "nombre": "MODELOPOLITICAS"
+            },
+            {
+                "valor": "RNG_98",
+                "nombre": "TEMA"
+            },
+            {
+                "valor": 3,
+                "nombre": "TEMAPOLITICAS"
+            }
+        ]
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Estado": "OK",
+        "Canal": "BTDIGITAL",
+        "Fecha": "2022-11-29",
+        "Servicio": "BTWorkflow.ObtenerMetadataDeTarea",
+        "Hora": "13:34:13",
+        "Numero": 225661,
+        "Requerimiento": 1
+    }
+}'
 ``` 
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA --> 

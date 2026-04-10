@@ -123,7 +123,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "7649e27cf5F955E77534D3E0"
     },
@@ -179,7 +179,7 @@ curl -X POST \
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Canal": "BTDIGITAL",
         "Token": "7649e27cf5F955E77534D3E0"
     },
@@ -190,7 +190,7 @@ curl -X POST \
         "Numero": 1587,
         "Servicio": "BTSNP.CrearAdhesion",
         "Estado": "OK",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Fecha": "2021-06-16",
         "Canal": "BTDIGITAL",
         "Hora": "15:07:29"

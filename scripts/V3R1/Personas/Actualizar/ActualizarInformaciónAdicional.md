@@ -1,4 +1,4 @@
----
+﻿---
 title: Actualizar Información Adicional
 breadcrumb: false
 pageInfo: false
@@ -91,14 +91,14 @@ curl -X POST \
 	  "Usuario": "MINSTALADOR",
 	  "Token": "16c1cFC33CD93505A5382434",
 	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
+	  "Requerimiento": 1
 	},
 	"personaUId": 204,
         "sdtInformacionAdicional": {
-          "sBTDatoLista": {
+          "sBTDatoLista": [{
             "clave": "Residencia",
             "valor": "Si"
-          }
+          }]
         }
 }'
 ```
@@ -138,25 +138,25 @@ curl -X POST \
 
 @tab JSON
 ```json
-{
+'{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",
       "Token": "16c1cFC33CD93505A5382434",
       "Canal": "BTDIGITAL",
-      "Requerimiento": "1"
+      "Requerimiento": 1
    },
-
+   "Erroresnegocio": {"BTErrorNegocio": []},
    "Btoutreq": {
-      "Numero": "111399",
+      "Numero": 10573,
       "Estado": "OK",
       "Servicio": "BTPersonas.ActualizarInformacionAdicional",
-      "Requerimiento": "1",
+      "Requerimiento": 1,
       "Fecha": "2023-05-10",
       "Canal": "BTDIGITAL",
-      "Hora": "12:21:52"
+      "Hora": "12:21:04"
    }
-}
+}'
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -144,28 +144,29 @@ curl -X POST \
         "Btinreq": {
           "Device": "AV",
           "Usuario": "MINSTALADOR",
+          "Requerimiento": 0,
           "Canal": "BTDIGITAL",
-          "Token": "658fcb0b034A8B5C60A82434"
+          "Token": "fe9c2c642d4A8B5C60A82434"
         },
         "sdtPrestamo": {
-          "productoUId": "75",
-          "monto": "10000",
-          "clienteUId": "221",
-          "actividad": "1111",
+          "productoUId": 75,
+          "monto": 10000,
+          "clienteUId": 221,
+          "actividad": 1111,
           "cantidadCuotas": "?",
           "cuotasCapital": {
             "sBTCuotaPrestamoAlta": [
               {
                 "fechaPago": "2020-04-15",
-                "importe": "3000"
+                "importe": 3000.0
               },
               {
                 "fechaPago": "2020-05-15",
-                "importe": "3000"
+                "importe": 3000.0
               },
               {
                 "fechaPago": "2020-06-15",
-                "importe": "4000"
+                "importe": 4000.0
               }
             ]
           }
@@ -303,7 +304,7 @@ curl -X POST \
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
+		"Requerimiento": 1,
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
@@ -410,7 +411,7 @@ curl -X POST \
         "Estado": "OK",
         "Servicio": "BTPrestamos.SimularLibreAmortizacion",
         "Fecha": "2019-04-24",
-        "Requerimiento": "",
+        "Requerimiento": 1,
         "Hora": "10:35:16",
         "Canal": "BTDIGITAL"
     }

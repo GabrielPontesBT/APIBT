@@ -192,7 +192,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Usuario": "INSTALADOR",
       "Device": "FC",
-      "Requerimiento": "0",
+      "Requerimiento": 0,
       "Token": "437DAC2305E671B72E8F8124"
     },
     "sdtPersona": {
@@ -311,7 +311,7 @@ curl -X POST \
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Token": "437DAC2305E671B72E8F8124"
   },
@@ -323,7 +323,7 @@ curl -X POST \
     "Numero": 36678,
     "Estado": "OK",
     "Servicio": "BTClientes.Crear",
-    "Requerimiento": "0",
+    "Requerimiento": 0,
     "Fecha": "2025-11-18",
     "Hora": "12:16:37",
     "Canal": "BTDIGITAL"

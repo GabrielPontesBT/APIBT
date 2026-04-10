@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente
 breadcrumb: false
 pageInfo: false
@@ -96,7 +96,7 @@ curl -X POST \
   -d '{
 		"Btinreq": {
 			"Canal": "BTDIGITAL",
-			"Requerimiento": "1",
+			"Requerimiento": 1,
 			"Usuario": "INSTALADOR",
 			"Token": "d25cdaf98eCD285A89A23FBE",
 			"Device": "BTDIGITAL"		 
@@ -213,7 +213,7 @@ curl -X POST \
    "Btinreq": { 
       "Device": "BTDIGITAL", 
       "Usuario": "INSTALADOR", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Canal": "BTDIGITAL", 
       "Token": "d25cdaf98eCD285A89A23FBE" 
    }, 
@@ -284,7 +284,7 @@ curl -X POST \
       "Numero": "110675", 
       "Estado": "OK", 
       "Servicio": "BTPrestamos.SimularDespejandoFechaVtoTasaSC", 
-      "Requerimiento": "1", 
+      "Requerimiento": 1, 
       "Fecha": "2021-03-18", 
       "Canal": "BTDIGITAL", 
       "Hora": "13:06:04" 

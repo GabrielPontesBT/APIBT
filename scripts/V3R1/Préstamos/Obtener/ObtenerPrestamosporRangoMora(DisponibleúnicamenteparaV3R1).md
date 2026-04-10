@@ -85,24 +85,27 @@ Código | Descripción
 
 @tab JSON
 
+```json
 curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosPorRangoMora=' \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosPorRangoMora' \
+  -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
-  "Btinreq": {
-    "Requerimiento": 0,
-    "Canal": "BTDIGITAL",
-    "Device": "GZ",
-    "Usuario": "Instalador",
-    "Token": "d51ae0498699865B3A2E76CF"
-  },
-  "diasMoraDesde": 23,
-  "diasMoraHasta": 100,
-  "offset": 1,
-  "limit": 10,
-  "contarRegistros": "N"
+    "Btinreq": {
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Device": "GZ",
+        "Usuario": "Instalador",
+        "Token": "d51ae0498699865B3A2E76CF"
+    },
+    "diasMoraDesde": 23,
+    "diasMoraHasta": 100,
+    "offset": 1,
+    "limit": 10,
+    "contarRegistros": "N"
 }'
-
+```
 :::
 
 <!-- CIERRA EJEMPLO DE INVOCACIÓN --> <!-- ABRE EJEMPLO DE RESPUESTA -->
@@ -163,26 +166,48 @@ curl -X POST \
 
 @tab JSON
 
-{
-  "quedanRegistros": "S",
-  "cantidadRegistros": 27,
-  "sdtDatosPrestamos": {
-    "sBTDatosPrestamo": [
-      {
-        "plazo": 113,
-        "deudaTotalVencida": 521.12,
-        "clienteUId": 253,
-        "diasMora": 95,
-        "operacionUId": 5819,
-        "saldoCapital": 500,
-        "estado": "Normal",
-        "sucursal": "MIRAFLORES",
-        "cantidadCuotas": 8
-      }
-    ]
-  }
-}
-
+```json
+'{
+    "Btinreq": {
+        "Device": "GZ",
+        "Usuario": "Instalador",
+        "Requerimiento": 0,
+        "Canal": "BTDIGITAL",
+        "Token": "d51ae0498699865B3A2E76CF"
+    },
+    "quedanRegistros": "S",
+    "cantidadRegistros": 27,
+    "sdtDatosPrestamos": {
+        "sBTDatosPrestamo": {
+            "plazo": 113,
+            "eventosPosteriores": "N",
+            "deudaTotalVencida": 521.12,
+            "periodicidad": 15,
+            "simboloMoneda": "$",
+            "fechaVencimiento": "2023-02-15",
+            "clienteUId": 253,
+            "diasMora": 95,
+            "operacionUId": 5819,
+            "saldoCapital": 500.00,
+            "estado": "Normal",
+            "sucursal": "MIRAFLORES",
+            "cantidadCuotas": 8
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Numero": 227484,
+        "Estado": "OK",
+        "Servicio": "BTPrestamos.ObtenerPrestamosPorRangoMora",
+        "Requerimiento": 0,
+        "Fecha": "2023-05-09",
+        "Hora": "12:58:32",
+        "Canal": "BTDIGITAL"
+    }
+}'
+```
 :::
 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
