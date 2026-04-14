@@ -379,5 +379,18 @@
       ]
     }
   ],
-  "valuesTable": []
+  "valuesTable": [
+    {
+      "elementValName": "sdtDatosExtendidos",
+      "listHeader": "Clave,Valor,Comentarios",
+      "fields": [
+        {
+          "Clave": "CAPITALIZA_INTERESES",
+          "Valor": "[S,N] (Valor por omisión \"N\")",
+          "Comentarios": "**[Opcional]** Permite simular un depósito a plazo con capitalización periódica de intereses."
+        }
+      ],
+      "description": ""
+    }
+  ]
 }

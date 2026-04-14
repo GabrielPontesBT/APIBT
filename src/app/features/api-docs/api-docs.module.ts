@@ -15,6 +15,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MarkdownModule } from 'ngx-markdown';
+import { KatexRenderDirective } from './katex-render.directive';
+import { PrismHighlightDirective } from './prism-highlight.directive';
 
 import { ApiDocsRoutingModule } from './api-docs-routing.module';
 
@@ -49,7 +52,9 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
     StructuredDataComponent,
     CodeExampleComponent,
     ChatPopupComponent,
-    FooterSpaceComponent
+    FooterSpaceComponent,
+    KatexRenderDirective,
+    PrismHighlightDirective
   ],
   imports: [
     CommonModule,
@@ -61,7 +66,8 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
     MatIconModule,
     MatExpansionModule,
     MatTooltipModule,
-    ApiDocsRoutingModule
+    ApiDocsRoutingModule,
+    MarkdownModule
   ],
   exports: [
     SearchBoxComponent

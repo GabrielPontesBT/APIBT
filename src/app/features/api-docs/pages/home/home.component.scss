@@ -1,3 +1,5 @@
+// ── Animación de entrada del componente ───────────────────────────────────────
+
 :host {
   display: block;
   animation: fadeIn 300ms ease-out;
@@ -8,17 +10,21 @@
   to   { opacity: 1; }
 }
 
+// ── Contenedor principal de la página ─────────────────────────────────────────
+
 .home-page {
   min-height: 100%;
   background: var(--bg-color);
   font-family: var(--font-family);
-  container-type: inline-size;
+  container-type: inline-size; // habilita @container queries en los hijos
   display: flex;
   flex-direction: column;
 }
 
+// ── Banner superior (imagen de fondo con overlay oscuro) ──────────────────────
+
 .home-banner {
-  min-height: 320px;
+  min-height: 30px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
     url('/assets/image/fondo_inicio.jpg') center center / cover no-repeat;
@@ -28,6 +34,7 @@
   overflow: hidden;
 }
 
+// Fila interna del banner: logo a la izquierda, título a la derecha
 .home-banner__content {
   width: min(1180px, calc(100% - clamp(2rem, 6vw, 5rem)));
   margin: 0 auto;
@@ -38,6 +45,7 @@
   padding: clamp(2rem, 4vw, 2.75rem) 0;
 }
 
+// Contenedor del logo (ocupa el espacio disponible a la izquierda)
 .home-banner__logo {
   flex: 1 1 0;
   display: flex;
@@ -45,6 +53,7 @@
   align-items: center;
 }
 
+// Imagen del logo: se escala con el contenedor pero no supera el máximo
 .home-banner__logo img {
   width: 100%;
   max-width: min(760px, 100%);
@@ -52,6 +61,7 @@
   display: block;
 }
 
+// Texto "DOCUMENTACIÓN API BANKING" a la derecha del banner
 .home-banner__text {
   flex: 0 0 auto;
   color: #ffffff;
@@ -67,6 +77,8 @@
   text-transform: uppercase;
 }
 
+// ── Sección de contenido (separador + grilla de cards) ────────────────────────
+
 .home-content {
   flex: 1 0 auto;
   width: min(1160px, calc(100% - clamp(2rem, 8vw, 7.5rem)));
@@ -74,6 +86,7 @@
   padding-bottom: 56px;
 }
 
+// Línea divisoria horizontal entre el banner y las cards
 .home-separator {
   width: 100%;
   height: 1px;
@@ -81,17 +94,22 @@
   margin-bottom: 36px;
 }
 
+// ── Grilla de cards de versiones ──────────────────────────────────────────────
+
+// auto-fit: agrega columnas automáticamente según el espacio disponible
 .home-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: clamp(1.5rem, 3.5vw, 2.875rem);
 }
 
+// Card individual: fondo transparente en reposo, elevada en hover
 .home-card {
   display: block;
   color: var(--text-color);
   font-family: var(--font-family);
   text-decoration: none;
+  cursor: pointer;
   padding: 1.25rem 1rem;
   border-radius: var(--border-radius);
   background: transparent;
@@ -108,6 +126,7 @@
   transform: scale(1.03);
 }
 
+// Título de la card: ícono circular + nombre de la versión
 .home-card__title {
   display: flex;
   align-items: flex-start;
@@ -120,6 +139,7 @@
   color: var(--text-color);
 }
 
+// Círculo con la flecha "›" a la izquierda del título
 .home-card__icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -135,6 +155,7 @@
   flex-shrink: 0;
 }
 
+// Descripción corta debajo del título de cada card
 .home-card__description {
   font-size: 0.96rem;
   font-weight: 300;
@@ -142,9 +163,11 @@
   color: var(--text-color);
 }
 
+// ── Responsive: pantallas ≤ 1440px ────────────────────────────────────────────
+
 @media (max-width: 1440px) {
   .home-banner {
-    min-height: 280px;
+    min-height: 30px;
   }
 
   .home-banner__content {
@@ -189,17 +212,22 @@
   }
 }
 
+// ── Container query: banner ancho ≤ 1180px (gap más ajustado) ─────────────────
+
 @container (max-width: 1180px) {
   .home-banner__content {
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
+// ── Container query: ancho ≤ 1080px (banner apilado verticalmente) ────────────
+
 @container (max-width: 1080px) {
   .home-banner {
-    min-height: auto;
+    min-height: 100px;
   }
 
+  // Logo y título pasan a columna centrada
   .home-banner__content {
     flex-direction: column;
     gap: 22px;
@@ -216,9 +244,45 @@
   }
 
   .home-content {
-    margin-top: 28px;
+    margin-top: 5px;
   }
 }
+
+// ── Escala 150% del sistema (devicePixelRatio 1.5, viewport ~1280px) ──────────
+// Reduce el banner y el logo para evitar scroll innecesario.
+// Se usan tres formas de la misma condición para máxima compatibilidad.
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (min-resolution: 144dpi) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  .home-banner {
+    min-height: 200px !important;
+  }
+
+  .home-banner__content {
+    padding: 0.5rem 0 !important;
+    gap: 1.25rem !important;
+  }
+
+  .home-banner__logo img {
+    max-width: 550px !important;
+  }
+
+  .home-banner__text h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .home-content {
+    margin-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .home-separator {
+    margin-bottom: 14px;
+  }
+}
+
+// ── Container query: ancho ≤ 640px (móvil, padding lateral reducido) ──────────
 
 @container (max-width: 640px) {
   .home-content {

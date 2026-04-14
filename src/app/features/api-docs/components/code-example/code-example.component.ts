@@ -78,10 +78,35 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
 
   copyCode(section: 'invocation' | 'response') {
     const text = this.examples[section][this.view[section]];
-    navigator.clipboard.writeText(text).then(() => {
+    const onSuccess = () => {
       this.copiedSection = section;
       setTimeout(() => { this.copiedSection = null; }, 2000);
-    });
+    };
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(onSuccess).catch(() => {
+        this.fallbackCopy(text, onSuccess);
+      });
+    } else {
+      this.fallbackCopy(text, onSuccess);
+    }
+  }
+
+  private fallbackCopy(text: string, onSuccess: () => void) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    try {
+      if (document.execCommand('copy')) {
+        onSuccess();
+      }
+    } finally {
+      document.body.removeChild(textarea);
+    }
   }
 
   private updateHighlight() {

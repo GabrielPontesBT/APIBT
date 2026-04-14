@@ -460,7 +460,7 @@ function extractValues(content) {
     return [];
   } else {
     const inputOutputBlock = extractBlock(content, '@tab Datos de Entrada', '@tab Datos de Salida');
-    const nomValRegex = /^.*\[valores\].*$/gm;
+    const nomValRegex = /^.*\[valores\.?\].*$/gm;
     const entries = Array.from(inputOutputBlock.matchAll(nomValRegex));
     const values = [];
 

@@ -152,5 +152,25 @@ Si se crea un nuevo componente y se quiere usar en el módulo de documentación:
 | zone.js | 0.16 |
 | fuse.js | 7.1+ |
 | prismjs | 1.30+ |
+| ngx-markdown | 21.2+ |
+| katex | 0.16+ |
 | gray-matter | 4.0+ |
 | flag-icons | 7.5+ |
+
+---
+
+## Dependencias del módulo de chat (ngx-markdown + KaTeX)
+
+El renderizado del chat del Asistente IA utiliza `ngx-markdown` para procesar Markdown y `katex` para fórmulas matemáticas LaTeX. Estas dependencias se instalan junto con `npm install`, pero se documentan aquí por ser incorporadas en una integración posterior.
+
+```bash
+npm install katex ngx-markdown --save
+```
+
+Los estilos de KaTeX se cargan globalmente desde `angular.json`:
+```json
+"node_modules/katex/dist/katex.min.css"
+```
+
+Los lenguajes adicionales de Prism (TypeScript, Java, LaTeX) se importan en:
+`src/app/features/api-docs/prism-highlight.directive.ts`

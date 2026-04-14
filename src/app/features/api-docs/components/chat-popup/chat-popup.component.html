@@ -25,11 +25,19 @@
     </div>
 
     <div class="chat-messages" #chatMessages>
-      @for (m of messagesHTML; track m) {
+      @for (m of messages; track m) {
         <div
           [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
           [@messageAnim]="m.isUser ? true : null">
-          <span [innerHTML]="m.text"></span>
+          @if (!m.isUser && !m.text) {
+            <div class="typing-dots">
+              <span></span><span></span><span></span>
+            </div>
+          } @else if (m.isUser) {
+            <p>{{ m.text }}</p>
+          } @else {
+            <markdown [data]="m.text" prism appRenderKatex></markdown>
+          }
         </div>
       }
     </div>

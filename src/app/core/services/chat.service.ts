@@ -4,21 +4,17 @@ import { Observable } from 'rxjs';
 interface SessionResponse {
   data: { sessionId: string };
 }
-interface ChatEntry { role: string; content: string; }
 
 @Injectable({ providedIn: 'root' })
 export class ChatService {
-  private sessionUrl = 'http://btcanales.dlya.corp:3070/api/agents/session';
-  private chatUrl    = 'http://btcanales.dlya.corp:3070/api/agents/APIBT';
+  private sessionUrl = 'https://bt-ia2.bantotal.com/aihub/api/agents/session';
+  private chatUrl    = 'https://bt-ia2.bantotal.com/aihub/api/agents/APIBTV3';
   private apiKey     = 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy';
 
   constructor() {}
 
-  /**
-   * Inicia sesión usando fetch y almacena el sessionId en localStorage
-   */
   iniciarSesion(): Promise<string> {
-    const payload = { agent: 'APIBT', user: '1.1.1.1' };
+    const payload = { agent: 'APIBTV3', user: '1.1.1.1' };
     return fetch(this.sessionUrl, {
       method: 'POST',
       headers: {
@@ -35,32 +31,31 @@ export class ChatService {
     });
   }
 
-  /**
-   * Devuelve un Observable que emite fragmentos de mensaje del asistente a medida que llegan
-   */
-  streamMessages(message: string, chatHistory: ChatEntry[]): Observable<string> {
+  streamMessages(message: string): Observable<string> {
     const sessionId = localStorage.getItem('chatSessionId');
-    const body = JSON.stringify({ message, sessionId, chat_history: chatHistory });
-    const headers = { 'Content-Type': 'application/json', 'apikey': this.apiKey };
+    const body = JSON.stringify({ message, sessionId });
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'apikey': this.apiKey
+    };
 
     return new Observable(observer => {
-      fetch(this.chatUrl, {
-        method: 'POST',
-        headers,
-        body
-      })
+      fetch(this.chatUrl, { method: 'POST', headers, body })
       .then(res => {
+        console.log('[ChatService] status:', res.status, res.headers.get('content-type'));
+        if (!res.ok) {
+          res.text().then(t => console.error('[ChatService] body:', t));
+          throw new Error(`HTTP ${res.status}`);
+        }
         if (!res.body) throw new Error('No response body');
+
         const reader = res.body.getReader();
         const decoder = new TextDecoder('utf-8');
         let buffer = '';
 
         const read = (): void => {
           reader.read().then(({ done, value }) => {
-            if (done) {
-              observer.complete();
-              return;
-            }
+            if (done) { observer.complete(); return; }
             buffer += decoder.decode(value, { stream: true });
             const lines = buffer.split('\n');
             buffer = lines.pop()!;
