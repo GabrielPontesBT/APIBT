@@ -73,6 +73,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       setTimeout(() => {
         this.inputRef?.nativeElement.focus();
         this.scrollToBottom();
+        this.injectCopyButtons();
       }, 0);
     }
   }
@@ -164,6 +165,40 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.typingIndicator = false;
     this.saveChatHistory();
     this.cdr.detectChanges();
+    setTimeout(() => this.injectCopyButtons(), 50);
+  }
+
+  private injectCopyButtons() {
+    const botMessages = document.querySelectorAll('.bot-message');
+    botMessages.forEach(msg => {
+      msg.querySelectorAll<HTMLElement>('pre[class*="language-"]').forEach(pre => {
+        if (pre.parentElement?.classList.contains('chat-code-wrapper')) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'chat-code-wrapper';
+
+        const btn = document.createElement('button');
+        btn.className = 'mat-icon-button-chat';
+        btn.title = 'Copiar código';
+        btn.innerHTML = '<span class="copy-label">Copiar</span><span class="material-icons">content_copy</span>';
+
+        btn.addEventListener('click', () => {
+          const code = pre.querySelector('code')?.textContent ?? '';
+          navigator.clipboard.writeText(code).then(() => {
+            btn.innerHTML = '<span class="copy-label">¡Copiado!</span><span class="material-icons">check</span>';
+            btn.classList.add('copied');
+            setTimeout(() => {
+              btn.innerHTML = '<span class="copy-label">Copiar</span><span class="material-icons">content_copy</span>';
+              btn.classList.remove('copied');
+            }, 2000);
+          }).catch(console.error);
+        });
+
+        pre.parentNode!.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+        wrapper.appendChild(btn);
+      });
+    });
   }
 
   private scrollToBottom() {
