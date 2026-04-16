@@ -39,6 +39,14 @@ export interface SearchResult {
 export class SearchService {
   private pages: PageIndex[] = [];
   private slugLabelMap = new Map<string, string>();
+  private _pendingHighlight: string | null = null;
+
+  setPendingHighlight(term: string): void { this._pendingHighlight = term; }
+  consumeHighlight(): string | null {
+    const t = this._pendingHighlight;
+    this._pendingHighlight = null;
+    return t;
+  }
 
   constructor(private http: HttpClient, private versionService: VersionService) {
     this.http.get<PageIndex[]>('assets/docs/search-index.json').subscribe({

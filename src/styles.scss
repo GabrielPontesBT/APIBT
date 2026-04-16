@@ -14,6 +14,22 @@
  */
 
 /* -------------------------------------------------------- */
+/* SEARCH HIGHLIGHT (CSS Custom Highlight API)             */
+/* -------------------------------------------------------- */
+
+@property --_hl-a {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+::highlight(search-result) {
+  background-color: color-mix(in srgb, var(--search-result) calc(var(--_hl-a) * 100%), transparent);
+  color: color-mix(in srgb, #1a1a1a calc(var(--_hl-a) * 100%), var(--text-color));
+  border-radius: 1rem;
+}
+
+/* -------------------------------------------------------- */
 /* RESET / BASE GLOBAL */
 /* -------------------------------------------------------- */
 

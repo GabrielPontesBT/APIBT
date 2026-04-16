@@ -54,6 +54,7 @@ export class SearchBoxComponent {
 
   goTo(url: string): void {
     this.saveHistory(this.query.trim());
+    this.searchService.setPendingHighlight(this.query.trim());
     this.router.navigateByUrl(url);
     this.clearResults();
   }
