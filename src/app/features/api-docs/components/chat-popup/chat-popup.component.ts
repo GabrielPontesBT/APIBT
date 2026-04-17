@@ -2,12 +2,16 @@ import {
   Component,
   OnInit,
   AfterViewInit,
+  OnDestroy,
   ViewChild,
   ElementRef,
   ChangeDetectorRef
 } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Subscription } from 'rxjs';
+import { skip } from 'rxjs/operators';
 import { ChatService } from '../../../../core/services/chat.service';
+import { VersionService } from '../../../../core/services/version.service';
 
 interface Message { text: string; isUser: boolean; }
 interface ChatEntry { role: string; content: string; }
@@ -35,7 +39,7 @@ interface ChatEntry { role: string; content: string; }
   ],
   standalone: false
 })
-export class ChatPopupComponent implements OnInit, AfterViewInit {
+export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
   @ViewChild('chatMessages') chatMessagesRef!: ElementRef<HTMLElement>;
 
@@ -47,8 +51,11 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   typingIndicator = false;
   chatHistory: ChatEntry[] = [];
 
+  private versionSub!: Subscription;
+
   constructor(
     private chatService: ChatService,
+    private versionService: VersionService,
     private cdr: ChangeDetectorRef
   ) { }
 
@@ -57,6 +64,14 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     if (!this.messages.length) {
       this.clearChatHistory();
     }
+
+    this.versionSub = this.versionService.activeVersion$
+      .pipe(skip(1))
+      .subscribe(() => this.clearChatHistory());
+  }
+
+  ngOnDestroy() {
+    this.versionSub?.unsubscribe();
   }
 
   ngAfterViewInit() {
@@ -81,16 +96,27 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   clearChatHistory() {
     this.messages = [{ text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }];
     this.chatHistory = [];
-    localStorage.clear();
+    this.chatService.clearSession();
+    localStorage.removeItem(this.messagesKey());
+    localStorage.removeItem(this.historyKey());
     this.chatService.iniciarSesion().catch(console.error);
+    this.cdr.detectChanges();
+  }
+
+  private messagesKey(): string {
+    return `messages-${this.versionService.activeVersion}`;
+  }
+
+  private historyKey(): string {
+    return `chatHistory-${this.versionService.activeVersion}`;
   }
 
   loadChatHistory() {
-    const savedMsgs = localStorage.getItem('messages');
+    const savedMsgs = localStorage.getItem(this.messagesKey());
     if (savedMsgs) {
       this.messages = JSON.parse(savedMsgs);
     }
-    const savedHist = localStorage.getItem('chatHistory');
+    const savedHist = localStorage.getItem(this.historyKey());
     if (savedHist) {
       this.chatHistory = JSON.parse(savedHist);
     }
@@ -98,8 +124,8 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   }
 
   saveChatHistory() {
-    localStorage.setItem('messages', JSON.stringify(this.messages));
-    localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
+    localStorage.setItem(this.messagesKey(), JSON.stringify(this.messages));
+    localStorage.setItem(this.historyKey(), JSON.stringify(this.chatHistory));
   }
 
   sendMessage() {
@@ -113,8 +139,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.typingIndicator = true;
     this.scrollToBottom();
 
-    const sid = localStorage.getItem('chatSessionId');
-    if (sid) {
+    if (this.chatService.hasSession()) {
       this.proceedChat(txt);
     } else {
       this.chatService.iniciarSesion()
