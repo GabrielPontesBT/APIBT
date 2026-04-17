@@ -1,20 +1,51 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { VersionService, VersionId } from './version.service';
 
 interface SessionResponse {
   data: { sessionId: string };
 }
 
+interface AgentConfig {
+  agentName: string;
+  chatUrl: string;
+}
+
+const BASE_URL = 'https://bt-ia2.bantotal.com/aihub/api/agents';
+
+const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
+  'v2r2': { agentName: 'APIBTV2R2', chatUrl: `${BASE_URL}/APIBTV2R2` },
+  'v2r3': { agentName: 'APIBTV2R3', chatUrl: `${BASE_URL}/APIBTV2R3` },
+  'v3r1': { agentName: 'APIBTV3',   chatUrl: `${BASE_URL}/APIBTV3`   },
+  'bpay': { agentName: 'APIBPAY',   chatUrl: `${BASE_URL}/APIBPAY`   },
+};
+
 @Injectable({ providedIn: 'root' })
 export class ChatService {
-  private sessionUrl = 'https://bt-ia2.bantotal.com/aihub/api/agents/session';
-  private chatUrl    = 'https://bt-ia2.bantotal.com/aihub/api/agents/APIBTV3';
+  private sessionUrl = `${BASE_URL}/session`;
   private apiKey     = 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy';
 
-  constructor() {}
+  constructor(private versionService: VersionService) {}
+
+  private getConfig(): AgentConfig {
+    return AGENT_CONFIG[this.versionService.activeVersion];
+  }
+
+  private sessionKey(): string {
+    return `chatSessionId-${this.versionService.activeVersion}`;
+  }
+
+  hasSession(): boolean {
+    return !!localStorage.getItem(this.sessionKey());
+  }
+
+  clearSession(): void {
+    localStorage.removeItem(this.sessionKey());
+  }
 
   iniciarSesion(): Promise<string> {
-    const payload = { agent: 'APIBTV3', user: '1.1.1.1' };
+    const { agentName } = this.getConfig();
+    const payload = { agent: agentName, user: '1.1.1.1' };
     return fetch(this.sessionUrl, {
       method: 'POST',
       headers: {
@@ -26,13 +57,14 @@ export class ChatService {
     .then(res => res.json())
     .then((json: SessionResponse) => {
       const sessionId = json.data.sessionId;
-      localStorage.setItem('chatSessionId', sessionId);
+      localStorage.setItem(this.sessionKey(), sessionId);
       return sessionId;
     });
   }
 
   streamMessages(message: string): Observable<string> {
-    const sessionId = localStorage.getItem('chatSessionId');
+    const { chatUrl } = this.getConfig();
+    const sessionId = localStorage.getItem(this.sessionKey());
     const body = JSON.stringify({ message, sessionId });
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
@@ -40,7 +72,7 @@ export class ChatService {
     };
 
     return new Observable(observer => {
-      fetch(this.chatUrl, { method: 'POST', headers, body })
+      fetch(chatUrl, { method: 'POST', headers, body })
       .then(res => {
         console.log('[ChatService] status:', res.status, res.headers.get('content-type'));
         if (!res.ok) {
