@@ -17,6 +17,7 @@ const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
   'v2r2': { agentName: 'APIBTV2R2', chatUrl: `${BASE_URL}/APIBTV2R2` },
   'v2r3': { agentName: 'APIBTV2R3', chatUrl: `${BASE_URL}/APIBTV2R3` },
   'v3r1': { agentName: 'APIBTV3',   chatUrl: `${BASE_URL}/APIBTV3`   },
+  'v4r1': { agentName: 'APIBTV3',   chatUrl: `${BASE_URL}/APIBTV3`   },
   'bpay': { agentName: 'APIBPAY',   chatUrl: `${BASE_URL}/APIBPAY`   },
 };
 

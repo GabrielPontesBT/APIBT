@@ -5,7 +5,7 @@ const projectRoot = process.cwd();
 const docsRoot = path.join(projectRoot, 'src', 'assets', 'docs', 'content');
 const releasesRoot = path.join(projectRoot, 'src', 'assets', 'releases');
 
-const VERSIONS = ['v2r2', 'v2r3', 'v3r1'];
+const VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'v4r1'];
 
 function normalizeReleaseKey(value) {
   return String(value || '')

@@ -610,6 +610,12 @@
           },
           {
             "type": "file",
+            "label": "obtenerserviciosv4",
+            "pageTitle": "Obtener Servicios",
+            "slug": "cash-management/obtener/obtenerserviciosv4"
+          },
+          {
+            "type": "file",
             "label": "ObtenerValoresOrden",
             "pageTitle": "Obtener Valores Orden",
             "slug": "cash-management/obtener/obtenervaloresorden"
@@ -2378,9 +2384,9 @@
           },
           {
             "type": "file",
-            "label": "ObtenerInstruccionesHabilitados",
-            "pageTitle": "Obtener Instrucciones Habilitados",
-            "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitados"
+            "label": "ObtenerInstruccionesHabilitadas",
+            "pageTitle": "Obtener Instrucciones Habilitadas",
+            "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitadas"
           },
           {
             "type": "file",

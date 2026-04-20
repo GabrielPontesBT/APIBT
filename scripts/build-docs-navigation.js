@@ -20,6 +20,7 @@ const VERSIONS = [
   { id: 'v2r2', folder: 'V2R2', useShared: true },
   { id: 'v2r3', folder: 'V2R3', useShared: true },
   { id: 'v3r1', folder: 'V3R1', useShared: true },
+  { id: 'v4r1', folder: 'V4R1', useShared: true },
   { id: 'bpay', folder: 'BPay', useShared: false },
 ];
 

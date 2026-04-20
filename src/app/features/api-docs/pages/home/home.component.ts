@@ -49,6 +49,11 @@ export class HomeComponent {
       description: 'Documentacion del API Banking correspondiente a Bantotal V3R1. Contiene mas de 650 metodos disponibles, el asistente virtual de Bantotal y nuevas funcionalidades incorporadas en el Release M2025.'
     },
     {
+      title: 'V4R1',
+      versionId: 'v4r1',
+      description: 'Documentacion del API Banking correspondiente a Bantotal V4R1.'
+    },
+    {
       title: 'BPay',
       versionId: 'bpay',
       description: 'En esta documentacion se detallan todas las integraciones de los diversos medios de pagos existentes en cada plaza.'
