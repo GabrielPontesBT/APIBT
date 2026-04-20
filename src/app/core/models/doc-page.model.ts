@@ -9,6 +9,14 @@ export interface DocTableRow {
   [key: string]: string;
 }
 
+export interface DocApiTab {
+  key: string;
+  label: string;
+  columns: string[];
+  rows: DocTableRow[];
+  text: string;
+}
+
 export interface DocStructuredType {
   typeName: string;
   fields: DocTableRow[];
@@ -37,11 +45,13 @@ export interface DocPage {
   pageTitle: string;
   description: string;
   pubName: string;
+  module: string;
   programa: string;
   scope: string;
   hasBackendConfig: boolean;
   backendText: string;
   backendData: any[];
+  apiTabs: DocApiTab[];
   inputData: DocTableRow[];
   outputData: DocTableRow[];
   errors: DocTableRow[];

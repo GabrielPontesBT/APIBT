@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { DocApiTab } from '../../../../core/models/doc-page.model';
 
 @Component({
     selector: 'app-api-tabs', templateUrl: './api-tabs.component.html',
@@ -7,10 +8,5 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
     standalone: false
 })
 export class ApiTabsComponent {
-  @Input() inputCols!: string[];
-  @Input() inputData!: any[];
-  @Input() outputCols!: string[];
-  @Input() outputData!: any[];
-  @Input() errorCols!: string[];
-  @Input() errors!: any[];
+  @Input() tabs: DocApiTab[] = [];
 }

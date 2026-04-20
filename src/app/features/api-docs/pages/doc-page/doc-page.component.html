@@ -7,7 +7,7 @@ doc-page.component.html
 
 @if (page$ | async; as page) {
   @let hasExamples = !!(page.examples.invocation.xml || page.examples.invocation.json || page.examples.response.xml || page.examples.response.json);
-  @let hasTabs = !!(page.inputData.length || page.outputData.length || page.errors.length);
+  @let hasTabs = !!(page.apiTabs?.length);
   <app-page-header
     class="fade-only front"
     [title]="page.pageTitle">
@@ -18,6 +18,7 @@ doc-page.component.html
         class="fade-only"
         [description]="page.description"
         [pubName]="page.pubName"
+        [module]="page.module"
         [programa]="page.programa"
         [scope]="page.scope">
       </app-info-card>
@@ -31,12 +32,7 @@ doc-page.component.html
       @if (hasTabs) {
         <app-api-tabs
           class="fade-only"
-          [inputCols]="['Nombre', 'Tipo', 'Comentarios']"
-          [inputData]="page.inputData"
-          [outputCols]="['Nombre', 'Tipo', 'Comentarios']"
-          [outputData]="page.outputData"
-          [errorCols]="['Código', 'Descripción']"
-          [errors]="page.errors">
+          [tabs]="page.apiTabs">
         </app-api-tabs>
       }
       @if (page.valuesTable && page.valuesTable.length > 0) {

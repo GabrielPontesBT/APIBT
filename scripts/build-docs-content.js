@@ -139,6 +139,40 @@ function extractBlockWithAlternatives(content, pairs) {
   return '';
 }
 
+function extractAllBlocks(content, start, end) {
+  const blocks = [];
+  let searchFrom = 0;
+
+  while (searchFrom < content.length) {
+    const startIndex = content.indexOf(start, searchFrom);
+
+    if (startIndex === -1) {
+      break;
+    }
+
+    const endIndex = content.indexOf(end, startIndex + start.length);
+
+    if (endIndex === -1) {
+      break;
+    }
+
+    blocks.push(content.slice(startIndex + start.length, endIndex).trim());
+    searchFrom = endIndex + end.length;
+  }
+
+  return blocks;
+}
+
+function extractBlocksWithAlternatives(content, pairs) {
+  for (const pair of pairs) {
+    if (content.includes(pair.start)) {
+      return extractAllBlocks(content, pair.start, pair.end);
+    }
+  }
+
+  return [];
+}
+
 function stripMarkdownLinks(text) {
   return String(text || '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
 }
@@ -153,6 +187,12 @@ function markdownLinksToHtml(text, baseRelPath) {
     }
     return `<a href="${href}">${label}</a>`;
   });
+}
+
+function normalizeKey(text) {
+  return stripAccents(String(text || ''))
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '');
 }
 
 function parseTable(md, relPath) {
@@ -182,36 +222,54 @@ function parseTable(md, relPath) {
   }
 }
 
+function parseTableColumns(md) {
+  const lines = String(md || '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line);
+
+  if (lines.length < 2) {
+    return [];
+  } else {
+    return lines[0]
+      .split('|')
+      .map((header) => stripMarkdownLinks(header.trim()))
+      .filter((header) => header);
+  }
+}
+
 function extractMethodMeta(content, relPath) {
-  const block = extractBlockWithAlternatives(content, [
-    {
-      start: '<!-- ABRE DATOS DEL MÉTODO -->',
-      end: '<!-- CIERRA DATOS DEL MÉTODO -->'
-    },
-    {
-      start: '<!-- ABRE LOS DATOS DEL MÉTODO -->',
-      end: '<!-- CIERRA LOS DATOS DEL MÉTODO -->'
-    }
-  ]);
+  const blockMatch = content.match(/<!--\s*ABRE(?:\s+LOS)?\s+DATOS[\s\S]*?-->([\s\S]*?)<!--\s*CIERRA(?:\s+LOS)?\s+DATOS[\s\S]*?-->/i);
+  const block = blockMatch ? blockMatch[1].trim() : '';
 
   if (!block) {
     return {
       description: '',
       pubName: '',
+      module: '',
       programa: '',
       scope: ''
     };
   } else {
-    const descriptionMatch = block.match(/::: note\s+([\s\S]*?)(?=\n\s*\*\*Nombre publicación:\*\*|\n\s*\*\*Programa:\*\*|\n\s*\*\*Global\/País:\*\*|:::$)/i);
-    const pubNameMatch = block.match(/\*\*Nombre publicación:\*\*\s*(.+)/i);
-    const programaMatch = block.match(/\*\*Programa:\*\*\s*(.+)/i);
-    const scopeMatch = block.match(/\*\*Global\/País:\*\*\s*(.+)/i);
+    const descriptionMatch = block.match(/::: note\s*([\s\S]*?)(?=\n\s*\*\*[^*]+:\*\*|:::$)/i);
+    const fieldMap = new Map();
+
+    for (const line of block.split('\n')) {
+      const match = line.trim().match(/^\*\*([^*]+?)\s*:\*\*\s*(.+)$/);
+
+      if (!match) {
+        continue;
+      }
+
+      fieldMap.set(normalizeKey(match[1]), normalizeWhitespace(match[2]));
+    }
 
     return {
       description: markdownLinksToHtml(normalizeWhitespace(descriptionMatch ? descriptionMatch[1].replace(/:::$/, '').trim() : ''), relPath),
-      pubName: normalizeWhitespace(pubNameMatch ? pubNameMatch[1] : ''),
-      programa: normalizeWhitespace(programaMatch ? programaMatch[1] : ''),
-      scope: normalizeWhitespace(scopeMatch ? scopeMatch[1] : '')
+      pubName: fieldMap.get('nombrepublicacion') || '',
+      module: fieldMap.get('modulo') || '',
+      programa: fieldMap.get('programa') || '',
+      scope: fieldMap.get('globalpais') || fieldMap.get('alcance') || ''
     };
   }
 }
@@ -230,26 +288,52 @@ function extractApiTabs(content, relPath) {
 
   if (!block) {
     return {
+      apiTabs: [],
       inputData: [],
       outputData: [],
       errors: []
     };
   } else {
-    const sections = {};
+    const sections = [];
     const tabRegex = /@tab\s*([^\n]+)\n([\s\S]*?)(?=(?:@tab|:::|$))/g;
     let match = tabRegex.exec(block);
 
     while (match !== null) {
-      sections[match[1].trim()] = match[2].trim();
+      sections.push({
+        key: normalizeKey(match[1]),
+        label: match[1].trim(),
+        content: match[2].trim()
+      });
       match = tabRegex.exec(block);
     }
 
-    const inputData = parseTable(sections['Datos de Entrada'] || '', relPath);
-    const outputData = parseTable(sections['Datos de Salida'] || '', relPath);
-    const errorsBlock = sections['Errores'] || '';
-    const errors = errorsBlock.includes('No aplica') ? [] : parseTable(errorsBlock, relPath);
+    const apiTabs = sections.map((section) => {
+      const rows = section.content.includes('No aplica') ? [] : parseTable(section.content, relPath);
+      const columns = rows.length > 0 ? parseTableColumns(section.content) : [];
+      const text = rows.length === 0 ? normalizeWhitespace(section.content) : '';
+
+      return {
+        key: section.key || slugifySegment(section.label),
+        label: section.label,
+        columns,
+        rows,
+        text
+      };
+    });
+
+    const getRowsByAliases = (aliases) => {
+      const aliasSet = new Set(aliases.map((alias) => normalizeKey(alias)));
+      return apiTabs
+        .filter((tab) => aliasSet.has(tab.key))
+        .flatMap((tab) => tab.rows);
+    };
+
+    const inputData = getRowsByAliases(['Datos de Entrada', 'Par?metros de Entrada', 'Parametros de Entrada']);
+    const outputData = getRowsByAliases(['Datos de Salida']);
+    const errors = getRowsByAliases(['Errores']);
 
     return {
+      apiTabs,
       inputData,
       outputData,
       errors
@@ -386,7 +470,7 @@ function extractBackendConfig(content, relPath) {
 }
 
 function extractSdts(content) {
-  const block = extractBlockWithAlternatives(content, [
+  const blocks = extractBlocksWithAlternatives(content, [
     {
       start: '<!-- ABRE SDT -->',
       end: '<!-- CIERRA SDT -->'
@@ -397,38 +481,41 @@ function extractSdts(content) {
     }
   ]);
 
-  if (!block) {
+  if (blocks.length === 0) {
     return [];
   } else {
-    const headerRegex = /###\s*([A-Za-z0-9_]+)/g;
-    const entries = Array.from(block.matchAll(headerRegex));
     const sdts = [];
 
-    for (let index = 0; index < entries.length; index += 1) {
-      const typeName = entries[index][1];
-      const startIndex = entries[index].index + entries[index][0].length;
-      const endIndex = index + 1 < entries.length ? entries[index + 1].index : block.length;
-      const section = block.slice(startIndex, endIndex);
+    for (const block of blocks) {
+      const headerRegex = /###\s*([A-Za-z0-9_]+)/g;
+      const entries = Array.from(block.matchAll(headerRegex));
 
-      const tableHeaderRegex = /Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/i;
-      const tableStart = section.search(tableHeaderRegex);
+      for (let index = 0; index < entries.length; index += 1) {
+        const typeName = entries[index][1];
+        const startIndex = entries[index].index + entries[index][0].length;
+        const endIndex = index + 1 < entries.length ? entries[index + 1].index : block.length;
+        const section = block.slice(startIndex, endIndex);
 
-      if (tableStart < 0) {
-        continue;
-      } else {
-        let tableMd = section.slice(tableStart);
+        const tableHeaderRegex = /Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/i;
+        const tableStart = section.search(tableHeaderRegex);
 
-        tableMd = tableMd
-          .split('\n')
-          .filter((line) => !line.trim().startsWith(':::'))
-          .join('\n');
+        if (tableStart < 0) {
+          continue;
+        } else {
+          let tableMd = section.slice(tableStart);
 
-        const fields = parseTable(tableMd);
+          tableMd = tableMd
+            .split('\n')
+            .filter((line) => !line.trim().startsWith(':::'))
+            .join('\n');
 
-        sdts.push({
-          typeName,
-          fields
-        });
+          const fields = parseTable(tableMd);
+
+          sdts.push({
+            typeName,
+            fields
+          });
+        }
       }
     }
 
@@ -553,11 +640,13 @@ function buildDocJson(mdFilePath, relPath) {
     pageTitle,
     description: methodMeta.description,
     pubName: methodMeta.pubName,
+    module: methodMeta.module,
     programa: methodMeta.programa,
     scope: methodMeta.scope || 'Global',
     hasBackendConfig: backendConfig.hasBackendConfig,
     backendText: backendConfig.backendText,
     backendData: backendConfig.backendData,
+    apiTabs: apiTabs.apiTabs,
     inputData: apiTabs.inputData,
     outputData: apiTabs.outputData,
     errors: apiTabs.errors,

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class InfoCardComponent {
   @Input() description!: string;
   @Input() pubName!: string;
+  @Input() module!: string;
   @Input() programa!: string;
   @Input() scope!: string;
 

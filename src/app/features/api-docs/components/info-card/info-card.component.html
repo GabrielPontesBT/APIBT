@@ -13,6 +13,12 @@
     }
 
     <div class="info-card_row">
+      @if (module) {
+        <div class="info-card_block">
+          <span><strong>Módulo: </strong>{{ module }}</span>
+        </div>
+      }
+
       @if (programa) {
         <div class="info-card_block">
           <span><strong>Programa: </strong>{{ programa }}</span>
