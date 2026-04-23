@@ -11,7 +11,7 @@ interface AgentConfig {
   chatUrl: string;
 }
 
-const BASE_URL = 'https://bt-ia2.bantotal.com/aihub/api/agents';
+const BASE_URL = 'https://aihub.bantotal.com/aihub/api';
 
 const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
   'v2r2': { agentName: 'APIBTV2R2', chatUrl: `${BASE_URL}/APIBTV2R2` },
