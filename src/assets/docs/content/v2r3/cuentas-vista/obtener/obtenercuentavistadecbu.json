@@ -32,6 +32,7 @@
       "Descripción": "No se encontró operación correspondiente al CBU."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.ObtenerCuentaVistaDeCBU>\r\n\t\t<Btinreq>\r\n\t\t\t<Device>AV</Device>\r\n\t\t\t<Usuario>MINSTALADOR</Usuario>\r\n\t\t\t<Requerimiento></Requerimiento>\r\n\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t<Token>268b6d23eb4A8B5C60A82434</Token>\r\n\t\t</Btinreq>\r\n\t\t<CBU>3220001800000831740016</CBU>\r\n      </bts:BTCuentasVista.ObtenerCuentaVistaDeCBU>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

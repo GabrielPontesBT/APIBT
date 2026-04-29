@@ -46,6 +46,7 @@
       "Descripción": "No se recuperó la operación para el identificador recibido."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.ObtenerSaldoDisponible>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>f778078d128D513B0C396F0B</bts:Token>\r\n            <bts:Usuario>LARROSAC</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>WB</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>1</bts:operacionUId>\r\n      </bts:BTCuentasVista.ObtenerSaldoDisponible>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

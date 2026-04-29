@@ -60,6 +60,7 @@
       "Descripción": "Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarDatosPEP>\r\n\t\t   <Btinreq>\r\n\t\t\t  <Canal>BTDIGITAL</Canal>\r\n\t\t\t  <Device>AV</Device>\r\n\t\t\t  <Requerimiento />\r\n\t\t\t  <Token>1254960580EF744F35AE6963</Token>\r\n\t\t\t  <Usuario>INSTALADOR</Usuario>\r\n\t\t   </Btinreq>\r\n\t\t   <personaUId>3</personaUId>  \r\n\t\t   <esPEP>S</esPEP>\r\n\t\t   <sdtDatosPEP>\r\n            <entidad>Bantotal</entidad>\r\n            <cargoRelacion>Político</cargoRelacion>\r\n            <observacion>No corresponde</observacion>\r\n            <fechaInicio>2012-12-12</fechaInicio>\r\n            <fechaSalida>0000-00-00</fechaSalida>\r\n            <correlativo>1</correlativo>\r\n            <tipoPEPId>1</tipoPEPId>\r\n            <tipoFuncionarioPublicoId>1</tipoFuncionarioPublicoId>\r\n            <tipoPEP>Actividad Pública</tipoPEP>\r\n            <tipoFuncionarioPublico>PEP Nacional</tipoFuncionarioPublico>\r\n         </sdtDatosPEP>\r\n\t   </bts:BTPersonas.AgregarDatosPEP>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

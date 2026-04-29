@@ -39,6 +39,16 @@
   }
 }
 
+.info-card_description {
+  ::ng-deep p {
+    margin: 0.9rem 0;
+    &:first-child { margin-top: 0; }
+    &:last-child  { margin-bottom: 0; }
+  }
+
+  //::ng-deep strong { color: var(--red-1); }
+}
+
 @media (max-width: 768px) {
   .info-card_row {
     grid-template-columns: 1fr;

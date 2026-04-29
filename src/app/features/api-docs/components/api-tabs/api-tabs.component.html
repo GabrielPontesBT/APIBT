@@ -21,6 +21,11 @@
     } @else {
       <p class="no-aplica">No aplica</p>
     }
+    @if (errorsNote) {
+      <div class="errors-note">
+        <markdown [data]="errorsNote"></markdown>
+      </div>
+    }
   </mat-tab>
 </mat-tab-group>
 

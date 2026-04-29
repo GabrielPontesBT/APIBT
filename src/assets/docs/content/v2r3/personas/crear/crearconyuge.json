@@ -90,6 +90,7 @@
       "Descripción": "El estado civil ingresado no admite cónyuge."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.CrearConyuge>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>1</bts:personaUId>\r\n         <bts:estadoCivilId>2</bts:estadoCivilId>\r\n         <bts:sdtPersona>\r\n            <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n            <bts:paisDocumento></bts:paisDocumento>\r\n            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n            <bts:tipoDocumento></bts:tipoDocumento>\r\n            <bts:nroDocumento>96900034</bts:nroDocumento>\r\n            <bts:primerApellido>CASTRO</bts:primerApellido>\r\n            <bts:segundoApellido></bts:segundoApellido>\r\n            <bts:primerNombre>MARCOS</bts:primerNombre>\r\n            <bts:segundoNombre></bts:segundoNombre>\r\n            <bts:sexo>M</bts:sexo>\r\n         </bts:sdtPersona>\r\n      </bts:BTPersonas.CrearConyuge>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

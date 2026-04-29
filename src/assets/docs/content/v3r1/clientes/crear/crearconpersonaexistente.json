@@ -65,6 +65,7 @@
       "Descripción": "Ya existe la cuenta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.CrearConPersonaExistente>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>da17de0A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>22</bts:personaUId>\r\n         <bts:sectorId>1</bts:sectorId>\r\n         <bts:clasificacionInternaId>1</bts:clasificacionInternaId>\r\n         <bts:ejecutivoId></bts:ejecutivoId>\r\n         <bts:sdtDatosAdicionales></bts:sdtDatosAdicionales>\r\n         <bts:sucursalId>1</bts:sucursalId>\r\n      </bts:BTClientes.CrearConPersonaExistente>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

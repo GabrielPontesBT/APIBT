@@ -220,7 +220,7 @@ curl -X POST \
 ::: center
 Los campos del tipo de dato estructurado sBTTraspaso son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 concepto | String | Concepto del traspaso.
 importe | Double | Importe del movimiento.
@@ -236,7 +236,7 @@ operacionUIdOrigen | long | Identificador único de operación de origen del tra
 ::: center
 Los campos del tipo de dato estructurado sBTResultadoTraspaso son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 idMovimiento | String | Identificador de movimiento string.
 movimientoUId | Long | Identificador único de movimiento.

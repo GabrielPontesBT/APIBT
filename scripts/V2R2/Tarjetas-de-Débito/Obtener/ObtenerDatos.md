@@ -213,7 +213,7 @@ tipoTarjeta |  String | Tipo de tarjeta.
 
 Los campos del tipo de dato estructurado sBDLimitesTarjeta son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción del límite. 
 moneda | String | Símbolo de la moneda. 

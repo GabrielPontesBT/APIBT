@@ -78,6 +78,7 @@
       "Descripción": "No existe registro para el identificador único."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header/>    \n    <soapenv:Body>        \n        <bts:BTCuentasVista.TraspasarMismoTitularConCotizacion>  \n            <bts:Btinreq>        \n                <bts:Device>AV</bts:Device> \n                <bts:Usuario>MINSTALADOR</bts:Usuario> \n                <bts:Requerimiento></bts:Requerimiento> \n                <bts:Canal>BTDIGITAL</bts:Canal> \n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token> \n            </bts:Btinreq> \n            <bts:clienteUId>21</bts:clienteUId> \n            <bts:sdtTraspaso> \n                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> \n                <bts:importe>500</bts:importe> \n                <bts:operacionUIdDestino>282</bts:operacionUIdDestino> \n                <bts:monedaId></bts:monedaId>    \n                <bts:concepto>Traspaso</bts:concepto>     \n            </bts:sdtTraspaso>   \n            <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  \n        </bts:BTCuentasVista.TraspasarMismoTitularConCotizacion>  \n    </soapenv:Body> \n</soapenv:Envelope>",

@@ -209,7 +209,7 @@ otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 concepto | String | Concepto.
 texto | String | Texto.

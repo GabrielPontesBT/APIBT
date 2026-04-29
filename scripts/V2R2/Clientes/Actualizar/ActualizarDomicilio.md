@@ -109,22 +109,22 @@ curl -X POST \
    "clienteUId": "102",
    "domicilio": 
       {
-         "localidad": "",
-         "paisDomicilio": "",
-         "barrioId": "10",
-         "departamento": "",
-         "numeroPuerta": "1111",
-         "barrio": "",
-         "localidadId": "10",
-         "tipoDeDomicilioId": "1",
-         "codigoPostal": "1",
-         "calle": "14 de julio",
-         "apartamento": "14B",
-         "tipoDeDomicilio": "",
-         "departamentoId": "10",
-         "paisDomicilioId": "845",
-         "direccion": "",
-         "referencia": "Casa Azul"
+        "localidad": "",
+        "paisDomicilio": "",
+        "barrioId": "10",
+        "departamento": "",
+        "numeroPuerta": "1111",
+        "barrio": "",
+        "localidadId": "10",
+        "tipoDeDomicilioId": "1",
+        "codigoPostal": "1",
+        "calle": "14 de julio",
+        "apartamento": "14B",
+        "tipoDeDomicilio": "",
+        "departamentoId": "10",
+        "paisDomicilioId": "845",
+        "direccion": "",
+        "referencia": "Casa Azul"
       },
 }'
 ```

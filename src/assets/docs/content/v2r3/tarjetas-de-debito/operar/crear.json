@@ -102,6 +102,7 @@
       "Descripción": "Funcionalidad inhabilitada en TDD025."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Crear>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>161</bts:clienteUId>\n         <bts:tipoTarjeta>MNO</bts:tipoTarjeta>\n         <bts:nombreTarjeta>AV</bts:nombreTarjeta>\n      </bts:BTTarjetasDeDebito.Crear>\n   </soapenv:Body>\n</soapenv:Envelope>",

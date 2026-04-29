@@ -49,7 +49,6 @@ Código | Descripción
 30002 | No se recuperó operación para el identificador: [Número de identificador].
 30003 | La operación ingresada no corresponde a una cuenta de ahorro.
 40001 | No se encontraron registros para la operación ingresada.
-
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 

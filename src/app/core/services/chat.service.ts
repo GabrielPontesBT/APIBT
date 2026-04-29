@@ -11,7 +11,7 @@ interface AgentConfig {
   chatUrl: string;
 }
 
-const BASE_URL = 'https://aihub.bantotal.com/aihub/api';
+const BASE_URL = 'https://aihub.bantotal.com/aihub/api/agents';
 
 const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
   'v2r2': { agentName: 'APIBTV2R2', chatUrl: `${BASE_URL}/APIBTV2R2` },
@@ -55,8 +55,9 @@ export class ChatService {
       body: JSON.stringify(payload)
     })
     .then(res => res.json())
-    .then((json: SessionResponse) => {
-      const sessionId = json.data.sessionId;
+    .then((json: any) => {
+      if (!json.success) throw new Error(json.msg?.message ?? 'Error al iniciar sesión');
+      const sessionId = (json as SessionResponse).data.sessionId;
       localStorage.setItem(this.sessionKey(), sessionId);
       return sessionId;
     });
@@ -74,7 +75,6 @@ export class ChatService {
     return new Observable(observer => {
       fetch(chatUrl, { method: 'POST', headers, body })
       .then(res => {
-        console.log('[ChatService] status:', res.status, res.headers.get('content-type'));
         if (!res.ok) {
           res.text().then(t => console.error('[ChatService] body:', t));
           throw new Error(`HTTP ${res.status}`);
@@ -93,15 +93,27 @@ export class ChatService {
             buffer = lines.pop()!;
 
             for (const line of lines) {
+              if (!line.trim()) continue;
               if (line.startsWith('data: ')) {
                 try {
                   const json = JSON.parse(line.slice(6));
                   if (json.t === 'msg' || json.t === 'chunk') {
                     observer.next(json.v);
+                  } else if (typeof json.text === 'string') {
+                    observer.next(json.text);
+                  } else if (typeof json.content === 'string') {
+                    observer.next(json.content);
                   }
                 } catch {
                   // ignorar líneas no JSON
                 }
+              } else if (!line.startsWith(':') && !line.startsWith('event:')) {
+                try {
+                  const json = JSON.parse(line);
+                  if (typeof json.text === 'string') observer.next(json.text);
+                  else if (typeof json.content === 'string') observer.next(json.content);
+                  else if (typeof json.v === 'string') observer.next(json.v);
+                } catch { /* no es JSON */ }
               }
             }
             read();

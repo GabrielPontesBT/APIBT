@@ -97,6 +97,7 @@
       "Descripción": "El código de origen de captación no existe."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.CrearSolicitudGrupal>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>669747179CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>1</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:usuarioIngreso>INSTALADOR</bts:usuarioIngreso>\r\n         <bts:fechaIngreso/>\r\n         <bts:usuarioAsignacion>INSTALADOR</bts:usuarioAsignacion>\r\n         <bts:sdtDatosSolicitud>\r\n            <bts:grupoId>34</bts:grupoId>\r\n            <bts:asesorId>92</bts:asesorId>\r\n            <bts:sucursalId/>\r\n            <bts:origenCaptacion>6</bts:origenCaptacion>\r\n         </bts:sdtDatosSolicitud>\r\n      </bts:BTMicrofinanzas.CrearSolicitudGrupal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

@@ -36,6 +36,7 @@
       "Descripción": "La persona ingresada no existe."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarInformacionAdicional>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>12217</bts:personaUId>\n         <bts:sdtInformacionAdicional>\n            <bts:sBTDatoLista>\n               <bts:clave>SCORE</bts:clave>\n               <bts:valor></bts:valor>\n            </bts:sBTDatoLista>\n         </bts:sdtInformacionAdicional>\n      </bts:BTPersonas.EliminarInformacionAdicional>\n   </soapenv:Body>\n</soapenv:Envelope>",

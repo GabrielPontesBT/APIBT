@@ -32,6 +32,7 @@
       "Descripción": "No se recuperó la Operacion para el Identificador: [Número de identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1136448858CD285A89A23FBE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>10211</bts:operacionUId>\r\n      </bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

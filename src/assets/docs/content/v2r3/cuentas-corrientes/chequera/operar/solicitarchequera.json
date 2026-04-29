@@ -71,6 +71,7 @@
       "Descripción": "Debe indicar la cantidad de libretas."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.SolicitarChequera>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>c5b241f7334A8</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:operacionUId>2</bts:operacionUId>\n         <bts:tipoCheque>1</bts:tipoCheque>\n         <bts:cantidadLibretas>1</bts:cantidadLibretas>\n         <bts:datosSolicitud>\n            <bts:persona1Texto1>D.N.I. 123456</bts:persona1Texto1>\n            <bts:persona1Texto2>Juan Perez</bts:persona1Texto2>\n            <bts:persona2Texto1></bts:persona2Texto1>\n            <bts:persona2Texto2></bts:persona2Texto2>  \n            <bts:persona3Texto1></bts:persona3Texto1>  \n            <bts:persona3Texto2></bts:persona3Texto2>  \n            <bts:domicilio>Avenida Italia 2145</bts:domicilio>\n            <bts:sucuraslDeRetiroId></bts:sucuraslDeRetiroId>\n         </bts:datosSolicitud>\n      </bts:BTCuentasCorrientes.SolicitarChequera>\n   </soapenv:Body>\n</soapenv:Envelope>",

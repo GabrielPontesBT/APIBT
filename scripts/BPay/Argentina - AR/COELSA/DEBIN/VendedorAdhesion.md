@@ -81,11 +81,6 @@ Código | Descripción
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-
-@tab JSON
-```json
-No aplica
-```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -122,11 +117,6 @@ No aplica
       </BTCOELSAGestionDebin.VendedorAdhesionResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-```
-
-@tab JSON
-```json
-No aplica
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

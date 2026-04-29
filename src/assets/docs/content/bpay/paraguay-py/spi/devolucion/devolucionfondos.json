@@ -160,6 +160,7 @@
       "Descripción": "Ya se ha realizado una devolución para esta transferencia. (Ref: {ReferenciaOriginal})."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSPIDevoluciones.DevolucionFondos>\n         <bts:Btinreq>\n            <bts:Device>ABC</bts:Device>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\n         </bts:Btinreq>\n         <bts:Canal>841</bts:Canal>\n         <bts:ReferenciaOriginal>TUFIPYPA30052549980002722979</bts:ReferenciaOriginal>\n         <bts:Importe>2505</bts:Importe>\n         <bts:Codigo>AC03</bts:Codigo>\n         <bts:Descripcion>test</bts:Descripcion>\n         <bts:Simular>N</bts:Simular>\n      </bts:BTSPIDevoluciones.DevolucionFondos>\n   </soapenv:Body>\n</soapenv:Envelope>",

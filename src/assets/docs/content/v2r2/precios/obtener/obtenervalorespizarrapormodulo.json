@@ -82,6 +82,7 @@
       "Descripción": "No se encontraron registros de tasas para la clave ingresada."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrecios.ObtenerValoresPizarraPorModulo>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>10355d3c5fCD285A89A23FBE</bts:Token>\n            <bts:Requerimiento></bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:modulo>71</bts:modulo>\n         <bts:tipoPizarra>25</bts:tipoPizarra>\n         <bts:papelId>0</bts:papelId>\n         <bts:monedaId>80</bts:monedaId>\n         <bts:fecha>2025-11-13</bts:fecha>\n         <bts:importe>50000000</bts:importe>\n         <bts:plazo></bts:plazo>\n      </bts:BTPrecios.ObtenerValoresPizarraPorModulo>\n   </soapenv:Body>\n</soapenv:Envelope>",

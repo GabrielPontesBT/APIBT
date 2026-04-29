@@ -187,7 +187,7 @@ curl -X POST \
 ::: center
 Los campos del tipo de dato estructurado sBTExcepcion son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 descripcion | String | Descripción de la excepción.
 descripcionMovimiento | String | Descripción del movimiento.

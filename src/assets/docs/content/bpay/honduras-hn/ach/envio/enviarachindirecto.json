@@ -159,6 +159,7 @@
       "Descripción": "No se recibió Teléfono."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasACH.EnviarAchIndirecto>\n         <bts:Btinreq>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>088459081EF05E4F9E3B2B7A</bts:Token>\n         </bts:Btinreq>\n         <bts:Canal>BTDIGITAL</bts:Canal>\n         <bts:IdClienteIndirecto>81</bts:IdClienteIndirecto>\n         <bts:BancoDestino>6</bts:BancoDestino>\n         <bts:NroCuentaDestino>543674</bts:NroCuentaDestino>\n         <bts:TipoCuentaDestino>1</bts:TipoCuentaDestino>\n         <bts:IdentidadDestino>1233223</bts:IdentidadDestino>\n         <bts:nombreDestino>Agustin Meriles</bts:nombreDestino>\n         <bts:Direccion>Av Italia 5566</bts:Direccion>\n         <bts:Comentario>Matriz 1</bts:Comentario>\n         <bts:moneda>1</bts:moneda>\n         <bts:Importe>150000</bts:Importe>\n         <bts:CorreoElectronico>agustin@gmail.com</bts:CorreoElectronico>\n         <bts:NroTelefono>54678433</bts:NroTelefono>\n      </bts:BTTransferenciasACH.EnviarAchIndirecto>\n   </soapenv:Body>\n</soapenv:Envelope>",

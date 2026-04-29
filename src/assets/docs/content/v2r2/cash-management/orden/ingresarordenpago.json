@@ -70,6 +70,7 @@
       "Descripción": "No se recibio fecha para la orden."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.IngresarOrdenPago>\n        <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>311020191114150000216393</bts:Token>\n            <bts:Device>001</bts:Device>\n         </bts:Btinreq>\n         <bts:contrato>3</bts:contrato>\n         <bts:servicio>10</bts:servicio>\n         <bts:operacionUId_debito>1</bts:operacionUId_debito>\n         <bts:moneda>101</bts:moneda>\n         <bts:importe>1000</bts:importe>\n         <bts:fecha>2019-11-06</bts:fecha>\n         <bts:listaCampoValor>\n            <bts:sBTValorCampoCASH>\n               <bts:tag>ORDENANTE_NOM</bts:tag>\n               <bts:valor>Francisco Otheguy</bts:valor>\n            </bts:sBTValorCampoCASH>\n         </bts:listaCampoValor>\n      </bts:BTCASHManagement.IngresarOrdenPago>\n   </soapenv:Body>\n</soapenv:Envelope>",

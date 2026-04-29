@@ -257,7 +257,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTEInstruccion son los siguientes: 
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 identificador | Short | Identificador de instrucción.
 descripcion | String | Descripción de instrucción.

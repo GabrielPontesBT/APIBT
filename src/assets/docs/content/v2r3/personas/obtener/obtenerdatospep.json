@@ -53,6 +53,7 @@
       "Descripción": "Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerDatosPEP>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>970772007CD285A89A23FBEE</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUID>12</bts:personaUID>\n      </bts:BTPersonas.ObtenerDatosPEP>\n   </soapenv:Body>\n</soapenv:Envelope>",

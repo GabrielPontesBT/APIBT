@@ -41,6 +41,7 @@
       "Descripción": "No se recuperó la cuenta para el Identificador: [Número de Identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>387E2B35D9F43B80C31D1FF0</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:sdtPrestamoAlta>\r\n            <bts:plazoTotal>300</bts:plazoTotal>\r\n            <bts:productoUId>71</bts:productoUId>\r\n            <bts:monto>20000</bts:monto>\r\n            <bts:actividad>1111</bts:actividad>\r\n            <bts:valorCuota>5000</bts:valorCuota>\r\n            <bts:periodoCuotas>30</bts:periodoCuotas>\r\n            <bts:cantidadCuotas></bts:cantidadCuotas>\r\n            <bts:tasa></bts:tasa>\r\n            <bts:fechaPrimerPago>2020-11-13</bts:fechaPrimerPago>\r\n            <bts:pizarra></bts:pizarra>\r\n         </bts:sdtPrestamoAlta>\r\n      </bts:BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

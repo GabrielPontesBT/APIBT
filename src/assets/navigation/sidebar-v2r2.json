@@ -11,12 +11,6 @@
         "children": [
           {
             "type": "file",
-            "label": "Contratar Simulación",
-            "pageTitle": "Contratar Simulación",
-            "slug": "ahorro-programado/contratar/contratar-simulacion"
-          },
-          {
-            "type": "file",
             "label": "ContratarSimulación",
             "pageTitle": "Contratar Simulación",
             "slug": "ahorro-programado/contratar/contratarsimulacion"
@@ -119,12 +113,6 @@
             "label": "Obtener",
             "pageTitle": "Obtener",
             "slug": "ahorro-programado/obtener/obtener"
-          },
-          {
-            "type": "file",
-            "label": "ObtenerCronogramaAbonos",
-            "pageTitle": "Obtener Cronograma de Abonos",
-            "slug": "ahorro-programado/obtener/obtenercronogramaabonos"
           },
           {
             "type": "file",

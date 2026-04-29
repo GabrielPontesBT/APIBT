@@ -32,6 +32,7 @@
       "Descripción": "No existe el usuario ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.Obtener>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>2062732190F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:usuario>INSTALADOR</bts:usuario>\n      </bts:BTUsuarios.Obtener>\n   </soapenv:Body>\n</soapenv:Envelope>",
@@ -42,6 +43,87 @@
       "json": "'{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"2062732190F955E77534D3E0\",\n        \"Device\": \"AC\"\n    },\n    \"sdtDatosUsuario\": {\n        \"usuario\": \"INSTALADOR\",\n        \"nombre\": \"INSTALADOR\",\n        \"email\": \"moralesa@dlya.com.uy\",\n        \"sucursal\": \"Sucursal Beta\",\n        \"programaInicial\": \"MINICIO\",\n        \"espaciosDeTrabajo\": 0,\n        \"cantidadSesionesAbiertas\": 9,\n        \"cajero\": \"S\",\n        \"numeroCaja\": 400,\n        \"nivel\": 9,\n        \"perfiles\": {\n            \"sBTPerfilBT\": [\n                {\n                    \"Perfil\": \"COMERCIAL\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"INSTALADOR\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"MFINSTALL\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"PRECIOS\",\n                    \"FechaAlta\": \"2001-02-22\",\n                    \"FechaVencimiento\": \"2035-03-03\"\n                }\n            ]\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTUsuarios.Obtener\",\n        \"Fecha\": \"2019-11-19\",\n        \"Hora\": \"17:21:59\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 6992,\n        \"Estado\": \"OK\"\n    }\n}'"
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosUsuario",
+      "fields": [
+        {
+          "Nombre": "cajero",
+          "Tipo": "String",
+          "Comentarios": "Es cajero? (S/N)."
+        },
+        {
+          "Nombre": "cantidadSesionesAbiertas",
+          "Tipo": "Short",
+          "Comentarios": "Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email del usuario."
+        },
+        {
+          "Nombre": "espaciosDeTrabajo",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad máxima de espacios de trabajos que puede tener abierta el usuario."
+        },
+        {
+          "Nombre": "nivel",
+          "Tipo": "short",
+          "Comentarios": "Nivel del usuario."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del usuario."
+        },
+        {
+          "Nombre": "numeroCaja",
+          "Tipo": "Int",
+          "Comentarios": "Número de caja del usuario."
+        },
+        {
+          "Nombre": "perfiles",
+          "Tipo": "<a href=\"#sbtperfilbt\">sBTPerfilBT</a>",
+          "Comentarios": "Listado de perfiles asociados al usuario."
+        },
+        {
+          "Nombre": "programaInicial",
+          "Tipo": "String",
+          "Comentarios": "Nombre de programa inicial que se invoca al acceder a Bantotal."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal donde se encuentra el usuario."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Identificador del usuario."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPerfilBT",
+      "fields": [
+        {
+          "Nombre": "FechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil."
+        },
+        {
+          "Nombre": "FechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del perfil para el usuario."
+        },
+        {
+          "Nombre": "Perfil",
+          "Tipo": "String",
+          "Comentarios": "Identificador de perfil Bantotal."
+        }
+      ]
+    }
+  ],
   "valuesTable": []
 }

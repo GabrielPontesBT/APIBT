@@ -81,6 +81,7 @@
       "Descripción": "Error: No tiene autorización para consultar la cuenta ingresada."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerPosicion>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>D567A28912FF8C29016DD5EC</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>341</bts:clienteUId>\r\n         <bts:monedaId>2222</bts:monedaId>\r\n         <bts:fecha>2020-08-06</bts:fecha>\r\n      </bts:BTClientes.ObtenerPosicion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

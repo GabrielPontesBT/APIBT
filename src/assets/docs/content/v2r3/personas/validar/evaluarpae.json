@@ -90,6 +90,7 @@
       "Descripción": "Error en la ejecución del modelo de evaluación."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EvaluarPAE>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\n         </bts:Btinreq>\n         <bts:modeloId>23</bts:modeloId>\n         <bts:personaUId>62</bts:personaUId>\n         <bts:productoUId>3</bts:productoUId>\n         <bts:sdtValores>\n            <bts:sBTPAEValorItem>\n               <bts:itemValor></bts:itemValor>\n               <bts:itemNombre></bts:itemNombre>\n            </bts:sBTPAEValorItem>\n         </bts:sdtValores>\n      </bts:BTPersonas.EvaluarPAE>\n   </soapenv:Body>\n</soapenv:Envelope>",

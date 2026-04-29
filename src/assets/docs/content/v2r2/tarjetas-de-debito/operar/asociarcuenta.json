@@ -31,6 +31,7 @@
       "Descripción": "No se recibió el Identificador de operación a asociar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.AsociarCuenta>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1080548031CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10</bts:operacionUId>\n         <bts:tarjetaUId>1</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.AsociarCuenta>\n   </soapenv:Body>\n</soapenv:Envelope>",

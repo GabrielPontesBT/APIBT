@@ -181,7 +181,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTActividad son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 descripcion | String | Descripción de actividad.
 identificador | Int | Identificador de actividad.

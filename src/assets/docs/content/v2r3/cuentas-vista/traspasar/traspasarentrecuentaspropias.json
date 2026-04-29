@@ -73,6 +73,7 @@
       "Descripción": "Error de configuración: No se definió transacción a ejecutar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.TraspasarEntreCuentasPropias>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtTraspaso>\n            <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>\n            <bts:importe>500</bts:importe>\n            <bts:operacionUIdDestino>282</bts:operacionUIdDestino>\n            <bts:monedaId></bts:monedaId>\n            <bts:concepto>Traspaso</bts:concepto>\n         </bts:sdtTraspaso>\n      </bts:BTCuentasVista.TraspasarEntreCuentasPropias>\n   </soapenv:Body>\n</soapenv:Envelope>",
@@ -83,6 +84,67 @@
       "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtResultadoTraspaso\": {\n        \"operacionUIdOrigen\": \"281\",\n        \"idMovimiento\": \"00100001000500075000000003820180809\",\n        \"operacionUIdDestino\": \"282\",\n        \"saldoOperacionOrigen\": \"7432400.28\",\n        \"movimientoUId\": \"142\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"868\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasVista.TraspasarEntreCuentasPropias\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-18\",\n        \"Hora\": \"17:15:28\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTTraspaso",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto del traspaso."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe del movimiento."
+        },
+        {
+          "Nombre": "monedaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "long",
+          "Comentarios": "Identificador único de operación de origen del traspaso."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTResultadoTraspaso",
+      "fields": [
+        {
+          "Nombre": "idMovimiento",
+          "Tipo": "String",
+          "Comentarios": "Identificador de movimiento string."
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de movimiento."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación de origen del traspaso."
+        },
+        {
+          "Nombre": "saldoOperacionOrigen",
+          "Tipo": "Double",
+          "Comentarios": "Saldo actual de operación de origen."
+        }
+      ]
+    }
+  ],
   "valuesTable": []
 }

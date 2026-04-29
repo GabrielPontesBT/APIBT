@@ -34,6 +34,7 @@
       "Descripción": "No es posible completar la tarea. No se pudo determinar el modelo de evaluación crediticia"
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.CompletarTarea>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>95</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1130594463CD285A89A23FBE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:solicitudUId>11109</bts:solicitudUId>\r\n      </bts:BTMicrofinanzas.CompletarTarea>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

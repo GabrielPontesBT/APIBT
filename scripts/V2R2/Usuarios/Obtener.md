@@ -232,7 +232,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDatosUsuario son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 cajero | String | Es cajero? (S/N). 
 cantidadSesionesAbiertas | Short | Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal. 
@@ -250,7 +250,7 @@ usuario | String | Identificador del usuario.
 
 Los campos del tipo de dato estructurado sBTPerfilBT son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 FechaAlta | Date | Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil. 
 FechaVencimiento | Date | Fecha de vencimiento del perfil para el usuario. 

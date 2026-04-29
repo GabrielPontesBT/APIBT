@@ -22,6 +22,7 @@
     }
   ],
   "errors": [],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n   xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header />\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConsultaCuentas>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>448d2e1ecc464D4650046918</Token>\n         </Btinreq>\n      </bts:BTCOELSAGestionDebin.ConsultaCuentas>\n   </soapenv:Body>\n</soapenv:Envelope>",

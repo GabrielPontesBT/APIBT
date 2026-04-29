@@ -55,6 +55,7 @@
       "Descripción": "No se recibió Tipo de Teléfono."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.AgregarTelefono>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>da17de6412</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n         <bts:domicilioId>2</bts:domicilioId>\n         <bts:numeroTelefono>22929787</bts:numeroTelefono>\n         <bts:tipoTelefonoId>1</bts:tipoTelefonoId>\n      </bts:BTClientes.AgregarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>",

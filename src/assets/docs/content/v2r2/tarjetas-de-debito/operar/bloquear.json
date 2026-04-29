@@ -60,6 +60,7 @@
       "Descripción": "El cliente ingresado no es habiente de la tarjeta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Bloquear>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BA</bts:Usuario>\n            <bts:Token>0211202010280000399672</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:tarjetaUId>109</bts:tarjetaUId>\n         <bts:motivoBloqueoId>1</bts:motivoBloqueoId>\n      </bts:BTTarjetasDeDebito.Bloquear>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -231,7 +231,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTLimiteTarjeta son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 identificador | Short | Código de límite. 
 limiteBandaMagnetica | Double | Monto límite en banda magnética. 

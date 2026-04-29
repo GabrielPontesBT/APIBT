@@ -84,6 +84,7 @@
       "Descripción": "No se ingresó primer apellido."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n  <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarEnListasNegras>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>8ab636f8624A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:paisDocumentoId>80</bts:paisDocumentoId>\n         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\n         <bts:numeroDocumento>23330162449</bts:numeroDocumento>\n         <bts:primerNombre>SERVICES</bts:primerNombre>\n         <bts:segundoNombre>TEST</bts:segundoNombre>\n         <bts:primerApellido>SUPER</bts:primerApellido>\n         <bts:segundoApellido>VIELLE</bts:segundoApellido>\n         <bts:nombreEmpresa></bts:nombreEmpresa>\n      </bts:BTPersonas.ValidarEnListasNegras>\n   </soapenv:Body>\n</soapenv:Envelope>",

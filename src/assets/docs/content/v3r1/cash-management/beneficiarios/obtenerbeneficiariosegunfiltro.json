@@ -64,6 +64,7 @@
       "Descripción": "No se recuperó Beneficiario para la identificación recibida."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>8</bts:contratoId>\r\n         <bts:servicioId></bts:servicioId>\r\n         <bts:clienteUId>364</bts:clienteUId>\r\n         <bts:agendaId></bts:agendaId>\r\n         <bts:sdtValorCampoCash>\r\n            <bts:sBTValorCampoCash>\r\n               <bts:tag></bts:tag>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTValorCampoCash>\r\n         </bts:sdtValorCampoCash>\r\n      </bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

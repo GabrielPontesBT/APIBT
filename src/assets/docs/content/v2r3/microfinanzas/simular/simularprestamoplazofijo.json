@@ -52,6 +52,7 @@
       "Descripción": "Debe ingresar plazo o fecha de vencimiento."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.SimularPlazoFijo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1571835133CD285A89A23FBE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTSimulacionPlazoFijo>\n            <bts:solicitudUId>10972</bts:solicitudUId>\n            <bts:clienteUId>2</bts:clienteUId>\n            <bts:productoUId>29</bts:productoUId>\n            <bts:fechaVencimiento/>\n            <bts:plazo>365</bts:plazo>\n            <bts:monto>35000</bts:monto>\n            <bts:pizarra/>\n            <bts:tasa/>\n            <bts:destinoCredito>28</bts:destinoCredito>\n            <bts:datosAdicionales/>\n         </bts:sBTSimulacionPlazoFijo>\n      </bts:BTMicrofinanzas.SimularPlazoFijo>\n   </soapenv:Body>\n</soapenv:Envelope>",

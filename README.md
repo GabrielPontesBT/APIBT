@@ -70,17 +70,20 @@ npm run build:docs-content
 # Regenerar la navegación lateral (sidebar)
 npm run build:docs-navigation
 
-# Regenerar el índice de búsqueda
-npm run build:docs-search
-
 # Validar que todos los documentos tienen el formato correcto
 npm run validate:docs
 
-# Ejecutar los 3 primeros pasos en secuencia (contenido + navegación + validación)
+# Ejecutar los 3 comandos anteriores en secuencia (atajo recomendado para el flujo habitual)
 npm run build:docs
+
+# Regenerar el índice de búsqueda (no incluido en build:docs, ejecutar por separado si se modifican documentos)
+npm run build:docs-search
+
+# Regenerar assets de releases (no incluido en build:docs, ejecutar por separado si se modifican releases)
+npm run build:release-assets
 ```
 
-> **Importante:** Cada vez que se agrega o modifica un archivo `.md` en `scripts/archivos-markdown/`, hay que ejecutar `npm run build:docs` para que los cambios se reflejen en la aplicación.
+> **Importante:** Cada vez que se agrega o modifica un archivo `.md`, hay que ejecutar `npm run build:docs` para que los cambios se reflejen en la aplicación. Si además se modificaron datos de búsqueda o releases, ejecutar también `npm run build:docs-search` o `npm run build:release-assets` según corresponda.
 
 ---
 

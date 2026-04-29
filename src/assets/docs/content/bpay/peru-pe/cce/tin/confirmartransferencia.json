@@ -116,6 +116,7 @@
       "Descripción": "No se recibió el IDL de la transferencia."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>        \n\t\t<bts:BTCCETIN.TransferenciaTin>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>1</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:Canal>91</bts:Canal>\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\n\t\t\t<bts:operacionUID>6935</bts:operacionUID>\n\t\t\t<bts:Moneda>1</bts:Moneda>\n\t\t\t<bts:Importe>1030</bts:Importe>\n\t\t\t<bts:IDTransferencia>2025042818142008028191000603</bts:IDTransferencia>\n\t\t\t<bts:MPE001IDL>26596</bts:MPE001IDL>\n\t\t\t<bts:Celular></bts:Celular>\n\t\t\t<bts:IdQr></bts:IdQr>\n\t\t</bts:BTCCETIN.TransferenciaTin>\n    </soapenv:Body>\n</soapenv:Envelope>",

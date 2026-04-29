@@ -230,7 +230,7 @@ curl -X POST \
 
 Los campos del tipo de dato estructurado sBTDetalleOperacion son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.

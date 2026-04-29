@@ -151,3 +151,4 @@ Nombre | Tipo | Comentarios
 CodBco 	| Int	 | Codigo banco. 
 NomBaco | String | Nombre. 
 :::
+<!-- CIERRA SDT -->

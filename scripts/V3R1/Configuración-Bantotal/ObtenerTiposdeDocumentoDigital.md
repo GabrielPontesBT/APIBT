@@ -487,7 +487,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTTipoDocumentoDigital son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Long | Identificador de tipo de documento digital.
 descripcion | String | Descripción del tipo de documento digital.

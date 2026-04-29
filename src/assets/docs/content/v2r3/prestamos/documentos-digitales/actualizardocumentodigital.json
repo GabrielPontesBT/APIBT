@@ -79,6 +79,7 @@
       "Descripción": "Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ActualizarDocumentoDigital>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>5744be79064A8B5C60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:operacionUId>121</bts:operacionUId>\n         <bts:documentoId>118</bts:documentoId>\n         <bts:nombreDelDocumento>ejemplo</bts:nombreDelDocumento>\n         <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>\n         <bts:fechaDeEmision>2010-10-10</bts:fechaDeEmision>\n         <bts:fechaDeVencimiento>2020-10-10</bts:fechaDeVencimiento>\n      </bts:BTPrestamos.ActualizarDocumentoDigital>\n   </soapenv:Body>\n</soapenv:Envelope>",

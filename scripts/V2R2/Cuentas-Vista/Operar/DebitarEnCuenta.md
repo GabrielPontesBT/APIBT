@@ -51,7 +51,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtDatosDebitar | [sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar) | Datos del débito.
+sdtDatosDebito | [sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar) | Datos del débito.
 
 @tab Datos de Salida
 
@@ -65,10 +65,8 @@ Código | Descripción
 :--------- | :---------
 30001 | Debe ingresar una operación.
 30002 | Debe ingresar al menos un importe.
-30004 | No se recuperó la operación origen para el Identificador: X.
-30004 | No se recuperó la cuenta cliente origen para el Identificador: X.
-
-
+30004 | No se recuperó la operación origen para el Identificador: [Número de identificador].
+30004 | No se recuperó la cuenta cliente origen para el Identificador: [Número de identificador].
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -243,18 +241,15 @@ Los campos del tipo de dato estructurado sBTDatosAcreditarDebitar son los siguie
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-clienteUId |	Long|	Identificador único de cliente.
-concepto1	|String	|Concepto 1 del movimiento.
-concepto2	|String	|Concepto 2 del movimiento.
-concepto3	|String	|Concepto 3 del movimiento.
-concepto4	|String	|Concepto 4 del movimiento.
-importe1	|Double	|Importe 1 del movimiento.
-importe2	|Double	|Importe 2 del movimiento.
-importe3	|Double	|Importe 3 del movimiento.
-importe4	|Double	|Importe 4 del movimiento.
-operacionUId |	Long|	Identificador único de operación.
+clienteUId | Long | Identificador único de cliente.
+concepto1	| String | Concepto 1 del movimiento.
+concepto2	| String | Concepto 2 del movimiento.
+concepto3 | String | Concepto 3 del movimiento.
+concepto4 | String | Concepto 4 del movimiento.
+importe1 | Double | Importe 1 del movimiento.
+importe2 | Double | Importe 2 del movimiento.
+importe3 | Double | Importe 3 del movimiento.
+importe4 | Double | Importe 4 del movimiento.
+operacionUId | Long |	Identificador único de operación.
 :::
 <!-- CIERRA SDT -->
-
-
-

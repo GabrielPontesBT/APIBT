@@ -324,13 +324,21 @@ function validateSidebarAgainstDocuments() {
     }
 
     if (node.type === 'file') {
-      const expectedJsonPath = path.join(CONTENT_DIR, `${node.slug}.json`);
+      const versionDirs = fs.existsSync(CONTENT_DIR)
+        ? fs.readdirSync(CONTENT_DIR, { withFileTypes: true })
+            .filter(e => e.isDirectory())
+            .map(e => e.name)
+        : [];
 
-      if (!fs.existsSync(expectedJsonPath)) {
+      const existsInAnyVersion = versionDirs.some(v =>
+        fs.existsSync(path.join(CONTENT_DIR, v, `${node.slug}.json`))
+      );
+
+      if (!existsInAnyVersion) {
         errors.push({
           type: 'SIDEBAR_BROKEN_LINK',
           slug: node.slug,
-          expectedJson: expectedJsonPath
+          expectedJson: path.join(CONTENT_DIR, `{version}/${node.slug}.json`)
         });
       } else {
         // No hacer nada

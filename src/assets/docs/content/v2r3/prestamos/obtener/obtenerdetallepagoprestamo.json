@@ -49,6 +49,7 @@
       "Descripción": "No existe registro para el movimiento indicado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDetallePagoPrestamo>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>ae6041cefd4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>751</bts:operacionUId>\n         <bts:movimientoUId>981</bts:movimientoUId>\n      </bts:BTPrestamos.ObtenerDetallePagoPrestamo>\n   </soapenv:Body>\n</soapenv:Envelope>",

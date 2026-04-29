@@ -38,6 +38,7 @@
       "Descripción": "Debe ingresar fecha a consultar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCalendarios.ObtenerFechaHabilAnterior>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>Instalador</bts:Usuario>\n            <bts:Token>172681201999865B3A2E76CF</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:fecha>2021-03-27</bts:fecha>\n      </bts:BTCalendarios.ObtenerFechaHabilAnterior>\n   </soapenv:Body>\n</soapenv:Envelope>",

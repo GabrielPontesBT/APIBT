@@ -96,6 +96,7 @@
       "Descripción": "La referencia no coincide con el mensaje original."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSPIDevoluciones.SolicitudRetornoFondos>\n         <bts:Btinreq>\n            <bts:Device>ABC</bts:Device>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\n         </bts:Btinreq>\n         <bts:canal>WEB</bts:canal>\n         <bts:referencia>BGNBPYPX27052537200024217053</bts:referencia>\n         <bts:importe>1300</bts:importe>\n         <bts:razonCodigo>AC03</bts:razonCodigo>\n      </bts:BTSPIDevoluciones.SolicitudRetornoFondos>\n   </soapenv:Body>\n</soapenv:Envelope>",

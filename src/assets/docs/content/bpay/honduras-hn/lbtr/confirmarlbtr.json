@@ -34,6 +34,7 @@
       "Descripción": "No se recibió Id de transferencia."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasLBTR.Confirmar>\n         <bts:Btinreq>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>088459081EF05E4F9E3B2B7A</bts:Token>\n         </bts:Btinreq>\n         <bts:IdTransferencia>130</bts:IdTransferencia>\n      </bts:BTTransferenciasLBTR.Confirmar>\n   </soapenv:Body>\n</soapenv:Envelope>",

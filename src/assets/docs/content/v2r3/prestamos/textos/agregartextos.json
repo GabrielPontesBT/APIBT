@@ -56,6 +56,7 @@
       "Descripción": "El código [Número del código] y renglón [Número del renglón] ya tiene texto ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.AgregarTextos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>0E93EA2F1B3F9ED212A0449F</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>49</bts:operacionUId>\n         <bts:sdtTextos>\n            <bts:sBTTextoOperacion>\n               <texto>Prueba1</texto>\n               <renglon>3</renglon>\n               <descripcion>NOMBRE DE CURSO</descripcion>\n               <codigo>8</codigo>\n            </bts:sBTTextoOperacion>\n            <bts:sBTTextoOperacion>\n               <texto>Prueba2</texto>\n               <renglon>4</renglon>\n               <descripcion>NOMBRE DE CURSO</descripcion>\n               <codigo>8</codigo>\n            </bts:sBTTextoOperacion>\n         </bts:sdtTextos>\n      </bts:BTPrestamos.AgregarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",

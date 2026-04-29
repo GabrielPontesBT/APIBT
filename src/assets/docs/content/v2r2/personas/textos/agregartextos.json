@@ -56,6 +56,7 @@
       "Descripción": "El código y renglón ya tiene texto ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.AgregarTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n         </bts:Btinreq>\n         <bts:PersonaUId>143</bts:PersonaUId>\n         <bts:sbtTextos>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>2</bts:renglon>\n               <bts:texto>ALEX</bts:texto>\n               <bts:descripcion>NOMBRE DEL BENEFICIARIO:</bts:descripcion>\n               <bts:codigo>11</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>2</bts:renglon>\n               <bts:texto>Rodriguez</bts:texto>\n               <bts:descripcion>APELLIDO DE CONYUGE:</bts:descripcion>\n               <bts:codigo>491</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n\n         </bts:sbtTextos>\n      </bts:BTPersonas.AgregarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",

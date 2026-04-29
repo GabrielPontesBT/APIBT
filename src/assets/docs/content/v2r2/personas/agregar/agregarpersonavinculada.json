@@ -56,6 +56,7 @@
       "Descripción": "El código de vínculo ingresado es inválido."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarPersonaVinculada>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>101560665CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>1</bts:personaUId>\r\n         <bts:personaVinculadaUId>3</bts:personaVinculadaUId>\r\n         <bts:vinculoId>53</bts:vinculoId>\r\n      </bts:BTPersonas.AgregarPersonaVinculada>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

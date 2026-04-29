@@ -40,6 +40,7 @@
       "Descripción": "La operación se encuentra cancelada."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerSegurosAsociados>\r\n         <bts:Btinreq>\r\n   \t\t  <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>FC</bts:Device>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Token>554DC597B08D07B49154AFFC</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>1059</bts:operacionUId>\r\n      </bts:BTPrestamos.ObtenerSegurosAsociados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

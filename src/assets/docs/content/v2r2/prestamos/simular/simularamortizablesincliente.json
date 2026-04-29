@@ -172,6 +172,7 @@
       "Descripción": "No se cumple el período máximo entre Fecha Valor y Fecha de Primer."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularAmortizableSinCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>72e34bcd9d4A8B5C60A82434</bts:Token>\n            <bts:Device>AV</bts:Device>          \n         </bts:Btinreq>\n         <bts:sdtDatosAmortizable>\n            <bts:monto>10000</bts:monto>\n            <bts:productoUId>61</bts:productoUId>\n            <bts:fechaPrimerPago>2019-01-12</bts:fechaPrimerPago>\n            <bts:pizarra></bts:pizarra>\n            <bts:tasa></bts:tasa>\n            <bts:actividad>11200</bts:actividad>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:cantidadCuotas>12</bts:cantidadCuotas>\n         </bts:sdtDatosAmortizable>\n      </bts:BTPrestamos.SimularAmortizableSinCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",

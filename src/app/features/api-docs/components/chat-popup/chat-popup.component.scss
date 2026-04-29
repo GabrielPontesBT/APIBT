@@ -196,6 +196,22 @@
 ::ng-deep .bot-message h2 { font-size: 1.2em; }
 ::ng-deep .bot-message h3 { font-size: 1.05em; }
 
+::ng-deep .bot-message h1 code,
+::ng-deep .bot-message h2 code,
+::ng-deep .bot-message h3 code,
+::ng-deep .bot-message h4 code,
+::ng-deep .bot-message h5 code,
+::ng-deep .bot-message h6 code,
+::ng-deep .bot-message p code {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--red-1);
+}
+
 ::ng-deep .bot-message hr {
   margin: 0.75rem 0;
   border: none;
@@ -224,37 +240,51 @@
   p { margin: 0; }
 }
 
+// ── Streaming text (texto plano mientras llegan los chunks) ──────────────────
+
+::ng-deep .bot-message .streaming-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
 // ── Tables ────────────────────────────────────────────────────────────────────
 
 ::ng-deep .bot-message table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0.6rem 0;
-  font-size: 0.8rem;
-  display: block;
-  overflow-x: auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  outline: 1px solid var(--border-color);
+  margin: 0.75rem 0;
 }
 
 ::ng-deep .bot-message thead {
-  background: color-mix(in oklab, var(--red-1) 12%, transparent);
+  background: var(--table-header);
 }
 
 ::ng-deep .bot-message th {
-  padding: 0.45rem 0.7rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 600;
+  color: var(--text-color);
   border: 1px solid var(--border-color);
-  white-space: nowrap;
 }
 
-::ng-deep .bot-message td {
-  padding: 0.4rem 0.7rem;
+::ng-deep .bot-message tbody td,
+::ng-deep .bot-message tbody th {
+  background: var(--table-columns);
+  padding: 0.6rem 1rem;
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   vertical-align: top;
 }
 
-::ng-deep .bot-message tbody tr:nth-child(even) {
-  background: color-mix(in oklab, var(--grey-1) 60%, transparent);
+::ng-deep .bot-message tbody tr:nth-child(even) td,
+::ng-deep .bot-message tbody tr:nth-child(even) th {
+  background: var(--grey-1);
 }
 
 ::ng-deep .bot-message pre[class*="language-"] {
@@ -268,7 +298,7 @@
 
 ::ng-deep .bot-message .chat-code-wrapper pre[class*="language-"] {
   margin: 0;
-  border-radius: 0;
+  border-radius: 1rem;
 }
 
 ::ng-deep .bot-message pre.language-json code,
@@ -291,7 +321,7 @@
 
   pre[class*="language-"] {
     margin: 0;
-    border-radius: 4px;
+    border-radius: 1rem;
   }
 
 }

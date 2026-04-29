@@ -81,6 +81,7 @@
       "Descripción": "Error - No hay precio para el papel [Número de Identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerDetallePosicion>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>E362E52FED059AA3BF86A6E3</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>341</bts:clienteUId>\r\n         <bts:monedaId>2222</bts:monedaId>\r\n         <bts:fecha>2020-08-06</bts:fecha>\r\n         <bts:identificadorClaseActivo>10</bts:identificadorClaseActivo>\r\n         <bts:numeradorConsulta>12928</bts:numeradorConsulta>\r\n      </bts:BTClientes.ObtenerDetallePosicion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

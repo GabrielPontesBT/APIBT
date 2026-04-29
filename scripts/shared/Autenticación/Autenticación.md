@@ -12,8 +12,48 @@ comment: false
 footer: false
 ---
 
-Para poder utilizar los servicios es necesario autenticarse a efectos de obtener el SessionToken.
+<!-- ABRE DATOS DEL MÉTODO -->
+::: note Previo al inicio de la ejecución de los servicios de BTS se debe obtener un token válido que luego será utilizado en la ejecución de los servicios.
 
+Para obtener un token valido se debe invocar el servicio Authenticate método Execute.
+
+Se lo invoca pasándole como parámetro de entrada UserId y UserPassword válido con el método de autenticación indicado en la parametrización (LDAP o AS400).
+
+**Nombre publicación:** Authenticate.Execute
+
+**Programa:** PBTIAUTHENTICATE
+
+**Global/País:** Global
+:::
+<!-- CIERRA DATOS DEL MÉTODO -->
+
+<!-- ABRE TABLA DE DATOS -->
+::: tabs #Datos 
+
+@tab Datos de Entrada
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+UserId | String | Usuario de autenticación.
+UserPassword | String | Contraseña de autenticación.
+
+@tab Datos de Salida
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+SessionToken | String | Token a utilizar para la ejecución de servicios.
+
+@tab Errores
+
+Código | Descripción
+:--------- | :---------
+50 | Error de Autenticación. 
+
+El mensaje de error puede variar ya que es devuelto por el programa que valida usuario/contraseña, y dicho programa es parametrizable (se puede utilizar el que viene por defecto u otro).
+::: 
+<!-- CIERRA TABLA DE DATOS -->
+
+<!-- ABRE EJEMPLO DE INVOCACIÓN -->
 ::: warning Ejemplo de Invocación
 ::: code-tabs #Formato
 
@@ -53,11 +93,13 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"UserId": "BANTOTAL",
-    "UserPassword": "z0na#1357"
+  "UserPassword": "z0na#1357"
 }'
 ```
 :::
+<!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
+<!-- ABRE EJEMPLO DE RESPUESTA -->
 ::: warning Ejemplo de Respuesta
 ::: code-tabs #Formato
 
@@ -115,3 +157,4 @@ curl -X POST \
 }'
 ```
 :::
+<!-- CIERRA EJEMPLO DE RESPUESTA -->

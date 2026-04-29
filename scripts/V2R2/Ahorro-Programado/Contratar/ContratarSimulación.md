@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtDatos | [sBTCrearSolicitudAhorro](#sBTCrearSolicitudAhorro) | Datos de la solicitud de ahorro.
+sdtDatos | [sBTCrearSolicitudAhorro](#sbtcrearsolicitudahorro) | Datos de la solicitud de ahorro.
 
 @tab Datos de Salida
 
@@ -105,6 +105,7 @@ curl -X POST \
           "clienteUid": 61
         }
     }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -162,6 +163,7 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 

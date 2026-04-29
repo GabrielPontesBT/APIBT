@@ -36,6 +36,7 @@
       "Descripción": "No se encontraron domicilios para la cuenta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerDomicilios>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>772a871c734A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n      </bts:BTClientes.ObtenerDomicilios>\n   </soapenv:Body>\n</soapenv:Envelope>",

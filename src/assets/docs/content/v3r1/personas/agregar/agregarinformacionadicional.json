@@ -27,6 +27,7 @@
       "Descripción": "No se recibió el identificador de persona."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>976EB9CBE6D99B71A5E627F1</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>204</bts:personaUId>\r\n         <bts:sdtInformacionAdicional>\r\n            <bts:sBTDatoLista>\r\n               <bts:Clave>Código TIN</bts:Clave>\r\n               <bts:Valor>1256</bts:Valor>\r\n            </bts:sBTDatoLista>\r\n         </bts:sdtInformacionAdicional>\r\n      </bts:BTPersonas.AgregarInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

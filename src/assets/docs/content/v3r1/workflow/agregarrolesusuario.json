@@ -32,6 +32,7 @@
       "Descripción": "No se recibió usuario."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope\r\n\txmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t<soapenv:Header/>\r\n\t<soapenv:Body>\r\n\t\t<bts:BTWorkflow.AgregarRolesUsuario>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>GP</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>5FE07FD2DCE53B0DC365AA02</bts:Token>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:usuario>INSTALADOR</bts:usuario>\r\n\t\t\t<bts:sdtRoles>\r\n\t\t\t\t<bts:sBTRolWF>\r\n\t\t\t\t\t<bts:descripcion></bts:descripcion>\r\n\t\t\t\t\t<bts:codigo>4</bts:codigo>\r\n\t\t\t\t</bts:sBTRolWF>\r\n\t\t\t\t<bts:sBTRolWF>\r\n\t\t\t\t\t<bts:descripcion></bts:descripcion>\r\n\t\t\t\t\t<bts:codigo>5</bts:codigo>\r\n\t\t\t\t</bts:sBTRolWF>\r\n\t\t\t</bts:sdtRoles>\r\n\t\t</bts:BTWorkflow.AgregarRolesUsuario>\r\n\t</soapenv:Body>\r\n</soapenv:Envelope>",

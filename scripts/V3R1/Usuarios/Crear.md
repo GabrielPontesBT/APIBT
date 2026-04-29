@@ -210,7 +210,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTUsuarioBT son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 cajero | String | Indica si el usuario es cajero (S/N). 
 cantidadSesionesAbiertas | Short | Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal. 

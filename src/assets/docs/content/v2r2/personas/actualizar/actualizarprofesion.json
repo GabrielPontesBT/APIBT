@@ -28,6 +28,7 @@
       "Descripción": "No se recibió el identificador de profesión."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarProfesion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>761768101CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>10003</bts:personaUId>\n         <bts:profesionId>1000</bts:profesionId>\n         <bts:fechaInicioProfesion>2012-03-01</bts:fechaInicioProfesion>\n      </bts:BTPersonas.ActualizarProfesion>\n   </soapenv:Body>\n</soapenv:Envelope>",

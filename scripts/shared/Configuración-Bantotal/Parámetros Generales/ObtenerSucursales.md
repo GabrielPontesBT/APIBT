@@ -209,7 +209,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTSucursal son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 descripcion | String | Descripción de sucursal.
 direccion | String | Dirección de sucursal.

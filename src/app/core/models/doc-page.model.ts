@@ -45,6 +45,7 @@ export interface DocPage {
   inputData: DocTableRow[];
   outputData: DocTableRow[];
   errors: DocTableRow[];
+  errorsNote: string;
   examples: DocExamples;
   structuredTypes: DocStructuredType[];
   valuesTable: DocValueTable[];

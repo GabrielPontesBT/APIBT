@@ -59,6 +59,7 @@
       "Descripción": "Debe indicar el identificador de la deuda."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ObtenerDeuda>\n         <bts:Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </bts:Btinreq>\n         <bts:contratoId>13</bts:contratoId>\n         <bts:servicio>600</bts:servicio>\n         <bts:deudaId>42525261</bts:deudaId>\n         <bts:sdtValorCampoCash>\n            <bts:sBTValorCampoCash>\n               <bts:tag>CSMD006IMP</bts:tag>\n               <bts:valor></bts:valor>\n            </bts:sBTValorCampoCash>\n         </bts:sdtValorCampoCash>\n      </bts:BTCASHManagement.ObtenerDeuda>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -40,6 +40,7 @@
       "Descripción": "No se recuperó la cuenta para el Identificador [Número de identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.SimularAmortizable>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>987391075CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTSimulacionAmortizable>\n            <bts:solicitudUId>10896</bts:solicitudUId>\n            <bts:clienteUId>7</bts:clienteUId>\n            <bts:productoUId>23</bts:productoUId>\n            <bts:fechaPrimerPago>2020-12-21</bts:fechaPrimerPago>\n            <bts:cantidadCuotas>3</bts:cantidadCuotas>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:monto>30000</bts:monto>\n            <bts:pizarra>0</bts:pizarra>\n            <bts:tasa>0</bts:tasa>\n            <bts:destinoCredito>33</bts:destinoCredito>\n            <bts:datosAdicionales/>\n         </bts:sBTSimulacionAmortizable>\n      </bts:BTMicrofinanzas.SimularAmortizable>\n   </soapenv:Body>\n</soapenv:Envelope>",
