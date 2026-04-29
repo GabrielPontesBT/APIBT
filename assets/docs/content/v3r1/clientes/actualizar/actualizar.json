@@ -1,0 +1,548 @@
+{
+  "slug": "clientes/actualizar/actualizar",
+  "pageTitle": "Actualizar",
+  "description": "Método para actualizar los datos de un cliente.",
+  "pubName": "BTClientes.Actualizar",
+  "programa": "RBTPG092",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "sdtPersona",
+      "Tipo": "<a href=\"#sbtpersonafisica\">sBTPersonaFisica</a>",
+      "Comentarios": "Datos de cliente."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar País del Documento."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El País del Documento no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Debe ingresar Tipo de Documento."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El Tipo de Documento no existe."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar Nro de Documento."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Número de Documento incorrecto."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar Primer Apellido."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "Debe ingresar Primer Nombre."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "Debe ingresar Fecha de Nacimiento."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "La Fecha de Nacimiento no puede ser posterior a hoy."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "La persona no es mayor de [Edad mínima] años."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Debe ingresar Sexo."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "Debe ingresar Ocupación."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "El código de Ocupación no existe."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "La Fecha de Inicio de Actividad no puede ser posterior a hoy."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Caracteres incorrectos en nombre/apellido."
+    },
+    {
+      "Código": "40028",
+      "Descripción": "Debe ingresar al menos un Teléfono."
+    },
+    {
+      "Código": "40029",
+      "Descripción": "Email inválido."
+    },
+    {
+      "Código": "40030",
+      "Descripción": "La persona se encuentra en la lista de Inhabilitados: [Descripción lista]."
+    },
+    {
+      "Código": "40035",
+      "Descripción": "Debe ingresar Segmento."
+    },
+    {
+      "Código": "40036",
+      "Descripción": "El código de Segmento no existe."
+    },
+    {
+      "Código": "40037",
+      "Descripción": "Debe ingresar clasificación interna."
+    },
+    {
+      "Código": "40038",
+      "Descripción": "El código de clasificación interna no existe."
+    },
+    {
+      "Código": "40039",
+      "Descripción": "Debe ingresar código de sector."
+    },
+    {
+      "Código": "40040",
+      "Descripción": "El código de Sector no existe."
+    },
+    {
+      "Código": "40041",
+      "Descripción": "Debe ingresar Actividad Laboral."
+    },
+    {
+      "Código": "40042",
+      "Descripción": "El código de Actividad Laboral no existe."
+    },
+    {
+      "Código": "40043",
+      "Descripción": "El País de la nacionalidad no existe."
+    },
+    {
+      "Código": "40044",
+      "Descripción": "El sexo ingresado no es válido."
+    },
+    {
+      "Código": "40049",
+      "Descripción": "Error al obtener el número de cuenta Bantotal."
+    },
+    {
+      "Código": "40051",
+      "Descripción": "La persona ya existe."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "Código de domicilio no válido."
+    },
+    {
+      "Código": "40119",
+      "Descripción": "Debe ingresar País del Domicilio"
+    },
+    {
+      "Código": "40120",
+      "Descripción": "El País del Domicilio no existe."
+    },
+    {
+      "Código": "40121",
+      "Descripción": "Debe ingresar Departamento."
+    },
+    {
+      "Código": "40122",
+      "Descripción": "El Departamento no existe."
+    },
+    {
+      "Código": "40123",
+      "Descripción": "Debe ingresar Localidad."
+    },
+    {
+      "Código": "40124",
+      "Descripción": "La Localidad no existe."
+    },
+    {
+      "Código": "40125",
+      "Descripción": "El barrio no existe."
+    },
+    {
+      "Código": "40126",
+      "Descripción": "Debe ingresar calle."
+    },
+    {
+      "Código": "40127",
+      "Descripción": "Debe ingresar número de puerta."
+    },
+    {
+      "Código": "40128",
+      "Descripción": "Debe ingresar código postal."
+    },
+    {
+      "Código": "40130",
+      "Descripción": "El domicilio ingresado ya existe."
+    },
+    {
+      "Código": "40131",
+      "Descripción": "El domicilio ingresado no existe."
+    },
+    {
+      "Código": "40132",
+      "Descripción": "El número de puerta no puede superar los 5 dígitos."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.Actualizar>\r\n         <bts:Btinreq>\r\n            <bts:Device>AS</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>8301C31B4F2699A90D39F77E</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>301</bts:clienteUId>\r\n         <bts:sdtPersona>\r\n            <bts:nroDocumento>52487610</bts:nroDocumento>\r\n            <bts:estadoCivil></bts:estadoCivil>\r\n            <bts:fechaInicioActividad>2019-09-21</bts:fechaInicioActividad>\r\n            <bts:segundoNombre>Mauricio</bts:segundoNombre>\r\n            <bts:fechaVencimiento>2019-03-15</bts:fechaVencimiento>\r\n            <bts:segundoApellido>HERNANDEZ</bts:segundoApellido>\r\n            <bts:fechaNacimiento>1995-11-05</bts:fechaNacimiento>\r\n            <bts:telefonoCelular>098712654</bts:telefonoCelular>\r\n            <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n            <bts:actividadLaboral></bts:actividadLaboral>\r\n            <bts:clasificacionInternaId>17</bts:clasificacionInternaId>\r\n            <bts:sexo>M</bts:sexo>\r\n            <bts:primerNombre>ANDRES</bts:primerNombre>\r\n            <bts:clasificacionInterna></bts:clasificacionInterna>\r\n            <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n            <bts:telefonoFijo>42276832</bts:telefonoFijo>\r\n            <bts:primerApellido>PEREIRA</bts:primerApellido>\r\n            <bts:ocupacion></bts:ocupacion>\r\n            <bts:sector></bts:sector>\r\n            <bts:paisDocumento></bts:paisDocumento>\r\n            <bts:ocupacionId>1</bts:ocupacionId>\r\n            <bts:sueldo>15000</bts:sueldo>\r\n            <bts:nacionalidad></bts:nacionalidad>\r\n            <bts:comentarioCorreo>Correo Profesional</bts:comentarioCorreo>\r\n            <bts:domicilios>\r\n               <bts:sBTDomicilioCompleto>\r\n                  <bts:coloniaId>1</bts:coloniaId>\r\n                  <bts:agrupador1Id>3</bts:agrupador1Id>\r\n                  <bts:agrupador5></bts:agrupador5>\r\n                  <bts:departamento></bts:departamento>\r\n                  <bts:agrupador4>Cerrito</bts:agrupador4>\r\n                  <bts:agrupador3Id>1</bts:agrupador3Id>\r\n                  <bts:detalleUbicacion>ENFRENTE A CAFE LA FARMACIA</bts:detalleUbicacion>\r\n                  <bts:barrio></bts:barrio>\r\n                  <bts:agrupador3>06</bts:agrupador3>\r\n                  <bts:agrupador2>1500</bts:agrupador2>\r\n                  <bts:agrupador1>Ituzaingó</bts:agrupador1>\r\n                  <bts:agrupador5Id></bts:agrupador5Id>\r\n                  <bts:tipoDomicilio></bts:tipoDomicilio>\r\n                  <bts:ubicacionDesde>2023-09-17</bts:ubicacionDesde>\r\n                  <bts:direccion></bts:direccion>\r\n                  <bts:colonia></bts:colonia>\r\n                  <bts:paisId>845</bts:paisId>\r\n                  <bts:tipoVivienda></bts:tipoVivienda>\r\n                  <bts:pais></bts:pais>\r\n                  <bts:agrupador2Id>1</bts:agrupador2Id>\r\n                  <bts:codigoPostal>11800</bts:codigoPostal>\r\n                  <bts:tipoViviendaId>5</bts:tipoViviendaId>\r\n                  <bts:agrupador4Id>1</bts:agrupador4Id>\r\n                  <bts:barrioId>380</bts:barrioId>\r\n                  <bts:localidadId>10</bts:localidadId>\r\n                  <bts:localidad></bts:localidad>\r\n                  <bts:tipoDomicilioId>1</bts:tipoDomicilioId>\r\n                  <bts:departamentoId>10</bts:departamentoId>\r\n               </bts:sBTDomicilioCompleto>\r\n            </bts:domicilios>\r\n            <bts:datosAdicionales>\r\n               <bts:sBTDatoLista>\r\n                  <bts:valor></bts:valor>\r\n                  <bts:clave></bts:clave>\r\n               </bts:sBTDatoLista>\r\n            </bts:datosAdicionales>\r\n            <bts:correoElectronico>Andres@hotmail.com</bts:correoElectronico>\r\n            <bts:sectorId>1</bts:sectorId>\r\n            <bts:actividadLaboralId>74220</bts:actividadLaboralId>\r\n            <bts:tipoDocumento></bts:tipoDocumento>\r\n            <bts:nacionalidadId>845</bts:nacionalidadId>\r\n            <bts:estadoCivilId>1</bts:estadoCivilId>\r\n         </bts:sdtPersona>\r\n      </bts:BTClientes.Actualizar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Actualizar=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 531f48b0-2c02-1cfc-7v5c-a063d4hl5nb8' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n          \"Device\": \"AS\",\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Requerimiento\": 1,\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Token\": \"8301C31B4F2699A90D39F77E\"\r\n        },\r\n        \"clienteUId\": 301,\r\n        \"sdtPersona\": {\r\n          \"nroDocumento\": 52487610,\r\n          \"estadoCivil\": \"\",\r\n          \"fechaInicioActividad\": \"2019-09-21\",\r\n          \"segundoNombre\": \"Mauricio\",\r\n          \"fechaVencimiento\": \"2019-03-15\",\r\n          \"segundoApellido\": \"HERNANDEZ\",\r\n          \"fechaNacimiento\": \"1995-11-05\",\r\n          \"telefonoCelular\": 98712654,\r\n          \"tipoDocumentoId\": 1,\r\n          \"actividadLaboral\": \"\",\r\n          \"clasificacionInternaId\": 17,\r\n          \"sexo\": \"M\",\r\n          \"primerNombre\": \"ANDRES\",\r\n          \"clasificacionInterna\": \"\",\r\n          \"paisDocumentoId\": 845,\r\n          \"telefonoFijo\": 42276832,\r\n          \"primerApellido\": \"PEREIRA\",\r\n          \"ocupacion\": \"\",\r\n          \"sector\": \"\",\r\n          \"paisDocumento\": \"\",\r\n          \"ocupacionId\": 1,\r\n          \"sueldo\": 15000,\r\n          \"nacionalidad\": \"\",\r\n          \"comentarioCorreo\": \"Correo Profesional\",\r\n          \"domicilios\": {\r\n            \"sBTDomicilioCompleto\": {\r\n              \"coloniaId\": 1,\r\n              \"agrupador1Id\": 3,\r\n              \"agrupador5\": \"\",  \r\n              \"departamento\": \"\",\r\n              \"agrupador4\": \"Cerrito\",\r\n              \"agrupador3Id\": 1,\r\n              \"detalleUbicacion\": \"ENFRENTE A CAFE LA FARMACIA\",\r\n              \"barrio\": \"\",\r\n              \"agrupador3\": 6,\r\n              \"agrupador2\": 1500,\r\n              \"agrupador1\": \"Ituzaingó\",\r\n              \"agrupador5Id\": \"\",\r\n              \"tipoDomicilio\": \"\",\r\n              \"ubicacionDesde\": \"2023-09-17\",\r\n              \"direccion\": \"\",\r\n              \"colonia\": \"\",\r\n              \"paisId\": 845,\r\n              \"tipoVivienda\": \"\",\r\n              \"pais\": \"\",\r\n              \"agrupador2Id\": 1,\r\n              \"codigoPostal\": 11800,\r\n              \"tipoViviendaId\": 5,\r\n              \"agrupador4Id\": 1,\r\n              \"barrioId\": 380,\r\n              \"localidadId\": 10,\r\n              \"localidad\": \"\",\r\n              \"tipoDomicilioId\": 1,\r\n              \"departamentoId\": 10\r\n            }\r\n          },\r\n          \"datosAdicionales\": {\r\n            \"sBTDatoLista\": {\r\n              \"valor\": \"\",\r\n              \"clave\": \"\"\r\n            }\r\n          },\r\n          \"correoElectronico\": \"Andres@hotmail.com\",\r\n          \"sectorId\": 1,\r\n          \"actividadLaboralId\": 74220,\r\n          \"tipoDocumento\": \"\",\r\n          \"nacionalidadId\": 845,\r\n          \"estadoCivilId\": 1\r\n        }\r\n      }"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ActualizarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>8301C31B4F2699A90D39F77E</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>35494</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.Actualizar</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2025-05-20</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>11:27:47</Hora>\r\n         </Btoutreq>\r\n      </BTClientes.ActualizarResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n          \"Device\": \"AS\",\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Requerimiento\": 1,\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Token\": \"8301C31B4F2699A90D39F77E\"\r\n        },\r\n        \"Erroresnegocio\": \"\",\r\n        \"Btoutreq\": {\r\n          \"Numero\": 35494,\r\n          \"Estado\": \"OK\",\r\n          \"Servicio\": \"BTClientes.Actualizar\",\r\n          \"Requerimiento\": 1,\r\n          \"Fecha\": \"2025-05-20\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Hora\": \"11:27:47\"\r\n        }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersonaFisica",
+      "fields": [
+        {
+          "Nombre": "actividadLaboral",
+          "Tipo": "String",
+          "Comentarios": "Descripción de actividad laboral."
+        },
+        {
+          "Nombre": "actividadLaboralId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la actividad laboral."
+        },
+        {
+          "Nombre": "clasificacionInterna",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la clasificación interna."
+        },
+        {
+          "Nombre": "clasificacionInternaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de la clasificación interna."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "domicilios",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
+          "Comentarios": "Listado de los domicilios."
+        },
+        {
+          "Nombre": "estadoCivil",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado civil."
+        },
+        {
+          "Nombre": "estadoCivilId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de estado civil."
+        },
+        {
+          "Nombre": "fechaInicioActividad",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio de actividad."
+        },
+        {
+          "Nombre": "fechaNacimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de nacimiento."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "nacionalidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país de nacimiento."
+        },
+        {
+          "Nombre": "nacionalidadId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país de nacimiento."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "ocupacion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de ocupación."
+        },
+        {
+          "Nombre": "ocupacionId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de ocupación."
+        },
+        {
+          "Nombre": "paisDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país del documento."
+        },
+        {
+          "Nombre": "paisDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país del documento."
+        },
+        {
+          "Nombre": "primerApellido",
+          "Tipo": "String",
+          "Comentarios": "Primer apellido."
+        },
+        {
+          "Nombre": "primerNombre",
+          "Tipo": "String",
+          "Comentarios": "Primer nombre."
+        },
+        {
+          "Nombre": "sector",
+          "Tipo": "String",
+          "Comentarios": "Sector."
+        },
+        {
+          "Nombre": "sectorId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del sector."
+        },
+        {
+          "Nombre": "segundoApellido",
+          "Tipo": "String",
+          "Comentarios": "Segundo apellido."
+        },
+        {
+          "Nombre": "segundoNombre",
+          "Tipo": "String",
+          "Comentarios": "Segundo nombre."
+        },
+        {
+          "Nombre": "sexo",
+          "Tipo": "String",
+          "Comentarios": "Sexo (M/F)."
+        },
+        {
+          "Nombre": "sueldo",
+          "Tipo": "Double",
+          "Comentarios": "Sueldo."
+        },
+        {
+          "Nombre": "telefonoCelular",
+          "Tipo": "String",
+          "Comentarios": "Teléfono celular."
+        },
+        {
+          "Nombre": "telefonoFijo",
+          "Tipo": "String",
+          "Comentarios": "Teléfono fijo."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDomicilioCompleto",
+      "fields": [
+        {
+          "Nombre": "agrupador1",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 1."
+        },
+        {
+          "Nombre": "agrupador1Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 1."
+        },
+        {
+          "Nombre": "agrupador2",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 2."
+        },
+        {
+          "Nombre": "agrupador2Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 2."
+        },
+        {
+          "Nombre": "agrupador3",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 3."
+        },
+        {
+          "Nombre": "agrupador3Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 3."
+        },
+        {
+          "Nombre": "agrupador4",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 4."
+        },
+        {
+          "Nombre": "agrupador4Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 4."
+        },
+        {
+          "Nombre": "agrupador5",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 5."
+        },
+        {
+          "Nombre": "agrupador5Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 5."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "colonia",
+          "Tipo": "String",
+          "Comentarios": "Colonia."
+        },
+        {
+          "Nombre": "coloniaId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la colonia."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "detalleUbicacion",
+          "Tipo": "String",
+          "Comentarios": "Detalle de la ubicación."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la localidad."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "tipoDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoDomicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoVivienda",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de vivienda."
+        },
+        {
+          "Nombre": "tipoViviendaId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del tipo de vivienda."
+        },
+        {
+          "Nombre": "ubicacionDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde que reside en ese domicilio."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "personas/obtener/obtenertitularesdeltelefono",
+  "pageTitle": "Obtener Titulares de Teléfono",
+  "description": "Método para obtener los titulares de un teléfono.",
+  "pubName": "BTPersonas.ObtenerTitularesDelTelefono",
+  "programa": "RBTPG552",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "numeroTelefono",
+      "Tipo": "String",
+      "Comentarios": "Número de teléfono de la persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTitulares",
+      "Tipo": "<a href=\"#sbttitulartelefono\">sBTTitularTelefono</a>",
+      "Comentarios": "Listado de titulares del teléfono."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el número de telefono."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe número de celular."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerTitularesDelTelefono>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:numeroTelefono>099099890</bts:numeroTelefono>\r\n      </bts:BTPersonas.ObtenerTitularesDelTelefono>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTitularesDelTelefono' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"numeroTelefono\": \"099099890\"\r\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerTitularesDelTelefonoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\r\n         </Btinreq>\r\n         <sdtTitulares>\r\n            <sBTTitularTelefono>\r\n               <datosAdicionales></datosAdicionales>\r\n               <personaUId>227</personaUId>\r\n               <nombre>RIVERA PERALTA FLORENCIA</nombre>\r\n            </sBTTitularTelefono>\r\n         </sdtTitulares>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>20054</Numero>\r\n            <Servicio>BTPersonas.ObtenerTitularesDelTelefono</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-04-23</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>11:00:04</Hora>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerTitularesDelTelefonoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"sdtTitulares\": {\r\n          \"sBTTitularTelefono\": [{\r\n            \"datosAdicionales\": {\"sBTDatoAdicional\": []},\r\n            \"personaUId\": 227,\r\n            \"nombre\": \"RIVERA PERALTA FLORENCIA\"\r\n        }]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 20054,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerTitularesDelTelefono\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2024-04-23\",\r\n        \"Hora\": \"11:00:04\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTitularTelefono",
+      "fields": [
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtdatoadicional\">sBTDatoAdicional</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la persona."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la persona."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoAdicional",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "String",
+          "Comentarios": "Detalle."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "prestamos/obtener/obtenersegurosasociados",
+  "pageTitle": "Obtener Seguros Asociados",
+  "description": "Método para obtener los seguros asociados a una operación de préstamo.",
+  "pubName": "BTPrestamos.ObtenerSegurosAsociados",
+  "programa": "RBTPG627",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSegurosAsociados",
+      "Tipo": "<a href=\"#sbtseguroasociado\">sBTSeguroAsociado</a>",
+      "Comentarios": "Datos del seguro asociado a la operación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No tiene seguros asociados."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La operación se encuentra cancelada."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerSegurosAsociados>\r\n         <bts:Btinreq>\r\n   \t\t  <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>FC</bts:Device>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Token>554DC597B08D07B49154AFFC</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>1059</bts:operacionUId>\r\n      </bts:BTPrestamos.ObtenerSegurosAsociados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerSegurosAsociados' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"FC\",\r\n        \"Requerimiento\": 0,\r\n        \"Token\": \"554DC597B08D07B49154AFFC\"\r\n    },\r\n    \"operacionUId\": 1059\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerSegurosAsociadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FC</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>554DC597B08D07B49154AFFC</Token>\r\n         </Btinreq>\r\n         <sdtSegurosAsociados>\r\n            <sBTSeguroAsociado>\r\n               <extraPrima>0.0</extraPrima>\r\n               <descripcion>SANCOR - Vida - Variante 1</descripcion>\r\n               <importe>720.0</importe>\r\n               <codigo>100</codigo>\r\n            </sBTSeguroAsociado>\r\n            <sBTSeguroAsociado>\r\n               <extraPrima>0.0</extraPrima>\r\n               <descripcion>SANCOR- Desempleo %saldos</descripcion>\r\n               <importe>36.65</importe>\r\n               <codigo>200</codigo>\r\n            </sBTSeguroAsociado>\r\n            <sBTSeguroAsociado>\r\n               <extraPrima>0.0</extraPrima>\r\n               <descripcion>Sobre saldos</descripcion>\r\n               <importe>653.4</importe>\r\n               <codigo>700</codigo>\r\n            </sBTSeguroAsociado>\r\n         </sdtSegurosAsociados>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>36897</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerSegurosAsociados</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2025-11-26</Fecha>\r\n            <Hora>09:52:55</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerSegurosAsociadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"FC\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"554DC597B08D07B49154AFFC\"\r\n    },\r\n    \"sdtSegurosAsociados\": {\r\n        \"sBTSeguroAsociado\": [\r\n            {\r\n                \"extraPrima\": 0.0,\r\n                \"descripcion\": \"SANCOR - Vida - Variante 1\",\r\n                \"importe\": 720.0,\r\n                \"codigo\": 100\r\n            },\r\n            {\r\n                \"extraPrima\": 0.0,\r\n                \"descripcion\": \"SANCOR- Desempleo %saldos\",\r\n                \"importe\": 36.65,\r\n                \"codigo\": 200\r\n            },\r\n            {\r\n                \"extraPrima\": 0.0,\r\n                \"descripcion\": \"Sobre saldos\",\r\n                \"importe\": 653.4,\r\n                \"codigo\": 700\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 36897,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerSegurosAsociados\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2025-11-26\",\r\n        \"Hora\": \"09:52:55\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSeguroAsociado",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del seguro."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del seguro."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Int",
+          "Comentarios": "importe total del seguro."
+        },
+        {
+          "Nombre": "extraPrima",
+          "Tipo": "Int",
+          "Comentarios": "Porcentaje extra del Seguro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

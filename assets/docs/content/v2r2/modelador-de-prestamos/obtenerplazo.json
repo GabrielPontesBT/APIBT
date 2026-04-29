@@ -1,0 +1,88 @@
+{
+  "slug": "modelador-de-prestamos/obtenerplazo",
+  "pageTitle": "Obtener Plazo",
+  "description": "Método para obtener los plazos parametrizados de un producto de préstamo.",
+  "pubName": "BTModeladorPrestamos.ObtenerPlazo",
+  "programa": "RBTPG350",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de producto."
+    },
+    {
+      "Nombre": "parametro",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Valor '410' definido por defecto]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "minimo",
+      "Tipo": "Long",
+      "Comentarios": "Valor mínimo de plazo de cuotas."
+    },
+    {
+      "Nombre": "maximo",
+      "Tipo": "Long",
+      "Comentarios": "Valor máximo de plazo de cuotas."
+    },
+    {
+      "Nombre": "valorPorDefecto",
+      "Tipo": "Long",
+      "Comentarios": "Valor por defecto de plazo de cuotas."
+    },
+    {
+      "Nombre": "tipo",
+      "Tipo": "Long",
+      "Comentarios": "Tipo de cuotas."
+    },
+    {
+      "Nombre": "sdtListaValores",
+      "Tipo": "<a href=\"#sbtvalor\">sBTValor</a>",
+      "Comentarios": "Listado de valores posibles."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTModeladorPrestamos.ObtenerPlazo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1047454914CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:productoUId>105</bts:productoUId>\n      </bts:BTModeladorPrestamos.ObtenerPlazo>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1047454914CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"productoUId\": \"105\"\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTModeladorPrestamos.ObtenerPlazoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1047454914CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <minimo>1</minimo>\n         <maximo>99999</maximo>\n         <valorPorDefecto>30</valorPorDefecto>\n         <tipo>Valor</tipo>\n         <sdtListaValores></sdtListaValores>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTModeladorPrestamos.ObtenerPlazo</Servicio>\n            <Fecha>2021-11-04</Fecha>\n            <Hora>10:00:29</Hora>\n            <Requerimiento/>\n            <Numero>8652</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTModeladorPrestamos.ObtenerPlazoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1047454914CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"minimo\": 1,\n    \"maximo\": 99999,\n    \"valorPorDefecto\": 30,\n    \"tipo\": \"Valor\",\n    \"sdtListaValores\": {\n        \"SdtsBTValor\": []\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerPlazo\",\n        \"Fecha\": \"2021-11-04\",\n        \"Hora\": \"09:57:14\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8650,\n        \"Estado\": \"OK\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValor",
+      "fields": [
+        {
+          "Nombre": "valor",
+          "Tipo": "Long",
+          "Comentarios": "Valor de plazo de cuotas."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

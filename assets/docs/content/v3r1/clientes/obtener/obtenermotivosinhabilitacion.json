@@ -1,0 +1,54 @@
+{
+  "slug": "clientes/obtener/obtenermotivosinhabilitacion",
+  "pageTitle": "Obtener Motivos Inhabilitación",
+  "description": "Método para obtener un listado de los motivos de inhabilitación.",
+  "pubName": "BTClientes.ObtenerMotivosInhabilitacion",
+  "programa": "RBTPG449",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtMotivosInhabilitacion",
+      "Tipo": "<a href=\"#sbtmotivoinhabilitacion\">sBTMotivoInhabilitacion</a>",
+      "Comentarios": "Listado de motivos de inhabilitación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "No existen motivos de inhabilitación."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerMotivosInhabilitacion>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>Instalador</bts:Usuario>\r\n            <bts:Token>289a9ca6a299865B3A2E76CF</bts:Token>\r\n            <bts:Device>2</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTClientes.ObtenerMotivosInhabilitacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerMotivosInhabilitacion' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"289a9ca6a299865B3A2E76CF\",\r\n        \"Device\": \"2\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 0\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerMotivosInhabilitacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>2</Device>\r\n            <Usuario>Instalador</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>289a9ca6a299865B3A2E76CF</Token>\r\n         </Btinreq>\r\n         <sdtMotivosInhabilitacion>\r\n            <sBTMotivoInhabilitacion>\r\n               <descripcion>Embargo</descripcion>\r\n               <codigo>1</codigo>\r\n            </sBTMotivoInhabilitacion>\r\n            <sBTMotivoInhabilitacion>\r\n               <descripcion>En Juicio</descripcion>\r\n               <codigo>3</codigo>\r\n            </sBTMotivoInhabilitacion>\r\n            <sBTMotivoInhabilitacion>\r\n               <descripcion>Retenciones</descripcion>\r\n               <codigo>10</codigo>\r\n            </sBTMotivoInhabilitacion>\r\n         </sdtMotivosInhabilitacion>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>1827</Numero>\r\n            <Servicio>BTClientes.ObtenerMotivosInhabilitacion</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2022-10-27</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>09:39:20</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerMotivosInhabilitacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"2\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"289a9ca6a299865B3A2E76CF\"\r\n    },\r\n    \"sdtMotivosInhabilitacion\": {\r\n        \"sBTMotivoInhabilitacion\": [\r\n            {\r\n                \"descripcion\": \"Embargo\",\r\n                \"codigo\": 1\r\n            },\r\n            {\r\n                \"descripcion\": \"En Juicio\",\r\n                \"codigo\": 3\r\n            },\r\n            {\r\n                \"descripcion\": \"Retenciones\",\r\n                \"codigo\": 10\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 1827,\r\n        \"Servicio\": \"BTClientes.ObtenerMotivosInhabilitacion\",\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2022-10-27\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"09:39:20\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTMotivoInhabilitacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Long",
+          "Comentarios": "Código del motivo de inhabilitación."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del motivo de inhabilitación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

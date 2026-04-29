@@ -1,0 +1,191 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenerinstruccion",
+  "pageTitle": "Obtener Instrucción",
+  "description": "Método para obtener una lista de las instrucciones de un depósito.",
+  "pubName": "BTDepositosAPlazo.ObtenerInstruccion",
+  "programa": "RBTPG109",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "depositoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación del depósito."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "instruccionVencimiento",
+      "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
+      "Comentarios": "Datos de instrucción al vencimiento."
+    },
+    {
+      "Nombre": "instruccionAcreditacion",
+      "Tipo": "<a href=\"#sbtinstruccion\">sBTInstruccion</a>",
+      "Comentarios": "Datos de instrucción de acreditación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la operación del depósito."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación del depósito para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La operación asociada al identificador: ? no pertenece a un depósito a plazo"
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se encontró instrucción de acreditación para el depósito ingresado"
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se encontró código de instrucción."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recuperó la operación de la instrucción para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recuperó la sucursal de la cuenta."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "No se recuperó la sucursal de la cuenta."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "No se encontró instrucción de acreditación para el depósito ingresado."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "No se encontró código de instrucción."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "No se recuperó la operación de la instrucción para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recuperó la sucursal de la cuenta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ObtenerInstruccion>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>6c275823524A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>61</bts:clienteUId>\r\n         <bts:depositoUId>4</bts:depositoUId>\r\n      </bts:BTDepositosAPlazo.ObtenerInstruccion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerInstruccion=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"clienteUId\": 61,\r\n\t\"depositoUId\": 4\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ObtenerInstruccionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6c275823524A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <instruccionVencimiento>\r\n            <sBTInstruccion>\r\n               <descripcion>Cancelar y Acreditar al vto.</descripcion>\r\n               <operacionUId>2</operacionUId>\r\n               <idOperacionFmt>000000029_001</idOperacionFmt>\r\n               <producto>\r\n                  <productoUId>21</productoUId>\r\n                  <nombre>CUENTA CORRIENTE, int.</nombre>\r\n                  <moneda>$</moneda>\r\n                  <papel/>\r\n               </producto>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBTInstruccion>\r\n         </instruccionVencimiento>\r\n         <instruccionAcreditacion>\r\n            <sBTInstruccion>\r\n               <descripcion>Acreditación</descripcion>\r\n               <operacionUId>2</operacionUId>\r\n               <idOperacionFmt>000000029_001</idOperacionFmt>\r\n               <producto>\r\n                  <productoUId>21</productoUId>\r\n                  <nombre>CUENTA CORRIENTE, int.</nombre>\r\n                  <moneda>$</moneda>\r\n                  <papel/>\r\n               </producto>\r\n               <sucursal>Casa Matriz</sucursal>\r\n            </sBTInstruccion>\r\n         </instruccionAcreditacion>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>144</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTDepositosAPlazo.ObtenerInstruccion</Servicio>\r\n            <Fecha>2018-03-01</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>11:07:39</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ObtenerInstruccionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"instruccionVencimiento\": {\r\n      \"sBTInstruccion\": [ {\r\n         \"descripcion\": \"Cancelar y Acreditar al vto.\",\r\n         \"operacionUId\": 2,\r\n         \"idOperacionFmt\": \"000000029_001\",\r\n         \"sucursal\": \"Casa Matriz\",\r\n         \"producto\": [ {\r\n           \"productoUId\": 21,\r\n               \"nombre\": \"CUENTA CORRIENTE, int.\",\r\n               \"moneda\": \"$\",\r\n               \"papel\": \"\"\r\n            }\r\n         ]\r\n      }\r\n      ]\r\n   },\r\n   \"instruccionAcreditacion\": {\r\n      \"sBTInstruccion\": [ {\r\n         \"descripcion\": \"Acreditación\",\r\n         \"operacionUId\": 2,\r\n         \"idOperacionFmt\": \"000000029_001\",\r\n         \"sucursal\": \"Casa Matriz\",\r\n         \"producto\": [ {\r\n               \"productoUId\": 21,\r\n               \"nombre\": \"CUENTA CORRIENTE, int.\",\r\n               \"moneda\": \"$\",\r\n               \"papel\": \"\"\r\n            }\r\n         ],\r\n      }\r\n      ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"144\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTDepositosAPlazo.ObtenerInstruccion\",\r\n        \"Fecha\": \"2018-03-01\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Hora\": \"11:07:39\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTInstruccion",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la instrucción."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos de producto."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la Sucursal de la operación."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

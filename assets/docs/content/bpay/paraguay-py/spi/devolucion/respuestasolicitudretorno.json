@@ -1,0 +1,170 @@
+{
+  "slug": "paraguay-py/spi/devolucion/respuestasolicitudretorno",
+  "pageTitle": "Respuesta a Solicitud de Retorno de Fondos",
+  "description": "Método para el envío de una respuesta a una solicitud de retorno de fondos.",
+  "pubName": "BTSPIDevoluciones.RespuestaSolicitudRetorno",
+  "programa": "RBTPPY011",
+  "scope": "Paraguay",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "Canal",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Código de transacción (MPE011CTR)."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Referencia de la transferencia original."
+    },
+    {
+      "Nombre": "Motivo",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Motivo de la aceptación o rechazo."
+    },
+    {
+      "Nombre": "Importe",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "Codigo",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Código de devolución."
+    },
+    {
+      "Nombre": "Devolucion",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "ACEPTAR o RECHAZAR."
+    },
+    {
+      "Nombre": "Simular",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Simular la contabilización."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "Sucursal",
+      "Tipo": "Int",
+      "Comentarios": "Sucursal de contabilización."
+    },
+    {
+      "Nombre": "Modulo",
+      "Tipo": "Int",
+      "Comentarios": "Módulo de contabilización."
+    },
+    {
+      "Nombre": "Transaccion",
+      "Tipo": "Int",
+      "Comentarios": "Transacción de contabilización."
+    },
+    {
+      "Nombre": "Relacion",
+      "Tipo": "Int",
+      "Comentarios": "Relación de contabilización."
+    },
+    {
+      "Nombre": "identificador",
+      "Tipo": "Int",
+      "Comentarios": "Id de la bandeja de transferencias (MPE001)."
+    },
+    {
+      "Nombre": "referenciaGenerada",
+      "Tipo": "String",
+      "Comentarios": "Referencia del mensaje de devolución."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "0",
+      "Descripción": "OK."
+    },
+    {
+      "Código": "30000",
+      "Descripción": "No se ingreso canal."
+    },
+    {
+      "Código": "30001",
+      "Descripción": "No se ingreso Id de mensaje."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Devolución incorrecta (ACEPTAR/RECHAZAR)'"
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se ingreso importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se ingreso código."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se ingreso motivo."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No fue posible encontrar el mensaje en MPE056: {ReferenciaOriginal}."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No fue posible encontrar el mensaje en MPEPYR PACS008 {MPEPYNID}."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "Estado de transferencia no permite devolución: {MPE001Est}."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "El importe ingresado supera transferencia original: {MPE001Imp}."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se encontró registro en MPE001."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "Error al enviar."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "Saldo no disponible para realizar la operación: {Saldo}."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "No se encontró modulo y transacción en canal: ({Canal})."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "No se pudo obtener nro. de relación para trn {Módulo} / {Transacción}."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "Error TRN: {MnTxt}."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSPIDevoluciones.RespuestaSolicitudRetorno>\n         <bts:Btinreq>\n            <bts:Device>ABC</bts:Device>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\n         </bts:Btinreq>\n         <bts:canal>841</bts:canal>\n         <bts:referencia>COMAPYPAARES250513112360004181905</bts:referencia>\n         <bts:motivo>test</bts:motivo>\n         <bts:importe>100</bts:importe>\n         <bts:codigo>AC03</bts:codigo>\n         <bts:devolucion>ACEPTAR</bts:devolucion>\n         <bts:simular>N</bts:simular>\n      </bts:BTSPIDevoluciones.RespuestaSolicitudRetorno>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTSPIDevoluciones.RespuestaSolicitudRetornoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>BANTOTAL1</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTINTERNO</Canal>\n            <Token>072C85F2036D7EBE3EC09EB5</Token>\n         </Btinreq>\n         <sucursal>1</sucursal>\n         <modulo>40</modulo>\n         <transaccion>596</transaccion>\n         <relacion>2</relacion>\n         <identificador>24190803</identificador>\n         <referenciaGenerada>BGNBPYPX30052561200024217125</referenciaGenerada>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>433583254</Numero>\n            <Servicio>BTSPIDevoluciones.RespuestaSolicitudRetorno</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2025-05-30</Fecha>\n            <Hora>17:00:53</Hora>\n            <Canal>BTINTERNO</Canal>\n         </Btoutreq>\n      </BTSPIDevoluciones.RespuestaSolicitudRetornoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

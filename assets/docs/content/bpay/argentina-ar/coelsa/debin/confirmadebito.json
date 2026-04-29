@@ -1,0 +1,199 @@
+{
+  "slug": "argentina-ar/coelsa/debin/confirmadebito",
+  "pageTitle": "Confirmar Débito",
+  "description": "Método para realizar la confirmación de un débito.",
+  "pubName": "BTCOELSAGestionDebin.ConfirmaDebito",
+  "programa": "RBTPAR65",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sBTConfirmaDebitoReq",
+      "Tipo": "<a href=\"#sbtconfirmardebitoreq\">sBTConfirmarDebitoReq</a>",
+      "Comentarios": "Confirmar débito datos de entrada."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "confirmaDebitoRespuesta",
+      "Tipo": "<a href=\"#sbtconfirmardebitores\">sBTConfirmarDebitoRes</a>",
+      "Comentarios": "Confirmar débito respuesta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió CUIT de comprador."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió CBU de comprador o CUIT, CBU o Titular de vendedor."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConfirmaDebito>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>8f4120fb56464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTConfirmaDebitoReq>             \n            <bts:DetalleAdiOri></bts:DetalleAdiOri>\n            <bts:Imsi></bts:Imsi>\n            <bts:IdDebin>MRD06ZO9WDV1PM1N5GP7XY</bts:IdDebin>\n            <bts:CompradorCbu>0940099366000013940012</bts:CompradorCbu>\n            <bts:VendedorTit>NAVAR SA</bts:VendedorTit>\n            <bts:Imei></bts:Imei>\n            <bts:Longitud></bts:Longitud>\n            <bts:CodRespuesta>00</bts:CodRespuesta>\n            <bts:DetalleTrxOri></bts:DetalleTrxOri>\n            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>\n            <bts:DetalleTermOri></bts:DetalleTermOri>\n            <bts:VendedorCbu>3150100611000100130016</bts:VendedorCbu>\n            <bts:Latitud></bts:Latitud>\n            <bts:Plataforma></bts:Plataforma>\n            <bts:TipoDispositivo></bts:TipoDispositivo>\n            <bts:DetalleMoneda>032</bts:DetalleMoneda>\n            <bts:VendedorCuit>27103484168</bts:VendedorCuit>\n            <bts:Precision></bts:Precision>\n            <bts:DetalleImporte>150.00</bts:DetalleImporte>\n            <bts:CompradorCuit>20042039390</bts:CompradorCuit>\n            <bts:IpCliente>127.0.0.1</bts:IpCliente>\n         </bts:sBTConfirmaDebitoReq>\n      </bts:BTCOELSAGestionDebin.ConfirmaDebito>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <SOAP-ENV:Body>\n    <BTCOELSAGestionDebin.ConfirmaDebitoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n       <Btinreq>\n          <Canal>BTDIGITAL</Canal>\n          <Requerimiento>1</Requerimiento>\n          <Usuario>INSTALADOR</Usuario>\n          <Token>1095768874CD285A89A23FBE</Token>\n          <Device>ABC</Device>\n       </Btinreq>\n       <confirmaDebitoRespuesta>\n          <CodigoRes>00</CodigoRes>\n          <DescripcionRes>Ok - GARANTIA CORRECTA</DescripcionRes>\n          <FechaNegocio>2024-08-21T00:00:00</FechaNegocio>\n          <Modulo>400</Modulo>\n          <Transaccion>810</Transaccion>\n          <Sucursal>1</Sucursal>\n          <NroRelacion>2</NroRelacion>\n       </confirmaDebitoRespuesta>\n       <Erroresnegocio></Erroresnegocio>\n       <Btoutreq>\n          <Canal>BTDIGITAL</Canal>\n          <Servicio>BTCOELSAGestionDebin.ConfirmaDebito</Servicio>\n          <Fecha>2024-08-21</Fecha>\n          <Hora>13:07:37</Hora>\n          <Requerimiento>1</Requerimiento>\n          <Numero>1038867</Numero>\n          <Estado>OK</Estado>\n       </Btoutreq>\n    </BTCOELSAGestionDebin.ConfirmaDebitoResponse>\n  </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTConfirmarDebitoReq",
+      "fields": [
+        {
+          "Nombre": "DetalleAdiOri",
+          "Tipo": "String",
+          "Comentarios": "Detalle Adicional Origen."
+        },
+        {
+          "Nombre": "Imsi",
+          "Tipo": "String",
+          "Comentarios": "Número de SIM."
+        },
+        {
+          "Nombre": "IdDebin",
+          "Tipo": "String",
+          "Comentarios": "Id de debin."
+        },
+        {
+          "Nombre": "CompradorCbu",
+          "Tipo": "String",
+          "Comentarios": "Clave Bancaria Uniforme a debitar."
+        },
+        {
+          "Nombre": "VendedorTit",
+          "Tipo": "String",
+          "Comentarios": "Nombre del vendedor titular."
+        },
+        {
+          "Nombre": "Imei",
+          "Tipo": "String",
+          "Comentarios": "Número de IMEI del equipo."
+        },
+        {
+          "Nombre": "Longitud",
+          "Tipo": "String",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "CodRespuesta",
+          "Tipo": "String",
+          "Comentarios": "Código de respuesta."
+        },
+        {
+          "Nombre": "DetalleTrxOri",
+          "Tipo": "String",
+          "Comentarios": "Detalle Trx Origen."
+        },
+        {
+          "Nombre": "tipoProductoCredito",
+          "Tipo": "String",
+          "Comentarios": "tipo de producto crédito."
+        },
+        {
+          "Nombre": "DetalleTermOri",
+          "Tipo": "String",
+          "Comentarios": "Detalle terminal origen."
+        },
+        {
+          "Nombre": "VendedorCbu",
+          "Tipo": "String",
+          "Comentarios": "Clave Bancaria Uniforme del vendedor."
+        },
+        {
+          "Nombre": "Latitud",
+          "Tipo": "String",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "Plataforma",
+          "Tipo": "String",
+          "Comentarios": "01: Windows, 02: Android, 03: Linux, 04: Mac OS, 05: iOS, 06: Otros."
+        },
+        {
+          "Nombre": "TipoDispositivo",
+          "Tipo": "String",
+          "Comentarios": "01: PC, 02: Teléfono Celular, 03: Tablet, 04: Otros."
+        },
+        {
+          "Nombre": "DetalleMoneda",
+          "Tipo": "String",
+          "Comentarios": "Código de Moneda."
+        },
+        {
+          "Nombre": "VendedorCuit",
+          "Tipo": "String",
+          "Comentarios": "Clave única de identificación tributaria del vendedor."
+        },
+        {
+          "Nombre": "Precision",
+          "Tipo": "String",
+          "Comentarios": "Precisión de la ubicación calculada en metros."
+        },
+        {
+          "Nombre": "DetalleImporte",
+          "Tipo": "String",
+          "Comentarios": "Importe de la operación."
+        },
+        {
+          "Nombre": "CompradorCuit",
+          "Tipo": "String",
+          "Comentarios": "Clave única de identificación tributaria del comprador."
+        },
+        {
+          "Nombre": "IpCliente",
+          "Tipo": "String",
+          "Comentarios": "Ip origen."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConfirmarDebitoRes",
+      "fields": [
+        {
+          "Nombre": "CodigoRes",
+          "Tipo": "String",
+          "Comentarios": "Código de respuesta."
+        },
+        {
+          "Nombre": "DescripcionRes",
+          "Tipo": "String",
+          "Comentarios": "Descripción de respuesta."
+        },
+        {
+          "Nombre": "FechaNegocio",
+          "Tipo": "String",
+          "Comentarios": "Fecha de negocio."
+        },
+        {
+          "Nombre": "Modulo",
+          "Tipo": "String",
+          "Comentarios": "Módulo."
+        },
+        {
+          "Nombre": "Transaccion",
+          "Tipo": "String",
+          "Comentarios": "Transacción."
+        },
+        {
+          "Nombre": "Sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal."
+        },
+        {
+          "Nombre": "NroRelacion",
+          "Tipo": "String",
+          "Comentarios": "Número de relación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

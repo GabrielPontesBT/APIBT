@@ -1,0 +1,96 @@
+{
+  "slug": "cash-management/beneficiarios/obtenerbeneficiariosegunfiltro",
+  "pageTitle": "Obtener Beneficiario Según Filtro",
+  "description": "Método para obtener el beneficiario según el filtro.",
+  "pubName": "BTCASHManagement.ObtenerBeneficiarioSegunFiltro",
+  "programa": "RBTPGC075",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del contrato."
+    },
+    {
+      "Nombre": "servicioId",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "agendaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la agenda."
+    },
+    {
+      "Nombre": "sdtValorCampoCash",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Lista de valores de campos CASH a buscar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtBeneficiario",
+      "Tipo": "<a href=\"#sbtresumenbeneficiario\">sBTResumenBeneficiario</a>",
+      "Comentarios": "Listado de beneficiarios."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030701",
+      "Descripción": "El Servicio no existe."
+    },
+    {
+      "Código": "1030704",
+      "Descripción": "Id de contrato cliente desconocido."
+    },
+    {
+      "Código": "1030709",
+      "Descripción": "Se requiere identificación de cuenta cliente"
+    },
+    {
+      "Código": "1030713",
+      "Descripción": "El contrato no corresponde a la cuenta recibida."
+    },
+    {
+      "Código": "1030780",
+      "Descripción": "No se recuperó Beneficiario para la identificación recibida."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>8</bts:contratoId>\r\n         <bts:servicioId></bts:servicioId>\r\n         <bts:clienteUId>364</bts:clienteUId>\r\n         <bts:agendaId></bts:agendaId>\r\n         <bts:sdtValorCampoCash>\r\n            <bts:sBTValorCampoCash>\r\n               <bts:tag></bts:tag>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTValorCampoCash>\r\n         </bts:sdtValorCampoCash>\r\n      </bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerBeneficiarioSegunFiltro=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": 1,\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n      \"contratoId\": 8,\r\n      \"servicioId\": \"\",\r\n      \"clienteUId\": 364,\r\n      \"agendaId\": \"\",\r\n      \"sdtValorCampoCash\": {\r\n         \"sBTValorCampoCash\": [\r\n            {\r\n               \"tag\": \"\",\r\n               \"valor\": \"\"\r\n            }\r\n         ]\r\n      }\r\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <sdtBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>CARLOS ABARCA</nombre>\r\n               <id>2546545498</id>\r\n               <corr>1</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>DIEGO CERVINI</nombre>\r\n               <id>15040306</id>\r\n               <corr>2</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>ISABEL PUIG</nombre>\r\n               <id>18685347</id>\r\n               <corr>3</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>FLORENCIA NEBOT</nombre>\r\n               <id>47851468</id>\r\n               <corr>4</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>PAUEL CARRASCO</nombre>\r\n               <id>43162495</id>\r\n               <corr>5</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>MARIA SOSA</nombre>\r\n               <id>46321571</id>\r\n               <corr>6</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>SEBASTIAN CASABLANCA</nombre>\r\n               <id>28964523</id>\r\n               <corr>7</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>MATIAS PEREZ</nombre>\r\n               <id>36528547</id>\r\n               <corr>8</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>LEONARDO DOMINGUEZ</nombre>\r\n               <id>25634581</id>\r\n               <corr>9</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>VALENTINA BRUNO</nombre>\r\n               <id>39635424</id>\r\n               <corr>10</corr>\r\n            </sBTResumenBeneficiario>\r\n            <sBTResumenBeneficiario>\r\n               <contrato>8</contrato>\r\n               <servicio>240</servicio>\r\n               <codAgenda>1</codAgenda>\r\n               <nombre>SUSANA GIMENEZ</nombre>\r\n               <id>41705427</id>\r\n               <corr>11</corr>\r\n            </sBTResumenBeneficiario>\r\n         </sdtBeneficiario>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-18</Fecha>\r\n            <Hora>14:13:04</Hora>\r\n            <Numero>26022</Numero>\r\n            <Servicio>BTCASHManagement.ObtenerBeneficiarioSegunFiltro</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": 1,\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"sdtBeneficiario\": {\r\n         \"sBTResumenBeneficiario\": [\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"CARLOS ABARCA\",\r\n            \"id\": 2546545498,\r\n            \"corr\": 1\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"DIEGO CERVINI\",\r\n            \"id\": 15040306,\r\n            \"corr\": 2\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"ISABEL PUIG\",\r\n            \"id\": 18685347,\r\n            \"corr\": 3\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"FLORENCIA NEBOT\",\r\n            \"id\": 47851468,\r\n            \"corr\": 4\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"PAUEL CARRASCO\",\r\n            \"id\": 43162495,\r\n            \"corr\": 5\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"MARIA SOSA\",\r\n            \"id\": 46321571,\r\n            \"corr\": 6\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"SEBASTIAN CASABLANCA\",\r\n            \"id\": 28964523,\r\n            \"corr\": 7\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"MATIAS PEREZ\",\r\n            \"id\": 36528547,\r\n            \"corr\": 8\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"LEONARDO DOMINGUEZ\",\r\n            \"id\": 25634581,\r\n            \"corr\": 9\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"VALENTINA BRUNO\",\r\n            \"id\": 39635424,\r\n            \"corr\": 10\r\n         },\r\n         {\r\n            \"contrato\": 8,\r\n            \"servicio\": 240,\r\n            \"codAgenda\": 1,\r\n            \"nombre\": \"SUSANA GIMENEZ\",\r\n            \"id\": 41705427,\r\n            \"corr\": 11\r\n         }\r\n         ]\r\n      },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": 10403,\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTCASHManagement.ObtenerBeneficiarioSegunFiltro\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": 1,\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorCampoCASH",
+      "fields": [
+        {
+          "Nombre": "tag",
+          "Tipo": "String",
+          "Comentarios": "Tag del campo CASH."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor del campo CASH."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

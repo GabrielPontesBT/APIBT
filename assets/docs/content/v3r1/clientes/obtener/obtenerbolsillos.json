@@ -1,0 +1,149 @@
+{
+  "slug": "clientes/obtener/obtenerbolsillos",
+  "pageTitle": "Obtener Bolsillos",
+  "description": "Método para obtener las cuentas bolsillo de un cliente.",
+  "pubName": "BTClientes.ObtenerBolsillos",
+  "programa": "RBTPG617",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtProductosPasivos",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
+      "Comentarios": "Listado de bolsillos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerBolsillos>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>322</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerBolsillos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerBolsillos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"CC6345192D8633F531F01D1D\"\r\n    },\r\n    \"clienteUId\": 322\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerBolsillosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>CC6345192D8633F531F01D1D</Token>\r\n         </Btinreq>\r\n         <sdtProductosPasivos>\r\n            <sBTProductoPasivo>\r\n               <tipoProducto>CB</tipoProducto>\r\n               <estado>Normal</estado>\r\n               <subCuenta/>\r\n               <operacionUId>18766</operacionUId>\r\n               <saldo>910000.00</saldo>\r\n               <idOperacionFmt>000000029_010</idOperacionFmt>\r\n               <idOperacionBT>0010100000221000000000000000002900010000000000002</idOperacionBT>\r\n               <producto>\r\n                  <moneda>$</moneda>\r\n                  <papel/>\r\n                  <productoUId>512</productoUId>\r\n                  <nombre>CUENTAS BOLSILLO, Bolsillo Gastos</nombre>\r\n               </producto>\r\n               <sucursal>Sucursal Ciudad de la Costa</sucursal>\r\n            </sBTProductoPasivo>\r\n            ...\r\n         </sdtProductosPasivos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>228501</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerBolsillos</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2023-11-01</Fecha>\r\n            <Hora>11:31:01</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerBolsillosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"CC6345192D8633F531F01D1D\"\r\n    },\r\n    \"sdtProductosPasivos\": {\r\n        \"sBTProductoPasivo\": {\r\n            \"tipoProducto\": \"CB\",\r\n            \"estado\": \"Normal\",\r\n            \"subCuenta\": \"\",\r\n            \"operacionUId\": 18766,\r\n            \"saldo\": 910000.00,\r\n            \"idOperacionFmt\": 29010,\r\n            \"idOperacionBT\": 10100000221000000000000000002900010000000000002,\r\n            \"producto\": {\r\n                \"moneda\": \"$\",\r\n                \"papel\": \"\",\r\n                \"productoUId\": 512,\r\n                \"nombre\": \"CUENTAS BOLSILLO, Bolsillo Gastos\"\r\n            },\r\n            \"sucursal\": \"Sucursal Ciudad de la Costa\"\r\n        }\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 228501,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.ObtenerBolsillos\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2023-11-01\",\r\n        \"Hora\": \"11:31:01\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProductoPasivo",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del Producto pasivo."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Decimal",
+          "Comentarios": "Saldo."
+        },
+        {
+          "Nombre": "subcuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta vista."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal de origen de la operación."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA')."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

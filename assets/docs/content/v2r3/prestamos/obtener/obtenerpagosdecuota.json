@@ -1,0 +1,148 @@
+{
+  "slug": "prestamos/obtener/obtenerpagosdecuota",
+  "pageTitle": "Obtener Pagos de Cuota",
+  "description": "Método para obtener el detalle de pagos de una cuota de préstamo.",
+  "pubName": "BTPrestamos.ObtenerPagosCuota",
+  "programa": "RBTPG095",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación del préstamo."
+    },
+    {
+      "Nombre": "numeroCuota",
+      "Tipo": "Int",
+      "Comentarios": "Número de cuota."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPagoDeCuota",
+      "Tipo": "<a href=\"#sbtpagodecuota\">sBTPagoDeCuota</a>",
+      "Comentarios": "Identificador único de movimiento [Asiento]."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La cuota indicada no es válida."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerPagosCuota>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>361</bts:operacionUId>\r\n         <bts:numeroCuota>1</bts:numeroCuota>\r\n      </bts:BTPrestamos.ObtenerPagosCuota>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPagosCuota=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 663f7ea1-30e7-309b-9c23-7792294641cc' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 361,\r\n    \"numeroCuota\": 1\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerPagosCuotaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>75e20bd1614A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPagoDeCuota>\r\n            <fechaUltimoPago>2018-11-05</fechaUltimoPago>\r\n            <detalle>\r\n               <sBTDetallePagoCuota>\r\n                  <fechaPago>2018-11-05</fechaPago>\r\n                  <capital>0.00</capital>\r\n                  <intereses>1287.08</intereses>\r\n                  <comisiones>0.00</comisiones>\r\n                  <seguros>0.00</seguros>\r\n                  <impuestos>0.00</impuestos>\r\n                  <otrosConceptos>0.00</otrosConceptos>\r\n                  <detalleConceptos></detalleConceptos>\r\n                  <total>1287.08</total>\r\n               </sBTDetallePagoCuota>\r\n            </detalle>\r\n            <importePago>1287.08</importePago>\r\n         </sdtPagoDeCuota>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>905</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerPagosCuota</Servicio>\r\n            <Fecha>2017-12-21</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>13:05:51</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerPagosCuotaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtPagoDeCuota\": {\r\n        \"fechaUltimoPago\": \"2018-11-05\",\r\n        \"detalle\": {\r\n            \"sBTDetallePagoCuota\": [\r\n                {\r\n                    \"otrosConceptos\": \"0.00\",\r\n                    \"capital\": \"0.00\",\r\n                    \"impuestos\": \"0.00\",\r\n                    \"intereses\": \"1287.08\",\r\n                    \"total\": \"1287.08\",\r\n                    \"fechaPago\": \"2018-11-05\",\r\n                    \"detalleConceptos\": {\r\n                        \"sBTConcepto\": []\r\n                    },\r\n                    \"seguros\": \"0.00\",\r\n                    \"comisiones\": \"0.00\"\r\n                }\r\n            ]\r\n        },\r\n        \"importePago\": \"1287.08\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"906\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerPagosCuota\",\r\n        \"Fecha\": \"2017-12-21\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"13:56:38\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPagoDeCuota",
+      "fields": [
+        {
+          "Nombre": "detalle",
+          "Tipo": "<a href=\"#sbtdetallepagocuota\">sBTDetallePagoCuota</a>",
+          "Comentarios": "Listado de pagos de una cuota."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de la cuota."
+        },
+        {
+          "Nombre": "importePago",
+          "Tipo": "Double",
+          "Comentarios": "Importe pagado."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDetallePagoCuota",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital de la cuota."
+        },
+        {
+          "Nombre": "comisiones",
+          "Tipo": "Double",
+          "Comentarios": "Comisiones de la cuota."
+        },
+        {
+          "Nombre": "detalleConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Detalle de los conceptos adicionales."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago prevista."
+        },
+        {
+          "Nombre": "impuestos",
+          "Tipo": "Double",
+          "Comentarios": "Impuestos de la cuota."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses de la cuota."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Importe otros conceptos."
+        },
+        {
+          "Nombre": "seguros",
+          "Tipo": "Double",
+          "Comentarios": "Seguros de la cuota."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Double",
+          "Comentarios": "Total de la cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "calendarios/obtener/obtenerfechahabildesucursal",
+  "pageTitle": "Obtener Fecha Hábil de Sucursal",
+  "description": "Método para obtener si una fecha es hábil en la sucursal ingresada.",
+  "pubName": "BTCalendarios.ObtenerFechaHabilSucursal",
+  "programa": "RBTPG327",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha a consultar."
+    },
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de Sucursal a consultar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "fechaHabil",
+      "Tipo": "String",
+      "Comentarios": "¿Es hábil? (S/N)"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40001",
+      "Descripción": "La Sucursal no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>120320211555340000388219</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:fecha>2020-11-14</bts:fecha>\n         <bts:sucursalId>1000</bts:sucursalId>\n      </bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerFechaHabilSucursal' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"INSTALADOR\",\n\t  \"Token\": \"120320211555340000388219\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"fecha\": \"2020-11-14\",\n\t\"sucursalId\": \"1000\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>120320211555340000388219</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <fechaHabil>N</fechaHabil>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerFechaHabilSucursal</Servicio>\n            <Fecha>2021-03-12</Fecha>\n            <Hora>15:58:02</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10660</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n \t\"Btinreq\": { \n\t  \"Device\": \"AC\", \n\t  \"Usuario\": \"INSTALADOR\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Token\": \"120320211555340000388219\" \n\t}, \n\t\"fechaHabil\": \"N\", \n\t\"Btoutreq\": { \n\t  \"Numero\": \"10660\", \n\t  \"Estado\": \"OK\", \n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerFechaHabilSucursal\", \n\t  \"Requerimiento\": \"1\", \n\t  \"Fecha\": \"2021-03-12\", \n\t  \"Canal\": \"BTDIGITAL\", \n\t  \"Hora\": \"15:58:02\" \n\t} \n }"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

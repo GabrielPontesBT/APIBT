@@ -1,0 +1,89 @@
+{
+  "slug": "personas/obtener/obtenerpersonasvinculadas",
+  "pageTitle": "Obtener Personas Vinculadas",
+  "description": "Método para obtener un listado de los vínculos de la persona.",
+  "pubName": "BTPersonas.ObtenerPersonasVinculadas",
+  "programa": "RBTPG375",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPersonasVinculadas",
+      "Tipo": "<a href=\"#sbtpersonavinculada\">sBTPersonaVinculada</a>",
+      "Comentarios": "Datos de la persona vinculada."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "31003",
+      "Descripción": "No existe registro para el identificador único."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerPersonasVinculadas>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>120109606CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>1</bts:personaUId>\r\n      </bts:BTPersonas.ObtenerPersonasVinculadas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasVinculadas' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"120109606CD285A89A23FBEE\",\r\n        \"Device\": \"MC\"\r\n    },\r\n    \"personaUId\": 1\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerPersonasVinculadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>120109606CD285A89A23FBEE</Token>\r\n            <Device>MC</Device>\r\n         </Btinreq>\r\n         <sdtPersonasVinculadas>\r\n            <sBTPersonaVinculada>\r\n               <personaUId>3</personaUId>\r\n               <nombre>PEREZ MANRIQUE JORGE</nombre>\r\n               <vinculo>\r\n                  <identificador>41</identificador>\r\n                  <descripcion>Padre</descripcion>\r\n                  <tipo>C</tipo>\r\n               </vinculo>\r\n            </sBTPersonaVinculada>\r\n            <sBTPersonaVinculada>\r\n               <personaUId>2</personaUId>\r\n               <nombre>ABARCA CARLOS</nombre>\r\n               <vinculo>\r\n                  <identificador>43</identificador>\r\n                  <descripcion>Hijo</descripcion>\r\n                  <tipo>C</tipo>\r\n               </vinculo>\r\n            </sBTPersonaVinculada>\r\n         </sdtPersonasVinculadas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTPersonas.ObtenerPersonasVinculadas</Servicio>\r\n            <Fecha>2021-11-30</Fecha>\r\n            <Hora>11:04:47</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>8767</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerPersonasVinculadasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"120109606CD285A89A23FBEE\",\r\n        \"Device\": \"MC\"\r\n    },\r\n    \"sdtPersonasVinculadas\": {\r\n        \"sBTPersonaVinculada\": [\r\n            {\r\n                \"personaUId\": 3,\r\n                \"nombre\": \"PEREZ MANRIQUE JORGE\",\r\n                \"vinculo\": {\r\n                    \"identificador\": 41,\r\n                    \"descripcion\": \"Padre\",\r\n                    \"tipo\": \"C\"\r\n                }\r\n            },\r\n            {\r\n                \"personaUId\": 2,\r\n                \"nombre\": \"ABARCA CARLOS\",\r\n                \"vinculo\": {\r\n                    \"identificador\": 43,\r\n                    \"descripcion\": \"Hijo\",\r\n                    \"tipo\": \"C\"\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTPersonas.ObtenerPersonasVinculadas\",\r\n        \"Fecha\": \"2021-11-30\",\r\n        \"Hora\": \"11:04:47\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 8767,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersonaVinculada",
+      "fields": [
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la persona."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "vinculo",
+          "Tipo": "<a href=\"#sbtvinculo\">sBTVinculo</a>",
+          "Comentarios": "Datos del vínculo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTVinculo",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de vínculo."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de vínculo."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de vínculo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

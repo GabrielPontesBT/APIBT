@@ -1,0 +1,204 @@
+{
+  "slug": "ahorro-programado/obtener/obtenercuentasdestinohabilitadas",
+  "pageTitle": "Obtener Cuentas Destino Habilitadas",
+  "description": "Método para obtener un listado de cuentas habilitadas para acreditar el ahorro.",
+  "pubName": "BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas",
+  "programa": "RBTPG112",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "clienteDestinoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente destino de fondos de ahorro."
+    },
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de producto."
+    },
+    {
+      "Nombre": "cuentaOrigenUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta origen."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCuentas",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
+      "Comentarios": "Listado de cuentas habilitadas para origen del ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del cliente destino de fondos."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador del producto de ahorro."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el identificador de la cuenta de origen del ahorro."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la cuenta destino para el identificador de cliente destino de fondos: [Número de identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó el producto de ahorro para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se recuperó cuenta de origen para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La cuenta de origen no corresponde al cliente."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El producto seleccionado no corresponde a un producto de ahorro."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "El cliente destino debe ser igual al cliente origen."
+    },
+    {
+      "Código": "40999",
+      "Descripción": "Este producto no se encuentra habilitado para operar por este canal."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>0d927483a74A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>81</bts:clienteUId>\r\n         <bts:clienteDestinoUId>81</bts:clienteDestinoUId>\r\n         <bts:productoUId>41</bts:productoUId>\r\n         <bts:cuentaOrigenUId>21</bts:cuentaOrigenUId>\r\n      </bts:BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCuentasDestinoHabilitadas' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n      \"clienteUId\": 81,\r\n      \"clienteDestinoUId\": 81,\r\n      \"productoUId\": 41,\r\n      \"cuentaOrigenUId\": 21\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ObtenerCuentasDestinoHabilitadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0d927483a74A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtCuentas>\r\n            <sBTProductoPasivo>\r\n               <operacionUId>21</operacionUId>\r\n               <idOperacionFmt>000000028_001</idOperacionFmt>\r\n               <idOperacionBT>0010010210000000000000028001000000000001</idOperacionBT>\r\n               <producto>\r\n                  <productoUId>0</productoUId>\r\n                  <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>\r\n                  <moneda>$</moneda>\r\n                  <papel/>\r\n                  <otrosConceptos/>\r\n               </producto>\r\n               <tipoProducto>CA</tipoProducto>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <subcuenta>Mi account 1</subcuenta>\r\n               <saldo>10000000.00</saldo>\r\n               <estado>Normal</estado>\r\n            </sBTProductoPasivo>\r\n            <sBTProductoPasivo>\r\n               <operacionUId>81</operacionUId>\r\n               <idOperacionFmt>000000028_002</idOperacionFmt>\r\n               <idOperacionBT>0010010210000000000000028002000000000001</idOperacionBT>\r\n               <producto>\r\n                  <productoUId>0</productoUId>\r\n                  <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>\r\n                  <moneda>$</moneda>\r\n                  <papel/>\r\n                  <otrosConceptos/>\r\n               </producto>\r\n               <tipoProducto>CA</tipoProducto>\r\n               <sucursal>Casa Matriz</sucursal>\r\n               <subcuenta>Mi account 2</subcuenta>\r\n               <saldo>0.00</saldo>\r\n               <estado>Normal</estado>\r\n            </sBTProductoPasivo>\r\n         </sdtCuentas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>403</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas</Servicio>\r\n            <Fecha>2018-05-03</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>11:54:19</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ObtenerCuentasDestinoHabilitadasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtCuentas\": {\r\n        \"sBTProductoPasivo\": [\r\n            {\r\n                \"tipoProducto\": \"CA\",\r\n                \"estado\": \"Normal\",\r\n                \"subcuenta\": \"Mi account 1\",\r\n                \"operacionUId\": 21,\r\n                \"saldo\": 10000000.00,\r\n                \"idOperacionFmt\": \"000000028_001\",\r\n                \"idOperacionBT\": \"0010010210000000000000028001000000000001\",\r\n                \"producto\": {\r\n                    \"papel\": \"\",\r\n                    \"moneda\": \"$\",\r\n                    \"productoUId\": 0,\r\n                    \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\"\r\n                },\r\n                \"sucursal\": \"Casa Matriz\"\r\n            },\r\n            {\r\n                \"tipoProducto\": \"CA\",\r\n                \"estado\": \"Normal\",\r\n                \"subcuenta\": \"Mi account 2\",\r\n                \"operacionUId\": 81,\r\n                \"saldo\": 0.00,\r\n                \"idOperacionFmt\": \"000000028_002\",\r\n                \"idOperacionBT\": \"0010010210000000000000028002000000000001\",\r\n                \"producto\": {\r\n                    \"papel\": \"\",\r\n                    \"moneda\": \"$\",\r\n                    \"productoUId\": 0,\r\n                    \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\"\r\n                },\r\n                \"sucursal\": \"Casa Matriz\"\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 404,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas\",\r\n        \"Fecha\": \"2018-05-03\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"11:57:10\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProductoPasivo",
+      "fields": [
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del Producto pasivo."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Decimal",
+          "Comentarios": "Saldo."
+        },
+        {
+          "Nombre": "subcuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta vista."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal de origen de la operación."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA')."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

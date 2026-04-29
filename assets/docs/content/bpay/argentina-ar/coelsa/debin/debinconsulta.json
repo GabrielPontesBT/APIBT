@@ -1,0 +1,290 @@
+{
+  "slug": "argentina-ar/coelsa/debin/debinconsulta",
+  "pageTitle": "Consultar DEBIN",
+  "description": "Método para realizar una consulta de Debin.",
+  "pubName": "BTCOELSAGestionDebin.ConsultaDebin",
+  "programa": "RBTPAR60",
+  "scope": "Argentina",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "idDebin",
+      "Tipo": "String",
+      "Comentarios": "Identificador único de Debin."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ConsultaDebinResponse",
+      "Tipo": "<a href=\"#sbtconsultadebinres\">sBTConsultaDebinRes</a>",
+      "Comentarios": "Datos de respuesta Debin."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió ID de Debin a consultar."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConsultaDebin>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>02cb4baaac464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:IdDebin>GWY7ZEPN6ZW0WR4NQ0M51O</bts:IdDebin>\n      </bts:BTCOELSAGestionDebin.ConsultaDebin>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.ConsultaDebinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>02cb4baaac464D4650046918</Token>\n         </Btinreq>\n         <ConsultaDebinResponse>\n            <OperFechaNegocio>2024-07-15T00:00:00</OperFechaNegocio>\n            <CompradorDescEstado>No Adherido</CompradorDescEstado>\n            <CompradorCbu>0940099366000013940012</CompradorCbu>\n            <FechaExpiracion>2999-12-31T00:00:00+00:00</FechaExpiracion>\n            <EvaluacionReglas>1a,9</EvaluacionReglas>\n            <Moneda>032</Moneda>\n            <Importe>100.00</Importe>\n            <CompradorEndP/>\n            <EstadoDebinDesc>0600 - ACREDITADO</EstadoDebinDesc>\n            <VendedorEndP>0202</VendedorEndP>\n            <OperacionId>GWY7ZEPN6ZW0WR4NQ0M51O</OperacionId>\n            <CompradorSuc>0099</CompradorSuc>\n            <EvaluacionPuntaje>50</EvaluacionPuntaje>\n            <Descripcion/>\n            <CodigoResp>00</CodigoResp>\n            <CompradorTitular>OJEDA FELIX ANGEL</CompradorTitular>\n            <VendedorEsTitu>0</VendedorEsTitu>\n            <VendedorBco>432</VendedorBco>\n            <FechaAlta>2024-07-12T20:14:30.3140212-03:00</FechaAlta>\n            <OperacionGarantia>true</OperacionGarantia>\n            <CompradorCodEstado>01</CompradorCodEstado>\n            <Devolucion>false</Devolucion>\n            <IdComprobante>0</IdComprobante>\n            <VendedorCod/>\n            <OperacionTipoOper>20</OperacionTipoOper>\n            <CompradorCodigo/>\n            <CompradorMda>032</CompradorMda>\n            <VendedorCbu>4320011910003292430013</VendedorCbu>\n            <CompradorTerm/>\n            <CompradorEsTitu>0</CompradorEsTitu>\n            <VendedorTerm/>\n            <CompradorCuit>20042039390</CompradorCuit>\n            <VendedorCuit>27337167255</VendedorCuit>\n            <IdUsuario>0</IdUsuario>\n            <Concepto>CUO</Concepto>\n            <VendedorTitular>VERON MARIA TERESA</VendedorTitular>\n            <VendedorSuc>0011</VendedorSuc>\n            <OperacionPreAuto>false</OperacionPreAuto>\n            <EstadoDebinCodigo>ACREDITADO</EstadoDebinCodigo>\n            <CompradorTipo>10</CompradorTipo>\n            <OperloteId>0</OperloteId>\n            <VendedorTipo>TRANSFERENCIA</VendedorTipo>\n            <CompradorAlias/>\n            <IdOperacionOriginal>8200566</IdOperacionOriginal>\n            <VendedorMda>032</VendedorMda>\n            <DescripcionResp>DEBIN ENCONTRADO</DescripcionResp>\n            <VendedorAlias/>\n            <CompradorBco>094</CompradorBco>\n         </ConsultaDebinResponse>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-08-01</Fecha>\n            <Hora>15:01:15</Hora>\n            <Numero>171266118</Numero>\n            <Servicio>BTCOELSAGestionDebin.ConsultaDebin</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.ConsultaDebinResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTConsultaDebinRes",
+      "fields": [
+        {
+          "Nombre": "VendedorTipo",
+          "Tipo": "String",
+          "Comentarios": "Vendedor tipo."
+        },
+        {
+          "Nombre": "VendedorEndP",
+          "Tipo": "String",
+          "Comentarios": "vendedor endpoint."
+        },
+        {
+          "Nombre": "EvaluacionPuntaje",
+          "Tipo": "Short",
+          "Comentarios": "Evaluación puntaje."
+        },
+        {
+          "Nombre": "EvaluacionReglas",
+          "Tipo": "String",
+          "Comentarios": "Evaluación Reglas."
+        },
+        {
+          "Nombre": "DescripcionResp",
+          "Tipo": "String",
+          "Comentarios": "Descripción respuesta."
+        },
+        {
+          "Nombre": "CodigoResp",
+          "Tipo": "String",
+          "Comentarios": "Código respuesta."
+        },
+        {
+          "Nombre": "OperacionId",
+          "Tipo": "String",
+          "Comentarios": "Operación Id."
+        },
+        {
+          "Nombre": "OperacionGarantia",
+          "Tipo": "String",
+          "Comentarios": "Operación garantía."
+        },
+        {
+          "Nombre": "OperacionTipoOper",
+          "Tipo": "String",
+          "Comentarios": "Tipo operación."
+        },
+        {
+          "Nombre": "OperloteId",
+          "Tipo": "Short",
+          "Comentarios": "Operación lote Id."
+        },
+        {
+          "Nombre": "OperFechaNegocio",
+          "Tipo": "String",
+          "Comentarios": "Operación fecha negocio."
+        },
+        {
+          "Nombre": "OperacionPreAuto",
+          "Tipo": "String",
+          "Comentarios": "Operacion pre autorización."
+        },
+        {
+          "Nombre": "EstadoDebinDesc",
+          "Tipo": "String",
+          "Comentarios": "Estado Debin Descripción."
+        },
+        {
+          "Nombre": "EstadoDebinCodigo",
+          "Tipo": "String",
+          "Comentarios": "Estado debin código."
+        },
+        {
+          "Nombre": "CompradorCodigo",
+          "Tipo": "String",
+          "Comentarios": "Comprador código."
+        },
+        {
+          "Nombre": "CompradorTitular",
+          "Tipo": "String",
+          "Comentarios": "Comprador titular."
+        },
+        {
+          "Nombre": "CompradorCuit",
+          "Tipo": "String",
+          "Comentarios": "Comprador Clave única de identificación tributaria."
+        },
+        {
+          "Nombre": "CompradorCodEstado",
+          "Tipo": "String",
+          "Comentarios": "Comprador código estado."
+        },
+        {
+          "Nombre": "CompradorDescEstado",
+          "Tipo": "String",
+          "Comentarios": "Comprador descripción estado."
+        },
+        {
+          "Nombre": "CompradorBco",
+          "Tipo": "String",
+          "Comentarios": "Comprador Banco."
+        },
+        {
+          "Nombre": "CompradorSuc",
+          "Tipo": "String",
+          "Comentarios": "Comprador sucursal."
+        },
+        {
+          "Nombre": "CompradorTerm",
+          "Tipo": "String",
+          "Comentarios": "Número de terminal del Comprador."
+        },
+        {
+          "Nombre": "CompradorAlias",
+          "Tipo": "String",
+          "Comentarios": "Comprador alias."
+        },
+        {
+          "Nombre": "CompradorCbu",
+          "Tipo": "String",
+          "Comentarios": "Comprador Clave Bancaria Uniforme."
+        },
+        {
+          "Nombre": "CompradorEsTitu",
+          "Tipo": "Short",
+          "Comentarios": "es titular?."
+        },
+        {
+          "Nombre": "CompradorMda",
+          "Tipo": "String",
+          "Comentarios": "Comprador moneda."
+        },
+        {
+          "Nombre": "CompradorTipo",
+          "Tipo": "String",
+          "Comentarios": "Comprador tipo."
+        },
+        {
+          "Nombre": "CompradorEndP",
+          "Tipo": "String",
+          "Comentarios": "Comprador endpoint."
+        },
+        {
+          "Nombre": "Concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "IdUsuario",
+          "Tipo": "Short",
+          "Comentarios": "Id usuario."
+        },
+        {
+          "Nombre": "IdComprobante",
+          "Tipo": "Short",
+          "Comentarios": "Id comprobante."
+        },
+        {
+          "Nombre": "Moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "Importe",
+          "Tipo": "Int",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "Devolucion",
+          "Tipo": "String",
+          "Comentarios": "Devolución."
+        },
+        {
+          "Nombre": "Descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "IdOperacionOriginal",
+          "Tipo": "String",
+          "Comentarios": "Id operación original."
+        },
+        {
+          "Nombre": "FechaAlta",
+          "Tipo": "String",
+          "Comentarios": "Fecha alta."
+        },
+        {
+          "Nombre": "FechaExpiracion",
+          "Tipo": "String",
+          "Comentarios": "Fecha expiración."
+        },
+        {
+          "Nombre": "VendedorCod",
+          "Tipo": "String",
+          "Comentarios": "Vendedor código."
+        },
+        {
+          "Nombre": "VendedorTitular",
+          "Tipo": "String",
+          "Comentarios": "Vendedor titular."
+        },
+        {
+          "Nombre": "VendedorCuit",
+          "Tipo": "String",
+          "Comentarios": "Vendedor Clave única de identificación tributaria."
+        },
+        {
+          "Nombre": "VendedorBco",
+          "Tipo": "String",
+          "Comentarios": "Vendedor banco."
+        },
+        {
+          "Nombre": "VendedorSuc",
+          "Tipo": "String",
+          "Comentarios": "Vendedor sucursal."
+        },
+        {
+          "Nombre": "VendedorTerm",
+          "Tipo": "String",
+          "Comentarios": "Vendedor terminal."
+        },
+        {
+          "Nombre": "VendedorAlias",
+          "Tipo": "String",
+          "Comentarios": "Vendedor alias."
+        },
+        {
+          "Nombre": "VendedorCbu",
+          "Tipo": "String",
+          "Comentarios": "Vendedor Clave Bancaria Uniforme."
+        },
+        {
+          "Nombre": "VendedorEsTitu",
+          "Tipo": "Short",
+          "Comentarios": "Es titular?."
+        },
+        {
+          "Nombre": "VendedorMda",
+          "Tipo": "String",
+          "Comentarios": "Vendedor Moneda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

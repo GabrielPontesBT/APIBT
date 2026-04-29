@@ -1,0 +1,95 @@
+{
+  "slug": "clientes/actualizar/actualizardocumentodigital",
+  "pageTitle": "Actualizar Documento Digital",
+  "description": "Método para actualizar el documento digital de una cuenta cliente.",
+  "pubName": "BTClientes.ActualizarDocumentoDigital",
+  "programa": "RBTPG167",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cuenta."
+    },
+    {
+      "Nombre": "documentoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del documento."
+    },
+    {
+      "Nombre": "nombre",
+      "Tipo": "String",
+      "Comentarios": "Nombre del documento."
+    },
+    {
+      "Nombre": "archivoCodificado",
+      "Tipo": "String",
+      "Comentarios": "Archivo a asociar codificado en Base 64."
+    },
+    {
+      "Nombre": "fechaEmision",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de emisión del documento (en caso que corresponda)."
+    },
+    {
+      "Nombre": "fechaVencimiento",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de emisión del documento (en caso que corresponda)."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de instancia de documento digital."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió nombre."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No existe registro para el identificador indicado."
+    },
+    {
+      "Código": "30041",
+      "Descripción": "Debe ingresar la fecha de emisión del documento."
+    },
+    {
+      "Código": "30042",
+      "Descripción": "Debe ingresar la fecha de vencimiento del documento."
+    },
+    {
+      "Código": "30130",
+      "Descripción": "Ocurrió un error al recibir el archivo, puede que el mismo este corrupto."
+    },
+    {
+      "Código": "31013",
+      "Descripción": "Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío."
+    },
+    {
+      "Código": "31024",
+      "Descripción": "Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ActualizarDocumentoDigital>\r\n        <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>5744be79064A8B5C60A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>81</bts:clienteUId>\r\n         <bts:documentoId>107</bts:documentoId>\r\n         <bts:nombre>ejemplo</bts:nombre>\r\n         <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>\r\n         <bts:fechaEmision>2010-10-10</bts:fechaEmision>\r\n         <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>\r\n      </bts:BTClientes.ActualizarDocumentoDigital>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ActualizarDocumentoDigital' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t \"clienteUId\":\"81\",\r\n    \"documentoId\":\"107\",\r\n    \"nombre\":\"ejemplo\",\r\n    \"archivoCodificado\":\"RG9jdW1lbnRvIGRlIGVqZW1wbG8=\",\r\n    \"fechaEmision\":\"2010-10-10\",\r\n    \"fechaVencimiento\": \"2020-10-10\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ActualizarDocumentoDigitalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>5744be79064A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>762</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ActualizarDocumentoDigital</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2018-11-12</Fecha>\r\n            <Hora>15:49:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ActualizarDocumentoDigitalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 767,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.ActualizarDocumentoDigital\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2018-11-12\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

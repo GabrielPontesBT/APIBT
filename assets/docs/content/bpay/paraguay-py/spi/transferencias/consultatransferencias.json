@@ -1,0 +1,111 @@
+{
+  "slug": "paraguay-py/spi/transferencias/consultatransferencias",
+  "pageTitle": "Consulta Transferencias",
+  "description": "Método para la consulta de transferencias.",
+  "pubName": "BTTransferencias.Consultar",
+  "programa": "PBTPPY101",
+  "scope": "Paraguay",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Identificador de movimiento contable (BTSIE00Id)."
+    },
+    {
+      "Nombre": "sentido",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "(E) Enviada - (R) Recibida."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "camara",
+      "Tipo": "String",
+      "Comentarios": "Cámara por la cual se realizó la transferencia."
+    },
+    {
+      "Nombre": "codigoBanco",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de banco Destino (FXSNP1Id)."
+    },
+    {
+      "Nombre": "nombreBanco",
+      "Tipo": "String",
+      "Comentarios": "Nombre de banco Destino."
+    },
+    {
+      "Nombre": "cuenta",
+      "Tipo": "String",
+      "Comentarios": "Cuenta destino."
+    },
+    {
+      "Nombre": "nombre",
+      "Tipo": "String",
+      "Comentarios": "Nombre destino."
+    },
+    {
+      "Nombre": "tipoDocumento",
+      "Tipo": "String",
+      "Comentarios": "Tipo documento destino."
+    },
+    {
+      "Nombre": "documento",
+      "Tipo": "String",
+      "Comentarios": "Número documento destino."
+    },
+    {
+      "Nombre": "concepto",
+      "Tipo": "String",
+      "Comentarios": "motivo, detalle."
+    },
+    {
+      "Nombre": "referenciaUnica",
+      "Tipo": "String",
+      "Comentarios": "Referencia."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Estado: Ok, pendiente, error."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    },
+    {
+      "Nombre": "hora",
+      "Tipo": "String",
+      "Comentarios": "Hora."
+    },
+    {
+      "Nombre": "referenciaEnvio",
+      "Tipo": "String",
+      "Comentarios": "Referencia generada en LBTR o ACH."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "10004",
+      "Descripción": "No se encontró transferencia en el sistema."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"movimientoUID\": \"438\",\n    \"sentido\": \"E\"\n}"
+    },
+    "response": {
+      "xml": "",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"camara\": \"SPI\",\n    \"codigoBanco\": 12,\n    \"nombreBanco\": \"BANCO GNB PARAGUAY SA\",\n    \"cuenta\": \"010143323888\",\n    \"nombre\": \"DESTINATARIO\",\n    \"tipoDocumento\": \"CI\",\n    \"documento\": \"3546681\",\n    \"concepto\": \"Pago de alquiler\",\n    \"referenciaUnica\": \"TUFIPYPA28042561440002719663\",\n    \"estado\": \"OK\",\n    \"fecha\": \"2025-04-28\",\n    \"hora\": \"17:04:21\",\n    \"referenciaEnvio\": \"\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2025-05-02\",\n        \"Hora\": \"16:51:43\",\n        \"Numero\": 14385,\n        \"Servicio\": \"BTTransferencias.Consultar\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

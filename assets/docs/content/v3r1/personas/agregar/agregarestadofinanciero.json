@@ -1,0 +1,171 @@
+{
+  "slug": "personas/agregar/agregarestadofinanciero",
+  "pageTitle": "Agregar Estado Financiero",
+  "description": "Método para agregar los estados financieros a una persona.",
+  "pubName": "BTPersonas.AgregarEstadoFinanciero",
+  "programa": "RBTPG580",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la persona."
+    },
+    {
+      "Nombre": "sdtEstadoFinanciero",
+      "Tipo": "<a href=\"#sbtestadofinanciero\">sBTEstadoFinanciero </a>",
+      "Comentarios": "Datos del estado financiero."
+    },
+    {
+      "Nombre": "sdtCondicionTributaria",
+      "Tipo": "<a href=\"#sbtcondiciontributaria\">sBTCondicionTributaria </a>",
+      "Comentarios": "Datos de la condición tributaria."
+    },
+    {
+      "Nombre": "sdtConceptosEstadoFinanciero",
+      "Tipo": "<a href=\"#sbtdetallesestadosfinancieros\">sBTDetallesEstadosFinancieros </a>",
+      "Comentarios": "Listado de los conceptos financieros."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEstadoFinanciero",
+      "Tipo": "<a href=\"#sbtestadofinanciero\">sBTEstadoFinanciero </a>",
+      "Comentarios": "Datos del estado financiero."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió la fecha de elaboración."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el código de la moneda."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Ya existe un Estado Financiero con esa fecha de elaboración."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "El código de moneda no coincide."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El valor de activo no corresponde."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "La fecha de Elaborado en EEFF no puede ser mayor a la fecha de Hoy."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "El concepto [Nombre del concepto] tiene valor [valor del concepto] el cual no está parametrizado."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "El concepto [Identificador del concepto] no está parametrizado."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "Los \"Activos Totales\" son diferente al \"Total Pasivo + Patrimonio\"."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarEstadoFinanciero>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>90A4D82C0D53C36114131B14</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>234</bts:personaUId>\r\n         <bts:sdtEstadoFinanciero>\r\n            <bts:Id></bts:Id>\r\n            <bts:Auditado>S</bts:Auditado>\r\n            <bts:Moneda>0</bts:Moneda>\r\n            <bts:FechadeElaborado>2024-09-7</bts:FechadeElaborado>\r\n            <bts:UsuariodeIngreso>INSTALADOR</bts:UsuariodeIngreso>\r\n            <bts:FechaRegistro>2024-09-18</bts:FechaRegistro>\r\n         </bts:sdtEstadoFinanciero>\r\n         <bts:sdtCondicionTributaria>\r\n            <bts:VentasAnuales>1</bts:VentasAnuales>\r\n            <bts:RUC>1</bts:RUC>\r\n            <bts:Activo>S</bts:Activo>\r\n            <bts:RegimenTributario>12</bts:RegimenTributario>\r\n         </bts:sdtCondicionTributaria>\r\n         <bts:sdtConceptosEstadoFinanciero>\r\n            <bts:sBTConceptoEstadoFinanciero>\r\n               <bts:idConcepto>1</bts:idConcepto>\r\n               <bts:valorConcepto></bts:valorConcepto>\r\n            </bts:sBTConceptoEstadoFinanciero>\r\n         </bts:sdtConceptosEstadoFinanciero>\r\n      </bts:BTPersonas.AgregarEstadoFinanciero>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarEstadoFinanciero' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\t\"personaUId\": 234,\r\n        \"sdtEstadoFinanciero\": {\r\n          \"Id\": \"\",\r\n          \"Auditado\": \"S\",\r\n          \"Moneda\": 0,\r\n          \"FechadeElaborado\": \"2024-09-7\",\r\n          \"UsuariodeIngreso\": \"INSTALADOR\",\r\n          \"FechaRegistro\": \"2024-09-18\"\r\n        },\r\n        \"sdtCondicionTributaria\": {\r\n          \"VentasAnuales\": 1,\r\n          \"RUC\": \"1\",\r\n          \"Activo\": \"S\",\r\n          \"RegimenTributario\": \"12\"\r\n        },\r\n        \"sdtConceptosEstadoFinanciero\": {\r\n          \"sBTConceptoEstadoFinanciero\": [{\r\n            \"idConcepto\": 1,\r\n            \"valorConcepto\": 0.0\r\n          }]\r\n        }\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.AgregarEstadoFinancieroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>90A4D82C0D53C36114131B14</Token>\r\n         </Btinreq>\r\n         <sdtEstadoFinanciero>\r\n            <Id>31</Id>\r\n            <Auditado>S</Auditado>\r\n            <Moneda>0</Moneda>\r\n            <FechadeElaborado>2024-09-07</FechadeElaborado>\r\n            <UsuariodeIngreso>INSTALADOR</UsuariodeIngreso>\r\n            <FechaRegistro>2024-09-18</FechaRegistro>\r\n         </sdtEstadoFinanciero>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>35226</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.AgregarEstadoFinanciero</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2025-05-14</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>14:53:41</Hora>\r\n         </Btoutreq>\r\n      </BTPersonas.AgregarEstadoFinancieroResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtEstadoFinanciero\": {\r\n          \"Id\": 31,\r\n          \"Auditado\": \"S\",\r\n          \"Moneda\": 0,\r\n          \"FechadeElaborado\": \"2024-09-07\",\r\n          \"UsuariodeIngreso\": \"INSTALADOR\",\r\n          \"FechaRegistro\": \"2024-09-18\"\r\n        },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 35226,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.AgregarEstadoFinanciero\",\r\n        \"Fecha\": \"2025-05-14\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"14:53:41\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEstadoFinanciero",
+      "fields": [
+        {
+          "Nombre": "Auditado",
+          "Tipo": "String",
+          "Comentarios": "¿Es auditado? (S/N)."
+        },
+        {
+          "Nombre": "FechadeElaborado",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de elaborado."
+        },
+        {
+          "Nombre": "FechaRegistro",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de registro."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "int",
+          "Comentarios": "Identificador de estado financiero."
+        },
+        {
+          "Nombre": "Moneda",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "UsuariodeIngreso",
+          "Tipo": "String",
+          "Comentarios": "Usuario de ingreso."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCondicionTributaria",
+      "fields": [
+        {
+          "Nombre": "activo",
+          "Tipo": "String",
+          "Comentarios": "¿Está activo? (S/N)."
+        },
+        {
+          "Nombre": "regimenTributario",
+          "Tipo": "String",
+          "Comentarios": "Régimen tributario."
+        },
+        {
+          "Nombre": "RUC",
+          "Tipo": "String",
+          "Comentarios": "RUC."
+        },
+        {
+          "Nombre": "ventasAnuales",
+          "Tipo": "Double",
+          "Comentarios": "Total de ventas anuales."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDetallesEstadosFinancieros",
+      "fields": [
+        {
+          "Nombre": "idConcepto",
+          "Tipo": "int",
+          "Comentarios": "Identificador del concepto del estado financiero."
+        },
+        {
+          "Nombre": "valorConcepto",
+          "Tipo": "Double",
+          "Comentarios": "Valor del concepto del estado financiero."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

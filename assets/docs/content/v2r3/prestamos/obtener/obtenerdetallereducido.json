@@ -1,0 +1,159 @@
+{
+  "slug": "prestamos/obtener/obtenerdetallereducido",
+  "pageTitle": "Obtener Detalle Reducido",
+  "description": "Método para obtener los datos básicos de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerDetalleReducido",
+  "programa": "RBTPG073",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPrestamo",
+      "Tipo": "<a href=\"#sbtprestamo\">sBTPrestamo</a>",
+      "Comentarios": "Datos del préstamo"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de Identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDetalleReducido>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>6453f934f94A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:OperacionUId>142</bts:OperacionUId>\n      </bts:BTPrestamos.ObtenerDetalleReducido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleReducido=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9c3f1bf5-3274-9009-5a4a-9b755b8652a9' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"OperacionUId\": 142\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerDetalleReducidoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>6453f934f94A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtPrestamo>\n            <sucursal>Sucursal Beta</sucursal>\n            <cuotasPagasConRetaso>0</cuotasPagasConRetaso>\n            <idOperacionBT>0010000100115000000000000000002700000000000326001</idOperacionBT>\n            <cantidadCuotas>37</cantidadCuotas>\n            <capitalOriginal>180000.00</capitalOriginal>\n            <estado>Normal</estado>\n            <operacionUId>142</operacionUId>\n            <tasaVigente>10.000000</tasaVigente>\n            <plazo>1096</plazo>\n            <saldoCapital>-174180.15</saldoCapital>\n            <tipoTasa>Lineal Anual</tipoTasa>\n            <producto>\n               <papel/>\n               <moneda/>\n               <productoUId>0</productoUId>\n               <nombre>Amort. - Capital F./Empr.- T/F</nombre>\n            </producto>\n            <idOperacionFmt>326-0</idOperacionFmt>\n            <fechaValor>2018-05-18</fechaValor>\n            <fechaVencimiento>2021-05-18</fechaVencimiento>\n            <cantidadCuotasImpagas>36</cantidadCuotasImpagas>\n         </sdtPrestamo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>766</Numero>\n            <Servicio>BTPrestamos.ObtenerDetalleReducido</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento/>\n            <Fecha>2017-12-12</Fecha>\n            <Hora>10:55:30</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ObtenerDetalleReducidoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtPrestamo\": {\n        \"sucursal\": \"Sucursal Beta\",\n        \"idOperacionBT\": \"0010000100115000000000000000002700000000000326001\",\n        \"cantidadCuotas\": \"37\",\n        \"capitalOriginal\": \"180000.00\",\n        \"estado\": \"Normal\",\n        \"operacionUId\": \"142\",\n        \"tasaVigente\": \"10.000000\",\n        \"plazo\": \"1096\",\n        \"saldoCapital\": \"-174180.15\",\n        \"tipoTasa\": \"Lineal Anual\",\n        \"producto\": {\n            \"papel\": \"\",\n            \"moneda\": \"\",\n            \"productoUId\": \"0\",\n            \"nombre\": \"Amort. - Capital F./Empr.- T/F\"\n        },\n        \"fechaValor\": \"2018-05-18\",\n        \"fechaVencimiento\": \"2021-05-18\",\n        \"cantidadCuotasImpagas\": \"36\",\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"767\",\n        \"Servicio\": \"BTPrestamos.ObtenerDetalleReducido\",\n        \"Estado\": \"OK\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-12\",\n        \"Hora\": \"11:15:09\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPrestamo",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas del préstamo."
+        },
+        {
+          "Nombre": "cantidadCuotasImpagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas impagas."
+        },
+        {
+          "Nombre": "capitalOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Capital original del préstamo."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del préstamo."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del préstamo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del préstamo."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador texto de operación."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación simulada."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo del préstamo."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Producto."
+        },
+        {
+          "Nombre": "saldoCapital",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de capital."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo monetario."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal del préstamo."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoTasa",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tasa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

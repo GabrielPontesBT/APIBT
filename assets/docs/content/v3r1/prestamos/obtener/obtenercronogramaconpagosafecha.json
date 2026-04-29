@@ -1,0 +1,183 @@
+{
+  "slug": "prestamos/obtener/obtenercronogramaconpagosafecha",
+  "pageTitle": "Obtener Cronograma con Pagos a Fecha",
+  "description": "Método para obtener el cronograma de un préstamo teniendo en cuenta solamente los pagos hasta la fecha indicada.",
+  "pubName": "BTPrestamos.ObtenerCronogramaConPagosAFecha",
+  "programa": "RBTPG440",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de los pagos."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "cronograma",
+      "Tipo": "<a href=\"#sbtcuotaprestamo\">sBTCuotaPrestamo</a>",
+      "Comentarios": "Cronograma del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el Identificador."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió fecha para consulta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerCronogramaConPagosAFecha>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>9aaec33a3bCD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>8892</bts:operacionUId>\r\n         <bts:fecha>2022-11-16</bts:fecha>\r\n      </bts:BTPrestamos.ObtenerCronogramaConPagosAFecha>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerCronogramaConPagosAFecha=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 1e026dc4-d252-eff9-4dce-9398f81a587e' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"9aaec33a3bCD285A89A23FBE\"\r\n\t},\r\n    \"operacionUId\" : 8892,\r\n    \"fecha\" : \"2022-11-16\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerCronogramaConPagosAFechaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n        <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>75e20bd1614A8B5C60A82434</Token>\r\n        </Btinreq>\r\n        <cronograma>\r\n            <sBTCuotaPrestamo>\r\n                <impuestos>0</impuestos>\r\n                <importePago>292.6</importePago>\r\n                <subsidios>0</subsidios>\r\n                <detalleConceptos>\r\n                    <sBTConcepto>\r\n                        <texto></texto>\r\n                        <valor>0</valor>\r\n                        <concepto>Impuesto al Interés</concepto>\r\n                    </sBTConcepto>\r\n                    <sBTConcepto>\r\n                        <texto></texto>\r\n                        <valor>0</valor>\r\n                        <concepto>Impuesto a la Mora</concepto>\r\n                    </sBTConcepto>\r\n                    <sBTConcepto>\r\n                        <texto></texto>\r\n                        <valor>0</valor>\r\n                        <concepto>Impuesto a las Comisiones</concepto>\r\n                    </sBTConcepto>\r\n                </detalleConceptos>\r\n                <fechaVencimiento></fechaVencimiento>\r\n                <intereses>0</intereses>\r\n                <estadoDsc></estadoDsc>\r\n                <comisiones>0</comisiones>\r\n                <otrosConceptos>0</otrosConceptos>\r\n                <concepto>Capital/Interés</concepto>\r\n                <interesMora>0</interesMora>\r\n                <capital>0</capital>\r\n                <diasMora>0</diasMora>\r\n                <tipoCuota>M</tipoCuota>\r\n                <nroCuota>1</nroCuota>\r\n                <seguros>0</seguros>\r\n                <fechaUltimoPago>2022-11-07</fechaUltimoPago>\r\n                <redondeo>0</redondeo>\r\n                <estado>Paga</estado>\r\n                <fechaPago>2022-09-21</fechaPago>\r\n                <total>0</total>\r\n            </sBTCuotaPrestamo>\r\n        </cronograma>\r\n        <Erroresnegocio></Erroresnegocio>\r\n        <Btoutreq>\r\n            <Numero>898</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerCronogramaConPagosAFechaResponse</Servicio>\r\n            <Fecha>2017-12-21</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>11:44:49</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n        </Btoutreq>\r\n      </BTPrestamos.ObtenerCronogramaConPagosAFechaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"75e20bd1614A8B5C60A82434\"\r\n\t},\r\n    \"cronograma\": {\r\n        \"sBTCuotaPrestamo\": [\r\n            {\r\n                \"impuestos\": 0,\r\n                \"importePago\": 292.6,\r\n                \"subsidios\": 0,\r\n                \"detalleConceptos\": {\r\n                    \"sBTConcepto\": [\r\n                        {\r\n                            \"texto\": \"\",\r\n                            \"valor\": 0,\r\n                            \"concepto\": \"Impuesto al Interés\"\r\n                        },\r\n                        {\r\n                            \"texto\": \"\",\r\n                            \"valor\": 0,\r\n                            \"concepto\": \"Impuesto a la Mora\"\r\n                        },\r\n                        {\r\n                            \"texto\": \"\",\r\n                            \"valor\": 0,\r\n                            \"concepto\": \"Impuesto a las Comisiones\"\r\n                        }\r\n                    ]\r\n                },\r\n                \"fechaVencimiento\": \"\",\r\n                \"intereses\": 0,\r\n                \"estadoDsc\": \"\",\r\n                \"comisiones\": 0,\r\n                \"otrosConceptos\": 0,\r\n                \"concepto\": \"Capital/Interés\",\r\n                \"interesMora\": 0,\r\n                \"capital\": 0,\r\n                \"diasMora\": 0,\r\n                \"tipoCuota\": \"M\",\r\n                \"nroCuota\": 1,\r\n                \"seguros\": 0,\r\n                \"fechaUltimoPago\": \"2022-11-07\",\r\n                \"redondeo\": 0,\r\n                \"estado\": \"Paga\",\r\n                \"fechaPago\": \"2022-09-21\",\r\n                \"total\": 0\r\n            },\r\n            ...\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 898,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerCronogramaConPagosAFechaResponse\",\r\n        \"Fecha\": \"2017-12-21\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"11:44:49\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCuotaPrestamo",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital de la cuota."
+        },
+        {
+          "Nombre": "comisiones",
+          "Tipo": "Double",
+          "Comentarios": "Comisiones de la cuota."
+        },
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "(Capital / Interés / Capital-Interés / Pago Mínimo / Cuota Fija)."
+        },
+        {
+          "Nombre": "detalleConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Detalle de los conceptos adicionales."
+        },
+        {
+          "Nombre": "diasMora",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora de la cuota."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado de la cuota."
+        },
+        {
+          "Nombre": "estadoDsc",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado de la cuota."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago prevista ."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de la cuota."
+        },
+        {
+          "Nombre": "importePago",
+          "Tipo": "Double",
+          "Comentarios": "Importe pagado."
+        },
+        {
+          "Nombre": "impuestos",
+          "Tipo": "Double",
+          "Comentarios": "Impuestos de la cuota."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses de la cuota."
+        },
+        {
+          "Nombre": "interesMora",
+          "Tipo": "Double",
+          "Comentarios": "Intereses de mora de la cuota."
+        },
+        {
+          "Nombre": "nroCuota",
+          "Tipo": "Int",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Importe otros conceptos."
+        },
+        {
+          "Nombre": "redondeo",
+          "Tipo": "Double",
+          "Comentarios": "Redondeo."
+        },
+        {
+          "Nombre": "seguros",
+          "Tipo": "Double",
+          "Comentarios": "Seguros de la cuota."
+        },
+        {
+          "Nombre": "subsidios",
+          "Tipo": "Double",
+          "Comentarios": "Subsidios  de la cuota."
+        },
+        {
+          "Nombre": "tipoCuota",
+          "Tipo": "String",
+          "Comentarios": "Tipo de cuota (Capital - K / Interés - I / Capital-Interés - M / Pago Mínimo - T / Cuota Fija - F)."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Double",
+          "Comentarios": "Total de la cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

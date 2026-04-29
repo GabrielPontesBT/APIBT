@@ -1,0 +1,127 @@
+{
+  "slug": "prestamos/obtener/obtenercuentadecobro",
+  "pageTitle": "Obtener Cuentas de Cobro",
+  "description": "Método para obtener un listado de las cuentas de cobro de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerCuentasDeCobro",
+  "programa": "RBTPG134",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de préstamo."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCuentasDeCobro",
+      "Tipo": "<a href=\"#sbtcuentadecobro\">sBTCuentaDeCobro</a>",
+      "Comentarios": "Listado de cuentas de cobro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "El Préstamo no existe."
+    },
+    {
+      "Código": "40102",
+      "Descripción": "No se encuentra Cuenta de Cobro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerCuentaDeCobro>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>74</bts:operacionUId>\n      </bts:BTPrestamos.ObtenerCuentaDeCobro>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerCuentaDeCobro' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\t\"operacionUId\": 74\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerCuentasDeCobroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>18C92AB2FE19E361315BA14B</Token>\n         </Btinreq>\n         <sdtCuentasDeCobro>\n            <sBTCuentaDeCobro>\n               <sucursal>Sucursal #3</sucursal>\n               <producto>\n                  <moneda>$</moneda>\n                  <papel>Bill</papel>\n                  <productoUId>6</productoUId>\n                  <nombre>CAJA DE AHORROS, 656</nombre>\n               </producto>\n               <idOperacionBT>00100302100800000000060929001000000000001</idOperacionBT>\n               <operacionUId>108</operacionUId>\n               <subCuenta/>\n               <idOperacionFmt>000060929_001</idOperacionFmt>\n               <sucursalId>3</sucursalId>\n               <tipoProducto>CA</tipoProducto>\n            </sBTCuentaDeCobro>\n         </sdtCuentasDeCobro>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>5861</Numero>\n            <Servicio>BTPrestamos.ObtenerCuentasDeCobro</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2024-06-12</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:02:38</Hora>\n         </Btoutreq>\n      </BTPrestamos.ObtenerCuentasDeCobroResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtCuentasDeCobro\": {\n      \"sBTCuentaDeCobro\": {\n      \"sucursal\": \"Sucursal #3\",\n      \"producto\": {\n         \"moneda\": \"$\",\n         \"papel\": \"Bill\",\n         \"productoUId\": 6,\n         \"nombre\": \"CAJA DE AHORROS, 656\"\n      },\n      \"idOperacionBT\": 1.003021008e+38,\n      \"operacionUId\": 108,\n      \"subCuenta\": \"\",\n      \"idOperacionFmt\": \"000060929_001\",\n      \"sucursalId\": 3,\n      \"tipoProducto\": \"CA\"\n      }\n   },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"111\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.ObtenerCuentasDeCobro\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-05-04\",\n        \"Hora\": \"18:27:34\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCuentaDeCobro",
+      "fields": [
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Información del producto."
+        },
+        {
+          "Nombre": "subCuenta",
+          "Tipo": "String",
+          "Comentarios": "Sub cuenta."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "sucursalId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

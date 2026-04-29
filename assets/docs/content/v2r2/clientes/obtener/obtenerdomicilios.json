@@ -1,0 +1,138 @@
+{
+  "slug": "clientes/obtener/obtenerdomicilios",
+  "pageTitle": "Obtener Domicilios",
+  "description": "Método para obtener un listado de los domicilios asociados a un cliente.",
+  "pubName": "BTClientes.ObtenerDomicilios",
+  "programa": "RBTPG184",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "domicilios",
+      "Tipo": "<a href=\"#sbtdomicilio1\">sBTDomicilio1</a>",
+      "Comentarios": "Listado de domicilios."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la cuenta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El identificador de la cuenta no es correcto."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se encontraron domicilios para la cuenta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerDomicilios>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>772a871c734A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>21</bts:clienteUId>\n      </bts:BTClientes.ObtenerDomicilios>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: a12f013d-9875-6451-dd62-ad7bb0217b5c' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"clienteUId\": \"21\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <SOAP-ENV:Body>\n      <BTClientes.ObtenerDomiciliosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>772a871c734A8B5C60A82434</Token>\n         </Btinreq>\n         <domicilios>\n            <sBTDomicilio1>\n               <paisDomicilioId>845</paisDomicilioId>\n               <paisDomicilio>URUGUAY</paisDomicilio>\n               <departamentoId>2</departamentoId>\n               <departamento>Canelones</departamento>\n               <localidadId>1497</localidadId>\n               <localidad>Parque de Solymar</localidad>\n               <barrioId>0</barrioId>\n               <barrio/>\n               <calle>70</calle>\n               <numeroPuerta>46</numeroPuerta>\n               <apartamento/>\n               <codigoPostal>15005</codigoPostal>\n               <tipoDeDomicilioId>1</tipoDeDomicilioId>\n               <tipoDeDomicilio>Residencia</tipoDeDomicilio>\n               <direccion>CALLE 70 NRO 46</direccion>\n               <referencia>Casa Azul</referencia>\n            </sBTDomicilio1>\n            <sBTDomicilio1>\n               <paisDomicilioId>845</paisDomicilioId>\n               <paisDomicilio>URUGUAY</paisDomicilio>\n               <departamentoId>3</departamentoId>\n               <departamento>Cerro Largo</departamento>\n               <localidadId>1738</localidadId>\n               <localidad>Plácido Rosas</localidad>\n               <barrioId>0</barrioId>\n               <barrio/>\n               <calle>101</calle>\n               <numeroPuerta>-</numeroPuerta>\n               <apartamento/>\n               <codigoPostal>15024</codigoPostal>\n               <tipoDeDomicilioId>3</tipoDeDomicilioId>\n               <tipoDeDomicilio>Negocio</tipoDeDomicilio>\n               <direccion>CALLE 101 NRO -</direccion>\n               <referencia>Casa Roja</referencia>\n            </sBTDomicilio1>\n         </domicilios>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2971</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTClientes.ObtenerDomicilios</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-11-08</Fecha>\n            <Hora>15:34:04</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTClientes.ObtenerDomiciliosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"domicilios\": {\n        \"sBTDomicilio1\": [\n            {\n                \"localidad\": \"Parque de Solymar\",\n                \"paisDomicilio\": \"URUGUAY\",\n                \"barrioId\": \"0\",\n                \"departamento\": \"Canelones\",\n                \"numeroPuerta\": \"46\",\n                \"barrio\": \"\",\n                \"localidadId\": \"1497\",\n                \"tipoDeDomicilioId\": \"1\",\n                \"codigoPostal\": \"15005\",\n                \"calle\": \"70\",\n                \"apartamento\": \"\",\n                \"tipoDeDomicilio\": \"Residencia\",\n                \"departamentoId\": \"2\",\n                \"paisDomicilioId\": \"845\",\n                \"direccion\": \"CALLE 70 NRO 46\",\n                \"referencia\": \"Casa Azul\"\n            },\n            {\n                \"localidad\": \"Plácido Rosas\",\n                \"paisDomicilio\": \"URUGUAY\",\n                \"barrioId\": \"0\",\n                \"departamento\": \"Cerro Largo\",\n                \"numeroPuerta\": \"-\",\n                \"barrio\": \"\",\n                \"localidadId\": \"1738\",\n                \"tipoDeDomicilioId\": \"3\",\n                \"codigoPostal\": \"15024\",\n                \"calle\": \"101\",\n                \"apartamento\": \"\",\n                \"tipoDeDomicilio\": \"Negocio\",\n                \"departamentoId\": \"3\",\n                \"paisDomicilioId\": \"845\",\n                \"direccion\": \"CALLE 101 NRO -\",\n                \"referencia\": \"Casa Roja\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"2973\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerDomicilios\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-11-08\",\n        \"Hora\": \"15:34:36\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDomicilio1",
+      "fields": [
+        {
+          "Nombre": "apartamento",
+          "Tipo": "String",
+          "Comentarios": "Número de apartamento."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "calle",
+          "Tipo": "String",
+          "Comentarios": "Calle del domicilio."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "dirección",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la localidad."
+        },
+        {
+          "Nombre": "numeroPuerta",
+          "Tipo": "String",
+          "Comentarios": "Número de puerta."
+        },
+        {
+          "Nombre": "paisDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisDomicilioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "referencia",
+          "Tipo": "String",
+          "Comentarios": "Referencia."
+        },
+        {
+          "Nombre": "tipoDeDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoDeDomicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de domicilio."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

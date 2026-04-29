@@ -1,0 +1,233 @@
+{
+  "slug": "depositos-a-plazo/contratar/contratarsimulacion",
+  "pageTitle": "Contratar Simulación",
+  "description": "Método para contratar un depósito a plazo fijo a partir de una simulación existente.\nEste servicio se debe ejecutar para contratar simulaciones realizadas desde el servicio <a href=\"/depositos-a-plazo/simular/simularconcronograma\">SimularConCronograma</a>",
+  "pubName": "BTDepositosAPlazo.ContratarSimulacion",
+  "programa": "RBTPG457",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: \n\nCampo | Valor \n:--------- | :---------  \nCorrelativo 1 | Módulo. \nCorrelativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). \nCorrelativo 3 | Valor incremental. \nValor específico 1 | Moneda (El valor 9999 indica todas las monedas). \nValor específico 2 | Papel (El valor 999999 indica todos los papeles). \nValor específico 3 | Código de instrucción a habilitar. \nImporte específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses).",
+  "backendData": [
+    {
+      "titulo": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "Módulo."
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "Tipo de operación (El valor 999 indica todos los tipos de operación)."
+        },
+        {
+          "Campo": "Correlativo 3",
+          "Valor": "Valor incremental."
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Moneda (El valor 9999 indica todas las monedas)."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "Papel (El valor 999999 indica todos los papeles)."
+        },
+        {
+          "Campo": "Valor específico 3",
+          "Valor": "Código de instrucción a habilitar."
+        },
+        {
+          "Campo": "Importe específico 1",
+          "Valor": "Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses)."
+        }
+      ]
+    }
+  ],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "simulacionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "instruccionVTO",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la instrucción al vencimiento"
+    },
+    {
+      "Nombre": "cuentaUIdDestinoVTO",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de la cuenta destino al vencimiento."
+    },
+    {
+      "Nombre": "instruccionPP",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la instrucción de pago periódico."
+    },
+    {
+      "Nombre": "cuentaUIdDestinoPP",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de la cuenta destino del pago periódico."
+    },
+    {
+      "Nombre": "cuentaUIdDebito",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de la cuenta de débito."
+    },
+    {
+      "Nombre": "sdtDatosExtendidos",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosExtendidos",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de la simulación."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió la instrucción de acreditación al vencimiento."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió la instrucción de acreditación periódica."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió el identificador de cuenta de débito."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recuperaron datos para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperaron datos para el identificador de cuenta de acreditación al vencimiento: [Número de identificador]."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recuperaron datos para el identificador de cuenta de acreditación periódica: [Número de identificador]."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se recuperaron datos para el identificador de cuenta de débito: [Número de identificador]."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "La simulación no está disponible para su contratación."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "La simulación no se encuentra vigente para su contratación."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "La simulación no corresponde al cliente."
+    },
+    {
+      "Código": "30020",
+      "Descripción": "Ocurrió un error al generar el Identificador de movimiento."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "Ocurrió un error al generar el Identificador de operación de depósito."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ContratarSimulacion>\n        <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\n            <bts:Device>GL</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>10009</bts:clienteUId>\n         <bts:simulacionId>93</bts:simulacionId>\n         <bts:InstruccionVTO>6</bts:InstruccionVTO>\n         <bts:cuentaUIdDestinoVTO></bts:cuentaUIdDestinoVTO>\n         <bts:InstruccionPP>7</bts:InstruccionPP>\n         <bts:cuentaUIdDestinoPP>10120</bts:cuentaUIdDestinoPP>\n         <bts:cuentaUIdDebito>10120</bts:cuentaUIdDebito>\n         <bts:sBTDatosExtendidos/>\n      </bts:BTDepositosAPlazo.ContratarSimulacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Requerimiento\": 1,\n          \"Usuario\": \"INSTALADOR\",\n          \"Token\": \"30F74741A02C318CEFD55684\",\n          \"Device\": \"GL\"\n        },\n        \"clienteUId\": 10009,\n        \"simulacionId\": 93,\n        \"InstruccionVTO\": 6,\n        \"cuentaUIdDestinoVTO\": \"\",\n        \"InstruccionPP\": 7,\n        \"cuentaUIdDestinoPP\": 10120,\n        \"cuentaUIdDebito\": 10120,\n        \"sBTDatosExtendidos\": \"\"\n      }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTDepositosAPlazo.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>30F74741A02C318CEFD55684</Token>\n            <Device>GL</Device>\n         </Btinreq>\n         <sBTDatosExtendidos></sBTDatosExtendidos>\n         <operacionUId>15</operacionUId>\n         <movimientoUId>15</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTDepositosAPlazo.ContratarSimulacion</Servicio>\n            <Fecha>2022-11-29</Fecha>\n            <Hora>11:35:46</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>507</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTDepositosAPlazo.ContratarSimulacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Requerimiento\": 1,\n          \"Usuario\": \"INSTALADOR\",\n          \"Token\": \"30F74741A02C318CEFD55684\",\n          \"Device\": \"GL\"\n        },\n        \"sBTDatosExtendidos\": \"\",\n        \"operacionUId\": 15,\n        \"movimientoUId\": 15,\n        \"Erroresnegocio\": \"\",\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTDepositosAPlazo.ContratarSimulacion\",\n          \"Fecha\": \"2022-11-29\",\n          \"Hora\": \"11:35:46\",\n          \"Requerimiento\": 1,\n          \"Numero\": 507,\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoExtendido",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Clave del dato extendido."
+        },
+        {
+          "Nombre": "lista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+          "Comentarios": "Lista de datos."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de dato extendido."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de dato extendido."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [
+    {
+      "elementValName": "sdtDatosExtendidos",
+      "listHeader": "Clave,Valor,Comentarios",
+      "fields": [
+        {
+          "Clave": "CONTROL_MISMO_CLIENTE",
+          "Valor": "[S,N] (Valor por omisión \"N\")",
+          "Comentarios": "**[Opcional]** Permite indicar si el servicio controla que todos los datos de la simulación correspondan al clienteUId que invoco el servicio."
+        }
+      ],
+      "description": ""
+    }
+  ]
+}

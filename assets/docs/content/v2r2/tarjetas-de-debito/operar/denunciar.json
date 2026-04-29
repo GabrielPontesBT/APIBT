@@ -1,0 +1,57 @@
+{
+  "slug": "tarjetas-de-debito/operar/denunciar",
+  "pageTitle": "Denunciar",
+  "description": "Método para denunciar una tarjeta de débito y darla de baja.",
+  "pubName": "BTTarjetasDeDebito.Denunciar",
+  "programa": "RBTPG070",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "motivo",
+      "Tipo": "Int",
+      "Comentarios": "[Hidden: Valor fijo 1 para este método]."
+    },
+    {
+      "Nombre": "motivoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del motivo."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la tarjeta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la tarjeta de débito para el identificador: [Número de identificador]"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Denunciar>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>c7b24221f2F955E77534D3E0</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>109</bts:tarjetaUId>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:motivoUId>1</bts:motivoUId>\n      </bts:BTTarjetasDeDebito.Denunciar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?Denunciar' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 19f16614-b11e-9eaf-4034-1d7994c6019f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"clienteUId\": 1,\n   \"tarjetaUId\": 109,\n   \"motivoUId\": 1\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.DenunciarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>BANTOTAL</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>c7b24221f2F955E77534D3E0</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>469</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.Denunciar</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2019-02-26</Fecha>\n            <Hora>12:02:52</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.DenunciarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": 470,\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTTarjetasDeDebito.Denunciar\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2019-02-26\",\n      \"Hora\": \"12:03:45\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

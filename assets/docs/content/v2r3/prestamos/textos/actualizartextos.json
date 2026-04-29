@@ -1,0 +1,94 @@
+{
+  "slug": "prestamos/textos/actualizartextos",
+  "pageTitle": "Actualizar Textos",
+  "description": "Método para actualizar los textos de un préstamo.",
+  "pubName": "BTPrestamos.ActualizarTextos",
+  "programa": "RBTPG562",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "sdtTextos",
+      "Tipo": "<a href=\"#sbttextooperacion\">sBTTextoOperacion</a>",
+      "Comentarios": "Listado de textos de la operación."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo \"UPD\" para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recupero la operación para el identificador recibido."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe texto para el código [Número de identificador]."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se ingresó el código del texto."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No se ingresó el reglón del texto."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No se ingresó el texto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ActualizarTextos>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>0E93EA2F1B3F9ED212A0449F</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>49</bts:operacionUId>\r\n         <bts:sdtTextos>\r\n            <bts:sBTTextoOperacion>\r\n               <texto>Prueba1nueva</texto>\r\n               <renglon>3</renglon>\r\n               <descripcion>NOMBRE DE CURSO</descripcion>\r\n               <codigo>8</codigo>\r\n            </bts:sBTTextoOperacion>\r\n            <bts:sBTTextoOperacion>\r\n               <texto>Prueba2nueva</texto>\r\n               <renglon>4</renglon>\r\n               <descripcion>NOMBRE DE CURSO</descripcion>\r\n               <codigo>8</codigo>\r\n            </bts:sBTTextoOperacion>\r\n         </bts:sdtTextos>\r\n      </bts:BTPrestamos.ActualizarTextos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ActualizarTextos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"0E93EA2F1B3F9ED212A0449F\"\r\n    },\r\n    \"operacionUId\": 49,\r\n    \"sdtTextos\": {\r\n        \"sBTTextoOperacion\": [\r\n            {\r\n                \"texto\": \"Prueba1nueva\",\r\n                \"renglon\": 3,\r\n                \"descripcion\": \"NOMBRE DE CURSO\",\r\n                \"codigo\": 8\r\n            },\r\n            {\r\n                \"texto\": \"Prueba2nueva\",\r\n                \"renglon\": 4,\r\n                \"descripcion\": \"NOMBRE DE CURSO\",\r\n                \"codigo\": 8\r\n            }\r\n        ]\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ActualizarTextosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>GZ</Device>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Token>0E93EA2F1B3F9ED212A0449F</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-10-09</Fecha>\r\n            <Hora>10:56:31</Hora>\r\n            <Numero>24966</Numero>\r\n            <Servicio>BTPrestamos.ActualizarTextos</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ActualizarTextosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"GZ\",\r\n        \"Requerimiento\": 0,\r\n        \"Token\": \"0E93EA2F1B3F9ED212A0449F\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2024-10-09\",\r\n        \"Hora\": \"10:56:31\",\r\n        \"Numero\": 24966,\r\n        \"Servicio\": \"BTPrestamos.ActualizarTextos\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTextoOperacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "renglon",
+          "Tipo": "Short",
+          "Comentarios": "Renglón."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

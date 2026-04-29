@@ -1,0 +1,57 @@
+{
+  "slug": "cuentas-vista/operar/activar",
+  "pageTitle": "Activar",
+  "description": "Método para activar una cuenta vista.",
+  "pubName": "BTCuentasVista.Activar",
+  "programa": "RBTPG442",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "nuevoEstado",
+      "Tipo": "Byte",
+      "Comentarios": "Nuevo estado [Hidden: Valor fijo '0']."
+    },
+    {
+      "Nombre": "fechaVencimientoEstado",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de vencimiento del estado."
+    },
+    {
+      "Nombre": "observaciones",
+      "Tipo": "String",
+      "Comentarios": "Observaciones."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.Activar>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>2772EB28927EAC58EF950EBA</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>1215</bts:operacionUId>\r\n         <bts:fechaFencimientoEstado></bts:fechaFencimientoEstado>\r\n         <bts:observaciones>Cuenta Activa</bts:observaciones>\r\n      </bts:BTCuentasVista.Activar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Activar' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 1,\r\n        \"Device\": \"GP\",\r\n        \"Token\": \"2772EB28927EAC58EF950EBA\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    },\r\n    \"operacionUId\": 1215,\r\n    \"fechaFencimientoEstado\": \"\",\r\n    \"observaciones\": \"Cuenta Activa\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasVista.ActivarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Token>2772EB28927EAC58EF950EBA</Token>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Fecha>2022-12-01</Fecha>\r\n            <Servicio>BTCuentasVista.CambiarEstado</Servicio>\r\n            <Hora>14:44:52</Hora>\r\n            <Numero>225689</Numero>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btoutreq>\r\n      </BTCuentasVista.ActivarResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Token\": \"2772EB28927EAC58EF950EBA\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Fecha\": \"2022-12-01\",\r\n        \"Servicio\": \"BTCuentasVista.CambiarEstado\",\r\n        \"Hora\": \"14:44:52\",\r\n        \"Numero\": 225689,\r\n        \"Requerimiento\": 1\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

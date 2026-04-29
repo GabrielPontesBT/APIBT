@@ -1,0 +1,80 @@
+{
+  "slug": "cuentas-corrientes/chequera/obtener/obtenercomisionchequera",
+  "pageTitle": "Obtener Comisión Chequera",
+  "description": "Método para obtener el importe de comisión que se cobrará para una determinada cuenta y un tipo de chequera.",
+  "pubName": "BTCuentasCorrientes.ObtenerComisionChequera",
+  "programa": "RBTPG247",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "tipoChequeraId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de chequera."
+    },
+    {
+      "Nombre": "cantidadChequeras",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de chequeras."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "moneda",
+      "Tipo": "String",
+      "Comentarios": "Moneda de la cuenta."
+    },
+    {
+      "Nombre": "comision",
+      "Tipo": "Double",
+      "Comentarios": "Importe de comisión a cobrar."
+    },
+    {
+      "Nombre": "impuestos",
+      "Tipo": "Double",
+      "Comentarios": "Importe de impuestos a cobrar."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió un tipo de chequera."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El tipo de chequera indicado no cobra comisión."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El código de comisión asignado al tipo de chequera no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El tipo de chequera indicado no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasCorrientes.ObtenerComisionChequera>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>64b082f7a84A8B5C60A82434</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>601</bts:operacionUId>\r\n         <bts:tipoChequeraId>2</bts:tipoChequeraId>\r\n         <bts:cantidadChequeras>1</bts:cantidadChequeras>\r\n      </bts:BTCuentasCorrientes.ObtenerComisionChequera>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerComisionChequera \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n      \"operacionUId\": \"601\",\r\n      \"tipoChequeraId\": \"2\",\r\n      \"cantidadChequeras\": \"1\"\r\n    }\r\n  }\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasCorrientes.ObtenerComisionChequeraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>64b082f7a84A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <moneda>$</moneda>\r\n         <comision>5000.0</comision>\r\n         <impuestos>0.0</impuestos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>420</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasCorrientes.ObtenerComisionChequera</Servicio>\r\n            <Fecha>2019-08-09</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>10:19:03</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCuentasCorrientes.ObtenerComisionChequeraResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n      \"moneda\": \"$\",\r\n      \"importeComision\": \"5000.0\",\r\n      \"Btoutreq\": {\r\n        \"Numero\": \"420\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasCorrientes.ObtenerComisionChequera\",\r\n        \"Fecha\": \"2019-08-09\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Hora\": \"10:19:03\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n      }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

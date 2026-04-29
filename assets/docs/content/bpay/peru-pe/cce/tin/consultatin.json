@@ -1,0 +1,225 @@
+{
+  "slug": "peru-pe/cce/tin/consultatin",
+  "pageTitle": "Consultar",
+  "description": "Método para consulta de cuenta (AV1), devolución comisión e impuesto.",
+  "pubName": "BTCCETIN.ConsultaTIN",
+  "programa": "RBTPG589",
+  "scope": "Perú",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "Canal",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "15 - Web, 91 - BancaMovil, 51 - Net."
+    },
+    {
+      "Nombre": "idCamara",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Codigo de camara (MPE005)"
+    },
+    {
+      "Nombre": "OperacionUID",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "id producto de ahorro."
+    },
+    {
+      "Nombre": "Moneda",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "1 - soles, 2 - dolares."
+    },
+    {
+      "Nombre": "Importe",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Importe."
+    },
+    {
+      "Nombre": "CodigoTransaccion",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "320 - Transferencias ordinarias, 325 - Pagos a cuenta tarjeta."
+    },
+    {
+      "Nombre": "BancoDestino",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Banco Destino."
+    },
+    {
+      "Nombre": "SucursalDestino",
+      "Tipo": "Int",
+      "Obligatoriedad": "O",
+      "Comentarios": "Sucursal Destino (solo si es 325)."
+    },
+    {
+      "Nombre": "CCIBeneficiario",
+      "Tipo": "String",
+      "Obligatoriedad": "O",
+      "Comentarios": "CCI de recepcion de fondos."
+    },
+    {
+      "Nombre": "nroCelular",
+      "Tipo": "String",
+      "Obligatoriedad": "O",
+      "Comentarios": "Interoperabilidad."
+    },
+    {
+      "Nombre": "Directorio",
+      "Tipo": "Int",
+      "Obligatoriedad": "O",
+      "Comentarios": "Interoperabilidad."
+    },
+    {
+      "Nombre": "CodigoQR",
+      "Tipo": "String",
+      "Obligatoriedad": "O",
+      "Comentarios": "Interoperabilidad."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "TipoDocBenef",
+      "Tipo": "Int",
+      "Comentarios": "Tipo de documento."
+    },
+    {
+      "Nombre": "DocumentoBeneficiario",
+      "Tipo": "String",
+      "Comentarios": "Documento Beneficiario."
+    },
+    {
+      "Nombre": "NombreBenef",
+      "Tipo": "String",
+      "Comentarios": "Nombre Beneficiario."
+    },
+    {
+      "Nombre": "DireccionBenef",
+      "Tipo": "String",
+      "Comentarios": "Direccion Beneficiario."
+    },
+    {
+      "Nombre": "TelefonoBeneficiario",
+      "Tipo": "String",
+      "Comentarios": "Telefono."
+    },
+    {
+      "Nombre": "IDTransferencia",
+      "Tipo": "Int",
+      "Comentarios": "InstruccionID."
+    },
+    {
+      "Nombre": "ITF",
+      "Tipo": "Int",
+      "Comentarios": "Impuesto."
+    },
+    {
+      "Nombre": "ComisionOriginante",
+      "Tipo": "Int",
+      "Comentarios": "Comision Banco."
+    },
+    {
+      "Nombre": "ComisionBeneficiario",
+      "Tipo": "Int",
+      "Comentarios": "Comision intebancario."
+    },
+    {
+      "Nombre": "IDL",
+      "Tipo": "Int",
+      "Comentarios": "Id bandeja BT."
+    },
+    {
+      "Nombre": "Erroresnegocio",
+      "Tipo": "Int",
+      "Comentarios": "ErrorNegocio."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió Canal."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió Id Camara."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió operación UID."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recibió el importe."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el código de transacción."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el banco destino."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió sucursal destino, si es 325."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recupero el identificador para la operación recibida."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No existe el código de transacción para la cámara seleccionada."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "La cámara no permite operaciones en moneda nacional."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "La cámara no permite operaciones en moneda extranjera."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "Importe no válido, el importe debe ser mayor a cero."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "El banco destino no es válido para la Cámara recibida."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "Error, CCI Beneficiario no corresponde al Banco Destino."
+    },
+    {
+      "Código": "30019",
+      "Descripción": "Error, CCI Beneficiario no es correcto. + CCIBeneficiario."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "La cuenta seleccionada no tiene saldo suficiente para la transacción."
+    },
+    {
+      "Código": "30024",
+      "Descripción": "La cuenta seleccionada no coincide con la moneda seleccionada de la operación."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>        \n\t\t<bts:BTCCETIN.ConsultaTIN>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>1</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>94CC69812C4DB70C55177749</bts:Token>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:Canal>91</bts:Canal>\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\n\t\t\t<bts:OperacionUID>379</bts:OperacionUID>\n\t\t\t<bts:Moneda>2</bts:Moneda>\n\t\t\t<bts:Importe>1030</bts:Importe>\n\t\t\t<bts:CodigoTransaccion>325</bts:CodigoTransaccion>\n\t\t\t<bts:BancoDestino>38</bts:BancoDestino>\n\t\t\t<bts:SucursalDestino>100</bts:SucursalDestino>\n\t\t\t<bts:Tarjeta>4916069900012386</bts:Tarjeta>   \t\n\t\t\t<bts:CCIBeneficiario></bts:CCIBeneficiario>\n\t\t\t<bts:NroCelular/>\n\t\t\t<bts:Directorio/>\n\t\t\t<bts:CodigoQr/>\n\t\t</bts:BTCCETIN.ConsultaTIN>\n    </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n\t\t<BTCCETIN.ConsultaTINResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t\t\t<Btinreq>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\n\t\t\t\t<Device>1</Device>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Token>1BC64FA67023F2B3ACAA1F52</Token>\n\t\t\t</Btinreq>\n\t\t\t<TipoDocBenef>0</TipoDocBenef>\n\t\t\t<DocumentoBeneficiario/>\n\t\t\t<NombreBenef>ANG REN LOZ</NombreBenef>\n\t\t\t<DireccionBenef/>\n\t\t\t<TelefonoBeneficiario>0</TelefonoBeneficiario>\n\t\t\t<MovilBenef>0</MovilBenef>\n\t\t\t<MismoTitular>O</MismoTitular>\n\t\t\t<IDTransferencia>2025042813510208028191000594</IDTransferencia>\n\t\t\t<ITF>0.0</ITF>\n\t\t\t<ComisionOriginante>0.7</ComisionOriginante>\n\t\t\t<ComisionBeneficiario>0.3</ComisionBeneficiario>\n\t\t\t<IDL>0</IDL>\n\t\t\t<CodRespuesta/>\n\t\t\t<DscRespuesta/>\n\t\t\t<Erroresnegocio/>\t\t\t\t\n\t\t\t<Btoutreq>\n\t\t\t\t<Estado>NEG_ERROR</Estado>\n\t\t\t\t<Fecha>2025-04-28</Fecha>\n\t\t\t\t<Hora>13:51:02</Hora>\n\t\t\t\t<Numero>6137808</Numero>\n\t\t\t\t<Servicio>BTCCETIN.ConsultaTIN</Servicio>\n\t\t\t\t<Requerimiento>1</Requerimiento>\n\t\t\t\t<Canal>BTDIGITAL</Canal>\n\t\t\t</Btoutreq>\n\t\t</BTCCETIN.ConsultaTINResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

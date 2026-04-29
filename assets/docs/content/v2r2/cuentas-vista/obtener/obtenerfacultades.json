@@ -1,0 +1,168 @@
+{
+  "slug": "cuentas-vista/obtener/obtenerfacultades",
+  "pageTitle": "Obtener Facultades",
+  "description": "Método para obtener un listado de las facultades de una cuenta vista.",
+  "pubName": "BTCuentasVista.ObtenerFacultades",
+  "programa": "RBTPG451",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtFacultades",
+      "Tipo": "<a href=\"#sbtfacultad\">sBTFacultad</a>",
+      "Comentarios": "Listado de datos de facultades."
+    },
+    {
+      "Nombre": "sdtFirmantes",
+      "Tipo": "<a href=\"#sbtfacultadfirmantes\">sBTFacultadFirmantes</a>",
+      "Comentarios": "Listado de datos de firmantes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerFacultadesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>30F74741A02C318CEFD55684</Token>\n            <Device>GL</Device>\n         </Btinreq>\n         <sdtFacultades>\n            <SdtsBTFacultad>\n                <grupos></grupos>\n                <firmantes></firmantes>\n                <descripcion>Firma de Cheques</descripcion>\n                <tipo>Categoría</tipo>\n                <codigo>1</codigo>\n            </SdtsBTFacultad>\n            <SdtsBTFacultad>\n                <grupos>\n                    <SdtsBTFacultadGrupo>\n                        <moneda>$</moneda>\n                        <codigoMoneda>0</codigoMoneda>\n                        <vigenciaHasta>2022-10-04</vigenciaHasta>\n                        <monto>99999990.00</monto>\n                        <habilitado>S</habilitado>\n                        <firmantes>\n                            <SdtsBTFacultadFirmante>\n                                <potestad>Titular</potestad>\n                                <personaUId>161</personaUId>\n                                <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>\n                                <categoria/>\n                            </SdtsBTFacultadFirmante>\n                        </firmantes>\n                        <codigoPapel>0</codigoPapel>\n                        <papel>$</papel>\n                        <numero>1</numero>\n                        <vigenciaDesde>2020-01-02</vigenciaDesde>\n                    </SdtsBTFacultadGrupo>\n                </grupos>\n                <firmantes></firmantes>\n                <descripcion>Retiro de cuentas vista</descripcion>\n                <tipo>Persona</tipo>\n                <codigo>2</codigo>\n            </SdtsBTFacultad>\n        </sdtFacultades>\n        <sdtFirmantes>\n            <SdtsBTFacultadFirmante>\n                <potestad>Titular</potestad>\n                <personaUId>161</personaUId>\n                <nombre>AZQUEZ SZENTANDRASI LEJANDRO</nombre>\n                <categoria/>\n            </SdtsBTFacultadFirmante>\n        </sdtFirmantes>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasVista.ObtenerFacultades</Servicio>\n            <Fecha>2022-11-29</Fecha>\n            <Hora>10:23:37</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>486</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerFacultadesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Requerimiento\": 1,\n          \"Usuario\": \"INSTALADOR\",\n          \"Token\": \"30F74741A02C318CEFD55684\",\n          \"Device\": \"GL\"\n        },\n        \"sdtFacultades\": {\n          \"SdtsBTFacultad\": [\n            {\n              \"grupos\": \"\",\n              \"firmantes\": \"\",\n              \"descripcion\": \"Firma de Cheques\",\n              \"tipo\": \"Categoría\",\n              \"codigo\": 1\n            },\n            {\n              \"grupos\": {\n                \"SdtsBTFacultadGrupo\": {\n                  \"moneda\": \"$\",\n                  \"codigoMoneda\": 0,\n                  \"vigenciaHasta\": \"2022-10-04\",\n                  \"monto\": 99999990,\n                  \"habilitado\": \"S\",\n                  \"firmantes\": {\n                    \"SdtsBTFacultadFirmante\": {\n                      \"potestad\": \"Titular\",\n                      \"personaUId\": 161,\n                      \"nombre\": \"AZQUEZ SZENTANDRASI LEJANDRO\",\n                      \"categoria\": \"\"\n                    }\n                  },\n                  \"codigoPapel\": 0,\n                  \"papel\": \"$\",\n                  \"numero\": 1,\n                  \"vigenciaDesde\": \"2020-01-02\"\n                }\n              },\n              \"firmantes\": \"\",\n              \"descripcion\": \"Retiro de cuentas vista\",\n              \"tipo\": \"Persona\",\n              \"codigo\": 2\n            }\n          ]\n        },\n        \"sdtFirmantes\": {\n          \"SdtsBTFacultadFirmante\": {\n            \"potestad\": \"Titular\",\n            \"personaUId\": 161,\n            \"nombre\": \"AZQUEZ SZENTANDRASI LEJANDRO\",\n            \"categoria\": \"\"\n          }\n        },\n        \"Erroresnegocio\": \"\",\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTCuentasVista.ObtenerFacultades\",\n          \"Fecha\": \"2022-11-29\",\n          \"Hora\": \"10:23:37\",\n          \"Requerimiento\": 1,\n          \"Numero\": 486,\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTFacultad",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "firmantes",
+          "Tipo": "<a href=\"#sbtfacultadfirmante\">sBTFacultadFirmante</a>",
+          "Comentarios": "Listado de firmantes de la facultad."
+        },
+        {
+          "Nombre": "grupos",
+          "Tipo": "<a href=\"#sbtfacultadgrupo\">sBTFacultadGrupo</a>",
+          "Comentarios": "Listado de grupos de la facultad."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadGrupo",
+      "fields": [
+        {
+          "Nombre": "codigoMoneda",
+          "Tipo": "Int",
+          "Comentarios": "Código de moneda."
+        },
+        {
+          "Nombre": "codigoPapel",
+          "Tipo": "Long",
+          "Comentarios": "Código de papel."
+        },
+        {
+          "Nombre": "firmantes",
+          "Tipo": "<a href=\"#sbtfacultadfirmante\">sBTFacultadFirmante</a>",
+          "Comentarios": "Listado de firmantes."
+        },
+        {
+          "Nombre": "habilitado",
+          "Tipo": "String",
+          "Comentarios": "¿Habilitado? (S/N)."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Long",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "numero",
+          "Tipo": "Short",
+          "Comentarios": "Número de grupo."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Papel."
+        },
+        {
+          "Nombre": "vigenciaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia desde."
+        },
+        {
+          "Nombre": "vigenciaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia hasta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadFirmante",
+      "fields": [
+        {
+          "Nombre": "categoria",
+          "Tipo": "String",
+          "Comentarios": "Categoría."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "potestad",
+          "Tipo": "String",
+          "Comentarios": "Potestad."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

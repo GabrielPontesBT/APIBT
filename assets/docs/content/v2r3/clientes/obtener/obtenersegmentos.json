@@ -1,0 +1,49 @@
+{
+  "slug": "clientes/obtener/obtenersegmentos",
+  "pageTitle": "Obtener Segmentos",
+  "description": "Método para obtener un listado de los segmentos ingresados en Bantotal.",
+  "pubName": "BTClientes.ObtenerSegmentos",
+  "programa": "RBTPG314",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtSegmentos",
+      "Tipo": "<a href=\"#sbtsegmento\">sBTSegmento</a>",
+      "Comentarios": "Listado de segmentos."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerSegmentos>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>b5890560A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTClientes.ObtenerSegmentos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerSegmentos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerSegmentosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10.12.10.118</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>b58905d3ad4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtSegmentos>\r\n            <sBTSegmento>\r\n               <descripcion>Independiente</descripcion>\r\n               <identificador>1</identificador>\r\n            </sBTSegmento>\r\n            <sBTSegmento>\r\n               <descripcion>Dependiente</descripcion>\r\n               <identificador>2</identificador>\r\n            </sBTSegmento>\r\n            <sBTSegmento>\r\n               <descripcion>Otros</descripcion>\r\n               <identificador>3</identificador>\r\n            </sBTSegmento>\r\n            <sBTSegmento>\r\n               <descripcion>Corporativo</descripcion>\r\n               <identificador>4</identificador>\r\n            </sBTSegmento>\r\n         </sdtSegmentos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8469</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerSegmentos</Servicio>\r\n            <Fecha>2019-05-07</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>19:31:26</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerSegmentosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtSegmentos\": {\r\n\t\t\"sBTSegmento\": [\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Independiente\",\r\n\t\t\t\t\"identificador\": \"1\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Dependiente\",\r\n\t\t\t\t\"identificador\": \"2\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Otros\",\r\n\t\t\t\t\"identificador\": \"3\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"descripcion\": \"Corporativo\",\r\n\t\t\t\t\"identificador\": \"4\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.ObtenerSegmentos\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSegmento",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del segmento."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del segmento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

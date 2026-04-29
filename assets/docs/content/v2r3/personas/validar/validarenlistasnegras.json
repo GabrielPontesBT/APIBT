@@ -1,0 +1,121 @@
+{
+  "slug": "personas/validar/validarenlistasnegras",
+  "pageTitle": "Validar en Listas Negras",
+  "description": "Método para validar si una persona pertenece a alguna lista negra.",
+  "pubName": "BTPersonas.ValidarEnListasNegras",
+  "programa": "RBTPG019",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "paisDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de país."
+    },
+    {
+      "Nombre": "tipoDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de documento."
+    },
+    {
+      "Nombre": "numeroDocumento",
+      "Tipo": "String",
+      "Comentarios": "Número de documento."
+    },
+    {
+      "Nombre": "primerNombre",
+      "Tipo": "String",
+      "Comentarios": "Primer nombre."
+    },
+    {
+      "Nombre": "segundoNombre",
+      "Tipo": "String",
+      "Comentarios": "Segundo nombre."
+    },
+    {
+      "Nombre": "primerApellido",
+      "Tipo": "String",
+      "Comentarios": "Primer apellido."
+    },
+    {
+      "Nombre": "segundoApellido",
+      "Tipo": "String",
+      "Comentarios": "Segundo apellido."
+    },
+    {
+      "Nombre": "nombreEmpresa",
+      "Tipo": "String",
+      "Comentarios": "Nombre de empresa."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "existeEnLista",
+      "Tipo": "String",
+      "Comentarios": "¿Existe en lista? (S/N)."
+    },
+    {
+      "Nombre": "sdtListasInhabilitados",
+      "Tipo": "<a href=\"#sbtlistainhabilitados\">sBTListaInhabilitados</a>",
+      "Comentarios": "Listado de listas negras."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se ingresó código de país."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se ingresó código de tipo de documento."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se ingresó número de documento."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se ingresó primer nombre."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se ingresó primer apellido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n  <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarEnListasNegras>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>8ab636f8624A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:paisDocumentoId>80</bts:paisDocumentoId>\n         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\n         <bts:numeroDocumento>23330162449</bts:numeroDocumento>\n         <bts:primerNombre>SERVICES</bts:primerNombre>\n         <bts:segundoNombre>TEST</bts:segundoNombre>\n         <bts:primerApellido>SUPER</bts:primerApellido>\n         <bts:segundoApellido>VIELLE</bts:segundoApellido>\n         <bts:nombreEmpresa></bts:nombreEmpresa>\n      </bts:BTPersonas.ValidarEnListasNegras>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarEnListasNegras=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: a12f013d-9875-6451-dd62-ad7bb0217b5c' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"paisDocumentoId\": \"80\",\n    \"tipoDocumentoId\": \"1\",\n    \"numeroDocumento\": \"23330162449\",\n    \"primerNombre\": \"SERVICES\",\n    \"segundoNombre\": \"TEST\",\n    \"primerApellido\": \"SUPER\",\n    \"segundoApellido\": \"VIELLE\",\n    \"nombreEmpresa\": \"\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ValidarEnListasNegrasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>8ab636f8624A8B5C60A82434</Token>\n         </Btinreq>\n         <ExisteEnLista>S</ExisteEnLista>\n         <sdtListasInhabilitados>\n            <sBTListaInhabilitados>\n               <descripcion>La persona se encuentra en la lista de Inhabilitados: LAVADO DE DINERO.</descripcion>\n               <codigo>0</codigo>\n               <bloqueante>S</bloqueante>\n            </sBTListaInhabilitados>\n         </sdtListasInhabilitados>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>158</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.ValidarEnListasNegras</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-10-29</Fecha>\n            <Hora>13:56:35</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ValidarEnListasNegrasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"ExisteEnLista\": \"S\",\n    \"sdtListasInhabilitados\": {\n        \"sBTListaInhabilitados\": [ {\n            \"descripcion\": \"La persona se encuentra en la lista de Inhabilitados: LAVADO DE DINERO.\",\n            \"codigo\": 0,\n            \"bloqueante\": \"S\"\n        } ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 163,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.ValidarEnListasNegras\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-10-29\",\n        \"Hora\": \"15:02:08\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTListaInhabilitados",
+      "fields": [
+        {
+          "Nombre": "bloqueante",
+          "Tipo": "String",
+          "Comentarios": "¿Es bloqueante? (S/N)."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de lista negra."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de lista negra."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

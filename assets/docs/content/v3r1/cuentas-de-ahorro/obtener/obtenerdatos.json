@@ -1,0 +1,218 @@
+{
+  "slug": "cuentas-de-ahorro/obtener/obtenerdatos",
+  "pageTitle": "Obtener Datos",
+  "description": "Método para obtener los datos de un producto de cuenta de ahorro.",
+  "pubName": "BTCuentasDeAhorro.ObtenerDatos",
+  "programa": "RBTPG007",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCajaAhorro",
+      "Tipo": "<a href=\"#sbtcajaahorro\">sBTCajaAhorro</a>",
+      "Comentarios": "Datos de caja de ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "La operación ingresada no corresponde a una cuenta de ahorro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasDeAhorro.ObtenerDatos>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>281</bts:operacionUId>\r\n      </bts:BTCuentasDeAhorro.ObtenerDatos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerDatos=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: c27aec65-f66f-b138-f9d3-15a243b6d5e4' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 281\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasDeAhorro.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>268b6d23eb4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtCajaAhorro>\r\n            <cobraIntereses>S</cobraIntereses>\r\n            <producto>\r\n               <papel/>\r\n               <moneda>$</moneda>\r\n               <productoUId>0</productoUId>\r\n               <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>\r\n            </producto>\r\n            <idOperacionBT>0010100000021000000000000000001100001000000000001</idOperacionBT>\r\n            <saldoPorConfirmar>0.00</saldoPorConfirmar>\r\n            <descPaquete/>\r\n            <idOperacionFmt>000000011_001</idOperacionFmt>\r\n            <ejecutivo/>\r\n            <saldoCobertura>0.00</saldoCobertura>\r\n            <pagaInteresSobregiro>N</pagaInteresSobregiro>\r\n            <saldoDisponible>7433400.28</saldoDisponible>\r\n            <pagaComisCantMovimientos>S</pagaComisCantMovimientos>\r\n            <saldoBloqueado>0.00</saldoBloqueado>\r\n            <pagaComisBajoPromedio>S</pagaComisBajoPromedio>\r\n            <operacionUId>281</operacionUId>\r\n            <frecuenciaEmisionEC>Cuatrimestral</frecuenciaEmisionEC>\r\n            <diasSobregiro>0</diasSobregiro>\r\n            <saldoContable>7433400.28</saldoContable>\r\n            <estado>Normal</estado>\r\n            <fechaApertura>2015-12-23</fechaApertura>\r\n            <sucursal>Casa Matriz</sucursal>\r\n            <pagaComisEstadoCuenta/>\r\n            <paquete>N</paquete>\r\n         </sdtCajaAhorro>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>856</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasDeAhorro.ObtenerDatos</Servicio>\r\n            <Fecha>2017-12-18</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>10:42:59</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCuentasDeAhorro.ObtenerDatosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtCajaAhorro\": {\r\n        \"cobraIntereses\": \"S\",\r\n        \"producto\": {\r\n            \"papel\": \"\",\r\n            \"moneda\": \"$\",\r\n            \"productoUId\": \"0\",\r\n            \"nombre\": \"CAJAS DE AHORRO, Caja de Ahorro P.Física\"\r\n        },\r\n        \"idOperacionBT\": \"0010100000021000000000000000001100001000000000001\",\r\n        \"saldoPorConfirmar\": \"0.00\",\r\n        \"descPaquete\": \"\",\r\n        \"idOperacionFmt\": \"000000011_001\",\r\n        \"ejecutivo\": \"\",\r\n        \"saldoCobertura\": \"0.00\",\r\n        \"pagaInteresSobregiro\": \"N\",\r\n        \"saldoDisponible\": \"7433400.28\",\r\n        \"pagaComisCantMovimientos\": \"S\",\r\n        \"saldoBloqueado\": \"0.00\",\r\n        \"pagaComisBajoPromedio\": \"S\",\r\n        \"operacionUId\": \"281\",\r\n        \"frecuenciaEmisionEC\": \"Cuatrimestral\",\r\n        \"diasSobregiro\": \"0\",\r\n        \"saldoContable\": \"7433400.28\",\r\n        \"estado\": \"Normal\",\r\n        \"fechaApertura\": \"2015-12-23\",\r\n        \"sucursal\": \"Casa Matriz\",\r\n        \"pagaComisEstadoCuenta\": \"\",\r\n        \"paquete\": \"N\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"857\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasDeAhorro.ObtenerDatos\",\r\n        \"Fecha\": \"2017-12-18\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"10:43:47\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCajaAhorro",
+      "fields": [
+        {
+          "Nombre": "cobraIntereses",
+          "Tipo": "String",
+          "Comentarios": "Cobra intereses (S/N)."
+        },
+        {
+          "Nombre": "descPaquete",
+          "Tipo": "String",
+          "Comentarios": "Descripción de paquete."
+        },
+        {
+          "Nombre": "diasSobregiro",
+          "Tipo": "Short",
+          "Comentarios": "Días de Sobregiro."
+        },
+        {
+          "Nombre": "ejecutivo",
+          "Tipo": "String",
+          "Comentarios": "Nombre de ejecutivo de alta."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado de la operación."
+        },
+        {
+          "Nombre": "fechaApertura",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta."
+        },
+        {
+          "Nombre": "frecuenciaEmisionEC",
+          "Tipo": "String",
+          "Comentarios": "Frecuencia de emisión de estado de cuenta."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación"
+        },
+        {
+          "Nombre": "pagaComisBajoPromedio",
+          "Tipo": "String",
+          "Comentarios": "Paga comisión por bajo promedio (S/N)."
+        },
+        {
+          "Nombre": "pagaComisCantMovimientos",
+          "Tipo": "String",
+          "Comentarios": "Paga comisión por cantidad de movimientos (S/N)."
+        },
+        {
+          "Nombre": "pagaComisEstadoCuenta",
+          "Tipo": "String",
+          "Comentarios": "Paga Comisión por estado de cuenta (S/N)."
+        },
+        {
+          "Nombre": "pagaInteresSobregiro",
+          "Tipo": "String",
+          "Comentarios": "Paga interes por sobregiro (S/N)."
+        },
+        {
+          "Nombre": "paquete",
+          "Tipo": "String",
+          "Comentarios": "Tiene paquete (S/N)."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del Producto."
+        },
+        {
+          "Nombre": "saldoBloqueado",
+          "Tipo": "Double",
+          "Comentarios": "Saldo bloqueado."
+        },
+        {
+          "Nombre": "saldoCobertura",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de cobertura."
+        },
+        {
+          "Nombre": "saldoContable",
+          "Tipo": "Double",
+          "Comentarios": "Saldo total."
+        },
+        {
+          "Nombre": "saldoDisponible",
+          "Tipo": "Double",
+          "Comentarios": "Saldo disponible."
+        },
+        {
+          "Nombre": "saldoPorConfirmar",
+          "Tipo": "Double",
+          "Comentarios": "Saldo pendiente de confirmación."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal de alta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,256 @@
+{
+  "slug": "prestamos/obtener/obtenerdetalledecancelaciontotal",
+  "pageTitle": "Obtener Detalle de Cancelación Total",
+  "description": "Método para obtener el detalle de la cancelación total de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerDetalleCancelacionTotal",
+  "programa": "RBTPG539",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "fecha",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    },
+    {
+      "Nombre": "perdonaIntereses",
+      "Tipo": "String",
+      "Comentarios": "¿Perdona intereses? (S/N)."
+    },
+    {
+      "Nombre": "cancelacionTotal",
+      "Tipo": "String",
+      "Comentarios": "¿Es cancelación total? (S/N)."
+    },
+    {
+      "Nombre": "expresadoEn",
+      "Tipo": "String",
+      "Comentarios": "[M-Moneda / E-Especie]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtConceptosPrestamo",
+      "Tipo": "<a href=\"#sbtconceptosprestamo\">sBTConceptosPrestamo</a>",
+      "Comentarios": "Datos de la cancelación total del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó préstamo para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el modo expresado."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "El valor de expresadoEn no es correcto."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió si es cancelacion total."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "El valor de cancelacionTotal no es correcto."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recibió si se perdona intereses."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El valor de perdonaIntereses no es correcto."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La Fecha para Consultas es anterior a la de la Operación."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La Operación no es válida para la Solicitud realizada."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerDetalleCancelacionTotal>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>b6a06c447cCD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>56</bts:operacionUId>\r\n         <bts:fecha></bts:fecha>\r\n         <bts:perdonaIntereses>S</bts:perdonaIntereses>\r\n         <bts:cancelacionTotal>S</bts:cancelacionTotal>\r\n         <bts:expresadoEn>M</bts:expresadoEn>\r\n      </bts:BTPrestamos.ObtenerDetalleCancelacionTotal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleCancelacionTotal' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"b6a06c447cCD285A89A23FBE\"\r\n    },\r\n    \"operacionUId\": 56,\r\n    \"fecha\": \"\",\r\n    \"perdonaIntereses\": \"S\",\r\n    \"cancelacionTotal\": \"S\",\r\n    \"expresadoEn\": \"M\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerDetalleCancelacionTotalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>b6a06c447cCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sdtConceptosPrestamo>\r\n            <totalSeguros>0.00</totalSeguros>\r\n            <fecha>2024-01-06</fecha>\r\n            <otrosSeguros>0.00</otrosSeguros>\r\n            <detalleSeguros></detalleSeguros>\r\n            <detalleConceptos>\r\n               <sBTConcepto>\r\n                  <texto>Impuesto Canon</texto>\r\n                  <valor>10676.119999999999</valor>\r\n                  <concepto>IMPUESTO_CANON</concepto>\r\n               </sBTConcepto>\r\n               <sBTConcepto>\r\n                  <texto>Total Interes Punitorio</texto>\r\n                  <valor>3231.39</valor>\r\n                  <concepto>PUNITORIO</concepto>\r\n               </sBTConcepto>\r\n            </detalleConceptos>\r\n            <totalComisiones>0.00</totalComisiones>\r\n            <intereses>656.41</intereses>\r\n            <precio>0.00</precio>\r\n            <impuestoComision>0.00</impuestoComision>\r\n            <porcentaje>0.00</porcentaje>\r\n            <otrosConceptos>0.00</otrosConceptos>\r\n            <impuestoInteres>2169.47</impuestoInteres>\r\n            <impuestoMora>2174.47</impuestoMora>\r\n            <tipoCambio>1.00</tipoCambio>\r\n            <interesMora>7123.25</interesMora>\r\n            <deudaTotal>25429.44</deudaTotal>\r\n            <capital>10074.45</capital>\r\n            <seguroIncendio>0.00</seguroIncendio>\r\n            <comisionMora>0.00</comisionMora>\r\n            <impuestoComisionMora>0.00</impuestoComisionMora>\r\n            <seguroVehicular>0.00</seguroVehicular>\r\n            <perdon>0.00</perdon>\r\n            <totalImpuestos>4343.94</totalImpuestos>\r\n            <comisionesCuota>0.00</comisionesCuota>\r\n            <seguroVida>0.00</seguroVida>\r\n            <signoImportes>$</signoImportes>\r\n         </sdtConceptosPrestamo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>269</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerDetalleCancelacionTotal</Servicio>\r\n            <Fecha>2024-05-07</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>12:42:48</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerDetalleCancelacionTotalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"b6a06c447cCD285A89A23FBE\"\r\n    },\r\n    \"sdtConceptosPrestamo\": {\r\n        \"totalSeguros\": 0.00,\r\n        \"fecha\": \"2024-01-06\",\r\n        \"otrosSeguros\": 0.00,\r\n        \"detalleSeguros\": \"\",\r\n        \"detalleConceptos\": {\r\n            \"sBTConcepto\": [\r\n                {\r\n                    \"texto\": \"Impuesto Canon\",\r\n                    \"valor\": 10676.119999999999,\r\n                    \"concepto\": \"IMPUESTO_CANON\"\r\n                },\r\n                {\r\n                    \"texto\": \"Total Interes Punitorio\",\r\n                    \"valor\": 3231.39,\r\n                    \"concepto\": \"PUNITORIO\"\r\n                }\r\n            ]\r\n        },\r\n        \"totalComisiones\": 0.00,\r\n        \"intereses\": 656.41,\r\n        \"precio\": 0.00,\r\n        \"impuestoComision\": 0.00,\r\n        \"porcentaje\": 0.00,\r\n        \"otrosConceptos\": 0.00,\r\n        \"impuestoInteres\": 2169.47,\r\n        \"impuestoMora\": 2174.47,\r\n        \"tipoCambio\": 1.00,\r\n        \"interesMora\": 7123.25,\r\n        \"deudaTotal\": 25429.44,\r\n        \"capital\": 10074.45,\r\n        \"seguroIncendio\": 0.00,\r\n        \"comisionMora\": 0.00,\r\n        \"impuestoComisionMora\": 0.00,\r\n        \"seguroVehicular\": 0.00,\r\n        \"perdon\": 0.00,\r\n        \"totalImpuestos\": 4343.94,\r\n        \"comisionesCuota\": 0.00,\r\n        \"seguroVida\": 0.00,\r\n        \"signoImportes\": \"$\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 269,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerDetalleCancelacionTotal\",\r\n        \"Fecha\": \"2024-05-07\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"12:42:48\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTConceptosPrestamo",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "comisionesCuota",
+          "Tipo": "Double",
+          "Comentarios": "Total de comisiones de las cuotas."
+        },
+        {
+          "Nombre": "comisionMora",
+          "Tipo": "Double",
+          "Comentarios": "Comisión de mora."
+        },
+        {
+          "Nombre": "detalleConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Detalle de los conceptos adicionales."
+        },
+        {
+          "Nombre": "detalleSeguros",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Listado de los seguros."
+        },
+        {
+          "Nombre": "deudaTotal",
+          "Tipo": "Double",
+          "Comentarios": "Deuda total."
+        },
+        {
+          "Nombre": "fecha",
+          "Tipo": "Date",
+          "Comentarios": "Fecha."
+        },
+        {
+          "Nombre": "impuestoComision",
+          "Tipo": "Double",
+          "Comentarios": "Impuesto de la comisión."
+        },
+        {
+          "Nombre": "impuestoComisionMora",
+          "Tipo": "Double",
+          "Comentarios": "Impuesto de comisión de mora."
+        },
+        {
+          "Nombre": "impuestoInteres",
+          "Tipo": "Double",
+          "Comentarios": "Impuesto de intereses."
+        },
+        {
+          "Nombre": "impuestoMora",
+          "Tipo": "Double",
+          "Comentarios": "Impuesto de mora."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses."
+        },
+        {
+          "Nombre": "interesMora",
+          "Tipo": "Double",
+          "Comentarios": "Interés de mora."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Total de los conceptos adicionales."
+        },
+        {
+          "Nombre": "otrosSeguros",
+          "Tipo": "Double",
+          "Comentarios": "Total de los otros seguros."
+        },
+        {
+          "Nombre": "perdon",
+          "Tipo": "Double",
+          "Comentarios": "Perdón."
+        },
+        {
+          "Nombre": "porcentaje",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje."
+        },
+        {
+          "Nombre": "precio",
+          "Tipo": "Double",
+          "Comentarios": "Precio."
+        },
+        {
+          "Nombre": "seguroIncendio",
+          "Tipo": "Double",
+          "Comentarios": "Seguro de incendio."
+        },
+        {
+          "Nombre": "seguroVehicular",
+          "Tipo": "Double",
+          "Comentarios": "Seguro vehicular."
+        },
+        {
+          "Nombre": "seguroVida",
+          "Tipo": "Double",
+          "Comentarios": "Seguro de vida."
+        },
+        {
+          "Nombre": "signoImportes",
+          "Tipo": "String",
+          "Comentarios": "Signo de importe."
+        },
+        {
+          "Nombre": "tipoCambio",
+          "Tipo": "Double",
+          "Comentarios": "Tipo de cambio."
+        },
+        {
+          "Nombre": "totalComisiones",
+          "Tipo": "Double",
+          "Comentarios": "Total de las comisiones."
+        },
+        {
+          "Nombre": "totalImpuestos",
+          "Tipo": "Double",
+          "Comentarios": "Total de impuestos."
+        },
+        {
+          "Nombre": "totalSeguros",
+          "Tipo": "Double",
+          "Comentarios": "Total de seguros."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Date",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,345 @@
+{
+  "slug": "personas/obtener/obtenerpersonajuridica",
+  "pageTitle": "Obtener Persona Jurídica",
+  "description": "Método para obtener la información de una persona jurídica.",
+  "pubName": "BTPersonas.ObtenerPersonaJuridica",
+  "programa": "RBTPG384",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "personaJuridica",
+      "Tipo": "<a href=\"#sbtpersonajuridica1\">sBTPersonaJuridica1</a>",
+      "Comentarios": "Datos de persona jurídica."
+    },
+    {
+      "Nombre": "sdtIntegrantesJuridicos",
+      "Tipo": "<a href=\"#sbtresumenintegrantejuridico\">sBTResumenIntegranteJuridico</a>",
+      "Comentarios": "Listado de integrantes jurídicos."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerPersonaJuridica>\r\n         <bts:Btinreq>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>3578f1ef27CD285A89A23FBE</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>303</bts:personaUId>\r\n      </bts:BTPersonas.ObtenerPersonaJuridica>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonaJuridica' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"GP\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"1839023315CD285A89A23FBE\"\r\n\t},\r\n   \"personaUId\": 303\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerPersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>GP</Device>\r\n            <Token>3578f1ef27CD285A89A23FBE</Token>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btinreq>\r\n         <personaJuridica>\r\n            <nroDocumento>214567892142</nroDocumento>\r\n            <numeroPuerta>0</numeroPuerta>\r\n            <nombreReducido>BANCO MODELO</nombreReducido>\r\n            <paisDomicilio>URUGUAY</paisDomicilio>\r\n            <razonSocial>BANCO MODELO</razonSocial>\r\n            <departamento>Montevideo</departamento>\r\n            <nroRegistro>78940</nroRegistro>\r\n            <naturalezaJuridica>Sociedad Anónima</naturalezaJuridica>\r\n            <barrio>Centro</barrio>\r\n            <apartamento></apartamento>\r\n            <tipoDocumentoId>2</tipoDocumentoId>\r\n            <tipoActividadId>1</tipoActividadId>\r\n            <piso></piso>\r\n            <paisId>845</paisId>\r\n            <fechaConstitucion>2007-08-22</fechaConstitucion>\r\n            <actividad></actividad>\r\n            <paisDomicilioId>845</paisDomicilioId>\r\n            <pais>URUGUAY</pais>\r\n            <codigoPostal></codigoPostal>\r\n            <tipoActividad>Actividad Principal</tipoActividad>\r\n            <barrioId>330</barrioId>\r\n            <localidadId>10</localidadId>\r\n            <localidad>Montevideo</localidad>\r\n            <correoElectronico>1</correoElectronico>\r\n            <actividadId>0</actividadId>\r\n            <calle></calle>\r\n            <naturalezaJuridicaId>1</naturalezaJuridicaId>\r\n            <tipoDocumento>RUT</tipoDocumento>\r\n            <departamentoId>10</departamentoId>\r\n            <telefonoFijo>3213342222</telefonoFijo>\r\n            <piso>123</piso>\r\n         </personaJuridica>\r\n         <sdtIntegrantesJuridicos>\r\n            <sBTIntegranteJuridico>\r\n               <nroDocumento>27928980</nroDocumento>\r\n               <vinculoId>1</vinculoId>\r\n               <pais>URUGUAY</pais>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <participacion>100.00</participacion>\r\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\r\n               <personaUId>141</personaUId>\r\n               <paisId>845</paisId>\r\n               <nombre>PRANKA VISENTIN ERIKA VERONICA</nombre>\r\n               <vinculo>Presidente</vinculo>\r\n            </sBTIntegranteJuridico>\r\n         </sdtIntegrantesJuridicos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Servicio>BTPersonas.ObtenerPersonaJuridica</Servicio>\r\n            <Hora>14:57:38</Hora>\r\n            <Numero>16624</Numero>\r\n            <Fecha>2022-06-23</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Estado>BTS_PLAT_ERROR</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerPersonaJuridicaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"GP\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"3578f1ef27CD285A89A23FBE\"\r\n\t},\r\n   \"personaJuridica\": {\r\n        \"nroDocumento\": \"214567892142\",\r\n        \"numeroPuerta\": 0,\r\n        \"nombreReducido\": \"BANCO MODELO\",\r\n        \"paisDomicilio\": \"URUGUAY\",\r\n        \"razonSocial\": \"BANCO MODELO\",\r\n        \"departamento\": \"Montevideo\",\r\n        \"nroRegistro\": 78940,\r\n        \"naturalezaJuridica\": \"Sociedad Anónima\",\r\n        \"barrio\": \"Centro\",\r\n        \"apartamento\": \"\",\r\n        \"tipoDocumentoId\": 2,\r\n        \"tipoActividadId\": 1,\r\n        \"piso\": \"123\",\r\n        \"paisId\": 845,\r\n        \"fechaConstitucion\": \"2007-08-22\",\r\n        \"actividad\": \"\",\r\n        \"paisDomicilioId\": 845,\r\n        \"pais\": \"URUGUAY\",\r\n        \"codigoPostal\": \"\",\r\n        \"tipoActividad\": \"Actividad Principal\",\r\n        \"barrioId\": 330,\r\n        \"localidadId\": 10,\r\n        \"localidad\": \"Montevideo\",\r\n        \"correoElectronico\": \"1\",\r\n        \"actividadId\": 0,\r\n        \"calle\": \"\",\r\n        \"naturalezaJuridicaId\": 1,\r\n        \"tipoDocumento\": \"RUT\",\r\n        \"departamentoId\": 10,\r\n        \"telefonoFijo\": \"3213342222\"\r\n    },\r\n    \"sdtIntegrantesJuridicos\": {\r\n        \"sBTIntegranteJuridico\": [{\r\n            \"nroDocumento\": \"27928980\",\r\n            \"vinculoId\": 1,\r\n            \"pais\": \"URUGUAY\",\r\n            \"tipoDocumentoId\": 1,\r\n            \"participacion\": 100.0,\r\n            \"tipoDocumento\": \"Cédula Identidad\",\r\n            \"personaUId\": 141,\r\n            \"paisId\": 845,\r\n            \"nombre\": \"PRANKA VISENTIN ERIKA VERONICA\",\r\n            \"vinculo\": \"Presidente\"\r\n        }]\r\n    },\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": 16624,\r\n      \"Estado\": \"BTS_PLAT_ERROR\",\r\n      \"Servicio\": \"BTPersonas.ObtenerPersonaJuridica\",\r\n      \"Fecha\": \"2022-06-23\",\r\n      \"Requerimiento\": 1,\r\n      \"Hora\": \"14:57:38\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersonaJuridica1",
+      "fields": [
+        {
+          "Nombre": "actividad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de actividad."
+        },
+        {
+          "Nombre": "actividadId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de actividad."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+          "Comentarios": "Listado de datos adicionales."
+        },
+        {
+          "Nombre": "domicilios",
+          "Tipo": "<a href=\"#sbtdomiciliocompleto\">sBTDomicilioCompleto</a>",
+          "Comentarios": "Listado de los domicilios."
+        },
+        {
+          "Nombre": "fechaConstitucion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de constitución."
+        },
+        {
+          "Nombre": "fechaExpiracion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de expiración."
+        },
+        {
+          "Nombre": "naturalezaJuridica",
+          "Tipo": "String",
+          "Comentarios": "Nombre de naturaleza jurídica."
+        },
+        {
+          "Nombre": "naturalezaJuridicaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de naturaleza jurídica."
+        },
+        {
+          "Nombre": "nombreReducido",
+          "Tipo": "String",
+          "Comentarios": "Nombre reducido."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "nroRegistro",
+          "Tipo": "Long",
+          "Comentarios": "Número de registro."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "razonSocial",
+          "Tipo": "String",
+          "Comentarios": "Razón social."
+        },
+        {
+          "Nombre": "telefonoCelular",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono celular."
+        },
+        {
+          "Nombre": "telefonoFijo",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono fijo."
+        },
+        {
+          "Nombre": "tipoActividad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de tipo de actividad."
+        },
+        {
+          "Nombre": "tipoActividadId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de tipo de actividad."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDomicilioCompleto",
+      "fields": [
+        {
+          "Nombre": "agrupador1",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 1."
+        },
+        {
+          "Nombre": "agrupador1Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 1."
+        },
+        {
+          "Nombre": "agrupador2",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 2."
+        },
+        {
+          "Nombre": "agrupador2Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 2."
+        },
+        {
+          "Nombre": "agrupador3",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 3."
+        },
+        {
+          "Nombre": "agrupador3Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 3."
+        },
+        {
+          "Nombre": "agrupador4",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 4."
+        },
+        {
+          "Nombre": "agrupador4Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 4."
+        },
+        {
+          "Nombre": "agrupador5",
+          "Tipo": "String",
+          "Comentarios": "Nombre agrupador 5."
+        },
+        {
+          "Nombre": "agrupador5Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador agrupador 5."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del barrio."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "colonia",
+          "Tipo": "String",
+          "Comentarios": "Colonia."
+        },
+        {
+          "Nombre": "coloniaId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la colonia."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "int",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "detalleUbicacion",
+          "Tipo": "String",
+          "Comentarios": "Detalle de la ubicación."
+        },
+        {
+          "Nombre": "direccion",
+          "Tipo": "String",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "int",
+          "Comentarios": "Identificador de la localidad."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "tipoDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoDomicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de domicilio."
+        },
+        {
+          "Nombre": "tipoVivienda",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de vivienda."
+        },
+        {
+          "Nombre": "tipoViviendaId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del tipo de vivienda."
+        },
+        {
+          "Nombre": "ubicacionDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde que reside en ese domicilio."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTResumenIntegranteJuridico",
+      "fields": [
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la persona."
+        },
+        {
+          "Nombre": "participacion",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de participación del integrante."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "vinculo",
+          "Tipo": "String",
+          "Comentarios": "Descripción del vínculo."
+        },
+        {
+          "Nombre": "vinculoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de vínculo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,399 @@
+{
+  "slug": "prestamos/obtener/obtenerdetalle",
+  "pageTitle": "Obtener Detalle",
+  "description": "Método para obtener los datos de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerDetalle",
+  "programa": "RBTPG012",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPrestamo",
+      "Tipo": "<a href=\"#sbtprestamo\">sBTPrestamo</a>",
+      "Comentarios": "Datos del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación para el identificador."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerDetalle>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>6453f934f94A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:OperacionUId>142</bts:OperacionUId>\r\n      </bts:BTPrestamos.ObtenerDetalle>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalle=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 9c3f1bf5-3274-9009-5a4a-9b755b8652a9' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"6453f934f94A8B5C60A82434\"\r\n\t},\r\n    \"OperacionUId\": 142\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerDetalleResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>75e20bd1614A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPrestamo>\r\n            <interesVigente>6812.75</interesVigente>\r\n            <deudaTotalVencida>17614.00</deudaTotalVencida>\r\n            <tipoTasaMora>Lineal Anual</tipoTasaMora>\r\n            <cuotasPagasConRetaso>0</cuotasPagasConRetaso>\r\n            <sucursal>Sucursal Beta</sucursal>\r\n            <diasMoraPromedio>0</diasMoraPromedio>\r\n            <plus>0.000000</plus>\r\n            <actividad>01112 Trigo</actividad>\r\n            <tasaOriginal>10.000000</tasaOriginal>\r\n            <idOperacionBT>0010000100115000000000000000002700000000000326001</idOperacionBT>\r\n            <diasMora>83</diasMora>\r\n            <cantidadCuotas>37</cantidadCuotas>\r\n            <estado>Normal</estado>\r\n            <capitalOriginal>180000.00</capitalOriginal>\r\n            <tipoDia>Meses Calendario</tipoDia>\r\n            <fechaPrimerPago>2018-07-18</fechaPrimerPago>\r\n            <claseTasa/>\r\n            <tipoAmortizacion>Leasing</tipoAmortizacion>\r\n            <simboloMoneda>$</simboloMoneda>\r\n            <operacionUId>142</operacionUId>\r\n            <fechaPrimerCuotaImpaga>2018-07-18</fechaPrimerCuotaImpaga>\r\n            <valorCuota>0.00</valorCuota>\r\n            <diasRevision>0</diasRevision>\r\n            <precioOriginal>0.000000</precioOriginal>\r\n            <tasaVigente>10.000000</tasaVigente>\r\n            <tasaMoraVigente>0.000000</tasaMoraVigente>\r\n            <interesDevengado>0.00</interesDevengado>\r\n            <interesSuspenso>0.00</interesSuspenso>\r\n            <deudaCancelacionTotal>213849.01</deudaCancelacionTotal>\r\n            <plazo>1096</plazo>\r\n            <tipoTasa>Lineal Anual</tipoTasa>\r\n            <interesMora>154.45</interesMora>\r\n            <saldoCapital>174180.15</saldoCapital>\r\n            <precioActual>0.000000</precioActual>\r\n            <cantidadCuotasVencidas>3</cantidadCuotasVencidas>\r\n            <producto>\r\n               <papel>$</papel>\r\n               <moneda>$</moneda>\r\n               <productoUId>0</productoUId>\r\n               <nombre>LEASING, Amort. - Capital F./Empr.- T/F</nombre>\r\n               <otrosConceptos></otrosConceptos>\r\n            </producto>\r\n            <fechaUltimoPago>2018-05-18</fechaUltimoPago>\r\n            <interesMoraDevengado>0.00</interesMoraDevengado>\r\n            <idOperacionFmt>326-0</idOperacionFmt>\r\n            <fechaProximoVencimiento>2018-10-18</fechaProximoVencimiento>\r\n            <fechaValor>2018-05-18</fechaValor>\r\n            <tasaMoraOriginal>10.000000</tasaMoraOriginal>\r\n            <tasaEfectiva>0.000000</tasaEfectiva>\r\n            <totalImpuestos>0.00</totalImpuestos>\r\n            <coeficienteIVA>0.000000</coeficienteIVA>\r\n            <periodicidad>30</periodicidad>\r\n            <resultadoInteresNormalDevengado>0.00</resultadoInteresNormalDevengado>\r\n            <fechaVencimiento>2021-05-18</fechaVencimiento>\r\n            <cantidadCuotasImpagas>36</cantidadCuotasImpagas>\r\n            <cuentaContable>Ds.P/Arrend.Financ.No Reaj.Res.</cuentaContable>\r\n            <tipoAno>360 Días</tipoAno>\r\n            <interesPunitorio>0.00</interesPunitorio>\r\n            <tipoProducto>AM</tipoProducto>\r\n            <tasaPunitorios>0.000000</tasaPunitorios>\r\n            <deudaTotalAFecha>23433.85</deudaTotalAFecha>\r\n         </sdtPrestamo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>950</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ObtenerDetalle</Servicio>\r\n            <Fecha>2017-12-21</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>18:33:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerDetalleResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"75e20bd1614A8B5C60A82434\"\r\n\t},\r\n    \"sdtPrestamo\": {\r\n        \"interesVigente\": 6812.75,\r\n        \"deudaTotalVencida\": 17614.00,\r\n        \"tipoTasaMora\": \"Lineal Anual\",\r\n        \"cuotasPagasConRetaso\": 0,\r\n        \"sucursal\": \"Sucursal Beta\",\r\n        \"diasMoraPromedio\": 0,\r\n        \"plus\": 0.000000,\r\n        \"actividad\": \"01112 Trigo\",\r\n        \"tasaOriginal\": 10.000000,\r\n        \"idOperacionBT\": \"0010000100115000000000000000002700000000000326001\",\r\n        \"diasMora\": 83,\r\n        \"cantidadCuotas\": 37,\r\n        \"estado\": \"Normal\",\r\n        \"capitalOriginal\": 180000.00,\r\n        \"tipoDia\": \"Meses Calendario\",\r\n        \"fechaPrimerPago\": \"2018-07-18\",\r\n        \"claseTasa\": \"\",\r\n        \"tipoAmortizacion\": \"Leasing\",\r\n        \"simboloMoneda\": \"$\",\r\n        \"operacionUId\": 142,\r\n        \"fechaPrimerCuotaImpaga\": \"2018-07-18\",\r\n        \"valorCuota\": 0.00,\r\n        \"diasRevision\": 0,\r\n        \"precioOriginal\": 0.000000,\r\n        \"tasaVigente\": 10.000000,\r\n        \"tasaMoraVigente\": 0.000000,\r\n        \"interesDevengado\": 0.00,\r\n        \"interesSuspenso\": 0.00,\r\n        \"deudaCancelacionTotal\": 213849.01,\r\n        \"plazo\": 1096,\r\n        \"tipoTasa\": \"Lineal Anual\",\r\n        \"interesMora\": 154.45,\r\n        \"saldoCapital\": 174180.15,\r\n        \"precioActual\": 0.000000,\r\n        \"cantidadCuotasVencidas\": 3,\r\n        \"producto\": {\r\n            \"papel\": \"$\",\r\n            \"moneda\": \"$\",\r\n            \"productoUId\": 0,\r\n            \"nombre\": \"LEASING, Amort. - Capital F./Empr.- T/F\",\r\n            \"otrosConceptos\": \"\"\r\n        },\r\n        \"fechaUltimoPago\": \"2018-05-18\",\r\n        \"interesMoraDevengado\": 0.00,\r\n        \"idOperacionFmt\": \"326-0\",\r\n        \"fechaProximoVencimiento\": \"2018-10-18\",\r\n        \"fechaValor\": \"2018-05-18\",\r\n        \"tasaMoraOriginal\": 10.000000,\r\n        \"tasaEfectiva\": 0.000000,\r\n        \"totalImpuestos\": 0.00,\r\n        \"coeficienteIVA\": 0.000000,\r\n        \"periodicidad\": 30,\r\n        \"resultadoInteresNormalDevengado\": 0.00,\r\n        \"fechaVencimiento\": \"2021-05-18\",\r\n        \"cantidadCuotasImpagas\": 36,\r\n        \"cuentaContable\": \"Ds.P/Arrend.Financ.No Reaj.Res.\",\r\n        \"tipoAno\": \"360 Días\",\r\n        \"interesPunitorio\": 0.00,\r\n        \"tipoProducto\": \"AM\",\r\n        \"tasaPunitorios\": 0.000000,\r\n        \"deudaTotalAFecha\": 23433.85\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 950,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.ObtenerDetalle\",\r\n        \"Fecha\": \"2017-12-21\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"18:33:21\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPrestamo",
+      "fields": [
+        {
+          "Nombre": "actividad",
+          "Tipo": "String",
+          "Comentarios": "Actividad."
+        },
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas del préstamo."
+        },
+        {
+          "Nombre": "cantidadCuotasImpagas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas impagas."
+        },
+        {
+          "Nombre": "cantidadCuotasVencidas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas vencidas."
+        },
+        {
+          "Nombre": "capitalOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Capital original del préstamo."
+        },
+        {
+          "Nombre": "claseTasa",
+          "Tipo": "String",
+          "Comentarios": "Clase de tasa."
+        },
+        {
+          "Nombre": "coeficienteIVA",
+          "Tipo": "Double",
+          "Comentarios": "Coeficiente de IVA."
+        },
+        {
+          "Nombre": "costoFinancieroTotal",
+          "Tipo": "Double",
+          "Comentarios": "Costo financiero total (Argentina)."
+        },
+        {
+          "Nombre": "cuentaContable",
+          "Tipo": "String",
+          "Comentarios": "Descripción del rubro."
+        },
+        {
+          "Nombre": "cuotasPagasConRetaso",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de cuotas pagas con atraso."
+        },
+        {
+          "Nombre": "deudaCancelacionTotal",
+          "Tipo": "Double",
+          "Comentarios": "Monto de cancelación total."
+        },
+        {
+          "Nombre": "deudaTotalAFecha",
+          "Tipo": "Double",
+          "Comentarios": "Monto a pagar para estar al día."
+        },
+        {
+          "Nombre": "deudaTotalVencida",
+          "Tipo": "Double",
+          "Comentarios": "Monto de la deuda vencida a la fecha."
+        },
+        {
+          "Nombre": "diasMora",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora del préstamo."
+        },
+        {
+          "Nombre": "diasMoraPromedio",
+          "Tipo": "Int",
+          "Comentarios": "Días de mora promedio."
+        },
+        {
+          "Nombre": "diasRevision",
+          "Tipo": "Int",
+          "Comentarios": "Días de revisión (Tasa variable)."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado del préstamo."
+        },
+        {
+          "Nombre": "fechaPrimerCuotaImpaga",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de la primera cuota impaga."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "fechaProximoVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de la próxima cuota."
+        },
+        {
+          "Nombre": "fechaUltimoPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de último pago de cuota."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de alta del préstamo."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del préstamo."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador texto de operación."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "interesDevengado",
+          "Tipo": "Double",
+          "Comentarios": "Intereses devengados."
+        },
+        {
+          "Nombre": "interesMora",
+          "Tipo": "Double",
+          "Comentarios": "Intereses de mora."
+        },
+        {
+          "Nombre": "interesMoraDevengado",
+          "Tipo": "Double",
+          "Comentarios": "Intereses de mora devengados."
+        },
+        {
+          "Nombre": "interesPunitorio",
+          "Tipo": "Double",
+          "Comentarios": "Intereses punitorios."
+        },
+        {
+          "Nombre": "interesSuspenso",
+          "Tipo": "Double",
+          "Comentarios": "Intereses en suspenso."
+        },
+        {
+          "Nombre": "interesVigente",
+          "Tipo": "Double",
+          "Comentarios": "Monto de interés vigente."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación simulada."
+        },
+        {
+          "Nombre": "periodicidad",
+          "Tipo": "Int",
+          "Comentarios": "Período entre cuotas."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo del préstamo."
+        },
+        {
+          "Nombre": "plus",
+          "Tipo": "Double",
+          "Comentarios": "Tasa plus."
+        },
+        {
+          "Nombre": "precioActual",
+          "Tipo": "Double",
+          "Comentarios": "Precio del papel actual."
+        },
+        {
+          "Nombre": "precioOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Precio original del papel."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Producto."
+        },
+        {
+          "Nombre": "resultadoInteresNormalDevengado",
+          "Tipo": "Double",
+          "Comentarios": "Resultado de intereses normal devengados."
+        },
+        {
+          "Nombre": "saldoCapital",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de capital."
+        },
+        {
+          "Nombre": "saldosPendiente",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Saldos pendientes."
+        },
+        {
+          "Nombre": "simboloMoneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo monetario."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal del préstamo."
+        },
+        {
+          "Nombre": "tasaEfectiva",
+          "Tipo": "Double",
+          "Comentarios": "Tasa efectiva anual."
+        },
+        {
+          "Nombre": "tasaMoraOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Tasa de mora original."
+        },
+        {
+          "Nombre": "tasaMoraVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa de mora vigente."
+        },
+        {
+          "Nombre": "tasaOriginal",
+          "Tipo": "Double",
+          "Comentarios": "Tasa original."
+        },
+        {
+          "Nombre": "tasaPunitorios",
+          "Tipo": "Double",
+          "Comentarios": "Tasa punitorios."
+        },
+        {
+          "Nombre": "tasaVigente",
+          "Tipo": "Double",
+          "Comentarios": "Tasa vigente."
+        },
+        {
+          "Nombre": "tipoAmortizacion",
+          "Tipo": "String",
+          "Comentarios": "Tipo de amortización."
+        },
+        {
+          "Nombre": "tipoAno",
+          "Tipo": "String",
+          "Comentarios": "Tipo de año."
+        },
+        {
+          "Nombre": "tipoDia",
+          "Tipo": "String",
+          "Comentarios": "Tipo de día del préstamo."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto (Amortizable / Plan de pagos)."
+        },
+        {
+          "Nombre": "tipoTasa",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tasa."
+        },
+        {
+          "Nombre": "tipoTasaMora",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tasa de mora."
+        },
+        {
+          "Nombre": "totalImpuestos",
+          "Tipo": "Double",
+          "Comentarios": "Total de impuestos."
+        },
+        {
+          "Nombre": "totalSaldosPendiente",
+          "Tipo": "Double",
+          "Comentarios": "Total saldos pendiente."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor de la cuota."
+        },
+        {
+          "Nombre": "capitalSolicitado",
+          "Tipo": "Double",
+          "Comentarios": "Capital solicitado."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

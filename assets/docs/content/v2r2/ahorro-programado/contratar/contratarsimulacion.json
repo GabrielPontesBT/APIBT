@@ -1,0 +1,91 @@
+{
+  "slug": "ahorro-programado/contratar/contratarsimulacion",
+  "pageTitle": "Contratar Simulación",
+  "description": "Método para crear un ahorro programado a partir de una simulación.",
+  "pubName": "BTAhorroProgramado.ContratarSimulacion",
+  "programa": "RBTPG445",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtDatos",
+      "Tipo": "<a href=\"#sbtcrearsolicitudahorro\">sBTCrearSolicitudAhorro</a>",
+      "Comentarios": "Datos de la solicitud de ahorro."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ahorroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la simulación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recuperó la cuenta origen del ahorro para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperó la cuenta destino del ahorro para el identificador: [Número de Identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ContratarSimulacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>GL</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtDatos>\n            <bts:simulacionId>741</bts:simulacionId>\n            <bts:cuentaDestinoUid>661</bts:cuentaDestinoUid>\n            <bts:motivoAhorro>Prueba</bts:motivoAhorro>\n            <bts:cuentaOrigenUid>661</bts:cuentaOrigenUid>\n            <bts:clienteUid>61</bts:clienteUid>\n         </bts:sdtDatos>\n      </bts:BTAhorroProgramado.ContratarSimulacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ContratarSimulacion' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Usuario\": \"MINSTALADOR\",\n          \"Device\": \"GL\",\n          \"Requerimiento\": 1,\n          \"Token\": \"01D45E9964612A4C8CCB1055\"\n        },\n        \"sdtDatos\": {\n          \"simulacionId\": 741,\n          \"cuentaDestinoUid\": 661,\n          \"motivoAhorro\": \"Prueba\",\n          \"cuentaOrigenUid\": 661,\n          \"clienteUid\": 61\n        }\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>MINSTALADOR</Usuario>\n            <Device>GL</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>01D45E9964612A4C8CCB1055</Token>\n         </Btinreq>\n         <ahorroUId>1102</ahorroUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2022-11-29</Fecha>\n            <Hora>17:23:23</Hora>\n            <Numero>11097</Numero>\n            <Servicio>BTAhorroProgramado.ContratarSimulacion</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTAhorroProgramado.ContratarSimulacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Device\": \"GL\",\n        \"Requerimiento\": 1,\n        \"Token\": \"01D45E9964612A4C8CCB1055\"\n    },\n    \"ahorroUId\": 1102,\n    \"Erroresnegocio\": \"\",\n    \"Btoutreq\": {\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2022-11-29\",\n        \"Hora\": \"17:23:23\",\n        \"Numero\": 11097,\n        \"Servicio\": \"BTAhorroProgramado.ContratarSimulacion\",\n        \"Requerimiento\": 1,\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCrearSolicitudAhorro",
+      "fields": [
+        {
+          "Nombre": "clienteuid",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de cliente."
+        },
+        {
+          "Nombre": "simulacionid",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de simulación."
+        },
+        {
+          "Nombre": "cuentaorigenuid",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de cuenta origen."
+        },
+        {
+          "Nombre": "cuentadestinouid",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de cuenta destino."
+        },
+        {
+          "Nombre": "motivoahorro",
+          "Tipo": "String",
+          "Comentarios": "Motivo de ahorro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

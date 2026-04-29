@@ -1,0 +1,129 @@
+{
+  "slug": "partners/contratar/contratarprestamo",
+  "pageTitle": "Contratar Préstamo",
+  "description": "Método para contratar un préstamo de Partner.",
+  "pubName": "BTPartners.ContratarPrestamo",
+  "programa": "RBTPN008",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la cuenta cliente."
+    },
+    {
+      "Nombre": "operacionAcreditacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de acreditación."
+    },
+    {
+      "Nombre": "operacionCobroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cobro"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo"
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de operación de Acreditación"
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó el préstamo para el identificador: [Número de identificador]"
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]"
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente"
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]"
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente"
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación de cobro no pertenece al cliente"
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recibió el identificador único de operación de cobro"
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No existe una empresa con los datos ingresados"
+    },
+    {
+      "Código": "30015",
+      "Descripción": "No se pudo resolver la empresa del usuario"
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ContratarPrestamo>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1222A10B1A106FB813BD7AE9</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:puntoVentaUId>3</bts:puntoVentaUId>\r\n            <bts:vendedorUId>56</bts:vendedorUId>\r\n            <bts:partnerUId>23</bts:partnerUId>\r\n         </bts:sdtPartner>\r\n         <bts:operacionUId>32123</bts:operacionUId>\r\n         <bts:clienteUId>23</bts:clienteUId>\r\n         <bts:operacionAcreditacionUId>8542</bts:operacionAcreditacionUId>\r\n         <bts:operacionCobroUId>8412</bts:operacionCobroUId>\r\n      </bts:BTPartners.ContratarPrestamo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ContratarPrestamo' \\\r\n\t-H 'cache-control: no-cache' \\\r\n\t-H 'content-type: application/json' \\\r\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n\t-d '{\r\n\t\"Btinreq\": {\r\n\t  \"Device\": \"1\",\r\n\t  \"Usuario\": \"MINSTALADOR\",\r\n\t  \"Token\": \"3JPL6DC33CD84655A5382434\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Requerimiento\": 1\r\n\t},\r\n   \"sdtPartner\": {\r\n      \"puntoVentaUId\": 3,\r\n      \"vendedorUId\": 56,\r\n      \"partnerUId\": 23\r\n   },\r\n   \"operacionUId\": 32123,\r\n   \"clienteUId\": 23,\r\n   \"operacionAcreditacionUId\": 8542,\r\n   \"operacionCobroUId\": 8412\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ContratarPrestamoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>268b6d23eb4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n\t\t <movimientoUId>141</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>864</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ContratarPrestamo</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-18</Fecha>\r\n            <Hora>17:07:19</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ContratarPrestamoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n   \"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n    },\r\n    \"movimientoUId\": 141,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 864,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPartners.ContratarPrestamo\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2017-12-18\",\r\n        \"Hora\": \"17:07:19\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

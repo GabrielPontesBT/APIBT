@@ -1,0 +1,89 @@
+{
+  "slug": "configuracion-bantotal/operaciones/obtenerpaquetes",
+  "pageTitle": "Obtener Paquetes",
+  "description": "Método para obtener un listado de los paquetes ingresados en Bantotal.",
+  "pubName": "BTConfiguracionBantotal.ObtenerPaquetes",
+  "programa": "RBTPG187",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtPaquetes",
+      "Tipo": "<a href=\"#sbtpaquete\">sBTPaquete</a>",
+      "Comentarios": "Listado de paquetes."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerPaquetes>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n      </bts:BTConfiguracionBantotal.ObtenerPaquetes>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPaquetes=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t}\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerPaquetesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>268b6d23eb4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtPaquetes>\n            <sBTPaquete>\n               <codigo>1</codigo>\n               <descripcion>Cuenta Persona</descripcion>\n               <vigente>S</vigente>\n               <productos>\n                  <sBTProductoPaquete>\n                     <productoUId>154</productoUId>\n                     <nombre/>\n                     <moneda>PESOS</moneda>\n                     <papel>Billete</papel>\n                     <cantidad>0</cantidad>\n                  </sBTProductoPaquete>\n                  <sBTProductoPaquete>\n                     <productoUId>93</productoUId>\n                     <nombre>Cuenta corriente P.Física</nombre>\n                     <moneda>PESOS</moneda>\n                     <papel>Billete</papel>\n                     <cantidad>1</cantidad>\n                  </sBTProductoPaquete>\n                  <sBTProductoPaquete>\n                     <productoUId>134</productoUId>\n                     <nombre>Caja de Ahorro P.Física</nombre>\n                     <moneda>DÓLAR ESTADOUNIDENSE</moneda>\n                     <papel>Billete</papel>\n                     <cantidad>1</cantidad>\n                  </sBTProductoPaquete>\n                  <sBTProductoPaquete>\n                     <productoUId>155</productoUId>\n                     <nombre>TARJETA DE DEBITO</nombre>\n                     <moneda>PESOS</moneda>\n                     <papel>Billete</papel>\n                     <cantidad>0</cantidad>\n                  </sBTProductoPaquete>\n               </productos>\n            </sBTPaquete>\n         </sdtPaquetes>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>788</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTConfiguracionBantotal.ObtenerPaquetes</Servicio>\n            <Fecha>2017-12-17</Fecha>\n            <Requerimiento/>\n            <Hora>16:47:42</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerPaquetesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"paquetes\": {\n         \"sBTPaquete\": {\n         \"codigo\": \"1\",\n         \"descripcion\": \"Cuenta Persona\",\n         \"vigente\": \"S\",\n         \"productos\": {\n            \"sBTProductoPaquete\": [\n               {\n               \"productoUId\": \"154\",\n               \"moneda\": \"PESOS\",\n               \"papel\": \"Billete\",\n               \"cantidad\": \"0\"\n               },\n               {\n               \"productoUId\": \"93\",\n               \"nombre\": \"Cuenta corriente P.Física\",\n               \"moneda\": \"PESOS\",\n               \"papel\": \"Billete\",\n               \"cantidad\": \"1\"\n               },\n               {\n               \"productoUId\": \"134\",\n               \"nombre\": \"Caja de Ahorro P.Física\",\n               \"moneda\": \"DÓLAR ESTADOUNIDENSE\",\n               \"papel\": \"Billete\",\n               \"cantidad\": \"1\"\n               },\n               {\n               \"productoUId\": \"155\",\n               \"nombre\": \"TARJETA DE DEBITO\",\n               \"moneda\": \"PESOS\",\n               \"papel\": \"Billete\",\n               \"cantidad\": \"0\"\n               }\n            ]\n         }\n         }\n      },\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"790\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTConfiguracionBantotal.ObtenerPaquetes\",\n      \"Fecha\": \"2017-12-17\",\n      \"Requerimiento\": 1,\n      \"Hora\": \"16:48:12\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPaquete",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código de paquete."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de paquete."
+        },
+        {
+          "Nombre": "productos",
+          "Tipo": "<a href=\"#sbtproductopaquete\">sBTProductoPaquete</a>",
+          "Comentarios": "Listado de productos incluidos en el paquete."
+        },
+        {
+          "Nombre": "vigente",
+          "Tipo": "String",
+          "Comentarios": "Indica si está vigente el paquete (S/N)."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProductoPaquete",
+      "fields": [
+        {
+          "Nombre": "cantidad",
+          "Tipo": "Short",
+          "Comentarios": "Cantidad de productos de este tipo incluidos en el paquete."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre de producto."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

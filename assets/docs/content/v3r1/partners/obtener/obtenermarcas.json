@@ -1,0 +1,81 @@
+{
+  "slug": "partners/obtener/obtenermarcas",
+  "pageTitle": "Obtener Marcas",
+  "description": "Método para retornar las marcas de los vehículos.",
+  "pubName": "BTPartners.ObtenerMarcas",
+  "programa": "RBTPNV03",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtMarcas",
+      "Tipo": "<a href=\"#sbtmarca\">sBTMarca</a>",
+      "Comentarios": "Colección de las marcas de vehículos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió Partner ni canal."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se recibió vendedor."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ObtenerMarcas>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>2</bts:puntoVentaUId>\n            <bts:vendedorUId>0</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n      </bts:BTPartners.ObtenerMarcas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\n    },\n    \"sdtPartner\": {\n        \"puntoVentaUId\": 2,\n        \"vendedorUId\": 0,\n        \"partnerUId\": 1\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPartners.ObtenerMarcasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtMarcas>\n            <sBTMarca>\n               <tipoMarcaId>1</tipoMarcaId>\n               <tipoMarca>Lujo</tipoMarca>\n               <marcaUId>1</marcaUId>\n               <nombreMarca>AUDI</nombreMarca>\n            </sBTMarca>\n         </sdtMarcas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16857</Numero>\n            <Servicio>BTPartners.ObtenerMarcas</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-27</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>11:57:14</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPartners.ObtenerMarcasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Device\": \"GZ\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\n    },\n    \"sdtMarcas\": {\n        \"sBTMarca\": {\n            \"tipoMarcaId\": 1,\n            \"tipoMarca\": \"Lujo\",\n            \"marcaUId\": 1,\n            \"nombreMarca\": \"AUDI\"\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 16857,\n        \"Servicio\": \"BTPartners.ObtenerMarcas\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2023-10-27\",\n        \"Requerimiento\": 0,\n        \"Hora\": \"11:57:14\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,192 @@
+{
+  "slug": "clientes/obtener/obtenerdatos",
+  "pageTitle": "Obtener Datos",
+  "description": "Método para obtener datos de un cliente.",
+  "pubName": "BTClientes.ObtenerDatos",
+  "programa": "RBTPG441",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosCuentaCliente",
+      "Tipo": "<a href=\"#sbtdatoscuentacliente\">sBTDatosCuentaCliente</a>",
+      "Comentarios": "Datos de la cuenta cliente."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe titular representativo para la cuenta."
+    },
+    {
+      "Código": "40099",
+      "Descripción": "La cuenta fue dada de baja."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCliente.ObtenerDatos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>papa</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>8A7B3C4E6F4A275BC67245E5</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUID>10010</bts:clienteUID>\n      </bts:BTCliente.ObtenerDatos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\t\"clienteUID\": 10010\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrueba.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>0</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>50F9EC89DBFA778E70454A66</Token>\n            <Device>papa</Device>\n         </Btinreq>\n         <sdtDatosCuentaCliente>\n            <empresaId>1</empresaId>\n            <cuentaBT>27</cuentaBT>\n            <fechaAlta>2015-12-23</fechaAlta>\n            <nombre>PRANKA ERIKA</nombre>\n            <sucursalId>1000</sucursalId>\n            <sucursal>Casa Matriz</sucursal>\n            <asesorId>0</asesorId>\n            <asesor/>\n            <ejecutivoId>1</ejecutivoId>\n            <ejecutivo>Instalador</ejecutivo>\n            <clasificacionInternaId>43</clasificacionInternaId>\n            <clasificacionInterna>Venta. Art. x menor Ferreteria</clasificacionInterna>\n            <fechaVtoClasificacion>2018-12-14</fechaVtoClasificacion>\n            <segmentoId>1</segmentoId>\n            <segmento>Independiente</segmento>\n            <actividadLaboralId>14100</actividadLaboralId>\n            <actividadLaboral>14100 Extracción de piedra, arena y arcilla</actividadLaboral>\n            <sectorId>1</sectorId>\n            <sector>Privado no Financiero</sector>\n            <residente>S</residente>\n            <empleado>N</empleado>\n            <proveedor>N</proveedor>\n            <retenerCorrespondencia>N</retenerCorrespondencia>\n            <correoElectronico>ZEPORAYTE@HOTMAIL.COM.UY</correoElectronico>\n            <estado>Inhabilitada</estado>\n            <estadoId>3</estadoId>\n         </sdtDatosCuentaCliente>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPrueba.ObtenerDatos</Servicio>\n            <Fecha>2022-11-15</Fecha>\n            <Hora>14:04:48</Hora>\n            <Requerimiento>0</Requerimiento>\n            <Numero>438</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPrueba.ObtenerDatosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtDatosCuentaCliente\": {\n          \"empresaId\": 1,\n          \"cuentaBT\": 27,\n          \"fechaAlta\": \"2015-12-23\",\n          \"nombre\": \"PRANKA ERIKA\",\n          \"sucursalId\": 1000,\n          \"sucursal\": \"Casa Matriz\",\n          \"asesorId\": 0,\n          \"asesor\": \"\",\n          \"ejecutivoId\": 1,\n          \"ejecutivo\": \"Instalador\",\n          \"clasificacionInternaId\": 43,\n          \"clasificacionInterna\": \"Venta. Art. x menor Ferreteria\",\n          \"fechaVtoClasificacion\": \"2018-12-14\",\n          \"segmentoId\": 1,\n          \"segmento\": \"Independiente\",\n          \"actividadLaboralId\": 14100,\n          \"actividadLaboral\": \"14100 Extracción de piedra, arena y arcilla\",\n          \"sectorId\": 1,\n          \"sector\": \"Privado no Financiero\",\n          \"residente\": \"S\",\n          \"empleado\": \"N\",\n          \"proveedor\": \"N\",\n          \"retenerCorrespondencia\": \"N\",\n          \"correoElectronico\": \"ZEPORAYTE@HOTMAIL.COM.UY\",\n          \"estado\": \"Inhabilitada\",\n          \"estadoId\": 3\n        },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"401\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTClientes.ObtenerDatos\",\n        \"Fecha\": \"2018-05-03\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"11:10:49\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosCuentaCliente",
+      "fields": [
+        {
+          "Nombre": "actividadLaboral",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la actividad laboral."
+        },
+        {
+          "Nombre": "actividadLaboralId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la actividad laboral."
+        },
+        {
+          "Nombre": "asesor",
+          "Tipo": "String",
+          "Comentarios": "Nombre del asesor."
+        },
+        {
+          "Nombre": "asesorId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del asesor."
+        },
+        {
+          "Nombre": "clasificacionInterna",
+          "Tipo": "String",
+          "Comentarios": "Descripción de clasificación interna."
+        },
+        {
+          "Nombre": "clasificacionInternaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de clasificación interna."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "cuentaBT",
+          "Tipo": "Int",
+          "Comentarios": "Cuenta Bantotal."
+        },
+        {
+          "Nombre": "ejecutivo",
+          "Tipo": "String",
+          "Comentarios": "Nombre del ejecutivo."
+        },
+        {
+          "Nombre": "ejecutivoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del ejecutivo."
+        },
+        {
+          "Nombre": "empleado",
+          "Tipo": "String",
+          "Comentarios": "¿Es empleado de la institución? (S/N)."
+        },
+        {
+          "Nombre": "empresaId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "estadoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "fechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del alta."
+        },
+        {
+          "Nombre": "fechaVtoClasificacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de clasificación."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del cliente."
+        },
+        {
+          "Nombre": "proveedor",
+          "Tipo": "String",
+          "Comentarios": "¿Es proveedor? (S/N)."
+        },
+        {
+          "Nombre": "residente",
+          "Tipo": "String",
+          "Comentarios": "¿Es residente? (S/N)."
+        },
+        {
+          "Nombre": "retenerCorrespondencia",
+          "Tipo": "String",
+          "Comentarios": "¿Retiene correspondencia? (S/N)."
+        },
+        {
+          "Nombre": "sector",
+          "Tipo": "String",
+          "Comentarios": "Descripción del sector."
+        },
+        {
+          "Nombre": "sectorId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sector."
+        },
+        {
+          "Nombre": "segmento",
+          "Tipo": "String",
+          "Comentarios": "Descripción del segmento."
+        },
+        {
+          "Nombre": "segmentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de segmento."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "sucursalId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de la sucursal."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

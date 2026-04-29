@@ -1,0 +1,74 @@
+{
+  "slug": "prestamos/textos/obtenertextos",
+  "pageTitle": "Obtener Textos",
+  "description": "Método para obtener los textos de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerTextos",
+  "programa": "RBTPG561",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTextos",
+      "Tipo": "<a href=\"#sbttextooperacion\">sBTTextoOperacion</a>",
+      "Comentarios": "Listado de textos de la operación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recupero la operación para el identificador recibido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerTextos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>0E93EA2F1B3F9ED212A0449F</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>49</bts:operacionUId>\n      </bts:BTPrestamos.ObtenerTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerTextos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\n  -d '{\n      \"operacionUId\": 49\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerTextosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>GZ</Device>\n            <Requerimiento>0</Requerimiento>\n            <Token>0E93EA2F1B3F9ED212A0449F</Token>\n         </Btinreq>\n         <sdtTextos>\n            <sBTTextoOperacion>\n               <renglon>1</renglon>\n               <texto>Copia Comision Cuota</texto>\n               <descripcion>NOMBRE DE CURSO</descripcion>\n               <codigo>8</codigo>\n            </sBTTextoOperacion>\n            <sBTTextoOperacion>\n               <renglon>2</renglon>\n               <texto>Copia Comision Operación</texto>\n               <descripcion>NOMBRE DE CURSO</descripcion>\n               <codigo>8</codigo>\n            </sBTTextoOperacion>\n            <sBTTextoOperacion>\n               <renglon>20</renglon>\n               <texto>Copia Seguros</texto>\n               <descripcion>NOMBRE DE CURSO</descripcion>\n               <codigo>8</codigo>\n            </sBTTextoOperacion>\n            <sBTTextoOperacion>\n               <renglon>1</renglon>\n               <texto>34</texto>\n               <descripcion/>\n               <codigo>120</codigo>\n            </sBTTextoOperacion>\n         </sdtTextos>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-10-09</Fecha>\n            <Hora>11:34:17</Hora>\n            <Numero>24968</Numero>\n            <Servicio>BTPrestamos.ObtenerTextos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ObtenerTextosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n      \"Device\": \"AC\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Requerimiento\": \"1\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\n    },\n    \"sdtTextos\": {\n         \"sBTTextoOperacion\": [\n         {\n            \"renglon\": 1,\n            \"texto\": \"Copia Comision Cuota\",\n            \"descripcion\": \"NOMBRE DE CURSO\",\n            \"codigo\": 8\n         },\n         {\n            \"renglon\": 2,\n            \"texto\": \"Copia Comision Operación\",\n            \"descripcion\": \"NOMBRE DE CURSO\",\n            \"codigo\": 8\n         },\n         {\n            \"renglon\": 20,\n            \"texto\": \"Copia Seguros\",\n            \"descripcion\": \"NOMBRE DE CURSO\",\n            \"codigo\": 8\n         },\n         {\n            \"renglon\": 1,\n            \"texto\": 34,\n            \"descripcion\": \"\",\n            \"codigo\": 120\n         }\n         ]\n      },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n      \"Numero\": \"10403\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPrestamos.ObtenerTextos\",\n      \"Fecha\": \"2021-01-29\",\n      \"Requerimiento\": \"1\",\n      \"Hora\": \"13:10:17\",\n      \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTextoOperacion",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "renglon",
+          "Tipo": "Short",
+          "Comentarios": "Renglón."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "tarjetas-de-debito/obtener/obtenertarjeta",
+  "pageTitle": "Obtener Tarjeta",
+  "description": "Método para obtener la tarjeta encriptada según las normas PCI.",
+  "pubName": "BTTarjetasDeDebito.ObtenerTarjeta",
+  "programa": "RBTPG805",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Se debe parametrizar el programa particular que resuelve la encriptación de la tarjeta en la FST900 con programa estándar RBTSTD13.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "tarjeta",
+      "Tipo": "String",
+      "Comentarios": "Tarjeta encriptada."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el Identificador de Tarjeta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.ObtenerTarjeta>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>933853107F955E77534D3E02</bts:Token>\r\n            <bts:Device>GL</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaUID>679</bts:personaUID>\r\n         <bts:tarjetaUID>2000001751</bts:tarjetaUID>\r\n      </bts:BTTarjetasDeDebito.ObtenerTarjeta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjeta' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Token\": \"933853107F955E77534D3E02\",\r\n        \"Device\": \"GL\"\r\n    },\r\n    \"personaUID\": 679,\r\n    \"tarjetaUID\": 2000001751\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.ObtenerTarjetaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Token>933853107F955E77534D3E02</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <Tarjeta>Z0YQCOAcMVX8Z40fu1vi/zbnphu39GQ4bbgWcnjXc7k=</Tarjeta>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTTarjetasDeDebito.ObtenerTarjeta</Servicio>\r\n            <Fecha>2022-11-30</Fecha>\r\n            <Hora>15:37:32</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>887444</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.ObtenerTarjetaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Token\": \"933853107F955E77534D3E02\",\r\n        \"Device\": \"GL\"\r\n    },\r\n    \"Tarjeta\": \"Z0YQCOAcMVX8Z40fu1vi/zbnphu39GQ4bbgWcnjXc7k=\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTTarjetasDeDebito.ObtenerTarjeta\",\r\n        \"Fecha\": \"2022-11-30\",\r\n        \"Hora\": \"15:37:32\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 887444,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

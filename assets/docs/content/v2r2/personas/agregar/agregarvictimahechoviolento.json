@@ -1,0 +1,209 @@
+{
+  "slug": "personas/agregar/agregarvictimahechoviolento",
+  "pageTitle": "Agregar Víctima Hecho Violento",
+  "description": "Método para agregar la información de una persona víctima de un hecho violento.",
+  "pubName": "BTPersonas.AgregarVictimaHechoViolento",
+  "programa": "RBTPCO04",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "esVictima",
+      "Tipo": "String",
+      "Comentarios": "Es víctima de hecho violento (S/N)."
+    },
+    {
+      "Nombre": "sdtVictimaHechoViolento",
+      "Tipo": "<a href=\"#sbtpcovictimahechoviolento\">sBTPCOVictimaHechoViolento</a>",
+      "Comentarios": "Datos de persona víctima de hecho violento (Se ingresa solo si el campo esVictima = S)."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de persona."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Debe ingresar entidad."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La entidad ingresada no es válida."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Debe ingresar fecha del hecho."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "La fecha del hecho no puede ser posterior a la fecha de apertura."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "Debe ingresar fecha de certificación."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "La fecha de certificación no puede ser anterior a la fecha del hecho."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar fecha de vencimiento."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "La fecha de vencimiento no puede ser anterior a la fecha del hecho."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "La fecha de vencimiento no puede ser anterior a la fecha de certificación."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "Debe ingresar departamento."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "El departamento ingresado no es válido."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Debe ingresar municipio."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "El municipio ingresado no es válido."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "Debe ingresar corregimiento."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "Debe ingresar inspección de policía."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Debe ingresar vereda."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "Debe ingresar sitio."
+    },
+    {
+      "Código": "40018",
+      "Descripción": "Debe ingresar tipo de hecho."
+    },
+    {
+      "Código": "40019",
+      "Descripción": "El tipo de hecho ingresado no es válido."
+    },
+    {
+      "Código": "40020",
+      "Descripción": "Ya existe registro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarVictimaHechoViolento>\r\n         <bts:Btinreq>\r\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>42</bts:personaUId>\r\n         <bts:esVictima>S</bts:esVictima>\r\n         <bts:sdtVictimaHechoViolento>\r\n            <bts:entidadId>3</bts:entidadId>\r\n            <bts:municipio></bts:municipio>\r\n            <bts:departamento></bts:departamento>\r\n            <bts:inspeccionPolicia>Golpes</bts:inspeccionPolicia>\r\n            <bts:sitio>Casa</bts:sitio>\r\n            <bts:municipioId>421</bts:municipioId>\r\n            <bts:tipoId>3</bts:tipoId>\r\n            <bts:vereda>Av Italia</bts:vereda>\r\n            <bts:entidad></bts:entidad>\r\n            <bts:tipo></bts:tipo>\r\n            <bts:fechaCertificacion>2020-08-20</bts:fechaCertificacion>\r\n            <bts:fechaVencimiento>2021-08-20</bts:fechaVencimiento>\r\n            <bts:corregimiento>No tiene</bts:corregimiento>\r\n            <bts:departamentoId>8</bts:departamentoId>\r\n            <bts:fechaHecho>2020-06-20</bts:fechaHecho>\r\n         </bts:sdtVictimaHechoViolento>\r\n      </bts:BTPersonas.AgregarVictimaHechoViolento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarVictimaHechoViolento' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Token\": \"042638a184CD285A89A23FBE\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"personaUId\": 42,\r\n    \"esVictima\": \"S\",\r\n    \"sdtVictimaHechoViolento\": {\r\n        \"entidadId\": 3,\r\n        \"municipio\": \"\",\r\n        \"departamento\": \"\",\r\n        \"inspeccionPolicia\": \"Golpes\",\r\n        \"sitio\": \"Casa\",\r\n        \"municipioId\": 421,\r\n        \"tipoId\": 3,\r\n        \"vereda\": \"Av Italia\",\r\n        \"entidad\": \"\",\r\n        \"tipo\": \"\",\r\n        \"fechaCertificacion\": \"2020-08-20\",\r\n        \"fechaVencimiento\": \"2021-08-20\",\r\n        \"corregimiento\": \"No tiene\",\r\n        \"departamentoId\": 8,\r\n        \"fechaHecho\": \"2020-06-20\"\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.AgregarVictimaHechoViolentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>042638a184CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>2073</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.AgregarVictimaHechoViolento</Servicio>\r\n            <Fecha>2020-03-10</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>07:51:55</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.AgregarVictimaHechoViolentoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"042638a184CD285A89A23FBE\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 2073,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.AgregarVictimaHechoViolento\",\r\n        \"Fecha\": \"2020-03-10\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"07:51:55\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPCOVictimaHechoViolento",
+      "fields": [
+        {
+          "Nombre": "corregimiento",
+          "Tipo": "String",
+          "Comentarios": "Corregimiento."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del departamento donde ocurrió el hecho."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de departamento."
+        },
+        {
+          "Nombre": "entidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de entidad."
+        },
+        {
+          "Nombre": "entidadId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de entidad."
+        },
+        {
+          "Nombre": "fechaCertificacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha en la que recibió la certificación."
+        },
+        {
+          "Nombre": "fechaHecho",
+          "Tipo": "Date",
+          "Comentarios": "Fecha en la que ocurrió el hecho."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento de la certificación."
+        },
+        {
+          "Nombre": "inspeccionPolicia",
+          "Tipo": "String",
+          "Comentarios": "Inspección de policía."
+        },
+        {
+          "Nombre": "municipio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del municipio donde ocurrió el hecho."
+        },
+        {
+          "Nombre": "municipioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de municipio."
+        },
+        {
+          "Nombre": "sitio",
+          "Tipo": "String",
+          "Comentarios": "Sitio."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de hecho."
+        },
+        {
+          "Nombre": "tipoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de tipo de hecho (1 = Leve / 2 = Medio / 3 = Grave) ."
+        },
+        {
+          "Nombre": "vereda",
+          "Tipo": "String",
+          "Comentarios": "Vereda."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

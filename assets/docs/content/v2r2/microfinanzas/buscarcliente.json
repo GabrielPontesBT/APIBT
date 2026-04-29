@@ -1,0 +1,110 @@
+{
+  "slug": "microfinanzas/buscarcliente",
+  "pageTitle": "Buscar Cliente",
+  "description": "Método para buscar una persona y sus cuentas cliente.",
+  "pubName": "BTMicrofinanzas.BuscarCliente",
+  "programa": "RBTPG411",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "paisDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador del país de origen del documento."
+    },
+    {
+      "Nombre": "tipoDocumentoId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador del tipo de documento."
+    },
+    {
+      "Nombre": "numeroDocumento",
+      "Tipo": "String",
+      "Comentarios": "Número de documento de la persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCuentas",
+      "Tipo": "<a href=\"#sbtcuentascliente\">sBTCuentasCliente</a>",
+      "Comentarios": "Listado de cuentas de la persona."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del País de documento."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del Tipo de documento."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el número de documento."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro de la Persona."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se pudo obtener identificador único de la persona."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se pudo obtener identificador único de la cuenta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.BuscarCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>419385365CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:paisDocumento>320</bts:paisDocumento>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDocumento>2131248150408</bts:numeroDocumento>\n      </bts:BTMicrofinanzas.BuscarCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?BuscarCliente \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"paisDocumento\": \"320\",\n        \"tipoDocumento\": \"1\",\n        \"numeroDocumento\": \"2131248150408\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.BuscarClienteResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>95</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>419385365CD285A89A23FBEE</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <sdtCuentas>\n            <Cuenta>\n               <clienteUId>2</clienteUId>\n               <titularidad>\n                  <identificador>1</identificador>\n                  <descripcion>Titular</descripcion>\n               </titularidad>\n               <representativo>S</representativo>\n            </Cuenta>\n         </sdtCuentas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.BuscarCliente</Servicio>\n            <Fecha>2019-09-11</Fecha>\n            <Hora>11:32:30</Hora>\n            <Requerimiento>95</Requerimiento>\n            <Numero>128</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.BuscarClienteResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"sdtCuentas\": {\n          \"Cuenta\": {\n            \"clienteUId\": \"2\",\n            \"titularidad\": {\n              \"identificador\": \"1\",\n              \"descripcion\": \"Titular\"\n            },\n            \"representativo\": \"S\"\n          }\n        },\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTMicrofinanzas.BuscarCliente\",\n          \"Fecha\": \"2019-09-11\",\n          \"Hora\": \"11:32:30\",\n          \"Requerimiento\": \"95\",\n          \"Numero\": \"128\",\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTCuentasCliente",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cuenta."
+        },
+        {
+          "Nombre": "representativo",
+          "Tipo": "String",
+          "Comentarios": "Indica si es titular representativo (S/N)."
+        },
+        {
+          "Nombre": "titularidad",
+          "Tipo": "<a href=\"#sbttipointegrante\">sBTTipoIntegrante</a>",
+          "Comentarios": "Tipo de integrante."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTTipoIntegrante",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del integrante."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del integrante."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "calendarios/obtener/obtenerinicioyfindemes",
+  "pageTitle": "Obtener Inicio y Fin de Mes",
+  "description": "Método para obtener la primer y última fecha hábil para el mes indicado.",
+  "pubName": "BTCalendarios.ObtenerInicioYFinMes",
+  "programa": "RBTPG332",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "calendarioId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central)."
+    },
+    {
+      "Nombre": "mesConsulta",
+      "Tipo": "Byte",
+      "Comentarios": "Mes de consulta."
+    },
+    {
+      "Nombre": "anioConsulta",
+      "Tipo": "Int",
+      "Comentarios": "Año de consulta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "fechaHabilInicio",
+      "Tipo": "Date",
+      "Comentarios": "Primera fecha hábil del mes."
+    },
+    {
+      "Nombre": "fechaHabilFin",
+      "Tipo": "Date",
+      "Comentarios": "Última fecha hábil del mes."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar mes a consultar."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar año a consultar."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCalendarios.ObtenerInicioYFinMes>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>Instalador</bts:Usuario>\n            <bts:Token>172681201999865B3A2E76CF</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:mesConsulta>11</bts:mesConsulta>\n         <bts:anioConsulta>2020</bts:anioConsulta>\n      </bts:BTCalendarios.ObtenerInicioYFinMes>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerInicioYFinMes' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\",\n      \"Usuario\": \"Instalador\",\n      \"Token\": \"172681201999865B3A2E76CF\",\n      \"Device\": \"1\"\n    },\n\t\"calendarioId\": \"1\",\n    \"mesConsulta\": \"11\",\n    \"anioConsulta\": \"2020\"\n  },"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCalendarios.ObtenerInicioYFinMesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>Instalador</Usuario>\n            <Token>172681201999865B3A2E76CF</Token>\n            <Device>1</Device>\n         </Btinreq>\n         <fechaHabilInicio>2020-11-02</fechaHabilInicio>\n         <fechaHabilFin>2020-11-30</fechaHabilFin>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCalendarios.ObtenerInicioYFinMes</Servicio>\n            <Fecha>2021-03-23</Fecha>\n            <Hora>17:35:57</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8086</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCalendarios.ObtenerInicioYFinMesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\",\n      \"Usuario\": \"Instalador\",\n      \"Token\": \"172681201999865B3A2E76CF\",\n      \"Device\": \"1\"\n    },\n    \"fechaHabilInicio\": \"2020-11-02\",\n    \"fechaHabilFin\": \"2020-11-30\",\n    \"Erroresnegocio\": {\n    },\n    \"Btoutreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Servicio\": \"BTCalendarios.ObtenerInicioYFinMes\",\n      \"Fecha\": \"2021-03-23\",\n      \"Hora\": \"17:35:57\",\n      \"Requerimiento\": \"1\",\n      \"Numero\": \"8086\",\n      \"Estado\": \"OK\"\n    }\n  }"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

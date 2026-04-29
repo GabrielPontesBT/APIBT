@@ -1,0 +1,150 @@
+{
+  "slug": "microfinanzas/crear-solicitud/crearsolicitudampliacion",
+  "pageTitle": "Crear Solicitud Ampliación",
+  "description": "Método para crear una solicitud de ampliación de crédito.",
+  "pubName": "BTMicrofinanzas.CrearSolicitudAmpliacion",
+  "programa": "RBTPG410",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "procesoId",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Identificador de proceso Workflow]."
+    },
+    {
+      "Nombre": "tareaId",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Identificador de tarea Workflow]."
+    },
+    {
+      "Nombre": "tipoSolicitud",
+      "Tipo": "Byte",
+      "Comentarios": "[Hidden: Identificador de tipo de solicitud 'Ampliación']."
+    },
+    {
+      "Nombre": "usuarioIngreso",
+      "Tipo": "String",
+      "Comentarios": "Usuario que ingresa la solicitud. En caso de no especificarse, se asigna el usuario conectado."
+    },
+    {
+      "Nombre": "fechaIngreso",
+      "Tipo": "Date",
+      "Comentarios": "Fecha en la que se ingresa la solicitud. En caso de no especificarse, se asigna fecha apertura."
+    },
+    {
+      "Nombre": "usuarioAsignacion",
+      "Tipo": "String",
+      "Comentarios": "Usuario al que queda asignada la tarea de solicitud. En caso de no especificarse, se asigna al Asesor de créditos."
+    },
+    {
+      "Nombre": "datosSolicitud",
+      "Tipo": "<a href=\"#sbtsolicitudindividual\">sBTSolicitudIndividual</a>",
+      "Comentarios": "Datos de la solicitud."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de instancia Workflow."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de proceso."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de tarea."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No existe FSD008 para la cuenta [Número de cuenta]."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se obtuvo el titular representativo de la cuenta [Número de cuenta]."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No se pudo determinar la sucursal de la solicitud."
+    },
+    {
+      "Código": "30014",
+      "Descripción": "No se pudo determinar el asesor de la solicitud."
+    },
+    {
+      "Código": "30015",
+      "Descripción": "El código de campaña no existe."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "El código de origen de captación no existe."
+    },
+    {
+      "Código": "30020 en adelante",
+      "Descripción": "Controles de regla de negocio."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.CrearSolicitudAmpliacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>419385365CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:usuarioIngreso>INSTALADOR</bts:usuarioIngreso>\n         <bts:fechaIngreso></bts:fechaIngreso>\n         <bts:usuarioAsignacion>INSTALADOR</bts:usuarioAsignacion>\n         <bts:datosSolicitud>\n            <bts:clienteUId>4</bts:clienteUId>\n            <bts:asesorId>1</bts:asesorId>\n            <bts:sucursalId>1</bts:sucursalId>\n            <bts:origenCaptacion>5</bts:origenCaptacion>\n            <bts:asunto>SIN ASUNTO</bts:asunto>\n            <bts:comentario>SOLICITUD DESDE API</bts:comentario>\n         </bts:datosSolicitud>\n      </bts:BTMicrofinanzas.CrearSolicitudAmpliacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudAmpliacion \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"usuarioIngreso\": \"INSTALADOR\",\n    \"usuarioAsignacion\": \"INSTALADOR\",\n    \"datosSolicitud\": {\n        \"clienteUId\": \"4\",\n        \"asesorId\": \"1\",\n        \"sucursalId\": \"1\",\n        \"origenCaptacion\": \"5\",\n        \"asunto\": \"SIN ASUNTO\",\n        \"comentario\": \"SOLICITUD DESDE API\",\n    }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.CrearSolicitudAmpliacionResponse>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>95</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>419385365CD285A89A23FBEE</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <solicitudUId>10847</solicitudUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTMicrofinanzas.CrearSolicitudAmpliacion</Servicio>\n            <Fecha>2019-09-10</Fecha>\n            <Hora>14:31:41</Hora>\n            <Requerimiento>95</Requerimiento>\n            <Numero>121</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTMicrofinanzas.CrearSolicitudAmpliacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n      \"solicitudUId\": \"10847\",\n      \"Btoutreq\": {\n         \"Canal\": \"BTDIGITAL\",\n         \"Servicio\": \"BTMicrofinanzas.CrearSolicitudAmpliacion\",\n         \"Fecha\": \"2019-09-10\",\n         \"Hora\": \"14:31:41\",\n         \"Requerimiento\": \"95\",\n         \"Numero\": \"121\",\n         \"Estado\": \"OK\"\n      }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSolicitudIndividual",
+      "fields": [
+        {
+          "Nombre": "asesorId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente."
+        },
+        {
+          "Nombre": "asunto",
+          "Tipo": "String",
+          "Comentarios": "Asunto de la solicitud."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de cliente que solicita el préstamo."
+        },
+        {
+          "Nombre": "comentario",
+          "Tipo": "String",
+          "Comentarios": "Comentario de la solicitud."
+        },
+        {
+          "Nombre": "origenCaptacion",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de origen captación."
+        },
+        {
+          "Nombre": "sucursalId",
+          "Tipo": "Int",
+          "Comentarios": "Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

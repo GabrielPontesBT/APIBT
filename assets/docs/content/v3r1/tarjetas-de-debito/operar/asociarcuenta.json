@@ -1,0 +1,56 @@
+{
+  "slug": "tarjetas-de-debito/operar/asociarcuenta",
+  "pageTitle": "Asociar Cuenta",
+  "description": "Método para asociar una cuenta vista a una tarjeta de débito dada.",
+  "pubName": "BTTarjetasDeDebito.AsociarCuenta",
+  "programa": "RBTPG377",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "tipoDeCuenta",
+      "Tipo": "Short",
+      "Comentarios": "Tipo de la cuenta a asociar."
+    },
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta de débito."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el Identificador de tarjeta de débito."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el Identificador de operación a asociar."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el tipo de cuenta a asociar."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.AsociarCuenta>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1080548031CD285A89A23FBE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>10</bts:operacionUId>\r\n         <bts:tipoDeCuenta>1</bts:tipoDeCuenta>\r\n         <bts:tarjetaUId>1</bts:tarjetaUId>\r\n      </bts:BTTarjetasDeDebito.AsociarCuenta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1518870407CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n\r\n    \"operacionUId\":\"10\",\r\n    \"tipoDeCuenta\":\"1\",\r\n    \"tarjetaUId\"  :\"1\"\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.AsociarCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento/>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1080548031CD285A89A23FBE</Token>\r\n            <Device/>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTTarjetasDeDebito.AsociarCuenta</Servicio>\r\n            <Fecha>2021-10-29</Fecha>\r\n            <Hora>14:27:12</Hora>\r\n            <Requerimiento/>\r\n            <Numero>8451</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.AsociarCuentaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1518870407CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTTarjetasDeDebito.AsociarCuenta\",\r\n        \"Fecha\": \"2021-10-29\",\r\n        \"Hora\": \"13:37:58\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 8449,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

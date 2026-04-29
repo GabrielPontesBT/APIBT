@@ -1,0 +1,68 @@
+{
+  "slug": "personas/actualizar/actualizarinformacionadicional",
+  "pageTitle": "Actualizar Información Adicional",
+  "description": "Método para actualizar la información adicional de una persona.",
+  "pubName": "BTPersonas.ActualizarInformacionAdicional",
+  "programa": "RBTPG517",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "sdtInformacionAdicional",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+      "Comentarios": "Listado de datos."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'UPD' para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El atributo [Identificador de información adicional] no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarInformacionAdicional>\n         <bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>55F1760133464FCBE2F3DD80</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>204</bts:personaUId>\n         <bts:sdtInformacionAdicional>\n            <bts:sBTDatoLista>\n               <bts:clave>Residencia</bts:clave>\n               <bts:valor>Si</bts:valor>\n            </bts:sBTDatoLista>\n         </bts:sdtInformacionAdicional>\n      </bts:BTPersonas.ActualizarInformacionAdicional>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarInformacionAdicional' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": 204,\n        \"sdtInformacionAdicional\": {\n          \"sBTDatoLista\": {\n            \"clave\": \"Residencia\",\n            \"valor\": \"Si\"\n          }\n        }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>55F1760133464FCBE2F3DD80</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>10573</Numero>\n            <Servicio>BTPersonas.ActualizarInformacionAdicional</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-10</Fecha>\n            <Hora>12:21:04</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ActualizarInformacionAdicionalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n   \"Btinreq\": {\n      \"Device\": \"1\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"16c1cFC33CD93505A5382434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n\n   \"Btoutreq\": {\n      \"Numero\": \"111399\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.ActualizarInformacionAdicional\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-10\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"12:21:52\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

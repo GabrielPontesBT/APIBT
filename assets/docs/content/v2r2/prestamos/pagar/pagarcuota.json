@@ -1,0 +1,104 @@
+{
+  "slug": "prestamos/pagar/pagarcuota",
+  "pageTitle": "Pagar Cuota",
+  "description": "Método para realizar el pago de cuota de un préstamo.",
+  "pubName": "BTPrestamos.PagarCuota",
+  "programa": "RBTPG034",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "1) Definir la transacción de pago, teniendo en cuenta que: \n\n\t- El préstamo se almacena en el preformato 1. \n\n\t- La cuenta vista de cobro se almacena en el preformato 2. \n\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \n\n3) Se debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación simulada."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe a pagar."
+    },
+    {
+      "Nombre": "operacionUId_cobro",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación de la cuenta vista de donde se cobrará el préstamo."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de movimiento [Asiento]."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación de préstamo."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de operación de cobro."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar importe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "No se recuperó la operación para el Identificador de Cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "El préstamo no pertenece al cliente."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La Cuenta indicada es incorrecta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.PagarCuota>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>321</bts:operacionUId>\n         <bts:clienteUId>161</bts:clienteUId>\n         <bts:Importe>161</bts:Importe>\n         <bts:operacionUId_cobro>281</bts:operacionUId_cobro>\n         <bts:referencia>PagarCuota</bts:referencia>\n      </bts:BTPrestamos.PagarCuota>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?PagarCuota=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 342,\n    \"clienteUId\": 161,\n    \"Importe\": 1000,\n    \"operacionUId_cobro\": 281,\n    \"referencia\": \"Cancelar\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.PagarCuotaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>dc7d30c0044A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>121</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>758</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.PagarCuota</Servicio>\n            <Requerimiento/>\n            <Fecha>2017-12-05</Fecha>\n            <Hora>13:32:15</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.PagarCuotaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"122\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"759\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.PagarCuota\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-05\",\n        \"Hora\": \"13:39:04\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "cash-management/obtener/obtenervaloresordenseguncampo",
+  "pageTitle": "Obtener Valores de Orden Según Campo",
+  "description": "Método para obtener los valores de los campos CASH recibidos para la orden que pertenezca al campo/valor recibido.",
+  "pubName": "BTCASHManagement.ObtenerValoresOrdenSegunCampo",
+  "programa": "RBTPGC33",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del Contrato CASH del Cliente."
+    },
+    {
+      "Nombre": "servicio",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "campoBusqueda",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Lista de valores de campos CASH a buscar."
+    },
+    {
+      "Nombre": "camposCash",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Lista de campos CASH a devolver valor."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de orden CASH."
+    },
+    {
+      "Nombre": "numeroLineaOrden",
+      "Tipo": "Int",
+      "Comentarios": "Número de línea de orden CASH."
+    },
+    {
+      "Nombre": "valoresCampoCASH",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Lista de valores de campos CASH."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030754",
+      "Descripción": "El campo de búsqueda no existe en el servicio recibido."
+    },
+    {
+      "Código": "1030755",
+      "Descripción": "No se encontró la orden para el campo/valor recibido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.ObtenerValoresOrdenSegunCampo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>60</bts:contratoId>\r\n         <bts:servicio>100</bts:servicio>\r\n         <bts:campoBusqueda>\r\n            <bts:tag>CSMD006NRO</bts:tag>\r\n            <bts:valor>47758889</bts:valor>\r\n         </bts:campoBusqueda>\r\n         <bts:camposCash>\r\n            <bts:sBTValorCampoCash>\r\n               <bts:tag></bts:tag>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTValorCampoCash>\r\n         </bts:camposCash>\r\n      </bts:BTCASHManagement.ObtenerValoresOrdenSegunCampo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerValoresOrdenSegunCampo' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"1\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"F971DE0C3D4C96A5ABC22DAD\"\r\n    },\r\n    \"contratoId\": 60,\r\n    \"servicio\": 100,\r\n    \"campoBusqueda\": {\r\n        \"tag\": \"CSMD006NRO\",\r\n        \"valor\": 47758889\r\n    },\r\n    \"camposCash\": {\r\n        \"sBTValorCampoCash\": {\r\n            \"tag\": \"\",\r\n            \"valor\": \"\"\r\n        }\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <ordenId>354</ordenId>\r\n         <numeroLineaOrden>1</numeroLineaOrden>\r\n         <valoresCampoCASH>\r\n            <sBTValorCampoCASH>\r\n               <tag/>\r\n               <valor/>\r\n            </sBTValorCampoCASH>\r\n         </valoresCampoCASH>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-19</Fecha>\r\n            <Hora>09:01:15</Hora>\r\n            <Numero>26093</Numero>\r\n            <Servicio>BTCASHManagement.ObtenerValoresOrdenSegunCampo</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"1\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"F971DE0C3D4C96A5ABC22DAD\"\r\n    },\r\n    \"ordenId\": 354,\r\n    \"numeroLineaOrden\": 1,\r\n    \"valoresCampoCASH\": {\r\n        \"sBTValorCampoCASH\": {\r\n            \"tag\": \"\",\r\n            \"valor\": \"\"\r\n        }\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2024-11-19\",\r\n        \"Hora\": \"09:01:15\",\r\n        \"Numero\": 26093,\r\n        \"Servicio\": \"BTCASHManagement.ObtenerValoresOrdenSegunCampo\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorCampoCASH",
+      "fields": [
+        {
+          "Nombre": "tag",
+          "Tipo": "String",
+          "Comentarios": "Tag del campo CASH."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor del campo CASH."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

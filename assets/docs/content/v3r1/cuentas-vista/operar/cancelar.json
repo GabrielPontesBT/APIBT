@@ -1,0 +1,158 @@
+{
+  "slug": "cuentas-vista/operar/cancelar",
+  "pageTitle": "Cancelar",
+  "description": "Método para realizar la liquidación de una cuenta vista.",
+  "pubName": "BTCuentasVista.Cancelar",
+  "programa": "RBTPG474",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cuenta cliente."
+    },
+    {
+      "Nombre": "cuentaLiquidacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la cuenta vista a cancelar."
+    },
+    {
+      "Nombre": "cuentaAcreditacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la cuenta vista de acreditación/cobro de la liquidación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento realizado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "La cuenta indicada no existe."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la cuenta."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La cuenta indicada no existe."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "La cuenta indicada no pertenece al cliente."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "La cuenta de cobro indicada no existe."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se pudo obtener el identificador para el movimiento realizado."
+    },
+    {
+      "Código": "30100",
+      "Descripción": "Error en la contabilización."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Operativa fuera de horario"
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Producto cancelado."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No se definió transacción a ejecutar."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "La Operación tiene Bloqueos; no puede ser liquidada."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "El producto se encuentra sobregirado, no es posible realizar la liquidación."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "La cuenta tiene Tarjeta de débito asociada; no puede ser liquidada."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "El producto paga la comisión del paquete, debe modificarse la instrucción."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "NO SE DEFINIÓ LA CARPETA EN LA QUE SE GUARDARÁ EL ARCHIVO."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "Usuario no autorizado a consultar esta Cuenta."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "Usuario no autorizado a consultar esta Cuenta."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "No es posible realizar la liquidación."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "El titular de la cuenta no es una persona física."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "No es posible operar con una cuenta conjunta."
+    },
+    {
+      "Código": "40018",
+      "Descripción": "La operación no permite operar."
+    },
+    {
+      "Código": "40019",
+      "Descripción": "La operación de acreditación no permite operar."
+    },
+    {
+      "Código": "40020",
+      "Descripción": "No se indicó cuenta de cobro/acreditación."
+    },
+    {
+      "Código": "40021",
+      "Descripción": "La operación a liquidar no puede ser CTS."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.Cancelar>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>65386256C895CD01D7DC796E</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>201</bts:clienteUId>\r\n         <bts:cuentaLiquidacionUId>310</bts:cuentaLiquidacionUId>\r\n         <bts:cuentaAcreditacionUId>311</bts:cuentaAcreditacionUId>\r\n      </bts:BTCuentasVista.Cancelar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\   \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\ \r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\": \"201\",\r\n\t\"cuentaLiquidacionUId\": \"310\",\r\n\t\"cuentaAcreditacionUId\": \"311\",\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasVista.CancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>65386256C895CD01D7DC796E</Token>\r\n         </Btinreq>\r\n         <movimientoUId>1032</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>12044</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasVista.Cancelar</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-23</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>15:19:22</Hora>\r\n         </Btoutreq>\r\n      </BTCuentasVista.CancelarResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": 1032,\r\n    \"Btoutreq\": {\r\n        \"Numero\": 823,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasVista.Cancelar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2018-11-12\",\r\n        \"Hora\": \"17:47:27\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

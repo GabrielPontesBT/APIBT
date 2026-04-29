@@ -1,0 +1,436 @@
+{
+  "slug": "partners/simular/simularofertasvehicular",
+  "pageTitle": "Simular Ofertas Vehicular",
+  "description": "Método para simular ofertas de préstamos vehicular.",
+  "pubName": "BTPartners.SimularOfertasVehicular",
+  "programa": "RBTPNV07",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartnerinreq\">sBTPartnerInReq</a>",
+      "Comentarios": "Datos del usuario."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "strAux",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo vacío para este método]."
+    },
+    {
+      "Nombre": "sdtDatosVehiculo",
+      "Tipo": "<a href=\"#sbtsimulacionveh\">sBTSimulacionVeh</a>",
+      "Comentarios": "Datos del vehículo."
+    },
+    {
+      "Nombre": "sdtDatosOferta",
+      "Tipo": "<a href=\"#sbtofertainput\">sBTOfertaInput</a>",
+      "Comentarios": "Datos de la oferta."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "simulacionId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "sdtOfertasPrestamo",
+      "Tipo": "<a href=\"#sbtofertaprestamo\">sBTOfertaPrestamo</a>",
+      "Comentarios": "Listado de ofertas del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de producto."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador]."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó el producto para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió Lista de cuotas a simular."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió partner ni canal."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El Partner no se encuentra habilitado."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No existe Partner con ese identificador."
+    },
+    {
+      "Código": "30017",
+      "Descripción": "No se recibió punto de venta."
+    },
+    {
+      "Código": "30018",
+      "Descripción": "No se recibió vendedor."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.SimularOfertasVehicular>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\r\n            <bts:vendedorUId>1</bts:vendedorUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n         </bts:sdtPartner>\r\n         <bts:clienteUId>342</bts:clienteUId>\r\n         <bts:sdtDatosVehiculo>\r\n            <bts:tipoCambioPref>1</bts:tipoCambioPref>\r\n            <bts:proveedorGps>2</bts:proveedorGps>\r\n            <bts:precio>33</bts:precio>\r\n            <bts:monedaPrecio>1</bts:monedaPrecio>\r\n            <bts:datosAdicionales>\r\n               <bts:sBTConcepto>\r\n                  <bts:texto></bts:texto>\r\n                  <bts:valor></bts:valor>\r\n                  <bts:concepto></bts:concepto>\r\n               </bts:sBTConcepto>\r\n            </bts:datosAdicionales>\r\n            <bts:versionUId>2</bts:versionUId>\r\n            <bts:kitMantenimiento>1</bts:kitMantenimiento>\r\n            <bts:estadoId>1</bts:estadoId>\r\n            <bts:entregaInicial>43</bts:entregaInicial>\r\n            <bts:tipoGps>1</bts:tipoGps>\r\n         </bts:sdtDatosVehiculo>\r\n         <bts:sdtDatosOferta>\r\n            <bts:pizarra>0</bts:pizarra>\r\n            <bts:fechaValor>2023-11-14</bts:fechaValor>\r\n            <bts:productoUId>48</bts:productoUId>\r\n            <bts:monto>8745</bts:monto>\r\n            <bts:comisionesCuota>\r\n               <bts:sBTComisionPrestamo>\r\n                  <bts:porcentaje></bts:porcentaje>\r\n                  <bts:descripcion></bts:descripcion>\r\n                  <bts:importe></bts:importe>\r\n                  <bts:codigo></bts:codigo>\r\n               </bts:sBTComisionPrestamo>\r\n            </bts:comisionesCuota>\r\n            <bts:periodoCuotas>35</bts:periodoCuotas>\r\n            <bts:diaPago>14</bts:diaPago>\r\n            <bts:ballon></bts:ballon>\r\n            <bts:tasa>36</bts:tasa>\r\n            <bts:cuotas>\r\n               <bts:Int>1</bts:Int>\r\n            </bts:cuotas>\r\n            <bts:fechaPrimerPago>2023-11-14</bts:fechaPrimerPago>\r\n            <bts:cuotasExtraordinarias>\r\n               <bts:sBTCuotaExtraordinaria>\r\n                  <bts:mes></bts:mes>\r\n                  <bts:porcentajeCuota></bts:porcentajeCuota>\r\n               </bts:sBTCuotaExtraordinaria>\r\n            </bts:cuotasExtraordinarias>\r\n            <bts:seguros>\r\n               <bts:sBTSeguroPrestamo>\r\n                  <bts:porcentaje></bts:porcentaje>\r\n                  <bts:descripcion></bts:descripcion>\r\n                  <bts:tipo></bts:tipo>\r\n                  <bts:importe></bts:importe>\r\n                  <bts:codigo></bts:codigo>\r\n               </bts:sBTSeguroPrestamo>\r\n            </bts:seguros>\r\n            <bts:comisiones>\r\n               <bts:sBTComisionPrestamo>\r\n                  <bts:porcentaje></bts:porcentaje>\r\n                  <bts:descripcion></bts:descripcion>\r\n                  <bts:importe></bts:importe>\r\n                  <bts:codigo></bts:codigo>\r\n               </bts:sBTComisionPrestamo>\r\n            </bts:comisiones>\r\n         </bts:sdtDatosOferta>\r\n      </bts:BTPartners.SimularOfertasVehicular>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularOfertasVehicular' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"sdtPartner\": {\r\n          \"puntoVentaUId\": 1,\r\n          \"vendedorUId\": 1,\r\n          \"partnerUId\": 1\r\n        },\r\n        \"clienteUId\": 342,\r\n        \"sdtDatosVehiculo\": {\r\n          \"tipoCambioPref\": 1,\r\n          \"proveedorGps\": 2,\r\n          \"precio\": 33,\r\n          \"monedaPrecio\": 1,\r\n          \"datosAdicionales\": {\r\n              \"sBTConcepto\": []\r\n          },\r\n          \"versionUId\": 2,\r\n          \"kitMantenimiento\": 1,\r\n          \"estadoId\": 1,\r\n          \"entregaInicial\": 43,\r\n          \"tipoGps\": 1\r\n        },\r\n        \"sdtDatosOferta\": {\r\n          \"pizarra\": 0,\r\n          \"fechaValor\": \"2023-11-14\",\r\n          \"productoUId\": 48,\r\n          \"monto\": 8745,\r\n          \"comisionesCuota\": {\r\n              \"sBTComisionPrestamo\": []\r\n          },\r\n          \"periodoCuotas\": 35,\r\n          \"diaPago\": 14,\r\n          \"ballon\": 0,\r\n          \"tasa\": 36,\r\n          \"cuotas\": {\r\n              \"Int\": [1]\r\n          },\r\n          \"fechaPrimerPago\": \"2023-11-14\",\r\n          \"cuotasExtraordinarias\": {\r\n              \"sBTCuotaExtraordinaria\": []\r\n          },\r\n          \"seguros\": {\r\n              \"sBTSeguroPrestamo\": []\r\n          },\r\n          \"comisiones\": {\r\n              \"sBTComisionPrestamo\": []\r\n          }\r\n        }\r\n    }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.SimularOfertasVehicularResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>b6a06c447cCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <simulacionId>256</simulacionId>\r\n         <sdtOfertasPrestamo>\r\n            <sBTOfertaPrestamo>\r\n               <otrosConceptos>0.00</otrosConceptos>\r\n               <fechaValor>2019-11-25</fechaValor>\r\n               <capital>1000.00</capital>\r\n               <totalComisiones>0.00</totalComisiones>\r\n               <valorCuota>101.81</valorCuota>\r\n               <cantidadCuotas>12</cantidadCuotas>\r\n               <tasa>23.000000</tasa>\r\n               <totalSeguros>0.00</totalSeguros>\r\n               <fechaPrimerPago>2020-05-05</fechaPrimerPago>\r\n               <totalIntereses>221.74</totalIntereses>\r\n               <fechaVencimiento>2021-04-05</fechaVencimiento>\r\n               <tea>25.590075</tea>\r\n               <plazo>497</plazo>\r\n               <totalAPagar>1221.74</totalAPagar>\r\n               <totalImpuestos>0.00</totalImpuestos>\r\n               <cft>25.030000</cft>\r\n            </sBTOfertaPrestamo>\r\n         </sdtOfertasPrestamo>\r\n         <Btoutreq>\r\n            <Numero>269</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.SimularOfertasVehicular</Servicio>\r\n            <Fecha>2024-05-07</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>12:42:48</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.SimularOfertasVehicularResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"simulacionId\": 256,\r\n    \"sdtOfertasPrestamo\": {\r\n        \"sBTOfertaPrestamo\": [\r\n            {\r\n                \"otrosConceptos\": 0.00,\r\n                \"fechaValor\": \"2019-11-25\",\r\n                \"capital\": 1000.00,\r\n                \"totalComisiones\": 0.00,\r\n                \"valorCuota\": 101.81,\r\n                \"cantidadCuotas\": 12,\r\n                \"tasa\": 23.000000,\r\n                \"totalSeguros\": 0.00,\r\n                \"fechaPrimerPago\": \"2020-05-05\",\r\n                \"totalIntereses\": 221.74,\r\n                \"fechaVencimiento\": \"2021-04-05\",\r\n                \"tea\": 25.590075,\r\n                \"plazo\": 497,\r\n                \"totalAPagar\": 1221.74,\r\n                \"totalImpuestos\": 0.00,\r\n                \"cft\": 25.030000\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 269,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPartners.SimularOfertasVehicular\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2024-05-07\",\r\n        \"Hora\": \"12:42:48\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartnerInReq",
+      "fields": [
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del Partner."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del punto de venta."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSimulacionVeh",
+      "fields": [
+        {
+          "Nombre": "datosAdicionales",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos adicionales."
+        },
+        {
+          "Nombre": "entregaInicial",
+          "Tipo": "Double",
+          "Comentarios": "Entrega inicial."
+        },
+        {
+          "Nombre": "estadoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del estado."
+        },
+        {
+          "Nombre": "kitMantenimiento",
+          "Tipo": "Double",
+          "Comentarios": "Kit de mantenimiento."
+        },
+        {
+          "Nombre": "monedaPrecio",
+          "Tipo": "Short",
+          "Comentarios": "Precio moneda."
+        },
+        {
+          "Nombre": "precio",
+          "Tipo": "Double",
+          "Comentarios": "Precio."
+        },
+        {
+          "Nombre": "proveedorGps",
+          "Tipo": "Int",
+          "Comentarios": "Proveedor del GPS."
+        },
+        {
+          "Nombre": "tipoCambioPref",
+          "Tipo": "Double",
+          "Comentarios": "Tipo de cambios."
+        },
+        {
+          "Nombre": "tipoGps",
+          "Tipo": "Int",
+          "Comentarios": "Tipo de GPS."
+        },
+        {
+          "Nombre": "versionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la versión."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTOfertaInput",
+      "fields": [
+        {
+          "Nombre": "ballon",
+          "Tipo": "Double",
+          "Comentarios": "Ballon."
+        },
+        {
+          "Nombre": "comisiones",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
+          "Comentarios": "Listado de comisiones."
+        },
+        {
+          "Nombre": "comisionesCuota",
+          "Tipo": "<a href=\"#sbtcomisionprestamo\">sBTComisionPrestamo</a>",
+          "Comentarios": "Listado de comisiones."
+        },
+        {
+          "Nombre": "cuotas",
+          "Tipo": "Int",
+          "Comentarios": "Listado de cuotas."
+        },
+        {
+          "Nombre": "cuotasExtraordinarias",
+          "Tipo": "<a href=\"#sbtcuotaextraordinaria\">sBTCuotaExtraordinaria</a>",
+          "Comentarios": "Listado de datos de cuota extraordinaria."
+        },
+        {
+          "Nombre": "diaPago",
+          "Tipo": "Byte",
+          "Comentarios": "Dia de pago."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de valor."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Double",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "periodoCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Periodo de cuotas."
+        },
+        {
+          "Nombre": "pizarra",
+          "Tipo": "Int",
+          "Comentarios": "Pizarra."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "seguros",
+          "Tipo": "<a href=\"#sbtseguroprestamo\">sBTSeguroPrestamo</a>",
+          "Comentarios": "Listado de seguros."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTComisionPrestamo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código de comisión."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la comisión."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe de la comisión."
+        },
+        {
+          "Nombre": "porcentaje",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de comisión."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCuotaExtraordinaria",
+      "fields": [
+        {
+          "Nombre": "mes",
+          "Tipo": "Byte",
+          "Comentarios": "Mes."
+        },
+        {
+          "Nombre": "porcentajeCuota",
+          "Tipo": "Double",
+          "Comentarios": "Porcentaje de cuota."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTSeguroPrestamo",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Codigo del seguro."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del seguro."
+        },
+        {
+          "Nombre": "importeFijo",
+          "Tipo": "Decimal",
+          "Comentarios": "Importe fijo del seguro."
+        },
+        {
+          "Nombre": "modificable",
+          "Tipo": "String",
+          "Comentarios": "Indica si es modificable."
+        },
+        {
+          "Nombre": "porcentaje",
+          "Tipo": "Decimal",
+          "Comentarios": "Porcentaje del seguro."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo del seguro."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTOfertaPrestamo",
+      "fields": [
+        {
+          "Nombre": "cantidadCuotas",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de las cuotas."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital del préstamo."
+        },
+        {
+          "Nombre": "cft",
+          "Tipo": "Double",
+          "Comentarios": "CFT del préstamo."
+        },
+        {
+          "Nombre": "fechaPrimerPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de primer pago."
+        },
+        {
+          "Nombre": "fechaValor",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        },
+        {
+          "Nombre": "fechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "Double",
+          "Comentarios": "Monto para otros conceptos."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "Int",
+          "Comentarios": "Plazo para el préstamo."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa del préstamo."
+        },
+        {
+          "Nombre": "tea",
+          "Tipo": "Double",
+          "Comentarios": "TEA del préstamo."
+        },
+        {
+          "Nombre": "totalAPagar",
+          "Tipo": "Double",
+          "Comentarios": "Total a pagar."
+        },
+        {
+          "Nombre": "totalComisiones",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para comisiones."
+        },
+        {
+          "Nombre": "totalImpuestos",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para impuestos."
+        },
+        {
+          "Nombre": "totalIntereses",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para intereses."
+        },
+        {
+          "Nombre": "totalSeguros",
+          "Tipo": "Double",
+          "Comentarios": "Monto total para seguros."
+        },
+        {
+          "Nombre": "valorCuota",
+          "Tipo": "Double",
+          "Comentarios": "Valor cuota."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

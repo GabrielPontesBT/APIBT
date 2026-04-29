@@ -1,0 +1,64 @@
+{
+  "slug": "prestamos/obtener/obtenerinformacionadicional",
+  "pageTitle": "Obtener Información Adicional",
+  "description": "Método para obtener la información adicional de un préstamo.",
+  "pubName": "BTPrestamos.ObtenerInformacionAdicional",
+  "programa": "RBTPG468",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtInformacionAdicional",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+      "Comentarios": "Información Adicional de datos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar identificador de operación."
+    },
+    {
+      "Código": "30013",
+      "Descripción": "No existe registro para el identificador único."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>D6F899CBE6D99B71A5E627F1</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>61</bts:operacionUId>\r\n      </bts:BTPrestamos.ObtenerInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerInformacionAdicional' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Token\": \"D6F899CBE6D99B71A5E627F1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"operacionUId\": 61\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>976EB9CBE6D99B71A5E627F1</Token>\r\n         </Btinreq>\r\n         <sdtInformacionAdicional>\r\n            <sBTDatoLista>\r\n\t\t   <clave>Impuesto s/Intereses en Cuota</clave>\r\n               <valor>S</valor>\r\n            </sBTDatoLista>\r\n            <sBTDatoLista>\r\n\t\t   <clave>Renovar a 30 dias</clave>\r\n               <valor>N</valor>\r\n            </sBTDatoLista>\r\n         </sdtInformacionAdicional>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>11261</Numero>\r\n            <Servicio>BTPrestamos.ObtenerInformacionAdicional</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-16</Fecha>\r\n            <Hora>15:48:08</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerInformacionAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"976EB9CBE6D99B71A5E627F1\"\r\n    },\r\n    \"sdtInformacionAdicional\": {\r\n        \"sBTDatoLista\": [\r\n            {\r\n                \"clave\": \"Impuesto s/Intereses en Cuota\",\r\n                \"valor\": \"S\"\r\n            },\r\n            {\r\n                \"clave\": \"Renovar a 30 dias\",\r\n                \"valor\": \"N\"\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 11261,\r\n        \"Servicio\": \"BTPrestamos.ObtenerInformacionAdicional\",\r\n        \"Estado\": \"OK\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2023-05-16\",\r\n        \"Hora\": \"15:48:08\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

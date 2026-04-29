@@ -1,0 +1,42 @@
+{
+  "slug": "cash-management/orden/autorizarorden",
+  "pageTitle": "Autorizar Orden",
+  "description": "Método para autorizar una orden determinada.",
+  "pubName": "BTCASHManagement.AutorizarOrden",
+  "programa": "RBTPGC08",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de orden."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "1030725",
+      "Descripción": "No se encontro orden a autorizar."
+    },
+    {
+      "Código": "1030722",
+      "Descripción": "El estado de la orden, no permite autorizar."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.AutorizarOrden>\r\n          <bts:Btinreq>\r\n            <bts:Device>001</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>1e39d33c824A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:ordenId>1414</bts:ordenId>\r\n      </bts:BTCASHManagement.AutorizarOrden>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AutorizarOrden=' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Postman-Token: 13ba5b1a-ee0f-44d1-a89c-33f50a9886ca,b554e081-e513-4d70-a311-824eb3e9218a' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"ordenId\": \"1416\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.AutorizarOrdenResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>001</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>1e39d33c824A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>7189</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCASHManagement.AutorizarOrden</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2019-04-25</Fecha>\r\n            <Hora>10:40:55</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.AutorizarOrdenResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 7190,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCASHManagement.AutorizarOrden\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-04-25\",\r\n        \"Hora\": \"10:45:20\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,174 @@
+{
+  "slug": "cash-management/obtener/obtenerdetalleordenseguncampo",
+  "pageTitle": "Obtener Detalle de Orden Según Campo",
+  "description": "Método para obtener la información de las líneas del detalle de pago para la orden que coincida con el campo/valor recibido.",
+  "pubName": "BTCASHManagement.ObtenerDetalleOrdenSegunCampo",
+  "programa": "RBTPGC26",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "contratoId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador del Contrato CASH del Cliente."
+    },
+    {
+      "Nombre": "servicioId",
+      "Tipo": "Short",
+      "Comentarios": "Servicio CASH."
+    },
+    {
+      "Nombre": "sdtValorCampoBusqueda",
+      "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
+      "Comentarios": "Valor del campo CASH a buscar."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ordenId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de orden CASH."
+    },
+    {
+      "Nombre": "numeroLineaOrden",
+      "Tipo": "Int",
+      "Comentarios": "Número de línea de orden CASH."
+    },
+    {
+      "Nombre": "cuentaDebito",
+      "Tipo": "Long",
+      "Comentarios": "Operación de débito."
+    },
+    {
+      "Nombre": "cantidadLineas",
+      "Tipo": "Int",
+      "Comentarios": "Cantidad de lineas."
+    },
+    {
+      "Nombre": "moneda",
+      "Tipo": "Short",
+      "Comentarios": "Moneda."
+    },
+    {
+      "Nombre": "importe",
+      "Tipo": "Double",
+      "Comentarios": "Importe total."
+    },
+    {
+      "Nombre": "referencia",
+      "Tipo": "String",
+      "Comentarios": "Referencia del pago o cobro."
+    },
+    {
+      "Nombre": "fechaPago",
+      "Tipo": "Date",
+      "Comentarios": "Fecha del pago."
+    },
+    {
+      "Nombre": "estado",
+      "Tipo": "String",
+      "Comentarios": "Estado."
+    },
+    {
+      "Nombre": "erroresPago",
+      "Tipo": "String",
+      "Comentarios": "Lista de mensajes de error del cabezal de pago."
+    },
+    {
+      "Nombre": "detallePagos",
+      "Tipo": "<a href=\"#sbtdetallepago\">sBTDetallePago</a>",
+      "Comentarios": "Listado del detalle de pago."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1030754",
+      "Descripción": "El campo de búsqueda no existe en el servicio recibido."
+    },
+    {
+      "Código": "1030755",
+      "Descripción": "No se encontró la orden para el campo/valor recibido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t<soapenv:Header/>\r\n\t<soapenv:Body>\r\n\t\t<bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Token>E0193ABA3B6E2D5976E40FA3</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:contratoId>2</bts:contratoId>\r\n\t\t\t<bts:servicioId>200</bts:servicioId>\r\n\t\t\t<bts:sdtValorCampoBusqueda>\r\n\t\t\t\t<bts:tag>CTABENEF</bts:tag>\r\n\t\t\t\t<bts:valor>00000002800001</bts:valor>\r\n\t\t\t</bts:sdtValorCampoBusqueda>\r\n\t\t</bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>\r\n\t</soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetalleOrdenSegunCampo' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"E0193ABA3B6E2D5976E40FA3\"\r\n    },\r\n    \"contratoId\": 2,\r\n    \"servicioId\": 200,\r\n    \"sdtValorCampoBusqueda\": {\r\n        \"tag\": \"CTABENEF\",\r\n        \"valor\": 2800001\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n\t<SOAP-ENV:Body>\r\n\t\t<BTCASHManagement.ObtenerDetalleOrdenSegunCampoResponse\r\n\t\t\txmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Token>E0193ABA3B6E2D5976E40FA3</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<ordenId>452</ordenId>\r\n\t\t\t<numeroLineaOrden>1</numeroLineaOrden>\r\n\t\t\t<cuentaDebito>194</cuentaDebito>\r\n\t\t\t<cantidadLineas>1</cantidadLineas>\r\n\t\t\t<moneda>0</moneda>\r\n\t\t\t<importe>1231.0</importe>\r\n\t\t\t<referencia/>\r\n\t\t\t<fechaPago>2025-05-27</fechaPago>\r\n\t\t\t<estado>Z</estado>\r\n\t\t\t<erroresPago>\r\n\t\t\t\t<item>Atención. No se obtuvo transacción para devolución.</item>\r\n\t\t\t</erroresPago>\r\n\t\t\t<detallePagos>\r\n\t\t\t\t<sBTDetallePago>\r\n\t\t\t\t\t<moneda>0</moneda>\r\n\t\t\t\t\t<beneficiarioCuenta>28001</beneficiarioCuenta>\r\n\t\t\t\t\t<estado>X</estado>\r\n\t\t\t\t\t<beneficiarioBanco>Pionero Bantotal</beneficiarioBanco>\r\n\t\t\t\t\t<importe>1231.0</importe>\r\n\t\t\t\t\t<beneficiarioId/>\r\n\t\t\t\t\t<mensajesError>\r\n\t\t\t\t\t\t<item>Error en ejecución de Proceso. Cancelación.</item>\r\n\t\t\t\t\t</mensajesError>\r\n\t\t\t\t\t<fechaPago>2025-05-27</fechaPago>\r\n\t\t\t\t\t<nombre>SOSA ANA</nombre>\r\n\t\t\t\t</sBTDetallePago>\r\n\t\t\t</detallePagos>\r\n\t\t\t<Erroresnegocio></Erroresnegocio>\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Numero>35123</Numero>\r\n\t\t\t\t<Estado>OK</Estado>\r\n\t\t\t\t<Servicio>BTCASHManagement.ObtenerDetalleOrdenSegunCampo</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Fecha>2025-05-07</Fecha>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Hora>17:27:58</Hora>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCASHManagement.ObtenerDetalleOrdenSegunCampoResponse>\r\n\t</SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"E0193ABA3B6E2D5976E40FA3\"\r\n    },\r\n    \"ordenId\": 452,\r\n    \"numeroLineaOrden\": 1,\r\n    \"cuentaDebito\": 194,\r\n    \"cantidadLineas\": 1,\r\n    \"moneda\": 0,\r\n    \"importe\": 1231.0,\r\n    \"referencia\": \"\",\r\n    \"fechaPago\": \"2025-05-27\",\r\n    \"estado\": \"Z\",\r\n    \"erroresPago\": {\r\n        \"item\": \"Atención. No se obtuvo transacción para devolución.\"\r\n    },\r\n    \"detallePagos\": {\r\n        \"sBTDetallePago\": {\r\n            \"moneda\": 0,\r\n            \"beneficiarioCuenta\": 28001,\r\n            \"estado\": \"X\",\r\n            \"beneficiarioBanco\": \"Pionero Bantotal\",\r\n            \"importe\": 1231.0,\r\n            \"beneficiarioId\": \"\",\r\n            \"mensajesError\": {\r\n                \"item\": \"Error en ejecución de Proceso. Cancelación.\"\r\n            },\r\n            \"fechaPago\": \"2025-05-27\",\r\n            \"nombre\": \"SOSA ANA\"\r\n        }\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 35123,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCASHManagement.ObtenerDetalleOrdenSegunCampo\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2025-05-07\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Hora\": \"17:27:58\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValorCampoCASH",
+      "fields": [
+        {
+          "Nombre": "tag",
+          "Tipo": "String",
+          "Comentarios": "Tag del campo CASH."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor del campo CASH."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDetallePago",
+      "fields": [
+        {
+          "Nombre": "beneficiarioBanco",
+          "Tipo": "String",
+          "Comentarios": "Banco del Beneficiario."
+        },
+        {
+          "Nombre": "beneficiarioCuenta",
+          "Tipo": "String",
+          "Comentarios": "Cuenta del Beneficiario."
+        },
+        {
+          "Nombre": "beneficiarioId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de Beneficiario."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado de la línea."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de Pago o Cobro."
+        },
+        {
+          "Nombre": "importe",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "mensajesError",
+          "Tipo": "String",
+          "Comentarios": "Lista de mensajes de la línea."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Short",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del Beneficiario de Pago."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

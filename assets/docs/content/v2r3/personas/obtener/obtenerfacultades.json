@@ -1,0 +1,244 @@
+{
+  "slug": "personas/obtener/obtenerfacultades",
+  "pageTitle": "Obtener Facultades",
+  "description": "Método para obtener un listado de las facultades de una persona.",
+  "pubName": "BTPersonas.ObtenerFacultades",
+  "programa": "RBTPG453",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personasUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtFacultades",
+      "Tipo": "<a href=\"#sbtfacultadespersona\">sBTFacultadesPersona</a>",
+      "Comentarios": "Listado de datos de facultades."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador único de persona."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la persona  para el Identificador: [Número de identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerFacultades>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>Instalador</bts:Usuario>\n            <bts:Token>5f7c5e6a6f99865B3A2E76CF</bts:Token>\n         </bts:Btinreq>\n         <bts:personasUId>183</bts:personasUId>\n      </bts:BTPersonas.ObtenerFacultades>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerDatos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n          \"Requerimiento\": 0,\n          \"Canal\": \"BTDIGITAL\",\n          \"Device\": \"GZ\",\n          \"Usuario\": \"INSTALADOR\",\n          \"Token\": \"5f7c5e6a6f99865B3A2E76CF\"\n        },\n        \"personaUId\": 183\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerFacultadesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>Instalador</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>5f7c5e6a6f99865B3A2E76CF</Token>\n         </Btinreq>\n         <sdtFacultades>\n            <facultadesOperacion>\n               <SdtsBTFacultadPersonaOperacion>\n                  <producto>\n                     <papel>$</papel>\n                     <moneda>$</moneda>\n                     <productoUId>41</productoUId>\n                     <nombre>CUENTA CORRIENTE, Cuenta corriente P.Física</nombre>\n                  </producto>\n                  <descripcion>Retiro de cuentas vista</descripcion>\n                  <operacionUId>1011</operacionUId>\n                  <tipo>Persona</tipo>\n                  <potestad>Titular</potestad>\n                  <grupo>\n                     <numero>1</numero>\n                     <monto>0.00</monto>\n                     <moneda>$</moneda>\n                     <papel>$</papel>\n                     <vigenciaHasta/>\n                     <codigoMoneda>0</codigoMoneda>\n                     <vigenciaDesde>2018-11-05</vigenciaDesde>\n                     <codigoPapel>0</codigoPapel>\n                  </grupo>\n                  <codigo>2</codigo>\n                  <categoria>-</categoria>\n               </SdtsBTFacultadPersonaOperacion>\n            </facultadesOperacion>\n            <facultadesCliente>\n               <SdtsBTFacultadPersonaCliente>\n                  <clienteUId>340</clienteUId>\n                  <descripcion>Firma de Cheques</descripcion>\n                  <potestad>Titular</potestad>\n                  <tipo>Categoría</tipo>\n                  <grupo>\n                     <numero>1</numero>\n                     <monto>2000000.00</monto>\n                     <moneda>$</moneda>\n                     <papel>$</papel>\n                     <vigenciaHasta>2022-09-23</vigenciaHasta>\n                     <codigoMoneda>0</codigoMoneda>\n                     <vigenciaDesde>2018-12-10</vigenciaDesde>\n                     <codigoPapel>0</codigoPapel>\n                  </grupo>\n                  <codigo>4</codigo>\n                  <categoria>A</categoria>\n               </SdtsBTFacultadPersonaCliente>\n            </facultadesCliente>\n         </sdtFacultades>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2957</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.ObtenerFacultades</Servicio>\n            <Fecha>2023-03-27</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>11:40:36</Hora>\n         </Btoutreq>\n      </BTPersonas.ObtenerFacultadesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n          \"Device\": \"GZ\",\n          \"Usuario\": \"Instalador\",\n          \"Requerimiento\": \"0\",\n          \"Canal\": \"BTDIGITAL\",\n          \"Token\": \"5f7c5e6a6f99865B3A2E76CF\"\n        },\n        \"sdtFacultades\": {\n          \"facultadesOperacion\": {\n            \"SdtsBTFacultadPersonaOperacion\": {\n              \"producto\": {\n                \"papel\": \"$\",\n                \"moneda\": \"$\",\n                \"productoUId\": \"41\",\n                \"nombre\": \"CUENTA CORRIENTE, Cuenta corriente P.Física\"\n              },\n              \"descripcion\": \"Retiro de cuentas vista\",\n              \"operacionUId\": \"1011\",\n              \"tipo\": \"Persona\",\n              \"potestad\": \"Titular\",\n              \"grupo\": {\n                \"numero\": \"1\",\n                \"monto\": \"0.00\",\n                \"moneda\": \"$\",\n                \"papel\": \"$\",\n                \"vigenciaHasta\": {\n                  \"-self-closing\": \"true\"\n                },\n                \"codigoMoneda\": \"0\",\n                \"vigenciaDesde\": \"2018-11-05\",\n                \"codigoPapel\": \"0\"\n              },\n              \"codigo\": \"2\",\n              \"categoria\": \"-\"\n            }\n          },\n          \"facultadesCliente\": {\n            \"SdtsBTFacultadPersonaCliente\": {\n              \"clienteUId\": \"340\",\n              \"descripcion\": \"Firma de Cheques\",\n              \"potestad\": \"Titular\",\n              \"tipo\": \"Categoría\",\n              \"grupo\": {\n                \"numero\": \"1\",\n                \"monto\": \"2000000.00\",\n                \"moneda\": \"$\",\n                \"papel\": \"$\",\n                \"vigenciaHasta\": \"2022-09-23\",\n                \"codigoMoneda\": \"0\",\n                \"vigenciaDesde\": \"2018-12-10\",\n                \"codigoPapel\": \"0\"\n              },\n              \"codigo\": \"4\",\n              \"categoria\": \"A\"\n            }\n          }\n        },\n        \"Erroresnegocio\": \"\",\n        \"Btoutreq\": {\n          \"Canal\": \"BTDIGITAL\",\n          \"Servicio\": \"BTPersonas.ObtenerFacultades\",\n          \"Fecha\": \"2022-11-29\",\n          \"Hora\": \"10:23:37\",\n          \"Requerimiento\": 1,\n          \"Numero\": 486,\n          \"Estado\": \"OK\"\n        }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTFacultadesPersona",
+      "fields": [
+        {
+          "Nombre": "sBTFacultadesCliente",
+          "Tipo": "<a href=\"#sbtfacultadpersonacliente\">sBTFacultadPersonaCliente</a>",
+          "Comentarios": "Listado de datos de cliente."
+        },
+        {
+          "Nombre": "sBTFacultadesOperacion",
+          "Tipo": "<a href=\"#sbtfacultadpersonaoperacion\">sBTFacultadPersonaOperacion</a>",
+          "Comentarios": "Listado de datos de operación."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadPersonaCliente",
+      "fields": [
+        {
+          "Nombre": "categoria",
+          "Tipo": "String",
+          "Comentarios": "Categoría."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "grupo",
+          "Tipo": "<a href=\"#sbtfacultadgrupopersona\">sBTFacultadGrupoPersona</a>",
+          "Comentarios": "Listado de grupos de la facultad."
+        },
+        {
+          "Nombre": "potestad",
+          "Tipo": "String",
+          "Comentarios": "Potestad."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadPersonaOperacion",
+      "fields": [
+        {
+          "Nombre": "categoria",
+          "Tipo": "String",
+          "Comentarios": "Categoria."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "grupo",
+          "Tipo": "<a href=\"#sbtfacultadgrupopersona\">sBTFacultadGrupoPersona</a>",
+          "Comentarios": "Listado de grupos de la facultad."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación."
+        },
+        {
+          "Nombre": "potestad",
+          "Tipo": "String",
+          "Comentarios": "Potestad."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos de producto."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTFacultadGrupoPersona",
+      "fields": [
+        {
+          "Nombre": "codigoMoneda",
+          "Tipo": "Int",
+          "Comentarios": "Código de moneda."
+        },
+        {
+          "Nombre": "codigoPapel",
+          "Tipo": "Int",
+          "Comentarios": "Código de papel."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Moneda."
+        },
+        {
+          "Nombre": "monto",
+          "Tipo": "Decimal",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "numero",
+          "Tipo": "Short",
+          "Comentarios": "Número de grupo."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Papel."
+        },
+        {
+          "Nombre": "vigenciaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia desde."
+        },
+        {
+          "Nombre": "vigenciaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vigencia hasta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "otrosConceptos",
+          "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
+          "Comentarios": "Datos de otros conceptos."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

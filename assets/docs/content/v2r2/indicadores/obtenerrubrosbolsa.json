@@ -1,0 +1,114 @@
+{
+  "slug": "indicadores/obtenerrubrosbolsa",
+  "pageTitle": "Obtener Rubros Bolsa",
+  "description": "Método para obtener posibles rubros de bolsa ingresados en el sistema.",
+  "pubName": "BTIndicadores.ObtenerRubrosBolsa",
+  "programa": "RBTPG708",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtRubrosBolsa",
+      "Tipo": "<a href=\"#sbtrubrobolsa\">sBTRubroBolsa</a>",
+      "Comentarios": "Listado de rubros de bolsa."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTIndicadores.ObtenerRubrosBolsa>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>959C2E0AEF210ABC0D8AA8F7</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>?</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n      </bts:BTIndicadores.ObtenerRubrosBolsa>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerRubrosBolsa' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"959C2E0AEF210ABC0D8AA8F7\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTIndicadores.ObtenerRubrosBolsaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>?</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>959C2E0AEF210ABC0D8AA8F7</Token>\r\n         </Btinreq>\r\n         <sdtRubrosBolsa>\r\n            <sBTRubroBolsa>\r\n               <moneda>0</moneda>\r\n               <cuentaCliente>0</cuentaCliente>\r\n               <signoMoneda>$</signoMoneda>\r\n               <ocurrencias>9</ocurrencias>\r\n               <descripcion>Mon.Y Bill.En Empresa-Ventanilla</descripcion>\r\n               <subOperacion>400</subOperacion>\r\n               <rubro>101002001</rubro>\r\n               <papel>0</papel>\r\n               <nombreSucursal>Casa Matriz</nombreSucursal>\r\n               <nombrePapel>Billete</nombrePapel>\r\n               <empresa>1</empresa>\r\n               <tipoOperacion>0</tipoOperacion>\r\n               <operacion>0</operacion>\r\n               <sucursal>1</sucursal>\r\n               <nombreEmpresa>Finaxis</nombreEmpresa>\r\n            </sBTRubroBolsa>\r\n            <sBTRubroBolsa>\r\n               ...\r\n            </sBTRubroBolsa>\r\n            ...\r\n         </sdtRubrosBolsa>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>11987</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTIndicadores.ObtenerRubrosBolsa</Servicio>\r\n            <Requerimiento>?</Requerimiento>\r\n            <Fecha>2023-05-22</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>13:55:55</Hora>\r\n         </Btoutreq>\r\n      </BTIndicadores.ObtenerRubrosBolsaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"1\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"959C2E0AEF210ABC0D8AA8F7\"\r\n    },\r\n    \"sdtRubrosBolsa\": {\r\n        \"sBTRubroBolsa\": [\r\n            {\r\n                \"moneda\": 0,\r\n                \"cuentaCliente\": 0,\r\n                \"signoMoneda\": \"$\",\r\n                \"ocurrencias\": 9,\r\n                \"descripcion\": \"Mon.Y Bill.En Empresa-Ventanilla\",\r\n                \"subOperacion\": 400,\r\n                \"rubro\": 101002001,\r\n                \"papel\": 0,\r\n                \"nombreSucursal\": \"Casa Matriz\",\r\n                \"nombrePapel\": \"Billete\",\r\n                \"empresa\": 1,\r\n                \"tipoOperacion\": 0,\r\n                \"operacion\": 0,\r\n                \"sucursal\": 1,\r\n                \"nombreEmpresa\": \"Finaxis\"\r\n            },\r\n            \"...\"\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 11987,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTIndicadores.ObtenerRubrosBolsa\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2023-05-22\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Hora\": \"13:55:55\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTRubroBolsa",
+      "fields": [
+        {
+          "Nombre": "cuentaCliente",
+          "Tipo": "Int",
+          "Comentarios": "Cuenta cliente."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Nombre del rubro."
+        },
+        {
+          "Nombre": "empresa",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "nombreEmpresa",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la empresa."
+        },
+        {
+          "Nombre": "nombrePapel",
+          "Tipo": "String",
+          "Comentarios": "Nombre del papel."
+        },
+        {
+          "Nombre": "nombreSucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "ocurrencias",
+          "Tipo": "Int",
+          "Comentarios": "Ocurrencias."
+        },
+        {
+          "Nombre": "operacion",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de operación."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de papel."
+        },
+        {
+          "Nombre": "rubro",
+          "Tipo": "Int",
+          "Comentarios": "Número de rubro."
+        },
+        {
+          "Nombre": "signoMoneda",
+          "Tipo": "String",
+          "Comentarios": "Signo de la moneda."
+        },
+        {
+          "Nombre": "subOperacion",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sub operación."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "tipoOperacion",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de tipo de operación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

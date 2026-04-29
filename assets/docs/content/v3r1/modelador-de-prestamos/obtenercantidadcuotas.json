@@ -1,0 +1,88 @@
+{
+  "slug": "modelador-de-prestamos/obtenercantidadcuotas",
+  "pageTitle": "Obtener Cantidad Cuotas",
+  "description": "Método para obtener la cantidad de cuotas parametrizadas de un producto de préstamo.",
+  "pubName": "BTModeladorPrestamos.ObtenerCantidadCuotas",
+  "programa": "RBTPG350",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de producto."
+    },
+    {
+      "Nombre": "parametro",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Valor '409' definido por defecto]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "minimo",
+      "Tipo": "Long",
+      "Comentarios": "Valor mínimo de cantidad de cuotas."
+    },
+    {
+      "Nombre": "maximo",
+      "Tipo": "Long",
+      "Comentarios": "Valor máximo de cantidad de cuotas."
+    },
+    {
+      "Nombre": "valorPorDefecto",
+      "Tipo": "Long",
+      "Comentarios": "Valor por defecto de cantidad de cuotas."
+    },
+    {
+      "Nombre": "tipo",
+      "Tipo": "Long",
+      "Comentarios": "Tipo de cuotas."
+    },
+    {
+      "Nombre": "sdtListaValores",
+      "Tipo": "<a href=\"#sbtvalor\">sBTValor</a>",
+      "Comentarios": "Listado de valores."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTModeladorPrestamos.ObtenerCantidadCuotas>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>194002532CD285A89A23FBEE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>105</bts:productoUId>\r\n      </bts:BTModeladorPrestamos.ObtenerCantidadCuotas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1511184612CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"productoUId\": \"105\"\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTModeladorPrestamos.ObtenerCantidadCuotasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento/>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>194002532CD285A89A23FBEE</Token>\r\n            <Device/>\r\n         </Btinreq>\r\n         <minimo>0</minimo>\r\n         <maximo>0</maximo>\r\n         <valorPorDefecto>0</valorPorDefecto>\r\n         <tipo>Lista</tipo>\r\n         <sdtListaValores>\r\n            <sBTValor>\r\n               <valor>6</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>10</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>12</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>15</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>18</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>20</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>24</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>36</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>60</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>90</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>120</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>180</valor>\r\n            </sBTValor>\r\n            <sBTValor>\r\n               <valor>240</valor>\r\n            </sBTValor>\r\n         </sdtListaValores>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTModeladorPrestamos.ObtenerCantidadCuotas</Servicio>\r\n            <Fecha>2021-11-03</Fecha>\r\n            <Hora>18:08:24</Hora>\r\n            <Requerimiento/>\r\n            <Numero>8631</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTModeladorPrestamos.ObtenerCantidadCuotasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1511184612CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"minimo\": 0,\r\n    \"maximo\": 0,\r\n    \"valorPorDefecto\": 0,\r\n    \"tipo\": \"Lista\",\r\n    \"sdtListaValores\": {\r\n        \"sBTValor\": [\r\n            {\r\n                \"valor\": 6\r\n            },\r\n            {\r\n                \"valor\": 10\r\n            },\r\n            {\r\n                \"valor\": 12\r\n            },\r\n            {\r\n                \"valor\": 15\r\n            },\r\n            {\r\n                \"valor\": 18\r\n            },\r\n            {\r\n                \"valor\": 20\r\n            },\r\n            {\r\n                \"valor\": 24\r\n            },\r\n            {\r\n                \"valor\": 36\r\n            },\r\n            {\r\n                \"valor\": 60\r\n            },\r\n            {\r\n                \"valor\": 90\r\n            },\r\n            {\r\n                \"valor\": 120\r\n            },\r\n            {\r\n                \"valor\": 180\r\n            },\r\n            {\r\n                \"valor\": 240\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerCantidadCuotas\",\r\n        \"Fecha\": \"2021-11-03\",\r\n        \"Hora\": \"17:30:49\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 8556,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValor",
+      "fields": [
+        {
+          "Nombre": "valor",
+          "Tipo": "Long",
+          "Comentarios": "Valor de cantidad de cuotas."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

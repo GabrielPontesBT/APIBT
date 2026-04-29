@@ -1,0 +1,91 @@
+{
+  "slug": "configuracion-bantotal/parametros-generales/obtenerdetalledecalendario",
+  "pageTitle": "Obtener Detalle de Calendario",
+  "description": "Método para obtener el detalle de los días de un determinado calendario.",
+  "pubName": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
+  "programa": "RBTPG285",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "calendarioId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de calendario."
+    },
+    {
+      "Nombre": "fechaInicio",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de inicio de visualización de calendario."
+    },
+    {
+      "Nombre": "fechaFin",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de fin de visualización de calendario."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "descripcionCalendario",
+      "Tipo": "String",
+      "Comentarios": "Descripción del calendario."
+    },
+    {
+      "Nombre": "sdtDetalleCalendario",
+      "Tipo": "<a href=\"#sbtdiacalendario\">sBTDiaCalendario</a>",
+      "Comentarios": "Detalle de la consulta del calendario."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de calendario."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió fecha de inicio."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió fecha de fin."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe calendario con el identificador ingresado."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No se pudo obtener detalle para los datos ingresados ingresados."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>MC</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>200f0b8b654A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:calendarioId>1</bts:calendarioId>\r\n         <bts:fechaInicio>2020-10-01</bts:fechaInicio>\r\n         <bts:fechaFin>2020-10-31</bts:fechaFin>\r\n      </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X GET \\\r\n   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados' \\\r\n   -H 'cache-control: no-cache' \\\r\n   -H 'content-type: application/json' \\\r\n   -d '{\r\n   \"Btinreq\": {\r\n        \"Device\": \"bms\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\r\n    },\r\n\t\"calendarioId\":1,\r\n\t\"fechaInicio\":\"2020-10-01\",\r\n\t\"fechaFin\":\"2020-10-31\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>MC</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>200f0b8b654A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <descripcionCalendario>Calendario 1</descripcionCalendario>\r\n         <sdtDetalleCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-01</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-02</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-03</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-04</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-05</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-06</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-07</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-08</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-09</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-10</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-11</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-12</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-13</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-14</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-15</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-16</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-17</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-18</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-19</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-20</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-21</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-22</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-23</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-24</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-25</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-26</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-27</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-28</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-29</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-30</fecha>  \r\n               <habil>S</habil>  \r\n            </sBTDiaCalendario>  \r\n            <sBTDiaCalendario>  \r\n               <fecha>2020-10-31</fecha>  \r\n               <habil>N</habil>  \r\n            </sBTDiaCalendario>  \r\n         </sdtDetalleCalendario> \r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>109132</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleCalendario</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2020-11-24</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>10:41:08</Hora>\r\n         </Btoutreq>\r\n      </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n\t\t\"Device\": \"MC\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"200f0b8b654A8B5C60A82434\"\r\n\t},\r\n\t\"descripcionCalendario\": \"Calendario 1\",\r\n\t\"sdtDetalleCalendario\": {  \r\n\t  \"sBTDiaCalendario\": [  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-01\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-02\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-03\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-04\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-05\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-06\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-07\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-08\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-09\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-10\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-11\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-12\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-13\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-14\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-15\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-16\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-17\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-18\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-19\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-20\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-21\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-22\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-23\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-24\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-25\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-26\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-27\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-28\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-29\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-30\",  \r\n\t\t  \"habil\": \"S\"  \r\n\t\t},  \r\n\t\t{  \r\n\t\t  \"fecha\": \"2020-10-31\",  \r\n\t\t  \"habil\": \"N\"  \r\n\t\t}  \r\n\t  ]  \r\n\t},  \r\n\t\"Btoutreq\": {\r\n\t  \"Numero\": 109132,\r\n\t  \"Estado\": \"OK\",\r\n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleCalendario\",\r\n\t  \"Requerimiento\": 1,\r\n\t  \"Fecha\": \"2020-11-24\",\r\n\t  \"Canal\": \"BTDIGITAL\",\r\n\t  \"Hora\": \"10:41:08\"\r\n\t}\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDiaCalendario",
+      "fields": [
+        {
+          "Nombre": "fecha",
+          "Tipo": "Date",
+          "Comentarios": "Día del calendario."
+        },
+        {
+          "Nombre": "habil",
+          "Tipo": "String",
+          "Comentarios": "¿Día hábil? (S/N)"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

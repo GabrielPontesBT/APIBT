@@ -1,0 +1,79 @@
+{
+  "slug": "workflow/obtenerprocesoshabilitados",
+  "pageTitle": "Obtener Procesos Habilitados",
+  "description": "Método para obtener un listado de los procesos habilitados de Workflow.",
+  "pubName": "BTWorkflow.ObtenerProcesosHabilitados",
+  "programa": "RBTPG515",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtProcesos",
+      "Tipo": "<a href=\"#sbtprocesowf\">sBTProcesoWF</a>",
+      "Comentarios": "Listado de procesos habilitados."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n   <soapenv:Header/> \r\n   <soapenv:Body> \r\n      <bts:BTWorkflow.ObtenerProcesosHabilitados> \r\n         <bts:Btinreq> \r\n            <bts:Requerimiento>2</bts:Requerimiento> \r\n            <bts:Device>FP</bts:Device> \r\n            <bts:Canal>BTDIGITAL</bts:Canal> \r\n            <bts:Usuario>INSTALADOR</bts:Usuario> \r\n            <bts:Token>3789c5608bCD285A89A23FBE</bts:Token> \r\n         </bts:Btinreq> \r\n      </bts:BTWorkflow.ObtenerProcesosHabilitados> \r\n   </soapenv:Body> \r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTWorkflow?ObtenerProcesosHabilitados' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 2,\r\n        \"Device\": \"FP\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"3789c5608bCD285A89A23FBE\"\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"> \r\n   <SOAP-ENV:Body> \r\n      <BTWorkflow.ObtenerProcesosHabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\"> \r\n         <Btinreq> \r\n            <Device>FP</Device> \r\n            <Usuario>INSTALADOR</Usuario> \r\n            <Requerimiento>2</Requerimiento> \r\n            <Canal>BTDIGITAL</Canal> \r\n            <Token>3789c5608bCD285A89A23FBE</Token> \r\n         </Btinreq> \r\n         <sBTProcesosWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>3</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2014-05-26</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2014-07-28</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>ALTA PRODUCTO</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>6</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2013-08-06</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2013-08-06</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>LIM_CAJA_SUC</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>8</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2014-07-21</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2014-07-21</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>Aplicaciones_Móviles</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>9</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-09-09</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2015-09-09</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>ALTA_MOD_CONTRATO</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>10</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-09-14</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2013-02-26</fechaCreacion> \r\n               <idVersion>2</idVersion> \r\n               <nombre>Créditos Individuales</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>11</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-09-14</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2013-02-26</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>Créditos Grupales</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>12</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-09-14</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2013-02-26</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>Creditos Retorno</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>13</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-09-14</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2013-02-26</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>Créditos Nuevos Reducido</nombre> \r\n            </sBTProcesoWF> \r\n            <sBTProcesoWF> \r\n               <idProceso>14</idProceso> \r\n               <descripcion/> \r\n               <fechaActualizacion>2015-05-13</fechaActualizacion> \r\n               <warning>0.00</warning> \r\n               <deadline>0.00</deadline> \r\n               <fechaCreacion>2015-05-06</fechaCreacion> \r\n               <idVersion>1</idVersion> \r\n               <nombre>FLUJO_ALERTAS</nombre> \r\n            </sBTProcesoWF> \r\n         </sBTProcesosWF> \r\n         <Erroresnegocio></Erroresnegocio> \r\n         <Btoutreq> \r\n            <Numero>31109</Numero> \r\n            <Estado>OK</Estado> \r\n            <Servicio>BTWorkflow.ObtenerProcesosHabilitados</Servicio> \r\n            <Requerimiento>2</Requerimiento> \r\n            <Fecha>2022-11-29</Fecha> \r\n            <Hora>13:04:36</Hora> \r\n            <Canal>BTDIGITAL</Canal> \r\n         </Btoutreq> \r\n      </BTWorkflow.ObtenerProcesosHabilitadosResponse> \r\n   </SOAP-ENV:Body> \r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"FP\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 2,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"3789c5608bCD285A89A23FBE\"\r\n    },\r\n    \"sBTProcesosWF\": {\r\n        \"sBTProcesoWF\": [\r\n            {\r\n                \"idProceso\": 3,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2014-05-26\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2014-07-28\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"ALTA PRODUCTO\"\r\n            },\r\n            {\r\n                \"idProceso\": 6,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2013-08-06\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2013-08-06\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"LIM_CAJA_SUC\"\r\n            },\r\n            {\r\n                \"idProceso\": 8,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2014-07-21\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2014-07-21\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"Aplicaciones_Móviles\"\r\n            },\r\n            {\r\n                \"idProceso\": 9,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-09-09\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2015-09-09\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"ALTA_MOD_CONTRATO\"\r\n            },\r\n            {\r\n                \"idProceso\": 10,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-09-14\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2013-02-26\",\r\n                \"idVersion\": 2,\r\n                \"nombre\": \"Créditos Individuales\"\r\n            },\r\n            {\r\n                \"idProceso\": 11,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-09-14\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2013-02-26\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"Créditos Grupales\"\r\n            },\r\n            {\r\n                \"idProceso\": 12,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-09-14\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2013-02-26\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"Creditos Retorno\"\r\n            },\r\n            {\r\n                \"idProceso\": 13,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-09-14\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2013-02-26\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"Créditos Nuevos Reducido\"\r\n            },\r\n            {\r\n                \"idProceso\": 14,\r\n                \"descripcion\": \"\",\r\n                \"fechaActualizacion\": \"2015-05-13\",\r\n                \"warning\": 0.00,\r\n                \"deadline\": 0.00,\r\n                \"fechaCreacion\": \"2015-05-06\",\r\n                \"idVersion\": 1,\r\n                \"nombre\": \"FLUJO_ALERTAS\"\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 31109,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTWorkflow.ObtenerProcesosHabilitados\",\r\n        \"Requerimiento\": 2,\r\n        \"Fecha\": \"2022-11-29\",\r\n        \"Hora\": \"13:04:36\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProcesoWF",
+      "fields": [
+        {
+          "Nombre": "deadline",
+          "Tipo": "Double",
+          "Comentarios": "Tiempo de deadline."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "fechaActualizacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de actualización."
+        },
+        {
+          "Nombre": "fechaCreacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de creación."
+        },
+        {
+          "Nombre": "idProceso",
+          "Tipo": "Long",
+          "Comentarios": "Código de proceso."
+        },
+        {
+          "Nombre": "idVersion",
+          "Tipo": "Short",
+          "Comentarios": "Versión del proceso."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del proceso."
+        },
+        {
+          "Nombre": "warning",
+          "Tipo": "Double",
+          "Comentarios": "Tiempo de warning."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

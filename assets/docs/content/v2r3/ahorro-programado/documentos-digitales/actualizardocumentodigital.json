@@ -1,0 +1,91 @@
+{
+  "slug": "ahorro-programado/documentos-digitales/actualizardocumentodigital",
+  "pageTitle": "Actualizar Documento Digital",
+  "description": "Método para actualizar un documento digital a un ahorro programado.",
+  "pubName": "BTAhorroProgramado.ActualizarDocumentoDigital",
+  "programa": "RBTPG565",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "tipoDocumentoId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del tipo de documento digital."
+    },
+    {
+      "Nombre": "nombre",
+      "Tipo": "String",
+      "Comentarios": "Nombre del documento."
+    },
+    {
+      "Nombre": "archivoCodificado",
+      "Tipo": "String",
+      "Comentarios": "Archivo a asociar codificado en Base 64."
+    },
+    {
+      "Nombre": "fechaEmision",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de emisión del documento (en caso que corresponda)."
+    },
+    {
+      "Nombre": "fechaVencimiento",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de vencimiento."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de instancia de documento digital."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió nombre."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La operación ingresada no corresponde a un ahorro programado."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recuperó el identificador para la operación recibida."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "Ocurrió un error al recibir el archivo, puede que el mismo este corrupto."
+    },
+    {
+      "Código": "40993",
+      "Descripción": "Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío."
+    },
+    {
+      "Código": "40994",
+      "Descripción": "Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ActualizarDocumentoDigital>\n         <bts:Btinreq>\n\t\t  <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>4724b65a9d4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>21</bts:operacionUId>\n         <bts:documentoId>86</bts:documentoId>\n         <bts:nombre>Prueba actualizar</bts:nombre>\n         <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>\n         <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>\n         <bts:fechaEmision>2010-10-10</bts:fechaEmision>\n      </bts:BTAhorroProgramado.ActualizarDocumentoDigital>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ActualizarDocumentoDigital=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\":\"21\",\n    \"documentoId\":\"86\",\n    \"nombre\":\"Prueba actualizar\",\n    \"archivoCodificado\":\"RG9jdW1lbnRvIGRlIGVqZW1wbG8=\",\n    \"fechaEmision\":\"2010-10-10\",\n    \"fechaVencimiento\": \"2020-10-10\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ActualizarDocumentoDigitalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10.12.10.159</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b98a5858014A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>3105</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTAhorroProgramado.ActualizarDocumentoDigital</Servicio>\n            <Fecha>2018-11-21</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>12:00:50</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTAhorroProgramado.ActualizarDocumentoDigitalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"3103\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTAhorroProgramado.ActualizarDocumentoDigital\",\n        \"Fecha\": \"2018-11-21\",\n        \"Requerimiento\": \"1\",\n        \"Hora\": \"12:00:07\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

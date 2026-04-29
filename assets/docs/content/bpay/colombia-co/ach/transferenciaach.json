@@ -1,0 +1,232 @@
+{
+  "slug": "colombia-co/ach/transferenciaach",
+  "pageTitle": "Alta Transferencia ACH",
+  "description": "Método para dar de alta una transferencia ACH.",
+  "pubName": "BTTransferenciasACH.TransferenciaACH",
+  "programa": "PBTPCO300",
+  "scope": "Colombia",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "Canal",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Canal."
+    },
+    {
+      "Nombre": "IdCamara",
+      "Tipo": "Int",
+      "Obligatoriedad": "M",
+      "Comentarios": "Id de cámara."
+    },
+    {
+      "Nombre": "OriPais",
+      "Tipo": "Short",
+      "Obligatoriedad": "N",
+      "Comentarios": "País origen."
+    },
+    {
+      "Nombre": "OriTDoc",
+      "Tipo": "Short",
+      "Obligatoriedad": "N",
+      "Comentarios": "Tipo documento ordenante."
+    },
+    {
+      "Nombre": "OriNDoc",
+      "Tipo": "String",
+      "Obligatoriedad": "N",
+      "Comentarios": "Documento ordenante."
+    },
+    {
+      "Nombre": "OriNombre",
+      "Tipo": "String",
+      "Obligatoriedad": "N",
+      "Comentarios": "Nombre ordenante."
+    },
+    {
+      "Nombre": "OperacionUId",
+      "Tipo": "Long",
+      "Obligatoriedad": "M",
+      "Comentarios": "Operación Uid ordenante (BTSIO00Id)."
+    },
+    {
+      "Nombre": "CuentaOrigen",
+      "Tipo": "String",
+      "Obligatoriedad": "N",
+      "Comentarios": "Cuenta ordenante."
+    },
+    {
+      "Nombre": "BancoDestino",
+      "Tipo": "Short",
+      "Obligatoriedad": "M",
+      "Comentarios": "Banco Destino."
+    },
+    {
+      "Nombre": "BenTDoc",
+      "Tipo": "Short",
+      "Obligatoriedad": "M",
+      "Comentarios": "Tipo documento Destino."
+    },
+    {
+      "Nombre": "BenNDoc",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Documento Destino."
+    },
+    {
+      "Nombre": "BenNombre",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nombre Destino."
+    },
+    {
+      "Nombre": "CuentaDestino",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Cuenta Destino."
+    },
+    {
+      "Nombre": "Importe",
+      "Tipo": "Double",
+      "Obligatoriedad": "M",
+      "Comentarios": "Import."
+    },
+    {
+      "Nombre": "CodigoServicio",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Tipo documento Destino."
+    },
+    {
+      "Nombre": "CodigoTransaccion",
+      "Tipo": "Short",
+      "Obligatoriedad": "M",
+      "Comentarios": "Documento Destino."
+    },
+    {
+      "Nombre": "ConceptoOperacion",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Nombre Destino."
+    },
+    {
+      "Nombre": "Addenda",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Cuenta Destino."
+    },
+    {
+      "Nombre": "Simular",
+      "Tipo": "String",
+      "Obligatoriedad": "M",
+      "Comentarios": "Import."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "Comision",
+      "Tipo": "Double",
+      "Comentarios": "Comisión."
+    },
+    {
+      "Nombre": "Impuesto",
+      "Tipo": "Double",
+      "Comentarios": "Impuesto."
+    },
+    {
+      "Nombre": "MPE001IDL",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de la operación (MPE001IDL)."
+    },
+    {
+      "Nombre": "MovimientoUID",
+      "Tipo": "Long",
+      "Comentarios": "Identificador del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "1",
+      "Mensaje": "No se indicó canal."
+    },
+    {
+      "Código": "2",
+      "Mensaje": "No se indicó cámara."
+    },
+    {
+      "Código": "7",
+      "Mensaje": "No se indicó banco destino."
+    },
+    {
+      "Código": "8",
+      "Mensaje": "No se indicó Tipo de documento del cliente destino."
+    },
+    {
+      "Código": "9",
+      "Mensaje": "No se indicó documento del cliente destino."
+    },
+    {
+      "Código": "10",
+      "Mensaje": "No se indicó nombre del cliente destino."
+    },
+    {
+      "Código": "11",
+      "Mensaje": "No se indicó cuenta destino."
+    },
+    {
+      "Código": "12",
+      "Mensaje": "Importe no puede ser 0."
+    },
+    {
+      "Código": "13",
+      "Mensaje": "No se indicó código de servicio."
+    },
+    {
+      "Código": "14",
+      "Mensaje": "No se indicó código de transacción."
+    },
+    {
+      "Código": "15",
+      "Mensaje": "No se indicó concepto de operación."
+    },
+    {
+      "Código": "16",
+      "Mensaje": "No se indicó addenda."
+    },
+    {
+      "Código": "17",
+      "Mensaje": "Se debe indicar la cuenta origen o la operación origen."
+    },
+    {
+      "Código": "18",
+      "Mensaje": "Error en parametrización del módulo/transacción para el canal."
+    },
+    {
+      "Código": "19",
+      "Mensaje": "Error de numerador."
+    },
+    {
+      "Código": "20",
+      "Mensaje": "En una pre-notificación el importe no puede ser mayor que 0."
+    },
+    {
+      "Código": "21",
+      "Mensaje": "No se encontró cuenta origen"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasACH.ConsultaEstado>\n         <bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Token>dea5419671CD285A89A23FBE</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:IdCamara>1</bts:IdCamara>\n         <bts:ListadoIDL>\n            <bts:SdtbbtIdLogPagos_bbtIdLogPagosItem>\n               <bts:IDL>645</bts:IDL>\n            </bts:SdtbbtIdLogPagos_bbtIdLogPagosItem>\n         </bts:ListadoIDL>\n      </bts:BTTransferenciasACH.ConsultaEstado>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTransferenciasACH.ConsultaEstadoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>BANTOTAL1</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>dea5419671CD285A89A23FBE</Token>\n         </Btinreq>\n         <Estado>\n            <SdtSngParm_it>\n               <Nombre>645</Nombre>\n               <Valor>NoOK</Valor>\n            </SdtSngParm_it>\n         </Estado>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>97389</Numero>\n            <Servicio>BTTransferenciasACH.ConsultaEstado</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2025-05-06</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:22:37</Hora>\n         </Btoutreq>\n      </BTTransferenciasACH.ConsultaEstadoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

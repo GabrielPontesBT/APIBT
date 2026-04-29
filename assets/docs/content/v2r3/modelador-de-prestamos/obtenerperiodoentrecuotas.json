@@ -1,0 +1,88 @@
+{
+  "slug": "modelador-de-prestamos/obtenerperiodoentrecuotas",
+  "pageTitle": "Obtener Período Entre Cuotas",
+  "description": "Método para obtener los períodos entre cuotas parametrizados de un producto de préstamo.",
+  "pubName": "BTModeladorPrestamos.ObtenerPeriodoEntreCuotas",
+  "programa": "RBTPG350",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de producto."
+    },
+    {
+      "Nombre": "parametro",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Valor '401' definido por defecto]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "minimo",
+      "Tipo": "Long",
+      "Comentarios": "Valor mínimo de período de cuotas."
+    },
+    {
+      "Nombre": "maximo",
+      "Tipo": "Long",
+      "Comentarios": "Valor máximo de período de cuotas."
+    },
+    {
+      "Nombre": "valorPorDefecto",
+      "Tipo": "Long",
+      "Comentarios": "Valor por defecto de período de cuotas."
+    },
+    {
+      "Nombre": "tipo",
+      "Tipo": "Long",
+      "Comentarios": "Tipo de cuotas."
+    },
+    {
+      "Nombre": "sdtListaValores",
+      "Tipo": "<a href=\"#sbtvalor\">sBTValor</a>",
+      "Comentarios": "Listado de valores posibles."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro para el identificador único."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No existe registro para el producto indicado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTModeladorPrestamos.ObtenerPeriodoEntreCuotas>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>194002532CD285A89A23FBEE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:productoUId>105</bts:productoUId>\n      </bts:BTModeladorPrestamos.ObtenerPeriodoEntreCuotas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1511184612CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"productoUId\": \"105\"\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTModeladorPrestamos.ObtenerPeriodoEntreCuotasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>194002532CD285A89A23FBEE</Token>\n            <Device/>\n         </Btinreq>\n         <minimo>0</minimo>\n         <maximo>0</maximo>\n         <valorPorDefecto>0</valorPorDefecto>\n         <tipo>Lista</tipo>\n         <sdtListaValores>\n            <SdtsBTValor>\n               <valor>30</valor>\n            </SdtsBTValor>\n            <SdtsBTValor>\n               <valor>60</valor>\n            </SdtsBTValor>\n         </sdtListaValores>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTModeladorPrestamos.ObtenerPeriodoEntreCuotas</Servicio>\n            <Fecha>2021-11-03</Fecha>\n            <Hora>18:10:12</Hora>\n            <Requerimiento/>\n            <Numero>8632</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTModeladorPrestamos.ObtenerPeriodoEntreCuotasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1511184612CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"minimo\": 0,\n    \"maximo\": 0,\n    \"valorPorDefecto\": 0,\n    \"tipo\": \"Lista\",\n    \"sdtListaValores\": {\n        \"SdtsBTValor\": [\n            {\n                \"valor\": 30\n            },\n            {\n                \"valor\": 60\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerPeriodoEntreCuotas\",\n        \"Fecha\": \"2021-11-03\",\n        \"Hora\": \"17:14:29\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8487,\n        \"Estado\": \"OK\"\n    }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTValor",
+      "fields": [
+        {
+          "Nombre": "valor",
+          "Tipo": "Long",
+          "Comentarios": "Valor de período de cuotas."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

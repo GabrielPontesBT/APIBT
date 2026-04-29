@@ -1,0 +1,57 @@
+{
+  "slug": "honduras-hn/ach/recepcion/recibirach",
+  "pageTitle": "Recibir Transferencia",
+  "description": "Método publicado en EndPoint, para la recepción de transferencias.",
+  "pubName": "BTTransferenciasACH.RecibirACH",
+  "programa": "RBPHO16",
+  "scope": "Honduras",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "TransfRecibidaACH",
+      "Tipo": "SdtBbpTransRecibidaInACH",
+      "Obligatoriedad": "M",
+      "Comentarios": "Sdt con datos de la transferencia."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "Código",
+      "Tipo": "Short",
+      "Comentarios": "Código de respuesta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "0",
+      "Descripción": "Transferencia Recibida."
+    },
+    {
+      "Código": "101",
+      "Descripción": "Cuenta inexistente."
+    },
+    {
+      "Código": "102",
+      "Descripción": "Cuenta cerrada."
+    },
+    {
+      "Código": "103",
+      "Descripción": "Cuenta bloqueada."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasACH.RecibirACH>\n         <bts:Btinreq>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>30</bts:Device>\n            <bts:Requerimiento>30</bts:Requerimiento>\n            <bts:Token>503442C1EF950B10BD480F95</bts:Token>\n         </bts:Btinreq>\n         <bts:TransfRecibidaACH>\n            <bts:Monto>10000</bts:Monto>\n            <bts:NombreBen>BARQUIN RODRIGO</bts:NombreBen>\n            <bts:Transaccion></bts:Transaccion>\n            <bts:Referencia>Recibir ACH</bts:Referencia>\n            <bts:tipoCuentaBen>21</bts:tipoCuentaBen>\n            <bts:cuentaRec>21000109676006</bts:cuentaRec>\n            <bts:Moneda>1</bts:Moneda>\n            <bts:Canal>1</bts:Canal>\n            <bts:TipoCuentaOri>1</bts:TipoCuentaOri>\n            <bts:IdOrigen>1232112111111</bts:IdOrigen>\n            <bts:DireccionBen>Zona</bts:DireccionBen>\n            <bts:Cndmgsp></bts:Cndmgsp>\n            <bts:NombreOri>Agustin Meriles</bts:NombreOri>\n            <bts:IdBeneficiario>5478851500000</bts:IdBeneficiario>\n            <bts:BancoOrigen>17</bts:BancoOrigen>\n            <bts:Bandera></bts:Bandera>\n            <bts:CuentaOri>1214</bts:CuentaOri>\n         </bts:TransfRecibidaACH>\n      </bts:BTTransferenciasACH.RecibirACH>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTransferenciasACH.RecibirACHResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTINTERNO</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>30</Device>\n            <Requerimiento>30</Requerimiento>\n            <Token>503442C1EF950B10BD480F95</Token>\n         </Btinreq>\n         <Codigo>0</Codigo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2025-05-30</Fecha>\n            <Hora>08:23:52</Hora>\n            <Numero>6687</Numero>\n            <Servicio>BTTransferenciasACH.RecibirACH</Servicio>\n            <Requerimiento>30</Requerimiento>\n            <Canal>BTINTERNO</Canal>\n         </Btoutreq>\n      </BTTransferenciasACH.RecibirACHResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

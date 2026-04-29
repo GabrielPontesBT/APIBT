@@ -1,0 +1,131 @@
+{
+  "slug": "prestamos/contratar/contratarrefinanciacion",
+  "pageTitle": "Contratar Refinanciación",
+  "description": "Método para contratar la refinanciación de un préstamo.",
+  "pubName": "BTPrestamos.ContratarRefinanciacion",
+  "programa": "RBTPG549",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "simulacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la simulación."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "parmsAux",
+      "Tipo": "String",
+      "Comentarios": "<a href=\"#valores\">Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores</a>]."
+    },
+    {
+      "Nombre": "operacionCobroUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación de cobro."
+    },
+    {
+      "Nombre": "operacionUIdIns",
+      "Tipo": "Long",
+      "Comentarios": "[Hidden: Valor fijo vacío para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "movimientoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación a contratar."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la operación a contratar para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta para el Identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recibió el identificador de la simulación."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperaron datos de la simulación para el identificador [Número de Identificador]."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "El cliente ingresado no coincide con el de la operación."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recuperó la operación de cobro para el identificador: [Número de Identificador]."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "La operación de cobro no pertenece al cliente."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recibió identificador de la operación de cuenta vista."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "No se recibió identificador de la operación de instrucción de cobro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ContratarRefinanciacion>\r\n         <bts:Btinreq>\r\n            <bts:Device>AC</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>52005b89a6F955E77534D3E0</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>2</bts:operacionUId>\r\n         <bts:simulacionUId>5</bts:simulacionUId>\r\n         <bts:clienteUId>6</bts:clienteUId>\r\n         <bts:operacionCobroUId>23</bts:operacionCobroUId>\r\n      </bts:BTPrestamos.ContratarRefinanciacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarRefinanciacion' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"AC\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"operacionUId\": 2,\r\n    \"simulacionUId\": 5,\r\n    \"clienteUId\": 6,\r\n    \"operacionCobroUId\": 23,\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ContratarRefinanciacion xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AC</Device>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>52005b89a6F955E77534D3E0</Token>\r\n         </Btinreq>\r\n         <movimientoUId>9</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>677</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.ContratarRefinanciacion</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2020-04-23</Fecha>\r\n            <Hora>16:17:04</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ContratarRefinanciacion>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Token\": \"324915377F955E77534D3E02\",\r\n        \"Device\": \"AC\"\r\n    },\r\n\t\"movimientoUId\": 9,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTPrestamos.ContratarRefinanciacion\",\r\n        \"Fecha\": \"2019-11-19\",\r\n        \"Hora\": \"13:05:22\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 6924,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": [
+    {
+      "elementValName": "parmsAux",
+      "listHeader": "Posición,Valor,Comentarios",
+      "fields": [
+        {
+          "Posición": "1",
+          "Valor": "[S,N] (Valor por defecto \"N\")",
+          "Comentarios": "Permite indicar si el servicio controla el ingreso del campo operacionUIdIns - Operación de instrucción de cobro."
+        },
+        {
+          "Posición": "2",
+          "Valor": "[S,N] (Valor por defecto \"N\")",
+          "Comentarios": "Permite indicar si la cancelación se realiza con fecha valor."
+        }
+      ],
+      "description": "Este campo se compone de 2 valores S/N separados por ; (por ejemplo N;S), que corresponden a:"
+    }
+  ]
+}

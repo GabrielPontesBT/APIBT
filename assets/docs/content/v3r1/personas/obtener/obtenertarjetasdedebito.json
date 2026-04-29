@@ -1,0 +1,79 @@
+{
+  "slug": "personas/obtener/obtenertarjetasdedebito",
+  "pageTitle": "Obtener Tarjetas de Débito",
+  "description": "Método para obtener las tarjetas de débito de una persona.",
+  "pubName": "BTPersonas.ObtenerTarjetasDeDebito",
+  "programa": "RBTPG383",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTarjetas",
+      "Tipo": "<a href=\"#sbdproductotarjeta\">sBDProductoTarjeta</a>",
+      "Comentarios": "Listado de tarjetas de débito."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la persona para el identificador: [Número de identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerTarjetasDeDebito>\r\n         <bts:Btinreq>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>c2cfd09eff4A8B5C60A82434</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>381</bts:personaUId>\r\n      </bts:BTPersonas.ObtenerTarjetasDeDebito>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTarjetasDeDebito' \\\r\n    -H 'cache-control: no-cache' \\\r\n    -H 'content-type: application/json' \\\r\n    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n    -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"bc8b678bc44A8B5C60A82434\"\r\n    },\r\n   \"personaUId\": 381\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerTarjetasDeDebitoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Token>c2cfd09eff4A8B5C60A82434</Token>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Device>GP</Device>\r\n         </Btinreq>\r\n         <sdtTarjetas>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000089</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001957</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000132</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001942</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO PREEMBOZADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000098</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001982</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000105</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001983</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000141</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001943</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO PREEMBOZADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n            <sBDProductoTarjeta>\r\n               <sucursal>Sucursal Beta</sucursal>\r\n               <numeroTarjeta>5010730101000000123</numeroTarjeta>\r\n               <adicional>N</adicional>\r\n               <tarjetaUID>2000001985</tarjetaUID>\r\n               <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\r\n            </sBDProductoTarjeta>\r\n         </sdtTarjetas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Servicio>BTPersonas.ObtenerTarjetasDeDebito</Servicio>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2022-05-26</Fecha>\r\n            <Numero>16575</Numero>\r\n            <Hora>09:01:21</Hora>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerTarjetasDeDebitoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{ \r\n    \"Btinreq\": { \r\n        \"Device\": \"GP\", \r\n        \"Usuario\": \"MINSTALADOR\", \r\n        \"Requerimiento\": 1, \r\n        \"Canal\": \"BTDIGITAL\", \r\n        \"Token\": \"c2cfd09eff4A8B5C60A82434\" \r\n    }, \r\n    \"sdtTarjetas\": { \r\n        \"sBDProductoTarjeta\": [ \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000089\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001957, \r\n            \"tipoTarjeta\": \"MAESTRO NOMINADA\" \r\n        }, \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000132\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001942, \r\n            \"tipoTarjeta\": \"MAESTRO PREEMBOZADA\" \r\n        }, \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000098\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001982, \r\n            \"tipoTarjeta\": \"MAESTRO NOMINADA\" \r\n        }, \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000105\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001983, \r\n            \"tipoTarjeta\": \"MAESTRO NOMINADA\" \r\n        }, \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000141\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001943, \r\n            \"tipoTarjeta\": \"MAESTRO PREEMBOZADA\" \r\n        }, \r\n        { \r\n            \"sucursal\": \"Sucursal Beta\", \r\n            \"numeroTarjeta\": \"5010730101000000123\", \r\n            \"adicional\": \"N\", \r\n            \"tarjetaUID\": 2000001985, \r\n            \"tipoTarjeta\": \"MAESTRO NOMINADA\" \r\n        } \r\n        ] \r\n    }, \r\n    \"Erroresnegocio\": { \r\n        \"BTErrorNegocio\": []\r\n    }, \r\n    \"Btoutreq\": { \r\n        \"Numero\": 16575, \r\n        \"Estado\": \"OK\", \r\n        \"Servicio\": \"BTPersonas.ObtenerTarjetasDeDebito\", \r\n        \"Requerimiento\": 1, \r\n        \"Fecha\": \"2022-05-26\", \r\n        \"Hora\": \"09:01:21\", \r\n        \"Canal\": \"BTDIGITAL\" \r\n    } \r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBDProductoTarjeta",
+      "fields": [
+        {
+          "Nombre": "adicional",
+          "Tipo": "String",
+          "Comentarios": "Adicional."
+        },
+        {
+          "Nombre": "numeroTarjeta",
+          "Tipo": "String",
+          "Comentarios": "Número de tarjeta."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal de la tarjeta."
+        },
+        {
+          "Nombre": "tarjetaUID",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de tarjeta de débito."
+        },
+        {
+          "Nombre": "tipoTarjeta",
+          "Tipo": "String",
+          "Comentarios": "Tipo de tarjeta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

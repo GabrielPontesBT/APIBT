@@ -1,0 +1,128 @@
+{
+  "slug": "personas/obtener/obtenerpersonas",
+  "pageTitle": "Obtener Personas",
+  "description": "Método para obtener los datos de la/s persona/s con el nombre ingresado.",
+  "pubName": "BTPersonas.ObtenerPersonas",
+  "programa": "RBTPG300",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "primerNombre",
+      "Tipo": "String",
+      "Comentarios": "Primer nombre."
+    },
+    {
+      "Nombre": "segundoNombre",
+      "Tipo": "String",
+      "Comentarios": "Segundo nombre."
+    },
+    {
+      "Nombre": "primerApellido",
+      "Tipo": "String",
+      "Comentarios": "Primer apellido."
+    },
+    {
+      "Nombre": "segundoApellido",
+      "Tipo": "String",
+      "Comentarios": "Segundo apellido."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPersonas",
+      "Tipo": "<a href=\"#sbtpersonabusqueda\">sBTPersonaBusqueda</a>",
+      "Comentarios": "Listado de datos de persona."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30002",
+      "Descripción": "Campo primer nombre requerido."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Campo primer apellido requerido."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No se encontró persona(s) con el patron de búsqueda ingresado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerPersonas>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>0d402ef5c94A84</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:primerNombre>ALEJANDRO</bts:primerNombre>\r\n         <bts:segundoNombre></bts:segundoNombre>\r\n         <bts:primerApellido>VAZQUEZ</bts:primerApellido>\r\n         <bts:segundoApellido>SZENTANDRASI</bts:segundoApellido>\r\n      </bts:BTPersonas.ObtenerPersonas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerPersonas=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"primerNombre\":\"ALEJANDRO\",\r\n\t\"segundoNombre\":\"\",\r\n\t\"primerApellido\":\"VAZQUEZ\",\r\n\t\"segundoApellido\":\"SZENTANDRASI\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerPersonasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10.12.10.118</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0d402ef5c94A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPersonas>\r\n            <sBTPersonaBusqueda>\r\n               <segundoApellido>SZENTANDRASI</segundoApellido>\r\n               <nroDocumento>27573084</nroDocumento>\r\n               <primerApellido>VAZQUEZ</primerApellido>\r\n               <pais>URUGUAY</pais>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\r\n               <primerNombre>ALEJANDRO</primerNombre>\r\n               <segundoNombre/>\r\n               <fechaNacimiento>1956-02-26</fechaNacimiento>\r\n               <personaUId>43</personaUId>\r\n               <paisId>845</paisId>\r\n            </sBTPersonaBusqueda>\r\n            <sBTPersonaBusqueda>\r\n               <segundoApellido>SZENTANDRASI</segundoApellido>\r\n               <nroDocumento>11380673</nroDocumento>\r\n               <primerApellido>VAZQUEZ</primerApellido>\r\n               <pais>URUGUAY</pais>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\r\n               <primerNombre>ALEJANDRO</primerNombre>\r\n               <segundoNombre/>\r\n               <fechaNacimiento>1966-02-26</fechaNacimiento>\r\n               <personaUId>44</personaUId>\r\n               <paisId>845</paisId>\r\n            </sBTPersonaBusqueda>\r\n            <sBTPersonaBusqueda>\r\n               <segundoApellido>SZENTANDRASI</segundoApellido>\r\n               <nroDocumento>27512189</nroDocumento>\r\n               <primerApellido>VAZQUEZ</primerApellido>\r\n               <pais>URUGUAY</pais>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\r\n               <primerNombre>ALEJANDRO</primerNombre>\r\n               <segundoNombre/>\r\n               <fechaNacimiento>1976-02-26</fechaNacimiento>\r\n               <personaUId>48</personaUId>\r\n               <paisId>845</paisId>\r\n            </sBTPersonaBusqueda>\r\n            <sBTPersonaBusqueda>\r\n               <segundoApellido>SZENTANDRASI</segundoApellido>\r\n               <nroDocumento>27510989</nroDocumento>\r\n               <primerApellido>VAZQUEZ</primerApellido>\r\n               <pais>URUGUAY</pais>\r\n               <tipoDocumentoId>1</tipoDocumentoId>\r\n               <tipoDocumento>Cédula Identidad</tipoDocumento>\r\n               <primerNombre>ALEJANDRO</primerNombre>\r\n               <segundoNombre/>\r\n               <fechaNacimiento>1986-02-26</fechaNacimiento>\r\n               <personaUId>50</personaUId>\r\n               <paisId>845</paisId>\r\n            </sBTPersonaBusqueda>\r\n         </sdtPersonas>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8477</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ObtenerPersonas</Servicio>\r\n            <Fecha>2019-05-08</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>16:54:26</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerPersonasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtPersonas\": {\r\n\t\t\"sBTPersonaBusqueda\": [\r\n\t\t\t{\r\n\t\t\t\t\"segundoApellido\": \"SZENTANDRASI\",\r\n\t\t\t\t\"nroDocumento\": \"27573084\",\r\n\t\t\t\t\"primerApellido\": \"VAZQUEZ\",\r\n\t\t\t\t\"pais\": \"URUGUAY\",\r\n\t\t\t\t\"tipoDocumentoId\": 1,\r\n\t\t\t\t\"tipoDocumento\": \"Cédula Identidad\",\r\n\t\t\t\t\"primerNombre\": \"ALEJANDRO\",\r\n\t\t\t\t\"segundoNombre\": \"\",\r\n\t\t\t\t\"fechaNacimiento\": \"1956-02-26\",\r\n\t\t\t\t\"personaUId\": 43,\r\n\t\t\t\t\"paisId\": 845\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"segundoApellido\": \"SZENTANDRASI\",\r\n\t\t\t\t\"nroDocumento\": \"11380673\",\r\n\t\t\t\t\"primerApellido\": \"VAZQUEZ\",\r\n\t\t\t\t\"pais\": \"URUGUAY\",\r\n\t\t\t\t\"tipoDocumentoId\": 1,\r\n\t\t\t\t\"tipoDocumento\": \"Cédula Identidad\",\r\n\t\t\t\t\"primerNombre\": \"ALEJANDRO\",\r\n\t\t\t\t\"segundoNombre\": \"\",\r\n\t\t\t\t\"fechaNacimiento\": \"1966-02-26\",\r\n\t\t\t\t\"personaUId\": 44,\r\n\t\t\t\t\"paisId\": 845\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"segundoApellido\": \"SZENTANDRASI\",\r\n\t\t\t\t\"nroDocumento\": \"27512189\",\r\n\t\t\t\t\"primerApellido\": \"VAZQUEZ\",\r\n\t\t\t\t\"pais\": \"URUGUAY\",\r\n\t\t\t\t\"tipoDocumentoId\": 1,\r\n\t\t\t\t\"tipoDocumento\": \"Cédula Identidad\",\r\n\t\t\t\t\"primerNombre\": \"ALEJANDRO\",\r\n\t\t\t\t\"segundoNombre\": \"\",\r\n\t\t\t\t\"fechaNacimiento\": \"1976-02-26\",\r\n\t\t\t\t\"personaUId\": 48,\r\n\t\t\t\t\"paisId\": 845\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"segundoApellido\": \"SZENTANDRASI\",\r\n\t\t\t\t\"nroDocumento\": \"27510989\",\r\n\t\t\t\t\"primerApellido\": \"VAZQUEZ\",\r\n\t\t\t\t\"pais\": \"URUGUAY\",\r\n\t\t\t\t\"tipoDocumentoId\": 1,\r\n\t\t\t\t\"tipoDocumento\": \"Cédula Identidad\",\r\n\t\t\t\t\"primerNombre\": \"ALEJANDRO\",\r\n\t\t\t\t\"segundoNombre\": \"\",\r\n\t\t\t\t\"fechaNacimiento\": \"1986-02-26\",\r\n\t\t\t\t\"personaUId\": 50,\r\n\t\t\t\t\"paisId\": 845\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8477,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerPersonas\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2019-05-08\",\r\n        \"Hora\": \"16:54:26\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersonaBusqueda",
+      "fields": [
+        {
+          "Nombre": "fechaNacimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de nacimiento."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "primerApellido",
+          "Tipo": "String",
+          "Comentarios": "Primer apellido."
+        },
+        {
+          "Nombre": "primerNombre",
+          "Tipo": "String",
+          "Comentarios": "Primer nombre."
+        },
+        {
+          "Nombre": "segundoApellido",
+          "Tipo": "String",
+          "Comentarios": "Segundo apellido."
+        },
+        {
+          "Nombre": "segundoNombre",
+          "Tipo": "String",
+          "Comentarios": "Segundo nombre."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de tipo de documento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

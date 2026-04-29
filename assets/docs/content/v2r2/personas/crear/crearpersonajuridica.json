@@ -1,0 +1,345 @@
+{
+  "slug": "personas/crear/crearpersonajuridica",
+  "pageTitle": "Crear Persona Jurídica",
+  "description": "Método para crear una persona jurídica.",
+  "pubName": "BTPersonas.CrearPersonaJuridica",
+  "programa": "RBTPG274",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtPersonaJuridica",
+      "Tipo": "<a href=\"#sbtpersonajuridica1\">sBTPersonaJuridica1</a>",
+      "Comentarios": "Datos de la persona jurídica."
+    },
+    {
+      "Nombre": "sdtIntegrantesJuridicosAlta",
+      "Tipo": "<a href=\"#sbtintegrantejuridicoalta\">sBTIntegranteJuridicoAlta</a>",
+      "Comentarios": "Listado de personas físicas integrantes de la persona jurídica."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar al menos un integrante."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "Debe ingresar identificador de vínculo."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se pudo obtener identificador único de la persona."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "La sumatoria de porcentajes asociados a los integrantes de la persona jurídica es mayor a 100%."
+    },
+    {
+      "Código": "30016",
+      "Descripción": "La sumatoria de porcentajes de participación supera el 100%."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Ya existe persona con los datos ingresados."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "Debe ingresar país."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El país ingresado no existe."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "Debe ingresar tipo de documento."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "El tipo de documento ingresado no existe."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "El tipo de documento ingresado no aplica para una persona jurídica."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Debe ingresar número de documento."
+    },
+    {
+      "Código": "40008",
+      "Descripción": "Número de documento incorrecto."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "Debe ingresar razón social."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "Caracteres incorrectos en razón social."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "Caracteres incorrectos en nombre reducido."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Debe ingresar naturaleza jurídica."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "La naturaleza jurídica ingresada no existe."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "Debe ingresar la fecha de constitución."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "La fecha de constitución no puede ser posterior a la fecha de apertura."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "Debe ingresar tipo de actividad."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "El tipo de actividad ingresado no existe."
+    },
+    {
+      "Código": "40018",
+      "Descripción": "Debe ingresar actividad."
+    },
+    {
+      "Código": "40019",
+      "Descripción": "La actividad ingresada no existe."
+    },
+    {
+      "Código": "40020",
+      "Descripción": "Debe ingresar país del domicilio."
+    },
+    {
+      "Código": "40021",
+      "Descripción": "El país del domicilio no existe."
+    },
+    {
+      "Código": "40022",
+      "Descripción": "Debe ingresar departamento."
+    },
+    {
+      "Código": "40023",
+      "Descripción": "El departamento no existe."
+    },
+    {
+      "Código": "40024",
+      "Descripción": "Debe ingresar localidad."
+    },
+    {
+      "Código": "40025",
+      "Descripción": "La localidad no existe."
+    },
+    {
+      "Código": "40026",
+      "Descripción": "El barrio no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.CrearPersonaJuridica>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>247d9cc0a3CD285A89A23FBE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:sdtPersonaJuridica>\n            <bts:nroDocumento>219999990016</bts:nroDocumento>\n            <bts:numeroPuerta>1</bts:numeroPuerta>\n            <bts:nombreReducido>prueba</bts:nombreReducido>\n            <bts:paisDomicilio></bts:paisDomicilio>\n            <bts:razonSocial>EMPRESA</bts:razonSocial>\n            <bts:departamento></bts:departamento>\n            <bts:nroRegistro></bts:nroRegistro>\n            <bts:naturalezaJuridica>1</bts:naturalezaJuridica>\n            <bts:barrio>1</bts:barrio>\n            <bts:apartamento></bts:apartamento>\n            <bts:tipoDocumentoId>2</bts:tipoDocumentoId>\n            <bts:tipoActividadId>1</bts:tipoActividadId>\n            <bts:fechaConstitucion>2020-01-01</bts:fechaConstitucion>\n            <bts:paisId>845</bts:paisId>\n            <bts:actividad></bts:actividad>\n            <bts:paisDomicilioId>845</bts:paisDomicilioId>\n            <bts:pais></bts:pais>\n            <bts:codigoPostal>91000</bts:codigoPostal>\n            <bts:tipoActividad></bts:tipoActividad>\n            <bts:barrioId>1</bts:barrioId>\n            <bts:localidad></bts:localidad>\n            <bts:localidadId>1008</bts:localidadId>\n            <bts:actividadId>1111</bts:actividadId>\n            <bts:calle>1</bts:calle>\n            <bts:tipoDocumento>2</bts:tipoDocumento>\n            <bts:naturalezaJuridicaId>1</bts:naturalezaJuridicaId>\n            <bts:departamentoId>2</bts:departamentoId>\n            <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>\n            <bts:telefonoFijo>3213342222</bts:telefonoFijo>\n            <bts:piso>123</bts:piso>\n         </bts:sdtPersonaJuridica>\n         <bts:sdtIntegrantesJuridicosAlta>\n            <bts:sBTIntegranteJuridicoAlta>\n               <bts:vinculoId>1</bts:vinculoId>\n               <bts:personaUId>141</bts:personaUId>\n               <bts:participacion>50</bts:participacion>\n            </bts:sBTIntegranteJuridicoAlta>\n         </bts:sdtIntegrantesJuridicosAlta>\n      </bts:BTPersonas.CrearPersonaJuridica>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n   'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?CrearPersonaJuridica' \\\n   -H 'cache-control: no-cache' \\\n   -H 'content-type: application/json' \\\n   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n   -d '{\n   \"Btinreq\": {\n      \"Requerimiento\": 0,\n      \"Canal\": \"BTDIGITAL\",\n      \"Device\": \"AC\",\n      \"Usuario\": \"Instalador\",\n      \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\n   },\n   \"sdtPersonaJuridica\": {\n       \"nroDocumento\": \"219999990016\",\n       \"numeroPuerta\": \"1\",\n       \"nombreReducido\": \"prueba\",\n       \"paisDomicilio\": null,\n       \"razonSocial\": \"EMPRESA\",\n       \"departamento\": null,\n       \"nroRegistro\": null,\n       \"naturalezaJuridica\": \"1\",\n       \"barrio\": \"1\",\n       \"apartamento\": null,\n       \"tipoDocumentoId\": \"2\",\n       \"tipoActividadId\": \"1\",\n       \"fechaConstitucion\": \"2020-01-01\",\n       \"paisId\": \"845\",\n       \"actividad\": null,\n       \"paisDomicilioId\": \"845\",\n       \"pais\": null,\n       \"codigoPostal\": \"91000\",\n       \"tipoActividad\": null,\n       \"barrioId\": \"1\",\n       \"localidad\": null,\n       \"localidadId\": \"1008\",\n       \"actividadId\": \"1111\",\n       \"calle\": \"1\",\n       \"tipoDocumento\": \"2\",\n       \"naturalezaJuridicaId\": \"1\",\n       \"departamentoId\": \"2\",\n      \"correoElectronico\": \"AV@GMAIL.COM\",\n      \"telefonoFijo\": \"3213342222\",\n      \"piso\": \"123\"\n   },\n   \"sdtIntegrantesJuridicosAlta\": {\n       \"sBTIntegranteJuridicoAlta\": [\n          {\n             \"vinculoId\": \"1\",\n             \"personaUId\": \"141\"\n             \"participacion\": \"50\"\n      }\n      ]\n   }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.CrearPersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>247d9cc0a3CD285A89A23FBE</Token>\n         </Btinreq>\n         <personaUId>282</personaUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>107338</Numero>\n            <Servicio>BTPersonas.CrearPersonaJuridica</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-11-05</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>12:31:25</Hora>\n         </Btoutreq>\n      </BTPersonas.CrearPersonaJuridicaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n     \"Btinreq\": {\n        \"Device\": \"MC\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"247d9cc0a3CD285A89A23FBE\"\n     },\n     \"personaUId\": \"282\",\n     \"Erroresnegocio\": null,\n     \"Btoutreq\": {\n        \"Numero\": \"107338\",\n        \"Servicio\": \"BTPersonas.CrearPersonaJuridica\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2020-11-05\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"12:31:25\"\n     }\n }"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPersonaJuridica1",
+      "fields": [
+        {
+          "Nombre": "actividad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de actividad."
+        },
+        {
+          "Nombre": "actividadId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de actividad."
+        },
+        {
+          "Nombre": "apartamento",
+          "Tipo": "String",
+          "Comentarios": "Apartamento."
+        },
+        {
+          "Nombre": "barrio",
+          "Tipo": "String",
+          "Comentarios": "Nombre de barrio."
+        },
+        {
+          "Nombre": "barrioId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de barrio."
+        },
+        {
+          "Nombre": "calle",
+          "Tipo": "String",
+          "Comentarios": "Calle."
+        },
+        {
+          "Nombre": "codigoPostal",
+          "Tipo": "String",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "correoElectronico",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico."
+        },
+        {
+          "Nombre": "departamento",
+          "Tipo": "String",
+          "Comentarios": "Nombre de departamento."
+        },
+        {
+          "Nombre": "departamentoId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de departamento."
+        },
+        {
+          "Nombre": "fechaConstitucion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de constitución."
+        },
+        {
+          "Nombre": "localidad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de localidad."
+        },
+        {
+          "Nombre": "localidadId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de localidad."
+        },
+        {
+          "Nombre": "naturalezaJuridica",
+          "Tipo": "String",
+          "Comentarios": "Nombre de naturaleza jurídica."
+        },
+        {
+          "Nombre": "naturalezaJuridicaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de naturaleza jurídica."
+        },
+        {
+          "Nombre": "nombreReducido",
+          "Tipo": "String",
+          "Comentarios": "Nombre reducido."
+        },
+        {
+          "Nombre": "nroDocumento",
+          "Tipo": "String",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "nroRegistro",
+          "Tipo": "Long",
+          "Comentarios": "Número de registro."
+        },
+        {
+          "Nombre": "numeroPuerta",
+          "Tipo": "String",
+          "Comentarios": "Número de puerta."
+        },
+        {
+          "Nombre": "pais",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país."
+        },
+        {
+          "Nombre": "paisDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Nombre del país de domicilio."
+        },
+        {
+          "Nombre": "paisDomicilioId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país de domicilio."
+        },
+        {
+          "Nombre": "paisId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "piso",
+          "Tipo": "String",
+          "Comentarios": "Piso."
+        },
+        {
+          "Nombre": "razonSocial",
+          "Tipo": "String",
+          "Comentarios": "Razón social."
+        },
+        {
+          "Nombre": "telefonoFijo",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono fijo."
+        },
+        {
+          "Nombre": "tipoActividad",
+          "Tipo": "String",
+          "Comentarios": "Nombre de tipo de actividad."
+        },
+        {
+          "Nombre": "tipoActividadId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de tipo de actividad."
+        },
+        {
+          "Nombre": "tipoDocumento",
+          "Tipo": "String",
+          "Comentarios": "Nombre del tipo de documento."
+        },
+        {
+          "Nombre": "tipoDocumentoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTIntegranteJuridicoAlta",
+      "fields": [
+        {
+          "Nombre": "participacion",
+          "Tipo": "Double",
+          "Comentarios": "porcentaje de participación del integrante."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de persona."
+        },
+        {
+          "Nombre": "vinculoId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de vínculo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "usuarios/crear",
+  "pageTitle": "Crear",
+  "description": "Método para crear un usuario.",
+  "pubName": "BTUsuarios.Crear",
+  "programa": "RBTPG120",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "sdtUsuario",
+      "Tipo": "<a href=\"#sbtusuariobt\">sBTUsuarioBT</a>",
+      "Comentarios": "Datos de usuario Bantotal."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'INS' para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar Usuario."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El Usuario ya existe."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Debe ingresar Nombre."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Debe ingresar Email."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "Debe ingresar Nro de Caja."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "Valor incorrecto para cantidad de sesiones abiertas."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "Valor incorrecto para Nivel."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "Debe ingresar Programa Inicial."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "El Programa Inicial no existe."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "Debe ingresar Sucursal."
+    },
+    {
+      "Código": "30012",
+      "Descripción": "La Sucursal no existe."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "Número de Cajero ya asignado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.Crear>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtUsuario>\n            <bts:cajero>S</bts:cajero>\n            <bts:cantidadSesionesAbiertas>1</bts:cantidadSesionesAbiertas>\n            <bts:email>prueba@bantotal.com</bts:email>\n            <bts:espaciosTrabajo>1</bts:espaciosTrabajo>\n            <bts:nivel>9</bts:nivel>\n            <bts:nombre>USUARIO PRUEBA</bts:nombre>\n            <bts:numeroCaja>1</bts:numeroCaja>\n            <bts:programaInicial>HEJECUTA</bts:programaInicial>\n            <bts:roles>\n               <bts:sBTRolWF>\n               \t<bts:codigo>6</bts:codigo>\n            \t\t<bts:descripcion>Asesor de Créditos</bts:descripcion>\n               </bts:sBTRolWF>\n            </bts:roles>\n            <bts:sucursal>1</bts:sucursal>\n            <bts:telefono>26012777</bts:telefono>\n            <bts:usuario>PRUEBA</bts:usuario>\n            <bts:usuarioWorkflow>S</bts:usuarioWorkflow>\n         </bts:sdtUsuario>\n\n      </bts:BTUsuarios.Crear>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Crear' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtUsuario\": {\n      \"cajero\": \"S\",\n      \"cantidadSesionesAbiertas\": \"1\",\n      \"email\": \"prueba@bantotal.com\",\n      \"espaciosTrabajo\": \"1\",\n      \"nivel\": \"9\",\n      \"nombre\": \"USUARIO PRUEBA\",\n      \"numeroCaja\": \"1\",\n      \"programaInicial\": \"HEJECUTA\",\n      \"roles\": {\n         \"sBTRolWF\": {\n               \"codigo\": \"6\",\n               \"descripcion\": \"Asesor de Créditos\"\n         }\n      },\n      \"sucursal\": \"1\",\n      \"telefono\": \"26012777\",\n      \"usuario\": \"PRUEBA\",\n      \"usuarioWorkflow\": \"S\"\n   }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTUsuarios.CrearResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>0d2dc7b1654A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>89</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTUsuarios.Crear</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-05-04</Fecha>\n            <Hora>16:13:28</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTUsuarios.CrearResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"96\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTUsuarios.Crear\",\n        \"Requerimiento\": 1,\n        \"Fecha\": \"2018-05-04\",\n        \"Hora\": \"16:18:56\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTUsuarioBT",
+      "fields": [
+        {
+          "Nombre": "cajero",
+          "Tipo": "String",
+          "Comentarios": "Indica si el usuario es cajero (S/N)."
+        },
+        {
+          "Nombre": "cantidadSesionesAbiertas",
+          "Tipo": "Short",
+          "Comentarios": "Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email de usuario."
+        },
+        {
+          "Nombre": "espaciosTrabajo",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad máxima de espacios de trabajos que puede tener abierta el usuario (0 - Para indicar que no tiene límites)."
+        },
+        {
+          "Nombre": "nivel",
+          "Tipo": "Short",
+          "Comentarios": "Nivel del usuario."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del usuario."
+        },
+        {
+          "Nombre": "numeroCaja",
+          "Tipo": "Int",
+          "Comentarios": "Número de caja que utiliza el cajero."
+        },
+        {
+          "Nombre": "programaInicial",
+          "Tipo": "String",
+          "Comentarios": "Nombre de programa inicial que se invoca al acceder a Bantotal."
+        },
+        {
+          "Nombre": "roles",
+          "Tipo": "<a href=\"#sbtrolwf\">sBTRolWF</a>",
+          "Comentarios": "Listado de roles de Workflow."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono del usuario."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Identificador del usuario."
+        },
+        {
+          "Nombre": "usuarioWorkflow",
+          "Tipo": "String",
+          "Comentarios": "¿Es usuario Workflow? (S/N)."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTRolWF",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Int",
+          "Comentarios": "Código del rol."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del rol."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

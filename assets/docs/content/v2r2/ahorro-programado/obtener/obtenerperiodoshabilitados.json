@@ -1,0 +1,73 @@
+{
+  "slug": "ahorro-programado/obtener/obtenerperiodoshabilitados",
+  "pageTitle": "Obtener Períodos Habilitados",
+  "description": "Método para obtener un listado de períodos habilitados para los casos que el alta de ahorro programado se realice mediante selección de período como lista de valores.",
+  "pubName": "BTAhorroProgramado.ObtenerPeriodosHabilitados",
+  "programa": "RBTPG419",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtPeriodos",
+      "Tipo": "sBTPeriodo",
+      "Comentarios": "Listado de periodos habilitados."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del producto."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó el producto de ahorro para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Error de configuración: No se definio listado de periodos."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ObtenerPeriodosHabilitados>\r\n         <bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>f2f7be2ebc4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>41</bts:productoUId>\r\n      </bts:BTAhorroProgramado.ObtenerPeriodosHabilitados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ObtenerPeriodosHabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>f2f7be2ebc4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtPeriodos>\r\n            <sdtPeriodo>\r\n               <Tipo>M</Tipo>\r\n               <Descripcion>1 - Meses</Descripcion>\r\n               <Valor>1</Valor>\r\n            </sdtPeriodo>\r\n            <sdtPeriodo>\r\n               <Tipo>M</Tipo>\r\n               <Descripcion>2 - Meses</Descripcion>\r\n               <Valor>2</Valor>\r\n            </sdtPeriodo>\r\n            <sdtPeriodo>\r\n               <Tipo>M</Tipo>\r\n               <Descripcion>3 - Meses</Descripcion>\r\n               <Valor>3</Valor>\r\n            </sdtPeriodo>\r\n         </sdtPeriodos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n\t\t <Btoutreq>\r\n            <Numero>370</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTAhorroProgramado.ObtenerPeriodosHabilitados</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2018-04-30</Fecha>\r\n            <Hora>11:21:10</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ObtenerPeriodosHabilitadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPeriodo",
+      "fields": [
+        {
+          "Nombre": "valor",
+          "Tipo": "Int",
+          "Comentarios": "Período."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A')."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción extendida del período."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,88 @@
+{
+  "slug": "contabilidad/obtener/identificadores/obteneridbantotaloperacion",
+  "pageTitle": "Obtener Identificador Bantotal de Operación",
+  "description": "Método para obtener la clave de identificación Bantotal de una operación.",
+  "pubName": "BTContabilidad.ObtenerIdBantotalOperacion",
+  "programa": "RBTPG369",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "empresa",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de empresa."
+    },
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de sucursal."
+    },
+    {
+      "Nombre": "moduloId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de módulo."
+    },
+    {
+      "Nombre": "monedaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "papelId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de papel."
+    },
+    {
+      "Nombre": "cuenta",
+      "Tipo": "Int",
+      "Comentarios": "Número de cuenta."
+    },
+    {
+      "Nombre": "operacionId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de operación."
+    },
+    {
+      "Nombre": "subOperacionId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de sub operación."
+    },
+    {
+      "Nombre": "tipoOperacionId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de tipo de operación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No existe registro para el identificador de operación ingresado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTContabilidad.ObtenerIdBantotalOperacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>281020211424260000881155</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>3</bts:operacionUId>\n      </bts:BTContabilidad.ObtenerIdBantotalOperacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalOperacion' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"GP\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"operacionUId\": \"3\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTContabilidad.ObtenerIdBantotalOperacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>MINSTALADOR</Usuario>\n            <Token>281020211424260000881155</Token>\n            <Device>GP</Device>\n         </Btinreq>\n         <empresa>1</empresa>\n         <sucursalId>1</sucursalId>\n         <moduloId>522</moduloId>\n         <monedaId>2225</monedaId>\n         <papelId>0</papelId>\n         <cuenta>29</cuenta>\n         <operacionId>80</operacionId>\n         <subOperacionId>0</subOperacionId>\n         <tipoOperacionId>3</tipoOperacionId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTContabilidad.ObtenerIdBantotalOperacion</Servicio>\n            <Fecha>2021-10-29</Fecha>\n            <Hora>10:25:26</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>11008</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTContabilidad.ObtenerIdBantotalOperacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n    \"Btinreq\": { \n\t    \"Device\": \"GP\", \n\t    \"Usuario\": \"MINSTALADOR\", \n\t    \"Token\": \"16c1cc9b534A8B5C60A82434\", \n\t    \"Canal\": \"BTDIGITAL\", \n\t    \"Requerimiento\": \"1\" \n    }, \n    \"empresa\": \"1\", \n    \"sucursalId\": \"1\", \n    \"moduloId\": \"522\", \n    \"monedaId\": \"2225\", \n    \"papelId\": \"0\", \n    \"cuenta\": \"29\", \n    \"operacionId\": \"80\", \n    \"subOperacionId\": \"0\", \n    \"tipoOperacionId\": \"3\", \n    \"Erroresnegocio\": { \n    }, \n    \"Btoutreq\": { \n        \"Canal\": \"BTDIGITAL\", \n        \"Servicio\": \"BTContabilidad.ObtenerIdBantotalOperacion\", \n        \"Fecha\": \"2021-10-28\", \n        \"Hora\": \"15:39:53\", \n        \"Requerimiento\": \"1\", \n        \"Numero\": \"11003\", \n        \"Estado\": \"OK\" \n    } \n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

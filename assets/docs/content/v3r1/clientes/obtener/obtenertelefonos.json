@@ -1,0 +1,70 @@
+{
+  "slug": "clientes/obtener/obtenertelefonos",
+  "pageTitle": "Obtener Telefonos",
+  "description": "Método para obtener los teléfonos de un cliente.",
+  "pubName": "BTClientes.ObtenerTelefonos",
+  "programa": "RBTPG215",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtTelefonos",
+      "Tipo": "<a href=\"#sbttelefono\">sBTTelefono</a>",
+      "Comentarios": "Listado de teléfonos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió identificador de cliente."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerTelefonos>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>da17de64124A</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>21</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerTelefonos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTelefonos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\":\"21\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.ObtenerTelefonosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10.12.10.118</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>da17de64124A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtTelefonos>\r\n            <sBTTelefono>\r\n               <telefono>26004288</telefono>\r\n               <tipoDeDomicilioId>1</tipoDeDomicilioId>\r\n               <identificador>1</identificador>\r\n               <tipoDeDomicilio>Casa</tipoDeDomicilio>\r\n            </sBTTelefono>\r\n            <sBTTelefono>\r\n               <telefono>091897718</telefono>\r\n               <tipoDeDomicilioId>1</tipoDeDomicilioId>\r\n               <identificador>2</identificador>\r\n               <tipoDeDomicilio>Casa</tipoDeDomicilio>\r\n            </sBTTelefono>\r\n            <sBTTelefono>\r\n               <telefono>2134543</telefono>\r\n               <tipoDeDomicilioId>1</tipoDeDomicilioId>\r\n               <identificador>3</identificador>\r\n               <tipoDeDomicilio>Casa</tipoDeDomicilio>\r\n            </sBTTelefono>\r\n            <sBTTelefono>\r\n               <telefono>21345434</telefono>\r\n               <tipoDeDomicilioId>1</tipoDeDomicilioId>\r\n               <identificador>4</identificador>\r\n               <tipoDeDomicilio>Casa</tipoDeDomicilio>\r\n            </sBTTelefono>\r\n         </sdtTelefonos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8434</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.ObtenerTelefonos</Servicio>\r\n            <Fecha>2019-05-07</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>17:42:25</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.ObtenerTelefonosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"sdtTelefonos\": {\r\n\t\t\"sBTTelefono\": [\r\n\t\t\t{\r\n\t\t\t\t\"telefono\": \"26004288\",\r\n\t\t\t\t\"tipoDeDomicilioId\": \"1\",\r\n\t\t\t\t\"identificador\": \"1\",\r\n\t\t\t\t\"tipoDeDomicilio\": \"Casa\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"telefono\": \"091897718\",\r\n\t\t\t\t\"tipoDeDomicilioId\": \"1\",\r\n\t\t\t\t\"identificador\": \"2\",\r\n\t\t\t\t\"tipoDeDomicilio\": \"Casa\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"telefono\": \"2134543\",\r\n\t\t\t\t\"tipoDeDomicilioId\": \"1\",\r\n\t\t\t\t\"identificador\": \"3\",\r\n\t\t\t\t\"tipoDeDomicilio\": \"Casa\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"telefono\": \"21345434\",\r\n\t\t\t\t\"tipoDeDomicilioId\": \"1\",\r\n\t\t\t\t\"identificador\": \"4\",\r\n\t\t\t\t\"tipoDeDomicilio\": \"Casa\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.ObtenerTelefonos\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTelefono",
+      "fields": [
+        {
+          "Nombre": "identificador",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador correlativo de teléfono."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono"
+        },
+        {
+          "Nombre": "tipoDeDomicilio",
+          "Tipo": "String",
+          "Comentarios": "Descripción de tipo de domicilio del teléfono."
+        },
+        {
+          "Nombre": "tipoDeDomicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de tipo de domicilio del teléfono."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

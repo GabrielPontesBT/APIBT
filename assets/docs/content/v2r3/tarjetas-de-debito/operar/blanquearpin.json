@@ -1,0 +1,67 @@
+{
+  "slug": "tarjetas-de-debito/operar/blanquearpin",
+  "pageTitle": "Blanquear PIN",
+  "description": "Método para realizar el blanqueo de PIN de una tarjeta de débito.",
+  "pubName": "BTTarjetasDeDebito.BlanquearPIN",
+  "programa": "RBTPG063",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la tarjeta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la tarjeta de débito para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro con el identificador indicado."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "La tarjeta no pertenece al cliente."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Error: El código de situación actual y/o el estado de la tarjeta son incorrectos."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "Error: Tarjeta inexistente."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Error devuelto por la rutina PTDD0017."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.BlanquearPIN>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000002072</bts:tarjetaUId>\n         <bts:clienteUId>161</bts:clienteUId>\n      </bts:BTTarjetasDeDebito.BlanquearPIN>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?BlanquearPIN=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 19f16614-b11e-9eaf-4034-1d7994c6019f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 2000002072,\n   \"clienteUId\": 161\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.BlanquearPINResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>be9fc8708b4A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>973</Numero>\n            <Estado>NEG_ERROR</Estado>\n            <Servicio>BTTarjetasDeDebito.BlanquearPIN</Servicio>\n            <Fecha>2017-12-22</Fecha>\n            <Requerimiento/>\n            <Hora>12:58:26</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.BlanquearPINResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"974\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.BlanquearPIN\",\n      \"Fecha\": \"2017-12-22\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"12:58:26\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "ahorro-programado/obtener/obtenercuentasorigenhabilitadas",
+  "pageTitle": "Obtener Cuentas Origen Habilitadas",
+  "description": "Método para obtener un listado de cuentas habilitadas para debitar periódicamente.",
+  "pubName": "BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas",
+  "programa": "RBTPG111",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de producto."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtCuentas",
+      "Tipo": "<a href=\"#sbtproductopasivo\">sBTProductoPasivo</a>",
+      "Comentarios": "Listado de cuentas habilitadas para origen del ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador del producto de ahorro."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó el producto de ahorro para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la persona para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El producto seleccionado no corresponde a un producto de ahorro."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La persona seleccionada no integra la cuenta-cliente."
+    },
+    {
+      "Código": "40101",
+      "Descripción": "El cliente no se encuentra facultado para operar con cuenta vista."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas>\n         <bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>f2f7be2ebc4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>2</bts:personaUId>\n         <bts:clienteUId>81</bts:clienteUId>\n         <bts:productoUId>41</bts:productoUId>\n      </bts:BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ObtenerCuentasOrigenHabilitadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>f2f7be2ebc4A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtCuentas>\n            <sBTProductoPasivo>\n               <operacionUId>21</operacionUId>\n               <idOperacionFmt>000000028_001</idOperacionFmt>\n               <idOperacionBT>0010010210000000000000028001000000000001</idOperacionBT>\n               <producto>\n                  <productoUId>0</productoUId>\n                  <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre>\n                  <moneda>$</moneda>\n                  <papel/>\n               </producto>\n               <tipoProducto>CA</tipoProducto>\n               <sucursal>Casa Matriz</sucursal>\n               <subCuenta>Mi account 1</subCuenta>\n               <saldo>10000000.00</saldo>\n               <estado>Normal</estado>\n            </sBTProductoPasivo>\n         </sdtCuentas>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>371</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-04-30</Fecha>\n            <Hora>11:32:24</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTAhorroProgramado.ObtenerCuentasOrigenHabilitadasResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTProductoPasivo",
+      "fields": [
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        },
+        {
+          "Nombre": "idOperacionFmt",
+          "Tipo": "String",
+          "Comentarios": "Identificador String (concatenación de algunos conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "idOperacionBT",
+          "Tipo": "String",
+          "Comentarios": "Identificador String Bantotal (concatenación de todos los conceptos claves de la operación)."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "<a href=\"#sbtproducto\">sBTProducto</a>",
+          "Comentarios": "Datos del Producto pasivo."
+        },
+        {
+          "Nombre": "tipoProducto",
+          "Tipo": "String",
+          "Comentarios": "Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA')."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal de origen de la operación."
+        },
+        {
+          "Nombre": "subcuenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la cuenta vista."
+        },
+        {
+          "Nombre": "saldo",
+          "Tipo": "Decimal",
+          "Comentarios": "Saldo."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Descripción de estado."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTProducto",
+      "fields": [
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "papel",
+          "Tipo": "String",
+          "Comentarios": "Símbolo del papel."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

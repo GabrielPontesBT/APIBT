@@ -1,0 +1,54 @@
+{
+  "slug": "personas/obtener/obtenertiposdefuncionariopublico",
+  "pageTitle": "Obtener Tipos de Funcionario Público",
+  "description": "Método para obtener los tipos de funcionario público.",
+  "pubName": "BTPersonas.ObtenerTiposDeFuncionarioPublico",
+  "programa": "RBTPG554",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtTiposFuncionarios",
+      "Tipo": "<a href=\"#sbttipofuncionario\">sBTTipoFuncionario</a>",
+      "Comentarios": "Listado de los tipos de funcionario público."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40002",
+      "Descripción": "La guía 8260 no está parametrizada."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>\r\n          <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\r\n         </bts:Btinreq>\r\n      </bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTiposDeFuncionarioPublico' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    }\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>9436BF7CB5B5BB404CC6E5A7</Token>\r\n         </Btinreq>\r\n         <sdtTiposFuncionarios>\r\n            <sBTTipoFuncionario>\r\n               <descripcion>PEP Nacional</descripcion>\r\n               <identificador>1</identificador>\r\n            </sBTTipoFuncionario>\r\n            <sBTTipoFuncionario>\r\n               <descripcion>PEP Extranjero</descripcion>\r\n               <identificador>2</identificador>\r\n            </sBTTipoFuncionario>\r\n         </sdtTiposFuncionarios>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>20051</Numero>\r\n            <Servicio>BTPersonas.ObtenerTiposDeFuncionarioPublico</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-04-23</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>09:54:54</Hora>\r\n         </Btoutreq>\r\n      </BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"Instalador\",\r\n        \"Token\": \"8e3a8ef2dd99865B3A2E76CF\"\r\n    },\r\n    \"sdtTiposFuncionarios\": {\r\n        \"sBTTipoFuncionario\": [\r\n        {\r\n            \"descripcion\": \"PEP Nacional\",\r\n            \"identificador\": 1\r\n        },\r\n        {\r\n            \"descripcion\": \"PEP Extranjero\",\r\n            \"identificador\": 2\r\n        }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 20051,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPersonas.ObtenerTiposDeFuncionarioPublico\",\r\n        \"Requerimiento\": 0,\r\n        \"Fecha\": \"2024-04-23\",\r\n        \"Hora\": \"09:54:54\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTipoFuncionario",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de funcionario público."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de funcionario público."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

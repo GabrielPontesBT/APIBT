@@ -1,0 +1,97 @@
+{
+  "slug": "microfinanzas/operaciones-a-cancelar/agregaroperacionesacancelar",
+  "pageTitle": "Agregar Operaciones a Cancelar",
+  "description": "Método para agregar operaciones a cancelar para una solicitud de créditos.",
+  "pubName": "BTMicrofinanzas.AgregarOperacionesACancelar",
+  "programa": "RBTPG362",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "solicitudUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador de instancia Workflow."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único del cliente."
+    },
+    {
+      "Nombre": "sdtOperaciones",
+      "Tipo": "<a href=\"#sbtoperacionid\">sBTOperacionId</a>",
+      "Comentarios": "Listado de operaciones."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "montoCancelacion",
+      "Tipo": "Double",
+      "Comentarios": "Monto de cancelación de la operación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de solicitud."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador de cliente."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió ninguna operación para ampliar."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta para el identificador de cliente: [Número de identificador]."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "No se recuperó la operación para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La solicitud ingresada no existe."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El cliente ingresado no corresponde con la solicitud."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El máximo de créditos a cancelar no puede ser mayor a [Número parametrizado]."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "La operación ingresada ya fue dada de alta previamente."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.AgregarOperacionesACancelar>\n         <bts:Btinreq>\n            <bts:Device>GP</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>16c1cc9b534A8B5C60A82434</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:solicitudUId>11887</bts:solicitudUId>\n         <bts:clienteUId>862</bts:clienteUId>\n         <bts:sdtOperaciones>\n            <bts:sBTOperacionId>\n               <bts:operacionUId>1727</bts:operacionUId>\n            </bts:sBTOperacionId>\n         </bts:sdtOperaciones>\n      </bts:BTMicrofinanzas.AgregarOperacionesACancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?AgregarOperacionesACancelar' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"GP\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"solicitudUId\": \"11887\",\n\t\"clienteUId\": \"862\",\n\t\"sdtOperaciones\": {\n\t  \"sBTOperacionId\": {\n\t\t\"operacionUId\": \"1727\"\n      },\n   },\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTMicrofinanzas.AgregarOperacionesACancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GP</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>16c1cc9b534A8B5C60A82434</Token>\n         </Btinreq>\n         <montoCancelacion>511820.42</montoCancelacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>111401</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTMicrofinanzas.AgregarOperacionesACancelar</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2021-10-15</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>14:56:43</Hora>\n         </Btoutreq>\n      </BTMicrofinanzas.AgregarOperacionesACancelarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n   \"Btinreq\": { \n      \"Device\": \"GP\", \n      \"Usuario\": \"MINSTALADOR\", \n      \"Token\": \"16c1cc9b534A8B5C60A82434\", \n      \"Canal\": \"BTDIGITAL\", \n      \"Requerimiento\": \"1\" \n   }, \n   \"montoCancelacion\": \"511820.42\", \n   \"Erroresnegocio\": { \n   }, \n   \"Btoutreq\": { \n      \"Canal\": \"BTDIGITAL\", \n      \"Servicio\": \"BTMicrofinanzas.AgregarOperacionesACancelar\", \n      \"Fecha\": \"2021-10-28\", \n      \"Hora\": \"15:39:53\", \n      \"Requerimiento\": \"1\", \n      \"Numero\": \"11003\", \n      \"Estado\": \"OK\" \n   } \n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTOperacionId",
+      "fields": [
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de operación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

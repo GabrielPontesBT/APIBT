@@ -1,0 +1,100 @@
+{
+  "slug": "personas/obtener/obtenerdatospep",
+  "pageTitle": "Obtener Datos PEP",
+  "description": "Método para obtener los datos de una persona expuesta políticamente.",
+  "pubName": "BTPersonas.ObtenerDatosPEP",
+  "programa": "RBTPG229",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "esPEP",
+      "Tipo": "String",
+      "Comentarios": "Es persona políticamente expuesta? (S/N)."
+    },
+    {
+      "Nombre": "sdtDatosPEP",
+      "Tipo": "<a href=\"#sbtdatospep\">sBTDatosPEP</a>",
+      "Comentarios": "Datos de la PEP."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "50001",
+      "Descripción": "Fecha Inicio cargo PEP es de ingreso obligatorio."
+    },
+    {
+      "Código": "50002",
+      "Descripción": "Entidad es de ingreso obligatorio."
+    },
+    {
+      "Código": "50003",
+      "Descripción": "Cargo y Relación es de ingreso obligatorio."
+    },
+    {
+      "Código": "50004",
+      "Descripción": "Fecha Salida cargo PEP debe de ser mayor a Fecha Inicio cargo PEP."
+    },
+    {
+      "Código": "50005",
+      "Descripción": "Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerDatosPEP>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>970772007CD285A89A23FBEE</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUID>12</bts:personaUID>\n      </bts:BTPersonas.ObtenerDatosPEP>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDatosPEP=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: a0776b33-6711-6c56-044c-42d681d3742f' \\\n  -d '{\n  \t\"Btinreq\": {\n\t\t\"Device\": \"GP\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"2081397563CD285A89A23FBE\"\n\t},\n\t\"personaUId\": 1\n  }'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerDatosPEPResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>970772007CD285A89A23FBEE</Token>\n            <Device>1</Device>\n         </Btinreq>\n         <esPEP>S</esPEP>\n         <sdtDatosPEP>\n            <entidad>Bantotal</entidad>\n            <cargoRelacion>Político</cargoRelacion>\n            <observacion>No corresponde</observacion>\n            <fechaInicio>2012-12-12</fechaInicio>\n            <fechaSalida>0000-00-00</fechaSalida>\n            <correlativo>1</correlativo>\n            <tipoPEPId>1</tipoPEPId>\n            <tipoFuncionarioPublicoId>1</tipoFuncionarioPublicoId>\n            <tipoPEP>Actividad Pública</tipoPEP>\n            <tipoFuncionarioPublico>PEP Nacional</tipoFuncionarioPublico>\n         </sdtDatosPEP>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.ObtenerDatosPEP</Servicio>\n            <Fecha>2021-02-11</Fecha>\n            <Hora>16:36:46</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>80313</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.ObtenerDatosPEPResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "\"Btinreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\",\n      \"Usuario\": \"INSTALADOR\",\n      \"Token\": \"970772007CD285A89A23FBEE\",\n      \"Device\": \"1\"\n    },\n    \"esPEP\": \"S\",\n    \"sdtDatosPEP\": {\n      \"entidad\": \"Bantotal\",\n      \"cargoRelacion\": \"Político\",\n      \"observacion\": \"No corresponde\",\n      \"fechaInicio\": \"2012-12-12\",\n      \"fechaSalida\": \"0000-00-00\",\n     \"correlativo\": 1,\n     \"tipoPEPId\": 1,\n     \"tipoFuncionarioPublicoId\": 1,\n     \"tipoPEP\": \"Actividad Pública\",\n     \"tipoFuncionarioPublico\": \"PEP Nacional\"\n    },\n    \"Erroresnegocio\": {},\n    \"Btoutreq\": {\n      \"Canal\": \"BTDIGITAL\",\n      \"Servicio\": \"BTPersonas.ObtenerDatosPEP\",\n      \"Fecha\": \"2021-02-11\",\n      \"Hora\": \"16:36:46\",\n      \"Requerimiento\": \"1\",\n      \"Numero\": \"80313\",\n      \"Estado\": \"OK\"\n    }"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosPEP",
+      "fields": [
+        {
+          "Nombre": "cargoRelacion",
+          "Tipo": "String",
+          "Comentarios": "Cargo que ocupa."
+        },
+        {
+          "Nombre": "entidad",
+          "Tipo": "String",
+          "Comentarios": "Entidad."
+        },
+        {
+          "Nombre": "fechaInicio",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio."
+        },
+        {
+          "Nombre": "fechaSalida",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de salida."
+        },
+        {
+          "Nombre": "observacion",
+          "Tipo": "String",
+          "Comentarios": "Observación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

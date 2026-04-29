@@ -1,0 +1,84 @@
+{
+  "slug": "ahorro-programado/documentos-digitales/obtenerdocumentosdigitales",
+  "pageTitle": "Obtener Documentos Digitales",
+  "description": "Método para obtener una lista de los documentos digitales asociados a una operación de ahorro programado.",
+  "pubName": "BTAhorroProgramado.ObtenerDocumentosDigitales",
+  "programa": "RBTPG482",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de ope   ración."
+    },
+    {
+      "Nombre": "codigoSistema",
+      "Tipo": "Short",
+      "Comentarios": "[Hidden: Valor fijo '3' para este método]."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDocumentosDigitales",
+      "Tipo": "<a href=\"#sbtdocumentodigital\">sBTDocumentoDigital</a>",
+      "Comentarios": "Listado de documentos digitales."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la operación."
+    },
+    {
+      "Código": "30021",
+      "Descripción": "No se recuperó la operación para el identificador recibido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ObtenerDocumentosDigitales>\n         <bts:Btinreq>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GP</bts:Device>\n            <bts:Token>65386256C895CD01D7DC796E</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:operacionUId>1018</bts:operacionUId>\n      </bts:BTAhorroProgramado.ObtenerDocumentosDigitales>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerDocumentosDigitales' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"operacionUId\": \"1018\",\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ObtenerDocumentosDigitalesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GP</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>65386256C895CD01D7DC796E</Token>\n         </Btinreq>\n         <sdtDocumentoDigital>\n            <sBTDocumentoDigital>\n               <Titulo>PRUEBA</Titulo>\n               <FechaActualizacion>2015-01-01</FechaActualizacion>\n               <FechaVencimiento/>\n               <TipoDocumentoDigital>Plan de Pagos</TipoDocumentoDigital>\n               <DocumentoId>265</DocumentoId>\n            </sBTDocumentoDigital>\n         </sdtDocumentoDigital>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>12028</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTAhorroProgramado.ObtenerDocumentosDigitales</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-23</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>12:50:30</Hora>\n         </Btoutreq>\n      </BTAhorroProgramado.ObtenerDocumentosDigitalesResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"sdtDocumentoDigital\": {\n        \"sBTDocumentoDigital\": {\n            \"Titulo\": \"PRUEBA GABO\",\n            \"FechaActualizacion\": \"2015-01-01\",\n            \"FechaVencimiento\": \"\",\n            \"TipoDocumentoDigital\": \"Plan de Pagos\",\n            \"DocumentoId\": \"265\"\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 823,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTAhorroProgramado.ObtenerDocumentosDigitales\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2018-11-12\",\n        \"Hora\": \"17:47:27\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDocumentoDigital",
+      "fields": [
+        {
+          "Nombre": "titulo",
+          "Tipo": "String",
+          "Comentarios": "Título del documento digital."
+        },
+        {
+          "Nombre": "fechaactualizacion",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de actualización del documento digital."
+        },
+        {
+          "Nombre": "fechavencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del documento digital."
+        },
+        {
+          "Nombre": "tipodocumentodigital",
+          "Tipo": "String",
+          "Comentarios": "Tipo del documento digital."
+        },
+        {
+          "Nombre": "documentoid",
+          "Tipo": "Long",
+          "Comentarios": "Identificador del documento digital."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

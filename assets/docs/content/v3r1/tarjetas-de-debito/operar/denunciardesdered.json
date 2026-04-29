@@ -1,0 +1,80 @@
+{
+  "slug": "tarjetas-de-debito/operar/denunciardesdered",
+  "pageTitle": "Denunciar Desde RED",
+  "description": "Método para denunciar una tarjeta de débito y darla de baja sin notificar a la RED.",
+  "pubName": "BTTarjetasDeDebito.DenunciarDesdeRED",
+  "programa": "RBTPG070",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "tarjetaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de tarjeta."
+    },
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cliente."
+    },
+    {
+      "Nombre": "novedad",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'DLTRE' para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de la tarjeta."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recuperó la tarjeta de débito para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "Error interno."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "No existen tarjetas de débito para los datos ingresados."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "Error en parámetros de input."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "No existe la persona (con los datos del titular recibidos)."
+    },
+    {
+      "Código": "40005",
+      "Descripción": "No existe la funcionalidad en TDD025."
+    },
+    {
+      "Código": "40006",
+      "Descripción": "Motivo de cancelación no valido."
+    },
+    {
+      "Código": "40007",
+      "Descripción": "Funcionalidad TDD025 inhabilitada."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.DenunciarDesdeRED>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:tarjetaUId>2000002072</bts:tarjetaUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n      </bts:BTTarjetasDeDebito.DenunciarDesdeRED>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?DenunciarDesdeRED' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"tarjetaUId\": 3\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.DenunciarDesdeREDResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>be9fc8708b4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>985</Numero>\r\n            <Estado>NEG_ERROR</Estado>\r\n            <Servicio>BTTarjetasDeDebito.DenunciarDesdeRED</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-22</Fecha>\r\n            <Hora>14:51:47</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.DenunciarDesdeREDResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"987\",\r\n      \"Estado\": \"NEG_ERROR\",\r\n      \"Servicio\": \"BTTarjetasDeDebito.DenunciarDesdeRED\",\r\n      \"Requerimiento\": 1,\r\n      \"Fecha\": \"2017-12-22\",\r\n      \"Hora\": \"16:15:27\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

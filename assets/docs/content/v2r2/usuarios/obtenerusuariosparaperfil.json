@@ -1,0 +1,74 @@
+{
+  "slug": "usuarios/obtenerusuariosparaperfil",
+  "pageTitle": "Obtener Usuarios Para Perfil",
+  "description": "Método para obtener un listado de los usuarios que tiene asociados un determinado perfil.",
+  "pubName": "BTUsuarios.ObtenerUsuariosParaPerfil",
+  "programa": "RBTPG392",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "perfil",
+      "Tipo": "String",
+      "Comentarios": "Perfil de usuario."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtUsuarios",
+      "Tipo": "<a href=\"#sbtdetalleusuario\">sBTDetalleUsuario</a>",
+      "Comentarios": "Listado de usuarios."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar perfil."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existe el perfil ingresado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.ObtenerUsuariosParaPerfil>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>20130357454A8B5C60A82434</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:usuario>CAJERO</bts:usuario>\n      </bts:BTUsuarios.ObtenerUsuariosParaPerfil>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuariosParaPerfil' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"20130357454A8B5C60A82434\",\n        \"Device\": \"GP\"\n    },\n    \"usuario\": \"CAJERO\"\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerUsuariosParaPerfilResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GP</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Token>c2cfd09eff4A8B5C60A82434</Token>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n         </Btinreq>\n         <sdtUsuarios>\n            <sBTDetalleUsuario>\n               <empresa>1</empresa>\n               <usuario>GERENTE</usuario>\n               <nombre>GERENTE</nombre>\n               <ultimoAvisoActividad>2018-03-21, 12:51:10</ultimoAvisoActividad>\n            </sBTDetalleUsuario>\n            <sBTDetalleUsuario>\n               <empresa>1 - BTV2R3 Uruguay</empresa>\n               <usuario>BANTOTAL</usuario>\n               <nombre>BANTOTAL</nombre>\n               <ultimoAvisoActividad>2022-05-26, 13:46:09</ultimoAvisoActividad>\n            </sBTDetalleUsuario>\n            <sBTDetalleUsuario>\n               <empresa>1</empresa>\n               <usuario>COLOCACION</usuario>\n               <nombre>COLOCACION</nombre>\n               <ultimoAvisoActividad>2018-02-26, 17:03:16</ultimoAvisoActividad>\n            </sBTDetalleUsuario>\n            <sBTDetalleUsuario>\n               <empresa>1</empresa>\n               <usuario>CAJERO</usuario>\n               <nombre>CAJERO</nombre>\n               <ultimoAvisoActividad>2022-05-26, 13:40:24</ultimoAvisoActividad>\n            </sBTDetalleUsuario>\n            <sBTDetalleUsuario>\n               <empresa>1</empresa>\n               <usuario>OPERADOR</usuario>\n               <nombre>OPERADOR</nombre>\n               <ultimoAvisoActividad>2001-01-01, 15:29:13</ultimoAvisoActividad>\n            </sBTDetalleUsuario>\n         </sdtUsuarios>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16576</Numero>\n            <Hora>12:36:58</Hora>\n            <Fecha>2022-05-26</Fecha>\n            <Servicio>BTPersonas.ObtenerUsuariosParaPerfil</Servicio>\n            <Estado>OK</Estado>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n         </Btoutreq>\n      </BTPersonas.ObtenerUsuariosParaPerfilResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Device\": \"GP\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"c2cfd09eff4A8B5C60A82434\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1\n    },\n    \"sdtUsuarios\": {\n        \"sBTDetalleUsuario\": [\n            {\n                \"empresa\": 1,\n                \"usuario\": \"GERENTE\",\n                \"nombre\": \"GERENTE\",\n                \"ultimoAvisoActividad\": \"2018-03-21, 12:51:10\"\n            },\n            {\n                \"empresa\": \"1 - BTV2R3 Uruguay\",\n                \"usuario\": \"BANTOTAL\",\n                \"nombre\": \"BANTOTAL\",\n                \"ultimoAvisoActividad\": \"2022-05-26, 13:46:09\"\n            },\n            {\n                \"empresa\": 1,\n                \"usuario\": \"COLOCACION\",\n                \"nombre\": \"COLOCACION\",\n                \"ultimoAvisoActividad\": \"2018-02-26, 17:03:16\"\n            },\n            {\n                \"empresa\": 1,\n                \"usuario\": \"CAJERO\",\n                \"nombre\": \"CAJERO\",\n                \"ultimoAvisoActividad\": \"2022-05-26, 13:40:24\"\n            },\n            {\n                \"empresa\": 1,\n                \"usuario\": \"OPERADOR\",\n                \"nombre\": \"OPERADOR\",\n                \"ultimoAvisoActividad\": \"2001-01-01, 15:29:13\"\n            }\n        ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 16576,\n        \"Hora\": \"12:36:58\",\n        \"Fecha\": \"2022-05-26\",\n        \"Servicio\": \"BTPersonas.ObtenerUsuariosParaPerfil\",\n        \"Estado\": \"OK\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1\n    }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDetalleUsuario",
+      "fields": [
+        {
+          "Nombre": "empresa",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la empresa."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del usuario."
+        },
+        {
+          "Nombre": "ultimoAvisoActividad",
+          "Tipo": "String",
+          "Comentarios": "Último aviso de actividad del usuario."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Código del usuario."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

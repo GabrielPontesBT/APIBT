@@ -1,0 +1,68 @@
+{
+  "slug": "personas/eliminar/eliminarinformacionadicional",
+  "pageTitle": "Eliminar Información Adicional",
+  "description": "Método para eliminar la información adicional de una persona.",
+  "pubName": "BTPersonas.EliminarInformacionAdicional",
+  "programa": "RBTPG517",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de persona."
+    },
+    {
+      "Nombre": "sdtInformacionAdicional",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+      "Comentarios": "Listado de datos."
+    },
+    {
+      "Nombre": "modo",
+      "Tipo": "String",
+      "Comentarios": "[Hidden: Valor fijo 'DLT' para este método]."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La persona ingresada no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarInformacionAdicional>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>12217</bts:personaUId>\n         <bts:sdtInformacionAdicional>\n            <bts:sBTDatoLista>\n               <bts:clave>SCORE</bts:clave>\n               <bts:valor></bts:valor>\n            </bts:sBTDatoLista>\n         </bts:sdtInformacionAdicional>\n      </bts:BTPersonas.EliminarInformacionAdicional>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarInformacionAdicional' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"INSTALADOR\",\n\t  \"Token\": \"e2db881814CD285A89A23FBE\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": 12217,\n        \"sdtInformacionAdicional\": {\n          \"sBTDatoLista\": {\n            \"clave\": \"SCORE\",\n            \"valor\": \"\"\n          }\n        }\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.EliminarInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>e2db881814CD285A89A23FBE</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>589696</Numero>\n            <Servicio>BTPersonas.EliminarInformacionAdicional</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-10</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>17:40:47</Hora>\n         </Btoutreq>\n      </BTPersonas.EliminarInformacionAdicionalResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{ \n   \"Btinreq\": { \n      \"Device\": \"1\", \n      \"Usuario\": \"MINSTALADOR\", \n      \"Token\": \"16c1cFC33CD93505A5382434\", \n      \"Canal\": \"BTDIGITAL\", \n      \"Requerimiento\": \"1\" \n   }, \n\n   \"Btoutreq\": { \n      \"Numero\": \"111399\", \n      \"Estado\": \"OK\", \n      \"Servicio\": \"BTPersonas.EliminarInformacionAdicional\", \n      \"Requerimiento\": \"1\", \n      \"Fecha\": \"2023-10-10\", \n      \"Canal\": \"BTDIGITAL\", \n      \"Hora\": \"12:21:52\" \n   }\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

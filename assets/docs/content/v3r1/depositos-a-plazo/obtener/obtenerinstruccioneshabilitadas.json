@@ -1,0 +1,197 @@
+{
+  "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitadas",
+  "pageTitle": "Obtener Instrucciones Habilitadas",
+  "description": "Método para obtener un listado de las instrucciones de un producto.",
+  "pubName": "BTDepositosAPlazo.ObtenerInstruccionesHabilitadas",
+  "programa": "RBTPG455",
+  "scope": "Global",
+  "hasBackendConfig": true,
+  "backendText": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: \r\n\r\nCampo | Valor \r\n:--------- | :---------  \r\nCorrelativo 1 | Módulo. \r\nCorrelativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). \r\nCorrelativo 3 | Valor incremental. \r\nValor específico 1 | Moneda (El valor 9999 indica todas las monedas). \r\nValor específico 2 | Papel (El valor 999999 indica todos los papeles). \r\nValor específico 3 | Código de instrucción a habilitar. \r\nImporte específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses).",
+  "backendData": [
+    {
+      "titulo": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera:",
+      "datos": [
+        {
+          "Campo": "Correlativo 1",
+          "Valor": "Módulo."
+        },
+        {
+          "Campo": "Correlativo 2",
+          "Valor": "Tipo de operación (El valor 999 indica todos los tipos de operación)."
+        },
+        {
+          "Campo": "Correlativo 3",
+          "Valor": "Valor incremental."
+        },
+        {
+          "Campo": "Valor específico 1",
+          "Valor": "Moneda (El valor 9999 indica todas las monedas)."
+        },
+        {
+          "Campo": "Valor específico 2",
+          "Valor": "Papel (El valor 999999 indica todos los papeles)."
+        },
+        {
+          "Campo": "Valor específico 3",
+          "Valor": "Código de instrucción a habilitar."
+        },
+        {
+          "Campo": "Importe específico 1",
+          "Valor": "Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses)."
+        }
+      ]
+    }
+  ],
+  "inputData": [
+    {
+      "Nombre": "productoUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de producto."
+    },
+    {
+      "Nombre": "tipoProducto",
+      "Tipo": "String",
+      "Comentarios": "Tipo de producto (VTO: Vencimiento, PP: Pago periódico)."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtDatosExtendidos",
+      "Tipo": "<a href=\"#sbtdatoextendido\">sBTDatoExtendido</a>",
+      "Comentarios": "Listado de datos complementarios."
+    },
+    {
+      "Nombre": "sdtCodigoInstrucciones",
+      "Tipo": "<a href=\"#sbtcodigoinstrucciones\">sBTCodigoInstrucciones</a>",
+      "Comentarios": "Listado de códigos de instrucciones."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador del Producto."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No existe registro para el producto indicado."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "No existen Instrucciones ingresados en el sistema."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas>\r\n       <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\r\n            <bts:Device>GL</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>132</bts:productoUId>\r\n         <bts:tipoProducto></bts:tipoProducto>\r\n      </bts:BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerInstruccionesHabilitadas' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Requerimiento\": 1,\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Token\": \"30F74741A02C318CEFD55684\",\r\n          \"Device\": \"GL\"\r\n        },\r\n        \"productoUId\": 132,\r\n        \"tipoProducto\": \"\"\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ObtenerInstruccionesHaiblitadasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>30F74741A02C318CEFD55684</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <Instrucciones>\r\n            <Instruccion>\r\n               <codigo>2</codigo>\r\n               <descripcion>Cancelar y Acreditar al vto.</descripcion>\r\n               <datosExtendidos>\r\n                  <sBTDatoExtendido>\r\n                     <Clave>TIPO_PRODUCTO</Clave>\r\n                     <Tipo>D</Tipo>\r\n                     <Valor>VTO</Valor>\r\n                     <Lista></Lista>\r\n                  </sBTDatoExtendido>\r\n               </datosExtendidos>\r\n            </Instruccion>\r\n            <Instruccion>\r\n               <codigo>6</codigo>\r\n               <descripcion>Renovación Automática</descripcion>\r\n               <datosExtendidos>\r\n                  <sBTDatoExtendido>\r\n                     <Clave>TIPO_PRODUCTO</Clave>\r\n                     <Tipo>D</Tipo>\r\n                     <Valor>VTO</Valor>\r\n                     <Lista></Lista>\r\n                  </sBTDatoExtendido>\r\n               </datosExtendidos>\r\n            </Instruccion>\r\n            <Instruccion>\r\n               <codigo>7</codigo>\r\n               <descripcion>Acreditación</descripcion>\r\n               <datosExtendidos>\r\n                  <sBTDatoExtendido>\r\n                     <Clave>TIPO_PRODUCTO</Clave>\r\n                     <Tipo>D</Tipo>\r\n                     <Valor>PP</Valor>\r\n                     <Lista></Lista>\r\n                  </sBTDatoExtendido>\r\n               </datosExtendidos>\r\n            </Instruccion>\r\n            <Instruccion>\r\n               <codigo>8</codigo>\r\n               <descripcion>Capitalización Periódica Int.</descripcion>\r\n               <datosExtendidos>\r\n                  <sBTDatoExtendido>\r\n                     <Clave>TIPO_PRODUCTO</Clave>\r\n                     <Tipo>D</Tipo>\r\n                     <Valor>PP</Valor>\r\n                     <Lista></Lista>\r\n                  </sBTDatoExtendido>\r\n               </datosExtendidos>\r\n            </Instruccion>\r\n         </Instrucciones>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas</Servicio>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>10:23:37</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>486</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ObtenerInstruccionesHaiblitadasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Requerimiento\": 1,\r\n          \"Usuario\": \"INSTALADOR\",\r\n          \"Token\": \"30F74741A02C318CEFD55684\",\r\n          \"Device\": \"GL\"\r\n        },\r\n        \"sdtCodigoInstrucciones\": {\r\n          \"sBTCodigoInstrucciones\": [\r\n            {\r\n              \"codigo\": 2,\r\n              \"descripcion\": \"Cancelar y Acreditar al vto.\",\r\n              \"datosExtendidos\": {\r\n                \"sBTDatoExtendido\": {\r\n                  \"clave\": \"TIPO_PRODUCTO\",\r\n                  \"tipo\": \"D\",\r\n                  \"valor\": \"VTO\",\r\n                  \"lista\": \"\"\r\n                }\r\n              }\r\n            },\r\n            {\r\n              \"codigo\": 6,\r\n              \"descripcion\": \"Renovación Automática\",\r\n              \"datosExtendidos\": {\r\n                \"sBTDatoExtendido\": {\r\n                  \"clave\": \"TIPO_PRODUCTO\",\r\n                  \"tipo\": \"D\",\r\n                  \"valor\": \"VTO\",\r\n                  \"lista\": \"\"\r\n                }\r\n              }\r\n            },\r\n            {\r\n              \"codigo\": 7,\r\n              \"descripcion\": \"Acreditación\",\r\n              \"datosExtendidos\": {\r\n                \"sBTDatoExtendido\": {\r\n                  \"clave\": \"TIPO_PRODUCTO\",\r\n                  \"tipo\": \"D\",\r\n                  \"valor\": \"PP\",\r\n                  \"lista\": \"\"\r\n                }\r\n              }\r\n            },\r\n            {\r\n              \"codigo\": 8,\r\n              \"descripcion\": \"Capitalización Periódica Int.\",\r\n              \"datosExtendidos\": {\r\n                \"sBTDatoExtendido\": {\r\n                  \"clave\": \"TIPO_PRODUCTO\",\r\n                  \"tipo\": \"D\",\r\n                  \"valor\": \"PP\",\r\n                  \"lista\": \"\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        \"Erroresnegocio\": {\r\n          \"BTErrorNegocio\": []\r\n        },\r\n        \"Btoutreq\": {\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Servicio\": \"BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas\",\r\n          \"Fecha\": \"2022-11-29\",\r\n          \"Hora\": \"10:23:37\",\r\n          \"Requerimiento\": 1,\r\n          \"Numero\": 486,\r\n          \"Estado\": \"OK\"\r\n        }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoExtendido",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Clave del dato extendido."
+        },
+        {
+          "Nombre": "lista",
+          "Tipo": "<a href=\"#sbtdatolista\">sBTDatosLista</a>",
+          "Comentarios": "Lista de datos."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de dato extendido."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de dato extendido."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTCodigoInstrucciones",
+      "fields": [
+        {
+          "Nombre": "codigo",
+          "Tipo": "Short",
+          "Comentarios": "Código."
+        },
+        {
+          "Nombre": "datosExtendidos",
+          "Tipo": "<a href=\"#sbtdatoextendidosalida\">sBTDatoExtendido</a>",
+          "Comentarios": "Listado de datos complementarios."
+        },
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoExtendidoSalida",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Clave del dato extendido."
+        },
+        {
+          "Nombre": "lista",
+          "Tipo": "<a href=\"#sbtdatolistasalida\">sBTDatoLista</a>",
+          "Comentarios": "Lista de datos."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Tipo de dato extendido."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de dato extendido."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTDatoListaSalida",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

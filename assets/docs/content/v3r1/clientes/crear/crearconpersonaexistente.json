@@ -1,0 +1,110 @@
+{
+  "slug": "clientes/crear/crearconpersonaexistente",
+  "pageTitle": "Crear con Persona Existente",
+  "description": "Método para crear una cuenta cliente a partir de una persona existente.",
+  "pubName": "BTClientes.CrearConPersonaExistente",
+  "programa": "RBTPG218",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personaUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la persona titular de la cuenta."
+    },
+    {
+      "Nombre": "sectorId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de sector."
+    },
+    {
+      "Nombre": "clasificacionInternaId",
+      "Tipo": "Short",
+      "Comentarios": "Identificador de clasificación interna."
+    },
+    {
+      "Nombre": "ejecutivoId",
+      "Tipo": "",
+      "Comentarios": "Identificador de ejecutivo de cuenta."
+    },
+    {
+      "Nombre": "sdtDatosAdicionales",
+      "Tipo": "<a href=\"#sbtdatolista\">sBTDatoLista</a>",
+      "Comentarios": "Listado de datos adicionales. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
+    },
+    {
+      "Nombre": "sucursalId",
+      "Tipo": "Int",
+      "Comentarios": "Identificador de sucursal."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "clienteUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de cuenta creada."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de persona."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el identificador del sector."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la clasificación interna."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Ya existe la cuenta."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.CrearConPersonaExistente>\r\n         <bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>da17de0A82434</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>22</bts:personaUId>\r\n         <bts:sectorId>1</bts:sectorId>\r\n         <bts:clasificacionInternaId>1</bts:clasificacionInternaId>\r\n         <bts:ejecutivoId></bts:ejecutivoId>\r\n         <bts:sdtDatosAdicionales></bts:sdtDatosAdicionales>\r\n         <bts:sucursalId>1</bts:sucursalId>\r\n      </bts:BTClientes.CrearConPersonaExistente>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?CrearConPersonaExistente' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"personaUId\":\"22\",\r\n\t\"sectorId\":\"1\",\r\n\t\"clasificacionInternaId\":\"1\",\r\n\t\"ejecutivoId\":\"\",\r\n   \"sdtDatosAdicionales\":\"\",\r\n   \"sucursalId\":\"1\"\r\n}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTClientes.CrearConPersonaExistenteResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>10</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>da17de0A82434</Token>\r\n         </Btinreq>\r\n         <clienteUId>201</clienteUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>8449</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTClientes.CrearConPersonaExistente</Servicio>\r\n            <Fecha>2019-05-07</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>19:12:18</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTClientes.CrearConPersonaExistenteResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\": 201,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 8396,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTClientes.AgregarTelefono\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2019-05-07\",\r\n        \"Hora\": \"15:54:44\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatoLista",
+      "fields": [
+        {
+          "Nombre": "clave",
+          "Tipo": "String",
+          "Comentarios": "Identificador de información adicional."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor de información adicional."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [
+    {
+      "elementValName": "sdtDatosAdicionales",
+      "listHeader": "Clave,Valor,Comentarios",
+      "fields": [
+        {
+          "Clave": "NOMBRE_CUENTA",
+          "Valor": "[Nombre de la cuenta]",
+          "Comentarios": "**[Opcional]** Permite indicar un nombre específico a la cuenta."
+        }
+      ],
+      "description": ""
+    }
+  ]
+}
