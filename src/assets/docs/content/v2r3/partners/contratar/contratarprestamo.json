@@ -92,6 +92,7 @@
       "Descripción": "Error en la contabilización"
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.ContratarPrestamo>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1222A10B1A106FB813BD7AE9</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>3</bts:puntoVentaUId>\n            <bts:vendedorUId>56</bts:vendedorUId>\n            <bts:partnerUId>23</bts:partnerUId>\n         </bts:sdtPartner>\n         <bts:operacionUId>32123</bts:operacionUId>\n         <bts:cuentaUId>23</bts:cuentaUId>\n         <bts:operacionAcreditacionUId>8542</bts:operacionAcreditacionUId>\n         <bts:operacionCobroUId>8412</bts:operacionCobroUId>\n      </bts:BTPartners.ContratarPrestamo>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -22,6 +22,7 @@
       "Descripción": "No existen motivos de inhabilitación."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerMotivosInhabilitacion>\n         <bts:Btinreq>\n            <bts:Usuario>Instalador</bts:Usuario>\n            <bts:Token>289a9ca6a299865B3A2E76CF</bts:Token>\n            <bts:Device>2</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>0</bts:Requerimiento>\n         </bts:Btinreq>\n      </bts:BTClientes.ObtenerMotivosInhabilitacion>\n   </soapenv:Body>\n</soapenv:Envelope>",

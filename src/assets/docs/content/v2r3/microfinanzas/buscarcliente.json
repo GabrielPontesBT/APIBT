@@ -58,6 +58,7 @@
       "Descripción": "No se pudo obtener identificador único de la cuenta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.BuscarCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>419385365CD285A89A23FBEE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:paisDocumento>320</bts:paisDocumento>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDocumento>2131248150408</bts:numeroDocumento>\n      </bts:BTMicrofinanzas.BuscarCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",

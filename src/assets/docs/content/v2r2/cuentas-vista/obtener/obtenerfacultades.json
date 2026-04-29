@@ -41,6 +41,7 @@
       "Descripción": "La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "",

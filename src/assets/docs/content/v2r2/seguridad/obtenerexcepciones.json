@@ -28,6 +28,7 @@
       "Descripción": "No se recibió el usuario."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSeguridad.ObtenerExcepciones>\n         <bts:Btinreq>\n            <bts:Device>ES</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:usuario>BANTOTAL</bts:usuario>\n      </bts:BTSeguridad.ObtenerExcepciones>\n   </soapenv:Body>\n</soapenv:Envelope>",
@@ -38,6 +39,52 @@
       "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"excepciones\": {\n      \"sBTExcepcion\": [\n         {\n         \"nombreUsuario\": \"INSTALADOR\",\n         \"descripcion\": \"Autorización T.Cbio./Arbitraje\",\n         \"identificador\": \"1854\",\n         \"usuario\": \"INSTALADOR\",\n         \"ligada\": \"N\",\n         \"movimientoUId\": \"0\",\n         \"nombreSucursal\": \"Casa Matriz\",\n         \"descripcionMovimiento\": \"Compra USD Caja\"\n         }\n      ]\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"956\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTSeguridad.ObtenerExcepciones\",\n        \"Fecha\": \"2017-12-22\",\n        \"Requerimiento\": \"\",\n        \"Hora\": \"10:54:51\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTExcepcion",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la excepción."
+        },
+        {
+          "Nombre": "descripcionMovimiento",
+          "Tipo": "String",
+          "Comentarios": "Descripción del movimiento."
+        },
+        {
+          "Nombre": "identificador",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de excepción."
+        },
+        {
+          "Nombre": "ligada",
+          "Tipo": "String",
+          "Comentarios": "Ligada (S/N)."
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de movimiento."
+        },
+        {
+          "Nombre": "nombreSucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "nombreUsuario",
+          "Tipo": "String",
+          "Comentarios": "Nombre del usuario."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Usuario."
+        }
+      ]
+    }
+  ],
   "valuesTable": []
 }

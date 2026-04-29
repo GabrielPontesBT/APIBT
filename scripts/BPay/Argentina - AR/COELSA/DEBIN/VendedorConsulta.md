@@ -38,7 +38,7 @@ cuit | String | Documento.
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 consultaVendedorRespuesta | [sBTVendedoresAdheridosRes](#sbtvendedoresadheridosres) | Datos listados de un vendedor.
-ColeccionVendedorConsulta | [sBTConsultaVendedorCuenta_CuentaItem](#sdtsbtconsultavendedorcuenta_cuentaitem) | Colección de datos del vendedor.
+ColeccionVendedorConsulta | [sBTConsultaVendedorCuenta_CuentaItem](#sbtconsultavendedorcuenta_cuentaitem) | Colección de datos del vendedor.
  
 @tab Errores
 

@@ -154,6 +154,7 @@
       "Descripción": "Error TRN: {MnTxt}."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSPIDevoluciones.RespuestaSolicitudRetorno>\n         <bts:Btinreq>\n            <bts:Device>ABC</bts:Device>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\n         </bts:Btinreq>\n         <bts:canal>841</bts:canal>\n         <bts:referencia>COMAPYPAARES250513112360004181905</bts:referencia>\n         <bts:motivo>test</bts:motivo>\n         <bts:importe>100</bts:importe>\n         <bts:codigo>AC03</bts:codigo>\n         <bts:devolucion>ACEPTAR</bts:devolucion>\n         <bts:simular>N</bts:simular>\n      </bts:BTSPIDevoluciones.RespuestaSolicitudRetorno>\n   </soapenv:Body>\n</soapenv:Envelope>",

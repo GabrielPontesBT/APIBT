@@ -36,6 +36,7 @@
       "Descripción": "El producto no tiene habilitado el manejo de chequeras."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>GP</bts:Device>\n            <bts:Token>7b789d76ae4A8B5C60A82434</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n         </bts:Btinreq>\n         <bts:productoUId>43</bts:productoUId>\n      </bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>\n   </soapenv:Body>\n</soapenv:Envelope>",

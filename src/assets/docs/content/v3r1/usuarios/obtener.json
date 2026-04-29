@@ -32,16 +32,108 @@
       "Descripción": "No existe el usuario ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTUsuarios.Obtener>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>2062732190F955E77534D3E0</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:usuario>INSTALADOR</bts:usuario>\r\n      </bts:BTUsuarios.Obtener>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Obtener=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 20394f02-93fd-01a3-c079-81b84239bc48' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AC\",\r\n\t\t\"Usuario\": \"BANTOTAL\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"2062732190F955E77534D3E0\"\r\n\t},\r\n\t\"usuario\": \"INSTALADOR\"\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.Obtener>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>2062732190F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:usuario>INSTALADOR</bts:usuario>\n      </bts:BTUsuarios.Obtener>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Obtener=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 20394f02-93fd-01a3-c079-81b84239bc48' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AC\",\n\t\t\"Usuario\": \"BANTOTAL\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"2062732190F955E77534D3E0\"\n\t},\n\t\"usuario\": \"INSTALADOR\"\n}'"
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTUsuarios.ObtenerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>BANTOTAL</Usuario>\r\n            <Token>2062732190F955E77534D3E0</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <sdtDatosUsuario>\r\n            <usuario>INSTALADOR</usuario>\r\n            <nombre>INSTALADOR</nombre>\r\n            <email>moralesa@dlya.com.uy</email>\r\n            <telefono>26012777</telefono>\r\n            <idSucursal>5</idSucursal>\r\n            <sucursal>Sucursal Beta</sucursal>\r\n            <programaInicial>MINICIO</programaInicial>\r\n            <espaciosDeTrabajo>0</espaciosDeTrabajo>\r\n            <cantidadSesionesAbiertas>9</cantidadSesionesAbiertas>\r\n            <cajero>S</cajero>\r\n            <numeroCaja>400</numeroCaja>\r\n            <nivel>9</nivel>\r\n            <perfiles>\r\n               <sBTPerfilBT>\r\n                  <Perfil>COMERCIAL</perfil>\r\n                  <FechaAlta>2001-01-01</fechaAlta>\r\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\r\n               </sBTPerfilBT>\r\n               <sBTPerfilBT>\r\n                  <Perfil>INSTALADOR</perfil>\r\n                  <FechaAlta>2001-01-01</fechaAlta>\r\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\r\n               </sBTPerfilBT>\r\n               <sBTPerfilBT>\r\n                  <Perfil>MFINSTALL</perfil>\r\n                  <FechaAlta>2001-01-01</fechaAlta>\r\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\r\n               </sBTPerfilBT>\r\n               <sBTPerfilBT>\r\n                  <Perfil>PRECIOS</perfil>\r\n                  <FechaAlta>2001-02-22</fechaAlta>\r\n                  <FechaVencimiento>2035-03-03</fechaVencimiento>\r\n               </sBTPerfilBT>\r\n            </perfiles>\r\n         </sdtDatosUsuario>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTUsuarios.Obtener</Servicio>\r\n            <Fecha>2019-11-19</Fecha>\r\n            <Hora>17:19:56</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>6991</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTUsuarios.ObtenerResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"BANTOTAL\",\r\n        \"Token\": \"2062732190F955E77534D3E0\",\r\n        \"Device\": \"AC\"\r\n    },\r\n    \"sdtDatosUsuario\": {\r\n        \"usuario\": \"INSTALADOR\",\r\n        \"nombre\": \"INSTALADOR\",\r\n        \"email\": \"moralesa@dlya.com.uy\",\r\n        \"telefono\": \"26012777\",\r\n        \"idSucursal\": \"5\",\r\n        \"sucursal\": \"Sucursal Beta\",\r\n        \"programaInicial\": \"MINICIO\",\r\n        \"espaciosDeTrabajo\": 0,\r\n        \"cantidadSesionesAbiertas\": 9,\r\n        \"cajero\": \"S\",\r\n        \"numeroCaja\": 400,\r\n        \"nivel\": 9,\r\n        \"perfiles\": {\r\n            \"sBTPerfilBT\": [\r\n                {\r\n                    \"Perfil\": \"COMERCIAL\",\r\n                    \"FechaAlta\": \"2001-01-01\",\r\n                    \"FechaVencimiento\": \"2021-01-01\"\r\n                },\r\n                {\r\n                    \"Perfil\": \"INSTALADOR\",\r\n                    \"FechaAlta\": \"2001-01-01\",\r\n                    \"FechaVencimiento\": \"2021-01-01\"\r\n                },\r\n                {\r\n                    \"Perfil\": \"MFINSTALL\",\r\n                    \"FechaAlta\": \"2001-01-01\",\r\n                    \"FechaVencimiento\": \"2021-01-01\"\r\n                },\r\n                {\r\n                    \"Perfil\": \"PRECIOS\",\r\n                    \"FechaAlta\": \"2001-02-22\",\r\n                    \"FechaVencimiento\": \"2035-03-03\"\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTUsuarios.Obtener\",\r\n        \"Fecha\": \"2019-11-19\",\r\n        \"Hora\": \"17:21:59\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 6992,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTUsuarios.ObtenerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>2062732190F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <sdtDatosUsuario>\n            <usuario>INSTALADOR</usuario>\n            <nombre>INSTALADOR</nombre>\n            <email>moralesa@dlya.com.uy</email>\n            <telefono>26012777</telefono>\n            <idSucursal>5</idSucursal>\n            <sucursal>Sucursal Beta</sucursal>\n            <programaInicial>MINICIO</programaInicial>\n            <espaciosDeTrabajo>0</espaciosDeTrabajo>\n            <cantidadSesionesAbiertas>9</cantidadSesionesAbiertas>\n            <cajero>S</cajero>\n            <numeroCaja>400</numeroCaja>\n            <nivel>9</nivel>\n            <perfiles>\n               <sBTPerfilBT>\n                  <Perfil>COMERCIAL</perfil>\n                  <FechaAlta>2001-01-01</fechaAlta>\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\n               </sBTPerfilBT>\n               <sBTPerfilBT>\n                  <Perfil>INSTALADOR</perfil>\n                  <FechaAlta>2001-01-01</fechaAlta>\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\n               </sBTPerfilBT>\n               <sBTPerfilBT>\n                  <Perfil>MFINSTALL</perfil>\n                  <FechaAlta>2001-01-01</fechaAlta>\n                  <FechaVencimiento>2021-01-01</fechaVencimiento>\n               </sBTPerfilBT>\n               <sBTPerfilBT>\n                  <Perfil>PRECIOS</perfil>\n                  <FechaAlta>2001-02-22</fechaAlta>\n                  <FechaVencimiento>2035-03-03</fechaVencimiento>\n               </sBTPerfilBT>\n            </perfiles>\n         </sdtDatosUsuario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTUsuarios.Obtener</Servicio>\n            <Fecha>2019-11-19</Fecha>\n            <Hora>17:19:56</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>6991</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTUsuarios.ObtenerResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"2062732190F955E77534D3E0\",\n        \"Device\": \"AC\"\n    },\n    \"sdtDatosUsuario\": {\n        \"usuario\": \"INSTALADOR\",\n        \"nombre\": \"INSTALADOR\",\n        \"email\": \"moralesa@dlya.com.uy\",\n        \"telefono\": \"26012777\",\n        \"idSucursal\": \"5\",\n        \"sucursal\": \"Sucursal Beta\",\n        \"programaInicial\": \"MINICIO\",\n        \"espaciosDeTrabajo\": 0,\n        \"cantidadSesionesAbiertas\": 9,\n        \"cajero\": \"S\",\n        \"numeroCaja\": 400,\n        \"nivel\": 9,\n        \"perfiles\": {\n            \"sBTPerfilBT\": [\n                {\n                    \"Perfil\": \"COMERCIAL\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"INSTALADOR\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"MFINSTALL\",\n                    \"FechaAlta\": \"2001-01-01\",\n                    \"FechaVencimiento\": \"2021-01-01\"\n                },\n                {\n                    \"Perfil\": \"PRECIOS\",\n                    \"FechaAlta\": \"2001-02-22\",\n                    \"FechaVencimiento\": \"2035-03-03\"\n                }\n            ]\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTUsuarios.Obtener\",\n        \"Fecha\": \"2019-11-19\",\n        \"Hora\": \"17:21:59\",\n        \"Requerimiento\": 1,\n        \"Numero\": 6992,\n        \"Estado\": \"OK\"\n    }\n}'"
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTDatosUsuario",
+      "fields": [
+        {
+          "Nombre": "cajero",
+          "Tipo": "String",
+          "Comentarios": "Es cajero? (S/N)."
+        },
+        {
+          "Nombre": "cantidadSesionesAbiertas",
+          "Tipo": "Short",
+          "Comentarios": "Cantidad máxima de sesiones que puede tener abiertas un mismo usuario Bantotal."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email del usuario."
+        },
+        {
+          "Nombre": "espaciosDeTrabajo",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad máxima de espacios de trabajos que puede tener abierta el usuario."
+        },
+        {
+          "Nombre": "idSucursal",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "nivel",
+          "Tipo": "Short",
+          "Comentarios": "Nivel del usuario."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del usuario."
+        },
+        {
+          "Nombre": "numeroCaja",
+          "Tipo": "Int",
+          "Comentarios": "Número de caja del usuario."
+        },
+        {
+          "Nombre": "perfiles",
+          "Tipo": "<a href=\"#sbtperfilbt\">sBTPerfilBT</a>",
+          "Comentarios": "Listado de perfiles asociados al usuario."
+        },
+        {
+          "Nombre": "programaInicial",
+          "Tipo": "String",
+          "Comentarios": "Nombre de programa inicial que se invoca al acceder a Bantotal."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Sucursal donde se encuentra el usuario."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Teléfono del usuario."
+        },
+        {
+          "Nombre": "usuario",
+          "Tipo": "String",
+          "Comentarios": "Identificador del usuario."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTPerfilBT",
+      "fields": [
+        {
+          "Nombre": "FechaAlta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil."
+        },
+        {
+          "Nombre": "FechaVencimiento",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento del perfil para el usuario."
+        },
+        {
+          "Nombre": "Perfil",
+          "Tipo": "String",
+          "Comentarios": "Identificador de perfil Bantotal."
+        }
+      ]
+    }
+  ],
   "valuesTable": []
 }

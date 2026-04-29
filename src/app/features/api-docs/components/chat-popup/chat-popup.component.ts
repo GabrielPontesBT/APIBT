@@ -13,7 +13,7 @@ import { skip } from 'rxjs/operators';
 import { ChatService } from '../../../../core/services/chat.service';
 import { VersionService } from '../../../../core/services/version.service';
 
-interface Message { text: string; isUser: boolean; }
+interface Message { text: string; isUser: boolean; streaming?: boolean; }
 interface ChatEntry { role: string; content: string; }
 
 @Component({
@@ -152,37 +152,73 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
+  private preprocessMarkdown(text: string): string {
+    const lines = text.split('\n');
+    let inBlock = false;
+    return lines.map(line => {
+      if (!inBlock && /^```/.test(line)) {
+        inBlock = true;
+        return /^```(\s*|none)\s*$/.test(line) ? '```text' : line;
+      }
+      if (inBlock && /^```\s*$/.test(line)) {
+        inBlock = false;
+      }
+      return line;
+    }).join('\n');
+  }
+
   private proceedChat(userMsg: string) {
-    this.messages.push({ text: '', isUser: false });
+    this.messages.push({ text: '', isUser: false, streaming: true });
     const msgIdx = this.messages.length - 1;
 
     this.chatHistory.push({ role: 'assistant', content: '' });
     const histIdx = this.chatHistory.length - 1;
 
-    let rawText = '';
+    let fullText = '';
+    let displayedLen = 0;
+    let streamDone = false;
+    let intervalId: ReturnType<typeof setInterval> | null = null;
 
-    this.chatService.streamMessages(userMsg)
-      .subscribe({
-        next: chunk => {
-          rawText += chunk;
-          this.messages[msgIdx].text = rawText;
-          this.chatHistory[histIdx].content = rawText;
+    const CHARS_PER_TICK = 8;
+
+    const startTypewriter = () => {
+      if (intervalId !== null) return;
+      intervalId = setInterval(() => {
+        if (displayedLen < fullText.length) {
+          displayedLen = Math.min(fullText.length, displayedLen + CHARS_PER_TICK);
+          this.messages[msgIdx] = { text: fullText.slice(0, displayedLen), isUser: false, streaming: true };
           this.cdr.detectChanges();
           this.scrollToBottom();
-        },
-        error: err => {
-          console.error(err);
-          this.messages.push({ text: 'Error en la solicitud.', isUser: false });
-          this.finalize();
-        },
-        complete: () => {
+        } else if (streamDone) {
+          clearInterval(intervalId!);
+          intervalId = null;
+          this.messages[msgIdx] = { text: this.preprocessMarkdown(fullText), isUser: false, streaming: false };
           this.finalize();
           setTimeout(() => {
             this.inputRef.nativeElement.focus();
             this.inputRef.nativeElement.select();
           }, 0);
         }
-      });
+      }, 16);
+    };
+
+    this.chatService.streamMessages(userMsg).subscribe({
+      next: chunk => {
+        fullText += chunk;
+        this.chatHistory[histIdx].content = fullText;
+        startTypewriter();
+      },
+      error: err => {
+        console.error(err);
+        if (intervalId !== null) { clearInterval(intervalId); intervalId = null; }
+        this.messages[msgIdx] = { text: 'Error en la solicitud.', isUser: false, streaming: false };
+        this.finalize();
+      },
+      complete: () => {
+        streamDone = true;
+        startTypewriter();
+      }
+    });
   }
 
   private finalize() {

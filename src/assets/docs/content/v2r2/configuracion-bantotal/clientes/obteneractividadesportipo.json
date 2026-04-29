@@ -32,6 +32,7 @@
       "Descripción": "No existen actividades ingresadas en el sistema."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerActividadesPorTipo>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>1EF0C356A692E3706CFA0201</bts:Token>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:tipoActividadId>1</bts:tipoActividadId>\r\n      </bts:BTConfiguracionBantotal.ObtenerActividadesPorTipo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

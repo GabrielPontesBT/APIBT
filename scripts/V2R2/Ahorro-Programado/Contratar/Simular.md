@@ -35,7 +35,7 @@ sBTSolicitudSimulacionAhorroProgramado | sBTSolicitudSimulacionAhorro | Datos de
 
 Los campos del tipo de dato estructurado sBTSolicitudSimulacionAhorro son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
 clienteUId | Long | Identificador único de cliente.
@@ -56,7 +56,7 @@ sBTSimulacionAhorroProgramado | sBTSimulacionAhorroProgramado | Simulación de a
 
 Los campos del tipo de dato estructurado sBTSimulacionAhorroProgramado son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 simulacionId | Long | Identificador de simulación.
 producto | sBTProducto | Datos del producto.
@@ -75,7 +75,7 @@ totalIntereses | Double | Total de intereses.
 
 Los campos del tipo de dato estructurado sBTProducto son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 productoUId | Long | Identificador único de producto.
 nombre | String | Nombre del producto.
@@ -84,13 +84,13 @@ papel | String | Símbolo del papel.
 
 Los campos del tipo de dato estructurado sBTCronogramaAhorro son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 sBTCronogramaAhorro | sBTCuotaAhorro | Datos de la cuota de ahorro.
 
 Los campos del tipo de dato estructurado sBTCuotaAhorro son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago.
 plazo | Int | Plazo.
@@ -102,7 +102,7 @@ otrosConceptos | sBTConcepto | Datos de otros conceptos.
 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 concepto | String | Concepto.
 valor | Double | Importe.

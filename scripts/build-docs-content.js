@@ -49,7 +49,7 @@ function walkMarkdownFiles(dirPath) {
     if (entry.isDirectory()) {
       return walkMarkdownFiles(fullPath);
     } else {
-      if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
+      if (entry.isFile() && entry.name.toLowerCase().endsWith('.md') && entry.name.toUpperCase() !== 'CHAT.MD') {
         return [fullPath];
       } else {
         return [];
@@ -246,12 +246,26 @@ function extractApiTabs(content, relPath) {
     const inputData = parseTable(sections['Datos de Entrada'] || '', relPath);
     const outputData = parseTable(sections['Datos de Salida'] || '', relPath);
     const errorsBlock = sections['Errores'] || '';
-    const errors = errorsBlock.includes('No aplica') ? [] : parseTable(errorsBlock, relPath);
+
+    let errors = [];
+    let errorsNote = '';
+
+    if (errorsBlock.includes('No aplica')) {
+      errors = [];
+    } else {
+      const allLines = errorsBlock.split('\n').map(l => l.trim());
+      const tableLines = allLines.filter(l => l.includes('|'));
+      const noteLines  = allLines.filter(l => l && !l.includes('|'));
+      const tableContent = tableLines.join('\n');
+      errors = tableContent ? parseTable(tableContent, relPath) : [];
+      errorsNote = noteLines.join('\n\n');
+    }
 
     return {
       inputData,
       outputData,
-      errors
+      errors,
+      errorsNote
     };
   }
 }
@@ -560,6 +574,7 @@ function buildDocJson(mdFilePath, relPath) {
     inputData: apiTabs.inputData,
     outputData: apiTabs.outputData,
     errors: apiTabs.errors,
+    errorsNote: apiTabs.errorsNote,
     examples,
     structuredTypes,
     valuesTable

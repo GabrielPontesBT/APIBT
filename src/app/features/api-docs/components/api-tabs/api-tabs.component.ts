@@ -13,4 +13,5 @@ export class ApiTabsComponent {
   @Input() outputData!: any[];
   @Input() errorCols!: string[];
   @Input() errors!: any[];
+  @Input() errorsNote: string = '';
 }

@@ -64,6 +64,7 @@
       "Descripción": "No se recupero Beneficiario para la identificación recibida."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\n         <bts:Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>1</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\n         </bts:Btinreq>\n         <bts:contratoId>8</bts:contratoId>\n         <bts:servicioId></bts:servicioId>\n         <bts:clienteUId>364</bts:clienteUId>\n         <bts:agendaId></bts:agendaId>\n         <bts:sdtValorCampoCash>\n            <bts:sBTValorCampoCash>\n               <bts:tag></bts:tag>\n               <bts:valor></bts:valor>\n            </bts:sBTValorCampoCash>\n         </bts:sdtValorCampoCash>\n      </bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>\n   </soapenv:Body>\n</soapenv:Envelope>",

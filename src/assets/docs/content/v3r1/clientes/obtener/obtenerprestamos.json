@@ -41,6 +41,7 @@
       "Descripción": "El cliente no tiene operaciones."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.ObtenerPrestamos>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>0B59FAC5EC89F5A9FBB8D64E</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>61</bts:clienteUId>\r\n      </bts:BTClientes.ObtenerPrestamos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

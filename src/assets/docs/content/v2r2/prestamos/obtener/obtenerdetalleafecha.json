@@ -41,6 +41,7 @@
       "Descripción": "No se recibió fecha."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDetalleAFecha>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>324915377F955E77534D3E02</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>15</bts:operacionUId>\n         <bts:fecha>2018-11-15</bts:fecha>\n      </bts:BTPrestamos.ObtenerDetalleAFecha>\n   </soapenv:Body>\n</soapenv:Envelope>",

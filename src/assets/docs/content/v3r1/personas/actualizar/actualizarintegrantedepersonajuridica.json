@@ -76,6 +76,7 @@
       "Descripción": "No existe el identificador de vínculo ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>IN</bts:Usuario>\r\n            <bts:Token>14298073CD285A89A23FBE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:personaJuridicaUId>2</bts:personaJuridicaUId>\r\n         <bts:sdtIntegranteAlta>\r\n             <bts:personaUId>1</bts:personaIntegranteUId>\r\n             <bts:vinculoId>1</bts:vinculoId>\r\n             <bts:participacion>50</bts:participacion>\r\n         </bts:sdtIntegranteAlta>\r\n      </bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

@@ -45,6 +45,7 @@
       "Descripción": "El filtro de la cuota no es válido."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>6CBBF8D88D2AEF23978B3C38</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>94</bts:operacionUId>\n         <bts:filtroAbono>1</bts:filtroAbono>\n      </bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -209,6 +209,7 @@
       "Descripción": "La cuenta seleccionada no coincide con la moneda seleccionada de la operación."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>        \n\t\t<bts:BTCCETIN.ConsultaTIN>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>1</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>94CC69812C4DB70C55177749</bts:Token>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:Canal>91</bts:Canal>\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\n\t\t\t<bts:OperacionUID>379</bts:OperacionUID>\n\t\t\t<bts:Moneda>2</bts:Moneda>\n\t\t\t<bts:Importe>1030</bts:Importe>\n\t\t\t<bts:CodigoTransaccion>325</bts:CodigoTransaccion>\n\t\t\t<bts:BancoDestino>38</bts:BancoDestino>\n\t\t\t<bts:SucursalDestino>100</bts:SucursalDestino>\n\t\t\t<bts:Tarjeta>4916069900012386</bts:Tarjeta>   \t\n\t\t\t<bts:CCIBeneficiario></bts:CCIBeneficiario>\n\t\t\t<bts:NroCelular/>\n\t\t\t<bts:Directorio/>\n\t\t\t<bts:CodigoQr/>\n\t\t</bts:BTCCETIN.ConsultaTIN>\n    </soapenv:Body>\n</soapenv:Envelope>",

@@ -41,6 +41,7 @@
       "Descripción": "El producto no corresponde a un producto de depósito a plazo."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>45A5647518BC5FBB73003EA9</bts:Token>\n         </bts:Btinreq>\n         <bts:productoUId>184</bts:productoUId>\n      </bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -95,6 +95,7 @@
       "Descripción": "No se encontró transferencia en el sistema."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "",

@@ -40,6 +40,19 @@ export class NavbarComponent {
     ).subscribe(e => {
       this.isOnReleasePage = e.urlAfterRedirects.startsWith('/releases/');
     });
+
+    // Si el usuario no eligió tema manualmente, seguir los cambios del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        this.applyTheme(e.matches);
+      }
+    });
+  }
+
+  private applyTheme(isDark: boolean): void {
+    this.isDarkMode = isDark;
+    document.body.classList.toggle('dark-mode', isDark);
+    document.documentElement.classList.toggle('dark-mode', isDark);
   }
 
   toggleReleases(event: MouseEvent): void {
@@ -59,23 +72,21 @@ export class NavbarComponent {
   toggleTheme() {
     this.rotate = true;
     const html = document.documentElement;
-    const body = document.body;
 
-    const applyTheme = () => {
-      this.isDarkMode = !this.isDarkMode;
-      body.classList.toggle('dark-mode', this.isDarkMode);
-      html.classList.toggle('dark-mode', this.isDarkMode);
+    const doToggle = () => {
+      this.applyTheme(!this.isDarkMode);
+      localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
     };
 
     // View Transitions API: toma un screenshot del estado actual, aplica el cambio
     // y hace crossfade a nivel de compositor — todos los elementos simultáneamente.
     if ((document as any).startViewTransition) {
       html.classList.add('theme-view-transition');
-      (document as any).startViewTransition(applyTheme).finished.then(() => {
+      (document as any).startViewTransition(doToggle).finished.then(() => {
         html.classList.remove('theme-view-transition');
       });
     } else {
-      applyTheme();
+      doToggle();
     }
 
     setTimeout(() => { this.rotate = false; }, 320);

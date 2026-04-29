@@ -123,6 +123,7 @@
       "Descripción": "Funcionalidad inhabilitada en TDD025."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>165</bts:clienteUId>\r\n         <bts:tipoTarjeta>MNO</bts:tipoTarjeta>\r\n         <bts:nombreTarjeta>Test</bts:nombreTarjeta>\r\n         <bts:sdtIdOperaciones>\r\n            <bts:sBTIdOperacion>\r\n               <bts:idOperacion>2411</bts:idOperacion>\r\n            </bts:sBTIdOperacion>\r\n            <bts:sBTIdOperacion>\r\n               <bts:idOperacion>3251</bts:idOperacion>\r\n            </bts:sBTIdOperacion>\r\n         </bts:sdtIdOperaciones>\r\n      </bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

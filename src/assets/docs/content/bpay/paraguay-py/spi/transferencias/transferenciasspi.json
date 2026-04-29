@@ -211,6 +211,7 @@
       "Descripción": "Código de instrumento no es valido(001 - 002)."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "",

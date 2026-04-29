@@ -43,6 +43,7 @@
     }
   ],
   "errors": [],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCalendarios.CalcularFechaVencimiento>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>573607534CD285A89A23FBEE</bts:Token>\n            <bts:Device>N</bts:Device>\n         </bts:Btinreq>\n         <bts:sucursalId></bts:sucursalId>\n         <bts:plazo>30</bts:plazo>\n         <bts:fechaInicio>2020-02-15</bts:fechaInicio>\n         <bts:tipoVencimiento>A</bts:tipoVencimiento>\n      </bts:BTCalendarios.CalcularFechaVencimiento>\n   </soapenv:Body>\n</soapenv:Envelope>",

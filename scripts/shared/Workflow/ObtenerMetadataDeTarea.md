@@ -222,7 +222,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTMetadataWF son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 nombre | String | Nombre del campo. 
 valor | String | Valor del campo. 

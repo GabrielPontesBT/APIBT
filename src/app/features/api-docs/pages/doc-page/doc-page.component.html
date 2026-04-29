@@ -36,7 +36,8 @@ doc-page.component.html
           [outputCols]="['Nombre', 'Tipo', 'Comentarios']"
           [outputData]="page.outputData"
           [errorCols]="['Código', 'Descripción']"
-          [errors]="page.errors">
+          [errors]="page.errors"
+          [errorsNote]="page.errorsNote">
         </app-api-tabs>
       }
       @if (page.valuesTable && page.valuesTable.length > 0) {

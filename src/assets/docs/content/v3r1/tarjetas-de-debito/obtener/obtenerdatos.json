@@ -28,14 +28,15 @@
       "Descripción": "No se recibió el identificador de tarjeta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTarjetasDeDebito.ObtenerDatos>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:tarjetaUId>3</bts:tarjetaUId>\r\n      </bts:BTTarjetasDeDebito.ObtenerDatos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerDatos=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 8ab15c2a-49b2-bedc-bcdf-df8d950d94a9' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"tarjetaUId\": 3\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ObtenerDatos>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>3</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.ObtenerDatos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerDatos=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 8ab15c2a-49b2-bedc-bcdf-df8d950d94a9' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 3\n}'"
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTarjetasDeDebito.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>75e20bd1614A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtEntidadTarjetaDebito>\r\n            <limites></limites>\r\n            <paquete>N</paquete>\r\n            <diasHastaVencimiento>2730</diasHastaVencimiento>\r\n            <tarjetaUId>3</tarjetaUId>\r\n            <estadoPlastico>ENTREGADO</estadoPlastico>\r\n            <descPaquete/>\r\n            <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\r\n            <estadoTarjeta>Activa</estadoTarjeta>\r\n            <numeroTarjeta>5010730101000000098</numeroTarjeta>\r\n            <fechaVencimiento>2026-03-31</fechaVencimiento>\r\n            <sucursal>Sucursal Beta</sucursal>\r\n            <nombreTarjeta>PEREZ SOSA JUAN</nombreTarjeta>\r\n         </sdtEntidadTarjetaDebito>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>936</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTTarjetasDeDebito.ObtenerDatos</Servicio>\r\n            <Fecha>2017-12-21</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>17:40:29</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTTarjetasDeDebito.ObtenerDatosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"sdtEntidadTarjetaDebito\": {\r\n      \"limites\": {\r\n         \"sBDLimitesTarjeta.it\": []\r\n      },\r\n      \"paquete\": \"N\",\r\n      \"diasHastaVencimiento\": \"2730\",\r\n      \"tarjetaUId\": \"3\",\r\n      \"estadoPlastico\": \"ENTREGADO\",\r\n      \"descPaquete\": \"\",\r\n      \"tipoTarjeta\": \"MAESTRO NOMINADA\",\r\n      \"estadoTarjeta\": \"Activa\",\r\n      \"numeroTarjeta\": \"5010730101000000098\",\r\n      \"fechaVencimiento\": \"2026-03-31\",\r\n      \"sucursal\": \"Sucursal Beta\",\r\n      \"nombreTarjeta\": \"PEREZ SOSA JUAN\"\r\n   },\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"937\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTTarjetasDeDebito.ObtenerDatos\",\r\n      \"Fecha\": \"2017-12-21\",\r\n      \"Requerimiento\": 1,\r\n      \"Hora\": \"17:41:23\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ObtenerDatosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>75e20bd1614A8B5C60A82434</Token>\n         </Btinreq>\n         <sdtEntidadTarjetaDebito>\n            <limites></limites>\n            <paquete>N</paquete>\n            <diasHastaVencimiento>2730</diasHastaVencimiento>\n            <tarjetaUId>3</tarjetaUId>\n            <estadoPlastico>ENTREGADO</estadoPlastico>\n            <descPaquete/>\n            <tipoTarjeta>MAESTRO NOMINADA</tipoTarjeta>\n            <estadoTarjeta>Activa</estadoTarjeta>\n            <numeroTarjeta>5010730101000000098</numeroTarjeta>\n            <fechaVencimiento>2026-03-31</fechaVencimiento>\n            <sucursal>Sucursal Beta</sucursal>\n            <nombreTarjeta>PEREZ SOSA JUAN</nombreTarjeta>\n         </sdtEntidadTarjetaDebito>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>936</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.ObtenerDatos</Servicio>\n            <Fecha>2017-12-21</Fecha>\n            <Requerimiento/>\n            <Hora>17:40:29</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ObtenerDatosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": 1,\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"sdtEntidadTarjetaDebito\": {\n      \"limites\": {\n         \"sBDLimitesTarjeta.it\": []\n      },\n      \"paquete\": \"N\",\n      \"diasHastaVencimiento\": \"2730\",\n      \"tarjetaUId\": \"3\",\n      \"estadoPlastico\": \"ENTREGADO\",\n      \"descPaquete\": \"\",\n      \"tipoTarjeta\": \"MAESTRO NOMINADA\",\n      \"estadoTarjeta\": \"Activa\",\n      \"numeroTarjeta\": \"5010730101000000098\",\n      \"fechaVencimiento\": \"2026-03-31\",\n      \"sucursal\": \"Sucursal Beta\",\n      \"nombreTarjeta\": \"PEREZ SOSA JUAN\"\n   },\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"937\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTTarjetasDeDebito.ObtenerDatos\",\n      \"Fecha\": \"2017-12-21\",\n      \"Requerimiento\": 1,\n      \"Hora\": \"17:41:23\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
     }
   },
   "structuredTypes": [
@@ -101,6 +102,36 @@
           "Nombre": "tipoTarjeta",
           "Tipo": "String",
           "Comentarios": "Tipo de tarjeta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBDLimitesTarjeta",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del límite."
+        },
+        {
+          "Nombre": "limiteBandaMagnetica",
+          "Tipo": "Double",
+          "Comentarios": "Monto del límite por banda magnética."
+        },
+        {
+          "Nombre": "limiteChip",
+          "Tipo": "Double",
+          "Comentarios": "Monto del límite por chip."
+        },
+        {
+          "Nombre": "limiteNoPresencial",
+          "Tipo": "Double",
+          "Comentarios": "Monto del límite no presencial."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
         }
       ]
     }

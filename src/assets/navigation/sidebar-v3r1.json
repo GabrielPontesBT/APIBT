@@ -749,19 +749,6 @@
   },
   {
     "type": "folder",
-    "label": "CHAT",
-    "slug": "chat",
-    "children": [
-      {
-        "type": "file",
-        "label": "CHAT",
-        "pageTitle": "CHAT",
-        "slug": "chat/chat"
-      }
-    ]
-  },
-  {
-    "type": "folder",
     "label": "Clientes",
     "slug": "clientes",
     "children": [
@@ -2378,9 +2365,9 @@
           },
           {
             "type": "file",
-            "label": "ObtenerInstruccionesHabilitados",
-            "pageTitle": "Obtener Instrucciones Habilitados",
-            "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitados"
+            "label": "ObtenerInstruccionesHabilitadas",
+            "pageTitle": "Obtener Instrucciones Habilitadas",
+            "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitadas"
           },
           {
             "type": "file",

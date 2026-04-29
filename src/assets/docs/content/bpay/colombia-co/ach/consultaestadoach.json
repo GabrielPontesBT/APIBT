@@ -35,6 +35,7 @@
       "Descripción": "BbtIdLogPagos no puede estar vacío."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasACH.ConsultaEstado>\n         <bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Token>dea5419671CD285A89A23FBE</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:IdCamara>1</bts:IdCamara>\n         <bts:ListadoIDL>\n            <bts:SdtbbtIdLogPagos_bbtIdLogPagosItem>\n               <bts:IDL>645</bts:IDL>\n            </bts:SdtbbtIdLogPagos_bbtIdLogPagosItem>\n         </bts:ListadoIDL>\n      </bts:BTTransferenciasACH.ConsultaEstado>\n   </soapenv:Body>\n</soapenv:Envelope>",

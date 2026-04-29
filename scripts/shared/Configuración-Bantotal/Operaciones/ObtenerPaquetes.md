@@ -230,7 +230,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPaquete son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Int | Código de paquete.
 descripcion | String | Descripción de paquete.
@@ -241,7 +241,7 @@ vigente | String | Indica si está vigente el paquete (S/N).
 
 Los campos del tipo de dato estructurado sBTProductoPaquete son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 cantidad | Short | Cantidad de productos de este tipo incluidos en el paquete.
 moneda | String | Símbolo de moneda.

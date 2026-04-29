@@ -32,6 +32,7 @@
       "Descripción": "No se recuperó la persona  para el Identificador: [Número de identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerFacultades>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>Instalador</bts:Usuario>\n            <bts:Token>5f7c5e6a6f99865B3A2E76CF</bts:Token>\n         </bts:Btinreq>\n         <bts:personasUId>183</bts:personasUId>\n      </bts:BTPersonas.ObtenerFacultades>\n   </soapenv:Body>\n</soapenv:Envelope>",

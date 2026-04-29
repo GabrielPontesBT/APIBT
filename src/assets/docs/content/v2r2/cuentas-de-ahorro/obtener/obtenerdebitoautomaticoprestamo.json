@@ -40,6 +40,7 @@
       "Descripción": "No se encontraron registros para la operación ingresada."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>ba1db0c9adCD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>81</bts:operacionUId>\n      </bts:BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo>\n   </soapenv:Body>\n</soapenv:Envelope>",

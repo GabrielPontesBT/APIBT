@@ -28,6 +28,7 @@
       "Descripción": "No se recibió el identificador de la tarjeta."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ObtenerCuentaPreferencial>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BA</bts:Usuario>\n            <bts:Token>0211202010280000399672</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:tarjetaId>109</bts:tarjetaId>\n      </bts:BTTarjetasDeDebito.ObtenerCuentaPreferencial>\n   </soapenv:Body>\n</soapenv:Envelope>",

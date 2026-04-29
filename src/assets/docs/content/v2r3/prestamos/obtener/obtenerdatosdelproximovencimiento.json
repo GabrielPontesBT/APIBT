@@ -54,14 +54,15 @@
       "Descripción": "La Operación se encuentra cancelada."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.ObtenerDatosProxVencimiento>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>9</bts:operacionUId>\r\n         <bts:fechaConsulta>2020-08-09</bts:fechaConsulta>\r\n      </bts:BTPrestamos.ObtenerDatosProxVencimiento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDatosProxVencimiento' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\r\n    },\r\n    \"operacionUId\": 9,\r\n    \"fechaConsulta\": \"2020-08-09\"\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerDatosProxVencimiento>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>9</bts:operacionUId>\n         <bts:fechaConsulta>2020-08-09</bts:fechaConsulta>\n      </bts:BTPrestamos.ObtenerDatosProxVencimiento>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDatosProxVencimiento' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Device\": \"GZ\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\n    },\n    \"operacionUId\": 9,\n    \"fechaConsulta\": \"2020-08-09\"\n}'"
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.ObtenerDatosProxVencimientoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\r\n         </Btinreq>\r\n         <sdtProxVencimiento>\r\n            <otrosConceptos></otrosConceptos>\r\n            <fechaPrimerIncumplimiento>2020-05-09</fechaPrimerIncumplimiento>\r\n            <deudaVencida>41395.15</deudaVencida>\r\n            <cantCuoImpagas>12</cantCuoImpagas>\r\n            <monto>41395.15</monto>\r\n            <fechaProxVencimiento>2020-08-09</fechaProxVencimiento>\r\n            <cantCuoPagas>0</cantCuoPagas>\r\n            <fechaUltPago/>\r\n            <cantCuoImpVenc>4</cantCuoImpVenc>\r\n            <cuotaVigente>0.00</cuotaVigente>\r\n         </sdtProxVencimiento>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>16849</Numero>\r\n            <Servicio>BTPrestamos.ObtenerDatosProxVencimiento</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2023-10-26</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>12:27:02</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.ObtenerDatosProxVencimientoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\r\n    },\r\n    \"sdtProxVencimiento\": {\r\n        \"otrosConceptos\": \"\",\r\n        \"fechaPrimerIncumplimiento\": \"2020-05-09\",\r\n        \"deudaVencida\": 41395.15,\r\n        \"cantCuoImpagas\": 12,\r\n        \"monto\": 41395.15,\r\n        \"fechaProxVencimiento\": \"2020-08-09\",\r\n        \"cantCuoPagas\": 0,\r\n        \"fechaUltPago\": \"\",\r\n        \"cantCuoImpVenc\": 4,\r\n        \"cuotaVigente\": 0.00\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 16849,\r\n        \"Servicio\": \"BTPrestamos.ObtenerDatosProxVencimiento\",\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2023-10-26\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"12:27:02\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.ObtenerDatosProxVencimientoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>DF1F942C6EC60E8B95BBEA69</Token>\n         </Btinreq>\n         <sdtProxVencimiento>\n            <otrosConceptos></otrosConceptos>\n            <fechaPrimerIncumplimiento>2020-05-09</fechaPrimerIncumplimiento>\n            <deudaVencida>41395.15</deudaVencida>\n            <cantCuoImpagas>12</cantCuoImpagas>\n            <monto>41395.15</monto>\n            <fechaProxVencimiento>2020-08-09</fechaProxVencimiento>\n            <cantCuoPagas>0</cantCuoPagas>\n            <fechaUltPago/>\n            <cantCuoImpVenc>4</cantCuoImpVenc>\n            <cuotaVigente>0.00</cuotaVigente>\n         </sdtProxVencimiento>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16849</Numero>\n            <Servicio>BTPrestamos.ObtenerDatosProxVencimiento</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2023-10-26</Fecha>\n            <Requerimiento>0</Requerimiento>\n            <Hora>12:27:02</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.ObtenerDatosProxVencimientoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "'{\n    \"Btinreq\": {\n        \"Device\": \"GZ\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Requerimiento\": 0,\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"DF1F942C6EC60E8B95BBEA69\"\n    },\n    \"sdtProxVencimiento\": {\n        \"otrosConceptos\": \"\",\n        \"fechaPrimerIncumplimiento\": \"2020-05-09\",\n        \"deudaVencida\": 41395.15,\n        \"cantCuoImpagas\": 12,\n        \"monto\": 41395.15,\n        \"fechaProxVencimiento\": \"2020-08-09\",\n        \"cantCuoPagas\": 0,\n        \"fechaUltPago\": \"\",\n        \"cantCuoImpVenc\": 4,\n        \"cuotaVigente\": 0.00\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 16849,\n        \"Servicio\": \"BTPrestamos.ObtenerDatosProxVencimiento\",\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2023-10-26\",\n        \"Requerimiento\": 0,\n        \"Hora\": \"12:27:02\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
     }
   },
   "structuredTypes": [
@@ -112,6 +113,26 @@
           "Nombre": "otrosConceptos",
           "Tipo": "<a href=\"#sbtconcepto\">sBTConcepto</a>",
           "Comentarios": "Datos de otros conceptos."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTConcepto",
+      "fields": [
+        {
+          "Nombre": "concepto",
+          "Tipo": "String",
+          "Comentarios": "Concepto."
+        },
+        {
+          "Nombre": "texto",
+          "Tipo": "String",
+          "Comentarios": "Texto."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "Double",
+          "Comentarios": "Importe."
         }
       ]
     }

@@ -52,6 +52,7 @@
       "Descripción": "No se recibió CBU."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ValidarCUIT>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <bts:cuitIn>27107718990</bts:cuitIn>\n         <bts:cbuIn>4320001020003185180008</bts:cbuIn>\n      </bts:BTCOELSAGestionDebin.ValidarCUIT>\n   </soapenv:Body>\n</soapenv:Envelope>",

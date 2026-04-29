@@ -574,7 +574,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPais son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 descripcion | String | Descripcion de moneda.
 identificador | Short | Identificador de país.

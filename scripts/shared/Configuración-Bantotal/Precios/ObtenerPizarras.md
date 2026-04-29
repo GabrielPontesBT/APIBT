@@ -297,7 +297,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTPizarra son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Int | Identificador de pizarra.
 descripcion | String | Nombre de la pizarra.

@@ -37,8 +37,8 @@ ListaDebinReq | [sBTListaDebinReq](#sbtlistadebinreq) | Datos listados de un Deb
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-DebinDatosRes | [SdtsBTListaDebinRes](#sdtsbttlistadebinres) | Lista de datos de respuesta de Debin.
-CollectionDebines | [SdtbBTListaDebinItem](#sdtbbtlistadebinitem) | Colección de Debines.
+DebinDatosRes | [sBTListaDebinRes](#sbtlistadebinres) | Lista de datos de respuesta de Debin.
+CollectionDebines | [bBTListaDebinItem](#bbtlistadebinitem) | Colección de Debines.
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -174,7 +174,7 @@ tipoDebin | String |  Tipo debin.
  
 ::: details SdtsBTListaDebinRes  
 
-### SdtsBTListaDebinRes
+### sBTListaDebinRes
 
 ::: center 
 Los campos del tipo de dato estructurado sBTListaDebinRes son los siguientes: 
@@ -188,7 +188,7 @@ DescRespuesta | String |  Descripción de respuesta.
 
 ::: details SdtbBTListaDebinItem  
 
-### SdtbBTListaDebinItem
+### bBTListaDebinItem
 
 ::: center 
 Los campos del tipo de dato estructurado SdtbBTListaDebinItem son los siguientes: 

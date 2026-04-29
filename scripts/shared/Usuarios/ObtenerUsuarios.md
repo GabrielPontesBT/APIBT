@@ -221,7 +221,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDetalleUsuario son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 empresa | String | Nombre de la empresa. 
 nombre | String | Nombre del usuario. 

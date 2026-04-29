@@ -2,7 +2,7 @@
   <div class="info-card_content">
     @if (description) {
       <div class="info-card_description" (click)="onDescriptionClick($event)">
-        <span><strong [innerHTML]="description"></strong></span>
+        <markdown [data]="description"></markdown>
       </div>
     }
 

@@ -51,6 +51,7 @@
       "Descripción": "No se encontró persona(s) con el patron de búsqueda ingresado."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerPersonas>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>0d402ef5c94A84</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:primerNombre>ALEJANDRO</bts:primerNombre>\n         <bts:segundoNombre></bts:segundoNombre>\n         <bts:primerApellido>VAZQUEZ</bts:primerApellido>\n         <bts:segundoApellido>SZENTANDRASI</bts:segundoApellido>\n      </bts:BTPersonas.ObtenerPersonas>\n   </soapenv:Body>\n</soapenv:Envelope>",

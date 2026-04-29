@@ -20,7 +20,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -92,7 +92,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -177,7 +177,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -212,7 +212,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -232,7 +232,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -282,7 +282,7 @@
       "Comentarios": ""
     },
     {
-      "Nombre": "Campo",
+      "Nombre": "Nombre",
       "Tipo": "Tipo",
       "Comentarios": "Comentarios"
     },
@@ -341,6 +341,7 @@
       "Descripción": "El deposito inicial es superior al total a ahorrar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.Simular>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>GL</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtDatos>\n            <bts:abono>10000</bts:abono>\n            <bts:productoUid>82</bts:productoUid>\n            <bts:montoTotalAhorrar>0</bts:montoTotalAhorrar>\n            <bts:clienteUid>61</bts:clienteUid>\n            <bts:personaUid>22</bts:personaUid>\n            <bts:diaIncremento>5</bts:diaIncremento>\n            <bts:depositoInicial>1000</bts:depositoInicial>\n            <bts:fechaInicioAhorro></bts:fechaInicioAhorro>\n            <bts:plazo>360</bts:plazo>\n            <bts:periodicidadIncremento>1</bts:periodicidadIncremento>\n         </bts:sdtDatos>\n      </bts:BTAhorroProgramado.Simular>\n   </soapenv:Body>\n</soapenv:Envelope>",

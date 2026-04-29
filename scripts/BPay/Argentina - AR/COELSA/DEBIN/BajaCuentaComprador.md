@@ -138,7 +138,7 @@ ctaCBU | String | Clave Bancaria Uniforme.
 ::: center 
 Los campos del tipo de dato estructurado sBTRespDebin son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción. 
 codigo | String | Código. 

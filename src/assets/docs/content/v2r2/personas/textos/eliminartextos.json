@@ -52,6 +52,7 @@
       "Descripción": "El texto a eliminar no existe."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>143</bts:personaUId>\n         <bts:sbtTextos>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>1</bts:renglon>\n               <bts:texto></bts:texto>\n               <bts:descripcion></bts:descripcion>\n               <bts:codigo>11</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n         </bts:sbtTextos>\n      </bts:BTPersonas.EliminarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",

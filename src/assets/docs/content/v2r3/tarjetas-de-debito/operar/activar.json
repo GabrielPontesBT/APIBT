@@ -71,6 +71,7 @@
       "Descripción": "El servicio se encuentra en ejecución."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Activar>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>407fce50864A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000002072</bts:tarjetaUId>\n         <bts:clienteUId>161</bts:clienteUId>\n      </bts:BTTarjetasDeDebito.Activar>\n   </soapenv:Body>\n</soapenv:Envelope>",

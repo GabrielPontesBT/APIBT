@@ -109,6 +109,7 @@ curl -X POST \
       "productoUId": 41,
       "cuentaOrigenUId": 21
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -236,6 +237,7 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 

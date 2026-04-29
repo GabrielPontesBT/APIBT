@@ -33,6 +33,7 @@
       "Descripción": "No se recibió identificador de persona."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ObtenerFATCA>\r\n         <bts:Btinreq>\r\n            <bts:Token>bbf6bf228fCD285A89A23FBE</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>41</bts:personaUId>\r\n      </bts:BTPersonas.ObtenerFATCA>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

@@ -49,6 +49,7 @@
       "Descripción": "No se recibió identificador de cuenta a consultar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerFacultades>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>papa</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>BC79E967434CDFE2512C069E</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>342</bts:clienteUId>\n      </bts:BTClientes.ObtenerFacultades>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -25,7 +25,7 @@
     </div>
 
     <div class="chat-messages" #chatMessages>
-      @for (m of messages; track m) {
+      @for (m of messages; track $index) {
         <div
           [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
           [@messageAnim]="m.isUser ? true : null">
@@ -35,6 +35,8 @@
             </div>
           } @else if (m.isUser) {
             <p>{{ m.text }}</p>
+          } @else if (m.streaming) {
+            <div class="streaming-text">{{ m.text }}</div>
           } @else {
             <markdown [data]="m.text" prism appRenderKatex></markdown>
           }

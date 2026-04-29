@@ -42,6 +42,7 @@
       "Descripción": "No existe el correlativo."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTParametrosBase.ObtenerCorrelativoGuia>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>43f21ff61cCD285A89A23FBE</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Device>1</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:codigo>50</bts:codigo>\r\n         <bts:correlativo>1</bts:correlativo>\r\n      </bts:BTParametrosBase.ObtenerCorrelativoGuia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

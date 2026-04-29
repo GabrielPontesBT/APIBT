@@ -29,6 +29,7 @@
       "Descripción": "No se recibió Id Camara."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n\t\t<bts:BTCCE.ObtenerBancos>\n\t\t\t<bts:Btinreq>\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\n\t\t\t\t<bts:Device>1</bts:Device>\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\n\t\t\t</bts:Btinreq>\n\t\t\t<bts:IDCamara>1</bts:IDCamara>\n\t\t</bts:BTCCE.ObtenerBancos>\n\t</soapenv:Body>\n</soapenv:Envelope>",
@@ -39,6 +40,22 @@
       "json": ""
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTListaBancox",
+      "fields": [
+        {
+          "Nombre": "CodBco",
+          "Tipo": "Int",
+          "Comentarios": "Codigo banco."
+        },
+        {
+          "Nombre": "NomBaco",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        }
+      ]
+    }
+  ],
   "valuesTable": []
 }

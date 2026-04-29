@@ -10,7 +10,7 @@
   "backendData": [],
   "inputData": [
     {
-      "Nombre": "sdtDatosDebitar",
+      "Nombre": "sdtDatosDebito",
       "Tipo": "<a href=\"#sbtdatosacreditardebitar\">sBTDatosAcreditarDebitar</a>",
       "Comentarios": "Datos del débito."
     }
@@ -33,13 +33,14 @@
     },
     {
       "Código": "30004",
-      "Descripción": "No se recuperó la operación origen para el Identificador: X."
+      "Descripción": "No se recuperó la operación origen para el Identificador: [Número de identificador]."
     },
     {
       "Código": "30004",
-      "Descripción": "No se recuperó la cuenta cliente origen para el Identificador: X."
+      "Descripción": "No se recuperó la cuenta cliente origen para el Identificador: [Número de identificador]."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.DebitarEnCuenta>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1244265502F955E77534D3E0</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:sdtDatosDebitar>\n            <bts:clienteUId>140</bts:clienteUId>\n            <bts:operacionUId>10140</bts:operacionUId>\n            <bts:importe1>1000</bts:importe1>\n            <bts:importe2>5220</bts:importe2>\n            <bts:importe3></bts:importe3>\n            <bts:importe4></bts:importe4>\n            <bts:concepto1>test</bts:concepto1>\n            <bts:concepto2></bts:concepto2>\n            <bts:concepto3></bts:concepto3>\n            <bts:concepto4></bts:concepto4>\n         </bts:sdtDatosDebitar>\n      </bts:BTCuentasVista.DebitarEnCuenta>\n   </soapenv:Body>",

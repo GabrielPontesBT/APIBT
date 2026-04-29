@@ -195,7 +195,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTMenu son los siguientes:
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 identificador | String | Identificador de menú.
 descripcion | String | Descripción de menú.

@@ -41,6 +41,7 @@
       "Descripción": "No se recuperó la tarjeta de débito para el identificador: [Número de identificador]"
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Denunciar>\n         <bts:Btinreq>\n            <bts:Device>10.12.10.159</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>c7b24221f2F955E77534D3E0</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>109</bts:tarjetaUId>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:motivoUId>1</bts:motivoUId>\n      </bts:BTTarjetasDeDebito.Denunciar>\n   </soapenv:Body>\n</soapenv:Envelope>",

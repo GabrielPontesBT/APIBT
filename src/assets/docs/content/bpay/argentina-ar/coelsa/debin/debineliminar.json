@@ -32,6 +32,7 @@
       "Descripción": "No se recibió CUIT de Vendedor/Creador a eliminar."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.EliminarDebin>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>02cb4baaac464D4650046918</Token>\n         </Btinreq>\n         <bts:EliminarDebinReq>\n            <bts:cuitVendedor>27337167255</bts:cuitVendedor>\n            <bts:idDebin>GWY7ZEPN6ZW0WR4NQ0M51O</bts:idDebin>\n         </bts:EliminarDebinReq>\n      </bts:BTCOELSAGestionDebin.EliminarDebin>\n   </soapenv:Body>\n</soapenv:Envelope>",
@@ -55,6 +56,21 @@
           "Nombre": "idDebin",
           "Tipo": "Character",
           "Comentarios": "Id de Debin."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTRespDebin",
+      "fields": [
+        {
+          "Nombre": "descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción de respuesta."
+        },
+        {
+          "Nombre": "codigo",
+          "Tipo": "String",
+          "Comentarios": "Código de respuesta."
         }
       ]
     }

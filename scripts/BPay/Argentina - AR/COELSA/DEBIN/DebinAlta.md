@@ -204,7 +204,7 @@ imsi | String | IMSI.
 ::: center 
 Los campos del tipo de dato estructurado sBTDebinRes son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 DebinId | String | Identificador Debin. 
 DebinCodEstado | String | Código estado. 

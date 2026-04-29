@@ -69,6 +69,7 @@
       "Descripción": "El contrato consultado no corresponde al servicio recibido."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCASHManagement.VisualizarSituacionArchivos>\n          <bts:Btinreq>\n            <bts:Device>001</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>1e39d33c824A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>1</bts:clienteUId>\n         <bts:contratoF></bts:contratoF>\n         <bts:servicioF></bts:servicioF>\n         <bts:estadoF></bts:estadoF>\n         <bts:fechaDesdeF>2018-01-01</bts:fechaDesdeF>\n         <bts:fechaHastaF></bts:fechaHastaF>\n      </bts:BTCASHManagement.VisualizarSituacionArchivos>\n   </soapenv:Body>\n</soapenv:Envelope>",

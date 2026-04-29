@@ -249,7 +249,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTDetalleExcepcion son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcionEstado | String | Descripción del estado.
 estado | String | Estado.
@@ -266,7 +266,7 @@ solicitaPassword | String | Solicita contraseña (S/N).
 
 Los campos del tipo de dato estructurado sBTExcepcion son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción de la excepción.
 descripcionMovimiento | String | Descripción del movimiento.
@@ -281,7 +281,7 @@ usuario | String | Usuario.
 
 Los campos del tipo de dato estructurado sBTMetadataExcepcion son los siguientes: 
 
-Campo | Tipo | Comentarios 
+Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción de la MetaData.
 esImporte | String | Es Importe (S/N).

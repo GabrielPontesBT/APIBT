@@ -305,7 +305,7 @@ curl -X POST \
 ::: center 
 Los campos del tipo de dato estructurado sBTImpuesto son los siguientes: 
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Short | Código de impuesto.
 condiciones | [sBTImpuestoCondicion](#sbtimpuestocondicion) | Listado de condiciones del impuesto.
@@ -315,7 +315,7 @@ descripcion | String | Descripción del impuesto.
 
 Los campos del tipo de dato estructurado sBTImpuestoCondicion son los siguientes: 
 
-Campo | Tipo | Comentarios
+Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 codigo | Short | Código de condición.
 descripcion | String | Descripción de condición.

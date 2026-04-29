@@ -23,7 +23,7 @@
     },
     {
       "Nombre": "ColeccionVendedorConsulta",
-      "Tipo": "<a href=\"#sdtsbtconsultavendedorcuenta_cuentaitem\">sBTConsultaVendedorCuenta_CuentaItem</a>",
+      "Tipo": "<a href=\"#sbtconsultavendedorcuenta_cuentaitem\">sBTConsultaVendedorCuenta_CuentaItem</a>",
       "Comentarios": "Colección de datos del vendedor."
     }
   ],
@@ -33,6 +33,7 @@
       "Descripción": "No se recibió CUIT."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConsultaVendedor>\n            <Btinreq>\n               <Canal>BTDIGITAL</Canal>\n               <Requerimiento>1</Requerimiento>\n               <Usuario>INSTALADOR</Usuario>\n               <Token>1095768874CD285A89A23FBE</Token>\n               <Device>ABC</Device>\n            </Btinreq>\n         <bts:Cuit>30716226308</bts:Cuit>\n      </bts:BTCOELSAGestionDebin.ConsultaVendedor>\n   </soapenv:Body>\n</soapenv:Envelope>",

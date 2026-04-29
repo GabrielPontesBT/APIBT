@@ -34,6 +34,7 @@
       "Descripción": "Se debe ingresar un Id."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasLBTR.ConsultaEstado>\n         <bts:Btinreq>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>162F5ED1EF5ECCFA9EAEE200</bts:Token>\n         </bts:Btinreq>\n         <bts:IdTransferencia>127</bts:IdTransferencia>\n      </bts:BTTransferenciasLBTR.ConsultaEstado>\n   </soapenv:Body>\n</soapenv:Envelope>",

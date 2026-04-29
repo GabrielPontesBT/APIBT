@@ -36,6 +36,7 @@
       "Descripción": "La cuenta ingresada no existe."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.EliminarInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>1189</bts:clienteUId>\r\n         <bts:sdtInformacionAdicional>\r\n            <bts:sBTDatoLista>\r\n               <bts:clave>AnioNacimiento</bts:clave>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTDatoLista>\r\n         </bts:sdtInformacionAdicional>\r\n      </bts:BTClientes.EliminarInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

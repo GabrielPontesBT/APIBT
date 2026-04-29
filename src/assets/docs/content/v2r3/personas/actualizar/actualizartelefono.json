@@ -70,6 +70,7 @@
       "Descripción": "El número del teléfono no acepta caracteres."
     }
   ],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarTelefono>\n         <bts:Btinreq>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>A088577A8D1E89A20E6EF27D</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>61</bts:personaUId>\n         <bts:numeroTelefono>099274742</bts:numeroTelefono>\n         <bts:tipoTelefonoId>2</bts:tipoTelefonoId>\n         <bts:domicilioId>1</bts:domicilioId>\n         <bts:telefonoId>1</bts:telefonoId>\n      </bts:BTPersonas.ActualizarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>",

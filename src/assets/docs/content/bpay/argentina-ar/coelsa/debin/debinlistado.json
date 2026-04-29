@@ -18,16 +18,17 @@
   "outputData": [
     {
       "Nombre": "DebinDatosRes",
-      "Tipo": "<a href=\"#sdtsbttlistadebinres\">SdtsBTListaDebinRes</a>",
+      "Tipo": "<a href=\"#sbtlistadebinres\">sBTListaDebinRes</a>",
       "Comentarios": "Lista de datos de respuesta de Debin."
     },
     {
       "Nombre": "CollectionDebines",
-      "Tipo": "<a href=\"#sdtbbtlistadebinitem\">SdtbBTListaDebinItem</a>",
+      "Tipo": "<a href=\"#bbtlistadebinitem\">bBTListaDebinItem</a>",
       "Comentarios": "Colección de Debines."
     }
   ],
   "errors": [],
+  "errorsNote": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ListaDebin>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>02cb4baaac464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:ListaDebinReq>\n            <bts:listadoPagina>1</bts:listadoPagina>\n            <bts:OpeFecDesde>2022-01-30T23:59:59.999Z</bts:OpeFecDesde>\n            <bts:vendedorCuit>20128329464</bts:vendedorCuit>\n            <bts:compradorBco></bts:compradorBco>\n            <bts:compradorCuit></bts:compradorCuit>\n            <bts:vendedorBco>094</bts:vendedorBco>\n            <bts:vendedorLote></bts:vendedorLote>\n            <bts:vendedorTerm></bts:vendedorTerm>\n            <bts:listadoTamano>10</bts:listadoTamano>\n            <bts:OpeFecHasta>2022-12-30T23:59:59.999Z</bts:OpeFecHasta>\n            <bts:CodEstado>ACREDITADO</bts:CodEstado>\n            <bts:compradorCbu></bts:compradorCbu>\n            <bts:vendedorCbu></bts:vendedorCbu>\n            <bts:tipoDebin>debin</bts:tipoDebin>\n         </bts:ListaDebinReq>\n      </bts:BTCOELSAGestionDebin.ListaDebin>\n   </soapenv:Body>\n</soapenv:Envelope>",
@@ -115,7 +116,7 @@
       ]
     },
     {
-      "typeName": "SdtsBTListaDebinRes",
+      "typeName": "sBTListaDebinRes",
       "fields": [
         {
           "Nombre": "listadoPagTotales",
@@ -135,7 +136,7 @@
       ]
     },
     {
-      "typeName": "SdtbBTListaDebinItem",
+      "typeName": "bBTListaDebinItem",
       "fields": [
         {
           "Nombre": "CompradorCuit",
