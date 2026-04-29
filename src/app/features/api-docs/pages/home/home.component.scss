@@ -27,7 +27,7 @@
   min-height: 30px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
-    url('/assets/image/fondo_inicio.jpg') center center / cover no-repeat;
+    url('../../../../../assets/image/fondo_inicio.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,11 +157,11 @@
     width: 60%;
     height: 60%;
     background-color: var(--bg-color);
-    mask-image: url('/assets/image/isotipo_Bantotal.png');
+    mask-image: url('../../../../../assets/image/isotipo_Bantotal.png');
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
-    -webkit-mask-image: url('/assets/image/isotipo_Bantotal.png');
+    -webkit-mask-image: url('../../../../../assets/image/isotipo_Bantotal.png');
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
