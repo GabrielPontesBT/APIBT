@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -75,13 +80,14 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTAhorroProgramado.ModificarMetaDeAhorro>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>b3c6f2d0e34A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:clienteUId>81</bts:clienteUId>\n         <bts:ahorroUId>141</bts:ahorroUId>\n         <bts:motivoAhorro>Mi ahorro 1</bts:motivoAhorro>\n         <bts:montoMetaAhorro>15000</bts:montoMetaAhorro>\n         <bts:fechaMetaAhorro></bts:fechaMetaAhorro>\n      </bts:BTAhorroProgramado.ModificarMetaDeAhorro>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ModificarMetaDeAhorro>\r\n\t\t<bts:Btinreq>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>b3c6f2d0e34A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>81</bts:clienteUId>\r\n         <bts:ahorroUId>141</bts:ahorroUId>\r\n         <bts:motivoAhorro>Mi ahorro 1</bts:motivoAhorro>\r\n         <bts:montoMetaAhorro>15000</bts:montoMetaAhorro>\r\n         <bts:fechaMetaAhorro></bts:fechaMetaAhorro>\r\n      </bts:BTAhorroProgramado.ModificarMetaDeAhorro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
       "json": ""
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTAhorroProgramado.ModificarMetaDeAhorroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>b3c6f2d0e34A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>151</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTAhorroProgramado.ModificarMetaDeAhorro</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2018-05-07</Fecha>\n            <Hora>13:26:12</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTAhorroProgramado.ModificarMetaDeAhorroResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ModificarMetaDeAhorroResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>1</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>b3c6f2d0e34A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>151</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTAhorroProgramado.ModificarMetaDeAhorro</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2018-05-07</Fecha>\r\n            <Hora>13:26:12</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ModificarMetaDeAhorroResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
       "json": ""
     }
   },

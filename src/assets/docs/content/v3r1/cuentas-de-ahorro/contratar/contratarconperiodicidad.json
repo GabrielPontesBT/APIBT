@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -61,6 +66,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n    <soapenv:Body>\r\n      <bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1335244350CD285A89A23FBE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>10021</bts:clienteUId>\r\n         <bts:productoUId>94</bts:productoUId>\r\n         <bts:nombreSubcuenta>Caja de Ahorro</bts:nombreSubcuenta>\r\n         <bts:periodoAcreditacion>1</bts:periodoAcreditacion>\r\n      </bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

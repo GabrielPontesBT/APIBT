@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "cuit",
@@ -38,6 +43,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.VendedorCuentaBaja>\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <bts:vendedorBaja>\n            <bts:cuit>30716226308</bts:cuit>\n            <bts:ctaCbu>4320001010003005710010</bts:ctaCbu>\n         </bts:vendedorBaja>\n      </bts:BTCOELSAGestionDebin.VendedorCuentaBaja>\n   </soapenv:Body>\n</soapenv:Envelope>",

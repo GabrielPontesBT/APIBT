@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "Si la opción general de procesos 3281 se encuentra activada, el servicio considera la sucursal del usuario de conexión, en caso contrario, simula con la sucursal de la cuenta cliente.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPrestamo",
@@ -161,6 +166,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.Simular>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>72e34bcd9d4A8B5C60A82434</bts:Token>\n            <bts:Device>AV</bts:Device>          \n         </bts:Btinreq>\n         <bts:sdtPrestamo>\n            <bts:fechaPrimerPago>2019-01-12</bts:fechaPrimerPago>\n            <bts:monto>10000</bts:monto>\n            <bts:tasa>0</bts:tasa>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:cantidadCuotas>12</bts:cantidadCuotas>\n            <bts:productoUId>61</bts:productoUId>\n            <bts:pizarra>0</bts:pizarra>\n            <bts:clienteUId>4</bts:clienteUId>\n            <bts:actividad>11200</bts:actividad>\n         </bts:sdtPrestamo>\n      </bts:BTPrestamos.Simular>\n   </soapenv:Body>\n</soapenv:Envelope>",

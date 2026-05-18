@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtSimulacionPlazoFijo",
@@ -53,6 +58,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.SimularPlazoFijo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>95</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1571835133CD285A89A23FBE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtSimulacionPlazoFijo>\r\n            <bts:solicitudUId>10972</bts:solicitudUId>\r\n            <bts:clienteUId>2</bts:clienteUId>\r\n            <bts:productoUId>29</bts:productoUId>\r\n            <bts:fechaVencimiento/>\r\n            <bts:plazo>365</bts:plazo>\r\n            <bts:monto>35000</bts:monto>\r\n            <bts:pizarra/>\r\n            <bts:tasa/>\r\n            <bts:destinoCredito>28</bts:destinoCredito>\r\n            <bts:datosAdicionales/>\r\n         </bts:sdtSimulacionPlazoFijo>\r\n      </bts:BTMicrofinanzas.SimularPlazoFijo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

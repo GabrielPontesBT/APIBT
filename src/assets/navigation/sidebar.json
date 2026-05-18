@@ -743,19 +743,6 @@
   },
   {
     "type": "folder",
-    "label": "CHAT",
-    "slug": "chat",
-    "children": [
-      {
-        "type": "file",
-        "label": "CHAT",
-        "pageTitle": "CHAT",
-        "slug": "chat/chat"
-      }
-    ]
-  },
-  {
-    "type": "folder",
     "label": "Clientes",
     "slug": "clientes",
     "children": [

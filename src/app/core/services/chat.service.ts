@@ -2,6 +2,7 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
 import { VersionService, VersionId } from './version.service';
+import { environment } from '../../../environments/environment';
 
 interface SessionResponse {
   data: { sessionId: string };
@@ -25,7 +26,7 @@ const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
 @Injectable({ providedIn: 'root' })
 export class ChatService {
   private sessionUrl = `${BASE_URL}/session`;
-  private apiKey     = 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy';
+  private apiKey     = environment.chatApiKey;
 
   constructor(
     private versionService: VersionService,

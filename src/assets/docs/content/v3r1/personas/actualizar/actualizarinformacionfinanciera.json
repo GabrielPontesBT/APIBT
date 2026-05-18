@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -152,6 +157,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ActualizarInformacionFinanciera>\r\n         <bts:Btinreq>\r\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>42</bts:personaUId>\r\n         <bts:sdtInformacionFinanciera>\r\n            <bts:paisOrigenRecursos></bts:paisOrigenRecursos>\r\n            <bts:otrosIngresosMensualesDesc>Alquileres</bts:otrosIngresosMensualesDesc>\r\n            <bts:operacionesInternacionales>\r\n               <bts:tipoProducto>CDT</bts:tipoProducto>\r\n               <bts:moneda></bts:moneda>\r\n               <bts:ciudadId>1465</bts:ciudadId>\r\n               <bts:nombreEntidad>Nombre Entidad Prueba</bts:nombreEntidad>\r\n               <bts:monto>884561.00</bts:monto>\r\n               <bts:pais></bts:pais>\r\n               <bts:ciudad></bts:ciudad>\r\n               <bts:operaMonedaExtranjera>S</bts:operaMonedaExtranjera>\r\n               <bts:numeroProducto>AAALLL</bts:numeroProducto>\r\n               <bts:tipoOperacion>Inversiones</bts:tipoOperacion>\r\n               <bts:monedaId>801</bts:monedaId>\r\n               <bts:paisId>845</bts:paisId>\r\n            </bts:operacionesInternacionales>\r\n            <bts:totalPasivos>450000.00</bts:totalPasivos>\r\n            <bts:origenRecursos>C</bts:origenRecursos>\r\n            <bts:totalIngresosMensuales>550015.00</bts:totalIngresosMensuales>\r\n            <bts:egresosMensuales>380000.00</bts:egresosMensuales>\r\n            <bts:otrosIngresosMensuales>450015.00</bts:otrosIngresosMensuales>\r\n            <bts:ingresosMensuales>100000.00</bts:ingresosMensuales>\r\n            <bts:totalActivos>950000.00</bts:totalActivos>\r\n            <bts:paisOrigenRecursosId></bts:paisOrigenRecursosId>\r\n         </bts:sdtInformacionFinanciera>\r\n      </bts:BTPersonas.ActualizarInformacionFinanciera>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

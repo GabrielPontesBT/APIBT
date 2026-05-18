@@ -1,0 +1,93 @@
+{
+  "slug": "term-deposit/getpersonproducts",
+  "pageTitle": "Get Person Products",
+  "description": "Método para obtener un listado de los productos de depósito a plazo que una persona puede contratar.",
+  "pubName": "PublicTermDeposit.getPersonProducts",
+  "modulo": "Configuration.ProductsHub",
+  "programa": "PublicAPI.BTPHPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la persona."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "Completar manualmente",
+      "Tipo": "Completar manualmente",
+      "Comentarios": "Completar manualmente"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "products",
+      "Tipo": "<a href=\"#sdtsbtphwproduct\">SdtsBTPHWProduct</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "Completar manualmente",
+      "Descripción": "Completar manualmente"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"personGUID\": \"f43a3946-4ae1-4a27-861d-c1c2d9cee87d\"\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"products\": {\n    \"product\": [\n      {\n        \"ProductGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\n        \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n        \"CurrencyId\": 0,\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\n        \"CurrencySign\": \"$\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      },\n      {\n        \"ProductGUID\": \"659d329f-3ad4-4984-aaa8-a3fe1561b512\",\n        \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n        \"CurrencyId\": 2222,\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE\",\n        \"CurrencySign\": \"USD\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      },\n      {\n        \"ProductGUID\": \"55dbadfa-6056-4d88-8779-c530a291bc1b\",\n        \"ProductDescription\": \"DPF TIPO 2 - COMERCIAL 360 EFECTIVA\",\n        \"CurrencyId\": 0,\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\n        \"CurrencySign\": \"$\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      },\n      {\n        \"ProductGUID\": \"ac1ab7da-04da-4ef6-8361-cc1f3d680705\",\n        \"ProductDescription\": \"DPF TIPO 2 - COMERCIAL 360 EFECTIVA\",\n        \"CurrencyId\": 2222,\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE\",\n        \"CurrencySign\": \"USD\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      },\n      {\n        \"ProductGUID\": \"8dbfe86d-577e-4a69-be2b-d996dff99393\",\n        \"ProductDescription\": \"DPF TIPO 3 - CALENDARIO 360 EFECTIVA\",\n        \"CurrencyId\": 0,\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\n        \"CurrencySign\": \"$\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      },\n      {\n        \"ProductGUID\": \"24786555-83a8-477a-8a8c-29e912c3fbfc\",\n        \"ProductDescription\": \"INVERSION COMPARTAMOS\",\n        \"CurrencyId\": 0,\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\n        \"CurrencySign\": \"$\",\n        \"KindId\": 0,\n        \"KindDescription\": \"Billete\"\n      }\n    ]\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:32\",\n    \"Numero\": 13472658,\n    \"Servicio\": \"PublicTermDeposit.getPersonProducts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTPHWProduct",
+      "fields": [
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "CurrencyDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción de la moneda."
+        },
+        {
+          "Nombre": "CurrencySign",
+          "Tipo": "String <strong>(length: 4)</strong>",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "KindDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción del tipo."
+        },
+        {
+          "Nombre": "ProductDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "ProductGUID",
+          "Tipo": "String <strong>(length: 36)</strong>",
+          "Comentarios": "GUID del producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

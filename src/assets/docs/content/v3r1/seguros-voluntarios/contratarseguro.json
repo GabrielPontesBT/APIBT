@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "seguroUId",
@@ -105,6 +110,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSegurosVoluntarios.ContratarSeguro>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:seguroUId>3</bts:seguroUId>\r\n         <bts:clienteUId>25</bts:clienteUId>\r\n         <bts:importe>3342</bts:importe>\r\n         <bts:cantidadCuotas>6</bts:cantidadCuotas>\r\n         <bts:monedaId>1</bts:monedaId>\r\n         <bts:numeroAfiliacion>3</bts:numeroAfiliacion>\r\n         <bts:operacionCobroUId>47</bts:operacionCobroUId>\r\n      </bts:BTSegurosVoluntarios.ContratarSeguro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

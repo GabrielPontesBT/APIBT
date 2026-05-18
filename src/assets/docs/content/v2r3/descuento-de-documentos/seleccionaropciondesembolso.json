@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "listaUId",
@@ -41,6 +46,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>\n\t\t<Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>GUAY.BANTOTAL</Usuario>\n            <Token>1485239356EB8880B52090F2</Token>\n            <Device>ES</Device>\n         </Btinreq>\n         <bts:listaUId>75</bts:listaUId>\n         <bts:operacionUId>12</bts:operacionUId>\n         <bts:tipoDesembolso>3</bts:tipoDesembolso>\n      </bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>\n   </soapenv:Body>\n</soapenv:Envelope>",

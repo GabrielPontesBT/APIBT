@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción a contabilizar, teniendo en cuenta que la operaciónUId1 y el importe1 se almacena en el preformato 1, la operaciónUId2 y el importe2 se almacena en el preformato 2 y así sucesivamente.\r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T).",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtDatosAsiento",
@@ -37,6 +42,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTContabilidad.RegistrarAsiento>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>1244265502F955E77534D3E0</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatosAsiento>\r\n            <bts:operacionUId1>10140</bts:operacionUId1>\r\n            <bts:operacionUId2>10141</bts:operacionUId2>\r\n            <bts:operacionUId3></bts:operacionUId3>\r\n            <bts:operacionUId4></bts:operacionUId4>\r\n            <bts:operacionUId5></bts:operacionUId5>\r\n            <bts:importe1>1000</bts:importe1>\r\n            <bts:importe2>5220</bts:importe2>\r\n            <bts:importe3></bts:importe3>\r\n            <bts:importe4></bts:importe4>\r\n            <bts:importe5></bts:importe5>\r\n            <bts:importe6></bts:importe6>\r\n            <bts:importe7></bts:importe7>\r\n            <bts:importe8></bts:importe8>\r\n            <bts:concepto></bts:concepto>\r\n         </bts:sdtDatosAsiento>\r\n      </bts:BTContabilidad.RegistrarAsiento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

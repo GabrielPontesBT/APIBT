@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -80,6 +85,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarEstadoFinanciero>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>90A4D82C0D53C36114131B14</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>234</bts:personaUId>\r\n         <bts:sdtEstadoFinanciero>\r\n            <bts:Id></bts:Id>\r\n            <bts:Auditado>S</bts:Auditado>\r\n            <bts:Moneda>0</bts:Moneda>\r\n            <bts:FechadeElaborado>2024-09-7</bts:FechadeElaborado>\r\n            <bts:UsuariodeIngreso>INSTALADOR</bts:UsuariodeIngreso>\r\n            <bts:FechaRegistro>2024-09-18</bts:FechaRegistro>\r\n         </bts:sdtEstadoFinanciero>\r\n         <bts:sdtCondicionTributaria>\r\n            <bts:VentasAnuales>1</bts:VentasAnuales>\r\n            <bts:RUC>1</bts:RUC>\r\n            <bts:Activo>S</bts:Activo>\r\n            <bts:RegimenTributario>12</bts:RegimenTributario>\r\n         </bts:sdtCondicionTributaria>\r\n         <bts:sdtConceptosEstadoFinanciero>\r\n            <bts:sBTConceptoEstadoFinanciero>\r\n               <bts:idConcepto>1</bts:idConcepto>\r\n               <bts:valorConcepto></bts:valorConcepto>\r\n            </bts:sBTConceptoEstadoFinanciero>\r\n         </bts:sdtConceptosEstadoFinanciero>\r\n      </bts:BTPersonas.AgregarEstadoFinanciero>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

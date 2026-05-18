@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "CompradorBaja",
@@ -33,6 +38,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.CompradorCuentaBaja>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>f65cf3d548464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:compradorBaja>\n            <bts:cuit>23112903879</bts:cuit>\n            <bts:ctaCBU>0940099312000605600019</bts:ctaCBU>\n         </bts:compradorBaja>\n      </bts:BTCOELSAGestionDebin.CompradorCuentaBaja>\n   </soapenv:Body>\n</soapenv:Envelope>",

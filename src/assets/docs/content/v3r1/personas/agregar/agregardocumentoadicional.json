@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -61,6 +66,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarDocumentoAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>2e3c830e3a4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaId>22</bts:personaId>\r\n         <bts:sBTDocumentoAdicional>\r\n            <bts:fechaEmision>2015-01-01</bts:fechaEmision>\r\n            <bts:tipoDocumento>3</bts:tipoDocumento>\r\n            <bts:fechaVencimiento>2025-01-01</bts:fechaVencimiento>\r\n            <bts:tipoDocumentoDsc></bts:tipoDocumentoDsc>\r\n            <bts:paisDocumentoDsc></bts:paisDocumentoDsc>\r\n            <bts:nroDocumento>TRT00987</bts:nroDocumento>\r\n            <bts:paisDocumento>63</bts:paisDocumento>\r\n         </bts:sBTDocumentoAdicional>\r\n      </bts:BTPersonas.AgregarDocumentoAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

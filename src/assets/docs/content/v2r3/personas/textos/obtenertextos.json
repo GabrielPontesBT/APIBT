@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -33,6 +38,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n\n         </bts:Btinreq>\n         <bts:personaUId>143</bts:personaUId>\n      </bts:BTPersonas.ObtenerTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",

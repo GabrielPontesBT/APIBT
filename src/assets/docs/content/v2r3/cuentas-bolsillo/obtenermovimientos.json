@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "bolsilloUId",
@@ -55,6 +60,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.ObtenerMovimientos>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>CC6345192D8633F531F01D1D</bts:Token>\n         </bts:Btinreq>\n         <bts:BolsilloUID>18848</bts:BolsilloUID>\n         <bts:CantDias>4</bts:CantDias>\n         <bts:CantMov>3</bts:CantMov>\n      </bts:BTCuentasBolsillo.ObtenerMovimientos>\n   </soapenv:Body>\n</soapenv:Envelope>",

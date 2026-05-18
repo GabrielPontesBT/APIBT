@@ -531,5 +531,48 @@
         "slug": "saving-accounts/unblock"
       }
     ]
+  },
+  {
+    "type": "folder",
+    "label": "Term Deposit",
+    "slug": "term-deposit",
+    "children": [
+      {
+        "type": "file",
+        "label": "create",
+        "pageTitle": "Create",
+        "slug": "term-deposit/create"
+      },
+      {
+        "type": "file",
+        "label": "getData",
+        "pageTitle": "Get Data",
+        "slug": "term-deposit/getdata"
+      },
+      {
+        "type": "file",
+        "label": "getInstructions",
+        "pageTitle": "Get Instructions",
+        "slug": "term-deposit/getinstructions"
+      },
+      {
+        "type": "file",
+        "label": "getPersonProducts",
+        "pageTitle": "Get Person Products",
+        "slug": "term-deposit/getpersonproducts"
+      },
+      {
+        "type": "file",
+        "label": "getProducts",
+        "pageTitle": "Get Products",
+        "slug": "term-deposit/getproducts"
+      },
+      {
+        "type": "file",
+        "label": "simulate",
+        "pageTitle": "Simulate",
+        "slug": "term-deposit/simulate"
+      }
+    ]
   }
 ]

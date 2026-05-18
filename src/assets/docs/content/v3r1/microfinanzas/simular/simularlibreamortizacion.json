@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtSimulacionLibreAmortizacion",
@@ -58,6 +63,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.SimularLibreAmortizacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>95</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1001009404CD285A89A23FBE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtSimulacionLibreAmortizacion>\r\n            <bts:solicitudUId>11077</bts:solicitudUId>\r\n            <bts:clienteUId>3</bts:clienteUId>\r\n            <bts:productoUId>21</bts:productoUId>\r\n            <bts:cantidadCuotas>2</bts:cantidadCuotas>\r\n            <bts:periodoCuotas>30</bts:periodoCuotas>\r\n            <bts:monto>10000</bts:monto>\r\n            <bts:pizarra></bts:pizarra>\r\n            <bts:tasa></bts:tasa>\r\n            <bts:destinoCredito>2</bts:destinoCredito>\r\n            <bts:cuotasCapital>\r\n                <bts:sBTCuotaPrestamoAlta>\r\n                    <bts:fechaPago>2021-12-30</bts:fechaPago>\r\n                    <bts:importe>2000</bts:importe>\r\n                </bts:sBTCuotaPrestamoAlta>\r\n                <bts:sBTCuotaPrestamoAlta>\r\n                    <bts:fechaPago>2022-01-30</bts:fechaPago>\r\n                    <bts:importe>8000</bts:importe>\r\n                </bts:sBTCuotaPrestamoAlta>\r\n            </bts:cuotasCapital>\r\n            <bts:cuotasInteres/>\r\n         </bts:sdtSimulacionLibreAmortizacion>\r\n      </bts:BTMicrofinanzas.SimularLibreAmortizacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

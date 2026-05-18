@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtDatos",
@@ -45,6 +50,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ContratarSimulacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>GL</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatos>\r\n            <bts:simulacionId>741</bts:simulacionId>\r\n            <bts:cuentaDestinoUid>661</bts:cuentaDestinoUid>\r\n            <bts:motivoAhorro>Prueba</bts:motivoAhorro>\r\n            <bts:cuentaOrigenUid>661</bts:cuentaOrigenUid>\r\n            <bts:clienteUid>61</bts:clienteUid>\r\n         </bts:sdtDatos>\r\n      </bts:BTAhorroProgramado.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

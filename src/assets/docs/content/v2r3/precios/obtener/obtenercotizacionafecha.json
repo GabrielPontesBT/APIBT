@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "monedaId",
@@ -42,6 +47,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\"><soapenv:Header/>    \r\n\t<soapenv:Body>        \r\n\t\t<bts:BTPrecios.ObtenerCotizacionAFecha>  \r\n\t\t\t <bts:Btinreq>        \r\n\t\t\t\t<bts:Device>AV</bts:Device> \r\n\t\t\t\t<bts:Usuario>MI</bts:Usuario> \r\n\t\t\t\t<bts:Requerimiento></bts:Requerimiento> \r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal> \r\n\t\t\t\t<bts:Token>268b6d2434</bts:Token> \r\n         </bts:Btinreq> \r\n         <bts:monedaId></bts:monedaId> \r\n         <bts:fecha></bts:fecha>  \r\n      </bts:BTPrecios.ObtenerCotizacionAFecha> \r\n   </soapenv:Body> \r\n</soapenv:Envelope>",

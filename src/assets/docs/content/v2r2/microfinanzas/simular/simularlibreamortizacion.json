@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sBTSimulacionLibreAmortizacion",
@@ -58,6 +63,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.SimularLibreAmortizacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>95</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1001009404CD285A89A23FBE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTSimulacionLibreAmortizacion>\n            <bts:solicitudUId>11077</bts:solicitudUId>\n            <bts:clienteUId>3</bts:clienteUId>\n            <bts:productoUId>21</bts:productoUId>\n            <bts:cantidadCuotas>2</bts:cantidadCuotas>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:monto>10000</bts:monto>\n            <bts:pizarra></bts:pizarra>\n            <bts:tasa></bts:tasa>\n            <bts:destinoCredito>2</bts:destinoCredito>\n            <bts:cuotasCapital>\n                <bts:sBTCuotaPrestamoAlta>\n                    <bts:fechaPago>2021-12-30</bts:fechaPago>\n                    <bts:importe>2000</bts:importe>\n                </bts:sBTCuotaPrestamoAlta>\n                <bts:sBTCuotaPrestamoAlta>\n                    <bts:fechaPago>2022-01-30</bts:fechaPago>\n                    <bts:importe>8000</bts:importe>\n                </bts:sBTCuotaPrestamoAlta>\n            </bts:cuotasCapital>\n            <bts:cuotasInteres/>\n         </bts:sBTSimulacionLibreAmortizacion>\n      </bts:BTMicrofinanzas.SimularLibreAmortizacion>\n   </soapenv:Body>\n</soapenv:Envelope>",

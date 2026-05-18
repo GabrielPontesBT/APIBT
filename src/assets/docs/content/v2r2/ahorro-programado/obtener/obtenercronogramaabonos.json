@@ -1,0 +1,203 @@
+{
+  "slug": "ahorro-programado/obtener/obtenercronogramaabonos",
+  "pageTitle": "Obtener Cronograma de Abonos",
+  "description": "Método para obtener el cronograma de abonos de un ahorro programado.",
+  "pubName": "BTAhorroProgramado.ObtenerCronogramaDeAbonos",
+  "programa": "RBTPG528",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de la operación."
+    },
+    {
+      "Nombre": "filtroAbono",
+      "Tipo": "Byte",
+      "Comentarios": "Tipo de filtro de abono. Se pueden enviar los siguientes <a href=\"#valores\">valores</a>."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtSituacionAhorro",
+      "Tipo": "<a href=\"#sbtsituacionahorro\">sBTSituacionAhorro</a>",
+      "Comentarios": "Datos de la situación del cronograma."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "No se recibió el identificador de operación."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "No se recibió el valor de filtroCuota."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recupero la operación para el identificador recibido."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "El filtro de la cuota no es válido."
+    }
+  ],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>6CBBF8D88D2AEF23978B3C38</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>94</bts:operacionUId>\r\n         <bts:filtroAbono>1</bts:filtroAbono>\r\n      </bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCronogramaDeAbonos' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\t\"operacionUId\": 94,\r\n      \"filtroAbono\": 1\r\n\t}'"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6CBBF8D88D2AEF23978B3C38</Token>\r\n         </Btinreq>\r\n         <sdtSituacionAhorro>\r\n            <capitalAhorro>10000.0</capitalAhorro>\r\n            <moneda>$</moneda>\r\n            <estado>Normal</estado>\r\n            <intereses>575.9</intereses>\r\n            <fechaProximoAbono/>\r\n            <titular>PRANKA VISENTIN ERIKA VERONICA</titular>\r\n            <clienteUId>4</clienteUId>\r\n            <operacionUId>94</operacionUId>\r\n            <abonos>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>1</numeroAbono>\r\n                  <capital>1000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-02-28</fechaPago>\r\n                  <intereses>8.49</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>2</numeroAbono>\r\n                  <capital>2000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-03-31</fechaPago>\r\n                  <intereses>16.44</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>3</numeroAbono>\r\n                  <capital>3000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-04-30</fechaPago>\r\n                  <intereses>24.66</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>4</numeroAbono>\r\n                  <capital>4000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-05-30</fechaPago>\r\n                  <intereses>33.97</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>5</numeroAbono>\r\n                  <capital>5000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-06-30</fechaPago>\r\n                  <intereses>41.1</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>6</numeroAbono>\r\n                  <capital>6000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-07-30</fechaPago>\r\n                  <intereses>54.25</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>7</numeroAbono>\r\n                  <capital>7000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-09-01</fechaPago>\r\n                  <intereses>113.15</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>8</numeroAbono>\r\n                  <capital>8000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-10-30</fechaPago>\r\n                  <intereses>70.14</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>9</numeroAbono>\r\n                  <capital>9000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2025-12-01</fechaPago>\r\n                  <intereses>147.95</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n               <sBTAbono>\r\n                  <abono>1000.0</abono>\r\n                  <numeroAbono>10</numeroAbono>\r\n                  <capital>10000.0</capital>\r\n                  <TAN>0.0</TAN>\r\n                  <tasa>10.0</tasa>\r\n                  <TAE>0.0</TAE>\r\n                  <fechaPago>2026-01-30</fechaPago>\r\n                  <intereses>65.75</intereses>\r\n                  <plazo>0</plazo>\r\n               </sBTAbono>\r\n            </abonos>\r\n            <total>10575.9</total>\r\n            <producto>AHORRO ANUAL</producto>\r\n            <sucursal>Casa Matriz</sucursal>\r\n         </sdtSituacionAhorro>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>34846</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTAhorroProgramado.ObtenerCronogramaDeAbonos</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2025-04-15</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>11:47:57</Hora>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtSituacionAhorro\": {\r\n          \"capitalAhorro\": 10000,\r\n          \"moneda\": \"$\",\r\n          \"estado\": \"Normal\",\r\n          \"intereses\": 575.9,\r\n          \"fechaProximoAbono\": \"\",\r\n          \"titular\": \"PRANKA VISENTIN ERIKA VERONICA\",\r\n          \"clienteUId\": 4,\r\n          \"operacionUId\": 94,\r\n          \"abonos\": {\r\n            \"sBTAbono\": [\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 1,\r\n                \"capital\": 1000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-02-28\",\r\n                \"intereses\": 8.49,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 2,\r\n                \"capital\": 2000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-03-31\",\r\n                \"intereses\": 16.44,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 3,\r\n                \"capital\": 3000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-04-30\",\r\n                \"intereses\": 24.66,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 4,\r\n                \"capital\": 4000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-05-30\",\r\n                \"intereses\": 33.97,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 5,\r\n                \"capital\": 5000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-06-30\",\r\n                \"intereses\": 41.1,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 6,\r\n                \"capital\": 6000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-07-30\",\r\n                \"intereses\": 54.25,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 7,\r\n                \"capital\": 7000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-09-01\",\r\n                \"intereses\": 113.15,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 8,\r\n                \"capital\": 8000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-10-30\",\r\n                \"intereses\": 70.14,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 9,\r\n                \"capital\": 9000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2025-12-01\",\r\n                \"intereses\": 147.95,\r\n                \"plazo\": 0\r\n              },\r\n              {\r\n                \"abono\": 1000,\r\n                \"numeroAbono\": 10,\r\n                \"capital\": 10000,\r\n                \"TAN\": 0,\r\n                \"tasa\": 10,\r\n                \"TAE\": 0,\r\n                \"fechaPago\": \"2026-01-30\",\r\n                \"intereses\": 65.75,\r\n                \"plazo\": 0\r\n              }\r\n            ]\r\n          },\r\n          \"total\": 10575.9,\r\n          \"producto\": \"AHORRO ANUAL\",\r\n          \"sucursal\": \"Casa Matriz\"\r\n        },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 401,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTAhorroProgramado.ObtenerCronogramaDeAbonos\",\r\n        \"Fecha\": \"2018-05-03\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"11:10:49\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTSituacionAhorro",
+      "fields": [
+        {
+          "Nombre": "abonos",
+          "Tipo": "<a href=\"#sbtabono\">sBTAbono</a>",
+          "Comentarios": "Listado de abonos."
+        },
+        {
+          "Nombre": "capitalAhorro",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente."
+        },
+        {
+          "Nombre": "estado",
+          "Tipo": "String",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "fechaProximoAbono",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del proximo abono."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses."
+        },
+        {
+          "Nombre": "moneda",
+          "Tipo": "String",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "operacionUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la operación."
+        },
+        {
+          "Nombre": "producto",
+          "Tipo": "String",
+          "Comentarios": "Nombre del producto."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la sucursal."
+        },
+        {
+          "Nombre": "titular",
+          "Tipo": "String",
+          "Comentarios": "Titular."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Double",
+          "Comentarios": "Total."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTAbono",
+      "fields": [
+        {
+          "Nombre": "abono",
+          "Tipo": "Double",
+          "Comentarios": "Abono."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital del abono."
+        },
+        {
+          "Nombre": "fechaPago",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de pago."
+        },
+        {
+          "Nombre": "intereses",
+          "Tipo": "Double",
+          "Comentarios": "Intereses del abono."
+        },
+        {
+          "Nombre": "numeroAbono",
+          "Tipo": "Int",
+          "Comentarios": "Número de abono."
+        },
+        {
+          "Nombre": "plazo",
+          "Tipo": "int",
+          "Comentarios": "Plazo del abono."
+        },
+        {
+          "Nombre": "TAE",
+          "Tipo": "Double",
+          "Comentarios": "TAE."
+        },
+        {
+          "Nombre": "TAN",
+          "Tipo": "Double",
+          "Comentarios": "TAN."
+        },
+        {
+          "Nombre": "tasa",
+          "Tipo": "Double",
+          "Comentarios": "Tasa del abono."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [
+    {
+      "elementValName": "filtroAbono",
+      "listHeader": "Valor,Comentarios",
+      "fields": [
+        {
+          "Valor": "1",
+          "Comentarios": "Plan original."
+        },
+        {
+          "Valor": "2",
+          "Comentarios": "Abonos realizados."
+        },
+        {
+          "Valor": "3",
+          "Comentarios": "Abonos pendientes."
+        }
+      ],
+      "description": "Este campo tiene tres opciones:"
+    }
+  ]
+}

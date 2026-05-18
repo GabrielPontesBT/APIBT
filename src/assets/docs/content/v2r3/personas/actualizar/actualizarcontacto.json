@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -60,6 +65,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarContacto>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>ccbe8f2e60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>21</bts:personaUId>\n         <bts:sdtContacto>\n            <bts:vinculoId>3</bts:vinculoId>\n            <bts:domicilio3></bts:domicilio3>\n            <bts:domicilio2></bts:domicilio2>\n            <bts:domicilio1>18 de Julio 1234</bts:domicilio1>\n            <bts:correlativo>3</bts:correlativo>\n            <bts:telefono>1234 5678</bts:telefono>\n            <bts:nombre>Rodolfo Rias</bts:nombre>\n            <bts:vinculo></bts:vinculo>\n         </bts:sdtContacto>\n      </bts:BTPersonas.ActualizarContacto>\n   </soapenv:Body>\n</soapenv:Envelope>",

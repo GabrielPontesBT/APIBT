@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de cancelación teniendo en cuenta que:\r\n   \r\n   - Tenga asociada la RTE PRT006 en el ordinal de la operación.\r\n   \r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T).",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -67,6 +72,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.Precancelar>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>853547DAE3BFB2C1EC0A3148</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>4</bts:clienteUId>\r\n         <bts:operacionUId>100</bts:operacionUId>\r\n         <bts:cuentaAcreditacionUId>12</bts:cuentaAcreditacionUId>\r\n      </bts:BTDepositosAPlazo.Precancelar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

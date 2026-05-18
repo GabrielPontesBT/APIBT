@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "agrupadorId1",
@@ -54,6 +59,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>C5DFB132EC9DE80A8063A90E</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n         </bts:Btinreq>\r\n         <bts:agrupadorId1>1</bts:agrupadorId1>\r\n         <bts:agrupadorId2>1</bts:agrupadorId2>\r\n         <bts:agrupadorId3></bts:agrupadorId3>\r\n         <bts:agrupadorId4></bts:agrupadorId4>\r\n         <bts:agrupadorId5></bts:agrupadorId5>\r\n         <bts:agrupadorId6></bts:agrupadorId6>\r\n      </bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

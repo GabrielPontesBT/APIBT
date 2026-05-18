@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -113,6 +118,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.AgregarVictimaHechoViolento>\r\n         <bts:Btinreq>\r\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>42</bts:personaUId>\r\n         <bts:esVictima>S</bts:esVictima>\r\n         <bts:sdtVictimaHechoViolento>\r\n            <bts:entidadId>3</bts:entidadId>\r\n            <bts:municipio></bts:municipio>\r\n            <bts:departamento></bts:departamento>\r\n            <bts:inspeccionPolicia>Golpes</bts:inspeccionPolicia>\r\n            <bts:sitio>Casa</bts:sitio>\r\n            <bts:municipioId>421</bts:municipioId>\r\n            <bts:tipoId>3</bts:tipoId>\r\n            <bts:vereda>Av Italia</bts:vereda>\r\n            <bts:entidad></bts:entidad>\r\n            <bts:tipo></bts:tipo>\r\n            <bts:fechaCertificacion>2020-08-20</bts:fechaCertificacion>\r\n            <bts:fechaVencimiento>2021-08-20</bts:fechaVencimiento>\r\n            <bts:corregimiento>No tiene</bts:corregimiento>\r\n            <bts:departamentoId>8</bts:departamentoId>\r\n            <bts:fechaHecho>2020-06-20</bts:fechaHecho>\r\n         </bts:sdtVictimaHechoViolento>\r\n      </bts:BTPersonas.AgregarVictimaHechoViolento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

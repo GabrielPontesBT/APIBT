@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -36,6 +41,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.AgregarDomicilio>\n\t\t<bts:Btinreq>\n         <bts:Device>10</bts:Device>\n         <bts:Token>da17de64124A834</bts:Token>\n         <bts:Usuario>MINSTALADOR</bts:Usuario>\n         <bts:Canal>BTDIGITAL</bts:Canal>\n         <bts:Requerimiento>1</bts:Requerimiento>\n\t\t</bts:Btinreq>\n\t\t<bts:clienteUId>21</bts:clienteUId>\n\t\t<bts:domicilio>\n\t\t\t<bts:localidad></bts:localidad>\n\t\t\t<bts:paisDomicilio></bts:paisDomicilio>\n\t\t\t<bts:barrioId>10</bts:barrioId>\n\t\t\t<bts:departamento></bts:departamento>\n\t\t\t<bts:numeroPuerta>1111</bts:numeroPuerta>\n\t\t\t<bts:barrio></bts:barrio>\n\t\t\t<bts:localidadId>10</bts:localidadId>\n\t\t\t<bts:tipoDeDomicilioId>1</bts:tipoDeDomicilioId>\n\t\t\t<bts:codigoPostal>1</bts:codigoPostal>\n\t\t\t<bts:calle>14 de julio</bts:calle>\n\t\t\t<bts:apartamento>14B</bts:apartamento>\n\t\t\t<bts:tipoDeDomicilio></bts:tipoDeDomicilio>\n\t\t\t<bts:departamentoId>10</bts:departamentoId>\n\t\t\t<bts:paisDomicilioId>845</bts:paisDomicilioId>\n         <direccion></direccion>\n         <referencia>Casa Azul</referencia>\n\t\t</bts:domicilio>\n      </bts:BTClientes.AgregarDomicilio>\n   </soapenv:Body>\n</soapenv:Envelope>",

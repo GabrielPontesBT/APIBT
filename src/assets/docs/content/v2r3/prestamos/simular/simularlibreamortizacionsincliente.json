@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtDatosLibreAmortizacion",
@@ -178,6 +183,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularLibreAmortizacionSinCliente>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>72e34bcd9d4A8B5C60A82434</bts:Token>\n            <bts:Device>AV</bts:Device>          \n         </bts:Btinreq>\n         <bts:sdtDatosLibreAmortizacion>\n            <bts:actividad>11200</bts:actividad>\n            <bts:pizarra>0</bts:pizarra>\n            <bts:tasa>0</bts:tasa>\n            <bts:productoUId>75</bts:productoUId>\n            <bts:monto>10000</bts:monto>\n            <bts:cantidadCuotas>0</bts:cantidadCuotas>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n\t\t\t   <bts:cuotasCapital>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-01-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>2000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-02-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>2000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-03-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>1000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-04-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>2000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-05-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>2000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t\t   <bts:sBTCuotaPrestamoAlta>\n\t\t\t\t\t   <bts:fechaPago>2019-06-10</bts:fechaPago>\n\t\t\t\t\t   <bts:importe>1000</bts:importe>\n\t\t\t\t   </bts:sBTCuotaPrestamoAlta>\n\t\t\t   </bts:cuotasCapital>\n         </bts:sdtDatosLibreAmortizacion>\n      </bts:BTPrestamos.SimularLibreAmortizacionSinCliente>\n   </soapenv:Body>\n</soapenv:Envelope>",

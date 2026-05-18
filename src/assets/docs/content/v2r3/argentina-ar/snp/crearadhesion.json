@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "prestacion",
@@ -164,6 +169,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSNP.CrearAdhesion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>7649e27cf5F955E77534D3E0</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>4</bts:clienteUId>\r\n         <bts:tipoDeDebito>1</bts:tipoDeDebito>\r\n         <bts:empresaOriginante>3050001626</bts:empresaOriginante>\r\n         <bts:prestacion>DEB RIO</bts:prestacion>\r\n         <bts:idCliente>5550101516490000005000</bts:idCliente>\r\n         <bts:operacionUId>6</bts:operacionUId>\r\n         <bts:avisoRechazo>S</bts:avisoRechazo>\r\n         <bts:moneda>80</bts:moneda>\r\n         <bts:montoMaximoDebito>M</bts:montoMaximoDebito>\r\n         <bts:importe>1000</bts:importe>\r\n      </bts:BTSNP.CrearAdhesion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

@@ -1,0 +1,91 @@
+{
+  "slug": "general/getdocumenttypes",
+  "pageTitle": "Get Document Types",
+  "description": "Método para obtener un listado de tipos los de documento.",
+  "pubName": "PublicGeneral.getDocumentTypes",
+  "modulo": "General",
+  "programa": "PublicAPI.BTDTPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "documentTypes",
+      "Tipo": "<a href=\"#sdtsbtdtwdocumenttype\">SdtsBTDTWDocumentType</a>",
+      "Comentarios": "Listado de tipos de documentos."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "50030001",
+      "Descripción": "Debe ingresar un tipo de documento válido"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"3985F17F736C68B94646C7E6\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"3985F17F736C68B94646C7E6\"\r\n  },\r\n  \"documentTypes\": {\r\n    \"documentType\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"Cédula de Identidad\",\r\n        \"ShortDescription\": \"CI\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 7,\r\n        \"MaxLength\": 12,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"RUT\",\r\n        \"ShortDescription\": \"RUT\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"S\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 7,\r\n        \"MaxLength\": 24,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"PASAPORTE\",\r\n        \"ShortDescription\": \"PAS\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"A\",\r\n        \"MinLength\": 6,\r\n        \"MaxLength\": 18,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 4,\r\n        \"Description\": \"NO RESIDENTE\",\r\n        \"ShortDescription\": \"NRE\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 6,\r\n        \"Description\": \"LIBRETA DE ENROLAMIE\",\r\n        \"ShortDescription\": \"LEN\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 7,\r\n        \"Description\": \"CIA(ARGENT.C.DE ID.)\",\r\n        \"ShortDescription\": \"CIA\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 8,\r\n        \"Description\": \"CI (BRASIL C.DE ID.)\",\r\n        \"ShortDescription\": \"CI\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 9,\r\n        \"Description\": \"Cadastro de Pessoas\",\r\n        \"ShortDescription\": \"CPF\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 10,\r\n        \"Description\": \"CIP(PARAG.C.DE ID.)\",\r\n        \"ShortDescription\": \"CIP\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 11,\r\n        \"Description\": \"D.N.I.\",\r\n        \"ShortDescription\": \"DNI\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 8,\r\n        \"MaxLength\": 8,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 12,\r\n        \"Description\": \"III(OTRS.DOC.REST.P.\",\r\n        \"ShortDescription\": \"III\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 13,\r\n        \"Description\": \"LIBRETA CÍVICA\",\r\n        \"ShortDescription\": \"LCI\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 14,\r\n        \"Description\": \"Carnet Extranjería\",\r\n        \"ShortDescription\": \"C.E.\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"A\",\r\n        \"MinLength\": 9,\r\n        \"MaxLength\": 12,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 15,\r\n        \"Description\": \"R.U.C.\",\r\n        \"ShortDescription\": \"RUC\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"S\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 11,\r\n        \"MaxLength\": 11,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 16,\r\n        \"Description\": \"N.I.T.\",\r\n        \"ShortDescription\": \"NIT\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"A\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 12,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 18,\r\n        \"Description\": \"CREDENCIAL CÍVICA\",\r\n        \"ShortDescription\": \"C.C.\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"A\",\r\n        \"MinLength\": 6,\r\n        \"MaxLength\": 8,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 19,\r\n        \"Description\": \"DOCUMENTO\",\r\n        \"ShortDescription\": \"DOC\",\r\n        \"PersonType\": \"A\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 5,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 20,\r\n        \"Description\": \"DEPENDENC. ESTATALES\",\r\n        \"ShortDescription\": \"DEP\",\r\n        \"PersonType\": \"A\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"X\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 21,\r\n        \"Description\": \"CIT(ARGENT.-CUIT)\",\r\n        \"ShortDescription\": \"CIT\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 22,\r\n        \"Description\": \"CNP(BRASIL-CNPJ)\",\r\n        \"ShortDescription\": \"CNP\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 23,\r\n        \"Description\": \"CGC (BRASIL)\",\r\n        \"ShortDescription\": \"CGC\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 24,\r\n        \"Description\": \"RPC (PARAGUAY)\",\r\n        \"ShortDescription\": \"RPC\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 25,\r\n        \"Description\": \"AUTONUM PRUEBA\",\r\n        \"ShortDescription\": \"NUM\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"X\",\r\n        \"MinLength\": 0,\r\n        \"MaxLength\": 0,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 26,\r\n        \"Description\": \"CLAVE ÚNICA REGISTRO POBlACIÓN\",\r\n        \"ShortDescription\": \"CURP\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"A\",\r\n        \"MinLength\": 18,\r\n        \"MaxLength\": 18,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 30,\r\n        \"Description\": \"BPS\",\r\n        \"ShortDescription\": \"BPS\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 9,\r\n        \"MaxLength\": 15,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 31,\r\n        \"Description\": \"INS (BRASIL-INSS)\",\r\n        \"ShortDescription\": \"INS\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 32,\r\n        \"Description\": \"IPS (PARAGUAY)\",\r\n        \"ShortDescription\": \"ips\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 34,\r\n        \"Description\": \"OPS (RESTO D/MUNDO)\",\r\n        \"ShortDescription\": \"OPS\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 8,\r\n        \"MaxLength\": 20,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 35,\r\n        \"Description\": \"REG(ID.REGISTR.MUNDO\",\r\n        \"ShortDescription\": \"REG\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 15,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 36,\r\n        \"Description\": \"CPI(SI NO POSEE ID.)\",\r\n        \"ShortDescription\": \"CPI\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 99,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 80,\r\n        \"Description\": \"CUIT\",\r\n        \"ShortDescription\": \"CUIT\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 11,\r\n        \"MaxLength\": 11,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 90,\r\n        \"Description\": \"A REGULARIZAR\",\r\n        \"ShortDescription\": \"AREG\",\r\n        \"PersonType\": \"F\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"X\",\r\n        \"MinLength\": 0,\r\n        \"MaxLength\": 0,\r\n        \"MainDocument\": true\r\n      },\r\n      {\r\n        \"Id\": 96,\r\n        \"Description\": \"CPJ (TODO MUNDO)\",\r\n        \"ShortDescription\": \"CPJ\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 97,\r\n        \"Description\": \"CNP (BRASIL)\",\r\n        \"ShortDescription\": \"CNP\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"N\",\r\n        \"Format\": \"N\",\r\n        \"MinLength\": 1,\r\n        \"MaxLength\": 9,\r\n        \"MainDocument\": false\r\n      },\r\n      {\r\n        \"Id\": 99,\r\n        \"Description\": \"Inst. Financiera\",\r\n        \"ShortDescription\": \"IF\",\r\n        \"PersonType\": \"J\",\r\n        \"AppliesToFI\": \"E\",\r\n        \"Format\": \"X\",\r\n        \"MinLength\": 0,\r\n        \"MaxLength\": 0,\r\n        \"MainDocument\": true\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:42:58\",\r\n    \"Numero\": 13466266,\r\n    \"Servicio\": \"PublicGeneral.getDocumentTypes\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTDTWDocumentType",
+      "fields": [
+        {
+          "Nombre": "AppliesToFI",
+          "Tipo": "String <strong>(length: 1)</strong>",
+          "Comentarios": "Aplica a institución financiera."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "Format",
+          "Tipo": "String <strong>(length: 1)</strong>",
+          "Comentarios": "Formato."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "MainDocument",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Documento principal."
+        },
+        {
+          "Nombre": "MaxLength",
+          "Tipo": "Short",
+          "Comentarios": "Longitud máxima."
+        },
+        {
+          "Nombre": "MinLength",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Longitud mínima."
+        },
+        {
+          "Nombre": "PersonType",
+          "Tipo": "String <strong>(length: 1)</strong>",
+          "Comentarios": "Tipo de persona."
+        },
+        {
+          "Nombre": "ShortDescription",
+          "Tipo": "String <strong>(length: 5)</strong>",
+          "Comentarios": "Descripción corta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

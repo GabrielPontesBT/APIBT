@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "simulacionUId",
@@ -92,6 +97,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.ContratarConFacultades>\n         <bts:Btinreq>\n            <bts:Device>FP</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>00C39357A152407BC2F8A995</bts:Token>\n         </bts:Btinreq>\n         <bts:simulacionUId>528</bts:simulacionUId>\n         <bts:clienteUId>322</bts:clienteUId>\n         <bts:operacionUIdOrigen>1128</bts:operacionUIdOrigen>\n         <bts:operacionUIdDestino>824</bts:operacionUIdDestino>\n         <bts:instruccionAlVencimiento>1</bts:instruccionAlVencimiento>\n         <bts:controlaMismoCliente>N</bts:controlaMismoCliente>\n         <bts:tipoIntegracionCuenta>A</bts:tipoIntegracionCuenta>\n      </bts:BTDepositosAPlazo.ContratarConFacultades>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -8,6 +8,12 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Obligatoriedad",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "TransfRecibidaACH",
@@ -42,13 +48,14 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTransferenciasACH.RecibirACH>\n         <bts:Btinreq>\n            <bts:Canal>BTINTERNO</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>30</bts:Device>\n            <bts:Requerimiento>30</bts:Requerimiento>\n            <bts:Token>503442C1EF950B10BD480F95</bts:Token>\n         </bts:Btinreq>\n         <bts:TransfRecibidaACH>\n            <bts:Monto>10000</bts:Monto>\n            <bts:NombreBen>BARQUIN RODRIGO</bts:NombreBen>\n            <bts:Transaccion></bts:Transaccion>\n            <bts:Referencia>Recibir ACH</bts:Referencia>\n            <bts:tipoCuentaBen>21</bts:tipoCuentaBen>\n            <bts:cuentaRec>21000109676006</bts:cuentaRec>\n            <bts:Moneda>1</bts:Moneda>\n            <bts:Canal>1</bts:Canal>\n            <bts:TipoCuentaOri>1</bts:TipoCuentaOri>\n            <bts:IdOrigen>1232112111111</bts:IdOrigen>\n            <bts:DireccionBen>Zona</bts:DireccionBen>\n            <bts:Cndmgsp></bts:Cndmgsp>\n            <bts:NombreOri>Agustin Meriles</bts:NombreOri>\n            <bts:IdBeneficiario>5478851500000</bts:IdBeneficiario>\n            <bts:BancoOrigen>17</bts:BancoOrigen>\n            <bts:Bandera></bts:Bandera>\n            <bts:CuentaOri>1214</bts:CuentaOri>\n         </bts:TransfRecibidaACH>\n      </bts:BTTransferenciasACH.RecibirACH>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTransferenciasACH.RecibirACH>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTINTERNO</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>30</bts:Device>\r\n            <bts:Requerimiento>30</bts:Requerimiento>\r\n            <bts:Token>503442C1EF950B10BD480F95</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:TransfRecibidaACH>\r\n            <bts:Monto>10000</bts:Monto>\r\n            <bts:NombreBen>BARQUIN RODRIGO</bts:NombreBen>\r\n            <bts:Transaccion></bts:Transaccion>\r\n            <bts:Referencia>Recibir ACH</bts:Referencia>\r\n            <bts:tipoCuentaBen>21</bts:tipoCuentaBen>\r\n            <bts:cuentaRec>21000109676006</bts:cuentaRec>\r\n            <bts:Moneda>1</bts:Moneda>\r\n            <bts:Canal>1</bts:Canal>\r\n            <bts:TipoCuentaOri>1</bts:TipoCuentaOri>\r\n            <bts:IdOrigen>1232112111111</bts:IdOrigen>\r\n            <bts:DireccionBen>Zona</bts:DireccionBen>\r\n            <bts:Cndmgsp></bts:Cndmgsp>\r\n            <bts:NombreOri>Agustin Meriles</bts:NombreOri>\r\n            <bts:IdBeneficiario>5478851500000</bts:IdBeneficiario>\r\n            <bts:BancoOrigen>17</bts:BancoOrigen>\r\n            <bts:Bandera></bts:Bandera>\r\n            <bts:CuentaOri>1214</bts:CuentaOri>\r\n         </bts:TransfRecibidaACH>\r\n      </bts:BTTransferenciasACH.RecibirACH>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
       "json": ""
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTransferenciasACH.RecibirACHResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTINTERNO</Canal>\n            <Usuario>INSTALADOR</Usuario>\n            <Device>30</Device>\n            <Requerimiento>30</Requerimiento>\n            <Token>503442C1EF950B10BD480F95</Token>\n         </Btinreq>\n         <Codigo>0</Codigo>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2025-05-30</Fecha>\n            <Hora>08:23:52</Hora>\n            <Numero>6687</Numero>\n            <Servicio>BTTransferenciasACH.RecibirACH</Servicio>\n            <Requerimiento>30</Requerimiento>\n            <Canal>BTINTERNO</Canal>\n         </Btoutreq>\n      </BTTransferenciasACH.RecibirACHResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTransferenciasACH.RecibirACHResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>30</Device>\r\n            <Requerimiento>30</Requerimiento>\r\n            <Token>503442C1EF950B10BD480F95</Token>\r\n         </Btinreq>\r\n         <Codigo>0</Codigo>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2025-05-30</Fecha>\r\n            <Hora>08:23:52</Hora>\r\n            <Numero>6687</Numero>\r\n            <Servicio>BTTransferenciasACH.RecibirACH</Servicio>\r\n            <Requerimiento>30</Requerimiento>\r\n            <Canal>BTINTERNO</Canal>\r\n         </Btoutreq>\r\n      </BTTransferenciasACH.RecibirACHResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
       "json": ""
     }
   },

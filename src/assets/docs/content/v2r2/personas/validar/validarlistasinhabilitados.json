@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "pais",
@@ -85,6 +90,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarListasInhabilitados>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>ccbe8f2A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:pais>845</bts:pais>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDeDocumento>27511184</bts:numeroDeDocumento>\n         <bts:tipoPersona></bts:tipoPersona>\n         <bts:primerNombre></bts:primerNombre>\n         <bts:segundoNombre></bts:segundoNombre>\n         <bts:primerApellido></bts:primerApellido>\n         <bts:segundoApellido></bts:segundoApellido>\n         <bts:razonSocial></bts:razonSocial>\n      </bts:BTPersonas.ValidarListasInhabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>",

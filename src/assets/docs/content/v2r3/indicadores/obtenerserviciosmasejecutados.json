@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "servicio",
@@ -24,6 +29,7 @@
   ],
   "errors": [],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTIndicadores.ObtenerServiciosMasEjecutados>\r\n         <bts:Btinreq>\r\n            <bts:Device>MC</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>3</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>3483F7F3C05B0DDF791C90A3</bts:Token>\r\n         </bts:Btinreq>\r\n      </bts:BTIndicadores.ObtenerServiciosMasEjecutados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

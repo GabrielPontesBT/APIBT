@@ -1,0 +1,76 @@
+{
+  "slug": "saving-accounts/getproducts",
+  "pageTitle": "Get Products",
+  "description": "Método para obtener un listado de productos.",
+  "pubName": "PublicSavingAccounts.getProducts",
+  "modulo": "Configuration.ProductsHub",
+  "programa": "PublicAPI.BTPHPA0002",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "products",
+      "Tipo": "<a href=\"#sdtsbtphwproduct\">SdtsBTPHWProduct</a>",
+      "Comentarios": "Listado de productos."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "No aplica.",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"products\": {\r\n    \"product\": [\r\n      {\r\n        \"ProductGUID\": \"dd98b54d-73d9-4248-b760-5e62b24617ac\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PF\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"01fc8f86-e7f4-463c-ba8c-b3c4244583d3\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PF\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 50,\r\n        \"KindDescription\": \"Unidad Indexada\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"1e4f6d65-4611-43c1-ad84-29b598e1e390\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PF\",\r\n        \"CurrencyId\": 1111,\r\n        \"CurrencyDescription\": \"EURO\",\r\n        \"CurrencySign\": \"EUR\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"ccfaa85e-3420-451f-b98f-0bcf5f811f43\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PF\",\r\n        \"CurrencyId\": 2222,\r\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE\",\r\n        \"CurrencySign\": \"USD\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"00d62e30-d932-4797-ba3e-bdc4cad6e8e1\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PF\",\r\n        \"CurrencyId\": 2225,\r\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE - BILLETE\",\r\n        \"CurrencySign\": \"U$D\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"3cf07632-e5f7-421f-86b3-d3b75e9ffcad\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PJ\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"d60cf435-9618-40f4-aa7f-99d3891edc93\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PJ\",\r\n        \"CurrencyId\": 1111,\r\n        \"CurrencyDescription\": \"EURO\",\r\n        \"CurrencySign\": \"EUR\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"910ecfbd-20e9-4702-8e33-0455babf3245\",\r\n        \"ProductDescription\": \"CAJA DE AHORRO PJ\",\r\n        \"CurrencyId\": 2222,\r\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE\",\r\n        \"CurrencySign\": \"USD\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"28169aa2-61c3-43ca-9fa9-e12ff30d4b71\",\r\n        \"ProductDescription\": \"CUENTA A MI FAVOR\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"57a29eb2-f783-41dd-87a2-c53c2edcdf6e\",\r\n        \"ProductDescription\": \"MIS AHORROS COMPARTAMOS\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"9034c46c-a46f-499d-a46a-d83fec424956\",\r\n        \"ProductDescription\": \"CAJAS DE AHORRO KIDS\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"4b5a3ef3-b958-493c-b6a9-f7cfe848b12e\",\r\n        \"ProductDescription\": \"CAJAS DE AHORRO SUELDOS\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"65e5cf42-3e10-47be-b703-d1252f3711ec\",\r\n        \"ProductDescription\": \"CAJAS DE AHORRO JUBILACIONES\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"8b96d720-56ed-45dd-a8e8-54105c51017b\",\r\n        \"ProductDescription\": \"CAJAS DE AHORRO SUELDO DE EMPLEADOS\",\r\n        \"CurrencyId\": 0,\r\n        \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n        \"CurrencySign\": \"$\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      },\r\n      {\r\n        \"ProductGUID\": \"8ace4641-72fb-4b0b-92b0-1a972b0f44d1\",\r\n        \"ProductDescription\": \"CAJAS DE AHORRO SUELDO DE EMPLEADOS\",\r\n        \"CurrencyId\": 2222,\r\n        \"CurrencyDescription\": \"DÓLAR ESTADOUNIDENSE\",\r\n        \"CurrencySign\": \"USD\",\r\n        \"KindId\": 0,\r\n        \"KindDescription\": \"Billete\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:53:48\",\r\n    \"Numero\": 13466296,\r\n    \"Servicio\": \"PublicSavingAccounts.getProducts\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTPHWProduct",
+      "fields": [
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "CurrencyDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción de la moneda."
+        },
+        {
+          "Nombre": "CurrencySign",
+          "Tipo": "String <strong>(length: 4)</strong>",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "KindDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción del tipo."
+        },
+        {
+          "Nombre": "ProductDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "ProductGUID",
+          "Tipo": "String <strong>(length: 36)</strong>",
+          "Comentarios": "GUID del producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

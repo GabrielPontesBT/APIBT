@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPrestamoAlta",
@@ -43,6 +48,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularIngresandoSeguros>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>GL</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPrestamoAlta>\n            <bts:fechaPrimerPago>2019-01-12</bts:fechaPrimerPago>\n            <bts:monto>10000</bts:monto>\n            <bts:tasa>0</bts:tasa>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:cantidadCuotas>12</bts:cantidadCuotas>\n            <bts:productoUId>61</bts:productoUId>\n            <bts:pizarra>0</bts:pizarra>\n            <bts:clienteUId>4</bts:clienteUId>\n            <bts:actividad>11200</bts:actividad>\n         </bts:sdtPrestamoAlta>\n         <bts:sinSeguros>N</bts:sinSeuros>\n         <bts:sdtSeguros>\n            <bts:sBTSegurosSimulacion>\n                <bts:codigo>100</bts:codigo>\n            </bts:sBTSegurosSimulacion>\n         </bts:sdtSeguros>\n      </bts:BTPrestamos.SimularIngresandoSeguros>\n   </soapenv:Body>\n</soapenv:Envelope>",

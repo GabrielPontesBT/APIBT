@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "contratoId",
@@ -93,6 +98,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t<soapenv:Header/>\r\n\t<soapenv:Body>\r\n\t\t<bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Token>E0193ABA3B6E2D5976E40FA3</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:contratoId>2</bts:contratoId>\r\n\t\t\t<bts:servicioId>200</bts:servicioId>\r\n\t\t\t<bts:sdtValorCampoBusqueda>\r\n\t\t\t\t<bts:tag>CTABENEF</bts:tag>\r\n\t\t\t\t<bts:valor>00000002800001</bts:valor>\r\n\t\t\t</bts:sdtValorCampoBusqueda>\r\n\t\t</bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>\r\n\t</soapenv:Body>\r\n</soapenv:Envelope>",

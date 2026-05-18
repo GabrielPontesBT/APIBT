@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPartner",
@@ -90,6 +95,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPartners.SimularOfertasVehicular>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>9436BF7CB5B5BB404CC6E5A7</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPartner>\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\n            <bts:vendedorUId>1</bts:vendedorUId>\n            <bts:partnerUId>1</bts:partnerUId>\n         </bts:sdtPartner>\n         <bts:clienteUId>342</bts:clienteUId>\n         <bts:sdtDatosVehiculo>\n            <bts:tipoCambioPref>1</bts:tipoCambioPref>\n            <bts:proveedorGps>2</bts:proveedorGps>\n            <bts:precio>33</bts:precio>\n            <bts:monedaPrecio>1</bts:monedaPrecio>\n            <bts:datosAdicionales>\n               <bts:SdtsBTConcepto>\n                  <bts:texto></bts:texto>\n                  <bts:valor></bts:valor>\n                  <bts:concepto></bts:concepto>\n               </bts:SdtsBTConcepto>\n            </bts:datosAdicionales>\n            <bts:versionUId>2</bts:versionUId>\n            <bts:kitMantenimiento>1</bts:kitMantenimiento>\n            <bts:estadoId>1</bts:estadoId>\n            <bts:entregaInicial>43</bts:entregaInicial>\n            <bts:tipoGps>1</bts:tipoGps>\n         </bts:sdtDatosVehiculo>\n         <bts:sdtDatosOferta>\n            <bts:pizzarra>0</bts:pizzarra>\n            <bts:fechaValor>2023-11-14</bts:fechaValor>\n            <bts:productoUId>48</bts:productoUId>\n            <bts:monto>8745</bts:monto>\n            <bts:comisionesCuota>\n               <bts:SdtsBTComisionPrestamo>\n                  <bts:porcentaje></bts:porcentaje>\n                  <bts:descripcion></bts:descripcion>\n                  <bts:importe></bts:importe>\n                  <bts:codigo></bts:codigo>\n               </bts:SdtsBTComisionPrestamo>\n            </bts:comisionesCuota>\n            <bts:periodoCuotas>35</bts:periodoCuotas>\n            <bts:diaPago>14</bts:diaPago>\n            <bts:ballon></bts:ballon>\n            <bts:tasa>36</bts:tasa>\n            <bts:cuotas>\n               <bts:Int>1</bts:Int>\n            </bts:cuotas>\n            <bts:fechaPrimerPago>2023-11-14</bts:fechaPrimerPago>\n            <bts:cuotasExtraordinarias>\n               <bts:SdtsBTCuotaExtraordinaria>\n                  <bts:mes></bts:mes>\n                  <bts:porcentajeCuota></bts:porcentajeCuota>\n               </bts:SdtsBTCuotaExtraordinaria>\n            </bts:cuotasExtraordinarias>\n            <bts:seguros>\n               <bts:SdtsBTSeguroPrestamo>\n                  <bts:porcentaje></bts:porcentaje>\n                  <bts:descripcion></bts:descripcion>\n                  <bts:tipo></bts:tipo>\n                  <bts:importe></bts:importe>\n                  <bts:codigo></bts:codigo>\n               </bts:SdtsBTSeguroPrestamo>\n            </bts:seguros>\n            <bts:comisiones>\n               <bts:SdtsBTComisionPrestamo>\n                  <bts:porcentaje></bts:porcentaje>\n                  <bts:descripcion></bts:descripcion>\n                  <bts:importe></bts:importe>\n                  <bts:codigo></bts:codigo>\n               </bts:SdtsBTComisionPrestamo>\n            </bts:comisiones>\n         </bts:sdtDatosOferta>\n      </bts:BTPartners.SimularOfertasVehicular>\n   </soapenv:Body>\n</soapenv:Envelope>",

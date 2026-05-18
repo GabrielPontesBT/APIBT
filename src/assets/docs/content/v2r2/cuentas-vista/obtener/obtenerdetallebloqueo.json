@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "idBloqueo",
@@ -53,6 +58,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.ObtenerDetalleBloqueo>\r\n         <bts:Btinreq>\r\n            <bts:Device>3</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>3</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>b1848faff14A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:idBloqueo>23</bts:idBloqueo>\r\n      </bts:BTCuentasVista.ObtenerDetalleBloqueo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

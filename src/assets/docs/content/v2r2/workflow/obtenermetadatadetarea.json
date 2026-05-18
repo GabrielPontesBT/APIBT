@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "procesoId",
@@ -50,6 +55,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\"> \n   <soapenv:Header/> \n   <soapenv:Body> \n      <bts:BTWorkflow.ObtenerMetadataDeTarea> \n         <bts:Btinreq> \n            <bts:Requerimiento>1</bts:Requerimiento> \n            <bts:Device>GP</bts:Device> \n            <bts:Token>151D0C3440510F1D04029085</bts:Token> \n            <bts:Usuario>INSTALADOR</bts:Usuario> \n            <bts:Canal>BTDIGITAL</bts:Canal> \n         </bts:Btinreq> \n         <bts:procesoId>1</bts:procesoId> \n         <bts:tareaId>11</bts:tareaId> \n      </bts:BTWorkflow.ObtenerMetadataDeTarea> \n   </soapenv:Body> \n</soapenv:Envelope>",

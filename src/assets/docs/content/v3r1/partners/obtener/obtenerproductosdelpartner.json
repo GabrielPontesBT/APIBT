@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPartner",
@@ -45,6 +50,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerProductosPartner>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1222A10B1A106FB813BD7AE9</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:puntoVentaUId>3</bts:puntoVentaUId>\r\n            <bts:vendedorUId>56</bts:vendedorUId>\r\n            <bts:partnerUId>23</bts:partnerUId>\r\n         </bts:sdtPartner>\r\n      </bts:BTPartners.ObtenerProductosPartner>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

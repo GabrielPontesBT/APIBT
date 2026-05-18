@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "usuario",
@@ -29,6 +34,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTSeguridad.ObtenerExcepciones>\n         <bts:Btinreq>\n            <bts:Device>ES</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:usuario>BANTOTAL</bts:usuario>\n      </bts:BTSeguridad.ObtenerExcepciones>\n   </soapenv:Body>\n</soapenv:Envelope>",

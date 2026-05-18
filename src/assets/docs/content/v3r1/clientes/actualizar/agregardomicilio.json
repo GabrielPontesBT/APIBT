@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -36,6 +41,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTClientes.AgregarDomicilio>\r\n\t\t<bts:Btinreq>\r\n            <bts:Device>10</bts:Device>\r\n            <bts:Token>da17de64124A834</bts:Token>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t</bts:Btinreq>\r\n\t\t<bts:clienteUId>21</bts:clienteUId>\r\n\t\t<bts:domicilio>\r\n\t\t\t<bts:agrupador1Id>1</bts:agrupador1Id>\r\n\t\t\t<bts:coloniaId>3</bts:coloniaId>\r\n\t\t\t<bts:departamento></bts:departamento>\r\n\t\t\t<bts:agrupador5></bts:agrupador5>\r\n\t\t\t<bts:agrupador4></bts:agrupador4>\r\n\t\t\t<bts:agrupador3Id>1</bts:agrupador3Id>\r\n\t\t\t<bts:agrupador3></bts:agrupador3>\r\n\t\t\t<bts:barrio></bts:barrio>\r\n\t\t\t<bts:detalleUbicacion></bts:detalleUbicacion>\r\n\t\t\t<bts:agrupador2></bts:agrupador2>\r\n\t\t\t<bts:agrupador1></bts:agrupador1>\r\n\t\t\t<bts:agrupador5Id>3</bts:agrupador5Id>\r\n\t\t\t<bts:ubicacionDesde></bts:ubicacionDesde>\r\n\t\t\t<bts:tipoDomicilio></bts:tipoDomicilio>\r\n\t\t\t<bts:direccion></bts:direccion>\r\n\t\t\t<bts:colonia></bts:colonia>\r\n\t\t\t<bts:paisId>845</bts:paisId>\r\n\t\t\t<bts:tipoVivienda></bts:tipoVivienda>\r\n\t\t\t<bts:pais></bts:pais>\r\n\t\t\t<bts:agrupador2Id>2</bts:agrupador2Id>\r\n\t\t\t<bts:codigoPostal>7852</bts:codigoPostal>\r\n\t\t\t<bts:tipoViviendaId>1</bts:tipoViviendaId>\r\n\t\t\t<bts:agrupador4Id>1</bts:agrupador4Id>\r\n\t\t\t<bts:barrioId>2</bts:barrioId>\r\n\t\t\t<bts:localidad></bts:localidad>\r\n\t\t\t<bts:localidadId>2</bts:localidadId>\r\n\t\t\t<bts:tipoDomicilioId>1</bts:tipoDomicilioId>\r\n\t\t\t<bts:departamentoId>1</bts:departamentoId>\r\n\t\t</bts:domicilio>\r\n      </bts:BTClientes.AgregarDomicilio>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

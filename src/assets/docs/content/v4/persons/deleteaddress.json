@@ -1,0 +1,153 @@
+{
+  "slug": "persons/deleteaddress",
+  "pageTitle": "Delete Address",
+  "description": "Método para eliminar el domicilio de una persona.",
+  "pubName": "PublicPersons.deleteAddress",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTPEPA0016",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la persona."
+    },
+    {
+      "Nombre": "correlative",
+      "Tipo": "Short <strong>(length: 3)</strong>",
+      "Comentarios": "Correlativo."
+    }
+  ],
+  "bodyData": [],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40010004",
+      "Descripción": "La persona no existe"
+    },
+    {
+      "Código": "40010008",
+      "Descripción": "País incorrecto"
+    },
+    {
+      "Código": "40010043",
+      "Descripción": "No existe el domicilio ingresado"
+    },
+    {
+      "Código": "40010046",
+      "Descripción": "La fecha de ubicación no puede ser mayor a la fecha de apertura"
+    },
+    {
+      "Código": "40010047",
+      "Descripción": "Debe ingresar un país para el domicilio"
+    },
+    {
+      "Código": "40010048",
+      "Descripción": "Debe ingresar un departamento para el domicilio"
+    },
+    {
+      "Código": "40010049",
+      "Descripción": "Debe ingresar una ciudad para el domicilio"
+    },
+    {
+      "Código": "40010053",
+      "Descripción": "La latitud debe ser un valor entre -90 y 90"
+    },
+    {
+      "Código": "40010054",
+      "Descripción": "La longitud debe ser un valor entre -90 y 90"
+    },
+    {
+      "Código": "40010055",
+      "Descripción": "Tercer nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010056",
+      "Descripción": "Segundo nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010057",
+      "Descripción": "Primer nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010067",
+      "Descripción": "Cuarto nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010068",
+      "Descripción": "Tercer nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010069",
+      "Descripción": "Segundo nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010070",
+      "Descripción": "Primer nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010092",
+      "Descripción": "Debe ingresar un correlativo de domicilio"
+    },
+    {
+      "Código": "40010237",
+      "Descripción": "Debe ingresar un código de Tipo de Domicilio comprendido entre 1 y 99"
+    },
+    {
+      "Código": "40010241",
+      "Descripción": "El Tipo de Domicilio no existe"
+    },
+    {
+      "Código": "40010251",
+      "Descripción": "El Tipo de Vivienda no existe"
+    },
+    {
+      "Código": "40010353",
+      "Descripción": "Existe inconsistencia de datos con el campo ? en la RNG ??"
+    },
+    {
+      "Código": "40020012",
+      "Descripción": "El número de contraparte no existe"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    },
+    {
+      "Código": "40050100",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\",\r\n  \"correlative\": 1\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:56:32\",\r\n    \"Numero\": 13469388,\r\n    \"Servicio\": \"PublicPersons.deleteAddress\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

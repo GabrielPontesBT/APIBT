@@ -20,7 +20,6 @@ export class NavbarComponent {
   isOnReleasePage = false;
   releases: Release[] = [];
   showReleases = true;
-  isV4 = false;
 
   constructor(
     private router: Router,
@@ -37,7 +36,6 @@ export class NavbarComponent {
     });
 
     this.versionService.activeVersion$.subscribe(version => {
-      this.isV4 = version === 'v4';
       this.showReleases = version !== 'bpay' && version !== 'v4';
       if (!this.showReleases) this.releasesOpen = false;
     });
@@ -103,8 +101,6 @@ export class NavbarComponent {
   }
 
   goHome() {
-    if (this.isV4) return;
-
     if (this.router.url === '/' || this.router.url === '') {
       if (isPlatformBrowser(this.platformId)) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
