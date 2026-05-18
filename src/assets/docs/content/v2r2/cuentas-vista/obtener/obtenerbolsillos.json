@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUId",
@@ -37,6 +42,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerBolsillos>\n         <bts:Btinreq>\n            <bts:Device>FP</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>64d9fe0781F955E77534D3E0</bts:Token>\n            <bts:Requerimiento>10</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:operacionUId>9</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerBolsillos>\n   </soapenv:Body>\n</soapenv:Envelope>",

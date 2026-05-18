@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "tipoTasaOrigen",
@@ -57,6 +62,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrecios.ConvertirTasaAnualEfectivaALineal>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>2081397563CD285A89A23FBE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:tasaOrigen>10</bts:tasaOrigen>\r\n         <bts:tipoAnio>2</bts:tipoAnio>\r\n         <bts:plazo>30</bts:plazo>\r\n      </bts:BTPrecios.ConvertirTasaAnualEfectivaALineal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

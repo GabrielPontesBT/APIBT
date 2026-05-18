@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "personaUId",
@@ -38,6 +43,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerVictimaHechoViolento>\n         <bts:Btinreq>\n            <bts:Token>d235ac28e6CD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>21</bts:personaUId>\n      </bts:BTPersonas.ObtenerVictimaHechoViolento>\n   </soapenv:Body>\n</soapenv:Envelope>",

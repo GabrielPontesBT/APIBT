@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "tarjetaUId",
@@ -45,6 +50,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>\n         <bts:Btinreq>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GP</bts:Device>\n            <bts:Token>65386256C895CD01D7DC796E</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000001942</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>\n   </soapenv:Body>\n</soapenv:Envelope>",

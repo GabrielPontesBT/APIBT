@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtSimulacionAmortizable",
@@ -41,6 +46,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.SimularAmortizable>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>95</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>987391075CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>GP</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtSimulacionAmortizable>\r\n            <bts:solicitudUId>10896</bts:solicitudUId>\r\n            <bts:clienteUId>7</bts:clienteUId>\r\n            <bts:productoUId>23</bts:productoUId>\r\n            <bts:fechaPrimerPago>2020-12-21</bts:fechaPrimerPago>\r\n            <bts:cantidadCuotas>3</bts:cantidadCuotas>\r\n            <bts:periodoCuotas>30</bts:periodoCuotas>\r\n            <bts:monto>30000</bts:monto>\r\n            <bts:pizarra>0</bts:pizarra>\r\n            <bts:tasa>0</bts:tasa>\r\n            <bts:destinoCredito>33</bts:destinoCredito>\r\n            <bts:datosAdicionales/>\r\n         </bts:sdtSimulacionAmortizable>\r\n      </bts:BTMicrofinanzas.SimularAmortizable>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

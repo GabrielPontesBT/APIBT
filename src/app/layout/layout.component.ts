@@ -1,4 +1,5 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -18,7 +19,11 @@ export class LayoutComponent implements OnDestroy {
   private sub!: Subscription;
   private readonly transitionClass = 'docs-view-transition-active';
 
-  constructor(private title: Title, private router: Router) {
+  constructor(
+    private title: Title,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {
     this.updateViewportState();
     this.updateIsHome(this.router.url);
 
@@ -34,10 +39,12 @@ export class LayoutComponent implements OnDestroy {
       )
       .subscribe(event => {
         if (event instanceof NavigationStart) {
-          const currentIsHome = this.isHomeRoute(this.router.url);
-          const nextIsHome = this.isHomeRoute(event.url);
-          const shouldAnimate = currentIsHome !== nextIsHome;
-          document.documentElement.classList.toggle(this.transitionClass, shouldAnimate);
+          if (isPlatformBrowser(this.platformId)) {
+            const currentIsHome = this.isHomeRoute(this.router.url);
+            const nextIsHome = this.isHomeRoute(event.url);
+            const shouldAnimate = currentIsHome !== nextIsHome;
+            document.documentElement.classList.toggle(this.transitionClass, shouldAnimate);
+          }
           return;
         }
 
@@ -53,9 +60,11 @@ export class LayoutComponent implements OnDestroy {
           event instanceof NavigationCancel ||
           event instanceof NavigationError
         ) {
-          setTimeout(() => {
-            document.documentElement.classList.remove(this.transitionClass);
-          }, 800);
+          if (isPlatformBrowser(this.platformId)) {
+            setTimeout(() => {
+              document.documentElement.classList.remove(this.transitionClass);
+            }, 800);
+          }
         }
       });
   }
@@ -65,6 +74,7 @@ export class LayoutComponent implements OnDestroy {
   }
 
   private updateViewportState(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     const nextCompact = window.innerWidth < 1024;
 
     if (nextCompact !== this.isCompactViewport) {
@@ -94,7 +104,9 @@ export class LayoutComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    document.documentElement.classList.remove(this.transitionClass);
+    if (isPlatformBrowser(this.platformId)) {
+      document.documentElement.classList.remove(this.transitionClass);
+    }
     this.sub?.unsubscribe();
   }
 

@@ -52,13 +52,33 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
     return section === 'invocation' ? 'Ejemplo de Invocación' : 'Ejemplo de Respuesta';
   }
 
+  hasXml(section: 'invocation' | 'response'): boolean {
+    return !!this.examples[section].xml;
+  }
+
+  hasJson(section: 'invocation' | 'response'): boolean {
+    return !!this.examples[section].json;
+  }
+
   ngOnInit() {
+    this.initViews();
     this.updateHighlight();
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['examples'] && !changes['examples'].isFirstChange()) {
+      this.initViews();
       this.updateHighlight();
+    }
+  }
+
+  private initViews() {
+    for (const section of this.sections) {
+      if (!this.examples[section].xml) {
+        this.view[section] = 'json';
+      } else if (!this.examples[section].json) {
+        this.view[section] = 'xml';
+      }
     }
   }
 

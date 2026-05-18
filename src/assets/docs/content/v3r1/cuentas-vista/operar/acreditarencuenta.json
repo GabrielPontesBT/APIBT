@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de compra, teniendo en cuenta que:\r\n\r\n\t- La cuenta vista origen se almacena en el preformato 1.\r\n\t\t\r\n\t- Los diferentes importes se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.\r\n\t\r\n\t- Los diferentes conceptos se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.\r\n\t\r\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal.\r\n\t\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):\r\n\r\n\t- Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtDatosAcreditacion",
@@ -41,6 +46,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.AcreditarEnCuenta>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>BANTOTAL</bts:Usuario>\r\n            <bts:Token>1244265502F955E77534D3E0</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatosAcreditacion>\r\n            <bts:clienteUId>140</bts:clienteUId>\r\n            <bts:operacionUId>10140</bts:operacionUId>\r\n            <bts:importe1>1000</bts:importe1>\r\n            <bts:importe2>5220</bts:importe2>\r\n            <bts:importe3></bts:importe3>\r\n            <bts:importe4></bts:importe4>\r\n            <bts:concepto1>test</bts:concepto1>\r\n            <bts:concepto2></bts:concepto2>\r\n            <bts:concepto3></bts:concepto3>\r\n            <bts:concepto4></bts:concepto4>\r\n         </bts:sdtDatosAcreditacion>\r\n      </bts:BTCuentasVista.AcreditarEnCuenta>\r\n   </soapenv:Body>",

@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "calendarioId",
@@ -60,6 +65,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>MC</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>200f0b8b654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:fechaInicio>2020-10-01</bts:fechaInicio>\n         <bts:fechaFin>2020-10-31</bts:fechaFin>\n      </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n   </soapenv:Body>\n</soapenv:Envelope>",

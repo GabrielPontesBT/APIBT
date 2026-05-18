@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "razonSocial",
@@ -33,6 +38,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerPersonasJuridicas>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1839023315CD285A89A23FBE</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n         <bts:razonSocial>BANCO</bts:razonSocial>\n      </bts:BTPersonas.ObtenerPersonasJuridicas>\n   </soapenv:Body>\n</soapenv:Envelope>",

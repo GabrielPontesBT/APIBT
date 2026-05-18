@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "Si no se ingresa valor en el parámetro 'sucursalId', su valor se asume de la cuenta cliente. Si la opción general 3282 está activada se tomará la sucursal del usuario que ejecuta el servicio.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUId",
@@ -37,6 +42,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerDocumentosDigitales>\n         <bts:Btinreq>\n\t\t  <bts:Device>10.12.10.159</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>1355f5da724A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>21</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerDocumentosDigitales>\n   </soapenv:Body>\n</soapenv:Envelope>",

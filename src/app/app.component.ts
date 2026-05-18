@@ -1,4 +1,5 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -24,7 +25,11 @@ export class AppComponent implements OnInit {
   private pendingDir: 'push' | 'back' | null = null;
   private prevUrl = '/';
 
-  constructor(private titleSvc: Title, private router: Router) { }
+  constructor(
+    private titleSvc: Title,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) { }
 
   ngOnInit() {
     this.prevUrl = this.router.url;
@@ -35,7 +40,7 @@ export class AppComponent implements OnInit {
         const wasHome = this.isRoot(this.prevUrl);
         const willBeHome = this.isRoot(nextUrl);
 
-        if (wasHome !== willBeHome && !this.animRunning) {
+        if (wasHome !== willBeHome && !this.animRunning && isPlatformBrowser(this.platformId)) {
           this.animRunning = true;
           this.pendingDir = wasHome ? 'push' : 'back';
           this.pendingOverlay = this.createOverlay(this.pendingDir);

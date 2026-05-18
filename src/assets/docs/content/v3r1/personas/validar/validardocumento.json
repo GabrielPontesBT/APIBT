@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "paisDocumentoId",
@@ -52,6 +57,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ValidarDocumento>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n         <bts:numeroDocumento>52116325</bts:numeroDocumento>\r\n      </bts:BTPersonas.ValidarDocumento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

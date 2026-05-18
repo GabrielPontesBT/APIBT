@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "Tiempo de validez de la simulación de una ampliación o refinanciación: \n\nPor defecto es 1440 minutos (24 horas). Este valor se puede modificar ingresando los minutos en el valor específico 1 de la guía especial 20100 para los correlativos 1, 2 y 3 igual cero.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtRefinanciacion",
@@ -181,6 +186,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularRefinanciacionSaldoCapital>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>18bdf2801e4A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtRefinanciacion>\n            <bts:productoUId>61</bts:productoUId>\n            <bts:clienteUId>221</bts:clienteUId>\n            <bts:actividad>1111</bts:actividad>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:cantidadCuotas>12</bts:cantidadCuotas>\n            <bts:tasa>0</bts:tasa>\n            <bts:fechaPrimerPago/>\n            <bts:operaciones>\n                <item>541</item>\n               </bts:operaciones>\n            <bts:pizarra>0</bts:pizarra>\n         </bts:sdtRefinanciacion>\n      </bts:BTPrestamos.SimularRefinanciacionSaldoCapital>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtSimulacionAmortizableGrupal",
@@ -50,6 +55,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.SimulaAmortizableGrupal>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1973148151CD285A89A23FBE</bts:Token>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:sdtSimulacionAmortizableGrupal>\n            <bts:solicitudUId>11341</bts:solicitudUId>\n            <bts:productoUId>17</bts:productoUId>\n            <bts:fechaPrimerPago>2018-08-14</bts:fechaPrimerPago>\n            <bts:cantidadCuotas></bts:cantidadCuotas>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:pizarra/>\n            <bts:tasa/>\n            <bts:integrantesGrupo>\n               <bts:sBTIntegranteGrupoSolicitud>\n                  <bts:empresa></bts:empresa>\n                  <bts:clienteUId>91</bts:clienteUId>\n                  <bts:cuenta></bts:cuenta>\n                  <bts:monto>10500</bts:monto>\n                  <bts:destinoCredito>41</bts:destinoCredito>\n                  <bts:destinoCreditoDesc></bts:destinoCreditoDesc>\n                  <bts:valorCuota></bts:valorCuota>\n               </bts:sBTIntegranteGrupoSolicitud>\n               <bts:sBTIntegranteGrupoSolicitud>\n                  <bts:empresa></bts:empresa>\n                  <bts:clienteUId>102</bts:clienteUId>\n                  <bts:cuenta></bts:cuenta>\n                  <bts:monto>15000</bts:monto>\n                  <bts:destinoCredito>42</bts:destinoCredito>\n                  <bts:destinoCreditoDesc></bts:destinoCreditoDesc>\n                  <bts:valorCuota></bts:valorCuota>\n               </bts:sBTIntegranteGrupoSolicitud>\n               <bts:sBTIntegranteGrupoSolicitud>\n                  <bts:empresa></bts:empresa>\n                  <bts:clienteUId>119</bts:clienteUId>\n                  <bts:cuenta></bts:cuenta>\n                  <bts:monto>12500</bts:monto>\n                  <bts:destinoCredito>43</bts:destinoCredito>\n                  <bts:destinoCreditoDesc></bts:destinoCreditoDesc>\n                  <bts:valorCuota></bts:valorCuota>\n               </bts:sBTIntegranteGrupoSolicitud>\n            </bts:integrantesGrupo>\n            <bts:datosAdicionales>\n            </bts:datosAdicionales>\n         </bts:sdtSimulacionAmortizableGrupal>\n      </bts:BTMicrofinanzas.SimulaAmortizableGrupal>\n   </soapenv:Body>\n</soapenv:Envelope>",

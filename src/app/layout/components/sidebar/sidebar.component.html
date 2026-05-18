@@ -36,7 +36,7 @@ sidebar.component.html
         @if (isFile(node)) {
           <a class="sidebar-node sidebar-file" [class.active]="isNodeActive(node)"
             [attr.aria-current]="isNodeActive(node) ? 'page' : null"
-            [attr.data-slug]="node.slug" [routerLink]="['/', node.slug]">
+            [attr.data-slug]="node.slug" [routerLink]="'/' + activeVersion + '/' + node.slug">
             <span class="sidebar-node__content">
               <span class="sidebar-file__dash" aria-hidden="true">·</span>
               <span class="sidebar-label">

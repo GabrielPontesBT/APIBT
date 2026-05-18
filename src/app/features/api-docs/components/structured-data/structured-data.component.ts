@@ -1,4 +1,4 @@
-import { Component, Input, HostListener, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, HostListener, OnChanges, SimpleChanges } from '@angular/core';
 
 interface StructuredType {
   typeName: string;
@@ -19,7 +19,7 @@ export class StructuredDataComponent implements OnChanges {
   /** Guarda qué panel (por id lowercase) está abierto */
   expandedMap: Record<string, boolean> = {};
 
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['types']) {
@@ -48,6 +48,7 @@ export class StructuredDataComponent implements OnChanges {
 
     // Sólo abrimos este panel, dejamos los demás como estaban
     this.expandedMap[fragment] = true;
+    this.cdr.markForCheck();
 
     // Scroll suave justo después de la animación de Material
     setTimeout(() => {

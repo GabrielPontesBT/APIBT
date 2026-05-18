@@ -10,6 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ApiTableComponent {
   @Input() columns!: string[];
   @Input() data!: any[];
+  @Input() wideSecondCol: boolean = false;
 
   constructor(private sanitizer: DomSanitizer) {}
 

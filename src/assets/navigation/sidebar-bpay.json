@@ -239,6 +239,79 @@
   },
   {
     "type": "folder",
+    "label": "Panamá PA",
+    "slug": "panama-pa",
+    "children": [
+      {
+        "type": "file",
+        "label": "AltaTarjeta",
+        "pageTitle": "Alta Tarjeta",
+        "slug": "panama-pa/altatarjeta"
+      },
+      {
+        "type": "file",
+        "label": "BloqueoTarjeta",
+        "pageTitle": "Bloqueo Tarjeta",
+        "slug": "panama-pa/bloqueotarjeta"
+      },
+      {
+        "type": "file",
+        "label": "CambioDePin",
+        "pageTitle": "Cambio PIN",
+        "slug": "panama-pa/cambiodepin"
+      },
+      {
+        "type": "file",
+        "label": "CancelarTarjeta",
+        "pageTitle": "Cancelar Tarjeta",
+        "slug": "panama-pa/cancelartarjeta"
+      },
+      {
+        "type": "file",
+        "label": "ConsultaCVV",
+        "pageTitle": "Consulta CVV",
+        "slug": "panama-pa/consultacvv"
+      },
+      {
+        "type": "file",
+        "label": "ConsultaMovBloqueados",
+        "pageTitle": "Consulta Movimientos Bloqueados",
+        "slug": "panama-pa/consultamovbloqueados"
+      },
+      {
+        "type": "file",
+        "label": "DesbloqueoTarjeta",
+        "pageTitle": "Desbloqueo de tarjeta",
+        "slug": "panama-pa/desbloqueotarjeta"
+      },
+      {
+        "type": "file",
+        "label": "InformacionTarjeta",
+        "pageTitle": "Informacion Tarjeta",
+        "slug": "panama-pa/informaciontarjeta"
+      },
+      {
+        "type": "file",
+        "label": "NotificacionTransaccionesEndPoint",
+        "pageTitle": "Notificacion de Transacciones",
+        "slug": "panama-pa/notificaciontransaccionesendpoint"
+      },
+      {
+        "type": "file",
+        "label": "PeticionAutorizacionEndPoint",
+        "pageTitle": "Petición de Autorización",
+        "slug": "panama-pa/peticionautorizacionendpoint"
+      },
+      {
+        "type": "file",
+        "label": "RecepcionTarjeta",
+        "pageTitle": "Recepción de Tarjeta",
+        "slug": "panama-pa/recepciontarjeta"
+      }
+    ]
+  },
+  {
+    "type": "folder",
     "label": "Paraguay PY",
     "slug": "paraguay-py",
     "children": [

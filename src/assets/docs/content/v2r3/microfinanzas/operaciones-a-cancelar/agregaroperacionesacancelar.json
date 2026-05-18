@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "solicitudUId",
@@ -71,6 +76,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTMicrofinanzas.AgregarOperacionesACancelar>\n         <bts:Btinreq>\n            <bts:Device>GP</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>16c1cc9b534A8B5C60A82434</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:solicitudUId>11887</bts:solicitudUId>\n         <bts:clienteUId>862</bts:clienteUId>\n         <bts:sdtOperaciones>\n            <bts:sBTOperacionId>\n               <bts:operacionUId>1727</bts:operacionUId>\n            </bts:sBTOperacionId>\n         </bts:sdtOperaciones>\n      </bts:BTMicrofinanzas.AgregarOperacionesACancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",

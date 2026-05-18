@@ -1,7 +1,7 @@
 
 <!-- Si hay datos, muestro encabezado y cuerpo -->
 @if ((data?.length ?? 0) > 0) {
-  <table>
+  <table [class.wide-second-col]="wideSecondCol">
     <thead>
       <tr>
         @for (col of columns; track col) {

@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "listaVendedorAdhReq",
@@ -29,6 +34,7 @@
   ],
   "errors": [],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <bts:listaVendedorAdhReq>\n            <bts:listaTamano>10</bts:listaTamano>\n            <bts:listaPagina>1</bts:listaPagina>\n            <bts:VendedorCuit>30716226308</bts:VendedorCuit>\n            <bts:VendedorRubro>VARIOS</bts:VendedorRubro>\n         </bts:listaVendedorAdhReq>\n      </bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n   </soapenv:Body>\n</soapenv:Envelope>",

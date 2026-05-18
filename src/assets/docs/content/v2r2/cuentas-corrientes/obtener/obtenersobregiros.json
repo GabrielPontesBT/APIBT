@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUId",
@@ -51,6 +56,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasCorrientes.ObtenerSobregiros>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>8B2DAF8BCFD755A866C37214</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>958</bts:operacionUId>\r\n         <bts:anio></bts:anio>\r\n         <bts:mes></bts:mes>\r\n      </bts:BTCuentasCorrientes.ObtenerSobregiros>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

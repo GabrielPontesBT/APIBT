@@ -116,6 +116,12 @@
           },
           {
             "type": "file",
+            "label": "ObtenerCronogramaAbonos",
+            "pageTitle": "Obtener Cronograma de Abonos",
+            "slug": "ahorro-programado/obtener/obtenercronogramaabonos"
+          },
+          {
+            "type": "file",
             "label": "ObtenerCuentasDestinoHabilitadas",
             "pageTitle": "Obtener Cuentas Destino Habilitadas",
             "slug": "ahorro-programado/obtener/obtenercuentasdestinohabilitadas"

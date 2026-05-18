@@ -2,18 +2,22 @@
   @for (section of sections; track section) {
     <mat-tab [label]="getTabLabel(section)">
       <div class="code-toggle">
-        <button
-          mat-button
-          [class.active]="view[section] === 'xml'"
-          (click)="switchView(section, 'xml')">
-          XML
-        </button>
-        <button
-          mat-button
-          [class.active]="view[section] === 'json'"
-          (click)="switchView(section, 'json')">
-          JSON
-        </button>
+        @if (hasXml(section)) {
+          <button
+            mat-button
+            [class.active]="view[section] === 'xml'"
+            (click)="switchView(section, 'xml')">
+            XML
+          </button>
+        }
+        @if (hasJson(section)) {
+          <button
+            mat-button
+            [class.active]="view[section] === 'json'"
+            (click)="switchView(section, 'json')">
+            JSON
+          </button>
+        }
         <button mat-icon-button (click)="copyCode(section)"
           [class.copied]="copiedSection === section"
           [matTooltip]="copiedSection === section ? '¡Copiado!' : 'Copiar'"

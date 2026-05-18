@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Release } from '../../../features/api-docs/pages/releases/releases.data';
@@ -13,7 +14,7 @@ import { VersionService } from '../../../core/services/version.service';
 })
 export class NavbarComponent {
 
-  isDarkMode = document.body.classList.contains('dark-mode');
+  isDarkMode = false;
   rotate = false;
   releasesOpen = false;
   isOnReleasePage = false;
@@ -23,14 +24,19 @@ export class NavbarComponent {
   constructor(
     private router: Router,
     private releasesService: ReleasesService,
-    private versionService: VersionService
+    private versionService: VersionService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isDarkMode = document.body.classList.contains('dark-mode');
+    }
+
     this.releasesService.getReleases().subscribe(releases => {
       this.releases = releases;
     });
 
     this.versionService.activeVersion$.subscribe(version => {
-      this.showReleases = version !== 'bpay';
+      this.showReleases = version !== 'bpay' && version !== 'v4';
       if (!this.showReleases) this.releasesOpen = false;
     });
 
@@ -41,15 +47,17 @@ export class NavbarComponent {
       this.isOnReleasePage = e.urlAfterRedirects.startsWith('/releases/');
     });
 
-    // Si el usuario no eligió tema manualmente, seguir los cambios del sistema
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        this.applyTheme(e.matches);
-      }
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          this.applyTheme(e.matches);
+        }
+      });
+    }
   }
 
   private applyTheme(isDark: boolean): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     this.isDarkMode = isDark;
     document.body.classList.toggle('dark-mode', isDark);
     document.documentElement.classList.toggle('dark-mode', isDark);
@@ -93,17 +101,13 @@ export class NavbarComponent {
   }
 
   goHome() {
-
-    // Si ya estamos en la home solo scrollea arriba
     if (this.router.url === '/' || this.router.url === '') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      if (isPlatformBrowser(this.platformId)) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
       return;
     }
 
-    // Si estamos en otra página, navega al home
     this.router.navigateByUrl('/');
   }
 

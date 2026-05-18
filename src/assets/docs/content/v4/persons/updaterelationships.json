@@ -1,0 +1,139 @@
+{
+  "slug": "persons/updaterelationships",
+  "pageTitle": "Update Relationships",
+  "description": "Método para actualizar las relaciones de una persona.",
+  "pubName": "PublicPersons.updateRelationships",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTPEPA0037",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la persona."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "relationships",
+      "Tipo": "<a href=\"#sdtsbtpewrelationship\">SdtsBTPEWRelationship</a>",
+      "Comentarios": "Listado de relaciones."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40010004",
+      "Descripción": "La persona no existe"
+    },
+    {
+      "Código": "40010087",
+      "Descripción": "Vínculo incorrecto"
+    },
+    {
+      "Código": "40010095",
+      "Descripción": "Relación no existe"
+    },
+    {
+      "Código": "40010096",
+      "Descripción": "El vínculo de cónyuge se agrega desde el alta/modificación de persona"
+    },
+    {
+      "Código": "40010097",
+      "Descripción": "Relación ya existe"
+    },
+    {
+      "Código": "40010098",
+      "Descripción": "Ya se ingresó un vínculo con esta persona"
+    },
+    {
+      "Código": "40010099",
+      "Descripción": "La persona a relacionar ya tiene un vínculo existente con otra persona"
+    },
+    {
+      "Código": "40010100",
+      "Descripción": "No puede relacionarse a sí mismo"
+    },
+    {
+      "Código": "40010102",
+      "Descripción": "El vínculo de cónyuge debe ser eliminado desde el alta/modificación de persona"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    },
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\",\r\n  \"relationships\": {\r\n    \"relationship\": [\r\n      {\r\n        \"BondId\": 1,\r\n        \"PersonGUID\": \"f43a3946-4ae1-4a27-861d-c1c2d9cee87d\",\r\n        \"Bidirectional\": false,\r\n        \"Percentage\": 0,\r\n        \"JobTitleId\": 0\r\n      }\r\n    ]\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:56:18\",\r\n    \"Numero\": 13469383,\r\n    \"Servicio\": \"PublicPersons.updateRelationships\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTPEWRelationship",
+      "fields": [
+        {
+          "Nombre": "Bidirectional",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Bidireccional."
+        },
+        {
+          "Nombre": "BondId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del vínculo."
+        },
+        {
+          "Nombre": "BondDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción del vínculo."
+        },
+        {
+          "Nombre": "IntegrantName",
+          "Tipo": "String <strong>(length: 70)</strong>",
+          "Comentarios": "Nombre del integrante."
+        },
+        {
+          "Nombre": "JobTitleId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del cargo."
+        },
+        {
+          "Nombre": "Percentage",
+          "Tipo": "Double <strong>(length: 8)</strong>",
+          "Comentarios": "Porcentaje."
+        },
+        {
+          "Nombre": "PersonGUID",
+          "Tipo": "String <strong>(length: 36)</strong>",
+          "Comentarios": "GUID de persona."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

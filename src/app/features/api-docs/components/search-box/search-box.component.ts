@@ -6,7 +6,8 @@
  * rápidamente a una página desde el frontend.
  */
 
-import { Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SearchService, SearchResult } from '../../../../core/services/search.service';
@@ -33,7 +34,8 @@ export class SearchBoxComponent {
     private searchService: SearchService,
     private router: Router,
     private elRef: ElementRef,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {
     this.recentSearches = this.loadHistory();
   }
@@ -67,12 +69,15 @@ export class SearchBoxComponent {
   removeFromHistory(term: string, event: Event): void {
     event.stopPropagation();
     this.recentSearches = this.recentSearches.filter(s => s !== term);
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(this.recentSearches));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(this.recentSearches));
+    }
   }
 
   // ── Historial ───────────────────────────────────────────────────────────
 
   private loadHistory(): string[] {
+    if (!isPlatformBrowser(this.platformId)) return [];
     try {
       return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
     } catch {
@@ -81,7 +86,7 @@ export class SearchBoxComponent {
   }
 
   private saveHistory(term: string): void {
-    if (!term) return;
+    if (!term || !isPlatformBrowser(this.platformId)) return;
     const updated = [term, ...this.recentSearches.filter(s => s !== term)]
       .slice(0, MAX_HISTORY);
     this.recentSearches = updated;

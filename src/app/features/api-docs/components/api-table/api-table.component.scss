@@ -49,6 +49,13 @@ table {
     text-align: center;
     font-style: italic;
   }
+
+  &.wide-second-col {
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 28%;
+    }
+  }
 }
 
 

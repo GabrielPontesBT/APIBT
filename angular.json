@@ -34,7 +34,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/generated-pages"
+              "src/app/generated-pages",
+              "src/web.config"
             ],
             "styles": [
               "node_modules/prismjs/themes/prism-solarizedlight.css",
@@ -52,7 +53,13 @@
             "production": {
               "budgets": [],
               "outputHashing": "all",
-              "optimization": true
+              "optimization": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,

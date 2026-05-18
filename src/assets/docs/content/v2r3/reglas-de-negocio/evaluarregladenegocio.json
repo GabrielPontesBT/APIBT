@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "reglaId",
@@ -43,6 +48,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTReglasNegocio.EvaluarReglaNegocio>\n         <bts:Btinreq>\n            <bts:Device>GP</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>86b12d9cbaCD285A89A23FBE</bts:Token>\n         </bts:Btinreq>\n         <bts:reglaId>4</bts:reglaId>\n         <bts:sdtVariables>\n            <bts:SdtsBTVariable>\n               <bts:valor>S</bts:valor>\n               <bts:nombre>CHECKAUX2</bts:nombre>\n            </bts:SdtsBTVariable>\n         </bts:sdtVariables>\n      </bts:BTReglasNegocio.EvaluarReglaNegocio>\n   </soapenv:Body>\n</soapenv:Envelope>",

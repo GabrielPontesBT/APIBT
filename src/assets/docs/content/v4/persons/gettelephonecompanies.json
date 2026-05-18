@@ -1,0 +1,60 @@
+{
+  "slug": "persons/gettelephonecompanies",
+  "pageTitle": "Get Telephone Companies",
+  "description": "Método para obtener un listado de las compañías telefónicas.",
+  "pubName": "PublicPersons.getTelephoneCompanies",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTPEPA0039",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "telephoneCompanies",
+      "Tipo": "<a href=\"#sbtpewtelephonecompany\">sBTPEWTelephoneCompany</a>",
+      "Comentarios": "Listado de compañias telefónicas."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40010004",
+      "Descripción": "La persona no existe"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"telephoneCompanies\": {\r\n    \"telephoneCompany\": [\r\n      {\r\n        \"id\": 1,\r\n        \"description\": \"ANTEL\"\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"description\": \"CLARO\"\r\n      },\r\n      {\r\n        \"id\": 3,\r\n        \"description\": \"MOVISTAR\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:37\",\r\n    \"Numero\": 13469345,\r\n    \"Servicio\": \"PublicPersons.getTelephoneCompanies\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPEWTelephoneCompany",
+      "fields": [
+        {
+          "Nombre": "id",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de compañía telefónica."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

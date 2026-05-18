@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -71,6 +76,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.Cancelar>\n         <bts:Btinreq>\n           <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>3E7C0C38BBBB8ECFE4C31B86</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>7</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:cuentaUId>322</bts:cuentaUId>\n         <bts:bolsilloUId>18830</bts:bolsilloUId>\n         <bts:operacionCobroUId>1133</bts:operacionCobroUId>\n      </bts:BTCuentasBolsillo.Cancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",

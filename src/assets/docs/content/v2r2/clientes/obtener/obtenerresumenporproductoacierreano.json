@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -38,6 +43,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTClientes.ObtenerResumenPorProductoACierreAnio>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>244353514CD285A89A23FBEE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>10010</bts:clienteUId>\n         <bts:anioConsulta>2018</bts:anioConsulta>\n      </bts:BTClientes.ObtenerResumenPorProductoACierreAnio>\n   </soapenv:Body>\n</soapenv:Envelope>",

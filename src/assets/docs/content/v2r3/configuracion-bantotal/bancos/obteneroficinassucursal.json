@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sucursalId",
@@ -24,6 +29,7 @@
   ],
   "errors": [],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerOficinasSucursal>\n         <bts:Btinreq>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>GP</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>6B4647555001A737F61D4995</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n         </bts:Btinreq>\n         <bts:sucursalId>3</bts:sucursalId>\n      </bts:BTConfiguracionBantotal.ObtenerOficinasSucursal>\n   </soapenv:Body>\n</soapenv:Envelope>",

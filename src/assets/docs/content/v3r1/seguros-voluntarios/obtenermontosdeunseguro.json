@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "seguroUId",
@@ -43,6 +48,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSegurosVoluntarios.ObtenerMontosDeUnSeguro>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>89B4F6D7BEFB0C7F653DB37A</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:seguroUId>107</bts:seguroUId>\r\n      </bts:BTSegurosVoluntarios.ObtenerMontosDeUnSeguro>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

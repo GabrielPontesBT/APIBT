@@ -8,6 +8,9 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "No aplica."
+  ],
   "inputData": [],
   "outputData": [
     {
@@ -23,6 +26,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital>\n         <bts:Btinreq>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0868626a064A8B5C60A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>10.12.10.159</bts:Device>\n         </bts:Btinreq>\n      </bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital>\n   </soapenv:Body>\n</soapenv:Envelope>",

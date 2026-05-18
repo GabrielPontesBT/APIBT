@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de pago, teniendo en cuenta que: \r\n\r\n\t- El préstamo se almacena en el preformato 1. \r\n\r\n\t- La cuenta vista de cobro se almacena en el preformato 2. \r\n\r\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \r\n\r\n3) Se debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUId",
@@ -99,6 +104,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.PagarCuotaAFechaTerceros>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>191631443CD285A89A23FBEE</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>37675</bts:operacionUId>\r\n         <bts:clienteUId>1600</bts:clienteUId>\r\n         <bts:operacionCobroUId>59</bts:operacionCobroUId>\r\n         <bts:referencia>Prueba</bts:referencia>\r\n         <bts:importe>1000</bts:importe>\r\n         <bts:fecha>2019-07-26</bts:fecha>\r\n      </bts:BTPrestamos.PagarCuotaAFechaTerceros>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

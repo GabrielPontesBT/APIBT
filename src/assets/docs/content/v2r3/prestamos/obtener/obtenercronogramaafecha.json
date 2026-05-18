@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUId",
@@ -42,6 +47,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.ObtenerCronogramaAFecha>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>191631443CD285A89A23FBEE</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>37675</bts:operacionUId>\n         <bts:fecha>2019-08-26</bts:fecha>\n      </bts:BTPrestamos.ObtenerCronogramaAFecha>\n   </soapenv:Body>\n</soapenv:Envelope>",

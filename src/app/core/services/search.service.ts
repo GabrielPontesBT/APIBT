@@ -140,7 +140,7 @@ export class SearchService {
       this.extractSnippet(page.pubName, terms);
 
     return {
-      url: '/' + page.slug,
+      url: `/${page.version}/${page.slug}`,
       snippet: snippetSource,
       pubName: page.pubName,
       programa: page.programa,

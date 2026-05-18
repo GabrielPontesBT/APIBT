@@ -13,7 +13,7 @@ import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/materia
 
 import { TitleStrategy } from '@angular/router';
 import { AppTitleStrategy } from './app-title.strategy';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 
 import { MARKED_OPTIONS, MarkedOptions, MarkedRenderer, MarkdownModule } from 'ngx-markdown';
 
@@ -49,6 +49,6 @@ const globalRippleConfig: RippleGlobalOptions = {
         Title, // servicio Title para que la estrategia pueda setearlo
         { provide: TitleStrategy, useClass: AppTitleStrategy }, // ⬅️ estrategia global "API | ..."
         { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withFetch(), withInterceptorsFromDi())
     ] })
 export class AppModule {}

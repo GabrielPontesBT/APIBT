@@ -1,0 +1,549 @@
+{
+  "slug": "saving-accounts/getdetaileddata",
+  "pageTitle": "Get Detailed Data",
+  "description": "Método para obtener la información detallada de una cuenta de ahorro.",
+  "pubName": "PublicSavingAccounts.getDetailedData",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "savingAccountGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    }
+  ],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "savingAccountData",
+      "Tipo": "<a href=\"#sdtsbtsawsavingaccountdata\">SdtsBTSAWSavingAccountData</a>",
+      "Comentarios": "Datos de la cuenta de ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "14001010001",
+      "Descripción": "Debe ingresar el GUID de la cuenta de ahorro."
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountData\": {\r\n    \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\r\n    \"AccountStatementPreferences\": {\r\n      \"RegulatorResumeFrequency\": 0,\r\n      \"RegulatorResumeFrequencyDescription\": \"\",\r\n      \"AccountingResumeFrequency\": 0,\r\n      \"AccountingResumeFrequencyDescription\": \"\",\r\n      \"ShipmentMethod\": 1,\r\n      \"ShipmentMethodDescription\": \"Email\",\r\n      \"AddressShipmentMethodId\": 0,\r\n      \"AddressShipmentMethodDescription\": \"\",\r\n      \"EmailShipmentMethodId\": 0,\r\n      \"EmailShipmentMethodDescription\": \"\",\r\n      \"BranchShipmentMethodId\": 0,\r\n      \"BranchShipmentMethodDescription\": \"\",\r\n      \"AvoidsAccountingResume\": false\r\n    },\r\n    \"Amount\": 0,\r\n    \"AvailableAmount\": \"0.00\",\r\n    \"BankCode\": \"36500101000002060678\",\r\n    \"BoardTypeId\": 44,\r\n    \"BoardTypeDescription\": \"Cuenta a mi favor\",\r\n    \"BranchId\": 1,\r\n    \"BranchDescription\": \"Sucursal Beta\",\r\n    \"CancelationDate\": \"\",\r\n    \"CancelationOriginId\": 0,\r\n    \"CancelationOriginDescription\": \"\",\r\n    \"CancelationReasonId\": 0,\r\n    \"CancelationReasonDescription\": \"\",\r\n    \"CancelationUser\": \"\",\r\n    \"CancelationUserDescription\": \"\",\r\n    \"CircularityFee\": false,\r\n    \"ClassRateTypeId\": 0,\r\n    \"ClassRateTypeDescription\": \"\",\r\n    \"CounterpartyId\": 5090,\r\n    \"CounterpartyDescription\": \"CRAMPET GUTIERREZ PEDRO PABLO\",\r\n    \"CreationUser\": \"INSTALADOR\",\r\n    \"CreationUserDescription\": \"INSTALADOR\",\r\n    \"CreationDate\": \"2027-04-30\",\r\n    \"GrouperId\": 0,\r\n    \"GrouperDescription\": \"\",\r\n    \"LowAverageFee\": false,\r\n    \"LowAverageFeeId\": 0,\r\n    \"LowAverageFeeDescription\": \"\",\r\n    \"MovementFee\": false,\r\n    \"OpeningFee\": false,\r\n    \"PaymentMethod\": 2,\r\n    \"PaymentMethodDescription\": \"Promedio\",\r\n    \"PaymentPeriod\": 0,\r\n    \"PaymentPeriodDescription\": \"\",\r\n    \"PaysInterest\": true,\r\n    \"RateType\": 1,\r\n    \"StatusId\": 0,\r\n    \"StatusDescription\": \"Normal\",\r\n    \"SubStatusId\": 0,\r\n    \"SubStatusDescription\": \"\",\r\n    \"Product\": {\r\n      \"ProductGUID\": \"28169aa2-61c3-43ca-9fa9-e12ff30d4b71\",\r\n      \"ProductDescription\": \"CUENTA A MI FAVOR\",\r\n      \"CurrencyId\": 0,\r\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n      \"CurrencySign\": \"$\",\r\n      \"KindId\": 0,\r\n      \"KindDescription\": \"Billete\"\r\n    },\r\n    \"ProductChanges\": {\r\n      \"SdtsBTSAWProductChange\": []\r\n    },\r\n    \"StatusChanges\": {\r\n      \"SdtsBTSAWStatusChange\": []\r\n    }\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:53:59\",\r\n    \"Numero\": 13466299,\r\n    \"Servicio\": \"PublicSavingAccounts.getDetailedData\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTSAWSavingAccountData",
+      "fields": [
+        {
+          "Nombre": "AccountStatementPreferences",
+          "Tipo": "<a href=\"#sdtsbtsawaccountstatementpreferences\">SdtsBTSAWAccountStatementPreferences</a>",
+          "Comentarios": "Preferencias del estado de cuenta."
+        },
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "AvailableAmount",
+          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Comentarios": "Monto disponible."
+        },
+        {
+          "Nombre": "BankCode",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Código bancario."
+        },
+        {
+          "Nombre": "BoardTypeId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador del tipo de pizarra."
+        },
+        {
+          "Nombre": "BoardTypeDescription",
+          "Tipo": "String <strong>(length: 20)</strong>",
+          "Comentarios": "Descripción del tipo de mesa."
+        },
+        {
+          "Nombre": "BranchId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "BranchDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción de sucursal."
+        },
+        {
+          "Nombre": "CancelationDate",
+          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Comentarios": "Fecha de cancelación."
+        },
+        {
+          "Nombre": "CancelationOriginId",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Identificador del origen de cancelación."
+        },
+        {
+          "Nombre": "CancelationOriginDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del origen de cancelación."
+        },
+        {
+          "Nombre": "CancelationReasonId",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Identificador del motivo de cancelación."
+        },
+        {
+          "Nombre": "CancelationReasonDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del motivo de cancelación."
+        },
+        {
+          "Nombre": "CancelationUser",
+          "Tipo": "String",
+          "Comentarios": "Usuario de cancelación."
+        },
+        {
+          "Nombre": "CancelationUserDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del usuario de cancelación."
+        },
+        {
+          "Nombre": "CircularityFee",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Comisión de circularidad."
+        },
+        {
+          "Nombre": "ClassRateTypeId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador del tipo de clase de tasa."
+        },
+        {
+          "Nombre": "ClassRateTypeDescription",
+          "Tipo": "String <strong>(length: 20)</strong>",
+          "Comentarios": "Descripción del tipo de clase de tasa."
+        },
+        {
+          "Nombre": "CounterpartyId",
+          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Comentarios": "Identificador de contraparte."
+        },
+        {
+          "Nombre": "CounterpartyDescription",
+          "Tipo": "String <strong>(length: 70)</strong>",
+          "Comentarios": "Descripción de contraparte."
+        },
+        {
+          "Nombre": "CreationDate",
+          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Comentarios": "Fecha de creación."
+        },
+        {
+          "Nombre": "CreationUser",
+          "Tipo": "String",
+          "Comentarios": "Usuario de creación."
+        },
+        {
+          "Nombre": "CreationUserDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del usuario de creación."
+        },
+        {
+          "Nombre": "GrouperId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del agrupador."
+        },
+        {
+          "Nombre": "GrouperDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del agrupador."
+        },
+        {
+          "Nombre": "LowAverageFee",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Comisión de saldo mínimo."
+        },
+        {
+          "Nombre": "LowAverageFeeId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de comisión de saldo mínimo."
+        },
+        {
+          "Nombre": "LowAverageFeeDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción de comisión de saldo mínimo."
+        },
+        {
+          "Nombre": "MovementFee",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Comisión por movimiento."
+        },
+        {
+          "Nombre": "OpeningFee",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Comisión de apertura."
+        },
+        {
+          "Nombre": "PaymentMethod",
+          "Tipo": "Short",
+          "Comentarios": "Método de pago."
+        },
+        {
+          "Nombre": "PaymentMethodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del método de pago."
+        },
+        {
+          "Nombre": "PaymentPeriod",
+          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Comentarios": "Período de pago."
+        },
+        {
+          "Nombre": "PaymentPeriodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del período de pago."
+        },
+        {
+          "Nombre": "PaysInterest",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Paga intereses."
+        },
+        {
+          "Nombre": "Product",
+          "Tipo": "<a href=\"#sdtsbtphwproduct\">SdtsBTPHWProduct</a>",
+          "Comentarios": "Producto."
+        },
+        {
+          "Nombre": "ProductChanges",
+          "Tipo": "<a href=\"#sdtsbtsawproductchange\">SdtsBTSAWProductChange</a>",
+          "Comentarios": "Cambios de producto."
+        },
+        {
+          "Nombre": "RateType",
+          "Tipo": "Long",
+          "Comentarios": "Tipo de tasa."
+        },
+        {
+          "Nombre": "SavingAccountGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID de cuenta de ahorro."
+        },
+        {
+          "Nombre": "StatusChanges",
+          "Tipo": "<a href=\"#sdtsbtsawstatuschange\">SdtsBTSAWStatusChange</a>",
+          "Comentarios": "Cambios de estado."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "StatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "SubStatusId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de subestado."
+        },
+        {
+          "Nombre": "SubStatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del subestado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTSAWAccountStatementPreferences",
+      "fields": [
+        {
+          "Nombre": "AccountingResumeFrequency",
+          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Comentarios": "Frecuencia de resumen contable."
+        },
+        {
+          "Nombre": "AccountingResumeFrequencyDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la frecuencia de resumen contable."
+        },
+        {
+          "Nombre": "AddressShipmentMethodId",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Identificador del método de envío a dirección."
+        },
+        {
+          "Nombre": "AddressShipmentMethodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del método de envío a dirección."
+        },
+        {
+          "Nombre": "AvoidsAccountingResume",
+          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Comentarios": "Evita resumen contable."
+        },
+        {
+          "Nombre": "BranchShipmentMethodId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador del método de envío a sucursal."
+        },
+        {
+          "Nombre": "BranchShipmentMethodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del método de envío a sucursal."
+        },
+        {
+          "Nombre": "EmailShipmentMethodId",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Identificador del método de envío por correo."
+        },
+        {
+          "Nombre": "EmailShipmentMethodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del método de envío por correo."
+        },
+        {
+          "Nombre": "RegulatorResumeFrequency",
+          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Comentarios": "Frecuencia de resumen regulatorio."
+        },
+        {
+          "Nombre": "RegulatorResumeFrequencyDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la frecuencia de resumen regulatorio."
+        },
+        {
+          "Nombre": "ShipmentMethod",
+          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Comentarios": "Método de envío."
+        },
+        {
+          "Nombre": "ShipmentMethodDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del método de envío."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM"
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTPHWProduct",
+      "fields": [
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "CurrencyDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción de la moneda."
+        },
+        {
+          "Nombre": "CurrencySign",
+          "Tipo": "String <strong>(length: 4)</strong>",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "KindDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción del tipo."
+        },
+        {
+          "Nombre": "ProductDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "ProductGUID",
+          "Tipo": "String <strong>(length: 36)</strong>",
+          "Comentarios": "GUID del producto."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTSAWProductChange",
+      "fields": [
+        {
+          "Nombre": "Correlative",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "Event",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Evento."
+        },
+        {
+          "Nombre": "EventDate",
+          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Comentarios": "Fecha del evento."
+        },
+        {
+          "Nombre": "EventUser",
+          "Tipo": "String",
+          "Comentarios": "Usuario del evento."
+        },
+        {
+          "Nombre": "EventUserDescription",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción del usuario del evento."
+        },
+        {
+          "Nombre": "MovementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del movimiento."
+        },
+        {
+          "Nombre": "PreviousProduct",
+          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Comentarios": "Producto anterior."
+        },
+        {
+          "Nombre": "PreviousProductDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del producto anterior."
+        },
+        {
+          "Nombre": "ValidFrom",
+          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Comentarios": "Válido desde."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTSAWStatusChange",
+      "fields": [
+        {
+          "Nombre": "ChangeDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de cambio."
+        },
+        {
+          "Nombre": "Comments",
+          "Tipo": "String",
+          "Comentarios": "Comentarios."
+        },
+        {
+          "Nombre": "ConfirmationUserId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del usuario de confirmación."
+        },
+        {
+          "Nombre": "ConfirmationUserDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del usuario de confirmación."
+        },
+        {
+          "Nombre": "Correlative",
+          "Tipo": "Int",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "CreationUserId",
+          "Tipo": "String",
+          "Comentarios": "Identificador del usuario de creación."
+        },
+        {
+          "Nombre": "CreationUserDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del usuario de creación."
+        },
+        {
+          "Nombre": "IsReversedEntry",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Es un asiento revertido?."
+        },
+        {
+          "Nombre": "NewStatusId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del nuevo estado."
+        },
+        {
+          "Nombre": "NewStatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del nuevo estado."
+        },
+        {
+          "Nombre": "NewSubStatusId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del nuevo subestado."
+        },
+        {
+          "Nombre": "NewSubStatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del nuevo subestado."
+        },
+        {
+          "Nombre": "PreviousStatusId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del estado anterior."
+        },
+        {
+          "Nombre": "PreviousStatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado anterior."
+        },
+        {
+          "Nombre": "PreviousSubStatusId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador del subestado anterior."
+        },
+        {
+          "Nombre": "PreviousSubStatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del subestado anterior."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

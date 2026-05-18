@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "No aplica.",
@@ -24,6 +29,7 @@
   ],
   "errors": [],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerHobbies>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Token>3214436424A8B5C60A82434C</bts:Token>\n            <bts:Device>GP</bts:Device>\n         </bts:Btinreq>\n      </bts:BTPersonas.ObtenerHobbies>\n   </soapenv:Body>\n</soapenv:Envelope>",

@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPrestamoAlta",
@@ -42,6 +47,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularDespejandoCapitalCantCuotas>\n         <bts:Btinreq>\n            <bts:Device>BTDIGITAL</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>d25cdaf98eCD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n         </bts:Btinreq>\n         <bts:sdtPrestamoAlta>\n            <bts:plazoTotal>300</bts:plazoTotal>\n            <bts:productoUId>181</bts:productoUId>\n            <bts:monto></bts:monto>\n            <bts:clienteUId>342</bts:clienteUId>\n            <bts:actividad>1111</bts:actividad>\n            <bts:valorCuota>5000</bts:valorCuota>\n            <bts:periodoCuotas>30</bts:periodoCuotas>\n            <bts:cantidadCuotas></bts:cantidadCuotas>\n            <bts:tasa>0</bts:tasa>\n            <bts:fechaPrimerPago>10-10-2021</bts:fechaPrimerPago>\n            <bts:pizarra>0</bts:pizarra>\n         </bts:sdtPrestamoAlta>\n      </bts:BTPrestamos.SimularDespejandoCapitalCantCuotas>\n   </soapenv:Body>\n</soapenv:Envelope>",

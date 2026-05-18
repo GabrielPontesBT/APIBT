@@ -1,0 +1,51 @@
+{
+  "slug": "customers/getsectors",
+  "pageTitle": "Get Sectors",
+  "description": "Método para obtener un listado de sectores.",
+  "pubName": "PublicCustomers.getSectors",
+  "modulo": "Accounting",
+  "programa": "PublicAPI.BTACPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "sectors",
+      "Tipo": "<a href=\"#sdtsbtacwsector\">SdtsBTACWSector</a>",
+      "Comentarios": "Listado de sectores."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "No aplica.",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"sectors\": {\r\n    \"sector\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"Privado no Financieros\"\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"Privado Financiero\"\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"Gobierno nacional\"\r\n      },\r\n      {\r\n        \"Id\": 4,\r\n        \"Description\": \"Gobierno Departamental\"\r\n      },\r\n      {\r\n        \"Id\": 5,\r\n        \"Description\": \"Seguridad Social\"\r\n      },\r\n      {\r\n        \"Id\": 6,\r\n        \"Description\": \"Entes Autónomos\"\r\n      },\r\n      {\r\n        \"Id\": 7,\r\n        \"Description\": \"Organizaciones Paraestatales\"\r\n      },\r\n      {\r\n        \"Id\": 9,\r\n        \"Description\": \"Público no nacional\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:14:06\",\r\n    \"Numero\": 13468809,\r\n    \"Servicio\": \"PublicCustomers.getSectors\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTACWSector",
+      "fields": [
+        {
+          "Nombre": "Id",
+          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(length: 30)</strong>",
+          "Comentarios": "Descripción."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

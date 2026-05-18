@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "movimientoUId",
@@ -47,6 +52,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>IN</bts:Usuario>\r\n            <bts:Token>12420485CD285A89A23FBE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:movimientoUId>8</bts:movimientoUId>\r\n         <bts:ordinal>1</bts:ordinal>\r\n         <bts:subOrdinal>1</bts:subOrdinal>\r\n      </bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

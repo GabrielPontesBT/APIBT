@@ -37,13 +37,17 @@ export interface DocPage {
   pageTitle: string;
   description: string;
   pubName: string;
+  modulo?: string;
   programa: string;
   scope: string;
   hasBackendConfig: boolean;
   backendText: string;
   backendData: any[];
+  inputCols?: string[];
   inputData: DocTableRow[];
+  bodyData?: DocTableRow[];
   outputData: DocTableRow[];
+  flowDiagram?: string;
   errors: DocTableRow[];
   errorsNote: string;
   examples: DocExamples;

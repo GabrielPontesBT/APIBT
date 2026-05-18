@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sBTConfirmaDebitoReq",
@@ -33,6 +38,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConfirmaDebito>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>8f4120fb56464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTConfirmaDebitoReq>             \n            <bts:DetalleAdiOri></bts:DetalleAdiOri>\n            <bts:Imsi></bts:Imsi>\n            <bts:IdDebin>MRD06ZO9WDV1PM1N5GP7XY</bts:IdDebin>\n            <bts:CompradorCbu>0940099366000013940012</bts:CompradorCbu>\n            <bts:VendedorTit>NAVAR SA</bts:VendedorTit>\n            <bts:Imei></bts:Imei>\n            <bts:Longitud></bts:Longitud>\n            <bts:CodRespuesta>00</bts:CodRespuesta>\n            <bts:DetalleTrxOri></bts:DetalleTrxOri>\n            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>\n            <bts:DetalleTermOri></bts:DetalleTermOri>\n            <bts:VendedorCbu>3150100611000100130016</bts:VendedorCbu>\n            <bts:Latitud></bts:Latitud>\n            <bts:Plataforma></bts:Plataforma>\n            <bts:TipoDispositivo></bts:TipoDispositivo>\n            <bts:DetalleMoneda>032</bts:DetalleMoneda>\n            <bts:VendedorCuit>27103484168</bts:VendedorCuit>\n            <bts:Precision></bts:Precision>\n            <bts:DetalleImporte>150.00</bts:DetalleImporte>\n            <bts:CompradorCuit>20042039390</bts:CompradorCuit>\n            <bts:IpCliente>127.0.0.1</bts:IpCliente>\n         </bts:sBTConfirmaDebitoReq>\n      </bts:BTCOELSAGestionDebin.ConfirmaDebito>\n   </soapenv:Body>\n</soapenv:Envelope>",

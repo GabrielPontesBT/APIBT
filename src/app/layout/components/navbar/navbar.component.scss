@@ -39,6 +39,11 @@
   display: none;
 }
 
+.logo--static {
+  cursor: default;
+  &:hover { transform: none; }
+}
+
 :host-context(body.dark-mode) .logo--light {
   display: none;
 }

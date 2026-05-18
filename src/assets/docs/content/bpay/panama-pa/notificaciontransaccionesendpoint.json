@@ -1,0 +1,110 @@
+{
+  "slug": "panama-pa/notificaciontransaccionesendpoint",
+  "pageTitle": "Notificacion de Transacciones",
+  "description": "Método para realizar Notificacion de Transacciones",
+  "pubName": "BTPayCaddy.NotificacionTransaccionesEndPoint",
+  "programa": "rbtbptd09",
+  "scope": "Panama",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "password",
+      "Tipo": "String",
+      "Comentarios": "Contraseña o clave de autenticación para validar la operación"
+    },
+    {
+      "Nombre": "c1Tipo",
+      "Tipo": "String",
+      "Comentarios": "Tipo de mensaje o transacción"
+    },
+    {
+      "Nombre": "c2CardId",
+      "Tipo": "String",
+      "Comentarios": "Identificador de la tarjeta asociada a la transacción"
+    },
+    {
+      "Nombre": "c3CodigoProceso",
+      "Tipo": "String",
+      "Comentarios": "Código de proceso que define el tipo de operación"
+    },
+    {
+      "Nombre": "c4ImporteTransaccion",
+      "Tipo": "String",
+      "Comentarios": "Monto de la transacción"
+    },
+    {
+      "Nombre": "c7FechaHoraTransaccion",
+      "Tipo": "String",
+      "Comentarios": "Fecha y hora de la transacción"
+    },
+    {
+      "Nombre": "BDateUtcCreate",
+      "Tipo": "String",
+      "Comentarios": "Fecha de creación del registro"
+    },
+    {
+      "Nombre": "c11NumeroIdentificativoTransaccion",
+      "Tipo": "String",
+      "Comentarios": "Número único de identificación de la transacción"
+    },
+    {
+      "Nombre": "c18CodigoActividadEstablecimiento",
+      "Tipo": "String",
+      "Comentarios": "Código de categoría del comercio"
+    },
+    {
+      "Nombre": "c19CodigoPaisAdquirente",
+      "Tipo": "String",
+      "Comentarios": "Código del país del adquirente"
+    },
+    {
+      "Nombre": "c38NumeroAutorizacion",
+      "Tipo": "String",
+      "Comentarios": "Código de autorización generado por el emisor"
+    },
+    {
+      "Nombre": "c41TerminalId",
+      "Tipo": "String",
+      "Comentarios": "Identificador del terminal donde se realiza la operación"
+    },
+    {
+      "Nombre": "c42Comercio",
+      "Tipo": "String",
+      "Comentarios": "Identificador del comercio"
+    },
+    {
+      "Nombre": "c43IdentificadorComercio",
+      "Tipo": "String",
+      "Comentarios": "Nombre o descripción del comercio"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "ErroresNegocio",
+      "Tipo": "Collection",
+      "Comentarios": "Lista de errores de negocio"
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n     </bts:BTPayCaddy.NotificacionTransaccionesEndPoint>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n         <bts:password>SecurePass123</bts:password>\r\n         <bts:c1Tipo>0200</bts:c1Tipo>\r\n         <bts:c2CardId>16843331-08d3-4ed1-a101-0192df055e86</bts:c2CardId>\r\n         <bts:c3CodigoProceso>000000</bts:c3CodigoProceso>  \r\n         <bts:c4ImporteTransaccion>10000</bts:c4ImporteTransaccion>\r\n         <bts:c7FechaHoraTransaccion>0506123045</bts:c7FechaHoraTransaccion>\r\n         <bts:BDateUtcCreate>2026-05-06T12:30:45Z</bts:BDateUtcCreate>\r\n         <bts:c11NumeroIdentificativoTransaccion>123456</bts:c11NumeroIdentificativoTransaccion>\r\n         <bts:c18CodigoActividadEstablecimiento>5411</bts:c18CodigoActividadEstablecimiento>\r\n         <bts:c19CodigoPaisAdquirente>858</bts:c19CodigoPaisAdquirente>\r\n         <bts:c38NumeroAutorizacion>ABC123</bts:c38NumeroAutorizacion>\r\n         <bts:c41TerminalId>TERM001</bts:c41TerminalId>\r\n         <bts:c42Comercio>COM123456789</bts:c42Comercio>\r\n         <bts:c43IdentificadorComercio>SUPERMERCADO</bts:c43IdentificadorComercio>\r\n      </bts:BTPayCaddy.NotificacionTransaccionesEndPoint>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": ""
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.NotificacionTransaccionesEndPointResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.NotificacionTransaccionesEndPoint</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.NotificacionTransaccionesEndPointResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

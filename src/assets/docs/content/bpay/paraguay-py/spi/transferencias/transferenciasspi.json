@@ -8,6 +8,12 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Obligatoriedad",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "operacionUID",
@@ -212,14 +218,15 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"operacionUID\": \"5\",\n    \"moneda\": \"6900\",\n    \"importeTransferencia\": \"10000\",\n    \"bancoDestino\": \"12\",\n    \"cuentaDestino\": \"010143323888\",\n    \"tipoDocumentoBeneficiario\": \"1\",\n    \"documentoBeneficiario\": \"3546681\",\n    \"nombreBeneficiario\": \"DESTINATARIO\",\n    \"detalleTransferencia\": \"Detalle\",\n    \"conceptoEntidadReceptora\": \"Concepto\",\n    \"codigoProposito\": \"CSCT\",\n    \"codigoInstrumento\": \"001\",\n    \"canal\": \"MOBILE\",\n    \"modoEnvio\": \"TRANSFERIR\",\n    \"camara\": \"SPI\"\n}"
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"operacionUID\": \"5\",\r\n    \"moneda\": \"6900\",\r\n    \"importeTransferencia\": \"10000\",\r\n    \"bancoDestino\": \"12\",\r\n    \"cuentaDestino\": \"010143323888\",\r\n    \"tipoDocumentoBeneficiario\": \"1\",\r\n    \"documentoBeneficiario\": \"3546681\",\r\n    \"nombreBeneficiario\": \"DESTINATARIO\",\r\n    \"detalleTransferencia\": \"Detalle\",\r\n    \"conceptoEntidadReceptora\": \"Concepto\",\r\n    \"codigoProposito\": \"CSCT\",\r\n    \"codigoInstrumento\": \"001\",\r\n    \"canal\": \"MOBILE\",\r\n    \"modoEnvio\": \"TRANSFERIR\",\r\n    \"camara\": \"SPI\"\r\n}"
     },
     "response": {
       "xml": "",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Device\": \"ABC\",\n        \"Requerimiento\": \"1\",\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\n    },\n    \"camara\": \"SPI\",\n    \"estado\": \"PENDIENTE\",\n    \"importeDebito\": 10000,\n    \"cotizacion\": 0,\n    \"comision\": 0,\n    \"referencia\": \"TUFIPYPA02052535040002720550\",\n    \"movimientoUID\": 456,\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Estado\": \"OK\",\n        \"Fecha\": \"2025-05-02\",\n        \"Hora\": \"09:44:07\",\n        \"Numero\": 14059,\n        \"Servicio\": \"BTTransferencias.Enviar\",\n        \"Requerimiento\": \"1\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}"
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"camara\": \"SPI\",\r\n    \"estado\": \"PENDIENTE\",\r\n    \"importeDebito\": 10000,\r\n    \"cotizacion\": 0,\r\n    \"comision\": 0,\r\n    \"referencia\": \"TUFIPYPA02052535040002720550\",\r\n    \"movimientoUID\": 456,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2025-05-02\",\r\n        \"Hora\": \"09:44:07\",\r\n        \"Numero\": 14059,\r\n        \"Servicio\": \"BTTransferencias.Enviar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
     }
   },
   "structuredTypes": [],

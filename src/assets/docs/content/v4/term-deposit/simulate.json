@@ -1,0 +1,148 @@
+{
+  "slug": "term-deposit/simulate",
+  "pageTitle": "Simulate",
+  "description": "Método para simular la contratación de un depósito a plazo.",
+  "pubName": "PublicTermDeposit.simulate",
+  "modulo": "TermDeposit",
+  "programa": "PublicAPI.BTTDPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    },
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "capital",
+      "Tipo": "Double <strong>(length: 18.2)</strong>",
+      "Comentarios": "Importe de capital."
+    },
+    {
+      "Nombre": "plazo",
+      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Comentarios": "Plazo."
+    },
+    {
+      "Nombre": "periodicidad",
+      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Comentarios": "Periodicidad."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "simulation",
+      "Tipo": "<a href=\"#sdtsbttdwsimulation\">SdtsBTTDWSimulation</a>",
+      "Comentarios": "Datos de la simulación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "Completar manualmente",
+      "Descripción": "Completar manualmente"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"productGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\r\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\r\n  \"capital\": 40000.00,\r\n  \"plazo\": 365,\r\n  \"periodicidad\": 30\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"instructions\": {\r\n    \"instruction\": []\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": [\r\n      {\r\n        \"Code\": 40050001,\r\n        \"Severity\": \"E\",\r\n        \"Target\": \"\",\r\n        \"Description\": \"\"\r\n      }\r\n    ]\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-15\",\r\n    \"Hora\": \"14:07:38\",\r\n    \"Numero\": 13472660,\r\n    \"Servicio\": \"PublicTermDeposit.simulate\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTTDWInstruction",
+      "fields": [
+        {
+          "Nombre": "Accounted",
+          "Tipo": "String <strong>(length: 1)</strong>",
+          "Comentarios": "Contabilizado."
+        },
+        {
+          "Nombre": "AccountingAccountId",
+          "Tipo": "Long <strong>(length: 16)</strong>",
+          "Comentarios": "Identificador de cuenta contable."
+        },
+        {
+          "Nombre": "BranchId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "CompanyId",
+          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "CounterpartyId",
+          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Comentarios": "Identificador de contraparte."
+        },
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "ModuleId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de módulo."
+        },
+        {
+          "Nombre": "MovementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del movimiento."
+        },
+        {
+          "Nombre": "OperationId",
+          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Comentarios": "Identificador de operación."
+        },
+        {
+          "Nombre": "OperationTypeId",
+          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Comentarios": "Identificador del tipo de operación."
+        },
+        {
+          "Nombre": "SuboperationId",
+          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Comentarios": "Identificador de suboperación."
+        },
+        {
+          "Nombre": "Type",
+          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Comentarios": "Tipo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de alta de depósito a plazo, teniendo en cuenta que:\r\n\r\n   - El depósito a plazo se almacena en el preformato 1.\r\n   - La cuenta vista de débito se almacena en el preformato 2.\r\n   - Los correlativos del subordinal deben corresponderse con los módulos de los productos de cuenta vista definidos en el subordinal.\r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T)\r\n\r\n   - Se debe indicar los ordinales donde se encuentra definido el depósito a plazo y la cuenta vista de débito.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "simulacionUId",
@@ -63,6 +68,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.Contratar>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>407fce50864A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:simulacionUId>41</bts:simulacionUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n         <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>\r\n         <bts:operacionUIdDestino>281</bts:operacionUIdDestino>\r\n         <bts:instruccionAlVencimiento>2</bts:instruccionAlVencimiento>\r\n      </bts:BTDepositosAPlazo.Contratar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",

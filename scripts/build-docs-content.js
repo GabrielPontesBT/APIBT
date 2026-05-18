@@ -215,6 +215,17 @@ function extractMethodMeta(content, relPath) {
   }
 }
 
+function extractTableHeaders(md) {
+  const lines = String(md || '').split('\n').map(l => l.trim()).filter(l => l);
+  if (lines.length < 1) return [];
+  return lines[0].split('|').map(h => stripMarkdownLinks(h.trim())).filter(h => h);
+}
+
+function extractFlowDiagramUrl(md) {
+  const match = String(md || '').match(/!\[.*?\]\(([^)]+)\)/);
+  return match ? match[1] : '';
+}
+
 function extractApiTabs(content, relPath) {
   const block = extractBlockWithAlternatives(content, [
     {
@@ -229,9 +240,11 @@ function extractApiTabs(content, relPath) {
 
   if (!block) {
     return {
+      inputCols: [],
       inputData: [],
       outputData: [],
-      errors: []
+      errors: [],
+      flowDiagram: ''
     };
   } else {
     const sections = {};
@@ -243,9 +256,12 @@ function extractApiTabs(content, relPath) {
       match = tabRegex.exec(block);
     }
 
-    const inputData = parseTable(sections['Datos de Entrada'] || '', relPath);
+    const inputMd = sections['Datos de Entrada'] || '';
+    const inputCols = extractTableHeaders(inputMd);
+    const inputData = parseTable(inputMd, relPath);
     const outputData = parseTable(sections['Datos de Salida'] || '', relPath);
     const errorsBlock = sections['Errores'] || '';
+    const flowDiagram = extractFlowDiagramUrl(sections['Diagrama de Flujo'] || '');
 
     let errors = [];
     let errorsNote = '';
@@ -262,10 +278,12 @@ function extractApiTabs(content, relPath) {
     }
 
     return {
+      inputCols,
       inputData,
       outputData,
       errors,
-      errorsNote
+      errorsNote,
+      flowDiagram
     };
   }
 }
@@ -571,10 +589,12 @@ function buildDocJson(mdFilePath, relPath) {
     hasBackendConfig: backendConfig.hasBackendConfig,
     backendText: backendConfig.backendText,
     backendData: backendConfig.backendData,
+    inputCols: apiTabs.inputCols,
     inputData: apiTabs.inputData,
     outputData: apiTabs.outputData,
     errors: apiTabs.errors,
     errorsNote: apiTabs.errorsNote,
+    flowDiagram: apiTabs.flowDiagram,
     examples,
     structuredTypes,
     valuesTable

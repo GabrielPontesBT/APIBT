@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtPrestamoPlazoFijo",
@@ -173,6 +178,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.SimularPlazoFijo>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>3252eea5d94A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtPrestamoPlazoFijo>\n            <bts:clienteUId>221</bts:clienteUId>\n            <bts:monto>10000</bts:monto>\n            <bts:tasa/>\n            <bts:fechaVencimiento/>\n            <bts:plazo>360</bts:plazo>\n            <bts:productoUId>79</bts:productoUId>\n            <bts:pizarra/>\n            <bts:actividad>1111</bts:actividad>\n         </bts:sdtPrestamoPlazoFijo>\n      </bts:BTPrestamos.SimularPlazoFijo>\n   </soapenv:Body>\n</soapenv:Envelope>",

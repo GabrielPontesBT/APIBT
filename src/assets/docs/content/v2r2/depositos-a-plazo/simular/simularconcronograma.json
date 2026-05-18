@@ -50,6 +50,11 @@
       ]
     }
   ],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -133,6 +138,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTDepositosAPlazo.SimularConCronograma>\n       <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\n            <bts:Device>GL</bts:Device>\n         </bts:Btinreq>\n         <bts:clienteUId>10009</bts:clienteUId>\n         <bts:productoUId>132</bts:productoUId>\n         <bts:capital>20000</bts:capital>\n         <bts:plazo>360</bts:plazo>\n         <bts:periodicidad>30</bts:periodicidad>\n         <bts:sBTDatosExtendidos/>\n      </bts:BTDepositosAPlazo.SimularConCronograma>\n   </soapenv:Body>\n</soapenv:Envelope>",

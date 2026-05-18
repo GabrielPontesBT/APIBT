@@ -8,6 +8,11 @@
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de traspaso, teniendo en cuenta que:\r\n\r\n   - La cuenta vista origen se almacena en el preformato 1.\r\n\r\n   - La cuenta vista destino en el preformato 2.\r\n\r\n   - El importe a transferir se almacena en el preformato 1.\r\n\r\n   - Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal.\r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):\r\n\r\n   - Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "clienteUId",
@@ -70,6 +75,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header/>    \r\n    <soapenv:Body>        \r\n        <bts:BTCuentasVista.TraspasarCuentasTercerosDiferentesMonedas>  \r\n            <bts:Btinreq>        \r\n                <bts:Device>AV</bts:Device> \r\n                <bts:Usuario>MINSTALADOR</bts:Usuario> \r\n                <bts:Requerimiento></bts:Requerimiento> \r\n                <bts:Canal>BTDIGITAL</bts:Canal> \r\n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token> \r\n            </bts:Btinreq> \r\n            <bts:clienteUId>21</bts:clienteUId> \r\n            <bts:sdtTraspaso> \r\n                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> \r\n                <bts:importeDebito>5000</bts:importeDebito> \r\n                <bts:importeCredito>500</bts:importeCredito> \r\n                <bts:operacionUIdDestino>282</bts:operacionUIdDestino> \r\n                <bts:monedaId></bts:monedaId>    \r\n                <bts:concepto>Traspaso</bts:concepto>     \r\n            </bts:sdtTraspaso>   \r\n            <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  \r\n        </bts:BTCuentasVista.TraspasarCuentasTercerosDiferentesMonedas>  \r\n    </soapenv:Body> \r\n</soapenv:Envelope>",

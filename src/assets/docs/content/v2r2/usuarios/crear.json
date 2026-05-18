@@ -8,6 +8,11 @@
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
   "inputData": [
     {
       "Nombre": "sdtUsuario",
@@ -72,6 +77,7 @@
     }
   ],
   "errorsNote": "",
+  "flowDiagram": "",
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTUsuarios.Crear>\n\t\t<bts:Btinreq>\n            <bts:Device>1</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:sdtUsuario>\n            <bts:cajero>S</bts:cajero>\n            <bts:cantidadSesionesAbiertas>1</bts:cantidadSesionesAbiertas>\n            <bts:email>prueba@bantotal.com</bts:email>\n            <bts:espaciosTrabajo>1</bts:espaciosTrabajo>\n            <bts:nivel>9</bts:nivel>\n            <bts:nombre>USUARIO PRUEBA</bts:nombre>\n            <bts:numeroCaja>1</bts:numeroCaja>\n            <bts:programaInicial>HEJECUTA</bts:programaInicial>\n            <bts:sucursal>1</bts:sucursal>\n            <bts:usuario>PRUEBA</bts:usuario>\n         </bts:sdtUsuario>\n      </bts:BTUsuarios.Crear>\n   </soapenv:Body>\n</soapenv:Envelope>",
