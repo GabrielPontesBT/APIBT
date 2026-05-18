@@ -1,4 +1,5 @@
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
 
@@ -10,7 +11,8 @@ export class RouterAnimationService {
 
   constructor(
     private router: Router,
-    rendererFactory: RendererFactory2
+    rendererFactory: RendererFactory2,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.init();
@@ -35,6 +37,7 @@ export class RouterAnimationService {
   }
 
   private animatePush() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const contentArea = document.querySelector('.content-area');
     if (!contentArea) return;
 

@@ -21,7 +21,19 @@ const VERSIONS = [
   { id: 'v2r3', folder: 'V2R3', useShared: true },
   { id: 'v3r1', folder: 'V3R1', useShared: true },
   { id: 'bpay', folder: 'BPay', useShared: false },
+  { id: 'v4',   folder: 'V4',   useShared: false, labelMap: loadLabelMap('v4-labels.json') },
 ];
+
+function loadLabelMap(fileName) {
+  const filePath = path.resolve(__dirname, fileName);
+  if (!fs.existsSync(filePath)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch {
+    console.warn(`  WARN: no se pudo leer el archivo de labels: ${fileName}`);
+    return {};
+  }
+}
 
 // ── Utilidades ────────────────────────────────────────────────────────────────
 
@@ -122,7 +134,7 @@ function buildMergedFileMap(versionDir, useShared) {
  * Construye el árbol de navegación a partir de un Map de relPath → absolutePath.
  * Recrea la jerarquía de carpetas implícita en los paths relativos.
  */
-function buildTreeFromFileMap(fileMap) {
+function buildTreeFromFileMap(fileMap, labelMap = {}) {
   // Agrupar por carpeta raíz de forma recursiva usando un árbol intermedio
   const root = {}; // árbol de nodos intermedios
 
@@ -138,7 +150,7 @@ function buildTreeFromFileMap(fileMap) {
     node[fileName] = { __isDir: false, __name: fileName, __absPath: absPath, __relPath: relPath };
   }
 
-  return convertToNavNodes(root, '');
+  return convertToNavNodes(root, '', labelMap);
 }
 
 function sortNodeEntries(entries) {
@@ -153,7 +165,7 @@ function sortNodeEntries(entries) {
   });
 }
 
-function convertToNavNodes(nodeMap, parentSlug) {
+function convertToNavNodes(nodeMap, parentSlug, labelMap = {}) {
   const children = [];
   const sorted = sortNodeEntries(Object.entries(nodeMap));
 
@@ -161,10 +173,10 @@ function convertToNavNodes(nodeMap, parentSlug) {
     if (node.__isDir) {
       const folderSlugSegment = slugifySegment(node.__name);
       const folderSlug = parentSlug ? `${parentSlug}/${folderSlugSegment}` : folderSlugSegment;
-      const folderChildren = convertToNavNodes(node.__children, folderSlug);
+      const folderChildren = convertToNavNodes(node.__children, folderSlug, labelMap);
       children.push({
         type: 'folder',
-        label: humanizeLabel(node.__name),
+        label: labelMap[node.__name] ?? humanizeLabel(node.__name),
         slug: folderSlug,
         children: folderChildren,
       });
@@ -218,7 +230,7 @@ function main() {
     const fileMap = buildMergedFileMap(versionDir, version.useShared);
     console.log(`  Archivos totales (shared + override): ${fileMap.size}`);
 
-    const tree = buildTreeFromFileMap(fileMap);
+    const tree = buildTreeFromFileMap(fileMap, version.labelMap ?? {});
     const cleanTree = removeEmptyFolders(tree);
 
     fs.writeFileSync(outFile, JSON.stringify(cleanTree, null, 2), 'utf8');

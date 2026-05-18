@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
 import { VersionService, VersionId } from './version.service';
 
@@ -18,6 +19,7 @@ const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
   'v2r3': { agentName: 'APIBTV2R3', chatUrl: `${BASE_URL}/APIBTV2R3` },
   'v3r1': { agentName: 'APIBTV3',   chatUrl: `${BASE_URL}/APIBTV3`   },
   'bpay': { agentName: 'APIBPAY',   chatUrl: `${BASE_URL}/APIBPAY`   },
+  'v4':   { agentName: 'APIBTV4',   chatUrl: `${BASE_URL}/APIBTV4`   },
 };
 
 @Injectable({ providedIn: 'root' })
@@ -25,7 +27,10 @@ export class ChatService {
   private sessionUrl = `${BASE_URL}/session`;
   private apiKey     = 'fI5Th4x6KH71mLPCjlRQbHSvWowqgETy';
 
-  constructor(private versionService: VersionService) {}
+  constructor(
+    private versionService: VersionService,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {}
 
   private getConfig(): AgentConfig {
     return AGENT_CONFIG[this.versionService.activeVersion];
@@ -36,14 +41,17 @@ export class ChatService {
   }
 
   hasSession(): boolean {
+    if (!isPlatformBrowser(this.platformId)) return false;
     return !!localStorage.getItem(this.sessionKey());
   }
 
   clearSession(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     localStorage.removeItem(this.sessionKey());
   }
 
   iniciarSesion(): Promise<string> {
+    if (!isPlatformBrowser(this.platformId)) return Promise.resolve('');
     const { agentName } = this.getConfig();
     const payload = { agent: agentName, user: '1.1.1.1' };
     return fetch(this.sessionUrl, {
@@ -64,6 +72,7 @@ export class ChatService {
   }
 
   streamMessages(message: string): Observable<string> {
+    if (!isPlatformBrowser(this.platformId)) return new Observable(o => o.complete());
     const { chatUrl } = this.getConfig();
     const sessionId = localStorage.getItem(this.sessionKey());
     const body = JSON.stringify({ message, sessionId });

@@ -1,4 +1,4 @@
-@import '~prismjs/themes/prism.css';
+@import 'prismjs/themes/prism.css';
 @import 'variables';
 
 // Sobreescribe la selección de Prism (que define un azul) para mantener gris uniforme
@@ -175,9 +175,6 @@ code[class*="language-"] *::selection {
   color: var(--text-color) !important;
   background: none !important;
   text-shadow: none !important;
-  white-space: pre-wrap !important;
-  overflow-wrap: break-word !important;
-  word-break: break-all !important;
 
   .token.property, .token.tag, .token.boolean, .token.number,
   .token.constant, .token.symbol, .token.deleted {
@@ -197,8 +194,7 @@ code[class*="language-"] *::selection {
 // CONTENEDOR DE SCROLL EXCLUSIVO DEL CÓDIGO
 .code-scroll {
   padding: 0rem 1rem;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   flex: 1;
   min-height: 0;
   max-height: 100%;
@@ -241,12 +237,9 @@ code[class*="language-"] *::selection {
   background: var(--code-bg) !important;
   padding: 1rem;
   margin: 0;
-  white-space: pre-wrap !important;
-  overflow-wrap: break-word !important;
-  word-break: break-all !important;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
+  min-width: max-content;
+  scrollbar-width: thin !important;
+  overflow: visible;
 }
 
 

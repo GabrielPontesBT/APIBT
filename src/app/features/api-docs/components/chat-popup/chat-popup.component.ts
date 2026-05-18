@@ -5,8 +5,11 @@ import {
   OnDestroy,
   ViewChild,
   ElementRef,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  Inject,
+  PLATFORM_ID
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { skip } from 'rxjs/operators';
@@ -56,18 +59,23 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private chatService: ChatService,
     private versionService: VersionService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: object
   ) { }
 
   ngOnInit() {
-    this.loadChatHistory();
-    if (!this.messages.length) {
-      this.clearChatHistory();
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadChatHistory();
+      if (!this.messages.length) {
+        this.clearChatHistory();
+      }
     }
 
     this.versionSub = this.versionService.activeVersion$
       .pipe(skip(1))
-      .subscribe(() => this.clearChatHistory());
+      .subscribe(() => {
+        if (isPlatformBrowser(this.platformId)) this.clearChatHistory();
+      });
   }
 
   ngOnDestroy() {
@@ -75,6 +83,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const c = document.querySelector('.chat-messages');
     if (c) {
       new MutationObserver(() => this.scrollToBottom())
@@ -97,9 +106,11 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     this.messages = [{ text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }];
     this.chatHistory = [];
     this.chatService.clearSession();
-    localStorage.removeItem(this.messagesKey());
-    localStorage.removeItem(this.historyKey());
-    this.chatService.iniciarSesion().catch(console.error);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem(this.messagesKey());
+      localStorage.removeItem(this.historyKey());
+      this.chatService.iniciarSesion().catch(console.error);
+    }
     this.cdr.detectChanges();
   }
 
@@ -112,6 +123,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   loadChatHistory() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const savedMsgs = localStorage.getItem(this.messagesKey());
     if (savedMsgs) {
       this.messages = JSON.parse(savedMsgs);
@@ -124,6 +136,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   saveChatHistory() {
+    if (!isPlatformBrowser(this.platformId)) return;
     localStorage.setItem(this.messagesKey(), JSON.stringify(this.messages));
     localStorage.setItem(this.historyKey(), JSON.stringify(this.chatHistory));
   }
@@ -230,6 +243,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private injectCopyButtons() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const botMessages = document.querySelectorAll('.bot-message');
     botMessages.forEach(msg => {
       msg.querySelectorAll<HTMLElement>('pre[class*="language-"]').forEach(pre => {

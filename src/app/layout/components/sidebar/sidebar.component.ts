@@ -27,8 +27,11 @@ import {
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 import { NavigationNode } from '../../../core/models/navigation-node.model';
 import { NavigationService } from '../../../features/api-docs/services/navigation.service';
+import { VersionService, VALID_VERSIONS } from '../../../core/services/version.service';
 
 @Component({
     selector: 'app-sidebar',
@@ -47,6 +50,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   navigationTree: NavigationNode[] = [];
   activeSlug = '';
+  activeVersion = '';
 
   /**
    * Carpetas abiertas manualmente por el usuario.
@@ -64,10 +68,19 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private navigationService: NavigationService,
     private router: Router,
-    private cdr: ChangeDetectorRef
-  ) { }
+    private cdr: ChangeDetectorRef,
+    private versionService: VersionService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.activeVersion = versionService.activeVersion;
+  }
 
   ngOnInit(): void {
+    this.versionService.activeVersion$.pipe(takeUntil(this.destroy$)).subscribe(v => {
+      this.activeVersion = v;
+      this.cdr.markForCheck();
+    });
+
     this.updateActiveSlug(this.router.url);
     this.loadNavigation();
 
@@ -254,11 +267,21 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
     } catch {
       // si la URL está malformada se usa tal cual
     }
-    return String(url || '')
+    const path = String(url || '')
       .split('?')[0]
       .split('#')[0]
       .replace(/^\/+/, '')
       .replace(/\/+$/, '');
+
+    // Stripear el prefijo de versión: /v4/authenticate/autenticacion → authenticate/autenticacion
+    const firstSlash = path.indexOf('/');
+    if (firstSlash !== -1) {
+      const prefix = path.substring(0, firstSlash) as any;
+      if (VALID_VERSIONS.includes(prefix)) {
+        return path.substring(firstSlash + 1);
+      }
+    }
+    return path;
   }
 
   private rebuildActivePath(): void {
@@ -417,6 +440,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private runAfterPaint(callback: () => void): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     if (this.scrollAnimationFrameId !== null) {
       cancelAnimationFrame(this.scrollAnimationFrameId);
     }
@@ -429,6 +453,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private runAfterSidebarLayout(delay: number, callback: () => void): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     window.setTimeout(() => {
       if (this.scrollAnimationFrameId !== null) {
         cancelAnimationFrame(this.scrollAnimationFrameId);

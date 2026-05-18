@@ -81,7 +81,7 @@
 
 .home-content {
   flex: 1 0 auto;
-  width: min(1160px, calc(100% - clamp(2rem, 8vw, 7.5rem)));
+  width: min(1300px, calc(100% - clamp(1rem, 3vw, 3rem)));
   margin: 40px auto 0;
   padding-bottom: 56px;
 }
@@ -99,7 +99,7 @@
 // auto-fit: agrega columnas automáticamente según el espacio disponible
 .home-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(175px, 100%), 1fr));
   gap: clamp(1.5rem, 3.5vw, 2.875rem);
 }
 
@@ -198,7 +198,7 @@
   }
 
   .home-content {
-    width: min(1080px, calc(100% - 4rem));
+    width: min(1240px, calc(100% - 2rem));
     margin: 32px auto 0;
     padding-bottom: 48px;
   }
@@ -299,7 +299,7 @@
 
 @container (max-width: 640px) {
   .home-content {
-    width: min(1080px, calc(100% - 32px));
+    width: calc(100% - 1.5rem);
   }
 
   .home-cards {

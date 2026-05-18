@@ -6,15 +6,17 @@
  * para renderizarlo mediante los componentes visuales reutilizables del proyecto.
  */
 
-import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, NgZone, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { catchError, map, switchMap, tap } from 'rxjs/operators';
+import { catchError, distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import { DocPage } from '../../../../core/models/doc-page.model';
 import { DocsService } from '../../services/docs.service';
 import { SearchService } from '../../../../core/services/search.service';
+import { VersionService } from '../../../../core/services/version.service';
 
 @Component({
     selector: 'app-doc-page',
@@ -38,6 +40,7 @@ export class DocPageComponent implements OnInit, OnDestroy {
 
   @HostBinding('@fade') fade = true;
   page$!: Observable<DocPage | null>;
+  isV4$!: Observable<boolean>;
 
   private highlightGen   = 0;
   private highlightTimer: ReturnType<typeof setTimeout> | null = null;
@@ -49,23 +52,37 @@ export class DocPageComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private searchService: SearchService,
     private el: ElementRef<HTMLElement>,
-    private zone: NgZone
+    private zone: NgZone,
+    private versionService: VersionService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
+    this.isV4$ = this.route.url.pipe(
+      map(segments => segments[0]?.path === 'v4'),
+      distinctUntilChanged()
+    );
+
     this.page$ = this.route.url.pipe(
-      map((segments: UrlSegment[]) => ({
-        slug: segments.map(s => s.path).filter(Boolean).join('/'),
-        highlight: this.searchService.consumeHighlight()
-      })),
-      switchMap(({ slug, highlight }) => {
-        if (!slug) {
+      map((segments: UrlSegment[]) => {
+        const [versionSegment, ...rest] = segments.map(s => s.path).filter(Boolean);
+        return {
+          version: versionSegment ?? '',
+          slug: rest.join('/'),
+          highlight: this.searchService.consumeHighlight()
+        };
+      }),
+      tap(({ version }) => {
+        if (version) this.versionService.setVersion(version as any);
+      }),
+      switchMap(({ version, slug, highlight }) => {
+        if (!slug || !version) {
           return of({ page: null as DocPage | null, highlight });
         }
-        return this.docsService.getPage(slug).pipe(
+        return this.docsService.getPage(slug, version).pipe(
           map(page => ({ page, highlight })),
           catchError((error) => {
-            console.error(`No se pudo cargar el documento para el slug: ${slug}`, error);
+            console.error(`No se pudo cargar el documento para el slug: ${version}/${slug}`, error);
             return of({ page: null as DocPage | null, highlight });
           })
         );
@@ -93,6 +110,7 @@ export class DocPageComponent implements OnInit, OnDestroy {
   }
 
   private clearHighlight(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     if (this.highlightTimer !== null) {
       clearTimeout(this.highlightTimer);
       this.highlightTimer = null;
@@ -108,6 +126,7 @@ export class DocPageComponent implements OnInit, OnDestroy {
   }
 
   private applyHighlight(query: string): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     if (!('highlights' in CSS)) return;
 
     const terms = query.trim().split(/\s+/).filter(t => t.length >= 2);
