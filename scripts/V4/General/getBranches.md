@@ -22,8 +22,8 @@ title: Get Branches
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-offset | Long $<(length: 10)>$ | Número de registros a omitir desde el inicio del resultado.
-limit | Long $<(length: 10)>$ | Cantidad máxima de registros a retornar en una sola respuesta.
+offset | Long $<(Length: 10)>$ | Número de registros a omitir desde el inicio del resultado.
+limit | Long $<(Length: 10)>$ | Cantidad máxima de registros a retornar en una sola respuesta.
 
 
 @tab Datos de Salida
@@ -377,27 +377,27 @@ Los campos del tipo de dato estructurado SdtsBTBRBranch son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-branchType | Byte $<(length: 2)>$ | Tipo de sucursal.
-calendarId | Short $<(length: 3)>$ | Código de calendario de sucursal.
-calendarName | String $<(length: 40)>$ | Nombre del calendario de sucursal.
-cityId | Int $<(length: 5)>$ | Ciudad de sucursal.
-cityName | String $<(length: 30)>$ | Nombre de la ciudad de sucursal.
-code | Int $<(length: 5)>$ | Código de sucursal.
-companyCode | Short $<(length: 3)>$ | Código de empresa.
-departmentId | Int $<(length: 5)>$ | Departamento de sucursal.
-departmentName | String $<(length: 30)>$ | Nombre del departamento de sucursal.
-dependencyId | Int $<(length: 5)>$ | Dependencia de sucursal.
-dependencyName | String $<(length: 30)>$ | Nombre de dependencia de sucursal.
-doorNumber | Int $<(length: 5)>$ | Número de puerta de sucursal.
-email | String $<(length: 50)>$ | Correo electrónico de sucursal.
-latitude | Double $<(length: 9)>$ | Latitud de sucursal.
-longitude | Double $<(length: 9)>$ | Longitud de sucursal.
-name | String $<(length: 30)>$ | Nombre de sucursal.
-phone | String $<(length: 20)>$ | Teléfono de sucursal.
-reducedName | String $<(length: 5)>$ | Nombre reducido.
-stateId | Byte $<(length: 2)>$ | Estado de sucursal.
-street | String $<(length: 25)>$ | Calle de sucursal.
-timeZone | Double $<(length: 5)>$ | Zona horaria de sucursal.
-zipCode | String $<(length: 8)>$ | Código postal de sucursal.
+branchType | Byte $<(Length: 2)>$ | Tipo de sucursal.
+calendarId | Short $<(Length: 3)>$ | Código de calendario de sucursal.
+calendarName | String $<(Length: 40)>$ | Nombre del calendario de sucursal.
+cityId | Int $<(Length: 5)>$ | Ciudad de sucursal.
+cityName | String $<(Length: 30)>$ | Nombre de la ciudad de sucursal.
+code | Int $<(Length: 5)>$ | Código de sucursal.
+companyCode | Short $<(Length: 3)>$ | Código de empresa.
+departmentId | Int $<(Length: 5)>$ | Departamento de sucursal.
+departmentName | String $<(Length: 30)>$ | Nombre del departamento de sucursal.
+dependencyId | Int $<(Length: 5)>$ | Dependencia de sucursal.
+dependencyName | String $<(Length: 30)>$ | Nombre de dependencia de sucursal.
+doorNumber | Int $<(Length: 5)>$ | Número de puerta de sucursal.
+email | String $<(Length: 50)>$ | Correo electrónico de sucursal.
+latitude | Double $<(Length: 9)>$ | Latitud de sucursal.
+longitude | Double $<(Length: 9)>$ | Longitud de sucursal.
+name | String $<(Length: 30)>$ | Nombre de sucursal.
+phone | String $<(Length: 20)>$ | Teléfono de sucursal.
+reducedName | String $<(Length: 5)>$ | Nombre reducido.
+stateId | Byte $<(Length: 2)>$ | Estado de sucursal.
+street | String $<(Length: 25)>$ | Calle de sucursal.
+timeZone | Double $<(Length: 5)>$ | Zona horaria de sucursal.
+zipCode | String $<(Length: 8)>$ | Código postal de sucursal.
 :::
 <!-- CIERRA SDT -->

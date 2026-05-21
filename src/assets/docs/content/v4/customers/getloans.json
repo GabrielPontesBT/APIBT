@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     },
     {
@@ -161,27 +161,27 @@
       "fields": [
         {
           "Nombre": "CurrencyId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de moneda."
         },
         {
           "Nombre": "CurrencyDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la moneda."
         },
         {
           "Nombre": "CurrencySign",
-          "Tipo": "String <strong>(length: 4)</strong>",
+          "Tipo": "String <strong>(Length: 4)</strong>",
           "Comentarios": "Símbolo de la moneda."
         },
         {
           "Nombre": "KindId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo."
         },
         {
           "Nombre": "KindDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo."
         },
         {
@@ -191,7 +191,7 @@
         },
         {
           "Nombre": "ProductGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID del producto."
         }
       ]

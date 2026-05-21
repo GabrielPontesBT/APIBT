@@ -22,7 +22,7 @@ title: Verify Existence
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyId | Int $<(length: 9)>$ | Identificador de contraparte.
+counterpartyId | Int $<(Length: 9)>$ | Identificador de contraparte.
 
 
 @tab Datos de Salida

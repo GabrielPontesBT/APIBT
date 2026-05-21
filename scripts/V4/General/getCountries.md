@@ -2855,12 +2855,12 @@ Los campos del tipo de dato estructurado SdtsBTCNWCountry son los siguientes:
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 EconomicBlocs | [SdtsBTCNWEconomicBloc](#sdtsbtcnweconomicbloc) | Bloques económicos.
-Id | Short $<(length: 3)>$ | Identificador.
-ISO2 | String $<(length: 2)>$ | ISO2.
-ISO3 | String $<(length: 3)>$ | ISO3.
-ISOName | String $<(length: 50)>$ | Nombre ISO.
-Name | String $<(length: 30)>$ | Nombre.
-TelephoneCodePrefix | Short $<(length: 4)>$ | Prefijo telefónico.
+Id | Short $<(Length: 3)>$ | Identificador.
+ISO2 | String $<(Length: 2)>$ | ISO2.
+ISO3 | String $<(Length: 3)>$ | ISO3.
+ISOName | String $<(Length: 50)>$ | Nombre ISO.
+Name | String $<(Length: 30)>$ | Nombre.
+TelephoneCodePrefix | Short $<(Length: 4)>$ | Prefijo telefónico.
 :::
 
 ::: details SdtsBTCNWEconomicBloc
@@ -2872,7 +2872,7 @@ Los campos del tipo de dato estructurado SdtsBTCNWEconomicBloc son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Short $<(length: 3)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
+Id | Short $<(Length: 3)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

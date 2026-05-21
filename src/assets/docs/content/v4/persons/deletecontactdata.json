@@ -12,17 +12,17 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     },
     {
       "Nombre": "contactTypeId",
-      "Tipo": "Byte <strong>(length: 2)</strong>",
+      "Tipo": "Byte <strong>(Length: 2)</strong>",
       "Comentarios": "Identificador de tipo de contacto."
     },
     {
       "Nombre": "correlative",
-      "Tipo": "Byte <strong>(length: 2)</strong>",
+      "Tipo": "Byte <strong>(Length: 2)</strong>",
       "Comentarios": "Correlativo."
     }
   ],

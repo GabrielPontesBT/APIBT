@@ -12,12 +12,12 @@
   "inputData": [
     {
       "Nombre": "offset",
-      "Tipo": "Long <strong>(length: 10)</strong>",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
       "Comentarios": "Número de registros a omitir desde el inicio del resultado."
     },
     {
       "Nombre": "limit",
-      "Tipo": "Long <strong>(length: 10)</strong>",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
       "Comentarios": "Cantidad máxima de registros a retornar en una sola respuesta."
     }
   ],
@@ -65,112 +65,112 @@
       "fields": [
         {
           "Nombre": "branchType",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Tipo de sucursal."
         },
         {
           "Nombre": "calendarId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Código de calendario de sucursal."
         },
         {
           "Nombre": "calendarName",
-          "Tipo": "String <strong>(length: 40)</strong>",
+          "Tipo": "String <strong>(Length: 40)</strong>",
           "Comentarios": "Nombre del calendario de sucursal."
         },
         {
           "Nombre": "cityId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Ciudad de sucursal."
         },
         {
           "Nombre": "cityName",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Nombre de la ciudad de sucursal."
         },
         {
           "Nombre": "code",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Código de sucursal."
         },
         {
           "Nombre": "companyCode",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Código de empresa."
         },
         {
           "Nombre": "departmentId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Departamento de sucursal."
         },
         {
           "Nombre": "departmentName",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Nombre del departamento de sucursal."
         },
         {
           "Nombre": "dependencyId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Dependencia de sucursal."
         },
         {
           "Nombre": "dependencyName",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Nombre de dependencia de sucursal."
         },
         {
           "Nombre": "doorNumber",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Número de puerta de sucursal."
         },
         {
           "Nombre": "email",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Correo electrónico de sucursal."
         },
         {
           "Nombre": "latitude",
-          "Tipo": "Double <strong>(length: 9)</strong>",
+          "Tipo": "Double <strong>(Length: 9)</strong>",
           "Comentarios": "Latitud de sucursal."
         },
         {
           "Nombre": "longitude",
-          "Tipo": "Double <strong>(length: 9)</strong>",
+          "Tipo": "Double <strong>(Length: 9)</strong>",
           "Comentarios": "Longitud de sucursal."
         },
         {
           "Nombre": "name",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Nombre de sucursal."
         },
         {
           "Nombre": "phone",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Teléfono de sucursal."
         },
         {
           "Nombre": "reducedName",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Nombre reducido."
         },
         {
           "Nombre": "stateId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Estado de sucursal."
         },
         {
           "Nombre": "street",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Calle de sucursal."
         },
         {
           "Nombre": "timeZone",
-          "Tipo": "Double <strong>(length: 5)</strong>",
+          "Tipo": "Double <strong>(Length: 5)</strong>",
           "Comentarios": "Zona horaria de sucursal."
         },
         {
           "Nombre": "zipCode",
-          "Tipo": "String <strong>(length: 8)</strong>",
+          "Tipo": "String <strong>(Length: 8)</strong>",
           "Comentarios": "Código postal de sucursal."
         }
       ]

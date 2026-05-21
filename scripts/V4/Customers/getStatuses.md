@@ -120,7 +120,7 @@ Los campos del tipo de dato estructurado SdtsBTCPWStatus son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Byte $<(length: 2)>$ | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
+Id | Byte $<(Length: 2)>$ | Identificador.
+Description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

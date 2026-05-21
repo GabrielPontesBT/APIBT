@@ -22,31 +22,51 @@ title: Create
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-simulationGUID | String $<(length: 36)>$ | GUID (identificador único global) de la simulación del depósito a plazo.
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
-expirationAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de destino al vencimiento.
-recurringPaymentAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de destino del pago periódico.
+simulationGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la simulación del depósito a plazo.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
+expirationAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de destino al vencimiento.
+recurringPaymentAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de destino del pago periódico.
 
 @tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-expirationInstruction | Short $<(length: 3)>$ | Identificador de la instrucción al vencimiento.
-recurringPaymentInstruction | Short $<(length: 3)>$ | Identificador de la instrucción de pago periódico.
+expirationInstruction | Short $<(Length: 3)>$ | Identificador de la instrucción al vencimiento.
+recurringPaymentInstruction | Short $<(Length: 3)>$ | Identificador de la instrucción de pago periódico.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-termDepositGUID | String $<(length: 36)>$ | GUID (identificador único global) del depósito a plazo.
-movementGUID | String $<(length: 36)>$ | GUID (identificador único global) del movimiento.
+termDepositGUID | String $<(Length: 36)>$ | GUID (identificador único global) del depósito a plazo.
+movementGUID | String $<(Length: 36)>$ | GUID (identificador único global) del movimiento.
 
 @tab Errores
 
 Código | Descripción
 :--------- | :-----------
-Completar manualmente | Completar manualmente
-
+90139 | Debe ingresar una contraparte
+90143 | Opción de pago/cobro inválida
+90151 | El importe de las formas de pago/cobro no coinciden con el total
+90152 | El importe de las formas de desembolso recibidas no puede ser 0
+90160 | El importe de las formas de cobro recibidas no puede ser 0
+90162 | El ID de la forma de pago/cobro no puede ser 0
+170054 | Debe ingresar el GUID
+180061 | No existen datos de simulación
+980003 | No existe el producto ingresado
+980096 | El subproducto se encuentra inhabilitado
+980097 | El subproducto no se encuentra vigente
+40020006 | Contraparte no existe
+40020009 | Debe ingresar número de contraparte
+40020012 | El número de contraparte no existe
+40020017 | La persona ingresada no existe
+120020061 | No existen datos de simulación
+120020078 | Debe ingresar instrucciones de débito
+180040001 | Debe ingresar el GUID de contraparte.
+180040002 | Debe ingresar el GUID de la simulación.
+180040003 | Debe ingresar el GUID de la cuenta de débito.
+99990010006 | No se pudo resolver el usuario
+99990010007 | No se pudo resolver la empresa
 :::
 <!-- CIERRA TABLA DE DATOS -->
 

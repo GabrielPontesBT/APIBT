@@ -149,8 +149,8 @@ Los campos del tipo de dato estructurado SdtsBTPEWMaritalStatus son los siguient
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Byte $<(length: 2)>$ | Identificador.
-Description | String $<(length: 20)>$ | Descripción.
-RequiresSpouse | Boolean $<(length: 1)>$ | Requiere cónyuge.
+Id | Byte $<(Length: 2)>$ | Identificador.
+Description | String $<(Length: 20)>$ | Descripción.
+RequiresSpouse | Boolean $<(Length: 1)>$ | Requiere cónyuge.
 :::
 <!-- CIERRA SDT -->

@@ -22,7 +22,7 @@ title: Update Occupations
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Body
@@ -139,27 +139,27 @@ Los campos del tipo de dato estructurado SdtsBTPEWOccupation son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CompanyDocument | String $<(length: 25)>$ | Documento de empresa.
-CompanyName | String $<(length: 70)>$ | Nombre de empresa.
-Correlative | Byte $<(length: 2)>$ | Correlativo.
-EconomicActivityId | Long $<(length: 11)>$ | Identificador de actividad económica.
-EconomicActivityDescription | String $<(length: 80)>$ | Descripción de actividad económica.
-EconomicActivityTypeId | Long $<(length: 15)>$ | Identificador del tipo de actividad económica.
-EconomicActivityTypeDescription | String $<(length: 60)>$ | Descripción del tipo de actividad económica.
-EndDate | Date $<(length: 8)>$ | Fecha de fin.
-EstablishmentTypeId | Int $<(length: 6)>$ | Identificador del tipo de establecimiento.
-EstablishmentTypeDescription | String $<(length: 50)>$ | Descripción del tipo de establecimiento.
-Exports | Boolean $<(length: 1)>$ | Exporta.
-Imports | Boolean $<(length: 1)>$ | Importa.
-Income | Double $<(length: 18)>$ | Ingresos.
-JobTitleId | Short $<(length: 4)>$ | Identificador del cargo.
-JobTitleDescription | String $<(length: 30)>$ | Descripción del cargo.
-MainOccupation | Boolean $<(length: 1)>$ | Ocupación principal.
-Multilateral | Boolean $<(length: 1)>$ | Multilateral.
-OccupationId | Int $<(length: 5)>$ | Identificador de ocupación.
-OccupationDescription | String $<(length: 30)>$ | Descripción de la ocupación.
+CompanyDocument | String $<(Length: 25)>$ | Documento de empresa.
+CompanyName | String $<(Length: 70)>$ | Nombre de empresa.
+Correlative | Byte $<(Length: 2)>$ | Correlativo.
+EconomicActivityId | Long $<(Length: 11)>$ | Identificador de actividad económica.
+EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
+EconomicActivityTypeId | Long $<(Length: 15)>$ | Identificador del tipo de actividad económica.
+EconomicActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tipo de actividad económica.
+EndDate | Date $<(Length: 8)>$ | Fecha de fin.
+EstablishmentTypeId | Int $<(Length: 6)>$ | Identificador del tipo de establecimiento.
+EstablishmentTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de establecimiento.
+Exports | Boolean $<(Length: 1)>$ | Exporta.
+Imports | Boolean $<(Length: 1)>$ | Importa.
+Income | Double $<(Length: 18)>$ | Ingresos.
+JobTitleId | Short $<(Length: 4)>$ | Identificador del cargo.
+JobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo.
+MainOccupation | Boolean $<(Length: 1)>$ | Ocupación principal.
+Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+OccupationId | Int $<(Length: 5)>$ | Identificador de ocupación.
+OccupationDescription | String $<(Length: 30)>$ | Descripción de la ocupación.
 OccupationTypeId | Short | Identificador del tipo de ocupación.
-OccupationTypeDescription | String $<(length: 30)>$ | Descripción del tipo de ocupación.
-StartDate | Date $<(length: 8)>$ | Fecha de inicio.
+OccupationTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de ocupación.
+StartDate | Date $<(Length: 8)>$ | Fecha de inicio.
 :::
 <!-- CIERRA SDT -->

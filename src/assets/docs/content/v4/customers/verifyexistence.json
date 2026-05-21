@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "counterpartyId",
-      "Tipo": "Int <strong>(length: 9)</strong>",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
       "Comentarios": "Identificador de contraparte."
     }
   ],

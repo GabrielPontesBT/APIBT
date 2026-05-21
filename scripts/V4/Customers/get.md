@@ -22,7 +22,7 @@ title: Get
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 
 @tab Datos de Salida
@@ -200,24 +200,24 @@ Los campos del tipo de dato estructurado SdtsBTPEWContact son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AddressCorrelative | Short $<(length: 3)>$ | Correlativo de dirección.
-AddressId | String $<(length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(length: 1)>$ | Asociado a una dirección.
-Comment | String $<(length: 250)>$ | Comentario.
-ContactTypeId | Byte $<(length: 2)>$ | Identificador del tipo de contacto.
-ContactTypeDescription | String $<(length: 50)>$ | Descripción del tipo de contacto.
-Correlative | Byte $<(length: 2)>$ | Correlativo.
-Enabled | Boolean $<(length: 1)>$ | Habilitado.
-EndTimeRange1 | String $<(length: 5)>$ | Fin del rango horario 1.
-EndTimeRange2 | String $<(length: 5)>$ | Fin del rango horario 2.
-Priority | Byte $<(length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(length: 1)>$ | Recibe correos.
-StartTimeRange1 | String $<(length: 5)>$ | Inicio del rango horario 1.
-StartTimeRange2 | String $<(length: 5)>$ | Inicio del rango horario 2.
-TelephoneCompanyId | Short $<(length: 3)>$ | Identificador de compañía telefónica.
-TelephoneCompanyDescription | String $<(length: 50)>$ | Descripción de la compañía telefónica.
-Text | String $<(length: 250)>$ | Texto.
-Validated | Boolean $<(length: 1)>$ | Validado.
+AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
+AddressId | String $<(Length: 140)>$ | Identificador de dirección.
+AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+Comment | String $<(Length: 250)>$ | Comentario.
+ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
+ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
+Correlative | Byte $<(Length: 2)>$ | Correlativo.
+Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
+EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
+Priority | Byte $<(Length: 2)>$ | Prioridad.
+ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
+StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
+TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
+TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
+Text | String $<(Length: 250)>$ | Texto.
+Validated | Boolean $<(Length: 1)>$ | Validado.
 :::
 
 ::: details SdtsBTCPWCounterparty
@@ -230,28 +230,28 @@ Los campos del tipo de dato estructurado SdtsBTCPWCounterparty son los siguiente
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 BranchId | Int | Identificador de sucursal.
-BranchDescription | String $<(length: 30)>$ | Descripción de sucursal.
-CancellationDate | Date $<(length: 8)>$ | Fecha de cancelación.
-CompanyId | Short $<(length: 3)>$ | Identificador de empresa.
-CompanyDescription | String $<(length: 50)>$ | Descripción de empresa.
-CounterpartyDescription | String $<(length: 70)>$ | Descripción de contraparte.
-CreationDate | Date $<(length: 8)>$ | Fecha de creación.
+BranchDescription | String $<(Length: 30)>$ | Descripción de sucursal.
+CancellationDate | Date $<(Length: 8)>$ | Fecha de cancelación.
+CompanyId | Short $<(Length: 3)>$ | Identificador de empresa.
+CompanyDescription | String $<(Length: 50)>$ | Descripción de empresa.
+CounterpartyDescription | String $<(Length: 70)>$ | Descripción de contraparte.
+CreationDate | Date $<(Length: 8)>$ | Fecha de creación.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
 EconomicActivityId | Long | Identificador de actividad económica.
-EconomicActivityDescription | String $<(length: 80)>$ | Descripción de actividad económica.
-Employee | Boolean $<(length: 1)>$ | ¿Es empleado?.
-ExecutiveId | Int $<(length: 5)>$ | Identificador del ejecutivo.
-ExecutiveDescription | String $<(length: 30)>$ | Descripción del ejecutivo.
-FinancialInstitution | Boolean $<(length: 1)>$ | Institución financiera.
+EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
+Employee | Boolean $<(Length: 1)>$ | ¿Es empleado?.
+ExecutiveId | Int $<(Length: 5)>$ | Identificador del ejecutivo.
+ExecutiveDescription | String $<(Length: 30)>$ | Descripción del ejecutivo.
+FinancialInstitution | Boolean $<(Length: 1)>$ | Institución financiera.
 InternalClassificationId | Short | Identificador de clasificación interna.
-InternalClassificationDescription | String $<(length: 30)>$ | Descripción de clasificación interna.
-Resident | Boolean $<(length: 1)>$ | ¿Es residente?.
+InternalClassificationDescription | String $<(Length: 30)>$ | Descripción de clasificación interna.
+Resident | Boolean $<(Length: 1)>$ | ¿Es residente?.
 SectorId | Short | Identificador de sector.
-SectorDescription | String $<(length: 30)>$ | Descripción del sector.
-SegmentId | Byte $<(length: 2)>$ | Identificador del segmento.
-SegmentDescription | String $<(length: 30)>$ | Descripción del segmento.
-StatusId | Byte $<(length: 2)>$ | Identificador de estado.
-StatusDescription | String $<(length: 30)>$ | Descripción del estado.
+SectorDescription | String $<(Length: 30)>$ | Descripción del sector.
+SegmentId | Byte $<(Length: 2)>$ | Identificador del segmento.
+SegmentDescription | String $<(Length: 30)>$ | Descripción del segmento.
+StatusId | Byte $<(Length: 2)>$ | Identificador de estado.
+StatusDescription | String $<(Length: 30)>$ | Descripción del estado.
 :::
 
 ::: details SdtsBTPAWCustomField
@@ -264,9 +264,9 @@ Los campos del tipo de dato estructurado SdtsBTPAWCustomField son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Correlative | Short | Correlativo.
-Id | String $<(length: 30)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
-Value | String $<(length: 250)>$ | Value.
+Id | String $<(Length: 30)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
+Value | String $<(Length: 250)>$ | Value.
 :::
 
 ::: details SdtsBTEGWEconomicGroup
@@ -278,11 +278,11 @@ Los campos del tipo de dato estructurado SdtsBTEGWEconomicGroup son los siguient
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-GroupId | Int $<(length: 7)>$ | Identificador del grupo.
-GroupName | String $<(length: 30)>$ | Nombre del grupo.
-GroupTypeId | Byte $<(length: 2)>$ | Identificador del tipo de grupo.
-GroupTypeDescription | String $<(length: 20)>$ | Descripción del tipo de grupo.
-MemberTypeId | Short $<(length: 3)>$ | Identificador del tipo de miembro.
+GroupId | Int $<(Length: 7)>$ | Identificador del grupo.
+GroupName | String $<(Length: 30)>$ | Nombre del grupo.
+GroupTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de grupo.
+GroupTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de grupo.
+MemberTypeId | Short $<(Length: 3)>$ | Identificador del tipo de miembro.
 :::
 
 ::: details SdtsBTPEWFinancialInstitution
@@ -294,23 +294,23 @@ Los campos del tipo de dato estructurado SdtsBTPEWFinancialInstitution son los s
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CompanyId | Short $<(length: 3)>$ | CompanyId
-CounterpartyId | Int $<(length: 9)>$ | CounterpartyId
+CompanyId | Short $<(Length: 3)>$ | CompanyId
+CounterpartyId | Int $<(Length: 9)>$ | CounterpartyId
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | CustomFields
-DocumentNumber | String $<(length: 25)>$ | DocumentNumber
-DocumentTypeId | Short $<(length: 4)>$ | DocumentTypeId
-DocumentTypeDescription | String $<(length: 30)>$ | DocumentTypeDescription
-EntryStatusId | Byte $<(length: 2)>$ | EntryStatusId
-EntryStatusDescription | String $<(length: 30)>$ | EntryStatusDescription
-EstablishmentCountryId | Short $<(length: 3)>$ | EstablishmentCountryId
-EstablishmentCountryDescription | String $<(length: 30)>$ | EstablishmentCountryDescription
+DocumentNumber | String $<(Length: 25)>$ | DocumentNumber
+DocumentTypeId | Short $<(Length: 4)>$ | DocumentTypeId
+DocumentTypeDescription | String $<(Length: 30)>$ | DocumentTypeDescription
+EntryStatusId | Byte $<(Length: 2)>$ | EntryStatusId
+EntryStatusDescription | String $<(Length: 30)>$ | EntryStatusDescription
+EstablishmentCountryId | Short $<(Length: 3)>$ | EstablishmentCountryId
+EstablishmentCountryDescription | String $<(Length: 30)>$ | EstablishmentCountryDescription
 HasSwiftKey | Boolean | HasSwiftKey
 IsCorrespondentAccount | Boolean | IsCorrespondentAccount
-Name | String $<(length: 60)>$ | Name
-PersonId | Long $<(length: 10)>$ | PersonId
-SwiftKey | String $<(length: 16)>$ | SwiftKey
-Type | Int $<(length: 5)>$ | Type
-TypeDescription | String $<(length: 20)>$ | TypeDescription
+Name | String $<(Length: 60)>$ | Name
+PersonId | Long $<(Length: 10)>$ | PersonId
+SwiftKey | String $<(Length: 16)>$ | SwiftKey
+Type | Int $<(Length: 5)>$ | Type
+TypeDescription | String $<(Length: 20)>$ | TypeDescription
 :::
 
 ::: details SdtsBTCPWCounterpartyIntegration
@@ -323,15 +323,15 @@ Los campos del tipo de dato estructurado SdtsBTCPWCounterpartyIntegration son lo
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 CountryId | Short | Identificador del país.
-CountryDescription | String $<(length: 30)>$ | Descripción del país.
-DocumentNumber | String $<(length: 25)>$ | Número de documento.
+CountryDescription | String $<(Length: 30)>$ | Descripción del país.
+DocumentNumber | String $<(Length: 25)>$ | Número de documento.
 DocumentTypeId | Short | Identificador del tipo de documento.
-DocumentTypeDescription | String $<(length: 30)>$ | Descripción del tipo de documento.
-OwnershipTypeId | Byte $<(length: 2)>$ | Identificador del tipo de propiedad.
+DocumentTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de documento.
+OwnershipTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de propiedad.
 OwnershipTypeDescription | String | Descripción del tipo de propiedad.
-PersonGUID | String $<(length: 36)>$ | GUID de persona.
-PersonName | String $<(length: 70)>$ | Nombre de persona.
-PersonType | String $<(length: 1)>$ | Tipo de persona.
+PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonName | String $<(Length: 70)>$ | Nombre de persona.
+PersonType | String $<(Length: 1)>$ | Tipo de persona.
 :::
 
 ::: details SdtsBTPAWText
@@ -343,8 +343,8 @@ Los campos del tipo de dato estructurado SdtsBTPAWText son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Int $<(length: 5)>$ | Identificador.
-Description | String $<(length: 60)>$ | Descripción.
+Id | Int $<(Length: 5)>$ | Identificador.
+Description | String $<(Length: 60)>$ | Descripción.
 Text | String | Texto.
 :::
 <!-- CIERRA SDT -->

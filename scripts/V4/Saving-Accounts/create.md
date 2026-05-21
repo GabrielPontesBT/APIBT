@@ -22,23 +22,23 @@ title: Create
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
-productGUID | String $<(length: 36)>$ | GUID (identificador único global) del producto.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
+productGUID | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
 
 @tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-subAccountName | String $<(length: 255)>$ | Nombre de la subcuenta.
-branchId | Int $<(length: 5)>$ | Identificador de sucursal.
-signatureType | String $<(length: 1)>$ | Tipo de integración.
+subAccountName | String $<(Length: 255)>$ | Nombre de la subcuenta.
+branchId | Int $<(Length: 5)>$ | Identificador de sucursal.
+signatureType | String $<(Length: 1)>$ | Tipo de integración.
 geolocalization | [SdtsBTGeolocalization](#sdtsbtgeolocalization) | Datos de geolocalización.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-savingAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
+savingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
 
 @tab Errores
 

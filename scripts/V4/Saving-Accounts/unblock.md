@@ -22,7 +22,7 @@ title: Unblock
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-savingAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
+savingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
 
 
 @tab Datos de Salida

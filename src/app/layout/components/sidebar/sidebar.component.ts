@@ -172,12 +172,6 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
     'CU': '\u{1F1E8}\u{1F1FA}',
     'PR': '\u{1F1F5}\u{1F1F7}',
     'US': '\u{1F1FA}\u{1F1F8}',
-    'ES': '\u{1F1EA}\u{1F1F8}',
-    'PT': '\u{1F1F5}\u{1F1F9}',
-    'DE': '\u{1F1E9}\u{1F1EA}',
-    'FR': '\u{1F1EB}\u{1F1F7}',
-    'IT': '\u{1F1EE}\u{1F1F9}',
-    'GB': '\u{1F1EC}\u{1F1E7}',
   };
 
   /**
@@ -311,17 +305,15 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
       if (this.isFile(node)) {
         if (node.slug === targetSlug) {
           return parentPath;
-        } else {
-          // No hacer nada
         }
       } else {
         const currentPath = [...parentPath, node.slug];
+        if (node.slug === targetSlug) {
+          return currentPath;
+        }
         const result = this.findPathToSlug(node.children || [], targetSlug, currentPath);
-
         if (result.length > 0) {
           return result;
-        } else {
-          // No hacer nada
         }
       }
     }

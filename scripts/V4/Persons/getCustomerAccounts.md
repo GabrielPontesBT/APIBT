@@ -22,7 +22,7 @@ title: Get Customer Accounts
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
  
 
 @tab Datos de Salida
@@ -107,9 +107,9 @@ Los campos del tipo de dato estructurado SdtsBTCPWCustomerCounterparty son los s
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CounterpartyGUID | String $<(length: 36)>$ | GUID de contraparte.
+CounterpartyGUID | String $<(Length: 36)>$ | GUID de contraparte.
 Ownership | [SdtsBTCPWOwnershipType](#sdtsbtcpwownershiptype) | Tipo de propiedad.
-Representative | Boolean $<(length: 1)>$ | Representante.
+Representative | Boolean $<(Length: 1)>$ | Representante.
 :::
 
 ::: details SdtsBTCPWOwnershipType
@@ -121,7 +121,7 @@ Los campos del tipo de dato estructurado SdtsBTCPWOwnershipType son los siguient
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Byte $<(length: 2)>$ | Identificador.
+Id | Byte $<(Length: 2)>$ | Identificador.
 Description | String | Descripción.
 :::
 <!-- CIERRA SDT -->

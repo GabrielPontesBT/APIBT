@@ -7,12 +7,13 @@
  */
 
 import { inject, NgModule } from '@angular/core';
-import { CanActivateFn, Router, RouterModule, Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterModule, Routes } from '@angular/router';
 import { map, take } from 'rxjs';
 import { DocPageComponent } from './pages/doc-page/doc-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReleasesPageComponent } from './pages/releases/releases-page.component';
 import { ReleasesService } from './services/releases.service';
+import { VersionService, VersionId } from '../../core/services/version.service';
 
 const latestReleaseGuard: CanActivateFn = () => {
   const router = inject(Router);
@@ -20,6 +21,19 @@ const latestReleaseGuard: CanActivateFn = () => {
     take(1),
     map(releases => releases[0]
       ? router.createUrlTree(['releases', releases[0].id])
+      : router.createUrlTree(['/'])
+    )
+  );
+};
+
+const latestVersionedReleaseGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
+  const router = inject(Router);
+  const version = route.params['version'] as VersionId;
+  inject(VersionService).setVersion(version);
+  return inject(ReleasesService).getReleases().pipe(
+    take(1),
+    map(releases => releases[0]
+      ? router.createUrlTree([version, 'releases', releases[0].id])
       : router.createUrlTree(['/'])
     )
   );
@@ -38,6 +52,16 @@ const routes: Routes = [
   },
   {
     path: 'releases/:id',
+    component: ReleasesPageComponent,
+    title: 'Releases'
+  },
+  {
+    path: ':version/releases',
+    canActivate: [latestVersionedReleaseGuard],
+    component: ReleasesPageComponent
+  },
+  {
+    path: ':version/releases/:id',
     component: ReleasesPageComponent,
     title: 'Releases'
   },

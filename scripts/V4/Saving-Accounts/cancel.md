@@ -22,22 +22,22 @@ title: Cancel
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
-savingAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
-paymentOrChargeAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de cobro o desembolso.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
+savingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
+paymentOrChargeAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de cobro o desembolso.
 
 @tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-cancellationOriginId | Short $<(length: 4)>$ | Identificador del origen de cancelación.
-cancellationReasonId | Byte $<(length: 2)>$ | Identificador del motivo de cancelación.
+cancellationOriginId | Short $<(Length: 4)>$ | Identificador del origen de cancelación.
+cancellationReasonId | Byte $<(Length: 2)>$ | Identificador del motivo de cancelación.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-movementGUID | String $<(length: 36)>$ | GUID (identificador único global) del movimiento.
+movementGUID | String $<(Length: 36)>$ | GUID (identificador único global) del movimiento.
 
 @tab Errores
 

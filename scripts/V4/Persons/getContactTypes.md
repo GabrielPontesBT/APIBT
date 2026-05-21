@@ -134,8 +134,8 @@ Los campos del tipo de dato estructurado sBTPEContactTypes son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Byte $<(length: 2)>$ | Identificador de tipo de contacto.
-description | String $<(length: 50)>$ | Descripción.
+id | Byte $<(Length: 2)>$ | Identificador de tipo de contacto.
+description | String $<(Length: 50)>$ | Descripción.
 requiresTelephoneCompany | Boolean | Requiere compañía telefónica?.
 :::
 <!-- CIERRA SDT -->

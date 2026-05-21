@@ -22,7 +22,7 @@ title: Update Reference
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Body
@@ -131,19 +131,19 @@ Los campos del tipo de dato estructurado SdtsBTPEWReference son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Address1 | String $<(length: 50)>$ | Dirección 1.
-Address2 | String $<(length: 50)>$ | Dirección 2.
-Address3 | String $<(length: 50)>$ | Dirección 3.
-BondOrJobTitle | String $<(length: 1)>$ | Vínculo o cargo.
-Correlative | Short $<(length: 3)>$ | Correlativo.
-EnterpriceJobTitleDescription | String $<(length: 30)>$ | Descripción del cargo en la empresa.
-EnterpriseJobTitleId | Short $<(length: 4)>$ | Identificador del cargo empresarial.
-Name | String $<(length: 50)>$ | Nombre.
-PersonType | String $<(length: 1)>$ | Tipo de persona.
-ReferenceTypeId | Byte $<(length: 2)>$ | Identificador del tipo de referencia.
-ReferenceTypeDescription | String $<(length: 30)>$ | Descripción del tipo de referencia.
+Address1 | String $<(Length: 50)>$ | Dirección 1.
+Address2 | String $<(Length: 50)>$ | Dirección 2.
+Address3 | String $<(Length: 50)>$ | Dirección 3.
+BondOrJobTitle | String $<(Length: 1)>$ | Vínculo o cargo.
+Correlative | Short $<(Length: 3)>$ | Correlativo.
+EnterpriceJobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo en la empresa.
+EnterpriseJobTitleId | Short $<(Length: 4)>$ | Identificador del cargo empresarial.
+Name | String $<(Length: 50)>$ | Nombre.
+PersonType | String $<(Length: 1)>$ | Tipo de persona.
+ReferenceTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de referencia.
+ReferenceTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de referencia.
 RelationshipId | Short | Identificador de relación.
-RelationshipDescription | String $<(length: 30)>$ | Descripción de la relación.
-Telephone | String $<(length: 50)>$ | Teléfono.
+RelationshipDescription | String $<(Length: 30)>$ | Descripción de la relación.
+Telephone | String $<(Length: 50)>$ | Teléfono.
 :::
 <!-- CIERRA SDT -->

@@ -22,7 +22,7 @@ title: Get Person Products
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 @tab Body
 
@@ -40,8 +40,22 @@ products | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Listado de productos.
 
 Código | Descripción
 :--------- | :-----------
-Completar manualmente | Completar manualmente
-
+| 960001 | Debe ingresar un país |
+| 960002 | Debe ingresar un tipo de documento |
+| 960003 | Debe ingresar el número de documento |
+| 980096 | El subproducto se encuentra inhabilitado |
+| 980097 | El subproducto no se encuentra vigente |
+| 980125 | No existen valores generales para el subproducto |
+| 40010004 | La persona no existe ||
+| 40010008 | País incorrecto |
+| 40010010 | País de nacimiento incorrecto |
+| 40010012 | País de ciudadanía incorrecto |
+| 40020006 | Contraparte no existe |
+| 40020012 | El número de contraparte no existe |
+| 40020017 | La persona ingresada no existe |
+| 40050001 | Debe ingresar el GUID de persona. |
+| 99990010006 | No se pudo resolver el usuario |
+| 99990010007 | No se pudo resolver la empresa |
 :::
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -166,12 +180,12 @@ Los campos del tipo de dato estructurado SdtsBTPHWProduct son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-CurrencyDescription | String $<(length: 30)>$ | Descripción de la moneda.
-CurrencySign | String $<(length: 4)>$ | Símbolo de la moneda.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-KindDescription | String $<(length: 30)>$ | Descripción del tipo.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+CurrencyDescription | String $<(Length: 30)>$ | Descripción de la moneda.
+CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(length: 36)>$ | GUID del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID del producto.
 :::
 <!-- CIERRA SDT -->

@@ -22,7 +22,7 @@ title: Get Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-termDepositGUID | String $<(length: 36)>$ | GUID (identificador único global) del depósito a plazo.
+termDepositGUID | String $<(Length: 36)>$ | GUID (identificador único global) del depósito a plazo.
 
 @tab Body
 
@@ -40,8 +40,33 @@ termDepositData | [SdtsBTTDWTermDepositData](#sdtsbttdwtermdepositdata) | Datos 
 
 Código | Descripción
 :--------- | :-----------
-Completar manualmente | Completar manualmente
-
+Completar manualmente | Completar manualmente| 60001 | No existe la moneda ingresada |
+| 90031 | El código contable no existe |
+| 90120 | Cuenta contable no tiene tipo |
+| 90121 | Cuenta contable no puede ser 0 |
+| 90132 | No existe un asiento relacionado a los datos ingresados |
+| 90142 | No existe registro de saldo |
+| 90161 | La fecha de contabilización del asiento a anular es mayor a la fecha de apertura |
+| 180006 | No existe registro pagos para la operación ingresada |
+| 180069 | La fecha de consulta es menor a la fecha valor de la operación |
+| 990070 | El sistema no se encuentra definido |
+| 990071 | El parámetro no se encuentra definido |
+| 20010005 | No existe la clase de tasa ingresada |
+| 20010014 | No existe el tipo de tasa ingresado |
+| 40010004 | La persona no existe |
+| 40010084 | Ocupación incorrecta |
+| 40010138 | No existe el Nivel de Datos |
+| 40010184 | El Cargo no existe |
+| 40010342 | El tipo de documento no aplica para el país |
+| 40010343 | Número de documento no válido |
+| 40010349 | Primer nivel asociado al país de nacimiento incorrecto |
+| 40010350 | Segundo nivel asociado al país de nacimiento incorrecto |
+| 40010353 | Existe inconsistencia de datos con el campo ? en la RNG ?? |
+| 40020006 | Contraparte no existe |
+| 40020012 | El número de contraparte no existe |
+| 40020017 | La persona ingresada no existe |
+| 40050001 | Debe ingresar el GUID de persona. |
+| 50060003 | No existe el módulo ingresado |
 :::
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -183,47 +208,47 @@ Los campos del tipo de dato estructurado SdtsBTTDWTermDepositData son los siguie
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AccountingAccountId | Long $<(length: 16)>$ | Identificador de cuenta contable.
+AccountingAccountId | Long $<(Length: 16)>$ | Identificador de cuenta contable.
 AccountingAccountDescription | String | Descripción de cuenta contable.
-Amount | Double $<(length: 18)>$ | Monto.
-Balance | Double $<(length: 18)>$ | Saldo.
-CancellationDate | Date $<(length: 8)>$ | Fecha de cancelación.
-DayType | Byte $<(length: 1)>$ | Tipo de día.
-DayTypeDescription | String $<(length: 40)>$ | Descripción del tipo de día.
+Amount | Double $<(Length: 18)>$ | Monto.
+Balance | Double $<(Length: 18)>$ | Saldo.
+CancellationDate | Date $<(Length: 8)>$ | Fecha de cancelación.
+DayType | Byte $<(Length: 1)>$ | Tipo de día.
+DayTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de día.
 Events | [SdtsBTTDWEvent](#sdtsbttdwevent) | Events.
-ExpandEndOfMonth | Boolean $<(length: 1)>$ | Ampliar fin de mes.
-ExpirationDate | Date $<(length: 8)>$ | Fecha de vencimiento.
-ExpirationType | String $<(length: 1)>$ | Tipo de vencimiento.
-ExpirationTypeDescription | String $<(length: 40)>$ | Descripción del tipo de vencimiento.
-ForcesCommercialTerm | Boolean $<(length: 1)>$ | Fuerza plazo comercial.
-IncludesTaxes | Boolean $<(length: 1)>$ | Incluye impuestos.
-InstallmentCount | Int $<(length: 5)>$ | Cantidad de cuotas.
+ExpandEndOfMonth | Boolean $<(Length: 1)>$ | Ampliar fin de mes.
+ExpirationDate | Date $<(Length: 8)>$ | Fecha de vencimiento.
+ExpirationType | String $<(Length: 1)>$ | Tipo de vencimiento.
+ExpirationTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de vencimiento.
+ForcesCommercialTerm | Boolean $<(Length: 1)>$ | Fuerza plazo comercial.
+IncludesTaxes | Boolean $<(Length: 1)>$ | Incluye impuestos.
+InstallmentCount | Int $<(Length: 5)>$ | Cantidad de cuotas.
 Installments | [SdtsBTTDWInstallment](#sdtsbttdwinstallment) | Cuotas.
 Instructions | [SdtsBTTDWInstruction](#sdtsbttdwinstruction) | Instrucciones.
-InterestCalculationType | String $<(length: 1)>$ | Tipo de cálculo de interés.
-KindValue | Double $<(length: 15)>$ | Valor del tipo.
-LastRevisionDay | Date $<(length: 8)>$ | Último día de revisión.
-NextPaymentDate | Date $<(length: 8)>$ | Fecha del próximo pago.
-PayDate | Date $<(length: 8)>$ | Fecha de pago.
-PaymentType | Byte $<(length: 2)>$ | Tipo de pago.
+InterestCalculationType | String $<(Length: 1)>$ | Tipo de cálculo de interés.
+KindValue | Double $<(Length: 15)>$ | Valor del tipo.
+LastRevisionDay | Date $<(Length: 8)>$ | Último día de revisión.
+NextPaymentDate | Date $<(Length: 8)>$ | Fecha del próximo pago.
+PayDate | Date $<(Length: 8)>$ | Fecha de pago.
+PaymentType | Byte $<(Length: 2)>$ | Tipo de pago.
 PaymentTypeDescription | String | Descripción del tipo de pago.
-Period | Int $<(length: 5)>$ | Período.
-PlusRate | Double $<(length: 11)>$ | Tasa adicional.
+Period | Int $<(Length: 5)>$ | Período.
+PlusRate | Double $<(Length: 11)>$ | Tasa adicional.
 Product | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Producto.
-Rate | Double $<(length: 11)>$ | Tasa.
-RateClassId | Int $<(length: 5)>$ | Identificador de clase de tasa.
-RateClassDescription | String $<(length: 20)>$ | Descripción de la clase de tasa.
-RateManagement | Byte $<(length: 1)>$ | Gestión de tasa.
-RateTypeId | Byte $<(length: 1)>$ | Identificador del tipo de tasa.
-RateTypeDescription | String $<(length: 20)>$ | Descripción del tipo de tasa.
-RevisionDay | Int $<(length: 5)>$ | Día de revisión.
+Rate | Double $<(Length: 11)>$ | Tasa.
+RateClassId | Int $<(Length: 5)>$ | Identificador de clase de tasa.
+RateClassDescription | String $<(Length: 20)>$ | Descripción de la clase de tasa.
+RateManagement | Byte $<(Length: 1)>$ | Gestión de tasa.
+RateTypeId | Byte $<(Length: 1)>$ | Identificador del tipo de tasa.
+RateTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de tasa.
+RevisionDay | Int $<(Length: 5)>$ | Día de revisión.
 StatusId | Short | Identificador de estado.
 StatusDescription | String | Descripción del estado.
-Term | Int $<(length: 5)>$ | Plazo.
+Term | Int $<(Length: 5)>$ | Plazo.
 TermDepositGUID | String | GUID del depósito a plazo.
-ValueDate | Date $<(length: 8)>$ | Fecha valor.
-YearType | Byte $<(length: 1)>$ | Tipo de año.
-YearTypeDescription | String $<(length: 40)>$ | Descripción del tipo de año.
+ValueDate | Date $<(Length: 8)>$ | Fecha valor.
+YearType | Byte $<(Length: 1)>$ | Tipo de año.
+YearTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de año.
 :::
 
 ::: details SdtsBTTDWEvent
@@ -235,17 +260,17 @@ Los campos del tipo de dato estructurado SdtsBTTDWEvent son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Accounted | String $<(length: 1)>$ | Contabilizado.
-Correlative | Long $<(length: 10)>$ | Correlativo.
-EventDate | Date $<(length: 8)>$ | Fecha del evento.
-Id | Int $<(length: 5)>$ | Identificador.
+Accounted | String $<(Length: 1)>$ | Contabilizado.
+Correlative | Long $<(Length: 10)>$ | Correlativo.
+EventDate | Date $<(Length: 8)>$ | Fecha del evento.
+Id | Int $<(Length: 5)>$ | Identificador.
 MovementGUID | String | GUID del movimiento.
 Name | String | Nombre.
-PlusRate | Double $<(length: 11)>$ | Tasa adicional.
-Rate | Double $<(length: 11)>$ | Tasa.
-RateTypeId | Byte $<(length: 1)>$ | Identificador del tipo de tasa.
-RateTypeDescription | String $<(length: 20)>$ | Descripción del tipo de tasa.
-ValueDate | Date $<(length: 8)>$ | Fecha valor.
+PlusRate | Double $<(Length: 11)>$ | Tasa adicional.
+Rate | Double $<(Length: 11)>$ | Tasa.
+RateTypeId | Byte $<(Length: 1)>$ | Identificador del tipo de tasa.
+RateTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de tasa.
+ValueDate | Date $<(Length: 8)>$ | Fecha valor.
 :::
 
 ::: details SdtsBTTDWInstallment
@@ -257,39 +282,28 @@ Los campos del tipo de dato estructurado SdtsBTTDWInstallment son los siguientes
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Accounted | String $<(length: 1)>$ | Contabilizado.
-BreachDate | Date $<(length: 8)>$ | Fecha de incumplimiento.
-Capital | Double $<(length: 18)>$ | Capital.
-CapitalTax | Double $<(length: 18)>$ | Impuesto sobre capital.
-DecimalsNumber | Byte $<(length: 1)>$ | Número de decimales.
-EndDate | Date $<(length: 8)>$ | Fecha de fin.
-ExpectedPaymentDate | Date $<(length: 8)>$ | Fecha de pago esperado.
-ExtendsTerm | Boolean $<(length: 1)>$ | Extiende plazo.
-Interest | Double $<(length: 18)>$ | Interés.
-InterestTax1 | Double $<(length: 18)>$ | Impuesto de interés 1.
-InterestTax2 | Double $<(length: 18)>$ | Impuesto de interés 2.
-InterestTax3 | Double $<(length: 18)>$ | Impuesto de interés 3.
-InverseExpectedPaymentDate | Int $<(length: 8)>$ | Fecha de pago esperado inversa.
-QuotaNumber | Short | Número de cuota.
-QuotaStatus | String $<(length: 1)>$ | Estado de la cuota.
-QuotaType | String $<(length: 1)>$ | Tipo de cuota.
-QuotaValue | Double $<(length: 18)>$ | Valor de cuota.
-RevenueTax | Double $<(length: 18)>$ | Impuesto a los ingresos.
-RoundOff | Double $<(length: 18)>$ | Redondeo.
-StartDate | Date $<(length: 8)>$ | Fecha de inicio.
-SubTotal | Double $<(length: 18)>$ | Subtotal.
-Taxes | Double $<(length: 18)>$ | Impuestos.
-Term | Int $<(length: 5)>$ | Plazo.
-Total | Double $<(length: 18)>$ | Total.
-TransactionBranchId | Int $<(length: 5)>$ | Identificador de sucursal de transacción.
-TransactionCompanyId | Short $<(length: 3)>$ | Identificador de empresa de transacción.
-TransactionDate | Date $<(length: 8)>$ | Fecha de transacción.
-TransactionEntryNum | Int $<(length: 9)>$ | Número de entrada de transacción.
-TransactionId | Int $<(length: 5)>$ | Identificador de transacción.
-TransactionModuleId | Int $<(length: 5)>$ | Identificador de módulo de transacción.
-TransactionOrdinalId | Short $<(length: 3)>$ | Identificador ordinal de transacción.
-TransactionSubordinalId | Short $<(length: 3)>$ | Identificador subordinal de transacción.
-Type | String $<(length: 1)>$ | Type.
+breachDate | Date | Fecha de incumplimiento.
+capital | Numeric $<(Length: 18, dec: 2)>$ | Capital de la cuota.
+capitalTax | Numeric $<(Length: 18, dec: 2)>$ | Impuesto sobre el capital.
+endDate | Date | Fecha de fin del período.
+expectedPaymentDate | Date | Fecha esperada de pago.
+extendsTerm | Boolean | Indica si la cuota extiende el plazo del depósito.
+installmentNumber | Numeric | Número de cuota.
+installmentStatus | Character $<(Length: 1)>$ | Estado de la cuota.
+installmentType | Character $<(Length: 1)>$ | Tipo de cuota.
+installmentValue | Numeric $<(Length: 18, dec: 2)>$ | Valor de la cuota.
+interest | Numeric $<(Length: 18, dec: 2)>$ | Intereses de la cuota.
+interestTax1 | Numeric $<(Length: 18, dec: 2)>$ | Impuesto sobre intereses 1.
+interestTax2 | Numeric $<(Length: 18, dec: 2)>$ | Impuesto sobre intereses 2.
+interestTax3 | Numeric $<(Length: 18, dec: 2)>$ | Impuesto sobre intereses 3.
+revenueTax | Numeric $<(Length: 18, dec: 2)>$ | Impuesto a la renta.
+roundOff | Numeric $<(Length: 18, dec: 2)>$ | Diferencia de redondeo.
+startDate | Date | Fecha de inicio del período.
+subTotal | Numeric $<(Length: 18, dec: 2)>$ | Subtotal de la cuota.
+taxes | Numeric $<(Length: 18, dec: 2)>$ | Total de impuestos de la cuota.
+term | Numeric $<(Length: 5)>$ | Plazo de la cuota.
+total | Numeric $<(Length: 18, dec: 2)>$ | Total de la cuota.
+type | Character $<(Length: 1)>$ | Tipo de movimiento (P - Pago, I - Incremento, D - Decremento).
 :::
 
 ::: details SdtsBTTDWInstruction
@@ -301,21 +315,21 @@ Los campos del tipo de dato estructurado SdtsBTTDWInstruction son los siguientes
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Accounted | String $<(length: 1)>$ | Contabilizado.
-AccountingAccountId | Long $<(length: 16)>$ | Identificador de cuenta contable.
-BranchId | Int $<(length: 5)>$ | Identificador de sucursal.
-CompanyId | Short $<(length: 3)>$ | Identificador de empresa.
-CounterpartyId | Int $<(length: 9)>$ | Identificador de contraparte.
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-Id | Short $<(length: 3)>$ | Identificador.
+Accounted | String $<(Length: 1)>$ | Contabilizado.
+AccountingAccountId | Long $<(Length: 16)>$ | Identificador de cuenta contable.
+BranchId | Int $<(Length: 5)>$ | Identificador de sucursal.
+CompanyId | Short $<(Length: 3)>$ | Identificador de empresa.
+CounterpartyId | Int $<(Length: 9)>$ | Identificador de contraparte.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+Id | Short $<(Length: 3)>$ | Identificador.
 Description | String | Descripción.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-ModuleId | Int $<(length: 5)>$ | Identificador de módulo.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+ModuleId | Int $<(Length: 5)>$ | Identificador de módulo.
 MovementGUID | String | GUID del movimiento.
-OperationId | Int $<(length: 9)>$ | Identificador de operación.
-OperationTypeId | Short $<(length: 3)>$ | Identificador del tipo de operación.
-SuboperationId | Int $<(length: 5)>$ | Identificador de suboperación.
-Type | Byte $<(length: 2)>$ | Tipo.
+OperationId | Int $<(Length: 9)>$ | Identificador de operación.
+OperationTypeId | Short $<(Length: 3)>$ | Identificador del tipo de operación.
+SuboperationId | Int $<(Length: 5)>$ | Identificador de suboperación.
+Type | Byte $<(Length: 2)>$ | Tipo.
 :::
 
 ::: details SdtsBTPHWProduct
@@ -327,12 +341,12 @@ Los campos del tipo de dato estructurado SdtsBTPHWProduct son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-CurrencyDescription | String $<(length: 30)>$ | Descripción de la moneda.
-CurrencySign | String $<(length: 4)>$ | Símbolo de la moneda.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-KindDescription | String $<(length: 30)>$ | Descripción del tipo.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+CurrencyDescription | String $<(Length: 30)>$ | Descripción de la moneda.
+CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(length: 36)>$ | GUID del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID del producto.
 :::
 <!-- CIERRA SDT -->

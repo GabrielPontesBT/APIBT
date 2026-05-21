@@ -36,7 +36,7 @@
       "fields": [
         {
           "Nombre": "Bidirectional",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Bidireccional."
         },
         {
@@ -46,17 +46,17 @@
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         },
         {
           "Nombre": "Multilateral",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Multilateral."
         },
         {
           "Nombre": "Type",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de vínculo."
         }
       ]

@@ -22,8 +22,8 @@ title: Delete Occupation
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
-correlative | Byte $<(length: 2)>$ | Correlativo.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
+correlative | Byte $<(Length: 2)>$ | Correlativo.
 
 
 @tab Datos de Salida

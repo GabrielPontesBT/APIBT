@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
@@ -51,12 +51,12 @@
       "fields": [
         {
           "Nombre": "Id",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 60)</strong>",
+          "Tipo": "String <strong>(Length: 60)</strong>",
           "Comentarios": "Descripción."
         },
         {

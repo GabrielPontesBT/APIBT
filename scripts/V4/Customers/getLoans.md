@@ -22,7 +22,7 @@ title: Get Loans
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 cancelledLoans | Boolean | Incluir préstamos cancelados.
 
 @tab Datos de Salida
@@ -139,12 +139,12 @@ Los campos del tipo de dato estructurado SdtsBTPHWProduct son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-CurrencyDescription | String $<(length: 30)>$ | Descripción de la moneda.
-CurrencySign | String $<(length: 4)>$ | Símbolo de la moneda.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-KindDescription | String $<(length: 30)>$ | Descripción del tipo.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+CurrencyDescription | String $<(Length: 30)>$ | Descripción de la moneda.
+CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(length: 36)>$ | GUID del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID del producto.
 :::
 <!-- CIERRA SDT -->

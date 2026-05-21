@@ -22,9 +22,9 @@ title: Get Administrative Levels
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-countryId | Short $<(length: 3)>$ | Identificador de país.
-firstLevel | Int $<(length: 5)>$ | Identificador de primer nivel administrativo.
-secondLevel | Int $<(length: 5)>$ | Identificador de segundo nivel administrativo.
+countryId | Short $<(Length: 3)>$ | Identificador de país.
+firstLevel | Int $<(Length: 5)>$ | Identificador de primer nivel administrativo.
+secondLevel | Int $<(Length: 5)>$ | Identificador de segundo nivel administrativo.
 
 
 @tab Datos de Salida
@@ -157,7 +157,7 @@ Los campos del tipo de dato estructurado SdtsBTCNWAdministrativeLevel son los si
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Int $<(length: 9)>$ | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
+Id | Int $<(Length: 9)>$ | Identificador.
+Description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

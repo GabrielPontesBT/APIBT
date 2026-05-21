@@ -188,9 +188,9 @@ Los campos del tipo de dato estructurado SdtsBTPEWOccupationQuery son los siguie
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-OccupationId | Int $<(length: 5)>$ | Identificador de ocupación.
-OccupationDescription | String $<(length: 30)>$ | Descripción de la ocupación.
+OccupationId | Int $<(Length: 5)>$ | Identificador de ocupación.
+OccupationDescription | String $<(Length: 30)>$ | Descripción de la ocupación.
 OccupationTypeId | Short | Identificador del tipo de ocupación.
-OccupationTypeDescription | String $<(length: 30)>$ | Descripción del tipo de ocupación.
+OccupationTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de ocupación.
 :::
 <!-- CIERRA SDT -->

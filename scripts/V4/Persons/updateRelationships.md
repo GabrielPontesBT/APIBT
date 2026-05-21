@@ -22,7 +22,7 @@ title: Update Relationships
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Body
@@ -131,12 +131,12 @@ Los campos del tipo de dato estructurado SdtsBTPEWRelationship son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(length: 1)>$ | Bidireccional.
+Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
 BondId | Short | Identificador del vínculo.
-BondDescription | String $<(length: 30)>$ | Descripción del vínculo.
-IntegrantName | String $<(length: 70)>$ | Nombre del integrante.
+BondDescription | String $<(Length: 30)>$ | Descripción del vínculo.
+IntegrantName | String $<(Length: 70)>$ | Nombre del integrante.
 JobTitleId | Short | Identificador del cargo.
-Percentage | Double $<(length: 8)>$ | Porcentaje.
-PersonGUID | String $<(length: 36)>$ | GUID de persona.
+Percentage | Double $<(Length: 8)>$ | Porcentaje.
+PersonGUID | String $<(Length: 36)>$ | GUID de persona.
 :::
 <!-- CIERRA SDT -->

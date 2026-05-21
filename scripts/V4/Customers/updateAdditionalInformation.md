@@ -22,7 +22,7 @@ title: Update Additional Information
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 
 @tab Body
@@ -126,8 +126,8 @@ Los campos del tipo de dato estructurado SdtsBTPAWCustomField son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Correlative | Short | Correlativo.
-Id | String $<(length: 30)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
-Value | String $<(length: 250)>$ | Value.
+Id | String $<(Length: 30)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
+Value | String $<(Length: 250)>$ | Value.
 :::
 <!-- CIERRA SDT -->

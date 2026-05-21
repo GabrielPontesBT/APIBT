@@ -22,7 +22,7 @@ title: Get Detailed Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-savingAccountGUID | String $<(length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
+savingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
 
 @tab Datos de Salida
 
@@ -179,47 +179,47 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 AccountStatementPreferences | [SdtsBTSAWAccountStatementPreferences](#sdtsbtsawaccountstatementpreferences) | Preferencias del estado de cuenta.
 Amount | Double | Monto.
-AvailableAmount | Double $<(length: 18)>$ | Monto disponible.
-BankCode | String $<(length: 30)>$ | Código bancario.
-BoardTypeId | Int $<(length: 5)>$ | Identificador del tipo de pizarra.
-BoardTypeDescription | String $<(length: 20)>$ | Descripción del tipo de mesa.
-BranchId | Int $<(length: 5)>$ | Identificador de sucursal.
-BranchDescription | String $<(length: 30)>$ | Descripción de sucursal.
-CancelationDate | Date $<(length: 8)>$ | Fecha de cancelación.
-CancelationOriginId | Byte $<(length: 2)>$ | Identificador del origen de cancelación.
+AvailableAmount | Double $<(Length: 18)>$ | Monto disponible.
+BankCode | String $<(Length: 30)>$ | Código bancario.
+BoardTypeId | Int $<(Length: 5)>$ | Identificador del tipo de pizarra.
+BoardTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de mesa.
+BranchId | Int $<(Length: 5)>$ | Identificador de sucursal.
+BranchDescription | String $<(Length: 30)>$ | Descripción de sucursal.
+CancelationDate | Date $<(Length: 8)>$ | Fecha de cancelación.
+CancelationOriginId | Byte $<(Length: 2)>$ | Identificador del origen de cancelación.
 CancelationOriginDescription | String | Descripción del origen de cancelación.
-CancelationReasonId | Byte $<(length: 2)>$ | Identificador del motivo de cancelación.
+CancelationReasonId | Byte $<(Length: 2)>$ | Identificador del motivo de cancelación.
 CancelationReasonDescription | String | Descripción del motivo de cancelación.
 CancelationUser | String | Usuario de cancelación.
 CancelationUserDescription | String | Descripción del usuario de cancelación.
-CircularityFee | Boolean $<(length: 1)>$ | Comisión de circularidad.
-ClassRateTypeId | Int $<(length: 5)>$ | Identificador del tipo de clase de tasa.
-ClassRateTypeDescription | String $<(length: 20)>$ | Descripción del tipo de clase de tasa.
-CounterpartyId | Int $<(length: 9)>$ | Identificador de contraparte.
-CounterpartyDescription | String $<(length: 70)>$ | Descripción de contraparte.
-CreationDate | Date $<(length: 8)>$ | Fecha de creación.
+CircularityFee | Boolean $<(Length: 1)>$ | Comisión de circularidad.
+ClassRateTypeId | Int $<(Length: 5)>$ | Identificador del tipo de clase de tasa.
+ClassRateTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de clase de tasa.
+CounterpartyId | Int $<(Length: 9)>$ | Identificador de contraparte.
+CounterpartyDescription | String $<(Length: 70)>$ | Descripción de contraparte.
+CreationDate | Date $<(Length: 8)>$ | Fecha de creación.
 CreationUser | String | Usuario de creación.
 CreationUserDescription | String | Descripción del usuario de creación.
 GrouperId | Short | Identificador del agrupador.
 GrouperDescription | String | Descripción del agrupador.
-LowAverageFee | Boolean $<(length: 1)>$ | Comisión de saldo mínimo.
-LowAverageFeeId | Int $<(length: 5)>$ | Identificador de comisión de saldo mínimo.
-LowAverageFeeDescription | String $<(length: 30)>$ | Descripción de comisión de saldo mínimo.
-MovementFee | Boolean $<(length: 1)>$ | Comisión por movimiento.
-OpeningFee | Boolean $<(length: 1)>$ | Comisión de apertura.
+LowAverageFee | Boolean $<(Length: 1)>$ | Comisión de saldo mínimo.
+LowAverageFeeId | Int $<(Length: 5)>$ | Identificador de comisión de saldo mínimo.
+LowAverageFeeDescription | String $<(Length: 30)>$ | Descripción de comisión de saldo mínimo.
+MovementFee | Boolean $<(Length: 1)>$ | Comisión por movimiento.
+OpeningFee | Boolean $<(Length: 1)>$ | Comisión de apertura.
 PaymentMethod | Short | Método de pago.
 PaymentMethodDescription | String | Descripción del método de pago.
-PaymentPeriod | Long $<(length: 18)>$ | Período de pago.
+PaymentPeriod | Long $<(Length: 18)>$ | Período de pago.
 PaymentPeriodDescription | String | Descripción del período de pago.
-PaysInterest | Boolean $<(length: 1)>$ | Paga intereses.
+PaysInterest | Boolean $<(Length: 1)>$ | Paga intereses.
 Product | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Producto.
 ProductChanges | [SdtsBTSAWProductChange](#sdtsbtsawproductchange) | Cambios de producto.
 RateType | Long | Tipo de tasa.
 SavingAccountGUID | String | GUID de cuenta de ahorro.
 StatusChanges | [SdtsBTSAWStatusChange](#sdtsbtsawstatuschange) | Cambios de estado.
-StatusId | Byte $<(length: 2)>$ | Identificador de estado.
+StatusId | Byte $<(Length: 2)>$ | Identificador de estado.
 StatusDescription | String | Descripción del estado.
-SubStatusId | Int $<(length: 5)>$ | Identificador de subestado.
+SubStatusId | Int $<(Length: 5)>$ | Identificador de subestado.
 SubStatusDescription | String | Descripción del subestado.
 :::
 
@@ -232,18 +232,18 @@ Los campos del tipo de dato estructurado SdtsBTSAWAccountStatementPreferences so
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AccountingResumeFrequency | Long $<(length: 18)>$ | Frecuencia de resumen contable.
+AccountingResumeFrequency | Long $<(Length: 18)>$ | Frecuencia de resumen contable.
 AccountingResumeFrequencyDescription | String | Descripción de la frecuencia de resumen contable.
-AddressShipmentMethodId | Byte $<(length: 2)>$ | Identificador del método de envío a dirección.
+AddressShipmentMethodId | Byte $<(Length: 2)>$ | Identificador del método de envío a dirección.
 AddressShipmentMethodDescription | String | Descripción del método de envío a dirección.
-AvoidsAccountingResume | Boolean $<(length: 1)>$ | Evita resumen contable.
-BranchShipmentMethodId | Int $<(length: 5)>$ | Identificador del método de envío a sucursal.
+AvoidsAccountingResume | Boolean $<(Length: 1)>$ | Evita resumen contable.
+BranchShipmentMethodId | Int $<(Length: 5)>$ | Identificador del método de envío a sucursal.
 BranchShipmentMethodDescription | String | Descripción del método de envío a sucursal.
-EmailShipmentMethodId | Byte $<(length: 2)>$ | Identificador del método de envío por correo.
+EmailShipmentMethodId | Byte $<(Length: 2)>$ | Identificador del método de envío por correo.
 EmailShipmentMethodDescription | String | Descripción del método de envío por correo.
-RegulatorResumeFrequency | Long $<(length: 18)>$ | Frecuencia de resumen regulatorio.
+RegulatorResumeFrequency | Long $<(Length: 18)>$ | Frecuencia de resumen regulatorio.
 RegulatorResumeFrequencyDescription | String | Descripción de la frecuencia de resumen regulatorio.
-ShipmentMethod | Long $<(length: 18)>$ | Método de envío.
+ShipmentMethod | Long $<(Length: 18)>$ | Método de envío.
 ShipmentMethodDescription | String | Descripción del método de envío.
 :::
 
@@ -270,13 +270,13 @@ Los campos del tipo de dato estructurado SdtsBTPHWProduct son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-CurrencyDescription | String $<(length: 30)>$ | Descripción de la moneda.
-CurrencySign | String $<(length: 4)>$ | Símbolo de la moneda.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-KindDescription | String $<(length: 30)>$ | Descripción del tipo.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+CurrencyDescription | String $<(Length: 30)>$ | Descripción de la moneda.
+CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(length: 36)>$ | GUID del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID del producto.
 :::
 
 ::: details SdtsBTSAWProductChange
@@ -289,14 +289,14 @@ Los campos del tipo de dato estructurado SdtsBTSAWProductChange son los siguient
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Correlative | Short | Correlativo.
-Event | Int $<(length: 5)>$ | Evento.
-EventDate | Date $<(length: 8)>$ | Fecha del evento.
+Event | Int $<(Length: 5)>$ | Evento.
+EventDate | Date $<(Length: 8)>$ | Fecha del evento.
 EventUser | String | Usuario del evento.
-EventUserDescription | String $<(length: 30)>$ | Descripción del usuario del evento.
+EventUserDescription | String $<(Length: 30)>$ | Descripción del usuario del evento.
 MovementGUID | String | GUID del movimiento.
-PreviousProduct | Long $<(length: 18)>$ | Producto anterior.
+PreviousProduct | Long $<(Length: 18)>$ | Producto anterior.
 PreviousProductDescription | String | Descripción del producto anterior.
-ValidFrom | Date $<(length: 8)>$ | Válido desde.
+ValidFrom | Date $<(Length: 8)>$ | Válido desde.
 :::
 
 ::: details SdtsBTSAWStatusChange

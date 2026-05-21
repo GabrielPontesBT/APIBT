@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -99,7 +99,7 @@
       "fields": [
         {
           "Nombre": "Bidirectional",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Bidireccional."
         },
         {
@@ -109,12 +109,12 @@
         },
         {
           "Nombre": "BondDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del vínculo."
         },
         {
           "Nombre": "IntegrantName",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Nombre del integrante."
         },
         {
@@ -124,12 +124,12 @@
         },
         {
           "Nombre": "Percentage",
-          "Tipo": "Double <strong>(length: 8)</strong>",
+          "Tipo": "Double <strong>(Length: 8)</strong>",
           "Comentarios": "Porcentaje."
         },
         {
           "Nombre": "PersonGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID de persona."
         }
       ]

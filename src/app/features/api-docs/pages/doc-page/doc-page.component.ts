@@ -59,7 +59,7 @@ export class DocPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.isV4$ = this.route.url.pipe(
-      map(segments => segments[0]?.path === 'v4'),
+      map(segments => segments[0]?.path === 'v4' || segments[0]?.path === 'bpay'),
       distinctUntilChanged()
     );
 

@@ -36,7 +36,7 @@
       "fields": [
         {
           "Nombre": "Id",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador."
         },
         {

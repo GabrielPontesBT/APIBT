@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -84,17 +84,17 @@
         },
         {
           "Nombre": "Id",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción."
         },
         {
           "Nombre": "Value",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Value."
         }
       ]

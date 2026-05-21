@@ -12,17 +12,17 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     },
     {
       "Nombre": "bondId",
-      "Tipo": "Short <strong>(length: 4)</strong>",
+      "Tipo": "Short <strong>(Length: 4)</strong>",
       "Comentarios": "Identificador de relacion."
     },
     {
       "Nombre": "vinculatedPersonGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona vinculada."
     }
   ],

@@ -36,12 +36,12 @@
       "fields": [
         {
           "Nombre": "Id",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         }
       ]

@@ -1,0 +1,116 @@
+{
+  "slug": "saving-accounts/getcustomersavingsaccounts",
+  "pageTitle": "Get Customer Savings Accounts",
+  "description": "Método para obtener un listado de las cuentas de ahorro de una contraparte.",
+  "pubName": "PublicSavingAccounts.getCustomerSavingsAccounts",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0007",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "savingsAccounts",
+      "Tipo": "<a href=\"#sdtsbtsaproduct\">SdtsBTSAProduct</a>",
+      "Comentarios": "Listado de cuentas de ahorro."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "14001010002",
+      "Descripción": "Debe ingresar el GUID de la contraparte."
+    },
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"9CAA9F8022504584A5E8DED9\"\n  },\n  \"counterpartyGUID\": \"8ac8ff85-69bc-406b-92fd-c48a674283df0\"\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"GPONTES\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15BE97FEFB54603E9455AF48\"\n  },\n  \"savingsAccounts\": {\n    \"savingsAccount\": [\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 19840.9,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"971a3810-9097-4f7c-a220-1c160691d2d2\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA SUELDO\",\n      },\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 47000.0,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"647740db-fe95-4b6a-8d12-abc55d34bcb8\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA PARA AHORRAR\",\n      },\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 54039.27,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"9037bb24-f99a-42e1-93cf-a42bb5af3f37\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA GASTOS\",\n      }\n    ]\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:00:41\",\n    \"Numero\": 13495841,\n    \"Servicio\": \"PublicSavingAccounts.getCustomerSavingsAccounts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTSAProduct",
+      "fields": [
+        {
+          "Nombre": "availableBalance",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Saldo disponible."
+        },
+        {
+          "Nombre": "balance",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Saldo."
+        },
+        {
+          "Nombre": "currencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "currencyDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de moneda."
+        },
+        {
+          "Nombre": "currencySign",
+          "Tipo": "String <strong>(Length: 5)</strong>",
+          "Comentarios": "Signo de moneda."
+        },
+        {
+          "Nombre": "kindId",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
+          "Comentarios": "Identificador de papel."
+        },
+        {
+          "Nombre": "kindDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de papel."
+        },
+        {
+          "Nombre": "kindSign",
+          "Tipo": "String <strong>(Length: 5)</strong>",
+          "Comentarios": "Signo de papel."
+        },
+        {
+          "Nombre": "savingsAccountGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+        },
+        {
+          "Nombre": "statusId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "statusDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de estado."
+        },
+        {
+          "Nombre": "subAccountDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Nombre de subcuenta."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

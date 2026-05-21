@@ -36,12 +36,12 @@
       "fields": [
         {
           "Nombre": "id",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de origen de cierre."
         },
         {
           "Nombre": "description",
-          "Tipo": "String <strong>(length: 40)</strong>",
+          "Tipo": "String <strong>(Length: 40)</strong>",
           "Comentarios": "Descripción."
         }
       ]

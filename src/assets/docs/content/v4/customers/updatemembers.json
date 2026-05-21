@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
@@ -104,12 +104,12 @@
         },
         {
           "Nombre": "CountryDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del país."
         },
         {
           "Nombre": "DocumentNumber",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Número de documento."
         },
         {
@@ -119,12 +119,12 @@
         },
         {
           "Nombre": "DocumentTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de documento."
         },
         {
           "Nombre": "OwnershipTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de propiedad."
         },
         {
@@ -134,17 +134,17 @@
         },
         {
           "Nombre": "PersonGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID de persona."
         },
         {
           "Nombre": "PersonName",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Nombre de persona."
         },
         {
           "Nombre": "PersonType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de persona."
         }
       ]

@@ -12,19 +12,19 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
   "bodyData": [
     {
       "Nombre": "statusId",
-      "Tipo": "Byte <strong>(length: 2)</strong>",
+      "Tipo": "Byte <strong>(Length: 2)</strong>",
       "Comentarios": "Identificador de estado."
     },
     {
       "Nombre": "reasonForStatusChangeId",
-      "Tipo": "Byte <strong>(length: 2)</strong>",
+      "Tipo": "Byte <strong>(Length: 2)</strong>",
       "Comentarios": "Identificador de cambio de estado."
     },
     {

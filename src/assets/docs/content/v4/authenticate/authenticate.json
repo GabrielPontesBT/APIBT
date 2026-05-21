@@ -1,10 +1,10 @@
 {
-  "slug": "authenticate/autenticacion",
+  "slug": "authenticate/authenticate",
   "pageTitle": "Execute",
-  "description": "Previo al inicio de la ejecución de los servicios de BTS se debe obtener un token válido que luego será utilizado en la ejecución de los servicios.\n\nPara obtener un token valido se debe invocar el servicio Authenticate método Execute.\n\nSe lo invoca pasándole como parámetro de entrada UserId y UserPassword válido con el método de autenticación indicado en la parametrización (LDAP o AS400).",
+  "description": "Previo al inicio de la ejecución de los servicios de BTS se debe obtener un token válido que luego será utilizado en la ejecución de los servicios.\n\nPara obtener un token valido se debe invocar el servicio Authenticate método Execute.\n\nSe lo invoca pasándole como parámetro de entrada UserId y UserPassword válido con el método de autenticación indicado en la parametrización.",
   "pubName": "Authenticate.Execute",
   "modulo": "",
-  "programa": "PBTIAUTHENTICATE",
+  "programa": "ABTIAUTHENTICATE",
   "scope": "Global",
   "hasBackendConfig": false,
   "backendText": "",
@@ -38,7 +38,7 @@
   "errorsNote": "El mensaje de error puede variar ya que es devuelto por el programa que valida usuario/contraseña, y dicho programa es parametrizable (se puede utilizar el que viene por defecto u otro).",
   "examples": {
     "invocation": {
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_Authenticate_v1?Execute' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"UserId\": \"BANTOTAL\",\r\n  \"UserPassword\": \"z0na#1357\"\r\n}'",
+      "json": "{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"UserId\": \"BANTOTAL\",\r\n\t\"UserPassword\": \"z0na#1357\"\r\n}'",
       "xml": ""
     },
     "response": {

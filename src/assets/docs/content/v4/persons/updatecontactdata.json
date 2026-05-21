@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -107,92 +107,92 @@
       "fields": [
         {
           "Nombre": "AddressCorrelative",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Correlativo de dirección."
         },
         {
           "Nombre": "AddressId",
-          "Tipo": "String <strong>(length: 140)</strong>",
+          "Tipo": "String <strong>(Length: 140)</strong>",
           "Comentarios": "Identificador de dirección."
         },
         {
           "Nombre": "AssociatedToAnAddress",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Asociado a una dirección."
         },
         {
           "Nombre": "Comment",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Comentario."
         },
         {
           "Nombre": "ContactTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de contacto."
         },
         {
           "Nombre": "ContactTypeDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción del tipo de contacto."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "Enabled",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Habilitado."
         },
         {
           "Nombre": "EndTimeRange1",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Fin del rango horario 1."
         },
         {
           "Nombre": "EndTimeRange2",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Fin del rango horario 2."
         },
         {
           "Nombre": "Priority",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Prioridad."
         },
         {
           "Nombre": "ReceivesMails",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Recibe correos."
         },
         {
           "Nombre": "StartTimeRange1",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Inicio del rango horario 1."
         },
         {
           "Nombre": "StartTimeRange2",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Inicio del rango horario 2."
         },
         {
           "Nombre": "TelephoneCompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador de compañía telefónica."
         },
         {
           "Nombre": "TelephoneCompanyDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción de la compañía telefónica."
         },
         {
           "Nombre": "Text",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Texto."
         },
         {
           "Nombre": "Validated",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Validado."
         }
       ]

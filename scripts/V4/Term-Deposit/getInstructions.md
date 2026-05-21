@@ -22,7 +22,7 @@ title: Get Instructions
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-termDepositGUID | String $<(length: 36)>$ | GUID (identificador único global) del depósito a plazo.
+termDepositGUID | String $<(Length: 36)>$ | GUID (identificador único global) del depósito a plazo.
 
 @tab Body
 
@@ -40,8 +40,15 @@ instructions | [SdtsBTTDWInstruction](#sdtsbttdwinstruction) | Listado de instru
 
 Código | Descripción
 :--------- | :-----------
-Completar manualmente | Completar manualmente
-
+| 90031 | El código contable no existe |
+| 90120 | Cuenta contable no tiene tipo |
+| 90121 | Cuenta contable no puede ser 0 |
+| 90132 | No existe un asiento relacionado a los datos ingresados |
+| 90142 | No existe registro de saldo |
+| 90161 | La fecha de contabilización del asiento a anular es mayor a la fecha de apertura |
+| 110005 | El prefijo del identificador del atributo debe indicar un tipo de valor válido |
+| 180006 | No existe registro pagos para la operación ingresada |
+| 180069 | La fecha de consulta es menor a la fecha valor de la operación |
 :::
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -129,20 +136,20 @@ Los campos del tipo de dato estructurado SdtsBTTDWInstruction son los siguientes
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Accounted | String $<(length: 1)>$ | Contabilizado.
-AccountingAccountId | Long $<(length: 16)>$ | Identificador de cuenta contable.
-BranchId | Int $<(length: 5)>$ | Identificador de sucursal.
-CompanyId | Short $<(length: 3)>$ | Identificador de empresa.
-CounterpartyId | Int $<(length: 9)>$ | Identificador de contraparte.
-CurrencyId | Short $<(length: 4)>$ | Identificador de moneda.
-Id | Short $<(length: 3)>$ | Identificador.
+Accounted | String $<(Length: 1)>$ | Contabilizado.
+AccountingAccountId | Long $<(Length: 16)>$ | Identificador de cuenta contable.
+BranchId | Int $<(Length: 5)>$ | Identificador de sucursal.
+CompanyId | Short $<(Length: 3)>$ | Identificador de empresa.
+CounterpartyId | Int $<(Length: 9)>$ | Identificador de contraparte.
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+Id | Short $<(Length: 3)>$ | Identificador.
 Description | String | Descripción.
-KindId | Int $<(length: 6)>$ | Identificador del tipo.
-ModuleId | Int $<(length: 5)>$ | Identificador de módulo.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+ModuleId | Int $<(Length: 5)>$ | Identificador de módulo.
 MovementGUID | String | GUID del movimiento.
-OperationId | Int $<(length: 9)>$ | Identificador de operación.
-OperationTypeId | Short $<(length: 3)>$ | Identificador del tipo de operación.
-SuboperationId | Int $<(length: 5)>$ | Identificador de suboperación.
-Type | Byte $<(length: 2)>$ | Tipo.
+OperationId | Int $<(Length: 9)>$ | Identificador de operación.
+OperationTypeId | Short $<(Length: 3)>$ | Identificador del tipo de operación.
+SuboperationId | Int $<(Length: 5)>$ | Identificador de suboperación.
+Type | Byte $<(Length: 2)>$ | Tipo.
 :::
 <!-- CIERRA SDT -->

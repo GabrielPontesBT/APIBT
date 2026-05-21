@@ -41,7 +41,7 @@
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         }
       ]

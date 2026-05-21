@@ -12,12 +12,12 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     },
     {
       "Nombre": "id",
-      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Identificador de texto."
     }
   ],

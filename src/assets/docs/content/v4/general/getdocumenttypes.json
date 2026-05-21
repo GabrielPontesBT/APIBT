@@ -41,17 +41,17 @@
       "fields": [
         {
           "Nombre": "AppliesToFI",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Aplica a institución financiera."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         },
         {
           "Nombre": "Format",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Formato."
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "Nombre": "MainDocument",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Documento principal."
         },
         {
@@ -71,17 +71,17 @@
         },
         {
           "Nombre": "MinLength",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Longitud mínima."
         },
         {
           "Nombre": "PersonType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de persona."
         },
         {
           "Nombre": "ShortDescription",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Descripción corta."
         }
       ]

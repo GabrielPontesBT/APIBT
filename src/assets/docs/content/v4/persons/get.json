@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -61,52 +61,52 @@
         },
         {
           "Nombre": "BirthCountryDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del país de nacimiento."
         },
         {
           "Nombre": "BirthDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de nacimiento."
         },
         {
           "Nombre": "BirthPlace",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceFirstLevelId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del primer nivel del lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceFirstLevelDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del primer nivel del lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceSecondLevelId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del segundo nivel del lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceSecondLevelDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del segundo nivel del lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceThirdLevelId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador del tercer nivel del lugar de nacimiento."
         },
         {
           "Nombre": "BirthPlaceThirdLevelDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tercer nivel del lugar de nacimiento."
         },
         {
           "Nombre": "ChildrenNumber",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Número de hijos."
         },
         {
@@ -116,7 +116,7 @@
         },
         {
           "Nombre": "CitizenshipCountryDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del país de ciudadanía."
         },
         {
@@ -131,17 +131,17 @@
         },
         {
           "Nombre": "CountryDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del país."
         },
         {
           "Nombre": "CustomerAcquisitionSource",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Fuente de adquisición del cliente."
         },
         {
           "Nombre": "CustomerAcquisitionSourceDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la fuente de adquisición del cliente."
         },
         {
@@ -151,22 +151,22 @@
         },
         {
           "Nombre": "DateOfDeath",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de fallecimiento."
         },
         {
           "Nombre": "Deceased",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Fallecido."
         },
         {
           "Nombre": "DependentsNumber",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Número de dependientes."
         },
         {
           "Nombre": "DocumentNumber",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Número de documento."
         },
         {
@@ -176,27 +176,27 @@
         },
         {
           "Nombre": "DocumentTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de documento."
         },
         {
           "Nombre": "ExpirationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de vencimiento."
         },
         {
           "Nombre": "FirstLastname",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Primer apellido."
         },
         {
           "Nombre": "FirstName",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Primer nombre."
         },
         {
           "Nombre": "Gender",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Género."
         },
         {
@@ -206,22 +206,22 @@
         },
         {
           "Nombre": "InstructionLevelDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del nivel de instrucción."
         },
         {
           "Nombre": "LegalCitizen",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Ciudadano legal."
         },
         {
           "Nombre": "MaritalStatusId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del estado civil."
         },
         {
           "Nombre": "MaritalStatusDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del estado civil."
         },
         {
@@ -231,7 +231,7 @@
         },
         {
           "Nombre": "PEP",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "PEP (Persona Expuesta Políticamente)."
         },
         {
@@ -246,32 +246,32 @@
         },
         {
           "Nombre": "RequiresSpouse",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Requiere cónyuge."
         },
         {
           "Nombre": "SecondLastname",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Segundo apellido."
         },
         {
           "Nombre": "SecondName",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Segundo nombre."
         },
         {
           "Nombre": "Worth",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Patrimonio."
         },
         {
           "Nombre": "WorthStatus",
-          "Tipo": "Boolean <strong>(length: 2)</strong>",
+          "Tipo": "Boolean <strong>(Length: 2)</strong>",
           "Comentarios": "Estado patrimonial."
         },
         {
           "Nombre": "WorthSubmissionDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de presentación del patrimonio."
         }
       ]
@@ -281,27 +281,27 @@
       "fields": [
         {
           "Nombre": "Address",
-          "Tipo": "String <strong>(length: 140)</strong>",
+          "Tipo": "String <strong>(Length: 140)</strong>",
           "Comentarios": "Dirección."
         },
         {
           "Nombre": "AddressCorrelative",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Correlativo de dirección."
         },
         {
           "Nombre": "AddressTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de dirección."
         },
         {
           "Nombre": "AddressTypeDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tipo de dirección."
         },
         {
           "Nombre": "CityId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de la ciudad."
         },
         {
@@ -311,12 +311,12 @@
         },
         {
           "Nombre": "ColonyId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de la colonia."
         },
         {
           "Nombre": "CountryId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del país."
         },
         {
@@ -326,7 +326,7 @@
         },
         {
           "Nombre": "DepartmentId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del departamento."
         },
         {
@@ -336,7 +336,7 @@
         },
         {
           "Nombre": "DistrictId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador del distrito."
         },
         {
@@ -346,12 +346,12 @@
         },
         {
           "Nombre": "GeographicalUbication",
-          "Tipo": "String <strong>(length: 6)</strong>",
+          "Tipo": "String <strong>(Length: 6)</strong>",
           "Comentarios": "Ubicación geográfica."
         },
         {
           "Nombre": "HousingTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de vivienda."
         },
         {
@@ -361,107 +361,107 @@
         },
         {
           "Nombre": "IsABusiness",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "¿Es un negocio?."
         },
         {
           "Nombre": "Latitude",
-          "Tipo": "Double <strong>(length: 10)</strong>",
+          "Tipo": "Double <strong>(Length: 10)</strong>",
           "Comentarios": "Latitud."
         },
         {
           "Nombre": "Level1Data",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Datos del nivel 1."
         },
         {
           "Nombre": "Level1Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del nivel 1."
         },
         {
           "Nombre": "Level1Description",
-          "Tipo": "String <strong>(length: 35)</strong>",
+          "Tipo": "String <strong>(Length: 35)</strong>",
           "Comentarios": "Descripción del nivel 1."
         },
         {
           "Nombre": "Level2Data",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Datos del nivel 2."
         },
         {
           "Nombre": "Level2Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del nivel 2."
         },
         {
           "Nombre": "Level2Description",
-          "Tipo": "String <strong>(length: 35)</strong>",
+          "Tipo": "String <strong>(Length: 35)</strong>",
           "Comentarios": "Descripción del nivel 2."
         },
         {
           "Nombre": "Level3Data",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Datos del nivel 3."
         },
         {
           "Nombre": "Level3Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del nivel 3."
         },
         {
           "Nombre": "Level3Description",
-          "Tipo": "String <strong>(length: 35)</strong>",
+          "Tipo": "String <strong>(Length: 35)</strong>",
           "Comentarios": "Descripción del nivel 3."
         },
         {
           "Nombre": "Level4Data",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Datos del nivel 4."
         },
         {
           "Nombre": "Level4Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del nivel 4."
         },
         {
           "Nombre": "Level4Description",
-          "Tipo": "String <strong>(length: 35)</strong>",
+          "Tipo": "String <strong>(Length: 35)</strong>",
           "Comentarios": "Descripción del nivel 4."
         },
         {
           "Nombre": "Longitude",
-          "Tipo": "Double <strong>(length: 10)</strong>",
+          "Tipo": "Double <strong>(Length: 10)</strong>",
           "Comentarios": "Longitud."
         },
         {
           "Nombre": "MainAddress",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Dirección principal."
         },
         {
           "Nombre": "PostalCode",
-          "Tipo": "String <strong>(length: 8)</strong>",
+          "Tipo": "String <strong>(Length: 8)</strong>",
           "Comentarios": "Código postal."
         },
         {
           "Nombre": "References",
-          "Tipo": "String <strong>(length: 140)</strong>",
+          "Tipo": "String <strong>(Length: 140)</strong>",
           "Comentarios": "Referencias."
         },
         {
           "Nombre": "SettlementType",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Tipo de asentamiento."
         },
         {
           "Nombre": "SinceDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha desde."
         },
         {
           "Nombre": "StatusId",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Identificador de estado."
         }
       ]
@@ -471,92 +471,92 @@
       "fields": [
         {
           "Nombre": "AddressCorrelative",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Correlativo de dirección."
         },
         {
           "Nombre": "AddressId",
-          "Tipo": "String <strong>(length: 140)</strong>",
+          "Tipo": "String <strong>(Length: 140)</strong>",
           "Comentarios": "Identificador de dirección."
         },
         {
           "Nombre": "AssociatedToAnAddress",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Asociado a una dirección."
         },
         {
           "Nombre": "Comment",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Comentario."
         },
         {
           "Nombre": "ContactTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de contacto."
         },
         {
           "Nombre": "ContactTypeDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción del tipo de contacto."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "Enabled",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Habilitado."
         },
         {
           "Nombre": "EndTimeRange1",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Fin del rango horario 1."
         },
         {
           "Nombre": "EndTimeRange2",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Fin del rango horario 2."
         },
         {
           "Nombre": "Priority",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Prioridad."
         },
         {
           "Nombre": "ReceivesMails",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Recibe correos."
         },
         {
           "Nombre": "StartTimeRange1",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Inicio del rango horario 1."
         },
         {
           "Nombre": "StartTimeRange2",
-          "Tipo": "String <strong>(length: 5)</strong>",
+          "Tipo": "String <strong>(Length: 5)</strong>",
           "Comentarios": "Inicio del rango horario 2."
         },
         {
           "Nombre": "TelephoneCompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador de compañía telefónica."
         },
         {
           "Nombre": "TelephoneCompanyDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción de la compañía telefónica."
         },
         {
           "Nombre": "Text",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Texto."
         },
         {
           "Nombre": "Validated",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Validado."
         }
       ]
@@ -571,17 +571,17 @@
         },
         {
           "Nombre": "Id",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción."
         },
         {
           "Nombre": "Value",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Value."
         }
       ]
@@ -591,97 +591,97 @@
       "fields": [
         {
           "Nombre": "CompanyDocument",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Documento de empresa."
         },
         {
           "Nombre": "CompanyName",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Nombre de empresa."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "EconomicActivityId",
-          "Tipo": "Long <strong>(length: 11)</strong>",
+          "Tipo": "Long <strong>(Length: 11)</strong>",
           "Comentarios": "Identificador de actividad económica."
         },
         {
           "Nombre": "EconomicActivityDescription",
-          "Tipo": "String <strong>(length: 80)</strong>",
+          "Tipo": "String <strong>(Length: 80)</strong>",
           "Comentarios": "Descripción de actividad económica."
         },
         {
           "Nombre": "EconomicActivityTypeId",
-          "Tipo": "Long <strong>(length: 15)</strong>",
+          "Tipo": "Long <strong>(Length: 15)</strong>",
           "Comentarios": "Identificador del tipo de actividad económica."
         },
         {
           "Nombre": "EconomicActivityTypeDescription",
-          "Tipo": "String <strong>(length: 60)</strong>",
+          "Tipo": "String <strong>(Length: 60)</strong>",
           "Comentarios": "Descripción del tipo de actividad económica."
         },
         {
           "Nombre": "EndDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de fin."
         },
         {
           "Nombre": "EstablishmentTypeId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo de establecimiento."
         },
         {
           "Nombre": "EstablishmentTypeDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción del tipo de establecimiento."
         },
         {
           "Nombre": "Exports",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Exporta."
         },
         {
           "Nombre": "Imports",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Importa."
         },
         {
           "Nombre": "Income",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Ingresos."
         },
         {
           "Nombre": "JobTitleId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador del cargo."
         },
         {
           "Nombre": "JobTitleDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del cargo."
         },
         {
           "Nombre": "MainOccupation",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Ocupación principal."
         },
         {
           "Nombre": "Multilateral",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Multilateral."
         },
         {
           "Nombre": "OccupationId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de ocupación."
         },
         {
           "Nombre": "OccupationDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la ocupación."
         },
         {
@@ -691,12 +691,12 @@
         },
         {
           "Nombre": "OccupationTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de ocupación."
         },
         {
           "Nombre": "StartDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de inicio."
         }
       ]
@@ -706,57 +706,57 @@
       "fields": [
         {
           "Nombre": "Address1",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 1."
         },
         {
           "Nombre": "Address2",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 2."
         },
         {
           "Nombre": "Address3",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 3."
         },
         {
           "Nombre": "BondOrJobTitle",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Vínculo o cargo."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "EnterpriceJobTitleDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del cargo en la empresa."
         },
         {
           "Nombre": "EnterpriseJobTitleId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador del cargo empresarial."
         },
         {
           "Nombre": "Name",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Nombre."
         },
         {
           "Nombre": "PersonType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de persona."
         },
         {
           "Nombre": "ReferenceTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de referencia."
         },
         {
           "Nombre": "ReferenceTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de referencia."
         },
         {
@@ -766,12 +766,12 @@
         },
         {
           "Nombre": "RelationshipDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la relación."
         },
         {
           "Nombre": "Telephone",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Teléfono."
         }
       ]
@@ -781,7 +781,7 @@
       "fields": [
         {
           "Nombre": "Bidirectional",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Bidireccional."
         },
         {
@@ -791,12 +791,12 @@
         },
         {
           "Nombre": "BondDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del vínculo."
         },
         {
           "Nombre": "IntegrantName",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Nombre del integrante."
         },
         {
@@ -806,12 +806,12 @@
         },
         {
           "Nombre": "Percentage",
-          "Tipo": "Double <strong>(length: 8)</strong>",
+          "Tipo": "Double <strong>(Length: 8)</strong>",
           "Comentarios": "Porcentaje."
         },
         {
           "Nombre": "PersonGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID de persona."
         }
       ]

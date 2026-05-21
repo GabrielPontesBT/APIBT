@@ -22,7 +22,7 @@ title: Get Texts
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Datos de Salida
@@ -107,8 +107,8 @@ Los campos del tipo de dato estructurado SdtsBTPAWText son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Int $<(length: 5)>$ | Identificador.
-Description | String $<(length: 60)>$ | Descripción.
+Id | Int $<(Length: 5)>$ | Identificador.
+Description | String $<(Length: 60)>$ | Descripción.
 Text | String | Texto.
 :::
 <!-- CIERRA SDT -->

@@ -127,7 +127,7 @@ Los campos del tipo de dato estructurado SdtsBTPEWHousingType son los siguientes
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Byte $<(length: 2)>$ | Identificador.
+Id | Byte $<(Length: 2)>$ | Identificador.
 Description | String | Descripción.
 :::
 <!-- CIERRA SDT -->

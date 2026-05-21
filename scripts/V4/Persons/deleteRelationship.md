@@ -22,9 +22,9 @@ title: Delete Relationship
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
-bondId | Short $<(length: 4)>$ | Identificador de relacion.
-vinculatedPersonGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona vinculada.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
+bondId | Short $<(Length: 4)>$ | Identificador de relacion.
+vinculatedPersonGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona vinculada.
 
 @tab Datos de Salida
 

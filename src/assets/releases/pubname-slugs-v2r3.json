@@ -1,5 +1,12 @@
 [
   {
+    "key": "Authenticate.Execute",
+    "path": [
+      "autenticacion",
+      "autenticacion"
+    ]
+  },
+  {
     "key": "BTAhorroProgramado.ActualizarDocumentoDigital",
     "path": [
       "ahorro-programado",

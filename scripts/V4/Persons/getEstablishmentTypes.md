@@ -119,7 +119,7 @@ Los campos del tipo de dato estructurado SdtsBTPEWEstablishmentType son los sigu
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Int $<(length: 6)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
+Id | Int $<(Length: 6)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

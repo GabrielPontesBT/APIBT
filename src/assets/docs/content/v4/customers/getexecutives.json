@@ -12,17 +12,17 @@
   "inputData": [
     {
       "Nombre": "offset",
-      "Tipo": "Long <strong>(length: 10)</strong>",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
       "Comentarios": "Número de registros a omitir desde el inicio del resultado."
     },
     {
       "Nombre": "limit",
-      "Tipo": "Long <strong>(length: 10)</strong>",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
       "Comentarios": "Cantidad máxima de registros a retornar en una sola respuesta."
     },
     {
       "Nombre": "executiveDescriptionFilter",
-      "Tipo": "String <strong>(length: 30)</strong>",
+      "Tipo": "String <strong>(Length: 30)</strong>",
       "Comentarios": "Filtro de ejecutivo por descripción."
     }
   ],
@@ -57,12 +57,12 @@
       "fields": [
         {
           "Nombre": "id",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de ejecutivo."
         },
         {
           "Nombre": "description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         }
       ]

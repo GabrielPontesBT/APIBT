@@ -364,7 +364,7 @@ Los campos del tipo de dato estructurado SdtsBTPEWActivityType son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-ActivityTypeId | Long $<(length: 15)>$ | Identificador del tipo de actividad.
-ActivityTypeDescription | String $<(length: 60)>$ | Descripción del tipo de actividad.
+ActivityTypeId | Long $<(Length: 15)>$ | Identificador del tipo de actividad.
+ActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tipo de actividad.
 :::
 <!-- CIERRA SDT -->

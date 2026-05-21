@@ -219,8 +219,8 @@ Los campos del tipo de dato estructurado SdtsBTPEWJobTitle son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Short $<(length: 4)>$ | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
-Multilateral | Boolean $<(length: 1)>$ | Multilateral.
+Id | Short $<(Length: 4)>$ | Identificador.
+Description | String $<(Length: 30)>$ | Descripción.
+Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
 :::
 <!-- CIERRA SDT -->

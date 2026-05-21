@@ -32,7 +32,7 @@ naturalPerson | [SdtsBTPEWNaturalPerson](#sdtsbtpewnaturalperson) | Datos de per
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 @tab Errores
 
@@ -343,49 +343,49 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Addresses | [SdtsBTPEWAddress](#sdtsbtpewaddress) | Direcciones.
 BirthCountryId | Short | Identificador del país de nacimiento.
-BirthCountryDescription | String $<(length: 30)>$ | Descripción del país de nacimiento.
-BirthDate | Date $<(length: 8)>$ | Fecha de nacimiento.
-BirthPlace | String $<(length: 20)>$ | Lugar de nacimiento.
-BirthPlaceFirstLevelId | Int $<(length: 5)>$ | Identificador del primer nivel del lugar de nacimiento.
-BirthPlaceFirstLevelDescription | String $<(length: 20)>$ | Descripción del primer nivel del lugar de nacimiento.
-BirthPlaceSecondLevelId | Int $<(length: 5)>$ | Identificador del segundo nivel del lugar de nacimiento.
-BirthPlaceSecondLevelDescription | String $<(length: 20)>$ | Descripción del segundo nivel del lugar de nacimiento.
-BirthPlaceThirdLevelId | Int $<(length: 9)>$ | Identificador del tercer nivel del lugar de nacimiento.
-BirthPlaceThirdLevelDescription | String $<(length: 20)>$ | Descripción del tercer nivel del lugar de nacimiento.
-ChildrenNumber | Short $<(length: 3)>$ | Número de hijos.
+BirthCountryDescription | String $<(Length: 30)>$ | Descripción del país de nacimiento.
+BirthDate | Date $<(Length: 8)>$ | Fecha de nacimiento.
+BirthPlace | String $<(Length: 20)>$ | Lugar de nacimiento.
+BirthPlaceFirstLevelId | Int $<(Length: 5)>$ | Identificador del primer nivel del lugar de nacimiento.
+BirthPlaceFirstLevelDescription | String $<(Length: 20)>$ | Descripción del primer nivel del lugar de nacimiento.
+BirthPlaceSecondLevelId | Int $<(Length: 5)>$ | Identificador del segundo nivel del lugar de nacimiento.
+BirthPlaceSecondLevelDescription | String $<(Length: 20)>$ | Descripción del segundo nivel del lugar de nacimiento.
+BirthPlaceThirdLevelId | Int $<(Length: 9)>$ | Identificador del tercer nivel del lugar de nacimiento.
+BirthPlaceThirdLevelDescription | String $<(Length: 20)>$ | Descripción del tercer nivel del lugar de nacimiento.
+ChildrenNumber | Short $<(Length: 3)>$ | Número de hijos.
 CitizenshipCountryId | Short | Identificador del país de ciudadanía.
-CitizenshipCountryDescription | String $<(length: 30)>$ | Descripción del país de ciudadanía.
+CitizenshipCountryDescription | String $<(Length: 30)>$ | Descripción del país de ciudadanía.
 Contacts | [SdtsBTPEWContact](#sdtsbtpewcontact) | Contactos.
 CountryId | Short | Identificador del país.
-CountryDescription | String $<(length: 30)>$ | Descripción del país.
-CustomerAcquisitionSource | Int $<(length: 5)>$ | Fuente de adquisición del cliente.
-CustomerAcquisitionSourceDescription | String $<(length: 30)>$ | Descripción de la fuente de adquisición del cliente.
+CountryDescription | String $<(Length: 30)>$ | Descripción del país.
+CustomerAcquisitionSource | Int $<(Length: 5)>$ | Fuente de adquisición del cliente.
+CustomerAcquisitionSourceDescription | String $<(Length: 30)>$ | Descripción de la fuente de adquisición del cliente.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
-DateOfDeath | Date $<(length: 8)>$ | Fecha de fallecimiento.
-Deceased | Boolean $<(length: 1)>$ | Fallecido.
-DependentsNumber | Short $<(length: 3)>$ | Número de dependientes.
-DocumentNumber | String $<(length: 25)>$ | Número de documento.
+DateOfDeath | Date $<(Length: 8)>$ | Fecha de fallecimiento.
+Deceased | Boolean $<(Length: 1)>$ | Fallecido.
+DependentsNumber | Short $<(Length: 3)>$ | Número de dependientes.
+DocumentNumber | String $<(Length: 25)>$ | Número de documento.
 DocumentTypeId | Short | Identificador del tipo de documento.
-DocumentTypeDescription | String $<(length: 30)>$ | Descripción del tipo de documento.
-ExpirationDate | Date $<(length: 8)>$ | Fecha de vencimiento.
-FirstLastname | String $<(length: 30)>$ | Primer apellido.
-FirstName | String $<(length: 25)>$ | Primer nombre.
-Gender | String $<(length: 1)>$ | Género.
+DocumentTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de documento.
+ExpirationDate | Date $<(Length: 8)>$ | Fecha de vencimiento.
+FirstLastname | String $<(Length: 30)>$ | Primer apellido.
+FirstName | String $<(Length: 25)>$ | Primer nombre.
+Gender | String $<(Length: 1)>$ | Género.
 InstructionLevelId | Short | Identificador del nivel de instrucción.
-InstructionLevelDescription | String $<(length: 30)>$ | Descripción del nivel de instrucción.
-LegalCitizen | Boolean $<(length: 1)>$ | Ciudadano legal.
-MaritalStatusId | Byte $<(length: 2)>$ | Identificador del estado civil.
-MaritalStatusDescription | String $<(length: 20)>$ | Descripción del estado civil.
+InstructionLevelDescription | String $<(Length: 30)>$ | Descripción del nivel de instrucción.
+LegalCitizen | Boolean $<(Length: 1)>$ | Ciudadano legal.
+MaritalStatusId | Byte $<(Length: 2)>$ | Identificador del estado civil.
+MaritalStatusDescription | String $<(Length: 20)>$ | Descripción del estado civil.
 Occupations | [SdtsBTPEWOccupation](#sdtsbtpewoccupation) | Ocupaciones.
-PEP | Boolean $<(length: 1)>$ | PEP (Persona Expuesta Políticamente).
+PEP | Boolean $<(Length: 1)>$ | PEP (Persona Expuesta Políticamente).
 References | [SdtsBTPEWReference](#sdtsbtpewreference) | Referencias.
 Relationships | [SdtsBTPEWRelationship](#sdtsbtpewrelationship) | Relaciones.
-RequiresSpouse | Boolean $<(length: 1)>$ | Requiere cónyuge.
-SecondLastname | String $<(length: 30)>$ | Segundo apellido.
-SecondName | String $<(length: 25)>$ | Segundo nombre.
-Worth | Double $<(length: 18)>$ | Patrimonio.
-WorthStatus | Boolean $<(length: 2)>$ | Estado patrimonial.
-WorthSubmissionDate | Date $<(length: 8)>$ | Fecha de presentación del patrimonio.
+RequiresSpouse | Boolean $<(Length: 1)>$ | Requiere cónyuge.
+SecondLastname | String $<(Length: 30)>$ | Segundo apellido.
+SecondName | String $<(Length: 25)>$ | Segundo nombre.
+Worth | Double $<(Length: 18)>$ | Patrimonio.
+WorthStatus | Boolean $<(Length: 2)>$ | Estado patrimonial.
+WorthSubmissionDate | Date $<(Length: 8)>$ | Fecha de presentación del patrimonio.
 :::
 
 ::: details SdtsBTPEWAddress
@@ -397,43 +397,43 @@ Los campos del tipo de dato estructurado SdtsBTPEWAddress son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Address | String $<(length: 140)>$ | Dirección.
-AddressCorrelative | Short $<(length: 3)>$ | Correlativo de dirección.
-AddressTypeId | Byte $<(length: 2)>$ | Identificador del tipo de dirección.
-AddressTypeDescription | String $<(length: 20)>$ | Descripción del tipo de dirección.
-CityId | Int $<(length: 5)>$ | Identificador de la ciudad.
+Address | String $<(Length: 140)>$ | Dirección.
+AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
+AddressTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de dirección.
+AddressTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de dirección.
+CityId | Int $<(Length: 5)>$ | Identificador de la ciudad.
 CityDescription | String | Descripción de la ciudad.
-ColonyId | Int $<(length: 9)>$ | Identificador de la colonia.
-CountryId | Short $<(length: 3)>$ | Identificador del país.
+ColonyId | Int $<(Length: 9)>$ | Identificador de la colonia.
+CountryId | Short $<(Length: 3)>$ | Identificador del país.
 CountryDescription | String | Descripción del país.
-DepartmentId | Int $<(length: 5)>$ | Identificador del departamento.
+DepartmentId | Int $<(Length: 5)>$ | Identificador del departamento.
 DepartmentDescription | String | Descripción del departamento.
-DistrictId | Int $<(length: 9)>$ | Identificador del distrito.
+DistrictId | Int $<(Length: 9)>$ | Identificador del distrito.
 DistrictDescription | String | Descripción del distrito.
-GeographicalUbication | String $<(length: 6)>$ | Ubicación geográfica.
-HousingTypeId | Byte $<(length: 2)>$ | Identificador del tipo de vivienda.
+GeographicalUbication | String $<(Length: 6)>$ | Ubicación geográfica.
+HousingTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de vivienda.
 HousingTypeDescription | String | Descripción del tipo de vivienda.
-IsABusiness | Boolean $<(length: 1)>$ | ¿Es un negocio?.
-Latitude | Double $<(length: 10)>$ | Latitud.
-Level1Data | String $<(length: 30)>$ | Datos del nivel 1.
-Level1Id | Short $<(length: 3)>$ | Identificador del nivel 1.
-Level1Description | String $<(length: 35)>$ | Descripción del nivel 1.
-Level2Data | String $<(length: 30)>$ | Datos del nivel 2.
-Level2Id | Short $<(length: 3)>$ | Identificador del nivel 2.
-Level2Description | String $<(length: 35)>$ | Descripción del nivel 2.
-Level3Data | String $<(length: 30)>$ | Datos del nivel 3.
-Level3Id | Short $<(length: 3)>$ | Identificador del nivel 3.
-Level3Description | String $<(length: 35)>$ | Descripción del nivel 3.
-Level4Data | String $<(length: 30)>$ | Datos del nivel 4.
-Level4Id | Short $<(length: 3)>$ | Identificador del nivel 4.
-Level4Description | String $<(length: 35)>$ | Descripción del nivel 4.
-Longitude | Double $<(length: 10)>$ | Longitud.
-MainAddress | Boolean $<(length: 1)>$ | Dirección principal.
-PostalCode | String $<(length: 8)>$ | Código postal.
-References | String $<(length: 140)>$ | Referencias.
-SettlementType | Short $<(length: 3)>$ | Tipo de asentamiento.
-SinceDate | Date $<(length: 8)>$ | Fecha desde.
-StatusId | String $<(length: 1)>$ | Identificador de estado.
+IsABusiness | Boolean $<(Length: 1)>$ | ¿Es un negocio?.
+Latitude | Double $<(Length: 10)>$ | Latitud.
+Level1Data | String $<(Length: 30)>$ | Datos del nivel 1.
+Level1Id | Short $<(Length: 3)>$ | Identificador del nivel 1.
+Level1Description | String $<(Length: 35)>$ | Descripción del nivel 1.
+Level2Data | String $<(Length: 30)>$ | Datos del nivel 2.
+Level2Id | Short $<(Length: 3)>$ | Identificador del nivel 2.
+Level2Description | String $<(Length: 35)>$ | Descripción del nivel 2.
+Level3Data | String $<(Length: 30)>$ | Datos del nivel 3.
+Level3Id | Short $<(Length: 3)>$ | Identificador del nivel 3.
+Level3Description | String $<(Length: 35)>$ | Descripción del nivel 3.
+Level4Data | String $<(Length: 30)>$ | Datos del nivel 4.
+Level4Id | Short $<(Length: 3)>$ | Identificador del nivel 4.
+Level4Description | String $<(Length: 35)>$ | Descripción del nivel 4.
+Longitude | Double $<(Length: 10)>$ | Longitud.
+MainAddress | Boolean $<(Length: 1)>$ | Dirección principal.
+PostalCode | String $<(Length: 8)>$ | Código postal.
+References | String $<(Length: 140)>$ | Referencias.
+SettlementType | Short $<(Length: 3)>$ | Tipo de asentamiento.
+SinceDate | Date $<(Length: 8)>$ | Fecha desde.
+StatusId | String $<(Length: 1)>$ | Identificador de estado.
 :::
 
 ::: details SdtsBTPEWContact
@@ -445,24 +445,24 @@ Los campos del tipo de dato estructurado SdtsBTPEWContact son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AddressCorrelative | Short $<(length: 3)>$ | Correlativo de dirección.
-AddressId | String $<(length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(length: 1)>$ | Asociado a una dirección.
-Comment | String $<(length: 250)>$ | Comentario.
-ContactTypeId | Byte $<(length: 2)>$ | Identificador del tipo de contacto.
-ContactTypeDescription | String $<(length: 50)>$ | Descripción del tipo de contacto.
-Correlative | Byte $<(length: 2)>$ | Correlativo.
-Enabled | Boolean $<(length: 1)>$ | Habilitado.
-EndTimeRange1 | String $<(length: 5)>$ | Fin del rango horario 1.
-EndTimeRange2 | String $<(length: 5)>$ | Fin del rango horario 2.
-Priority | Byte $<(length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(length: 1)>$ | Recibe correos.
-StartTimeRange1 | String $<(length: 5)>$ | Inicio del rango horario 1.
-StartTimeRange2 | String $<(length: 5)>$ | Inicio del rango horario 2.
-TelephoneCompanyId | Short $<(length: 3)>$ | Identificador de compañía telefónica.
-TelephoneCompanyDescription | String $<(length: 50)>$ | Descripción de la compañía telefónica.
-Text | String $<(length: 250)>$ | Texto.
-Validated | Boolean $<(length: 1)>$ | Validado.
+AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
+AddressId | String $<(Length: 140)>$ | Identificador de dirección.
+AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+Comment | String $<(Length: 250)>$ | Comentario.
+ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
+ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
+Correlative | Byte $<(Length: 2)>$ | Correlativo.
+Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
+EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
+Priority | Byte $<(Length: 2)>$ | Prioridad.
+ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
+StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
+TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
+TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
+Text | String $<(Length: 250)>$ | Texto.
+Validated | Boolean $<(Length: 1)>$ | Validado.
 :::
 
 ::: details SdtsBTPAWCustomField
@@ -475,9 +475,9 @@ Los campos del tipo de dato estructurado SdtsBTPAWCustomField son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Correlative | Short | Correlativo.
-Id | String $<(length: 30)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
-Value | String $<(length: 250)>$ | Value.
+Id | String $<(Length: 30)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
+Value | String $<(Length: 250)>$ | Value.
 :::
 
 ::: details SdtsBTPEWOccupation
@@ -489,28 +489,28 @@ Los campos del tipo de dato estructurado SdtsBTPEWOccupation son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CompanyDocument | String $<(length: 25)>$ | Documento de empresa.
-CompanyName | String $<(length: 70)>$ | Nombre de empresa.
-Correlative | Byte $<(length: 2)>$ | Correlativo.
-EconomicActivityId | Long $<(length: 11)>$ | Identificador de actividad económica.
-EconomicActivityDescription | String $<(length: 80)>$ | Descripción de actividad económica.
-EconomicActivityTypeId | Long $<(length: 15)>$ | Identificador del tipo de actividad económica.
-EconomicActivityTypeDescription | String $<(length: 60)>$ | Descripción del tipo de actividad económica.
-EndDate | Date $<(length: 8)>$ | Fecha de fin.
-EstablishmentTypeId | Int $<(length: 6)>$ | Identificador del tipo de establecimiento.
-EstablishmentTypeDescription | String $<(length: 50)>$ | Descripción del tipo de establecimiento.
-Exports | Boolean $<(length: 1)>$ | Exporta.
-Imports | Boolean $<(length: 1)>$ | Importa.
-Income | Double $<(length: 18)>$ | Ingresos.
-JobTitleId | Short $<(length: 4)>$ | Identificador del cargo.
-JobTitleDescription | String $<(length: 30)>$ | Descripción del cargo.
-MainOccupation | Boolean $<(length: 1)>$ | Ocupación principal.
-Multilateral | Boolean $<(length: 1)>$ | Multilateral.
-OccupationId | Int $<(length: 5)>$ | Identificador de ocupación.
-OccupationDescription | String $<(length: 30)>$ | Descripción de la ocupación.
+CompanyDocument | String $<(Length: 25)>$ | Documento de empresa.
+CompanyName | String $<(Length: 70)>$ | Nombre de empresa.
+Correlative | Byte $<(Length: 2)>$ | Correlativo.
+EconomicActivityId | Long $<(Length: 11)>$ | Identificador de actividad económica.
+EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
+EconomicActivityTypeId | Long $<(Length: 15)>$ | Identificador del tipo de actividad económica.
+EconomicActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tipo de actividad económica.
+EndDate | Date $<(Length: 8)>$ | Fecha de fin.
+EstablishmentTypeId | Int $<(Length: 6)>$ | Identificador del tipo de establecimiento.
+EstablishmentTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de establecimiento.
+Exports | Boolean $<(Length: 1)>$ | Exporta.
+Imports | Boolean $<(Length: 1)>$ | Importa.
+Income | Double $<(Length: 18)>$ | Ingresos.
+JobTitleId | Short $<(Length: 4)>$ | Identificador del cargo.
+JobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo.
+MainOccupation | Boolean $<(Length: 1)>$ | Ocupación principal.
+Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+OccupationId | Int $<(Length: 5)>$ | Identificador de ocupación.
+OccupationDescription | String $<(Length: 30)>$ | Descripción de la ocupación.
 OccupationTypeId | Short | Identificador del tipo de ocupación.
-OccupationTypeDescription | String $<(length: 30)>$ | Descripción del tipo de ocupación.
-StartDate | Date $<(length: 8)>$ | Fecha de inicio.
+OccupationTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de ocupación.
+StartDate | Date $<(Length: 8)>$ | Fecha de inicio.
 :::
 
 ::: details SdtsBTPEWReference
@@ -522,20 +522,20 @@ Los campos del tipo de dato estructurado SdtsBTPEWReference son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Address1 | String $<(length: 50)>$ | Dirección 1.
-Address2 | String $<(length: 50)>$ | Dirección 2.
-Address3 | String $<(length: 50)>$ | Dirección 3.
-BondOrJobTitle | String $<(length: 1)>$ | Vínculo o cargo.
-Correlative | Short $<(length: 3)>$ | Correlativo.
-EnterpriceJobTitleDescription | String $<(length: 30)>$ | Descripción del cargo en la empresa.
-EnterpriseJobTitleId | Short $<(length: 4)>$ | Identificador del cargo empresarial.
-Name | String $<(length: 50)>$ | Nombre.
-PersonType | String $<(length: 1)>$ | Tipo de persona.
-ReferenceTypeId | Byte $<(length: 2)>$ | Identificador del tipo de referencia.
-ReferenceTypeDescription | String $<(length: 30)>$ | Descripción del tipo de referencia.
+Address1 | String $<(Length: 50)>$ | Dirección 1.
+Address2 | String $<(Length: 50)>$ | Dirección 2.
+Address3 | String $<(Length: 50)>$ | Dirección 3.
+BondOrJobTitle | String $<(Length: 1)>$ | Vínculo o cargo.
+Correlative | Short $<(Length: 3)>$ | Correlativo.
+EnterpriceJobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo en la empresa.
+EnterpriseJobTitleId | Short $<(Length: 4)>$ | Identificador del cargo empresarial.
+Name | String $<(Length: 50)>$ | Nombre.
+PersonType | String $<(Length: 1)>$ | Tipo de persona.
+ReferenceTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de referencia.
+ReferenceTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de referencia.
 RelationshipId | Short | Identificador de relación.
-RelationshipDescription | String $<(length: 30)>$ | Descripción de la relación.
-Telephone | String $<(length: 50)>$ | Teléfono.
+RelationshipDescription | String $<(Length: 30)>$ | Descripción de la relación.
+Telephone | String $<(Length: 50)>$ | Teléfono.
 :::
 
 ::: details SdtsBTPEWRelationship
@@ -547,12 +547,12 @@ Los campos del tipo de dato estructurado SdtsBTPEWRelationship son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(length: 1)>$ | Bidireccional.
+Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
 BondId | Short | Identificador del vínculo.
-BondDescription | String $<(length: 30)>$ | Descripción del vínculo.
-IntegrantName | String $<(length: 70)>$ | Nombre del integrante.
+BondDescription | String $<(Length: 30)>$ | Descripción del vínculo.
+IntegrantName | String $<(Length: 70)>$ | Nombre del integrante.
 JobTitleId | Short | Identificador del cargo.
-Percentage | Double $<(length: 8)>$ | Porcentaje.
-PersonGUID | String $<(length: 36)>$ | GUID de persona.
+Percentage | Double $<(Length: 8)>$ | Porcentaje.
+PersonGUID | String $<(Length: 36)>$ | GUID de persona.
 :::
 <!-- CIERRA SDT -->

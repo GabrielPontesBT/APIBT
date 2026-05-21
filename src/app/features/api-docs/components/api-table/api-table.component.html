@@ -1,7 +1,7 @@
 
 <!-- Si hay datos, muestro encabezado y cuerpo -->
 @if ((data?.length ?? 0) > 0) {
-  <table [class.wide-second-col]="wideSecondCol">
+  <table [class.wide-second-col]="wideSecondCol" (mousedown)="$event.stopPropagation()">
     <thead>
       <tr>
         @for (col of columns; track col) {

@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -91,57 +91,57 @@
       "fields": [
         {
           "Nombre": "Address1",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 1."
         },
         {
           "Nombre": "Address2",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 2."
         },
         {
           "Nombre": "Address3",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Dirección 3."
         },
         {
           "Nombre": "BondOrJobTitle",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Vínculo o cargo."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "EnterpriceJobTitleDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del cargo en la empresa."
         },
         {
           "Nombre": "EnterpriseJobTitleId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador del cargo empresarial."
         },
         {
           "Nombre": "Name",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Nombre."
         },
         {
           "Nombre": "PersonType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de persona."
         },
         {
           "Nombre": "ReferenceTypeId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del tipo de referencia."
         },
         {
           "Nombre": "ReferenceTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de referencia."
         },
         {
@@ -151,12 +151,12 @@
         },
         {
           "Nombre": "RelationshipDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la relación."
         },
         {
           "Nombre": "Telephone",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Teléfono."
         }
       ]

@@ -489,14 +489,14 @@ Los campos del tipo de dato estructurado SdtsBTDTWDocumentType son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AppliesToFI | String $<(length: 1)>$ | Aplica a institución financiera.
-Description | String $<(length: 30)>$ | Descripción.
-Format | String $<(length: 1)>$ | Formato.
+AppliesToFI | String $<(Length: 1)>$ | Aplica a institución financiera.
+Description | String $<(Length: 30)>$ | Descripción.
+Format | String $<(Length: 1)>$ | Formato.
 Id | Short | Identificador.
-MainDocument | Boolean $<(length: 1)>$ | Documento principal.
+MainDocument | Boolean $<(Length: 1)>$ | Documento principal.
 MaxLength | Short | Longitud máxima.
-MinLength | Byte $<(length: 2)>$ | Longitud mínima.
-PersonType | String $<(length: 1)>$ | Tipo de persona.
-ShortDescription | String $<(length: 5)>$ | Descripción corta.
+MinLength | Byte $<(Length: 2)>$ | Longitud mínima.
+PersonType | String $<(Length: 1)>$ | Tipo de persona.
+ShortDescription | String $<(Length: 5)>$ | Descripción corta.
 :::
 <!-- CIERRA SDT -->

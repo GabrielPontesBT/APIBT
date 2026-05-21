@@ -22,8 +22,8 @@ title: Delete Address
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
-correlative | Short $<(length: 3)>$ | Correlativo.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
+correlative | Short $<(Length: 3)>$ | Correlativo.
 
 
 @tab Datos de Salida

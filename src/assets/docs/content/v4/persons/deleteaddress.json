@@ -12,12 +12,12 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     },
     {
       "Nombre": "correlative",
-      "Tipo": "Short <strong>(length: 3)</strong>",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
       "Comentarios": "Correlativo."
     }
   ],

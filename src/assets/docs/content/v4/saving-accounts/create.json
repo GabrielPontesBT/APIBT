@@ -12,29 +12,29 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     },
     {
       "Nombre": "productGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del producto."
     }
   ],
   "bodyData": [
     {
       "Nombre": "subAccountName",
-      "Tipo": "String <strong>(length: 255)</strong>",
+      "Tipo": "String <strong>(Length: 255)</strong>",
       "Comentarios": "Nombre de la subcuenta."
     },
     {
       "Nombre": "branchId",
-      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Identificador de sucursal."
     },
     {
       "Nombre": "signatureType",
-      "Tipo": "String <strong>(length: 1)</strong>",
+      "Tipo": "String <strong>(Length: 1)</strong>",
       "Comentarios": "Tipo de integración."
     },
     {
@@ -46,7 +46,7 @@
   "outputData": [
     {
       "Nombre": "savingAccountGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
     }
   ],

@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "personGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
@@ -51,97 +51,97 @@
       "fields": [
         {
           "Nombre": "CompanyDocument",
-          "Tipo": "String <strong>(length: 25)</strong>",
+          "Tipo": "String <strong>(Length: 25)</strong>",
           "Comentarios": "Documento de empresa."
         },
         {
           "Nombre": "CompanyName",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Nombre de empresa."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "EconomicActivityId",
-          "Tipo": "Long <strong>(length: 11)</strong>",
+          "Tipo": "Long <strong>(Length: 11)</strong>",
           "Comentarios": "Identificador de actividad económica."
         },
         {
           "Nombre": "EconomicActivityDescription",
-          "Tipo": "String <strong>(length: 80)</strong>",
+          "Tipo": "String <strong>(Length: 80)</strong>",
           "Comentarios": "Descripción de actividad económica."
         },
         {
           "Nombre": "EconomicActivityTypeId",
-          "Tipo": "Long <strong>(length: 15)</strong>",
+          "Tipo": "Long <strong>(Length: 15)</strong>",
           "Comentarios": "Identificador del tipo de actividad económica."
         },
         {
           "Nombre": "EconomicActivityTypeDescription",
-          "Tipo": "String <strong>(length: 60)</strong>",
+          "Tipo": "String <strong>(Length: 60)</strong>",
           "Comentarios": "Descripción del tipo de actividad económica."
         },
         {
           "Nombre": "EndDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de fin."
         },
         {
           "Nombre": "EstablishmentTypeId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo de establecimiento."
         },
         {
           "Nombre": "EstablishmentTypeDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción del tipo de establecimiento."
         },
         {
           "Nombre": "Exports",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Exporta."
         },
         {
           "Nombre": "Imports",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Importa."
         },
         {
           "Nombre": "Income",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Ingresos."
         },
         {
           "Nombre": "JobTitleId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador del cargo."
         },
         {
           "Nombre": "JobTitleDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del cargo."
         },
         {
           "Nombre": "MainOccupation",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Ocupación principal."
         },
         {
           "Nombre": "Multilateral",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Multilateral."
         },
         {
           "Nombre": "OccupationId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de ocupación."
         },
         {
           "Nombre": "OccupationDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la ocupación."
         },
         {
@@ -151,12 +151,12 @@
         },
         {
           "Nombre": "OccupationTypeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo de ocupación."
         },
         {
           "Nombre": "StartDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de inicio."
         }
       ]

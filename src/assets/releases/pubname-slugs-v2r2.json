@@ -1,5 +1,12 @@
 [
   {
+    "key": "Authenticate.Execute",
+    "path": [
+      "autenticacion",
+      "autenticacion"
+    ]
+  },
+  {
     "key": "BTAhorroProgramado.ActualizarDocumentoDigital",
     "path": [
       "ahorro-programado",
@@ -13,14 +20,6 @@
       "ahorro-programado",
       "documentos-digitales",
       "asociardocumentodigital"
-    ]
-  },
-  {
-    "key": "BTAhorroProgramado.ContratarSimulacion",
-    "path": [
-      "ahorro-programado",
-      "contratar",
-      "contratar-simulacion"
     ]
   },
   {
@@ -93,6 +92,14 @@
       "ahorro-programado",
       "obtener",
       "obtener"
+    ]
+  },
+  {
+    "key": "BTAhorroProgramado.ObtenerCronogramaDeAbonos",
+    "path": [
+      "ahorro-programado",
+      "obtener",
+      "obtenercronogramaabonos"
     ]
   },
   {

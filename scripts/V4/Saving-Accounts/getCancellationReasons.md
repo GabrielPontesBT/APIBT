@@ -22,7 +22,7 @@ title: Get Cancellation Reasons
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-cancellationOriginId | Short $<(length: 4)>$ | Identificador del origen de cancelación.
+cancellationOriginId | Short $<(Length: 4)>$ | Identificador del origen de cancelación.
 
 @tab Datos de Salida
 
@@ -116,7 +116,7 @@ Los campos del tipo de dato estructurado SdtsBTLICancellationReason son los sigu
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Short $<(length: 4)>$ | Identificador de motivo de cierre.
-description | String $<(length: 40)>$ | Descripción.
+id | Short $<(Length: 4)>$ | Identificador de motivo de cierre.
+description | String $<(Length: 40)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

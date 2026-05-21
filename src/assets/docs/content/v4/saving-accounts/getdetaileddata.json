@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "savingAccountGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
     }
   ],
@@ -69,42 +69,42 @@
         },
         {
           "Nombre": "AvailableAmount",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Monto disponible."
         },
         {
           "Nombre": "BankCode",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Código bancario."
         },
         {
           "Nombre": "BoardTypeId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del tipo de pizarra."
         },
         {
           "Nombre": "BoardTypeDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tipo de mesa."
         },
         {
           "Nombre": "BranchId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de sucursal."
         },
         {
           "Nombre": "BranchDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de sucursal."
         },
         {
           "Nombre": "CancelationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de cancelación."
         },
         {
           "Nombre": "CancelationOriginId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del origen de cancelación."
         },
         {
@@ -114,7 +114,7 @@
         },
         {
           "Nombre": "CancelationReasonId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del motivo de cancelación."
         },
         {
@@ -134,32 +134,32 @@
         },
         {
           "Nombre": "CircularityFee",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Comisión de circularidad."
         },
         {
           "Nombre": "ClassRateTypeId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del tipo de clase de tasa."
         },
         {
           "Nombre": "ClassRateTypeDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tipo de clase de tasa."
         },
         {
           "Nombre": "CounterpartyId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de contraparte."
         },
         {
           "Nombre": "CounterpartyDescription",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Descripción de contraparte."
         },
         {
           "Nombre": "CreationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de creación."
         },
         {
@@ -184,27 +184,27 @@
         },
         {
           "Nombre": "LowAverageFee",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Comisión de saldo mínimo."
         },
         {
           "Nombre": "LowAverageFeeId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de comisión de saldo mínimo."
         },
         {
           "Nombre": "LowAverageFeeDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de comisión de saldo mínimo."
         },
         {
           "Nombre": "MovementFee",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Comisión por movimiento."
         },
         {
           "Nombre": "OpeningFee",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Comisión de apertura."
         },
         {
@@ -219,7 +219,7 @@
         },
         {
           "Nombre": "PaymentPeriod",
-          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Tipo": "Long <strong>(Length: 18)</strong>",
           "Comentarios": "Período de pago."
         },
         {
@@ -229,7 +229,7 @@
         },
         {
           "Nombre": "PaysInterest",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Paga intereses."
         },
         {
@@ -259,7 +259,7 @@
         },
         {
           "Nombre": "StatusId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador de estado."
         },
         {
@@ -269,7 +269,7 @@
         },
         {
           "Nombre": "SubStatusId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de subestado."
         },
         {
@@ -284,7 +284,7 @@
       "fields": [
         {
           "Nombre": "AccountingResumeFrequency",
-          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Tipo": "Long <strong>(Length: 18)</strong>",
           "Comentarios": "Frecuencia de resumen contable."
         },
         {
@@ -294,7 +294,7 @@
         },
         {
           "Nombre": "AddressShipmentMethodId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del método de envío a dirección."
         },
         {
@@ -304,12 +304,12 @@
         },
         {
           "Nombre": "AvoidsAccountingResume",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Evita resumen contable."
         },
         {
           "Nombre": "BranchShipmentMethodId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del método de envío a sucursal."
         },
         {
@@ -319,7 +319,7 @@
         },
         {
           "Nombre": "EmailShipmentMethodId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del método de envío por correo."
         },
         {
@@ -329,7 +329,7 @@
         },
         {
           "Nombre": "RegulatorResumeFrequency",
-          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Tipo": "Long <strong>(Length: 18)</strong>",
           "Comentarios": "Frecuencia de resumen regulatorio."
         },
         {
@@ -339,7 +339,7 @@
         },
         {
           "Nombre": "ShipmentMethod",
-          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Tipo": "Long <strong>(Length: 18)</strong>",
           "Comentarios": "Método de envío."
         },
         {
@@ -374,27 +374,27 @@
       "fields": [
         {
           "Nombre": "CurrencyId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de moneda."
         },
         {
           "Nombre": "CurrencyDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la moneda."
         },
         {
           "Nombre": "CurrencySign",
-          "Tipo": "String <strong>(length: 4)</strong>",
+          "Tipo": "String <strong>(Length: 4)</strong>",
           "Comentarios": "Símbolo de la moneda."
         },
         {
           "Nombre": "KindId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo."
         },
         {
           "Nombre": "KindDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo."
         },
         {
@@ -404,7 +404,7 @@
         },
         {
           "Nombre": "ProductGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID del producto."
         }
       ]
@@ -419,12 +419,12 @@
         },
         {
           "Nombre": "Event",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Evento."
         },
         {
           "Nombre": "EventDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha del evento."
         },
         {
@@ -434,7 +434,7 @@
         },
         {
           "Nombre": "EventUserDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del usuario del evento."
         },
         {
@@ -444,7 +444,7 @@
         },
         {
           "Nombre": "PreviousProduct",
-          "Tipo": "Long <strong>(length: 18)</strong>",
+          "Tipo": "Long <strong>(Length: 18)</strong>",
           "Comentarios": "Producto anterior."
         },
         {
@@ -454,7 +454,7 @@
         },
         {
           "Nombre": "ValidFrom",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Válido desde."
         }
       ]

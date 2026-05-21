@@ -12,53 +12,137 @@
   "inputData": [
     {
       "Nombre": "simulationGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la simulación del depósito a plazo."
     },
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     },
     {
       "Nombre": "expirationAccountGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la cuenta de destino al vencimiento."
     },
     {
       "Nombre": "recurringPaymentAccountGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la cuenta de destino del pago periódico."
     }
   ],
   "bodyData": [
     {
       "Nombre": "expirationInstruction",
-      "Tipo": "Short <strong>(length: 3)</strong>",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
       "Comentarios": "Identificador de la instrucción al vencimiento."
     },
     {
       "Nombre": "recurringPaymentInstruction",
-      "Tipo": "Short <strong>(length: 3)</strong>",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
       "Comentarios": "Identificador de la instrucción de pago periódico."
     }
   ],
   "outputData": [
     {
       "Nombre": "termDepositGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del depósito a plazo."
     },
     {
       "Nombre": "movementGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del movimiento."
     }
   ],
   "errors": [
     {
-      "Código": "Completar manualmente",
-      "Descripción": "Completar manualmente"
+      "Código": "90139",
+      "Descripción": "Debe ingresar una contraparte"
+    },
+    {
+      "Código": "90143",
+      "Descripción": "Opción de pago/cobro inválida"
+    },
+    {
+      "Código": "90151",
+      "Descripción": "El importe de las formas de pago/cobro no coinciden con el total"
+    },
+    {
+      "Código": "90152",
+      "Descripción": "El importe de las formas de desembolso recibidas no puede ser 0"
+    },
+    {
+      "Código": "90160",
+      "Descripción": "El importe de las formas de cobro recibidas no puede ser 0"
+    },
+    {
+      "Código": "90162",
+      "Descripción": "El ID de la forma de pago/cobro no puede ser 0"
+    },
+    {
+      "Código": "170054",
+      "Descripción": "Debe ingresar el GUID"
+    },
+    {
+      "Código": "180061",
+      "Descripción": "No existen datos de simulación"
+    },
+    {
+      "Código": "980003",
+      "Descripción": "No existe el producto ingresado"
+    },
+    {
+      "Código": "980096",
+      "Descripción": "El subproducto se encuentra inhabilitado"
+    },
+    {
+      "Código": "980097",
+      "Descripción": "El subproducto no se encuentra vigente"
+    },
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe"
+    },
+    {
+      "Código": "40020009",
+      "Descripción": "Debe ingresar número de contraparte"
+    },
+    {
+      "Código": "40020012",
+      "Descripción": "El número de contraparte no existe"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "120020061",
+      "Descripción": "No existen datos de simulación"
+    },
+    {
+      "Código": "120020078",
+      "Descripción": "Debe ingresar instrucciones de débito"
+    },
+    {
+      "Código": "180040001",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "180040002",
+      "Descripción": "Debe ingresar el GUID de la simulación."
+    },
+    {
+      "Código": "180040003",
+      "Descripción": "Debe ingresar el GUID de la cuenta de débito."
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
     }
   ],
   "errorsNote": "",

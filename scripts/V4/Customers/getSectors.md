@@ -136,7 +136,7 @@ Los campos del tipo de dato estructurado SdtsBTACWSector son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Short $<(length: 3)>$ | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
+Id | Short $<(Length: 3)>$ | Identificador.
+Description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

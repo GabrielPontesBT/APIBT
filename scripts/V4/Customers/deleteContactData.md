@@ -22,14 +22,14 @@ title: Delete Contact Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 @tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-contactTypeId | Byte $<(length: 2)>$ | Identificador de tipo de contacto.
-correlative | Byte $<(length: 2)>$ | Correlativo.
+contactTypeId | Byte $<(Length: 2)>$ | Identificador de tipo de contacto.
+correlative | Byte $<(Length: 2)>$ | Correlativo.
 
 @tab Datos de Salida
 

@@ -110,7 +110,7 @@ Los campos del tipo de dato estructurado SdtsBTLICancellationOrigin son los sigu
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Short $<(length: 4)>$ | Identificador de origen de cierre.
-description | String $<(length: 40)>$ | Descripción.
+id | Short $<(Length: 4)>$ | Identificador de origen de cierre.
+description | String $<(Length: 40)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

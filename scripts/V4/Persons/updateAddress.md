@@ -22,7 +22,7 @@ title: Update Address
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Body
@@ -173,42 +173,42 @@ Los campos del tipo de dato estructurado SdtsBTPEWAddress son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Address | String $<(length: 140)>$ | Dirección.
-AddressCorrelative | Short $<(length: 3)>$ | Correlativo de dirección.
-AddressTypeId | Byte $<(length: 2)>$ | Identificador del tipo de dirección.
-AddressTypeDescription | String $<(length: 20)>$ | Descripción del tipo de dirección.
-CityId | Int $<(length: 5)>$ | Identificador de la ciudad.
+Address | String $<(Length: 140)>$ | Dirección.
+AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
+AddressTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de dirección.
+AddressTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de dirección.
+CityId | Int $<(Length: 5)>$ | Identificador de la ciudad.
 CityDescription | String | Descripción de la ciudad.
-ColonyId | Int $<(length: 9)>$ | Identificador de la colonia.
-CountryId | Short $<(length: 3)>$ | Identificador del país.
+ColonyId | Int $<(Length: 9)>$ | Identificador de la colonia.
+CountryId | Short $<(Length: 3)>$ | Identificador del país.
 CountryDescription | String | Descripción del país.
-DepartmentId | Int $<(length: 5)>$ | Identificador del departamento.
+DepartmentId | Int $<(Length: 5)>$ | Identificador del departamento.
 DepartmentDescription | String | Descripción del departamento.
-DistrictId | Int $<(length: 9)>$ | Identificador del distrito.
+DistrictId | Int $<(Length: 9)>$ | Identificador del distrito.
 DistrictDescription | String | Descripción del distrito.
-GeographicalUbication | String $<(length: 6)>$ | Ubicación geográfica.
-HousingTypeId | Byte $<(length: 2)>$ | Identificador del tipo de vivienda.
+GeographicalUbication | String $<(Length: 6)>$ | Ubicación geográfica.
+HousingTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de vivienda.
 HousingTypeDescription | String | Descripción del tipo de vivienda.
-IsABusiness | Boolean $<(length: 1)>$ | ¿Es un negocio?.
-Latitude | Double $<(length: 10)>$ | Latitud.
-Level1Data | String $<(length: 30)>$ | Datos del nivel 1.
-Level1Id | Short $<(length: 3)>$ | Identificador del nivel 1.
-Level1Description | String $<(length: 35)>$ | Descripción del nivel 1.
-Level2Data | String $<(length: 30)>$ | Datos del nivel 2.
-Level2Id | Short $<(length: 3)>$ | Identificador del nivel 2.
-Level2Description | String $<(length: 35)>$ | Descripción del nivel 2.
-Level3Data | String $<(length: 30)>$ | Datos del nivel 3.
-Level3Id | Short $<(length: 3)>$ | Identificador del nivel 3.
-Level3Description | String $<(length: 35)>$ | Descripción del nivel 3.
-Level4Data | String $<(length: 30)>$ | Datos del nivel 4.
-Level4Id | Short $<(length: 3)>$ | Identificador del nivel 4.
-Level4Description | String $<(length: 35)>$ | Descripción del nivel 4.
-Longitude | Double $<(length: 10)>$ | Longitud.
-MainAddress | Boolean $<(length: 1)>$ | Dirección principal.
-PostalCode | String $<(length: 8)>$ | Código postal.
-References | String $<(length: 140)>$ | Referencias.
-SettlementType | Short $<(length: 3)>$ | Tipo de asentamiento.
-SinceDate | Date $<(length: 8)>$ | Fecha desde.
-StatusId | String $<(length: 1)>$ | Identificador de estado.
+IsABusiness | Boolean $<(Length: 1)>$ | ¿Es un negocio?.
+Latitude | Double $<(Length: 10)>$ | Latitud.
+Level1Data | String $<(Length: 30)>$ | Datos del nivel 1.
+Level1Id | Short $<(Length: 3)>$ | Identificador del nivel 1.
+Level1Description | String $<(Length: 35)>$ | Descripción del nivel 1.
+Level2Data | String $<(Length: 30)>$ | Datos del nivel 2.
+Level2Id | Short $<(Length: 3)>$ | Identificador del nivel 2.
+Level2Description | String $<(Length: 35)>$ | Descripción del nivel 2.
+Level3Data | String $<(Length: 30)>$ | Datos del nivel 3.
+Level3Id | Short $<(Length: 3)>$ | Identificador del nivel 3.
+Level3Description | String $<(Length: 35)>$ | Descripción del nivel 3.
+Level4Data | String $<(Length: 30)>$ | Datos del nivel 4.
+Level4Id | Short $<(Length: 3)>$ | Identificador del nivel 4.
+Level4Description | String $<(Length: 35)>$ | Descripción del nivel 4.
+Longitude | Double $<(Length: 10)>$ | Longitud.
+MainAddress | Boolean $<(Length: 1)>$ | Dirección principal.
+PostalCode | String $<(Length: 8)>$ | Código postal.
+References | String $<(Length: 140)>$ | Referencias.
+SettlementType | Short $<(Length: 3)>$ | Tipo de asentamiento.
+SinceDate | Date $<(Length: 8)>$ | Fecha desde.
+StatusId | String $<(Length: 1)>$ | Identificador de estado.
 :::
 <!-- CIERRA SDT -->

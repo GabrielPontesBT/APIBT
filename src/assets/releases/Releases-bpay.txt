@@ -1,0 +1,12 @@
+Release Mayo 2026
+BTPayCaddy.AltaTarjeta
+BTPayCaddy.BloqueoTarjeta
+BTPayCaddy.CambioDePin
+BTPayCaddy.CancelarTarjeta
+BTPayCaddy.ConsultaCVV
+BTPayCaddy.ConsultaMovBloqueados
+BTPayCaddy.DesbloqueoTarjeta
+BTPayCaddy.InformacionTarjeta
+BTPayCaddy.NotificacionTransaccionesEndPoint
+BTPayCaddy.PeticionAutorizacionEndPoint
+BTPayCaddy.RecepcionTarjeta

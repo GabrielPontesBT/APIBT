@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "termDepositGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del depósito a plazo."
     }
   ],
@@ -32,8 +32,40 @@
   ],
   "errors": [
     {
-      "Código": "Completar manualmente",
-      "Descripción": "Completar manualmente"
+      "Código": "",
+      "Descripción": "90031"
+    },
+    {
+      "Código": "",
+      "Descripción": "90120"
+    },
+    {
+      "Código": "",
+      "Descripción": "90121"
+    },
+    {
+      "Código": "",
+      "Descripción": "90132"
+    },
+    {
+      "Código": "",
+      "Descripción": "90142"
+    },
+    {
+      "Código": "",
+      "Descripción": "90161"
+    },
+    {
+      "Código": "",
+      "Descripción": "110005"
+    },
+    {
+      "Código": "",
+      "Descripción": "180006"
+    },
+    {
+      "Código": "",
+      "Descripción": "180069"
     }
   ],
   "errorsNote": "",
@@ -53,37 +85,37 @@
       "fields": [
         {
           "Nombre": "Accounted",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Contabilizado."
         },
         {
           "Nombre": "AccountingAccountId",
-          "Tipo": "Long <strong>(length: 16)</strong>",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
           "Comentarios": "Identificador de cuenta contable."
         },
         {
           "Nombre": "BranchId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de sucursal."
         },
         {
           "Nombre": "CompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador de empresa."
         },
         {
           "Nombre": "CounterpartyId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de contraparte."
         },
         {
           "Nombre": "CurrencyId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de moneda."
         },
         {
           "Nombre": "Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador."
         },
         {
@@ -93,12 +125,12 @@
         },
         {
           "Nombre": "KindId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo."
         },
         {
           "Nombre": "ModuleId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de módulo."
         },
         {
@@ -108,22 +140,22 @@
         },
         {
           "Nombre": "OperationId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de operación."
         },
         {
           "Nombre": "OperationTypeId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del tipo de operación."
         },
         {
           "Nombre": "SuboperationId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de suboperación."
         },
         {
           "Nombre": "Type",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Tipo."
         }
       ]

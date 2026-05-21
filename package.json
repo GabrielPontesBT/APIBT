@@ -2,13 +2,15 @@
   "name": "api-docs",
   "version": "0.0.0",
   "scripts": {
+    "build": "ng build --base-href /apibanking/ && node scripts/generate-static-routes.js",
+    "serve:local": "npm run build && python -m http.server 8081 --directory dist",
     "build:docs-content": "node scripts/build-docs-content.js",
     "build:docs-content-v4": "node scripts/build-docs-content-v4.js",
     "build:docs-navigation": "node scripts/build-docs-navigation.js",
     "build:docs-search": "node scripts/build-docs-search.js",
     "build:release-assets": "node scripts/build-release-assets.js",
     "validate:docs": "node scripts/validate-docs.js",
-    "build:docs": "npm run build:docs-content && npm run build:docs-content-v4 && npm run build:docs-navigation && npm run validate:docs"
+    "build:docs": "npm run build:docs-content && npm run build:docs-content-v4 && npm run build:docs-navigation && npm run build:docs-search && npm run validate:docs"
   },
   "private": true,
   "dependencies": {
@@ -23,15 +25,11 @@
     "@angular/platform-browser-dynamic": "^21.2.5",
     "@angular/router": "^21.2.5",
     "dompurify": "^3.3.3",
-    "flag-icons": "^7.5.0",
     "fs-extra": "^11.3.4",
     "fuse.js": "^7.1.0",
-    "highlight.js": "^11.11.1",
     "katex": "^0.16.45",
     "markdown-it": "^14.1.1",
     "marked": "^17.0.5",
-    "ngx-highlight": "^0.0.3",
-    "ngx-highlight-js": "^21.0.0",
     "ngx-markdown": "^21.2.0",
     "path": "^0.12.7",
     "prismjs": "^1.30.0",

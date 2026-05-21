@@ -20,6 +20,7 @@ export class NavbarComponent {
   isOnReleasePage = false;
   releases: Release[] = [];
   showReleases = true;
+  activeVersion = '';
 
   constructor(
     private router: Router,
@@ -36,15 +37,16 @@ export class NavbarComponent {
     });
 
     this.versionService.activeVersion$.subscribe(version => {
-      this.showReleases = version !== 'bpay' && version !== 'v4';
+      this.activeVersion = version;
+      this.showReleases = version !== 'v4';
       if (!this.showReleases) this.releasesOpen = false;
     });
 
-    this.isOnReleasePage = this.router.url.startsWith('/releases/');
+    this.isOnReleasePage = this.isReleasesUrl(this.router.url);
     this.router.events.pipe(
       filter((e): e is NavigationEnd => e instanceof NavigationEnd)
     ).subscribe(e => {
-      this.isOnReleasePage = e.urlAfterRedirects.startsWith('/releases/');
+      this.isOnReleasePage = this.isReleasesUrl(e.urlAfterRedirects);
     });
 
     if (isPlatformBrowser(this.platformId)) {
@@ -98,6 +100,10 @@ export class NavbarComponent {
     }
 
     setTimeout(() => { this.rotate = false; }, 320);
+  }
+
+  private isReleasesUrl(url: string): boolean {
+    return url.startsWith('/releases/') || /^\/[^/]+\/releases\//.test(url);
   }
 
   goHome() {

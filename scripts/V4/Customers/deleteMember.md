@@ -22,8 +22,8 @@ title: Delete Member
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Datos de Salida

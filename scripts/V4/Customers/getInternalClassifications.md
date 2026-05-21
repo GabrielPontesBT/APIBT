@@ -120,6 +120,6 @@ Los campos del tipo de dato estructurado SdtsBTCPWInternalClassification son los
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Id | Short | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
+Description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

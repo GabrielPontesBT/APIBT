@@ -22,9 +22,9 @@ title: Get Executives
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-offset | Long $<(length: 10)>$ | Número de registros a omitir desde el inicio del resultado.
-limit | Long $<(length: 10)>$ | Cantidad máxima de registros a retornar en una sola respuesta.
-executiveDescriptionFilter | String $<(length: 30)>$ | Filtro de ejecutivo por descripción.
+offset | Long $<(Length: 10)>$ | Número de registros a omitir desde el inicio del resultado.
+limit | Long $<(Length: 10)>$ | Cantidad máxima de registros a retornar en una sola respuesta.
+executiveDescriptionFilter | String $<(Length: 30)>$ | Filtro de ejecutivo por descripción.
 
 @tab Datos de Salida
 
@@ -152,7 +152,7 @@ Los campos del tipo de dato estructurado sBTCPExecutive son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Int $<(length: 5)>$ | Identificador de ejecutivo.
-description | String $<(length: 30)>$ | Descripción.
+id | Int $<(Length: 5)>$ | Identificador de ejecutivo.
+description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

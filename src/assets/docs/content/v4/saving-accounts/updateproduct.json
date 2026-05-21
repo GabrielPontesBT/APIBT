@@ -1,0 +1,57 @@
+{
+  "slug": "saving-accounts/updateproduct",
+  "pageTitle": "Update Product",
+  "description": "Método para realizar un cambio de producto en una cuenta de ahorros.",
+  "pubName": "PublicSavingAccounts.updateProduct",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0005",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "savingAccountGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    },
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyData": [],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "14001010001",
+      "Descripción": "Debe ingresar el GUID de la cuenta de ahorro."
+    },
+    {
+      "Código": "14001010003",
+      "Descripción": "Debe ingresar el GUID del producto."
+    },
+    {
+      "Código": "140011027",
+      "Descripción": "El producto no permite cambio."
+    },
+    {
+      "Código": "140011028",
+      "Descripción": "No es posible cambiar al producto indicado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"savingAccountGUID\": \"42755eb6-18a7-4492-b17e-e248be17b5fd\",\n  \"productGUID\": \"57a29eb2-f783-41dd-87a2-c53c2edcdf6e\"\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:57:25\",\n    \"Numero\": 13496130,\n    \"Servicio\": \"PublicSavingAccounts.updateProduct\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

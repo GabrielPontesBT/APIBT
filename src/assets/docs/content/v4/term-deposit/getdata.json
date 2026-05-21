@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "termDepositGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del depósito a plazo."
     }
   ],
@@ -34,6 +34,110 @@
     {
       "Código": "Completar manualmente",
       "Descripción": "Completar manualmente"
+    },
+    {
+      "Código": "",
+      "Descripción": "90031"
+    },
+    {
+      "Código": "",
+      "Descripción": "90120"
+    },
+    {
+      "Código": "",
+      "Descripción": "90121"
+    },
+    {
+      "Código": "",
+      "Descripción": "90132"
+    },
+    {
+      "Código": "",
+      "Descripción": "90142"
+    },
+    {
+      "Código": "",
+      "Descripción": "90161"
+    },
+    {
+      "Código": "",
+      "Descripción": "180006"
+    },
+    {
+      "Código": "",
+      "Descripción": "180069"
+    },
+    {
+      "Código": "",
+      "Descripción": "990070"
+    },
+    {
+      "Código": "",
+      "Descripción": "990071"
+    },
+    {
+      "Código": "",
+      "Descripción": "20010005"
+    },
+    {
+      "Código": "",
+      "Descripción": "20010014"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010004"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010084"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010138"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010184"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010342"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010343"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010349"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010350"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010353"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020006"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020012"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020017"
+    },
+    {
+      "Código": "",
+      "Descripción": "40050001"
+    },
+    {
+      "Código": "",
+      "Descripción": "50060003"
     }
   ],
   "errorsNote": "",
@@ -53,7 +157,7 @@
       "fields": [
         {
           "Nombre": "AccountingAccountId",
-          "Tipo": "Long <strong>(length: 16)</strong>",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
           "Comentarios": "Identificador de cuenta contable."
         },
         {
@@ -63,27 +167,27 @@
         },
         {
           "Nombre": "Amount",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Monto."
         },
         {
           "Nombre": "Balance",
-          "Tipo": "Double <strong>(length: 18)</strong>",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
           "Comentarios": "Saldo."
         },
         {
           "Nombre": "CancellationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de cancelación."
         },
         {
           "Nombre": "DayType",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de día."
         },
         {
           "Nombre": "DayTypeDescription",
-          "Tipo": "String <strong>(length: 40)</strong>",
+          "Tipo": "String <strong>(Length: 40)</strong>",
           "Comentarios": "Descripción del tipo de día."
         },
         {
@@ -93,37 +197,37 @@
         },
         {
           "Nombre": "ExpandEndOfMonth",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Ampliar fin de mes."
         },
         {
           "Nombre": "ExpirationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de vencimiento."
         },
         {
           "Nombre": "ExpirationType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de vencimiento."
         },
         {
           "Nombre": "ExpirationTypeDescription",
-          "Tipo": "String <strong>(length: 40)</strong>",
+          "Tipo": "String <strong>(Length: 40)</strong>",
           "Comentarios": "Descripción del tipo de vencimiento."
         },
         {
           "Nombre": "ForcesCommercialTerm",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Fuerza plazo comercial."
         },
         {
           "Nombre": "IncludesTaxes",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Incluye impuestos."
         },
         {
           "Nombre": "InstallmentCount",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Cantidad de cuotas."
         },
         {
@@ -138,32 +242,32 @@
         },
         {
           "Nombre": "InterestCalculationType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de cálculo de interés."
         },
         {
           "Nombre": "KindValue",
-          "Tipo": "Double <strong>(length: 15)</strong>",
+          "Tipo": "Double <strong>(Length: 15)</strong>",
           "Comentarios": "Valor del tipo."
         },
         {
           "Nombre": "LastRevisionDay",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Último día de revisión."
         },
         {
           "Nombre": "NextPaymentDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha del próximo pago."
         },
         {
           "Nombre": "PayDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de pago."
         },
         {
           "Nombre": "PaymentType",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Tipo de pago."
         },
         {
@@ -173,12 +277,12 @@
         },
         {
           "Nombre": "Period",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Período."
         },
         {
           "Nombre": "PlusRate",
-          "Tipo": "Double <strong>(length: 11)</strong>",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
           "Comentarios": "Tasa adicional."
         },
         {
@@ -188,37 +292,37 @@
         },
         {
           "Nombre": "Rate",
-          "Tipo": "Double <strong>(length: 11)</strong>",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
           "Comentarios": "Tasa."
         },
         {
           "Nombre": "RateClassId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de clase de tasa."
         },
         {
           "Nombre": "RateClassDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción de la clase de tasa."
         },
         {
           "Nombre": "RateManagement",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
           "Comentarios": "Gestión de tasa."
         },
         {
           "Nombre": "RateTypeId",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
           "Comentarios": "Identificador del tipo de tasa."
         },
         {
           "Nombre": "RateTypeDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tipo de tasa."
         },
         {
           "Nombre": "RevisionDay",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Día de revisión."
         },
         {
@@ -233,7 +337,7 @@
         },
         {
           "Nombre": "Term",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Plazo."
         },
         {
@@ -243,17 +347,17 @@
         },
         {
           "Nombre": "ValueDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha valor."
         },
         {
           "Nombre": "YearType",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de año."
         },
         {
           "Nombre": "YearTypeDescription",
-          "Tipo": "String <strong>(length: 40)</strong>",
+          "Tipo": "String <strong>(Length: 40)</strong>",
           "Comentarios": "Descripción del tipo de año."
         }
       ]
@@ -263,22 +367,22 @@
       "fields": [
         {
           "Nombre": "Accounted",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Contabilizado."
         },
         {
           "Nombre": "Correlative",
-          "Tipo": "Long <strong>(length: 10)</strong>",
+          "Tipo": "Long <strong>(Length: 10)</strong>",
           "Comentarios": "Correlativo."
         },
         {
           "Nombre": "EventDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha del evento."
         },
         {
           "Nombre": "Id",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador."
         },
         {
@@ -293,27 +397,27 @@
         },
         {
           "Nombre": "PlusRate",
-          "Tipo": "Double <strong>(length: 11)</strong>",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
           "Comentarios": "Tasa adicional."
         },
         {
           "Nombre": "Rate",
-          "Tipo": "Double <strong>(length: 11)</strong>",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
           "Comentarios": "Tasa."
         },
         {
           "Nombre": "RateTypeId",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
           "Comentarios": "Identificador del tipo de tasa."
         },
         {
           "Nombre": "RateTypeDescription",
-          "Tipo": "String <strong>(length: 20)</strong>",
+          "Tipo": "String <strong>(Length: 20)</strong>",
           "Comentarios": "Descripción del tipo de tasa."
         },
         {
           "Nombre": "ValueDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha valor."
         }
       ]
@@ -322,169 +426,114 @@
       "typeName": "SdtsBTTDWInstallment",
       "fields": [
         {
-          "Nombre": "Accounted",
-          "Tipo": "String <strong>(length: 1)</strong>",
-          "Comentarios": "Contabilizado."
-        },
-        {
-          "Nombre": "BreachDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Nombre": "breachDate",
+          "Tipo": "Date",
           "Comentarios": "Fecha de incumplimiento."
         },
         {
-          "Nombre": "Capital",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Capital."
+          "Nombre": "capital",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Capital de la cuota."
         },
         {
-          "Nombre": "CapitalTax",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuesto sobre capital."
+          "Nombre": "capitalTax",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre el capital."
         },
         {
-          "Nombre": "DecimalsNumber",
-          "Tipo": "Byte <strong>(length: 1)</strong>",
-          "Comentarios": "Número de decimales."
+          "Nombre": "endDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de fin del período."
         },
         {
-          "Nombre": "EndDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
-          "Comentarios": "Fecha de fin."
+          "Nombre": "expectedPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha esperada de pago."
         },
         {
-          "Nombre": "ExpectedPaymentDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
-          "Comentarios": "Fecha de pago esperado."
+          "Nombre": "extendsTerm",
+          "Tipo": "Boolean",
+          "Comentarios": "Indica si la cuota extiende el plazo del depósito."
         },
         {
-          "Nombre": "ExtendsTerm",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
-          "Comentarios": "Extiende plazo."
-        },
-        {
-          "Nombre": "Interest",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Interés."
-        },
-        {
-          "Nombre": "InterestTax1",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuesto de interés 1."
-        },
-        {
-          "Nombre": "InterestTax2",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuesto de interés 2."
-        },
-        {
-          "Nombre": "InterestTax3",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuesto de interés 3."
-        },
-        {
-          "Nombre": "InverseExpectedPaymentDate",
-          "Tipo": "Int <strong>(length: 8)</strong>",
-          "Comentarios": "Fecha de pago esperado inversa."
-        },
-        {
-          "Nombre": "QuotaNumber",
-          "Tipo": "Short",
+          "Nombre": "installmentNumber",
+          "Tipo": "Numeric",
           "Comentarios": "Número de cuota."
         },
         {
-          "Nombre": "QuotaStatus",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Nombre": "installmentStatus",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
           "Comentarios": "Estado de la cuota."
         },
         {
-          "Nombre": "QuotaType",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Nombre": "installmentType",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
           "Comentarios": "Tipo de cuota."
         },
         {
-          "Nombre": "QuotaValue",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Valor de cuota."
+          "Nombre": "installmentValue",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Valor de la cuota."
         },
         {
-          "Nombre": "RevenueTax",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuesto a los ingresos."
+          "Nombre": "interest",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Intereses de la cuota."
         },
         {
-          "Nombre": "RoundOff",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Redondeo."
+          "Nombre": "interestTax1",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 1."
         },
         {
-          "Nombre": "StartDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
-          "Comentarios": "Fecha de inicio."
+          "Nombre": "interestTax2",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 2."
         },
         {
-          "Nombre": "SubTotal",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Subtotal."
+          "Nombre": "interestTax3",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 3."
         },
         {
-          "Nombre": "Taxes",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Impuestos."
+          "Nombre": "revenueTax",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto a la renta."
         },
         {
-          "Nombre": "Term",
-          "Tipo": "Int <strong>(length: 5)</strong>",
-          "Comentarios": "Plazo."
+          "Nombre": "roundOff",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Diferencia de redondeo."
         },
         {
-          "Nombre": "Total",
-          "Tipo": "Double <strong>(length: 18)</strong>",
-          "Comentarios": "Total."
+          "Nombre": "startDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio del período."
         },
         {
-          "Nombre": "TransactionBranchId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
-          "Comentarios": "Identificador de sucursal de transacción."
+          "Nombre": "subTotal",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Subtotal de la cuota."
         },
         {
-          "Nombre": "TransactionCompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
-          "Comentarios": "Identificador de empresa de transacción."
+          "Nombre": "taxes",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Total de impuestos de la cuota."
         },
         {
-          "Nombre": "TransactionDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
-          "Comentarios": "Fecha de transacción."
+          "Nombre": "term",
+          "Tipo": "Numeric <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo de la cuota."
         },
         {
-          "Nombre": "TransactionEntryNum",
-          "Tipo": "Int <strong>(length: 9)</strong>",
-          "Comentarios": "Número de entrada de transacción."
+          "Nombre": "total",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Total de la cuota."
         },
         {
-          "Nombre": "TransactionId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
-          "Comentarios": "Identificador de transacción."
-        },
-        {
-          "Nombre": "TransactionModuleId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
-          "Comentarios": "Identificador de módulo de transacción."
-        },
-        {
-          "Nombre": "TransactionOrdinalId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
-          "Comentarios": "Identificador ordinal de transacción."
-        },
-        {
-          "Nombre": "TransactionSubordinalId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
-          "Comentarios": "Identificador subordinal de transacción."
-        },
-        {
-          "Nombre": "Type",
-          "Tipo": "String <strong>(length: 1)</strong>",
-          "Comentarios": "Type."
+          "Nombre": "type",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de movimiento (P - Pago, I - Incremento, D - Decremento)."
         }
       ]
     },
@@ -493,37 +542,37 @@
       "fields": [
         {
           "Nombre": "Accounted",
-          "Tipo": "String <strong>(length: 1)</strong>",
+          "Tipo": "String <strong>(Length: 1)</strong>",
           "Comentarios": "Contabilizado."
         },
         {
           "Nombre": "AccountingAccountId",
-          "Tipo": "Long <strong>(length: 16)</strong>",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
           "Comentarios": "Identificador de cuenta contable."
         },
         {
           "Nombre": "BranchId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de sucursal."
         },
         {
           "Nombre": "CompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador de empresa."
         },
         {
           "Nombre": "CounterpartyId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de contraparte."
         },
         {
           "Nombre": "CurrencyId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de moneda."
         },
         {
           "Nombre": "Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador."
         },
         {
@@ -533,12 +582,12 @@
         },
         {
           "Nombre": "KindId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo."
         },
         {
           "Nombre": "ModuleId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de módulo."
         },
         {
@@ -548,22 +597,22 @@
         },
         {
           "Nombre": "OperationId",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador de operación."
         },
         {
           "Nombre": "OperationTypeId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador del tipo de operación."
         },
         {
           "Nombre": "SuboperationId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador de suboperación."
         },
         {
           "Nombre": "Type",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Tipo."
         }
       ]
@@ -573,27 +622,27 @@
       "fields": [
         {
           "Nombre": "CurrencyId",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de moneda."
         },
         {
           "Nombre": "CurrencyDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de la moneda."
         },
         {
           "Nombre": "CurrencySign",
-          "Tipo": "String <strong>(length: 4)</strong>",
+          "Tipo": "String <strong>(Length: 4)</strong>",
           "Comentarios": "Símbolo de la moneda."
         },
         {
           "Nombre": "KindId",
-          "Tipo": "Int <strong>(length: 6)</strong>",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
           "Comentarios": "Identificador del tipo."
         },
         {
           "Nombre": "KindDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del tipo."
         },
         {
@@ -603,7 +652,7 @@
         },
         {
           "Nombre": "ProductGUID",
-          "Tipo": "String <strong>(length: 36)</strong>",
+          "Tipo": "String <strong>(Length: 36)</strong>",
           "Comentarios": "GUID del producto."
         }
       ]

@@ -6,9 +6,9 @@
     "children": [
       {
         "type": "file",
-        "label": "Autenticación",
+        "label": "Authenticate",
         "pageTitle": "Execute",
-        "slug": "authenticate/autenticacion"
+        "slug": "authenticate/authenticate"
       }
     ]
   },
@@ -508,6 +508,12 @@
       },
       {
         "type": "file",
+        "label": "getCustomerSavingsAccounts",
+        "pageTitle": "Get Customer Savings Accounts",
+        "slug": "saving-accounts/getcustomersavingsaccounts"
+      },
+      {
+        "type": "file",
         "label": "getDetailedData",
         "pageTitle": "Get Detailed Data",
         "slug": "saving-accounts/getdetaileddata"
@@ -526,9 +532,21 @@
       },
       {
         "type": "file",
+        "label": "transfer",
+        "pageTitle": "Transfer",
+        "slug": "saving-accounts/transfer"
+      },
+      {
+        "type": "file",
         "label": "unblock",
         "pageTitle": "Unblock",
         "slug": "saving-accounts/unblock"
+      },
+      {
+        "type": "file",
+        "label": "updateProduct",
+        "pageTitle": "Update Product",
+        "slug": "saving-accounts/updateproduct"
       }
     ]
   },

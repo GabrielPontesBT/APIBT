@@ -22,8 +22,8 @@ title: Delete Text
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
-id | Int $<(length: 5)>$ | Identificador de texto.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
+id | Int $<(Length: 5)>$ | Identificador de texto.
 
 @tab Datos de Salida
 

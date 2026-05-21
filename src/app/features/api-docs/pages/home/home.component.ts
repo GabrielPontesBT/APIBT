@@ -6,7 +6,7 @@ import { take } from 'rxjs';
 import { VersionService, VersionId } from '../../../../core/services/version.service';
 import { ReleasesService } from '../../services/releases.service';
 
-const V4_DEFAULT_SLUG = 'authenticate/autenticacion';
+const V4_DEFAULT_SLUG = 'authenticate/authenticate';
 
 interface HomeDocItem {
   title: string;
@@ -64,7 +64,7 @@ export class HomeComponent {
   ];
 
   get docs(): HomeDocItem[] {
-    const showV4 = isPlatformBrowser(this.platformId) && localStorage.getItem('enable-v4') === 'true';
+    const showV4 = isPlatformBrowser(this.platformId);
     return showV4 ? this.allDocs : this.allDocs.filter(d => d.versionId !== 'v4');
   }
 
@@ -78,13 +78,11 @@ export class HomeComponent {
   selectVersion(versionId: VersionId): void {
     this.versionService.setVersion(versionId);
 
-    if (versionId === 'bpay') {
-      this.router.navigateByUrl('/bpay/readme');
-    } else if (versionId === 'v4') {
+    if (versionId === 'v4') {
       this.router.navigateByUrl(`/v4/${V4_DEFAULT_SLUG}`);
     } else {
       this.releasesService.getReleases().pipe(take(1)).subscribe(releases => {
-        if (releases[0]) this.router.navigate(['releases', releases[0].id]);
+        if (releases[0]) this.router.navigate([versionId, 'releases', releases[0].id]);
       });
     }
   }

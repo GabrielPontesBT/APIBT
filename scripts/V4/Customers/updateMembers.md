@@ -22,7 +22,7 @@ title: Update Members
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 
 @tab Body
@@ -134,14 +134,14 @@ Los campos del tipo de dato estructurado SdtsBTCPWCounterpartyIntegration son lo
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 CountryId | Short | Identificador del país.
-CountryDescription | String $<(length: 30)>$ | Descripción del país.
-DocumentNumber | String $<(length: 25)>$ | Número de documento.
+CountryDescription | String $<(Length: 30)>$ | Descripción del país.
+DocumentNumber | String $<(Length: 25)>$ | Número de documento.
 DocumentTypeId | Short | Identificador del tipo de documento.
-DocumentTypeDescription | String $<(length: 30)>$ | Descripción del tipo de documento.
-OwnershipTypeId | Byte $<(length: 2)>$ | Identificador del tipo de propiedad.
+DocumentTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de documento.
+OwnershipTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de propiedad.
 OwnershipTypeDescription | String | Descripción del tipo de propiedad.
-PersonGUID | String $<(length: 36)>$ | GUID de persona.
-PersonName | String $<(length: 70)>$ | Nombre de persona.
-PersonType | String $<(length: 1)>$ | Tipo de persona.
+PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonName | String $<(Length: 70)>$ | Nombre de persona.
+PersonType | String $<(Length: 1)>$ | Tipo de persona.
 :::
 <!-- CIERRA SDT -->

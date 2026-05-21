@@ -12,17 +12,17 @@
   "inputData": [
     {
       "Nombre": "countryId",
-      "Tipo": "Short <strong>(length: 3)</strong>",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
       "Comentarios": "Identificador de país."
     },
     {
       "Nombre": "firstLevel",
-      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Identificador de primer nivel administrativo."
     },
     {
       "Nombre": "secondLevel",
-      "Tipo": "Int <strong>(length: 5)</strong>",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Identificador de segundo nivel administrativo."
     }
   ],
@@ -65,12 +65,12 @@
       "fields": [
         {
           "Nombre": "Id",
-          "Tipo": "Int <strong>(length: 9)</strong>",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción."
         }
       ]

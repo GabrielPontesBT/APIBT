@@ -22,7 +22,7 @@ title: Get Activities
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-activityTypeId | Long $<(length: 15)>$ | Identificador de tipo de actividad.
+activityTypeId | Long $<(Length: 15)>$ | Identificador de tipo de actividad.
 
 
 @tab Datos de Salida
@@ -155,9 +155,9 @@ Los campos del tipo de dato estructurado SdtsBTPEWActivity son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-ActivityId | Long $<(length: 11)>$ | Identificador de la actividad.
-ActivityDescription | String $<(length: 80)>$ | Descripción de la actividad.
-ActivityTypeId | Long $<(length: 15)>$ | Identificador del tipo de actividad.
-ActivityTypeDescription | String $<(length: 60)>$ | Descripción del tipo de actividad.
+ActivityId | Long $<(Length: 11)>$ | Identificador de la actividad.
+ActivityDescription | String $<(Length: 80)>$ | Descripción de la actividad.
+ActivityTypeId | Long $<(Length: 15)>$ | Identificador del tipo de actividad.
+ActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tipo de actividad.
 :::
 <!-- CIERRA SDT -->

@@ -119,7 +119,7 @@ Los campos del tipo de dato estructurado SdtsBTCPWOwnershipType son los siguient
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Id | Byte $<(length: 2)>$ | Identificador.
+Id | Byte $<(Length: 2)>$ | Identificador.
 Description | String | Descripción.
 :::
 <!-- CIERRA SDT -->

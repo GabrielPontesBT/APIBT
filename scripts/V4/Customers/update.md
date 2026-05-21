@@ -22,7 +22,7 @@ title: Update
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 @tab Body
 
@@ -154,28 +154,28 @@ Los campos del tipo de dato estructurado SdtsBTCPWCounterparty son los siguiente
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 BranchId | Int | Identificador de sucursal.
-BranchDescription | String $<(length: 30)>$ | Descripción de sucursal.
-CancellationDate | Date $<(length: 8)>$ | Fecha de cancelación.
-CompanyId | Short $<(length: 3)>$ | Identificador de empresa.
-CompanyDescription | String $<(length: 50)>$ | Descripción de empresa.
-CounterpartyDescription | String $<(length: 70)>$ | Descripción de contraparte.
-CreationDate | Date $<(length: 8)>$ | Fecha de creación.
+BranchDescription | String $<(Length: 30)>$ | Descripción de sucursal.
+CancellationDate | Date $<(Length: 8)>$ | Fecha de cancelación.
+CompanyId | Short $<(Length: 3)>$ | Identificador de empresa.
+CompanyDescription | String $<(Length: 50)>$ | Descripción de empresa.
+CounterpartyDescription | String $<(Length: 70)>$ | Descripción de contraparte.
+CreationDate | Date $<(Length: 8)>$ | Fecha de creación.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
 EconomicActivityId | Long | Identificador de actividad económica.
-EconomicActivityDescription | String $<(length: 80)>$ | Descripción de actividad económica.
-Employee | Boolean $<(length: 1)>$ | ¿Es empleado?.
-ExecutiveId | Int $<(length: 5)>$ | Identificador del ejecutivo.
-ExecutiveDescription | String $<(length: 30)>$ | Descripción del ejecutivo.
-FinancialInstitution | Boolean $<(length: 1)>$ | Institución financiera.
+EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
+Employee | Boolean $<(Length: 1)>$ | ¿Es empleado?.
+ExecutiveId | Int $<(Length: 5)>$ | Identificador del ejecutivo.
+ExecutiveDescription | String $<(Length: 30)>$ | Descripción del ejecutivo.
+FinancialInstitution | Boolean $<(Length: 1)>$ | Institución financiera.
 InternalClassificationId | Short | Identificador de clasificación interna.
-InternalClassificationDescription | String $<(length: 30)>$ | Descripción de clasificación interna.
-Resident | Boolean $<(length: 1)>$ | ¿Es residente?.
+InternalClassificationDescription | String $<(Length: 30)>$ | Descripción de clasificación interna.
+Resident | Boolean $<(Length: 1)>$ | ¿Es residente?.
 SectorId | Short | Identificador de sector.
-SectorDescription | String $<(length: 30)>$ | Descripción del sector.
-SegmentId | Byte $<(length: 2)>$ | Identificador del segmento.
-SegmentDescription | String $<(length: 30)>$ | Descripción del segmento.
-StatusId | Byte $<(length: 2)>$ | Identificador de estado.
-StatusDescription | String $<(length: 30)>$ | Descripción del estado.
+SectorDescription | String $<(Length: 30)>$ | Descripción del sector.
+SegmentId | Byte $<(Length: 2)>$ | Identificador del segmento.
+SegmentDescription | String $<(Length: 30)>$ | Descripción del segmento.
+StatusId | Byte $<(Length: 2)>$ | Identificador de estado.
+StatusDescription | String $<(Length: 30)>$ | Descripción del estado.
 :::
 
 ::: details SdtsBTPAWCustomField
@@ -188,8 +188,8 @@ Los campos del tipo de dato estructurado SdtsBTPAWCustomField son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Correlative | Short | Correlativo.
-Id | String $<(length: 30)>$ | Identificador.
-Description | String $<(length: 50)>$ | Descripción.
-Value | String $<(length: 250)>$ | Value.
+Id | String $<(Length: 30)>$ | Identificador.
+Description | String $<(Length: 50)>$ | Descripción.
+Value | String $<(Length: 250)>$ | Value.
 :::
 <!-- CIERRA SDT -->

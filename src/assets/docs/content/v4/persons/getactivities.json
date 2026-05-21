@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "activityTypeId",
-      "Tipo": "Long <strong>(length: 15)</strong>",
+      "Tipo": "Long <strong>(Length: 15)</strong>",
       "Comentarios": "Identificador de tipo de actividad."
     }
   ],
@@ -42,22 +42,22 @@
       "fields": [
         {
           "Nombre": "ActivityId",
-          "Tipo": "Long <strong>(length: 11)</strong>",
+          "Tipo": "Long <strong>(Length: 11)</strong>",
           "Comentarios": "Identificador de la actividad."
         },
         {
           "Nombre": "ActivityDescription",
-          "Tipo": "String <strong>(length: 80)</strong>",
+          "Tipo": "String <strong>(Length: 80)</strong>",
           "Comentarios": "Descripción de la actividad."
         },
         {
           "Nombre": "ActivityTypeId",
-          "Tipo": "Long <strong>(length: 15)</strong>",
+          "Tipo": "Long <strong>(Length: 15)</strong>",
           "Comentarios": "Identificador del tipo de actividad."
         },
         {
           "Nombre": "ActivityTypeDescription",
-          "Tipo": "String <strong>(length: 60)</strong>",
+          "Tipo": "String <strong>(Length: 60)</strong>",
           "Comentarios": "Descripción del tipo de actividad."
         }
       ]

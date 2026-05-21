@@ -167,10 +167,10 @@ Los campos del tipo de dato estructurado SdtsBTPEWBond son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(length: 1)>$ | Bidireccional.
+Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
 Id | Short | Identificador.
-Description | String $<(length: 30)>$ | Descripción.
-Multilateral | Boolean $<(length: 1)>$ | Multilateral.
-Type | String $<(length: 1)>$ | Tipo de vínculo.
+Description | String $<(Length: 30)>$ | Descripción.
+Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+Type | String $<(Length: 1)>$ | Tipo de vínculo.
 :::
 <!-- CIERRA SDT -->

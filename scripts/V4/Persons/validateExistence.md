@@ -24,9 +24,9 @@ No aplica.
 @tab Body
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-countryId | Short $<(length: 3)>$ | Identificador de país.
-documentTypeId | Short $<(length: 4)>$ | Tipo de documento.
-documentNumber | String $<(length: 25)>$ | Número de documento.
+countryId | Short $<(Length: 3)>$ | Identificador de país.
+documentTypeId | Short $<(Length: 4)>$ | Tipo de documento.
+documentNumber | String $<(Length: 25)>$ | Número de documento.
 
 @tab Datos de Salida
 

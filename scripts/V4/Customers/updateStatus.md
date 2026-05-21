@@ -22,14 +22,14 @@ title: Update Status
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterpartyGUID | String $<(length: 36)>$ | GUID (identificador único global) de la contraparte.
+counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
 
 @tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-statusId | Byte $<(length: 2)>$ | Identificador de estado.
-reasonForStatusChangeId | Byte $<(length: 2)>$ | Identificador de cambio de estado.
+statusId | Byte $<(Length: 2)>$ | Identificador de estado.
+reasonForStatusChangeId | Byte $<(Length: 2)>$ | Identificador de cambio de estado.
 comment | String | Comentario.
 
 @tab Datos de Salida

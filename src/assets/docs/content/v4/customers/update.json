@@ -12,7 +12,7 @@
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
-      "Tipo": "String <strong>(length: 36)</strong>",
+      "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
@@ -200,32 +200,32 @@
         },
         {
           "Nombre": "BranchDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de sucursal."
         },
         {
           "Nombre": "CancellationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de cancelación."
         },
         {
           "Nombre": "CompanyId",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador de empresa."
         },
         {
           "Nombre": "CompanyDescription",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción de empresa."
         },
         {
           "Nombre": "CounterpartyDescription",
-          "Tipo": "String <strong>(length: 70)</strong>",
+          "Tipo": "String <strong>(Length: 70)</strong>",
           "Comentarios": "Descripción de contraparte."
         },
         {
           "Nombre": "CreationDate",
-          "Tipo": "Date <strong>(length: 8)</strong>",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
           "Comentarios": "Fecha de creación."
         },
         {
@@ -240,27 +240,27 @@
         },
         {
           "Nombre": "EconomicActivityDescription",
-          "Tipo": "String <strong>(length: 80)</strong>",
+          "Tipo": "String <strong>(Length: 80)</strong>",
           "Comentarios": "Descripción de actividad económica."
         },
         {
           "Nombre": "Employee",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "¿Es empleado?."
         },
         {
           "Nombre": "ExecutiveId",
-          "Tipo": "Int <strong>(length: 5)</strong>",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
           "Comentarios": "Identificador del ejecutivo."
         },
         {
           "Nombre": "ExecutiveDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del ejecutivo."
         },
         {
           "Nombre": "FinancialInstitution",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "Institución financiera."
         },
         {
@@ -270,12 +270,12 @@
         },
         {
           "Nombre": "InternalClassificationDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción de clasificación interna."
         },
         {
           "Nombre": "Resident",
-          "Tipo": "Boolean <strong>(length: 1)</strong>",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
           "Comentarios": "¿Es residente?."
         },
         {
@@ -285,27 +285,27 @@
         },
         {
           "Nombre": "SectorDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del sector."
         },
         {
           "Nombre": "SegmentId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador del segmento."
         },
         {
           "Nombre": "SegmentDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del segmento."
         },
         {
           "Nombre": "StatusId",
-          "Tipo": "Byte <strong>(length: 2)</strong>",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
           "Comentarios": "Identificador de estado."
         },
         {
           "Nombre": "StatusDescription",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Descripción del estado."
         }
       ]
@@ -320,17 +320,17 @@
         },
         {
           "Nombre": "Id",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción."
         },
         {
           "Nombre": "Value",
-          "Tipo": "String <strong>(length: 250)</strong>",
+          "Tipo": "String <strong>(Length: 250)</strong>",
           "Comentarios": "Value."
         }
       ]

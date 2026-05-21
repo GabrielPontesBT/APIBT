@@ -22,7 +22,7 @@ title: Get Contact Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-personGUID | String $<(length: 36)>$ | GUID (identificador único global) de la persona.
+personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
 
 
 @tab Datos de Salida
@@ -168,23 +168,23 @@ Los campos del tipo de dato estructurado SdtsBTPEWContact son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-AddressCorrelative | Short $<(length: 3)>$ | Correlativo de dirección.
-AddressId | String $<(length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(length: 1)>$ | Asociado a una dirección.
-Comment | String $<(length: 250)>$ | Comentario.
-ContactTypeId | Byte $<(length: 2)>$ | Identificador del tipo de contacto.
-ContactTypeDescription | String $<(length: 50)>$ | Descripción del tipo de contacto.
-Correlative | Byte $<(length: 2)>$ | Correlativo.
-Enabled | Boolean $<(length: 1)>$ | Habilitado.
-EndTimeRange1 | String $<(length: 5)>$ | Fin del rango horario 1.
-EndTimeRange2 | String $<(length: 5)>$ | Fin del rango horario 2.
-Priority | Byte $<(length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(length: 1)>$ | Recibe correos.
-StartTimeRange1 | String $<(length: 5)>$ | Inicio del rango horario 1.
-StartTimeRange2 | String $<(length: 5)>$ | Inicio del rango horario 2.
-TelephoneCompanyId | Short $<(length: 3)>$ | Identificador de compañía telefónica.
-TelephoneCompanyDescription | String $<(length: 50)>$ | Descripción de la compañía telefónica.
-Text | String $<(length: 250)>$ | Texto.
-Validated | Boolean $<(length: 1)>$ | Validado.
+AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
+AddressId | String $<(Length: 140)>$ | Identificador de dirección.
+AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+Comment | String $<(Length: 250)>$ | Comentario.
+ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
+ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
+Correlative | Byte $<(Length: 2)>$ | Correlativo.
+Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
+EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
+Priority | Byte $<(Length: 2)>$ | Prioridad.
+ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
+StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
+TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
+TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
+Text | String $<(Length: 250)>$ | Texto.
+Validated | Boolean $<(Length: 1)>$ | Validado.
 :::
 <!-- CIERRA SDT -->

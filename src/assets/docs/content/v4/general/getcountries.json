@@ -50,32 +50,32 @@
         },
         {
           "Nombre": "Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "ISO2",
-          "Tipo": "String <strong>(length: 2)</strong>",
+          "Tipo": "String <strong>(Length: 2)</strong>",
           "Comentarios": "ISO2."
         },
         {
           "Nombre": "ISO3",
-          "Tipo": "String <strong>(length: 3)</strong>",
+          "Tipo": "String <strong>(Length: 3)</strong>",
           "Comentarios": "ISO3."
         },
         {
           "Nombre": "ISOName",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Nombre ISO."
         },
         {
           "Nombre": "Name",
-          "Tipo": "String <strong>(length: 30)</strong>",
+          "Tipo": "String <strong>(Length: 30)</strong>",
           "Comentarios": "Nombre."
         },
         {
           "Nombre": "TelephoneCodePrefix",
-          "Tipo": "Short <strong>(length: 4)</strong>",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Prefijo telefónico."
         }
       ]
@@ -85,12 +85,12 @@
       "fields": [
         {
           "Nombre": "Id",
-          "Tipo": "Short <strong>(length: 3)</strong>",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
           "Comentarios": "Identificador."
         },
         {
           "Nombre": "Description",
-          "Tipo": "String <strong>(length: 50)</strong>",
+          "Tipo": "String <strong>(Length: 50)</strong>",
           "Comentarios": "Descripción."
         }
       ]
