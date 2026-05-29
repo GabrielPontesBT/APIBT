@@ -47,7 +47,7 @@ export class ReleasesService {
   }
 
   private getReleasesForVersion(version: string): Observable<Release[]> {
-    if (version === 'v4') return of([]);
+    if (version === 'g4') return of([]);
 
     if (!this.cache.has(version)) {
       const releases$ = forkJoin({

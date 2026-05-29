@@ -10,7 +10,8 @@ doc-page.component.html
   @let hasTabs = !!(page.inputData.length || (page.bodyData?.length ?? 0) || page.outputData.length || page.errors.length || page.flowDiagram);
   <app-page-header
     class="fade-only front"
-    [title]="page.pageTitle">
+    [title]="page.pageTitle"
+    [showNewBadge]="(isNew$ | async) ?? false">
   </app-page-header>
   <div class="content" [class.content--full]="!hasExamples">
     <div class="content-left">
@@ -44,7 +45,7 @@ doc-page.component.html
           [flowDiagram]="page.flowDiagram ?? ''">
         </app-api-tabs>
       }
-      @if (page.valuesTable && page.valuesTable.length > 0) {
+      @if (page.valuesTable && page.valuesTable.length > 0 && page.valuesBeforeStructuredTypes !== false) {
         <app-vals-data
           class="fade-only"
           [types]="page.valuesTable">
@@ -54,6 +55,12 @@ doc-page.component.html
         class="fade-only"
         [types]="page.structuredTypes">
       </app-structured-data>
+      @if (page.valuesTable && page.valuesTable.length > 0 && page.valuesBeforeStructuredTypes === false) {
+        <app-vals-data
+          class="fade-only"
+          [types]="page.valuesTable">
+        </app-vals-data>
+      }
     </div>
     @if (hasExamples) {
       <div class="content-right fade-only" appAnchorScroll>

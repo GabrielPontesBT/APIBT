@@ -38,7 +38,7 @@
   "errorsNote": "El mensaje de error puede variar ya que es devuelto por el programa que valida usuario/contraseña, y dicho programa es parametrizable (se puede utilizar el que viene por defecto u otro).",
   "examples": {
     "invocation": {
-      "json": "{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"UserId\": \"BANTOTAL\",\r\n\t\"UserPassword\": \"z0na#1357\"\r\n}'",
+      "json": "{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"UserId\": \"BANTOTAL\",\r\n  \"UserPassword\": \"z0na#1357\"\r\n}'",
       "xml": ""
     },
     "response": {

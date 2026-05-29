@@ -17,6 +17,7 @@ import { DocPage } from '../../../../core/models/doc-page.model';
 import { DocsService } from '../../services/docs.service';
 import { SearchService } from '../../../../core/services/search.service';
 import { VersionService } from '../../../../core/services/version.service';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
     selector: 'app-doc-page',
@@ -41,6 +42,7 @@ export class DocPageComponent implements OnInit, OnDestroy {
   @HostBinding('@fade') fade = true;
   page$!: Observable<DocPage | null>;
   isV4$!: Observable<boolean>;
+  isNew$!: Observable<boolean>;
 
   private highlightGen   = 0;
   private highlightTimer: ReturnType<typeof setTimeout> | null = null;
@@ -54,12 +56,13 @@ export class DocPageComponent implements OnInit, OnDestroy {
     private el: ElementRef<HTMLElement>,
     private zone: NgZone,
     private versionService: VersionService,
+    private navigationService: NavigationService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
     this.isV4$ = this.route.url.pipe(
-      map(segments => segments[0]?.path === 'v4' || segments[0]?.path === 'bpay'),
+      map(segments => segments[0]?.path === 'g4' || segments[0]?.path === 'bpay'),
       distinctUntilChanged()
     );
 
@@ -102,6 +105,11 @@ export class DocPageComponent implements OnInit, OnDestroy {
         }
       }),
       map(({ page }) => page)
+    );
+
+    this.isNew$ = this.page$.pipe(
+      switchMap(page => page ? this.navigationService.isSlugNew(page.slug) : of(false)),
+      distinctUntilChanged()
     );
   }
 

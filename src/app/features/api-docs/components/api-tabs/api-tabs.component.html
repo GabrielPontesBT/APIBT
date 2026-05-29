@@ -1,6 +1,6 @@
 <mat-tab-group class="api-tabs" disableRipple animationDuration="0ms">
   <mat-tab label="Datos de Entrada">
-    @if (inputCols?.length || inputData?.length) {
+    @if (inputCols.length || inputData.length) {
       <app-api-table [columns]="inputCols" [data]="inputData" [wideSecondCol]="isV4"></app-api-table>
     } @else {
       <p class="no-aplica">No aplica</p>
@@ -14,7 +14,7 @@
   }
 
   <mat-tab label="Datos de Salida">
-    @if (outputCols?.length || outputData?.length) {
+    @if (outputCols.length || outputData.length) {
       <app-api-table [columns]="outputCols" [data]="outputData" [wideSecondCol]="isV4"></app-api-table>
     } @else {
       <p class="no-aplica">No aplica</p>
@@ -22,7 +22,7 @@
   </mat-tab>
 
   <mat-tab label="Errores">
-    @if (errorCols?.length || errors?.length) {
+    @if (errorCols.length || errors.length) {
       <app-api-table [columns]="errorCols" [data]="errors"></app-api-table>
     } @else {
       <p class="no-aplica">No aplica</p>

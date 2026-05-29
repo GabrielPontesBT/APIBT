@@ -230,10 +230,11 @@
         {
           "Clave": "CONTROL_MISMO_CLIENTE",
           "Valor": "[S,N] (Valor por omisión \"N\")",
-          "Comentarios": "**[Opcional]** Permite indicar si el servicio controla que todos los datos de la simulación correspondan al clienteUId que invoco el servicio."
+          "Comentarios": "<strong>[Opcional]</strong> Permite indicar si el servicio controla que todos los datos de la simulación correspondan al clienteUId que invoco el servicio."
         }
       ],
       "description": ""
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

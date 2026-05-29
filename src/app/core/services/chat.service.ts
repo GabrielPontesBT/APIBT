@@ -20,7 +20,7 @@ const AGENT_CONFIG: Record<VersionId, AgentConfig> = {
   'v2r3': { agentName: 'APIBTV2R3', chatUrl: `${BASE_URL}/APIBTV2R3` },
   'v3r1': { agentName: 'APIBTV3',   chatUrl: `${BASE_URL}/APIBTV3`   },
   'bpay': { agentName: 'APIBPAY',   chatUrl: `${BASE_URL}/APIBPAY`   },
-  'v4':   { agentName: 'APIBTV4',   chatUrl: `${BASE_URL}/APIBTV4`   },
+  'g4':   { agentName: 'APIBTV4',   chatUrl: `${BASE_URL}/APIBTV4`   },
 };
 
 @Injectable({ providedIn: 'root' })
@@ -51,6 +51,13 @@ export class ChatService {
     localStorage.removeItem(this.sessionKey());
   }
 
+  ensureSession(): Promise<string> {
+    if (!isPlatformBrowser(this.platformId)) return Promise.resolve('');
+    const existing = localStorage.getItem(this.sessionKey());
+    if (existing) return Promise.resolve(existing);
+    return this.iniciarSesion();
+  }
+
   iniciarSesion(): Promise<string> {
     if (!isPlatformBrowser(this.platformId)) return Promise.resolve('');
     const { agentName } = this.getConfig();
@@ -63,7 +70,12 @@ export class ChatService {
       },
       body: JSON.stringify(payload)
     })
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) {
+        return res.text().then(text => { throw new Error(text || `HTTP ${res.status}`); });
+      }
+      return res.json();
+    })
     .then((json: any) => {
       if (!json.success) throw new Error(json.msg?.message ?? 'Error al iniciar sesión');
       const sessionId = (json as SessionResponse).data.sessionId;

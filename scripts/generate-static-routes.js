@@ -13,7 +13,7 @@ const DIST_DIR  = path.resolve(__dirname, '../dist/apibanking');
 const NAV_DIR   = path.join(DIST_DIR, 'assets/navigation');
 const INDEX_SRC = path.join(DIST_DIR, 'index.html');
 
-const VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'v4'];
+const VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'g4'];
 
 // ── Utilidades ────────────────────────────────────────────────────────────────
 

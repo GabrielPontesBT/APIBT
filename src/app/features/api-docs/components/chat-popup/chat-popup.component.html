@@ -36,9 +36,9 @@
           } @else if (m.isUser) {
             <p>{{ m.text }}</p>
           } @else if (m.streaming) {
-            <div class="streaming-text">{{ m.text }}</div>
+            <markdown [data]="m.text" (ready)="onStreamingReady()"></markdown>
           } @else {
-            <markdown [data]="m.text" prism appRenderKatex></markdown>
+            <markdown [data]="m.text" prism appRenderKatex (ready)="onMarkdownReady()"></markdown>
           }
         </div>
       }

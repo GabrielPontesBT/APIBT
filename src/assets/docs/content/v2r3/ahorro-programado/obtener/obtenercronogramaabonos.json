@@ -199,5 +199,6 @@
       ],
       "description": "Este campo tiene tres opciones:"
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

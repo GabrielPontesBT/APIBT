@@ -394,10 +394,11 @@
         {
           "Clave": "CAPITALIZA_INTERESES",
           "Valor": "[S,N] (Valor por omisión \"N\")",
-          "Comentarios": "**[Opcional]** Permite simular un depósito a plazo con capitalización periódica de intereses."
+          "Comentarios": "<strong>[Opcional]</strong> Permite simular un depósito a plazo con capitalización periódica de intereses."
         }
       ],
       "description": ""
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

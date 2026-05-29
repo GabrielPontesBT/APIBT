@@ -1,5 +1,4 @@
 @import 'prismjs/themes/prism.css';
-@import 'variables';
 
 // CONFIGURACION BACKEND
 
@@ -19,7 +18,7 @@
       color: var(--text-color);
       font-size: 1rem;
       font-family: var(--font-family);
-      padding: 1.5rem;
+      padding: 1rem 1.5rem;
       border-radius: var(--border-radius);
       font-weight: 700;
       box-shadow: none !important;
@@ -54,9 +53,15 @@
 }
 
 .vals-title {
-  margin: 0;
+  margin-top: 3rem;
   font-size: 1.8rem;
   font-family: var(--font-family);
   font-weight: 700;
   color: var(--text-color);
+}
+
+@media (max-width: 1440px) {
+  .vals-title {
+    font-size: 1.5rem;
+  }
 }

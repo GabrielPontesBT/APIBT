@@ -10,11 +10,12 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, In
 export class PageHeaderComponent {
   @Input() title!: string;
   @Input() newBadgeSrc = 'assets/image/nuevo.svg';
+  @Input() showNewBadge = false;
 
   constructor(private cdr: ChangeDetectorRef) {}
 
   get isNew(): boolean {
-    return /-NUEVO\s*$/i.test(this.title || '');
+    return this.showNewBadge || /-NUEVO\s*$/i.test(this.title || '');
   }
 
   get cleanTitle(): string {

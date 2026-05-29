@@ -1,0 +1,106 @@
+{
+  "slug": "cuentas-vista/estado-de-cuenta/obtenerdatosenvioeecc",
+  "pageTitle": "Obtener Datos de Envío",
+  "description": "Método para obtener los datos de envío de estado de cuenta.",
+  "pubName": "BTCuentasVista.ObtenerDatosEnvioEECC",
+  "programa": "RBTPG640",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "sdtEnvioEstadoCuenta",
+      "Tipo": "<a href=\"#sbtenvioestadocuenta\">sBTEnvioEstadoCuenta</a>",
+      "Comentarios": "Datos de envío de estado de cuenta."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de la cuenta vista."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la cuenta vista para el identificador: [Número de identificador]."
+    }
+  ],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerDatosEnvioEECC>\n         <bts:Btinreq>\n            <bts:Device>AS</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>74BC0CF92E9F6D66D80B3AFB</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>1142</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerDatosEnvioEECC>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"F7814AFD1A10F481ED759114\"\n  },\n  \"operacionUId\": \"1142\"\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerDatosEnvioEECCResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AS</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>74BC0CF92E9F6D66D80B3AFB</Token>\n         </Btinreq>\n         <sdtEnvioEstadoCuenta>\n            <formaEnvio>Email</formaEnvio>\n            <frecuencia>Cuatrimestral</frecuencia> \n            <recibeEstado>S</recibeEstado>\n            <emailId>1</emailId>\n            <domicilioId>0</domicilioId>\n            <formaEnvioId>M</formaEnvioId>\n            <email>acastro@dlya.com.uy</email>\n            <frecuenciaId>9</frecuenciaId>\n            <domicilio/>\n         </sdtEnvioEstadoCuenta>\n         <Erroresnegocio/>\n         <Btoutreq>\n            <Numero>38493</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasVista.ObtenerDatosEnvioEECC</Servicio>\n            <Requerimiento/>\n            <Fecha>2026-05-27</Fecha>\n            <Hora>14:48:11</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerDatosEnvioEECCResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"INSTALADOR\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"F7814AFD1A10F481ED759114\"\n  },\n  \"sdtEnvioEstadoCuenta\": {\n    \"formaEnvio\": \"Email\",\n    \"frecuencia\": \"Cuatrimestral\",\n    \"recibeEstado\": \"S\",\n    \"emailId\": 1,\n    \"domicilioId\": 0,\n    \"formaEnvioId\": \"M\",\n    \"email\": \"acastro@dlya.com.uy\",\n    \"frecuenciaId\": 9,\n    \"domicilio\": \"\"\n  },\n  \"Erroresnegocio\": [],\n  \"Btoutreq\": {\n    \"Numero\": 38490,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasVista.ObtenerDatosEnvioEECC\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2026-05-27\",\n    \"Hora\": \"14:40:32\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEnvioEstadoCuenta",
+      "fields": [
+        {
+          "Nombre": "domicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de domicilio."
+        },
+        {
+          "Nombre": "domicilio",
+          "Tipo": "String",
+          "Comentarios": "Domicilio."
+        },
+        {
+          "Nombre": "emailId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de email."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email."
+        },
+        {
+          "Nombre": "formaEnvioId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de forma de envío."
+        },
+        {
+          "Nombre": "formaEnvio",
+          "Tipo": "String",
+          "Comentarios": "Forma de envío (M:Correo, P:Correo Postal)."
+        },
+        {
+          "Nombre": "frecuenciaId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de frecuencia."
+        },
+        {
+          "Nombre": "frecuencia",
+          "Tipo": "String",
+          "Comentarios": "Frecuencia."
+        },
+        {
+          "Nombre": "recibeEstado",
+          "Tipo": "String",
+          "Comentarios": "Recibe estado (S: Si / N: No)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
+}

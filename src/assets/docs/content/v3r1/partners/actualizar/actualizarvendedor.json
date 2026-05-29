@@ -1,0 +1,196 @@
+{
+  "slug": "partners/actualizar/actualizarvendedor",
+  "pageTitle": "Actualizar Vendedor",
+  "description": "Método para actualizar un vendedor de un Partner.",
+  "pubName": "BTPartners.ActualizarVendedor",
+  "programa": "RBTPN015",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "sdtVendedor",
+      "Tipo": "<a href=\"#sbtvendedor\">sBTVendedor</a>",
+      "Comentarios": "Datos del vendedor."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "Debe ingresar el identificador del vendedor."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El identificador del Partner no puede ser vacío."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "No existe registro con la cuenta indicada."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "Si el usuario no está registrado en Bantotal, debe ingresar nombre."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "Si el usuario no está registrado en Bantotal, debe ingresar email."
+    },
+    {
+      "Código": "30008",
+      "Descripción": "Si el usuario no está registrado en Bantotal, debe ingresar teléfono."
+    },
+    {
+      "Código": "30009",
+      "Descripción": "No se recibió identificador de persona."
+    },
+    {
+      "Código": "30010",
+      "Descripción": "No se recibió identificador de cliente."
+    },
+    {
+      "Código": "30011",
+      "Descripción": "No se recuperó la persona para el identificador ingresado."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "Debe ingresar identificador de un punto de venta."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El Partner no tiene un vendedor con el identificador que se quiere modificar."
+    },
+    {
+      "Código": "40009",
+      "Descripción": "El código de comisión no existe."
+    },
+    {
+      "Código": "40010",
+      "Descripción": "El usuario Bantotal ingresado, no existe."
+    },
+    {
+      "Código": "40011",
+      "Descripción": "El Usuario Bantotal ingresado ya está asociado a un vendedor habilitado."
+    },
+    {
+      "Código": "40012",
+      "Descripción": "El Usuario Bantotal ingresado ya está asociado al vendedor."
+    },
+    {
+      "Código": "40013",
+      "Descripción": "El punto de venta seleccionado está inhabilitado."
+    },
+    {
+      "Código": "40014",
+      "Descripción": "La cuenta no corresponde a la persona."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "Este Partner ya tiene registrada a esta persona como vendedor."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "La persona ya está asociada a un vendedor habilitado."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "El Partner tiene indicado que todos sus vendedores deben ser Usuarios Bantotal, por lo cual debe ingresar uno."
+    },
+    {
+      "Código": "40018",
+      "Descripción": "La contraparte ya está asociada a un vendedor habilitado."
+    }
+  ],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ActualizarVendedor>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n          </Btinreq>\r\n         <bts:sdtVendedor>\r\n            <bts:registradoEnBantotal>S</bts:registradoEnBantotal>\r\n            <bts:habilitado>S</bts:habilitado>\r\n            <bts:clienteUId>402</bts:clienteUId>\r\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n            <bts:personaUId>269</bts:personaUId>\r\n            <bts:email></bts:email>\r\n            <bts:nombrePuntoVenta></bts:nombrePuntoVenta>\r\n            <bts:telefono></bts:telefono>\r\n            <bts:codigoComision></bts:codigoComision>\r\n            <bts:usuarioBantotal></bts:usuarioBantotal>\r\n            <bts:nombre></bts:nombre>\r\n            <bts:vendedorUId>1</bts:vendedorUId>\r\n         </bts:sdtVendedor>\r\n      </bts:BTPartners.ActualizarVendedor>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"8D8FB1A2E87D4E904004B6BB\"\r\n  },\r\n  \"sdtVendedor\": {\r\n    \"registradoEnBantotal\": \"S\",\r\n    \"habilitado\": \"S\",\r\n    \"clienteUId\": 402,\r\n    \"puntoVentaUId\": 1,\r\n    \"partnerUId\": 1,\r\n    \"personaUId\": 269,\r\n    \"email\": \"\",\r\n    \"nombrePuntoVenta\": \"\",\r\n    \"telefono\": \"\",\r\n    \"codigoComision\": \"\",\r\n    \"usuarioBantotal\": \"\",\r\n    \"nombre\": \"\",\r\n    \"vendedorUId\": 1\r\n  }\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ActualizarVendedorResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38350</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ActualizarVendedor</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>16:40:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ActualizarVendedorResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38350,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ActualizarVendedor\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"16:40:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTVendedor",
+      "fields": [
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente en Bantotal."
+        },
+        {
+          "Nombre": "codigoComision",
+          "Tipo": "Int",
+          "Comentarios": "Código de comisión asignado al vendedor."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Correo electrónico del vendedor."
+        },
+        {
+          "Nombre": "habilitado",
+          "Tipo": "String",
+          "Comentarios": "Indica si el vendedor está habilitado (S: Si, N: No)."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del vendedor."
+        },
+        {
+          "Nombre": "nombrePuntoVenta",
+          "Tipo": "String",
+          "Comentarios": "Nombre del punto de venta al que pertenece."
+        },
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del partner."
+        },
+        {
+          "Nombre": "personaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de la persona en Bantotal."
+        },
+        {
+          "Nombre": "puntoVentaUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del punto de venta."
+        },
+        {
+          "Nombre": "registradoEnBantotal",
+          "Tipo": "String",
+          "Comentarios": "Indica si el vendedor está registrado en Bantotal (S: Si, N: No)."
+        },
+        {
+          "Nombre": "telefono",
+          "Tipo": "String",
+          "Comentarios": "Número de teléfono del vendedor."
+        },
+        {
+          "Nombre": "usuarioBantotal",
+          "Tipo": "String",
+          "Comentarios": "Nombre de usuario en Bantotal."
+        },
+        {
+          "Nombre": "vendedorUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del vendedor."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
+}

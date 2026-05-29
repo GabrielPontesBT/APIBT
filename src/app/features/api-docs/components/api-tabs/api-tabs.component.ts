@@ -24,7 +24,7 @@ export class ApiTabsComponent {
   constructor(private versionService: VersionService) {}
 
   get isV4(): boolean {
-    return this.versionService.activeVersion === 'v4';
+    return this.versionService.activeVersion === 'g4';
   }
 
   openLightbox(): void {

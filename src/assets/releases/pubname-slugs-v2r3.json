@@ -2007,6 +2007,14 @@
     ]
   },
   {
+    "key": "BTCuentasVista.ActualizarDatosEnvioEECC",
+    "path": [
+      "cuentas-vista",
+      "estado-de-cuenta",
+      "actualizardatosenvioeecc"
+    ]
+  },
+  {
     "key": "BTCuentasVista.ActualizarDocumentoDigital",
     "path": [
       "cuentas-vista",
@@ -2100,6 +2108,14 @@
       "cuentas-vista",
       "obtener",
       "obtenercuentavistadecbu"
+    ]
+  },
+  {
+    "key": "BTCuentasVista.ObtenerDatosEnvioEECC",
+    "path": [
+      "cuentas-vista",
+      "estado-de-cuenta",
+      "obtenerdatosenvioeecc"
     ]
   },
   {
@@ -3037,6 +3053,30 @@
     ]
   },
   {
+    "key": "BTPartners.ActualizarPartner",
+    "path": [
+      "partners",
+      "actualizar",
+      "actualizarpartner"
+    ]
+  },
+  {
+    "key": "BTPartners.ActualizarPuntoVenta",
+    "path": [
+      "partners",
+      "actualizar",
+      "actualizarpuntoventa"
+    ]
+  },
+  {
+    "key": "BTPartners.ActualizarVendedor",
+    "path": [
+      "partners",
+      "actualizar",
+      "actualizarvendedor"
+    ]
+  },
+  {
     "key": "BTPartners.ContratarPrestamo",
     "path": [
       "partners",
@@ -3061,11 +3101,59 @@
     ]
   },
   {
+    "key": "BTPartners.CrearPartner",
+    "path": [
+      "partners",
+      "crear",
+      "crearpartner"
+    ]
+  },
+  {
     "key": "BTPartners.CrearPersonaCliente",
     "path": [
       "partners",
       "crear",
       "crearpersonacliente"
+    ]
+  },
+  {
+    "key": "BTPartners.CrearPuntoVenta",
+    "path": [
+      "partners",
+      "crear",
+      "crearpuntoventa"
+    ]
+  },
+  {
+    "key": "BTPartners.CrearVendedor",
+    "path": [
+      "partners",
+      "crear",
+      "crearvendedor"
+    ]
+  },
+  {
+    "key": "BTPartners.EliminarPartner",
+    "path": [
+      "partners",
+      "eliminar",
+      "eliminarpartner"
+    ]
+  },
+  {
+    "key": "BTPartners.EliminarPuntoVenta",
+    "path": [
+      "partners",
+      "eliminar",
+      "eliminarpuntoventa"
+    ]
+  },
+  {
+    "key": "BTPartners.EliminarVendedor",
+    "path": [
+      "partners",
+      "eliminar",
+      "eliminarvendedor"
     ]
   },
   {
@@ -3109,6 +3197,14 @@
     ]
   },
   {
+    "key": "BTPartners.ObtenerNiveles",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenerniveles"
+    ]
+  },
+  {
     "key": "BTPartners.ObtenerPartners",
     "path": [
       "partners",
@@ -3146,6 +3242,14 @@
       "partners",
       "obtener",
       "obtenerpuntosdeventa"
+    ]
+  },
+  {
+    "key": "BTPartners.ObtenerTiposDePartner",
+    "path": [
+      "partners",
+      "obtener",
+      "obtenertiposdepartner"
     ]
   },
   {

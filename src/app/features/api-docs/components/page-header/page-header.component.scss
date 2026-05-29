@@ -1,4 +1,5 @@
-@import 'variables';
+$page-header-easing: cubic-bezier(0.4, 0, 0.2, 1);
+$page-header-duration: 500ms;
 
 :host {
   display: block;
@@ -37,7 +38,7 @@
     .nuevo-icon {
       display: inline-block;
       flex: 0 0 auto;
-      height: 0.9em !important;
+      height: 0.7em !important;
       width: auto;
       max-height: calc(var(--title-height) - 16px);
       object-fit: contain;

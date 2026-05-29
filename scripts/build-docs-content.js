@@ -143,15 +143,18 @@ function stripMarkdownLinks(text) {
 }
 
 function markdownLinksToHtml(text, baseRelPath) {
-  return String(text || '').replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    if (baseRelPath && href.toLowerCase().endsWith('.md')) {
-      const dir = path.dirname(baseRelPath).replace(/\\/g, '/');
-      const resolved = path.posix.normalize(`${dir}/${href}`);
-      const slug = buildSlugFromRelPath(resolved);
-      return `<a href="/${slug}">${label}</a>`;
-    }
-    return `<a href="${href}">${label}</a>`;
-  });
+  return String(text || '')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      if (baseRelPath && href.toLowerCase().endsWith('.md')) {
+        const dir = path.dirname(baseRelPath).replace(/\\/g, '/');
+        const resolved = path.posix.normalize(`${dir}/${href}`);
+        const slug = buildSlugFromRelPath(resolved);
+        return `<a href="/${slug}">${label}</a>`;
+      }
+      return `<a href="${href}">${label}</a>`;
+    })
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>');
 }
 
 function parseTable(md, relPath) {
@@ -489,23 +492,39 @@ function extractValues(content) {
   const valuesBlock = extractBlock(content, '<!-- ABRE VALORES -->', '<!-- CIERRA VALORES -->');
 
   if (!valuesBlock) {
-    return [];
+    return { items: [], beforeStructuredTypes: true };
   } else {
-    const inputOutputBlock = extractBlock(content, '@tab Datos de Entrada', '@tab Datos de Salida');
+    // Determinar posición: si el link [valores] aparece en los tabs de entrada/salida
+    // se muestra antes de los SDTs; si solo aparece dentro de un SDT, se muestra después.
+    const inputOutputBlock = extractBlock(content, '@tab Datos de Entrada', '@tab Datos de Salida') || '';
+    const outputSalidaBlock = extractBlock(content, '@tab Datos de Salida', '@tab Errores') || '';
+    const foundInTabs = /^.*\[valores\.?\].*$/m.test(inputOutputBlock) ||
+                        /^.*\[valores\.?\].*$/m.test(outputSalidaBlock);
+    const beforeStructuredTypes = foundInTabs;
+
+    // Buscar referencias en todo el contenido (incluyendo SDTs)
     const nomValRegex = /^.*\[valores\.?\].*$/gm;
-    const entries = Array.from(inputOutputBlock.matchAll(nomValRegex));
-    const values = [];
+    const entries = Array.from(content.matchAll(nomValRegex));
+    const items = [];
+    const seenIds = new Set();
 
     for (let index = 0; index < entries.length; index += 1) {
       const elementValLine = entries[index][0];
-      const elementValName = elementValLine.split('|')[0].trim();
       const idMatch = elementValLine.match(/\(#(valores\d*)\)/);
 
       if (!idMatch) {
         continue;
       } else {
-        let elementValNameId = idMatch[1];
-        elementValNameId = elementValNameId[0].toUpperCase() + elementValNameId.slice(1);
+        const anchorId = idMatch[1];
+
+        // Evitar procesar el mismo ancla más de una vez
+        if (seenIds.has(anchorId)) {
+          continue;
+        }
+        seenIds.add(anchorId);
+
+        const elementValName = elementValLine.split('|')[0].trim();
+        let elementValNameId = anchorId[0].toUpperCase() + anchorId.slice(1);
 
         let blockElementValNameId = extractBlockVals(content, '### ' + elementValNameId, ':::');
         const headerTable = (blockElementValNameId.match(/^(.*\|.*)$/m) || [])[1] || '';
@@ -523,7 +542,7 @@ function extractValues(content) {
         const description = extractBlock(blockElementValNameId, '::: center ', headerTable);
         const fields = parseTable(blockVals);
 
-        values.push({
+        items.push({
           elementValName,
           listHeader,
           fields,
@@ -532,7 +551,7 @@ function extractValues(content) {
       }
     }
 
-    return values;
+    return { items, beforeStructuredTypes };
   }
 }
 
@@ -577,7 +596,7 @@ function buildDocJson(mdFilePath, relPath) {
   const examples = extractExamples(content);
   const backendConfig = extractBackendConfig(content, relPath);
   const structuredTypes = extractSdts(content);
-  const valuesTable = extractValues(content);
+  const { items: valuesTable, beforeStructuredTypes: valuesBeforeStructuredTypes } = extractValues(content);
 
   return {
     slug,
@@ -597,7 +616,8 @@ function buildDocJson(mdFilePath, relPath) {
     flowDiagram: apiTabs.flowDiagram,
     examples,
     structuredTypes,
-    valuesTable
+    valuesTable,
+    valuesBeforeStructuredTypes
   };
 }
 

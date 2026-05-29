@@ -12,16 +12,17 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-const ROOT_DIR = path.resolve(__dirname, '..');
-const SHARED_DIR = path.resolve(__dirname, './shared');
-const NAV_OUT_DIR = path.resolve(ROOT_DIR, './src/assets/navigation');
+const ROOT_DIR      = path.resolve(__dirname, '..');
+const SHARED_DIR    = path.resolve(__dirname, './shared');
+const NAV_OUT_DIR   = path.resolve(ROOT_DIR, './src/assets/navigation');
+const RELEASES_DIR  = path.resolve(ROOT_DIR, './src/assets/releases');
 
 const VERSIONS = [
   { id: 'v2r2', folder: 'V2R2', useShared: true },
   { id: 'v2r3', folder: 'V2R3', useShared: true },
   { id: 'v3r1', folder: 'V3R1', useShared: true },
   { id: 'bpay', folder: 'BPay', useShared: false },
-  { id: 'v4',   folder: 'V4',   useShared: false, labelMap: loadLabelMap('v4-labels.json') },
+  { id: 'g4',   folder: 'G4',   useShared: false, labelMap: loadLabelMap('g4-labels.json') },
 ];
 
 function loadLabelMap(fileName) {
@@ -207,6 +208,77 @@ function removeEmptyFolders(nodes) {
     .filter(node => node.type !== 'folder' || node.children.length > 0);
 }
 
+// ── Marcado de "Nuevo" desde el último release ────────────────────────────────
+
+function normalizeReleaseKey(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .trim();
+}
+
+/**
+ * Lee el archivo de releases y el mapa pubname→slug de una versión y devuelve
+ * un Set con los slugs (sin prefijo de versión) que pertenecen al último release.
+ * El último bloque "Release X" del archivo es el más reciente (parseReleaseList lo invierte).
+ */
+function getLatestReleaseSlugs(versionId) {
+  const releasesFile = path.join(RELEASES_DIR, `Releases-${versionId}.txt`);
+  const slugsFile    = path.join(RELEASES_DIR, `pubname-slugs-${versionId}.json`);
+
+  if (!fs.existsSync(releasesFile) || !fs.existsSync(slugsFile)) return new Set();
+
+  // Leer el mapa pubname → path[]
+  const pathEntries = JSON.parse(fs.readFileSync(slugsFile, 'utf8'));
+  const pathMap = new Map(pathEntries.map(e => [e.key, e.path]));
+
+  // Recolectar bloques de release; el último en el archivo es el más reciente
+  const lines = fs.readFileSync(releasesFile, 'utf8').split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  let latestPubNames = [];
+  let currentPubNames = [];
+
+  for (const line of lines) {
+    if (/^Release\s+/i.test(line)) {
+      currentPubNames = [];
+    } else {
+      currentPubNames.push(line);
+    }
+    // Cada vez que encontramos un nuevo bloque, el anterior queda en currentPubNames.
+    // Al terminar el loop, currentPubNames tiene el último bloque.
+    latestPubNames = currentPubNames;
+  }
+
+  const slugs = new Set();
+  for (const line of latestPubNames) {
+    const key = normalizeReleaseKey(line);
+    const slugPath = pathMap.get(key);
+    if (slugPath && slugPath.length > 0) {
+      slugs.add(slugPath.join('/'));
+    }
+  }
+
+  return slugs;
+}
+
+/**
+ * Recorre el árbol de nodos y marca con isNew:true los archivos cuyo slug
+ * esté en newSlugs. Elimina isNew del resto para que el JSON quede limpio.
+ */
+function markNewNodes(nodes, newSlugs) {
+  for (const node of nodes) {
+    if (node.type === 'file') {
+      if (newSlugs.has(node.slug)) {
+        node.isNew = true;
+      } else {
+        delete node.isNew;
+      }
+    }
+    if (Array.isArray(node.children) && node.children.length) {
+      markNewNodes(node.children, newSlugs);
+    }
+  }
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 function main() {
@@ -232,6 +304,13 @@ function main() {
 
     const tree = buildTreeFromFileMap(fileMap, version.labelMap ?? {});
     const cleanTree = removeEmptyFolders(tree);
+
+    // Marcar nodos del último release con isNew: true
+    const newSlugs = getLatestReleaseSlugs(version.id);
+    if (newSlugs.size > 0) {
+      markNewNodes(cleanTree, newSlugs);
+      console.log(`  Nuevo: ${newSlugs.size} slugs del último release marcados`);
+    }
 
     fs.writeFileSync(outFile, JSON.stringify(cleanTree, null, 2), 'utf8');
     console.log(`  OK → ${path.relative(ROOT_DIR, outFile)}`);

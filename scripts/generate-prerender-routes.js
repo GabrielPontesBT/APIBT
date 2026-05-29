@@ -10,7 +10,7 @@ const path = require('path');
 
 const NAV_DIR    = path.resolve(__dirname, '../src/assets/navigation');
 const OUT_FILE   = path.resolve(__dirname, '../prerender-routes.txt');
-const VERSIONS   = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'v4'];
+const VERSIONS   = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'g4'];
 
 function collectFileSlugs(nodes, acc = []) {
   for (const node of nodes) {

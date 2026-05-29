@@ -10,7 +10,7 @@
     "build:docs-search": "node scripts/build-docs-search.js",
     "build:release-assets": "node scripts/build-release-assets.js",
     "validate:docs": "node scripts/validate-docs.js",
-    "build:docs": "npm run build:docs-content && npm run build:docs-content-v4 && npm run build:docs-navigation && npm run build:docs-search && npm run validate:docs"
+    "build:docs": "npm run build:docs-content && npm run build:docs-content-v4 && npm run build:release-assets && npm run build:docs-navigation && npm run build:docs-search && npm run validate:docs"
   },
   "private": true,
   "dependencies": {

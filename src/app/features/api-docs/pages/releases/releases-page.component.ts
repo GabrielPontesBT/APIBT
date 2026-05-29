@@ -27,7 +27,7 @@ export class ReleasesPageComponent implements OnInit {
         const version = params.get('version') as VersionId | null;
         if (version) {
           this.versionService.setVersion(version);
-          this.showChat = version !== 'v4' && version !== 'bpay';
+          this.showChat = version !== 'g4' && version !== 'bpay';
         }
       }),
       switchMap(params => this.releasesService.getReleaseById(params.get('id') ?? ''))

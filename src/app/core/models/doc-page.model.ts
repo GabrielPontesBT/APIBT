@@ -53,4 +53,5 @@ export interface DocPage {
   examples: DocExamples;
   structuredTypes: DocStructuredType[];
   valuesTable: DocValueTable[];
+  valuesBeforeStructuredTypes?: boolean;
 }

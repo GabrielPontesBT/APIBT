@@ -210,6 +210,10 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
     return node.label;
   }
 
+  isNew(node: NavigationNode): boolean {
+    return node.type === 'file' && node.isNew === true;
+  }
+
   toggleFolder(node: NavigationNode, siblings: NavigationNode[] = []): void {
     if (!this.isFolder(node)) {
       return;

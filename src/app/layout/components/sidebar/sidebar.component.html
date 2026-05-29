@@ -42,6 +42,9 @@ sidebar.component.html
               <span class="sidebar-label">
                 {{ node.pageTitle || node.label }}
               </span>
+              @if (isNew(node)) {
+                <img src="assets/image/nuevo.svg" alt="Nuevo" class="sidebar-nuevo-icon" />
+              }
             </span>
           </a>
         }

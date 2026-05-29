@@ -155,5 +155,6 @@
       ],
       "description": ""
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

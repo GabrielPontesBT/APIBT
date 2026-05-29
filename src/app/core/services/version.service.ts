@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 const STORAGE_KEY = 'active-version';
 const DEFAULT_VERSION = 'v3r1';
-export const VALID_VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'v4'] as const;
+export const VALID_VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'g4'] as const;
 
 export type VersionId = typeof VALID_VERSIONS[number];
 

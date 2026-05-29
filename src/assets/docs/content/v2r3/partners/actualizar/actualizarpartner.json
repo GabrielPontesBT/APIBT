@@ -1,0 +1,160 @@
+{
+  "slug": "partners/actualizar/actualizarpartner",
+  "pageTitle": "Actualizar Partner",
+  "description": "Método para actualizar un Partner.",
+  "pubName": "BTPartners.ActualizarPartner",
+  "programa": "RBTPN019",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "sdtPartner",
+      "Tipo": "<a href=\"#sbtpartner\">sBTPartner</a>",
+      "Comentarios": "Datos del partner."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30001",
+      "Descripción": "El código de Partner no puede ser cero."
+    },
+    {
+      "Código": "30002",
+      "Descripción": "El nombre del Partner no puede ser vacío."
+    },
+    {
+      "Código": "30003",
+      "Descripción": "Debe ingresar un tipo de Partner."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "Debe ingresar nivel."
+    },
+    {
+      "Código": "30005",
+      "Descripción": "Si el Partner quedará habilitado entonces se debe ingresar un canal para poder operar."
+    },
+    {
+      "Código": "30006",
+      "Descripción": "No se recibió identificador de cliente."
+    },
+    {
+      "Código": "30007",
+      "Descripción": "Si el Partner no maneja vendedores no puede registrar el tipo de vendedor."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "La cuenta cliente no existe."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "No existe un Partner con el código indicado para modificar."
+    },
+    {
+      "Código": "40015",
+      "Descripción": "El código de comisión no existe."
+    },
+    {
+      "Código": "40016",
+      "Descripción": "La sucursal no existe."
+    },
+    {
+      "Código": "40017",
+      "Descripción": "Los canales no pueden ser compartidos por los Partners."
+    }
+  ],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ActualizarPartner>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n          </Btinreq>\r\n         <bts:sdtPartner>\r\n            <bts:tipoUId>1</bts:tipoUId>\r\n            <bts:nivelUId>1</bts:nivelUId>\r\n            <bts:habilitado>S</bts:habilitado>\r\n            <bts:clienteUId>343</bts:clienteUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n            <bts:canal>CANAL 1</bts:canal>\r\n            <bts:tipo></bts:tipo>\r\n            <bts:codigoComision>10</bts:codigoComision>\r\n            <bts:nivel></bts:nivel>\r\n            <bts:nombre>Prueba</bts:nombre>\r\n            <bts:tipoRegistroVendedor>U</bts:tipoRegistroVendedor>\r\n            <bts:sucursal>1</bts:sucursal>\r\n            <bts:manejaVendedores>N</bts:manejaVendedores>\r\n         </bts:sdtPartner>\r\n      </bts:BTPartners.ActualizarPartner>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"sdtPartner\": {\r\n    \"tipoUId\": 1,\r\n    \"nivelUId\": 1,\r\n    \"habilitado\": \"S\",\r\n    \"clienteUId\": 343,\r\n    \"partnerUId\": 1,\r\n    \"canal\": \"CANAL 1\",\r\n    \"tipo\": \"\",\r\n    \"codigoComision\": 10,\r\n    \"nivel\": \"\",\r\n    \"nombre\": \"Prueba\",\r\n    \"tipoRegistroVendedor\": \"U\",\r\n    \"sucursal\": 1,\r\n    \"manejaVendedores\": \"N\"\r\n  }\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ActualizarPartnerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38462</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ActualizarPartner</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-21</Fecha>\r\n            <Hora>14:34:04</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ActualizarPartnerResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38462,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ActualizarPartner\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-21\",\r\n    \"Hora\": \"14:34:04\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPartner",
+      "fields": [
+        {
+          "Nombre": "canal",
+          "Tipo": "String",
+          "Comentarios": "Canal de comunicación."
+        },
+        {
+          "Nombre": "clienteUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único del cliente en Bantotal."
+        },
+        {
+          "Nombre": "codigoComision",
+          "Tipo": "Int",
+          "Comentarios": "Código de comisión asignado al partner."
+        },
+        {
+          "Nombre": "habilitado",
+          "Tipo": "String",
+          "Comentarios": "Indica si el partner está habilitado (S: Si, N: No)."
+        },
+        {
+          "Nombre": "manejaVendedores",
+          "Tipo": "String",
+          "Comentarios": "Indica si el partner maneja vendedores (S: Si, N: No)."
+        },
+        {
+          "Nombre": "nivel",
+          "Tipo": "String",
+          "Comentarios": "Descripción del nivel del partner."
+        },
+        {
+          "Nombre": "nivelUId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador único del nivel."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre del partner."
+        },
+        {
+          "Nombre": "partnerUId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador único del partner."
+        },
+        {
+          "Nombre": "sucursal",
+          "Tipo": "Int",
+          "Comentarios": "Número de sucursal asociada."
+        },
+        {
+          "Nombre": "tipo",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de partner."
+        },
+        {
+          "Nombre": "tipoRegistroVendedor",
+          "Tipo": "String",
+          "Comentarios": "Tipo de registro del vendedor."
+        },
+        {
+          "Nombre": "tipoUId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador único del tipo de partner."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
+}

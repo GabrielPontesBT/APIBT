@@ -216,5 +216,6 @@
     }
   },
   "structuredTypes": [],
-  "valuesTable": []
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
 }

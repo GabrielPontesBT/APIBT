@@ -246,67 +246,78 @@
         "type": "file",
         "label": "AltaTarjeta",
         "pageTitle": "Alta Tarjeta",
-        "slug": "panama-pa/altatarjeta"
+        "slug": "panama-pa/altatarjeta",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "BloqueoTarjeta",
         "pageTitle": "Bloqueo Tarjeta",
-        "slug": "panama-pa/bloqueotarjeta"
+        "slug": "panama-pa/bloqueotarjeta",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "CambioDePin",
         "pageTitle": "Cambio PIN",
-        "slug": "panama-pa/cambiodepin"
+        "slug": "panama-pa/cambiodepin",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "CancelarTarjeta",
         "pageTitle": "Cancelar Tarjeta",
-        "slug": "panama-pa/cancelartarjeta"
+        "slug": "panama-pa/cancelartarjeta",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "ConsultaCVV",
         "pageTitle": "Consulta CVV",
-        "slug": "panama-pa/consultacvv"
+        "slug": "panama-pa/consultacvv",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "ConsultaMovBloqueados",
         "pageTitle": "Consulta Movimientos Bloqueados",
-        "slug": "panama-pa/consultamovbloqueados"
+        "slug": "panama-pa/consultamovbloqueados",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "DesbloqueoTarjeta",
         "pageTitle": "Desbloqueo de tarjeta",
-        "slug": "panama-pa/desbloqueotarjeta"
+        "slug": "panama-pa/desbloqueotarjeta",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "InformacionTarjeta",
         "pageTitle": "Informacion Tarjeta",
-        "slug": "panama-pa/informaciontarjeta"
+        "slug": "panama-pa/informaciontarjeta",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "NotificacionTransaccionesEndPoint",
         "pageTitle": "Notificacion de Transacciones",
-        "slug": "panama-pa/notificaciontransaccionesendpoint"
+        "slug": "panama-pa/notificaciontransaccionesendpoint",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "PeticionAutorizacionEndPoint",
         "pageTitle": "Petición de Autorización",
-        "slug": "panama-pa/peticionautorizacionendpoint"
+        "slug": "panama-pa/peticionautorizacionendpoint",
+        "isNew": true
       },
       {
         "type": "file",
         "label": "RecepcionTarjeta",
         "pageTitle": "Recepción de Tarjeta",
-        "slug": "panama-pa/recepciontarjeta"
+        "slug": "panama-pa/recepciontarjeta",
+        "isNew": true
       }
     ]
   },

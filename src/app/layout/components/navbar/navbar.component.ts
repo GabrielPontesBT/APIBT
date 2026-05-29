@@ -38,7 +38,7 @@ export class NavbarComponent {
 
     this.versionService.activeVersion$.subscribe(version => {
       this.activeVersion = version;
-      this.showReleases = version !== 'v4';
+      this.showReleases = version !== 'g4';
       if (!this.showReleases) this.releasesOpen = false;
     });
 
