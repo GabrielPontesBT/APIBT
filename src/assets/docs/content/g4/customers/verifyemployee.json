@@ -1,0 +1,50 @@
+{
+  "slug": "customers/verifyemployee",
+  "pageTitle": "Verify Employee",
+  "description": "Método para verificar si la contraparte indicada pertenece a un empleado de la institución.",
+  "pubName": "PublicCustomers.verifyEmployee",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTCPPA0014",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "exists",
+      "Tipo": "Boolean",
+      "Comentarios": "Existe?"
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40020012",
+      "Descripción": "El número de contraparte no existe"
+    },
+    {
+      "Código": "40050100",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"counterpartyGUID\": \"45399742-1326-4d8d-b7c8-10eb4cf976b0\"\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"exists\": false,\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:15:03\",\r\n    \"Numero\": 13468831,\r\n    \"Servicio\": \"PublicCustomers.verifyEmployee\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

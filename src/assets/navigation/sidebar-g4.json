@@ -1,0 +1,596 @@
+[
+  {
+    "type": "folder",
+    "label": "Authenticate",
+    "slug": "authenticate",
+    "children": [
+      {
+        "type": "file",
+        "label": "Authenticate",
+        "pageTitle": "Execute",
+        "slug": "authenticate/authenticate"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Customers",
+    "slug": "customers",
+    "children": [
+      {
+        "type": "file",
+        "label": "addAdditionalInformation",
+        "pageTitle": "Add Additional Information",
+        "slug": "customers/addadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "createWithExistingPerson",
+        "pageTitle": "Create With Existing Person",
+        "slug": "customers/createwithexistingperson"
+      },
+      {
+        "type": "file",
+        "label": "deleteAdditionalInformation",
+        "pageTitle": "Delete Additional Information",
+        "slug": "customers/deleteadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "deleteContactData",
+        "pageTitle": "Delete Contact Data",
+        "slug": "customers/deletecontactdata"
+      },
+      {
+        "type": "file",
+        "label": "deleteMember",
+        "pageTitle": "Delete Member",
+        "slug": "customers/deletemember"
+      },
+      {
+        "type": "file",
+        "label": "deleteText",
+        "pageTitle": "Delete Text",
+        "slug": "customers/deletetext"
+      },
+      {
+        "type": "file",
+        "label": "get",
+        "pageTitle": "Get",
+        "slug": "customers/get"
+      },
+      {
+        "type": "file",
+        "label": "getAdditionalInformation",
+        "pageTitle": "Get Additional Information",
+        "slug": "customers/getadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "getContactData",
+        "pageTitle": "Get Contact Data",
+        "slug": "customers/getcontactdata"
+      },
+      {
+        "type": "file",
+        "label": "getExecutives",
+        "pageTitle": "Get Executives",
+        "slug": "customers/getexecutives"
+      },
+      {
+        "type": "file",
+        "label": "getIntegrationTypes",
+        "pageTitle": "Get Integration Types",
+        "slug": "customers/getintegrationtypes"
+      },
+      {
+        "type": "file",
+        "label": "getInternalClassifications",
+        "pageTitle": "Get Internal Classifications",
+        "slug": "customers/getinternalclassifications"
+      },
+      {
+        "type": "file",
+        "label": "getLoans",
+        "pageTitle": "Get Loans",
+        "slug": "customers/getloans"
+      },
+      {
+        "type": "file",
+        "label": "getMembers",
+        "pageTitle": "Get Members",
+        "slug": "customers/getmembers"
+      },
+      {
+        "type": "file",
+        "label": "getRepresentativeHolder",
+        "pageTitle": "Get Representative Holder",
+        "slug": "customers/getrepresentativeholder"
+      },
+      {
+        "type": "file",
+        "label": "getSectors",
+        "pageTitle": "Get Sectors",
+        "slug": "customers/getsectors"
+      },
+      {
+        "type": "file",
+        "label": "getSegments",
+        "pageTitle": "Get Segments",
+        "slug": "customers/getsegments"
+      },
+      {
+        "type": "file",
+        "label": "getStatuses",
+        "pageTitle": "Get Statuses",
+        "slug": "customers/getstatuses"
+      },
+      {
+        "type": "file",
+        "label": "getStatusUpdateReasons",
+        "pageTitle": "Get Status Update Reasons",
+        "slug": "customers/getstatusupdatereasons"
+      },
+      {
+        "type": "file",
+        "label": "getTexts",
+        "pageTitle": "Get Texts",
+        "slug": "customers/gettexts"
+      },
+      {
+        "type": "file",
+        "label": "update",
+        "pageTitle": "Update",
+        "slug": "customers/update"
+      },
+      {
+        "type": "file",
+        "label": "updateAdditionalInformation",
+        "pageTitle": "Update Additional Information",
+        "slug": "customers/updateadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "updateContactData",
+        "pageTitle": "Update Contact Data",
+        "slug": "customers/updatecontactdata"
+      },
+      {
+        "type": "file",
+        "label": "updateMembers",
+        "pageTitle": "Update Members",
+        "slug": "customers/updatemembers"
+      },
+      {
+        "type": "file",
+        "label": "updateStatus",
+        "pageTitle": "Update Status",
+        "slug": "customers/updatestatus"
+      },
+      {
+        "type": "file",
+        "label": "updateTexts",
+        "pageTitle": "Update Texts",
+        "slug": "customers/updatetexts"
+      },
+      {
+        "type": "file",
+        "label": "verifyEmployee",
+        "pageTitle": "Verify Employee",
+        "slug": "customers/verifyemployee"
+      },
+      {
+        "type": "file",
+        "label": "verifyExistence",
+        "pageTitle": "Verify Existence",
+        "slug": "customers/verifyexistence"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "General",
+    "slug": "general",
+    "children": [
+      {
+        "type": "file",
+        "label": "getAdministrativeLevels",
+        "pageTitle": "Get Administrative Levels",
+        "slug": "general/getadministrativelevels"
+      },
+      {
+        "type": "file",
+        "label": "getBranches",
+        "pageTitle": "Get Branches",
+        "slug": "general/getbranches"
+      },
+      {
+        "type": "file",
+        "label": "getCountries",
+        "pageTitle": "Get Countries",
+        "slug": "general/getcountries"
+      },
+      {
+        "type": "file",
+        "label": "getDocumentTypes",
+        "pageTitle": "Get Document Types",
+        "slug": "general/getdocumenttypes"
+      },
+      {
+        "type": "file",
+        "label": "getSystemDate",
+        "pageTitle": "Get System Date",
+        "slug": "general/getsystemdate"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Persons",
+    "slug": "persons",
+    "children": [
+      {
+        "type": "file",
+        "label": "addAdditionalInformation",
+        "pageTitle": "Add Additional Information",
+        "slug": "persons/addadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "create",
+        "pageTitle": "Create",
+        "slug": "persons/create"
+      },
+      {
+        "type": "file",
+        "label": "createReduced",
+        "pageTitle": "Create Reduced",
+        "slug": "persons/createreduced"
+      },
+      {
+        "type": "file",
+        "label": "deleteAdditionalInformation",
+        "pageTitle": "Delete Additional Information",
+        "slug": "persons/deleteadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "deleteAddress",
+        "pageTitle": "Delete Address",
+        "slug": "persons/deleteaddress"
+      },
+      {
+        "type": "file",
+        "label": "deleteContactData",
+        "pageTitle": "Delete Contact Data",
+        "slug": "persons/deletecontactdata"
+      },
+      {
+        "type": "file",
+        "label": "deleteOccupation",
+        "pageTitle": "Delete Occupation",
+        "slug": "persons/deleteoccupation"
+      },
+      {
+        "type": "file",
+        "label": "deleteReference",
+        "pageTitle": "Delete Reference",
+        "slug": "persons/deletereference"
+      },
+      {
+        "type": "file",
+        "label": "deleteRelationship",
+        "pageTitle": "Delete Relationship",
+        "slug": "persons/deleterelationship"
+      },
+      {
+        "type": "file",
+        "label": "deleteText",
+        "pageTitle": "Delete Text",
+        "slug": "persons/deletetext"
+      },
+      {
+        "type": "file",
+        "label": "get",
+        "pageTitle": "Get",
+        "slug": "persons/get"
+      },
+      {
+        "type": "file",
+        "label": "getActivities",
+        "pageTitle": "Get Activities",
+        "slug": "persons/getactivities"
+      },
+      {
+        "type": "file",
+        "label": "getActivityTypes",
+        "pageTitle": "Get Activity Types",
+        "slug": "persons/getactivitytypes"
+      },
+      {
+        "type": "file",
+        "label": "getAdditionalInformation",
+        "pageTitle": "Get Additional Information",
+        "slug": "persons/getadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "getAddresses",
+        "pageTitle": "Get Addresses",
+        "slug": "persons/getaddresses"
+      },
+      {
+        "type": "file",
+        "label": "getContactData",
+        "pageTitle": "Get Contact Data",
+        "slug": "persons/getcontactdata"
+      },
+      {
+        "type": "file",
+        "label": "getContactTypes",
+        "pageTitle": "Get Contact Types",
+        "slug": "persons/getcontacttypes"
+      },
+      {
+        "type": "file",
+        "label": "getCustomerAccounts",
+        "pageTitle": "Get Customer Accounts",
+        "slug": "persons/getcustomeraccounts"
+      },
+      {
+        "type": "file",
+        "label": "getEstablishmentTypes",
+        "pageTitle": "Get Establishment Types",
+        "slug": "persons/getestablishmenttypes"
+      },
+      {
+        "type": "file",
+        "label": "getGUID",
+        "pageTitle": "Get GUID",
+        "slug": "persons/getguid"
+      },
+      {
+        "type": "file",
+        "label": "getHousingTypes",
+        "pageTitle": "Get Housing Types",
+        "slug": "persons/gethousingtypes"
+      },
+      {
+        "type": "file",
+        "label": "getLinkTypes",
+        "pageTitle": "Get Link Types",
+        "slug": "persons/getlinktypes"
+      },
+      {
+        "type": "file",
+        "label": "getMaritalStatuses",
+        "pageTitle": "Get Marital Statuses",
+        "slug": "persons/getmaritalstatuses"
+      },
+      {
+        "type": "file",
+        "label": "getOccupationList",
+        "pageTitle": "Get Occupation List",
+        "slug": "persons/getoccupationlist"
+      },
+      {
+        "type": "file",
+        "label": "getOccupations",
+        "pageTitle": "Get Occupations",
+        "slug": "persons/getoccupations"
+      },
+      {
+        "type": "file",
+        "label": "getPositions",
+        "pageTitle": "Get Positions",
+        "slug": "persons/getpositions"
+      },
+      {
+        "type": "file",
+        "label": "getReferences",
+        "pageTitle": "Get References",
+        "slug": "persons/getreferences"
+      },
+      {
+        "type": "file",
+        "label": "getRelationships",
+        "pageTitle": "Get Relationships",
+        "slug": "persons/getrelationships"
+      },
+      {
+        "type": "file",
+        "label": "getTelephoneCompanies",
+        "pageTitle": "Get Telephone Companies",
+        "slug": "persons/gettelephonecompanies"
+      },
+      {
+        "type": "file",
+        "label": "getTexts",
+        "pageTitle": "Get Texts",
+        "slug": "persons/gettexts"
+      },
+      {
+        "type": "file",
+        "label": "update",
+        "pageTitle": "Update",
+        "slug": "persons/update"
+      },
+      {
+        "type": "file",
+        "label": "updateAdditionalInformation",
+        "pageTitle": "Update Additional Information",
+        "slug": "persons/updateadditionalinformation"
+      },
+      {
+        "type": "file",
+        "label": "updateAddress",
+        "pageTitle": "Update Address",
+        "slug": "persons/updateaddress"
+      },
+      {
+        "type": "file",
+        "label": "updateContactData",
+        "pageTitle": "Update Contact Data",
+        "slug": "persons/updatecontactdata"
+      },
+      {
+        "type": "file",
+        "label": "updateOccupations",
+        "pageTitle": "Update Occupations",
+        "slug": "persons/updateoccupations"
+      },
+      {
+        "type": "file",
+        "label": "updateReduced",
+        "pageTitle": "Update Reduced",
+        "slug": "persons/updatereduced"
+      },
+      {
+        "type": "file",
+        "label": "updateReference",
+        "pageTitle": "Update Reference",
+        "slug": "persons/updatereference"
+      },
+      {
+        "type": "file",
+        "label": "updateRelationships",
+        "pageTitle": "Update Relationships",
+        "slug": "persons/updaterelationships"
+      },
+      {
+        "type": "file",
+        "label": "updateTexts",
+        "pageTitle": "Update Texts",
+        "slug": "persons/updatetexts"
+      },
+      {
+        "type": "file",
+        "label": "validateExistence",
+        "pageTitle": "Validate Existence",
+        "slug": "persons/validateexistence"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Saving Accounts",
+    "slug": "saving-accounts",
+    "children": [
+      {
+        "type": "file",
+        "label": "block",
+        "pageTitle": "Block",
+        "slug": "saving-accounts/block"
+      },
+      {
+        "type": "file",
+        "label": "cancel",
+        "pageTitle": "Cancel",
+        "slug": "saving-accounts/cancel"
+      },
+      {
+        "type": "file",
+        "label": "create",
+        "pageTitle": "Create",
+        "slug": "saving-accounts/create"
+      },
+      {
+        "type": "file",
+        "label": "getCancellationOrigins",
+        "pageTitle": "Get Cancellation Origins",
+        "slug": "saving-accounts/getcancellationorigins"
+      },
+      {
+        "type": "file",
+        "label": "getCancellationReasons",
+        "pageTitle": "Get Cancellation Reasons",
+        "slug": "saving-accounts/getcancellationreasons"
+      },
+      {
+        "type": "file",
+        "label": "getCustomerSavingsAccounts",
+        "pageTitle": "Get Customer Savings Accounts",
+        "slug": "saving-accounts/getcustomersavingsaccounts"
+      },
+      {
+        "type": "file",
+        "label": "getDetailedData",
+        "pageTitle": "Get Detailed Data",
+        "slug": "saving-accounts/getdetaileddata"
+      },
+      {
+        "type": "file",
+        "label": "getPersonProducts",
+        "pageTitle": "Get Person Products",
+        "slug": "saving-accounts/getpersonproducts"
+      },
+      {
+        "type": "file",
+        "label": "getProducts",
+        "pageTitle": "Get Products",
+        "slug": "saving-accounts/getproducts"
+      },
+      {
+        "type": "file",
+        "label": "transfer",
+        "pageTitle": "Transfer",
+        "slug": "saving-accounts/transfer"
+      },
+      {
+        "type": "file",
+        "label": "unblock",
+        "pageTitle": "Unblock",
+        "slug": "saving-accounts/unblock"
+      },
+      {
+        "type": "file",
+        "label": "updateProduct",
+        "pageTitle": "Update Product",
+        "slug": "saving-accounts/updateproduct"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Term Deposit",
+    "slug": "term-deposit",
+    "children": [
+      {
+        "type": "file",
+        "label": "create",
+        "pageTitle": "Create",
+        "slug": "term-deposit/create"
+      },
+      {
+        "type": "file",
+        "label": "getData",
+        "pageTitle": "Get Data",
+        "slug": "term-deposit/getdata"
+      },
+      {
+        "type": "file",
+        "label": "getInstructions",
+        "pageTitle": "Get Instructions",
+        "slug": "term-deposit/getinstructions"
+      },
+      {
+        "type": "file",
+        "label": "getPersonProducts",
+        "pageTitle": "Get Person Products",
+        "slug": "term-deposit/getpersonproducts"
+      },
+      {
+        "type": "file",
+        "label": "getProducts",
+        "pageTitle": "Get Products",
+        "slug": "term-deposit/getproducts"
+      },
+      {
+        "type": "file",
+        "label": "simulate",
+        "pageTitle": "Simulate",
+        "slug": "term-deposit/simulate"
+      }
+    ]
+  }
+]

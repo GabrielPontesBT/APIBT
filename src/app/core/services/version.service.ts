@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 const STORAGE_KEY = 'active-version';
 const DEFAULT_VERSION = 'v3r1';
-export const VALID_VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'v4'] as const;
+export const VALID_VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'g4'] as const;
 
 export type VersionId = typeof VALID_VERSIONS[number];
 
@@ -33,6 +33,11 @@ export class VersionService {
 
   private loadFromStorage(): VersionId {
     if (isPlatformBrowser(this.platformId)) {
+      const base     = document.querySelector('base')?.getAttribute('href') ?? '/';
+      const pathname = window.location.pathname;
+      const stripped = pathname.startsWith(base) ? pathname.slice(base.length) : pathname.replace(/^\//, '');
+      const firstSegment = stripped.split('/').filter(Boolean)[0] as VersionId;
+      if (VALID_VERSIONS.includes(firstSegment)) return firstSegment;
       const stored = localStorage.getItem(STORAGE_KEY) as VersionId;
       return stored && VALID_VERSIONS.includes(stored) ? stored : DEFAULT_VERSION;
     }

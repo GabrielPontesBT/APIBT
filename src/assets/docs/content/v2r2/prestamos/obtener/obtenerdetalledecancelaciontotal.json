@@ -258,5 +258,6 @@
       ]
     }
   ],
-  "valuesTable": []
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
 }

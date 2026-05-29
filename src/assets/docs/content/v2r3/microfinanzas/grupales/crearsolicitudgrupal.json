@@ -141,5 +141,6 @@
       ]
     }
   ],
-  "valuesTable": []
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
 }

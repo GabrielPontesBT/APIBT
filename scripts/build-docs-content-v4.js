@@ -10,7 +10,7 @@
  *     los interprete como etiquetas y los elimine (ej: String $<(length: 36)>$).
  *   - SDT con soporte de encabezados en inglés y español.
  *   - No usa shared/: V4 es una versión independiente.
- *   - Solo limpia src/assets/docs/content/v4/, no toca las demás versiones.
+ *   - Solo limpia src/assets/docs/content/g4/, no toca las demás versiones.
  */
 
 const fs   = require('fs');
@@ -18,8 +18,8 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const V4_DIR   = path.resolve(__dirname, './V4');
-const OUT_DIR  = path.resolve(ROOT_DIR, './src/assets/docs/content/v4');
+const V4_DIR   = path.resolve(__dirname, './G4');
+const OUT_DIR  = path.resolve(ROOT_DIR, './src/assets/docs/content/g4');
 
 // ── Filesystem ─────────────────────────────────────────────────────────────────
 

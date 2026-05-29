@@ -69,5 +69,6 @@
       ]
     }
   ],
-  "valuesTable": []
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
 }

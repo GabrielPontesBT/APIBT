@@ -1,0 +1,662 @@
+{
+  "slug": "term-deposit/getdata",
+  "pageTitle": "Get Data",
+  "description": "Método para obtener los datos de un depósito a plazo.",
+  "pubName": "PublicTermDeposit.getData",
+  "modulo": "TermDeposit",
+  "programa": "PublicAPI.BTTDPA0003",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "termDepositGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del depósito a plazo."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "Completar manualmente",
+      "Tipo": "Completar manualmente",
+      "Comentarios": "Completar manualmente"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "termDepositData",
+      "Tipo": "<a href=\"#sdtsbttdwtermdepositdata\">SdtsBTTDWTermDepositData</a>",
+      "Comentarios": "Datos del depósito a plazo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "Completar manualmente",
+      "Descripción": "Completar manualmente"
+    },
+    {
+      "Código": "",
+      "Descripción": "90031"
+    },
+    {
+      "Código": "",
+      "Descripción": "90120"
+    },
+    {
+      "Código": "",
+      "Descripción": "90121"
+    },
+    {
+      "Código": "",
+      "Descripción": "90132"
+    },
+    {
+      "Código": "",
+      "Descripción": "90142"
+    },
+    {
+      "Código": "",
+      "Descripción": "90161"
+    },
+    {
+      "Código": "",
+      "Descripción": "180006"
+    },
+    {
+      "Código": "",
+      "Descripción": "180069"
+    },
+    {
+      "Código": "",
+      "Descripción": "990070"
+    },
+    {
+      "Código": "",
+      "Descripción": "990071"
+    },
+    {
+      "Código": "",
+      "Descripción": "20010005"
+    },
+    {
+      "Código": "",
+      "Descripción": "20010014"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010004"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010084"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010138"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010184"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010342"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010343"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010349"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010350"
+    },
+    {
+      "Código": "",
+      "Descripción": "40010353"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020006"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020012"
+    },
+    {
+      "Código": "",
+      "Descripción": "40020017"
+    },
+    {
+      "Código": "",
+      "Descripción": "40050001"
+    },
+    {
+      "Código": "",
+      "Descripción": "50060003"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositData\": {\n    \"AccountingAccountId\": 162502000,\n    \"AccountingAccountDescription\": \"Dep.A Plazo Fijo Intran.No Reaj.Res\",\n    \"Amount\": \"2000.00\",\n    \"Balance\": \"2000.00\",\n    \"CancellationDate\": \"\",\n    \"DayType\": 1,\n    \"DayTypeDescription\": \"Comerciales\",\n    \"ExpandEndOfMonth\": true,\n    \"ExpirationDate\": \"2028-02-02\",\n    \"ExpirationType\": \"P\",\n    \"ExpirationTypeDescription\": \"Día hábil posterior\",\n    \"ForcesCommercialTerm\": false,\n    \"IncludesTaxes\": false,\n    \"InstallmentCount\": 0,\n    \"InterestCalculationType\": \"C\",\n    \"KindValue\": \"0E-8\",\n    \"LastRevisionDay\": \"\",\n    \"NextPaymentDate\": \"\",\n    \"PayDate\": \"\",\n    \"PaymentType\": 1,\n    \"PaymentTypeDescription\": \"\",\n    \"Period\": 0,\n    \"PlusRate\": \"0.000000\",\n    \"Rate\": \"13.000000\",\n    \"RateClassId\": 0,\n    \"RateClassDescription\": \"\",\n    \"RateManagement\": 0,\n    \"RateTypeId\": 1,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"RevisionDay\": 0,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"Term\": 361,\n    \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\",\n    \"ValueDate\": \"2027-02-01\",\n    \"YearType\": 2,\n    \"YearTypeDescription\": \"365 - Año calendario\",\n    \"Product\": {\n      \"ProductGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\n      \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\"\n    },\n    \"Instructions\": {\n      \"SdtsBTTDWInstruction\": [\n        {\n          \"Id\": 1,\n          \"Description\": \"Cancelar y Acreditar al vto.\",\n          \"Accounted\": \"S\",\n          \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n          \"AccountingAccountId\": 102100000,\n          \"BranchId\": 0,\n          \"CompanyId\": 0,\n          \"CounterpartyId\": 4612,\n          \"CurrencyId\": 0,\n          \"KindId\": 0,\n          \"ModuleId\": 0,\n          \"OperationId\": 0,\n          \"OperationTypeId\": 0,\n          \"SuboperationId\": 0,\n          \"Type\": 0\n        }\n      ]\n    },\n    \"Installments\": {\n      \"SdtsBTTDWInstallment\": []\n    },\n    \"Events\": {\n      \"SdtsBTTDWEvent\": []\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:35\",\n    \"Numero\": 13472659,\n    \"Servicio\": \"PublicTermDeposit.getData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTTDWTermDepositData",
+      "fields": [
+        {
+          "Nombre": "AccountingAccountId",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
+          "Comentarios": "Identificador de cuenta contable."
+        },
+        {
+          "Nombre": "AccountingAccountDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción de cuenta contable."
+        },
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "Balance",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Saldo."
+        },
+        {
+          "Nombre": "CancellationDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de cancelación."
+        },
+        {
+          "Nombre": "DayType",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de día."
+        },
+        {
+          "Nombre": "DayTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del tipo de día."
+        },
+        {
+          "Nombre": "Events",
+          "Tipo": "<a href=\"#sdtsbttdwevent\">SdtsBTTDWEvent</a>",
+          "Comentarios": "Events."
+        },
+        {
+          "Nombre": "ExpandEndOfMonth",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "Ampliar fin de mes."
+        },
+        {
+          "Nombre": "ExpirationDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "ExpirationType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de vencimiento."
+        },
+        {
+          "Nombre": "ExpirationTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del tipo de vencimiento."
+        },
+        {
+          "Nombre": "ForcesCommercialTerm",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "Fuerza plazo comercial."
+        },
+        {
+          "Nombre": "IncludesTaxes",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "Incluye impuestos."
+        },
+        {
+          "Nombre": "InstallmentCount",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Cantidad de cuotas."
+        },
+        {
+          "Nombre": "Installments",
+          "Tipo": "<a href=\"#sdtsbttdwinstallment\">SdtsBTTDWInstallment</a>",
+          "Comentarios": "Cuotas."
+        },
+        {
+          "Nombre": "Instructions",
+          "Tipo": "<a href=\"#sdtsbttdwinstruction\">SdtsBTTDWInstruction</a>",
+          "Comentarios": "Instrucciones."
+        },
+        {
+          "Nombre": "InterestCalculationType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cálculo de interés."
+        },
+        {
+          "Nombre": "KindValue",
+          "Tipo": "Double <strong>(Length: 15)</strong>",
+          "Comentarios": "Valor del tipo."
+        },
+        {
+          "Nombre": "LastRevisionDay",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Último día de revisión."
+        },
+        {
+          "Nombre": "NextPaymentDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha del próximo pago."
+        },
+        {
+          "Nombre": "PayDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de pago."
+        },
+        {
+          "Nombre": "PaymentType",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Tipo de pago."
+        },
+        {
+          "Nombre": "PaymentTypeDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de pago."
+        },
+        {
+          "Nombre": "Period",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Período."
+        },
+        {
+          "Nombre": "PlusRate",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Tasa adicional."
+        },
+        {
+          "Nombre": "Product",
+          "Tipo": "<a href=\"#sdtsbtphwproduct\">SdtsBTPHWProduct</a>",
+          "Comentarios": "Producto."
+        },
+        {
+          "Nombre": "Rate",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "RateClassId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de clase de tasa."
+        },
+        {
+          "Nombre": "RateClassDescription",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Descripción de la clase de tasa."
+        },
+        {
+          "Nombre": "RateManagement",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Gestión de tasa."
+        },
+        {
+          "Nombre": "RateTypeId",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de tasa."
+        },
+        {
+          "Nombre": "RateTypeDescription",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Descripción del tipo de tasa."
+        },
+        {
+          "Nombre": "RevisionDay",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Día de revisión."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "StatusDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del estado."
+        },
+        {
+          "Nombre": "Term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "TermDepositGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del depósito a plazo."
+        },
+        {
+          "Nombre": "ValueDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha valor."
+        },
+        {
+          "Nombre": "YearType",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de año."
+        },
+        {
+          "Nombre": "YearTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del tipo de año."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTTDWEvent",
+      "fields": [
+        {
+          "Nombre": "Accounted",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Contabilizado."
+        },
+        {
+          "Nombre": "Correlative",
+          "Tipo": "Long <strong>(Length: 10)</strong>",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "EventDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha del evento."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "MovementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del movimiento."
+        },
+        {
+          "Nombre": "Name",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "PlusRate",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Tasa adicional."
+        },
+        {
+          "Nombre": "Rate",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "RateTypeId",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de tasa."
+        },
+        {
+          "Nombre": "RateTypeDescription",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Descripción del tipo de tasa."
+        },
+        {
+          "Nombre": "ValueDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha valor."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTTDWInstallment",
+      "fields": [
+        {
+          "Nombre": "breachDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de incumplimiento."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Capital de la cuota."
+        },
+        {
+          "Nombre": "capitalTax",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre el capital."
+        },
+        {
+          "Nombre": "endDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de fin del período."
+        },
+        {
+          "Nombre": "expectedPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha esperada de pago."
+        },
+        {
+          "Nombre": "extendsTerm",
+          "Tipo": "Boolean",
+          "Comentarios": "Indica si la cuota extiende el plazo del depósito."
+        },
+        {
+          "Nombre": "installmentNumber",
+          "Tipo": "Numeric",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "installmentStatus",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
+          "Comentarios": "Estado de la cuota."
+        },
+        {
+          "Nombre": "installmentType",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cuota."
+        },
+        {
+          "Nombre": "installmentValue",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Valor de la cuota."
+        },
+        {
+          "Nombre": "interest",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Intereses de la cuota."
+        },
+        {
+          "Nombre": "interestTax1",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 1."
+        },
+        {
+          "Nombre": "interestTax2",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 2."
+        },
+        {
+          "Nombre": "interestTax3",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto sobre intereses 3."
+        },
+        {
+          "Nombre": "revenueTax",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Impuesto a la renta."
+        },
+        {
+          "Nombre": "roundOff",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Diferencia de redondeo."
+        },
+        {
+          "Nombre": "startDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio del período."
+        },
+        {
+          "Nombre": "subTotal",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Subtotal de la cuota."
+        },
+        {
+          "Nombre": "taxes",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Total de impuestos de la cuota."
+        },
+        {
+          "Nombre": "term",
+          "Tipo": "Numeric <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo de la cuota."
+        },
+        {
+          "Nombre": "total",
+          "Tipo": "Numeric <strong>(Length: 18, dec: 2)</strong>",
+          "Comentarios": "Total de la cuota."
+        },
+        {
+          "Nombre": "type",
+          "Tipo": "Character <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de movimiento (P - Pago, I - Incremento, D - Decremento)."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTTDWInstruction",
+      "fields": [
+        {
+          "Nombre": "Accounted",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Contabilizado."
+        },
+        {
+          "Nombre": "AccountingAccountId",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
+          "Comentarios": "Identificador de cuenta contable."
+        },
+        {
+          "Nombre": "BranchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "CompanyId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "CounterpartyId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de contraparte."
+        },
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "ModuleId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de módulo."
+        },
+        {
+          "Nombre": "MovementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del movimiento."
+        },
+        {
+          "Nombre": "OperationId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de operación."
+        },
+        {
+          "Nombre": "OperationTypeId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del tipo de operación."
+        },
+        {
+          "Nombre": "SuboperationId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de suboperación."
+        },
+        {
+          "Nombre": "Type",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Tipo."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTPHWProduct",
+      "fields": [
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "CurrencyDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de la moneda."
+        },
+        {
+          "Nombre": "CurrencySign",
+          "Tipo": "String <strong>(Length: 4)</strong>",
+          "Comentarios": "Símbolo de la moneda."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "KindDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo."
+        },
+        {
+          "Nombre": "ProductDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "ProductGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID del producto."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

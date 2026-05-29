@@ -2872,6 +2872,34 @@
     "children": [
       {
         "type": "folder",
+        "label": "Actualizar",
+        "slug": "partners/actualizar",
+        "children": [
+          {
+            "type": "file",
+            "label": "ActualizarPartner",
+            "pageTitle": "Actualizar Partner",
+            "slug": "partners/actualizar/actualizarpartner",
+            "isNew": true
+          },
+          {
+            "type": "file",
+            "label": "ActualizarPuntoVenta",
+            "pageTitle": "Actualizar Punto Venta",
+            "slug": "partners/actualizar/actualizarpuntoventa",
+            "isNew": true
+          },
+          {
+            "type": "file",
+            "label": "ActualizarVendedor",
+            "pageTitle": "Actualizar Vendedor",
+            "slug": "partners/actualizar/actualizarvendedor",
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "type": "folder",
         "label": "Contratar",
         "slug": "partners/contratar",
         "children": [
@@ -2902,9 +2930,58 @@
           },
           {
             "type": "file",
+            "label": "CrearPartner",
+            "pageTitle": "Crear Partner",
+            "slug": "partners/crear/crearpartner",
+            "isNew": true
+          },
+          {
+            "type": "file",
             "label": "CrearPersonaCliente",
             "pageTitle": "Crear Persona Cliente",
             "slug": "partners/crear/crearpersonacliente"
+          },
+          {
+            "type": "file",
+            "label": "CrearPuntoVenta",
+            "pageTitle": "Crear Punto Venta",
+            "slug": "partners/crear/crearpuntoventa",
+            "isNew": true
+          },
+          {
+            "type": "file",
+            "label": "CrearVendedor",
+            "pageTitle": "Crear Vendedor",
+            "slug": "partners/crear/crearvendedor",
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "label": "Eliminar",
+        "slug": "partners/eliminar",
+        "children": [
+          {
+            "type": "file",
+            "label": "EliminarPartner",
+            "pageTitle": "Eliminar Partner",
+            "slug": "partners/eliminar/eliminarpartner",
+            "isNew": true
+          },
+          {
+            "type": "file",
+            "label": "EliminarPuntoVenta",
+            "pageTitle": "Eliminar Punto Venta",
+            "slug": "partners/eliminar/eliminarpuntoventa",
+            "isNew": true
+          },
+          {
+            "type": "file",
+            "label": "EliminarVendedor",
+            "pageTitle": "Eliminar Vendedor",
+            "slug": "partners/eliminar/eliminarvendedor",
+            "isNew": true
           }
         ]
       },
@@ -2945,6 +3022,13 @@
           },
           {
             "type": "file",
+            "label": "ObtenerNiveles",
+            "pageTitle": "Obtener Niveles",
+            "slug": "partners/obtener/obtenerniveles",
+            "isNew": true
+          },
+          {
+            "type": "file",
             "label": "ObtenerPartners",
             "pageTitle": "Obtener Partners",
             "slug": "partners/obtener/obtenerpartners"
@@ -2972,6 +3056,13 @@
             "label": "ObtenerPuntosdeVenta",
             "pageTitle": "Obtener Puntos de Venta",
             "slug": "partners/obtener/obtenerpuntosdeventa"
+          },
+          {
+            "type": "file",
+            "label": "ObtenerTiposDePartner",
+            "pageTitle": "Obtener Tipos De Partner",
+            "slug": "partners/obtener/obtenertiposdepartner",
+            "isNew": true
           },
           {
             "type": "file",

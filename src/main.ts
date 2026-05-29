@@ -3,13 +3,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-// Aplica el tema antes de que Angular cargue para evitar el flash de tema incorrecto.
-// Prioridad: preferencia guardada → preferencia del sistema → claro por defecto.
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const isDark = savedTheme === 'dark' || (savedTheme === null && prefersDark);
-if (isDark) {
-  document.documentElement.classList.add('dark-mode');
+// El inline script de index.html ya aplicó dark-mode al <html> antes del primer render.
+// Aquí solo sincronizamos <body> cuando Angular está listo.
+if (document.documentElement.classList.contains('dark-mode')) {
   document.body.classList.add('dark-mode');
 }
 

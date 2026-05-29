@@ -1,5 +1,5 @@
 @if (release) {
-  <app-page-header [title]="release.titulo"></app-page-header>
+  <app-page-header [title]="'Release ' + release.titulo"></app-page-header>
   <div class="releases-wrap">
     <div class="nov-grid">
       @for (g of release.grupos; track g.titulo) {
@@ -28,5 +28,7 @@
   </div>
 }
 
-<app-chat-popup></app-chat-popup>
+@if (showChat) {
+  <app-chat-popup></app-chat-popup>
+}
 <app-footer-space></app-footer-space>

@@ -6,8 +6,30 @@
   <title>API Banking | Bantotal </title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var p = sessionStorage.getItem('_spa_redirect');
+      if (p) { sessionStorage.removeItem('_spa_redirect'); history.replaceState(null, '', p); return; }
+      var base = document.querySelector('base').getAttribute('href');
+      var path = location.pathname;
+      if (path !== base && path.slice(-1) === '/') {
+        history.replaceState(null, '', path.slice(0, -1) + location.search + location.hash);
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (saved === null && prefersDark)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script>
   <link rel="icon" href="assets/image/isotipo_Bantotal.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />

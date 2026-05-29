@@ -11,5 +11,6 @@ export interface NavigationNode {
   label: string;
   slug: string;
   pageTitle?: string;
+  isNew?: boolean;
   children?: NavigationNode[];
 }

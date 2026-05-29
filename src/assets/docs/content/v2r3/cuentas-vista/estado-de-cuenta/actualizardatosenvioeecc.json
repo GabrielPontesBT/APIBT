@@ -1,0 +1,121 @@
+{
+  "slug": "cuentas-vista/estado-de-cuenta/actualizardatosenvioeecc",
+  "pageTitle": "Actualizar Datos Envío",
+  "description": "Método para actualizar los datos de envío de estado de cuenta.",
+  "pubName": "BTCuentasVista.ActualizarDatosEnvioEECC",
+  "programa": "RBTPG640",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "Nombre",
+    "Tipo",
+    "Comentarios"
+  ],
+  "inputData": [
+    {
+      "Nombre": "operacionUId",
+      "Tipo": "Long",
+      "Comentarios": "Identificador único de operación."
+    },
+    {
+      "Nombre": "sdtEnvioEstadoCuenta",
+      "Tipo": "<a href=\"#sbtenvioestadocuenta\">sBTEnvioEstadoCuenta</a>",
+      "Comentarios": "Datos de envío de estado de cuenta."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "30003",
+      "Descripción": "No se recibió el identificador de Cuenta Vista."
+    },
+    {
+      "Código": "30004",
+      "Descripción": "No se recuperó la Cuenta Vista para el identificador: [Número de identificador]."
+    },
+    {
+      "Código": "40001",
+      "Descripción": "La frecuencia enviada no es correcta."
+    },
+    {
+      "Código": "40002",
+      "Descripción": "El valor ingresado para recibe estado de cuenta no es correcto."
+    },
+    {
+      "Código": "40003",
+      "Descripción": "El valor enviado ingresado para la forma de envío no es correcta. Debe ser (M-Correo, P-Correo postal)."
+    },
+    {
+      "Código": "40004",
+      "Descripción": "El código de domicilio ingresado no es valido."
+    }
+  ],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ActualizarDatosEnvioEECC>\n         <bts:Btinreq>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Device>AS</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>74BC0CF92E9F6D66D80B3AFB</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n         </bts:Btinreq>\n         <bts:operacionUId>1142</bts:operacionUId>\n         <bts:sdtEnvioEstadoCuenta>\n            <bts:formaEnvio>Envío Físico</bts:formaEnvio>\n            <bts:frecuencia>Cuatrimestral</bts:frecuencia>\n            <bts:recibeEstado>S</bts:recibeEstado>\n            <bts:emailId></bts:emailId>\n            <bts:domicilioId>1</bts:domicilioId>\n            <bts:formaEnvioId>P</bts:formaEnvioId>\n            <bts:email></bts:email>\n            <bts:frecuenciaId>9</bts:frecuenciaId>\n            <bts:domicilio>AVENIDA ITALIA MANZANA 2144</bts:domicilio>\n         </bts:sdtEnvioEstadoCuenta>\n      </bts:BTCuentasVista.ActualizarDatosEnvioEECC>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"B0EFB6BF27264672AD43324E\"\n  },\n  \"operacionUId\": \"1142\",\n  \"sdtEnvioEstadoCuenta\": {\n    \"domicilio\": \"AVENIDA ITALIA MANZANA 2144\",\n    \"domicilioId\": \"1\",\n    \"email\": \"\",\n    \"emailId\": \"\",\n    \"formaEnvio\": \"Envío Físico\",\n    \"formaEnvioId\": \"P\",\n    \"frecuencia\": \"Cuatrimestral\",\n    \"frecuenciaId\": \"9\",\n    \"recibeEstado\": \"S\"\n  }\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ActualizarDatosEnvioEECCResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AS</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>74BC0CF92E9F6D66D80B3AFB</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>38499</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasVista.ActualizarDatosEnvioEECC</Servicio>\n            <Requerimiento/>\n            <Fecha>2026-05-27</Fecha>\n            <Hora>14:56:22</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasVista.ActualizarDatosEnvioEECCResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"INSTALADOR\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"B0EFB6BF27264672AD43324E\"\n  },\n  \"Erroresnegocio\": [],\n  \"Btoutreq\": {\n    \"Numero\": 38498,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasVista.ActualizarDatosEnvioEECC\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2026-05-27\",\n    \"Hora\": \"14:54:36\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTEnvioEstadoCuenta",
+      "fields": [
+        {
+          "Nombre": "domicilioId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de domicilio."
+        },
+        {
+          "Nombre": "domicilio",
+          "Tipo": "String",
+          "Comentarios": "Domicilio."
+        },
+        {
+          "Nombre": "emailId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de email."
+        },
+        {
+          "Nombre": "email",
+          "Tipo": "String",
+          "Comentarios": "Email."
+        },
+        {
+          "Nombre": "formaEnvioId",
+          "Tipo": "String",
+          "Comentarios": "Identificador de forma de envío."
+        },
+        {
+          "Nombre": "formaEnvio",
+          "Tipo": "String",
+          "Comentarios": "Forma de envío (M: Correo, P: Correo Postal)."
+        },
+        {
+          "Nombre": "frecuenciaId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de frecuencia."
+        },
+        {
+          "Nombre": "frecuencia",
+          "Tipo": "String",
+          "Comentarios": "Frecuencia."
+        },
+        {
+          "Nombre": "recibeEstado",
+          "Tipo": "String",
+          "Comentarios": "Recibe estado (S: Si / N: No)."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
+}

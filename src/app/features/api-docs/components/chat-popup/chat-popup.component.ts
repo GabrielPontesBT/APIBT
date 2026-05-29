@@ -109,7 +109,6 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.removeItem(this.messagesKey());
       localStorage.removeItem(this.historyKey());
-      this.chatService.iniciarSesion().catch(console.error);
     }
     this.cdr.detectChanges();
   }
@@ -152,23 +151,22 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     this.typingIndicator = true;
     this.scrollToBottom();
 
-    if (this.chatService.hasSession()) {
-      this.proceedChat(txt);
-    } else {
-      this.chatService.iniciarSesion()
-        .then(() => this.proceedChat(txt))
-        .catch(err => {
-          console.error(err);
-          this.messages.push({ text: 'Error iniciando sesión.', isUser: false });
-          this.loading = this.typingIndicator = false;
-        });
-    }
+    this.chatService.ensureSession()
+      .then(() => this.proceedChat(txt))
+      .catch(err => {
+        const msg = err?.message?.includes('429') || err?.message?.toLowerCase().includes('too many')
+          ? 'Demasiadas solicitudes. Esperá unos segundos e intentá de nuevo.'
+          : 'Error iniciando sesión.';
+        this.messages.push({ text: msg, isUser: false });
+        this.loading = this.typingIndicator = false;
+        this.cdr.detectChanges();
+      });
   }
 
-  private preprocessMarkdown(text: string): string {
+  private preprocessMarkdown(text: string, streaming = false): string {
     const lines = text.split('\n');
     let inBlock = false;
-    return lines.map(line => {
+    const processed = lines.map(line => {
       if (!inBlock && /^```/.test(line)) {
         inBlock = true;
         return /^```(\s*|none)\s*$/.test(line) ? '```text' : line;
@@ -178,6 +176,10 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       return line;
     }).join('\n');
+    if (streaming && inBlock) {
+      return processed + '\n```';
+    }
+    return processed;
   }
 
   private proceedChat(userMsg: string) {
@@ -192,14 +194,15 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     let streamDone = false;
     let intervalId: ReturnType<typeof setInterval> | null = null;
 
-    const CHARS_PER_TICK = 8;
+    const CHARS_PER_TICK = 3;
 
     const startTypewriter = () => {
       if (intervalId !== null) return;
       intervalId = setInterval(() => {
         if (displayedLen < fullText.length) {
           displayedLen = Math.min(fullText.length, displayedLen + CHARS_PER_TICK);
-          this.messages[msgIdx] = { text: fullText.slice(0, displayedLen), isUser: false, streaming: true };
+          const visible = fullText.slice(0, displayedLen);
+          this.messages[msgIdx] = { text: this.preprocessMarkdown(visible, true), isUser: false, streaming: true };
           this.cdr.detectChanges();
           this.scrollToBottom();
         } else if (streamDone) {
@@ -234,12 +237,22 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  onStreamingReady() {
+    setTimeout(() => this.injectWordBreaks(), 0);
+  }
+
+  onMarkdownReady() {
+    setTimeout(() => {
+      this.injectCopyButtons();
+      this.injectWordBreaks();
+    }, 0);
+  }
+
   private finalize() {
     this.loading = false;
     this.typingIndicator = false;
     this.saveChatHistory();
     this.cdr.detectChanges();
-    setTimeout(() => this.injectCopyButtons(), 50);
   }
 
   private injectCopyButtons() {
@@ -272,6 +285,29 @@ export class ChatPopupComponent implements OnInit, AfterViewInit, OnDestroy {
         pre.parentNode!.insertBefore(wrapper, pre);
         wrapper.appendChild(pre);
         wrapper.appendChild(btn);
+      });
+    });
+  }
+
+  private injectWordBreaks() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    document.querySelectorAll('.bot-message td:not([data-wbr]), .bot-message th:not([data-wbr])').forEach(cell => {
+      cell.setAttribute('data-wbr', '1');
+      const walker = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+      const textNodes: Text[] = [];
+      let node: Text | null;
+      while ((node = walker.nextNode() as Text | null)) textNodes.push(node);
+      textNodes.forEach(textNode => {
+        const text = textNode.textContent;
+        if (!text) return;
+        const html = text
+          .replace(/([A-Z]+)([A-Z][a-z])/g, '$1<wbr>$2')  // BT→Indicadores
+          .replace(/([a-z0-9])([A-Z])/g, '$1<wbr>$2')       // obtener→Agrupadores
+          .replace(/\./g, '.<wbr>');                          // BTIndicadores.→Obtener
+        if (html === text) return;
+        const span = document.createElement('span');
+        span.innerHTML = html;
+        textNode.parentNode?.replaceChild(span, textNode);
       });
     });
   }

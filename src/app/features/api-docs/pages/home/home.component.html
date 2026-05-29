@@ -1,16 +1,29 @@
 <div class="home-page">
   <section class="home-banner">
-    <div class="home-banner__content">
-      <div class="home-banner__logo">
-        <img
-          src="assets/image/logo-Bantotal-blanco.png"
-          alt="Bantotal"
-        />
+    <div class="home-banner__inner">
+
+      <div class="home-banner__content">
+        <div class="home-banner__logo">
+          <img
+            src="assets/image/logo-Bantotal-blanco.png"
+            alt="Bantotal"
+          />
+        </div>
+
+        <div class="home-banner__text">
+          <h1>DOCUMENTACIÓN<br />API BANKING</h1>
+        </div>
       </div>
 
-      <div class="home-banner__text">
-        <h1>DOCUMENTACIÓN<br />API BANKING</h1>
+      <div class="home-news">
+        <h2 class="home-news__title">Novedades</h2>
+        <ul class="home-news__list">
+          @for (item of newsItems; track $index) {
+            <li class="home-news__item">{{ item }}</li>
+          }
+        </ul>
       </div>
+
     </div>
   </section>
 

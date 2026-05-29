@@ -17,13 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["prismjs"],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/styles",
                 "node_modules"
               ]
             },
-            "outputPath": "dist/api-docs",
+            "outputPath": "dist/apibanking",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -35,12 +36,13 @@
               "src/favicon.ico",
               "src/assets",
               "src/app/generated-pages",
-              "src/web.config"
+              "src/web.config",
+              "src/404.html"
             ],
             "styles": [
               "node_modules/prismjs/themes/prism-solarizedlight.css",
               "node_modules/katex/dist/katex.min.css",
-              "node_modules/flag-icons/css/flag-icons.min.css",
+              "src/flag-icons-americas.css",
               "src/styles.scss"
             ],
             "scripts": [

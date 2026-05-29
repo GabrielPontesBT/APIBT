@@ -107,10 +107,11 @@
         {
           "Clave": "NOMBRE_CUENTA",
           "Valor": "[Nombre de la cuenta]",
-          "Comentarios": "**[Opcional]** Permite indicar un nombre específico a la cuenta."
+          "Comentarios": "<strong>[Opcional]</strong> Permite indicar un nombre específico a la cuenta."
         }
       ],
       "description": ""
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

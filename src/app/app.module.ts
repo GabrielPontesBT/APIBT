@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -14,6 +14,14 @@ import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/materia
 import { TitleStrategy } from '@angular/router';
 import { AppTitleStrategy } from './app-title.strategy';
 import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
+import { IMAGE_CONFIG } from '@angular/common';
+
+class AppErrorHandler extends ErrorHandler {
+  override handleError(error: unknown): void {
+    if (error instanceof DOMException && error.name === 'InvalidStateError') return;
+    super.handleError(error);
+  }
+}
 
 import { MARKED_OPTIONS, MarkedOptions, MarkedRenderer, MarkdownModule } from 'ngx-markdown';
 
@@ -49,6 +57,8 @@ const globalRippleConfig: RippleGlobalOptions = {
         Title, // servicio Title para que la estrategia pueda setearlo
         { provide: TitleStrategy, useClass: AppTitleStrategy }, // ⬅️ estrategia global "API | ..."
         { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
-        provideHttpClient(withFetch(), withInterceptorsFromDi())
+        provideHttpClient(withFetch(), withInterceptorsFromDi()),
+        { provide: IMAGE_CONFIG, useValue: { disableImageSizeWarning: true } },
+        { provide: ErrorHandler, useClass: AppErrorHandler }
     ] })
 export class AppModule {}

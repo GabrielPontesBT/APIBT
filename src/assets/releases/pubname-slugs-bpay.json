@@ -1,0 +1,415 @@
+[
+  {
+    "key": "BTCCE.EnviarTransferencia",
+    "path": [
+      "peru-pe",
+      "cce",
+      "diferidas",
+      "enviartransferencia"
+    ]
+  },
+  {
+    "key": "BTCCE.ObtenerBancos",
+    "path": [
+      "peru-pe",
+      "cce",
+      "diferidas",
+      "obtenerbancos"
+    ]
+  },
+  {
+    "key": "BTCCETIN.ConsultaTIN",
+    "path": [
+      "peru-pe",
+      "cce",
+      "tin",
+      "consultatin"
+    ]
+  },
+  {
+    "key": "BTCCETIN.RecepcionTransferencias",
+    "path": [
+      "peru-pe",
+      "cce",
+      "tin",
+      "recepciontin"
+    ]
+  },
+  {
+    "key": "BTCCETIN.TransferenciaTin",
+    "path": [
+      "peru-pe",
+      "cce",
+      "tin",
+      "confirmartransferencia"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.AltaDebin",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "debinalta"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.CompradorAdhesion",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "adhesioncomprador"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.CompradorConsulta",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "consultacomprador"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.CompradorCuentaBaja",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "bajacuentacomprador"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.ConfirmaDebito",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "confirmadebito"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.ConsultaCuentas",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "consultacuentas"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.ConsultaDebin",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "debinconsulta"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.CuentaEspecialAlta",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "cuentaespecialalta"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.DebinEliminar",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "debineliminar"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.DebinListado",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "debinlistado"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.EnviarTransferencia",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "enviartransferencia"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.ValidarCUIT",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "validarcuit"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.VendedorAdheridoConsulta",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "consultavendedoresadheridos"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.VendedorAdhesion",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "vendedoradhesion"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.VendedorConsulta",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "vendedorconsulta"
+    ]
+  },
+  {
+    "key": "BTCOELSAGestionDebin.VendedorCuentaBaja",
+    "path": [
+      "argentina-ar",
+      "coelsa",
+      "debin",
+      "bajacuentavendedor"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.AltaTarjeta",
+    "path": [
+      "panama-pa",
+      "altatarjeta"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.BloqueoTarjeta",
+    "path": [
+      "panama-pa",
+      "bloqueotarjeta"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.CambioDePin",
+    "path": [
+      "panama-pa",
+      "cambiodepin"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.CancelarTarjeta",
+    "path": [
+      "panama-pa",
+      "cancelartarjeta"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.ConsultaCVV",
+    "path": [
+      "panama-pa",
+      "consultacvv"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.ConsultaMovBloqueados",
+    "path": [
+      "panama-pa",
+      "consultamovbloqueados"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.DesbloqueoTarjeta",
+    "path": [
+      "panama-pa",
+      "desbloqueotarjeta"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.InformacionTarjeta",
+    "path": [
+      "panama-pa",
+      "informaciontarjeta"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.NotificacionTransaccionesEndPoint",
+    "path": [
+      "panama-pa",
+      "notificaciontransaccionesendpoint"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.PeticionAutorizacionEndPoint",
+    "path": [
+      "panama-pa",
+      "peticionautorizacionendpoint"
+    ]
+  },
+  {
+    "key": "BTPayCaddy.RecepcionTarjeta",
+    "path": [
+      "panama-pa",
+      "recepciontarjeta"
+    ]
+  },
+  {
+    "key": "BTSPIDevoluciones.DevolucionFondos",
+    "path": [
+      "paraguay-py",
+      "spi",
+      "devolucion",
+      "devolucionfondos"
+    ]
+  },
+  {
+    "key": "BTSPIDevoluciones.RespuestaSolicitudRetorno",
+    "path": [
+      "paraguay-py",
+      "spi",
+      "devolucion",
+      "respuestasolicitudretorno"
+    ]
+  },
+  {
+    "key": "BTSPIDevoluciones.SolicitudRetornoFondos",
+    "path": [
+      "paraguay-py",
+      "spi",
+      "devolucion",
+      "solicitudretornofondos"
+    ]
+  },
+  {
+    "key": "BTTransferencias.Consultar",
+    "path": [
+      "paraguay-py",
+      "spi",
+      "transferencias",
+      "consultatransferencias"
+    ]
+  },
+  {
+    "key": "BTTransferencias.Enviar",
+    "path": [
+      "paraguay-py",
+      "spi",
+      "transferencias",
+      "transferenciasspi"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.ActualizarPendiente",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "recepcion",
+      "actualizarpendiente"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.ConfirmarACH",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "envio",
+      "confirmarach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.ConsultaEstado",
+    "path": [
+      "colombia-co",
+      "ach",
+      "consultaestadoach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.ConsultaEstado",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "envio",
+      "consultaestadoach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.EnviarAchIndirecto",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "envio",
+      "enviarachindirecto"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.ListaBancos",
+    "path": [
+      "colombia-co",
+      "ach",
+      "listabancosach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.RecibirACH",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "recepcion",
+      "recibirach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.SimularACH",
+    "path": [
+      "honduras-hn",
+      "ach",
+      "envio",
+      "simularachdirecto"
+    ]
+  },
+  {
+    "key": "BTTransferenciasACH.TransferenciaACH",
+    "path": [
+      "colombia-co",
+      "ach",
+      "transferenciaach"
+    ]
+  },
+  {
+    "key": "BTTransferenciasLBTR.Confirmar",
+    "path": [
+      "honduras-hn",
+      "lbtr",
+      "confirmarlbtr"
+    ]
+  },
+  {
+    "key": "BTTransferenciasLBTR.ConsultaEstado",
+    "path": [
+      "honduras-hn",
+      "lbtr",
+      "consultaestadolbtr"
+    ]
+  },
+  {
+    "key": "BTTransferenciasLBTR.Solicitar",
+    "path": [
+      "honduras-hn",
+      "lbtr",
+      "simularlbtr"
+    ]
+  }
+]

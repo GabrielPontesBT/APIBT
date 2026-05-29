@@ -1,0 +1,154 @@
+{
+  "slug": "customers/updatemembers",
+  "pageTitle": "Update Members",
+  "description": "Método para actualizar los miembros de una contraparte.",
+  "pubName": "PublicCustomers.updateMembers",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTCPPA0017",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "members",
+      "Tipo": "<a href=\"#sdtsbtcpwcounterpartyintegration\">SdtsBTCPWCounterpartyIntegration</a>",
+      "Comentarios": "Listado de miembros."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40020009",
+      "Descripción": "Debe ingresar número de contraparte"
+    },
+    {
+      "Código": "40020015",
+      "Descripción": "La persona ya se encuentra integrada con el nro. de contraparte ingresado"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "40020018",
+      "Descripción": "Código de titularidad Incorrecto"
+    },
+    {
+      "Código": "40020026",
+      "Descripción": "Se requiere un integrante como titular representativo"
+    },
+    {
+      "Código": "40020027",
+      "Descripción": "No se permite más de un integrante como titular representativo"
+    },
+    {
+      "Código": "40020028",
+      "Descripción": "Se ingresó la misma persona más de una vez"
+    },
+    {
+      "Código": "40020068",
+      "Descripción": "El estado de la contraparte no admite cambios"
+    },
+    {
+      "Código": "40020080",
+      "Descripción": "Existe inconsistencia de datos con el campo ? en la RNG ??"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    },
+    {
+      "Código": "40050100",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"counterpartyGUID\": \"45399742-1326-4d8d-b7c8-10eb4cf976b0\",\r\n  \"members\": {\r\n    \"member\": [\r\n      {\r\n        \"PersonGUID\": \"f43a3946-4ae1-4a27-861d-c1c2d9cee87d\",\r\n        \"PersonName\": \"PEDRO CRAMPET\",\r\n        \"PersonType\": \"F\",\r\n        \"OwnershipTypeId\": 1,\r\n        \"DocumentTypeId\": 0,\r\n        \"DocumentNumber\": \"\",\r\n        \"CountryId\": 0\r\n      }\r\n    ]\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:14:51\",\r\n    \"Numero\": 13468826,\r\n    \"Servicio\": \"PublicCustomers.updateMembers\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTCPWCounterpartyIntegration",
+      "fields": [
+        {
+          "Nombre": "CountryId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "CountryDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del país."
+        },
+        {
+          "Nombre": "DocumentNumber",
+          "Tipo": "String <strong>(Length: 25)</strong>",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "DocumentTypeId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de documento."
+        },
+        {
+          "Nombre": "DocumentTypeDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo de documento."
+        },
+        {
+          "Nombre": "OwnershipTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de propiedad."
+        },
+        {
+          "Nombre": "OwnershipTypeDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de propiedad."
+        },
+        {
+          "Nombre": "PersonGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID de persona."
+        },
+        {
+          "Nombre": "PersonName",
+          "Tipo": "String <strong>(Length: 70)</strong>",
+          "Comentarios": "Nombre de persona."
+        },
+        {
+          "Nombre": "PersonType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de persona."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

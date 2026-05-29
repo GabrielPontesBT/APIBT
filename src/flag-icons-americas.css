@@ -1,0 +1,26 @@
+.fib,.fi{background-size:contain;background-position:50%;background-repeat:no-repeat}
+.fi{position:relative;display:inline-block;width:1.333333em;line-height:1em}
+.fi:before{content:" "}
+.fi.fis{width:1em}
+
+.fi-ar{background-image:url(./assets/flags/4x3/ar.svg)}.fi-ar.fis{background-image:url(./assets/flags/1x1/ar.svg)}
+.fi-br{background-image:url(./assets/flags/4x3/br.svg)}.fi-br.fis{background-image:url(./assets/flags/1x1/br.svg)}
+.fi-cl{background-image:url(./assets/flags/4x3/cl.svg)}.fi-cl.fis{background-image:url(./assets/flags/1x1/cl.svg)}
+.fi-co{background-image:url(./assets/flags/4x3/co.svg)}.fi-co.fis{background-image:url(./assets/flags/1x1/co.svg)}
+.fi-mx{background-image:url(./assets/flags/4x3/mx.svg)}.fi-mx.fis{background-image:url(./assets/flags/1x1/mx.svg)}
+.fi-pe{background-image:url(./assets/flags/4x3/pe.svg)}.fi-pe.fis{background-image:url(./assets/flags/1x1/pe.svg)}
+.fi-uy{background-image:url(./assets/flags/4x3/uy.svg)}.fi-uy.fis{background-image:url(./assets/flags/1x1/uy.svg)}
+.fi-py{background-image:url(./assets/flags/4x3/py.svg)}.fi-py.fis{background-image:url(./assets/flags/1x1/py.svg)}
+.fi-bo{background-image:url(./assets/flags/4x3/bo.svg)}.fi-bo.fis{background-image:url(./assets/flags/1x1/bo.svg)}
+.fi-ec{background-image:url(./assets/flags/4x3/ec.svg)}.fi-ec.fis{background-image:url(./assets/flags/1x1/ec.svg)}
+.fi-ve{background-image:url(./assets/flags/4x3/ve.svg)}.fi-ve.fis{background-image:url(./assets/flags/1x1/ve.svg)}
+.fi-pa{background-image:url(./assets/flags/4x3/pa.svg)}.fi-pa.fis{background-image:url(./assets/flags/1x1/pa.svg)}
+.fi-cr{background-image:url(./assets/flags/4x3/cr.svg)}.fi-cr.fis{background-image:url(./assets/flags/1x1/cr.svg)}
+.fi-gt{background-image:url(./assets/flags/4x3/gt.svg)}.fi-gt.fis{background-image:url(./assets/flags/1x1/gt.svg)}
+.fi-hn{background-image:url(./assets/flags/4x3/hn.svg)}.fi-hn.fis{background-image:url(./assets/flags/1x1/hn.svg)}
+.fi-sv{background-image:url(./assets/flags/4x3/sv.svg)}.fi-sv.fis{background-image:url(./assets/flags/1x1/sv.svg)}
+.fi-ni{background-image:url(./assets/flags/4x3/ni.svg)}.fi-ni.fis{background-image:url(./assets/flags/1x1/ni.svg)}
+.fi-do{background-image:url(./assets/flags/4x3/do.svg)}.fi-do.fis{background-image:url(./assets/flags/1x1/do.svg)}
+.fi-cu{background-image:url(./assets/flags/4x3/cu.svg)}.fi-cu.fis{background-image:url(./assets/flags/1x1/cu.svg)}
+.fi-pr{background-image:url(./assets/flags/4x3/pr.svg)}.fi-pr.fis{background-image:url(./assets/flags/1x1/pr.svg)}
+.fi-us{background-image:url(./assets/flags/4x3/us.svg)}.fi-us.fis{background-image:url(./assets/flags/1x1/us.svg)}

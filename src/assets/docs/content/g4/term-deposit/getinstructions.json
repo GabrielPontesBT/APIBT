@@ -1,0 +1,165 @@
+{
+  "slug": "term-deposit/getinstructions",
+  "pageTitle": "Get Instructions",
+  "description": "Método para obtener las instrucciones de un depósito a plazo.",
+  "pubName": "PublicTermDeposit.getInstructions",
+  "modulo": "TermDeposit",
+  "programa": "PublicAPI.BTTDPA0004",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "termDepositGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del depósito a plazo."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "Completar manualmente",
+      "Tipo": "Completar manualmente",
+      "Comentarios": "Completar manualmente"
+    }
+  ],
+  "outputData": [
+    {
+      "Nombre": "instructions",
+      "Tipo": "<a href=\"#sdtsbttdwinstruction\">SdtsBTTDWInstruction</a>",
+      "Comentarios": "Listado de instrucciones."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "",
+      "Descripción": "90031"
+    },
+    {
+      "Código": "",
+      "Descripción": "90120"
+    },
+    {
+      "Código": "",
+      "Descripción": "90121"
+    },
+    {
+      "Código": "",
+      "Descripción": "90132"
+    },
+    {
+      "Código": "",
+      "Descripción": "90142"
+    },
+    {
+      "Código": "",
+      "Descripción": "90161"
+    },
+    {
+      "Código": "",
+      "Descripción": "110005"
+    },
+    {
+      "Código": "",
+      "Descripción": "180006"
+    },
+    {
+      "Código": "",
+      "Descripción": "180069"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"instructions\": {\n    \"instruction\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"Cancelar y Acreditar al vto.\",\n        \"Accounted\": \"S\",\n        \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n        \"AccountingAccountId\": 102100000,\n        \"BranchId\": 0,\n        \"CompanyId\": 0,\n        \"CounterpartyId\": 4612,\n        \"CurrencyId\": 0,\n        \"KindId\": 0,\n        \"ModuleId\": 0,\n        \"OperationId\": 0,\n        \"OperationTypeId\": 0,\n        \"SuboperationId\": 0,\n        \"Type\": 0\n      }\n    ]\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:38\",\n    \"Numero\": 13472660,\n    \"Servicio\": \"PublicTermDeposit.getInstructions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTTDWInstruction",
+      "fields": [
+        {
+          "Nombre": "Accounted",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Contabilizado."
+        },
+        {
+          "Nombre": "AccountingAccountId",
+          "Tipo": "Long <strong>(Length: 16)</strong>",
+          "Comentarios": "Identificador de cuenta contable."
+        },
+        {
+          "Nombre": "BranchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "CompanyId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "CounterpartyId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de contraparte."
+        },
+        {
+          "Nombre": "CurrencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "KindId",
+          "Tipo": "Int <strong>(Length: 6)</strong>",
+          "Comentarios": "Identificador del tipo."
+        },
+        {
+          "Nombre": "ModuleId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de módulo."
+        },
+        {
+          "Nombre": "MovementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID del movimiento."
+        },
+        {
+          "Nombre": "OperationId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de operación."
+        },
+        {
+          "Nombre": "OperationTypeId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del tipo de operación."
+        },
+        {
+          "Nombre": "SuboperationId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de suboperación."
+        },
+        {
+          "Nombre": "Type",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Tipo."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

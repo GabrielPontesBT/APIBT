@@ -1,0 +1,214 @@
+---
+title:  Crear Vendedor
+breadcrumb: false
+pageInfo: false
+toc: false
+contributors: false
+editLink: false
+lastUpdated: false
+prev: false
+next: false
+comment: false
+footer: false
+backtotop: false
+---
+
+<!-- ABRE DATOS DEL MÉTODO -->
+::: note Método para crear un vendedor de un Partner.
+
+**Nombre publicación:** BTPartners.CrearVendedor
+
+**Programa:** RBTPN015
+
+**Alcance:** Global
+:::
+<!-- CIERRA DATOS DEL MÉTODO -->
+
+<!-- ABRE TABLA DE DATOS -->
+::: tabs #Datos
+
+@tab Datos de Entrada
+
+Nombre | Tipo | Comentarios
+:--------- | :----------- | :-----------
+sdtVendedor | [sBTVendedor](#sbtvendedor) | Datos del vendedor.
+
+@tab Datos de Salida
+
+No aplica.
+
+@tab Errores
+
+Código | Descripción
+:--------- | :-----------
+30001 | Debe ingresar el identificador del Partner.
+30002 | Debe ingresar el identificador del vendedor.
+30006 | Si el usuario no está registrado en Bantotal, debe ingresar nombre.
+30007 | Si el usuario no está registrado en Bantotal, debe ingresar email.
+30008 | Si el usuario no está registrado en Bantotal, debe ingresar teléfono.
+30009 | No se recibió identificador de persona.
+30010 | No se recibió identificador de cliente.
+30011 | No se recuperó la persona para el identificador ingresado.
+30012 | No se recuperó la cuenta para el identificador ingresado.
+40001 | El identificador de vendedor ya existe para el Partner.
+40009 | El código de comisión no existe.
+40010 | El usuario Bantotal ingresado no existe.
+40011 | El Usuario Bantotal ingresado ya está asociado a un vendedor habilitado.
+40012 | El Usuario Bantotal ingresado ya está asociado al vendedor.
+40013 | El punto de venta seleccionado está inhabilitado.
+40014 | La cuenta no corresponde a la persona.
+40015 | Este Partner ya tiene registrada a esta persona como vendedor.
+40016 | La persona ya está asociada a un vendedor habilitado.
+40017 | El Partner tiene indicado que todos sus vendedores deben ser Usuarios Bantotal, por lo cual debe ingresar uno.
+40018 | La contraparte ya está asociada a un vendedor habilitado.
+:::
+<!-- CIERRA TABLA DE DATOS -->
+
+## **Ejemplos**
+
+<!-- ABRE EJEMPLO DE INVOCACIÓN -->
+::: details Ejemplo de Invocación
+::: code-tabs #Formato
+@tab XML
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bts:BTPartners.CrearVendedor>
+         <Btinreq>
+            <Canal>BTDIGITAL</Canal>
+            <Usuario>INSTALADOR</Usuario>
+            <Device>FPAIS</Device>
+            <Requerimiento>1</Requerimiento>
+            <Token>0A4505C5C795F276A390FC46</Token>
+          </Btinreq>
+         <bts:sdtVendedor>
+            <bts:registradoEnBantotal>S</bts:registradoEnBantotal>
+            <bts:habilitado>S</bts:habilitado>
+            <bts:clienteUId>332</bts:clienteUId>
+            <bts:puntoVentaUId>1</bts:puntoVentaUId>
+            <bts:partnerUId>2</bts:partnerUId>
+            <bts:personaUId>61</bts:personaUId>
+            <bts:email></bts:email>
+            <bts:nombrePuntoVenta></bts:nombrePuntoVenta>
+            <bts:telefono></bts:telefono>
+            <bts:codigoComision></bts:codigoComision>
+            <bts:usuarioBantotal>FCALDA</bts:usuarioBantotal>
+            <bts:nombre></bts:nombre>
+            <bts:vendedorUId>1</bts:vendedorUId>
+         </bts:sdtVendedor>
+      </bts:BTPartners.CrearVendedor>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+@tab JSON
+```json
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Device": "FPAIS",
+    "Requerimiento": 1,
+    "Token": "0A4505C5C795F276A390FC46"
+  },
+  "sdtVendedor": {
+    "registradoEnBantotal": "S",
+    "habilitado": "S",
+    "clienteUId": 332,
+    "puntoVentaUId": 1,
+    "partnerUId": 2,
+    "personaUId": 61,
+    "email": "",
+    "nombrePuntoVenta": "",
+    "telefono": "",
+    "codigoComision": "",
+    "usuarioBantotal": "FCALDA",
+    "nombre": "",
+    "vendedorUId": 1
+  }
+}
+```
+:::
+<!-- CIERRA EJEMPLO DE INVOCACIÓN -->
+
+<!-- ABRE EJEMPLO DE RESPUESTA -->
+::: details Ejemplo de Respuesta
+::: code-tabs #Formato
+@tab XML
+```xml
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <SOAP-ENV:Body>
+      <BTPartners.CrearVendedorResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+         <Btinreq>
+            <Device>FPAIS</Device>
+            <Usuario>INSTALADOR</Usuario>
+            <Requerimiento>1</Requerimiento>
+            <Canal>BTDIGITAL</Canal>
+            <Token>0A4505C5C795F276A390FC46</Token>
+         </Btinreq>
+         <Erroresnegocio></Erroresnegocio>
+         <Btoutreq>
+            <Numero>38477</Numero>
+            <Estado>OK</Estado>
+            <Servicio>BTPartners.CrearVendedor</Servicio>
+            <Requerimiento>1</Requerimiento>
+            <Fecha>2026-05-21</Fecha>
+            <Hora>14:54:53</Hora>
+            <Canal>BTDIGITAL</Canal>
+         </Btoutreq>
+      </BTPartners.CrearVendedorResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+@tab JSON
+```json
+{
+  "Btinreq": {
+    "Device": "FPAIS",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "0A4505C5C795F276A390FC46"
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": 38477,
+    "Estado": "OK",
+    "Servicio": "BTPartners.CrearVendedor",
+    "Requerimiento": 1,
+    "Fecha": "2026-05-21",
+    "Hora": "14:54:53",
+    "Canal": "BTDIGITAL"
+  }
+}
+```
+:::
+<!-- CIERRA EJEMPLO DE RESPUESTA -->
+
+## **Tipos de Dato Estructurado**
+
+<!-- ABRE SDT -->
+::: details sBTVendedor
+
+### sBTVendedor
+
+::: center
+Los campos del tipo de dato estructurado sBTVendedor son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :----------- | :-----------
+clienteUId | Long | Identificador único del cliente en Bantotal.
+codigoComision | Int | Código de comisión asignado al vendedor.
+email | String | Correo electrónico del vendedor.
+habilitado | String | Indica si el vendedor está habilitado (S: Si, N: No).
+nombre | String | Nombre del vendedor.
+nombrePuntoVenta | String | Nombre del punto de venta al que pertenece.
+partnerUId | Int | Identificador único del partner.
+personaUId | Long | Identificador único de la persona en Bantotal.
+puntoVentaUId | Int | Identificador único del punto de venta.
+registradoEnBantotal | String | Indica si el vendedor está registrado en Bantotal (S: Si, N: No).
+telefono | String | Número de teléfono del vendedor.
+usuarioBantotal | String | Nombre de usuario en Bantotal.
+vendedorUId | Int | Identificador único del vendedor.
+:::
+<!-- CIERRA SDT -->

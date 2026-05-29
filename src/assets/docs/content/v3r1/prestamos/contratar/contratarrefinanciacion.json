@@ -133,5 +133,6 @@
       ],
       "description": "Este campo se compone de 2 valores S/N separados por ; (por ejemplo N;S), que corresponden a:"
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

@@ -302,3 +302,18 @@ BTPrestamos.SimularCancelacionAnticipada
 BTWorkflow.AgregarRolesUsuario
 BTWorkflow.EliminarRolesUsuario
 BTWorkflow.ObtenerRolesUsuario
+
+Release Mayo 2026
+BTCuentasVista.ActualizarDatosEnvioEECC
+BTCuentasVista.ObtenerDatosEnvioEECC
+BTPartners.ActualizarPartner
+BTPartners.ActualizarPuntoVenta
+BTPartners.ActualizarVendedor
+BTPartners.CrearPartner
+BTPartners.CrearPuntoVenta
+BTPartners.CrearVendedor
+BTPartners.EliminarPartner
+BTPartners.EliminarPuntoVenta
+BTPartners.EliminarVendedor
+BTPartners.ObtenerNiveles
+BTPartners.ObtenerTiposDePartner

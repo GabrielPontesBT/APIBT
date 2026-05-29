@@ -1,0 +1,345 @@
+{
+  "slug": "persons/updateaddress",
+  "pageTitle": "Update Address",
+  "description": "Método para actualizar los datos del domicilio de una persona.",
+  "pubName": "PublicPersons.updateAddress",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTPEPA0015",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "personGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la persona."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "address",
+      "Tipo": "<a href=\"#sdtsbtpewaddress\">SdtsBTPEWAddress</a>",
+      "Comentarios": "Domicilio."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40010004",
+      "Descripción": "La persona no existe"
+    },
+    {
+      "Código": "40010008",
+      "Descripción": "País incorrecto"
+    },
+    {
+      "Código": "40010043",
+      "Descripción": "No existe el domicilio ingresado"
+    },
+    {
+      "Código": "40010046",
+      "Descripción": "La fecha de ubicación no puede ser mayor a la fecha de apertura"
+    },
+    {
+      "Código": "40010047",
+      "Descripción": "Debe ingresar un país para el domicilio"
+    },
+    {
+      "Código": "40010048",
+      "Descripción": "Debe ingresar un departamento para el domicilio"
+    },
+    {
+      "Código": "40010049",
+      "Descripción": "Debe ingresar una ciudad para el domicilio"
+    },
+    {
+      "Código": "40010053",
+      "Descripción": "La latitud debe ser un valor entre -90 y 90"
+    },
+    {
+      "Código": "40010054",
+      "Descripción": "La longitud debe ser un valor entre -90 y 90"
+    },
+    {
+      "Código": "40010055",
+      "Descripción": "Tercer nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010056",
+      "Descripción": "Segundo nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010057",
+      "Descripción": "Primer nivel de división administrativa inexistente"
+    },
+    {
+      "Código": "40010067",
+      "Descripción": "Cuarto nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010068",
+      "Descripción": "Tercer nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010069",
+      "Descripción": "Segundo nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010070",
+      "Descripción": "Primer nivel de agrupación inexistente"
+    },
+    {
+      "Código": "40010092",
+      "Descripción": "Debe ingresar un correlativo de domicilio"
+    },
+    {
+      "Código": "40010237",
+      "Descripción": "Debe ingresar un código de Tipo de Domicilio comprendido entre 1 y 99"
+    },
+    {
+      "Código": "40010241",
+      "Descripción": "El Tipo de Domicilio no existe"
+    },
+    {
+      "Código": "40010251",
+      "Descripción": "El Tipo de Vivienda no existe"
+    },
+    {
+      "Código": "40010353",
+      "Descripción": "Existe inconsistencia de datos con el campo ? en la RNG ??"
+    },
+    {
+      "Código": "40020012",
+      "Descripción": "El número de contraparte no existe"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    },
+    {
+      "Código": "40050100",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\",\r\n  \"address\": {\r\n    \"AddressCorrelative\": 1,\r\n    \"AddressTypeId\": 1,\r\n    \"AddressTypeDescription\": \"RESIDENCIA\",\r\n    \"HousingTypeId\": 5,\r\n    \"HousingTypeDescription\": \"FAMILIAR\",\r\n    \"IsABusiness\": true,\r\n    \"SinceDate\": \"2022-01-01\",\r\n    \"Level1Id\": 1,\r\n    \"Level1Description\": \"AVENIDA\",\r\n    \"Level1Data\": \"JOSE BENITO LAMAS\",\r\n    \"Level2Id\": 1,\r\n    \"Level2Description\": \"NO. PUERTA\",\r\n    \"Level2Data\": \"2233\",\r\n    \"Level3Id\": 1,\r\n    \"Level3Description\": \"APTO\",\r\n    \"Level3Data\": \"14\",\r\n    \"Level4Id\": 1,\r\n    \"Level4Description\": \"X\",\r\n    \"Level4Data\": \"\",\r\n    \"Address\": \"AVENIDA JOSE BENITO LAMAS NO. PUERTA 2233 APTO 14 X\",\r\n    \"References\": \"\",\r\n    \"Latitude\": \"0.000000\",\r\n    \"Longitude\": \"0.000000\",\r\n    \"CountryId\": 604,\r\n    \"CountryDescription\": \"México\",\r\n    \"DepartmentId\": 1,\r\n    \"DepartmentDescription\": \"Amazonas\",\r\n    \"CityId\": 101,\r\n    \"CityDescription\": \"Chachapoyas\",\r\n    \"DistrictId\": 10119,\r\n    \"DistrictDescription\": \"San Isidro de Maino\",\r\n    \"ColonyId\": 0,\r\n    \"GeographicalUbication\": \"\",\r\n    \"PostalCode\": \"9999\",\r\n    \"SettlementType\": 0,\r\n    \"StatusId\": \"H\",\r\n    \"MainAddress\": true\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:56:07\",\r\n    \"Numero\": 13469379,\r\n    \"Servicio\": \"PublicPersons.updateAddress\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTPEWAddress",
+      "fields": [
+        {
+          "Nombre": "Address",
+          "Tipo": "String <strong>(Length: 140)</strong>",
+          "Comentarios": "Dirección."
+        },
+        {
+          "Nombre": "AddressCorrelative",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Correlativo de dirección."
+        },
+        {
+          "Nombre": "AddressTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de dirección."
+        },
+        {
+          "Nombre": "AddressTypeDescription",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Descripción del tipo de dirección."
+        },
+        {
+          "Nombre": "CityId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de la ciudad."
+        },
+        {
+          "Nombre": "CityDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la ciudad."
+        },
+        {
+          "Nombre": "ColonyId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de la colonia."
+        },
+        {
+          "Nombre": "CountryId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "CountryDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del país."
+        },
+        {
+          "Nombre": "DepartmentId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador del departamento."
+        },
+        {
+          "Nombre": "DepartmentDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del departamento."
+        },
+        {
+          "Nombre": "DistrictId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del distrito."
+        },
+        {
+          "Nombre": "DistrictDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del distrito."
+        },
+        {
+          "Nombre": "GeographicalUbication",
+          "Tipo": "String <strong>(Length: 6)</strong>",
+          "Comentarios": "Ubicación geográfica."
+        },
+        {
+          "Nombre": "HousingTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de vivienda."
+        },
+        {
+          "Nombre": "HousingTypeDescription",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de vivienda."
+        },
+        {
+          "Nombre": "IsABusiness",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "¿Es un negocio?."
+        },
+        {
+          "Nombre": "Latitude",
+          "Tipo": "Double <strong>(Length: 10)</strong>",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "Level1Data",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Datos del nivel 1."
+        },
+        {
+          "Nombre": "Level1Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del nivel 1."
+        },
+        {
+          "Nombre": "Level1Description",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Descripción del nivel 1."
+        },
+        {
+          "Nombre": "Level2Data",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Datos del nivel 2."
+        },
+        {
+          "Nombre": "Level2Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del nivel 2."
+        },
+        {
+          "Nombre": "Level2Description",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Descripción del nivel 2."
+        },
+        {
+          "Nombre": "Level3Data",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Datos del nivel 3."
+        },
+        {
+          "Nombre": "Level3Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del nivel 3."
+        },
+        {
+          "Nombre": "Level3Description",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Descripción del nivel 3."
+        },
+        {
+          "Nombre": "Level4Data",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Datos del nivel 4."
+        },
+        {
+          "Nombre": "Level4Id",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador del nivel 4."
+        },
+        {
+          "Nombre": "Level4Description",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Descripción del nivel 4."
+        },
+        {
+          "Nombre": "Longitude",
+          "Tipo": "Double <strong>(Length: 10)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "MainAddress",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "Dirección principal."
+        },
+        {
+          "Nombre": "PostalCode",
+          "Tipo": "String <strong>(Length: 8)</strong>",
+          "Comentarios": "Código postal."
+        },
+        {
+          "Nombre": "References",
+          "Tipo": "String <strong>(Length: 140)</strong>",
+          "Comentarios": "Referencias."
+        },
+        {
+          "Nombre": "SettlementType",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Tipo de asentamiento."
+        },
+        {
+          "Nombre": "SinceDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha desde."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador de estado."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

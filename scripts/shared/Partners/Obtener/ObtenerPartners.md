@@ -14,18 +14,18 @@ backtotop: false
 ---
 
 <!-- ABRE DATOS DEL MÉTODO -->
-::: note Método para obtener los Partners.
+::: note Método para obtener los partners.
 
 **Nombre publicación:** BTPartners.ObtenerPartners
 
 **Programa:** RBTPN003
 
-**Global/País:** Global
+**Alcance:** Global
 :::
 <!-- CIERRA DATOS DEL MÉTODO -->
 
 <!-- ABRE TABLA DE DATOS -->
-::: tabs #Datos 
+::: tabs #Datos
 
 @tab Datos de Entrada
 
@@ -34,21 +34,23 @@ No aplica.
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :--------- | :---------
-sdtPartners | [sBTPartner](#sbtpartner) | Listado de los Partners.
+:--------- | :----------- | :-----------
+sdtPartners | [sBTPartner](#sbtpartner) | Listado de Partners.
 
 @tab Errores
 
+Código | Descripción
+:--------- | :-----------
 No aplica.
-::: 
+
+:::
 <!-- CIERRA TABLA DE DATOS -->
 
 ## **Ejemplos**
 
 <!-- ABRE EJEMPLO DE INVOCACIÓN -->
-::: details Ejemplo de Invocación 
+::: details Ejemplo de Invocación
 ::: code-tabs #Formato
-
 @tab XML
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
@@ -56,154 +58,185 @@ No aplica.
    <soapenv:Body>
       <bts:BTPartners.ObtenerPartners>
          <bts:Btinreq>
-            <bts:Requerimiento>0</bts:Requerimiento>
-            <bts:Canal>BTDIGITAL</bts:Canal>
-            <bts:Device>GZ</bts:Device>
+            <bts:Device>INSTALADOR</bts:Device>
             <bts:Usuario>INSTALADOR</bts:Usuario>
-            <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>
+            <bts:Requerimiento></bts:Requerimiento>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Token>599B05BBD8DA84FEC631B5C3</bts:Token>
          </bts:Btinreq>
       </bts:BTPartners.ObtenerPartners>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPartners' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-    "Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Token": "DF1F942C6EC60E8B95BBEA69"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Device": "INSTALADOR",
+    "Requerimiento": "1",
+    "Token": "599B05BBD8DA84FEC631B5C3"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
 <!-- ABRE EJEMPLO DE RESPUESTA -->
-::: details Ejemplo de Respuesta 
+::: details Ejemplo de Respuesta
 ::: code-tabs #Formato
-
 @tab XML
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ObtenerPartnersResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
-            <Device>GZ</Device>
+            <Device>INSTALADOR</Device>
             <Usuario>INSTALADOR</Usuario>
-            <Requerimiento>0</Requerimiento>
+            <Requerimiento/>
             <Canal>BTDIGITAL</Canal>
-            <Token>DF1F942C6EC60E8B95BBEA69</Token>
+            <Token>TOKEN_AQUI</Token>
          </Btinreq>
          <sdtPartners>
             <sBTPartner>
+               <tipoUId>1</tipoUId>
+               <tipo>Concesionario</tipo>
+               <nivelUId>1</nivelUId>
+               <nivel>Nivel 1A - Venta</nivel>
+               <habilitado>S</habilitado>
+               <clienteUId>24</clienteUId>
                <partnerUId>1</partnerUId>
-               <nombre>Concesionario 1</nombre>
+               <canal>CANAL 1</canal>
+               <codigoComision>35</codigoComision>
+               <nombre>CELLULAR CENTER</nombre>
+               <sucursal>1</sucursal>
+               <tipoRegistroVendedor>U</tipoRegistroVendedor>
+               <manejaVendedores>S</manejaVendedores>
             </sBTPartner>
             <sBTPartner>
-               <partnerUId>2</partnerUId>
-               <nombre>Concesionario 2</nombre>
-            </sBTPartner>
-            <sBTPartner>
-               <partnerUId>3</partnerUId>
-               <nombre>Concesionario 3</nombre>
-            </sBTPartner>
-            <sBTPartner>
-               <partnerUId>4</partnerUId>
-               <nombre>Concesionario 4</nombre>
-            </sBTPartner>
-            <sBTPartner>
+               <tipoUId>1</tipoUId>
+               <tipo>Concesionario</tipo>
+               <nivelUId>3</nivelUId>
+               <nivel>Nivel 3A - Venta, cobro y post-venta</nivel>
+               <habilitado>S</habilitado>
+               <clienteUId>47</clienteUId>
                <partnerUId>5</partnerUId>
-               <nombre>No Vehicular 1</nombre>
+               <canal>CANAL 2</canal>
+               <codigoComision>35</codigoComision>
+               <nombre>MUNDO PC</nombre>
+               <sucursal>22</sucursal>
+               <tipoRegistroVendedor>P</tipoRegistroVendedor>
+               <manejaVendedores>S</manejaVendedores>
             </sBTPartner>
          </sdtPartners>
-         <Erroresnegocio></Erroresnegocio>
+         <Erroresnegocio/>
          <Btoutreq>
-            <Numero>16859</Numero>
-            <Servicio>BTPartners.ObtenerPartners</Servicio>
+            <Numero>00000000</Numero>
             <Estado>OK</Estado>
-            <Fecha>2023-10-27</Fecha>
-            <Requerimiento>0</Requerimiento>
-            <Hora>12:30:10</Hora>
+            <Servicio>BTPartners.ObtenerPartners</Servicio>
+            <Requerimiento/>
+            <Fecha>2026-01-01</Fecha>
             <Canal>BTDIGITAL</Canal>
+            <Hora>00:00:00</Hora>
          </Btoutreq>
       </BTPartners.ObtenerPartnersResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
-
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "DF1F942C6EC60E8B95BBEA69"
-    },
-    "sdtPartners": {
-        "sBTPartner": [
-            {
-                "partnerUId": 1,
-                "nombre": "Concesionario 1"
-            },
-            {
-                "partnerUId": 2,
-                "nombre": "Concesionario 2"
-            },
-            {
-                "partnerUId": 3,
-                "nombre": "Concesionario 3"
-            },
-            {
-                "partnerUId": 4,
-                "nombre": "Concesionario 4"
-            },
-            {
-                "partnerUId": 5,
-                "nombre": "No Vehicular 1"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 16859,
-        "Servicio": "BTPartners.ObtenerPartners",
-        "Estado": "OK",
-        "Fecha": "2023-10-27",
-        "Requerimiento": 0,
-        "Hora": "12:30:10",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "INSTALADOR",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "599B05BBD8DA84FEC631B5C3"
+  },
+  "sdtPartners": {
+    "sBTPartner": [
+      {
+        "tipoUId": 1,
+        "tipo": "Concesionario",
+        "nivelUId": 1,
+        "nivel": "Nivel 1A - Venta",
+        "habilitado": "S",
+        "clienteUId": 24,
+        "partnerUId": 1,
+        "canal": "CANAL 1",
+        "codigoComision": 35,
+        "nombre": "CELLULAR CENTER",
+        "sucursal": 1,
+        "tipoRegistroVendedor": "U",
+        "manejaVendedores": "S"
+      },
+      {
+        "tipoUId": 1,
+        "tipo": "Concesionario",
+        "nivelUId": 3,
+        "nivel": "Nivel 3A - Venta, cobro y post-venta",
+        "habilitado": "S",
+        "clienteUId": 47,
+        "partnerUId": 5,
+        "canal": "CANAL 2",
+        "codigoComision": 35,
+        "nombre": "MUNDO PC",
+        "sucursal": 22,
+        "tipoRegistroVendedor": "P",
+        "manejaVendedores": "S"
+      }
+    ]
+  },
+  "Erroresnegocio": [],
+  "Btoutreq": {
+    "Numero": 38483,
+    "Estado": "OK",
+    "Servicio": "BTPartners.ObtenerPartners",
+    "Requerimiento": "1",
+    "Fecha": "2026-05-22",
+    "Hora": "14:34:37",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
-::: 
+:::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTPartner  
+::: details sBTPartner
 
 ### sBTPartner
 
-::: center 
-Los campos del tipo de dato estructurado sBTPartner son los siguientes: 
+::: center
+Los campos del tipo de dato estructurado sBTPartner son los siguientes:
 
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-nombre | String | Nombre del Partner.
-partnerUId | Int | Identificador del Partner.
+Nombre | Tipo | Comentarios
+:--------- | :----------- | :-----------
+canal | String | Canal de comunicación.
+clienteUId | Long | Identificador único del cliente en Bantotal.
+codigoComision | Int | Código de comisión asignado al partner.
+habilitado | String | Indica si el partner está habilitado (S: Si, N: No).
+manejaVendedores | String | Indica si el partner maneja vendedores (S: Si, N: No).
+nivel | String | Descripción del nivel del partner.
+nivelUId | Byte | Identificador único del nivel.
+nombre | String | Nombre del partner.
+partnerUId | Int | Identificador único del partner.
+sucursal | Int | Número de sucursal asociada.
+tipo | String | Descripción del tipo de partner.
+tipoRegistroVendedor | String | Tipo de registro del vendedor. Se pueden obtener los siguientes [valores.](#valores)
+tipoUId | Short | Identificador único del tipo de partner.
 :::
 <!-- CIERRA SDT -->
+
+<!-- ABRE VALORES -->
+
+### Valores
+
+Clave | Valor | Comentarios
+:--------- | :--------- | :--------- 
+tipoRegistroVendedor | [U,P,C,A,B] | **[Opcional]** Define el tipo de registro permitido para los vendedores del Partner. U: Deben ser solo usuarios en Bantotal. P: Deben ser solo personas en Bantotal. C: Deben ser solo contraparte (y persona) en Bantotal. A: Deben ser a la vez usuarios y personas en Bantotal. B: Deben ser usuarios y contraparte (y persona) en Bantotal.
+:::
+<!-- CIERRA VALORES -->

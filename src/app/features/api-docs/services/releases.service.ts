@@ -47,7 +47,7 @@ export class ReleasesService {
   }
 
   private getReleasesForVersion(version: string): Observable<Release[]> {
-    if (version === 'bpay') return of([]);
+    if (version === 'g4') return of([]);
 
     if (!this.cache.has(version)) {
       const releases$ = forkJoin({
@@ -68,6 +68,7 @@ export class ReleasesService {
                 if (item.path?.length) {
                   const title = slugTitleMap.get(item.path.join('/'));
                   if (title) item.label = title;
+                  item.path = [version, ...item.path];
                 }
               }
             }

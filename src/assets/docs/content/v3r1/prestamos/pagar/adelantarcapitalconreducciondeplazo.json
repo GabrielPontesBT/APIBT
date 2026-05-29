@@ -152,5 +152,6 @@
       ],
       "description": "Este campo tiene dos opciones:"
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

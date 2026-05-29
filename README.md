@@ -61,29 +61,32 @@ Los archivos compilados se generan en la carpeta `dist/`.
 
 ### Procesamiento de documentación
 
-Estos comandos procesan los archivos Markdown de `scripts/archivos-markdown/` y generan los JSONs y archivos de navegación que consume la aplicación.
+Estos comandos procesan los archivos Markdown de `scripts/` y generan los JSONs, la navegación y el índice de búsqueda que consume la aplicación.
 
 ```bash
-# Procesar contenido de los documentos (.md → .json en assets)
+# Procesar contenido V2/V3/BPay (.md → .json en assets)
 npm run build:docs-content
 
-# Regenerar la navegación lateral (sidebar)
+# Procesar contenido V4 (.md → .json en assets)
+npm run build:docs-content-v4
+
+# Regenerar la navegación lateral (sidebar) para todas las versiones
 npm run build:docs-navigation
+
+# Regenerar el índice de búsqueda (search-index.json)
+npm run build:docs-search
 
 # Validar que todos los documentos tienen el formato correcto
 npm run validate:docs
 
-# Ejecutar los 3 comandos anteriores en secuencia (atajo recomendado para el flujo habitual)
+# Ejecutar todos los comandos anteriores en secuencia (atajo recomendado)
 npm run build:docs
 
-# Regenerar el índice de búsqueda (no incluido en build:docs, ejecutar por separado si se modifican documentos)
-npm run build:docs-search
-
-# Regenerar assets de releases (no incluido en build:docs, ejecutar por separado si se modifican releases)
+# Regenerar assets de releases (ejecutar por separado si se modifican releases)
 npm run build:release-assets
 ```
 
-> **Importante:** Cada vez que se agrega o modifica un archivo `.md`, hay que ejecutar `npm run build:docs` para que los cambios se reflejen en la aplicación. Si además se modificaron datos de búsqueda o releases, ejecutar también `npm run build:docs-search` o `npm run build:release-assets` según corresponda.
+> **Importante:** Cada vez que se agrega o modifica un archivo `.md`, ejecutar `npm run build:docs` para que los cambios se reflejen en la aplicación (contenido, navegación, búsqueda y validación en un solo paso). Solo `build:release-assets` queda fuera del atajo y debe correrse manualmente cuando se modifican datos de releases.
 
 ---
 
@@ -91,12 +94,18 @@ npm run build:release-assets
 
 ```
 ├── scripts/
-│   ├── archivos-markdown/       # Fuente de la documentación en formato Markdown
-│   ├── build-docs-content.js    # Script: .md → .json (assets)
-│   ├── build-docs-navigation.js # Script: genera sidebar y rutas
-│   ├── build-docs-search.js     # Script: genera índice de búsqueda
-│   ├── validate-docs.js         # Script: valida formato de los documentos
-│   └── generate-pages.js        # Script auxiliar de generación
+│   ├── V2R2/                    # Fuente de documentación — versión 2 release 2
+│   ├── V2R3/                    # Fuente de documentación — versión 2 release 3
+│   ├── V3R1/                    # Fuente de documentación — versión 3 release 1
+│   ├── V4/                      # Fuente de documentación — versión 4
+│   ├── BPay/                    # Fuente de documentación — BPay
+│   ├── shared/                  # Archivos .md compartidos entre V2R2, V2R3 y V3R1
+│   ├── build-docs-content.js    # Script: .md → .json para V2/V3/BPay
+│   ├── build-docs-content-v4.js # Script: .md → .json para V4
+│   ├── build-docs-navigation.js # Script: genera sidebars para todas las versiones
+│   ├── build-docs-search.js     # Script: genera índice de búsqueda (search-index.json)
+│   ├── build-release-assets.js  # Script: genera assets de releases
+│   └── validate-docs.js         # Script: valida formato de los documentos
 │
 ├── src/
 │   ├── app/
@@ -109,10 +118,15 @@ npm run build:release-assets
 │   │   └── shared/              # Directivas y utilidades compartidas
 │   │
 │   ├── assets/
-│   │   └── docs/
-│   │       ├── content/         # JSONs generados por build:docs-content
-│   │       ├── navigation.json  # Generado por build:docs-navigation
-│   │       └── search-index.json# Generado por build:docs-search
+│   │   ├── docs/
+│   │   │   ├── content/             # JSONs generados por build:docs-content / build:docs-content-v4
+│   │   │   └── search-index.json    # Generado por build:docs-search
+│   │   └── navigation/
+│   │       ├── sidebar-v2r2.json    # Generados por build:docs-navigation
+│   │       ├── sidebar-v2r3.json
+│   │       ├── sidebar-v3r1.json
+│   │       ├── sidebar-v4.json
+│   │       └── sidebar-bpay.json
 │   │
 │   ├── styles/
 │   │   └── _variables.scss      # Variables globales de diseño (colores, espaciados, etc.)
@@ -127,8 +141,10 @@ npm run build:release-assets
 
 ## Agregar un nuevo documento
 
-1. Crear el archivo `.md` en la carpeta correspondiente dentro de `scripts/archivos-markdown/`.
-2. Ejecutar `npm run build:docs` para procesar el archivo.
+1. Crear el archivo `.md` en la carpeta correspondiente:
+   - V2/V3/BPay → `scripts/V2R2/`, `scripts/V2R3/`, `scripts/V3R1/` o `scripts/BPay/`
+   - V4 → `scripts/V4/`
+2. Ejecutar `npm run build:docs` para procesar el archivo (genera contenido, navegación, búsqueda y valida).
 3. Verificar en `ng serve` que el documento aparezca en el sidebar y se renderice correctamente.
 
 ---

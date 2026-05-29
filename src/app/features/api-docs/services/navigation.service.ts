@@ -7,7 +7,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, shareReplay, switchMap } from 'rxjs';
+import { map, Observable, shareReplay, switchMap } from 'rxjs';
 import { NavigationNode } from '../../../core/models/navigation-node.model';
 import { VersionService } from '../../../core/services/version.service';
 
@@ -34,5 +34,22 @@ export class NavigationService {
         return this.cache.get(version)!;
       })
     );
+  }
+
+  isSlugNew(slug: string): Observable<boolean> {
+    return this.getNavigationTree().pipe(
+      map(tree => this.findNodeBySlug(tree, slug)?.isNew ?? false)
+    );
+  }
+
+  private findNodeBySlug(nodes: NavigationNode[], slug: string): NavigationNode | undefined {
+    for (const node of nodes) {
+      if (node.slug === slug) return node;
+      if (node.children?.length) {
+        const found = this.findNodeBySlug(node.children, slug);
+        if (found) return found;
+      }
+    }
+    return undefined;
   }
 }

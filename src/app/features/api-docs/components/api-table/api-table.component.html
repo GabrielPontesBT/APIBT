@@ -1,7 +1,7 @@
 
 <!-- Si hay datos, muestro encabezado y cuerpo -->
-@if ((data?.length ?? 0) > 0) {
-  <table [class.wide-second-col]="wideSecondCol">
+@if (data.length > 0) {
+  <table [class.wide-second-col]="wideSecondCol" (mousedown)="$event.stopPropagation()">
     <thead>
       <tr>
         @for (col of columns; track col) {
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <!-- Modo columnas o dinámico -->
-      @if ((columns?.length ?? 0) > 0) {
+      @if (columns.length > 0) {
         @for (row of data; track row) {
           <tr>
             @for (col of columns; track col) {
@@ -34,7 +34,7 @@
 } @else {
   <tbody>
     <tr>
-      <td [attr.colspan]="columns?.length ?? 1" class="text-center">
+      <td [attr.colspan]="columns.length || 1" class="text-center">
         No aplica.
       </td>
     </tr>

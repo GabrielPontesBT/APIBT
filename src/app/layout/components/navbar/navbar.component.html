@@ -17,7 +17,7 @@
         <div class="releases-dropdown">
           @for (r of releases; track r.id) {
             <a class="releases-item"
-              [routerLink]="['/releases', r.id]"
+              [routerLink]="['/', activeVersion, 'releases', r.id]"
               routerLinkActive="releases-item--active"
               (click)="closeReleases()">
               {{ r.titulo }}

@@ -1,0 +1,69 @@
+{
+  "slug": "partners/obtener/obtenertiposdepartner",
+  "pageTitle": "Obtener Tipos De Partner",
+  "description": "Método para obtener los tipos de Partner.",
+  "pubName": "BTPartners.ObtenerTiposDePartner",
+  "programa": "RBTPN017",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputCols": [
+    "No aplica."
+  ],
+  "inputData": [],
+  "outputData": [
+    {
+      "Nombre": "sdtTiposDePartner",
+      "Tipo": "<a href=\"#sbttipodepartner\">sBTTipoDePartner</a>",
+      "Comentarios": "Listado de tipos de partner disponibles."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "flowDiagram": "",
+  "examples": {
+    "invocation": {
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerTiposDePartner>\r\n         <bts:Btinreq>\r\n            <bts:Device>INSTALADOR</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>673543DE2A22DFAC951F9E41</bts:Token>\r\n         </bts:Btinreq>\r\n\r\n      </bts:BTPartners.ObtenerTiposDePartner>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"673543DE2A22DFAC951F9E41\"\r\n  }\r\n}"
+    },
+    "response": {
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ObtenerTiposDePartnerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <sdtTiposDePartner>\r\n            <sBTTipoDePartner>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Concesionario</Descripcion>\r\n               <CantidadNiveles>3</CantidadNiveles>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>5</CantidadPartners>\r\n            </sBTTipoDePartner>\r\n            <sBTTipoDePartner>\r\n               <TipoUId>2</TipoUId>\r\n               <Descripcion>Casa de Electrodomésticos</Descripcion>\r\n               <CantidadNiveles>3</CantidadNiveles>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>3</CantidadPartners>\r\n            </sBTTipoDePartner>\r\n            <sBTTipoDePartner>\r\n               <TipoUId>3</TipoUId>\r\n               <Descripcion>Institución Educativa</Descripcion>\r\n               <CantidadNiveles>0</CantidadNiveles>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>0</CantidadPartners>\r\n            </sBTTipoDePartner>\r\n         </sdtTiposDePartner>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38306</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ObtenerTiposDePartner</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>15:26:13</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ObtenerTiposDePartnerResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"sdtTiposDePartner\": {\r\n    \"sBTTipoDePartner\": [\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Concesionario\",\r\n        \"CantidadNiveles\": 3,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 5\r\n      },\r\n      {\r\n        \"TipoUId\": 2,\r\n        \"Descripcion\": \"Casa de Electrodomésticos\",\r\n        \"CantidadNiveles\": 3,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 3\r\n      },\r\n      {\r\n        \"TipoUId\": 3,\r\n        \"Descripcion\": \"Institución Educativa\",\r\n        \"CantidadNiveles\": 0,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 0\r\n      }\r\n    ]\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38306,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ObtenerTiposDePartner\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"15:26:13\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTTipoDePartner",
+      "fields": [
+        {
+          "Nombre": "CantidadNiveles",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de niveles definidos para el tipo."
+        },
+        {
+          "Nombre": "CantidadPartners",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de partners del tipo."
+        },
+        {
+          "Nombre": "Descripcion",
+          "Tipo": "String",
+          "Comentarios": "Descripción del tipo de partner."
+        },
+        {
+          "Nombre": "Habilitado",
+          "Tipo": "String",
+          "Comentarios": "Indica si el tipo está habilitado (S: Si, N: No)."
+        },
+        {
+          "Nombre": "TipoUId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador único del tipo de partner."
+        }
+      ]
+    }
+  ],
+  "valuesTable": [],
+  "valuesBeforeStructuredTypes": true
+}

@@ -9,26 +9,26 @@
 const fs   = require('fs');
 const path = require('path');
 
-const DIST_DIR  = path.resolve(__dirname, '../dist/api-docs');
+const DIST_DIR  = path.resolve(__dirname, '../dist/apibanking');
 const NAV_DIR   = path.join(DIST_DIR, 'assets/navigation');
 const INDEX_SRC = path.join(DIST_DIR, 'index.html');
 
-const VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'v4'];
+const VERSIONS = ['v2r2', 'v2r3', 'v3r1', 'bpay', 'g4'];
 
 // ── Utilidades ────────────────────────────────────────────────────────────────
 
-function collectFileSlugs(nodes, acc = []) {
+function collectAllSlugs(nodes, acc = []) {
   for (const node of nodes) {
-    if (node.type === 'file' && node.slug) acc.push(node.slug);
-    if (node.children?.length) collectFileSlugs(node.children, acc);
+    if (node.slug) acc.push(node.slug);
+    if (node.children?.length) collectAllSlugs(node.children, acc);
   }
   return acc;
 }
 
 function writeHtmlAt(routePath) {
-  const fullPath = path.join(DIST_DIR, routePath + '.html');
-  fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-  fs.copyFileSync(INDEX_SRC, fullPath);
+  const dir = path.join(DIST_DIR, routePath);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.copyFileSync(INDEX_SRC, path.join(dir, 'index.html'));
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -52,7 +52,7 @@ for (const version of VERSIONS) {
   }
 
   const nodes = JSON.parse(fs.readFileSync(sidebarPath, 'utf8'));
-  const slugs = collectFileSlugs(nodes);
+  const slugs = collectAllSlugs(nodes);
 
   for (const slug of slugs) {
     writeHtmlAt(`${version}/${slug}`);

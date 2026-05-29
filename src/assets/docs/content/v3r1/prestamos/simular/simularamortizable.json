@@ -112,5 +112,6 @@
       ],
       "description": "Este campo se compone de 4 valores S/N separados por ; (por ejemplo N;S;S;S), que corresponden a:"
     }
-  ]
+  ],
+  "valuesBeforeStructuredTypes": true
 }

@@ -1,0 +1,51 @@
+{
+  "slug": "customers/getstatuses",
+  "pageTitle": "Get Statuses",
+  "description": "Método para obtener un listado de los posibles estados de una contraparte.",
+  "pubName": "PublicCustomers.getStatuses",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTCPPA0010",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "statuses",
+      "Tipo": "<a href=\"#sdtsbtcpwstatus\">SdtsBTCPWStatus</a>",
+      "Comentarios": "Listado de estados."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "No aplica.",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"statuses\": {\r\n    \"status\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"ACTIVA\"\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"CERRADA\"\r\n      },\r\n      {\r\n        \"Id\": 9,\r\n        \"Description\": \"ALTA INCONCLUSA (INST.FINANC.)\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:13:55\",\r\n    \"Numero\": 13468805,\r\n    \"Servicio\": \"PublicCustomers.getStatuses\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTCPWStatus",
+      "fields": [
+        {
+          "Nombre": "Id",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

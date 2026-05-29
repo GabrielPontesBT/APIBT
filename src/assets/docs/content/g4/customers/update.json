@@ -1,0 +1,340 @@
+{
+  "slug": "customers/update",
+  "pageTitle": "Update",
+  "description": "Método para actualizar los datos de una contraparte.",
+  "pubName": "PublicCustomers.update",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTCPPA0025",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyData": [
+    {
+      "Nombre": "counterpartyData",
+      "Tipo": "SdtsBTCPWCounterparty",
+      "Comentarios": "Datos de la contraparte."
+    }
+  ],
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40010010",
+      "Descripción": "País de nacimiento incorrecto"
+    },
+    {
+      "Código": "40010012",
+      "Descripción": "País de ciudadanía incorrecto"
+    },
+    {
+      "Código": "40010019",
+      "Descripción": "Debe ingresar primer nombre"
+    },
+    {
+      "Código": "40010020",
+      "Descripción": "Primer nombre contiene caracteres no válidos"
+    },
+    {
+      "Código": "40010021",
+      "Descripción": "Segundo nombre contiene caracteres no válidos"
+    },
+    {
+      "Código": "40010022",
+      "Descripción": "Debe ingresar primer apellido"
+    },
+    {
+      "Código": "40010023",
+      "Descripción": "Primer apellido contiene caracteres no válidos"
+    },
+    {
+      "Código": "40010024",
+      "Descripción": "Descripción no encontrada"
+    },
+    {
+      "Código": "40010025",
+      "Descripción": "Debe ingresar género Femenino (F), Masculino (M) o No Binario (X)"
+    },
+    {
+      "Código": "40010026",
+      "Descripción": "Debe ingresar fecha de nacimiento"
+    },
+    {
+      "Código": "40010027",
+      "Descripción": "Fecha de nacimiento no puede ser igual o posterior a la fecha de apertura"
+    },
+    {
+      "Código": "40010029",
+      "Descripción": "Debe ingresar fecha de fallecimiento"
+    },
+    {
+      "Código": "40010032",
+      "Descripción": "Debe ingresar fecha de presentación de patrimonio"
+    },
+    {
+      "Código": "40010034",
+      "Descripción": "Debe ingresar patrimonio"
+    },
+    {
+      "Código": "40010091",
+      "Descripción": "Descripción no encontrada"
+    },
+    {
+      "Código": "40010099",
+      "Descripción": "La persona a relacionar ya tiene un vínculo existente con otra persona"
+    },
+    {
+      "Código": "40010100",
+      "Descripción": "No puede relacionarse a sí mismo"
+    },
+    {
+      "Código": "40010210",
+      "Descripción": "Debe ingresar un código de Nivel de Instrucción comprendido entre 1 y 999"
+    },
+    {
+      "Código": "40010212",
+      "Descripción": "El Nivel de Instrucción no existe"
+    },
+    {
+      "Código": "40010215",
+      "Descripción": "Debe ingresar un código de Estado Civil comprendido entre 1 y 26"
+    },
+    {
+      "Código": "40010219",
+      "Descripción": "El Estado Civil no existe"
+    },
+    {
+      "Código": "40010229",
+      "Descripción": "El Origen de Captación no existe"
+    },
+    {
+      "Código": "40010329",
+      "Descripción": "La persona no puede ser eliminada, tiene registro asociado a contrapartes"
+    },
+    {
+      "Código": "40010335",
+      "Descripción": "Debe ingresar un nombre no mayor de 70 caracteres"
+    },
+    {
+      "Código": "40010340",
+      "Descripción": "No puede ser eliminado, tiene referencias con ? en la tabla de Relaciones entre Personas"
+    },
+    {
+      "Código": "40010341",
+      "Descripción": "No puede ser eliminado, tiene referencias con ? en la tabla de Integrantes de personas jurídicas"
+    },
+    {
+      "Código": "40010347",
+      "Descripción": "La persona con número de documento ? ya existe"
+    },
+    {
+      "Código": "40010349",
+      "Descripción": "Primer nivel asociado al país de nacimiento incorrecto"
+    },
+    {
+      "Código": "40010350",
+      "Descripción": "Segundo nivel asociado al país de nacimiento incorrecto"
+    },
+    {
+      "Código": "40010353",
+      "Descripción": "Existe inconsistencia de datos con el campo ? en la RNG ??"
+    },
+    {
+      "Código": "40010359",
+      "Descripción": "La persona ingresada como cónyuge no existe"
+    },
+    {
+      "Código": "40010360",
+      "Descripción": "La fecha de fallecimiento debe ser posterior a la fecha de nacimiento"
+    },
+    {
+      "Código": "40010361",
+      "Descripción": "La fecha de fallecimiento no puede ser posterior o igual a la fecha de apertura"
+    },
+    {
+      "Código": "40020017",
+      "Descripción": "La persona ingresada no existe"
+    },
+    {
+      "Código": "40050001",
+      "Descripción": "Debe ingresar el GUID de persona."
+    },
+    {
+      "Código": "50050003",
+      "Descripción": "No se encuentra la empresa"
+    },
+    {
+      "Código": "99990010006",
+      "Descripción": "No se pudo resolver el usuario"
+    },
+    {
+      "Código": "99990010007",
+      "Descripción": "No se pudo resolver la empresa"
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"counterpartyGUID\": \"45399742-1326-4d8d-b7c8-10eb4cf976b0\",\r\n  \"counterpartyData\": {\r\n    \"BranchId\": 1,\r\n    \"CompanyId\": 1,\r\n    \"EconomicActivityId\": 1111,\r\n    \"ExecutiveId\": 20,\r\n    \"InternalClassificationId\": 1,\r\n    \"Resident\": true,\r\n    \"SectorId\": 1,\r\n    \"SegmentId\": 1\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:14:20\",\r\n    \"Numero\": 13468814,\r\n    \"Servicio\": \"PublicCustomers.update\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTCPWCounterparty",
+      "fields": [
+        {
+          "Nombre": "BranchId",
+          "Tipo": "Int",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "BranchDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de sucursal."
+        },
+        {
+          "Nombre": "CancellationDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de cancelación."
+        },
+        {
+          "Nombre": "CompanyId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador de empresa."
+        },
+        {
+          "Nombre": "CompanyDescription",
+          "Tipo": "String <strong>(Length: 50)</strong>",
+          "Comentarios": "Descripción de empresa."
+        },
+        {
+          "Nombre": "CounterpartyDescription",
+          "Tipo": "String <strong>(Length: 70)</strong>",
+          "Comentarios": "Descripción de contraparte."
+        },
+        {
+          "Nombre": "CreationDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de creación."
+        },
+        {
+          "Nombre": "CustomFields",
+          "Tipo": "<a href=\"#sdtsbtpawcustomfield\">SdtsBTPAWCustomField</a>",
+          "Comentarios": "Campos personalizados."
+        },
+        {
+          "Nombre": "EconomicActivityId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de actividad económica."
+        },
+        {
+          "Nombre": "EconomicActivityDescription",
+          "Tipo": "String <strong>(Length: 80)</strong>",
+          "Comentarios": "Descripción de actividad económica."
+        },
+        {
+          "Nombre": "Employee",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "¿Es empleado?."
+        },
+        {
+          "Nombre": "ExecutiveId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador del ejecutivo."
+        },
+        {
+          "Nombre": "ExecutiveDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del ejecutivo."
+        },
+        {
+          "Nombre": "FinancialInstitution",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "Institución financiera."
+        },
+        {
+          "Nombre": "InternalClassificationId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de clasificación interna."
+        },
+        {
+          "Nombre": "InternalClassificationDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de clasificación interna."
+        },
+        {
+          "Nombre": "Resident",
+          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Comentarios": "¿Es residente?."
+        },
+        {
+          "Nombre": "SectorId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador de sector."
+        },
+        {
+          "Nombre": "SectorDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del sector."
+        },
+        {
+          "Nombre": "SegmentId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del segmento."
+        },
+        {
+          "Nombre": "SegmentDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del segmento."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "StatusDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del estado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTPAWCustomField",
+      "fields": [
+        {
+          "Nombre": "Correlative",
+          "Tipo": "Short",
+          "Comentarios": "Correlativo."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 50)</strong>",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "Value",
+          "Tipo": "String <strong>(Length: 250)</strong>",
+          "Comentarios": "Value."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

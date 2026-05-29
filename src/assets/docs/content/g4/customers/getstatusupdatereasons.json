@@ -1,0 +1,61 @@
+{
+  "slug": "customers/getstatusupdatereasons",
+  "pageTitle": "Get Status Update Reasons",
+  "description": "Método para obtener un listado de los posibles motivos de cambio de estado para una contraparte.",
+  "pubName": "PublicCustomers.getStatusUpdateReasons",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTCPPA0011",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "reasonsForStatusChange",
+      "Tipo": "<a href=\"#sdtsbtcpwreasonforstatuschange\">SdtsBTCPWReasonForStatusChange</a>",
+      "Comentarios": "Listado de razones de actualización de estado."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "No aplica.",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"reasonsForStatusChange\": {\r\n    \"reasonForStatusChange\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"EMBARGO\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"EN JUICIO\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"RETENCIONES\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 4,\r\n        \"Description\": \"CIERRE\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 5,\r\n        \"Description\": \"REGULARIZACIÓN\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 6,\r\n        \"Description\": \"CIERRE POR INACTIVIDAD\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 7,\r\n        \"Description\": \"FALLECIMIENTO\",\r\n        \"StatusId\": 2,\r\n        \"StatusDescription\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 8,\r\n        \"Description\": \"CIERRE\",\r\n        \"StatusId\": 3,\r\n        \"StatusDescription\": \"CERRADA\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:13:57\",\r\n    \"Numero\": 13468806,\r\n    \"Servicio\": \"PublicCustomers.getStatusUpdateReasons\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTCPWReasonForStatusChange",
+      "fields": [
+        {
+          "Nombre": "Id",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "StatusDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del estado."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

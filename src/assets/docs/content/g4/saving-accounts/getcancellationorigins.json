@@ -1,0 +1,51 @@
+{
+  "slug": "saving-accounts/getcancellationorigins",
+  "pageTitle": "Get Cancellation Origins",
+  "description": "Método para obtener un listado de los orígenes de cancelación.",
+  "pubName": "PublicSavingAccounts.getCancellationOrigins",
+  "modulo": "Liabilities",
+  "programa": "PublicAPI.BTLIPA0001",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "cancellationOrigins",
+      "Tipo": "<a href=\"#sdtsbtlicancellationorigin\">SdtsBTLICancellationOrigin</a>",
+      "Comentarios": "Listado de orígenes de cancelación."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"cancellationOrigins\": {\r\n    \"cancellationOrigin\": [\r\n      {\r\n        \"id\": 1,\r\n        \"description\": \"POR DECISIÓN DEL TITULAR\"\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"description\": \"POR DECISIÓN DE LA ENTIDAD\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:06\",\r\n    \"Numero\": 13466302,\r\n    \"Servicio\": \"PublicSavingAccounts.getCancellationOrigins\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLICancellationOrigin",
+      "fields": [
+        {
+          "Nombre": "id",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de origen de cierre."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

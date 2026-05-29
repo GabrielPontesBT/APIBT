@@ -1,0 +1,56 @@
+{
+  "slug": "persons/getcontacttypes",
+  "pageTitle": "Get Contact Types",
+  "description": "Método para obtener un listado de los tipos de contacto.",
+  "pubName": "PublicPersons.getContactTypes",
+  "modulo": "Customers",
+  "programa": "PublicAPI.BTPEPA0040",
+  "scope": "Global",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "inputData": [],
+  "bodyData": [],
+  "outputData": [
+    {
+      "Nombre": "contactTypes",
+      "Tipo": "<a href=\"#sbtpecontacttypes\">sBTPEContactTypes</a>",
+      "Comentarios": "Listado de tipos de contacto."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "No aplica.",
+  "examples": {
+    "invocation": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'",
+      "xml": ""
+    },
+    "response": {
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"contactTypes\": {\r\n    \"contactType\": [\r\n      {\r\n        \"id\": 1,\r\n        \"description\": \"TELEFONO MÓVIL\",\r\n        \"requiresTelephoneCompany\": true\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"description\": \"TELEFONO FIJO\",\r\n        \"requiresTelephoneCompany\": false\r\n      },\r\n      {\r\n        \"id\": 3,\r\n        \"description\": \"CORREO ELECTRÓNICO\",\r\n        \"requiresTelephoneCompany\": false\r\n      },\r\n      {\r\n        \"id\": 4,\r\n        \"description\": \"X\",\r\n        \"requiresTelephoneCompany\": false\r\n      },\r\n      {\r\n        \"id\": 5,\r\n        \"description\": \"INSTAGRAM\",\r\n        \"requiresTelephoneCompany\": false\r\n      },\r\n      {\r\n        \"id\": 6,\r\n        \"description\": \"WHATSAPP\",\r\n        \"requiresTelephoneCompany\": false\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:17\",\r\n    \"Numero\": 13469335,\r\n    \"Servicio\": \"PublicPersons.getContactTypes\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "xml": ""
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "sBTPEContactTypes",
+      "fields": [
+        {
+          "Nombre": "id",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de tipo de contacto."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String <strong>(Length: 50)</strong>",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "requiresTelephoneCompany",
+          "Tipo": "Boolean",
+          "Comentarios": "Requiere compañía telefónica?."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}
