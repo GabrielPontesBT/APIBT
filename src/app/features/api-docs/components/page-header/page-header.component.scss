@@ -78,3 +78,19 @@ $page-header-duration: 500ms;
     padding-left: 1.5rem;
   }
 }
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  .header-content {
+    height: 4.5rem;
+
+    .page-title {
+      font-size: 1.35rem;
+      padding-left: 3.5rem;
+    }
+
+    &.scrolled {
+      height: 2.25rem;
+    }
+  }
+}

@@ -16,97 +16,97 @@
             "children": [
               {
                 "type": "file",
-                "label": "AdhesiónComprador",
+                "label": "Comprador Adhesión",
                 "pageTitle": "Comprador Adhesión",
                 "slug": "argentina-ar/coelsa/debin/adhesioncomprador"
               },
               {
                 "type": "file",
-                "label": "BajaCuentaComprador",
+                "label": "Baja Cuenta Comprador",
                 "pageTitle": "Baja Cuenta Comprador",
                 "slug": "argentina-ar/coelsa/debin/bajacuentacomprador"
               },
               {
                 "type": "file",
-                "label": "BajaCuentaVendedor",
+                "label": "Baja Cuenta Vendedor",
                 "pageTitle": "Baja Cuenta Vendedor",
                 "slug": "argentina-ar/coelsa/debin/bajacuentavendedor"
               },
               {
                 "type": "file",
-                "label": "ConfirmaDebito",
+                "label": "Confirmar Débito",
                 "pageTitle": "Confirmar Débito",
                 "slug": "argentina-ar/coelsa/debin/confirmadebito"
               },
               {
                 "type": "file",
-                "label": "ConsultaComprador",
+                "label": "Consultar Comprador",
                 "pageTitle": "Consultar Comprador",
                 "slug": "argentina-ar/coelsa/debin/consultacomprador"
               },
               {
                 "type": "file",
-                "label": "ConsultaCuentas",
+                "label": "Consultar Cuentas",
                 "pageTitle": "Consultar Cuentas",
                 "slug": "argentina-ar/coelsa/debin/consultacuentas"
               },
               {
                 "type": "file",
-                "label": "ConsultaVendedoresAdheridos",
+                "label": "Consultar Vendedores Adheridos",
                 "pageTitle": "Consultar Vendedores Adheridos",
                 "slug": "argentina-ar/coelsa/debin/consultavendedoresadheridos"
               },
               {
                 "type": "file",
-                "label": "CuentaEspecialAlta",
+                "label": "Alta Cuenta Especial",
                 "pageTitle": "Alta Cuenta Especial",
                 "slug": "argentina-ar/coelsa/debin/cuentaespecialalta"
               },
               {
                 "type": "file",
-                "label": "DebinAlta",
+                "label": "Alta DEBIN",
                 "pageTitle": "Alta DEBIN",
                 "slug": "argentina-ar/coelsa/debin/debinalta"
               },
               {
                 "type": "file",
-                "label": "DebinConsulta",
+                "label": "Consultar DEBIN",
                 "pageTitle": "Consultar DEBIN",
                 "slug": "argentina-ar/coelsa/debin/debinconsulta"
               },
               {
                 "type": "file",
-                "label": "DebinEliminar",
+                "label": "Eliminar DEBIN",
                 "pageTitle": "Eliminar DEBIN",
                 "slug": "argentina-ar/coelsa/debin/debineliminar"
               },
               {
                 "type": "file",
-                "label": "DebinListado",
+                "label": "Listado DEBIN",
                 "pageTitle": "Listado DEBIN",
                 "slug": "argentina-ar/coelsa/debin/debinlistado"
               },
               {
                 "type": "file",
-                "label": "EnviarTransferencia",
+                "label": "Enviar Transferencia",
                 "pageTitle": "Enviar Transferencia",
                 "slug": "argentina-ar/coelsa/debin/enviartransferencia"
               },
               {
                 "type": "file",
-                "label": "ValidarCUIT",
+                "label": "Validar CUIT",
                 "pageTitle": "Validar CUIT",
                 "slug": "argentina-ar/coelsa/debin/validarcuit"
               },
               {
                 "type": "file",
-                "label": "VendedorAdhesion",
+                "label": "Vendedor Adhesion",
                 "pageTitle": "Vendedor Adhesion",
                 "slug": "argentina-ar/coelsa/debin/vendedoradhesion"
               },
               {
                 "type": "file",
-                "label": "VendedorConsulta",
+                "label": "Vendedor Consulta",
                 "pageTitle": "Vendedor Consulta",
                 "slug": "argentina-ar/coelsa/debin/vendedorconsulta"
               }
@@ -128,19 +128,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ConsultaEstadoACH",
+            "label": "Consultar Estado Transferencia ACH",
             "pageTitle": "Consultar Estado Transferencia ACH",
             "slug": "colombia-co/ach/consultaestadoach"
           },
           {
             "type": "file",
-            "label": "ListaBancosACH",
+            "label": "Listado de Bancos ACH",
             "pageTitle": "Listado de Bancos ACH",
             "slug": "colombia-co/ach/listabancosach"
           },
           {
             "type": "file",
-            "label": "TransferenciaACH",
+            "label": "Alta Transferencia ACH",
             "pageTitle": "Alta Transferencia ACH",
             "slug": "colombia-co/ach/transferenciaach"
           }
@@ -165,25 +165,25 @@
             "children": [
               {
                 "type": "file",
-                "label": "ConfirmarACH",
+                "label": "Confirmar Transferencia Directa",
                 "pageTitle": "Confirmar Transferencia Directa",
                 "slug": "honduras-hn/ach/envio/confirmarach"
               },
               {
                 "type": "file",
-                "label": "ConsultaEstadoACH",
+                "label": "Consultar Estado",
                 "pageTitle": "Consultar Estado",
                 "slug": "honduras-hn/ach/envio/consultaestadoach"
               },
               {
                 "type": "file",
-                "label": "EnviarACHindirecto",
+                "label": "Enviar Transferencia Indirecta",
                 "pageTitle": "Enviar Transferencia Indirecta",
                 "slug": "honduras-hn/ach/envio/enviarachindirecto"
               },
               {
                 "type": "file",
-                "label": "SimularACHDirecto",
+                "label": "Simular Transferencia Directa",
                 "pageTitle": "Simular Transferencia Directa",
                 "slug": "honduras-hn/ach/envio/simularachdirecto"
               }
@@ -196,13 +196,13 @@
             "children": [
               {
                 "type": "file",
-                "label": "ActualizarPendiente",
+                "label": "Actualizar Pendiente",
                 "pageTitle": "Actualizar Pendiente",
                 "slug": "honduras-hn/ach/recepcion/actualizarpendiente"
               },
               {
                 "type": "file",
-                "label": "RecibirACH",
+                "label": "Recibir Transferencia",
                 "pageTitle": "Recibir Transferencia",
                 "slug": "honduras-hn/ach/recepcion/recibirach"
               }
@@ -217,19 +217,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ConfirmarLBTR",
+            "label": "Confirmar Transferencia",
             "pageTitle": "Confirmar Transferencia",
             "slug": "honduras-hn/lbtr/confirmarlbtr"
           },
           {
             "type": "file",
-            "label": "ConsultaEstadoLBTR",
+            "label": "Consultar Estado Transferencia",
             "pageTitle": "Consultar Estado Transferencia",
             "slug": "honduras-hn/lbtr/consultaestadolbtr"
           },
           {
             "type": "file",
-            "label": "SimularLBTR",
+            "label": "Solicitar Transferencia",
             "pageTitle": "Solicitar Transferencia",
             "slug": "honduras-hn/lbtr/simularlbtr"
           }
@@ -244,77 +244,77 @@
     "children": [
       {
         "type": "file",
-        "label": "AltaTarjeta",
+        "label": "Alta Tarjeta",
         "pageTitle": "Alta Tarjeta",
         "slug": "panama-pa/altatarjeta",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "BloqueoTarjeta",
+        "label": "Bloqueo Tarjeta",
         "pageTitle": "Bloqueo Tarjeta",
         "slug": "panama-pa/bloqueotarjeta",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "CambioDePin",
+        "label": "Cambio PIN",
         "pageTitle": "Cambio PIN",
         "slug": "panama-pa/cambiodepin",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "CancelarTarjeta",
+        "label": "Cancelar Tarjeta",
         "pageTitle": "Cancelar Tarjeta",
         "slug": "panama-pa/cancelartarjeta",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "ConsultaCVV",
+        "label": "Consulta CVV",
         "pageTitle": "Consulta CVV",
         "slug": "panama-pa/consultacvv",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "ConsultaMovBloqueados",
+        "label": "Consulta Movimientos Bloqueados",
         "pageTitle": "Consulta Movimientos Bloqueados",
         "slug": "panama-pa/consultamovbloqueados",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "DesbloqueoTarjeta",
+        "label": "Desbloqueo de tarjeta",
         "pageTitle": "Desbloqueo de tarjeta",
         "slug": "panama-pa/desbloqueotarjeta",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "InformacionTarjeta",
+        "label": "Informacion Tarjeta",
         "pageTitle": "Informacion Tarjeta",
         "slug": "panama-pa/informaciontarjeta",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "NotificacionTransaccionesEndPoint",
+        "label": "Notificacion de Transacciones",
         "pageTitle": "Notificacion de Transacciones",
         "slug": "panama-pa/notificaciontransaccionesendpoint",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "PeticionAutorizacionEndPoint",
+        "label": "Petición de Autorización",
         "pageTitle": "Petición de Autorización",
         "slug": "panama-pa/peticionautorizacionendpoint",
         "isNew": true
       },
       {
         "type": "file",
-        "label": "RecepcionTarjeta",
+        "label": "Recepción de Tarjeta",
         "pageTitle": "Recepción de Tarjeta",
         "slug": "panama-pa/recepciontarjeta",
         "isNew": true
@@ -338,19 +338,19 @@
             "children": [
               {
                 "type": "file",
-                "label": "DevolucionFondos",
+                "label": "Devolución de Fondos",
                 "pageTitle": "Devolución de Fondos",
                 "slug": "paraguay-py/spi/devolucion/devolucionfondos"
               },
               {
                 "type": "file",
-                "label": "RespuestaSolicitudRetorno",
+                "label": "Respuesta a Solicitud de Retorno de Fondos",
                 "pageTitle": "Respuesta a Solicitud de Retorno de Fondos",
                 "slug": "paraguay-py/spi/devolucion/respuestasolicitudretorno"
               },
               {
                 "type": "file",
-                "label": "SolicitudRetornoFondos",
+                "label": "Solicitud de Retorno de Fondos",
                 "pageTitle": "Solicitud de Retorno de Fondos",
                 "slug": "paraguay-py/spi/devolucion/solicitudretornofondos"
               }
@@ -363,13 +363,13 @@
             "children": [
               {
                 "type": "file",
-                "label": "ConsultaTransferencias",
+                "label": "Consulta Transferencias",
                 "pageTitle": "Consulta Transferencias",
                 "slug": "paraguay-py/spi/transferencias/consultatransferencias"
               },
               {
                 "type": "file",
-                "label": "TransferenciasSPI",
+                "label": "Transferencias SPI",
                 "pageTitle": "Transferencias SPI",
                 "slug": "paraguay-py/spi/transferencias/transferenciasspi"
               }
@@ -396,13 +396,13 @@
             "children": [
               {
                 "type": "file",
-                "label": "EnviarTransferencia",
+                "label": "Enviar Transferencia",
                 "pageTitle": "Enviar Transferencia",
                 "slug": "peru-pe/cce/diferidas/enviartransferencia"
               },
               {
                 "type": "file",
-                "label": "ObtenerBancos",
+                "label": "Lista Entidades",
                 "pageTitle": "Lista Entidades",
                 "slug": "peru-pe/cce/diferidas/obtenerbancos"
               }
@@ -415,19 +415,19 @@
             "children": [
               {
                 "type": "file",
-                "label": "ConfirmarTransferencia",
+                "label": "Confirmar Transferencia",
                 "pageTitle": "Confirmar Transferencia",
                 "slug": "peru-pe/cce/tin/confirmartransferencia"
               },
               {
                 "type": "file",
-                "label": "ConsultaTIN",
+                "label": "Consultar",
                 "pageTitle": "Consultar",
                 "slug": "peru-pe/cce/tin/consultatin"
               },
               {
                 "type": "file",
-                "label": "RecepcionTIN",
+                "label": "Recepción Transferencias",
                 "pageTitle": "Recepción Transferencias",
                 "slug": "peru-pe/cce/tin/recepciontin"
               }

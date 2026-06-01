@@ -292,3 +292,36 @@ code[class*="language-"] *::selection {
     min-height: 360px;
   }
 }
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  ::ng-deep .code-tabs .mat-mdc-tab-header {
+    --mdc-secondary-navigation-tab-container-height: 36px;
+    min-height: 36px !important;
+    font-size: 0.8rem;
+  }
+
+  ::ng-deep .code-tabs .mdc-tab {
+    height: 36px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  ::ng-deep .code-tabs .mat-mdc-tab-body-wrapper {
+    padding: 1.25rem;
+  }
+
+  .code-toggle button[mat-icon-button] {
+    padding: 0 0.5rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    .material-icons {
+      font-size: 18px;
+      line-height: 18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Préstamo
 breadcrumb: false
 pageInfo: false
@@ -802,8 +802,8 @@ cantidadCuotas | Int | Cantidad de cuotas.
 capital | Double | Capital.
 cft | Double | Costo financiero total.
 coeficienteIVA | Double | Coeficiente IVA.
-comisiones | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones.
-comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones de cuota.
+comisiones | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones.
+comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones de cuota.
 comisionesDesembolso | Double | Comisiones de desembolso.
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo.
 diasRevision | Int | Días de revisión.
@@ -821,7 +821,7 @@ plus | Double | Tasa plus.
 precio | Double | Precio.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 redondeo | Double | Redondeo.
-seguros | [sBTSeguroPrestamo](#sbtseguroprestamosalida) | Listado de seguros.
+seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 segurosDesembolso | Double | Seguros de desembolso.
 tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva.
@@ -887,9 +887,6 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
-
-### sBTSeguroPrestamoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
@@ -901,9 +898,6 @@ importeFijo | Decimal | Importe fijo del seguro.
 modificable | String | Indica si es modificable.
 porcentaje | Decimal | Porcentaje del seguro.
 tipo | String | Tipo del seguro.
-
-### sBTComisionPrestamoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 

@@ -15,23 +15,23 @@
         </div>
       </div>
 
-      <div class="home-news">
-        <h2 class="home-news__title">Novedades</h2>
-        <ul class="home-news__list">
-          @for (item of newsItems; track $index) {
-            <li class="home-news__item">{{ item }}</li>
-          }
-        </ul>
-      </div>
-
     </div>
   </section>
 
   <section class="home-content">
     <div class="home-separator"></div>
 
+    <div class="home-news">
+      <h2 class="home-news__title">Novedades</h2>
+      <ul class="home-news__list">
+        @for (item of newsItems; track $index) {
+          <li class="home-news__item">{{ item }}</li>
+        }
+      </ul>
+    </div>
+
     <div class="home-cards">
-      @for (doc of docs; track doc) {
+      @for (doc of docs; track doc.versionId) {
         <div class="home-card" (click)="selectVersion(doc.versionId)">
           <div class="home-card__title">
             <span class="home-card__icon"></span>

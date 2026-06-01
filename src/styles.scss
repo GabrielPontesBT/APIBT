@@ -102,10 +102,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
 }
 
-@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1280px),
-       (resolution: 1.5dppx) and (min-width: 1280px) {
-  body {
-    font-size: 0.8rem;
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  .mat-mdc-tooltip .mdc-tooltip__surface {
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
 }
 

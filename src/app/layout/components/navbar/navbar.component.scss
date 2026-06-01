@@ -153,6 +153,32 @@
   }
 }
 
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  .navbar {
+    padding: 0.3rem 1.5rem;
+  }
+
+  .logo {
+    height: 2.25rem;
+    margin-left: 0;
+  }
+
+  .toggle-theme-button {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .toggle-theme-button .material-icons {
+    font-size: 18px;
+  }
+
+  .releases-btn,
+  .releases-item {
+    font-size: 0.78rem;
+  }
+}
+
 @keyframes dropdownFade {
   from { opacity: 0; transform: translateY(-6px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }

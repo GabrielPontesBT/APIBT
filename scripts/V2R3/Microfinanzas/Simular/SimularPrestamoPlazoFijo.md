@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Plazo Fijo
 breadcrumb: false
 pageInfo: false
@@ -279,7 +279,7 @@ fechaValor | Date | Fecha valor.
 fechaVencimiento | Date | Fecha de vencimiento. 
 intereses | Double | Intereses. 
 operacionUId | Long | Identificador único de operación. 
-otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Importe otros conceptos.  
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Importe otros conceptos.  
 plazo | Int | Plazo. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 tasa | Double | Tasa. 
@@ -298,12 +298,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
-otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
 productoUId | Long | Identificador único de producto. 
-
-### sBTConceptoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 

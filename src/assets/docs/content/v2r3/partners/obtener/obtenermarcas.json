@@ -81,6 +81,31 @@
           "Comentarios": "Identificador del vendedor."
         }
       ]
+    },
+    {
+      "typeName": "sBTMarca",
+      "fields": [
+        {
+          "Nombre": "marcaUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la marca."
+        },
+        {
+          "Nombre": "nombreMarca",
+          "Tipo": "String",
+          "Comentarios": "Nombre de la marca."
+        },
+        {
+          "Nombre": "tipoMarca",
+          "Tipo": "String",
+          "Comentarios": "Tipo de marca."
+        },
+        {
+          "Nombre": "tipoMarcaId",
+          "Tipo": "Short",
+          "Comentarios": "Identificador del tipo de marca."
+        }
+      ]
     }
   ],
   "valuesTable": [],

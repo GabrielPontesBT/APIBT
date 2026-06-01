@@ -51,9 +51,7 @@ export class NavbarComponent {
 
     if (isPlatformBrowser(this.platformId)) {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-          this.applyTheme(e.matches);
-        }
+        this.applyTheme(e.matches);
       });
     }
   }
@@ -85,7 +83,6 @@ export class NavbarComponent {
 
     const doToggle = () => {
       this.applyTheme(!this.isDarkMode);
-      localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
     };
 
     // View Transitions API: toma un screenshot del estado actual, aplica el cambio

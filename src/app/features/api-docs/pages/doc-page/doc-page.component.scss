@@ -144,9 +144,14 @@
   }
 }
 
-@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1280px),
-       (resolution: 1.5dppx) and (min-width: 1280px) {
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
   .content {
-    --content-right-bottom-gap: 2.5rem;
+    padding-top: 4.5rem;
+    --content-right-bottom-gap: 2rem;
+  }
+
+  .content-right {
+    top: calc(3.75rem + 4.5rem);
   }
 }

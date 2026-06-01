@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Instrucciones Habilitados
 breadcrumb: false
 pageInfo: false
@@ -312,23 +312,17 @@ Los campos del tipo de dato estructurado sBTCodigoInstrucciones son los siguient
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 codigo | Short | Código. 
-datosExtendidos | [sBTDatoExtendido](#sbtdatoextendidosalida) | Listado de datos complementarios. 
+datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 descripcion | String | Descripción. 
-
-### sBTDatoExtendidoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
-lista | [sBTDatoLista](#sbtdatolistasalida) | Lista de datos. 
+lista | [sBTDatoLista](#sbtdatalista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido. 
-
-### sBTDatoListaSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 

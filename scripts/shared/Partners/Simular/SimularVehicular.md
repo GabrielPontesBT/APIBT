@@ -1,4 +1,4 @@
----
+﻿---
 title: Simular Vehicular
 breadcrumb: false
 pageInfo: false
@@ -866,8 +866,8 @@ cantidadCuotas | Int | Cantidad de cuotas.
 capital | Double | Capital.
 cft | Double | Costo financiero total.
 coeficienteIVA | Double | Coeficiente IVA.
-comisiones | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones.
-comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones de cuota.
+comisiones | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones.
+comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones de cuota.
 comisionesDesembolso | Double | Comisiones de desembolso.
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo.
 diasRevision | Int | Días de revisión.
@@ -878,14 +878,14 @@ impuestosDesembolso | Double | Impuestos de desembolso.
 montoDesembolso | Double | Monto de desembolso.
 nomSucursal | String | Nombre de la sucursal.
 operacionUid | Long | Identificador único de operación.
-otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 periodicidad | Int | Periodicidad.
 plazo | Int | Plazo.
 plus | Double | Tasa plus.
 precio | Double | Precio.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 redondeo | Double | Redondeo.
-seguros | [sBTSeguroPrestamo](#sbtseguroprestamosalida) | Listado de seguros.
+seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 segurosDesembolso | Double | Seguros de desembolso.
 tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva.
@@ -899,9 +899,6 @@ totalIntereses | Double | Total de intereses.
 totalPrestamo | Double | Total de préstamo.
 totalSeguros | Double | Total de seguros.
 valorCuota | Double | Valor de la cuota.
-
-### sBTConceptoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
@@ -951,9 +948,6 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
-
-### sBTSeguroPrestamoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
@@ -965,9 +959,6 @@ importeFijo | Decimal | Importe fijo del seguro.
 modificable | String | Indica si es modificable.
 porcentaje | Decimal | Porcentaje del seguro.
 tipo | String | Tipo del seguro.
-
-### sBTComisionPrestamoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 

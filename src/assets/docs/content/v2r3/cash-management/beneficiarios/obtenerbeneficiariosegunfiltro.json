@@ -96,6 +96,41 @@
           "Comentarios": "Valor del campo CASH."
         }
       ]
+    },
+    {
+      "typeName": "sBTResumenBeneficiario",
+      "fields": [
+        {
+          "Nombre": "contrato",
+          "Tipo": "Int",
+          "Comentarios": "Contrato."
+        },
+        {
+          "Nombre": "servicio",
+          "Tipo": "Short",
+          "Comentarios": "Servicio."
+        },
+        {
+          "Nombre": "codAgenda",
+          "Tipo": "Short",
+          "Comentarios": "Código de agenda."
+        },
+        {
+          "Nombre": "nombre",
+          "Tipo": "String",
+          "Comentarios": "Nombre."
+        },
+        {
+          "Nombre": "id",
+          "Tipo": "String",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "corr",
+          "Tipo": "Int",
+          "Comentarios": "Correlativo."
+        }
+      ]
     }
   ],
   "valuesTable": [],

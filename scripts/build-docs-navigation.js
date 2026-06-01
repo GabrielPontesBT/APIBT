@@ -103,9 +103,12 @@ function getPageTitleFromMarkdown(filePath) {
 /**
  * Devuelve un Map de { relPath → absolutePath } con todos los archivos .md
  * que conforman esta versión. Los archivos de versionDir sobreescriben sharedDir.
+ * La deduplicación se hace por slug normalizado para que archivos con el mismo
+ * nombre pero distinto acento (ej: ObtenerPrestamos vs ObtenerPréstamos) no
+ * generen entradas duplicadas en la navegación.
  */
 function buildMergedFileMap(versionDir, useShared) {
-  const fileMap = new Map(); // relPath (unix) → absolutePath
+  const slugMap = new Map(); // slugKey → { relPath, absPath }
 
   function walk(dir, baseDir) {
     if (!fs.existsSync(dir)) return;
@@ -118,14 +121,21 @@ function buildMergedFileMap(versionDir, useShared) {
         walk(fullPath, baseDir);
       } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
         const relPath = path.relative(baseDir, fullPath).replace(/\\/g, '/');
-        fileMap.set(relPath, fullPath);
+        const slugKey = relPath.split('/').map(seg =>
+          slugifySegment(seg.replace(/\.md$/i, ''))
+        ).join('/');
+        slugMap.set(slugKey, { relPath, absPath: fullPath });
       }
     }
   }
 
   if (useShared) walk(SHARED_DIR, SHARED_DIR);
-  walk(versionDir, versionDir); // versión sobreescribe shared
+  walk(versionDir, versionDir); // versión sobreescribe shared (por slug, no por relPath)
 
+  const fileMap = new Map();
+  for (const [, { relPath, absPath }] of slugMap) {
+    fileMap.set(relPath, absPath);
+  }
   return fileMap;
 }
 
@@ -185,10 +195,11 @@ function convertToNavNodes(nodeMap, parentSlug, labelMap = {}) {
       const fileBaseName = node.__name.replace(/\.md$/i, '');
       const fileSlugSegment = slugifySegment(fileBaseName);
       const fileSlug = parentSlug ? `${parentSlug}/${fileSlugSegment}` : fileSlugSegment;
+      const pageTitle = getPageTitleFromMarkdown(node.__absPath);
       children.push({
         type: 'file',
-        label: humanizeLabel(fileBaseName),
-        pageTitle: getPageTitleFromMarkdown(node.__absPath),
+        label: pageTitle || humanizeLabel(fileBaseName),
+        pageTitle,
         slug: fileSlug,
       });
     }
