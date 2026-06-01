@@ -91,6 +91,41 @@
           "Comentarios": "Valor del campo CASH."
         }
       ]
+    },
+    {
+      "typeName": "sBTInfoDetalleCASH",
+      "fields": [
+        {
+          "Nombre": "detalleOrden",
+          "Tipo": "Int",
+          "Comentarios": "Detalle de la orden."
+        },
+        {
+          "Nombre": "ordenId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de la orden."
+        },
+        {
+          "Nombre": "valoresDetalle",
+          "Tipo": "<a href=\"#sbtvalorcampocash1\">sBTValorCampoCASH</a>",
+          "Comentarios": "Listado de datos de valores de campos CASH."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTValorCampoCASH1",
+      "fields": [
+        {
+          "Nombre": "tag",
+          "Tipo": "String",
+          "Comentarios": "Tag del campo CASH."
+        },
+        {
+          "Nombre": "valor",
+          "Tipo": "String",
+          "Comentarios": "Valor del campo CASH."
+        }
+      ]
     }
   ],
   "valuesTable": [],

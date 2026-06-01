@@ -1,4 +1,4 @@
----
+﻿---
 title: Obtener Productos
 breadcrumb: false
 pageInfo: false
@@ -307,12 +307,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 moneda | String | Moneda.
 nombre | String | Nombre.
-otrosConceptos | [sBTConcepto](#sbtconceptosalida) | Listado de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
 papel | String | Papel.
 productoUId | Long | Identificador del producto.
-
-### sBTConceptoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 

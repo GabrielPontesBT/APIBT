@@ -356,3 +356,27 @@
     max-height: none;
   }
 }
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  .sidebar-toggle-btn {
+    right: -20px;
+    width: 20px;
+    height: 40px;
+  }
+
+  .sidebar-icon {
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .sidebar-container {
+    font-size: 0.8rem;
+    scrollbar-width: thin;
+  }
+
+  .sidebar-container::-webkit-scrollbar {
+    width: 3px;
+  }
+}

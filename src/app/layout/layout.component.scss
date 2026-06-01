@@ -133,6 +133,23 @@ app-sidebar {
   }
 }
 
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  app-sidebar {
+    width: 220px;
+  }
+
+  .content-area:not(.content-area--home) {
+    margin-left: 220px;
+  }
+
+  .main-container:not(.main-container--home):not(.sidebar-collapsed) {
+    --page-header-left-offset: 220px;
+    --content-left-offset: 220px;
+    --col-width: calc((100vw - 220px) / 2);
+  }
+}
+
 .content-area > * {
   backface-visibility: hidden;
 }

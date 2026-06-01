@@ -243,9 +243,7 @@ monedaId | Short | Identificador de Moneda.
 operacionUIdDestino | Long | Identificador de operación de origen del traspaso.
 operacionUIdOrigen | Long | Identificador de operación de destino del traspaso.
 :::
-<!-- CIERRA SDT -->
 
-<!-- ABRE SDT -->
 ::: details sBTResultadoTraspaso  
 
 ### sBTResultadoTraspaso

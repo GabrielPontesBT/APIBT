@@ -11,7 +11,7 @@
         "children": [
           {
             "type": "file",
-            "label": "ContratarSimulación",
+            "label": "Contratar Simulación",
             "pageTitle": "Contratar Simulación",
             "slug": "ahorro-programado/contratar/contratarsimulacion"
           },
@@ -36,31 +36,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "ahorro-programado/documentos-digitales/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "ahorro-programado/documentos-digitales/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "ahorro-programado/documentos-digitales/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "ahorro-programado/documentos-digitales/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "ahorro-programado/documentos-digitales/obtenerdocumentosdigitales"
           }
@@ -73,31 +73,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ModificarCuentaDestino",
+            "label": "Modificar Cuenta Destino",
             "pageTitle": "Modificar Cuenta Destino",
             "slug": "ahorro-programado/modificar/modificarcuentadestino"
           },
           {
             "type": "file",
-            "label": "ModificarCuentaOrigen",
+            "label": "Modificar Cuenta Origen",
             "pageTitle": "Modificar Cuenta Origen",
             "slug": "ahorro-programado/modificar/modificarcuentaorigen"
           },
           {
             "type": "file",
-            "label": "ModificarFechadeAbono",
+            "label": "Modificar Fecha de Abono",
             "pageTitle": "Modificar Fecha de Abono",
             "slug": "ahorro-programado/modificar/modificarfechadeabono"
           },
           {
             "type": "file",
-            "label": "ModificarMetadeAhorro",
+            "label": "Modificar Meta de Ahorro",
             "pageTitle": "Modificar Meta de Ahorro",
             "slug": "ahorro-programado/modificar/modificarmetadeahorro"
           },
           {
             "type": "file",
-            "label": "ModificarMontodeAbono",
+            "label": "Modificar Monto de Abono",
             "pageTitle": "Modificar Monto de Abono",
             "slug": "ahorro-programado/modificar/modificarmontodeabono"
           }
@@ -116,49 +116,43 @@
           },
           {
             "type": "file",
-            "label": "ObtenerCronogramaAbonos",
+            "label": "Obtener Cronograma de Abonos",
             "pageTitle": "Obtener Cronograma de Abonos",
             "slug": "ahorro-programado/obtener/obtenercronogramaabonos"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasDestinoHabilitadas",
+            "label": "Obtener Cuentas Destino Habilitadas",
             "pageTitle": "Obtener Cuentas Destino Habilitadas",
             "slug": "ahorro-programado/obtener/obtenercuentasdestinohabilitadas"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasOrigenHabilitadas",
+            "label": "Obtener Cuentas Origen Habilitadas",
             "pageTitle": "Obtener Cuentas Origen Habilitadas",
             "slug": "ahorro-programado/obtener/obtenercuentasorigenhabilitadas"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadodeCuenta",
+            "label": "Obtener Estado de Cuenta",
             "pageTitle": "Obtener Estado de Cuenta",
             "slug": "ahorro-programado/obtener/obtenerestadodecuenta"
           },
           {
             "type": "file",
-            "label": "ObtenerPeríodosHabilitados",
+            "label": "Obtener Períodos Habilitados",
             "pageTitle": "Obtener Períodos Habilitados",
             "slug": "ahorro-programado/obtener/obtenerperiodoshabilitados"
           },
           {
             "type": "file",
-            "label": "ObtenerPeriodosHabilitados",
-            "pageTitle": "Obtener Períodos Habilitados",
-            "slug": "ahorro-programado/obtener/obtenerperiodoshabilitados"
-          },
-          {
-            "type": "file",
-            "label": "ObtenerPlazosHabilitados",
+            "label": "Obtener Plazos Habilitados",
             "pageTitle": "Obtener Plazos Habilitados",
             "slug": "ahorro-programado/obtener/obtenerplazoshabilitados"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "ahorro-programado/obtener/obtenerproductos"
           }
@@ -183,55 +177,55 @@
             "children": [
               {
                 "type": "file",
-                "label": "AnularChequeElectrónico",
+                "label": "Anular Cheque Electrónico",
                 "pageTitle": "Anular Cheque Electrónico",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/anularchequeelectronico"
               },
               {
                 "type": "file",
-                "label": "AsignarIdaChequeElectrónico",
+                "label": "Asignar Id a Cheque Electrónico",
                 "pageTitle": "Asignar Id a Cheque Electrónico",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/asignaridachequeelectronico"
               },
               {
                 "type": "file",
-                "label": "CrearChequeraElectrónica",
+                "label": "Crear Chequera Electrónica",
                 "pageTitle": "Crear Chequera Electrónica",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/crearchequeraelectronica"
               },
               {
                 "type": "file",
-                "label": "DepositarChequeElectrónicodeBancoPropio",
+                "label": "Depositar Cheque Electrónico de Banco Propio",
                 "pageTitle": "Depositar Cheque Electrónico de Banco Propio",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/depositarchequeelectronicodebancopropio"
               },
               {
                 "type": "file",
-                "label": "DepositarChequeElectrónicodeOtroBanco",
+                "label": "Depositar Cheque Electrónico de Otro Banco",
                 "pageTitle": "Depositar Cheque Electrónico de Otro Banco",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/depositarchequeelectronicodeotrobanco"
               },
               {
                 "type": "file",
-                "label": "DepositarChequeElectrónicoenCustodia",
+                "label": "Depositar Cheque Electrónico en Custodia",
                 "pageTitle": "Depositar Cheque Electrónico en Custodia",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/depositarchequeelectronicoencustodia"
               },
               {
                 "type": "file",
-                "label": "EmitirChequeElectronico",
+                "label": "Emitir Cheque Electrónico",
                 "pageTitle": "Emitir Cheque Electrónico",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/emitirchequeelectronico"
               },
               {
                 "type": "file",
-                "label": "EmitirChequeElectrónicodeChequera",
+                "label": "Emitir Cheque Electrónico de Chequera",
                 "pageTitle": "Emitir Cheque Electrónico de Chequera",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/emitirchequeelectronicodechequera"
               },
               {
                 "type": "file",
-                "label": "HabilitarChequeElectronico",
+                "label": "Habilitar Cheque Electrónico",
                 "pageTitle": "Habilitar Cheque Electrónico",
                 "slug": "argentina-ar/cuentas-corrientes/cheque-electronico/habilitarchequeelectronico"
               }
@@ -246,61 +240,61 @@
         "children": [
           {
             "type": "file",
-            "label": "CrearAdhesión",
+            "label": "Crear Adhesión",
             "pageTitle": "Crear Adhesión",
             "slug": "argentina-ar/snp/crearadhesion"
           },
           {
             "type": "file",
-            "label": "CrearStopDebit",
+            "label": "Crear Stop Debit",
             "pageTitle": "Crear Stop Debit",
             "slug": "argentina-ar/snp/crearstopdebit"
           },
           {
             "type": "file",
-            "label": "CrearStopDebitparaAdhesiónconImporte",
+            "label": "Crear Stop Debit para Adhesión con Importe",
             "pageTitle": "Crear Stop Debit para Adhesión con Importe",
             "slug": "argentina-ar/snp/crearstopdebitparaadhesionconimporte"
           },
           {
             "type": "file",
-            "label": "EliminarStopDebit",
+            "label": "Eliminar Stop Debit",
             "pageTitle": "Eliminar Stop Debit",
             "slug": "argentina-ar/snp/eliminarstopdebit"
           },
           {
             "type": "file",
-            "label": "ObtenerAdhesiones",
+            "label": "Obtener Adhesiones",
             "pageTitle": "Obtener Adhesiones",
             "slug": "argentina-ar/snp/obteneradhesiones"
           },
           {
             "type": "file",
-            "label": "ObtenerDébitos",
+            "label": "Obtener Débitos",
             "pageTitle": "Obtener Débitos",
             "slug": "argentina-ar/snp/obtenerdebitos"
           },
           {
             "type": "file",
-            "label": "ObtenerEmpresasOriginantes",
+            "label": "Obtener Empresas Originantes",
             "pageTitle": "Obtener Empresas Originantes",
             "slug": "argentina-ar/snp/obtenerempresasoriginantes"
           },
           {
             "type": "file",
-            "label": "ObtenerStopDebits",
+            "label": "Obtener Stop Debits",
             "pageTitle": "Obtener Stop Debits",
             "slug": "argentina-ar/snp/obtenerstopdebits"
           },
           {
             "type": "file",
-            "label": "ReversarDébitos",
+            "label": "Reversar Débitos",
             "pageTitle": "Reversar Débitos",
             "slug": "argentina-ar/snp/reversardebitos"
           },
           {
             "type": "file",
-            "label": "SolicitarBajadeAdhesión",
+            "label": "Solicitar Baja de Adhesión",
             "pageTitle": "Solicitar Baja de Adhesión",
             "slug": "argentina-ar/snp/solicitarbajadeadhesion"
           }
@@ -328,49 +322,49 @@
     "children": [
       {
         "type": "file",
-        "label": "ObtenerDetalledeEjecución",
+        "label": "Obtener Detalle de Ejecución",
         "pageTitle": "Obtener Detalle de Ejecución",
         "slug": "cadena-de-cierre/obtenerdetalledeejecucion"
       },
       {
         "type": "file",
-        "label": "ObtenerDetalledeProceso",
+        "label": "Obtener Detalle de Proceso",
         "pageTitle": "Obtener Detalle de Proceso",
         "slug": "cadena-de-cierre/obtenerdetalledeproceso"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosconError",
+        "label": "Obtener Procesos con Error",
         "pageTitle": "Obtener Procesos con Error",
         "slug": "cadena-de-cierre/obtenerprocesosconerror"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosCríticos",
+        "label": "Obtener Procesos Críticos",
         "pageTitle": "Obtener Procesos Críticos",
         "slug": "cadena-de-cierre/obtenerprocesoscriticos"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosDiarios",
+        "label": "Obtener Procesos Diarios",
         "pageTitle": "Obtener Procesos Diarios",
         "slug": "cadena-de-cierre/obtenerprocesosdiarios"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosMensuales",
+        "label": "Obtener Procesos Mensuales",
         "pageTitle": "Obtener Procesos Mensuales",
         "slug": "cadena-de-cierre/obtenerprocesosmensuales"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosReprocesables",
+        "label": "Obtener Procesos Reprocesables",
         "pageTitle": "Obtener Procesos Reprocesables",
         "slug": "cadena-de-cierre/obtenerprocesosreprocesables"
       },
       {
         "type": "file",
-        "label": "VerificarEstadoServidor",
+        "label": "Verificar Estado del Servidor",
         "pageTitle": "Verificar Estado del Servidor",
         "slug": "cadena-de-cierre/verificarestadoservidor"
       }
@@ -388,25 +382,25 @@
         "children": [
           {
             "type": "file",
-            "label": "CalcularFechadeVencimiento",
+            "label": "Calcular Fecha de Vencimiento",
             "pageTitle": "Calcular Fecha de Vencimiento",
             "slug": "calendarios/calcular/calcularfechadevencimiento"
           },
           {
             "type": "file",
-            "label": "CalcularFechadeVencimientoenDíasHábiles",
+            "label": "Calcular Fecha de Vencimiento en Días Hábiles",
             "pageTitle": "Calcular Fecha de Vencimiento en Días Hábiles",
             "slug": "calendarios/calcular/calcularfechadevencimientoendiashabiles"
           },
           {
             "type": "file",
-            "label": "CalcularPlazo",
+            "label": "Calcular Plazo",
             "pageTitle": "Calcular Plazo",
             "slug": "calendarios/calcular/calcularplazo"
           },
           {
             "type": "file",
-            "label": "CalcularPlazoenDíasHábiles",
+            "label": "Calcular Plazo en Días Hábiles",
             "pageTitle": "Calcular Plazo en Días Hábiles",
             "slug": "calendarios/calcular/calcularplazoendiashabiles"
           }
@@ -419,49 +413,49 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerFechaHábil",
+            "label": "Obtener Fecha Hábil",
             "pageTitle": "Obtener Fecha Hábil",
             "slug": "calendarios/obtener/obtenerfechahabil"
           },
           {
             "type": "file",
-            "label": "ObtenerFechaHábilAnterior",
+            "label": "Obtener Fecha Hábil Anterior",
             "pageTitle": "Obtener Fecha Hábil Anterior",
             "slug": "calendarios/obtener/obtenerfechahabilanterior"
           },
           {
             "type": "file",
-            "label": "ObtenerFechaHábilAnteriordeSucursal",
+            "label": "Obtener Fecha Hábil Anterior de Sucursal",
             "pageTitle": "Obtener Fecha Hábil Anterior de Sucursal",
             "slug": "calendarios/obtener/obtenerfechahabilanteriordesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerFechaHábildeSucursal",
+            "label": "Obtener Fecha Hábil de Sucursal",
             "pageTitle": "Obtener Fecha Hábil de Sucursal",
             "slug": "calendarios/obtener/obtenerfechahabildesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerInicioyFindeMes",
+            "label": "Obtener Inicio y Fin de Mes",
             "pageTitle": "Obtener Inicio y Fin de Mes",
             "slug": "calendarios/obtener/obtenerinicioyfindemes"
           },
           {
             "type": "file",
-            "label": "ObtenerInicioyFindeMesdeSucursal",
+            "label": "Obtener Inicio y Fin de Mes de Sucursal",
             "pageTitle": "Obtener Inicio y Fin de Mes de Sucursal",
             "slug": "calendarios/obtener/obtenerinicioyfindemesdesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerPróximaFechaHábil",
+            "label": "Obtener Próxima Fecha Hábil",
             "pageTitle": "Obtener Próxima Fecha Hábil",
             "slug": "calendarios/obtener/obtenerproximafechahabil"
           },
           {
             "type": "file",
-            "label": "ObtenerPróximaFechaHábildeSucursal",
+            "label": "Obtener Próxima Fecha Hábil de Sucursal",
             "pageTitle": "Obtener Próxima Fecha Hábil de Sucursal",
             "slug": "calendarios/obtener/obtenerproximafechahabildesucursal"
           }
@@ -481,31 +475,31 @@
         "children": [
           {
             "type": "file",
-            "label": "AutorizarArchivo",
+            "label": "Autorizar Archivo",
             "pageTitle": "Autorizar Archivo",
             "slug": "cash-management/archivo/autorizararchivo"
           },
           {
             "type": "file",
-            "label": "CargarArchivo",
+            "label": "Cargar Archivo",
             "pageTitle": "Cargar Archivo",
             "slug": "cash-management/archivo/cargararchivo"
           },
           {
             "type": "file",
-            "label": "CargarArchivoRecibidoComoDato",
+            "label": "Cargar Archivo Recibido Como Dato",
             "pageTitle": "Cargar Archivo Recibido Como Dato",
             "slug": "cash-management/archivo/cargararchivorecibidocomodato"
           },
           {
             "type": "file",
-            "label": "DetenerArchivo",
+            "label": "Detener Archivo",
             "pageTitle": "Detener Archivo",
             "slug": "cash-management/archivo/detenerarchivo"
           },
           {
             "type": "file",
-            "label": "RechazarArchivo",
+            "label": "Rechazar Archivo",
             "pageTitle": "Rechazar Archivo",
             "slug": "cash-management/archivo/rechazararchivo"
           }
@@ -518,19 +512,19 @@
         "children": [
           {
             "type": "file",
-            "label": "CargarBeneficiarios",
+            "label": "Cargar Beneficiarios",
             "pageTitle": "Cargar Beneficiarios",
             "slug": "cash-management/beneficiarios/cargarbeneficiarios"
           },
           {
             "type": "file",
-            "label": "IngresarBeneficiario",
+            "label": "Ingresar Beneficiario",
             "pageTitle": "Ingresar Beneficiario",
             "slug": "cash-management/beneficiarios/ingresarbeneficiario"
           },
           {
             "type": "file",
-            "label": "ObtenerBeneficiarioSegunFiltro",
+            "label": "Obtener Beneficiario Según Filtro",
             "pageTitle": "Obtener Beneficiario Según Filtro",
             "slug": "cash-management/beneficiarios/obtenerbeneficiariosegunfiltro"
           }
@@ -543,19 +537,19 @@
         "children": [
           {
             "type": "file",
-            "label": "AltaAutomáticaContrato",
+            "label": "Alta Automática Contrato",
             "pageTitle": "Alta Automática Contrato",
             "slug": "cash-management/contratar/altaautomaticacontrato"
           },
           {
             "type": "file",
-            "label": "CargarServiciosDisponibles",
+            "label": "Cargar Servicios Disponibles",
             "pageTitle": "Cargar Servicios Disponibles",
             "slug": "cash-management/contratar/cargarserviciosdisponibles"
           },
           {
             "type": "file",
-            "label": "ContratarDebitoAutomatico",
+            "label": "Contratar Débito Automático",
             "pageTitle": "Contratar Débito Automático",
             "slug": "cash-management/contratar/contratardebitoautomatico"
           }
@@ -568,55 +562,55 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerDetalledeOrdendeCuenta",
+            "label": "Obtener Detalle de Orden de Cuenta",
             "pageTitle": "Obtener Detalle de Orden de Cuenta",
             "slug": "cash-management/obtener/obtenerdetalledeordendecuenta"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledePago",
+            "label": "Obtener Detalle de Pago",
             "pageTitle": "Obtener Detalle de Pago",
             "slug": "cash-management/obtener/obtenerdetalledepago"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleOrdenSegunCampo",
+            "label": "Obtener Detalle de Orden Según Campo",
             "pageTitle": "Obtener Detalle de Orden Según Campo",
             "slug": "cash-management/obtener/obtenerdetalleordenseguncampo"
           },
           {
             "type": "file",
-            "label": "ObtenerDetallePagoOrden",
+            "label": "Obtener Detalle de Pago de una Orden",
             "pageTitle": "Obtener Detalle de Pago de una Orden",
             "slug": "cash-management/obtener/obtenerdetallepagoorden"
           },
           {
             "type": "file",
-            "label": "ObtenerDeuda",
+            "label": "Obtener Deuda",
             "pageTitle": "Obtener Deuda",
             "slug": "cash-management/obtener/obtenerdeuda"
           },
           {
             "type": "file",
-            "label": "ObtenerResumenOrden",
+            "label": "Obtener Resumen de una Orden",
             "pageTitle": "Obtener Resumen de una Orden",
             "slug": "cash-management/obtener/obtenerresumenorden"
           },
           {
             "type": "file",
-            "label": "ObtenerServicios",
+            "label": "Obtener Servicios",
             "pageTitle": "Obtener Servicios",
             "slug": "cash-management/obtener/obtenerservicios"
           },
           {
             "type": "file",
-            "label": "ObtenerValoresOrden",
+            "label": "Obtener Valores Orden",
             "pageTitle": "Obtener Valores Orden",
             "slug": "cash-management/obtener/obtenervaloresorden"
           },
           {
             "type": "file",
-            "label": "ObtenerValoresOrdenSegunCampo",
+            "label": "Obtener Valores de Orden Según Campo",
             "pageTitle": "Obtener Valores de Orden Según Campo",
             "slug": "cash-management/obtener/obtenervaloresordenseguncampo"
           }
@@ -629,31 +623,31 @@
         "children": [
           {
             "type": "file",
-            "label": "AutorizarOrden",
+            "label": "Autorizar Orden",
             "pageTitle": "Autorizar Orden",
             "slug": "cash-management/orden/autorizarorden"
           },
           {
             "type": "file",
-            "label": "DetenerOrden",
+            "label": "Detener Orden",
             "pageTitle": "Detener Orden",
             "slug": "cash-management/orden/detenerorden"
           },
           {
             "type": "file",
-            "label": "IngresarOrdenPago",
+            "label": "Ingresar Orden Pago",
             "pageTitle": "Ingresar Orden Pago",
             "slug": "cash-management/orden/ingresarordenpago"
           },
           {
             "type": "file",
-            "label": "ProcesarOrden",
+            "label": "Procesar Orden",
             "pageTitle": "Procesar Orden",
             "slug": "cash-management/orden/procesarorden"
           },
           {
             "type": "file",
-            "label": "RechazarOrden",
+            "label": "Rechazar Orden",
             "pageTitle": "Rechazar Orden",
             "slug": "cash-management/orden/rechazarorden"
           }
@@ -666,31 +660,31 @@
         "children": [
           {
             "type": "file",
-            "label": "AnularPagoDeuda",
+            "label": "Anular Pago Deuda",
             "pageTitle": "Anular Pago Deuda",
             "slug": "cash-management/pagos/anularpagodeuda"
           },
           {
             "type": "file",
-            "label": "PagarDeudaDesdeCuenta",
+            "label": "Pagar Deuda Desde Cuenta",
             "pageTitle": "Pagar Deuda Desde Cuenta",
             "slug": "cash-management/pagos/pagardeudadesdecuenta"
           },
           {
             "type": "file",
-            "label": "RegistrarPagoDeuda",
+            "label": "Registrar Pago de Deuda",
             "pageTitle": "Registrar Pago de Deuda",
             "slug": "cash-management/pagos/registrarpagodeuda"
           },
           {
             "type": "file",
-            "label": "RegistrarPagoEnLinea",
+            "label": "Registrar Pago en Linea",
             "pageTitle": "Registrar Pago en Linea",
             "slug": "cash-management/pagos/registrarpagoenlinea"
           },
           {
             "type": "file",
-            "label": "RegistrarPagoEnLineaDesdeCuenta",
+            "label": "Registrar Pago En Linea Desde Cuenta",
             "pageTitle": "Registrar Pago En Linea Desde Cuenta",
             "slug": "cash-management/pagos/registrarpagoenlineadesdecuenta"
           }
@@ -703,43 +697,43 @@
         "children": [
           {
             "type": "file",
-            "label": "VisualizarListaResumenCabezal",
+            "label": "Visualizar Lista Resumen Cabezal",
             "pageTitle": "Visualizar Lista Resumen Cabezal",
             "slug": "cash-management/visualizar/visualizarlistaresumencabezal"
           },
           {
             "type": "file",
-            "label": "VisualizarListaResumenCabezalOrden",
+            "label": "Visualizar Lista de Órdenes con su Resumen",
             "pageTitle": "Visualizar Lista de Órdenes con su Resumen",
             "slug": "cash-management/visualizar/visualizarlistaresumencabezalorden"
           },
           {
             "type": "file",
-            "label": "VisualizarOrdendeArchivoParaCuenta",
+            "label": "Visualizar Orden de Archivo Para Cuenta",
             "pageTitle": "Visualizar Orden de Archivo Para Cuenta",
             "slug": "cash-management/visualizar/visualizarordendearchivoparacuenta"
           },
           {
             "type": "file",
-            "label": "VisualizarResultadoProcesamiento",
+            "label": "Visualizar Resultado Procesamiento",
             "pageTitle": "Visualizar Resultado Procesamiento",
             "slug": "cash-management/visualizar/visualizarresultadoprocesamiento"
           },
           {
             "type": "file",
-            "label": "VisualizarResumenCabezal",
+            "label": "Visualizar Resumen Cabezal",
             "pageTitle": "Visualizar Resumen Cabezal",
             "slug": "cash-management/visualizar/visualizarresumencabezal"
           },
           {
             "type": "file",
-            "label": "VisualizarSituacionArchivos",
+            "label": "Visualizar Situación Archivos",
             "pageTitle": "Visualizar Situación Archivos",
             "slug": "cash-management/visualizar/visualizarsituacionarchivos"
           },
           {
             "type": "file",
-            "label": "VisualizarSituacionLineas",
+            "label": "Visualizar Situación Lineas",
             "pageTitle": "Visualizar Situación Lineas",
             "slug": "cash-management/visualizar/visualizarsituacionlineas"
           }
@@ -765,85 +759,85 @@
           },
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "clientes/actualizar/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ActualizarDomicilio",
+            "label": "Actualizar Domicilio",
             "pageTitle": "Actualizar Domicilio",
             "slug": "clientes/actualizar/actualizardomicilio"
           },
           {
             "type": "file",
-            "label": "ActualizarInformaciónAdicional",
+            "label": "Actualizar Información Adicional",
             "pageTitle": "Actualizar Información Adicional",
             "slug": "clientes/actualizar/actualizarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ActualizarRegistroEmpleado",
+            "label": "Actualizar Registro Empleado",
             "pageTitle": "Actualizar Registro Empleado",
             "slug": "clientes/actualizar/actualizarregistroempleado"
           },
           {
             "type": "file",
-            "label": "ActualizarTeléfono",
+            "label": "Actualizar Teléfono",
             "pageTitle": "Actualizar Teléfono",
             "slug": "clientes/actualizar/actualizartelefono"
           },
           {
             "type": "file",
-            "label": "AgregarDomicilio",
+            "label": "Agregar Domicilio",
             "pageTitle": "Agregar Domicilio",
             "slug": "clientes/actualizar/agregardomicilio"
           },
           {
             "type": "file",
-            "label": "AgregarInformaciónAdicional",
+            "label": "Agregar Información Adicional",
             "pageTitle": "Agregar Información Adicional",
             "slug": "clientes/actualizar/agregarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "AgregarIntegrante",
+            "label": "Agregar Integrante",
             "pageTitle": "Agregar Integrante",
             "slug": "clientes/actualizar/agregarintegrante"
           },
           {
             "type": "file",
-            "label": "AgregarTelefono",
+            "label": "Agregar Teléfono",
             "pageTitle": "Agregar Teléfono",
             "slug": "clientes/actualizar/agregartelefono"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "clientes/actualizar/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "clientes/actualizar/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDomicilio",
+            "label": "Eliminar Domicilio",
             "pageTitle": "Eliminar Domicilio",
             "slug": "clientes/actualizar/eliminardomicilio"
           },
           {
             "type": "file",
-            "label": "EliminarInformaciónAdicional",
+            "label": "Eliminar Información Adicional",
             "pageTitle": "Eliminar Información Adicional",
             "slug": "clientes/actualizar/eliminarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "EliminarIntegrante",
+            "label": "Eliminar Integrante",
             "pageTitle": "Eliminar Integrante",
             "slug": "clientes/actualizar/eliminarintegrante"
           },
@@ -861,7 +855,7 @@
           },
           {
             "type": "file",
-            "label": "ModificarEjecutivo",
+            "label": "Modificar Ejecutivo",
             "pageTitle": "Modificar Ejecutivo",
             "slug": "clientes/actualizar/modificarejecutivo"
           }
@@ -880,13 +874,13 @@
           },
           {
             "type": "file",
-            "label": "CrearconPersonaExistente",
+            "label": "Crear con Persona Existente",
             "pageTitle": "Crear con Persona Existente",
             "slug": "clientes/crear/crearconpersonaexistente"
           },
           {
             "type": "file",
-            "label": "CrearParaPersonaJurídica",
+            "label": "Crear Para Persona Jurídica",
             "pageTitle": "Crear Para Persona Jurídica",
             "slug": "clientes/crear/crearparapersonajuridica"
           }
@@ -905,259 +899,247 @@
           },
           {
             "type": "file",
-            "label": "ObtenerAhorrosProgramados",
+            "label": "Obtener Ahorros Programados",
             "pageTitle": "Obtener Ahorros Programados",
             "slug": "clientes/obtener/obtenerahorrosprogramados"
           },
           {
             "type": "file",
-            "label": "ObtenerBolsillos",
+            "label": "Obtener Bolsillos",
             "pageTitle": "Obtener Bolsillos",
             "slug": "clientes/obtener/obtenerbolsillos"
           },
           {
             "type": "file",
-            "label": "ObtenerClasificacionesInternas",
+            "label": "Obtener Clasificaciones Internas",
             "pageTitle": "Obtener Clasificaciones Internas",
             "slug": "clientes/obtener/obtenerclasificacionesinternas"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentaCliente",
+            "label": "Obtener Cuenta Cliente",
             "pageTitle": "Obtener Cuenta Cliente",
             "slug": "clientes/obtener/obtenercuentacliente"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasCorrientes(SaldoContable)",
+            "label": "Obtener Cuentas Corrientes (Saldo Contable)",
             "pageTitle": "Obtener Cuentas Corrientes (Saldo Contable)",
             "slug": "clientes/obtener/obtenercuentascorrientes-saldocontable"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasCorrientes(SaldoDisponible)",
+            "label": "Obtener Cuentas Corrientes (Saldo Disponible)",
             "pageTitle": "Obtener Cuentas Corrientes (Saldo Disponible)",
             "slug": "clientes/obtener/obtenercuentascorrientes-saldodisponible"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasdeAhorro(SaldoContable)",
+            "label": "Obtener Cuentas de Ahorro (Saldo Contable)",
             "pageTitle": "Obtener Cuentas de Ahorro (Saldo Contable)",
             "slug": "clientes/obtener/obtenercuentasdeahorro-saldocontable"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasdeAhorro(SaldoDisponible)",
+            "label": "Obtener Cuentas de Ahorro (Saldo Disponible)",
             "pageTitle": "Obtener Cuentas de Ahorro (Saldo Disponible)",
             "slug": "clientes/obtener/obtenercuentasdeahorro-saldodisponible"
           },
           {
             "type": "file",
-            "label": "ObtenerDatos",
+            "label": "Obtener Datos",
             "pageTitle": "Obtener Datos",
             "slug": "clientes/obtener/obtenerdatos"
           },
           {
             "type": "file",
-            "label": "ObtenerDetallePosicion",
+            "label": "Obtener Detalle de Posición",
             "pageTitle": "Obtener Detalle de Posición",
             "slug": "clientes/obtener/obtenerdetalleposicion"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "clientes/obtener/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "clientes/obtener/obtenerdocumentosdigitales"
           },
           {
             "type": "file",
-            "label": "ObtenerDomicilios",
+            "label": "Obtener Domicilios",
             "pageTitle": "Obtener Domicilios",
             "slug": "clientes/obtener/obtenerdomicilios"
           },
           {
             "type": "file",
-            "label": "ObtenerFacultades",
+            "label": "Obtener Facultades",
             "pageTitle": "Obtener Facultades",
             "slug": "clientes/obtener/obtenerfacultades"
           },
           {
             "type": "file",
-            "label": "ObtenerIdentificadorÚnico",
+            "label": "Obtener Identificador Único",
             "pageTitle": "Obtener Identificador Único",
             "slug": "clientes/obtener/obteneridentificadorunico"
           },
           {
             "type": "file",
-            "label": "ObtenerInformaciónAdicional",
+            "label": "Obtener Información Adicional",
             "pageTitle": "Obtener Información Adicional",
             "slug": "clientes/obtener/obtenerinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ObtenerIntegrantes",
+            "label": "Obtener Integrantes",
             "pageTitle": "Obtener Integrantes",
             "slug": "clientes/obtener/obtenerintegrantes"
           },
           {
             "type": "file",
-            "label": "ObtenerLímites",
+            "label": "Obtener Límites",
             "pageTitle": "Obtener Límites",
             "slug": "clientes/obtener/obtenerlimites"
           },
           {
             "type": "file",
-            "label": "ObtenerMotivosInhabilitacion",
+            "label": "Obtener Motivos Inhabilitación",
             "pageTitle": "Obtener Motivos Inhabilitación",
             "slug": "clientes/obtener/obtenermotivosinhabilitacion"
           },
           {
             "type": "file",
-            "label": "ObtenerPerfil",
+            "label": "Obtener Perfil",
             "pageTitle": "Obtener Perfil",
             "slug": "clientes/obtener/obtenerperfil"
           },
           {
             "type": "file",
-            "label": "ObtenerPlazosFijos",
+            "label": "Obtener Plazos Fijos",
             "pageTitle": "Obtener Plazos Fijos",
             "slug": "clientes/obtener/obtenerplazosfijos"
           },
           {
             "type": "file",
-            "label": "ObtenerPlazosFijosCancelados",
+            "label": "Obtener Plazos Fijos Cancelados",
             "pageTitle": "Obtener Plazos Fijos Cancelados",
             "slug": "clientes/obtener/obtenerplazosfijoscancelados"
           },
           {
             "type": "file",
-            "label": "ObtenerPlazosFijosconAvance",
+            "label": "Obtener Plazos Fijos con Avance",
             "pageTitle": "Obtener Plazos Fijos con Avance",
             "slug": "clientes/obtener/obtenerplazosfijosconavance"
           },
           {
             "type": "file",
-            "label": "ObtenerPosicion",
+            "label": "Obtener Posición",
             "pageTitle": "Obtener Posición",
             "slug": "clientes/obtener/obtenerposicion"
           },
           {
             "type": "file",
-            "label": "ObtenerPréstamos",
+            "label": "Obtener Préstamos",
             "pageTitle": "Obtener Préstamos",
             "slug": "clientes/obtener/obtenerprestamos"
           },
           {
             "type": "file",
-            "label": "ObtenerPrestamos",
-            "pageTitle": "Obtener Préstamos",
-            "slug": "clientes/obtener/obtenerprestamos"
-          },
-          {
-            "type": "file",
-            "label": "ObtenerPréstamosCancelados",
+            "label": "Obtener Préstamos Cancelados",
             "pageTitle": "Obtener Préstamos Cancelados",
             "slug": "clientes/obtener/obtenerprestamoscancelados"
           },
           {
             "type": "file",
-            "label": "ObtenerPrestamosCancelados",
-            "pageTitle": "Obtener Préstamos Cancelados",
-            "slug": "clientes/obtener/obtenerprestamoscancelados"
-          },
-          {
-            "type": "file",
-            "label": "ObtenerPréstamosCastigados",
+            "label": "Obtener Préstamos Castigados",
             "pageTitle": "Obtener Préstamos Castigados",
             "slug": "clientes/obtener/obtenerprestamoscastigados"
           },
           {
             "type": "file",
-            "label": "ObtenerPréstamosconAvance",
+            "label": "Obtener Préstamos con Avance",
             "pageTitle": "Obtener Préstamos con Avance",
             "slug": "clientes/obtener/obtenerprestamosconavance"
           },
           {
             "type": "file",
-            "label": "ObtenerResumendeProductos(Cierredeaño)",
+            "label": "Obtener Resumen de Productos (Cierre de Año)",
             "pageTitle": "Obtener Resumen de Productos (Cierre de Año)",
             "slug": "clientes/obtener/obtenerresumendeproductos-cierredeano"
           },
           {
             "type": "file",
-            "label": "ObtenerResumendeProductos(SaldosContables)",
+            "label": "Obtener Resumen de Productos (Saldos Contables)",
             "pageTitle": "Obtener Resumen de Productos (Saldos Contables)",
             "slug": "clientes/obtener/obtenerresumendeproductos-saldoscontables"
           },
           {
             "type": "file",
-            "label": "ObtenerResumendeProductos(SaldosDisponibles)",
+            "label": "Obtener Resumen de Productos (Saldos Disponibles)",
             "pageTitle": "Obtener Resumen de Productos (Saldos Disponibles)",
             "slug": "clientes/obtener/obtenerresumendeproductos-saldosdisponibles"
           },
           {
             "type": "file",
-            "label": "ObtenerResumenporProductoaCierreAño",
+            "label": "Obtener Resumen por Producto a Cierre Año",
             "pageTitle": "Obtener Resumen por Producto a Cierre Año",
             "slug": "clientes/obtener/obtenerresumenporproductoacierreano"
           },
           {
             "type": "file",
-            "label": "ObtenerRiesgodeCredito",
+            "label": "Obtener Riesgo de Credito",
             "pageTitle": "Obtener Riesgo de Credito",
             "slug": "clientes/obtener/obtenerriesgodecredito"
           },
           {
             "type": "file",
-            "label": "ObtenerSaldosdeOtrosProductos",
+            "label": "Obtener Saldos de Otros Productos",
             "pageTitle": "Obtener Saldos de Otros Productos",
             "slug": "clientes/obtener/obtenersaldosdeotrosproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerSectores",
+            "label": "Obtener Sectores",
             "pageTitle": "Obtener Sectores",
             "slug": "clientes/obtener/obtenersectores"
           },
           {
             "type": "file",
-            "label": "ObtenerSegmentos",
+            "label": "Obtener Segmentos",
             "pageTitle": "Obtener Segmentos",
             "slug": "clientes/obtener/obtenersegmentos"
           },
           {
             "type": "file",
-            "label": "ObtenerTarjetasdeDébito",
+            "label": "Obtener Tarjetas de Débito",
             "pageTitle": "Obtener Tarjetas de Débito",
             "slug": "clientes/obtener/obtenertarjetasdedebito"
           },
           {
             "type": "file",
-            "label": "ObtenerTelefonos",
+            "label": "Obtener Telefonos",
             "pageTitle": "Obtener Telefonos",
             "slug": "clientes/obtener/obtenertelefonos"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeIntegración",
+            "label": "Obtener Tipos de Integración",
             "pageTitle": "Obtener Tipos de Integración",
             "slug": "clientes/obtener/obtenertiposdeintegracion"
           },
           {
             "type": "file",
-            "label": "ObtenerTitularRepresentativo",
+            "label": "Obtener Titular Representativo",
             "pageTitle": "Obtener Titular Representativo",
             "slug": "clientes/obtener/obtenertitularrepresentativo"
           },
           {
             "type": "file",
-            "label": "ObtenerTitulos",
+            "label": "Obtener Títulos",
             "pageTitle": "Obtener Títulos",
             "slug": "clientes/obtener/obtenertitulos"
           }
@@ -1170,13 +1152,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ValidarExistencia",
+            "label": "Validar Existencia",
             "pageTitle": "Validar Existencia",
             "slug": "clientes/validar/validarexistencia"
           },
           {
             "type": "file",
-            "label": "VerificarEmpleado",
+            "label": "Verificar Empleado",
             "pageTitle": "Verificar Empleado",
             "slug": "clientes/validar/verificarempleado"
           }
@@ -1196,31 +1178,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerAgenciasBanco",
+            "label": "Obtener Agencias Banco",
             "pageTitle": "Obtener Agencias Banco",
             "slug": "configuracion-bantotal/bancos/obteneragenciasbanco"
           },
           {
             "type": "file",
-            "label": "ObtenerBancos",
+            "label": "Obtener Bancos",
             "pageTitle": "Obtener Bancos",
             "slug": "configuracion-bantotal/bancos/obtenerbancos"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleSucursal",
+            "label": "Obtener Detalle de Sucursal",
             "pageTitle": "Obtener Detalle de Sucursal",
             "slug": "configuracion-bantotal/bancos/obtenerdetallesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerOficinasSucursal",
+            "label": "Obtener Oficinas de Sucursal",
             "pageTitle": "Obtener Oficinas de Sucursal",
             "slug": "configuracion-bantotal/bancos/obteneroficinassucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerSucursalesPrincipales",
+            "label": "Obtener Sucursales Principales",
             "pageTitle": "Obtener Sucursales Principales",
             "slug": "configuracion-bantotal/bancos/obtenersucursalesprincipales"
           }
@@ -1233,31 +1215,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerActividades",
+            "label": "Obtener Actividades",
             "pageTitle": "Obtener Actividades",
             "slug": "configuracion-bantotal/clientes/obteneractividades"
           },
           {
             "type": "file",
-            "label": "ObtenerActividadesporTipo",
+            "label": "Obtener Actividades por Tipo",
             "pageTitle": "Obtener Actividades por Tipo",
             "slug": "configuracion-bantotal/clientes/obteneractividadesportipo"
           },
           {
             "type": "file",
-            "label": "ObtenerEjecutivos",
+            "label": "Obtener Ejecutivos",
             "pageTitle": "Obtener Ejecutivos",
             "slug": "configuracion-bantotal/clientes/obtenerejecutivos"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeActividad",
+            "label": "Obtener Tipos de Actividad",
             "pageTitle": "Obtener Tipos de Actividad",
             "slug": "configuracion-bantotal/clientes/obtenertiposdeactividad"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeTarjeta",
+            "label": "Obtener Tipos de Tarjeta",
             "pageTitle": "Obtener Tipos de Tarjeta",
             "slug": "configuracion-bantotal/clientes/obtenertiposdetarjeta"
           }
@@ -1270,25 +1252,25 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerEstados",
+            "label": "Obtener Estados",
             "pageTitle": "Obtener Estados",
             "slug": "configuracion-bantotal/operaciones/obtenerestados"
           },
           {
             "type": "file",
-            "label": "ObtenerInstrucciones",
+            "label": "Obtener Instrucciones",
             "pageTitle": "Obtener Instrucciones",
             "slug": "configuracion-bantotal/operaciones/obtenerinstrucciones"
           },
           {
             "type": "file",
-            "label": "ObtenerPaquetes",
+            "label": "Obtener Paquetes",
             "pageTitle": "Obtener Paquetes",
             "slug": "configuracion-bantotal/operaciones/obtenerpaquetes"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeTexto",
+            "label": "Obtener Tipos de Texto",
             "pageTitle": "Obtener Tipos de Texto",
             "slug": "configuracion-bantotal/operaciones/obtenertiposdetexto"
           }
@@ -1301,61 +1283,61 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerCalendariodeSucursal",
+            "label": "Obtener Calendario de Sucursal",
             "pageTitle": "Obtener Calendario de Sucursal",
             "slug": "configuracion-bantotal/parametros-generales/obtenercalendariodesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerCalendarios",
+            "label": "Obtener Calendarios",
             "pageTitle": "Obtener Calendarios",
             "slug": "configuracion-bantotal/parametros-generales/obtenercalendarios"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeCalendario",
+            "label": "Obtener Detalle de Calendario",
             "pageTitle": "Obtener Detalle de Calendario",
             "slug": "configuracion-bantotal/parametros-generales/obtenerdetalledecalendario"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeCalendariodeSucursal",
+            "label": "Obtener Detalle de Calendario de Sucursal",
             "pageTitle": "Obtener Detalle de Calendario de Sucursal",
             "slug": "configuracion-bantotal/parametros-generales/obtenerdetalledecalendariodesucursal"
           },
           {
             "type": "file",
-            "label": "ObtenerDólarUSA",
+            "label": "Obtener Dólar USA",
             "pageTitle": "Obtener Dólar USA",
             "slug": "configuracion-bantotal/parametros-generales/obtenerdolarusa"
           },
           {
             "type": "file",
-            "label": "ObtenerEmpresa",
+            "label": "Obtener Empresa",
             "pageTitle": "Obtener Empresa",
             "slug": "configuracion-bantotal/parametros-generales/obtenerempresa"
           },
           {
             "type": "file",
-            "label": "ObtenerFechadeSistema",
+            "label": "Obtener Fecha de Sistema",
             "pageTitle": "Obtener Fecha de Sistema",
             "slug": "configuracion-bantotal/parametros-generales/obtenerfechadesistema"
           },
           {
             "type": "file",
-            "label": "ObtenerMonedaNacional",
+            "label": "Obtener Moneda Nacional",
             "pageTitle": "Obtener Moneda Nacional",
             "slug": "configuracion-bantotal/parametros-generales/obtenermonedanacional"
           },
           {
             "type": "file",
-            "label": "ObtenerMonedas",
+            "label": "Obtener Monedas",
             "pageTitle": "Obtener Monedas",
             "slug": "configuracion-bantotal/parametros-generales/obtenermonedas"
           },
           {
             "type": "file",
-            "label": "ObtenerSucursales",
+            "label": "Obtener Sucursales",
             "pageTitle": "Obtener Sucursales",
             "slug": "configuracion-bantotal/parametros-generales/obtenersucursales"
           }
@@ -1368,55 +1350,55 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerAgrupadoresDomicilio",
+            "label": "Obtener Agrupadores de Domicilio",
             "pageTitle": "Obtener Agrupadores de Domicilio",
             "slug": "configuracion-bantotal/personas/obteneragrupadoresdomicilio"
           },
           {
             "type": "file",
-            "label": "ObtenerBarriosyColonias",
+            "label": "Obtener Barrios y Colonias",
             "pageTitle": "Obtener Barrios y Colonias",
             "slug": "configuracion-bantotal/personas/obtenerbarriosycolonias"
           },
           {
             "type": "file",
-            "label": "ObtenerCiudadesyLocalidades",
+            "label": "Obtener Ciudades y Localidades",
             "pageTitle": "Obtener Ciudades y Localidades",
             "slug": "configuracion-bantotal/personas/obtenerciudadesylocalidades"
           },
           {
             "type": "file",
-            "label": "ObtenerCódigosdeDomicilio",
+            "label": "Obtener Códigos de Domicilio",
             "pageTitle": "Obtener Códigos de Domicilio",
             "slug": "configuracion-bantotal/personas/obtenercodigosdedomicilio"
           },
           {
             "type": "file",
-            "label": "ObtenerEstados,ProvinciasyDepartamentos",
+            "label": "Obtener Estados, Provincias y Departamentos",
             "pageTitle": "Obtener Estados, Provincias y Departamentos",
             "slug": "configuracion-bantotal/personas/obtenerestados-provinciasydepartamentos"
           },
           {
             "type": "file",
-            "label": "ObtenerPaíses",
+            "label": "Obtener Países",
             "pageTitle": "Obtener Países",
             "slug": "configuracion-bantotal/personas/obtenerpaises"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeListasNegras",
+            "label": "Obtener Tipos de Listas Negras",
             "pageTitle": "Obtener Tipos de Listas Negras",
             "slug": "configuracion-bantotal/personas/obtenertiposdelistasnegras"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeTelefono",
+            "label": "Obtener Tipos de Telefono",
             "pageTitle": "Obtener Tipos de Telefono",
             "slug": "configuracion-bantotal/personas/obtenertiposdetelefono"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeVivienda",
+            "label": "Obtener Tipos de Vivienda",
             "pageTitle": "Obtener Tipos de Vivienda",
             "slug": "configuracion-bantotal/personas/obtenertiposdevivienda"
           }
@@ -1429,13 +1411,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerPizarraporMódulo",
+            "label": "Obtener Pizarra por Módulo",
             "pageTitle": "Obtener Pizarra por Módulo",
             "slug": "configuracion-bantotal/precios/obtenerpizarrapormodulo"
           },
           {
             "type": "file",
-            "label": "ObtenerPizarras",
+            "label": "Obtener Pizarras",
             "pageTitle": "Obtener Pizarras",
             "slug": "configuracion-bantotal/precios/obtenerpizarras"
           }
@@ -1448,13 +1430,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerMenús",
+            "label": "Obtener Menús",
             "pageTitle": "Obtener Menús",
             "slug": "configuracion-bantotal/seguridad/obtenermenus"
           },
           {
             "type": "file",
-            "label": "ObtenerPerfiles",
+            "label": "Obtener Perfiles",
             "pageTitle": "Obtener Perfiles",
             "slug": "configuracion-bantotal/seguridad/obtenerperfiles"
           }
@@ -1462,13 +1444,13 @@
       },
       {
         "type": "file",
-        "label": "ObtenerImpuestos",
+        "label": "Obtener Impuestos",
         "pageTitle": "Obtener Impuestos",
         "slug": "configuracion-bantotal/obtenerimpuestos"
       },
       {
         "type": "file",
-        "label": "ObtenerTiposdeDocumentoDigital",
+        "label": "Obtener Tipos de Documento Digital",
         "pageTitle": "Obtener Tipos de Documento Digital",
         "slug": "configuracion-bantotal/obtenertiposdedocumentodigital"
       }
@@ -1486,13 +1468,13 @@
         "children": [
           {
             "type": "file",
-            "label": "AgregarTextoAsiento",
+            "label": "Agregar Texto Asiento",
             "pageTitle": "Agregar Texto Asiento",
             "slug": "contabilidad/agregar-texto/agregartextoasiento"
           },
           {
             "type": "file",
-            "label": "AgregarTextoOrdinal",
+            "label": "Agregar Texto Ordinal",
             "pageTitle": "Agregar Texto Ordinal",
             "slug": "contabilidad/agregar-texto/agregartextoordinal"
           }
@@ -1505,13 +1487,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarCondiciónImpositiva",
+            "label": "Actualizar Condición Impositiva",
             "pageTitle": "Actualizar Condición Impositiva",
             "slug": "contabilidad/condicion-impositiva/actualizarcondicionimpositiva"
           },
           {
             "type": "file",
-            "label": "CrearCondiciónImpositiva",
+            "label": "Crear Condición Impositiva",
             "pageTitle": "Crear Condición Impositiva",
             "slug": "contabilidad/condicion-impositiva/crearcondicionimpositiva"
           }
@@ -1529,37 +1511,37 @@
             "children": [
               {
                 "type": "file",
-                "label": "ObtenerIdBantotalMovimiento",
+                "label": "Obtener Identificador Bantotal de Movimiento",
                 "pageTitle": "Obtener Identificador Bantotal de Movimiento",
                 "slug": "contabilidad/obtener/identificadores/obteneridbantotalmovimiento"
               },
               {
                 "type": "file",
-                "label": "ObtenerIdBantotalOperación",
+                "label": "Obtener Identificador Bantotal de Operación",
                 "pageTitle": "Obtener Identificador Bantotal de Operación",
                 "slug": "contabilidad/obtener/identificadores/obteneridbantotaloperacion"
               },
               {
                 "type": "file",
-                "label": "ObtenerIdBantotalProducto",
+                "label": "Obtener Identificador Bantotal de Producto",
                 "pageTitle": "Obtener Identificador Bantotal de Producto",
                 "slug": "contabilidad/obtener/identificadores/obteneridbantotalproducto"
               },
               {
                 "type": "file",
-                "label": "ObtenerIdentificadorÚnicodeMovimiento",
+                "label": "Obtener Identificador Único de Movimiento",
                 "pageTitle": "Obtener Identificador Único de Movimiento",
                 "slug": "contabilidad/obtener/identificadores/obteneridentificadorunicodemovimiento"
               },
               {
                 "type": "file",
-                "label": "ObtenerIdentificadorÚnicodeOperación",
+                "label": "Obtener Identificador Único de Operación",
                 "pageTitle": "Obtener Identificador Único de Operación",
                 "slug": "contabilidad/obtener/identificadores/obteneridentificadorunicodeoperacion"
               },
               {
                 "type": "file",
-                "label": "ObtenerIdentificadorÚnicodeProducto",
+                "label": "Obtener Identificador Único de Producto",
                 "pageTitle": "Obtener Identificador Único de Producto",
                 "slug": "contabilidad/obtener/identificadores/obteneridentificadorunicodeproducto"
               }
@@ -1567,37 +1549,37 @@
           },
           {
             "type": "file",
-            "label": "ObtenerClientedeunaOperación",
+            "label": "Obtener Cliente de una Operación",
             "pageTitle": "Obtener Cliente de una Operación",
             "slug": "contabilidad/obtener/obtenerclientedeunaoperacion"
           },
           {
             "type": "file",
-            "label": "ObtenerCondiciónImpositiva",
+            "label": "Obtener Condición Impositiva",
             "pageTitle": "Obtener Condición Impositiva",
             "slug": "contabilidad/obtener/obtenercondicionimpositiva"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeMovimiento",
+            "label": "Obtener Detalle de Movimiento",
             "pageTitle": "Obtener Detalle de Movimiento",
             "slug": "contabilidad/obtener/obtenerdetalledemovimiento"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeOrdinal",
+            "label": "Obtener Detalle de Ordinal",
             "pageTitle": "Obtener Detalle de Ordinal",
             "slug": "contabilidad/obtener/obtenerdetalledeordinal"
           },
           {
             "type": "file",
-            "label": "ObtenerIntegrantesdeOperación",
+            "label": "Obtener Integrantes de Operación",
             "pageTitle": "Obtener Integrantes de Operación",
             "slug": "contabilidad/obtener/obtenerintegrantesdeoperacion"
           },
           {
             "type": "file",
-            "label": "ObtenerTextosdeMovimiento",
+            "label": "Obtener Textos de Movimiento",
             "pageTitle": "Obtener Textos de Movimiento",
             "slug": "contabilidad/obtener/obtenertextosdemovimiento"
           }
@@ -1610,13 +1592,13 @@
         "children": [
           {
             "type": "file",
-            "label": "RegistrarAsiento",
+            "label": "Registrar Asiento",
             "pageTitle": "Registrar Asiento",
             "slug": "contabilidad/registrar-asiento/registrarasiento"
           },
           {
             "type": "file",
-            "label": "RegistrarAsientoFechaValor",
+            "label": "Registrar Asiento Fecha Valor",
             "pageTitle": "Registrar Asiento Fecha Valor",
             "slug": "contabilidad/registrar-asiento/registrarasientofechavalor"
           }
@@ -1624,7 +1606,7 @@
       },
       {
         "type": "file",
-        "label": "AnularMovimiento",
+        "label": "Anular Movimiento",
         "pageTitle": "Anular Movimiento",
         "slug": "contabilidad/anularmovimiento"
       }
@@ -1643,13 +1625,13 @@
       },
       {
         "type": "file",
-        "label": "CashIn",
+        "label": "Cash In",
         "pageTitle": "Cash In",
         "slug": "cuentas-bolsillo/cashin"
       },
       {
         "type": "file",
-        "label": "CashOut",
+        "label": "Cash Out",
         "pageTitle": "Cash Out",
         "slug": "cuentas-bolsillo/cashout"
       },
@@ -1661,25 +1643,25 @@
       },
       {
         "type": "file",
-        "label": "ObtenerDatos",
+        "label": "Obtener Datos",
         "pageTitle": "Obtener Datos",
         "slug": "cuentas-bolsillo/obtenerdatos"
       },
       {
         "type": "file",
-        "label": "ObtenerMovimientos",
+        "label": "Obtener Movimientos",
         "pageTitle": "Obtener Movimientos",
         "slug": "cuentas-bolsillo/obtenermovimientos"
       },
       {
         "type": "file",
-        "label": "ObtenerProductos",
+        "label": "Obtener Productos",
         "pageTitle": "Obtener Productos",
         "slug": "cuentas-bolsillo/obtenerproductos"
       },
       {
         "type": "file",
-        "label": "ObtenerProductosCV",
+        "label": "Obtener Productos CV",
         "pageTitle": "Obtener Productos CV",
         "slug": "cuentas-bolsillo/obtenerproductoscv"
       }
@@ -1702,49 +1684,49 @@
             "children": [
               {
                 "type": "file",
-                "label": "ObtenerChequera",
+                "label": "Obtener Chequera",
                 "pageTitle": "Obtener Chequera",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenerchequera"
               },
               {
                 "type": "file",
-                "label": "ObtenerChequeras",
+                "label": "Obtener Chequeras",
                 "pageTitle": "Obtener Chequeras",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenerchequeras"
               },
               {
                 "type": "file",
-                "label": "ObtenerChequesdeChequera",
+                "label": "Obtener Cheques de Chequera",
                 "pageTitle": "Obtener Cheques de Chequera",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenerchequesdechequera"
               },
               {
                 "type": "file",
-                "label": "ObtenerComisiónChequera",
+                "label": "Obtener Comisión Chequera",
                 "pageTitle": "Obtener Comisión Chequera",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenercomisionchequera"
               },
               {
                 "type": "file",
-                "label": "ObtenerEstadodeChequera",
+                "label": "Obtener Estado de Chequera",
                 "pageTitle": "Obtener Estado de Chequera",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenerestadodechequera"
               },
               {
                 "type": "file",
-                "label": "ObtenerSolicitudesdeChequeras",
+                "label": "Obtener Solicitudes de Chequeras",
                 "pageTitle": "Obtener Solicitudes de Chequeras",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenersolicitudesdechequeras"
               },
               {
                 "type": "file",
-                "label": "ObtenerTiposdeChequera",
+                "label": "Obtener Tipos de Chequera",
                 "pageTitle": "Obtener Tipos de Chequera",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenertiposdechequera"
               },
               {
                 "type": "file",
-                "label": "ObtenerTiposdeChequeraporProducto",
+                "label": "Obtener Tipos de Chequera por Producto",
                 "pageTitle": "Obtener Tipos de Chequera por Producto",
                 "slug": "cuentas-corrientes/chequera/obtener/obtenertiposdechequeraporproducto"
               }
@@ -1757,25 +1739,25 @@
             "children": [
               {
                 "type": "file",
-                "label": "EliminarChequera",
+                "label": "Eliminar Chequera",
                 "pageTitle": "Eliminar Chequera",
                 "slug": "cuentas-corrientes/chequera/operar/eliminarchequera"
               },
               {
                 "type": "file",
-                "label": "RegistrarOrdendeNoPagodeChequera",
+                "label": "Registrar Orden de No Pago de Chequera",
                 "pageTitle": "Registrar Orden de No Pago de Chequera",
                 "slug": "cuentas-corrientes/chequera/operar/registrarordendenopagodechequera"
               },
               {
                 "type": "file",
-                "label": "RegistrarOrdendeNoPagodeCheques",
+                "label": "Registrar Orden de No Pago de Cheques",
                 "pageTitle": "Registrar Orden de No Pago de Cheques",
                 "slug": "cuentas-corrientes/chequera/operar/registrarordendenopagodecheques"
               },
               {
                 "type": "file",
-                "label": "SolicitarChequera",
+                "label": "Solicitar Chequera",
                 "pageTitle": "Solicitar Chequera",
                 "slug": "cuentas-corrientes/chequera/operar/solicitarchequera"
               }
@@ -1790,19 +1772,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ContratarconPeriodicidad",
+            "label": "Contratar con Periodicidad",
             "pageTitle": "Contratar con Periodicidad",
             "slug": "cuentas-corrientes/contratar/contratarconperiodicidad"
           },
           {
             "type": "file",
-            "label": "ContratarProducto",
+            "label": "Contratar Producto",
             "pageTitle": "Contratar Producto",
             "slug": "cuentas-corrientes/contratar/contratarproducto"
           },
           {
             "type": "file",
-            "label": "ContratarProductoconAltadeFacultades",
+            "label": "Contratar Producto con Alta de Facultades",
             "pageTitle": "Contratar Producto con Alta de Facultades",
             "slug": "cuentas-corrientes/contratar/contratarproductoconaltadefacultades"
           }
@@ -1815,37 +1797,37 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerAcuerdos",
+            "label": "Obtener Acuerdos",
             "pageTitle": "Obtener Acuerdos",
             "slug": "cuentas-corrientes/obtener/obteneracuerdos"
           },
           {
             "type": "file",
-            "label": "ObtenerDatos",
+            "label": "Obtener Datos",
             "pageTitle": "Obtener Datos",
             "slug": "cuentas-corrientes/obtener/obtenerdatos"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadodeCuenta",
+            "label": "Obtener Estado de Cuenta",
             "pageTitle": "Obtener Estado de Cuenta",
             "slug": "cuentas-corrientes/obtener/obtenerestadodecuenta"
           },
           {
             "type": "file",
-            "label": "ObtenerEvoluciondeSaldos",
+            "label": "Obtener Evolución de Saldos",
             "pageTitle": "Obtener Evolución de Saldos",
             "slug": "cuentas-corrientes/obtener/obtenerevoluciondesaldos"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "cuentas-corrientes/obtener/obtenerproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerSobregiros",
+            "label": "Obtener Sobregiros",
             "pageTitle": "Obtener Sobregiros",
             "slug": "cuentas-corrientes/obtener/obtenersobregiros"
           }
@@ -1865,19 +1847,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ContratarconPeriodicidad",
+            "label": "Contratar con Periodicidad",
             "pageTitle": "Contratar con Periodicidad",
             "slug": "cuentas-de-ahorro/contratar/contratarconperiodicidad"
           },
           {
             "type": "file",
-            "label": "ContratarProducto",
+            "label": "Contratar Producto",
             "pageTitle": "Contratar Producto",
             "slug": "cuentas-de-ahorro/contratar/contratarproducto"
           },
           {
             "type": "file",
-            "label": "ContratarProductoconAltadeFacultades",
+            "label": "Contratar Producto con Alta de Facultades",
             "pageTitle": "Contratar Producto con Alta de Facultades",
             "slug": "cuentas-de-ahorro/contratar/contratarproductoconaltadefacultades"
           }
@@ -1890,31 +1872,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerDatos",
+            "label": "Obtener Datos",
             "pageTitle": "Obtener Datos",
             "slug": "cuentas-de-ahorro/obtener/obtenerdatos"
           },
           {
             "type": "file",
-            "label": "ObtenerDebitoAutomaticoPrestamo",
+            "label": "Obtener Débito Automático de Préstamo",
             "pageTitle": "Obtener Débito Automático de Préstamo",
             "slug": "cuentas-de-ahorro/obtener/obtenerdebitoautomaticoprestamo"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadodeCuenta",
+            "label": "Obtener Estado de Cuenta",
             "pageTitle": "Obtener Estado de Cuenta",
             "slug": "cuentas-de-ahorro/obtener/obtenerestadodecuenta"
           },
           {
             "type": "file",
-            "label": "ObtenerEvolucióndeSaldos",
+            "label": "Obtener Evolución de Saldos",
             "pageTitle": "Obtener Evolución de Saldos",
             "slug": "cuentas-de-ahorro/obtener/obtenerevoluciondesaldos"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "cuentas-de-ahorro/obtener/obtenerproductos"
           }
@@ -1934,13 +1916,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarBeneficiarios",
+            "label": "Actualizar Beneficiarios",
             "pageTitle": "Actualizar Beneficiarios",
             "slug": "cuentas-vista/beneficiarios/actualizarbeneficiarios"
           },
           {
             "type": "file",
-            "label": "ObtenerBeneficiarios",
+            "label": "Obtener Beneficiarios",
             "pageTitle": "Obtener Beneficiarios",
             "slug": "cuentas-vista/beneficiarios/obtenerbeneficiarios"
           }
@@ -1953,31 +1935,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "cuentas-vista/documentos-digitales/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "cuentas-vista/documentos-digitales/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "cuentas-vista/documentos-digitales/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "cuentas-vista/documentos-digitales/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "cuentas-vista/documentos-digitales/obtenerdocumentosdigitales"
           }
@@ -1990,14 +1972,14 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDatosEnvioEECC",
+            "label": "Actualizar Datos Envío",
             "pageTitle": "Actualizar Datos Envío",
             "slug": "cuentas-vista/estado-de-cuenta/actualizardatosenvioeecc",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "ObtenerDatosEnvioEECC",
+            "label": "Obtener Datos de Envío",
             "pageTitle": "Obtener Datos de Envío",
             "slug": "cuentas-vista/estado-de-cuenta/obtenerdatosenvioeecc",
             "isNew": true
@@ -2011,85 +1993,85 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerBolsillos",
+            "label": "Obtener Bolsillos",
             "pageTitle": "Obtener Bolsillos",
             "slug": "cuentas-vista/obtener/obtenerbolsillos"
           },
           {
             "type": "file",
-            "label": "ObtenerCBUdeCuentaVista",
+            "label": "Obtener CBU de Cuenta Vista",
             "pageTitle": "Obtener CBU de Cuenta Vista",
             "slug": "cuentas-vista/obtener/obtenercbudecuentavista"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentaVistadeCBU",
+            "label": "Obtener Cuenta Vista de CBU",
             "pageTitle": "Obtener Cuenta Vista de CBU",
             "slug": "cuentas-vista/obtener/obtenercuentavistadecbu"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleBloqueo",
+            "label": "Obtener Detalle Bloqueo",
             "pageTitle": "Obtener Detalle Bloqueo",
             "slug": "cuentas-vista/obtener/obtenerdetallebloqueo"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadodeCuentaporPeríodo",
+            "label": "Obtener Estado de Cuenta por Período",
             "pageTitle": "Obtener Estado de Cuenta por Período",
             "slug": "cuentas-vista/obtener/obtenerestadodecuentaporperiodo"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadoDeOperacion",
+            "label": "Obtener Estado De Operación",
             "pageTitle": "Obtener Estado De Operación",
             "slug": "cuentas-vista/obtener/obtenerestadodeoperacion"
           },
           {
             "type": "file",
-            "label": "ObtenerFacultades",
+            "label": "Obtener Facultades",
             "pageTitle": "Obtener Facultades",
             "slug": "cuentas-vista/obtener/obtenerfacultades"
           },
           {
             "type": "file",
-            "label": "ObtenerInstrucciones",
+            "label": "Obtener Instrucciones",
             "pageTitle": "Obtener Instrucciones",
             "slug": "cuentas-vista/obtener/obtenerinstrucciones"
           },
           {
             "type": "file",
-            "label": "ObtenerPaquete",
+            "label": "Obtener Paquete",
             "pageTitle": "Obtener Paquete",
             "slug": "cuentas-vista/obtener/obtenerpaquete"
           },
           {
             "type": "file",
-            "label": "ObtenerPeríododeAcreditación",
+            "label": "Obtener Período de Acreditación",
             "pageTitle": "Obtener Período de Acreditación",
             "slug": "cuentas-vista/obtener/obtenerperiododeacreditacion"
           },
           {
             "type": "file",
-            "label": "ObtenerPeriodosdeAcreditación",
+            "label": "Obtener Períodos de Acreditación",
             "pageTitle": "Obtener Períodos de Acreditación",
             "slug": "cuentas-vista/obtener/obtenerperiodosdeacreditacion"
           },
           {
             "type": "file",
-            "label": "ObtenerSaldoBloqueado",
+            "label": "Obtener Saldo Bloqueado",
             "pageTitle": "Obtener Saldo Bloqueado",
             "slug": "cuentas-vista/obtener/obtenersaldobloqueado"
           },
           {
             "type": "file",
-            "label": "ObtenerSaldoDisponible",
+            "label": "Obtener Saldo Disponible",
             "pageTitle": "Obtener Saldo Disponible",
             "slug": "cuentas-vista/obtener/obtenersaldodisponible"
           },
           {
             "type": "file",
-            "label": "ObtenerSaldosBloqueados",
+            "label": "Obtener Saldos Bloqueados",
             "pageTitle": "Obtener Saldos Bloqueados",
             "slug": "cuentas-vista/obtener/obtenersaldosbloqueados"
           }
@@ -2102,7 +2084,7 @@
         "children": [
           {
             "type": "file",
-            "label": "AcreditarEnCuenta",
+            "label": "Acreditar en Cuenta",
             "pageTitle": "Acreditar en Cuenta",
             "slug": "cuentas-vista/operar/acreditarencuenta"
           },
@@ -2114,13 +2096,13 @@
           },
           {
             "type": "file",
-            "label": "ActualizarPeríododeAcreditación",
+            "label": "Actualizar Período de Acreditación",
             "pageTitle": "Actualizar Período de Acreditación",
             "slug": "cuentas-vista/operar/actualizarperiododeacreditacion"
           },
           {
             "type": "file",
-            "label": "BloquearSaldo",
+            "label": "Bloquear Saldo",
             "pageTitle": "Bloquear Saldo",
             "slug": "cuentas-vista/operar/bloquearsaldo"
           },
@@ -2132,13 +2114,13 @@
           },
           {
             "type": "file",
-            "label": "DebitarEnCuenta",
+            "label": "Debitar en Cuenta",
             "pageTitle": "Debitar en Cuenta",
             "slug": "cuentas-vista/operar/debitarencuenta"
           },
           {
             "type": "file",
-            "label": "DesbloquearSaldo",
+            "label": "Desbloquear Saldo",
             "pageTitle": "Desbloquear Saldo",
             "slug": "cuentas-vista/operar/desbloquearsaldo"
           }
@@ -2151,19 +2133,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarPerfilTransaccional",
+            "label": "Actualizar Perfil Transaccional",
             "pageTitle": "Actualizar Perfil Transaccional",
             "slug": "cuentas-vista/perfil-transaccional/actualizarperfiltransaccional"
           },
           {
             "type": "file",
-            "label": "AgregarPerfilTransaccional",
+            "label": "Agregar Perfil Transaccional",
             "pageTitle": "Agregar Perfil Transaccional",
             "slug": "cuentas-vista/perfil-transaccional/agregarperfiltransaccional"
           },
           {
             "type": "file",
-            "label": "ObtenerPerfilTransaccional",
+            "label": "Obtener Perfil Transaccional",
             "pageTitle": "Obtener Perfil Transaccional",
             "slug": "cuentas-vista/perfil-transaccional/obtenerperfiltransaccional"
           }
@@ -2176,61 +2158,61 @@
         "children": [
           {
             "type": "file",
-            "label": "TraspasarConTipoDeCambioEspecial",
+            "label": "Traspasar con Tipo de Cambio Especial",
             "pageTitle": "Traspasar con Tipo de Cambio Especial",
             "slug": "cuentas-vista/traspasar/traspasarcontipodecambioespecial"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasdelaMismaPersona",
+            "label": "Traspasar Entre Cuentas de la Misma Persona",
             "pageTitle": "Traspasar Entre Cuentas de la Misma Persona",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasdelamismapersona"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasMismoTitular(contipodecambio)",
+            "label": "Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)",
             "pageTitle": "Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasmismotitular-contipodecambio"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasMismoTitular(diferentesmonedas)",
+            "label": "Traspasar Entre Cuentas Mismo Titular (diferentes monedas)",
             "pageTitle": "Traspasar Entre Cuentas Mismo Titular (diferentes monedas)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasmismotitular-diferentesmonedas"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasPropias",
+            "label": "Traspasar Entre Cuentas Propias",
             "pageTitle": "Traspasar Entre Cuentas Propias",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentaspropias"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasPropias(contipodecambio)",
+            "label": "Traspasar Entre Cuentas Propias (con tipo de cambio)",
             "pageTitle": "Traspasar Entre Cuentas Propias (con tipo de cambio)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentaspropias-contipodecambio"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasPropias(diferentesmonedas)",
+            "label": "Traspasar Entre Cuentas Propias (diferentes monedas)",
             "pageTitle": "Traspasar Entre Cuentas Propias (diferentes monedas)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentaspropias-diferentesmonedas"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasTerceros",
+            "label": "Traspasar Entre Cuentas Terceros",
             "pageTitle": "Traspasar Entre Cuentas Terceros",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasterceros"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasTerceros(contipodecambio)",
+            "label": "Traspasar Entre Cuentas Terceros (con tipo de cambio)",
             "pageTitle": "Traspasar Entre Cuentas Terceros (con tipo de cambio)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasterceros-contipodecambio"
           },
           {
             "type": "file",
-            "label": "TraspasarEntreCuentasTerceros(diferentesmonedas)",
+            "label": "Traspasar Entre Cuentas Terceros (diferentes monedas)",
             "pageTitle": "Traspasar Entre Cuentas Terceros (diferentes monedas)",
             "slug": "cuentas-vista/traspasar/traspasarentrecuentasterceros-diferentesmonedas"
           }
@@ -2250,13 +2232,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarBeneficiarios",
+            "label": "Actualizar Beneficiarios",
             "pageTitle": "Actualizar Beneficiarios",
             "slug": "depositos-a-plazo/beneficiarios/actualizarbeneficiarios"
           },
           {
             "type": "file",
-            "label": "ObtenerBeneficiarios",
+            "label": "Obtener Beneficiarios",
             "pageTitle": "Obtener Beneficiarios",
             "slug": "depositos-a-plazo/beneficiarios/obtenerbeneficiarios"
           }
@@ -2275,13 +2257,13 @@
           },
           {
             "type": "file",
-            "label": "ContratarConFacultades",
+            "label": "Contratar con Facultades",
             "pageTitle": "Contratar con Facultades",
             "slug": "depositos-a-plazo/contratar/contratarconfacultades"
           },
           {
             "type": "file",
-            "label": "ContratarSimulación",
+            "label": "Contratar Simulación",
             "pageTitle": "Contratar Simulación",
             "slug": "depositos-a-plazo/contratar/contratarsimulacion"
           }
@@ -2294,31 +2276,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "depositos-a-plazo/documentos-digitales/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "depositos-a-plazo/documentos-digitales/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "depositos-a-plazo/documentos-digitales/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "depositos-a-plazo/documentos-digitales/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "depositos-a-plazo/documentos-digitales/obtenerdocumentosdigitales"
           }
@@ -2331,19 +2313,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ModificarCuentaDestinoalVencimiento",
+            "label": "Modificar Cuenta Destino al Vencimiento",
             "pageTitle": "Modificar Cuenta Destino al Vencimiento",
             "slug": "depositos-a-plazo/modificar/modificarcuentadestinoalvencimiento"
           },
           {
             "type": "file",
-            "label": "ModificarCuentaDestinodeAcreditaciónPeriódica",
+            "label": "Modificar Cuenta Destino de Acreditación Periódica",
             "pageTitle": "Modificar Cuenta Destino de Acreditación Periódica",
             "slug": "depositos-a-plazo/modificar/modificarcuentadestinodeacreditacionperiodica"
           },
           {
             "type": "file",
-            "label": "ModificarInstrucción",
+            "label": "Modificar Instrucción",
             "pageTitle": "Modificar Instrucción",
             "slug": "depositos-a-plazo/modificar/modificarinstruccion"
           }
@@ -2356,67 +2338,67 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerAvance",
+            "label": "Obtener Avance",
             "pageTitle": "Obtener Avance",
             "slug": "depositos-a-plazo/obtener/obteneravance"
           },
           {
             "type": "file",
-            "label": "ObtenerDatos",
+            "label": "Obtener Datos",
             "pageTitle": "Obtener Datos",
             "slug": "depositos-a-plazo/obtener/obtenerdatos"
           },
           {
             "type": "file",
-            "label": "ObtenerDatosPrecancelacion",
+            "label": "Obtener Datos de Precancelación",
             "pageTitle": "Obtener Datos de Precancelación",
             "slug": "depositos-a-plazo/obtener/obtenerdatosprecancelacion"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "depositos-a-plazo/obtener/obtenerdocumentosdigitales"
           },
           {
             "type": "file",
-            "label": "ObtenerInstrucción",
+            "label": "Obtener Instrucción",
             "pageTitle": "Obtener Instrucción",
             "slug": "depositos-a-plazo/obtener/obtenerinstruccion"
           },
           {
             "type": "file",
-            "label": "ObtenerInstruccionesHabilitadas",
+            "label": "Obtener Instrucciones Habilitadas",
             "pageTitle": "Obtener Instrucciones Habilitadas",
             "slug": "depositos-a-plazo/obtener/obtenerinstruccioneshabilitadas"
           },
           {
             "type": "file",
-            "label": "ObtenerMovimientos",
+            "label": "Obtener Movimientos",
             "pageTitle": "Obtener Movimientos",
             "slug": "depositos-a-plazo/obtener/obtenermovimientos"
           },
           {
             "type": "file",
-            "label": "ObtenerPeriodosHabilitados",
+            "label": "Obtener Períodos Habilitados",
             "pageTitle": "Obtener Períodos Habilitados",
             "slug": "depositos-a-plazo/obtener/obtenerperiodoshabilitados"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "depositos-a-plazo/obtener/obtenerproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerProductosHabilitados",
+            "label": "Obtener Productos Habilitados",
             "pageTitle": "Obtener Productos Habilitados",
             "slug": "depositos-a-plazo/obtener/obtenerproductoshabilitados"
           },
           {
             "type": "file",
-            "label": "ObtenerTasadePrecancelación",
+            "label": "Obtener Tasa de Precancelación",
             "pageTitle": "Obtener Tasa de Precancelación",
             "slug": "depositos-a-plazo/obtener/obtenertasadeprecancelacion"
           }
@@ -2435,7 +2417,7 @@
           },
           {
             "type": "file",
-            "label": "SimularConCronograma",
+            "label": "Simular Con Cronograma",
             "pageTitle": "Simular Con Cronograma",
             "slug": "depositos-a-plazo/simular/simularconcronograma"
           }
@@ -2456,37 +2438,37 @@
     "children": [
       {
         "type": "file",
-        "label": "ConfirmarLista",
+        "label": "Confirmar Lista",
         "pageTitle": "Confirmar Lista",
         "slug": "descuento-de-documentos/confirmarlista"
       },
       {
         "type": "file",
-        "label": "CrearLista",
+        "label": "Crear Lista",
         "pageTitle": "Crear Lista",
         "slug": "descuento-de-documentos/crearlista"
       },
       {
         "type": "file",
-        "label": "CrearListaCheques",
+        "label": "Crear Lista Cheques",
         "pageTitle": "Crear Lista Cheques",
         "slug": "descuento-de-documentos/crearlistacheques"
       },
       {
         "type": "file",
-        "label": "ObtenerProductos",
+        "label": "Obtener Productos",
         "pageTitle": "Obtener Productos",
         "slug": "descuento-de-documentos/obtenerproductos"
       },
       {
         "type": "file",
-        "label": "ObtenerTiposDeDesembolso",
+        "label": "Obtener Tipos de Desembolso",
         "pageTitle": "Obtener Tipos de Desembolso",
         "slug": "descuento-de-documentos/obtenertiposdedesembolso"
       },
       {
         "type": "file",
-        "label": "SeleccionarOpcionDesembolso",
+        "label": "Seleccionar Opción Desembolso",
         "pageTitle": "Seleccionar Opción Desembolso",
         "slug": "descuento-de-documentos/seleccionaropciondesembolso"
       }
@@ -2499,67 +2481,67 @@
     "children": [
       {
         "type": "file",
-        "label": "ObtenerAgrupadores",
+        "label": "Obtener Agrupadores",
         "pageTitle": "Obtener Agrupadores",
         "slug": "indicadores/obteneragrupadores"
       },
       {
         "type": "file",
-        "label": "ObtenerCierredeSaldosporMoneda",
+        "label": "Obtener Cierre de Saldos por Moneda",
         "pageTitle": "Obtener Cierre de Saldos por Moneda",
         "slug": "indicadores/obtenercierredesaldospormoneda"
       },
       {
         "type": "file",
-        "label": "ObtenerCondicionesGenerales",
+        "label": "Obtener Condiciones Generales",
         "pageTitle": "Obtener Condiciones Generales",
         "slug": "indicadores/obtenercondicionesgenerales"
       },
       {
         "type": "file",
-        "label": "ObtenerIndicadores",
+        "label": "Obtener Indicadores",
         "pageTitle": "Obtener Indicadores",
         "slug": "indicadores/obtenerindicadores"
       },
       {
         "type": "file",
-        "label": "ObtenerMetodosMasEjecutados",
+        "label": "Obtener Métodos Más Ejecutados",
         "pageTitle": "Obtener Métodos Más Ejecutados",
         "slug": "indicadores/obtenermetodosmasejecutados"
       },
       {
         "type": "file",
-        "label": "ObtenerMonedasIndices",
+        "label": "Obtener Monedas Indices",
         "pageTitle": "Obtener Monedas Indices",
         "slug": "indicadores/obtenermonedasindices"
       },
       {
         "type": "file",
-        "label": "ObtenerRubrosBolsa",
+        "label": "Obtener Rubros Bolsa",
         "pageTitle": "Obtener Rubros Bolsa",
         "slug": "indicadores/obtenerrubrosbolsa"
       },
       {
         "type": "file",
-        "label": "ObtenerServiciosMasEjecutados",
+        "label": "Obtener Servicios Más Ejecutados",
         "pageTitle": "Obtener Servicios Más Ejecutados",
         "slug": "indicadores/obtenerserviciosmasejecutados"
       },
       {
         "type": "file",
-        "label": "ObtenerSesionesPorUsuario",
+        "label": "Obtener Sesiones Por Usuario",
         "pageTitle": "Obtener Sesiones Por Usuario",
         "slug": "indicadores/obtenersesionesporusuario"
       },
       {
         "type": "file",
-        "label": "ObtenerSucursalesCajas",
+        "label": "Obtener Sucursales Cajas",
         "pageTitle": "Obtener Sucursales Cajas",
         "slug": "indicadores/obtenersucursalescajas"
       },
       {
         "type": "file",
-        "label": "ObtenerTransaccionesporEstados",
+        "label": "Obtener Transacciones por Estados",
         "pageTitle": "Obtener Transacciones por Estados",
         "slug": "indicadores/obtenertransaccionesporestados"
       }
@@ -2577,19 +2559,19 @@
         "children": [
           {
             "type": "file",
-            "label": "CrearSolicitudAmpliación",
+            "label": "Crear Solicitud Ampliación",
             "pageTitle": "Crear Solicitud Ampliación",
             "slug": "microfinanzas/crear-solicitud/crearsolicitudampliacion"
           },
           {
             "type": "file",
-            "label": "CrearSolicitudIndividual",
+            "label": "Crear Solicitud Individual",
             "pageTitle": "Crear Solicitud Individual",
             "slug": "microfinanzas/crear-solicitud/crearsolicitudindividual"
           },
           {
             "type": "file",
-            "label": "CrearSolicitudRenovación",
+            "label": "Crear Solicitud Renovación",
             "pageTitle": "Crear Solicitud Renovación",
             "slug": "microfinanzas/crear-solicitud/crearsolicitudrenovacion"
           }
@@ -2602,13 +2584,13 @@
         "children": [
           {
             "type": "file",
-            "label": "AgregarFiador",
+            "label": "Agregar Fiador",
             "pageTitle": "Agregar Fiador",
             "slug": "microfinanzas/fiadores/agregarfiador"
           },
           {
             "type": "file",
-            "label": "EliminarFiador",
+            "label": "Eliminar Fiador",
             "pageTitle": "Eliminar Fiador",
             "slug": "microfinanzas/fiadores/eliminarfiador"
           }
@@ -2621,79 +2603,79 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarGrupo",
+            "label": "Actualizar Grupo",
             "pageTitle": "Actualizar Grupo",
             "slug": "microfinanzas/grupales/actualizargrupo"
           },
           {
             "type": "file",
-            "label": "ActualizarIntegrantedeGrupo",
+            "label": "Actualizar Integrante de Grupo",
             "pageTitle": "Actualizar Integrante de Grupo",
             "slug": "microfinanzas/grupales/actualizarintegrantedegrupo"
           },
           {
             "type": "file",
-            "label": "AgregarGrupo",
+            "label": "Agregar Grupo",
             "pageTitle": "Agregar Grupo",
             "slug": "microfinanzas/grupales/agregargrupo"
           },
           {
             "type": "file",
-            "label": "AgregarIntegranteaGrupo",
+            "label": "Agregar Integrante a Grupo",
             "pageTitle": "Agregar Integrante a Grupo",
             "slug": "microfinanzas/grupales/agregarintegranteagrupo"
           },
           {
             "type": "file",
-            "label": "CrearSolicitudGrupal",
+            "label": "Crear Solicitud Grupal",
             "pageTitle": "Crear Solicitud Grupal",
             "slug": "microfinanzas/grupales/crearsolicitudgrupal"
           },
           {
             "type": "file",
-            "label": "HabilitarIntegrantedeunGrupo",
+            "label": "Habilitar Integrante de Grupo",
             "pageTitle": "Habilitar Integrante de Grupo",
             "slug": "microfinanzas/grupales/habilitarintegrantedeungrupo"
           },
           {
             "type": "file",
-            "label": "InhabilitarIntegrantedeunGrupo",
+            "label": "Inhabilitar Integrante de Grupo",
             "pageTitle": "Inhabilitar Integrante de Grupo",
             "slug": "microfinanzas/grupales/inhabilitarintegrantedeungrupo"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleGrupo",
+            "label": "Obtener Detalle Grupo",
             "pageTitle": "Obtener Detalle Grupo",
             "slug": "microfinanzas/grupales/obtenerdetallegrupo"
           },
           {
             "type": "file",
-            "label": "ObtenerGrupos",
+            "label": "Obtener Grupos",
             "pageTitle": "Obtener Grupos",
             "slug": "microfinanzas/grupales/obtenergrupos"
           },
           {
             "type": "file",
-            "label": "ObtenerIntegrantesdeGrupo",
+            "label": "Obtener Integrantes de Grupo",
             "pageTitle": "Obtener Integrantes de Grupo",
             "slug": "microfinanzas/grupales/obtenerintegrantesdegrupo"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeGrupo",
+            "label": "Obtener Tipos de Grupo",
             "pageTitle": "Obtener Tipos de Grupo",
             "slug": "microfinanzas/grupales/obtenertiposdegrupo"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeIntegrante",
+            "label": "Obtener Tipos de Integrante",
             "pageTitle": "Obtener Tipos de Integrante",
             "slug": "microfinanzas/grupales/obtenertiposdeintegrante"
           },
           {
             "type": "file",
-            "label": "SimularPréstamoAmortizableGrupal",
+            "label": "Simular Amortizable Grupal",
             "pageTitle": "Simular Amortizable Grupal",
             "slug": "microfinanzas/grupales/simularprestamoamortizablegrupal"
           }
@@ -2706,49 +2688,49 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerAsesores",
+            "label": "Obtener Asesores",
             "pageTitle": "Obtener Asesores",
             "slug": "microfinanzas/obtener/obtenerasesores"
           },
           {
             "type": "file",
-            "label": "ObtenerCampañas",
+            "label": "Obtener Campañas",
             "pageTitle": "Obtener Campañas",
             "slug": "microfinanzas/obtener/obtenercampanas"
           },
           {
             "type": "file",
-            "label": "ObtenerDestinosCrédito",
+            "label": "Obtener Destinos Crédito",
             "pageTitle": "Obtener Destinos Crédito",
             "slug": "microfinanzas/obtener/obtenerdestinoscredito"
           },
           {
             "type": "file",
-            "label": "ObtenerOperacionesCliente",
+            "label": "Obtener Operaciones Cliente",
             "pageTitle": "Obtener Operaciones Cliente",
             "slug": "microfinanzas/obtener/obteneroperacionescliente"
           },
           {
             "type": "file",
-            "label": "ObtenerOrigenesdeCaptación",
+            "label": "Obtener Orígenes de Captación",
             "pageTitle": "Obtener Orígenes de Captación",
             "slug": "microfinanzas/obtener/obtenerorigenesdecaptacion"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "microfinanzas/obtener/obtenerproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerSolicitudesCliente",
+            "label": "Obtener Solicitudes Cliente",
             "pageTitle": "Obtener Solicitudes Cliente",
             "slug": "microfinanzas/obtener/obtenersolicitudescliente"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposAval",
+            "label": "Obtener Tipos Aval",
             "pageTitle": "Obtener Tipos Aval",
             "slug": "microfinanzas/obtener/obtenertiposaval"
           }
@@ -2761,19 +2743,19 @@
         "children": [
           {
             "type": "file",
-            "label": "AgregarOperacionesaCancelar",
+            "label": "Agregar Operaciones a Cancelar",
             "pageTitle": "Agregar Operaciones a Cancelar",
             "slug": "microfinanzas/operaciones-a-cancelar/agregaroperacionesacancelar"
           },
           {
             "type": "file",
-            "label": "ObtenerOperacionesaCancelar",
+            "label": "Obtener Operaciones a Cancelar",
             "pageTitle": "Obtener Operaciones a Cancelar",
             "slug": "microfinanzas/operaciones-a-cancelar/obteneroperacionesacancelar"
           },
           {
             "type": "file",
-            "label": "QuitarOperacionesaCancelar",
+            "label": "Quitar Operaciones a Cancelar",
             "pageTitle": "Quitar Operaciones a Cancelar",
             "slug": "microfinanzas/operaciones-a-cancelar/quitaroperacionesacancelar"
           }
@@ -2786,19 +2768,19 @@
         "children": [
           {
             "type": "file",
-            "label": "SimularLibreAmortización",
+            "label": "Simular Libre Amortización",
             "pageTitle": "Simular Libre Amortización",
             "slug": "microfinanzas/simular/simularlibreamortizacion"
           },
           {
             "type": "file",
-            "label": "SimularPréstamoAmortizable",
+            "label": "Simular Amortizable",
             "pageTitle": "Simular Amortizable",
             "slug": "microfinanzas/simular/simularprestamoamortizable"
           },
           {
             "type": "file",
-            "label": "SimularPréstamoPlazoFijo",
+            "label": "Simular Plazo Fijo",
             "pageTitle": "Simular Plazo Fijo",
             "slug": "microfinanzas/simular/simularprestamoplazofijo"
           }
@@ -2806,19 +2788,19 @@
       },
       {
         "type": "file",
-        "label": "BuscarCliente",
+        "label": "Buscar Cliente",
         "pageTitle": "Buscar Cliente",
         "slug": "microfinanzas/buscarcliente"
       },
       {
         "type": "file",
-        "label": "CompletarTarea",
+        "label": "Completar Tarea",
         "pageTitle": "Completar Tarea",
         "slug": "microfinanzas/completartarea"
       },
       {
         "type": "file",
-        "label": "ValidarPolíticas",
+        "label": "Validar Políticas",
         "pageTitle": "Validar Políticas",
         "slug": "microfinanzas/validarpoliticas"
       }
@@ -2831,61 +2813,61 @@
     "children": [
       {
         "type": "file",
-        "label": "ObtenerCantidadCuotas",
+        "label": "Obtener Cantidad Cuotas",
         "pageTitle": "Obtener Cantidad Cuotas",
         "slug": "modelador-de-prestamos/obtenercantidadcuotas"
       },
       {
         "type": "file",
-        "label": "ObtenerCapital",
+        "label": "Obtener Capital",
         "pageTitle": "Obtener Capital",
         "slug": "modelador-de-prestamos/obtenercapital"
       },
       {
         "type": "file",
-        "label": "ObtenerComisiones",
+        "label": "Obtener Comisiones",
         "pageTitle": "Obtener Comisiones",
         "slug": "modelador-de-prestamos/obtenercomisiones"
       },
       {
         "type": "file",
-        "label": "ObtenerComisionesporCuota",
+        "label": "Obtener Comisiones por Cuota",
         "pageTitle": "Obtener Comisiones por Cuota",
         "slug": "modelador-de-prestamos/obtenercomisionesporcuota"
       },
       {
         "type": "file",
-        "label": "ObtenerDíasPrimerPeríodo",
+        "label": "Obtener Días Primer Período",
         "pageTitle": "Obtener Días Primer Período",
         "slug": "modelador-de-prestamos/obtenerdiasprimerperiodo"
       },
       {
         "type": "file",
-        "label": "ObtenerPeríodoEntreCuotas",
+        "label": "Obtener Período Entre Cuotas",
         "pageTitle": "Obtener Período Entre Cuotas",
         "slug": "modelador-de-prestamos/obtenerperiodoentrecuotas"
       },
       {
         "type": "file",
-        "label": "ObtenerPermiteSegurosdelMismoTipo",
+        "label": "Obtener Permite Seguros del Mismo Tipo",
         "pageTitle": "Obtener Permite Seguros del Mismo Tipo",
         "slug": "modelador-de-prestamos/obtenerpermitesegurosdelmismotipo"
       },
       {
         "type": "file",
-        "label": "ObtenerPlazo",
+        "label": "Obtener Plazo",
         "pageTitle": "Obtener Plazo",
         "slug": "modelador-de-prestamos/obtenerplazo"
       },
       {
         "type": "file",
-        "label": "ObtenerRequiereSegurodeVidaObligatorio",
+        "label": "Obtener Requiere Seguro de Vida Obligatorio",
         "pageTitle": "Obtener Requiere Seguro de Vida Obligatorio",
         "slug": "modelador-de-prestamos/obtenerrequieresegurodevidaobligatorio"
       },
       {
         "type": "file",
-        "label": "ObtenerSeguros",
+        "label": "Obtener Seguros",
         "pageTitle": "Obtener Seguros",
         "slug": "modelador-de-prestamos/obtenerseguros"
       }
@@ -2898,25 +2880,25 @@
     "children": [
       {
         "type": "file",
-        "label": "ObtenerItemsModelo",
+        "label": "Obtener Items Modelo",
         "pageTitle": "Obtener Items Modelo",
         "slug": "pae/obteneritemsmodelo"
       },
       {
         "type": "file",
-        "label": "ObtenerModelosPAE",
+        "label": "Obtener Modelos PAE",
         "pageTitle": "Obtener Modelos PAE",
         "slug": "pae/obtenermodelospae"
       },
       {
         "type": "file",
-        "label": "ObtenerScores",
+        "label": "Obtener Scores",
         "pageTitle": "Obtener Scores",
         "slug": "pae/obtenerscores"
       },
       {
         "type": "file",
-        "label": "ObtenerTiposDeModelos",
+        "label": "Obtener Tipos De Modelos",
         "pageTitle": "Obtener Tipos De Modelos",
         "slug": "pae/obtenertiposdemodelos"
       }
@@ -2929,43 +2911,43 @@
     "children": [
       {
         "type": "file",
-        "label": "ObtenerCorrelativoGuía",
+        "label": "Obtener Correlativo Guía",
         "pageTitle": "Obtener Correlativo Guía",
         "slug": "parametros-base/obtenercorrelativoguia"
       },
       {
         "type": "file",
-        "label": "ObtenerCorrelativoGuíaEspecial",
+        "label": "Obtener Correlativo Guía Especial",
         "pageTitle": "Obtener Correlativo Guía Especial",
         "slug": "parametros-base/obtenercorrelativoguiaespecial"
       },
       {
         "type": "file",
-        "label": "ObtenerGuíadeProceso",
+        "label": "Obtener Guía de Proceso",
         "pageTitle": "Obtener Guía de Proceso",
         "slug": "parametros-base/obtenerguiadeproceso"
       },
       {
         "type": "file",
-        "label": "ObtenerGuíaEspecialdeProceso",
+        "label": "Obtener Guía Especial de Proceso",
         "pageTitle": "Obtener Guía Especial de Proceso",
         "slug": "parametros-base/obtenerguiaespecialdeproceso"
       },
       {
         "type": "file",
-        "label": "ObtenerOpcionGeneraldeProceso",
+        "label": "Obtener Opción General de Proceso",
         "pageTitle": "Obtener Opción General de Proceso",
         "slug": "parametros-base/obteneropciongeneraldeproceso"
       },
       {
         "type": "file",
-        "label": "ObtenerOpciónGeneralPorModulo",
+        "label": "Obtener Opción General Por Módulo",
         "pageTitle": "Obtener Opción General Por Módulo",
         "slug": "parametros-base/obteneropciongeneralpormodulo"
       },
       {
         "type": "file",
-        "label": "ObtenerProgramaParticular",
+        "label": "Obtener Programa Particular",
         "pageTitle": "Obtener Programa Particular",
         "slug": "parametros-base/obtenerprogramaparticular"
       }
@@ -2983,21 +2965,21 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarPartner",
+            "label": "Actualizar Partner",
             "pageTitle": "Actualizar Partner",
             "slug": "partners/actualizar/actualizarpartner",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "ActualizarPuntoVenta",
+            "label": "Actualizar Punto Venta",
             "pageTitle": "Actualizar Punto Venta",
             "slug": "partners/actualizar/actualizarpuntoventa",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "ActualizarVendedor",
+            "label": "Actualizar Vendedor",
             "pageTitle": "Actualizar Vendedor",
             "slug": "partners/actualizar/actualizarvendedor",
             "isNew": true
@@ -3011,13 +2993,13 @@
         "children": [
           {
             "type": "file",
-            "label": "ContratarPréstamo",
+            "label": "Contratar Préstamo",
             "pageTitle": "Contratar Préstamo",
             "slug": "partners/contratar/contratarprestamo"
           },
           {
             "type": "file",
-            "label": "ContratarVehicular",
+            "label": "Contratar Vehicular",
             "pageTitle": "Contratar Vehicular",
             "slug": "partners/contratar/contratarvehicular"
           }
@@ -3030,33 +3012,33 @@
         "children": [
           {
             "type": "file",
-            "label": "CrearCliente",
+            "label": "Crear Cliente",
             "pageTitle": "Crear Cliente",
             "slug": "partners/crear/crearcliente"
           },
           {
             "type": "file",
-            "label": "CrearPartner",
+            "label": "Crear Partner",
             "pageTitle": "Crear Partner",
             "slug": "partners/crear/crearpartner",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "CrearPersonaCliente",
+            "label": "Crear Persona Cliente",
             "pageTitle": "Crear Persona Cliente",
             "slug": "partners/crear/crearpersonacliente"
           },
           {
             "type": "file",
-            "label": "CrearPuntoVenta",
+            "label": "Crear Punto Venta",
             "pageTitle": "Crear Punto Venta",
             "slug": "partners/crear/crearpuntoventa",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "CrearVendedor",
+            "label": "Crear Vendedor",
             "pageTitle": "Crear Vendedor",
             "slug": "partners/crear/crearvendedor",
             "isNew": true
@@ -3070,21 +3052,21 @@
         "children": [
           {
             "type": "file",
-            "label": "EliminarPartner",
+            "label": "Eliminar Partner",
             "pageTitle": "Eliminar Partner",
             "slug": "partners/eliminar/eliminarpartner",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "EliminarPuntoVenta",
+            "label": "Eliminar Punto Venta",
             "pageTitle": "Eliminar Punto Venta",
             "slug": "partners/eliminar/eliminarpuntoventa",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "EliminarVendedor",
+            "label": "Eliminar Vendedor",
             "pageTitle": "Eliminar Vendedor",
             "slug": "partners/eliminar/eliminarvendedor",
             "isNew": true
@@ -3098,87 +3080,87 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerDatosdeUsuario",
+            "label": "Obtener Datos de Usuario",
             "pageTitle": "Obtener Datos de Usuario",
             "slug": "partners/obtener/obtenerdatosdeusuario"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeOfertaAmortizable",
+            "label": "Obtener Detalle de Oferta Amortizable",
             "pageTitle": "Obtener Detalle de Oferta Amortizable",
             "slug": "partners/obtener/obtenerdetalledeofertaamortizable"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleOfertaVehicular",
+            "label": "Obtener Detalle de Oferta Vehicular",
             "pageTitle": "Obtener Detalle de Oferta Vehicular",
             "slug": "partners/obtener/obtenerdetalleofertavehicular"
           },
           {
             "type": "file",
-            "label": "ObtenerMarcas",
+            "label": "Obtener Marcas",
             "pageTitle": "Obtener Marcas",
             "slug": "partners/obtener/obtenermarcas"
           },
           {
             "type": "file",
-            "label": "ObtenerModelos",
+            "label": "Obtener Modelos",
             "pageTitle": "Obtener Modelos",
             "slug": "partners/obtener/obtenermodelos"
           },
           {
             "type": "file",
-            "label": "ObtenerNiveles",
+            "label": "Obtener Niveles",
             "pageTitle": "Obtener Niveles",
             "slug": "partners/obtener/obtenerniveles",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "ObtenerPartners",
+            "label": "Obtener Partners",
             "pageTitle": "Obtener Partners",
             "slug": "partners/obtener/obtenerpartners"
           },
           {
             "type": "file",
-            "label": "ObtenerPréstamosdeCliente",
+            "label": "Obtener Préstamos de Cliente",
             "pageTitle": "Obtener Préstamos de Cliente",
             "slug": "partners/obtener/obtenerprestamosdecliente"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "partners/obtener/obtenerproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerProductosdelPartner",
+            "label": "Obtener Productos del Partner",
             "pageTitle": "Obtener Productos del Partner",
             "slug": "partners/obtener/obtenerproductosdelpartner"
           },
           {
             "type": "file",
-            "label": "ObtenerPuntosdeVenta",
+            "label": "Obtener Puntos de Venta",
             "pageTitle": "Obtener Puntos de Venta",
             "slug": "partners/obtener/obtenerpuntosdeventa"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposDePartner",
+            "label": "Obtener Tipos De Partner",
             "pageTitle": "Obtener Tipos De Partner",
             "slug": "partners/obtener/obtenertiposdepartner",
             "isNew": true
           },
           {
             "type": "file",
-            "label": "ObtenerVendedores",
+            "label": "Obtener Vendedores",
             "pageTitle": "Obtener Vendedores",
             "slug": "partners/obtener/obtenervendedores"
           },
           {
             "type": "file",
-            "label": "ObtenerVersiones",
+            "label": "Obtener Versiones",
             "pageTitle": "Obtener Versiones",
             "slug": "partners/obtener/obtenerversiones"
           }
@@ -3191,25 +3173,25 @@
         "children": [
           {
             "type": "file",
-            "label": "SimularOfertas",
+            "label": "Simular Ofertas",
             "pageTitle": "Simular Ofertas",
             "slug": "partners/simular/simularofertas"
           },
           {
             "type": "file",
-            "label": "SimularOfertasVehicular",
+            "label": "Simular Ofertas Vehicular",
             "pageTitle": "Simular Ofertas Vehicular",
             "slug": "partners/simular/simularofertasvehicular"
           },
           {
             "type": "file",
-            "label": "SimularPréstamo",
+            "label": "Simular Préstamo",
             "pageTitle": "Simular Préstamo",
             "slug": "partners/simular/simularprestamo"
           },
           {
             "type": "file",
-            "label": "SimularVehicular",
+            "label": "Simular Vehicular",
             "pageTitle": "Simular Vehicular",
             "slug": "partners/simular/simularvehicular"
           }
@@ -3235,103 +3217,103 @@
           },
           {
             "type": "file",
-            "label": "ActualizarCelular",
+            "label": "Actualizar Celular",
             "pageTitle": "Actualizar Celular",
             "slug": "personas/actualizar/actualizarcelular"
           },
           {
             "type": "file",
-            "label": "ActualizarContacto",
+            "label": "Actualizar Contacto",
             "pageTitle": "Actualizar Contacto",
             "slug": "personas/actualizar/actualizarcontacto"
           },
           {
             "type": "file",
-            "label": "ActualizarCónyuge",
+            "label": "Actualizar Cónyuge",
             "pageTitle": "Actualizar Cónyuge",
             "slug": "personas/actualizar/actualizarconyuge"
           },
           {
             "type": "file",
-            "label": "ActualizarCorreoElectrónico",
+            "label": "Actualizar Correo Electrónico",
             "pageTitle": "Actualizar Correo Electrónico",
             "slug": "personas/actualizar/actualizarcorreoelectronico"
           },
           {
             "type": "file",
-            "label": "ActualizarDomicilio",
+            "label": "Actualizar Domicilio",
             "pageTitle": "Actualizar Domicilio",
             "slug": "personas/actualizar/actualizardomicilio"
           },
           {
             "type": "file",
-            "label": "ActualizarFATCA",
+            "label": "Actualizar FATCA",
             "pageTitle": "Actualizar FATCA",
             "slug": "personas/actualizar/actualizarfatca"
           },
           {
             "type": "file",
-            "label": "ActualizarInformaciónAdicional",
+            "label": "Actualizar Información Adicional",
             "pageTitle": "Actualizar Información Adicional",
             "slug": "personas/actualizar/actualizarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ActualizarInformaciónFinanciera",
+            "label": "Actualizar Información Financiera",
             "pageTitle": "Actualizar Información Financiera",
             "slug": "personas/actualizar/actualizarinformacionfinanciera"
           },
           {
             "type": "file",
-            "label": "ActualizarIntegrantedePersonaJurídica",
+            "label": "Actualizar Integrante de Persona Jurídica",
             "pageTitle": "Actualizar Integrante de Persona Jurídica",
             "slug": "personas/actualizar/actualizarintegrantedepersonajuridica"
           },
           {
             "type": "file",
-            "label": "ActualizarPersonaJurídica",
+            "label": "Actualizar Persona Jurídica",
             "pageTitle": "Actualizar Persona Jurídica",
             "slug": "personas/actualizar/actualizarpersonajuridica"
           },
           {
             "type": "file",
-            "label": "ActualizarProfesión",
+            "label": "Actualizar Profesión",
             "pageTitle": "Actualizar Profesión",
             "slug": "personas/actualizar/actualizarprofesion"
           },
           {
             "type": "file",
-            "label": "ActualizarReducido",
+            "label": "Actualizar Reducido",
             "pageTitle": "Actualizar Reducido",
             "slug": "personas/actualizar/actualizarreducido"
           },
           {
             "type": "file",
-            "label": "ActualizarReferencia",
+            "label": "Actualizar Referencia",
             "pageTitle": "Actualizar Referencia",
             "slug": "personas/actualizar/actualizarreferencia"
           },
           {
             "type": "file",
-            "label": "ActualizarRegistroEmpleado",
+            "label": "Actualizar Registro Empleado",
             "pageTitle": "Actualizar Registro Empleado",
             "slug": "personas/actualizar/actualizarregistroempleado"
           },
           {
             "type": "file",
-            "label": "ActualizarTeléfono",
+            "label": "Actualizar Teléfono",
             "pageTitle": "Actualizar Teléfono",
             "slug": "personas/actualizar/actualizartelefono"
           },
           {
             "type": "file",
-            "label": "ActualizarVíctimaHechoViolento",
+            "label": "Actualizar Víctima Hecho Violento",
             "pageTitle": "Actualizar Víctima Hecho Violento",
             "slug": "personas/actualizar/actualizarvictimahechoviolento"
           },
           {
             "type": "file",
-            "label": "ModificarDocumentoAdicional",
+            "label": "Modificar Documento Adicional",
             "pageTitle": "Modificar Documento Adicional",
             "slug": "personas/actualizar/modificardocumentoadicional"
           }
@@ -3344,91 +3326,91 @@
         "children": [
           {
             "type": "file",
-            "label": "AgregaraListaNegra",
+            "label": "Agregar a Lista Negra",
             "pageTitle": "Agregar a Lista Negra",
             "slug": "personas/agregar/agregaralistanegra"
           },
           {
             "type": "file",
-            "label": "AgregarContacto",
+            "label": "Agregar Contacto",
             "pageTitle": "Agregar Contacto",
             "slug": "personas/agregar/agregarcontacto"
           },
           {
             "type": "file",
-            "label": "AgregarCorreoElectronico",
+            "label": "Agregar Correo Electrónico",
             "pageTitle": "Agregar Correo Electrónico",
             "slug": "personas/agregar/agregarcorreoelectronico"
           },
           {
             "type": "file",
-            "label": "AgregarDatosPEP",
+            "label": "Agregar Datos PEP",
             "pageTitle": "Agregar Datos PEP",
             "slug": "personas/agregar/agregardatospep"
           },
           {
             "type": "file",
-            "label": "AgregarDocumentoAdicional",
+            "label": "Agregar Documento Adicional",
             "pageTitle": "Agregar Documento Adicional",
             "slug": "personas/agregar/agregardocumentoadicional"
           },
           {
             "type": "file",
-            "label": "AgregarDomicilio",
+            "label": "Agregar Domicilio",
             "pageTitle": "Agregar Domicilio",
             "slug": "personas/agregar/agregardomicilio"
           },
           {
             "type": "file",
-            "label": "AgregarEstadoFinanciero",
+            "label": "Agregar Estado Financiero",
             "pageTitle": "Agregar Estado Financiero",
             "slug": "personas/agregar/agregarestadofinanciero"
           },
           {
             "type": "file",
-            "label": "AgregarFATCA",
+            "label": "Agregar FATCA",
             "pageTitle": "Agregar FATCA",
             "slug": "personas/agregar/agregarfatca"
           },
           {
             "type": "file",
-            "label": "AgregarInformaciónAdicional",
+            "label": "Agregar Información Adicional",
             "pageTitle": "Agregar Información Adicional",
             "slug": "personas/agregar/agregarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "AgregarInformaciónFinanciera",
+            "label": "Agregar Información Financiera",
             "pageTitle": "Agregar Información Financiera",
             "slug": "personas/agregar/agregarinformacionfinanciera"
           },
           {
             "type": "file",
-            "label": "AgregarIntegranteaPersonaJurídica",
+            "label": "Agregar Integrante a Persona Jurídica",
             "pageTitle": "Agregar Integrante a Persona Jurídica",
             "slug": "personas/agregar/agregarintegranteapersonajuridica"
           },
           {
             "type": "file",
-            "label": "AgregarPersonaVinculada",
+            "label": "Agregar Persona Vinculada",
             "pageTitle": "Agregar Persona Vinculada",
             "slug": "personas/agregar/agregarpersonavinculada"
           },
           {
             "type": "file",
-            "label": "AgregarReferencia",
+            "label": "Agregar Referencia",
             "pageTitle": "Agregar Referencia",
             "slug": "personas/agregar/agregarreferencia"
           },
           {
             "type": "file",
-            "label": "AgregarTeléfono",
+            "label": "Agregar Teléfono",
             "pageTitle": "Agregar Teléfono",
             "slug": "personas/agregar/agregartelefono"
           },
           {
             "type": "file",
-            "label": "AgregarVíctimaHechoViolento",
+            "label": "Agregar Víctima Hecho Violento",
             "pageTitle": "Agregar Víctima Hecho Violento",
             "slug": "personas/agregar/agregarvictimahechoviolento"
           }
@@ -3447,19 +3429,19 @@
           },
           {
             "type": "file",
-            "label": "CrearCónyuge",
+            "label": "Crear Cónyuge",
             "pageTitle": "Crear Cónyuge",
             "slug": "personas/crear/crearconyuge"
           },
           {
             "type": "file",
-            "label": "CrearPersonaJurídica",
+            "label": "Crear Persona Jurídica",
             "pageTitle": "Crear Persona Jurídica",
             "slug": "personas/crear/crearpersonajuridica"
           },
           {
             "type": "file",
-            "label": "CrearReducido",
+            "label": "Crear Reducido",
             "pageTitle": "Crear Reducido",
             "slug": "personas/crear/crearreducido"
           }
@@ -3472,31 +3454,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "personas/documentos-digitales/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "personas/documentos-digitales/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "personas/documentos-digitales/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "personas/documentos-digitales/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "personas/documentos-digitales/obtenerdocumentosdigitales"
           }
@@ -3509,43 +3491,43 @@
         "children": [
           {
             "type": "file",
-            "label": "EliminarCónyuge",
+            "label": "Eliminar Cónyuge",
             "pageTitle": "Eliminar Cónyuge",
             "slug": "personas/eliminar/eliminarconyuge"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoAdicional",
+            "label": "Eliminar Documento Adicional",
             "pageTitle": "Eliminar Documento Adicional",
             "slug": "personas/eliminar/eliminardocumentoadicional"
           },
           {
             "type": "file",
-            "label": "EliminarDomicilio",
+            "label": "Eliminar Domicilio",
             "pageTitle": "Eliminar Domicilio",
             "slug": "personas/eliminar/eliminardomicilio"
           },
           {
             "type": "file",
-            "label": "EliminarInformaciónAdicional",
+            "label": "Eliminar Información Adicional",
             "pageTitle": "Eliminar Información Adicional",
             "slug": "personas/eliminar/eliminarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "EliminarIntegrantedePersonaJurídica",
+            "label": "Eliminar Integrante de Persona Jurídica",
             "pageTitle": "Eliminar Integrante de Persona Jurídica",
             "slug": "personas/eliminar/eliminarintegrantedepersonajuridica"
           },
           {
             "type": "file",
-            "label": "EliminarPersonaVinculada",
+            "label": "Eliminar Persona Vinculada",
             "pageTitle": "Eliminar Persona Vinculada",
             "slug": "personas/eliminar/eliminarpersonavinculada"
           },
           {
             "type": "file",
-            "label": "EliminarProfesión",
+            "label": "Eliminar Profesión",
             "pageTitle": "Eliminar Profesión",
             "slug": "personas/eliminar/eliminarprofesion"
           }
@@ -3564,253 +3546,253 @@
           },
           {
             "type": "file",
-            "label": "ObtenerConcepto",
+            "label": "Obtener Concepto",
             "pageTitle": "Obtener Concepto",
             "slug": "personas/obtener/obtenerconcepto"
           },
           {
             "type": "file",
-            "label": "ObtenerContactos",
+            "label": "Obtener Contactos",
             "pageTitle": "Obtener Contactos",
             "slug": "personas/obtener/obtenercontactos"
           },
           {
             "type": "file",
-            "label": "ObtenerCónyuge",
+            "label": "Obtener Cónyuge",
             "pageTitle": "Obtener Cónyuge",
             "slug": "personas/obtener/obtenerconyuge"
           },
           {
             "type": "file",
-            "label": "ObtenerCorreosElectrónicos",
+            "label": "Obtener Correos Electrónicos",
             "pageTitle": "Obtener Correos Electrónicos",
             "slug": "personas/obtener/obtenercorreoselectronicos"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasCliente",
+            "label": "Obtener Cuentas Cliente",
             "pageTitle": "Obtener Cuentas Cliente",
             "slug": "personas/obtener/obtenercuentascliente"
           },
           {
             "type": "file",
-            "label": "ObtenerDatosPEP",
+            "label": "Obtener Datos PEP",
             "pageTitle": "Obtener Datos PEP",
             "slug": "personas/obtener/obtenerdatospep"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosAdicionales",
+            "label": "Obtener Documentos Adicionales",
             "pageTitle": "Obtener Documentos Adicionales",
             "slug": "personas/obtener/obtenerdocumentosadicionales"
           },
           {
             "type": "file",
-            "label": "ObtenerDomicilios",
+            "label": "Obtener Domicilios",
             "pageTitle": "Obtener Domicilios",
             "slug": "personas/obtener/obtenerdomicilios"
           },
           {
             "type": "file",
-            "label": "ObtenerEstadosCiviles",
+            "label": "Obtener Estados Civiles",
             "pageTitle": "Obtener Estados Civiles",
             "slug": "personas/obtener/obtenerestadosciviles"
           },
           {
             "type": "file",
-            "label": "ObtenerFacultades",
+            "label": "Obtener Facultades",
             "pageTitle": "Obtener Facultades",
             "slug": "personas/obtener/obtenerfacultades"
           },
           {
             "type": "file",
-            "label": "ObtenerFATCA",
+            "label": "Obtener FATCA",
             "pageTitle": "Obtener FATCA",
             "slug": "personas/obtener/obtenerfatca"
           },
           {
             "type": "file",
-            "label": "ObtenerHobbies",
+            "label": "Obtener Hobbies",
             "pageTitle": "Obtener Hobbies",
             "slug": "personas/obtener/obtenerhobbies"
           },
           {
             "type": "file",
-            "label": "ObtenerHobby",
+            "label": "Obtener Hobby",
             "pageTitle": "Obtener Hobby",
             "slug": "personas/obtener/obtenerhobby"
           },
           {
             "type": "file",
-            "label": "ObtenerIdBantotal",
+            "label": "Obtener Id Bantotal",
             "pageTitle": "Obtener Id Bantotal",
             "slug": "personas/obtener/obteneridbantotal"
           },
           {
             "type": "file",
-            "label": "ObtenerIdentidadesdeGénero",
+            "label": "Obtener Identidades de Género",
             "pageTitle": "Obtener Identidades de Género",
             "slug": "personas/obtener/obteneridentidadesdegenero"
           },
           {
             "type": "file",
-            "label": "ObtenerIdentificadorÚnico",
+            "label": "Obtener Identificador Único",
             "pageTitle": "Obtener Identificador Único",
             "slug": "personas/obtener/obteneridentificadorunico"
           },
           {
             "type": "file",
-            "label": "ObtenerInformaciónAdicional",
+            "label": "Obtener Información Adicional",
             "pageTitle": "Obtener Información Adicional",
             "slug": "personas/obtener/obtenerinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ObtenerInformaciónFinanciera",
+            "label": "Obtener Información Financiera",
             "pageTitle": "Obtener Información Financiera",
             "slug": "personas/obtener/obtenerinformacionfinanciera"
           },
           {
             "type": "file",
-            "label": "ObtenerIntegrantesPersonaJurídica",
+            "label": "Obtener Integrantes Persona Jurídica",
             "pageTitle": "Obtener Integrantes Persona Jurídica",
             "slug": "personas/obtener/obtenerintegrantespersonajuridica"
           },
           {
             "type": "file",
-            "label": "ObtenerLimites",
+            "label": "Obtener Límites",
             "pageTitle": "Obtener Límites",
             "slug": "personas/obtener/obtenerlimites"
           },
           {
             "type": "file",
-            "label": "ObtenerNaturalezasJurídicas",
+            "label": "Obtener Naturalezas Jurídicas",
             "pageTitle": "Obtener Naturalezas Jurídicas",
             "slug": "personas/obtener/obtenernaturalezasjuridicas"
           },
           {
             "type": "file",
-            "label": "ObtenerNivelesEducativos",
+            "label": "Obtener Niveles Educativos",
             "pageTitle": "Obtener Niveles Educativos",
             "slug": "personas/obtener/obtenerniveleseducativos"
           },
           {
             "type": "file",
-            "label": "ObtenerOcupaciones",
+            "label": "Obtener Ocupaciones",
             "pageTitle": "Obtener Ocupaciones",
             "slug": "personas/obtener/obtenerocupaciones"
           },
           {
             "type": "file",
-            "label": "ObtenerPersonaJurídica",
+            "label": "Obtener Persona Jurídica",
             "pageTitle": "Obtener Persona Jurídica",
             "slug": "personas/obtener/obtenerpersonajuridica"
           },
           {
             "type": "file",
-            "label": "ObtenerPersonas",
+            "label": "Obtener Personas",
             "pageTitle": "Obtener Personas",
             "slug": "personas/obtener/obtenerpersonas"
           },
           {
             "type": "file",
-            "label": "ObtenerPersonasJurídicas",
+            "label": "Obtener Personas Jurídicas",
             "pageTitle": "Obtener Personas Jurídicas",
             "slug": "personas/obtener/obtenerpersonasjuridicas"
           },
           {
             "type": "file",
-            "label": "ObtenerPersonasVinculadas",
+            "label": "Obtener Personas Vinculadas",
             "pageTitle": "Obtener Personas Vinculadas",
             "slug": "personas/obtener/obtenerpersonasvinculadas"
           },
           {
             "type": "file",
-            "label": "ObtenerProfesión",
+            "label": "Obtener Profesión",
             "pageTitle": "Obtener Profesión",
             "slug": "personas/obtener/obtenerprofesion"
           },
           {
             "type": "file",
-            "label": "ObtenerProfesiones",
+            "label": "Obtener Profesiones",
             "pageTitle": "Obtener Profesiones",
             "slug": "personas/obtener/obtenerprofesiones"
           },
           {
             "type": "file",
-            "label": "ObtenerReferencias",
+            "label": "Obtener Referencias",
             "pageTitle": "Obtener Referencias",
             "slug": "personas/obtener/obtenerreferencias"
           },
           {
             "type": "file",
-            "label": "ObtenerTarjetasdeDébito",
+            "label": "Obtener Tarjetas de Débito",
             "pageTitle": "Obtener Tarjetas de Débito",
             "slug": "personas/obtener/obtenertarjetasdedebito"
           },
           {
             "type": "file",
-            "label": "ObtenerTeléfonos",
+            "label": "Obtener Teléfonos",
             "pageTitle": "Obtener Teléfonos",
             "slug": "personas/obtener/obtenertelefonos"
           },
           {
             "type": "file",
-            "label": "ObtenerTipodePersona",
+            "label": "Obtener Tipo de Persona",
             "pageTitle": "Obtener Tipo de Persona",
             "slug": "personas/obtener/obtenertipodepersona"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeDocumento",
+            "label": "Obtener Tipos de Documento",
             "pageTitle": "Obtener Tipos de Documento",
             "slug": "personas/obtener/obtenertiposdedocumento"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposDeFuncionarioPublico",
+            "label": "Obtener Tipos de Funcionario Público",
             "pageTitle": "Obtener Tipos de Funcionario Público",
             "slug": "personas/obtener/obtenertiposdefuncionariopublico"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposDePEP",
+            "label": "Obtener Tipos de PEP",
             "pageTitle": "Obtener Tipos de PEP",
             "slug": "personas/obtener/obtenertiposdepep"
           },
           {
             "type": "file",
-            "label": "ObtenerTitularesDelTelefono",
+            "label": "Obtener Titulares de Teléfono",
             "pageTitle": "Obtener Titulares de Teléfono",
             "slug": "personas/obtener/obtenertitularesdeltelefono"
           },
           {
             "type": "file",
-            "label": "ObtenerVíctimaHechoViolento",
+            "label": "Obtener Víctima Hecho Violento",
             "pageTitle": "Obtener Víctima Hecho Violento",
             "slug": "personas/obtener/obtenervictimahechoviolento"
           },
           {
             "type": "file",
-            "label": "ObtenerVínculos",
+            "label": "Obtener Vínculos",
             "pageTitle": "Obtener Vínculos",
             "slug": "personas/obtener/obtenervinculos"
           },
           {
             "type": "file",
-            "label": "ObtenerVínculosdeAfinidad",
+            "label": "Obtener Vínculos de Afinidad",
             "pageTitle": "Obtener Vínculos de Afinidad",
             "slug": "personas/obtener/obtenervinculosdeafinidad"
           },
           {
             "type": "file",
-            "label": "ObtenerVínculosdeConsanguinidad",
+            "label": "Obtener Vínculos de Consanguinidad",
             "pageTitle": "Obtener Vínculos de Consanguinidad",
             "slug": "personas/obtener/obtenervinculosdeconsanguinidad"
           },
           {
             "type": "file",
-            "label": "ObtenerVínculosJuridicos",
+            "label": "Obtener Vínculos Juridicos",
             "pageTitle": "Obtener Vínculos Juridicos",
             "slug": "personas/obtener/obtenervinculosjuridicos"
           }
@@ -3823,25 +3805,25 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarTextos",
+            "label": "Actualizar Textos",
             "pageTitle": "Actualizar Textos",
             "slug": "personas/textos/actualizartextos"
           },
           {
             "type": "file",
-            "label": "AgregarTextos",
+            "label": "Agregar Textos",
             "pageTitle": "Agregar Textos",
             "slug": "personas/textos/agregartextos"
           },
           {
             "type": "file",
-            "label": "EliminarTextos",
+            "label": "Eliminar Textos",
             "pageTitle": "Eliminar Textos",
             "slug": "personas/textos/eliminartextos"
           },
           {
             "type": "file",
-            "label": "ObtenerTextos",
+            "label": "Obtener Textos",
             "pageTitle": "Obtener Textos",
             "slug": "personas/textos/obtenertextos"
           }
@@ -3854,43 +3836,43 @@
         "children": [
           {
             "type": "file",
-            "label": "EvaluarPAE",
+            "label": "Evaluar PAE",
             "pageTitle": "Evaluar PAE",
             "slug": "personas/validar/evaluarpae"
           },
           {
             "type": "file",
-            "label": "ValidarCorreoElectronico",
+            "label": "Validar Correo electrónico",
             "pageTitle": "Validar Correo electrónico",
             "slug": "personas/validar/validarcorreoelectronico"
           },
           {
             "type": "file",
-            "label": "ValidarDocumento",
+            "label": "Validar Documento",
             "pageTitle": "Validar Documento",
             "slug": "personas/validar/validardocumento"
           },
           {
             "type": "file",
-            "label": "ValidarenListasNegras",
+            "label": "Validar en Listas Negras",
             "pageTitle": "Validar en Listas Negras",
             "slug": "personas/validar/validarenlistasnegras"
           },
           {
             "type": "file",
-            "label": "ValidarExistencia",
+            "label": "Validar Existencia",
             "pageTitle": "Validar Existencia",
             "slug": "personas/validar/validarexistencia"
           },
           {
             "type": "file",
-            "label": "ValidarListasInhabilitados",
+            "label": "Validar Listas Inhabilitados",
             "pageTitle": "Validar Listas Inhabilitados",
             "slug": "personas/validar/validarlistasinhabilitados"
           },
           {
             "type": "file",
-            "label": "VerificarEmpleado",
+            "label": "Verificar Empleado",
             "pageTitle": "Verificar Empleado",
             "slug": "personas/validar/verificarempleado"
           }
@@ -3910,25 +3892,25 @@
         "children": [
           {
             "type": "file",
-            "label": "ConvertirTasaAnualEfectivaaLineal",
+            "label": "Convertir Tasa Anual Efectiva a Lineal",
             "pageTitle": "Convertir Tasa Anual Efectiva a Lineal",
             "slug": "precios/convertir/convertirtasaanualefectivaalineal"
           },
           {
             "type": "file",
-            "label": "ConvertirTasaAnualLinealaEfectiva",
+            "label": "Convertir Tasa Anual Lineal a Efectiva",
             "pageTitle": "Convertir Tasa Anual Lineal a Efectiva",
             "slug": "precios/convertir/convertirtasaanuallinealaefectiva"
           },
           {
             "type": "file",
-            "label": "ConvertirTasaMensualEfectivaaLineal",
+            "label": "Convertir Tasa Mensual Efectiva a Lineal",
             "pageTitle": "Convertir Tasa Mensual Efectiva a Lineal",
             "slug": "precios/convertir/convertirtasamensualefectivaalineal"
           },
           {
             "type": "file",
-            "label": "ConvertirTasaMensualLinealaEfectiva",
+            "label": "Convertir Tasa Mensual Lineal a Efectiva",
             "pageTitle": "Convertir Tasa Mensual Lineal a Efectiva",
             "slug": "precios/convertir/convertirtasamensuallinealaefectiva"
           }
@@ -3941,79 +3923,79 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerCotización",
+            "label": "Obtener Cotización",
             "pageTitle": "Obtener Cotización",
             "slug": "precios/obtener/obtenercotizacion"
           },
           {
             "type": "file",
-            "label": "ObtenerCotizaciónaFecha",
+            "label": "Obtener Cotización a Fecha",
             "pageTitle": "Obtener Cotización a Fecha",
             "slug": "precios/obtener/obtenercotizacionafecha"
           },
           {
             "type": "file",
-            "label": "ObtenerCotizaciónCierre",
+            "label": "Obtener Cotización Cierre",
             "pageTitle": "Obtener Cotización Cierre",
             "slug": "precios/obtener/obtenercotizacioncierre"
           },
           {
             "type": "file",
-            "label": "ObtenerCotizacionesPizarraEspecial",
+            "label": "Obtener Cotizaciones de Pizarra Especial",
             "pageTitle": "Obtener Cotizaciones de Pizarra Especial",
             "slug": "precios/obtener/obtenercotizacionespizarraespecial"
           },
           {
             "type": "file",
-            "label": "ObtenerPizarraEspecialporTransacción",
+            "label": "Obtener Pizarra Especial por Transacción",
             "pageTitle": "Obtener Pizarra Especial por Transacción",
             "slug": "precios/obtener/obtenerpizarraespecialportransaccion"
           },
           {
             "type": "file",
-            "label": "ObtenerPrecioaFecha",
+            "label": "Obtener Precio a Fecha",
             "pageTitle": "Obtener Precio a Fecha",
             "slug": "precios/obtener/obtenerprecioafecha"
           },
           {
             "type": "file",
-            "label": "ObtenerPrecioEspecie",
+            "label": "Obtener Precio Especie",
             "pageTitle": "Obtener Precio Especie",
             "slug": "precios/obtener/obtenerprecioespecie"
           },
           {
             "type": "file",
-            "label": "ObtenerTasadeOperación",
+            "label": "Obtener Tasa de Operación",
             "pageTitle": "Obtener Tasa de Operación",
             "slug": "precios/obtener/obtenertasadeoperacion"
           },
           {
             "type": "file",
-            "label": "ObtenerTasaParaCliente",
+            "label": "Obtener Tasa Para Cliente",
             "pageTitle": "Obtener Tasa Para Cliente",
             "slug": "precios/obtener/obtenertasaparacliente"
           },
           {
             "type": "file",
-            "label": "ObtenerTasaParaProducto",
+            "label": "Obtener Tasa Para Producto",
             "pageTitle": "Obtener Tasa Para Producto",
             "slug": "precios/obtener/obtenertasaparaproducto"
           },
           {
             "type": "file",
-            "label": "ObtenerTipodeCambio",
+            "label": "Obtener Tipo de Cambio",
             "pageTitle": "Obtener Tipo de Cambio",
             "slug": "precios/obtener/obtenertipodecambio"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposDeCambioEspeciales",
+            "label": "Obtener Tipos de Cambio Especiales",
             "pageTitle": "Obtener Tipos de Cambio Especiales",
             "slug": "precios/obtener/obtenertiposdecambioespeciales"
           },
           {
             "type": "file",
-            "label": "ObtenerValoresPizarraPorModulo",
+            "label": "Obtener Valores de Pizarra Por Módulo",
             "pageTitle": "Obtener Valores de Pizarra Por Módulo",
             "slug": "precios/obtener/obtenervalorespizarrapormodulo"
           }
@@ -4033,19 +4015,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ConfirmarCancelacionAnticipada",
+            "label": "Confirmar Cancelación Anticipada",
             "pageTitle": "Confirmar Cancelación Anticipada",
             "slug": "prestamos/cancelacion-anticipada/confirmarcancelacionanticipada"
           },
           {
             "type": "file",
-            "label": "ObtenerSimulacionCancAnticipada",
+            "label": "Obtener Simulación de Cancelación Anticipada",
             "pageTitle": "Obtener Simulación de Cancelación Anticipada",
             "slug": "prestamos/cancelacion-anticipada/obtenersimulacioncancanticipada"
           },
           {
             "type": "file",
-            "label": "SimularCancelacionAnticipada",
+            "label": "Simular Cancelación Anticipada",
             "pageTitle": "Simular Cancelación Anticipada",
             "slug": "prestamos/cancelacion-anticipada/simularcancelacionanticipada"
           }
@@ -4064,19 +4046,19 @@
           },
           {
             "type": "file",
-            "label": "CancelaraFecha",
+            "label": "Cancelar a Fecha",
             "pageTitle": "Cancelar a Fecha",
             "slug": "prestamos/cancelar/cancelarafecha"
           },
           {
             "type": "file",
-            "label": "CancelaraFechaTerceros",
+            "label": "Cancelar a Fecha Terceros",
             "pageTitle": "Cancelar a Fecha Terceros",
             "slug": "prestamos/cancelar/cancelarafechaterceros"
           },
           {
             "type": "file",
-            "label": "CancelarTerceros",
+            "label": "Cancelar Terceros",
             "pageTitle": "Cancelar Terceros",
             "slug": "prestamos/cancelar/cancelarterceros"
           }
@@ -4095,25 +4077,25 @@
           },
           {
             "type": "file",
-            "label": "ContratarAmpliación",
+            "label": "Contratar Ampliación",
             "pageTitle": "Contratar Ampliación",
             "slug": "prestamos/contratar/contratarampliacion"
           },
           {
             "type": "file",
-            "label": "ContratarRefinanciacion",
+            "label": "Contratar Refinanciación",
             "pageTitle": "Contratar Refinanciación",
             "slug": "prestamos/contratar/contratarrefinanciacion"
           },
           {
             "type": "file",
-            "label": "ContratarRefinanciaciónporDeudaTotal",
+            "label": "Contratar Refinanciación por Deuda Total",
             "pageTitle": "Contratar Refinanciación por Deuda Total",
             "slug": "prestamos/contratar/contratarrefinanciacionpordeudatotal"
           },
           {
             "type": "file",
-            "label": "ContratarRefinanciaciónporSaldoCapital",
+            "label": "Contratar Refinanciación por Saldo Capital",
             "pageTitle": "Contratar Refinanciación por Saldo Capital",
             "slug": "prestamos/contratar/contratarrefinanciacionporsaldocapital"
           }
@@ -4126,31 +4108,31 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarDocumentoDigital",
+            "label": "Actualizar Documento Digital",
             "pageTitle": "Actualizar Documento Digital",
             "slug": "prestamos/documentos-digitales/actualizardocumentodigital"
           },
           {
             "type": "file",
-            "label": "AsociarDocumentoDigital",
+            "label": "Asociar Documento Digital",
             "pageTitle": "Asociar Documento Digital",
             "slug": "prestamos/documentos-digitales/asociardocumentodigital"
           },
           {
             "type": "file",
-            "label": "EliminarDocumentoDigital",
+            "label": "Eliminar Documento Digital",
             "pageTitle": "Eliminar Documento Digital",
             "slug": "prestamos/documentos-digitales/eliminardocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentoDigital",
+            "label": "Obtener Documento Digital",
             "pageTitle": "Obtener Documento Digital",
             "slug": "prestamos/documentos-digitales/obtenerdocumentodigital"
           },
           {
             "type": "file",
-            "label": "ObtenerDocumentosDigitales",
+            "label": "Obtener Documentos Digitales",
             "pageTitle": "Obtener Documentos Digitales",
             "slug": "prestamos/documentos-digitales/obtenerdocumentosdigitales"
           }
@@ -4163,211 +4145,211 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerCronograma",
+            "label": "Obtener Cronograma",
             "pageTitle": "Obtener Cronograma",
             "slug": "prestamos/obtener/obtenercronograma"
           },
           {
             "type": "file",
-            "label": "ObtenerCronogramaaFecha",
+            "label": "Obtener Cronograma a Fecha",
             "pageTitle": "Obtener Cronograma a Fecha",
             "slug": "prestamos/obtener/obtenercronogramaafecha"
           },
           {
             "type": "file",
-            "label": "ObtenerCronogramaconPagosaFecha",
+            "label": "Obtener Cronograma con Pagos a Fecha",
             "pageTitle": "Obtener Cronograma con Pagos a Fecha",
             "slug": "prestamos/obtener/obtenercronogramaconpagosafecha"
           },
           {
             "type": "file",
-            "label": "ObtenerCronogramaenEspecie",
+            "label": "Obtener Cronograma en Especie",
             "pageTitle": "Obtener Cronograma en Especie",
             "slug": "prestamos/obtener/obtenercronogramaenespecie"
           },
           {
             "type": "file",
-            "label": "ObtenerCronogramaOriginal",
+            "label": "Obtener Cronograma Original",
             "pageTitle": "Obtener Cronograma Original",
             "slug": "prestamos/obtener/obtenercronogramaoriginal"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentadeCobro",
+            "label": "Obtener Cuentas de Cobro",
             "pageTitle": "Obtener Cuentas de Cobro",
             "slug": "prestamos/obtener/obtenercuentadecobro"
           },
           {
             "type": "file",
-            "label": "ObtenerDatosdelPróximoVencimiento",
+            "label": "Obtener Datos del Próximo Vencimiento",
             "pageTitle": "Obtener Datos del Próximo Vencimiento",
             "slug": "prestamos/obtener/obtenerdatosdelproximovencimiento"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalle",
+            "label": "Obtener Detalle",
             "pageTitle": "Obtener Detalle",
             "slug": "prestamos/obtener/obtenerdetalle"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleaFecha",
+            "label": "Obtener Detalle a Fecha",
             "pageTitle": "Obtener Detalle a Fecha",
             "slug": "prestamos/obtener/obtenerdetalleafecha"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeCancelacionTotal",
+            "label": "Obtener Detalle de Cancelación Total",
             "pageTitle": "Obtener Detalle de Cancelación Total",
             "slug": "prestamos/obtener/obtenerdetalledecancelaciontotal"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeOferta",
+            "label": "Obtener Detalle de Oferta",
             "pageTitle": "Obtener Detalle de Oferta",
             "slug": "prestamos/obtener/obtenerdetalledeoferta"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeOfertaAmortizable",
+            "label": "Obtener Detalle de Oferta Amortizable",
             "pageTitle": "Obtener Detalle de Oferta Amortizable",
             "slug": "prestamos/obtener/obtenerdetalledeofertaamortizable"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledeOperacionesaRefinanciar",
+            "label": "Obtener Detalle de Operaciones a Refinanciar",
             "pageTitle": "Obtener Detalle de Operaciones a Refinanciar",
             "slug": "prestamos/obtener/obtenerdetalledeoperacionesarefinanciar"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalledePréstamoCancelado",
+            "label": "Obtener Detalle de Préstamo Cancelado",
             "pageTitle": "Obtener Detalle de Préstamo Cancelado",
             "slug": "prestamos/obtener/obtenerdetalledeprestamocancelado"
           },
           {
             "type": "file",
-            "label": "ObtenerDetallePagoPréstamo",
+            "label": "Obtener Detalle Pago Préstamo",
             "pageTitle": "Obtener Detalle Pago Préstamo",
             "slug": "prestamos/obtener/obtenerdetallepagoprestamo"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleReducido",
+            "label": "Obtener Detalle Reducido",
             "pageTitle": "Obtener Detalle Reducido",
             "slug": "prestamos/obtener/obtenerdetallereducido"
           },
           {
             "type": "file",
-            "label": "ObtenerDetalleSimulación",
+            "label": "Obtener Detalle Simulación",
             "pageTitle": "Obtener Detalle Simulación",
             "slug": "prestamos/obtener/obtenerdetallesimulacion"
           },
           {
             "type": "file",
-            "label": "ObtenerDeuda",
+            "label": "Obtener Deuda",
             "pageTitle": "Obtener Deuda",
             "slug": "prestamos/obtener/obtenerdeuda"
           },
           {
             "type": "file",
-            "label": "ObtenerDeudaPréstamoCastigado",
+            "label": "Obtener Deuda Préstamo Castigado",
             "pageTitle": "Obtener Deuda Préstamo Castigado",
             "slug": "prestamos/obtener/obtenerdeudaprestamocastigado"
           },
           {
             "type": "file",
-            "label": "ObtenerDeudaVencida",
+            "label": "Obtener Deuda Vencida",
             "pageTitle": "Obtener Deuda Vencida",
             "slug": "prestamos/obtener/obtenerdeudavencida"
           },
           {
             "type": "file",
-            "label": "ObtenerFechadeIncumplimiento",
+            "label": "Obtener Fecha de Incumplimiento",
             "pageTitle": "Obtener Fecha de Incumplimiento",
             "slug": "prestamos/obtener/obtenerfechadeincumplimiento"
           },
           {
             "type": "file",
-            "label": "ObtenerFechadeUltimoPago",
+            "label": "Obtener Fecha de Último Pago",
             "pageTitle": "Obtener Fecha de Último Pago",
             "slug": "prestamos/obtener/obtenerfechadeultimopago"
           },
           {
             "type": "file",
-            "label": "ObtenerFechasdePago",
+            "label": "Obtener Fechas de Pago",
             "pageTitle": "Obtener Fechas de Pago",
             "slug": "prestamos/obtener/obtenerfechasdepago"
           },
           {
             "type": "file",
-            "label": "ObtenerInformaciónAdicional",
+            "label": "Obtener Información Adicional",
             "pageTitle": "Obtener Información Adicional",
             "slug": "prestamos/obtener/obtenerinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ObtenerMontodeCancelación",
+            "label": "Obtener Monto de Cancelación",
             "pageTitle": "Obtener Monto de Cancelación",
             "slug": "prestamos/obtener/obtenermontodecancelacion"
           },
           {
             "type": "file",
-            "label": "ObtenerMotivosPrecancelacion",
+            "label": "Obtener Motivos de Precancelación",
             "pageTitle": "Obtener Motivos de Precancelación",
             "slug": "prestamos/obtener/obtenermotivosprecancelacion"
           },
           {
             "type": "file",
-            "label": "ObtenerPagosdeCuota",
+            "label": "Obtener Pagos de Cuota",
             "pageTitle": "Obtener Pagos de Cuota",
             "slug": "prestamos/obtener/obtenerpagosdecuota"
           },
           {
             "type": "file",
-            "label": "ObtenerPagosdeunPréstamo",
+            "label": "Obtener Pagos de un Préstamo",
             "pageTitle": "Obtener Pagos de un Préstamo",
             "slug": "prestamos/obtener/obtenerpagosdeunprestamo"
           },
           {
             "type": "file",
-            "label": "ObtenerPrestamosaVencer(DisponibleúnicamenteparaV3R1)",
+            "label": "Obtener Préstamos a Vencer",
             "pageTitle": "Obtener Préstamos a Vencer",
             "slug": "prestamos/obtener/obtenerprestamosavencer-disponibleunicamenteparav3r1"
           },
           {
             "type": "file",
-            "label": "ObtenerPrestamosporRangoMora(DisponibleúnicamenteparaV3R1)",
+            "label": "Obtener Préstamos por Rango Mora",
             "pageTitle": "Obtener Préstamos por Rango Mora",
             "slug": "prestamos/obtener/obtenerprestamosporrangomora-disponibleunicamenteparav3r1"
           },
           {
             "type": "file",
-            "label": "ObtenerPrestamossinMora(DisponibleúnicamenteparaV3R1)",
+            "label": "Obtener Préstamos Sin Mora",
             "pageTitle": "Obtener Préstamos Sin Mora",
             "slug": "prestamos/obtener/obtenerprestamossinmora-disponibleunicamenteparav3r1"
           },
           {
             "type": "file",
-            "label": "ObtenerProductos",
+            "label": "Obtener Productos",
             "pageTitle": "Obtener Productos",
             "slug": "prestamos/obtener/obtenerproductos"
           },
           {
             "type": "file",
-            "label": "ObtenerProductosRefinanciacion",
+            "label": "Obtener Productos Refinanciación",
             "pageTitle": "Obtener Productos Refinanciación",
             "slug": "prestamos/obtener/obtenerproductosrefinanciacion"
           },
           {
             "type": "file",
-            "label": "ObtenerRefinanciacionSimulada",
+            "label": "Obtener Refinanciación Simulada",
             "pageTitle": "Obtener Refinanciación Simulada",
             "slug": "prestamos/obtener/obtenerrefinanciacionsimulada"
           },
           {
             "type": "file",
-            "label": "ObtenerSegurosAsociados",
+            "label": "Obtener Seguros Asociados",
             "pageTitle": "Obtener Seguros Asociados",
             "slug": "prestamos/obtener/obtenersegurosasociados"
           }
@@ -4380,49 +4362,49 @@
         "children": [
           {
             "type": "file",
-            "label": "AbonaraCuenta",
+            "label": "Abonar a Cuenta",
             "pageTitle": "Abonar a Cuenta",
             "slug": "prestamos/operar/abonaracuenta"
           },
           {
             "type": "file",
-            "label": "ActualizarInformaciónAdicional",
+            "label": "Actualizar Información Adicional",
             "pageTitle": "Actualizar Información Adicional",
             "slug": "prestamos/operar/actualizarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "ActualizarPrestamosconEvento(DisponibleúnicamenteparaV3R1)",
+            "label": "Actualizar Prestamos con Evento",
             "pageTitle": "Actualizar Prestamos con Evento",
             "slug": "prestamos/operar/actualizarprestamosconevento-disponibleunicamenteparav3r1"
           },
           {
             "type": "file",
-            "label": "AgregarCuentadeCobro",
+            "label": "Agregar Cuenta de Cobro",
             "pageTitle": "Agregar Cuenta de Cobro",
             "slug": "prestamos/operar/agregarcuentadecobro"
           },
           {
             "type": "file",
-            "label": "AgregarInformaciónAdicional",
+            "label": "Agregar Información Adicional",
             "pageTitle": "Agregar Información Adicional",
             "slug": "prestamos/operar/agregarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "EliminarCuentadeCobro",
+            "label": "Eliminar Cuenta de Cobro",
             "pageTitle": "Eliminar Cuenta de Cobro",
             "slug": "prestamos/operar/eliminarcuentadecobro"
           },
           {
             "type": "file",
-            "label": "EliminarInformaciónAdicional",
+            "label": "Eliminar Información Adicional",
             "pageTitle": "Eliminar Información Adicional",
             "slug": "prestamos/operar/eliminarinformacionadicional"
           },
           {
             "type": "file",
-            "label": "SolicitarPrecancelacion",
+            "label": "Solicitar Precancelación",
             "pageTitle": "Solicitar Precancelación",
             "slug": "prestamos/operar/solicitarprecancelacion"
           }
@@ -4435,37 +4417,37 @@
         "children": [
           {
             "type": "file",
-            "label": "AdelantarCapitalConReduccionDeCuota",
+            "label": "Adelantar Capital Con Reducción De Cuota",
             "pageTitle": "Adelantar Capital Con Reducción De Cuota",
             "slug": "prestamos/pagar/adelantarcapitalconreducciondecuota"
           },
           {
             "type": "file",
-            "label": "AdelantarCapitalConReduccionDePlazo",
+            "label": "Adelantar Capital Con Reducción De Plazo",
             "pageTitle": "Adelantar Capital Con Reducción De Plazo",
             "slug": "prestamos/pagar/adelantarcapitalconreducciondeplazo"
           },
           {
             "type": "file",
-            "label": "PagarCuota",
+            "label": "Pagar Cuota",
             "pageTitle": "Pagar Cuota",
             "slug": "prestamos/pagar/pagarcuota"
           },
           {
             "type": "file",
-            "label": "PagarCuotaaFecha",
+            "label": "Pagar Cuota a Fecha",
             "pageTitle": "Pagar Cuota a Fecha",
             "slug": "prestamos/pagar/pagarcuotaafecha"
           },
           {
             "type": "file",
-            "label": "PagarCuotaaFechaTerceros",
+            "label": "Pagar Cuota a Fecha Terceros",
             "pageTitle": "Pagar Cuota a Fecha Terceros",
             "slug": "prestamos/pagar/pagarcuotaafechaterceros"
           },
           {
             "type": "file",
-            "label": "PagarCuotaTerceros",
+            "label": "Pagar Cuota Terceros",
             "pageTitle": "Pagar Cuota Terceros",
             "slug": "prestamos/pagar/pagarcuotaterceros"
           }
@@ -4478,19 +4460,19 @@
         "children": [
           {
             "type": "file",
-            "label": "ResimularAmortizable",
+            "label": "Resimular Amortizable",
             "pageTitle": "Resimular Amortizable",
             "slug": "prestamos/simular/resimularamortizable"
           },
           {
             "type": "file",
-            "label": "ResimularAmpliacion",
+            "label": "Resimular Ampliación",
             "pageTitle": "Resimular Ampliación",
             "slug": "prestamos/simular/resimularampliacion"
           },
           {
             "type": "file",
-            "label": "ResimularRefinanciacion",
+            "label": "Resimular Refinanciación",
             "pageTitle": "Resimular Refinanciación",
             "slug": "prestamos/simular/resimularrefinanciacion"
           },
@@ -4502,127 +4484,127 @@
           },
           {
             "type": "file",
-            "label": "SimularAmortizable",
+            "label": "Simular Amortizable",
             "pageTitle": "Simular Amortizable",
             "slug": "prestamos/simular/simularamortizable"
           },
           {
             "type": "file",
-            "label": "SimularAmortizableSinCliente",
+            "label": "Simular Amortizable Sin Cliente",
             "pageTitle": "Simular Amortizable Sin Cliente",
             "slug": "prestamos/simular/simularamortizablesincliente"
           },
           {
             "type": "file",
-            "label": "SimularAmpliación",
+            "label": "Simular Ampliación",
             "pageTitle": "Simular Ampliación",
             "slug": "prestamos/simular/simularampliacion"
           },
           {
             "type": "file",
-            "label": "SimularAmpliaciónIngresandoSeguros",
+            "label": "Simular Ampliación Ingresando Seguros",
             "pageTitle": "Simular Ampliación Ingresando Seguros",
             "slug": "prestamos/simular/simularampliacioningresandoseguros"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoCapitalyCantidaddeCuotas",
+            "label": "Simular Despejando Capital y Cantidad de Cuotas",
             "pageTitle": "Simular Despejando Capital y Cantidad de Cuotas",
             "slug": "prestamos/simular/simulardespejandocapitalycantidaddecuotas"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoCapitalyCantidaddeCuotasSinCliente",
+            "label": "Simular Despejando Capital y Cantidad de Cuotas Sin Cliente",
             "pageTitle": "Simular Despejando Capital y Cantidad de Cuotas Sin Cliente",
             "slug": "prestamos/simular/simulardespejandocapitalycantidaddecuotassincliente"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoFechadeVencimientoyCantidaddeCuotas",
+            "label": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas",
             "pageTitle": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas",
             "slug": "prestamos/simular/simulardespejandofechadevencimientoycantidaddecuotas"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente",
+            "label": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente",
             "pageTitle": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente",
             "slug": "prestamos/simular/simulardespejandofechadevencimientoycantidaddecuotassincliente"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoFechadeVencimientoyTasa",
+            "label": "Simular Despejando Fecha de Vencimiento y Tasa",
             "pageTitle": "Simular Despejando Fecha de Vencimiento y Tasa",
             "slug": "prestamos/simular/simulardespejandofechadevencimientoytasa"
           },
           {
             "type": "file",
-            "label": "SimularDespejandoFechadeVencimientoyTasaSinCliente",
+            "label": "Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente",
             "pageTitle": "Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente",
             "slug": "prestamos/simular/simulardespejandofechadevencimientoytasasincliente"
           },
           {
             "type": "file",
-            "label": "SimularIngresandoBalloon",
+            "label": "Simular Ingresando Balloon",
             "pageTitle": "Simular Ingresando Balloon",
             "slug": "prestamos/simular/simularingresandoballoon"
           },
           {
             "type": "file",
-            "label": "SimularIngresandoBalloonSinCliente",
+            "label": "Simular Ingresando Balloon Sin Cliente",
             "pageTitle": "Simular Ingresando Balloon Sin Cliente",
             "slug": "prestamos/simular/simularingresandoballoonsincliente"
           },
           {
             "type": "file",
-            "label": "SimularIngresandoSeguros",
+            "label": "Simular Ingresando Seguros",
             "pageTitle": "Simular Ingresando Seguros",
             "slug": "prestamos/simular/simularingresandoseguros"
           },
           {
             "type": "file",
-            "label": "SimularIngresandoSegurosSinCliente",
+            "label": "Simular Ingresando Seguros Sin Cliente",
             "pageTitle": "Simular Ingresando Seguros Sin Cliente",
             "slug": "prestamos/simular/simularingresandosegurossincliente"
           },
           {
             "type": "file",
-            "label": "SimularLibreAmortización",
+            "label": "Simular Libre Amortización",
             "pageTitle": "Simular Libre Amortización",
             "slug": "prestamos/simular/simularlibreamortizacion"
           },
           {
             "type": "file",
-            "label": "SimularLibreAmortizaciónSinCliente",
+            "label": "Simular Libre Amortización Sin Cliente",
             "pageTitle": "Simular Libre Amortización Sin Cliente",
             "slug": "prestamos/simular/simularlibreamortizacionsincliente"
           },
           {
             "type": "file",
-            "label": "SimularOfertas",
+            "label": "Simular Ofertas",
             "pageTitle": "Simular Ofertas",
             "slug": "prestamos/simular/simularofertas"
           },
           {
             "type": "file",
-            "label": "SimularPlazoFijo",
+            "label": "Simular Plazo Fijo",
             "pageTitle": "Simular Plazo Fijo",
             "slug": "prestamos/simular/simularplazofijo"
           },
           {
             "type": "file",
-            "label": "SimularRefinanciacion",
+            "label": "Simular Refinanciación",
             "pageTitle": "Simular Refinanciación",
             "slug": "prestamos/simular/simularrefinanciacion"
           },
           {
             "type": "file",
-            "label": "SimularRefinanciaciónporDeudaTotal",
+            "label": "Simular Refinanciación por Deuda Total",
             "pageTitle": "Simular Refinanciación por Deuda Total",
             "slug": "prestamos/simular/simularrefinanciacionpordeudatotal"
           },
           {
             "type": "file",
-            "label": "SimularRefinanciaciónporSaldoCapital",
+            "label": "Simular Refinanciación por Saldo Capital",
             "pageTitle": "Simular Refinanciación por Saldo Capital",
             "slug": "prestamos/simular/simularrefinanciacionporsaldocapital"
           }
@@ -4635,25 +4617,25 @@
         "children": [
           {
             "type": "file",
-            "label": "ActualizarTextos",
+            "label": "Actualizar Textos",
             "pageTitle": "Actualizar Textos",
             "slug": "prestamos/textos/actualizartextos"
           },
           {
             "type": "file",
-            "label": "AgregarTextos",
+            "label": "Agregar Textos",
             "pageTitle": "Agregar Textos",
             "slug": "prestamos/textos/agregartextos"
           },
           {
             "type": "file",
-            "label": "EliminarTextos",
+            "label": "Eliminar Textos",
             "pageTitle": "Eliminar Textos",
             "slug": "prestamos/textos/eliminartextos"
           },
           {
             "type": "file",
-            "label": "ObtenerTextos",
+            "label": "Obtener Textos",
             "pageTitle": "Obtener Textos",
             "slug": "prestamos/textos/obtenertextos"
           }
@@ -4668,25 +4650,25 @@
     "children": [
       {
         "type": "file",
-        "label": "EvaluarRegladeNegocio",
+        "label": "Evaluar Regla de Negocio",
         "pageTitle": "Evaluar Regla de Negocio",
         "slug": "reglas-de-negocio/evaluarregladenegocio"
       },
       {
         "type": "file",
-        "label": "ObtenerReglasdeNegocio",
+        "label": "Obtener Reglas de Negocio",
         "pageTitle": "Obtener Reglas de Negocio",
         "slug": "reglas-de-negocio/obtenerreglasdenegocio"
       },
       {
         "type": "file",
-        "label": "ObtenerVariablesRegla",
+        "label": "Obtener Variables Regla",
         "pageTitle": "Obtener Variables Regla",
         "slug": "reglas-de-negocio/obtenervariablesregla"
       },
       {
         "type": "file",
-        "label": "ValidarDatosRegladeNegocio",
+        "label": "Validar Datos Regla de Negocio",
         "pageTitle": "Validar Datos Regla de Negocio",
         "slug": "reglas-de-negocio/validardatosregladenegocio"
       }
@@ -4699,31 +4681,31 @@
     "children": [
       {
         "type": "file",
-        "label": "AutorizarExcepción",
+        "label": "Autorizar Excepción",
         "pageTitle": "Autorizar Excepción",
         "slug": "seguridad/autorizarexcepcion"
       },
       {
         "type": "file",
-        "label": "ObtenerDetalledeExcepción",
+        "label": "Obtener Detalle de Excepción",
         "pageTitle": "Obtener Detalle de Excepción",
         "slug": "seguridad/obtenerdetalledeexcepcion"
       },
       {
         "type": "file",
-        "label": "ObtenerExcepciones",
+        "label": "Obtener Excepciones",
         "pageTitle": "Obtener Excepciones",
         "slug": "seguridad/obtenerexcepciones"
       },
       {
         "type": "file",
-        "label": "RechazarExcepcion",
+        "label": "Rechazar Excepción",
         "pageTitle": "Rechazar Excepción",
         "slug": "seguridad/rechazarexcepcion"
       },
       {
         "type": "file",
-        "label": "RegistrarDispositivo",
+        "label": "Registrar Dispositivo",
         "pageTitle": "Registrar Dispositivo",
         "slug": "seguridad/registrardispositivo"
       }
@@ -4736,31 +4718,31 @@
     "children": [
       {
         "type": "file",
-        "label": "ContratarSeguro",
+        "label": "Contratar Seguro",
         "pageTitle": "Contratar Seguro",
         "slug": "seguros-voluntarios/contratarseguro"
       },
       {
         "type": "file",
-        "label": "ObtenerMontosDeUnSeguro",
+        "label": "Obtener Montos de Seguro",
         "pageTitle": "Obtener Montos de Seguro",
         "slug": "seguros-voluntarios/obtenermontosdeunseguro"
       },
       {
         "type": "file",
-        "label": "ObtenerSeguros",
+        "label": "Obtener Seguros",
         "pageTitle": "Obtener Seguros",
         "slug": "seguros-voluntarios/obtenerseguros"
       },
       {
         "type": "file",
-        "label": "ObtenerSegurosAPagar",
+        "label": "Obtener Seguros a Pagar",
         "pageTitle": "Obtener Seguros a Pagar",
         "slug": "seguros-voluntarios/obtenersegurosapagar"
       },
       {
         "type": "file",
-        "label": "PagarSeguro",
+        "label": "Pagar Seguro",
         "pageTitle": "Pagar Seguro",
         "slug": "seguros-voluntarios/pagarseguro"
       }
@@ -4778,85 +4760,85 @@
         "children": [
           {
             "type": "file",
-            "label": "ObtenerCódigosdeLimites",
+            "label": "Obtener Códigos de Límites",
             "pageTitle": "Obtener Códigos de Límites",
             "slug": "tarjetas-de-debito/obtener/obtenercodigosdelimites"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentaPreferencial",
+            "label": "Obtener Cuenta Preferencial",
             "pageTitle": "Obtener Cuenta Preferencial",
             "slug": "tarjetas-de-debito/obtener/obtenercuentapreferencial"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasaAsociar",
+            "label": "Obtener Cuentas a Asociar",
             "pageTitle": "Obtener Cuentas a Asociar",
             "slug": "tarjetas-de-debito/obtener/obtenercuentasaasociar"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasAsociadas",
+            "label": "Obtener Cuentas Asociadas",
             "pageTitle": "Obtener Cuentas Asociadas",
             "slug": "tarjetas-de-debito/obtener/obtenercuentasasociadas"
           },
           {
             "type": "file",
-            "label": "ObtenerCuentasAsociadasPorTipo",
+            "label": "Obtener Cuentas Asociadas Por Tipo",
             "pageTitle": "Obtener Cuentas Asociadas Por Tipo",
             "slug": "tarjetas-de-debito/obtener/obtenercuentasasociadasportipo"
           },
           {
             "type": "file",
-            "label": "ObtenerDatos",
+            "label": "Obtener Datos",
             "pageTitle": "Obtener Datos",
             "slug": "tarjetas-de-debito/obtener/obtenerdatos"
           },
           {
             "type": "file",
-            "label": "ObtenerDatosContacto",
+            "label": "Obtener Datos de Contacto",
             "pageTitle": "Obtener Datos de Contacto",
             "slug": "tarjetas-de-debito/obtener/obtenerdatoscontacto"
           },
           {
             "type": "file",
-            "label": "ObtenerIdentificadorUnico",
+            "label": "Obtener Identificador Único",
             "pageTitle": "Obtener Identificador Único",
             "slug": "tarjetas-de-debito/obtener/obteneridentificadorunico"
           },
           {
             "type": "file",
-            "label": "ObtenerLímites",
+            "label": "Obtener Límites",
             "pageTitle": "Obtener Límites",
             "slug": "tarjetas-de-debito/obtener/obtenerlimites"
           },
           {
             "type": "file",
-            "label": "ObtenerMovimientos",
+            "label": "Obtener Movimientos",
             "pageTitle": "Obtener Movimientos",
             "slug": "tarjetas-de-debito/obtener/obtenermovimientos"
           },
           {
             "type": "file",
-            "label": "ObtenerTarjeta",
+            "label": "Obtener Tarjeta",
             "pageTitle": "Obtener Tarjeta",
             "slug": "tarjetas-de-debito/obtener/obtenertarjeta"
           },
           {
             "type": "file",
-            "label": "ObtenerTarjetaHabiente",
+            "label": "Obtener Tarjeta Habiente",
             "pageTitle": "Obtener Tarjeta Habiente",
             "slug": "tarjetas-de-debito/obtener/obtenertarjetahabiente"
           },
           {
             "type": "file",
-            "label": "ObtenerTarjetasAdicionales",
+            "label": "Obtener Tarjetas Adicionales",
             "pageTitle": "Obtener Tarjetas Adicionales",
             "slug": "tarjetas-de-debito/obtener/obtenertarjetasadicionales"
           },
           {
             "type": "file",
-            "label": "ObtenerTiposdeCuenta",
+            "label": "Obtener Tipos de Cuenta",
             "pageTitle": "Obtener Tipos de Cuenta",
             "slug": "tarjetas-de-debito/obtener/obtenertiposdecuenta"
           }
@@ -4875,25 +4857,25 @@
           },
           {
             "type": "file",
-            "label": "ActualizarCuentaPreferencial",
+            "label": "Actualizar Cuenta Preferencial",
             "pageTitle": "Actualizar Cuenta Preferencial",
             "slug": "tarjetas-de-debito/operar/actualizarcuentapreferencial"
           },
           {
             "type": "file",
-            "label": "ActualizarDatosContacto",
+            "label": "Actualizar Datos de Contacto",
             "pageTitle": "Actualizar Datos de Contacto",
             "slug": "tarjetas-de-debito/operar/actualizardatoscontacto"
           },
           {
             "type": "file",
-            "label": "AsociarCuenta",
+            "label": "Asociar Cuenta",
             "pageTitle": "Asociar Cuenta",
             "slug": "tarjetas-de-debito/operar/asociarcuenta"
           },
           {
             "type": "file",
-            "label": "BlanquearPin",
+            "label": "Blanquear PIN",
             "pageTitle": "Blanquear PIN",
             "slug": "tarjetas-de-debito/operar/blanquearpin"
           },
@@ -4905,7 +4887,7 @@
           },
           {
             "type": "file",
-            "label": "BloquearDesdeRED",
+            "label": "Bloquear Desde RED",
             "pageTitle": "Bloquear Desde RED",
             "slug": "tarjetas-de-debito/operar/bloqueardesdered"
           },
@@ -4917,7 +4899,7 @@
           },
           {
             "type": "file",
-            "label": "CrearConCuentasAsociadas",
+            "label": "Crear Con Cuentas Asociadas",
             "pageTitle": "Crear Con Cuentas Asociadas",
             "slug": "tarjetas-de-debito/operar/crearconcuentasasociadas"
           },
@@ -4929,7 +4911,7 @@
           },
           {
             "type": "file",
-            "label": "DenunciarDesdeRED",
+            "label": "Denunciar Desde RED",
             "pageTitle": "Denunciar Desde RED",
             "slug": "tarjetas-de-debito/operar/denunciardesdered"
           },
@@ -4941,19 +4923,19 @@
           },
           {
             "type": "file",
-            "label": "DesbloquearDesdeRED",
+            "label": "Desbloquear Desde RED",
             "pageTitle": "Desbloquear Desde RED",
             "slug": "tarjetas-de-debito/operar/desbloqueardesdered"
           },
           {
             "type": "file",
-            "label": "EliminarCuentaAsociada",
+            "label": "Eliminar Cuenta Asociada",
             "pageTitle": "Eliminar Cuenta Asociada",
             "slug": "tarjetas-de-debito/operar/eliminarcuentaasociada"
           },
           {
             "type": "file",
-            "label": "ModificarLímite",
+            "label": "Modificar Límite",
             "pageTitle": "Modificar Límite",
             "slug": "tarjetas-de-debito/operar/modificarlimite"
           }
@@ -4974,19 +4956,19 @@
       },
       {
         "type": "file",
-        "label": "ObtenerEstadoCompra",
+        "label": "Obtener Estado de Compra",
         "pageTitle": "Obtener Estado de Compra",
         "slug": "titulos/obtenerestadocompra"
       },
       {
         "type": "file",
-        "label": "ObtenerGrupos",
+        "label": "Obtener Grupos",
         "pageTitle": "Obtener Grupos",
         "slug": "titulos/obtenergrupos"
       },
       {
         "type": "file",
-        "label": "ObtenerValores",
+        "label": "Obtener Valores",
         "pageTitle": "Obtener Valores",
         "slug": "titulos/obtenervalores"
       }
@@ -4999,7 +4981,7 @@
     "children": [
       {
         "type": "file",
-        "label": "AgregarPerfil",
+        "label": "Agregar Perfil",
         "pageTitle": "Agregar Perfil",
         "slug": "usuarios/agregarperfil"
       },
@@ -5011,31 +4993,31 @@
       },
       {
         "type": "file",
-        "label": "EliminarPerfil",
+        "label": "Eliminar Perfil",
         "pageTitle": "Eliminar Perfil",
         "slug": "usuarios/eliminarperfil"
       },
       {
         "type": "file",
-        "label": "EliminarUsuario",
+        "label": "Eliminar Usuario",
         "pageTitle": "Eliminar Usuario",
         "slug": "usuarios/eliminarusuario"
       },
       {
         "type": "file",
-        "label": "HabilitarEnCanal",
+        "label": "Habilitar en Canal",
         "pageTitle": "Habilitar en Canal",
         "slug": "usuarios/habilitarencanal"
       },
       {
         "type": "file",
-        "label": "HabilitarUsuario",
+        "label": "Habilitar Usuario",
         "pageTitle": "Habilitar Usuario",
         "slug": "usuarios/habilitarusuario"
       },
       {
         "type": "file",
-        "label": "InhabilitarUsuario",
+        "label": "Inhabilitar Usuario",
         "pageTitle": "Inhabilitar Usuario",
         "slug": "usuarios/inhabilitarusuario"
       },
@@ -5053,19 +5035,19 @@
       },
       {
         "type": "file",
-        "label": "ObtenerPerfiles",
+        "label": "Obtener Perfiles",
         "pageTitle": "Obtener Perfiles",
         "slug": "usuarios/obtenerperfiles"
       },
       {
         "type": "file",
-        "label": "ObtenerUsuarios",
+        "label": "Obtener Usuarios",
         "pageTitle": "Obtener Usuarios",
         "slug": "usuarios/obtenerusuarios"
       },
       {
         "type": "file",
-        "label": "ObtenerUsuariosParaPerfil",
+        "label": "Obtener Usuarios Para Perfil",
         "pageTitle": "Obtener Usuarios Para Perfil",
         "slug": "usuarios/obtenerusuariosparaperfil"
       }
@@ -5078,49 +5060,49 @@
     "children": [
       {
         "type": "file",
-        "label": "AgregarRolesUsuario",
+        "label": "Agregar Roles Usuario",
         "pageTitle": "Agregar Roles Usuario",
         "slug": "workflow/agregarrolesusuario"
       },
       {
         "type": "file",
-        "label": "EliminarRolesUsuario",
+        "label": "Eliminar Roles Usuario",
         "pageTitle": "Eliminar Roles Usuario",
         "slug": "workflow/eliminarrolesusuario"
       },
       {
         "type": "file",
-        "label": "ObtenerMetadataDeTarea",
+        "label": "Obtener Metadata De Tarea",
         "pageTitle": "Obtener Metadata De Tarea",
         "slug": "workflow/obtenermetadatadetarea"
       },
       {
         "type": "file",
-        "label": "ObtenerProcesosHabilitados",
+        "label": "Obtener Procesos Habilitados",
         "pageTitle": "Obtener Procesos Habilitados",
         "slug": "workflow/obtenerprocesoshabilitados"
       },
       {
         "type": "file",
-        "label": "ObtenerRoles",
+        "label": "Obtener Roles",
         "pageTitle": "Obtener Roles",
         "slug": "workflow/obtenerroles"
       },
       {
         "type": "file",
-        "label": "ObtenerRolesdeTarea",
+        "label": "Obtener Roles de Tarea",
         "pageTitle": "Obtener Roles de Tarea",
         "slug": "workflow/obtenerrolesdetarea"
       },
       {
         "type": "file",
-        "label": "ObtenerRolesUsuario",
+        "label": "Obtener Roles Usuario",
         "pageTitle": "Obtener Roles Usuario",
         "slug": "workflow/obtenerrolesusuario"
       },
       {
         "type": "file",
-        "label": "ObtenerTareasdeProceso",
+        "label": "Obtener Tareas de Proceso",
         "pageTitle": "Obtener Tareas de Proceso",
         "slug": "workflow/obtenertareasdeproceso"
       }

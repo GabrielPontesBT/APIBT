@@ -290,24 +290,18 @@ Los campos del tipo de dato estructurado sBTPeriodoHabilitado son los siguientes
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-datosExtendidos | [sBTDatoExtendido](#sbtdatoextendidosalida) | Listado de datos complementarios. 
+datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 descripcion | String | Descripción. 
 periodo | Int | Período. 
-
-### sBTDatoExtendidoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
-lista | [sBTDatosLista](#sbtdatolistasalida) | Lista de datos. 
+lista | [sBTDatosLista](#sbtdatalista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido. 
-
-### sBTDatoListaSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
 

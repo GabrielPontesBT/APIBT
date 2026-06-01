@@ -377,9 +377,7 @@ tag | String | Tag del campo CASH.
 valor | String | Valor del campo CASH.
 
 :::
-<!-- CIERRA SDT -->
 
-<!-- ABRE SDT -->
 ::: details sBTResumenBeneficiario  
 
 ### sBTResumenBeneficiario

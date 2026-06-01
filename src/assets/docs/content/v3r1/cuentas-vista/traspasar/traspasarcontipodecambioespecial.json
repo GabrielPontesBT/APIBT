@@ -147,6 +147,36 @@
           "Comentarios": "Identificador de operación de destino del traspaso."
         }
       ]
+    },
+    {
+      "typeName": "sBTResultadoTraspaso",
+      "fields": [
+        {
+          "Nombre": "idMovimiento",
+          "Tipo": "String",
+          "Comentarios": "Identificador de Movimiento String."
+        },
+        {
+          "Nombre": "movimientoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de Movimiento."
+        },
+        {
+          "Nombre": "operacionUIdDestino",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de destino del traspaso."
+        },
+        {
+          "Nombre": "operacionUIdOrigen",
+          "Tipo": "Long",
+          "Comentarios": "Identificador de operación de origen del traspaso."
+        },
+        {
+          "Nombre": "saldoOperacionOrigen",
+          "Tipo": "Double",
+          "Comentarios": "Saldo Actual de operación de origen."
+        }
+      ]
     }
   ],
   "valuesTable": [],

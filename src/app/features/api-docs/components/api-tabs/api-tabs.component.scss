@@ -146,3 +146,24 @@
     }
   }
 }
+
+@media (-webkit-device-pixel-ratio: 1.5) and (min-width: 1200px),
+       (resolution: 1.5dppx) and (min-width: 1200px) {
+  .mat-mdc-tab-group.api-tabs {
+    .mat-mdc-tab-header {
+      --mdc-secondary-navigation-tab-container-height: 36px;
+      font-size: 0.8rem;
+      min-height: 36px !important;
+    }
+
+    .mdc-tab {
+      height: 36px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .mat-mdc-tab-body-wrapper {
+      padding: 1.25rem;
+    }
+  }
+}

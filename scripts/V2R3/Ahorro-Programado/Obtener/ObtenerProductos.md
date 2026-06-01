@@ -189,20 +189,3 @@ moneda | String | Símbolo de la moneda.
 papel | String | Símbolo del papel.  
 :::
 <!-- CIERRA SDT -->
-
-<!-- ABRE SDT -->
-::: details sbtproducto  
-
-### sbtproducto
-
-::: center 
-Los campos del tipo de dato estructurado sbtproducto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-productouid | Long | Identificador único de producto.  
-nombre | String | Nombre del producto.  
-moneda | String | Símbolo de la moneda.  
-papel | String | Símbolo del papel.  
-:::
-<!-- CIERRA SDT -->

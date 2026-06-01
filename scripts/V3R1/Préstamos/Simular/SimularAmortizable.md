@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
-parmsAux | String | [Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores).]
+parmsAux | String | Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores).
 sdtSimulacionInput | [sBTSimulacionInput](#sbtsimulacioninput) | Datos necesarios para la simulación.
 
 @tab Datos de Salida
@@ -800,8 +800,8 @@ cantidadCuotas | Int | Cantidad de cuotas.
 capital | Double | Capital.
 cft | Double | Costo financiero total.
 coeficienteIVA | Double | Coeficiente IVA.
-comisiones | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones.
-comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamosalida) | Listado de comisiones de cuota.
+comisiones | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones.
+comisionesCuota | [sBTComisionPrestamo](#sbtcomisionprestamo) | Listado de comisiones de cuota.
 comisionesDesembolso | Double | Comisiones de desembolso.
 cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo.
 diasRevision | Int | Días de revisión.
@@ -819,7 +819,7 @@ plus | Double | Tasa plus.
 precio | Double | Precio.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 redondeo | Double | Redondeo.
-seguros | [sBTSeguroPrestamo](#sbtseguroprestamosalida) | Listado de seguros.
+seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 segurosDesembolso | Double | Seguros de desembolso.
 tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva.
@@ -885,9 +885,6 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
-
-### sBTSeguroPrestamoSalida
-
 ::: center
 Los campos del tipo de dato estructurado sBTSeguroPrestamo son los siguientes: 
 
@@ -899,9 +896,6 @@ tipo | String | Tipo del seguro.
 modificable | String | Indica si es modificable.
 importeFijo | Decimal | Importe fijo del seguro.
 porcentaje | Decimal | Porcentaje del seguro.
-
-### sBTComisionPrestamoSalida
-
 ::: center 
 Los campos del tipo de dato estructurado sBTComisionPrestamo son los siguientes: 
 
@@ -912,3 +906,4 @@ descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 codigo | Int | Código de comisión.
 :::
+<!-- CIERRA SDT -->

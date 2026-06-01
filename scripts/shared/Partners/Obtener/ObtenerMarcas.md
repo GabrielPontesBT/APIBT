@@ -195,7 +195,6 @@ partnerUId | Int | Identificador del Partner.
 puntoVentaUId	 | Int | Identificador del punto de venta.
 vendedorUId	 | Int | Identificador del vendedor.
 :::
-<!-- CIERRA SDT --> 
 
 ::: details sBTMarca  
 
