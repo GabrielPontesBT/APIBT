@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre            | Tipo   | Obligatorio | Comentarios |
 :--------- | :--------- | :--------- | :---------
-CarID      | Long   | S              | Identificador Tarjeta.
+CarId      | Long   | S              | Identificador Tarjeta.
 
 @tab Datos de Salida
 
@@ -65,7 +65,7 @@ Código | Descripción
             <Requerimiento>1</Requerimiento>
             <Token>088459081EF05E4F9E3B2B7A</Token>
          </bts:Btinreq>
-         <bts:carId>16843331-08d3-4ed1-a101-0192df055e86</bts:carId>
+         <bts:CarId>16843331-08d3-4ed1-a101-0192df055e86</bts:CarId>
       </bts:BTPayCaddy.BloqueoTarjeta>
    </soapenv:Body>
 </soapenv:Envelope>

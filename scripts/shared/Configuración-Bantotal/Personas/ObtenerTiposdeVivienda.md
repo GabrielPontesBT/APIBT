@@ -146,55 +146,57 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "1394857355CD285A89A23FBE",
-        "Device": "AV"
-    },
-    "sdtViviendas": {
-        "tipoDeVivienda": [
-            {
-                "codigo": 1,
-                "descripcion": "Propietario"
-            },
-            {
-                "codigo": 2,
-                "descripcion": "Inquilino"
-            },
-            {
-                "codigo": 3,
-                "descripcion": "BHU"
-            },
-            {
-                "codigo": 4,
-                "descripcion": "Usufructo"
-            },
-            {
-                "codigo": 5,
-                "descripcion": "Familiar"
-            },
-            {
-                "codigo": 6,
-                "descripcion": "Otros"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeVivienda",
-        "Fecha": "2021-11-15",
-        "Hora": "12:47:10",
-        "Requerimiento": 1,
-        "Numero": 8696,
-        "Estado": "OK"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "1394857355CD285A89A23FBE",
+    "Device": "AV"
+  },
+  "sdtViviendas": {
+    "tipoDeVivienda": [
+      {
+        "codigo": 1,
+        "descripcion": "Propietario"
+      },
+      {
+        "codigo": 2,
+        "descripcion": "Inquilino"
+      },
+      {
+        "codigo": 3,
+        "descripcion": "BHU"
+      },
+      {
+        "codigo": 4,
+        "descripcion": "Usufructo"
+      },
+      {
+        "codigo": 5,
+        "descripcion": "Familiar"
+      },
+      {
+        "codigo": 6,
+        "descripcion": "Otros"
+      }
+    ],
+    "codigo": 0,
+    "descripcion": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeVivienda",
+    "Fecha": "2021-11-15",
+    "Hora": "12:47:10",
+    "Requerimiento": 1,
+    "Numero": 8696,
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

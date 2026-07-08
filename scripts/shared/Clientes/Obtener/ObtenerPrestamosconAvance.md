@@ -136,7 +136,7 @@ curl -X POST \
          <sdtPrestamos>
             <sBTProgresoPrestamo>
                <operacionUId>10</operacionUId>
-               <idOperacionFmt>0000000170-000</idOperacionFmt>
+               <idOperacionFMT>0000000170-000</idOperacionFMT>
                <idOperacionBT>0010000100101000000000000000002700000000000170003</idOperacionBT>
                <producto>
                   <productoUId>0</productoUId>
@@ -153,7 +153,7 @@ curl -X POST \
             </sBTProgresoPrestamo>
             <sBTProgresoPrestamo>
                <operacionUId>11</operacionUId>
-               <idOperacionFmt>0000000048-000</idOperacionFmt>
+               <idOperacionFMT>0000000048-000</idOperacionFMT>
                <idOperacionBT>0010100000101000000000000000002700000000000048001</idOperacionBT>
                <producto>
                   <productoUId>0</productoUId>
@@ -170,7 +170,7 @@ curl -X POST \
             </sBTProgresoPrestamo>
             <sBTProgresoPrestamo>
                <operacionUId>12</operacionUId>
-               <idOperacionFmt>0000000080-000</idOperacionFmt>
+               <idOperacionFMT>0000000080-000</idOperacionFMT>
                <idOperacionBT>0010100000101000000000000000002700000000000080001</idOperacionBT>
                <producto>
                   <productoUId>0</productoUId>
@@ -203,81 +203,96 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Canal": "BTDIGITAL", 
-        "Requerimiento": 1, 
-        "Usuario": "BANTOTAL", 
-        "Token": "324915377F955E77534D3E02", 
-        "Device": "AC" 
-    }, 
-    "sdtPrestamos": { 
-        "sBTProgresoPrestamo": [ 
-            { 
-                "operacionUId": 10, 
-                "idOperacionFmt": "0000000170-000", 
-                "idOperacionBT": "0010000100101000000000000000002700000000000170003", 
-                "producto": { 
-                    "productoUId": 0, 
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amort. Libre UI_Empresa", 
-                    "moneda": "$", 
-                    "papel": "" 
-                }, 
-                "sucursal": "Sucursal Beta", 
-                "estado": "Cobro Judicial", 
-                "cantidadCuotas": 12, 
-                "cantidadCuotasPagas": 2, 
-                "capitalDesembolsado": 100000.00, 
-                "capitalCancelado": 16666.67 
-            }, 
-            { 
-                "operacionUId": 11, 
-                "idOperacionFmt": "0000000048-000", 
-                "idOperacionBT": "0010100000101000000000000000002700000000000048001", 
-                "producto": { 
-                    "productoUId": 0, 
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF", 
-                    "moneda": "$", 
-                    "papel": "" 
-                }, 
-                "sucursal": "Casa Matriz", 
-                "estado": "Normal", 
-                "cantidadCuotas": 12, 
-                "cantidadCuotasPagas": 0, 
-                "capitalDesembolsado": 515000.00, 
-                "capitalCancelado": 16666.67 
-            }, 
-            { 
-                "operacionUId": 12, 
-                "idOperacionFmt": "0000000080-000", 
-                "idOperacionBT": "0010100000101000000000000000002700000000000080001", 
-                "producto": { 
-                    "productoUId": 0, 
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF", 
-                    "moneda": "$", 
-                    "papel": "" 
-                }, 
-                "sucursal": "Casa Matriz", 
-                "estado": "Normal", 
-                "cantidadCuotas": 12, 
-                "cantidadCuotasPagas": 6, 
-                "capitalDesembolsado": 765000.00, 
-                "capitalCancelado": 142470.83 
-            } 
-        ] 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTClientes.ObtenerPrestamosConAvance", 
-        "Fecha": "2019-11-19", 
-        "Hora": "13:05:22", 
-        "Requerimiento": 1, 
-        "Numero": 6924, 
-        "Estado": "OK" 
-    } 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "324915377F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtPrestamos": {
+    "sBTProgresoPrestamo": [
+      {
+        "operacionUId": 10,
+        "idOperacionBT": "0010000100101000000000000000002700000000000170003",
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amort. Libre UI_Empresa",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Sucursal Beta",
+        "estado": "Cobro Judicial",
+        "cantidadCuotas": 12,
+        "cantidadCuotasPagas": 2,
+        "capitalDesembolsado": 100000,
+        "capitalCancelado": 16666.67,
+        "idOperacionFMT": "0000000170-000"
+      },
+      {
+        "operacionUId": 11,
+        "idOperacionBT": "0010100000101000000000000000002700000000000048001",
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "estado": "Normal",
+        "cantidadCuotas": 12,
+        "cantidadCuotasPagas": 0,
+        "capitalDesembolsado": 515000,
+        "capitalCancelado": 16666.67,
+        "idOperacionFMT": "0000000048-000"
+      },
+      {
+        "operacionUId": 12,
+        "idOperacionBT": "0010100000101000000000000000002700000000000080001",
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "estado": "Normal",
+        "cantidadCuotas": 12,
+        "cantidadCuotasPagas": 6,
+        "capitalDesembolsado": 765000,
+        "capitalCancelado": 142470.83,
+        "idOperacionFMT": "0000000080-000"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTClientes.ObtenerPrestamosConAvance",
+    "Fecha": "2019-11-19",
+    "Hora": "13:05:22",
+    "Requerimiento": 1,
+    "Numero": 6924,
+    "Estado": "OK"
+  }
 }
 ```
 ::: 
@@ -304,7 +319,10 @@ idOperacionBT | String | Identificador String Bantotal (concatenación de todos 
 idOperacionFMT | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador. 
 producto | [sBTProducto](#sBTProducto) | Datos del producto. 
-sucursal | String | Nombre de la sucursal de alta. 
+sucursal | String | Nombre de la sucursal de alta.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -317,7 +335,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -330,4 +351,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

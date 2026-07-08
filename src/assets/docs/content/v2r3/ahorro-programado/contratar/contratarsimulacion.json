@@ -5,6 +5,7 @@
   "pubName": "BTAhorroProgramado.ContratarSimulacion",
   "programa": "RBTPG445",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Datos de la solicitud de ahorro programado."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "ahorroUId",
@@ -53,12 +57,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ContratarSimulacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>GL</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatos>\r\n            <bts:simulacionId>741</bts:simulacionId>\r\n            <bts:cuentaDestinoUid>661</bts:cuentaDestinoUid>\r\n            <bts:motivoAhorro>Prueba</bts:motivoAhorro>\r\n            <bts:cuentaOrigenUid>661</bts:cuentaOrigenUid>\r\n            <bts:clienteUid>61</bts:clienteUid>\r\n         </bts:sdtDatos>\r\n      </bts:BTAhorroProgramado.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ContratarSimulacion' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Device\": \"GL\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n    },\r\n    \"sdtDatos\": {\r\n        \"simulacionId\": 741,\r\n        \"cuentaDestinoUid\": 661,\r\n        \"motivoAhorro\": \"Prueba\",\r\n        \"cuentaOrigenUid\": 661,\r\n        \"clienteUid\": 61\r\n    }\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ContratarSimulacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>GL</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatos>\r\n            <bts:simulacionId>741</bts:simulacionId>\r\n            <bts:cuentaDestinoUId>661</bts:cuentaDestinoUId>\r\n            <bts:motivoAhorro>Prueba</bts:motivoAhorro>\r\n            <bts:cuentaOrigenUId>661</bts:cuentaOrigenUId>\r\n            <bts:clienteUId>61</bts:clienteUId>\r\n         </bts:sdtDatos>\r\n      </bts:BTAhorroProgramado.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Device\": \"GL\",\n    \"Requerimiento\": 1,\n    \"Token\": \"01D45E9964612A4C8CCB1055\"\n  },\n  \"sdtDatos\": {\n    \"simulacionId\": 741,\n    \"motivoAhorro\": \"Prueba\",\n    \"clienteUId\": 61,\n    \"cuentaDestinoUId\": 661,\n    \"cuentaOrigenUId\": 661\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTAhorroProgramado.ContratarSimulacion>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Device>GL</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatos>\r\n            <bts:simulacionId>741</bts:simulacionId>\r\n            <bts:cuentaDestinoUId>661</bts:cuentaDestinoUId>\r\n            <bts:motivoAhorro>Prueba</bts:motivoAhorro>\r\n            <bts:cuentaOrigenUId>661</bts:cuentaOrigenUId>\r\n            <bts:clienteUId>61</bts:clienteUId>\r\n         </bts:sdtDatos>\r\n      </bts:BTAhorroProgramado.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Device\": \"GL\",\n    \"Requerimiento\": 1,\n    \"Token\": \"01D45E9964612A4C8CCB1055\"\n  },\n  \"sdtDatos\": {\n    \"simulacionId\": 741,\n    \"motivoAhorro\": \"Prueba\",\n    \"clienteUId\": 61,\n    \"cuentaDestinoUId\": 661,\n    \"cuentaOrigenUId\": 661\n  }\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Device>GL</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>01D45E9964612A4C8CCB1055</Token>\r\n         </Btinreq>\r\n         <ahorroUId>1102</ahorroUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>17:23:23</Hora>\r\n            <Numero>11097</Numero>\r\n            <Servicio>BTAhorroProgramado.ContratarSimulacion</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ContratarSimulacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Device\": \"GL\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n    },\r\n    \"ahorroUId\": 1102,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2022-11-29\",\r\n        \"Hora\": \"17:23:23\",\r\n        \"Numero\": 11097,\r\n        \"Servicio\": \"BTAhorroProgramado.ContratarSimulacion\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Device\": \"GL\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n    },\r\n    \"ahorroUId\": 1102,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2022-11-29\",\r\n        \"Hora\": \"17:23:23\",\r\n        \"Numero\": 11097,\r\n        \"Servicio\": \"BTAhorroProgramado.ContratarSimulacion\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTAhorroProgramado.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Device>GL</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>01D45E9964612A4C8CCB1055</Token>\r\n         </Btinreq>\r\n         <ahorroUId>1102</ahorroUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>17:23:23</Hora>\r\n            <Numero>11097</Numero>\r\n            <Servicio>BTAhorroProgramado.ContratarSimulacion</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTAhorroProgramado.ContratarSimulacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Device\": \"GL\",\r\n        \"Requerimiento\": 1,\r\n        \"Token\": \"01D45E9964612A4C8CCB1055\"\r\n    },\r\n    \"ahorroUId\": 1102,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2022-11-29\",\r\n        \"Hora\": \"17:23:23\",\r\n        \"Numero\": 11097,\r\n        \"Servicio\": \"BTAhorroProgramado.ContratarSimulacion\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

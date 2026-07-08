@@ -93,7 +93,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"operacionUId": "21",
-	"documentoId": "87",
+	"documentoId": "87"
 }'
 ```
 :::

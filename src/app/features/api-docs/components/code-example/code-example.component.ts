@@ -12,6 +12,8 @@ import {
 import * as Prism from 'prismjs';
 import 'prismjs/components/prism-markup.js';
 import 'prismjs/components/prism-json.min.js';
+import 'prismjs/components/prism-bash.min.js';
+import { DocExampleTab } from '../../../../core/models/doc-page.model';
 
 @Component({
     selector: 'app-code-example',
@@ -23,8 +25,8 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
   readonly sections: Array<'invocation' | 'response'> = ['invocation', 'response'];
 
   @Input() examples!: {
-    invocation: { xml: string; json: string };
-    response:   { xml: string; json: string };
+    invocation: { xml: string; json: string; tabs?: DocExampleTab[] };
+    response:   { xml: string; json: string; tabs?: DocExampleTab[] };
   };
 
   view: {
@@ -35,12 +37,22 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
     response:   'xml'
   };
 
+  selectedTab: { invocation: number; response: number } = {
+    invocation: 0,
+    response: 0
+  };
+
   highlightedCode: {
     invocation: { xml: string; json: string };
     response:   { xml: string; json: string };
   } = {
     invocation: { xml: '', json: '' },
     response:   { xml: '', json: '' }
+  };
+
+  highlightedTabs: { invocation: string[]; response: string[] } = {
+    invocation: [],
+    response: []
   };
 
   @ViewChildren('codeBlock') codeBlocks!: QueryList<ElementRef>;
@@ -50,6 +62,14 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
 
   getTabLabel(section: 'invocation' | 'response'): string {
     return section === 'invocation' ? 'Ejemplo de Invocación' : 'Ejemplo de Respuesta';
+  }
+
+  hasTabs(section: 'invocation' | 'response'): boolean {
+    return (this.examples[section].tabs?.length ?? 0) > 0;
+  }
+
+  getTabs(section: 'invocation' | 'response'): DocExampleTab[] {
+    return this.examples[section].tabs ?? [];
   }
 
   hasXml(section: 'invocation' | 'response'): boolean {
@@ -74,6 +94,7 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
 
   private initViews() {
     for (const section of this.sections) {
+      this.selectedTab[section] = 0;
       if (!this.examples[section].xml) {
         this.view[section] = 'json';
       } else if (!this.examples[section].json) {
@@ -96,8 +117,19 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
     this.updateHighlight();
   }
 
+  switchTab(section: 'invocation' | 'response', index: number) {
+    this.selectedTab[section] = index;
+    this.needsRehighlight = true;
+  }
+
   copyCode(section: 'invocation' | 'response') {
-    const text = this.examples[section][this.view[section]];
+    let text: string;
+    if (this.hasTabs(section)) {
+      text = this.getTabs(section)[this.selectedTab[section]]?.code ?? '';
+    } else {
+      text = this.examples[section][this.view[section]];
+    }
+
     const onSuccess = () => {
       this.copiedSection = section;
       setTimeout(() => { this.copiedSection = null; }, 2000);
@@ -129,11 +161,33 @@ export class CodeExampleComponent implements OnInit, OnChanges, AfterViewChecked
     }
   }
 
+  private highlightPlaceholders(html: string): string {
+    return html.replace(/\{\{([^}]+)\}\}/g, '<span class="placeholder">{{$1}}</span>');
+  }
+
+  private highlightQueryParamValues(html: string): string {
+    return html.replace(
+      /([?]|&amp;)([^=<>'"&\s]+)=([^&<>'"?\s]+)/g,
+      (match, sep, key, value) => {
+        if (!value || value.startsWith('<')) return match;
+        return `${sep}${key}=<span class="param-value">${value}</span>`;
+      }
+    );
+  }
+
+  private postProcess(html: string): string {
+    return this.highlightQueryParamValues(this.highlightPlaceholders(html));
+  }
+
   private updateHighlight() {
     for (const section of this.sections) {
       const data = this.examples[section];
-      this.highlightedCode[section].xml = Prism.highlight(data.xml, Prism.languages['markup'], 'xml');
-      this.highlightedCode[section].json = Prism.highlight(data.json, Prism.languages['json'], 'json');
+      this.highlightedCode[section].xml  = this.postProcess(Prism.highlight(data.xml  || '', Prism.languages['markup'], 'xml'));
+      this.highlightedCode[section].json = this.postProcess(Prism.highlight(data.json || '', Prism.languages['json'],   'json'));
+      this.highlightedTabs[section] = (data.tabs ?? []).map(tab => {
+        const lang = Prism.languages[tab.lang] ? tab.lang : 'markup';
+        return this.postProcess(Prism.highlight(tab.code, Prism.languages[lang], lang));
+      });
     }
     this.needsRehighlight = true;
   }

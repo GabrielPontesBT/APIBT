@@ -45,7 +45,7 @@ razonSocial | String | Razón social
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-listaInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de lista de inhabilitados.
+sdtListaInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de lista de inhabilitados.
 
 @tab Errores
 
@@ -80,7 +80,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:pais>845</bts:pais>
          <bts:tipoDocumento>1</bts:tipoDocumento>
-         <bts:numeroDeDocumento>27511184</bts:numeroDeDocumento>
+         <bts:numeroDocumento>27511184</bts:numeroDocumento>
          <bts:tipoPersona></bts:tipoPersona>
          <bts:primerNombre></bts:primerNombre>
          <bts:segundoNombre></bts:segundoNombre>
@@ -94,29 +94,24 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarListasInhabilitados' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"pais":"845",
-	"tipoDocumento":"1",
-	"numeroDeDocumento":"27511184",
-	"tipoPersona":"",
-	"primerNombre":"",
-	"segundoNombre":"",
-	"primerApellido":"",
-	"segundoApellido":"",
-	"razonSocial":""
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "pais": "845",
+  "tipoDocumento": "1",
+  "numeroDocumento": "27511184",
+  "tipoPersona": "",
+  "primerNombre": "",
+  "segundoNombre": "",
+  "primerApellido": "",
+  "segundoApellido": "",
+  "razonSocial": ""
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -163,36 +158,36 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtListaInhabilitados": {
-		"sBTListaInhabilitados": {
-			"descripcion": "LAVADO DE DINERO",
-			"fechaHasta": "0000-00-00",
-			"fechaDesde": "2016-06-13",
-			"codigo": "1",
-			"bloqueante": "S"
-		}
-	},
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8396,
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ValidarListasInhabilitados",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtListaInhabilitados": {
+    "sBTListaInhabilitados": {
+      "descripcion": "LAVADO DE DINERO",
+      "fechaHasta": "0000-00-00",
+      "fechaDesde": "2016-06-13",
+      "codigo": "1",
+      "bloqueante": "S"
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8396,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ValidarListasInhabilitados",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

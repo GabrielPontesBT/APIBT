@@ -68,7 +68,7 @@ Código | Descripción
             <bts:Token>0306ebbd9c4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
          <bts:clienteUId>181</bts:clienteUId>
-      </bts:BTClientes.Obtener>
+      </bts:BTClientes.ObtenerPerfil>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -261,7 +261,10 @@ otrosIngresos | Double | Otros ingresos.
 personaUId | Long | Identificador único de persona. 
 profesion | String | Profesión. 
 sexo | String | Sexo (M/F). 
-telefono | String | Teléfono. 
+telefono | String | Teléfono.
+:::
+
+::: details sCTDomicilio
 
 ### sCTDomicilio
 
@@ -279,7 +282,10 @@ localidad | String | Localidad del domicilio.
 longitud | Double | Longitud del domicilio. 
 pais | String | País del domicilio. 
 propietario | String | Propietario del domicilio. 
-zona | String | Zona del domicilio. 
+zona | String | Zona del domicilio.
+:::
+
+::: details sCTDocumento
 
 ### sCTDocumento
 
@@ -292,6 +298,8 @@ fechaVencimiento | Date | Fecha de vencimiento del documento.
 nombreTipoDocumento | String | Nombre del tipo de documento. 
 nroDocumento | String | Número de documento. 
 pais | String | País del documento. 
-tipoDocumento | String | Tipo del documento. 
+tipoDocumento | String | Tipo del documento.
 :::
+
 <!-- CIERRA SDT -->
+

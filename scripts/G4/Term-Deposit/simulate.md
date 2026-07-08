@@ -29,9 +29,9 @@ counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) 
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-capital |  Double $<(Length: 18.2)>$ | Importe de capital.
-plazo | Int $<(Length: 5)>$ | Plazo.
-periodicidad | Int $<(Length: 5)>$ | Periodicidad.
+amount |  Double $<(Length: 18.2)>$ | Importe de capital.
+term | Int $<(Length: 5)>$ | Plazo.
+frequency | Int $<(Length: 5)>$ | Periodicidad.
 
 @tab Datos de Salida
 

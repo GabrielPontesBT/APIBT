@@ -87,6 +87,7 @@ Código | Descripción
     },
     "productoUId": "105"
 }
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -146,5 +147,6 @@ Código | Descripción
         "Estado": "OK"
     }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

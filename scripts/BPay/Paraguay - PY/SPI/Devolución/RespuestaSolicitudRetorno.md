@@ -96,11 +96,11 @@ Código | Descripción
          </bts:Btinreq>
          <bts:canal>841</bts:canal>
          <bts:referencia>COMAPYPAARES250513112360004181905</bts:referencia>
-         <bts:motivo>test</bts:motivo>
-         <bts:importe>100</bts:importe>
-         <bts:codigo>AC03</bts:codigo>
-         <bts:devolucion>ACEPTAR</bts:devolucion>
-         <bts:simular>N</bts:simular>
+         <bts:Motivo>test</bts:Motivo>
+         <bts:Importe>100</bts:Importe>
+         <bts:Codigo>AC03</bts:Codigo>
+         <bts:Devolucion>ACEPTAR</bts:Devolucion>
+         <bts:Simular>N</bts:Simular>
       </bts:BTSPIDevoluciones.RespuestaSolicitudRetorno>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -124,10 +124,10 @@ Código | Descripción
             <Canal>BTINTERNO</Canal>
             <Token>072C85F2036D7EBE3EC09EB5</Token>
          </Btinreq>
-         <sucursal>1</sucursal>
-         <modulo>40</modulo>
-         <transaccion>596</transaccion>
-         <relacion>2</relacion>
+         <Sucursal>1</Sucursal>
+         <Modulo>40</Modulo>
+         <Transaccion>596</Transaccion>
+         <Relacion>2</Relacion>
          <identificador>24190803</identificador>
          <referenciaGenerada>BGNBPYPX30052561200024217125</referenciaGenerada>
          <Erroresnegocio></Erroresnegocio>

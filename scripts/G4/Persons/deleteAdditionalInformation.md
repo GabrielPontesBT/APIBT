@@ -72,9 +72,13 @@ Código | Descripción
         "Description": "",
         "Value": ""
       }
-    ]
+    ],
+    "Correlative": 0,
+    "Id": "",
+    "Description": "",
+    "Value": ""
   }
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

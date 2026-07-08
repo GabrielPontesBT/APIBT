@@ -103,15 +103,15 @@ curl -X POST \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
 	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "productoUId": 132,
-        "tipoProducto": ""
-	}'
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "productoUId": 132,
+  "tipoProducto": ""
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -132,7 +132,7 @@ curl -X POST \
             <Token>30F74741A02C318CEFD55684</Token>
             <Device>GL</Device>
          </Btinreq>
-         <Instrucciones>
+         <sdtCodigoInstrucciones>
             <Instruccion>
                <codigo>2</codigo>
                <descripcion>Cancelar y Acreditar al vto.</descripcion>
@@ -181,7 +181,13 @@ curl -X POST \
                   </sBTDatoExtendido>
                </datosExtendidos>
             </Instruccion>
-         </Instrucciones>
+         </sdtCodigoInstrucciones>
+         <sdtDatosExtendidos>
+            <clave></clave>
+            <lista></lista>
+            <tipo></tipo>
+            <valor></valor>
+         </sdtDatosExtendidos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -199,79 +205,85 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "sdtCodigoInstrucciones": {
-          "sBTCodigoInstrucciones": [
-            {
-              "codigo": 2,
-              "descripcion": "Cancelar y Acreditar al vto.",
-              "datosExtendidos": {
-                "sBTDatoExtendido": {
-                  "clave": "TIPO_PRODUCTO",
-                  "tipo": "D",
-                  "valor": "VTO",
-                  "lista": ""
-                }
-              }
-            },
-            {
-              "codigo": 6,
-              "descripcion": "Renovación Automática",
-              "datosExtendidos": {
-                "sBTDatoExtendido": {
-                  "clave": "TIPO_PRODUCTO",
-                  "tipo": "D",
-                  "valor": "VTO",
-                  "lista": ""
-                }
-              }
-            },
-            {
-              "codigo": 7,
-              "descripcion": "Acreditación",
-              "datosExtendidos": {
-                "sBTDatoExtendido": {
-                  "clave": "TIPO_PRODUCTO",
-                  "tipo": "D",
-                  "valor": "PP",
-                  "lista": ""
-                }
-              }
-            },
-            {
-              "codigo": 8,
-              "descripcion": "Capitalización Periódica Int.",
-              "datosExtendidos": {
-                "sBTDatoExtendido": {
-                  "clave": "TIPO_PRODUCTO",
-                  "tipo": "D",
-                  "valor": "PP",
-                  "lista": ""
-                }
-              }
-            }
-          ]
-        },
-        "Erroresnegocio": {
-          "BTErrorNegocio": []
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas",
-          "Fecha": "2022-11-29",
-          "Hora": "10:23:37",
-          "Requerimiento": 1,
-          "Numero": 486,
-          "Estado": "OK"
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "sdtCodigoInstrucciones": {
+    "sBTCodigoInstrucciones": [
+      {
+        "codigo": 2,
+        "descripcion": "Cancelar y Acreditar al vto.",
+        "datosExtendidos": {
+          "sBTDatoExtendido": {
+            "clave": "TIPO_PRODUCTO",
+            "tipo": "D",
+            "valor": "VTO",
+            "lista": {}
+          }
         }
-}'
+      },
+      {
+        "codigo": 6,
+        "descripcion": "Renovación Automática",
+        "datosExtendidos": {
+          "sBTDatoExtendido": {
+            "clave": "TIPO_PRODUCTO",
+            "tipo": "D",
+            "valor": "VTO",
+            "lista": {}
+          }
+        }
+      },
+      {
+        "codigo": 7,
+        "descripcion": "Acreditación",
+        "datosExtendidos": {
+          "sBTDatoExtendido": {
+            "clave": "TIPO_PRODUCTO",
+            "tipo": "D",
+            "valor": "PP",
+            "lista": {}
+          }
+        }
+      },
+      {
+        "codigo": 8,
+        "descripcion": "Capitalización Periódica Int.",
+        "datosExtendidos": {
+          "sBTDatoExtendido": {
+            "clave": "TIPO_PRODUCTO",
+            "tipo": "D",
+            "valor": "PP",
+            "lista": {}
+          }
+        }
+      }
+    ]
+  },
+  "sdtDatosExtendidos": {
+    "clave": "",
+    "tipo": "",
+    "valor": "",
+    "lista": {}
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas",
+    "Fecha": "2022-11-29",
+    "Hora": "10:23:37",
+    "Requerimiento": 1,
+    "Numero": 486,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -292,6 +304,9 @@ clave | String | Clave del dato extendido.
 lista | [sBTDatosLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido. 
+:::
+
+::: details sBTDatoLista 
 
 ### sBTDatoLista
 
@@ -316,21 +331,5 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código. 
 datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 descripcion | String | Descripción. 
-::: center 
-Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Clave del dato extendido. 
-lista | [sBTDatoLista](#sbtdatalista) | Lista de datos. 
-tipo | String | Tipo de dato extendido. 
-valor | String | Valor de dato extendido. 
-::: center 
-Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
-:::
+::: 
 <!-- CIERRA SDT -->

@@ -1,0 +1,82 @@
+{
+  "slug": "loans/getrenewalamount",
+  "pageTitle": "Get Renewal Amount",
+  "description": "Método para obtener el monto de renovación.",
+  "pubName": "PublicLoans.getRenewalAmount",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0015",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    },
+    {
+      "Nombre": "loanGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del préstamo."
+    },
+    {
+      "Nombre": "calculationDate",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de cálculo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "consolidationGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID de la consolidación."
+    },
+    {
+      "Nombre": "cancellationAmount",
+      "Tipo": "Double <strong>(Length: 18.2)</strong>",
+      "Comentarios": "Monto de cancelación."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"loanGUID\": \"b84e1c60-73d2-4a91-8f5e-cf920a371d24\",\n  \"calculationDate\": \"2026-06-19\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"loanGUID\": \"b84e1c60-73d2-4a91-8f5e-cf920a371d24\",\n  \"calculationDate\": \"2026-06-19\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"consolidationGUID\": \"c2f91a84-5e3d-4b70-a8f1-d93e720c64b5\",\n  \"cancellationAmount\": 48750.00,\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:52:37\",\n    \"Numero\": \"10048329\",\n    \"Servicio\": \"PublicLoans.getRenewalAmount\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"consolidationGUID\": \"c2f91a84-5e3d-4b70-a8f1-d93e720c64b5\",\n  \"cancellationAmount\": 48750.00,\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:52:37\",\n    \"Numero\": \"10048329\",\n    \"Servicio\": \"PublicLoans.getRenewalAmount\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

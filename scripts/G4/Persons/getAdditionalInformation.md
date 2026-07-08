@@ -89,7 +89,11 @@ Código | Descripción
         "Value": "0",
         "Description": ""
       }
-    ]
+    ],
+    "Correlative": 0,
+    "Id": "",
+    "Description": "",
+    "Value": ""
   },
   "BusinessErrors": {
     "BusinessError": []

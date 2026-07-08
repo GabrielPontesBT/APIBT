@@ -99,10 +99,10 @@ Código | Descripción
          <bts:NroCuentaDestino>543674</bts:NroCuentaDestino>
          <bts:TipoCuentaDestino>1</bts:TipoCuentaDestino>
          <bts:IdentidadDestino>1233223</bts:IdentidadDestino>
-         <bts:nombreDestino>Agustin Meriles</bts:nombreDestino>
+         <bts:NombreDestino>Agustin Meriles</bts:NombreDestino>
          <bts:Direccion>Av Italia 5566</bts:Direccion>
          <bts:Comentario>Matriz 1</bts:Comentario>
-         <bts:moneda>1</bts:moneda>
+         <bts:Moneda>1</bts:Moneda>
          <bts:Importe>150000</bts:Importe>
          <bts:CorreoElectronico>agustin@gmail.com</bts:CorreoElectronico>
          <bts:NroTelefono>54678433</bts:NroTelefono>

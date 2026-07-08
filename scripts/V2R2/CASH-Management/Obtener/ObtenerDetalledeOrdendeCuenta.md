@@ -155,36 +155,46 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "cuentaDebito": 34,
-    "cantidadLineas": 3,
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "cuentaDebito": 34,
+  "cantidadLineas": 3,
+  "moneda": 0,
+  "importe": 82,
+  "referencia": "",
+  "fechaPago": "2023-09-04",
+  "estado": "P",
+  "erroresPago": "",
+  "detallePagos": {
+    "beneficiarioBanco": "",
+    "beneficiarioCuenta": "",
+    "beneficiarioId": "",
+    "estado": "",
+    "fechaPago": "",
+    "importe": 0,
+    "mensajesError": "",
     "moneda": 0,
-    "importe": 82,
-    "referencia": "",
-    "fechaPago": "2023-09-04",
-    "estado": "P",
-    "erroresPago": "",
-    "detallePagos": "",
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 7174,
-        "Estado": "OK",
-        "Servicio": "BTCASHManagement.ObtenerDetalleOrdenCuenta",
-        "Requerimiento": "1",
-        "Fecha": "2019-04-24",
-        "Hora": "15:23:16",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "nombre": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 7174,
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.ObtenerDetalleOrdenCuenta",
+    "Requerimiento": "1",
+    "Fecha": "2019-04-24",
+    "Hora": "15:23:16",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

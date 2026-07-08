@@ -7,7 +7,10 @@ import { Component, Input } from '@angular/core';
     standalone: false
 })
 export class BackendConfigComponent {
-  @Input() text!: string; // ya existía
-  @Input() backendData: { titulo: string; datos: { Campo: string; Valor: string; }[] }[] = []; // nuevo Input para los grupos
+  @Input() text!: string;
+  @Input() title: string = 'Configuración Backend';
+  @Input() note: string = '';
+  @Input() columns: string[] = ['Campo', 'Valor'];
+  @Input() backendData: { titulo: string; datos: any[] }[] = [];
 }
 

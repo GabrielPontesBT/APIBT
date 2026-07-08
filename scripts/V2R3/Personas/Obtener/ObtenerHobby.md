@@ -107,10 +107,10 @@ curl -X POST \
             <Token>3214436424A8B5C60A82434C</Token>
             <Device>GP</Device>
          </Btinreq>
-         <sBTHobby>
+         <sdtHobby>
             <codigo>24</codigo>
             <descripcion>Football</descripcion>
-         </sBTHobby>
+         </sdtHobby>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -129,28 +129,27 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Device": "GP",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "1",
-        "Canal": "BTDIGITAL",
-        "Token": "c2cfd09eff4A8B5C60A82434"
-    },
-   "SdtsBTHobby": {
-      "codigo": "24",
-      "descripcion": "Football"
-   },
-    "Erroresnegocio": {
-    },
-    "Btoutreq": {
-        "Numero": "839",
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ObtenerHobby",
-        "Requerimiento": "1",
-        "Fecha": "2022-05-12",
-        "Hora": "15:35:54",
-        "Canal": "BTDIGITAL"
-    }
+  "Btinreq": {
+    "Device": "GP",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "c2cfd09eff4A8B5C60A82434"
+  },
+  "sdtHobby": {
+    "codigo": "24",
+    "descripcion": "Football"
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "839",
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerHobby",
+    "Requerimiento": "1",
+    "Fecha": "2022-05-12",
+    "Hora": "15:35:54",
+    "Canal": "BTDIGITAL"
+  }
 }
 ```
 ::: 

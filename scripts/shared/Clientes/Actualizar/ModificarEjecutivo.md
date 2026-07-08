@@ -92,6 +92,7 @@ curl -X POST \
 	"clienteUId":"21",
     "ejecutivoId":"1"
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -149,5 +150,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

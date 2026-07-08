@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Obligatoriedad | Comentarios
 :--------- | :--------- | :--------- | :---------
-operacionUID   			    | Int 		| M	| Identificador Cuenta débito (BTSIO00Id).
+operacionUId   			    | Int 		| M	| Identificador Cuenta débito (BTSIO00Id).
 moneda 			            | Int 		| M	| Valor de moneda nacional(6900) ó dólar(1). 
 importeTransferencia		| Double    | M	| Importe a enviar. 
 bancoDestino 				| Int 		| M	| Código de banco destino(FXSNP1Id).
@@ -57,7 +57,7 @@ importeDebito 			| Double | Nombre Beneficiario.
 cotizacion 			    | Double | Dirección Beneficiario.
 comision 	            | Double | Teléfono.
 referencia 		        | String | Identificador de instrucción.
-movimientoUID 			| Int 	 | Impuesto.
+movimientoUId 			| Int 	 | Impuesto.
 
 
 @tab Errores

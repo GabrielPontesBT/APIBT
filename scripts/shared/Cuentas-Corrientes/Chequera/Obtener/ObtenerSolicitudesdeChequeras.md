@@ -89,10 +89,8 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-        "operacionUId": "101"
-      }
-    }
-  }'
+  "operacionUId": "101"
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -181,6 +179,19 @@ curl -X POST \
                   <estadoId>1</estadoId>
                </sBTDatosChequera>
             </sBTDatosChequera>
+            <sdtDatosChequera>
+               <cantidadLibretas>0</cantidadLibretas>
+               <chequeInicial>0</chequeInicial>
+               <empresa>0</empresa>
+               <estado></estado>
+               <estadoId>0</estadoId>
+               <operacionUId>0</operacionUId>
+               <solicitud>0</solicitud>
+               <tipo></tipo>
+               <tipoId>0</tipoId>
+               <titular></titular>
+               <totalCheques>0</totalCheques>
+            </sdtDatosChequera>
          </sdtSolicitudesChequeras>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -199,95 +210,108 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtSolicitudesChequeras": {
-          "sBTDatosChequera": {
-            "sBTDatosChequera": [
-              {
-                "totalCheques": "50",
-                "estado": "ENTREGADA AL CLIENTE",
-                "chequeInicial": "1651",
-                "titular": "PEREZ SOSA JUAN",
-                "cantidadLibretas": "2",
-                "operacionUId": "101",
-                "empresa": "1",
-                "tipoId": "1",
-                "tipo": "Chequera Común 25 / Pesos",
-                "solicitud": "23",
-                "estadoId": "6"
-              },
-              {
-                "totalCheques": "25",
-                "estado": "SOLICITADA",
-                "chequeInicial": "3051",
-                "titular": "PEREZ SOSA JUAN",
-                "cantidadLibretas": "1",
-                "operacionUId": "101",
-                "empresa": "1",
-                "tipoId": "1",
-                "tipo": "Chequera Común 25 / Pesos",
-                "solicitud": "53",
-                "estadoId": "1"
-              },
-              {
-                "totalCheques": "25",
-                "estado": "SOLICITADA",
-                "chequeInicial": "3076",
-                "titular": "PEREZ SOSA JUAN",
-                "cantidadLibretas": "1",
-                "operacionUId": "101",
-                "empresa": "1",
-                "tipoId": "1",
-                "tipo": "Chequera Común 25 / Pesos",
-                "solicitud": "54",
-                "estadoId": "1"
-              },
-              {
-                "totalCheques": "25",
-                "estado": "SOLICITADA",
-                "chequeInicial": "3101",
-                "titular": "PEREZ SOSA JUAN",
-                "cantidadLibretas": "1",
-                "operacionUId": "101",
-                "empresa": "1",
-                "tipoId": "1",
-                "tipo": "Chequera Común 25 / Pesos",
-                "solicitud": "55",
-                "estadoId": "1"
-              },
-              {
-                "totalCheques": "25",
-                "estado": "SOLICITADA",
-                "chequeInicial": "3126",
-                "titular": "PEREZ SOSA JUAN",
-                "cantidadLibretas": "1",
-                "operacionUId": "101",
-                "empresa": "1",
-                "tipoId": "1",
-                "tipo": "Chequera Común 25 / Pesos",
-                "solicitud": "56",
-                "estadoId": "1"
-              }
-            ]
-          }
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSolicitudesChequeras": {
+    "sBTDatosChequera": {
+      "sBTDatosChequera": [
+        {
+          "totalCheques": "50",
+          "estado": "ENTREGADA AL CLIENTE",
+          "chequeInicial": "1651",
+          "titular": "PEREZ SOSA JUAN",
+          "cantidadLibretas": "2",
+          "operacionUId": "101",
+          "empresa": "1",
+          "tipoId": "1",
+          "tipo": "Chequera Común 25 / Pesos",
+          "solicitud": "23",
+          "estadoId": "6"
         },
-        "Btoutreq": {
-          "Numero": "103",
-          "Estado": "OK",
-          "Servicio": "BTCuentasCorrientes.ObtenerSolicitudesChequera",
-          "Requerimiento": "1",
-          "Fecha": "2019-07-22",
-          "Canal": "BTDIGITAL",
-          "Hora": "16:00:37"
+        {
+          "totalCheques": "25",
+          "estado": "SOLICITADA",
+          "chequeInicial": "3051",
+          "titular": "PEREZ SOSA JUAN",
+          "cantidadLibretas": "1",
+          "operacionUId": "101",
+          "empresa": "1",
+          "tipoId": "1",
+          "tipo": "Chequera Común 25 / Pesos",
+          "solicitud": "53",
+          "estadoId": "1"
+        },
+        {
+          "totalCheques": "25",
+          "estado": "SOLICITADA",
+          "chequeInicial": "3076",
+          "titular": "PEREZ SOSA JUAN",
+          "cantidadLibretas": "1",
+          "operacionUId": "101",
+          "empresa": "1",
+          "tipoId": "1",
+          "tipo": "Chequera Común 25 / Pesos",
+          "solicitud": "54",
+          "estadoId": "1"
+        },
+        {
+          "totalCheques": "25",
+          "estado": "SOLICITADA",
+          "chequeInicial": "3101",
+          "titular": "PEREZ SOSA JUAN",
+          "cantidadLibretas": "1",
+          "operacionUId": "101",
+          "empresa": "1",
+          "tipoId": "1",
+          "tipo": "Chequera Común 25 / Pesos",
+          "solicitud": "55",
+          "estadoId": "1"
+        },
+        {
+          "totalCheques": "25",
+          "estado": "SOLICITADA",
+          "chequeInicial": "3126",
+          "titular": "PEREZ SOSA JUAN",
+          "cantidadLibretas": "1",
+          "operacionUId": "101",
+          "empresa": "1",
+          "tipoId": "1",
+          "tipo": "Chequera Común 25 / Pesos",
+          "solicitud": "56",
+          "estadoId": "1"
         }
-}'
+      ],
+      "sdtDatosChequera": {
+        "cantidadLibretas": 0,
+        "chequeInicial": 0,
+        "empresa": 0,
+        "estado": "",
+        "estadoId": 0,
+        "operacionUId": 0,
+        "solicitud": 0,
+        "tipo": "",
+        "tipoId": 0,
+        "titular": "",
+        "totalCheques": 0
+      }
+    }
+  },
+  "Btoutreq": {
+    "Numero": "103",
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerSolicitudesChequera",
+    "Requerimiento": "1",
+    "Fecha": "2019-07-22",
+    "Canal": "BTDIGITAL",
+    "Hora": "16:00:37"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -305,6 +329,9 @@ Los campos del tipo de dato estructurado sBTSolicitudesChequeras son los siguien
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 sdtDatosChequera | [sBTDatosChequera](#sbtdatoschequera) | Listado de chequeras.
+:::
+
+::: details sBTDatosChequera
 
 ### sBTDatosChequera
 
@@ -325,4 +352,6 @@ tipoId | Short | Identificador de tipo de chequera.
 titular | String | Titular de la cuenta.
 totalCheques | Short | Cantidad de cheques de la chequera.
 :::
+
 <!-- CIERRA SDT -->
+

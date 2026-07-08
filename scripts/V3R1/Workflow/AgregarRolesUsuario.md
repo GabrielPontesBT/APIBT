@@ -63,7 +63,7 @@ Código | Descripción
 	<soapenv:Body>
 		<bts:BTWorkflow.AgregarRolesUsuario>
 			<bts:Btinreq>
-				<bts:Usuario>INSTALADOR</bts:Usuario>
+				<bts:usuario>INSTALADOR</bts:usuario>
 				<bts:Device>GP</bts:Device>
 				<bts:Requerimiento>1</bts:Requerimiento>
 				<bts:Token>5FE07FD2DCE53B0DC365AA02</bts:Token>
@@ -83,7 +83,6 @@ Código | Descripción
 		</bts:BTWorkflow.AgregarRolesUsuario>
 	</soapenv:Body>
 </soapenv:Envelope>
-
 ```
 
 @tab JSON

@@ -175,5 +175,6 @@ curl -X POST \
         "Hora": "18:04:41"
     }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

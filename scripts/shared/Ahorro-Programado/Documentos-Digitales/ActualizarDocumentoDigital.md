@@ -77,7 +77,7 @@ Código | Descripción
             <bts:Token>4724b65a9d4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
          <bts:operacionUId>21</bts:operacionUId>
-         <bts:documentoId>86</bts:documentoId>
+         <bts:tipoDocumentoId>86</bts:tipoDocumentoId>
          <bts:nombre>Prueba actualizar</bts:nombre>
          <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>
          <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
@@ -89,26 +89,22 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ActualizarDocumentoDigital=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: dc197965-60bc-3f23-3367-5902a0392e1d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"operacionUId":"21",
-    "documentoId":"86",
-    "nombre":"Prueba actualizar",
-    "archivoCodificado":"RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-    "fechaEmision":"2010-10-10",
-    "fechaVencimiento": "2020-10-10"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": "21",
+  "tipoDocumentoId": "86",
+  "nombre": "Prueba actualizar",
+  "archivoCodificado": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+  "fechaEmision": "2010-10-10",
+  "fechaVencimiento": "2020-10-10",
+  "tipoDocumentoId": 0
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

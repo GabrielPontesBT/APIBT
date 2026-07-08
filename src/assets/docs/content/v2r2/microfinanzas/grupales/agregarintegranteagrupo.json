@@ -5,6 +5,7 @@
   "pubName": "BTMicrofinanzas.AgregarIntegranteAGrupo",
   "programa": "RBTPG433",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -25,6 +26,9 @@
       "Comentarios": "Datos del integrante"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -57,11 +61,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1414147105CD285A89A23FBE</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:grupoId>3</bts:grupoId>\r\n         <bts:sdtIntegranteGrupo>\r\n            <bts:clienteUId>157</bts:clienteUId>\r\n            <bts:cuenta></bts:cuenta>\r\n            <bts:tipoIntegranteId>2</bts:tipoIntegranteId>\r\n            <bts:tipoIntegrante></bts:tipoIntegrante>\r\n            <bts:fechaAlta>2020-04-20</bts:fechaAlta>\r\n            <bts:fechaBaja></bts:fechaBaja>\r\n            <bts:vigente>S</bts:vigente>\r\n            <bts:identificacionAlternativa></bts:identificacionAlternativa>\r\n         </bts:sdtIntegranteGrupo>\r\n      </bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarIntegranteAGrupo=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"grupoId\": 3,\r\n\t\"sdtIntegranteGrupo\": {\r\n\t\t\"clienteUId\": \"157\",\r\n\t\t\"tipoIntegranteId\": \"2\",\r\n\t\t\"tipoIntegrante\": \"\",\r\n\t\t\"fechaAlta\": \"2020-04-20\",\r\n\t\t\"vigente\": \"S\"\r\n\t}\r\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"grupoId\": 3,\n  \"sdtIntegranteGrupo\": {\n    \"clienteUId\": \"157\",\n    \"tipoIntegranteId\": \"2\",\n    \"tipoIntegrante\": \"\",\n    \"fechaAlta\": \"2020-04-20\",\n    \"vigente\": \"S\",\n    \"cuenta\": \"\",\n    \"fechaBaja\": \"\",\n    \"identificacionAlternativa\": \"\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1414147105CD285A89A23FBE</bts:Token>\r\n            <bts:Device>AC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:grupoId>3</bts:grupoId>\r\n         <bts:sdtIntegranteGrupo>\r\n            <bts:clienteUId>157</bts:clienteUId>\r\n            <bts:cuenta></bts:cuenta>\r\n            <bts:tipoIntegranteId>2</bts:tipoIntegranteId>\r\n            <bts:tipoIntegrante></bts:tipoIntegrante>\r\n            <bts:fechaAlta>2020-04-20</bts:fechaAlta>\r\n            <bts:fechaBaja></bts:fechaBaja>\r\n            <bts:vigente>S</bts:vigente>\r\n            <bts:identificacionAlternativa></bts:identificacionAlternativa>\r\n         </bts:sdtIntegranteGrupo>\r\n      </bts:BTMicrofinanzas.AgregarIntegranteAGrupo>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"grupoId\": 3,\n  \"sdtIntegranteGrupo\": {\n    \"clienteUId\": \"157\",\n    \"tipoIntegranteId\": \"2\",\n    \"tipoIntegrante\": \"\",\n    \"fechaAlta\": \"2020-04-20\",\n    \"vigente\": \"S\",\n    \"cuenta\": \"\",\n    \"fechaBaja\": \"\",\n    \"identificacionAlternativa\": \"\"\n  }\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTMicrofinanzas.AgregarIntegranteAGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1414147105CD285A89A23FBE</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTMicrofinanzas.AgregarIntegranteAGrupo</Servicio>\r\n            <Fecha>2020-04-20</Fecha>\r\n            <Hora>16:59:02</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>5004</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTMicrofinanzas.AgregarIntegranteAGrupoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"786\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTMicrofinanzas.AgregarIntegranteAGrupo\",\r\n        \"Fecha\": \"2017-12-15\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"16:35:22\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"786\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTMicrofinanzas.AgregarIntegranteAGrupo\",\r\n        \"Fecha\": \"2017-12-15\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"16:35:22\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTMicrofinanzas.AgregarIntegranteAGrupoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1414147105CD285A89A23FBE</Token>\r\n            <Device>AC</Device>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTMicrofinanzas.AgregarIntegranteAGrupo</Servicio>\r\n            <Fecha>2020-04-20</Fecha>\r\n            <Hora>16:59:02</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>5004</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTMicrofinanzas.AgregarIntegranteAGrupoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"786\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTMicrofinanzas.AgregarIntegranteAGrupo\",\r\n        \"Fecha\": \"2017-12-15\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"16:35:22\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

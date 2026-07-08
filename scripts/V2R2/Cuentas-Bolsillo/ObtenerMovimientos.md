@@ -72,9 +72,9 @@ Código | Descripción
             <bts:Usuario>INSTALADOR</bts:Usuario>
             <bts:Token>CC6345192D8633F531F01D1D</bts:Token>
          </bts:Btinreq>
-         <bts:BolsilloUID>18848</bts:BolsilloUID>
-         <bts:CantDias>4</bts:CantDias>
-         <bts:CantMov>3</bts:CantMov>
+         <bts:bolsilloUId>18848</bts:bolsilloUId>
+         <bts:cantDias>4</bts:cantDias>
+         <bts:cantMov>3</bts:cantMov>
       </bts:BTCuentasBolsillo.ObtenerMovimientos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -161,47 +161,49 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
-        "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
-    },
-    "sdtEstadoDeCuenta": {
-        "saldoPartida": 0,
-        "fechaHasta": "2020-04-30",
-        "productoUID": 512,
-        "movimientos": {
-        "sBTMovimiento": {
-            "moneda": "",
-            "hora": "16:39:10",
-            "referencia": "",
-            "concepto": "Cash Out",
-            "movimientoUId": 1842,
-            "datosAdicionales": "",
-            "debitoCredito": "D",
-            "saldo": -910000,
-            "ordinal": 85001,
-            "importe": 910000,
-            "numeroCheque": 0,
-            "tipoCambio": 0,
-            "arbitraje": 0,
-            "fecha": "2020-04-30"
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "MINSTALADOR",
+    "Token": "16c1cFC33CD93505A5382434",
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1"
+  },
+  "sdtEstadoDeCuenta": {
+    "saldoPartida": 0,
+    "fechaHasta": "2020-04-30",
+    "productoUID": 512,
+    "movimientos": {
+      "sBTMovimiento": {
+        "moneda": "",
+        "hora": "16:39:10",
+        "referencia": "",
+        "concepto": "Cash Out",
+        "movimientoUId": 1842,
+        "debitoCredito": "D",
+        "saldo": -910000,
+        "ordinal": 85001,
+        "importe": 910000,
+        "numeroCheque": 0,
+        "tipoCambio": 0,
+        "arbitraje": 0,
+        "fecha": "2020-04-30",
+        "datosAdicionales": {
+          "detalle": ""
         }
-        },
-        "fechaDesde": "2020-04-26"
+      }
     },
-    "Btoutreq": {
-        "Numero": "111399",
-        "Estado": "OK",
-        "Servicio": "BTCuentasBolsillo.ObtenerMovimientos",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
-    }
-}'
+    "fechaDesde": "2020-04-26"
+  },
+  "Btoutreq": {
+    "Numero": "111399",
+    "Estado": "OK",
+    "Servicio": "BTCuentasBolsillo.ObtenerMovimientos",
+    "Requerimiento": "1",
+    "Fecha": "2023-05-10",
+    "Canal": "BTDIGITAL",
+    "Hora": "15:10:52"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -221,8 +223,11 @@ Nombre | Tipo | Comentarios
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta.
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta.
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de movimiento.
-productoUId | Long | Identificador único de producto.
+productoUID | Long | Identificador único de producto.
 saldoPartida | Double | Saldo inicial.
+:::
+
+::: details sBTMovimiento
 
 ### sBTMovimiento
 
@@ -245,6 +250,9 @@ ordinal | Int | Número de ordinal.
 referencia | String | Referencia..
 saldo | Double | Saldo de cuenta vista.
 tipoCambio | Double | Tipo de cambio de moneda.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -255,4 +263,6 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 detalle | String | Detalle de dato adicional.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -165,66 +165,86 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "CC6345192D8633F531F01D1D"
-    },
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 512,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 511,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "USD",
-                "papel": "$",
-                "productoUId": 531,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 451,
-                "nombre": ",",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 532,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
-                "otrosConceptos": ""
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 228483,
-        "Estado": "OK",
-        "Servicio": "BTCuentasBolsillo.ObtenerProductosCV",
-        "Requerimiento": 0,
-        "Fecha": "2023-11-01",
-        "Hora": "08:52:59",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "CC6345192D8633F531F01D1D"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 512,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 511,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "USD",
+        "papel": "$",
+        "productoUId": 531,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 451,
+        "nombre": ",",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 532,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 228483,
+    "Estado": "OK",
+    "Servicio": "BTCuentasBolsillo.ObtenerProductosCV",
+    "Requerimiento": 0,
+    "Fecha": "2023-11-01",
+    "Hora": "08:52:59",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -245,7 +265,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -258,4 +281,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

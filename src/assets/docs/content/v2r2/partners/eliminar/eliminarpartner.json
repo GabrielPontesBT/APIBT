@@ -5,6 +5,7 @@
   "pubName": "BTPartners.EliminarPartner",
   "programa": "RBTPN021",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador único del partner."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -68,11 +72,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.EliminarPartner>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n         </Btinreq>\r\n         <bts:partnerUId>12</bts:partnerUId>\r\n      </bts:BTPartners.EliminarPartner>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"partnerUId\": 12\r\n}"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"partnerUId\": 12\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.EliminarPartner>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n         </Btinreq>\r\n         <bts:partnerUId>12</bts:partnerUId>\r\n      </bts:BTPartners.EliminarPartner>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"partnerUId\": 12\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.EliminarPartnerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38478</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.EliminarPartner</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-21</Fecha>\r\n            <Hora>15:01:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.EliminarPartnerResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38478,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.EliminarPartner\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-21\",\r\n    \"Hora\": \"15:01:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38478,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.EliminarPartner\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-21\",\r\n    \"Hora\": \"15:01:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.EliminarPartnerResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38478</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.EliminarPartner</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-21</Fecha>\r\n            <Hora>15:01:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.EliminarPartnerResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"0A4505C5C795F276A390FC46\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38478,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.EliminarPartner\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-21\",\r\n    \"Hora\": \"15:01:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

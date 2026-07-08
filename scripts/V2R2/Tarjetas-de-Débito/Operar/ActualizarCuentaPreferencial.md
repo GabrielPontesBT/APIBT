@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
-tarjetaId | Long | Identificador de tarjeta.
+tarjetaUId | Long | Identificador de tarjeta.
 operacionUId | Long | Identificador único de operación de cuenta preferencial del cliente.
 
 @tab Datos de Salida
@@ -75,7 +75,7 @@ Código | Descripción
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
          <bts:clienteUId>1</bts:clienteUId>
-         <bts:tarjetaUId>109</bts:tarjetaId>
+         <bts:tarjetaUId>109</bts:tarjetaUId>
          <bts:operacionUId>10</bts:operacionUId>
       </bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>
    </soapenv:Body>
@@ -84,21 +84,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ActualizarCuentaPreferencial' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-		"Canal": "BTDIGITAL",
-		"Requerimiento": "1",
-		"Usuario": "BA",
-		"Token": "0211202010280000399672",
-		"Device": "MC"
-	 },
-	 "clienteUId": "1",
-	 "tarjetaUId": "109"
-	 "operacionUId": "10"
+{
+  "Btinreq": {
+      "Canal": "BTDIGITAL",
+      "Requerimiento": "",
+      "Usuario": "INSTALADOR",
+      "Token": "1518870407CD285A89A23FBE",
+      "Device": ""
+  },
+  "clienteUId": 1,
+  "tarjetaUId": 109,
+  "operacionUId": 10
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

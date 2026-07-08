@@ -5,6 +5,7 @@
   "pubName": "BTPayCaddy.AltaTarjeta",
   "programa": "RBTBPT01",
   "scope": "Panamá",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -148,6 +149,9 @@
       "Comentarios": "Tarjeta física."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "WalletId",
@@ -208,11 +212,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPayCaddy.AltaTarjeta>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n         <bts:OperacionUID>42</bts:OperacionUID>\r\n         <bts:Email>Prueba@gmail.com</bts:Email>\r\n         <bts:Direccion1>Av Italia </bts:Direccion1>\r\n         <bts:Direccion2>403</bts:Direccion2>\r\n         <bts:NumeroPuerta>620</bts:NumeroPuerta>\r\n         <bts:Ciudad>Monteviddeo</bts:Ciudad>\r\n         <bts:Region>Centro</bts:Region>\r\n         <bts:CodigoPostal>11400</bts:CodigoPostal>\r\n         <bts:Pais>Panama</bts:Pais>\r\n         <bts:UrlFront>URL</bts:UrlFront>\r\n         <bts:UrlBack>URL</bts:UrlBack>\r\n         <bts:ResidencePoof></bts:ResidencePoof>\r\n      </bts:BTPayCaddy.AltaTarjeta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPayCaddy.AltaTarjeta>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n         <bts:OperacionUID>42</bts:OperacionUID>\r\n         <bts:Email>Prueba@gmail.com</bts:Email>\r\n         <bts:Direccion1>Av Italia </bts:Direccion1>\r\n         <bts:Direccion2>403</bts:Direccion2>\r\n         <bts:NumeroPuerta>620</bts:NumeroPuerta>\r\n         <bts:Ciudad>Monteviddeo</bts:Ciudad>\r\n         <bts:Region>Centro</bts:Region>\r\n         <bts:CodigoPostal>11400</bts:CodigoPostal>\r\n         <bts:Pais>Panama</bts:Pais>\r\n         <bts:UrlFront>URL</bts:UrlFront>\r\n         <bts:UrlBack>URL</bts:UrlBack>\r\n         <bts:ResidencePoof></bts:ResidencePoof>\r\n      </bts:BTPayCaddy.AltaTarjeta>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.AltaTarjetaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n\t\t     <WalletId>eeb50228-19a2-40a0-95e9-019bbe42ff87</WalletId>\r\n         <UserId>684eb09c-c107-483b-8fe1-0192df03519c</UserId>\r\n         <CardId>16843331-08d3-4ed1-a101-0192df055e86</CardId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.AltaTarjeta</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.AltaTarjetaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.AltaTarjetaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n\t\t     <WalletId>eeb50228-19a2-40a0-95e9-019bbe42ff87</WalletId>\r\n         <UserId>684eb09c-c107-483b-8fe1-0192df03519c</UserId>\r\n         <CardId>16843331-08d3-4ed1-a101-0192df055e86</CardId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.AltaTarjeta</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.AltaTarjetaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [],

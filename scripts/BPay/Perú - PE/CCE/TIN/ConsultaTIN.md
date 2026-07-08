@@ -42,7 +42,7 @@ Nombre | Tipo | Obligatoriedad | Comentarios
 :--------- | :--------- | :--------- | :---------
 Canal   			| Int 		| M	| 15 - Web, 91 - BancaMovil, 51 - Net.
 idCamara 			| Int 		| M	| Codigo de camara (MPE005)
-OperacionUID		| Int 		| M	| id producto de ahorro.
+OperacionUId		| Int 		| M	| id producto de ahorro.
 Moneda 				| Int 		| M	| 1 - soles, 2 - dolares.
 Importe				| Double	| M	| Importe.
 CodigoTransaccion	| Int 		| M	| 320 - Transferencias ordinarias, 325 - Pagos a cuenta tarjeta.

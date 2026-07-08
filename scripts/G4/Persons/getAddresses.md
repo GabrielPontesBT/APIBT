@@ -76,7 +76,7 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "addresses": {
-    "address": [
+    "Address": [
       {
         "AddressCorrelative": 1,
         "AddressTypeId": 1,
@@ -116,7 +116,43 @@ Código | Descripción
         "StatusId": "H",
         "MainAddress": true
       }
-    ]
+    ],
+    "AddressCorrelative": "",
+    "AddressTypeId": "",
+    "AddressTypeDescription": "",
+    "CityId": "",
+    "CityDescription": "",
+    "ColonyId": "",
+    "CountryId": "",
+    "CountryDescription": "",
+    "DepartmentId": "",
+    "DepartmentDescription": "",
+    "DistrictId": "",
+    "DistrictDescription": "",
+    "GeographicalUbication": "",
+    "HousingTypeId": "",
+    "HousingTypeDescription": "",
+    "IsABusiness": false,
+    "Latitude": "",
+    "Level1Data": "",
+    "Level1Id": "",
+    "Level1Description": "",
+    "Level2Data": "",
+    "Level2Id": "",
+    "Level2Description": "",
+    "Level3Data": "",
+    "Level3Id": "",
+    "Level3Description": "",
+    "Level4Data": "",
+    "Level4Id": "",
+    "Level4Description": "",
+    "Longitude": "",
+    "MainAddress": false,
+    "PostalCode": "",
+    "References": "",
+    "SettlementType": "",
+    "SinceDate": "",
+    "StatusId": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -163,7 +199,7 @@ DistrictDescription | String | Descripción del distrito.
 GeographicalUbication | String $<(Length: 6)>$ | Ubicación geográfica.
 HousingTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de vivienda.
 HousingTypeDescription | String | Descripción del tipo de vivienda.
-IsABusiness | Boolean $<(Length: 1)>$ | ¿Es un negocio?.
+IsABusiness | Boolean | ¿Es un negocio?.
 Latitude | Double $<(Length: 10)>$ | Latitud.
 Level1Data | String $<(Length: 30)>$ | Datos del nivel 1.
 Level1Id | Short $<(Length: 3)>$ | Identificador del nivel 1.
@@ -178,7 +214,7 @@ Level4Data | String $<(Length: 30)>$ | Datos del nivel 4.
 Level4Id | Short $<(Length: 3)>$ | Identificador del nivel 4.
 Level4Description | String $<(Length: 35)>$ | Descripción del nivel 4.
 Longitude | Double $<(Length: 10)>$ | Longitud.
-MainAddress | Boolean $<(Length: 1)>$ | Dirección principal.
+MainAddress | Boolean | Dirección principal.
 PostalCode | String $<(Length: 8)>$ | Código postal.
 References | String $<(Length: 140)>$ | Referencias.
 SettlementType | Short $<(Length: 3)>$ | Tipo de asentamiento.

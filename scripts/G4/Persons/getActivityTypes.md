@@ -333,7 +333,9 @@ No aplica.
         "ActivityTypeId": 65,
         "ActivityTypeDescription": "FAMILIAS"
       }
-    ]
+    ],
+    "ActivityTypeId": "",
+    "ActivityTypeDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []

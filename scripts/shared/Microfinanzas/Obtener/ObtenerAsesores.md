@@ -166,72 +166,74 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "sdtAsesores": {
-        "Asesor": [
-          {
-            "identificador": "1",
-            "usuario": "INSTALADOR"
-          },
-          {
-            "identificador": "2",
-            "usuario": "COLOCACION"
-          },
-          {
-            "identificador": "3",
-            "usuario": "COLOCACION"
-          },
-          {
-            "identificador": "15",
-            "usuario": "CONSULTAS"
-          },
-          {
-            "identificador": "16",
-            "usuario": "EJECCUENTA"
-          },
-          {
-            "identificador": "17",
-            "usuario": "CAJERO"
-          },
-          {
-            "identificador": "18",
-            "usuario": "CAPTACCONF"
-          },
-          {
-            "identificador": "90",
-            "usuario": "CONTADOR"
-          },
-          {
-            "identificador": "91",
-            "usuario": "CONSEJOD"
-          },
-          {
-            "identificador": "92",
-            "usuario": "ETRIESGO"
-          },
-          {
-            "identificador": "93",
-            "usuario": "TESORSUC"
-          }
-        ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtAsesores": {
+    "Asesor": [
+      {
+        "identificador": "1",
+        "usuario": "INSTALADOR"
       },
-      "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTMicrofinanzas.ObtenerAsesores",
-        "Fecha": "2019-09-10",
-        "Hora": "14:45:13",
-        "Requerimiento": "95",
-        "Numero": "122",
-        "Estado": "OK"
+      {
+        "identificador": "2",
+        "usuario": "COLOCACION"
+      },
+      {
+        "identificador": "3",
+        "usuario": "COLOCACION"
+      },
+      {
+        "identificador": "15",
+        "usuario": "CONSULTAS"
+      },
+      {
+        "identificador": "16",
+        "usuario": "EJECCUENTA"
+      },
+      {
+        "identificador": "17",
+        "usuario": "CAJERO"
+      },
+      {
+        "identificador": "18",
+        "usuario": "CAPTACCONF"
+      },
+      {
+        "identificador": "90",
+        "usuario": "CONTADOR"
+      },
+      {
+        "identificador": "91",
+        "usuario": "CONSEJOD"
+      },
+      {
+        "identificador": "92",
+        "usuario": "ETRIESGO"
+      },
+      {
+        "identificador": "93",
+        "usuario": "TESORSUC"
       }
-}'
+    ],
+    "identificador": 0,
+    "usuario": ""
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.ObtenerAsesores",
+    "Fecha": "2019-09-10",
+    "Hora": "14:45:13",
+    "Requerimiento": "95",
+    "Numero": "122",
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

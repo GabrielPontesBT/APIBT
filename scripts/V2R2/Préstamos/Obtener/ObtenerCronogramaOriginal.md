@@ -75,21 +75,16 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerCronogramaOriginal' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "480647346F955E77534D3E02",
-	  "bts:Device": "AC"
-	},
-	"operacionUId": 10118
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "BANTOTAL",
+    "Token": "480647346F955E77534D3E02",
+    "Device": "AC"
+  },
+  "operacionUId": 10118
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -582,8 +577,11 @@ totalImpuestos | Double | Total de impuestos.
 totalIntereses | Double | Total de intereses. 
 totalMora | Double | Total de mora. 
 totalPagar | Double | Total a pagar. 
-totalSeguros | Double | Total de seguros. 
- 
+totalSeguros | Double | Total de seguros.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -594,7 +592,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTCuotaPrestamoOriginal
 
 ### sBTCuotaPrestamoOriginal
 
@@ -614,6 +615,8 @@ plazo | Int | Plazo.
 saldoCapital | Double | Saldo capital. 
 seguros | Double | Seguros. 
 situacion | String | Situación. 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

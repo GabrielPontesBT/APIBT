@@ -246,7 +246,10 @@ cuotas | [sBTCuota](#sbtcuota) | Colección de cantidad de cuotas para simular.
 fechaPrimerPago | Date | Fecha de primer pago. 
 monto | Double | Monto del préstamo. 
 periodoCuotas | Int | Período entre cuotas. 
-productoUId | Long | Identificador único del producto. 
+productoUId | Long | Identificador único del producto.
+:::
+
+::: details sBTCuota
 
 ### sBTCuota
 
@@ -255,7 +258,7 @@ Los campos del tipo de dato estructurado sBTCuota son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-cantidadCuotas | Int | Cantidad de cuotas. 
+cantidadCuotas | Int | Cantidad de cuotas.
 :::
 
 ::: details sBTOfertaPrestamo  

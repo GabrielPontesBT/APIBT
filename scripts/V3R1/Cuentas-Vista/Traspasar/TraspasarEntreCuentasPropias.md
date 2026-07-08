@@ -103,7 +103,7 @@ Código | Descripción
             <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>
             <bts:importe>500</bts:importe>
             <bts:operacionUIdDestino>282</bts:operacionUIdDestino>
-            <bts:monedaId></bts:monedaId>
+            <bts:monedaId>0</bts:monedaId>
             <bts:concepto>Traspaso</bts:concepto>
          </bts:sdtTraspaso>
       </bts:BTCuentasVista.TraspasarEntreCuentasPropias>
@@ -113,27 +113,23 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?TraspasarEntreCuentasPropias=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "clienteUId": 40,
-	"sdtTraspaso": {
-		"operacionUIdOrigen": 281,
-		"operacionUIdDestino": 282,
-		"importe": 500,
-		"concepto": "Traspaso"
-	}      
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": 40,
+  "sdtTraspaso": {
+    "operacionUIdOrigen": 281,
+    "operacionUIdDestino": 282,
+    "importe": 500,
+    "concepto": "Traspaso",
+    "monedaId": "0"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

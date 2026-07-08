@@ -1,0 +1,134 @@
+{
+  "slug": "saving-accounts/createsection",
+  "pageTitle": "Create Section",
+  "description": "Método para crear un apartado a una cuenta de ahorro.",
+  "pubName": "PublicSavingAccounts.createSection",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0011",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "savingAccountGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "category",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
+      "Comentarios": "Categoría del apartado."
+    },
+    {
+      "Nombre": "concept",
+      "Tipo": "String <strong>(Length: 255)</strong>",
+      "Comentarios": "Concepto."
+    },
+    {
+      "Nombre": "geolocalization",
+      "Tipo": "<a href=\"#sdtsbtgeolocalization\">SdtsBTGeolocalization</a>",
+      "Comentarios": "Datos de geolocalización."
+    },
+    {
+      "Nombre": "transferType",
+      "Tipo": "Byte <strong>(Length: 1)</strong>",
+      "Comentarios": "Tipo de transferencia."
+    },
+    {
+      "Nombre": "frequency",
+      "Tipo": "Byte <strong>(Length: 1)</strong>",
+      "Comentarios": "Frecuencia."
+    },
+    {
+      "Nombre": "amount",
+      "Tipo": "Double <strong>(Length: 18.2)</strong>",
+      "Comentarios": "Monto."
+    },
+    {
+      "Nombre": "monthlyTransferDay",
+      "Tipo": "Byte <strong>(Length: 2)</strong>",
+      "Comentarios": "Día mensual de transferencia."
+    },
+    {
+      "Nombre": "weeklyTransferDay",
+      "Tipo": "Byte <strong>(Length: 1)</strong>",
+      "Comentarios": "Día semanal de transferencia."
+    },
+    {
+      "Nombre": "schedulesTransfer",
+      "Tipo": "Boolean",
+      "Comentarios": "Indica si programa la transferencia."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "sectionGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del apartado."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "14001010001",
+      "Descripción": "Debe ingresar el GUID de la cuenta de ahorro."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"savingAccountGUID\": \"65e099e6-00ef-4dcd-a244-0c2aa0793c3e\",\n  \"category\": \"1\",\n  \"concept\": \"Gastos Varios\",\n  \"geolocalization\": {\n    \"latitude\": \"44.666666\",\n    \"longitude\": \"53.123456\",\n    \"timestamp\": \"2026-06-14T12:02:00UTC-3\"\n  },\n  \"transferType\": \"1\",\n  \"frequency\": \"3\",\n  \"amount\": \"200\",\n  \"monthlyTransferDay\": \"24\",\n  \"weeklyTransferDay\": \"0\",\n  \"schedulesTransfer\": \"true\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"savingAccountGUID\": \"65e099e6-00ef-4dcd-a244-0c2aa0793c3e\",\n  \"category\": \"1\",\n  \"concept\": \"Gastos Varios\",\n  \"geolocalization\": {\n    \"latitude\": \"44.666666\",\n    \"longitude\": \"53.123456\",\n    \"timestamp\": \"2026-06-14T12:02:00UTC-3\"\n  },\n  \"transferType\": \"1\",\n  \"frequency\": \"3\",\n  \"amount\": \"200\",\n  \"monthlyTransferDay\": \"24\",\n  \"weeklyTransferDay\": \"0\",\n  \"schedulesTransfer\": \"true\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"sectionGUID\": \"78824b30-366d-4686-a84e-89ffa0e35285\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:45:56\",\n    \"Numero\": 13585058,\n    \"Servicio\": \"PublicSavingAccounts.createSection\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"sectionGUID\": \"78824b30-366d-4686-a84e-89ffa0e35285\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:45:56\",\n    \"Numero\": 13585058,\n    \"Servicio\": \"PublicSavingAccounts.createSection\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double <strong>(Length: 11.8)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

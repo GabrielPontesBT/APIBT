@@ -719,8 +719,11 @@ intereses | Double | Intereses de la cuota.
 otrosConceptos | Double | Importe otros conceptos. 
 redondeos | Double | Redondeos. 
 seguros | Double | Seguros de la cuota. 
-total | Double | Total de la cuota. 
- 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTDetallePagoCuota
+
 ### sBTDetallePagoCuota
 
 ::: center 
@@ -736,7 +739,10 @@ impuestos | Double | Impuestos de la cuota.
 intereses | Double | Intereses de la cuota. 
 otrosConceptos | Double | Importe otros conceptos. 
 seguros | Double | Seguros de la cuota. 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -747,6 +753,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -259,7 +259,7 @@ idOperacionBT | String | Identificador String Bantotal (concatenación de todos 
 producto | [sBTProducto](#sbtproducto) | Datos del Producto pasivo.  
 tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').  
 sucursal | String | Nombre de la sucursal de origen de la operación.  
-subcuenta | String | Nombre de la cuenta vista.  
+subCuenta | String | Nombre de la cuenta vista.  
 saldo | Decimal | Saldo.  
 estado | String | Descripción de estado.  
 :::

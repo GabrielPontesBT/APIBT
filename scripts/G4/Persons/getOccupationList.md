@@ -157,7 +157,11 @@ No aplica.
         "OccupationTypeId": 2,
         "OccupationTypeDescription": "INDEPENDIENTE"
       }
-    ]
+    ],
+    "OccupationId": "",
+    "OccupationDescription": "",
+    "OccupationTypeId": 0,
+    "OccupationTypeDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []

@@ -33,7 +33,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 paisDocumentoId | Short | Identificador de país del documento.
 tipoDocumentoId | Short | Identificador de tipo de documento.
-nroDocumento | String | Número de documento.
+numeroDocumento | String | Número de documento.
 
 @tab Datos de Salida
 
@@ -81,23 +81,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarDocumento=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \
-  -d '{
-	"Btinreq": {
-		"Device": "GZ",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": 0,
-		"Canal": "BTDIGITAL",
-		"Token": "E1F15D391E5C8FAC4189A627"
-	},
-   "paisDocumentoId": 845,
-   "tipoDocumentoId": 1,
-   "numeroDocumento": "52116325"
-}'
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "E1F15D391E5C8FAC4189A627"
+  },
+  "paisDocumentoId": 845,
+  "tipoDocumentoId": 1,
+  "numeroDocumento": "52116325",
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -119,7 +114,7 @@ curl -X POST \
             <Token>E1F15D391E5C8FAC4189A627</Token>
          </Btinreq>
          <valido>S</valido>
-         <mensajeValido/>
+         <mensaje></mensaje>
          <Erroresnegocio/>
          <Btoutreq>
             <Numero>16884</Numero>
@@ -137,29 +132,29 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "GZ",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": 0,
-		"Canal": "BTDIGITAL",
-		"Token": "E1F15D391E5C8FAC4189A627"
-	},
-   "valido": "S",
-   "mensajeValido": "",
-   "Erroresnegocio": {
-       "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-       "Numero": 16884,
-       "Estado": "OK",
-       "Servicio": "BTPersonas.ValidarDocumento",
-       "Fecha": "2023-10-30",
-       "Requerimiento": 0,
-       "Hora": "15:04:42",
-       "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "E1F15D391E5C8FAC4189A627"
+  },
+  "valido": "S",
+  "mensaje": "",
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 16884,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ValidarDocumento",
+    "Fecha": "2023-10-30",
+    "Requerimiento": 0,
+    "Hora": "15:04:42",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

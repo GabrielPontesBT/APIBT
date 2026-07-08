@@ -110,7 +110,6 @@ curl -X POST \
                <moneda>$</moneda>
                <papel/>
             </sBTProducto>
-            ...
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -128,38 +127,37 @@ curl -X POST \
 ```
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "61",
-                "nombre": "Amortización Automática TF"
-            },
-            ...
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "724",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerProductos",
-        "Fecha": "2017-11-24",
-        "Requerimiento": "",
-        "Hora": "13:13:45",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "61",
+        "nombre": "Amortización Automática TF"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "724",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerProductos",
+    "Fecha": "2017-11-24",
+    "Requerimiento": "",
+    "Hora": "13:13:45",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -117,7 +117,7 @@ curl -X POST \
             <Token>573607534CD285A89A23FBEE</Token>
             <Device>N</Device>
          </Btinreq>
-         <fechaFin>2020-03-15</fechaFin>
+         <fechaVencimiento>2020-03-15</fechaVencimiento>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -135,27 +135,26 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
-      "Usuario": "INSTALADOR", 
-      "Token": "573607534CD285A89A23FBEE", 
-      "Device": "N" 
-    }, 
-    "fechaFin": "2020-03-15", 
-    "Erroresnegocio": { 
-    }, 
-    "Btoutreq": { 
-      "Canal": "BTDIGITAL", 
-      "Servicio": "BTCalendarios.CalcularFechaVencimientoDiasHabiles", 
-      "Fecha": "2021-04-07", 
-      "Hora": "17:52:43", 
-      "Requerimiento": "1", 
-      "Numero": "8156", 
-      "Estado": "OK" 
-    } 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "INSTALADOR",
+    "Token": "573607534CD285A89A23FBEE",
+    "Device": "N"
+  },
+  "fechaVencimiento": "2020-03-15",
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTCalendarios.CalcularFechaVencimientoDiasHabiles",
+    "Fecha": "2021-04-07",
+    "Hora": "17:52:43",
+    "Requerimiento": "1",
+    "Numero": "8156",
+    "Estado": "OK"
   }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

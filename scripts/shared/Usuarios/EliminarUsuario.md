@@ -64,7 +64,7 @@ Código | Descripción
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Token>20130357454A8B5C60A82434</bts:Token>
             <bts:Device>GP</bts:Device>
          </bts:Btinreq>

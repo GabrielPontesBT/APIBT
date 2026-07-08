@@ -158,6 +158,7 @@ Código | Descripción
             <bts:direccion></bts:direccion>
             <bts:referencia>EN LA ESQUINA</bts:referencia>
             <bts:piso>123</bts:piso>
+            <ejecutivoId>0</ejecutivoId>
          </bts:sdtPersona>
       </bts:BTClientes.Actualizar>
    </soapenv:Body>
@@ -166,58 +167,56 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Actualizar=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 66bf87c8-af54-aec4-4550-d5bc9320068a' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "clienteUId": "202",
-   "sdtPersona": {
-      "paisDocumentoId": 0,
-      "tipoDocumentoId": 0,
-      "nroDocumento": "",
-      "ingresos": "1500.00",
-      "nacionalidad": "URUGUAY",
-      "sexo": "M",
-      "clasificacionInternaId": 1,
-      "segundoNombre": "",
-      "telefonoCelular": "",
-      "departamentoId": 10,
-      "ocupacionId": "1",
-      "actividadLaboralId": 1112,
-      "nacionalidadId": 845,
-      "localidadId": "10",
-      "paisDomicilioId": 845,
-      "telefonoFijo": "26004288",
-      "codigoPostal": "",
-      "primerNombre": "ALEJANDRO",
-      "fechaNacimiento": "1976-02-26",
-      "primerApellido": "VAZQUEZ",
-      "estadoCivilId": "1",
-      "segundoApellido": "SZENTANDRASI",
-      "paisDocumento": "URUGUAY",
-      "fechaInicioActividad": "1980-01-01",
-      "ocupacion": "Empleado",
-      "paisDomicilio": "URUGUAY",
-      "fechaVencimiento": "2025-01-01",
-      "correoElectronico": "AV@GMAIL.COM",
-      "numeroPuerta": "7216",
-      "calle": "BAZZURRO",
-      "barrioId": 0,
-      "sectorId": 3,
-      "direccion": "",
-      "referencia": "EN LA ESQUINA",
-      "piso": "123"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": "202",
+  "sdtPersona": {
+    "paisDocumentoId": 0,
+    "tipoDocumentoId": 0,
+    "nroDocumento": "",
+    "ingresos": "1500.00",
+    "nacionalidad": "URUGUAY",
+    "sexo": "M",
+    "clasificacionInternaId": 1,
+    "segundoNombre": "",
+    "telefonoCelular": "",
+    "departamentoId": 10,
+    "ocupacionId": "1",
+    "actividadLaboralId": 1112,
+    "nacionalidadId": 845,
+    "localidadId": "10",
+    "paisDomicilioId": 845,
+    "telefonoFijo": "26004288",
+    "codigoPostal": "",
+    "primerNombre": "ALEJANDRO",
+    "fechaNacimiento": "1976-02-26",
+    "primerApellido": "VAZQUEZ",
+    "estadoCivilId": "1",
+    "segundoApellido": "SZENTANDRASI",
+    "paisDocumento": "URUGUAY",
+    "fechaInicioActividad": "1980-01-01",
+    "ocupacion": "Empleado",
+    "paisDomicilio": "URUGUAY",
+    "fechaVencimiento": "2025-01-01",
+    "correoElectronico": "AV@GMAIL.COM",
+    "numeroPuerta": "7216",
+    "calle": "BAZZURRO",
+    "barrioId": 0,
+    "sectorId": 3,
+    "direccion": "",
+    "referencia": "EN LA ESQUINA",
+    "piso": "123",
+    "apartamento": "",
+    "ejecutivoId": 0,
+    "estadoCivil": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

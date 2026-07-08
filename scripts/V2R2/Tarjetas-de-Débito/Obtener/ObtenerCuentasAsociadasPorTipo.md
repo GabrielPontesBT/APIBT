@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjetaUId | Long | Identificador único de tarjeta.
+tarjetaUID | Long | Identificador único de tarjeta.
 tipoDeCuenta | Short | Tipo de cuenta.
 
 @tab Datos de Salida
@@ -113,7 +113,7 @@ curl -X POST \
             <Device>GL</Device>
          </Btinreq>
          <sdtCuentasAsociadasTD>
-            <tarjetaUId>2000001957</tarjetaUId>
+            <tarjetaUID>2000001957</tarjetaUID>
             <cuentas>
                <SdtsBTCuentaAsociadaTD>
                   <operacionUId>10216</operacionUId>
@@ -150,46 +150,51 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "B086B798299A7DB5B8310AAA",
-          "Device": "GL"
-        },
-        "sdtCuentasAsociadasTD": {
-          "tarjetaUId": 2000001957,
-          "cuentas": {
-            "SdtsBTCuentaAsociadaTD": {
-              "operacionUId": 10216,
-              "idOperacionFmt": "000000040_008",
-              "producto": {
-                "productoUId": 93,
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                "moneda": "S/.",
-                "papel": ""
-              },
-              "sucursal": "Sucursal Cusco",
-              "simboloMoneda": "S/.",
-              "subCuenta": "",
-              "tipoDeCuenta": 1,
-              "saldo": 10003628.81,
-              "estado": "CUENTAS INACTIVAS"
-            }
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "B086B798299A7DB5B8310AAA",
+    "Device": "GL"
+  },
+  "sdtCuentasAsociadasTD": {
+    "cuentas": {
+      "SdtsBTCuentaAsociadaTD": {
+        "operacionUId": 10216,
+        "idOperacionFmt": "000000040_008",
+        "producto": {
+          "productoUId": 93,
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "moneda": "S/.",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
           }
         },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo",
-          "Fecha": "2022-11-30",
-          "Hora": "17:25:57",
-          "Requerimiento": 1,
-          "Numero": 513,
-          "Estado": "OK"
-        }
-}'
+        "sucursal": "Sucursal Cusco",
+        "simboloMoneda": "S/.",
+        "subCuenta": "",
+        "tipoDeCuenta": 1,
+        "saldo": 10003628.81,
+        "estado": "CUENTAS INACTIVAS"
+      }
+    },
+    "tarjetaUID": 2000001957
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo",
+    "Fecha": "2022-11-30",
+    "Hora": "17:25:57",
+    "Requerimiento": 1,
+    "Numero": 513,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -207,7 +212,10 @@ Los campos del tipo de dato estructurado sBTCuentasAsociadasTD son los siguiente
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 cuentas | [sBTCuentaAsociadaTD](#sbtcuentaasociadatd) | Datos cuenta asociada. 
-tarjetaUId | Long | Identificador único de tarjeta.. 
+tarjetaUID | Long | Identificador único de tarjeta..
+:::
+
+::: details sBTCuentaAsociadaTD
 
 ### sBTCuentaAsociadaTD
 
@@ -224,7 +232,10 @@ saldo | Double | Saldo.
 simboloMoneda | String | Símbolo de la moneda. 
 subCuenta | String | Sub cuenta. 
 sucursal | String | Sucursal. 
-tipoDeCuenta | Short | Tipo de cuenta. 
+tipoDeCuenta | Short | Tipo de cuenta.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -237,7 +248,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -250,4 +264,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

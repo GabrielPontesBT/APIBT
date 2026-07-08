@@ -73,7 +73,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>2e3c830e3a4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
-         <bts:personaId>21</bts:personaId>
+         <bts:personaUId>21</bts:personaUId>
          <bts:sdtDocumentoAdicional>
             <bts:fechaEmision>2015-01-01</bts:fechaEmision>
             <bts:tipoDocumento>3</bts:tipoDocumento>
@@ -90,30 +90,26 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ModificarDocumentoAdicional=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 9827b2ac-efc7-deaf-0969-9be9808e05e1' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "personaId": 21,
-   "sdtDocumentoAdicional": {
-      "fechaEmision": "0000-00-00",
-      "tipoDocumento": "3",
-      "fechaVencimiento": "2024-01-01",
-      "tipoDocumentoDsc": "Pasaporte",
-      "paisDocumentoDsc": "ARGENTINA",
-      "nroDocumento": "B8789452",
-      "paisDocumento": "63"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": 21,
+  "sdtDocumentoAdicional": {
+    "fechaEmision": "0000-00-00",
+    "tipoDocumento": "3",
+    "fechaVencimiento": "2024-01-01",
+    "tipoDocumentoDsc": "Pasaporte",
+    "paisDocumentoDsc": "ARGENTINA",
+    "nroDocumento": "B8789452",
+    "paisDocumento": "63"
+  },
+  "personaUId": 0
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

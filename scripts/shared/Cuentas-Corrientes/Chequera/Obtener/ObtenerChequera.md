@@ -140,39 +140,40 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtDatosChequera": {
-		"totalCheques": 25,
-		"estado": "SOLICITADA",
-		"chequeInicial": 2226,
-		"titular": "SOSA PEREZ ANA",
-		"cantidadLibretas": 1,
-		"empresa": 1,
-		"operacionUId": 2,
-		"tipoId": 1,
-		"tipo": "Chequera Común 25 / Pesos",
-		"solicitud": 37  
-	},
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8418,
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerChequera",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDatosChequera": {
+    "totalCheques": 25,
+    "estado": "SOLICITADA",
+    "chequeInicial": 2226,
+    "titular": "SOSA PEREZ ANA",
+    "cantidadLibretas": 1,
+    "empresa": 1,
+    "operacionUId": 2,
+    "tipoId": 1,
+    "tipo": "Chequera Común 25 / Pesos",
+    "solicitud": 37,
+    "estadoId": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8418,
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerChequera",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

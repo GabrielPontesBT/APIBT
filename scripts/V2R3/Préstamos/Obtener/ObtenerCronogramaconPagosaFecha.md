@@ -154,7 +154,6 @@ curl -X POST \
                 <fechaPago>2022-09-21</fechaPago>
                 <total>0</total>
             </SdtsBTCuotaPrestamo>
-            ...
         </sdtCuotasPrestamos>
         <Erroresnegocio></Erroresnegocio>
         <Btoutreq>
@@ -173,73 +172,72 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtCuotasPrestamos": {
-        "SdtsBTCuotaPrestamo": [
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuotasPrestamos": {
+    "SdtsBTCuotaPrestamo": [
+      {
+        "impuestos": 0,
+        "importePago": 292.6,
+        "subsidios": 0,
+        "detalleConceptos": {
+          "SdtsBTConcepto": [
             {
-                "impuestos": 0,
-                "importePago": 292.6,
-                "subsidios": 0,
-                "detalleConceptos": {
-                    "SdtsBTConcepto": [
-                        {
-                            "texto": "",
-                            "valor": 0,
-                            "concepto": "Impuesto al Interés"
-                        },
-                        {
-                            "texto": "",
-                            "valor": 0,
-                            "concepto": "Impuesto a la Mora"
-                        },
-                        {
-                            "texto": "",
-                            "valor": 0,
-                            "concepto": "Impuesto a las Comisiones"
-                        }
-                    ]
-                },
-                "fechaVencimiento": "\n\t\t",
-                "intereses": 0,
-                "estadoDsc": "",
-                "comisiones": 0,
-                "otrosConceptos": 0,
-                "concepto": "Capital/Interés",
-                "interesMora": 0,
-                "capital": 0,
-                "diasMora": 0,
-                "tipoCuota": "M",
-                "nroCuota": 1,
-                "seguros": 0,
-                "fechaUltimoPago": "2022-11-07",
-                "redondeo": 0,
-                "estado": "Paga",
-                "fechaPago": "2022-09-21",
-                "total": 0
+              "texto": "",
+              "valor": 0,
+              "concepto": "Impuesto al Interés"
             },
-            ...
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "901",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerCronograma",
-        "Fecha": "2017-12-21",
-        "Requerimiento": "",
-        "Hora": "12:27:52",
-        "Canal": "BTDIGITAL"
-    }
-}'
+            {
+              "texto": "",
+              "valor": 0,
+              "concepto": "Impuesto a la Mora"
+            },
+            {
+              "texto": "",
+              "valor": 0,
+              "concepto": "Impuesto a las Comisiones"
+            }
+          ]
+        },
+        "fechaVencimiento": "\n\t\t",
+        "intereses": 0,
+        "estadoDsc": "",
+        "comisiones": 0,
+        "otrosConceptos": 0,
+        "concepto": "Capital/Interés",
+        "interesMora": 0,
+        "capital": 0,
+        "diasMora": 0,
+        "tipoCuota": "M",
+        "nroCuota": 1,
+        "seguros": 0,
+        "fechaUltimoPago": "2022-11-07",
+        "redondeo": 0,
+        "estado": "Paga",
+        "fechaPago": "2022-09-21",
+        "total": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "901",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerCronograma",
+    "Fecha": "2017-12-21",
+    "Requerimiento": "",
+    "Hora": "12:27:52",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -275,7 +273,10 @@ redondeo | Double | Redondeo.
 seguros | Double | Seguros de la cuota. 
 subsidios | Double | Subsidios  de la cuota. 
 tipoCuota | String | Tipo de cuota (Capital - K / Interés - I / Capital-Interés - M / Pago Mínimo - T / Cuota Fija - F). 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -288,4 +289,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

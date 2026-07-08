@@ -189,66 +189,75 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-      "Device": "BTDIGITAL", 
-      "Usuario": "INSTALADOR", 
-      "Requerimiento": 1, 
-      "Canal": "BTDIGITAL", 
-      "Token": "d25cdaf98eCD285A89A23FBE" 
-   }, 
-   "sdtSimulacionPrestamo": { 
-      "cft": "27.380000", 
-      "plazo": "31", 
-      "tasa": "23.000000", 
-      "impuestos": "82.850000", 
-      "tasaEfectiva": "0.000000", 
-      "fechaVencimiento": "2020-11-14", 
-      "producto": { 
-         "papel": "$", 
-         "moneda": "$", 
-         "productoUId": "71", 
-         "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF" 
-      }, 
-      "intereses": "348.02", 
-      "fechaPrimerPago": "2020-11-13", 
-      "comisiones": "0.000000", 
-      "valorCuota": "15544.58", 
-      "otrosConceptos": "", 
-      "cronograma": { 
-         "sBTCuotaPrestamoAlta": [ 
-            { 
-               "importe": "15544.58", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-11-13" 
-            }, 
-            { 
-               "importe": "5000.00", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-11-14" 
-            } 
-         ] 
-      }, 
-      "totalPrestamo": "20573.18", 
-      "capital": "20000.00", 
-      "operacionUId": "1", 
-      "tasaEfectivaAnual": "23.000000", 
-      "seguros": "120.000000", 
-      "tasaNominalAnual": "20.881010", 
-      "fechaValor": "2020-10-13" 
-   }, 
-   "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-   }, 
-   "Btoutreq": { 
-      "Numero": "110672", 
-      "Estado": "OK", 
-      "Servicio": "BTPrestamos.SimularIngresandoBalloonSC", 
-      "Requerimiento": 1, 
-      "Fecha": "2021-03-18", 
-      "Canal": "BTDIGITAL", 
-      "Hora": "12:34:44" 
-   } 
+{
+  "Btinreq": {
+    "Device": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "d25cdaf98eCD285A89A23FBE"
+  },
+  "sdtSimulacionPrestamo": {
+    "cft": "27.380000",
+    "plazo": "31",
+    "tasa": "23.000000",
+    "impuestos": "82.850000",
+    "tasaEfectiva": "0.000000",
+    "fechaVencimiento": "2020-11-14",
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": "71",
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "intereses": "348.02",
+    "fechaPrimerPago": "2020-11-13",
+    "comisiones": "0.000000",
+    "valorCuota": "15544.58",
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "importe": "15544.58",
+          "redondeo": "0.00",
+          "fechaPago": "2020-11-13"
+        },
+        {
+          "importe": "5000.00",
+          "redondeo": "0.00",
+          "fechaPago": "2020-11-14"
+        }
+      ]
+    },
+    "totalPrestamo": "20573.18",
+    "capital": "20000.00",
+    "operacionUId": "1",
+    "tasaEfectivaAnual": "23.000000",
+    "seguros": "120.000000",
+    "tasaNominalAnual": "20.881010",
+    "fechaValor": "2020-10-13",
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "110672",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularIngresandoBalloonSC",
+    "Requerimiento": 1,
+    "Fecha": "2021-03-18",
+    "Canal": "BTDIGITAL",
+    "Hora": "12:34:44"
+  }
 }
 ```
 :::
@@ -303,7 +312,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -316,7 +328,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -328,6 +343,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -336,6 +354,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

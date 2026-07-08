@@ -131,35 +131,35 @@ curl -X POST \
          <listaCheques>
             <sBTChequeElectronico>
                <beneficiario>3435262644</beneficiario>
-               <numeroCheque>4009969</numeroCheque>
+               <NumeroCheque>4009969</NumeroCheque>
                <importe>1000.00</importe>
                <numeroChequera>50243</numeroChequera>
                <CMC7>00110010030400996900000000747</CMC7>
            </sBTChequeElectronico>
             <sBTChequeElectronico>
                <beneficiario>3435262644</beneficiario>
-               <numeroCheque>4009970</numeroCheque>
+               <NumeroCheque>4009970</NumeroCheque>
                <importe>1000.00</importe>
                <numeroChequera>50243</numeroChequera>
                <CMC7>00110010030400997000000000747</CMC7>
             </sBTChequeElectronico>
             <sBTChequeElectronico>
                <beneficiario>3435262644</beneficiario>
-               <numeroCheque>4009971</numeroCheque>
+               <NumeroCheque>4009971</NumeroCheque>
                <importe>1000.00</importe>
                <numeroChequera>50243</numeroChequera>
                <CMC7>00110010030400997100000000747</CMC7>
             </sBTChequeElectronico>
             <sBTChequeElectronico>
                <beneficiario>3435262644</beneficiario>
-               <numeroCheque>4009972</numeroCheque>
+               <NumeroCheque>4009972</NumeroCheque>
                <importe>1000.00</importe>
                <numeroChequera>50243</numeroChequera>
                <CMC7>00110010030400997200000000747</CMC7>
             </sBTChequeElectronico>
             <sBTChequeElectronico>
                <beneficiario>3435262644</beneficiario>
-               <numeroCheque>4009973</numeroCheque>
+               <NumeroCheque>4009973</NumeroCheque>
                <importe>1000.00</importe>
                <numeroChequera>50243</numeroChequera>
                <CMC7>00110010030400997300000000747</CMC7>
@@ -182,66 +182,66 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"listaCheques": {
-		"sBTChequeElectronico": [
-			{
-				"beneficiario": "3435262644",
-				"NumeroCheque": "4009969",
-				"importe": "1000.00",
-				"numeroChequera": "50243",
-				"CMC7": "00110010030400996900000000747"
-			},
-			{
-				"beneficiario": "3435262644",
-				"numeroCheque": "4009970",
-				"importe": "1000.00",
-				"numeroChequera": "50243",
-				"CMC7": "00110010030400997000000000747"
-			},
-			{
-				"beneficiario": "3435262644",
-				"numeroCheque": "4009971",
-				"importe": "1000.00",
-				"numeroChequera": "50243",
-				"CMC7": "00110010030400997100000000747"
-			},
-			{
-				"beneficiario": "3435262644",
-				"numeroCheque": "4009972",
-				"importe": "1000.00",
-				"numeroChequera": "50243",
-				"CMC7": "00110010030400997200000000747"
-			},
-			{
-				"beneficiario": "3435262644",
-				"numeroCheque": "4009973",
-				"importe": "1000.00",
-				"numeroChequera": "50243",
-				"CMC7": "00110010030400997300000000747"
-			}
-		]
-	}
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8396,
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.EmitirChequeElectronico",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "listaCheques": {
+    "sBTChequeElectronico": [
+      {
+        "beneficiario": "3435262644",
+        "NumeroCheque": "4009969",
+        "importe": "1000.00",
+        "numeroChequera": "50243",
+        "CMC7": "00110010030400996900000000747"
+      },
+      {
+        "beneficiario": "3435262644",
+        "importe": "1000.00",
+        "numeroChequera": "50243",
+        "CMC7": "00110010030400997000000000747",
+        "NumeroCheque": "4009970"
+      },
+      {
+        "beneficiario": "3435262644",
+        "importe": "1000.00",
+        "numeroChequera": "50243",
+        "CMC7": "00110010030400997100000000747",
+        "NumeroCheque": "4009971"
+      },
+      {
+        "beneficiario": "3435262644",
+        "importe": "1000.00",
+        "numeroChequera": "50243",
+        "CMC7": "00110010030400997200000000747",
+        "NumeroCheque": "4009972"
+      },
+      {
+        "beneficiario": "3435262644",
+        "importe": "1000.00",
+        "numeroChequera": "50243",
+        "CMC7": "00110010030400997300000000747",
+        "NumeroCheque": "4009973"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8396,
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.EmitirChequeElectronico",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -261,7 +261,7 @@ Nombre | Tipo | Comentarios
 beneficiario | String | Nombre del beneficiario.
 CMC7 | Long | Identificador CMC7 de cheque electrónico.
 importe | Double | Importe.
-numerocheque | Long | Numero de cheque electrónico.
-numerochequera | Long | Numero de chequera electrónica.
+NumeroCheque | Long | Numero de cheque electrónico.
+numeroChequera | Long | Numero de chequera electrónica.
 :::
 <!-- CIERRA SDT -->

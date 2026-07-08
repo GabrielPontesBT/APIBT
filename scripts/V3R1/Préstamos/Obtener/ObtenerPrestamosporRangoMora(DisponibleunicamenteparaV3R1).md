@@ -82,6 +82,7 @@ Código | Descripción
       </bts:BTPrestamos.ObtenerPrestamosPorRangoMora>
    </soapenv:Body>
 </soapenv:Envelope>
+```
 
 @tab JSON
 
@@ -114,7 +115,7 @@ curl -X POST \
 ::: code-tabs #Formato
 
 @tab XML
-
+```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerPrestamosPorRangoMoraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
@@ -163,6 +164,7 @@ curl -X POST \
       </BTPrestamos.ObtenerPrestamosPorRangoMoraResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
+```
 
 @tab JSON
 

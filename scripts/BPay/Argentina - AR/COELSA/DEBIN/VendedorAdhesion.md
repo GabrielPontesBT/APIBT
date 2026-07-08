@@ -68,7 +68,7 @@ Código | Descripción
                <Token>1095768874CD285A89A23FBE</Token>
                <Device>ABC</Device>
             </Btinreq>
-         <bts:Vendedor>
+         <bts:vendedor>
             <bts:sucursal>003</bts:sucursal>
             <bts:emailContacto>veronicamariateresa@gmail.com</bts:emailContacto>
             <bts:rubro>VARIOS</bts:rubro>
@@ -76,7 +76,7 @@ Código | Descripción
             <bts:ctaCbu>4320001020003185180008</bts:ctaCbu>
             <bts:endpoint>0202</bts:endpoint>
             <bts:cuit>30716226308</bts:cuit>
-         </bts:Vendedor>
+         </bts:vendedor>
       </bts:BTCOELSAGestionDebin.VendedorAdhesion>
    </soapenv:Body>
 </soapenv:Envelope>

@@ -166,6 +166,10 @@ Código | Descripción
             <bts:tipoDocumento></bts:tipoDocumento>
             <bts:nacionalidadId>4</bts:nacionalidadId>
             <bts:estadoCivilId>1</bts:estadoCivilId>
+            <datosAdicionales>
+               <clave></clave>
+               <valor></valor>
+            </datosAdicionales>
          </bts:sdtPersona>
       </bts:BTPersonas.Crear>
    </soapenv:Body>
@@ -174,83 +178,84 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?Crear' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
-    "Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "AC",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "AC",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPersona": {
+    "nroDocumento": "7896328",
+    "estadoCivil": "",
+    "segundoNombre": "Carlos",
+    "fechaInicioActividad": "2023-09-26",
+    "fechaVencimiento": "2024-09-26",
+    "segundoApellido": "Gimenez",
+    "fechaNacimiento": "1998-09-26",
+    "telefonoCelular": "025874532",
+    "tipoDocumentoId": 1,
+    "actividadLaboral": "",
+    "clasificacionInternaId": 2,
+    "sexo": "M",
+    "primerNombre": "Luis",
+    "clasificacionInterna": "",
+    "paisDocumentoId": 845,
+    "telefonoFijo": "874525",
+    "primerApellido": "Gonzales",
+    "ocupacion": "",
+    "sector": "",
+    "paisDocumento": "",
+    "ocupacionId": 8,
+    "nacionalidad": "",
+    "sueldo": 7845,
+    "domicilios": {
+      "sBTDomicilioCompleto": [
+        {
+          "agrupador1Id": 1,
+          "coloniaId": 3,
+          "departamento": "",
+          "agrupador5": "",
+          "agrupador4": "",
+          "agrupador3Id": 1,
+          "agrupador3": "",
+          "barrio": "",
+          "detalleUbicacion": "",
+          "agrupador2": "",
+          "agrupador1": "",
+          "agrupador5Id": 3,
+          "ubicacionDesde": "",
+          "tipoDomicilio": "",
+          "direccion": "",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "",
+          "pais": "",
+          "agrupador2Id": 2,
+          "codigoPostal": "7852",
+          "tipoViviendaId": 1,
+          "agrupador4Id": 1,
+          "barrioId": 2,
+          "localidad": "",
+          "localidadId": 2,
+          "tipoDomicilioId": 1,
+          "departamentoId": 1
+        }
+      ]
     },
-   "sdtPersona": {
-      "nroDocumento": "7896328",
-      "estadoCivil": "",
-      "segundoNombre": "Carlos",
-      "fechaInicioActividad": "2023-09-26",
-      "fechaVencimiento": "2024-09-26",
-      "segundoApellido": "Gimenez",
-      "fechaNacimiento": "1998-09-26",
-      "telefonoCelular": "025874532",
-      "tipoDocumentoId": 1,
-      "actividadLaboral": "",
-      "clasificacionInternaId": 2,
-      "sexo": "M",
-      "primerNombre": "Luis",
-      "clasificacionInterna": "",
-      "paisDocumentoId": 845,
-      "telefonoFijo": "874525",
-      "primerApellido": "Gonzales",
-      "ocupacion": "",
-      "sector": "",
-      "paisDocumento": "",
-      "ocupacionId": 8,
-      "nacionalidad": "",
-      "sueldo": 7845,
-      "domicilios": {
-         "sBTDomicilioCompleto": [{
-            "agrupador1Id": 1,
-            "coloniaId": 3,
-            "departamento": "",
-            "agrupador5": "",
-            "agrupador4": "",
-            "agrupador3Id": 1,
-            "agrupador3": "",
-            "barrio": "",
-            "detalleUbicacion": "",
-            "agrupador2": "",
-            "agrupador1": "",
-            "agrupador5Id": 3,
-            "ubicacionDesde": "",
-            "tipoDomicilio": "",
-            "direccion": "",
-            "colonia": "",
-            "paisId": 845,
-            "tipoVivienda": "",
-            "pais": "",
-            "agrupador2Id": 2,
-            "codigoPostal": "7852",
-            "tipoViviendaId": 1,
-            "agrupador4Id": 1,
-            "barrioId": 2,
-            "localidad": "",
-            "localidadId": 2,
-            "tipoDomicilioId": 1,
-            "departamentoId": 1
-         }]
-      },
-      "correoElectronico": "juanLui@mail.com",
-      "sectorId": 2,
-      "actividadLaboralId": 3,
-      "tipoDocumento": "",
-      "nacionalidadId": 4,
-      "estadoCivilId": 1
-   }
-}'
+    "correoElectronico": "juanLui@mail.com",
+    "sectorId": 2,
+    "actividadLaboralId": 3,
+    "tipoDocumento": "",
+    "nacionalidadId": 4,
+    "estadoCivilId": 1,
+    "datosAdicionales": {
+      "clave": "",
+      "valor": ""
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -359,6 +364,9 @@ telefonoCelular | String | Teléfono celular.
 telefonoFijo | String | Teléfono fijo.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -394,6 +402,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -403,6 +414,8 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+valor | String | Valor de información adicional.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -1,0 +1,153 @@
+{
+  "slug": "loan-parameters/getinsurances",
+  "pageTitle": "Get Insurances",
+  "description": "Método para obtener los seguros disponibles de un producto de préstamos.",
+  "pubName": "PublicLoanParameters.getInsurances",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0023",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "insurances",
+      "Tipo": "<a href=\"#sdtsbtlowinsurancedefinition\">SdtsBTLOWInsuranceDefinition</a>",
+      "Comentarios": "Listado de seguros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"insurances\": {\n    \"insurance\": [\n      {\n        \"InsuranceId\": 1,\n        \"InsuranceDescription\": \"SEGURO DE VIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 12,\n        \"InsuranceCompanyDescription\": \"ASEGURADORA REGIONAL\",\n        \"Enabled\": true,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.005000\",\n        \"FixedAmount\": \"0.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"K\"\n      },\n      {\n        \"InsuranceId\": 2,\n        \"InsuranceDescription\": \"SEGURO VIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 1,\n        \"InsuranceCompanyDescription\": \"BANCO DE SEGUROS DEL ESTADO\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.000000\",\n        \"FixedAmount\": \"500.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"I\"\n      },\n      {\n        \"InsuranceId\": 8,\n        \"InsuranceDescription\": \"SEGURO DE VIDA CUOTAS\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": true,\n        \"BoardId\": 30,\n        \"BoardPercentage\": \"0.500000\",\n        \"BoardFixedAmount\": \"10.00000\",\n        \"FixedPercentage\": \"0.500000\",\n        \"FixedAmount\": \"10.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"S\"\n      },\n      {\n        \"InsuranceId\": 5,\n        \"InsuranceDescription\": \"SEGURO DE VIDA EN DESEMBOLSO\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 1,\n        \"InsuranceCompanyDescription\": \"BANCO DE SEGUROS DEL ESTADO\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": true,\n        \"BoardId\": 10,\n        \"BoardPercentage\": \"0.500000\",\n        \"BoardFixedAmount\": \"100.00000\",\n        \"FixedPercentage\": \"0.500000\",\n        \"FixedAmount\": \"100.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"I\"\n      },\n      {\n        \"InsuranceId\": 50,\n        \"InsuranceDescription\": \"ALIANZA VIDA ANTICIPADO\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.565000\",\n        \"FixedAmount\": \"45.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"K\"\n      },\n      {\n        \"InsuranceId\": 3,\n        \"InsuranceDescription\": \"XXXVIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": false,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.050000\",\n        \"FixedAmount\": \"0.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"S\"\n      },\n      {\n        \"InsuranceId\": 4,\n        \"InsuranceDescription\": \"SEGURO VIDA ALIANZA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"1.250000\",\n        \"FixedAmount\": \"100.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"V\"\n      }\n    ],\n    \"AllowsModification\": false,\n    \"BoardFixedAmount\": \"\",\n    \"BoardId\": \"\",\n    \"BoardPercentage\": \"\",\n    \"ChargeType\": \"\",\n    \"Enabled\": false,\n    \"FixedAmount\": \"\",\n    \"FixedPercentage\": \"\",\n    \"InsuranceCompanyId\": \"\",\n    \"InsuranceCompanyDescription\": \"\",\n    \"InsuranceId\": \"\",\n    \"InsuranceDescription\": \"\",\n    \"InsuranceTypeId\": \"\",\n    \"InsuranceTypeDescription\": \"\",\n    \"ManagesExtraPremium\": false,\n    \"UsesBoard\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:55\",\n    \"Numero\": 13568708,\n    \"Servicio\": \"PublicLoanParameters.getInsurances\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"insurances\": {\n    \"insurance\": [\n      {\n        \"InsuranceId\": 1,\n        \"InsuranceDescription\": \"SEGURO DE VIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 12,\n        \"InsuranceCompanyDescription\": \"ASEGURADORA REGIONAL\",\n        \"Enabled\": true,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.005000\",\n        \"FixedAmount\": \"0.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"K\"\n      },\n      {\n        \"InsuranceId\": 2,\n        \"InsuranceDescription\": \"SEGURO VIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 1,\n        \"InsuranceCompanyDescription\": \"BANCO DE SEGUROS DEL ESTADO\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.000000\",\n        \"FixedAmount\": \"500.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"I\"\n      },\n      {\n        \"InsuranceId\": 8,\n        \"InsuranceDescription\": \"SEGURO DE VIDA CUOTAS\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": true,\n        \"BoardId\": 30,\n        \"BoardPercentage\": \"0.500000\",\n        \"BoardFixedAmount\": \"10.00000\",\n        \"FixedPercentage\": \"0.500000\",\n        \"FixedAmount\": \"10.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"S\"\n      },\n      {\n        \"InsuranceId\": 5,\n        \"InsuranceDescription\": \"SEGURO DE VIDA EN DESEMBOLSO\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 1,\n        \"InsuranceCompanyDescription\": \"BANCO DE SEGUROS DEL ESTADO\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": true,\n        \"BoardId\": 10,\n        \"BoardPercentage\": \"0.500000\",\n        \"BoardFixedAmount\": \"100.00000\",\n        \"FixedPercentage\": \"0.500000\",\n        \"FixedAmount\": \"100.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"I\"\n      },\n      {\n        \"InsuranceId\": 50,\n        \"InsuranceDescription\": \"ALIANZA VIDA ANTICIPADO\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.565000\",\n        \"FixedAmount\": \"45.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"K\"\n      },\n      {\n        \"InsuranceId\": 3,\n        \"InsuranceDescription\": \"XXXVIDA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": false,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"0.050000\",\n        \"FixedAmount\": \"0.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"S\"\n      },\n      {\n        \"InsuranceId\": 4,\n        \"InsuranceDescription\": \"SEGURO VIDA ALIANZA\",\n        \"InsuranceTypeId\": 1,\n        \"InsuranceTypeDescription\": \"VIDA\",\n        \"InsuranceCompanyId\": 5,\n        \"InsuranceCompanyDescription\": \"ALIANZA SEGUROS\",\n        \"Enabled\": false,\n        \"AllowsModification\": true,\n        \"UsesBoard\": false,\n        \"BoardId\": 0,\n        \"BoardPercentage\": \"0.000000\",\n        \"BoardFixedAmount\": \"0.00000\",\n        \"FixedPercentage\": \"1.250000\",\n        \"FixedAmount\": \"100.00000\",\n        \"ManagesExtraPremium\": false,\n        \"ChargeType\": \"V\"\n      }\n    ],\n    \"AllowsModification\": false,\n    \"BoardFixedAmount\": \"\",\n    \"BoardId\": \"\",\n    \"BoardPercentage\": \"\",\n    \"ChargeType\": \"\",\n    \"Enabled\": false,\n    \"FixedAmount\": \"\",\n    \"FixedPercentage\": \"\",\n    \"InsuranceCompanyId\": \"\",\n    \"InsuranceCompanyDescription\": \"\",\n    \"InsuranceId\": \"\",\n    \"InsuranceDescription\": \"\",\n    \"InsuranceTypeId\": \"\",\n    \"InsuranceTypeDescription\": \"\",\n    \"ManagesExtraPremium\": false,\n    \"UsesBoard\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:55\",\n    \"Numero\": 13568708,\n    \"Servicio\": \"PublicLoanParameters.getInsurances\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOWInsuranceDefinition",
+      "fields": [
+        {
+          "Nombre": "AllowsModification",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Permite modificación?"
+        },
+        {
+          "Nombre": "BoardFixedAmount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto fijo de pizarra."
+        },
+        {
+          "Nombre": "BoardId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de pizarra."
+        },
+        {
+          "Nombre": "BoardPercentage",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Porcentaje de pizarra."
+        },
+        {
+          "Nombre": "ChargeType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cargo (K: Porcentaje sobre capital inicial, I: Importe fijo, S: Porcentaje sobre saldo previsto de capital, V: Cálculo sobre valor comercial)."
+        },
+        {
+          "Nombre": "Enabled",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Habilitado?"
+        },
+        {
+          "Nombre": "FixedAmount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto fijo."
+        },
+        {
+          "Nombre": "FixedPercentage",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Porcentaje fijo."
+        },
+        {
+          "Nombre": "InsuranceCompanyId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de compañía aseguradora."
+        },
+        {
+          "Nombre": "InsuranceCompanyDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de compañía aseguradora."
+        },
+        {
+          "Nombre": "InsuranceId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de seguro."
+        },
+        {
+          "Nombre": "InsuranceDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del seguro."
+        },
+        {
+          "Nombre": "InsuranceTypeId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador del tipo de seguro."
+        },
+        {
+          "Nombre": "InsuranceTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del tipo de seguro."
+        },
+        {
+          "Nombre": "ManagesExtraPremium",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Gestiona prima adicional?"
+        },
+        {
+          "Nombre": "UsesBoard",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Usa pizarra?"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

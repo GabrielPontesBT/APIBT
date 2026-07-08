@@ -60,14 +60,14 @@ Código | Descripción
    <soapenv:Body>
       <bts:BTSeguridad.ObtenerDetalleExcepcion>
 			<bts:Btinreq>             
-            <bts:Device>ES</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
-            <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Canal>BTDIGITAL</bts:Canal>
-            <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>
-         </bts:Btinreq>
-         <bts:idExcepcion>1850</bts:idExcepcion>
-      </bts:BTSeguridad.ObtenerDetalleExcepcion>
+        <bts:Device>ES</bts:Device>
+        <bts:Usuario>MINSTALADOR</bts:Usuario>
+        <bts:Requerimiento>1</bts:Requerimiento>
+        <bts:Canal>BTDIGITAL</bts:Canal>
+        <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>
+      </bts:Btinreq>
+      <bts:idExcepcion>1850</bts:idExcepcion>
+    </bts:BTSeguridad.ObtenerDetalleExcepcion>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -87,7 +87,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "idExcepcion": 1854
+  "idExcepcion": 1854
 }'
 ```
 :::
@@ -109,7 +109,6 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>dac8c7fdec4A8B5C60A82434</Token>
          </Btinreq>
-         <idExcepcion>1850</idExcepcion>
          <excepciones>
             <estado>N</estado>
             <solicitaPassword>N</solicitaPassword>
@@ -151,6 +150,16 @@ curl -X POST \
             <descripcionEstado/>
             <puedeAutorizar>S</puedeAutorizar>
             <importeMovimiento>104090.91</importeMovimiento>
+            <sdtExcepcion>
+               <descripcion></descripcion>
+               <descripcionMovimiento></descripcionMovimiento>
+               <identificador>0</identificador>
+               <ligada></ligada>
+               <movimientoUId>0</movimientoUId>
+               <nombreSucursal></nombreSucursal>
+               <nombreUsuario></nombreUsuario>
+               <usuario></usuario>
+            </sdtExcepcion>
          </excepciones>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -169,72 +178,81 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "idExcepcion": "1854",
-    "excepciones": {
-        "estado": "P",
-        "solicitaPassword": "N",
-        "operacionUId": "0",
-        "saldo": "0.00",
-        "simboloMoneda": "$",
-        "excepcion": {
-            "nombreUsuario": "INSTALADOR",
-            "descripcion": "Autorización T.Cbio./Arbitraje",
-            "identificador": "1854",
-            "usuario": "INSTALADOR",
-            "ligada": "N",
-            "movimientoUId": "0",
-            "nombreSucursal": "Casa Matriz",
-            "descripcionMovimiento": "Compra USD Caja"
-        },
-        "descripcionEstado": "Pendiente",
-        "metadata": {
-            "sBTMetadataExcepcion": [
-                {
-                    "descripcion": "Acción",
-                    "valor": "COMPRA",
-                    "esImporte": "N"
-                },
-                {
-                    "descripcion": "Moneda Destino",
-                    "valor": "$",
-                    "esImporte": "N"
-                },
-                {
-                    "descripcion": "Tipo de Cambio Base",
-                    "valor": "28.18182000",
-                    "esImporte": "S"
-                },
-                {
-                    "descripcion": "Tipo de Cambio Solicitado",
-                    "valor": "208.18182000",
-                    "esImporte": "S"
-                }
-            ]
-        },
-        "puedeAutorizar": "S",
-        "importeMovimiento": "104090.91"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "excepciones": {
+    "estado": "P",
+    "solicitaPassword": "N",
+    "operacionUId": "0",
+    "saldo": "0.00",
+    "simboloMoneda": "$",
+    "excepcion": {
+      "nombreUsuario": "INSTALADOR",
+      "descripcion": "Autorización T.Cbio./Arbitraje",
+      "identificador": "1854",
+      "usuario": "INSTALADOR",
+      "ligada": "N",
+      "movimientoUId": "0",
+      "nombreSucursal": "Casa Matriz",
+      "descripcionMovimiento": "Compra USD Caja"
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "descripcionEstado": "Pendiente",
+    "metadata": {
+      "sBTMetadataExcepcion": [
+        {
+          "descripcion": "Acción",
+          "valor": "COMPRA",
+          "esImporte": "N"
+        },
+        {
+          "descripcion": "Moneda Destino",
+          "valor": "$",
+          "esImporte": "N"
+        },
+        {
+          "descripcion": "Tipo de Cambio Base",
+          "valor": "28.18182000",
+          "esImporte": "S"
+        },
+        {
+          "descripcion": "Tipo de Cambio Solicitado",
+          "valor": "208.18182000",
+          "esImporte": "S"
+        }
+      ]
     },
-    "Btoutreq": {
-        "Numero": "958",
-        "Estado": "OK",
-        "Servicio": "BTSeguridad.ObtenerDetalleExcepcion",
-        "Fecha": "2017-12-22",
-        "Requerimiento": 1,
-        "Hora": "10:57:23",
-        "Canal": "BTDIGITAL"
+    "puedeAutorizar": "S",
+    "importeMovimiento": "104090.91",
+    "sdtExcepcion": {
+      "descripcion": "",
+      "descripcionMovimiento": "",
+      "identificador": 0,
+      "ligada": "",
+      "movimientoUId": 0,
+      "nombreSucursal": "",
+      "nombreUsuario": "",
+      "usuario": ""
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "958",
+    "Estado": "OK",
+    "Servicio": "BTSeguridad.ObtenerDetalleExcepcion",
+    "Fecha": "2017-12-22",
+    "Requerimiento": 1,
+    "Hora": "10:57:23",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -261,6 +279,9 @@ saldo | Double | Saldo de operación.
 sdtExcepcion | [sBTExcepcion](#sbtexcepcion) | Datos de la excepción.
 simboloMoneda | String | Símbolo de moneda.
 solicitaPassword | String | Solicita contraseña (S/N).
+:::
+
+::: details sBTExcepcion
 
 ### sBTExcepcion
 
@@ -276,6 +297,9 @@ movimientoUId | Long | Identificador único de movimiento.
 nombreSucursal | String | Nombre de la sucursal.
 nombreUsuario | String | Nombre del usuario.
 usuario | String | Usuario.
+:::
+
+::: details sBTMetadataExcepcion
 
 ### sBTMetadataExcepcion
 
@@ -287,3 +311,5 @@ descripcion | String | Descripción de la MetaData.
 esImporte | String | Es Importe (S/N).
 valor | String | Valor de la MetaData.
 <!-- CIERRA SDT -->
+:::
+

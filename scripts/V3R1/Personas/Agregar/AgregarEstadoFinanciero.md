@@ -248,10 +248,10 @@ Los campos del tipo de dato estructurado sBTCondicionTributaria son los siguient
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-activo | String | ¿Está activo? (S/N).
-regimenTributario | String | Régimen tributario.
+Activo | String | ¿Está activo? (S/N).
+RegimenTributario | String | Régimen tributario.
 RUC | String | RUC.
-ventasAnuales | Double | Total de ventas anuales.
+VentasAnuales | Double | Total de ventas anuales.
 :::
 
 ::: details sBTDetallesEstadosFinancieros  

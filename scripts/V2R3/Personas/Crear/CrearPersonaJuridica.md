@@ -143,61 +143,56 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-   'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?CrearPersonaJuridica' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-   -d '{
-   "Btinreq": {
-      "Requerimiento": 0,
-      "Canal": "BTDIGITAL",
-      "Device": "AC",
-      "Usuario": "Instalador",
-      "Token": "8e3a8ef2dd99865B3A2E76CF"
-   },
-   "sdtPersonaJuridica": {
-       "nroDocumento": "219999990016",
-       "numeroPuerta": "1",
-       "nombreReducido": "prueba",
-       "paisDomicilio": null,
-       "razonSocial": "EMPRESA",
-       "departamento": null,
-       "nroRegistro": null,
-       "naturalezaJuridica": "1",
-       "barrio": "1",
-       "apartamento": null,
-       "tipoDocumentoId": "2",
-       "tipoActividadId": "1",
-       "fechaConstitucion": "2020-01-01",
-       "paisId": "845",
-       "actividad": null,
-       "paisDomicilioId": "845",
-       "pais": null,
-       "codigoPostal": "91000",
-       "tipoActividad": null,
-       "barrioId": "1",
-       "localidad": null,
-       "localidadId": "1008",
-       "actividadId": "1111",
-       "calle": "1",
-       "tipoDocumento": "2",
-       "naturalezaJuridicaId": "1",
-       "departamentoId": "2",
-      "correoElectronico": "AV@GMAIL.COM",
-      "telefonoFijo": "3213342222",
-      "piso": "123"
-   },
-   "sdtIntegrantesJuridicosAlta": {
-       "sBTIntegranteJuridicoAlta": [
-          {
-             "vinculoId": "1",
-             "personaUId": "141"
-             "participacion": "50"
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "AC",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPersonaJuridica": {
+    "nroDocumento": "219999990016",
+    "numeroPuerta": "1",
+    "nombreReducido": "prueba",
+    "paisDomicilio": null,
+    "razonSocial": "EMPRESA",
+    "departamento": null,
+    "nroRegistro": null,
+    "naturalezaJuridica": "1",
+    "barrio": "1",
+    "apartamento": null,
+    "tipoDocumentoId": "2",
+    "tipoActividadId": "1",
+    "fechaConstitucion": "2020-01-01",
+    "paisId": "845",
+    "actividad": null,
+    "paisDomicilioId": "845",
+    "pais": null,
+    "codigoPostal": "91000",
+    "tipoActividad": null,
+    "barrioId": "1",
+    "localidad": null,
+    "localidadId": "1008",
+    "actividadId": "1111",
+    "calle": "1",
+    "tipoDocumento": "2",
+    "naturalezaJuridicaId": "1",
+    "departamentoId": "2",
+    "correoElectronico": "AV@GMAIL.COM",
+    "telefonoFijo": "3213342222",
+    "piso": "123"
+  },
+  "sdtIntegrantesJuridicosAlta": {
+    "sBTIntegranteJuridicoAlta": [
+      {
+        "vinculoId": "1",
+        "personaUId": "141",
+        "participacion": "50"
       }
-      ]
-   }
-}'
+    ]
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -312,7 +307,7 @@ Los campos del tipo de dato estructurado sBTIntegranteJuridicoAlta son los sigui
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :---------
-participacion | Double | porcentaje de participación del integrante.
+participacion | Double | Porcentaje de participación del integrante.
 personaUId | Long | Identificador único de persona.
 vinculoId | Short | Identificador de vínculo.
 :::

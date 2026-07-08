@@ -76,7 +76,9 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "texts": {
-    "text": []
+    "Id": "",
+    "Description": "",
+    "Text": []
   },
   "BusinessErrors": {
     "BusinessError": []

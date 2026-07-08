@@ -204,7 +204,10 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único de cuenta. 
 representativo | String | Indica si es titular representativo (S/N). 
-titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Datos de tipo de integrante. 
+titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Datos de tipo de integrante.
+:::
+
+::: details sBTTipoIntegrante
 
 ### sBTTipoIntegrante
 
@@ -214,6 +217,8 @@ Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción del integrante. 
-identificador | Int | Identificador del integrante. 
+identificador | Int | Identificador del integrante.
 :::
+
 <!-- CIERRA SDT -->
+

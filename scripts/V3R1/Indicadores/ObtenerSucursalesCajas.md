@@ -421,6 +421,9 @@ porcentajeCajasC | Int | Porcentaje de cajas cerradas.
 porcentajeCajasA | Int | Porcentaje de cajas abiertas.
 listadoCajasC | [sBTCaja](#sbtcaja) | Listado de cajas cerradas.
 listadoCajasA | [sBTCaja](#sbtcaja) | Listado de cajas abiertas.
+:::
+
+::: details sBTSucursal
 
 ### sBTSucursal
 
@@ -434,8 +437,10 @@ direccion | String | Dirección de la sucursal.
 identificador | Int | Identificador de sucursal. 
 latitud | Int | Latitud de la sucursal. 
 longitud | Int | Longitud de la sucursal. 
-telefono | String | Teléfono de la sucursal. 
+telefono | String | Teléfono de la sucursal.
 :::
+
+::: details sBTCaja
 
 ### sBTCaja
 
@@ -447,6 +452,8 @@ Nombre | Tipo | Comentarios
 indicador | Int | Indicador de la caja. 
 nombre | String | Nombre de la caja. 
 sucursalId | Int | Identificador de la sucursal. 
-usuario | String | Usuario de la caja. 
+usuario | String | Usuario de la caja.
 :::
+
 <!-- CIERRA SDT -->
+

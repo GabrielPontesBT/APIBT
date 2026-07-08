@@ -105,6 +105,7 @@ curl -X POST \
       "ahorroUId": 61,
       "cuentaUId": 21
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -162,5 +163,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -112,7 +112,6 @@ curl -X POST \
                <parametrosExtendidos>SI</parametrosExtendidos>
                <esReprocesable>Reprocesar siempre</esReprocesable>
             </sBTProcesoBatch>
-            ...
          </sdtProcesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

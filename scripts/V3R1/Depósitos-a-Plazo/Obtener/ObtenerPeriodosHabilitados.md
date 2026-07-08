@@ -1,4 +1,4 @@
-﻿---
+---
 title: Obtener Períodos Habilitados
 breadcrumb: false
 pageInfo: false
@@ -37,7 +37,7 @@ productoUId | Long | Identificador único del producto.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtDatosExtendidos | [sBTDatosExtendidos](#sbtdatosextendidos) | Listado de datos complementarios.
+sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios.
 sdtPeriodos | [sBTPeriodoHabilitado](#sbtperiodohabilitado) | Listado de períodos habilitados.
 
 @tab Errores
@@ -112,7 +112,12 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>45A5647518BC5FBB73003EA9</Token>
          </Btinreq>
-         <sdtDatosExtendidos></sdtDatosExtendidos>
+         <sdtDatosExtendidos>
+            <clave></clave>
+            <lista></lista>
+            <tipo></tipo>
+            <valor></valor>
+         </sdtDatosExtendidos>
          <sdtPeriodos>
             <sBTPeriodoHabilitado>
                <descripcion>Semanal</descripcion>
@@ -177,77 +182,157 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "GZ",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDatosExtendidos": "",
-    "sdtPeriodos": {
-        "sBTPeriodoHabilitado": [
-        {
-            "descripcion": "Semanal",
-            "datosExtendidos": "",
-            "periodo": 7
-        },
-        {
-            "descripcion": "Quincenal",
-            "datosExtendidos": "",
-            "periodo": 14
-        },
-        {
-            "descripcion": "Mensual",
-            "datosExtendidos": "",
-            "periodo": 30
-        },
-        {
-            "descripcion": "Bimestral",
-            "datosExtendidos": "",
-            "periodo": 60
-        },
-        {
-            "descripcion": "Trimestral",
-            "datosExtendidos": "",
-            "periodo": 90
-        },
-        {
-            "descripcion": "Cuatrimestral",
-            "datosExtendidos": "",
-            "periodo": 120
-        },
-        {
-            "descripcion": "Quintumestral",
-            "datosExtendidos": "",
-            "periodo": 150
-        },
-        {
-            "descripcion": "Semestral",
-            "datosExtendidos": "",
-            "periodo": 180
-        },
-        {
-            "descripcion": "Anual",
-            "datosExtendidos": "",
-            "periodo": 360
-        }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 16830,
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.ObtenerPeriodosHabilitados",
-        "Fecha": "2023-10-25",
-        "Requerimiento": 1,
-        "Hora": "18:12:09",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDatosExtendidos": {
+    "clave": "",
+    "tipo": "",
+    "valor": "",
+    "lista": {
+      "clave": "",
+      "valor": ""
     }
-}'
+  },
+  "sdtPeriodos": {
+    "sBTPeriodoHabilitado": [
+      {
+        "descripcion": "Semanal",
+        "periodo": 7,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Quincenal",
+        "periodo": 14,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Mensual",
+        "periodo": 30,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Bimestral",
+        "periodo": 60,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Trimestral",
+        "periodo": 90,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Cuatrimestral",
+        "periodo": 120,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Quintumestral",
+        "periodo": 150,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Semestral",
+        "periodo": 180,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      },
+      {
+        "descripcion": "Anual",
+        "periodo": 360,
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 16830,
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerPeriodosHabilitados",
+    "Fecha": "2023-10-25",
+    "Requerimiento": 1,
+    "Hora": "18:12:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -256,19 +341,22 @@ curl -X POST \
 
 <!-- ABRE SDT -->
 
-::: details sBTDatosExtendidos  
+::: details sBTDatoExtendido
 
-### sBTDatosExtendidos
+### sBTDatoExtendido
 
 ::: center 
-Los campos del tipo de dato estructurado sBTDatosExtendidos son los siguientes: 
+Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
-lista | [sBTDatosLista](#sbtdatolista) | Lista de datos. 
+lista | [sBTDatoLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido. 
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -293,21 +381,5 @@ Nombre | Tipo | Comentarios
 datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 descripcion | String | Descripción. 
 periodo | Int | Período. 
-::: center 
-Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Clave del dato extendido. 
-lista | [sBTDatosLista](#sbtdatalista) | Lista de datos. 
-tipo | String | Tipo de dato extendido. 
-valor | String | Valor de dato extendido. 
-::: center 
-Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
 :::
 <!-- CIERRA SDT -->

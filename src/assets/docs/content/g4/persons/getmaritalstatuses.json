@@ -6,11 +6,18 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTPEPA0006",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "maritalStatuses",
@@ -23,11 +30,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"maritalStatuses\": {\r\n    \"maritalStatus\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"SOLTERO/A\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"CASADO/A\",\r\n        \"RequiresSpouse\": true\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"SEPARADO/A\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 4,\r\n        \"Description\": \"VIUDO/A\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 5,\r\n        \"Description\": \"DIVORCIADO/A\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 6,\r\n        \"Description\": \"CONCUBINO/A\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 7,\r\n        \"Description\": \"CASADO C/SEP.DE BIEN\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 8,\r\n        \"Description\": \"UNIÓN LIBRE\",\r\n        \"RequiresSpouse\": false\r\n      },\r\n      {\r\n        \"Id\": 9,\r\n        \"Description\": \"OTROS\",\r\n        \"RequiresSpouse\": false\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:29\",\r\n    \"Numero\": 13469340,\r\n    \"Servicio\": \"PublicPersons.getMaritalStatuses\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"maritalStatuses\": {\n    \"maritalStatus\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"SOLTERO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"CASADO/A\",\n        \"RequiresSpouse\": true\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"SEPARADO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 4,\n        \"Description\": \"VIUDO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 5,\n        \"Description\": \"DIVORCIADO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 6,\n        \"Description\": \"CONCUBINO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 7,\n        \"Description\": \"CASADO C/SEP.DE BIEN\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 8,\n        \"Description\": \"UNIÓN LIBRE\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 9,\n        \"Description\": \"OTROS\",\n        \"RequiresSpouse\": false\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\",\n    \"RequiresSpouse\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:54:29\",\n    \"Numero\": 13469340,\n    \"Servicio\": \"PublicPersons.getMaritalStatuses\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"maritalStatuses\": {\n    \"maritalStatus\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"SOLTERO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"CASADO/A\",\n        \"RequiresSpouse\": true\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"SEPARADO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 4,\n        \"Description\": \"VIUDO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 5,\n        \"Description\": \"DIVORCIADO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 6,\n        \"Description\": \"CONCUBINO/A\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 7,\n        \"Description\": \"CASADO C/SEP.DE BIEN\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 8,\n        \"Description\": \"UNIÓN LIBRE\",\n        \"RequiresSpouse\": false\n      },\n      {\n        \"Id\": 9,\n        \"Description\": \"OTROS\",\n        \"RequiresSpouse\": false\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\",\n    \"RequiresSpouse\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:54:29\",\n    \"Numero\": 13469340,\n    \"Servicio\": \"PublicPersons.getMaritalStatuses\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -46,7 +67,7 @@
         },
         {
           "Nombre": "RequiresSpouse",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Requiere cónyuge."
         }
       ]

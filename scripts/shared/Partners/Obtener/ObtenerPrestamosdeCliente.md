@@ -187,73 +187,88 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "prestamos": {
-         "sBTProductoPrestamo": [
-         {
-            "operacionUId": 1,
-            "idOperacionFmt": "0000000170-000",
-            "idOperacionBT": 1.0000100101e+46,
-            "producto": {
-               "productoUId": 0,
-               "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
-               "moneda": "$",
-               "papel": ""
-            },
-            "sucursal": "Sucursal Beta",
-            "saldo": 87128.11,
-            "estado": ""
-         },
-         {
-            "operacionUId": 2,
-            "idOperacionFmt": "0000000080-000",
-            "idOperacionBT": 1.0100000101e+46,
-            "producto": {
-               "productoUId": 0,
-               "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-               "moneda": "$",
-               "papel": ""
-            },
-            "sucursal": "Casa Matriz",
-            "saldo": 124195.84,
-            "estado": ""
-         },
-         {
-            "operacionUId": 361,
-            "idOperacionFmt": "0000000412-000",
-            "idOperacionBT": 1.0100000101e+46,
-            "producto": {
-               "productoUId": 0,
-               "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
-               "moneda": "$",
-               "papel": ""
-            },
-            "sucursal": "Casa Matriz",
-            "saldo": 100000,
-            "estado": ""
-         }
-         ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "prestamos": {
+    "sBTProductoPrestamo": [
+      {
+        "operacionUId": 1,
+        "idOperacionFmt": "0000000170-000",
+        "idOperacionBT": 1.0000100101e+46,
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Sucursal Beta",
+        "saldo": 87128.11,
+        "estado": ""
       },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "786",
-        "Estado": "OK",
-        "Servicio": "BTPartners.ObtenerPrestamosCliente",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "16:35:22",
-        "Canal": "BTDIGITAL"
-    }
-}'
+      {
+        "operacionUId": 2,
+        "idOperacionFmt": "0000000080-000",
+        "idOperacionBT": 1.0100000101e+46,
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "saldo": 124195.84,
+        "estado": ""
+      },
+      {
+        "operacionUId": 361,
+        "idOperacionFmt": "0000000412-000",
+        "idOperacionBT": 1.0100000101e+46,
+        "producto": {
+          "productoUId": 0,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "saldo": 100000,
+        "estado": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "786",
+    "Estado": "OK",
+    "Servicio": "BTPartners.ObtenerPrestamosCliente",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "16:35:22",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -291,6 +306,9 @@ operacionUId | Long | Identificador único de operación.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Double | Capital.
 sucursal | String | Nombre de la sucursal.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -303,7 +321,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -316,4 +337,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

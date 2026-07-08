@@ -66,7 +66,7 @@ Código | Descripción
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Device>10.12.10.40</bts:Device>
          </bts:Btinreq>
-         <bts:IdDebin>GWY7ZEPN6ZW0WR4NQ0M51O</bts:IdDebin>
+         <bts:idDebin>GWY7ZEPN6ZW0WR4NQ0M51O</bts:idDebin>
       </bts:BTCOELSAGestionDebin.ConsultaDebin>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -170,7 +170,7 @@ Los campos del tipo de dato estructurado sBTConsultaDebinRes son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 VendedorTipo | String | Vendedor tipo. 
-VendedorEndP | String | vendedor endpoint. 
+VendedorEndP | String | Vendedor endpoint. 
 EvaluacionPuntaje | Short | Evaluación puntaje. 
 EvaluacionReglas | String | Evaluación Reglas. 
 DescripcionResp | String | Descripción respuesta. 
@@ -193,7 +193,7 @@ CompradorSuc | String | Comprador sucursal.
 CompradorTerm | String | Número de terminal del Comprador. 
 CompradorAlias | String | Comprador alias. 
 CompradorCbu | String | Comprador Clave Bancaria Uniforme. 
-CompradorEsTitu | Short | es titular?. 
+CompradorEsTitu | Short | Es titular?. 
 CompradorMda | String | Comprador moneda. 
 CompradorTipo | String | Comprador tipo. 
 CompradorEndP | String | Comprador endpoint. 

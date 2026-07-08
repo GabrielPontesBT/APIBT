@@ -53,9 +53,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente. 
 productoUId | Long | Identificador único de producto. 
-capital | Double | Importe capital. 
-plazo | Int | Plazo. 
-periodicidad | Int | Período entre pagos de intereses. 
+Capital | Double | Importe capital. 
+Plazo | Int | Plazo. 
+Periodicidad | Int | Período entre pagos de intereses. 
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)
 
 @tab Datos de Salida
@@ -114,10 +114,10 @@ CAPITALIZA_INTERESES | [S,N] (Valor por omisión "N") | **[Opcional]** Permite s
          </bts:Btinreq>
          <bts:clienteUId>10009</bts:clienteUId>
          <bts:productoUId>132</bts:productoUId>
-         <bts:capital>20000</bts:capital>
-         <bts:plazo>360</bts:plazo>
-         <bts:periodicidad>30</bts:periodicidad>
-         <bts:sBTDatosExtendidos/>
+         <bts:Capital>20000</bts:Capital>
+         <bts:Plazo>360</bts:Plazo>
+         <bts:Periodicidad>30</bts:Periodicidad>
+         <bts:sdtDatosExtendidos/>
       </bts:BTDepositosAPlazo.SimularConCronograma>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -125,26 +125,21 @@ CAPITALIZA_INTERESES | [S,N] (Valor por omisión "N") | **[Opcional]** Permite s
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-         "Canal": "BTDIGITAL",
-         "Requerimiento": 1,
-         "Usuario": "INSTALADOR",
-         "Token": "30F74741A02C318CEFD55684",
-         "Device": "GL"
-      },
-      "clienteUId": 10009,
-      "productoUId": 132,
-      "capital": 20000,
-      "plazo": 360,
-      "periodicidad": 30,
-      "sBTDatosExtendidos": ""
-   }'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "clienteUId": 10009,
+  "productoUId": 132,
+  "Capital": 20000,
+  "Plazo": 360,
+  "Periodicidad": 30,
+  "sdtDatosExtendidos": {}
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -165,7 +160,6 @@ curl -X POST \
             <Token>30F74741A02C318CEFD55684</Token>
             <Device>GL</Device>
          </Btinreq>
-         <sBTDatosExtendidos></sBTDatosExtendidos>
          <sBTSimulacionDepositoAPlazo>
             <simulacionId>92</simulacionId>
             <producto>
@@ -380,6 +374,7 @@ curl -X POST \
                </SdtsBTCuotaPlanDeposito>
             </Cronograma>
          </sBTSimulacionDepositoAPlazo>
+         <sdtDatosExtendidos></sdtDatosExtendidos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -397,232 +392,289 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{ 
-"Btinreq": { 
-         "Canal": "BTDIGITAL", 
-         "Requerimiento": 1, 
-         "Usuario": "INSTALADOR", 
-         "Token": "30F74741A02C318CEFD55684", 
-         "Device": "GL" 
-      }, 
-      "sBTDatosExtendidos": "", 
-      "sBTSimulacionDepositoAPlazo": { 
-         "simulacionId": 92, 
-         "producto": { 
-         "productoUId": 132, 
-         "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.", 
-         "moneda": "S/.", 
-         "papel": "$" 
-         }, 
-         "clienteUId": 10009, 
-         "Sucursal": "Sucursal Principal", 
-         "TipoProducto": "PP", 
-         "Capital": 20000, 
-         "ValorNominal": 0, 
-         "Precio": 0, 
-         "TipoTasa": "Efectiva Anual", 
-         "Tasa": 11.2, 
-         "TipoAnio": "360 Días", 
-         "Plazo": 360, 
-         "TipoDia": "Días Comerciales", 
-         "FechaInicio": "2022-04-21", 
-         "FechaVencimiento": "2023-04-21", 
-         "Periodicidad": 30, 
-         "Intereses": 2132.71, 
-         "Impuestos": { 
-         "SdtsBTConcepto": { 
-            "concepto": "GANANCIA", 
-            "valor": 106.65, 
-            "texto": "Impuestos a las ganancias Totales" 
-         } 
-         }, 
-         "otrosConceptos": "", 
-         "Cronograma": { 
-         "SdtsBTCuotaPlanDeposito": [ 
-            { 
-               "FechaPago": "2022-05-23", 
-               "Plazo": 32, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 189.62, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 9.48, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-06-23", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-07-25", 
-               "Plazo": 32, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 189.62, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 9.48, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-08-25", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-09-26", 
-               "Plazo": 31, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 183.67, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 9.18, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-10-26", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-11-28", 
-               "Plazo": 32, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 189.62, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 9.48, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2022-12-28", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2023-01-30", 
-               "Plazo": 32, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 189.62, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 9.48, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2023-02-28", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2023-03-31", 
-               "Plazo": 30, 
-               "TipoCuota": "I", 
-               "Capital": 0, 
-               "Interes": 177.72, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 8.89, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            }, 
-            { 
-               "FechaPago": "2023-04-21", 
-               "Plazo": 21, 
-               "TipoCuota": "M", 
-               "Capital": 20000, 
-               "Interes": 124.24, 
-               "Impuestos": { 
-               "SdtsBTConcepto": { 
-                  "concepto": "GANANCIA", 
-                  "valor": 6.21, 
-                  "texto": "Impuestos a las ganancias" 
-               } 
-               }, 
-               "OtrosConceptos": "" 
-            } 
-         ] 
-         } 
-      } 
-}' 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "sBTSimulacionDepositoAPlazo": {
+    "simulacionId": 92,
+    "producto": {
+      "productoUId": 132,
+      "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.",
+      "moneda": "S/.",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "clienteUId": 10009,
+    "Sucursal": "Sucursal Principal",
+    "TipoProducto": "PP",
+    "Capital": 20000,
+    "ValorNominal": 0,
+    "Precio": 0,
+    "TipoTasa": "Efectiva Anual",
+    "Tasa": 11.2,
+    "TipoAnio": "360 Días",
+    "Plazo": 360,
+    "TipoDia": "Días Comerciales",
+    "FechaInicio": "2022-04-21",
+    "FechaVencimiento": "2023-04-21",
+    "Periodicidad": 30,
+    "Intereses": 2132.71,
+    "Impuestos": {
+      "SdtsBTConcepto": {
+        "concepto": "GANANCIA",
+        "valor": 106.65,
+        "texto": "Impuestos a las ganancias Totales"
+      }
+    },
+    "Cronograma": {
+      "SdtsBTCuotaPlanDeposito": [
+        {
+          "Plazo": 32,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 9.48,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-05-23",
+          "interes": 189.62,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-06-23",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 32,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 9.48,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-07-25",
+          "interes": 189.62,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-08-25",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 31,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 9.18,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-09-26",
+          "interes": 183.67,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-10-26",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 32,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 9.48,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-11-28",
+          "interes": 189.62,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2022-12-28",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 32,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 9.48,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2023-01-30",
+          "interes": 189.62,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2023-02-28",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 30,
+          "Capital": 0,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 8.89,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2023-03-31",
+          "interes": 177.72,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "I"
+        },
+        {
+          "Plazo": 21,
+          "Capital": 20000,
+          "Impuestos": {
+            "SdtsBTConcepto": {
+              "concepto": "GANANCIA",
+              "valor": 6.21,
+              "texto": "Impuestos a las ganancias"
+            }
+          },
+          "fechaPago": "2023-04-21",
+          "interes": 124.24,
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "tipoCuota": "M"
+        }
+      ]
+    },
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    }
+  },
+  "sdtDatosExtendidos": {}
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -642,7 +694,10 @@ Nombre | Tipo | Comentarios
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
-valor | String | Valor de dato extendido. 
+valor | String | Valor de dato extendido.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -652,7 +707,7 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+valor | String | Valor de información adicional.
 :::
 
 ::: details sBTSimulacionDepositoAPlazo  
@@ -664,26 +719,29 @@ Los campos del tipo de dato estructurado sBTSimulacionDepositoAPlazo son los sig
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-capital | Double | Capital del cronograma. 
+Capital | Double | Capital del cronograma. 
 clienteUId | Long | Identificador de cliente. 
-cronograma | [sBTCuotaPlanDeposito](#sbtcuotaplandeposito) | Cronograma del préstamo. 
-fechaInicio | Date | Fecha de inicio. 
-fechaVencimiento | Date | Fecha de vencimiento. 
-impuestos | [sBTConcepto](#sbtconcepto) | Datos de impuestos. 
-intereses | Double | Intereses. 
+Cronograma | [sBTCuotaPlanDeposito](#sbtcuotaplandeposito) | Cronograma del préstamo. 
+FechaInicio | Date | Fecha de inicio. 
+FechaVencimiento | Date | Fecha de vencimiento. 
+Impuestos | [sBTConcepto](#sbtconcepto) | Datos de impuestos. 
+Intereses | Double | Intereses. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Otros conceptos. 
-periodicidad | Long | Periodicidad. 
-plazo | Long |  Plazo. 
-precio | Long | Precio. 
+Periodicidad | Long | Periodicidad. 
+Plazo | Long |  Plazo. 
+Precio | Long | Precio. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 simulacionId | Long | Identificador de simulación. 
-sucursal | String | Sucursal. 
-tasa | Long |  Tasa. 
-tipoAnio | String | Tipo de año. 
-tipoDia | String | Tipo de día. 
-tipoProducto | String | Tipo de producto. 
-tipoTasa | String | Tipo de tasa. 
-valorNominal | Double | Valor nominal. 
+Sucursal | String | Sucursal. 
+Tasa | Long |  Tasa. 
+TipoAnio | String | Tipo de año. 
+TipoDia | String | Tipo de día. 
+TipoProducto | String | Tipo de producto. 
+TipoTasa | String | Tipo de tasa. 
+ValorNominal | Double | Valor nominal.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -696,7 +754,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -708,6 +769,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPlanDeposito
 
 ### sBTCuotaPlanDeposito
 
@@ -716,12 +780,14 @@ Los campos del tipo de dato estructurado sBTCuotaPlanDeposito son los siguientes
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-capital | Double | Capital. 
+Capital | Double | Capital. 
 fechaPago | Date | Fecha de pago. 
-impuestos | [sBTConcepto](#sbtconcepto) | Datos de impuestos. 
+Impuestos | [sBTConcepto](#sbtconcepto) | Datos de impuestos. 
 interes | Double | Interés. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Otros conceptos. 
-plazo | Long |  Plazo. 
-tipoCuota | String | Tipo de cuota. 
+Plazo | Long |  Plazo. 
+tipoCuota | String | Tipo de cuota.
 :::
+
 <!-- CIERRA SDT -->
+

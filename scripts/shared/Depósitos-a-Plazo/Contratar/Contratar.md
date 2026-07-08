@@ -115,11 +115,11 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "simulacionUId":41,
-    "clienteUId":161,
-    "operacionUIdOrigen":281,
-    "operacionUIdDestino":281,
-    "instruccionAlVencimiento":2   
+  "simulacionUId":41,
+  "clienteUId":161,
+  "operacionUIdOrigen":281,
+  "operacionUIdDestino":281,
+  "instruccionAlVencimiento":2   
 }'
 ```
 :::
@@ -142,10 +142,6 @@ curl -X POST \
             <Token>407fce50864A8B5C60A82434</Token>
          </Btinreq>
          <operacionUId>321</operacionUId>
-         <fechaAlta>2018-10-09</fechaAlta>
-         <fechaVencimiento>2019-10-09</fechaVencimiento>
-         <intereses>1001.78</intereses>
-         <tasa>0.18</tasa>
          <movimientoUId>357</movimientoUId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -173,24 +169,19 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"operacionUId": "358",
-   "fechaAlta": "2018-10-09",
-   "fechaVencimiento": "2019-10-09",
-   "intereses": "1001.78",
-   "tasa": "0.18",
-   "simulacionUId": "21",
 	"movimientoUId": "357",
-   "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "946",
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.Contratar",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "18:10:30",
-        "Canal": "BTDIGITAL"
-    }
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "946",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.Contratar",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "18:10:30",
+    "Canal": "BTDIGITAL"
+  }
 }'
 ```
 :::

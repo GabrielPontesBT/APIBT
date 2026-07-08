@@ -5,6 +5,7 @@
   "pubName": "BTContabilidad.ObtenerDetalleOrdinal",
   "programa": "RBTPG337",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Subordinal del movimiento."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtOrdinal",
@@ -56,11 +60,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>IN</bts:Usuario>\r\n            <bts:Token>12420485CD285A89A23FBE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:movimientoUId>8</bts:movimientoUId>\r\n         <bts:ordinal>1</bts:ordinal>\r\n         <bts:subOrdinal>1</bts:subOrdinal>\r\n      </bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleOrdinal' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t \"Btinreq\": {\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Usuario\": \"IN\",\r\n\t\t\"Token\": \"12420485CD285A89A23FBE\",\r\n\t\t\"Device\": \"MC\"\r\n\t },\r\n\t \"movimientoUId\": 8,\r\n\t \"ordinal\":1,\r\n\t \"subOrdinal\":1\r\n  }'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleOrdinal' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t \"Btinreq\": {\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Usuario\": \"IN\",\r\n\t\t\"Token\": \"12420485CD285A89A23FBE\",\r\n\t\t\"Device\": \"MC\"\r\n\t },\r\n\t \"movimientoUId\": 8,\r\n\t \"ordinal\":1,\r\n\t \"subOrdinal\":1\r\n  }'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>IN</bts:Usuario>\r\n            <bts:Token>12420485CD285A89A23FBE</bts:Token>\r\n            <bts:Device>MC</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:movimientoUId>8</bts:movimientoUId>\r\n         <bts:ordinal>1</bts:ordinal>\r\n         <bts:subOrdinal>1</bts:subOrdinal>\r\n      </bts:BTContabilidad.ObtenerDetalleOrdinal>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleOrdinal' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n\t \"Btinreq\": {\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Usuario\": \"IN\",\r\n\t\t\"Token\": \"12420485CD285A89A23FBE\",\r\n\t\t\"Device\": \"MC\"\r\n\t },\r\n\t \"movimientoUId\": 8,\r\n\t \"ordinal\":1,\r\n\t \"subOrdinal\":1\r\n  }'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTContabilidad.ObtenerDetalleOrdinalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>IN</Usuario>\r\n            <Token>12420485CD285A89A23FBE</Token>\r\n            <Device>MC</Device>\r\n         </Btinreq>\r\n         <sdtOrdinal>\r\n            <operacionUId>10189</operacionUId>\r\n            <idOperacionBT>0010000100021000000000000000002700003000000000000</idOperacionBT>\r\n            <debeHaber>D</debeHaber>\r\n            <importe>10000.00</importe>\r\n            <producto>\r\n               <productoUId>0</productoUId>  \r\n               <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>\r\n               <moneda>$</moneda>\r\n               <papel>$</papel>\r\n               <otrosConceptos/>\r\n            </producto>\r\n         </sdtOrdinal>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTContabilidad.ObtenerDetalleOrdinal</Servicio>\r\n            <Fecha>2020-10-29</Fecha>\r\n            <Hora>16:13:11</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>7704</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTContabilidad.ObtenerDetalleOrdinalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{ \r\n   \"Btinreq\": { \r\n      \"Canal\": \"BTDIGITAL\", \r\n      \"Requerimiento\": 1, \r\n      \"Usuario\": \"IN\", \r\n      \"Token\": \"12420485CD285A89A23FBE\", \r\n      \"Device\": \"MC\" \r\n   },\r\n\t\"sdtOrdinal\":  \r\n\t{ \r\n\t  \"operacionUId\": 10189, \r\n\t  \"idOperacionBT\": \"0010000100021000000000000000002700003000000000000\", \r\n\t  \"debeHaber\": \"D\", \r\n\t  \"importe\": 10000.00, \r\n\t  \"producto\": { \r\n\t\t \"productoUId\": 0, \r\n\t\t \"nombre\": \"CAJAS DE AHORRO, GENÉRICA\", \r\n\t\t \"moneda\": \"$\", \r\n\t\t \"papel\": \"$\" \r\n\t  } \r\n   },\r\n   \"Erroresnegocio\": null, \r\n   \"Btoutreq\": { \r\n      \"Canal\": \"BTDIGITAL\", \r\n      \"Servicio\": \"BTContabilidad.ObtenerDetalleOrdinal\", \r\n      \"Fecha\": \"2020-10-29\", \r\n      \"Hora\": \"16:13:11\", \r\n      \"Requerimiento\": 1, \r\n      \"Numero\": 7704, \r\n      \"Estado\": \"OK\" \r\n   }\r\n}"
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": 1,\n    \"Usuario\": \"IN\",\n    \"Token\": \"12420485CD285A89A23FBE\",\n    \"Device\": \"MC\"\n  },\n  \"sdtOrdinal\": {\n    \"operacionUId\": 10189,\n    \"idOperacionBT\": \"0010000100021000000000000000002700003000000000000\",\n    \"debeHaber\": \"D\",\n    \"importe\": 10000,\n    \"producto\": {\n      \"productoUId\": 0,\n      \"nombre\": \"CAJAS DE AHORRO, GENÉRICA\",\n      \"moneda\": \"$\",\n      \"papel\": \"$\",\n      \"otrosConceptos\": {\n        \"concepto\": \"\",\n        \"texto\": \"\",\n        \"valor\": 0\n      }\n    }\n  },\n  \"Erroresnegocio\": null,\n  \"Btoutreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Servicio\": \"BTContabilidad.ObtenerDetalleOrdinal\",\n    \"Fecha\": \"2020-10-29\",\n    \"Hora\": \"16:13:11\",\n    \"Requerimiento\": 1,\n    \"Numero\": 7704,\n    \"Estado\": \"OK\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTContabilidad.ObtenerDetalleOrdinalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>IN</Usuario>\r\n            <Token>12420485CD285A89A23FBE</Token>\r\n            <Device>MC</Device>\r\n         </Btinreq>\r\n         <sdtOrdinal>\r\n            <operacionUId>10189</operacionUId>\r\n            <idOperacionBT>0010000100021000000000000000002700003000000000000</idOperacionBT>\r\n            <debeHaber>D</debeHaber>\r\n            <importe>10000.00</importe>\r\n            <producto>\r\n               <productoUId>0</productoUId>  \r\n               <nombre>CAJAS DE AHORRO, GENÉRICA</nombre>\r\n               <moneda>$</moneda>\r\n               <papel>$</papel>\r\n               <otrosConceptos/>\r\n            </producto>\r\n         </sdtOrdinal>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTContabilidad.ObtenerDetalleOrdinal</Servicio>\r\n            <Fecha>2020-10-29</Fecha>\r\n            <Hora>16:13:11</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>7704</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTContabilidad.ObtenerDetalleOrdinalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": 1,\n    \"Usuario\": \"IN\",\n    \"Token\": \"12420485CD285A89A23FBE\",\n    \"Device\": \"MC\"\n  },\n  \"sdtOrdinal\": {\n    \"operacionUId\": 10189,\n    \"idOperacionBT\": \"0010000100021000000000000000002700003000000000000\",\n    \"debeHaber\": \"D\",\n    \"importe\": 10000,\n    \"producto\": {\n      \"productoUId\": 0,\n      \"nombre\": \"CAJAS DE AHORRO, GENÉRICA\",\n      \"moneda\": \"$\",\n      \"papel\": \"$\",\n      \"otrosConceptos\": {\n        \"concepto\": \"\",\n        \"texto\": \"\",\n        \"valor\": 0\n      }\n    }\n  },\n  \"Erroresnegocio\": null,\n  \"Btoutreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Servicio\": \"BTContabilidad.ObtenerDetalleOrdinal\",\n    \"Fecha\": \"2020-10-29\",\n    \"Hora\": \"16:13:11\",\n    \"Requerimiento\": 1,\n    \"Numero\": 7704,\n    \"Estado\": \"OK\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -199,16 +199,16 @@ curl -X POST \
 @tab JSON
 ```json
 {
-   "Btinreq": {
-      "Device": "GP",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "c2cfd09eff4A8B5C60A82434"
-   },
-   "simulacionUId": 21879,
-   "sdtPrestamosACancelar": {
-      "sBTPrestamoACancelar": {
+  "Btinreq": {
+    "Device": "GP",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "c2cfd09eff4A8B5C60A82434"
+  },
+  "simulacionUId": 21879,
+  "sdtPrestamosACancelar": {
+    "sBTPrestamoACancelar": {
       "otrosConceptos": 0,
       "fechaValor": "2023-02-17",
       "capital": 0,
@@ -222,52 +222,68 @@ curl -X POST \
       "fechaVencimiento": "",
       "diasMora": 0,
       "producto": {
-         "moneda": "$",
-         "papel": "$",
-         "productoUId": 60,
-         "nombre": "PRESTAMO VEHICULAR, Credito Convencional"
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 60,
+        "nombre": "PRESTAMO VEHICULAR, Credito Convencional",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
       },
-      "detalleConceptos": "",
-      "totalImpuestos": 0
-      }
-   },
-   "sdtConceptosPrestamo": {
-      "totalSeguros": 0,
-      "otrosSeguros": 0,
-      "detalleSeguros": "",
-      "detalleConceptos": "",
-      "totalComisiones": 0,
-      "intereses": 0,
-      "precio": 0,
-      "impuestoComision": 0,
-      "otrosConceptos": 0,
-      "impuestoInteres": 0,
-      "impuestoMora": 0,
-      "tipoCambio": 0,
-      "interesMora": 0,
-      "deudaTotal": 0,
-      "capital": 0,
-      "seguroIncendio": 0,
-      "comisionMora": 0,
-      "impuestoComisionMora": 0,
-      "seguroVehicular": 0,
       "totalImpuestos": 0,
-      "comisionesCuota": 0,
-      "seguroVida": 0,
-      "signoImportes": ""
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTPrestamos.ObtenerDetalleOperacionesARefinanciar",
-      "Fecha": "2021-03-18",
-      "Hora": "10:03:41",
-      "Requerimiento": 1,
-      "Numero": 8032,
-      "Estado": "OK"
-   }
+      "detalleConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    }
+  },
+  "sdtConceptosPrestamo": {
+    "totalSeguros": 0,
+    "otrosSeguros": 0,
+    "totalComisiones": 0,
+    "intereses": 0,
+    "precio": 0,
+    "impuestoComision": 0,
+    "otrosConceptos": 0,
+    "impuestoInteres": 0,
+    "impuestoMora": 0,
+    "tipoCambio": 0,
+    "interesMora": 0,
+    "deudaTotal": 0,
+    "capital": 0,
+    "seguroIncendio": 0,
+    "comisionMora": 0,
+    "impuestoComisionMora": 0,
+    "seguroVehicular": 0,
+    "totalImpuestos": 0,
+    "comisionesCuota": 0,
+    "seguroVida": 0,
+    "signoImportes": "",
+    "detalleConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    },
+    "detalleSeguros": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    }
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerDetalleOperacionesARefinanciar",
+    "Fecha": "2021-03-18",
+    "Hora": "10:03:41",
+    "Requerimiento": 1,
+    "Numero": 8032,
+    "Estado": "OK"
+  }
 }
-         
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -313,6 +329,9 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 totalComisiones | Double | Total de comisiones.
 totalImpuestos | Double | Total de impuestos.
 totalSeguros | Double | Total de seguros.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -324,6 +343,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -336,18 +358,7 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
-
-### sBTConcepto
-
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+productoUId | Long | Identificador único de producto.
 :::
 
 ::: details sBTConceptosPrestamo
@@ -362,8 +373,8 @@ Nombre | Tipo | Comentarios
 capital | Double | Capital.
 comisionesCuota | Double | Comisiones de las cuotas.
 comisionMora | Double | Comisión de mora.
-detalleConceptos | sBTConcepto | Listado del detalle de los conceptos.
-detalleSeguros | sBTConcepto | Listado del detalle de los seguros.
+detalleConceptos | [sBTConcepto](#sbtconcepto) | Listado del detalle de los conceptos.
+detalleSeguros | [sBTConcepto](#sbtconcepto) | Listado del detalle de los seguros.
 deudaTotal | Double | Deuda total.
 impuestoComision | Double | Total de impuestos de comisión. 
 impuestoComisionMora | Double | Impuesto de comisión de mora.

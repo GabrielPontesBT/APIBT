@@ -298,8 +298,11 @@ Los campos del tipo de dato estructurado sBTEvolucionSaldos son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 productoUId | Long | Identificador único de producto. 
-saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual. 
- 
+saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual.
+:::
+
+::: details sBTSaldoMensual
+
 ### sBTSaldoMensual
 
 ::: center 
@@ -309,6 +312,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 anio | Short | Año. 
 mes | Byte | Mes. 
-saldo | Double | Saldo mensual. 
+saldo | Double | Saldo mensual.
 :::
+
 <!-- CIERRA SDT -->
+

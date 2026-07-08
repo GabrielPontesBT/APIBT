@@ -224,7 +224,10 @@ Nombre | Tipo | Comentarios
 codigo | Int | Código de paquete. 
 descripcion | String | Descripción de paquete. 
 productos | [sBTProductoPaquete](#sbtproductopaquete) | Listado de productos incluidos en el paquete. 
-vigente | String | Indica si está vigente el paquete (S/N). 
+vigente | String | Indica si está vigente el paquete (S/N).
+:::
+
+::: details sBTProductoPaquete
 
 ### sBTProductoPaquete
 
@@ -237,6 +240,8 @@ cantidad | Short | Cantidad de productos de este tipo incluidos en el paquete.
 moneda | String | Símbolo de moneda. 
 nombre | String | Nombre de producto. 
 papel | String | Símbolo de papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -132,34 +132,43 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtChequeras": {
-        "chequera": {
-            "sBTChequera": []
-        },
-        "productoUId": "81",
-        "cantidad": "0"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtChequeras": {
+    "chequera": {
+      "sBTChequera": [
+        {
+          "cantidadCheques": 0,
+          "chequeInicial": 0,
+          "chequesDisponibles": 0,
+          "estado": "",
+          "fechaAlta": "",
+          "tipo": ""
+        }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "993",
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerChequeras",
-        "Fecha": "2017-12-26",
-        "Requerimiento": 1,
-        "Hora": "11:19:27",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "productoUId": "81",
+    "cantidad": "0"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "993",
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerChequeras",
+    "Fecha": "2017-12-26",
+    "Requerimiento": 1,
+    "Hora": "11:19:27",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -178,7 +187,10 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 cantidad | Int | Cantidad de chequeras. 
 chequera | [sBTChequera](#sbtchequera) | Datos de Chequera. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTChequera
 
 ### sBTChequera
 
@@ -189,8 +201,10 @@ Nombre | Tipo | Comentarios
 cantidadCheques | Short | Cantidad de cheques. 
 chequeInicial | Int | Número de cheque en el cual inicia la chequera. 
 chequesDisponibles | Short | Cantidad de cheques disponibles. 
-estado | String | estado de chequera. 
+estado | String | Estado de chequera. 
 fechaAlta | Date | Fecha de alta. 
-tipo | String | tipo de chequera. 
+tipo | String | Tipo de chequera.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -31,13 +31,13 @@ backtotop: false
 
 Nombre            | Tipo   | Obligatorio | Comentarios |
 :--------- | :--------- | :--------- | :---------
-OperationUID      | Long   | S | OperacionUID referenciada a la cuenta.
+OperationUId      | Long   | S | OperacionUID referenciada a la cuenta.
 
 @tab Datos de Salida
 
 Nombre            | Tipo   | Comentarios 
 :--------- | :--------- | :--------- 
-ListaMovimientos | SdtsBTEstadoCuentaCV  | Lista de movimientos.
+ListaMovimientos | [SdtsBTEstadoCuentaCV](#sdtsbtestadocuentacv)  | Lista de movimientos.
 
 @tab Errores
 
@@ -59,7 +59,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      </bts:BTPayCaddy.ConsultaMovBloqueados>
+      <bts:BTPayCaddy.ConsultaMovBloqueados>
          <bts:Btinreq>
             <Canal>BTINTERNO</Canal>
             <Usuario>INSTALADOR</Usuario>
@@ -94,7 +94,7 @@ Código | Descripción
 		 <ListaMovimientos>
             <saldoPartida>2000</saldoPartida>
             <fechaHasta>2026-05-06</fechaHasta>
-            <productoUID>12</productoUID>
+            <productoUId>12</productoUId>
             <movimientos>32</movimientos>
             <fechaDesde>2026-01-06</fechaDesde>
          </ListaMovimientos>
@@ -114,3 +114,23 @@ Código | Descripción
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
+
+## **Tipos de Dato Estructurado**
+
+<!-- ABRE SDT -->
+::: details SdtsBTEstadoCuentaCV
+
+### SdtsBTEstadoCuentaCV
+
+::: center
+Los campos del tipo de dato estructurado SdtsBTEstadoCuentaCV son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+saldoPartida | Double | Saldo de partida.
+fechaHasta | Date | Fecha hasta.
+productoUId | Long | Identificador único de producto.
+movimientos | Int | Cantidad de movimientos.
+fechaDesde | Date | Fecha desde.
+:::
+<!-- CIERRA SDT -->

@@ -1,0 +1,88 @@
+{
+  "slug": "loans/grouploanaccounting",
+  "pageTitle": "Group Loan Accounting",
+  "description": "Método para contabilizar un préstamo grupal.",
+  "pubName": "PublicLoans.groupLoanAccounting",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0044",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "cycleId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador del ciclo."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "accountingEntries",
+      "Tipo": "<a href=\"#sdtsbtmgmemberaccountingentry\">SdtsBTMGMemberAccountingEntry</a>",
+      "Comentarios": "Listado de asientos por integrante."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el identificador de grupo."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"cycleId\": 1\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"cycleId\": 1\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"accountingEntries\": {\n    \"counterpartyGUID\": \"\",\n    \"movementGUID\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:11:30\",\n    \"Numero\": 13547120,\n    \"Servicio\": \"PublicLoans.groupLoanAccounting\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"accountingEntries\": {\n    \"counterpartyGUID\": \"\",\n    \"movementGUID\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:11:30\",\n    \"Numero\": 13547120,\n    \"Servicio\": \"PublicLoans.groupLoanAccounting\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGMemberAccountingEntry",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de contraparte."
+        },
+        {
+          "Nombre": "movementGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del asiento contable."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

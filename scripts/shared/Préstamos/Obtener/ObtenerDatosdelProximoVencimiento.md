@@ -146,39 +146,43 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "DF1F942C6EC60E8B95BBEA69"
-    },
-    "sdtProxVencimiento": {
-        "otrosConceptos": "",
-        "fechaPrimerIncumplimiento": "2020-05-09",
-        "deudaVencida": 41395.15,
-        "cantCuoImpagas": 12,
-        "monto": 41395.15,
-        "fechaProxVencimiento": "2020-08-09",
-        "cantCuoPagas": 0,
-        "fechaUltPago": "",
-        "cantCuoImpVenc": 4,
-        "cuotaVigente": 0.00
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 16849,
-        "Servicio": "BTPrestamos.ObtenerDatosProxVencimiento",
-        "Estado": "OK",
-        "Fecha": "2023-10-26",
-        "Requerimiento": 0,
-        "Hora": "12:27:02",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "DF1F942C6EC60E8B95BBEA69"
+  },
+  "sdtProxVencimiento": {
+    "fechaPrimerIncumplimiento": "2020-05-09",
+    "deudaVencida": 41395.15,
+    "cantCuoImpagas": 12,
+    "monto": 41395.15,
+    "fechaProxVencimiento": "2020-08-09",
+    "cantCuoPagas": 0,
+    "fechaUltPago": "",
+    "cantCuoImpVenc": 4,
+    "cuotaVigente": 0,
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 16849,
+    "Servicio": "BTPrestamos.ObtenerDatosProxVencimiento",
+    "Estado": "OK",
+    "Fecha": "2023-10-26",
+    "Requerimiento": 0,
+    "Hora": "12:27:02",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -204,6 +208,9 @@ fechaProxVencimiento | Date | Identificador de información adicional.
 fechaUltPago | Date | Fecha de último pago.
 monto | Decimal | Valor de información adicional.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -215,4 +222,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

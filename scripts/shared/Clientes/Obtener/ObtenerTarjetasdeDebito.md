@@ -173,67 +173,71 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosTarjeta": {
-        "sBDProductoTarjeta": [
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000089",
-                "tipoTarjeta": "",
-                "tarjetaUId": "1"
-            },
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000132",
-                "tipoTarjeta": "",
-                "tarjetaUId": "2"
-            },
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000098",
-                "tipoTarjeta": "",
-                "tarjetaUId": "3"
-            },
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000105",
-                "tipoTarjeta": "",
-                "tarjetaUId": "4"
-            },
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000141",
-                "tipoTarjeta": "",
-                "tarjetaUId": "5"
-            },
-            {
-                "sucursal": "Casa Matriz",
-                "numeroTarjeta": "5010730101000000123",
-                "tipoTarjeta": "",
-                "tarjetaUId": "6"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "840",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerTarjetasDebito",
-        "Fecha": "2017-12-18",
-        "Requerimiento": 1,
-        "Hora": "02:16:29",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosTarjeta": {
+    "sBDProductoTarjeta": [
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000089",
+        "tipoTarjeta": "",
+        "tarjetaUId": "1"
+      },
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000132",
+        "tipoTarjeta": "",
+        "tarjetaUId": "2"
+      },
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000098",
+        "tipoTarjeta": "",
+        "tarjetaUId": "3"
+      },
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000105",
+        "tipoTarjeta": "",
+        "tarjetaUId": "4"
+      },
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000141",
+        "tipoTarjeta": "",
+        "tarjetaUId": "5"
+      },
+      {
+        "sucursal": "Casa Matriz",
+        "numeroTarjeta": "5010730101000000123",
+        "tipoTarjeta": "",
+        "tarjetaUId": "6"
+      }
+    ],
+    "numeroTarjeta": "",
+    "sucursal": "",
+    "tarjetaUId": 0,
+    "tipoTarjeta": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "840",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerTarjetasDebito",
+    "Fecha": "2017-12-18",
+    "Requerimiento": 1,
+    "Hora": "02:16:29",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

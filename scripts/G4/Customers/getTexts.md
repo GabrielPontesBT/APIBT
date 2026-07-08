@@ -76,7 +76,9 @@ Código | Descripción
     "Token": "444B674391BCA7676279700A"
   },
   "texts": {
-    "text": []
+    "Id": "",
+    "Description": "",
+    "Text": []
   },
   "BusinessErrors": {
     "BusinessError": []

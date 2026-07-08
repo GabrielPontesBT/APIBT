@@ -188,7 +188,10 @@ No aplica.
         "Description": "PRESIDENTE",
         "Multilateral": false
       }
-    ]
+    ],
+    "Id": "",
+    "Description": "",
+    "Multilateral": false
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -221,6 +224,6 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Id | Short $<(Length: 4)>$ | Identificador.
 Description | String $<(Length: 30)>$ | Descripción.
-Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+Multilateral | Boolean | Multilateral.
 :::
 <!-- CIERRA SDT -->

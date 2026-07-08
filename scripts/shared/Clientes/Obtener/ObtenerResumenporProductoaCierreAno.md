@@ -162,61 +162,76 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "244353514CD285A89A23FBEE",
-        "Device": "MC"
-    },
-    "sdtOperaciones": {
-        "sBTDetalleOperacion": [
-            {
-                "operacionUId": 2,
-                "producto": {
-                    "productoUId": 93,
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                    "moneda": "$",
-                    "papel": "$"
-                },
-                "saldo": 0.00
-            },
-            {
-                "operacionUId": 7,
-                "producto": {
-                    "productoUId": 132,
-                    "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
-                    "moneda": "$",
-                    "papel": "$"
-                },
-                "saldo": 15000.00
-            },
-            {
-                "operacionUId": 11,
-                "producto": {
-                    "productoUId": 105,
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-                    "moneda": "$",
-                    "papel": "$"
-                },
-                "saldo": -415000.00
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTClientes.ObtenerResumenPorProductoACierreAnio",
-        "Fecha": "2020-04-20",
-        "Hora": "14:06:20",
-        "Requerimiento": 1,
-        "Numero": 7331,
-        "Estado": "OK"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "244353514CD285A89A23FBEE",
+    "Device": "MC"
+  },
+  "sdtOperaciones": {
+    "sBTDetalleOperacion": [
+      {
+        "operacionUId": 2,
+        "producto": {
+          "productoUId": 93,
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "moneda": "$",
+          "papel": "$",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "saldo": 0
+      },
+      {
+        "operacionUId": 7,
+        "producto": {
+          "productoUId": 132,
+          "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
+          "moneda": "$",
+          "papel": "$",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "saldo": 15000
+      },
+      {
+        "operacionUId": 11,
+        "producto": {
+          "productoUId": 105,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+          "moneda": "$",
+          "papel": "$",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "saldo": -415000
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTClientes.ObtenerResumenPorProductoACierreAnio",
+    "Fecha": "2020-04-20",
+    "Hora": "14:06:20",
+    "Requerimiento": 1,
+    "Numero": 7331,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -235,6 +250,9 @@ Nombre | Tipo | Comentarios
 operacionUId | Long | Identificador único de operación.
 producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Decimal | Saldo.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -247,7 +265,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -260,4 +281,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

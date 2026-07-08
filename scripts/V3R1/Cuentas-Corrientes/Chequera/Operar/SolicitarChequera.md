@@ -87,7 +87,7 @@ Código | Descripción
             <bts:persona3Texto1></bts:persona3Texto1>  
             <bts:persona3Texto2></bts:persona3Texto2>  
             <bts:domicilio>Avenida Italia 2145</bts:domicilio>
-            <bts:sucursalDeRetiroId></bts:sucursalDeRetiroId>
+            <bts:sucursalDeRetiroId>1</bts:sucursalDeRetiroId>
          </bts:datosSolicitud>
       </bts:BTCuentasCorrientes.SolicitarChequera>
    </soapenv:Body>
@@ -112,16 +112,16 @@ curl -X POST \
 	"operacionUId":"2",
    "tipoCheque":"1",
    "cantidadLibretas":"1",
-   "bts:datosSolicitud": {
-          "bts:persona1Texto1": "D.N.I. 123456",
-          "bts:persona1Texto2": "Juan Perez",
-          "bts:persona2Texto1": " ",
-          "bts:persona2Texto2": " ",
-          "bts:persona3Texto1": " ",
-          "bts:persona3Texto2": " ",
-          "bts:domicilio": "Avenida Italia 2145",
-          "bts:sucuraslDeRetiroId": " "
-        }
+   "datosSolicitud": {
+      "persona1Texto1": "D.N.I. 123456",
+      "persona1Texto2": "Juan Perez",
+      "persona2Texto1": " ",
+      "persona2Texto2": " ",
+      "persona3Texto1": " ",
+      "persona3Texto2": " ",
+      "domicilio": "Avenida Italia 2145",
+      "sucursalDeRetiroId": "1"
+    }
 }'
 ```
 :::
@@ -205,6 +205,6 @@ persona2Texto1 | String | Información persona 2.
 persona2Texto2 | String | Información complementaria persona 2. 
 persona3Texto1 | String | Información persona 3. 
 persona3Texto2 | String | Información complementaria persona 3. 
-sucuraslDeRetiroId | Int | Identificador de la sucursal de retiro. 
+sucursalDeRetiroId | Int | Identificador de la sucursal de retiro. 
 :::
 <!-- CIERRA SDT -->

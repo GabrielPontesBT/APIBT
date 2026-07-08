@@ -160,7 +160,7 @@ Imei | String | Número de IMEI del equipo.
 Longitud | String | Longitud.
 CodRespuesta | String | Código de respuesta.
 DetalleTrxOri | String | Detalle Trx Origen.
-tipoProductoCredito | String | tipo de producto crédito.
+tipoProductoCredito | String | Tipo de producto crédito.
 DetalleTermOri | String | Detalle terminal origen.
 VendedorCbu | String | Clave Bancaria Uniforme del vendedor.
 Latitud | String | Latitud.

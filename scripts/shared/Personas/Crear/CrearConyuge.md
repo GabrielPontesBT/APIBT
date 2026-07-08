@@ -102,30 +102,29 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?CrearConyuge=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 0ccca369-0793-d62f-ebc0-3033cc750dad' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "1",
-	"estadoCivilId": "2",
-	"sdtPersona": {
-	  "paisDocumentoId": "845",
-	  "tipoDocumentoId": "1",
-	  "nroDocumento": "96900034",
-	  "primerApellido": "CASTRO",
-	  "primerNombre": "MARCOS",
-	  "sexo": "M"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": "1",
+  "estadoCivilId": "2",
+  "sdtPersona": {
+    "paisDocumentoId": "845",
+    "tipoDocumentoId": "1",
+    "nroDocumento": "96900034",
+    "primerApellido": "CASTRO",
+    "primerNombre": "MARCOS",
+    "sexo": "M",
+    "paisDocumento": "",
+    "segundoApellido": "",
+    "segundoNombre": "",
+    "tipoDocumento": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

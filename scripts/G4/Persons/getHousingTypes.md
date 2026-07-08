@@ -96,7 +96,9 @@ No aplica.
         "Id": 6,
         "Description": "OTROS"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
   "BusinessErrors": {
     "BusinessError": []

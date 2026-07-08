@@ -18,7 +18,7 @@ backtotop: false
 
 **Nombre publicación:** BTCuentasVista.DebitarEnCuenta 
 
-**Programa:** RBTPG569
+**Programa:** RBTPG582
 
 **Global/País:** Global
 :::
@@ -89,7 +89,7 @@ Código | Descripción
             <bts:Token>1244265502F955E77534D3E0</bts:Token>
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
-         <bts:sdtDatosDebitar>
+         <bts:sdtDatosDebito>
             <bts:clienteUId>140</bts:clienteUId>
             <bts:operacionUId>10140</bts:operacionUId>
             <bts:importe1>1000</bts:importe1>
@@ -100,7 +100,7 @@ Código | Descripción
             <bts:concepto2></bts:concepto2>
             <bts:concepto3></bts:concepto3>
             <bts:concepto4></bts:concepto4>
-         </bts:sdtDatosDebitar>
+         </bts:sdtDatosDebito>
       </bts:BTCuentasVista.DebitarEnCuenta>
    </soapenv:Body>
 
@@ -121,37 +121,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL", 
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
-	"sdtDatosDebitar": { 
-		"operacionUId1": "10140", 
-		"operacionUId2": "10141", 
-		"operacionUId3": "", 
-		"operacionUId4": "", 
-		"operacionUId5": "", 
-		"importe1": "1000", 
-		"importe2": "5220", 
-		"importe3": "", 
-		"importe4": "", 
-		"importe5": "", 
-		"importe6": "", 
-		"importe7": "", 
-		"importe8": "", 
-		"concepto": "" 
-	}    
-}' 
-curl -X POST \ 
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?DebitarEnCuenta=' \ 
-  -H 'cache-control: no-cache' \ 
-  -H 'content-type: application/json' \ 
-  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \ 
-  -d '{
-"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-	"sdtDatosDebitar": { 
+	"sdtDatosDebito": { 
 		"clienteUId": "140",
 		"operacionUId": "10140", 
 		"importe1": "1000", 
@@ -164,8 +134,6 @@ curl -X POST \
 		"concepto4": ""
 	}    
 }' 
-
-
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -176,7 +144,10 @@ curl -X POST \
 
 @tab XML
 ```xml
-<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTCuentasVista.DebitarEnCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -200,29 +171,28 @@ curl -X POST \
         </BTCuentasVista.DebitarEnCuentaResponse>
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-
 ```
 
 @tab JSON
 ```json
 '{
-    "Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
-        "Canal": "BTDIGITAL",
-        "Token": "fa2c02c95a4A8B5C60A82434"
-    },
-    "movimientoUId": "141",
-    "Btoutreq": {
-        "Numero": "103",
-        "Estado": "OK",
-        "Servicio": "BTCuentasVista.DebitarEnCuenta",
-        "Requerimiento": "1",
-        "Fecha": "2019-07-22",
-        "Canal": "BTDIGITAL",
-        "Hora": "16:00:37"
-    }
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "movimientoUId": "141",
+  "Btoutreq": {
+    "Numero": "103",
+    "Estado": "OK",
+    "Servicio": "BTCuentasVista.DebitarEnCuenta",
+    "Requerimiento": "1",
+    "Fecha": "2019-07-22",
+    "Canal": "BTDIGITAL",
+    "Hora": "16:00:37"
+  }
 }'
 
 ```

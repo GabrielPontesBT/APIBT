@@ -248,7 +248,9 @@ Nombre | Tipo | Comentarios
 origenDeFondosId | Short | Identificador del origen de los fondos. 
 origenDeFondos | String | Origen de los fondos. 
 movimientosMensuales | [sBTPerfilTrnMovimientosMensuales](#sbtperfiltrnmovimientosmensuales) | Datos de los movimientos mensuales.
+:::
 
+::: details sBTPerfilTrnMovimientosMensuales
 
 ### sBTPerfilTrnMovimientosMensuales
  
@@ -260,6 +262,9 @@ enEfectivo | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Dat
 conCheque | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Datos de los movimientos mensuales con cheques.
 transferenciaLocal | [sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos) | Datos de los movimientos mensuales de transferencias locales.
 transferenciaInternacional | [sBTPerfilTrnDatosMovInternacionales](#sbtperfiltrndatosmovinternacionales) | Datos de los movimientos mensuales de transferencias internacionales.
+:::
+
+::: details sBTPerfilTrnDatosMovimientos
 
 ### sBTPerfilTrnDatosMovimientos
  
@@ -271,7 +276,9 @@ montoRetiros | Double | Total de importes de retiros.
 montoDepositos | Double | Total de importes de depósitos.
 cantidadDepositos | int | Cantidad de movimientos de depósitos.
 cantidadRetiros | int | Cantidad de movimientos de retiros.
+:::
 
+::: details sBTPerfilTrnDatosMovInternacionales
 
 ### sBTPerfilTrnDatosMovInternacionales
  
@@ -287,6 +294,7 @@ paisOrigenId | int | Identificador del país.
 paisOrigen | String | Nombre del país.
 paisDestinoId | int | Identificador del país.
 paisDestino | String | Nombre del país.
-
 :::
+
 <!-- CIERRA SDT -->
+

@@ -63,7 +63,7 @@ Código | Descripción
       <bts:BTUsuarios.EliminarPerfil>
 		<bts:Btinreq>
             <bts:Device>1</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>0d2dc7b1654A8B5C60A82434</bts:Token>

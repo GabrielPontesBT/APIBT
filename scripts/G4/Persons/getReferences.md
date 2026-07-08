@@ -76,7 +76,21 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "references": {
-    "reference": []
+    "reference": [],
+    "Address1": "",
+    "Address2": "",
+    "Address3": "",
+    "BondOrJobTitle": "",
+    "Correlative": "",
+    "EnterpriceJobTitleDescription": "",
+    "EnterpriseJobTitleId": "",
+    "Name": "",
+    "PersonType": "",
+    "ReferenceTypeId": "",
+    "ReferenceTypeDescription": "",
+    "RelationshipId": 0,
+    "RelationshipDescription": "",
+    "Telephone": ""
   },
   "BusinessErrors": {
     "BusinessError": []

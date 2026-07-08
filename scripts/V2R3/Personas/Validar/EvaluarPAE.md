@@ -160,31 +160,40 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "valor": 10000,
-   "mensaje": "",
-   "sdtPoliticas": "",
-   "numeroEjecucion": 2,
-   "Erroresnegocio": {
-       "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-       "Numero": "835",
-       "Estado": "OK",
-       "Servicio": "BTPersonas.EvaluarPAE",
-       "Fecha": "2017-12-18",
-       "Requerimiento": "",
-       "Hora": "01:48:53",
-       "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "valor": 10000,
+  "mensaje": "",
+  "sdtPoliticas": {
+    "estado": "",
+    "estadoDsc": "",
+    "nroAutorizacion": 0,
+    "observacion": "",
+    "politica": "",
+    "politicaId": 0,
+    "restriccion": "",
+    "restriccionDsc": ""
+  },
+  "numeroEjecucion": 2,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "835",
+    "Estado": "OK",
+    "Servicio": "BTPersonas.EvaluarPAE",
+    "Fecha": "2017-12-18",
+    "Requerimiento": "",
+    "Hora": "01:48:53",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

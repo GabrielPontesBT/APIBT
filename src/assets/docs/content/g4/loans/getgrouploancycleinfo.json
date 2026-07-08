@@ -1,0 +1,208 @@
+{
+  "slug": "loans/getgrouploancycleinfo",
+  "pageTitle": "Get Group Loan Cycle Info",
+  "description": "Método para obtener la información de un ciclo de crédito grupal",
+  "pubName": "PublicLoans.getGroupLoanCycleInfo",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0043",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "offset",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Número de registros a omitir desde el inicio del resultado."
+    },
+    {
+      "Nombre": "limit",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad máxima de registros a retornar en una sola respuesta."
+    },
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "cycleId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador del ciclo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "hasNext",
+      "Tipo": "Boolean",
+      "Comentarios": "Indica si existen más páginas disponibles."
+    },
+    {
+      "Nombre": "cycleInfo",
+      "Tipo": "<a href=\"#sdtsbtmgloangroupcycleout\">SdtsBTMGLoanGroupCycleOut</a>",
+      "Comentarios": "Información del ciclo de crédito grupal."
+    },
+    {
+      "Nombre": "groupLoanCycleMembers",
+      "Tipo": "<a href=\"#sdtsbtmggrouploancyclememberout\">SdtsBTMGGroupLoanCycleMemberOut</a>",
+      "Comentarios": "Listado de integrantes del ciclo."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"FEA6099887C1B4D7C79A7DE0\"\n  },\n  \"offset\": \"0\",\n  \"limit\": \"15\",\n  \"groupId\": \"33\",\n  \"cycleId\": \"1\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"FEA6099887C1B4D7C79A7DE0\"\n  },\n  \"offset\": \"0\",\n  \"limit\": \"15\",\n  \"groupId\": \"33\",\n  \"cycleId\": \"1\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"FEA6099887C1B4D7C79A7DE0\"\n  },\n  \"hasNext\": false,\n  \"cycleInfo\": {\n    \"groupId\": 33,\n    \"cycleId\": 1,\n    \"totalOfCapital\": \"21000.00000\",\n    \"memberCount\": 3,\n    \"expirationDate\": \"2027-11-09\",\n    \"term\": 109,\n    \"installmentAmount\": \"1410.00000\",\n    \"totalFinancialCost\": \"56.16\",\n    \"rate\": \"20.00\"\n  },\n  \"groupLoanCycleMembers\": {\n    \"groupLoanCycleMember\": [\n      {\n        \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n        \"counterpartyName\": \"FRANCELLA  JUAN\",\n        \"memberTypeId\": 1,\n        \"memberTypeDescription\": \"Presidente\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"ec26be68-2364-4686-95cf-4919210c2d80\",\n        \"movementGUID\": \"bb325d6e-e5dc-456b-ba19-1e6d263b781b\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"c3681d33-10e9-4f4e-b4fc-026975b8822f\"\n      },\n      {\n        \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n        \"counterpartyName\": \"RADA  RUBEN\",\n        \"memberTypeId\": 1,\n        \"memberTypeDescription\": \"Presidente\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"7c499851-502f-43ff-8c32-0e7bc20150c6\",\n        \"movementGUID\": \"4a1877a0-4141-474d-bd5a-d45f22749a62\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"9a7ffde0-71e7-4409-8c20-b5db01504254\"\n      },\n      {\n        \"counterpartyGUID\": \"b37c32b0-d455-4c91-9ff0-ce00638906d3\",\n        \"counterpartyName\": \"BENAVIDES JUAREZ ROXANA\",\n        \"memberTypeId\": 3,\n        \"memberTypeDescription\": \"Integrante\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"8ee44f5f-60af-4b60-9493-37364705065a\",\n        \"movementGUID\": \"73de4f6f-5b17-4337-9092-8f529b77b887\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"bfcf4446-d73a-4edd-a94b-ed3d152be591\"\n      }\n    ],\n    \"capital\": \"\",\n    \"counterpartyGUID\": \"\",\n    \"counterpartyName\": \"\",\n    \"disbursementAmount\": \"\",\n    \"installmentAmount\": \"\",\n    \"intercycle\": false,\n    \"loanGUID\": \"\",\n    \"memberTypeId\": \"\",\n    \"memberTypeDescription\": \"\",\n    \"movementGUID\": \"\",\n    \"rate\": \"\",\n    \"simulationGUID\": \"\",\n    \"totalFinancialCost\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:38:50\",\n    \"Numero\": 13584972,\n    \"Servicio\": \"PublicLoans.getGroupLoanCycleInfo\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"FEA6099887C1B4D7C79A7DE0\"\n  },\n  \"hasNext\": false,\n  \"cycleInfo\": {\n    \"groupId\": 33,\n    \"cycleId\": 1,\n    \"totalOfCapital\": \"21000.00000\",\n    \"memberCount\": 3,\n    \"expirationDate\": \"2027-11-09\",\n    \"term\": 109,\n    \"installmentAmount\": \"1410.00000\",\n    \"totalFinancialCost\": \"56.16\",\n    \"rate\": \"20.00\"\n  },\n  \"groupLoanCycleMembers\": {\n    \"groupLoanCycleMember\": [\n      {\n        \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n        \"counterpartyName\": \"FRANCELLA  JUAN\",\n        \"memberTypeId\": 1,\n        \"memberTypeDescription\": \"Presidente\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"ec26be68-2364-4686-95cf-4919210c2d80\",\n        \"movementGUID\": \"bb325d6e-e5dc-456b-ba19-1e6d263b781b\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"c3681d33-10e9-4f4e-b4fc-026975b8822f\"\n      },\n      {\n        \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n        \"counterpartyName\": \"RADA  RUBEN\",\n        \"memberTypeId\": 1,\n        \"memberTypeDescription\": \"Presidente\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"7c499851-502f-43ff-8c32-0e7bc20150c6\",\n        \"movementGUID\": \"4a1877a0-4141-474d-bd5a-d45f22749a62\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"9a7ffde0-71e7-4409-8c20-b5db01504254\"\n      },\n      {\n        \"counterpartyGUID\": \"b37c32b0-d455-4c91-9ff0-ce00638906d3\",\n        \"counterpartyName\": \"BENAVIDES JUAREZ ROXANA\",\n        \"memberTypeId\": 3,\n        \"memberTypeDescription\": \"Integrante\",\n        \"capital\": \"7000.00000\",\n        \"installmentAmount\": \"470.00000\",\n        \"rate\": \"20.000000\",\n        \"intercycle\": false,\n        \"simulationGUID\": \"8ee44f5f-60af-4b60-9493-37364705065a\",\n        \"movementGUID\": \"73de4f6f-5b17-4337-9092-8f529b77b887\",\n        \"totalFinancialCost\": \"56.160000\",\n        \"disbursementAmount\": \"0.00\",\n        \"loanGUID\": \"bfcf4446-d73a-4edd-a94b-ed3d152be591\"\n      }\n    ],\n    \"capital\": \"\",\n    \"counterpartyGUID\": \"\",\n    \"counterpartyName\": \"\",\n    \"disbursementAmount\": \"\",\n    \"installmentAmount\": \"\",\n    \"intercycle\": false,\n    \"loanGUID\": \"\",\n    \"memberTypeId\": \"\",\n    \"memberTypeDescription\": \"\",\n    \"movementGUID\": \"\",\n    \"rate\": \"\",\n    \"simulationGUID\": \"\",\n    \"totalFinancialCost\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:38:50\",\n    \"Numero\": 13584972,\n    \"Servicio\": \"PublicLoans.getGroupLoanCycleInfo\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGLoanGroupCycleOut",
+      "fields": [
+        {
+          "Nombre": "cycleId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de ciclo."
+        },
+        {
+          "Nombre": "expirationDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "groupId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Monto de cuota."
+        },
+        {
+          "Nombre": "memberCount",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Cantidad de miembros."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.2)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "totalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.2)</strong>",
+          "Comentarios": "Costo financiero total."
+        },
+        {
+          "Nombre": "totalOfCapital",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Total de capital."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGGroupLoanCycleMemberOut",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "counterpartyName",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Nombre de contraparte."
+        },
+        {
+          "Nombre": "disbursementAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de desembolso."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Monto de cuota."
+        },
+        {
+          "Nombre": "intercycle",
+          "Tipo": "Boolean",
+          "Comentarios": "Interciclo."
+        },
+        {
+          "Nombre": "loanGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del préstamo."
+        },
+        {
+          "Nombre": "memberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        },
+        {
+          "Nombre": "memberTypeDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo de miembro."
+        },
+        {
+          "Nombre": "movementGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID (identificador único global) del movimiento."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "simulationGUID",
+          "Tipo": "String",
+          "Comentarios": "GUID (identificador único global) de la simulación."
+        },
+        {
+          "Nombre": "totalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Costo financiero total."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

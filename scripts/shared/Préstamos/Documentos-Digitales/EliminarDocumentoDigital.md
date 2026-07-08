@@ -67,7 +67,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
          </bts:Btinreq>
-         <bts:operacionUId>121</bts:operacionUId>
+         <bts:clienteUId>121</bts:clienteUId>
          <bts:documentoId>115</bts:documentoId>
       </bts:BTPrestamos.EliminarDocumentoDigital>
    </soapenv:Body>
@@ -76,22 +76,17 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?EliminarDocumentoDigital' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"operacionUId":"121",
-    "documentoId":"123"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": "121",
+  "documentoId": "123"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

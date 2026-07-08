@@ -156,6 +156,53 @@ curl -X POST \
                   <categoria>A</categoria>
                </sBTFacultadPersonaCliente>
             </facultadesCliente>
+            <sBTFacultadesCliente>
+               <categoria></categoria>
+               <clienteUId>0</clienteUId>
+               <codigo>0</codigo>
+               <descripcion></descripcion>
+               <grupo>
+                  <codigoMoneda>0</codigoMoneda>
+                  <codigoPapel>0</codigoPapel>
+                  <moneda></moneda>
+                  <monto>0</monto>
+                  <numero>0</numero>
+                  <papel></papel>
+                  <vigenciaDesde></vigenciaDesde>
+                  <vigenciaHasta></vigenciaHasta>
+               </grupo>
+               <potestad></potestad>
+               <tipo></tipo>
+            </sBTFacultadesCliente>
+            <sBTFacultadesOperacion>
+               <categoria></categoria>
+               <codigo>0</codigo>
+               <descripcion></descripcion>
+               <grupo>
+                  <codigoMoneda>0</codigoMoneda>
+                  <codigoPapel>0</codigoPapel>
+                  <moneda></moneda>
+                  <monto>0</monto>
+                  <numero>0</numero>
+                  <papel></papel>
+                  <vigenciaDesde></vigenciaDesde>
+                  <vigenciaHasta></vigenciaHasta>
+               </grupo>
+               <operacionUId>0</operacionUId>
+               <potestad></potestad>
+               <producto>
+                  <moneda></moneda>
+                  <nombre></nombre>
+                  <otrosConceptos>
+                     <concepto></concepto>
+                     <texto></texto>
+                     <valor>0</valor>
+                  </otrosConceptos>
+                  <papel></papel>
+                  <productoUId>0</productoUId>
+               </producto>
+               <tipo></tipo>
+            </sBTFacultadesOperacion>
          </sdtFacultades>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -174,75 +221,126 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Device": "GZ",
-          "Usuario": "Instalador",
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Token": "5f7c5e6a6f99865B3A2E76CF"
-        },
-        "sdtFacultades": {
-          "facultadesOperacion": {
-            "sBTFacultadPersonaOperacion": [{
-              "producto": {
-                "papel": "$",
-                "moneda": "$",
-                "productoUId": 41,
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-              },
-              "descripcion": "Retiro de cuentas vista",
-              "operacionUId": 1011,
-              "tipo": "Persona",
-              "potestad": "Titular",
-              "grupo": {
-                "numero": 1,
-                "monto": 0.00,
-                "moneda": "$",
-                "papel": "$",
-                "vigenciaHasta": "",
-                "codigoMoneda": 0,
-                "vigenciaDesde": "2018-11-05",
-                "codigoPapel": 0
-              },
-              "codigo": 2,
-              "categoria": "-"
-            }]
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "5f7c5e6a6f99865B3A2E76CF"
+  },
+  "sdtFacultades": {
+    "facultadesOperacion": {
+      "sBTFacultadPersonaOperacion": [
+        {
+          "producto": {
+            "papel": "$",
+            "moneda": "$",
+            "productoUId": 41,
+            "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
           },
-          "facultadesCliente": {
-            "sBTFacultadPersonaCliente": [{
-              "clienteUId": 340,
-              "descripcion": "Firma de Cheques",
-              "potestad": "Titular",
-              "tipo": "Categoría",
-              "grupo": {
-                "numero": 1,
-                "monto": 2000000.00,
-                "moneda": "$",
-                "papel": "$",
-                "vigenciaHasta": "2022-09-23",
-                "codigoMoneda": 0,
-                "vigenciaDesde": "2018-12-10",
-                "codigoPapel": 0
-              },
-              "codigo": 4,
-              "categoria": "A"
-            }]
-          }
-        },
-        "Erroresnegocio": {
-          "BTErrorNegocio": []
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTPersonas.ObtenerFacultades",
-          "Fecha": "2023-03-27",
-          "Hora": "11:40:36",
-          "Requerimiento": 0,
-          "Numero": 2957,
-          "Estado": "OK"
+          "descripcion": "Retiro de cuentas vista",
+          "operacionUId": 1011,
+          "tipo": "Persona",
+          "potestad": "Titular",
+          "grupo": {
+            "numero": 1,
+            "monto": 0,
+            "moneda": "$",
+            "papel": "$",
+            "vigenciaHasta": "",
+            "codigoMoneda": 0,
+            "vigenciaDesde": "2018-11-05",
+            "codigoPapel": 0
+          },
+          "codigo": 2,
+          "categoria": "-"
         }
-}'
+      ]
+    },
+    "facultadesCliente": {
+      "sBTFacultadPersonaCliente": [
+        {
+          "clienteUId": 340,
+          "descripcion": "Firma de Cheques",
+          "potestad": "Titular",
+          "tipo": "Categoría",
+          "grupo": {
+            "numero": 1,
+            "monto": 2000000,
+            "moneda": "$",
+            "papel": "$",
+            "vigenciaHasta": "2022-09-23",
+            "codigoMoneda": 0,
+            "vigenciaDesde": "2018-12-10",
+            "codigoPapel": 0
+          },
+          "codigo": 4,
+          "categoria": "A"
+        }
+      ]
+    },
+    "sBTFacultadesCliente": {
+      "categoria": "",
+      "clienteUId": 0,
+      "codigo": 0,
+      "descripcion": "",
+      "grupo": {
+        "codigoMoneda": 0,
+        "codigoPapel": 0,
+        "moneda": "",
+        "monto": 0,
+        "numero": 0,
+        "papel": "",
+        "vigenciaDesde": "",
+        "vigenciaHasta": ""
+      },
+      "potestad": "",
+      "tipo": ""
+    },
+    "sBTFacultadesOperacion": {
+      "categoria": "",
+      "codigo": 0,
+      "descripcion": "",
+      "grupo": {
+        "codigoMoneda": 0,
+        "codigoPapel": 0,
+        "moneda": "",
+        "monto": 0,
+        "numero": 0,
+        "papel": "",
+        "vigenciaDesde": "",
+        "vigenciaHasta": ""
+      },
+      "operacionUId": 0,
+      "potestad": "",
+      "producto": {
+        "moneda": "",
+        "nombre": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "papel": "",
+        "productoUId": 0
+      },
+      "tipo": ""
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPersonas.ObtenerFacultades",
+    "Fecha": "2023-03-27",
+    "Hora": "11:40:36",
+    "Requerimiento": 0,
+    "Numero": 2957,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -260,7 +358,10 @@ Los campos del tipo de dato estructurado sBTFacultadesPersona son los siguientes
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 sBTFacultadesCliente | [sBTFacultadPersonaCliente](#sbtfacultadpersonacliente) | Listado de datos de cliente. 
-sBTFacultadesOperacion | [sBTFacultadPersonaOperacion](#sbtfacultadpersonaoperacion) | Listado de datos de operación. 
+sBTFacultadesOperacion | [sBTFacultadPersonaOperacion](#sbtfacultadpersonaoperacion) | Listado de datos de operación.
+:::
+
+::: details sBTFacultadPersonaCliente
 
 ### sBTFacultadPersonaCliente
 
@@ -274,7 +375,10 @@ codigo | Short | Código.
 descripcion | String | Descripción. 
 grupo | [sBTFacultadGrupoPersona](#sbtfacultadgrupopersona) | Listado de grupos de la facultad. 
 potestad | String | Potestad. 
-tipo | String | Tipo. 
+tipo | String | Tipo.
+:::
+
+::: details sBTFacultadPersonaOperacion
 
 ### sBTFacultadPersonaOperacion
 
@@ -289,7 +393,10 @@ grupo | [sBTFacultadGrupoPersona](#sbtfacultadgrupopersona) | Listado de grupos 
 operacionUId | Long | Identificador único de la operación. 
 potestad | String | Potestad. 
 producto | [sBTProducto](#sbtproducto) | Datos de producto. 
-tipo | String | Tipo. 
+tipo | String | Tipo.
+:::
+
+::: details sBTFacultadGrupoPersona
 
 ### sBTFacultadGrupoPersona
 
@@ -304,7 +411,10 @@ monto | Decimal | Monto.
 numero | Short | Número de grupo. 
 papel | String | Papel. 
 vigenciaDesde | Date | Fecha de vigencia desde. 
-vigenciaHasta | Date | Fecha de vigencia hasta. 
+vigenciaHasta | Date | Fecha de vigencia hasta.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -317,7 +427,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -330,4 +443,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -115,7 +115,7 @@ curl -X POST \
             <sBTDocumentoDigital>
                <titulo>PRUEBA</titulo>
                <fechaActualizacion>2015-01-01</fechaActualizacion>
-               <FechaVencimiento/>
+               <fechaVencimiento/>
                <tipoDocumentoDigital>Plan de Pagos</tipoDocumentoDigital>
                <documentoId>265</documentoId>
             </sBTDocumentoDigital>

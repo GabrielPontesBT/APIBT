@@ -97,7 +97,7 @@ curl -X POST \
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
-      <Prueba.ObtenerMotivosInhabilitacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+      <BTClientes.ObtenerMotivosInhabilitacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>2</Device>
             <Usuario>Instalador</Usuario>
@@ -105,7 +105,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>289a9ca6a299865B3A2E76CF</Token>
          </Btinreq>
-         <sbtMotivosInhabilitacion>
+         <sdtMotivosInhabilitacion>
             <SdtsBTMotivoInhabilitacion>
                <descripcion>Embargo</descripcion>
                <codigo>1</codigo>
@@ -118,11 +118,11 @@ curl -X POST \
                <descripcion>Retenciones</descripcion>
                <codigo>10</codigo>
             </SdtsBTMotivoInhabilitacion>
-         </sbtMotivosInhabilitacion>
+         </sdtMotivosInhabilitacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>1827</Numero>
-            <Servicio>Prueba.ObtenerMotivosInhabilitacion</Servicio>
+            <Servicio>BTClientes.ObtenerMotivosInhabilitacion</Servicio>
             <Estado>OK</Estado>
             <Fecha>2022-10-27</Fecha>
             <Requerimiento>0</Requerimiento>
@@ -136,41 +136,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Device": 2,
-          "Usuario": "Instalador",
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Token": "289a9ca6a299865B3A2E76CF"
-        },
-        "sbtMotivosInhabilitacion": {
-          "SdtsBTMotivoInhabilitacion": [
-            {
-              "descripcion": "Embargo",
-              "codigo": 1
-            },
-            {
-              "descripcion": "En Juicio",
-              "codigo": 3
-            },
-            {
-              "descripcion": "Retenciones",
-              "codigo": 10
-            }
-          ]
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Numero": 1827,
-          "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
-          "Estado": "OK",
-          "Fecha": "2022-10-27",
-          "Requerimiento": 0,
-          "Hora": "09:39:20",
-          "Canal": "BTDIGITAL"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": 2,
+    "Usuario": "Instalador",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "289a9ca6a299865B3A2E76CF"
+  },
+  "sdtMotivosInhabilitacion": {
+    "SdtsBTMotivoInhabilitacion": [
+      {
+        "descripcion": "Embargo",
+        "codigo": 1
+      },
+      {
+        "descripcion": "En Juicio",
+        "codigo": 3
+      },
+      {
+        "descripcion": "Retenciones",
+        "codigo": 10
+      }
+    ]
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": 1827,
+    "Servicio": "BTClientes.ObtenerMotivosInhabilitacion",
+    "Estado": "OK",
+    "Fecha": "2022-10-27",
+    "Requerimiento": 0,
+    "Hora": "09:39:20",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

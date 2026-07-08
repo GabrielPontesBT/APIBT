@@ -116,7 +116,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>ae6041cefd4A8B5C60A82434</Token>
          </Btinreq>
-         <sbtDetallePagoPrestamo>
+         <sdtDetallePagoPrestamo>
             <redondeos>0.00</redondeos>
             <otrosConceptos>0.00</otrosConceptos>
             <capital>883.21</capital>
@@ -375,7 +375,7 @@ curl -X POST \
             <total>1137.39</total>
             <seguros>0.00</seguros>
             <comisiones>118.13</comisiones>
-         </sbtDetallePagoPrestamo>
+         </sdtDetallePagoPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>155926</Numero>
@@ -393,305 +393,305 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{ 
-	"Btinreq": { 
-          "Device": "1", 
-          "Usuario": "MINSTALADOR", 
-          "Requerimiento": 0, 
-          "Canal": "BTDIGITAL", 
-          "Token": "ae6041cefd4A8B5C60A82434" 
-        }, 
-        "sbtDetallePagoPrestamo": { 
-          "redondeos": 0, 
-          "otrosConceptos": 0, 
-          "capital": 883.21, 
-          "impuestos": 26.92, 
-          "intereses": 109.13, 
-          "detalle": { 
-            "sBTDetallePagoCuota": [ 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 126.5, 
-                "impuestos": 0.88, 
-                "intereses": 0, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-05-27", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 0.88, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    }, 
-                    { 
-                      "texto": "Comisión Mora", 
-                      "valor": 77.7, 
-                      "concepto": "COMISION_MORA" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 82.6 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 98.19, 
-                "impuestos": 5.2, 
-                "intereses": 23.99, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-06-12", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 23.99, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 5.2, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 98.15, 
-                "impuestos": 5.21, 
-                "intereses": 24.02, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-06-30", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 24.02, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 5.21, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 105.9, 
-                "impuestos": 4.02, 
-                "intereses": 17.46, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-07-15", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 17.46, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 4.02, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 107.91, 
-                "impuestos": 3.72, 
-                "intereses": 15.75, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-07-31", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 15.75, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 3.72, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 112.35, 
-                "impuestos": 3.04, 
-                "intereses": 11.99, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-08-15", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 11.99, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 3.04, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 115, 
-                "impuestos": 2.64, 
-                "intereses": 9.74, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-08-31", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 9.74, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 2.64, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 119.21, 
-                "impuestos": 1.99, 
-                "intereses": 6.18, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-09-15", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Interés", 
-                      "valor": 6.18, 
-                      "concepto": "INTERES" 
-                    }, 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 1.99, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 4.9, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 4.9 
-              }, 
-              { 
-                "otrosConceptos": 0, 
-                "capital": 0, 
-                "impuestos": 0.22, 
-                "intereses": 0, 
-                "redondeo": 0, 
-                "total": 0, 
-                "fechaPago": "2022-09-30", 
-                "detalleConceptos": { 
-                  "sBTConcepto": [ 
-                    { 
-                      "texto": "Impuesto de Interés", 
-                      "valor": 0.22, 
-                      "concepto": "IMPUESTO_INTERES" 
-                    }, 
-                    { 
-                      "texto": "Comisión", 
-                      "valor": 1.23, 
-                      "concepto": "COMISION" 
-                    } 
-                  ] 
-                }, 
-                "seguros": 0, 
-                "comisiones": 1.23 
-              } 
-            ] 
-          }, 
-          "fechaPago": "2022-09-15", 
-          "total": 1137.39, 
-          "seguros": 0, 
-          "comisiones": 118.13 
-        }, 
-        "Erroresnegocio": "", 
-        "Btoutreq": { 
-          "Numero": 155926, 
-          "Estado": "OK", 
-          "Servicio": "BTPrestamos.ObtenerDetallePagoPrestamo", 
-          "Requerimiento": 0, 
-          "Fecha": "2022-12-01", 
-          "Hora": "18:43:49", 
-          "Canal": "BTDIGITAL" 
-        } 
-}' 
+{
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "ae6041cefd4A8B5C60A82434"
+  },
+  "sdtDetallePagoPrestamo": {
+    "redondeos": 0,
+    "otrosConceptos": 0,
+    "capital": 883.21,
+    "impuestos": 26.92,
+    "intereses": 109.13,
+    "detalle": {
+      "sBTDetallePagoCuota": [
+        {
+          "otrosConceptos": 0,
+          "capital": 126.5,
+          "impuestos": 0.88,
+          "intereses": 0,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-05-27",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 0.88,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              },
+              {
+                "texto": "Comisión Mora",
+                "valor": 77.7,
+                "concepto": "COMISION_MORA"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 82.6
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 98.19,
+          "impuestos": 5.2,
+          "intereses": 23.99,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-06-12",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 23.99,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 5.2,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 98.15,
+          "impuestos": 5.21,
+          "intereses": 24.02,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-06-30",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 24.02,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 5.21,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 105.9,
+          "impuestos": 4.02,
+          "intereses": 17.46,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-07-15",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 17.46,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 4.02,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 107.91,
+          "impuestos": 3.72,
+          "intereses": 15.75,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-07-31",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 15.75,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 3.72,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 112.35,
+          "impuestos": 3.04,
+          "intereses": 11.99,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-08-15",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 11.99,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 3.04,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 115,
+          "impuestos": 2.64,
+          "intereses": 9.74,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-08-31",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 9.74,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 2.64,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 119.21,
+          "impuestos": 1.99,
+          "intereses": 6.18,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-09-15",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Interés",
+                "valor": 6.18,
+                "concepto": "INTERES"
+              },
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 1.99,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 4.9,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 4.9
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 0,
+          "impuestos": 0.22,
+          "intereses": 0,
+          "redondeo": 0,
+          "total": 0,
+          "fechaPago": "2022-09-30",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "texto": "Impuesto de Interés",
+                "valor": 0.22,
+                "concepto": "IMPUESTO_INTERES"
+              },
+              {
+                "texto": "Comisión",
+                "valor": 1.23,
+                "concepto": "COMISION"
+              }
+            ]
+          },
+          "seguros": 0,
+          "comisiones": 1.23
+        }
+      ]
+    },
+    "fechaPago": "2022-09-15",
+    "total": 1137.39,
+    "seguros": 0,
+    "comisiones": 118.13
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": 155926,
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerDetallePagoPrestamo",
+    "Requerimiento": 0,
+    "Fecha": "2022-12-01",
+    "Hora": "18:43:49",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -717,8 +717,11 @@ intereses | Double | Intereses de la cuota.
 otrosConceptos | Double | Importe otros conceptos. 
 redondeos | Double | Redondeos. 
 seguros | Double | Seguros de la cuota. 
-total | Double | Total de la cuota. 
- 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTDetallePagoCuota
+
 ### sBTDetallePagoCuota
 
 ::: center 
@@ -734,7 +737,10 @@ impuestos | Double | Impuestos de la cuota.
 intereses | Double | Intereses de la cuota. 
 otrosConceptos | Double | Importe otros conceptos. 
 seguros | Double | Seguros de la cuota. 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -745,6 +751,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

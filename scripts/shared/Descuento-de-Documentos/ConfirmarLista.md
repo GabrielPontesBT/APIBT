@@ -87,7 +87,7 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "listaUId": 75
+  "listaUId": 75
 }'
 ```
 :::
@@ -109,7 +109,6 @@ curl -X POST \
             <Token>1485239356EB8880B52090F2</Token>
             <Device>ES</Device>
          </Btinreq>
-         <listaUId>75</listaUId>
          <movimientoUId>58</movimientoUId>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -136,7 +135,6 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "listaUId": 75 ,
 	"movimientoUId": 58 ,
     "Erroresnegocio": {
         "BTErrorNegocio": []

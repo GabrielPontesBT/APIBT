@@ -33,7 +33,7 @@ Nombre | Tipo | Obligatoriedad | Comentarios
 :--------- | :--------- | :--------- | :---------
 Canal   		    | String    | M	|
 BancoDestino 	    | Int 		| M	| Código de banco destino.
-OperacionUID	    | Long 		| M	| id producto de ahorro.
+OperacionUId	    | Long 		| M	| id producto de ahorro.
 CuentaDestino 	    | Int 		| M	| Número de cuenta destino.
 TipoCuentaDestino	| Double	| M	| Tipo de cuenta destino (1 o 2).
 NombreDestino	    | String 	| M	| Nombre beneficiario.
@@ -99,7 +99,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:Canal>BTDIGITAL</bts:Canal>
          <bts:BancoDestino>17</bts:BancoDestino>
-         <bts:OperacionUID>49</bts:OperacionUID>
+         <bts:OperacionUId>49</bts:OperacionUId>
          <bts:CuentaDestino>0516440</bts:CuentaDestino>
          <bts:TipoCuentaDestino>1</bts:TipoCuentaDestino>
          <bts:NombreDestino>Agustin Meriles</bts:NombreDestino>

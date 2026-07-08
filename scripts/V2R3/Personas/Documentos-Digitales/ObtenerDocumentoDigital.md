@@ -125,6 +125,7 @@ curl -X POST \
                <Version>1</Version>
                <Nombre>ejemplo</Nombre>
                <Instancia>115</Instancia>
+               <documentoId>0</documentoId>
             </sBTVersionDocumentoDigital>
          </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
@@ -144,38 +145,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtDocumentosDigitales": {
-      "sBTVersionDocumentoDigital": [ {
-          "FechaEmision": "2010-10-10",
-          "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-          "FechaVencimiento": "2020-10-10",
-          "TipoDocumentoDigital": "Recibo de Aguinaldo",
-          "Version": 1,
-          "Nombre": "ejemplo",
-          "Instancia": 115
-      } ]
-   },
-   "Erroresnegocio": {
-       "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-       "Numero": 882,
-       "Estado": "OK",
-       "Servicio": "BTPersonas.ObtenerDocumentoDigital",
-       "Requerimiento": "1",
-       "Fecha": "2018-11-13",
-       "Hora": "13:09:46",
-       "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentosDigitales": {
+    "sBTVersionDocumentoDigital": [
+      {
+        "FechaEmision": "2010-10-10",
+        "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+        "FechaVencimiento": "2020-10-10",
+        "TipoDocumentoDigital": "Recibo de Aguinaldo",
+        "Version": 1,
+        "Nombre": "ejemplo",
+        "Instancia": 115,
+        "documentoId": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 882,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerDocumentoDigital",
+    "Requerimiento": "1",
+    "Fecha": "2018-11-13",
+    "Hora": "13:09:46",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -192,13 +196,13 @@ Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los sigu
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-archivo | String | Documento digital codificado en base 64. 
+Archivo | String | Documento digital codificado en base 64. 
 documentoId | Long | Identificador del documento digital. 
-fechaEmision | Date | Fecha de emisión del documento digital. 
-fechaVencimiento | Date | Fecha de Vencimiento del documento digital. 
-instancia | Long | Título del documento digital. 
-nombre | String | Nombre del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-version | Int | Número de versión del documento digital. 
+FechaEmision | Date | Fecha de emisión del documento digital. 
+FechaVencimiento | Date | Fecha de Vencimiento del documento digital. 
+Instancia | Long | Título del documento digital. 
+Nombre | String | Nombre del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Version | Int | Número de versión del documento digital. 
 :::
 <!-- CIERRA SDT -->

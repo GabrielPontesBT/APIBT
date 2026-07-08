@@ -96,12 +96,13 @@ Código | Descripción
             </bts:Btinreq>
             <bts:personaUId>21</bts:personaUId>
             <bts:sdtTraspaso>
-                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>
-                <bts:operacionUIdDestino>282</bts:operacionUIdDestino>
-                <bts:monedaId></bts:monedaId>
-                <bts:concepto>Traspaso</bts:concepto>
-                <bts:importeDebito>5000</bts:importeDebito>
-                <bts:importeCredito>500</bts:importeCredito>
+              <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>
+              <bts:operacionUIdDestino>282</bts:operacionUIdDestino>
+              <bts:monedaId></bts:monedaId>
+              <bts:concepto>Traspaso</bts:concepto>
+              <bts:importeDebito>5000</bts:importeDebito>
+              <bts:importeCredito>500</bts:importeCredito>
+              <importe></importe>
             </bts:sdtTraspaso>
         </bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>
     </soapenv:Body>
@@ -110,30 +111,25 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarMismoTitularDiferentesMonedas \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-    "Btinreq": {
-        "Requerimiento": 1,
-        "Device": "GP",
-        "Token": "b4ae55b35c4A8B5C60A82434",
-        "Usuario": "MINSTALADOR",
-        "Canal": "BTDIGITAL"
-    },
-    "personaUId": 21,
-    "sdtTraspaso":
-    {
-        "operacionUIdOrigen": 281,
-        "importeDebito": 5000,
-        "importeCredito": 500,
-        "operacionUIdDestino": 282,
-        "monedaId": "",
-        "concepto": "Traspaso"
-    }
-}'
+{
+  "Btinreq": {
+    "Requerimiento": 1,
+    "Device": "GP",
+    "Token": "b4ae55b35c4A8B5C60A82434",
+    "Usuario": "MINSTALADOR",
+    "Canal": "BTDIGITAL"
+  },
+  "personaUId": 21,
+  "sdtTraspaso": {
+    "operacionUIdOrigen": 281,
+    "importeDebito": 5000,
+    "importeCredito": 500,
+    "operacionUIdDestino": 282,
+    "monedaId": "",
+    "concepto": "Traspaso",
+    "importe": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -179,30 +175,30 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-    "Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "fa2c02c95a4A8B5C60A82434"
-    },
-    "sdtResultadoTraspaso":
-    {
-        "operacionUIdOrigen": 281,
-        "idMovimiento": "0010000100050007003720180706",
-        "operacionUIdDestino": 282,
-        "saldoOperacionOrigen": 7432900.28,
-        "movimientoUId": 141
-    },
-    "Btoutreq": {
-        "Numero": 864,
-        "Estado": "OK",
-        "Servicio": "BTCuentasVista.TraspasarMismoTitularDiferentesMonedas",
-        "Requerimiento": 1,
-        "Fecha": "2019-07-22",
-        "Canal": "BTDIGITAL",
-        "Hora": "16:00:37"
-    }
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtResultadoTraspaso":
+  {
+    "operacionUIdOrigen": 281,
+    "idMovimiento": "0010000100050007003720180706",
+    "operacionUIdDestino": 282,
+    "saldoOperacionOrigen": 7432900.28,
+    "movimientoUId": 141
+  },
+  "Btoutreq": {
+    "Numero": 864,
+    "Estado": "OK",
+    "Servicio": "BTCuentasVista.TraspasarMismoTitularDiferentesMonedas",
+    "Requerimiento": 1,
+    "Fecha": "2019-07-22",
+    "Canal": "BTDIGITAL",
+    "Hora": "16:00:37"
+  }
 }'
 ```
 ::: 
@@ -222,6 +218,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto del Traspaso. 
 importe | Double | Importe del Movimiento. 
+importeCredito | Double | Importe de crédito del movimiento. 
+importeDebito | Double | Importe del débito del movimiento. 
 monedaId | Short | Identificador de Moneda.  
 operacionUIdDestino | Long | Identificador de operación de destino del traspaso.  
 operacionUIdOrigen | Long | Identificador de operación de origen del traspaso.  

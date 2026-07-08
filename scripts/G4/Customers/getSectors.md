@@ -105,7 +105,9 @@ No aplica.
         "Id": 9,
         "Description": "Público no nacional"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
   "BusinessErrors": {
     "BusinessError": []

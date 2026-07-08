@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-usuario | String | Identificador del usuario.
+Usuario | String | Identificador del usuario.
 sdtPerfil | [sBTPerfilBT](#sbtperfilbt) | Datos del perfil.
 
 @tab Datos de Salida

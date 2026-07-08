@@ -6,11 +6,18 @@
   "modulo": "Liabilities",
   "programa": "PublicAPI.BTLIPA0001",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "cancellationOrigins",
@@ -23,11 +30,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  }\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"cancellationOrigins\": {\r\n    \"cancellationOrigin\": [\r\n      {\r\n        \"id\": 1,\r\n        \"description\": \"POR DECISIÓN DEL TITULAR\"\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"description\": \"POR DECISIÓN DE LA ENTIDAD\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:06\",\r\n    \"Numero\": 13466302,\r\n    \"Servicio\": \"PublicSavingAccounts.getCancellationOrigins\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"cancellationOrigins\": {\n    \"cancellationOrigin\": [\n      {\n        \"id\": 1,\n        \"description\": \"POR DECISIÓN DEL TITULAR\"\n      },\n      {\n        \"id\": 2,\n        \"description\": \"POR DECISIÓN DE LA ENTIDAD\"\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:54:06\",\n    \"Numero\": 13466302,\n    \"Servicio\": \"PublicSavingAccounts.getCancellationOrigins\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"cancellationOrigins\": {\n    \"cancellationOrigin\": [\n      {\n        \"id\": 1,\n        \"description\": \"POR DECISIÓN DEL TITULAR\"\n      },\n      {\n        \"id\": 2,\n        \"description\": \"POR DECISIÓN DE LA ENTIDAD\"\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:54:06\",\n    \"Numero\": 13466302,\n    \"Servicio\": \"PublicSavingAccounts.getCancellationOrigins\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -35,7 +56,7 @@
       "typeName": "SdtsBTLICancellationOrigin",
       "fields": [
         {
-          "Nombre": "id",
+          "Nombre": "Id",
           "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de origen de cierre."
         },

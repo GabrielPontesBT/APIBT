@@ -4,11 +4,16 @@
   "description": "Método para realizar una transferencia entre cuentas.",
   "pubName": "PublicSavingAccounts.transfer",
   "modulo": "Liabilities.SavingsAccounts",
-  "programa": "PublicAPI.ABTSAPA00010",
+  "programa": "PublicAPI.BTSAPA00010",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
@@ -16,6 +21,7 @@
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "transferData",
@@ -23,6 +29,7 @@
       "Comentarios": "Datos de la transferencia."
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "movementGUID",
@@ -72,11 +79,25 @@
   "examples": {
     "invocation": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"MC\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"6232CBF14B2FB5FA8F8EFA72\"\n  },\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\n  \"transferData\": {\n    \"reference\": \"PAGO \",\n    \"savingAccountGUIDPayment\": \"dba24b7e-c0c9-4005-b5dc-817f101d1c71\",\n    \"currency\": 0,\n    \"savingAccountGUIDOrigin\": \"a5b85da2-a28f-4701-875a-affb7ca17ea9\",\n    \"amount\": 1000\n  }\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"MC\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"6232CBF14B2FB5FA8F8EFA72\"\n  },\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\n  \"transferData\": {\n    \"reference\": \"PAGO \",\n    \"savingAccountGUIDPayment\": \"dba24b7e-c0c9-4005-b5dc-817f101d1c71\",\n    \"currency\": 0,\n    \"savingAccountGUIDOrigin\": \"a5b85da2-a28f-4701-875a-affb7ca17ea9\",\n    \"amount\": 1000\n  }\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"MC\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"6232CBF14B2FB5FA8F8EFA72\"\n  },\n  \"movementGUID\": \"a480efd4-d72b-4305-be14-ad81a7bd5266\",\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"20:37:36\",\n    \"Numero\": \"13496433\",\n    \"Servicio\": \"PublicSavingAccounts.transfer\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"MC\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"6232CBF14B2FB5FA8F8EFA72\"\n  },\n  \"movementGUID\": \"a480efd4-d72b-4305-be14-ad81a7bd5266\",\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"20:37:36\",\n    \"Numero\": \"13496433\",\n    \"Servicio\": \"PublicSavingAccounts.transfer\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

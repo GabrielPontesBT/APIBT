@@ -52,9 +52,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
 simulacionId | Long | Identificador único de la simulación.
-instruccionVTO | Short | Identificador de la instrucción al vencimiento
+InstruccionVTO | Short | Identificador de la instrucción al vencimiento
 cuentaUIdDestinoVTO | Long | Identificador único de la operación de la cuenta destino al vencimiento.
-instruccionPP | Short | Identificador de la instrucción de pago periódico.
+InstruccionPP | Short | Identificador de la instrucción de pago periódico.
 cuentaUIdDestinoPP | Long | Identificador único de la operación de la cuenta destino del pago periódico.
 cuentaUIdDebito | Long | Identificador único de la operación de la cuenta de débito.
 sdtDatosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)
@@ -120,6 +120,7 @@ CONTROL_MISMO_CLIENTE | [S,N] (Valor por omisión "N") | **[Opcional]** Permite 
             <bts:Token>30F74741A02C318CEFD55684</bts:Token>
             <bts:Device>GL</bts:Device>
          </bts:Btinreq>
+         <bts:sdtDatosExtendidos></bts:sdtDatosExtendidos>
          <bts:clienteUId>10009</bts:clienteUId>
          <bts:simulacionId>93</bts:simulacionId>
          <bts:InstruccionVTO>6</bts:InstruccionVTO>
@@ -127,7 +128,6 @@ CONTROL_MISMO_CLIENTE | [S,N] (Valor por omisión "N") | **[Opcional]** Permite 
          <bts:InstruccionPP>7</bts:InstruccionPP>
          <bts:cuentaUIdDestinoPP>10120</bts:cuentaUIdDestinoPP>
          <bts:cuentaUIdDebito>10120</bts:cuentaUIdDebito>
-         <bts:sBTDatosExtendidos/>
       </bts:BTDepositosAPlazo.ContratarSimulacion>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -135,28 +135,23 @@ CONTROL_MISMO_CLIENTE | [S,N] (Valor por omisión "N") | **[Opcional]** Permite 
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarSimulacion' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "30F74741A02C318CEFD55684",
-        "Device": "GL"
-    },
-    "clienteUId": 10009,
-    "simulacionId": 93,
-    "InstruccionVTO": 6,
-    "cuentaUIdDestinoVTO": "",
-    "InstruccionPP": 7,
-    "cuentaUIdDestinoPP": 10120,
-    "cuentaUIdDebito": 10120,
-    "sBTDatosExtendidos": ""
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "clienteUId": 10009,
+  "simulacionId": 93,
+  "InstruccionVTO": 6,
+  "cuentaUIdDestinoVTO": "",
+  "InstruccionPP": 7,
+  "cuentaUIdDestinoPP": 10120,
+  "cuentaUIdDebito": 10120,
+  "sdtDatosExtendidos": {}
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -177,9 +172,9 @@ curl -X POST \
             <Token>30F74741A02C318CEFD55684</Token>
             <Device>GL</Device>
          </Btinreq>
-         <sBTDatosExtendidos></sBTDatosExtendidos>
          <operacionUId>15</operacionUId>
          <movimientoUId>15</movimientoUId>
+         <sdtDatosExtendidos></sdtDatosExtendidos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -197,30 +192,30 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "30F74741A02C318CEFD55684",
-        "Device": "GL"
-    },
-    "sBTDatosExtendidos": "",
-    "operacionUId": 15,
-    "movimientoUId": 15,
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTDepositosAPlazo.ContratarSimulacion",
-        "Fecha": "2022-11-29",
-        "Hora": "11:35:46",
-        "Requerimiento": 1,
-        "Numero": 507,
-        "Estado": "OK"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "sdtDatosExtendidos": {},
+  "operacionUId": 15,
+  "movimientoUId": 15,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTDepositosAPlazo.ContratarSimulacion",
+    "Fecha": "2022-11-29",
+    "Hora": "11:35:46",
+    "Requerimiento": 1,
+    "Numero": 507,
+    "Estado": "OK"
+  },
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -241,6 +236,9 @@ clave | String | Clave del dato extendido.
 lista | [sBTDatoLista](#sbtdatolista)  | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido. 
+:::
+
+::: details sBTDatoLista 
 
 ### sBTDatoLista
 

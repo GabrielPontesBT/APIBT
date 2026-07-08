@@ -132,6 +132,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>2018-11-05</fechaUltimoPago> 
                <importePago>1287.08</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>2</nroCuota> 
@@ -154,6 +155,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>3</nroCuota> 
@@ -176,6 +178,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>4</nroCuota> 
@@ -198,6 +201,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>5</nroCuota> 
@@ -220,6 +224,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>6</nroCuota> 
@@ -242,6 +247,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>7</nroCuota> 
@@ -264,6 +270,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
             <sBTCuotaPrestamo> 
                <nroCuota>8</nroCuota> 
@@ -286,6 +293,7 @@ curl -X POST \
                <diasMora>0</diasMora> 
                <fechaUltimoPago>0000-00-00</fechaUltimoPago> 
                <importePago>0.00</importePago> 
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo> 
          </sdtCuotaPrestamo> 
          <Erroresnegocio></Erroresnegocio>
@@ -305,223 +313,279 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtCuotaPrestamo": { 
-        "sBTCuotaPrestamo": [ 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "1287.08", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "0.00", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Interés Vencido", 
-                "interesMora": "0.00", 
-                "capital": "0.00", 
-                "diasMora": "0", 
-                "tipoCuota": "I", 
-                "nroCuota": "1", 
-                "seguros": "0.00", 
-                "fechaUltimoPago": "2018-11-05", 
-                "estado": "Paga", 
-                "fechaPago": "2018-11-05", 
-                "total": "0.00" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "1287.08", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Interés Vencido", 
-                "interesMora": "0.00", 
-                "capital": "0.00", 
-                "diasMora": "0", 
-                "tipoCuota": "I", 
-                "nroCuota": "2", 
-                "seguros": "0.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2018-12-05", 
-                "total": "1287.08" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "0.00", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Capital", 
-                "interesMora": "0.00", 
-                "capital": "25000.00", 
-                "diasMora": "0", 
-                "tipoCuota": "K", 
-                "nroCuota": "3", 
-                "seguros": "200.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2018-12-05", 
-                "total": "25200.00" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "2027.16", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Interés Vencido", 
-                "interesMora": "0.00", 
-                "capital": "0.00", 
-                "diasMora": "0", 
-                "tipoCuota": "I", 
-                "nroCuota": "4", 
-                "seguros": "0.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2019-01-07", 
-                "total": "2027.16" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "0.00", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Capital", 
-                "interesMora": "0.00", 
-                "capital": "25000.00", 
-                "diasMora": "0", 
-                "tipoCuota": "K", 
-                "nroCuota": "5", 
-                "seguros": "200.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2019-01-07", 
-                "total": "25200.00" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "622.09", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Interés Vencido", 
-                "interesMora": "0.00", 
-                "capital": "0.00", 
-                "diasMora": "0", 
-                "tipoCuota": "I", 
-                "nroCuota": "6", 
-                "seguros": "0.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2019-02-05", 
-                "total": "622.09" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "0.00", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Capital", 
-                "interesMora": "0.00", 
-                "capital": "25000.00", 
-                "diasMora": "0", 
-                "tipoCuota": "K", 
-                "nroCuota": "7", 
-                "seguros": "200.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2019-02-05", 
-                "total": "25200.00" 
-            }, 
-            { 
-                "impuestos": "0.00", 
-                "importePago": "0.00", 
-                "subsidios": "0.00", 
-                "detalleConceptos": { 
-                    "sBTConcepto": [] 
-                }, 
-                "fechaVencimiento": "0000-00-00", 
-                "intereses": "0.00", 
-                "estadoDsc": "", 
-                "comisiones": "0.00", 
-                "otrosConceptos": "0.00", 
-                "concepto": "Capital", 
-                "interesMora": "0.00", 
-                "capital": "25000.00", 
-                "diasMora": "0", 
-                "tipoCuota": "K", 
-                "nroCuota": "8", 
-                "seguros": "200.00", 
-                "fechaUltimoPago": "0000-00-00", 
-                "estado": "Impaga", 
-                "fechaPago": "2019-03-05", 
-                "total": "25200.00" 
-            } 
-        ] 
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "901",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerCronograma",
-        "Fecha": "2017-12-21",
-        "Requerimiento": "",
-        "Hora": "12:27:52",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuotaPrestamo": {
+    "sBTCuotaPrestamo": [
+      {
+        "impuestos": "0.00",
+        "importePago": "1287.08",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "0.00",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Interés Vencido",
+        "interesMora": "0.00",
+        "capital": "0.00",
+        "diasMora": "0",
+        "tipoCuota": "I",
+        "nroCuota": "1",
+        "seguros": "0.00",
+        "fechaUltimoPago": "2018-11-05",
+        "estado": "Paga",
+        "fechaPago": "2018-11-05",
+        "total": "0.00",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "1287.08",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Interés Vencido",
+        "interesMora": "0.00",
+        "capital": "0.00",
+        "diasMora": "0",
+        "tipoCuota": "I",
+        "nroCuota": "2",
+        "seguros": "0.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2018-12-05",
+        "total": "1287.08",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "0.00",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Capital",
+        "interesMora": "0.00",
+        "capital": "25000.00",
+        "diasMora": "0",
+        "tipoCuota": "K",
+        "nroCuota": "3",
+        "seguros": "200.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2018-12-05",
+        "total": "25200.00",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "2027.16",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Interés Vencido",
+        "interesMora": "0.00",
+        "capital": "0.00",
+        "diasMora": "0",
+        "tipoCuota": "I",
+        "nroCuota": "4",
+        "seguros": "0.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2019-01-07",
+        "total": "2027.16",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "0.00",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Capital",
+        "interesMora": "0.00",
+        "capital": "25000.00",
+        "diasMora": "0",
+        "tipoCuota": "K",
+        "nroCuota": "5",
+        "seguros": "200.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2019-01-07",
+        "total": "25200.00",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "622.09",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Interés Vencido",
+        "interesMora": "0.00",
+        "capital": "0.00",
+        "diasMora": "0",
+        "tipoCuota": "I",
+        "nroCuota": "6",
+        "seguros": "0.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2019-02-05",
+        "total": "622.09",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "0.00",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Capital",
+        "interesMora": "0.00",
+        "capital": "25000.00",
+        "diasMora": "0",
+        "tipoCuota": "K",
+        "nroCuota": "7",
+        "seguros": "200.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2019-02-05",
+        "total": "25200.00",
+        "redondeo": 0
+      },
+      {
+        "impuestos": "0.00",
+        "importePago": "0.00",
+        "subsidios": "0.00",
+        "detalleConceptos": {
+          "sBTConcepto": [
+            {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          ]
+        },
+        "fechaVencimiento": "0000-00-00",
+        "intereses": "0.00",
+        "estadoDsc": "",
+        "comisiones": "0.00",
+        "otrosConceptos": "0.00",
+        "concepto": "Capital",
+        "interesMora": "0.00",
+        "capital": "25000.00",
+        "diasMora": "0",
+        "tipoCuota": "K",
+        "nroCuota": "8",
+        "seguros": "200.00",
+        "fechaUltimoPago": "0000-00-00",
+        "estado": "Impaga",
+        "fechaPago": "2019-03-05",
+        "total": "25200.00",
+        "redondeo": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "901",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerCronograma",
+    "Fecha": "2017-12-21",
+    "Requerimiento": "",
+    "Hora": "12:27:52",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -557,7 +621,10 @@ redondeo | Double | Redondeo.
 seguros | Double | Seguros de la cuota. 
 subsidios | Double | Subsidios  de la cuota. 
 tipoCuota | String | Tipo de cuota (Capital - K / Interés - I / Capital-Interés - M / Pago Mínimo - T / Cuota Fija - F). 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -570,4 +637,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

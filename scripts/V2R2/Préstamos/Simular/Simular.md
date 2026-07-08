@@ -259,101 +259,103 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-	  "Device": "AV",
-	  "Usuario": "MINSTALADOR",
-	  "Requerimiento": "1",
-	  "Canal": "BTDIGITAL",
-	  "Token": "72e34bcd9d4A8B5C60A82434"
-	},
-	"sdtSimulacion": {
-	  "otrosConceptos": {
-	  },
-	  "cronograma": {
-		"sBTCuotaPrestamoAlta": [
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-01-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-02-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-03-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-04-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-05-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-06-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-07-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-08-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-09-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-10-12"
-		  },
-		  {
-			"importe": "1194.01",
-			"fechaPago": "2019-11-12"
-		  },
-		  {
-			"importe": "1194.04",
-			"fechaPago": "2019-12-12"
-		  }
-		]
-	  },
-	  "fechaValor": "2018-12-11",
-	  "capital": "10000.00",
-	  "tasaEfectiva": "0.000000",
-	  "intereses": "1288.18",
-	  "tasaNominalAnual": "23.000000",
-	  "totalPrestamo": "14328.15",
-	  "valorCuota": "1194.01",
-	  "tasaEfectivaAnual": "25.590075",
-	  "operacionUId": "1",
-	  "tasa": "23.000000",
-	  "fechaPrimerPago": "2019-01-12",
-	  "fechaVencimiento": "2019-12-12",
-	  "plazo": "361",
-	  "producto": {
-		"papel": "$",
-		"moneda": "$",
-		"productoUId": "61",
-		"nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
-	  }
-	},
-	"Erroresnegocio": {
-	},
-	"Btoutreq": {
-	  "Numero": "623",
-	  "Estado": "OK",
-	  "Servicio": "BTPrestamos.Simular",
-	  "Fecha": "2019-11-20",
-	  "Requerimiento": "1",
-	  "Hora": "09:23:04",
-	  "Canal": "BTDIGITAL"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "72e34bcd9d4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    },
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-01-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-02-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-03-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-04-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-05-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-06-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-07-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-08-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-09-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-10-12"
+        },
+        {
+          "importe": "1194.01",
+          "fechaPago": "2019-11-12"
+        },
+        {
+          "importe": "1194.04",
+          "fechaPago": "2019-12-12"
+        }
+      ]
+    },
+    "fechaValor": "2018-12-11",
+    "capital": "10000.00",
+    "tasaEfectiva": "0.000000",
+    "intereses": "1288.18",
+    "tasaNominalAnual": "23.000000",
+    "totalPrestamo": "14328.15",
+    "valorCuota": "1194.01",
+    "tasaEfectivaAnual": "25.590075",
+    "operacionUId": "1",
+    "tasa": "23.000000",
+    "fechaPrimerPago": "2019-01-12",
+    "fechaVencimiento": "2019-12-12",
+    "plazo": "361",
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": "61",
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
+    }
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "623",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.Simular",
+    "Fecha": "2019-11-20",
+    "Requerimiento": "1",
+    "Hora": "09:23:04",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -405,7 +407,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -417,7 +422,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -429,6 +437,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -437,6 +448,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

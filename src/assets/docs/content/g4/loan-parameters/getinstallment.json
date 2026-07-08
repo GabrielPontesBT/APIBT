@@ -1,0 +1,77 @@
+{
+  "slug": "loan-parameters/getinstallment",
+  "pageTitle": "Get Installment",
+  "description": "Método para obtener la cantidad de cuotas parametrizadas de un producto de préstamos.",
+  "pubName": "PublicLoanParameters.getInstallment",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0021",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "minimum",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad mínima de cuotas."
+    },
+    {
+      "Nombre": "maximum",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad máxima de cuotas."
+    },
+    {
+      "Nombre": "defaultValue",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad de cuotas por defecto."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 1,\n  \"maximum\": 120,\n  \"defaultValue\": 12,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:39\",\n    \"Numero\": 13568707,\n    \"Servicio\": \"PublicLoanParameters.getInstallment\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 1,\n  \"maximum\": 120,\n  \"defaultValue\": 12,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:39\",\n    \"Numero\": 13568707,\n    \"Servicio\": \"PublicLoanParameters.getInstallment\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

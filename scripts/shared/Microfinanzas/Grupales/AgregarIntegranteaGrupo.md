@@ -88,28 +88,26 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarIntegranteAGrupo=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: fc072469-5f8a-a897-b716-d45406adf3e7' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"grupoId": 3,
-	"sdtIntegranteGrupo": {
-		"clienteUId": "157",
-		"tipoIntegranteId": "2",
-		"tipoIntegrante": "",
-		"fechaAlta": "2020-04-20",
-		"vigente": "S"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "grupoId": 3,
+  "sdtIntegranteGrupo": {
+    "clienteUId": "157",
+    "tipoIntegranteId": "2",
+    "tipoIntegrante": "",
+    "fechaAlta": "2020-04-20",
+    "vigente": "S",
+    "cuenta": "",
+    "fechaBaja": "",
+    "identificacionAlternativa": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

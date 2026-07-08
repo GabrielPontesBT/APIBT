@@ -5,6 +5,7 @@
   "pubName": "BTPrestamos.EliminarInformacionAdicional",
   "programa": "RBTPG469",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "[Hidden: Valor fijo 'DLT' para este método]."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -50,11 +54,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.EliminarInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>2</bts:operacionUId>\r\n         <bts:sdtInformacionAdicional>\r\n            <bts:sBTDatoLista>\r\n               <bts:clave>CUENTA_ST</bts:clave>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTDatoLista>\r\n         </bts:sdtInformacionAdicional>\r\n      </bts:BTPrestamos.EliminarInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"operacionUId\": 2,\r\n    \"sdtInformacionAdicional\": {\r\n        \"sBTDatoLista\": {\r\n            \"clave\": \"CUENTA_ST\",\r\n            \"valor\": \"\"\r\n        }\r\n    }\r\n}'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"operacionUId\": 2,\r\n    \"sdtInformacionAdicional\": {\r\n        \"sBTDatoLista\": {\r\n            \"clave\": \"CUENTA_ST\",\r\n            \"valor\": \"\"\r\n        }\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.EliminarInformacionAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>e2db881814CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>2</bts:operacionUId>\r\n         <bts:sdtInformacionAdicional>\r\n            <bts:sBTDatoLista>\r\n               <bts:clave>CUENTA_ST</bts:clave>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTDatoLista>\r\n         </bts:sdtInformacionAdicional>\r\n      </bts:BTPrestamos.EliminarInformacionAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"operacionUId\": 2,\r\n    \"sdtInformacionAdicional\": {\r\n        \"sBTDatoLista\": {\r\n            \"clave\": \"CUENTA_ST\",\r\n            \"valor\": \"\"\r\n        }\r\n    }\r\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.EliminarInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>e2db881814CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>589871</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.EliminarInformacionAdicional</Servicio>\r\n            <Fecha>2023-10-11</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>08:55:31</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.EliminarInformacionAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 589871,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.EliminarInformacionAdicional\",\r\n        \"Fecha\": \"2023-10-11\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"08:55:31\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 589871,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.EliminarInformacionAdicional\",\r\n        \"Fecha\": \"2023-10-11\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"08:55:31\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.EliminarInformacionAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>e2db881814CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>589871</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.EliminarInformacionAdicional</Servicio>\r\n            <Fecha>2023-10-11</Fecha>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Hora>08:55:31</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.EliminarInformacionAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GZ\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 0,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e2db881814CD285A89A23FBE\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 589871,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.EliminarInformacionAdicional\",\r\n        \"Fecha\": \"2023-10-11\",\r\n        \"Requerimiento\": 0,\r\n        \"Hora\": \"08:55:31\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -127,6 +127,7 @@ Código | Descripción
                 <item>541</item>
             </bts:operaciones>
             <bts:pizarra>0</bts:pizarra>
+            <plazo>0</plazo>
          </bts:sdtAmpliacion>
          <bts:sinSeguros>N</bts:sinSeuros>
          <bts:sdtSeguros>
@@ -141,40 +142,36 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularAmpliacionIngresandoSeguros=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "72e34bcd9d4A8B5C60A82434"
-	},
-   "sdtAmpliacion": {
-      "productoUId": 61,
-      "monto": 20000,
-      "clienteUId": 221,
-      "actividad": 1111,
-      "periodoCuotas": 30,
-      "cantidadCuotas": 12,
-      "tasa": 0,
-      "fechaPrimerPago": "",
-      "operaciones": {
-         "item": 541
-      },
-      "pizarra": 0
-   },
-   "sinSeguros": "N",
-   "sdtSeguros": {
-      "sBTSeguroSimulacion": {
-         "codigo": 100
-      }
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "72e34bcd9d4A8B5C60A82434"
+  },
+  "sdtAmpliacion": {
+    "productoUId": 61,
+    "monto": 20000,
+    "clienteUId": 221,
+    "actividad": 1111,
+    "periodoCuotas": 30,
+    "cantidadCuotas": 12,
+    "tasa": 0,
+    "fechaPrimerPago": "",
+    "operaciones": {
+      "item": 541
+    },
+    "pizarra": 0,
+    "plazo": 0
+  },
+  "sinSeguros": "N",
+  "sdtSeguros": {
+    "sBTSeguroSimulacion": {
+      "codigo": 100
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -291,107 +288,115 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-      "Device": "AV",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "72e34bcd9d4A8B5C60A82434"
-   },
-   "ampliacionId": 122,
-   "deudaTotalCancelacion":"30216.45",
-   "sdtSimulacion": {
-      "sBTConceptos": {
-         "concepto": 100,
-         "valor": 1500,
-         "texto": "Seguro vida"
-      },
-      "cronograma": {
-         "sBTCuotaPrestamoAlta": [
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-01-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-02-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-03-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-04-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-05-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-06-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-07-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-08-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-09-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-10-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-11-12"
-            },
-            {
-               "importe": 2228.53,
-               "fechaPago": "2019-12-12"
-            }
-         ]
-      },
-      "fechaValor": "2020-03-13",
-      "capital": 37524,
-      "tasaEfectiva": 0,
-      "intereses": 2541.18,
-      "tasaNominalAnual": 23,
-      "totalPrestamo": 26742.34,
-      "valorCuota": 2228.53,
-      "tasaEfectivaAnual": 25.590075,
-      "operacionUId": 1,
-      "tasa": 23,
-      "fechaPrimerPago": "2020-04-13",
-      "fechaVencimiento": "2021-03-13",
-      "plazo": 0,
-      "producto": {
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "72e34bcd9d4A8B5C60A82434"
+  },
+  "ampliacionId": 122,
+  "deudaTotalCancelacion": "30216.45",
+  "sdtSimulacion": {
+    "sBTConceptos": {
+      "concepto": 100,
+      "valor": 1500,
+      "texto": "Seguro vida"
+    },
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-01-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-02-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-03-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-04-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-05-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-06-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-07-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-08-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-09-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-10-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-11-12"
+        },
+        {
+          "importe": 2228.53,
+          "fechaPago": "2019-12-12"
+        }
+      ]
+    },
+    "fechaValor": "2020-03-13",
+    "capital": 37524,
+    "tasaEfectiva": 0,
+    "intereses": 2541.18,
+    "tasaNominalAnual": 23,
+    "totalPrestamo": 26742.34,
+    "valorCuota": 2228.53,
+    "tasaEfectivaAnual": 25.590075,
+    "operacionUId": 1,
+    "tasa": 23,
+    "fechaPrimerPago": "2020-04-13",
+    "fechaVencimiento": "2021-03-13",
+    "plazo": 0,
+    "producto": {
       "papel": "$",
       "moneda": "$",
       "productoUId": 61,
       "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-      "otrosConceptos":""
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
       }
-   },
-    "Erroresnegocio": {
     },
-    "Btoutreq": {
-      "Numero": "623",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.SimularAmpliacionIngresandoSeguros",
-      "Fecha": "2019-11-20",
-      "Requerimiento": 1,
-      "Hora": "09:23:04",
-      "Canal": "BTDIGITAL"
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     }
-}'
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "623",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularAmpliacionIngresandoSeguros",
+    "Fecha": "2019-11-20",
+    "Requerimiento": 1,
+    "Hora": "09:23:04",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -456,7 +461,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -469,7 +477,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -481,6 +492,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -489,6 +503,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

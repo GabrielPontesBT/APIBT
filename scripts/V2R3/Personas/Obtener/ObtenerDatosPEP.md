@@ -73,7 +73,7 @@ Código | Descripción
             <bts:Token>970772007CD285A89A23FBEE</bts:Token>
             <bts:Device>1</bts:Device>
          </bts:Btinreq>
-         <bts:personaUID>12</bts:personaUID>
+         <bts:personaUId>12</bts:personaUId>
       </bts:BTPersonas.ObtenerDatosPEP>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -146,7 +146,8 @@ curl -X POST \
 
 @tab JSON
 ```json
-"Btinreq": {
+{
+    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",
       "Usuario": "INSTALADOR",
@@ -176,6 +177,7 @@ curl -X POST \
       "Numero": "80313",
       "Estado": "OK"
     }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

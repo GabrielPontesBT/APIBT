@@ -147,37 +147,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": 1, 
-      "Usuario": "IN", 
-      "Token": "12420485CD285A89A23FBE", 
-      "Device": "MC" 
-   },
-	"sdtOrdinal":  
-	{ 
-	  "operacionUId": 10189, 
-	  "idOperacionBT": "0010000100021000000000000000002700003000000000000", 
-	  "debeHaber": "D", 
-	  "importe": 10000.00, 
-	  "producto": { 
-		 "productoUId": 0, 
-		 "nombre": "CAJAS DE AHORRO, GENÉRICA", 
-		 "moneda": "$", 
-		 "papel": "$" 
-	  } 
-   },
-   "Erroresnegocio": null, 
-   "Btoutreq": { 
-      "Canal": "BTDIGITAL", 
-      "Servicio": "BTContabilidad.ObtenerDetalleOrdinal", 
-      "Fecha": "2020-10-29", 
-      "Hora": "16:13:11", 
-      "Requerimiento": 1, 
-      "Numero": 7704, 
-      "Estado": "OK" 
-   }
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "IN",
+    "Token": "12420485CD285A89A23FBE",
+    "Device": "MC"
+  },
+  "sdtOrdinal": {
+    "operacionUId": 10189,
+    "idOperacionBT": "0010000100021000000000000000002700003000000000000",
+    "debeHaber": "D",
+    "importe": 10000,
+    "producto": {
+      "productoUId": 0,
+      "nombre": "CAJAS DE AHORRO, GENÉRICA",
+      "moneda": "$",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    }
+  },
+  "Erroresnegocio": null,
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTContabilidad.ObtenerDetalleOrdinal",
+    "Fecha": "2020-10-29",
+    "Hora": "16:13:11",
+    "Requerimiento": 1,
+    "Numero": 7704,
+    "Estado": "OK"
+  }
 }
 ```
 ::: 
@@ -199,7 +203,10 @@ debeHaber | String | Debe/Haber (Crédito: 'C', Débito: 'D').
 idOperacionBT | String | Identificador String Bantotal. 
 importe | Double | Importe. 
 operacionUId | Long | Identificador único de operación. 
-producto | [sBTProducto](#sbtproducto) | Datos del Producto. 
+producto | [sBTProducto](#sbtproducto) | Datos del Producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -212,7 +219,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -225,4 +235,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

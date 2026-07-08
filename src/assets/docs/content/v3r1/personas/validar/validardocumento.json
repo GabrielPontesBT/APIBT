@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ValidarDocumento",
   "programa": "RBTPG531",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -25,11 +26,14 @@
       "Comentarios": "Identificador de tipo de documento."
     },
     {
-      "Nombre": "nroDocumento",
+      "Nombre": "numeroDocumento",
       "Tipo": "String",
       "Comentarios": "Número de documento."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "valido",
@@ -61,11 +65,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ValidarDocumento>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n         <bts:numeroDocumento>52116325</bts:numeroDocumento>\r\n      </bts:BTPersonas.ValidarDocumento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarDocumento=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"GZ\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n\t},\r\n   \"paisDocumentoId\": 845,\r\n   \"tipoDocumentoId\": 1,\r\n   \"numeroDocumento\": \"52116325\"\r\n}'"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n  },\r\n  \"paisDocumentoId\": 845,\r\n  \"tipoDocumentoId\": 1,\r\n  \"numeroDocumento\": \"52116325\",\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ValidarDocumento>\r\n         <bts:Btinreq>\r\n            <bts:Requerimiento>0</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GZ</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:paisDocumentoId>845</bts:paisDocumentoId>\r\n         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>\r\n         <bts:numeroDocumento>52116325</bts:numeroDocumento>\r\n      </bts:BTPersonas.ValidarDocumento>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n  },\r\n  \"paisDocumentoId\": 845,\r\n  \"tipoDocumentoId\": 1,\r\n  \"numeroDocumento\": \"52116325\",\r\n}"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ValidarDocumentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E1F15D391E5C8FAC4189A627</Token>\r\n         </Btinreq>\r\n         <valido>S</valido>\r\n         <mensajeValido/>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Numero>16884</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ValidarDocumento</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2023-10-30</Fecha>\r\n            <Hora>15:04:42</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ValidarDocumentoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"GZ\",\r\n\t\t\"Usuario\": \"INSTALADOR\",\r\n\t\t\"Requerimiento\": 0,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n\t},\r\n   \"valido\": \"S\",\r\n   \"mensajeValido\": \"\",\r\n   \"Erroresnegocio\": {\r\n       \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n       \"Numero\": 16884,\r\n       \"Estado\": \"OK\",\r\n       \"Servicio\": \"BTPersonas.ValidarDocumento\",\r\n       \"Fecha\": \"2023-10-30\",\r\n       \"Requerimiento\": 0,\r\n       \"Hora\": \"15:04:42\",\r\n       \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ValidarDocumentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E1F15D391E5C8FAC4189A627</Token>\r\n         </Btinreq>\r\n         <valido>S</valido>\r\n         <mensaje></mensaje>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Numero>16884</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ValidarDocumento</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2023-10-30</Fecha>\r\n            <Hora>15:04:42</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ValidarDocumentoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n  },\r\n  \"valido\": \"S\",\r\n  \"mensaje\": \"\",\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": 16884,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPersonas.ValidarDocumento\",\r\n    \"Fecha\": \"2023-10-30\",\r\n    \"Requerimiento\": 0,\r\n    \"Hora\": \"15:04:42\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ValidarDocumentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GZ</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E1F15D391E5C8FAC4189A627</Token>\r\n         </Btinreq>\r\n         <valido>S</valido>\r\n         <mensaje></mensaje>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Numero>16884</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ValidarDocumento</Servicio>\r\n            <Requerimiento>0</Requerimiento>\r\n            <Fecha>2023-10-30</Fecha>\r\n            <Hora>15:04:42</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ValidarDocumentoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"GZ\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 0,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E1F15D391E5C8FAC4189A627\"\r\n  },\r\n  \"valido\": \"S\",\r\n  \"mensaje\": \"\",\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": 16884,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPersonas.ValidarDocumento\",\r\n    \"Fecha\": \"2023-10-30\",\r\n    \"Requerimiento\": 0,\r\n    \"Hora\": \"15:04:42\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

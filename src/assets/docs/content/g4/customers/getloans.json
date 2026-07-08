@@ -6,9 +6,14 @@
   "modulo": "Loans",
   "programa": "PublicAPI.BTLOPA0001",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
@@ -21,7 +26,9 @@
       "Comentarios": "Incluir préstamos cancelados."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "customerLoan",
@@ -43,11 +50,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"counterpartyGUID\": \"45399742-1326-4d8d-b7c8-10eb4cf976b0\",\r\n  \"cancelledLoans\": false\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"counterpartyGUID\": \"45399742-1326-4d8d-b7c8-10eb4cf976b0\",\r\n  \"cancelledLoans\": false\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"customerLoan\": {\r\n    \"customerLoan\": []\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:14:58\",\r\n    \"Numero\": 13468828,\r\n    \"Servicio\": \"PublicCustomers.getLoans\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"444B674391BCA7676279700A\"\n  },\n  \"customerLoan\": {\n    \"customerLoan\": [],\n    \"AccountBalance\": 0,\n    \"AmortizationTypeId\": 0,\n    \"AmortizationTypeDescription\": \"\",\n    \"BranchId\": 0,\n    \"BranchDescription\": \"\",\n    \"DateOfLastTotalPayment\": \"\",\n    \"ExpirationDate\": \"\",\n    \"FirstUnpaidDate\": \"\",\n    \"InstallmentPeriodicity\": 0,\n    \"InstallmentValue\": 0,\n    \"InterestRate\": 0,\n    \"LoanGUId\": \"\",\n    \"NumberOfInstallments\": 0,\n    \"OriginalAmount\": 0,\n    \"Product\": {\n      \"CurrencyId\": \"\",\n      \"CurrencyDescription\": \"\",\n      \"CurrencySign\": \"\",\n      \"KindId\": \"\",\n      \"KindDescription\": \"\",\n      \"ProductDescription\": \"\",\n      \"ProductGUId\": \"\"\n    },\n    \"StatusId\": 0,\n    \"StatusDescription\": \"\",\n    \"Term\": 0,\n    \"TotalPaidInstallments\": 0,\n    \"ValueDate\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"16:14:58\",\n    \"Numero\": 13468828,\n    \"Servicio\": \"PublicCustomers.getLoans\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"444B674391BCA7676279700A\"\n  },\n  \"customerLoan\": {\n    \"customerLoan\": [],\n    \"AccountBalance\": 0,\n    \"AmortizationTypeId\": 0,\n    \"AmortizationTypeDescription\": \"\",\n    \"BranchId\": 0,\n    \"BranchDescription\": \"\",\n    \"DateOfLastTotalPayment\": \"\",\n    \"ExpirationDate\": \"\",\n    \"FirstUnpaidDate\": \"\",\n    \"InstallmentPeriodicity\": 0,\n    \"InstallmentValue\": 0,\n    \"InterestRate\": 0,\n    \"LoanGUId\": \"\",\n    \"NumberOfInstallments\": 0,\n    \"OriginalAmount\": 0,\n    \"Product\": {\n      \"CurrencyId\": \"\",\n      \"CurrencyDescription\": \"\",\n      \"CurrencySign\": \"\",\n      \"KindId\": \"\",\n      \"KindDescription\": \"\",\n      \"ProductDescription\": \"\",\n      \"ProductGUId\": \"\"\n    },\n    \"StatusId\": 0,\n    \"StatusDescription\": \"\",\n    \"Term\": 0,\n    \"TotalPaidInstallments\": 0,\n    \"ValueDate\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"16:14:58\",\n    \"Numero\": 13468828,\n    \"Servicio\": \"PublicCustomers.getLoans\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -110,9 +131,9 @@
           "Comentarios": "Tasa de interés."
         },
         {
-          "Nombre": "LoanGUID",
+          "Nombre": "LoanGUId",
           "Tipo": "String",
-          "Comentarios": "GUID del préstamo."
+          "Comentarios": "GUID (identificador único global) del préstamo."
         },
         {
           "Nombre": "NumberOfInstallments",
@@ -190,9 +211,9 @@
           "Comentarios": "Descripción del producto."
         },
         {
-          "Nombre": "ProductGUID",
+          "Nombre": "ProductGUId",
           "Tipo": "String <strong>(Length: 36)</strong>",
-          "Comentarios": "GUID del producto."
+          "Comentarios": "GUID (identificador único global) del producto."
         }
       ]
     }

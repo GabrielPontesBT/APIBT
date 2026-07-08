@@ -149,6 +149,10 @@ Código | Descripción
                   <bts:departamentoId>1</bts:departamentoId>
                </bts:sBTDomicilioCompleto>
             </bts:domicilios>
+            <datosAdicionales>
+               <clave></clave>
+               <valor></valor>
+            </datosAdicionales>
          </bts:sdtPersonaJuridica>
          <bts:sdtIntegrantesJuridicosAlta>
             <bts:sBTIntegranteJuridicoAlta>
@@ -164,80 +168,83 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-   'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?CrearPersonaJuridica' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-   -d '{
-   "Btinreq": {
-      "Requerimiento": 0,
-      "Canal": "BTDIGITAL",
-      "Device": "AC",
-      "Usuario": "Instalador",
-      "Token": "8e3a8ef2dd99865B3A2E76CF"
-   },
-   "sdtPersonaJuridica": {
-      "nroDocumento": "219999990016",
-      "nombreReducido": "prueba",
-      "razonSocial": "EMPRESA",
-      "nroRegistro": "",
-      "naturalezaJuridica": "1",
-      "tipoDocumentoId": 2,
-      "tipoActividadId": 1,
-      "fechaConstitucion": "2020-01-01",
-      "fechaExpiracion": "2027-01-01",
-      "paisId": 845,
-      "actividad": "",
-      "pais": "",
-      "tipoActividad": "",
-      "actividadId": 1111,
-      "tipoDocumento": "2",
-      "naturalezaJuridicaId": 1,
-      "correoElectronico": "AV@GMAIL.COM",
-      "telefonoFijo": "3213342222",
-      "telefonoCelular": "05985423",
-      "domicilios": {
-         "sBTDomicilioCompleto": [{
-            "agrupador1Id": 1,
-            "coloniaId": 3,
-            "departamento": "",
-            "agrupador5": "",
-            "agrupador4": "",
-            "agrupador3Id": 1,
-            "agrupador3": "",
-            "barrio": "",
-            "detalleUbicacion": "",
-            "agrupador2": "",
-            "agrupador1": "",
-            "agrupador5Id": 3,
-            "ubicacionDesde": "",
-            "tipoDomicilio": "",
-            "direccion": "",
-            "colonia": "",
-            "paisId": 845,
-            "tipoVivienda": "",
-            "pais": "",
-            "agrupador2Id": 2,
-            "codigoPostal": "7852",
-            "tipoViviendaId": 1,
-            "agrupador4Id": 1,
-            "barrioId": 2,
-            "localidad": "",
-            "localidadId": 2,
-            "tipoDomicilioId": 1,
-            "departamentoId": 1
-         }]
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "AC",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPersonaJuridica": {
+    "nroDocumento": "219999990016",
+    "nombreReducido": "prueba",
+    "razonSocial": "EMPRESA",
+    "nroRegistro": "",
+    "naturalezaJuridica": "1",
+    "tipoDocumentoId": 2,
+    "tipoActividadId": 1,
+    "fechaConstitucion": "2020-01-01",
+    "fechaExpiracion": "2027-01-01",
+    "paisId": 845,
+    "actividad": "",
+    "pais": "",
+    "tipoActividad": "",
+    "actividadId": 1111,
+    "tipoDocumento": "2",
+    "naturalezaJuridicaId": 1,
+    "correoElectronico": "AV@GMAIL.COM",
+    "telefonoFijo": "3213342222",
+    "telefonoCelular": "05985423",
+    "domicilios": {
+      "sBTDomicilioCompleto": [
+        {
+          "agrupador1Id": 1,
+          "coloniaId": 3,
+          "departamento": "",
+          "agrupador5": "",
+          "agrupador4": "",
+          "agrupador3Id": 1,
+          "agrupador3": "",
+          "barrio": "",
+          "detalleUbicacion": "",
+          "agrupador2": "",
+          "agrupador1": "",
+          "agrupador5Id": 3,
+          "ubicacionDesde": "",
+          "tipoDomicilio": "",
+          "direccion": "",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "",
+          "pais": "",
+          "agrupador2Id": 2,
+          "codigoPostal": "7852",
+          "tipoViviendaId": 1,
+          "agrupador4Id": 1,
+          "barrioId": 2,
+          "localidad": "",
+          "localidadId": 2,
+          "tipoDomicilioId": 1,
+          "departamentoId": 1
+        }
+      ]
+    },
+    "datosAdicionales": {
+      "clave": "",
+      "valor": ""
+    }
+  },
+  "sdtIntegrantesJuridicosAlta": {
+    "sBTIntegranteJuridicoAlta": [
+      {
+        "vinculoId": 1,
+        "personaUId": 141,
+        "participacion": 0
       }
-   },
-   "sdtIntegrantesJuridicosAlta": {
-      "sBTIntegranteJuridicoAlta": [{
-         "vinculoId": 1,
-         "personaUId": 141,
-         "participacion": 0.0
-      }]
-   }
-}'
+    ]
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -335,6 +342,9 @@ tipoActividad | String | Nombre de tipo de actividad.
 tipoActividadId | Long | Identificador de tipo de actividad.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -371,6 +381,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -392,7 +405,7 @@ Los campos del tipo de dato estructurado sBTIntegranteJuridicoAlta son los sigui
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :---------
-participacion | Double | porcentaje de participación del integrante.
+participacion | Double | Porcentaje de participación del integrante.
 personaUId | Long | Identificador único de persona.
 vinculoId | Short | Identificador de vínculo.
 :::

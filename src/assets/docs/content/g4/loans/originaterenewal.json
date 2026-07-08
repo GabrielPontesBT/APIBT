@@ -1,0 +1,113 @@
+{
+  "slug": "loans/originaterenewal",
+  "pageTitle": "Originate Renewal",
+  "description": "Método para contabilizar una renovación.",
+  "pubName": "PublicLoans.originateRenewal",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0020",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "increaseGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la simulación de las operaciones a cancelar."
+    },
+    {
+      "Nombre": "simulationGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la simulación."
+    },
+    {
+      "Nombre": "disbursmentAccountGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de desembolso."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "amount",
+      "Tipo": "Double <strong>(Length: 18.2)</strong>",
+      "Comentarios": "Monto."
+    },
+    {
+      "Nombre": "geolocalization",
+      "Tipo": "<a href=\"#sdtsbtgeolocalization\">SdtsBTGeolocalization</a>",
+      "Comentarios": "Datos de geolocalización."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "movementGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050001",
+      "Descripción": "Debe ingresar el GUID de préstamo."
+    },
+    {
+      "Código": "180040003",
+      "Descripción": "Debe ingresar el GUID de la cuenta de débito."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"increaseGUID\": \"c2f91a84-5e3d-4b70-a8f1-d93e720c64b5\",\n  \"simulationGUID\": \"a1d54c72-3f8b-4e20-91dc-6b83e5f029a4\",\n  \"disbursmentAccountGUID\": \"d6e20c53-8b1f-4a97-b72e-3f94c810d5a1\",\n  \"amount\": 50000.00,\n  \"geolocalization\": {\n    \"latitude\": -34.60376,\n    \"longitude\": -58.38162,\n    \"timestamp\": \"2026-06-19T11:03:00.000000-03:00\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"increaseGUID\": \"c2f91a84-5e3d-4b70-a8f1-d93e720c64b5\",\n  \"simulationGUID\": \"a1d54c72-3f8b-4e20-91dc-6b83e5f029a4\",\n  \"disbursmentAccountGUID\": \"d6e20c53-8b1f-4a97-b72e-3f94c810d5a1\",\n  \"amount\": 50000.00,\n  \"geolocalization\": {\n    \"latitude\": -34.60376,\n    \"longitude\": -58.38162,\n    \"timestamp\": \"2026-06-19T11:03:00.000000-03:00\"\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"movementGUID\": \"b72f3e91-4c58-4d02-a6b8-1e95d720f4c3\",\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"11:03:18\",\n    \"Numero\": \"10048365\",\n    \"Servicio\": \"PublicLoans.originateRenewal\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"movementGUID\": \"b72f3e91-4c58-4d02-a6b8-1e95d720f4c3\",\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"11:03:18\",\n    \"Numero\": \"10048365\",\n    \"Servicio\": \"PublicLoans.originateRenewal\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double <strong>(Length: 11.8)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

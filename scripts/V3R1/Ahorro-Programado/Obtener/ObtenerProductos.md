@@ -139,43 +139,53 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": 41,
-                "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": 42,
-                "nombre": "AHORRO PROGRAMADO, Ahorro Casa"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 399,
-        "Estado": "OK",
-        "Servicio": "BTAhorroProgramado.ObtenerProductos",
-        "Fecha": "2018-05-03",
-        "Requerimiento": 1,
-        "Hora": "10:40:16",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": 41,
+        "nombre": "AHORRO PROGRAMADO, Ahorro Casa",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": 42,
+        "nombre": "AHORRO PROGRAMADO, Ahorro Casa",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 399,
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.ObtenerProductos",
+    "Fecha": "2018-05-03",
+    "Requerimiento": 1,
+    "Hora": "10:40:16",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -196,7 +206,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -209,4 +222,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

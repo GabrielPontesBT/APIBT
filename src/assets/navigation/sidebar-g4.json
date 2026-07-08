@@ -6,8 +6,8 @@
     "children": [
       {
         "type": "file",
-        "label": "Execute",
-        "pageTitle": "Execute",
+        "label": "Authenticate",
+        "pageTitle": "Authenticate",
         "slug": "authenticate/authenticate"
       }
     ]
@@ -221,6 +221,302 @@
         "label": "Get System Date",
         "pageTitle": "Get System Date",
         "slug": "general/getsystemdate"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Loan Parameters",
+    "slug": "loan-parameters",
+    "children": [
+      {
+        "type": "file",
+        "label": "Get Capital",
+        "pageTitle": "Get Capital",
+        "slug": "loan-parameters/getcapital"
+      },
+      {
+        "type": "file",
+        "label": "Get Disbursement Options",
+        "pageTitle": "Get Disbursement Options",
+        "slug": "loan-parameters/getdisbursementoptions"
+      },
+      {
+        "type": "file",
+        "label": "Get Frequencies",
+        "pageTitle": "Get Frequencies",
+        "slug": "loan-parameters/getfrequencies"
+      },
+      {
+        "type": "file",
+        "label": "Get Group Capital",
+        "pageTitle": "Get Group Capital",
+        "slug": "loan-parameters/getgroupcapital"
+      },
+      {
+        "type": "file",
+        "label": "Get Group Member",
+        "pageTitle": "Get Group Member",
+        "slug": "loan-parameters/getgroupmember"
+      },
+      {
+        "type": "file",
+        "label": "Get Installment",
+        "pageTitle": "Get Installment",
+        "slug": "loan-parameters/getinstallment"
+      },
+      {
+        "type": "file",
+        "label": "Get Insurances",
+        "pageTitle": "Get Insurances",
+        "slug": "loan-parameters/getinsurances"
+      },
+      {
+        "type": "file",
+        "label": "Get Loan Payment Options",
+        "pageTitle": "Get Loan Payment Options",
+        "slug": "loan-parameters/getloanpaymentoptions"
+      },
+      {
+        "type": "file",
+        "label": "Get Rate",
+        "pageTitle": "Get Rate",
+        "slug": "loan-parameters/getrate"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "label": "Loans",
+    "slug": "loans",
+    "children": [
+      {
+        "type": "file",
+        "label": "Add Intercycle Member",
+        "pageTitle": "Add Intercycle Member",
+        "slug": "loans/addintercyclemember"
+      },
+      {
+        "type": "file",
+        "label": "Add Member",
+        "pageTitle": "Add Member",
+        "slug": "loans/addmember"
+      },
+      {
+        "type": "file",
+        "label": "Block Member",
+        "pageTitle": "Block Member",
+        "slug": "loans/blockmember"
+      },
+      {
+        "type": "file",
+        "label": "Cancel",
+        "pageTitle": "Cancel",
+        "slug": "loans/cancel"
+      },
+      {
+        "type": "file",
+        "label": "Create Group",
+        "pageTitle": "Create Group",
+        "slug": "loans/creategroup"
+      },
+      {
+        "type": "file",
+        "label": "Delete Member",
+        "pageTitle": "Delete Member",
+        "slug": "loans/deletemember"
+      },
+      {
+        "type": "file",
+        "label": "Get Cancellation Total Concepts",
+        "pageTitle": "Get Cancellation Total Concepts",
+        "slug": "loans/getcancelationtotalconcepts"
+      },
+      {
+        "type": "file",
+        "label": "Get Cancellation Amount",
+        "pageTitle": "Get Cancellation Amount",
+        "slug": "loans/getcancellationamount"
+      },
+      {
+        "type": "file",
+        "label": "Get Customer Loans",
+        "pageTitle": "Get Customer Loans",
+        "slug": "loans/getcustomerloans"
+      },
+      {
+        "type": "file",
+        "label": "Get Detail",
+        "pageTitle": "Get Detail",
+        "slug": "loans/getdetail"
+      },
+      {
+        "type": "file",
+        "label": "Get Group",
+        "pageTitle": "Get Group",
+        "slug": "loans/getgroup"
+      },
+      {
+        "type": "file",
+        "label": "Get Group Loan Cycle Info",
+        "pageTitle": "Get Group Loan Cycle Info",
+        "slug": "loans/getgrouploancycleinfo"
+      },
+      {
+        "type": "file",
+        "label": "Get Group Loan Simulation",
+        "pageTitle": "Get Group Loan Simulation",
+        "slug": "loans/getgrouploansimulation"
+      },
+      {
+        "type": "file",
+        "label": "Get Group Query",
+        "pageTitle": "Get Group Query",
+        "slug": "loans/getgroupquery"
+      },
+      {
+        "type": "file",
+        "label": "Get Groups",
+        "pageTitle": "Get Groups",
+        "slug": "loans/getgroups"
+      },
+      {
+        "type": "file",
+        "label": "Get Member",
+        "pageTitle": "Get Member",
+        "slug": "loans/getmember"
+      },
+      {
+        "type": "file",
+        "label": "Get Members Of Group",
+        "pageTitle": "Get Members Of Group",
+        "slug": "loans/getmembersofgroup"
+      },
+      {
+        "type": "file",
+        "label": "Get Member Types",
+        "pageTitle": "Get Member Types",
+        "slug": "loans/getmembertypes"
+      },
+      {
+        "type": "file",
+        "label": "Get Person Products",
+        "pageTitle": "Get Person Products",
+        "slug": "loans/getpersonproducts"
+      },
+      {
+        "type": "file",
+        "label": "Get Products",
+        "pageTitle": "Get Products",
+        "slug": "loans/getproducts"
+      },
+      {
+        "type": "file",
+        "label": "Get Refinance Amount",
+        "pageTitle": "Get Refinance Amount",
+        "slug": "loans/getrefinanceamount"
+      },
+      {
+        "type": "file",
+        "label": "Get Renewal Amount",
+        "pageTitle": "Get Renewal Amount",
+        "slug": "loans/getrenewalamount"
+      },
+      {
+        "type": "file",
+        "label": "Get Schedule",
+        "pageTitle": "Get Schedule",
+        "slug": "loans/getschedule"
+      },
+      {
+        "type": "file",
+        "label": "Group Loan Accounting",
+        "pageTitle": "Group Loan Accounting",
+        "slug": "loans/grouploanaccounting"
+      },
+      {
+        "type": "file",
+        "label": "Group Loan Individual Resimulation",
+        "pageTitle": "Group Loan Individual Resimulation",
+        "slug": "loans/grouploanindividualresimulation"
+      },
+      {
+        "type": "file",
+        "label": "Modify Group Term",
+        "pageTitle": "Modify Group Term",
+        "slug": "loans/modifygroupterm"
+      },
+      {
+        "type": "file",
+        "label": "Originate Refinancing",
+        "pageTitle": "Originate Refinancing",
+        "slug": "loans/originaterefinancing"
+      },
+      {
+        "type": "file",
+        "label": "Originate Renewal",
+        "pageTitle": "Originate Renewal",
+        "slug": "loans/originaterenewal"
+      },
+      {
+        "type": "file",
+        "label": "Pay Group Installment",
+        "pageTitle": "Pay Group Installment",
+        "slug": "loans/paygroupinstallment"
+      },
+      {
+        "type": "file",
+        "label": "Pay Installment",
+        "pageTitle": "Pay Installment",
+        "slug": "loans/payinstallment"
+      },
+      {
+        "type": "file",
+        "label": "Pay Member Group Installment",
+        "pageTitle": "Pay Member Group Installment",
+        "slug": "loans/paymembergroupinstallment"
+      },
+      {
+        "type": "file",
+        "label": "Process Member Death Write Off",
+        "pageTitle": "Process Member Death Write Off",
+        "slug": "loans/processmemberdeathwriteoff"
+      },
+      {
+        "type": "file",
+        "label": "Save Disbursement Options In Group Loans",
+        "pageTitle": "Save Disbursement Options In Group Loans",
+        "slug": "loans/savedisbursementoptionsingrouploans"
+      },
+      {
+        "type": "file",
+        "label": "Simulate Group Loan",
+        "pageTitle": "Simulate Group Loan",
+        "slug": "loans/simulategrouploan"
+      },
+      {
+        "type": "file",
+        "label": "Simulate Group Renewal",
+        "pageTitle": "Simulate Group Renewal",
+        "slug": "loans/simulategrouprenewal"
+      },
+      {
+        "type": "file",
+        "label": "Update Group Loan Saving Account",
+        "pageTitle": "Update Group Loan Saving Account",
+        "slug": "loans/updategrouploansavingaccount"
+      },
+      {
+        "type": "file",
+        "label": "Update Member",
+        "pageTitle": "Update Member",
+        "slug": "loans/updatemember"
+      },
+      {
+        "type": "file",
+        "label": "Waive",
+        "pageTitle": "Waive",
+        "slug": "loans/waive"
       }
     ]
   },
@@ -496,6 +792,18 @@
       },
       {
         "type": "file",
+        "label": "Create Section",
+        "pageTitle": "Create Section",
+        "slug": "saving-accounts/createsection"
+      },
+      {
+        "type": "file",
+        "label": "Currency Exchange",
+        "pageTitle": "Currency Exchange",
+        "slug": "saving-accounts/currencyexchange"
+      },
+      {
+        "type": "file",
         "label": "Get Cancellation Origins",
         "pageTitle": "Get Cancellation Origins",
         "slug": "saving-accounts/getcancellationorigins"
@@ -532,9 +840,21 @@
       },
       {
         "type": "file",
+        "label": "Get Sections Category Type",
+        "pageTitle": "Get Sections Category Type",
+        "slug": "saving-accounts/getsectionscategorytype"
+      },
+      {
+        "type": "file",
         "label": "Transfer",
         "pageTitle": "Transfer",
         "slug": "saving-accounts/transfer"
+      },
+      {
+        "type": "file",
+        "label": "Transfer Section Balance",
+        "pageTitle": "Transfer Section Balance",
+        "slug": "saving-accounts/transfersectionbalance"
       },
       {
         "type": "file",

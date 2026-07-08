@@ -5,6 +5,7 @@
   "pubName": "BTPrestamos.AbonarACuenta",
   "programa": "RBTPG226",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de pago, teniendo en cuenta que: \n\n\t- El préstamo se almacena en el preformato 1. \n\n\t- La cuenta vista de cobro se almacena en el preformato 2. \n\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \n\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \n\n3)\tSe debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
   "backendData": [],
@@ -25,7 +26,7 @@
       "Comentarios": "Identificador único de cliente."
     },
     {
-      "Nombre": "importe",
+      "Nombre": "Importe",
       "Tipo": "Double",
       "Comentarios": "Importe a pagar."
     },
@@ -45,6 +46,9 @@
       "Comentarios": "Referencia"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "movimientoUId",
@@ -103,11 +107,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.AbonarACuenta>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>321</bts:operacionUId>\n         <bts:clienteUId>161</bts:clienteUId>\n         <bts:Importe>1000</bts:Importe>\n         <bts:operacionUId_cobro>281</bts:operacionUId_cobro>\n         <bts:referencia>AbonarACuenta</bts:referencia>\n      </bts:BTPrestamos.AbonarACuenta>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AbonarACuenta=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 342,\n    \"clienteUId\": 161,\n    \"Importe\": 1000,\n    \"operacionUId_cobro\": 281,\n    \"referencia\": \"AbonarACuenta\"\n}'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AbonarACuenta=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 342,\n    \"clienteUId\": 161,\n    \"Importe\": 1000,\n    \"operacionUId_cobro\": 281,\n    \"referencia\": \"AbonarACuenta\"\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPrestamos.AbonarACuenta>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:operacionUId>321</bts:operacionUId>\n         <bts:clienteUId>161</bts:clienteUId>\n         <bts:Importe>1000</bts:Importe>\n         <bts:operacionUId_cobro>281</bts:operacionUId_cobro>\n         <bts:referencia>AbonarACuenta</bts:referencia>\n      </bts:BTPrestamos.AbonarACuenta>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AbonarACuenta=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"operacionUId\": 342,\n    \"clienteUId\": 161,\n    \"Importe\": 1000,\n    \"operacionUId_cobro\": 281,\n    \"referencia\": \"AbonarACuenta\"\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.AbonarACuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>dc7d30c0044A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>121</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>758</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.PagarCuota</Servicio>\n            <Requerimiento/>\n            <Fecha>2017-12-05</Fecha>\n            <Hora>13:32:15</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.AbonarACuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"122\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"759\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.AbonarACuenta\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-05\",\n        \"Hora\": \"13:39:04\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"122\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"759\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.AbonarACuenta\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-05\",\n        \"Hora\": \"13:39:04\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPrestamos.AbonarACuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>dc7d30c0044A8B5C60A82434</Token>\n         </Btinreq>\n         <movimientoUId>121</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>758</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPrestamos.PagarCuota</Servicio>\n            <Requerimiento/>\n            <Fecha>2017-12-05</Fecha>\n            <Hora>13:32:15</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPrestamos.AbonarACuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n    \"movimientoUId\": \"122\",\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": \"759\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPrestamos.AbonarACuenta\",\n        \"Requerimiento\": \"\",\n        \"Fecha\": \"2017-12-05\",\n        \"Hora\": \"13:39:04\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

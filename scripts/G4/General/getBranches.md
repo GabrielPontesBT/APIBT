@@ -9,7 +9,7 @@ title: Get Branches
 
 **Módulo:** General
 
-**Programa:** PublicAPI.ABTBRPA0001
+**Programa:** PublicAPI.BTBRPA0001
 
 **Alcance:** Global
 :::
@@ -346,7 +346,29 @@ Código | Descripción
         "zipCode": "",
         "email": ""
       }
-    ]
+    ],
+    "branchType": "",
+    "calendarId": "",
+    "calendarName": "",
+    "cityId": "",
+    "cityName": "",
+    "code": "",
+    "companyCode": "",
+    "departmentId": "",
+    "departmentName": "",
+    "dependencyId": "",
+    "dependencyName": "",
+    "doorNumber": "",
+    "email": "",
+    "latitude": "",
+    "longitude": "",
+    "name": "",
+    "phone": "",
+    "reducedName": "",
+    "stateId": "",
+    "street": "",
+    "timeZone": "",
+    "zipCode": ""
   },
   "BusinessErrors": {
     "BusinessError": []

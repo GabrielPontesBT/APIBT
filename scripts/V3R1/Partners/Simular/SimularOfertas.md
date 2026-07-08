@@ -137,52 +137,75 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularOfertas' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "3JPL6DC33CD84655A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": 1
-	},
-   "sdtPartner": {
-      "puntoVentaUId": 2,
-      "vendedorUId": 0,
-      "partnerUId": 1
-   },
-   "clienteUId": 351,
-   "sdtOfertaInput": {
-      "pizarra": 0,
-      "fechaValor": "2023-11-14",
-      "productoUId": 48,
-      "monto": 8745,
-      "comisionesCuota": {
-          "sBTComisionPrestamo": []
-      },
-      "periodoCuotas": 35,
-      "diaPago": 14,
-      "ballon": 0,
-      "tasa": 36,
-      "cuotas": {
-          "Int": []
-      },
-      "fechaPrimerPago": "2023-11-14",
-      "cuotasExtraordinarias": {
-          "sBTCuotaExtraordinaria": []
-      },
-      "seguros": {
-          "sBTSeguroPrestamo": []
-      },
-      "comisiones": {
-          "sBTComisionPrestamo": []
-      }
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "MINSTALADOR",
+    "Token": "3JPL6DC33CD84655A5382434",
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1
+  },
+  "sdtPartner": {
+    "puntoVentaUId": 2,
+    "vendedorUId": 0,
+    "partnerUId": 1
+  },
+  "clienteUId": 351,
+  "sdtOfertaInput": {
+    "pizarra": 0,
+    "fechaValor": "2023-11-14",
+    "productoUId": 48,
+    "monto": 8745,
+    "comisionesCuota": {
+      "sBTComisionPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importe": 0,
+          "porcentaje": 0
+        }
+      ]
+    },
+    "periodoCuotas": 35,
+    "diaPago": 14,
+    "ballon": 0,
+    "tasa": 36,
+    "cuotas": {
+      "Int": []
+    },
+    "fechaPrimerPago": "2023-11-14",
+    "cuotasExtraordinarias": {
+      "sBTCuotaExtraordinaria": [
+        {
+          "mes": 0,
+          "porcentajeCuota": 0
+        }
+      ]
+    },
+    "seguros": {
+      "sBTSeguroPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importeFijo": 0,
+          "modificable": "",
+          "porcentaje": 0,
+          "tipo": ""
+        }
+      ]
+    },
+    "comisiones": {
+      "sBTComisionPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importe": 0,
+          "porcentaje": 0
+        }
+      ]
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -330,6 +353,9 @@ pizarra | Int | Pizarra.
 productoUId | Long | Identificador único de producto.
 seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 tasa | Double | Tasa.
+:::
+
+::: details sBTComisionPrestamo
 
 ### sBTComisionPrestamo
 
@@ -342,6 +368,9 @@ codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 porcentaje | Double | Porcentaje de comisión.
+:::
+
+::: details sBTCuotaExtraordinaria
 
 ### sBTCuotaExtraordinaria
 
@@ -352,6 +381,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 mes | Byte | Mes.
 porcentajeCuota | Double | Porcentaje de cuota.
+:::
+
+::: details sBTSeguroPrestamo
 
 ### sBTSeguroPrestamo
 

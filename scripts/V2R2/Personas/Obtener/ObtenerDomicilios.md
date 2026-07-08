@@ -148,47 +148,49 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDomicilios": {
-        "sBTDomicilio1": [
-            {
-                "localidad": "Riachuelo",
-                "paisDomicilio": "URUGUAY",
-                "barrioId": "0",
-                "departamento": "Colonia",
-                "numeroPuerta": "167",
-                "barrio": "",
-                "localidadId": "1357",
-                "tipoDeDomicilioId": "1",
-                "codigoPostal": "",
-                "calle": "1",
-                "apartamento": "",
-                "tipoDeDomicilio": "Residencia",
-                "departamentoId": "4",
-                "paisDomicilioId": "845"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "2993",
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ObtenerDomicilios",
-        "Requerimiento": "1",
-        "Fecha": "2018-11-08",
-        "Hora": "16:07:57",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDomicilios": {
+    "sBTDomicilio1": [
+      {
+        "localidad": "Riachuelo",
+        "paisDomicilio": "URUGUAY",
+        "barrioId": "0",
+        "departamento": "Colonia",
+        "numeroPuerta": "167",
+        "barrio": "",
+        "localidadId": "1357",
+        "tipoDeDomicilioId": "1",
+        "codigoPostal": "",
+        "calle": "1",
+        "apartamento": "",
+        "tipoDeDomicilio": "Residencia",
+        "departamentoId": "4",
+        "paisDomicilioId": "845",
+        "direccion": "CALLE 1 NRO 167",
+        "referencia": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "2993",
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerDomicilios",
+    "Requerimiento": "1",
+    "Fecha": "2018-11-08",
+    "Hora": "16:07:57",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -212,7 +214,7 @@ calle | String | Calle del domicilio.
 codigoPostal | String | Código postal. 
 departamento | String | Nombre del departamento. 
 departamentoId | Int | Identificador del departamento. 
-dirección | String | Dirección. 
+direccion | String | Dirección. 
 localidad | String | Nombre de la localidad. 
 localidadId | Int | Identificador de la localidad. 
 numeroPuerta | String | Número de puerta. 

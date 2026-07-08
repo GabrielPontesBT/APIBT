@@ -104,7 +104,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>1EF0C356A692E3706CFA0201</Token>
          </Btinreq>
-         <sdtTipoActividad>
+         <sdtActividades>
             <SdtsBTActividad>
                <descripcion>Actividad Principal</descripcion>
                <identificador>1</identificador>
@@ -115,7 +115,7 @@ curl -X POST \
                <identificador>2</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
             </SdtsBTActividad>
-         </sdtTipoActividad>
+         </sdtActividades>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>10261</Numero>

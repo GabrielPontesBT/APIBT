@@ -153,53 +153,54 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-    'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?Crear' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-    -d '{
-    "Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "AC",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
-   "sdtPersona": {
-      "paisDocumentoId": 845,
-      "tipoDocumentoId": 1,
-      "nroDocumento": "41875255",
-      "ingresos": "1500.00",
-      "nacionalidad": "URUGUAY",
-      "sexo": "M",
-      "segundoNombre": "",
-      "telefonoCelular": "",
-      "departamentoId": 10,
-      "ocupacionId": "1",
-      "actividadLaboralId": 1112,
-      "nacionalidadId": 845,
-      "localidadId": "10",
-      "paisDomicilioId": 845,
-      "telefonoFijo": "26004288",
-      "codigoPostal": "",
-      "primerNombre": "aALEJANDRO",
-      "fechaNacimiento": "1976-02-26",
-      "primerApellido": "vVAZQUEZ",
-      "estadoCivilId": "1",
-      "segundoApellido": "SZENTANDRASI",
-      "paisDocumento": "URUGUAY",
-      "fechaInicioActividad": "1980-01-01",
-      "ocupacion": "Empleado",
-      "paisDomicilio": "URUGUAY",
-      "fechaVencimiento": "2025-01-01",
-      "correoElectronico": "AV@GMAIL.COM",
-      "numeroPuerta": "7216",
-      "calle": "BAZZURRO",
-      "apartamento": "13B",
-      "barrioId": 0,
-   }
-}'
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "AC",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPersona": {
+    "paisDocumentoId": 845,
+    "tipoDocumentoId": 1,
+    "nroDocumento": "41875255",
+    "ingresos": "1500.00",
+    "nacionalidad": "URUGUAY",
+    "sexo": "M",
+    "segundoNombre": "",
+    "telefonoCelular": "",
+    "departamentoId": 10,
+    "ocupacionId": "1",
+    "actividadLaboralId": 1112,
+    "nacionalidadId": 845,
+    "localidadId": "10",
+    "paisDomicilioId": 845,
+    "telefonoFijo": "26004288",
+    "codigoPostal": "",
+    "primerNombre": "aALEJANDRO",
+    "fechaNacimiento": "1976-02-26",
+    "primerApellido": "vVAZQUEZ",
+    "estadoCivilId": "1",
+    "segundoApellido": "SZENTANDRASI",
+    "paisDocumento": "URUGUAY",
+    "fechaInicioActividad": "1980-01-01",
+    "ocupacion": "Empleado",
+    "paisDomicilio": "URUGUAY",
+    "fechaVencimiento": "2025-01-01",
+    "correoElectronico": "AV@GMAIL.COM",
+    "numeroPuerta": "7216",
+    "calle": "BAZZURRO",
+    "apartamento": "13B",
+    "barrioId": 0,
+    "actividadLaboral": "",
+    "barrio": "",
+    "departamento": "",
+    "estadoCivil": "",
+    "localidad": "",
+    "tipoDocumento": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

@@ -117,7 +117,6 @@ Código | Descripción
     </soapenv:Body>
 </soapenv:Envelope>
 ```
-
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 

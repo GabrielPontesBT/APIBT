@@ -179,62 +179,74 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Usuario": "BANTOTAL",
-        "Device": "GZ",
-        "Requerimiento": 0,
-        "Token": "E362E52FED059AA3BF86A6E3"
-    },
-    "totalGeneral": 527406.43,
-    "sdtDetalleClaseActivo": {
-        "sBTDetalleClaseActivo": [
-            {
-                "nombreElemento": "Depósitos a plazo fijo",
-                "datosSinManejoEspecie": {
-                    "sBTDatoSinManejoEspecie": {
-                        "signo": "$",
-                        "monedaId": 0,
-                        "total": 5263.16,
-                        "cantidadOperaciones": 2,
-                        "totalOrigen": 200000.00
-                    }
-                },
-                "porcentajeComposicion": 1.00,
-                "datosConManejoEspecie": "",
-                "total": 5263.16
-            },
-            {
-                "nombreElemento": "Cuenta Corrientes",
-                "datosSinManejoEspecie": {
-                    "sBTDatoSinManejoEspecie": {
-                        "signo": "USD",
-                        "monedaId": 2222,
-                        "total": 496723.14,
-                        "cantidadOperaciones": 2,
-                        "totalOrigen": 522143.27
-                    }
-                },
-                "porcentajeComposicion": 99.00,
-                "datosConManejoEspecie": "",
-                "total": 522143.27
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Estado": "OK",
-        "Fecha": "2024-10-08",
-        "Hora": "12:46:22",
-        "Numero": 744,
-        "Servicio": "BTClientes.ObtenerDetallePosicion",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Usuario": "BANTOTAL",
+    "Device": "GZ",
+    "Requerimiento": 0,
+    "Token": "E362E52FED059AA3BF86A6E3"
+  },
+  "totalGeneral": 527406.43,
+  "sdtDetalleClaseActivo": {
+    "sBTDetalleClaseActivo": [
+      {
+        "nombreElemento": "Depósitos a plazo fijo",
+        "datosSinManejoEspecie": {
+          "sBTDatoSinManejoEspecie": {
+            "signo": "$",
+            "monedaId": 0,
+            "total": 5263.16,
+            "cantidadOperaciones": 2,
+            "totalOrigen": 200000
+          }
+        },
+        "porcentajeComposicion": 1,
+        "total": 5263.16,
+        "datosConManejoEspecie": {
+          "descripcion": "",
+          "papelId": 0,
+          "resultado": 0,
+          "totalEfectivo": 0,
+          "totalNominal": 0
+        }
+      },
+      {
+        "nombreElemento": "Cuenta Corrientes",
+        "datosSinManejoEspecie": {
+          "sBTDatoSinManejoEspecie": {
+            "signo": "USD",
+            "monedaId": 2222,
+            "total": 496723.14,
+            "cantidadOperaciones": 2,
+            "totalOrigen": 522143.27
+          }
+        },
+        "porcentajeComposicion": 99,
+        "total": 522143.27,
+        "datosConManejoEspecie": {
+          "descripcion": "",
+          "papelId": 0,
+          "resultado": 0,
+          "totalEfectivo": 0,
+          "totalNominal": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Estado": "OK",
+    "Fecha": "2024-10-08",
+    "Hora": "12:46:22",
+    "Numero": 744,
+    "Servicio": "BTClientes.ObtenerDetallePosicion",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -256,6 +268,9 @@ datosSinManejoEspecie | [sBTDatoSinManejoEspecie](#sbtdatosinmanejoespecie) | Li
 nombreElemento | String | Nombre del elemento del detalle. 
 porcentajeComposicion | Double | Porcentaje de composición del elemento del detalle.
 total | Double | Total del elemento del detalle.
+:::
+
+::: details sBTDatoConManejoEspecie
 
 ### sBTDatoConManejoEspecie
  
@@ -268,6 +283,9 @@ papelId | Int | Identificador del papel.
 resultado | Double | Resultado.
 totalEfectivo | Double | Total en efectivo.
 totalNominal | Double | Total nominal.
+:::
+
+::: details sBTDatoSinManejoEspecie
 
 ### sBTDatoSinManejoEspecie
  
@@ -280,6 +298,7 @@ monedaId | Short | Identificador de la moneda.
 signo | String | Signo de la moneda.
 total | Double | Total.
 totalOrigen | Double | Total del origen.
-
 :::
+
 <!-- CIERRA SDT -->
+

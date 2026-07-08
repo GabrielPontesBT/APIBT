@@ -67,10 +67,10 @@ Código | Descripción
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Device>10.12.10.40</bts:Device>
          </bts:Btinreq>
-         <bts:compradorBaja>
+         <bts:CompradorBaja>
             <bts:cuit>23112903879</bts:cuit>
             <bts:ctaCBU>0940099312000605600019</bts:ctaCBU>
-         </bts:compradorBaja>
+         </bts:CompradorBaja>
       </bts:BTCOELSAGestionDebin.CompradorCuentaBaja>
    </soapenv:Body>
 </soapenv:Envelope>

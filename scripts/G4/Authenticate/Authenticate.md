@@ -1,155 +1,115 @@
 ---
-title: Execute
-breadcrumb: false
-pageInfo: false
-toc: false
-contributors: false
-editLink: false
-lastUpdated: false
-prev: false
-next: false
-comment: false
-footer: false
+title: Authenticate
+type: POST
 ---
 
 <!-- ABRE DATOS DEL MÉTODO -->
-::: note Previo al inicio de la ejecución de los servicios de BTS se debe obtener un token válido que luego será utilizado en la ejecución de los servicios.
+::: note 
+Antes de invocar cualquier servicio es necesario obtener un token de sesión válido. Dicho token deberá incluirse en el header **Token** de todas las solicitudes posteriores.
 
-Para obtener un token valido se debe invocar el servicio Authenticate método Execute.
+Se obtiene invocando al método enviando un usuario y contraseña válidos según el método de autenticación configurado en el sistema.
 
-Se lo invoca pasándole como parámetro de entrada UserId y UserPassword válido con el método de autenticación indicado en la parametrización.
+El token tiene una duración limitada. Una vez expirado, deberá obtenerse uno nuevo invocando nuevamente este servicio. Si se intenta usar un token vencido, los servicios devolverán un error de autenticación.
 
 **Nombre publicación:** Authenticate.Execute
 
-**Programa:** ABTIAUTHENTICATE
+**Programa:** BTIAUTHENTICATE
 
-**Global/País:** Global
+**Alcance:** Global
+
+**Endpoint:** /public/Authenticate/v1/execute
 :::
 <!-- CIERRA DATOS DEL MÉTODO -->
 
-<!-- ABRE TABLA DE DATOS -->
-::: tabs #Datos 
+<!-- ABRE CONFIGURACIÓN BACKEND -->
+::: info Headers
 
-@tab Datos de Entrada
+::: comment 
+
+Los headers indicados a continuación deben ser ingresados en los request de todos los métodos.
+Para el método **Authenticate.Execute** el header **Token** puede enviarse vacío, ya que éste es el endpoint que lo genera. 
+:::
+
+Nombre | Descripción
+:--------- | :-----------
+Device | Identificador del dispositivo o canal de origen.
+Usuario | Usuario que realiza la solicitud.
+Requerimiento | Número de requerimiento.
+Canal | Canal de comunicación utilizado.
+Token | Token de sesión activo.
+:::
+<!-- CIERRA CONFIGURACIÓN BACKEND -->
+
+<!-- ABRE TABLA DE DATOS -->
+::: tabs #Datos
+
+@tab Body
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-UserId | String | Usuario de autenticación.
-UserPassword | String | Contraseña de autenticación.
+UserId | String | Usuario de autenticación configurado en el sistema.
+UserPassword | String | Contraseña correspondiente al usuario.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-SessionToken | String | Token a utilizar para la ejecución de servicios.
+SessionToken | String | Token de sesión a utilizar como valor del header **Token**.
 
 @tab Errores
 
+::: comment
+El mensaje de error asociado al código **50** puede variar, ya que es devuelto por el programa de validación de usuario/contraseña, el cual es parametrizable. Pueden existir errores adicionales dependiendo de la configuración del ambiente.
+:::
+
 Código | Descripción
 :--------- | :---------
-50 | Error de Autenticación. 
-
-El mensaje de error puede variar ya que es devuelto por el programa que valida usuario/contraseña, y dicho programa es parametrizable (se puede utilizar el que viene por defecto u otro).
-::: 
+50 | Error de autenticación. 
+:::
 <!-- CIERRA TABLA DE DATOS -->
 
+## **Ejemplos**
+
 <!-- ABRE EJEMPLO DE INVOCACIÓN -->
-::: warning Ejemplo de Invocación
+::: details Ejemplo de Invocación
 ::: code-tabs #Formato
 
-@tab XML
-```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <bts:Authenticate.Execute>
-         <bts:Btinreq>
-            <bts:Device>AV</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
-            <bts:Requerimiento></bts:Requerimiento>
-            <bts:Canal>BTDIGITAL</bts:Canal>
-            <bts:Token></bts:Token>
-         </bts:Btinreq>
-         <bts:UserId>MINSTALADOR</bts:UserId>
-         <bts:UserPassword>Bantotal2015</bts:UserPassword>
-      </bts:Authenticate.Execute>
-   </soapenv:Body>
-</soapenv:Envelope>
-```
-
-@tab JSON
-```json
-{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"UserId": "BANTOTAL",
-  "UserPassword": "z0na#1357"
+@tab cURL
+```bash
+curl -X POST \
+  '{{baseUrl}}/public/Authenticate/v1/execute' \
+  -H 'Device: {{device}}' \
+  -H 'Usuario: {{usuario}}' \
+  -H 'Requerimiento: {{requerimiento}}' \
+  -H 'Canal: {{canal}}' \
+  -H 'Token: ' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "UserId": "{{userId}}",
+  "UserPassword": "{{password}}"
 }'
 ```
+
+@tab JSON Body
+```json
+{
+  "UserId": "{{userId}}",
+  "UserPassword": "{{password}}"
+}
+```
+
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
 <!-- ABRE EJEMPLO DE RESPUESTA -->
-::: warning Ejemplo de Respuesta
+::: details Ejemplo de Respuesta
 ::: code-tabs #Formato
-
-@tab XML
-```xml
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <SOAP-ENV:Body>
-      <Authenticate.ExecuteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
-         <Btinreq>
-            <Device>AV</Device>
-            <Usuario>MINSTALADOR</Usuario>
-            <Requerimiento/>
-            <Canal>BTDIGITAL</Canal>
-            <Token/>
-         </Btinreq>
-         <SessionToken>7f582501004A8B5C60A82434</SessionToken>
-         <Erroresnegocio></Erroresnegocio>
-         <Btoutreq>
-            <Numero>722</Numero>
-            <Estado>OK</Estado>
-            <Servicio>Authenticate.Execute</Servicio>
-            <Fecha>2017-11-24</Fecha>
-            <Requerimiento/>
-            <Hora>12:52:24</Hora>
-            <Canal>BTDIGITAL</Canal>
-         </Btoutreq>
-      </Authenticate.ExecuteResponse>
-   </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-```
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "SessionToken": "991ba47aac4A8B5C60A82434",
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 46,
-        "Servicio": "Authenticate.Execute",
-        "Estado": "OK",
-        "Fecha": "2019-10-24",
-        "Requerimiento": 1,
-        "Hora": "20:55:06",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "SessionToken": "23B342928917607ECECF65BD"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

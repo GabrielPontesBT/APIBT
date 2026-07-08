@@ -100,59 +100,61 @@ curl -X POST \
 
 @tab XML
 ```xml
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTitulos.ObtenerValoresResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
             <Device>AV</Device>
             <Usuario>MINSTALADOR</Usuario>
-            <Requerimiento/>
+            <Requerimiento />
             <Canal>BTDIGITAL</Canal>
             <Token>be9fc8708b4A8B5C60A82434</Token>
          </Btinreq>
-         <sdtTitulo>
+         <sdtTitulos>
             <sBTTitulo>
-					<moneda>2222</moneda>
-					<simbolo>USD</simbolo>
-					<pais>UNITED STATES OF AMERICA (USA)</pais>
-					<grupoId>1</grupoId>
-					<grupo>Acción Ordinaria</grupo>
-					<codigo>703</codigo>
-					<nombre>APPLIED MICRO CIRCUITS CORP.</nombre>
-					<precioActual>0.00</precioActual>
-					<otrosConceptos>
-						<sBTConcepto>
-							<texto>Fecha de vencimiento.</texto>
-							<valor>0.00</valor>
-							<concepto>31/12/99</concepto>
-						</sBTConcepto>
-					</otrosConceptos>
-				</sBTTitulo>
-				<sBTTitulo>
-					<moneda>2222</moneda>
-					<simbolo>USD</simbolo>
-					<pais>UNITED STATES OF AMERICA (USA)</pais>
-					<grupoId>1</grupoId>
-					<grupo>Acción Ordinaria</grupo>
-					<codigo>704</codigo>
-					<nombre>APPLE COMPUTER INC.COM</nombre>
-					<precioActual>0.00</precioActual>
-					<otrosConceptos>
-						<sBTConcepto>
-							<texto>Fecha de vencimiento.</texto>
-							<valor>0.00</valor>
-							<concepto>31/12/99</concepto>
-						</sBTConcepto>
-					</otrosConceptos>
-				</sBTTitulo>
-         </sdtTitulo>
+               <moneda>2222</moneda>
+               <simbolo>USD</simbolo>
+               <pais>UNITED STATES OF AMERICA (USA)</pais>
+               <grupoId>1</grupoId>
+               <grupo>Acción Ordinaria</grupo>
+               <codigo>703</codigo>
+               <nombre>APPLIED MICRO CIRCUITS CORP.</nombre>
+               <precioActual>0.00</precioActual>
+               <otrosConceptos>
+                  <sBTConcepto>
+                     <texto>Fecha de vencimiento.</texto>
+                     <valor>0.00</valor>
+                     <concepto>31/12/99</concepto>
+                  </sBTConcepto>
+               </otrosConceptos>
+            </sBTTitulo>
+            <sBTTitulo>
+               <moneda>2222</moneda>
+               <simbolo>USD</simbolo>
+               <pais>UNITED STATES OF AMERICA (USA)</pais>
+               <grupoId>1</grupoId>
+               <grupo>Acción Ordinaria</grupo>
+               <codigo>704</codigo>
+               <nombre>APPLE COMPUTER INC.COM</nombre>
+               <precioActual>0.00</precioActual>
+               <otrosConceptos>
+                  <sBTConcepto>
+                     <texto>Fecha de vencimiento.</texto>
+                     <valor>0.00</valor>
+                     <concepto>31/12/99</concepto>
+                  </sBTConcepto>
+               </otrosConceptos>
+            </sBTTitulo>
+         </sdtTitulos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>967</Numero>
             <Estado>OK</Estado>
             <Servicio>BTTitulos.ObtenerValores</Servicio>
             <Fecha>2017-12-22</Fecha>
-            <Requerimiento/>
+            <Requerimiento />
             <Hora>12:26:12</Hora>
             <Canal>BTDIGITAL</Canal>
          </Btoutreq>
@@ -163,65 +165,65 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtTitulo": {
-      "sBTTitulo": [
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtTitulos": {
+    "sBTTitulo": [
       {
-         "moneda": 2222,
-         "simbolo": "USD",
-         "pais": "UNITED STATES OF AMERICA (USA)",
-         "grupoId": 1,
-         "grupo": "Acción Ordinaria",
-         "codigo": 703,
-         "nombre": "APPLIED MICRO CIRCUITS CORP.",
-         "precioActual": 0,
-         "otrosConceptos": {
-            "sBTConcepto": {
+        "moneda": 2222,
+        "simbolo": "USD",
+        "pais": "UNITED STATES OF AMERICA (USA)",
+        "grupoId": 1,
+        "grupo": "Acción Ordinaria",
+        "codigo": 703,
+        "nombre": "APPLIED MICRO CIRCUITS CORP.",
+        "precioActual": 0,
+        "otrosConceptos": {
+          "sBTConcepto": {
             "texto": "Fecha de vencimiento.",
             "valor": 0,
             "concepto": "31/12/99"
-            }
-         }
+          }
+        }
       },
       {
-         "moneda": 2222,
-         "simbolo": "USD",
-         "pais": "UNITED STATES OF AMERICA (USA)",
-         "grupoId": 1,
-         "grupo": "Acción Ordinaria",
-         "codigo": 704,
-         "nombre": "APPLE COMPUTER INC.COM",
-         "precioActual": 0,
-         "otrosConceptos": {
-            "sBTConcepto": {
+        "moneda": 2222,
+        "simbolo": "USD",
+        "pais": "UNITED STATES OF AMERICA (USA)",
+        "grupoId": 1,
+        "grupo": "Acción Ordinaria",
+        "codigo": 704,
+        "nombre": "APPLE COMPUTER INC.COM",
+        "precioActual": 0,
+        "otrosConceptos": {
+          "sBTConcepto": {
             "texto": "Fecha de vencimiento.",
             "valor": 0,
             "concepto": "31/12/99"
-            }
-         }
+          }
+        }
       }
-      ]
-   },
-    "Erroresnegocio": {
-      "BTErrorNegocio": []
-    },
-   "Btoutreq": {
-      "Numero": "786",
-      "Estado": "OK",
-      "Servicio": "BTTitulos.ObtenerValores",
-      "Fecha": "2017-12-15",
-      "Requerimiento": 1,
-      "Hora": "16:35:22",
-      "Canal": "BTDIGITAL"
-    }
-}'
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "786",
+    "Estado": "OK",
+    "Servicio": "BTTitulos.ObtenerValores",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "16:35:22",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -247,6 +249,9 @@ otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
 pais | String | Nombre del país.
 precioActual | Double | Precio actual.
 simbolo | String | Símbolo de moneda.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -259,4 +264,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

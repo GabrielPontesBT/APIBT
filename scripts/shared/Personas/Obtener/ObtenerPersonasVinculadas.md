@@ -208,7 +208,10 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 nombre | String | Nombre de la persona. 
 personaUId | Long | Identificador único de persona. 
-vinculo | [sBTVinculo](#sbtvinculo) | Datos del vínculo. 
+vinculo | [sBTVinculo](#sbtvinculo) | Datos del vínculo.
+:::
+
+::: details sBTVinculo
 
 ### sBTVinculo
 
@@ -219,6 +222,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción de vínculo. 
 identificador | Short | Identificador de vínculo. 
-tipo | String | Tipo de vínculo. 
+tipo | String | Tipo de vínculo.
 :::
+
 <!-- CIERRA SDT -->
+

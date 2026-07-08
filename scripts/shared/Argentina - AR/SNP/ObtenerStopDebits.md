@@ -170,66 +170,69 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Device": "AC",
-        "Usuario": "BANTOTAL",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "fbd47e2319F955E77534D3E0"
-    },
-    "sdtConsultaStopDebit": {
-        "sBTConsultaStopDebit": [
-            {
-                "montoMaximoDebito": "M",
-                "importe": 1000,
-                "moneda": 2,
-                "stopDebit": {
-                    "prestacion": "DEB RIO",
-                    "referencia": "",
-                    "empresaOriginante": "3050001626",
-                    "clienteUId": 2,
-                    "idCliente": "2750101459380000006000",
-                    "fechaDesde": "0001-01-01",
-                    "fechaVencimiento": "0001-01-01",
-                    "fechaHasta": "0001-01-01",
-                    "tipoDeDebito": 1
-                },
-                "correlativo": 1,
-                "estado": "AC"
-            },
-            {
-                "montoMaximoDebito": "F",
-                "importe": 2000,
-                "moneda": 80,
-                "stopDebit": {
-                    "prestacion": "DEB RIO",
-                    "referencia": "",
-                    "empresaOriginante": "3050001626",
-                    "clienteUId": 2,
-                    "idCliente": "2750101516490000004000",
-                    "fechaDesde": "0001-01-01",
-                    "fechaVencimiento": "0001-01-01",
-                    "fechaHasta": "0001-01-01",
-                    "tipoDeDebito": 1
-                },
-                "correlativo": 2,
-                "estado": "AC"
-            },
-            ...
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 1638,
-        "Servicio": "BTSNP.ObtenerStopDebits",
-        "Estado": "OK",
-        "Fecha": "2021-06-18",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Hora": "16:05:58"
-    }
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "BANTOTAL",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fbd47e2319F955E77534D3E0"
+  },
+  "sdtConsultaStopDebit": {
+    "sBTConsultaStopDebit": [
+      {
+        "montoMaximoDebito": "M",
+        "importe": 1000,
+        "moneda": 2,
+        "stopDebit": {
+          "prestacion": "DEB RIO",
+          "referencia": "",
+          "empresaOriginante": "3050001626",
+          "clienteUId": 2,
+          "idCliente": "2750101459380000006000",
+          "fechaDesde": "0001-01-01",
+          "fechaVencimiento": "0001-01-01",
+          "fechaHasta": "0001-01-01",
+          "tipoDeDebito": 1
+        },
+        "correlativo": 1,
+        "estado": "AC",
+        "fechaAlta": "",
+        "fechaBaja": ""
+      },
+      {
+        "montoMaximoDebito": "F",
+        "importe": 2000,
+        "moneda": 80,
+        "stopDebit": {
+          "prestacion": "DEB RIO",
+          "referencia": "",
+          "empresaOriginante": "3050001626",
+          "clienteUId": 2,
+          "idCliente": "2750101516490000004000",
+          "fechaDesde": "0001-01-01",
+          "fechaVencimiento": "0001-01-01",
+          "fechaHasta": "0001-01-01",
+          "tipoDeDebito": 1
+        },
+        "correlativo": 2,
+        "estado": "AC",
+        "fechaAlta": "",
+        "fechaBaja": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 1638,
+    "Servicio": "BTSNP.ObtenerStopDebits",
+    "Estado": "OK",
+    "Fecha": "2021-06-18",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Hora": "16:05:58"
+  }
 }
 ```
 :::
@@ -255,7 +258,10 @@ importe | Double | Importe del Stop Debit.
 moneda | Short | Identificador de moneda.
 montoMaximoDebito | String | Monto máximo de débito (m=mensual/f=factura).
 stopDebit | [sBTStopDebit](#sbtstopdebit) | Datos del Stop Debit.
- 
+:::
+
+::: details sBTStopDebit
+
 ### sBTStopDebit
 
 ::: center 
@@ -273,4 +279,6 @@ prestacion | String | Identificador de prestación.
 referencia | String | Referencia del débito.
 tipoDeDebito | Byte | Tipo de débito (1=Abierto/2=Cerrado).
 :::
+
 <!-- CIERRA SDT -->
+

@@ -116,7 +116,7 @@ curl -X POST \
          <sdtTarjetaHabiente>
             <numeroDocumento>46600107</numeroDocumento>
             <tipoDocumento>Cédula Identidad</tipoDocumento>
-            <personaUid>122</personaUid>
+            <personaUId>122</personaUId>
             <nombre>PEREZ SOSA JUAN</nombre>
             <paisDocumento>URUGUAY</paisDocumento>
          </sdtTarjetaHabiente>

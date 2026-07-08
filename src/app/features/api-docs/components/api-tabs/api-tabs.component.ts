@@ -12,6 +12,9 @@ export class ApiTabsComponent {
   @Input() inputData!: any[];
   @Input() bodyCols: string[] = [];
   @Input() bodyData: any[] = [];
+  @Input() inputNote: string = '';
+  @Input() bodyNote: string = '';
+  @Input() outputNote: string = '';
   @Input() outputCols!: string[];
   @Input() outputData!: any[];
   @Input() errorCols!: string[];

@@ -123,6 +123,8 @@ curl -X POST \
             <fechaVencimiento>2026-03-31</fechaVencimiento>
             <sucursal>Sucursal Beta</sucursal>
             <nombreTarjeta>PEREZ SOSA JUAN</nombreTarjeta>
+            <fechaAlta></fechaAlta>
+            <novedadPendiente></novedadPendiente>
          </sdtEntidadTarjetaDebito>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -141,43 +143,48 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtEntidadTarjetaDebito": {
-      "limites": {
-         "sBDLimitesTarjeta.it": []
-      },
-      "paquete": "N",
-      "diasHastaVencimiento": "2730",
-      "tarjetaUId": "3",
-      "estadoPlastico": "ENTREGADO",
-      "descPaquete": "",
-      "tipoTarjeta": "MAESTRO NOMINADA",
-      "estadoTarjeta": "Activa",
-      "numeroTarjeta": "5010730101000000098",
-      "fechaVencimiento": "2026-03-31",
-      "sucursal": "Sucursal Beta",
-      "nombreTarjeta": "PEREZ SOSA JUAN"
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "937",
-      "Estado": "OK",
-      "Servicio": "BTTarjetasDeDebito.ObtenerDatos",
-      "Fecha": "2017-12-21",
-      "Requerimiento": "",
-      "Hora": "17:41:23",
-      "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtEntidadTarjetaDebito": {
+    "limites": {
+      "sBDLimitesTarjeta.it": [],
+      "descripcion": "",
+      "moneda": "",
+      "monto": 0
+    },
+    "paquete": "N",
+    "diasHastaVencimiento": "2730",
+    "tarjetaUId": "3",
+    "estadoPlastico": "ENTREGADO",
+    "descPaquete": "",
+    "tipoTarjeta": "MAESTRO NOMINADA",
+    "estadoTarjeta": "Activa",
+    "numeroTarjeta": "5010730101000000098",
+    "fechaVencimiento": "2026-03-31",
+    "sucursal": "Sucursal Beta",
+    "nombreTarjeta": "PEREZ SOSA JUAN",
+    "fechaAlta": "",
+    "novedadPendiente": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "937",
+    "Estado": "OK",
+    "Servicio": "BTTarjetasDeDebito.ObtenerDatos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": "",
+    "Hora": "17:41:23",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -207,8 +214,11 @@ numeroTarjeta | String | Número de tarjeta.
 paquete | String | ¿Tiene paquete? (S/N). 
 sucursal | String | Nombre de la sucursal. 
 tarjetaUId | Long | Identificador único de tarjeta. 
-tipoTarjeta |  String | Tipo de tarjeta. 
- 
+tipoTarjeta |  String | Tipo de tarjeta.
+:::
+
+::: details sBDLimitesTarjeta
+
 ### sBDLimitesTarjeta
 
 Los campos del tipo de dato estructurado sBDLimitesTarjeta son los siguientes: 
@@ -219,4 +229,6 @@ descripcion | String | Descripción del límite.
 moneda | String | Símbolo de la moneda. 
 monto | Double | Monto del límite.
 :::
+
 <!-- CIERRA SDT -->
+

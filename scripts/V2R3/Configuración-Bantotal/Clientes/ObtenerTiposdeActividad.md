@@ -35,7 +35,7 @@ No aplica.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtActividades | [sBTActividad](#sbtactividad) | Listado de actividades.
+sdtTiposActividad | [sBTActividad](#sbtactividad) | Listado de actividades.
 
 @tab Errores
 
@@ -104,7 +104,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>1EF0C356A692E3706CFA0201</Token>
          </Btinreq>
-         <sdtTipoActividad>
+         <sdtTiposActividad>
             <SdtsBTActividad>
                <descripcion>Actividad Principal</descripcion>
                <identificador>1</identificador>
@@ -115,7 +115,7 @@ curl -X POST \
                <identificador>2</identificador>
                <identificadorEntidadReguladora>0</identificadorEntidadReguladora>
             </SdtsBTActividad>
-         </sdtTipoActividad>
+         </sdtTiposActividad>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>10261</Numero>
@@ -140,7 +140,7 @@ curl -X POST \
       "Canal": "BTDIGITAL",
       "Requerimiento": "1"
    },
-   "sdtActividades": {
+   "sdtTiposActividad": {
       "sBTActividad": [             
          { 
                "descripcion": "Actividad Principal",
@@ -160,7 +160,7 @@ curl -X POST \
    "Btoutreq": {
       "Numero": "111598",
       "Estado": "OK",
-      "Servicio": "BTConfiguracionBantotal.ObtenerActividadesPorTipo",
+      "Servicio": "BTConfiguracionBantotal.ObtenerTiposDeActividad",
       "Requerimiento": "1",
       "Fecha": "2023-05-04",
       "Canal": "BTDIGITAL",

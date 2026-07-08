@@ -1,0 +1,433 @@
+{
+  "slug": "loans/getgrouploansimulation",
+  "pageTitle": "Get Group Loan Simulation",
+  "description": "Método para obtener la simulación de un integrante de un grupo.",
+  "pubName": "PublicLoans.getGroupLoanSimulation",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0041",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "simulationGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la simulación."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "currencyId",
+      "Tipo": "Short <strong>(Length: 4)</strong>",
+      "Comentarios": "Identificador de moneda."
+    },
+    {
+      "Nombre": "currencyDescription",
+      "Tipo": "String <strong>(Length: 30)</strong>",
+      "Comentarios": "Descripción de moneda."
+    },
+    {
+      "Nombre": "currencySign",
+      "Tipo": "String <strong>(Length: 4)</strong>",
+      "Comentarios": "Símbolo de moneda."
+    },
+    {
+      "Nombre": "general",
+      "Tipo": "<a href=\"#sdtsbtlogeneraldata\">SdtsBTLOGeneralData</a>",
+      "Comentarios": "Información general de la simulación."
+    },
+    {
+      "Nombre": "installmentDetails",
+      "Tipo": "<a href=\"#sdtsbtloinstallmentdetail\">SdtsBTLOInstallmentDetail</a>",
+      "Comentarios": "Listado de detalles de cuotas."
+    },
+    {
+      "Nombre": "disbursementFees",
+      "Tipo": "<a href=\"#sdtsbtlofeeloanout\">SdtsBTLOFeeLoanOut</a>",
+      "Comentarios": "Listado de comisiones en desembolso."
+    },
+    {
+      "Nombre": "installmentFees",
+      "Tipo": "<a href=\"#sdtsbtlofeeloanout\">SdtsBTLOFeeLoanOut</a>",
+      "Comentarios": "Listado de comisiones por cuota."
+    },
+    {
+      "Nombre": "insurancesAssociated",
+      "Tipo": "<a href=\"#sdtsbtloinsuranceloanout\">SdtsBTLOInsuranceLoanOut</a>",
+      "Comentarios": "Listado de seguros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050012",
+      "Descripción": "Debe ingresar el GUID de la simulación."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"simulationGUID\": \"6bad8760-206d-4eed-ad31-845081289d22\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"simulationGUID\": \"6bad8760-206d-4eed-ad31-845081289d22\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"currencyId\": 0,\n  \"currencyDescription\": \"Pesos Uruguayos\",\n  \"currencySign\": \"$\",\n  \"general\": {\n    \"QuotaPeriodicity\": 7,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"FirstPaymentDate\": \"2027-07-22\",\n    \"TotalOfTerm\": 82,\n    \"QuotaValue\": 1813,\n    \"ProductDescription\": \"GRUPALES\",\n    \"Amount\": 15000.6,\n    \"AmortizationTypeId\": 3,\n    \"QuotaNumber\": 12,\n    \"RateTypeId\": 1,\n    \"AmortizationTypeDescription\": \"AMORTIZABLE FRANCÉS (CONSTANTE TOTAL)\",\n    \"ExpirationDate\": \"2027-10-07\",\n    \"Rate\": 15,\n    \"Capital\": 15000,\n    \"ValueDate\": \"2027-07-15\",\n    \"Term\": 82,\n    \"TotalFinancialCost\": 0,\n    \"Total\": 21755.4\n  },\n  \"installmentDetails\": {\n    \"Capital\": 0,\n    \"deferredInterest\": 0,\n    \"fees\": {\n      \"Amount\": \"\",\n      \"feeName\": \"\",\n      \"taxes\": \"\",\n      \"Total\": \"\",\n      \"FeeId\": \"\"\n    },\n    \"feesTotal\": 0,\n    \"initialDate\": \"\",\n    \"installmentNumber\": 0,\n    \"installmentType\": \"\",\n    \"insurances\": {\n      \"Amount\": \"\",\n      \"Description\": \"\",\n      \"InsuranceId\": \"\"\n    },\n    \"insurancesTotal\": 0,\n    \"interest\": 0,\n    \"paymentDate\": \"\",\n    \"roundOff\": 0,\n    \"taxes\": 0,\n    \"Term\": 0,\n    \"Total\": 0,\n    \"typeOfGrace\": \"\"\n  },\n  \"disbursementFees\": {\n    \"Amount\": \"\",\n    \"Description\": \"\",\n    \"FeeId\": \"\",\n    \"ModificationType\": \"\",\n    \"Modified\": false,\n    \"Percentage\": \"\"\n  },\n  \"installmentFees\": {\n    \"Amount\": \"\",\n    \"Description\": \"\",\n    \"FeeId\": \"\",\n    \"ModificationType\": \"\",\n    \"Modified\": false,\n    \"Percentage\": \"\"\n  },\n  \"insurancesAssociated\": {\n    \"AdditionalAmount\": \"\",\n    \"ChargeTypeId\": \"\",\n    \"CommercialValue\": \"\",\n    \"Description\": \"\",\n    \"ExtraPrime\": \"\",\n    \"InsuranceId\": \"\",\n    \"InsuranceTypeDescription\": \"\",\n    \"ManagesExtraPremium\": false,\n    \"Percentage\": \"\",\n    \"Policy\": \"\",\n    \"PolicyEndDate\": \"\",\n    \"PolicyStartDate\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"17:56:02\",\n    \"Numero\": 13546976,\n    \"Servicio\": \"PublicLoans.getGroupLoanSimulation\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"currencyId\": 0,\n  \"currencyDescription\": \"Pesos Uruguayos\",\n  \"currencySign\": \"$\",\n  \"general\": {\n    \"QuotaPeriodicity\": 7,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"FirstPaymentDate\": \"2027-07-22\",\n    \"TotalOfTerm\": 82,\n    \"QuotaValue\": 1813,\n    \"ProductDescription\": \"GRUPALES\",\n    \"Amount\": 15000.6,\n    \"AmortizationTypeId\": 3,\n    \"QuotaNumber\": 12,\n    \"RateTypeId\": 1,\n    \"AmortizationTypeDescription\": \"AMORTIZABLE FRANCÉS (CONSTANTE TOTAL)\",\n    \"ExpirationDate\": \"2027-10-07\",\n    \"Rate\": 15,\n    \"Capital\": 15000,\n    \"ValueDate\": \"2027-07-15\",\n    \"Term\": 82,\n    \"TotalFinancialCost\": 0,\n    \"Total\": 21755.4\n  },\n  \"installmentDetails\": {\n    \"Capital\": 0,\n    \"deferredInterest\": 0,\n    \"fees\": {\n      \"Amount\": \"\",\n      \"feeName\": \"\",\n      \"taxes\": \"\",\n      \"Total\": \"\",\n      \"FeeId\": \"\"\n    },\n    \"feesTotal\": 0,\n    \"initialDate\": \"\",\n    \"installmentNumber\": 0,\n    \"installmentType\": \"\",\n    \"insurances\": {\n      \"Amount\": \"\",\n      \"Description\": \"\",\n      \"InsuranceId\": \"\"\n    },\n    \"insurancesTotal\": 0,\n    \"interest\": 0,\n    \"paymentDate\": \"\",\n    \"roundOff\": 0,\n    \"taxes\": 0,\n    \"Term\": 0,\n    \"Total\": 0,\n    \"typeOfGrace\": \"\"\n  },\n  \"disbursementFees\": {\n    \"Amount\": \"\",\n    \"Description\": \"\",\n    \"FeeId\": \"\",\n    \"ModificationType\": \"\",\n    \"Modified\": false,\n    \"Percentage\": \"\"\n  },\n  \"installmentFees\": {\n    \"Amount\": \"\",\n    \"Description\": \"\",\n    \"FeeId\": \"\",\n    \"ModificationType\": \"\",\n    \"Modified\": false,\n    \"Percentage\": \"\"\n  },\n  \"insurancesAssociated\": {\n    \"AdditionalAmount\": \"\",\n    \"ChargeTypeId\": \"\",\n    \"CommercialValue\": \"\",\n    \"Description\": \"\",\n    \"ExtraPrime\": \"\",\n    \"InsuranceId\": \"\",\n    \"InsuranceTypeDescription\": \"\",\n    \"ManagesExtraPremium\": false,\n    \"Percentage\": \"\",\n    \"Policy\": \"\",\n    \"PolicyEndDate\": \"\",\n    \"PolicyStartDate\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"17:56:02\",\n    \"Numero\": 13546976,\n    \"Servicio\": \"PublicLoans.getGroupLoanSimulation\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOGeneralData",
+      "fields": [
+        {
+          "Nombre": "AmortizationTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de amortización."
+        },
+        {
+          "Nombre": "AmortizationTypeDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo de amortización."
+        },
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "Capital",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "ExpirationDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "FirstPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del primer pago."
+        },
+        {
+          "Nombre": "ProductDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del producto."
+        },
+        {
+          "Nombre": "QuotaNumber",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "QuotaPeriodicity",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Periodicidad de cuotas."
+        },
+        {
+          "Nombre": "QuotaValue",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Valor de cuota."
+        },
+        {
+          "Nombre": "Rate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "RateTypeId",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de tasa."
+        },
+        {
+          "Nombre": "RateTypeDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo de tasa."
+        },
+        {
+          "Nombre": "Term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total"
+        },
+        {
+          "Nombre": "TotalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Costo financiero total."
+        },
+        {
+          "Nombre": "TotalOfTerm",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Total del plazo."
+        },
+        {
+          "Nombre": "ValueDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOInstallmentDetail",
+      "fields": [
+        {
+          "Nombre": "Capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "deferredInterest",
+          "Tipo": "Double",
+          "Comentarios": "Intereses diferidos."
+        },
+        {
+          "Nombre": "fees",
+          "Tipo": "<a href=\"#sdtsbtlofeedetail\">SdtsBTLOFeeDetail</a>",
+          "Comentarios": "Comisiones."
+        },
+        {
+          "Nombre": "feesTotal",
+          "Tipo": "Double",
+          "Comentarios": "Total de comisiones."
+        },
+        {
+          "Nombre": "initialDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha inicial."
+        },
+        {
+          "Nombre": "installmentNumber",
+          "Tipo": "Short",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "installmentType",
+          "Tipo": "String",
+          "Comentarios": "Tipo de cuota."
+        },
+        {
+          "Nombre": "insurances",
+          "Tipo": "<a href=\"#sdtsbtloinsurancedetail\">SdtsBTLOInsuranceDetail</a>",
+          "Comentarios": "Seguros."
+        },
+        {
+          "Nombre": "insurancesTotal",
+          "Tipo": "Double",
+          "Comentarios": "Total de seguros."
+        },
+        {
+          "Nombre": "interest",
+          "Tipo": "Double",
+          "Comentarios": "Interés."
+        },
+        {
+          "Nombre": "paymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de fin."
+        },
+        {
+          "Nombre": "roundOff",
+          "Tipo": "Double",
+          "Comentarios": "Redondeo."
+        },
+        {
+          "Nombre": "taxes",
+          "Tipo": "Double",
+          "Comentarios": "Impuestos."
+        },
+        {
+          "Nombre": "Term",
+          "Tipo": "Int",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double",
+          "Comentarios": "Total."
+        },
+        {
+          "Nombre": "typeOfGrace",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de gracia."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOFeeDetail",
+      "fields": [
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "FeeId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de comisión."
+        },
+        {
+          "Nombre": "feeName",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de comisión."
+        },
+        {
+          "Nombre": "taxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuestos."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOInsuranceDetail",
+      "fields": [
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de seguro."
+        },
+        {
+          "Nombre": "InsuranceId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de seguro."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOFeeLoanOut",
+      "fields": [
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Description de comisión."
+        },
+        {
+          "Nombre": "FeeId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de comisión."
+        },
+        {
+          "Nombre": "ModificationType",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de modificación."
+        },
+        {
+          "Nombre": "Modified",
+          "Tipo": "Boolean",
+          "Comentarios": "Modificado."
+        },
+        {
+          "Nombre": "Percentage",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Porcentaje."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOInsuranceLoanOut",
+      "fields": [
+        {
+          "Nombre": "AdditionalAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto agregado."
+        },
+        {
+          "Nombre": "ChargeTypeId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cobro."
+        },
+        {
+          "Nombre": "CommercialValue",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Valor comercial."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de seguro."
+        },
+        {
+          "Nombre": "ExtraPrime",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Prima adicional."
+        },
+        {
+          "Nombre": "InsuranceId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de seguro."
+        },
+        {
+          "Nombre": "InsuranceTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de tipo de seguro"
+        },
+        {
+          "Nombre": "ManagesExtraPremium",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Incluye prima adicional?"
+        },
+        {
+          "Nombre": "Percentage",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Porcentaje modificado."
+        },
+        {
+          "Nombre": "Policy",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Número de póliza."
+        },
+        {
+          "Nombre": "PolicyEndDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de fin de póliza."
+        },
+        {
+          "Nombre": "PolicyStartDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio de póliza."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

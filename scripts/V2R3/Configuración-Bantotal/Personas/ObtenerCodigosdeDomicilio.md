@@ -164,71 +164,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtCodigos": {
-		"codigoDomicilio": [
-			{
-				"descripcion": "Legal",
-				"identificador": "1"
-			},
-			{
-				"descripcion": "Particular",
-				"identificador": "2"
-			},
-			{
-				"descripcion": "Laboral",
-				"identificador": "3"
-			},
-			{
-				"descripcion": "Correspondencia 1",
-				"identificador": "4"
-			},
-			{
-				"descripcion": "Correspondencia 2",
-				"identificador": "5"
-			},
-			{
-				"descripcion": "Leasing Corresponden",
-				"identificador": "6"
-			},
-			{
-				"descripcion": "Migración",
-				"identificador": "50"
-			},
-			{
-				"descripcion": "Factoring (Ver BGL)",
-				"identificador": "97"
-			},
-			{
-				"descripcion": "Migración-Particular",
-				"identificador": "98"
-			},
-			{
-				"descripcion": "Migración-Call Cente",
-				"identificador": "99"
-			}
-		]
-	},
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8396,
-        "Estado": "OK",
-        "Servicio": "BTConfiguracionBantotal.ObtenerCodigosDeDomicilio",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCodigos": {
+    "codigoDomicilio": [
+      {
+        "descripcion": "Legal",
+        "identificador": "1"
+      },
+      {
+        "descripcion": "Particular",
+        "identificador": "2"
+      },
+      {
+        "descripcion": "Laboral",
+        "identificador": "3"
+      },
+      {
+        "descripcion": "Correspondencia 1",
+        "identificador": "4"
+      },
+      {
+        "descripcion": "Correspondencia 2",
+        "identificador": "5"
+      },
+      {
+        "descripcion": "Leasing Corresponden",
+        "identificador": "6"
+      },
+      {
+        "descripcion": "Migración",
+        "identificador": "50"
+      },
+      {
+        "descripcion": "Factoring (Ver BGL)",
+        "identificador": "97"
+      },
+      {
+        "descripcion": "Migración-Particular",
+        "identificador": "98"
+      },
+      {
+        "descripcion": "Migración-Call Cente",
+        "identificador": "99"
+      }
+    ],
+    "descripcion": "",
+    "identificador": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8396,
+    "Estado": "OK",
+    "Servicio": "BTConfiguracionBantotal.ObtenerCodigosDeDomicilio",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

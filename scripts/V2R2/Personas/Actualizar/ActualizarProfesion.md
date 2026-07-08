@@ -35,7 +35,7 @@ personaUId | Long | Identificador único de persona.
 profesionId | Short | Identificador de profesión.
 fechaInicioProfesion | Date | Fecha de inicio de la profesión.
 
-@tab Datos de Entrada
+@tab Datos de Salida
 
 No aplica.
 
@@ -94,7 +94,7 @@ curl -X POST \
 	},
 	"personaUId": 10003,
 	"profesionId": 1000,
-	"fechaInicioProfesion": 2012-03-01
+	"fechaInicioProfesion": "2012-03-01"
   }'
 ```
 :::

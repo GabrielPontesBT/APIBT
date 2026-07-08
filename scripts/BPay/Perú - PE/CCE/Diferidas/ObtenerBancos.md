@@ -37,7 +37,7 @@ idCamara 		| Int 		| M	| Codigo de camara (MPE005)
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-movimientoUID 	| [sBTListaBancox](#sbtlistabancox)	| Lista Bancos.
+movimientoUId 	| [sBTListaBancox](#sbtlistabancox)	| Lista Bancos.
 
 @tab Errores
 

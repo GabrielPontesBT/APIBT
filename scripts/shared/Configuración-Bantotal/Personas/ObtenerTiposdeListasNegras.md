@@ -107,28 +107,28 @@ curl -X POST \
          </Btinreq>
          <sdtTiposListaNegra>
             <sBTTipoListaNegra>
-               <descripcion>LAVADO DE DINERO</descripcion>
-               <codigo>1</codigo>
+               <Descripcion>LAVADO DE DINERO</Descripcion>
+               <Codigo>1</Codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <descripcion>LISTA DEL BANCO</descripcion>
-               <codigo>2</codigo>
+               <Descripcion>LISTA DEL BANCO</Descripcion>
+               <Codigo>2</Codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <descripcion>LISTA DE CLIENTES INDESEABLES</descripcion>
-               <codigo>3</codigo>
+               <Descripcion>LISTA DE CLIENTES INDESEABLES</Descripcion>
+               <Codigo>3</Codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <descripcion>INHABILITADOS CAMBIOS</descripcion>
-               <codigo>4</codigo>
+               <Descripcion>INHABILITADOS CAMBIOS</Descripcion>
+               <Codigo>4</Codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <descripcion>TERRORISTA</descripcion>
-               <codigo>16</codigo>
+               <Descripcion>TERRORISTA</Descripcion>
+               <Codigo>16</Codigo>
             </sBTTipoListaNegra>
             <sBTTipoListaNegra>
-               <descripcion/>
-               <codigo>18</codigo>
+               <Descripcion/>
+               <Codigo>18</Codigo>
             </sBTTipoListaNegra>
          </sdtTiposListaNegra>
          <Erroresnegocio></Erroresnegocio>
@@ -212,7 +212,7 @@ Los campos del tipo de dato estructurado sBTTipoListaNegra son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-codigo | Long | Identificador de tipo de lista negra.
-descripcion | String | Descripción de tipo de lista negra.
+Codigo | Long | Identificador de tipo de lista negra.
+Descripcion | String | Descripción de tipo de lista negra.
 :::
 <!-- CIERRA SDT -->

@@ -103,6 +103,7 @@ curl -X POST \
 		"clienteUId": 81,
 		"productoUId": 41
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -214,6 +215,7 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
@@ -235,11 +237,13 @@ idOperacionBT | String | Identificador String Bantotal (concatenación de todos 
 producto | [sBTProducto](#sbtproducto) | Datos del Producto pasivo.
 tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
 sucursal | String | Nombre de la sucursal de origen de la operación.
-subcuenta | String | Nombre de la cuenta vista.
+subCuenta | String | Nombre de la cuenta vista.
 saldo | Decimal | Saldo.
 estado | String | Descripción de estado.
 :::
- 
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -252,4 +256,6 @@ nombre | String | Nombre del producto.
 moneda | String | Símbolo de la moneda.
 papel | String | Símbolo del papel.
 :::
+
 <!-- CIERRA SDT -->
+

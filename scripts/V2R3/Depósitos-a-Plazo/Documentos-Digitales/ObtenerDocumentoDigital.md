@@ -125,17 +125,15 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b98a5858014A8B5C60A82434</Token>
          </Btinreq>
-         <sdtDocumentosDigitales>
-            <sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital xmlns:sBTVersionDocumentoDigitalns="http://uy.com.dlya.bantotal/BTSOA/" xmlns="ServiciosBT">
-               <DocumentoId>87</DocumentoId>
-               <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>
-               <Nombre>Prueba Asociar Contrato</Nombre>
-               <Version>1</Version>
-               <FechaEmision>2020-10-10</FechaEmision>
-               <FechaVencimiento>2010-10-10</FechaVencimiento>
-               <Archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</Archivo>
-            </sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital>
-         </sdtDocumentosDigitales>
+         <sdtDocumentoDigital>
+            <documentoId>87</documentoId>
+            <fechaEmision>2020-10-10</fechaEmision>
+            <archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</archivo>
+            <fechaVencimiento>2010-10-10</fechaVencimiento>
+            <tipoDocumentoDigital>Contrato</tipoDocumentoDigital>
+            <nombre>Prueba Asociar Contrato</nombre>
+            <version>1</version>
+         </sdtDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>3107</Numero>
@@ -153,40 +151,36 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDocumentosDigitales": {
-        "sBTVersionDocumentoDigital": [
-            {
-                "FechaEmision": "2020-10-10",
-                "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-                "FechaVencimiento": "2010-10-10",
-                "TipoDocumentoDigital": "Contrato",
-                "Version": "1",
-                "Nombre": "Prueba Asociar Contrato",
-                "DocumentoId": "87"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "3108",
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.ObtenerDocumentoDigital",
-        "Fecha": "2018-11-21",
-        "Requerimiento": "1",
-        "Hora": "12:09:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentoDigital": {
+    "documentoId": "87",
+    "fechaEmision": "2020-10-10",
+    "archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+    "fechaVencimiento": "2010-10-10",
+    "tipoDocumentoDigital": "Contrato",
+    "nombre": "Prueba Asociar Contrato",
+    "version": "1"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "3108",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerDocumentoDigital",
+    "Fecha": "2018-11-21",
+    "Requerimiento": "1",
+    "Hora": "12:09:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

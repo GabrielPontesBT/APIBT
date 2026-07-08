@@ -172,59 +172,69 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "instruccionVencimiento": {
-      "sBTInstruccion": [ {
-         "descripcion": "Cancelar y Acreditar al vto.",
-         "operacionUId": 2,
-         "idOperacionFmt": "000000029_001",
-         "sucursal": "Casa Matriz",
-         "producto": [ {
-           "productoUId": 21,
-               "nombre": "CUENTA CORRIENTE, int.",
-               "moneda": "$",
-               "papel": ""
-            }
-         ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "instruccionVencimiento": {
+    "sBTInstruccion": [
+      {
+        "descripcion": "Cancelar y Acreditar al vto.",
+        "operacionUId": 2,
+        "idOperacionFmt": "000000029_001",
+        "sucursal": "Casa Matriz",
+        "producto": {
+          "moneda": "",
+          "nombre": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "papel": "",
+          "productoUId": 0
+        }
       }
-      ]
-   },
-   "instruccionAcreditacion": {
-      "sBTInstruccion": [ {
-         "descripcion": "Acreditación",
-         "operacionUId": 2,
-         "idOperacionFmt": "000000029_001",
-         "sucursal": "Casa Matriz",
-         "producto": [ {
-               "productoUId": 21,
-               "nombre": "CUENTA CORRIENTE, int.",
-               "moneda": "$",
-               "papel": ""
-            }
-         ],
+    ]
+  },
+  "instruccionAcreditacion": {
+    "sBTInstruccion": [
+      {
+        "descripcion": "Acreditación",
+        "operacionUId": 2,
+        "idOperacionFmt": "000000029_001",
+        "sucursal": "Casa Matriz",
+        "producto": {
+          "moneda": "",
+          "nombre": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          },
+          "papel": "",
+          "productoUId": 0
+        }
       }
-      ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "144",
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.ObtenerInstruccion",
-        "Fecha": "2018-03-01",
-        "Requerimiento": "1",
-        "Hora": "11:07:39",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "144",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerInstruccion",
+    "Fecha": "2018-03-01",
+    "Requerimiento": "1",
+    "Hora": "11:07:39",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -245,7 +255,10 @@ descripcion | String | Descripción de la instrucción.
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos de producto. 
-sucursal | String | Nombre de la Sucursal de la operación. 
+sucursal | String | Nombre de la Sucursal de la operación.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -258,7 +271,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -269,6 +285,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

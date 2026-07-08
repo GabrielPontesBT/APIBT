@@ -74,7 +74,6 @@ Código | Descripción
             <bts:Token>ad33e17b1199865B3A2E76CF</bts:Token>
          </bts:Btinreq>
          <bts:diasVtoCuota>2</bts:diasVtoCuota>
-         <bts:actualiza>N</bts:actualiza>
          <bts:offset>1</bts:offset>
          <bts:limit>10</bts:limit>
          <bts:contarRegistros>N</bts:contarRegistros>
@@ -85,12 +84,7 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosAVencer=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 1e026dc4-d252-eff9-4dce-9398f81a587e' \
-  -d '{
+{
   "Btinreq": {
     "Requerimiento": 0,
     "Canal": "BTDIGITAL",
@@ -99,11 +93,10 @@ curl -X POST \
     "Token": "ad33e17b1199865B3A2E76CF"
   },
   "diasVtoCuota": 2,
-  "actualiza": "N",
   "offset": 1,
   "limit": 10,
   "contarRegistros": "N"
-}'
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -183,17 +176,17 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
+{
+  "Btinreq": {
     "Requerimiento": 0,
     "Canal": "BTDIGITAL",
     "Device": "GZ",
     "Usuario": "Instalador",
     "Token": "d51ae0498699865B3A2E76CF"
-	},
-   "quedanRegistros":"S",
-   "cantidadRegistros": 0,
-   "sdtDatosPrestamos": {
+  },
+  "quedanRegistros": "S",
+  "cantidadRegistros": 0,
+  "sdtDatosPrestamos": {
     "sBTDatosPrestamo": {
       "plazo": 124,
       "eventosPosteriores": "N",
@@ -205,7 +198,12 @@ curl -X POST \
         "papel": "$",
         "moneda": "S/",
         "productoUId": 1,
-        "nombre": "PRÉSTAMO-Financiero 9"
+        "nombre": "PRÉSTAMO-Financiero 9",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
       },
       "clienteUId": 407,
       "fechaProximoVencimiento": "2023-03-31",
@@ -213,7 +211,6 @@ curl -X POST \
       "fechaPrimerCuotaImpaga": "2023-03-31",
       "valorCuota": 106.1,
       "saldoCapital": 458.21,
-      "otrosConceptos": "",
       "cantidadCuotasVencidas": 0,
       "capitalOriginal": 800,
       "tir": 0,
@@ -225,27 +222,34 @@ curl -X POST \
       "cuotasPagasConRetraso": 3,
       "fechaUltimoPago": "2023-03-29",
       "tipoAmortizacion": "Francés con Seg.e Impu.",
-      "datosAdicionales": "",
       "estado": "Normal",
       "tasaMoraVigente": 40,
       "sucursal": "MIRAFLORES",
       "fechaValor": "2023-01-27",
-      "cantidadCuotas": 9
+      "cantidadCuotas": 9,
+      "datosAdicionales": {
+        "detalle": ""
+      },
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     }
   },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "901",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerPrestamosAVencer",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "12:27:52",
-        "Canal": "BTDIGITAL"
-    }
-}'
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "901",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerPrestamosAVencer",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "12:27:52",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -294,6 +298,9 @@ tasaVigente | Double | Tasa vigente.
 tipoAmortizacion | String | Tipo de amortización.
 tir | Double | Tir.
 valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -306,7 +313,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -318,6 +328,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -327,4 +340,6 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 detalle | String | Detalle de dato adicional.
 :::
+
 <!-- CIERRA SDT -->
+

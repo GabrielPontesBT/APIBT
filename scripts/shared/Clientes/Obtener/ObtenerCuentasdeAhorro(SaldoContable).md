@@ -184,63 +184,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosPasivos": {
-        "sBTProductoPasivo": [
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subCuenta": "PESOS",
-                "operacionUId": "281",
-                "saldo": "7433400.28",
-                "idOperacionFmt": "000000011_001",
-                "idOperacionBT": "0010100000021000000000000000001100001000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subCuenta": "",
-                "operacionUId": "282",
-                "saldo": "0.00",
-                "idOperacionFmt": "000000011_004",
-                "idOperacionBT": "0010000100021222200000000000001100004000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "USD",
-                    "productoUId": "0",
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Sucursal Beta"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "780",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerCuentasAhorro",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "11:42:37",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosPasivos": {
+    "sBTProductoPasivo": [
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subCuenta": "PESOS",
+        "operacionUId": "281",
+        "saldo": "7433400.28",
+        "idOperacionFmt": "000000011_001",
+        "idOperacionBT": "0010100000021000000000000000001100001000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subCuenta": "",
+        "operacionUId": "282",
+        "saldo": "0.00",
+        "idOperacionFmt": "000000011_004",
+        "idOperacionBT": "0010000100021222200000000000001100004000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "USD",
+          "productoUId": "0",
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Sucursal Beta"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "780",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerCuentasAhorro",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "11:42:37",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -265,7 +275,10 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Double | Saldo contable de la CC. 
 subCuenta | String | Nombre de la subcuenta. 
 sucursal | String | Nombre de la sucursal.. 
-tipoProducto | String | Tipo de producto. 
+tipoProducto | String | Tipo de producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -278,7 +291,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -291,4 +307,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

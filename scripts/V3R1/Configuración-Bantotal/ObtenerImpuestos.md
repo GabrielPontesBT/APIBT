@@ -310,6 +310,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de impuesto.
 condiciones | [sBTImpuestoCondicion](#sbtimpuestocondicion) | Listado de condiciones del impuesto.
 descripcion | String | Descripción del impuesto.
+:::
+
+::: details sBTImpuestoCondicion
 
 ### sBTImpuestoCondicion
 
@@ -321,4 +324,6 @@ codigo | Short | Código de condición.
 descripcion | String | Descripción de condición.
 tipo | String | Tipo de condición.
 :::
+
 <!-- CIERRA SDT -->
+

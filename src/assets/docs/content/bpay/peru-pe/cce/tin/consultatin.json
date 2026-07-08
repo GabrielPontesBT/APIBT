@@ -5,6 +5,7 @@
   "pubName": "BTCCETIN.ConsultaTIN",
   "programa": "RBTPG589",
   "scope": "Perú",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -28,7 +29,7 @@
       "Comentarios": "Codigo de camara (MPE005)"
     },
     {
-      "Nombre": "OperacionUID",
+      "Nombre": "OperacionUId",
       "Tipo": "Int",
       "Obligatoriedad": "M",
       "Comentarios": "id producto de ahorro."
@@ -88,6 +89,9 @@
       "Comentarios": "Interoperabilidad."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "TipoDocBenef",
@@ -220,11 +224,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header />\r\n    <soapenv:Body>        \r\n\t\t<bts:BTCCETIN.ConsultaTIN>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>94CC69812C4DB70C55177749</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:Canal>91</bts:Canal>\r\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\r\n\t\t\t<bts:OperacionUID>379</bts:OperacionUID>\r\n\t\t\t<bts:Moneda>2</bts:Moneda>\r\n\t\t\t<bts:Importe>1030</bts:Importe>\r\n\t\t\t<bts:CodigoTransaccion>325</bts:CodigoTransaccion>\r\n\t\t\t<bts:BancoDestino>38</bts:BancoDestino>\r\n\t\t\t<bts:SucursalDestino>100</bts:SucursalDestino>\r\n\t\t\t<bts:Tarjeta>4916069900012386</bts:Tarjeta>   \t\r\n\t\t\t<bts:CCIBeneficiario></bts:CCIBeneficiario>\r\n\t\t\t<bts:NroCelular/>\r\n\t\t\t<bts:Directorio/>\r\n\t\t\t<bts:CodigoQr/>\r\n\t\t</bts:BTCCETIN.ConsultaTIN>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Tarjeta",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header />\r\n    <soapenv:Body>        \r\n\t\t<bts:BTCCETIN.ConsultaTIN>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>94CC69812C4DB70C55177749</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:Canal>91</bts:Canal>\r\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\r\n\t\t\t<bts:OperacionUID>379</bts:OperacionUID>\r\n\t\t\t<bts:Moneda>2</bts:Moneda>\r\n\t\t\t<bts:Importe>1030</bts:Importe>\r\n\t\t\t<bts:CodigoTransaccion>325</bts:CodigoTransaccion>\r\n\t\t\t<bts:BancoDestino>38</bts:BancoDestino>\r\n\t\t\t<bts:SucursalDestino>100</bts:SucursalDestino>\r\n\t\t\t<bts:Tarjeta>4916069900012386</bts:Tarjeta>   \t\r\n\t\t\t<bts:CCIBeneficiario></bts:CCIBeneficiario>\r\n\t\t\t<bts:NroCelular/>\r\n\t\t\t<bts:Directorio/>\r\n\t\t\t<bts:CodigoQr/>\r\n\t\t</bts:BTCCETIN.ConsultaTIN>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "CCI",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header />\r\n    <soapenv:Body>        \r\n\t\t<bts:BTCCETIN.ConsultaTIN>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>94CC69812C4DB70C55177749</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:Canal>91</bts:Canal>\r\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\r\n\t\t\t<bts:OperacionUID>6935</bts:OperacionUID>\r\n\t\t\t<bts:Moneda>1</bts:Moneda>\r\n\t\t\t<bts:Importe>1030</bts:Importe>\r\n\t\t\t<bts:CodigoTransaccion>320</bts:CodigoTransaccion>\r\n\t\t\t<bts:BancoDestino>49</bts:BancoDestino>\r\n\t\t\t<bts:SucursalDestino></bts:SucursalDestino>\r\n\t\t\t<bts:Tarjeta></bts:Tarjeta>   \t\r\n\t\t\t<bts:CCIBeneficiario>04955700601816547120</bts:CCIBeneficiario>\r\n\t\t\t<bts:NroCelular/>\r\n\t\t\t<bts:Directorio/>\r\n\t\t\t<bts:CodigoQr/>\r\n\t\t</bts:BTCCETIN.ConsultaTIN>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n\t\t<BTCCETIN.ConsultaTINResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>1BC64FA67023F2B3ACAA1F52</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<TipoDocBenef>0</TipoDocBenef>\r\n\t\t\t<DocumentoBeneficiario/>\r\n\t\t\t<NombreBenef>ANG REN LOZ</NombreBenef>\r\n\t\t\t<DireccionBenef/>\r\n\t\t\t<TelefonoBeneficiario>0</TelefonoBeneficiario>\r\n\t\t\t<MovilBenef>0</MovilBenef>\r\n\t\t\t<MismoTitular>O</MismoTitular>\r\n\t\t\t<IDTransferencia>2025042813510208028191000594</IDTransferencia>\r\n\t\t\t<ITF>0.0</ITF>\r\n\t\t\t<ComisionOriginante>0.7</ComisionOriginante>\r\n\t\t\t<ComisionBeneficiario>0.3</ComisionBeneficiario>\r\n\t\t\t<IDL>0</IDL>\r\n\t\t\t<CodRespuesta/>\r\n\t\t\t<DscRespuesta/>\r\n\t\t\t<Erroresnegocio/>\t\t\t\t\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>NEG_ERROR</Estado>\r\n\t\t\t\t<Fecha>2025-04-28</Fecha>\r\n\t\t\t\t<Hora>13:51:02</Hora>\r\n\t\t\t\t<Numero>6137808</Numero>\r\n\t\t\t\t<Servicio>BTCCETIN.ConsultaTIN</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCETIN.ConsultaTINResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Tarjeta",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n\t\t<BTCCETIN.ConsultaTINResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>1BC64FA67023F2B3ACAA1F52</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<TipoDocBenef>0</TipoDocBenef>\r\n\t\t\t<DocumentoBeneficiario/>\r\n\t\t\t<NombreBenef>ANG REN LOZ</NombreBenef>\r\n\t\t\t<DireccionBenef/>\r\n\t\t\t<TelefonoBeneficiario>0</TelefonoBeneficiario>\r\n\t\t\t<MovilBenef>0</MovilBenef>\r\n\t\t\t<MismoTitular>O</MismoTitular>\r\n\t\t\t<IDTransferencia>2025042813510208028191000594</IDTransferencia>\r\n\t\t\t<ITF>0.0</ITF>\r\n\t\t\t<ComisionOriginante>0.7</ComisionOriginante>\r\n\t\t\t<ComisionBeneficiario>0.3</ComisionBeneficiario>\r\n\t\t\t<IDL>0</IDL>\r\n\t\t\t<CodRespuesta/>\r\n\t\t\t<DscRespuesta/>\r\n\t\t\t<Erroresnegocio/>\t\t\t\t\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>NEG_ERROR</Estado>\r\n\t\t\t\t<Fecha>2025-04-28</Fecha>\r\n\t\t\t\t<Hora>13:51:02</Hora>\r\n\t\t\t\t<Numero>6137808</Numero>\r\n\t\t\t\t<Servicio>BTCCETIN.ConsultaTIN</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCETIN.ConsultaTINResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "CCI",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n\t\t<BTCCETIN.ConsultaTINResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>1BC64FA67023F2B3ACAA1F52</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t <TipoDocBenef>0</TipoDocBenef>\r\n\t\t\t <DocumentoBeneficiario/>\r\n\t\t\t <NombreBenef>JUAN AYAY GONZALES</NombreBenef>\r\n\t\t\t <DireccionBenef/>\r\n\t\t\t <TelefonoBeneficiario>0</TelefonoBeneficiario>\r\n\t\t\t <MovilBenef>0</MovilBenef>\r\n\t\t\t <MismoTitular>O</MismoTitular>\r\n\t\t\t <IDTransferencia>2025042814041008028191000595</IDTransferencia>\r\n\t\t\t <ITF>0.05</ITF>\r\n\t\t\t <ComisionOriginante>3.0</ComisionOriginante>\r\n\t\t\t <ComisionBeneficiario>7.0</ComisionBeneficiario>\r\n\t\t\t <IDL>26589</IDL>\r\n\t\t\t <CodRespuesta/>\r\n\t\t\t <DscRespuesta/>\r\n\t\t\t <Erroresnegocio/>\t\t\t\t\t\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>NEG_ERROR</Estado>\r\n\t\t\t\t<Fecha>2025-04-28</Fecha>\r\n\t\t\t\t<Hora>13:51:02</Hora>\r\n\t\t\t\t<Numero>6137808</Numero>\r\n\t\t\t\t<Servicio>BTCCETIN.ConsultaTIN</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCETIN.ConsultaTINResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [],

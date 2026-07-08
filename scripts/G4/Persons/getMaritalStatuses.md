@@ -118,7 +118,10 @@ No aplica.
         "Description": "OTROS",
         "RequiresSpouse": false
       }
-    ]
+    ],
+    "Id": "",
+    "Description": "",
+    "RequiresSpouse": false
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -151,6 +154,6 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 Id | Byte $<(Length: 2)>$ | Identificador.
 Description | String $<(Length: 20)>$ | Descripción.
-RequiresSpouse | Boolean $<(Length: 1)>$ | Requiere cónyuge.
+RequiresSpouse | Boolean | Requiere cónyuge.
 :::
 <!-- CIERRA SDT -->

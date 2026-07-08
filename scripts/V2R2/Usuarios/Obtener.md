@@ -63,7 +63,7 @@ Código | Descripción
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Usuario>BANTOTAL</bts:Usuario>
+            <bts:usuario>BANTOTAL</bts:usuario>
             <bts:Token>2062732190F955E77534D3E0</bts:Token>
             <bts:Device>AC</bts:Device>
          </bts:Btinreq>
@@ -244,7 +244,10 @@ numeroCaja | Int | Número de caja del usuario.
 perfiles | [sBTPerfilBT](#sbtperfilbt) | Listado de perfiles asociados al usuario. 
 programaInicial | String | Nombre de programa inicial que se invoca al acceder a Bantotal. 
 sucursal | String | Sucursal donde se encuentra el usuario. 
-usuario | String | Identificador del usuario. 
+usuario | String | Identificador del usuario.
+:::
+
+::: details sBTPerfilBT
 
 ### sBTPerfilBT
 
@@ -254,6 +257,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 FechaAlta | Date | Fecha a partir de la cual el usuario se encuentra habilitado para operar con el perfil. 
 FechaVencimiento | Date | Fecha de vencimiento del perfil para el usuario. 
-Perfil | String | Identificador de perfil Bantotal. 
+Perfil | String | Identificador de perfil Bantotal.
 :::
+
 <!-- CIERRA SDT -->
+

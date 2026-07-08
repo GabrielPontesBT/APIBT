@@ -124,7 +124,6 @@ curl -X POST \
                <desdeFecha>0001-01-01</desdeFecha>
                <hastaCaracter/>
             </sBTScorePAE>
-            ...
          </sdtScoresPAE>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

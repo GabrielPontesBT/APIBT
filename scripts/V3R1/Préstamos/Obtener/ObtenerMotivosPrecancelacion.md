@@ -156,31 +156,31 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtMotivosPrecancelacion": {
-         "sBTCampo": {
-         "identificador": 1,
-         "descripcion": "Por Solicitud del cliente"
-         }
-      },
-    "Erroresnegocio":,
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.ObtenerMotivosPreCancelacion",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtMotivosPrecancelacion": {
+    "sBTCampo": {
+      "identificador": 1,
+      "descripcion": "Por Solicitud del cliente"
     }
-}'
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerMotivosPreCancelacion",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

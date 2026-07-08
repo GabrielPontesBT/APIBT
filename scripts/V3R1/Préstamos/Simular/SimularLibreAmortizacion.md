@@ -135,43 +135,45 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularLibreAmortizacion \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-        "Btinreq": {
-          "Device": "AV",
-          "Usuario": "MINSTALADOR",
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Token": "fe9c2c642d4A8B5C60A82434"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "fe9c2c642d4A8B5C60A82434"
+  },
+  "sdtPrestamo": {
+    "productoUId": 75,
+    "monto": 10000,
+    "clienteUId": 221,
+    "actividad": 1111,
+    "cantidadCuotas": "?",
+    "cuotasCapital": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2020-04-15",
+          "importe": 3000
         },
-        "sdtPrestamo": {
-          "productoUId": 75,
-          "monto": 10000,
-          "clienteUId": 221,
-          "actividad": 1111,
-          "cantidadCuotas": "?",
-          "cuotasCapital": {
-            "sBTCuotaPrestamoAlta": [
-              {
-                "fechaPago": "2020-04-15",
-                "importe": 3000.0
-              },
-              {
-                "fechaPago": "2020-05-15",
-                "importe": 3000.0
-              },
-              {
-                "fechaPago": "2020-06-15",
-                "importe": 4000.0
-              }
-            ]
-          }
+        {
+          "fechaPago": "2020-05-15",
+          "importe": 3000
+        },
+        {
+          "fechaPago": "2020-06-15",
+          "importe": 4000
         }
-      }'
+      ]
+    },
+    "cuotasInteres": {
+      "fechaPago": "",
+      "importe": 0
+    },
+    "periodoCuotas": 0,
+    "pizarra": 0,
+    "tasa": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -300,122 +302,127 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtSimulacion": {
-        "otrosConceptos": {
-            "sBTConcepto": []
-        },
-        "capital": "10000.00",
-        "fechaValor": "2018-10-30",
-        "cronograma": {
-            "sBTCuotaSimulacion": [
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "2937.53",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "I",
-                    "cuota": "2937.53",
-                    "fechaPago": "2020-04-15",
-                    "seguros": "0.00"
-                },
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "3000.00",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "K",
-                    "cuota": "3245.50",
-                    "fechaPago": "2020-04-15",
-                    "seguros": "245.50"
-                },
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "102.21",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "I",
-                    "cuota": "102.21",
-                    "fechaPago": "2020-05-15",
-                    "seguros": "0.00"
-                },
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "3000.00",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "K",
-                    "cuota": "3244.15",
-                    "fechaPago": "2020-05-15",
-                    "seguros": "244.15"
-                },
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "60.37",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "I",
-                    "cuota": "60.37",
-                    "fechaPago": "2020-06-15",
-                    "seguros": "0.00"
-                },
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "4000.00",
-                    "impuestos": "0.00",
-                    "intereses": "0.00",
-                    "concepto": "",
-                    "tipoCuota": "K",
-                    "cuota": "4242.80",
-                    "fechaPago": "2020-06-15",
-                    "seguros": "242.80"
-                }
-            ]
-        },
-        "impuestos": "0.00",
-        "tasaEfectiva": "0.000000",
-        "intereses": "3100.11",
-        "tasaNominalAnual": "17.522024",
-        "totalPrestamo": "10000.00",
-        "tasaEfectivaAnual": "19.000000",
-        "operacionUId": "761",
-        "tasa": "19.000000",
-        "fechaPrimerPago": "2020-04-15",
-        "fechaVencimiento": "2020-06-15",
-        "plazo": "0",
-        "producto": {
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": "0",
-            "nombre": "PRÉSTAMOS CONSUMO, Amortización Libre TF"
-        },
-        "comisiones": "0.00"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "otrosConceptos": {
+      "sBTConcepto": []
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "capital": "10000.00",
+    "fechaValor": "2018-10-30",
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "otrosConceptos": "0.00",
+          "capital": "2937.53",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "I",
+          "cuota": "2937.53",
+          "fechaPago": "2020-04-15",
+          "seguros": "0.00"
+        },
+        {
+          "otrosConceptos": "0.00",
+          "capital": "3000.00",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "K",
+          "cuota": "3245.50",
+          "fechaPago": "2020-04-15",
+          "seguros": "245.50"
+        },
+        {
+          "otrosConceptos": "0.00",
+          "capital": "102.21",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "I",
+          "cuota": "102.21",
+          "fechaPago": "2020-05-15",
+          "seguros": "0.00"
+        },
+        {
+          "otrosConceptos": "0.00",
+          "capital": "3000.00",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "K",
+          "cuota": "3244.15",
+          "fechaPago": "2020-05-15",
+          "seguros": "244.15"
+        },
+        {
+          "otrosConceptos": "0.00",
+          "capital": "60.37",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "I",
+          "cuota": "60.37",
+          "fechaPago": "2020-06-15",
+          "seguros": "0.00"
+        },
+        {
+          "otrosConceptos": "0.00",
+          "capital": "4000.00",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "K",
+          "cuota": "4242.80",
+          "fechaPago": "2020-06-15",
+          "seguros": "242.80"
+        }
+      ]
     },
-    "Btoutreq": {
-        "Numero": "13299",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.SimularLibreAmortizacion",
-        "Fecha": "2019-04-24",
-        "Requerimiento": 1,
-        "Hora": "10:35:16",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "impuestos": "0.00",
+    "tasaEfectiva": "0.000000",
+    "intereses": "3100.11",
+    "tasaNominalAnual": "17.522024",
+    "totalPrestamo": "10000.00",
+    "tasaEfectivaAnual": "19.000000",
+    "operacionUId": "761",
+    "tasa": "19.000000",
+    "fechaPrimerPago": "2020-04-15",
+    "fechaVencimiento": "2020-06-15",
+    "plazo": "0",
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": "0",
+      "nombre": "PRÉSTAMOS CONSUMO, Amortización Libre TF",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "comisiones": "0.00"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "13299",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularLibreAmortizacion",
+    "Fecha": "2019-04-24",
+    "Requerimiento": 1,
+    "Hora": "10:35:16",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -442,7 +449,10 @@ monto | Double | Capital solicitado.
 periodoCuotas | Long | Período entre vencimiento de cada cuota. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 productoUId | Long | Identificador único de producto. 
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -451,9 +461,9 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
- 
+
 ::: details sBTSimulacionPrestamoLA  
 
 ### sBTSimulacionPrestamoLA
@@ -477,7 +487,10 @@ tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva. 
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
-totalPrestamo | Double | Total a pagar. 
+totalPrestamo | Double | Total a pagar.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -490,7 +503,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -503,4 +519,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

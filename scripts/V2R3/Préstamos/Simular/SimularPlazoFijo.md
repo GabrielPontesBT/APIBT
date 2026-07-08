@@ -119,30 +119,26 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularPlazoFijo' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtPrestamoPlazoFijo": {
-        "clienteUId": 221,
-        "productoUId": 79,
-        "fechaPrimerPago": "",
-        "monto": 10000,
-        "plazo": 360,
-        "pizarra": 0,
-        "tasa": 0,
-        "actividad": 1111
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPrestamoPlazoFijo": {
+    "clienteUId": 221,
+    "productoUId": 79,
+    "fechaPrimerPago": "",
+    "monto": 10000,
+    "plazo": 360,
+    "pizarra": 0,
+    "tasa": 0,
+    "actividad": 1111,
+    "fechaVencimiento": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -208,59 +204,65 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtSimulacion": {
-        "otrosConceptos": {
-            "sBTConcepto": []
-        },
-        "fechaValor": "2020-03-13",
-        "capital": "10000.00",
-        "tasaEfectiva": "0.000000",
-        "intereses": "1200.00",
-        "tasaNominalAnual": "12.000000",
-        "totalPrestamo": "11200.00",
-        "tasaEfectivaAnual": "12.000000",
-        "valorCuota": "11200.00",
-        "operacionUId": "662",
-        "tasa": "12.000000",
-        "fechaPrimerPago": "2021-03-08",
-        "fechaVencimiento": "2021-03-08",
-        "plazo": "360",
-        "producto": {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": "0",
-            "nombre": "PRÉSTAMOS CAPITAL DE TRABAJO, Plazo Fijo"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
-        "cronograma": {
-            "sBTCuotaPrestamoAlta": [
-                {
-                    "fechaPago": "2017-08-10",
-                    "importe": 10000.00
-                }
-            ]
+      ]
+    },
+    "fechaValor": "2020-03-13",
+    "capital": "10000.00",
+    "tasaEfectiva": "0.000000",
+    "intereses": "1200.00",
+    "tasaNominalAnual": "12.000000",
+    "totalPrestamo": "11200.00",
+    "tasaEfectivaAnual": "12.000000",
+    "valorCuota": "11200.00",
+    "operacionUId": "662",
+    "tasa": "12.000000",
+    "fechaPrimerPago": "2021-03-08",
+    "fechaVencimiento": "2021-03-08",
+    "plazo": "360",
+    "producto": {
+      "moneda": "$",
+      "papel": "$",
+      "productoUId": "0",
+      "nombre": "PRÉSTAMOS CAPITAL DE TRABAJO, Plazo Fijo"
+    },
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2017-08-10",
+          "importe": 10000
         }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "12536",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.SimularPlazoFijo",
-        "Requerimiento": "",
-        "Fecha": "2019-02-25",
-        "Hora": "15:13:12",
-        "Canal": "BTDIGITAL"
+      ]
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "12536",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularPlazoFijo",
+    "Requerimiento": "",
+    "Fecha": "2019-02-25",
+    "Hora": "15:13:12",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -312,7 +314,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -324,7 +329,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -336,6 +344,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -344,6 +355,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

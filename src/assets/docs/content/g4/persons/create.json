@@ -6,10 +6,16 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTPEPA0030",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "naturalPerson",
@@ -17,6 +23,7 @@
       "Comentarios": "Datos de persona natural."
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "personGUID",
@@ -182,11 +189,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"naturalPerson\": {\r\n    \"CountryId\": 604,\r\n    \"CountryDescription\": \"Perú\",\r\n    \"DocumentTypeId\": 11,\r\n    \"DocumentTypeDescription\": \"D.N.I.\",\r\n    \"DocumentNumber\": \"12345679\",\r\n    \"FirstLastname\": \"PONTES\",\r\n    \"SecondLastname\": \"SILVA\",\r\n    \"FirstName\": \"GABRIEL\",\r\n    \"SecondName\": \"\",\r\n    \"Gender\": \"M\",\r\n    \"BirthDate\": \"1996-12-04\",\r\n    \"MaritalStatusId\": 1,\r\n    \"MaritalStatusDescription\": \"SOLTERO/A\",\r\n    \"RequiresSpouse\": false,\r\n    \"BirthCountryId\": 484,\r\n    \"BirthCountryDescription\": \"México\",\r\n    \"BirthPlace\": \"\",\r\n    \"BirthPlaceFirstLevelId\": 8,\r\n    \"BirthPlaceFirstLevelDescription\": \"\",\r\n    \"BirthPlaceSecondLevelId\": 4,\r\n    \"BirthPlaceSecondLevelDescription\": \"\",\r\n    \"BirthPlaceThirdLevelId\": 0,\r\n    \"BirthPlaceThirdLevelDescription\": \"\",\r\n    \"LegalCitizen\": false,\r\n    \"CitizenshipCountryId\": 604,\r\n    \"CitizenshipCountryDescription\": \"México\",\r\n    \"Deceased\": false,\r\n    \"DateOfDeath\": \"\",\r\n    \"ChildrenNumber\": 3,\r\n    \"DependentsNumber\": 0,\r\n    \"InstructionLevelId\": 0,\r\n    \"InstructionLevelDescription\": \"\",\r\n    \"Worth\": \"0.00\",\r\n    \"WorthStatus\": false,\r\n    \"WorthSubmissionDate\": \"\",\r\n    \"ExpirationDate\": \"2030-12-31\",\r\n    \"PEP\": false,\r\n    \"CustomerAcquisitionSource\": 8,\r\n    \"CustomerAcquisitionSourceDescription\": \"COMERCIALIZADORA\",\r\n    \"Contacts\": {\r\n      \"SdtsBTPEWContact\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 3,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"GPONTES@GMAIL.COM\",\r\n          \"Comment\": \"CORREO\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 3\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 1,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"095265956\",\r\n          \"Comment\": \"TELEFONO CELULAR\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 1\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 2,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"25148765\",\r\n          \"Comment\": \"TELEFONO FIJO\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 2\r\n        }\r\n      ]\r\n    },\r\n    \"Occupations\": {\r\n      \"SdtsBTPEWOccupation\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"OccupationId\": 1,\r\n          \"OccupationDescription\": \"EMPLEADO\",\r\n          \"JobTitleId\": 19,\r\n          \"JobTitleDescription\": \"ACCIONISTA\",\r\n          \"Multilateral\": false,\r\n          \"CompanyDocument\": \"\",\r\n          \"CompanyName\": \"DIENTE LOPEZ\",\r\n          \"StartDate\": \"2024-01-01\",\r\n          \"EndDate\": \"\",\r\n          \"EconomicActivityId\": 97000,\r\n          \"EconomicActivityDescription\": \"FAMILIAS\",\r\n          \"EconomicActivityTypeId\": 65,\r\n          \"EconomicActivityTypeDescription\": \"FAMILIAS\",\r\n          \"MainOccupation\": true,\r\n          \"Imports\": false,\r\n          \"Exports\": false,\r\n          \"EstablishmentTypeId\": 2,\r\n          \"EstablishmentTypeDescription\": \"ESTABLECIMIENTO / LOCAL\",\r\n          \"OccupationTypeId\": 1,\r\n          \"OccupationTypeDescription\": \"DEPENDIENTE\",\r\n          \"Income\": \"90000.00\"\r\n        }\r\n      ]\r\n    },\r\n    \"Addresses\": {\r\n      \"SdtsBTPEWAddress\": [\r\n        {\r\n          \"AddressCorrelative\": 1,\r\n          \"AddressTypeId\": 1,\r\n          \"AddressTypeDescription\": \"RESIDENCIA\",\r\n          \"HousingTypeId\": 5,\r\n          \"HousingTypeDescription\": \"FAMILIAR\",\r\n          \"IsABusiness\": true,\r\n          \"SinceDate\": \"2022-01-01\",\r\n          \"Level1Id\": 1,\r\n          \"Level1Description\": \"AVENIDA\",\r\n          \"Level1Data\": \"JOSE BENITO LAMAS\",\r\n          \"Level2Id\": 1,\r\n          \"Level2Description\": \"NO. PUERTA\",\r\n          \"Level2Data\": \"2233\",\r\n          \"Level3Id\": 1,\r\n          \"Level3Description\": \"APTO\",\r\n          \"Level3Data\": \"14\",\r\n          \"Level4Id\": 1,\r\n          \"Level4Description\": \"X\",\r\n          \"Level4Data\": \"\",\r\n          \"Address\": \"AVENIDA JOSE BENITO LAMAS NO. PUERTA 2233 APTO 14 X\",\r\n          \"References\": \"\",\r\n          \"Latitude\": \"0.000000\",\r\n          \"Longitude\": \"0.000000\",\r\n          \"CountryId\": 604,\r\n          \"CountryDescription\": \"México\",\r\n          \"DepartmentId\": 1,\r\n          \"DepartmentDescription\": \"Amazonas\",\r\n          \"CityId\": 101,\r\n          \"CityDescription\": \"Chachapoyas\",\r\n          \"DistrictId\": 10119,\r\n          \"DistrictDescription\": \"San Isidro de Maino\",\r\n          \"ColonyId\": 0,\r\n          \"GeographicalUbication\": \"\",\r\n          \"PostalCode\": \"9999\",\r\n          \"SettlementType\": 0,\r\n          \"StatusId\": \"H\",\r\n          \"MainAddress\": true\r\n        }\r\n      ]\r\n    },\r\n    \"References\": {\r\n      \"SdtsBTPEWReference\": []\r\n    },\r\n    \"Relationships\": {\r\n      \"SdtsBTPEWRelationship\": []\r\n    },\r\n    \"CustomFields\": {\r\n      \"SdtsBTPAWCustomField\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"Id\": \"Afición\",\r\n          \"Value\": \"0\",\r\n          \"Description\": \"\"\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"Id\": \"Profesión\",\r\n          \"Value\": \"0\",\r\n          \"Description\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"naturalPerson\": {\r\n    \"CountryId\": 604,\r\n    \"CountryDescription\": \"Perú\",\r\n    \"DocumentTypeId\": 11,\r\n    \"DocumentTypeDescription\": \"D.N.I.\",\r\n    \"DocumentNumber\": \"12345679\",\r\n    \"FirstLastname\": \"PONTES\",\r\n    \"SecondLastname\": \"SILVA\",\r\n    \"FirstName\": \"GABRIEL\",\r\n    \"SecondName\": \"\",\r\n    \"Gender\": \"M\",\r\n    \"BirthDate\": \"1996-12-04\",\r\n    \"MaritalStatusId\": 1,\r\n    \"MaritalStatusDescription\": \"SOLTERO/A\",\r\n    \"RequiresSpouse\": false,\r\n    \"BirthCountryId\": 484,\r\n    \"BirthCountryDescription\": \"México\",\r\n    \"BirthPlace\": \"\",\r\n    \"BirthPlaceFirstLevelId\": 8,\r\n    \"BirthPlaceFirstLevelDescription\": \"\",\r\n    \"BirthPlaceSecondLevelId\": 4,\r\n    \"BirthPlaceSecondLevelDescription\": \"\",\r\n    \"BirthPlaceThirdLevelId\": 0,\r\n    \"BirthPlaceThirdLevelDescription\": \"\",\r\n    \"LegalCitizen\": false,\r\n    \"CitizenshipCountryId\": 604,\r\n    \"CitizenshipCountryDescription\": \"México\",\r\n    \"Deceased\": false,\r\n    \"DateOfDeath\": \"\",\r\n    \"ChildrenNumber\": 3,\r\n    \"DependentsNumber\": 0,\r\n    \"InstructionLevelId\": 0,\r\n    \"InstructionLevelDescription\": \"\",\r\n    \"Worth\": \"0.00\",\r\n    \"WorthStatus\": false,\r\n    \"WorthSubmissionDate\": \"\",\r\n    \"ExpirationDate\": \"2030-12-31\",\r\n    \"PEP\": false,\r\n    \"CustomerAcquisitionSource\": 8,\r\n    \"CustomerAcquisitionSourceDescription\": \"COMERCIALIZADORA\",\r\n    \"Contacts\": {\r\n      \"SdtsBTPEWContact\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 3,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"GPONTES@GMAIL.COM\",\r\n          \"Comment\": \"CORREO\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 3\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 1,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"095265956\",\r\n          \"Comment\": \"TELEFONO CELULAR\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 1\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"ContactTypeId\": 2,\r\n          \"ContactTypeDescription\": \"\",\r\n          \"Text\": \"25148765\",\r\n          \"Comment\": \"TELEFONO FIJO\",\r\n          \"TelephoneCompanyId\": 1,\r\n          \"TelephoneCompanyDescription\": \"ANTEL\",\r\n          \"Enabled\": true,\r\n          \"AssociatedToAnAddress\": false,\r\n          \"AddressCorrelative\": 0,\r\n          \"AddressId\": \"\",\r\n          \"Validated\": true,\r\n          \"ReceivesMails\": false,\r\n          \"StartTimeRange1\": \"\",\r\n          \"EndTimeRange1\": \"\",\r\n          \"StartTimeRange2\": \"\",\r\n          \"EndTimeRange2\": \"\",\r\n          \"Priority\": 2\r\n        }\r\n      ]\r\n    },\r\n    \"Occupations\": {\r\n      \"SdtsBTPEWOccupation\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"OccupationId\": 1,\r\n          \"OccupationDescription\": \"EMPLEADO\",\r\n          \"JobTitleId\": 19,\r\n          \"JobTitleDescription\": \"ACCIONISTA\",\r\n          \"Multilateral\": false,\r\n          \"CompanyDocument\": \"\",\r\n          \"CompanyName\": \"DIENTE LOPEZ\",\r\n          \"StartDate\": \"2024-01-01\",\r\n          \"EndDate\": \"\",\r\n          \"EconomicActivityId\": 97000,\r\n          \"EconomicActivityDescription\": \"FAMILIAS\",\r\n          \"EconomicActivityTypeId\": 65,\r\n          \"EconomicActivityTypeDescription\": \"FAMILIAS\",\r\n          \"MainOccupation\": true,\r\n          \"Imports\": false,\r\n          \"Exports\": false,\r\n          \"EstablishmentTypeId\": 2,\r\n          \"EstablishmentTypeDescription\": \"ESTABLECIMIENTO / LOCAL\",\r\n          \"OccupationTypeId\": 1,\r\n          \"OccupationTypeDescription\": \"DEPENDIENTE\",\r\n          \"Income\": \"90000.00\"\r\n        }\r\n      ]\r\n    },\r\n    \"Addresses\": {\r\n      \"SdtsBTPEWAddress\": [\r\n        {\r\n          \"AddressCorrelative\": 1,\r\n          \"AddressTypeId\": 1,\r\n          \"AddressTypeDescription\": \"RESIDENCIA\",\r\n          \"HousingTypeId\": 5,\r\n          \"HousingTypeDescription\": \"FAMILIAR\",\r\n          \"IsABusiness\": true,\r\n          \"SinceDate\": \"2022-01-01\",\r\n          \"Level1Id\": 1,\r\n          \"Level1Description\": \"AVENIDA\",\r\n          \"Level1Data\": \"JOSE BENITO LAMAS\",\r\n          \"Level2Id\": 1,\r\n          \"Level2Description\": \"NO. PUERTA\",\r\n          \"Level2Data\": \"2233\",\r\n          \"Level3Id\": 1,\r\n          \"Level3Description\": \"APTO\",\r\n          \"Level3Data\": \"14\",\r\n          \"Level4Id\": 1,\r\n          \"Level4Description\": \"X\",\r\n          \"Level4Data\": \"\",\r\n          \"Address\": \"AVENIDA JOSE BENITO LAMAS NO. PUERTA 2233 APTO 14 X\",\r\n          \"References\": \"\",\r\n          \"Latitude\": \"0.000000\",\r\n          \"Longitude\": \"0.000000\",\r\n          \"CountryId\": 604,\r\n          \"CountryDescription\": \"México\",\r\n          \"DepartmentId\": 1,\r\n          \"DepartmentDescription\": \"Amazonas\",\r\n          \"CityId\": 101,\r\n          \"CityDescription\": \"Chachapoyas\",\r\n          \"DistrictId\": 10119,\r\n          \"DistrictDescription\": \"San Isidro de Maino\",\r\n          \"ColonyId\": 0,\r\n          \"GeographicalUbication\": \"\",\r\n          \"PostalCode\": \"9999\",\r\n          \"SettlementType\": 0,\r\n          \"StatusId\": \"H\",\r\n          \"MainAddress\": true\r\n        }\r\n      ]\r\n    },\r\n    \"References\": {\r\n      \"SdtsBTPEWReference\": []\r\n    },\r\n    \"Relationships\": {\r\n      \"SdtsBTPEWRelationship\": []\r\n    },\r\n    \"CustomFields\": {\r\n      \"SdtsBTPAWCustomField\": [\r\n        {\r\n          \"Correlative\": 1,\r\n          \"Id\": \"Afición\",\r\n          \"Value\": \"0\",\r\n          \"Description\": \"\"\r\n        },\r\n        {\r\n          \"Correlative\": 1,\r\n          \"Id\": \"Profesión\",\r\n          \"Value\": \"0\",\r\n          \"Description\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\",\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:49\",\r\n    \"Numero\": 13469348,\r\n    \"Servicio\": \"PublicPersons.create\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\",\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:49\",\r\n    \"Numero\": 13469348,\r\n    \"Servicio\": \"PublicPersons.create\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -300,7 +321,7 @@
         },
         {
           "Nombre": "Deceased",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Fallecido."
         },
         {
@@ -355,7 +376,7 @@
         },
         {
           "Nombre": "LegalCitizen",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Ciudadano legal."
         },
         {
@@ -375,7 +396,7 @@
         },
         {
           "Nombre": "PEP",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "PEP (Persona Expuesta Políticamente)."
         },
         {
@@ -390,7 +411,7 @@
         },
         {
           "Nombre": "RequiresSpouse",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Requiere cónyuge."
         },
         {
@@ -505,7 +526,7 @@
         },
         {
           "Nombre": "IsABusiness",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "¿Es un negocio?."
         },
         {
@@ -580,7 +601,7 @@
         },
         {
           "Nombre": "MainAddress",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Dirección principal."
         },
         {
@@ -625,7 +646,7 @@
         },
         {
           "Nombre": "AssociatedToAnAddress",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Asociado a una dirección."
         },
         {
@@ -650,7 +671,7 @@
         },
         {
           "Nombre": "Enabled",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Habilitado."
         },
         {
@@ -670,7 +691,7 @@
         },
         {
           "Nombre": "ReceivesMails",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Recibe correos."
         },
         {
@@ -700,7 +721,7 @@
         },
         {
           "Nombre": "Validated",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Validado."
         }
       ]
@@ -785,12 +806,12 @@
         },
         {
           "Nombre": "Exports",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Exporta."
         },
         {
           "Nombre": "Imports",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Importa."
         },
         {
@@ -810,12 +831,12 @@
         },
         {
           "Nombre": "MainOccupation",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Ocupación principal."
         },
         {
           "Nombre": "Multilateral",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Multilateral."
         },
         {
@@ -925,7 +946,7 @@
       "fields": [
         {
           "Nombre": "Bidirectional",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Bidireccional."
         },
         {
@@ -954,9 +975,9 @@
           "Comentarios": "Porcentaje."
         },
         {
-          "Nombre": "PersonGUID",
+          "Nombre": "PersonGUId",
           "Tipo": "String <strong>(Length: 36)</strong>",
-          "Comentarios": "GUID de persona."
+          "Comentarios": "GUID (identificador único global) de persona."
         }
       ]
     }

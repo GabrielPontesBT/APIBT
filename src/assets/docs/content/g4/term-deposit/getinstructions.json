@@ -6,9 +6,14 @@
   "modulo": "TermDeposit",
   "programa": "PublicAPI.BTTDPA0004",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "termDepositGUID",
@@ -16,6 +21,7 @@
       "Comentarios": "GUID (identificador único global) del depósito a plazo."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "Completar manualmente",
@@ -23,6 +29,7 @@
       "Comentarios": "Completar manualmente"
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "instructions",
@@ -72,11 +79,25 @@
   "examples": {
     "invocation": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"instructions\": {\n    \"instruction\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"Cancelar y Acreditar al vto.\",\n        \"Accounted\": \"S\",\n        \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n        \"AccountingAccountId\": 102100000,\n        \"BranchId\": 0,\n        \"CompanyId\": 0,\n        \"CounterpartyId\": 4612,\n        \"CurrencyId\": 0,\n        \"KindId\": 0,\n        \"ModuleId\": 0,\n        \"OperationId\": 0,\n        \"OperationTypeId\": 0,\n        \"SuboperationId\": 0,\n        \"Type\": 0\n      }\n    ]\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:38\",\n    \"Numero\": 13472660,\n    \"Servicio\": \"PublicTermDeposit.getInstructions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"instructions\": {\n    \"instruction\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"Cancelar y Acreditar al vto.\",\n        \"Accounted\": \"S\",\n        \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n        \"AccountingAccountId\": 102100000,\n        \"BranchId\": 0,\n        \"CompanyId\": 0,\n        \"CounterpartyId\": 4612,\n        \"CurrencyId\": 0,\n        \"KindId\": 0,\n        \"ModuleId\": 0,\n        \"OperationId\": 0,\n        \"OperationTypeId\": 0,\n        \"SuboperationId\": 0,\n        \"Type\": 0\n      }\n    ],\n    \"Accounted\": \"\",\n    \"AccountingAccountId\": \"\",\n    \"BranchId\": \"\",\n    \"CompanyId\": \"\",\n    \"CounterpartyId\": \"\",\n    \"CurrencyId\": \"\",\n    \"Id\": \"\",\n    \"Description\": \"\",\n    \"KindId\": \"\",\n    \"ModuleId\": \"\",\n    \"MovementGUID\": \"\",\n    \"OperationId\": \"\",\n    \"OperationTypeId\": \"\",\n    \"SuboperationId\": \"\",\n    \"Type\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:38\",\n    \"Numero\": 13472660,\n    \"Servicio\": \"PublicTermDeposit.getInstructions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"instructions\": {\n    \"instruction\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"Cancelar y Acreditar al vto.\",\n        \"Accounted\": \"S\",\n        \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n        \"AccountingAccountId\": 102100000,\n        \"BranchId\": 0,\n        \"CompanyId\": 0,\n        \"CounterpartyId\": 4612,\n        \"CurrencyId\": 0,\n        \"KindId\": 0,\n        \"ModuleId\": 0,\n        \"OperationId\": 0,\n        \"OperationTypeId\": 0,\n        \"SuboperationId\": 0,\n        \"Type\": 0\n      }\n    ],\n    \"Accounted\": \"\",\n    \"AccountingAccountId\": \"\",\n    \"BranchId\": \"\",\n    \"CompanyId\": \"\",\n    \"CounterpartyId\": \"\",\n    \"CurrencyId\": \"\",\n    \"Id\": \"\",\n    \"Description\": \"\",\n    \"KindId\": \"\",\n    \"ModuleId\": \"\",\n    \"MovementGUID\": \"\",\n    \"OperationId\": \"\",\n    \"OperationTypeId\": \"\",\n    \"SuboperationId\": \"\",\n    \"Type\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:38\",\n    \"Numero\": 13472660,\n    \"Servicio\": \"PublicTermDeposit.getInstructions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -136,7 +157,7 @@
         {
           "Nombre": "MovementGUID",
           "Tipo": "String",
-          "Comentarios": "GUID del movimiento."
+          "Comentarios": "GUID (identificador único global) del movimiento."
         },
         {
           "Nombre": "OperationId",

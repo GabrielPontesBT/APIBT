@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-productoUID | Long | Identificador de producto.
+productoUId | Long | Identificador de producto.
 parametro | Short | [Hidden: Valor '350' definido por defecto].
 
 @tab Datos de Salida
@@ -87,6 +87,7 @@ Código | Descripción
     },
     "productoUId": "105"
 }
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -107,9 +108,7 @@ Código | Descripción
             <Device/>
          </Btinreq>
          <valor>S</valor>
-         <Erroresnegocio>
-            <BTErrorNegocio>...</BTErrorNegocio>
-         </Erroresnegocio>
+         <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
             <Servicio>BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio</Servicio>
@@ -148,5 +147,6 @@ Código | Descripción
         "Estado": "OK"
     }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

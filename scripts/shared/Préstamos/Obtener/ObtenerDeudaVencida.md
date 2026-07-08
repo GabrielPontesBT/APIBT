@@ -93,6 +93,7 @@ curl -X POST \
    "operacionUId": 142,
 	"fechaDeCalculo": "2020-11-11"
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -152,5 +153,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

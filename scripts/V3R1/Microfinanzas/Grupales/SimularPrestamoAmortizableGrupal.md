@@ -118,47 +118,60 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularAmortizableGrupal \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "669747179CD285A89A23FBEE",
-        "Device": "1"
-    },
-    "sdtSimulacionAmortizableGrupal": {
-        "solicitudUId": 11341,
-        "productoUId": 17,
-        "fechaPrimerPago": "2018-08-14",
-        "cantidadCuotas": 0,
-        "periodoCuotas": 30,
-        "integrantesGrupo": {
-            "sBTIntegranteGrupoSolicitud": [
-                {
-                    "clienteUId": 91,
-                    "monto": 10500,
-                    "destinoCredito": 41
-                },
-                {
-                    "clienteUId": 102,
-                    "monto": 15000,
-                    "destinoCredito": 42
-                },
-                {
-                    "clienteUId": 119,
-                    "monto": 12500,
-                    "destinoCredito": 43
-                }
-            ]
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "669747179CD285A89A23FBEE",
+    "Device": "1"
+  },
+  "sdtSimulacionAmortizableGrupal": {
+    "solicitudUId": 11341,
+    "productoUId": 17,
+    "fechaPrimerPago": "2018-08-14",
+    "cantidadCuotas": 0,
+    "periodoCuotas": 30,
+    "integrantesGrupo": {
+      "sBTIntegranteGrupoSolicitud": [
+        {
+          "clienteUId": 91,
+          "monto": 10500,
+          "destinoCredito": 41,
+          "cuenta": "",
+          "destinoCreditoDesc": "",
+          "empresa": 0,
+          "valorCuota": 0
         },
-        "datosAdicionales": ""
-    }
-}'
+        {
+          "clienteUId": 102,
+          "monto": 15000,
+          "destinoCredito": 42,
+          "cuenta": "",
+          "destinoCreditoDesc": "",
+          "empresa": 0,
+          "valorCuota": 0
+        },
+        {
+          "clienteUId": 119,
+          "monto": 12500,
+          "destinoCredito": 43,
+          "cuenta": "",
+          "destinoCreditoDesc": "",
+          "empresa": 0,
+          "valorCuota": 0
+        }
+      ]
+    },
+    "datosAdicionales": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    },
+    "pizarra": 0,
+    "tasa": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -248,85 +261,108 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "1973148151CD285A89A23FBE",
-        "Device": "1"
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "1973148151CD285A89A23FBE",
+    "Device": "1"
+  },
+  "sdtSimulacionPrestamo": {
+    "operacionUId": 94,
+    "producto": {
+      "productoUId": 17,
+      "nombre": "PRESTAMOS, GRUPAL PAGO MENSUAL INT Y CAP",
+      "moneda": "Q",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "sdtSimulacionPrestamo": {
-        "operacionUId": 94,
-        "producto": {
-            "productoUId": 17,
-            "nombre": "PRESTAMOS, GRUPAL PAGO MENSUAL INT Y CAP",
-            "moneda": "Q",
-            "papel": "$"
-        },
-        "capital": 38000.00,
-        "valorCuota": 7467.00,
-        "intereses": 6802.02,
-        "tasa": 36.000000,
-        "tasaEfectiva": 0.000000,
-        "tasaEfectivaAnual": 42.576089,
-        "tasaNominalAnual": 36.000000,
-        "totalPrestamo": 44802.02,
-        "fechaValor": "2018-07-19",
-        "fechaVencimiento": "2019-01-14",
-        "fechaPrimerPago": "2018-08-14",
-        "plazo": 179,
-        "otrosConceptos": {
-            "sBTConcepto": []
-        },
-        "cronograma": {
-            "sBTCuotaSimulacion": []
+    "capital": 38000,
+    "valorCuota": 7467,
+    "intereses": 6802.02,
+    "tasa": 36,
+    "tasaEfectiva": 0,
+    "tasaEfectivaAnual": 42.576089,
+    "tasaNominalAnual": 36,
+    "totalPrestamo": 44802.02,
+    "fechaValor": "2018-07-19",
+    "fechaVencimiento": "2019-01-14",
+    "fechaPrimerPago": "2018-08-14",
+    "plazo": 179,
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
+      ]
     },
-    "sdtIntegrantesGrupo": {
-        "sBTIntegranteGrupoSolicitud": [
-            {
-                "empresa": 1,
-                "clienteUId": 91,
-                "cuenta": "PONTES SILVA GABRIEL",
-                "monto": 10500.00,
-                "destinoCredito": 41,
-                "destinoCreditoDesc": "CAPITAL DE TRABAJO PARA TEMPORADA ALTA",
-                "valorCuota": 2063.25
-            },
-            {
-                "empresa": 1,
-                "clienteUId": 102,
-                "cuenta": "BERGESSIO MARTINEZ GONZALO",
-                "monto": 15000.00,
-                "destinoCredito": 42,
-                "destinoCreditoDesc": "CAPITAL DE TRABAJO P.E.A.",
-                "valorCuota": 2947.50
-            },
-            {
-                "empresa": 1,
-                "clienteUId": 119,
-                "cuenta": "CERON RODRIGUEZ CESAR MAURICIO",
-                "monto": 12500.00,
-                "destinoCredito": 43,
-                "destinoCreditoDesc": "CAPITAL DE TRABAJO PERMANENTE P.E.A.",
-                "valorCuota": 2456.25
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTMicrofinanzas.SimulaAmortizableGrupal",
-        "Fecha": "2020-10-28",
-        "Hora": "11:03:57",
-        "Requerimiento": 1,
-        "Numero": 5417,
-        "Estado": "OK"
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "capital": 0,
+          "concepto": "",
+          "cuota": 0,
+          "fechaPago": "",
+          "impuestos": 0,
+          "interes": 0,
+          "otrosConceptos": 0,
+          "seguros": 0,
+          "tipoCuota": ""
+        }
+      ]
     }
-}'
+  },
+  "sdtIntegrantesGrupo": {
+    "sBTIntegranteGrupoSolicitud": [
+      {
+        "empresa": 1,
+        "clienteUId": 91,
+        "cuenta": "PONTES SILVA GABRIEL",
+        "monto": 10500,
+        "destinoCredito": 41,
+        "destinoCreditoDesc": "CAPITAL DE TRABAJO PARA TEMPORADA ALTA",
+        "valorCuota": 2063.25
+      },
+      {
+        "empresa": 1,
+        "clienteUId": 102,
+        "cuenta": "BERGESSIO MARTINEZ GONZALO",
+        "monto": 15000,
+        "destinoCredito": 42,
+        "destinoCreditoDesc": "CAPITAL DE TRABAJO P.E.A.",
+        "valorCuota": 2947.5
+      },
+      {
+        "empresa": 1,
+        "clienteUId": 119,
+        "cuenta": "CERON RODRIGUEZ CESAR MAURICIO",
+        "monto": 12500,
+        "destinoCredito": 43,
+        "destinoCreditoDesc": "CAPITAL DE TRABAJO PERMANENTE P.E.A.",
+        "valorCuota": 2456.25
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.SimulaAmortizableGrupal",
+    "Fecha": "2020-10-28",
+    "Hora": "11:03:57",
+    "Requerimiento": 1,
+    "Numero": 5417,
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -351,7 +387,10 @@ periodoCuotas | Int | Período entre vencimiento de cada cuota.
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 productoUId | Long | Identificador único de producto. 
 solicitudUId | Long | Identificador de instancia Workflow.  
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTIntegranteGrupoSolicitud
 
 ### sBTIntegranteGrupoSolicitud
 
@@ -366,7 +405,10 @@ destinoCredito | Int | Identificador del destino del crédito.
 destinoCreditoDesc | String | Nombre del destino del crédito. 
 empresa | Short | Identificador de empresa. 
 monto | Double | Monto solicitado por el cliente. 
-valorCuota | Double | Valor de la cuota. 
+valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -377,7 +419,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
 
 ::: details sBTSimulacionPrestamo
@@ -404,7 +446,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -417,15 +462,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
+productoUId | Long | Identificador único de producto.
+:::
 
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto. 
-texto | String | Texto. 
-valor | Double | Importe. 
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -442,6 +482,8 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
 <!-- CIERRA SDT -->
+

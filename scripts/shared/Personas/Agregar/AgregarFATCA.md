@@ -215,6 +215,9 @@ permanencia183Dias | String | Permanencia de más de 183 días en el último añ
 residenciaMasPaises | String | Residencia en más países. 
 residenciasFiscales | [sBTPCOResidenciasFiscales](#sbtpcoresidenciasfiscales) | Listado de residencias.
 tieneGreenCard | String | Poseedor de la tarjeta verde o "Green Card" de los EEUU (S/N).
+:::
+
+::: details sBTPCOResidenciasFiscales
 
 ### sBTPCOResidenciasFiscales
 
@@ -226,6 +229,8 @@ Nombre | Tipo | Comentarios
 codigoTIN | String | Código TIN. 
 correlativo | Short | Número de correlativo. 
 pais | String | Nombre del país. 
-paisId | Short | Identificador de país. 
+paisId | Short | Identificador de país.
 :::
+
 <!-- CIERRA SDT -->
+

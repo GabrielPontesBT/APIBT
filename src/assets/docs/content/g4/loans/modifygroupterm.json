@@ -1,0 +1,62 @@
+{
+  "slug": "loans/modifygroupterm",
+  "pageTitle": "Modify Group Term",
+  "description": "Método para el aplazamiento de un préstamo grupal.",
+  "pubName": "PublicLoans.modifyGroupTerm",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0054",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "periodsToExtend",
+      "Tipo": "Int <strong>(Length: 5)</strong>",
+      "Comentarios": "Períodos a extender."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"groupId\": \"123\",\n  \"periodsToExtend\": \"2\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"groupId\": \"123\",\n  \"periodsToExtend\": \"2\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.modifyGroupTerm\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.modifyGroupTerm\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

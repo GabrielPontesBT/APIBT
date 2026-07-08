@@ -45,7 +45,7 @@ cuenta 			    | String | Cuenta destino.
 nombre 	            | String | Nombre destino.
 tipoDocumento 		| String | Tipo documento destino.
 documento 			| String | Número documento destino.
-concepto 			| String | motivo, detalle.
+concepto 			| String | Motivo, detalle.
 referenciaUnica 	| String | Referencia.
 estado 			    | String | Estado: Ok, pendiente, error.
 fecha 			    | Date 	 | Fecha. 

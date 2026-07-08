@@ -89,32 +89,32 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularAmortizable \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtSimulacionAmortizable": {
-        "solicitudUId": 10896,
-        "clienteUId": 7,
-        "productoUId": 23,
-        "fechaPrimerPago": "2020-12-21",
-        "cantidadCuotas": 3,
-        "periodoCuotas": 30,
-        "monto": 30000,
-        "pizarra": 0,
-        "tasa": 0,
-        "destinoCredito": 33
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacionAmortizable": {
+    "solicitudUId": 10896,
+    "clienteUId": 7,
+    "productoUId": 23,
+    "fechaPrimerPago": "2020-12-21",
+    "cantidadCuotas": 3,
+    "periodoCuotas": 30,
+    "monto": 30000,
+    "pizarra": 0,
+    "tasa": 0,
+    "destinoCredito": 33,
+    "datosAdicionales": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     }
-}'
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -191,70 +191,105 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtSimulacion": {
-        "operacionUId": 15,
-        "producto": {
-            "productoUId": 23,
-            "nombre": "HIPOTECARIOS VIVIENDA, VIVIENDA HIPOTECARIO",
-            "moneda": "Q",
-            "papel": "$"
-        },
-        "capital": 30000.00,
-        "valorCuota": 10783.16,
-        "intereses": 2349.48,
-        "tasa": 30.000000,
-        "tasaEfectiva": 0.000000,
-        "tasaEfectivaAnual": 34.488882,
-        "tasaNominalAnual": 30.000000,
-        "totalPrestamo": 32349.48,
-        "fechaValor": "2020-10-20",
-        "fechaVencimiento": "2021-02-20",
-        "fechaPrimerPago": "2020-12-21",
-        "plazo": 123,
-        "otrosConceptos": {
-            "sBTConcepto": []
-        },
-        "cronograma": {
-            "sBTCuotaPrestamoAlta": [
-                {
-                    "fechaPago": "2020-12-21",
-                    "importe": 10783.16,
-                    "redondeo": 0.00
-                },
-                {
-                    "fechaPago": "2021-01-21",
-                    "importe": 10783.16,
-                    "redondeo": 0.00
-                },
-                {
-                    "fechaPago": "2021-02-20",
-                    "importe": 10783.16,
-                    "redondeo": 0.00
-                }
-            ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "operacionUId": 15,
+    "producto": {
+      "productoUId": 23,
+      "nombre": "HIPOTECARIOS VIVIENDA, VIVIENDA HIPOTECARIO",
+      "moneda": "Q",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "capital": 30000,
+    "valorCuota": 10783.16,
+    "intereses": 2349.48,
+    "tasa": 30,
+    "tasaEfectiva": 0,
+    "tasaEfectivaAnual": 34.488882,
+    "tasaNominalAnual": 30,
+    "totalPrestamo": 32349.48,
+    "fechaValor": "2020-10-20",
+    "fechaVencimiento": "2021-02-20",
+    "fechaPrimerPago": "2020-12-21",
+    "plazo": 123,
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTMicrofinanzas.SimularAmortizable",
-        "Fecha": "2019-10-18",
-        "Hora": "15:48:00",
-        "Requerimiento": 95,
-        "Numero": 1319,
-        "Estado": "OK"
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2020-12-21",
+          "importe": 10783.16,
+          "redondeo": 0,
+          "capital": 0,
+          "concepto": "",
+          "cuota": 0,
+          "impuestos": 0,
+          "interes": 0,
+          "otrosConceptos": 0,
+          "seguros": 0,
+          "tipoCuota": ""
+        },
+        {
+          "fechaPago": "2021-01-21",
+          "importe": 10783.16,
+          "redondeo": 0,
+          "capital": 0,
+          "concepto": "",
+          "cuota": 0,
+          "impuestos": 0,
+          "interes": 0,
+          "otrosConceptos": 0,
+          "seguros": 0,
+          "tipoCuota": ""
+        },
+        {
+          "fechaPago": "2021-02-20",
+          "importe": 10783.16,
+          "redondeo": 0,
+          "capital": 0,
+          "concepto": "",
+          "cuota": 0,
+          "impuestos": 0,
+          "interes": 0,
+          "otrosConceptos": 0,
+          "seguros": 0,
+          "tipoCuota": ""
+        }
+      ]
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.SimularAmortizable",
+    "Fecha": "2019-10-18",
+    "Hora": "15:48:00",
+    "Requerimiento": 95,
+    "Numero": 1319,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -281,7 +316,10 @@ periodoCuotas | Int | Período entre vencimiento de cada cuota.
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 productoUId | Long | Identificador único de producto. 
 solicitudUId | Long | Identificador de instancia Workflow. 
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -292,7 +330,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
 
 ::: details sBTSimulacionPrestamo
@@ -319,7 +357,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -332,15 +373,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
+productoUId | Long | Identificador único de producto.
+:::
 
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto. 
-texto | String | Texto. 
-valor | Double | Importe. 
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -357,6 +393,8 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
 <!-- CIERRA SDT -->
+

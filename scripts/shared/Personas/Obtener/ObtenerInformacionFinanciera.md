@@ -226,8 +226,11 @@ paisOrigenRecursos | String | Nombre de país.
 paisOrigenRecursosId | Short | Identificador de país.  
 totalActivos | Double | Importe del total de activos. 
 totalIngresosMensuales | Double | Importe del total de ingresos mensuales. 
-totalPasivos | Double | Importe del total de pasivos. 
- 
+totalPasivos | Double | Importe del total de pasivos.
+:::
+
+::: details sBTPCOOperacionesInternacionales
+
 ### sBTPCOOperacionesInternacionales
 
 ::: center 
@@ -246,6 +249,8 @@ operaMonedaExtranjera | String | (S = Si / N = No).
 pais | String | Nombre de país. 
 paisId | Short | Identificador de país. 
 tipoOperacion | String | (Importación / Exportación / Inversiones / Préstamos / Otro). 
-tipoProducto | String | (Cuenta de ahorros / Cuenta Corriente / CDT). 
+tipoProducto | String | (Cuenta de ahorros / Cuenta Corriente / CDT).
 :::
+
 <!-- CIERRA SDT -->
+

@@ -122,7 +122,6 @@ curl -X POST \
                <identificador>920</identificador> 
                <descripcion>Paso Molino</descripcion> 
             </sBTBarrio> 
-            ...
          </sdtBarrios> 
          <Erroresnegocio></Erroresnegocio> 
          <Btoutreq> 

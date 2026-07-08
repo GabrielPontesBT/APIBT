@@ -125,7 +125,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b98a5858014A8B5C60A82434</Token>
          </Btinreq>
-         <sdtDocumentosDigitales>
+         <sdtDocumentoDigital>
             <sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital xmlns:sBTVersionDocumentoDigitalns="http://uy.com.dlya.bantotal/BTSOA/" xmlns="ServiciosBT">
                <DocumentoId>87</DocumentoId>
                <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>
@@ -135,7 +135,7 @@ curl -X POST \
                <FechaVencimiento>2010-10-10</FechaVencimiento>
                <Archivo>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</Archivo>
             </sBTVersionDocumentoDigitalns:sBTVersionDocumentoDigital>
-         </sdtDocumentosDigitales>
+         </sdtDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>3107</Numero>
@@ -153,40 +153,40 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDocumentosDigitales": {
-        "sBTVersionDocumentoDigital": [
-            {
-                "FechaEmision": "2020-10-10",
-                "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-                "FechaVencimiento": "2010-10-10",
-                "TipoDocumentoDigital": "Contrato",
-                "Version": "1",
-                "Nombre": "Prueba Asociar Contrato",
-                "DocumentoId": "87"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "3108",
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.ObtenerDocumentoDigital",
-        "Fecha": "2018-11-21",
-        "Requerimiento": "1",
-        "Hora": "12:09:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentoDigital": {
+    "sBTVersionDocumentoDigital": [
+      {
+        "FechaEmision": "2020-10-10",
+        "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+        "FechaVencimiento": "2010-10-10",
+        "TipoDocumentoDigital": "Contrato",
+        "Version": "1",
+        "Nombre": "Prueba Asociar Contrato",
+        "DocumentoId": "87"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "3108",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerDocumentoDigital",
+    "Fecha": "2018-11-21",
+    "Requerimiento": "1",
+    "Hora": "12:09:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -203,12 +203,12 @@ Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los sigu
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-documentoId | Long | Titulo del documento digital. 
-fechaEmision | Date | Fecha de emisión del documento digital. 
-archivo | String | Documento digital codificado en base 64. 
-fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-nombre | String | Nombre del documento digital. 
-version | Int | Número de versión del documento digital. 
+DocumentoId | Long | Titulo del documento digital. 
+FechaEmision | Date | Fecha de emisión del documento digital. 
+Archivo | String | Documento digital codificado en base 64. 
+FechaVencimiento | Date | Fecha de vencimiento del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Nombre | String | Nombre del documento digital. 
+Version | Int | Número de versión del documento digital. 
 :::
 <!-- CIERRA SDT -->

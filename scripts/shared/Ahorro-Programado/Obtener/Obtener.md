@@ -113,7 +113,7 @@ curl -X POST \
          <sdtDetalleAhorro>
             <plazo>60</plazo>
             <ahorroUId>205</ahorroUId>
-            <diaDeIncremento>9</diaDeIncremento>
+            <diadeIncremento>9</diadeIncremento>
             <periodicidad>1</periodicidad>
             <fechaAltaSolicitud>2017-03-06</fechaAltaSolicitud>
             <periodosDeGraciaHabilitados>3</periodosDeGraciaHabilitados>
@@ -135,8 +135,8 @@ curl -X POST \
             <tipoTasa>Lineal Anual</tipoTasa>
             <fechaProximoIncremento>2017-06-09</fechaProximoIncremento>
             <renueva>No</renueva>
-            <operacionUIdOrigen>541</operacionUIdOrigen>
-            <operacionUIdDestino>541</operacionUIdDestino>
+            <operacionUIdorigen>541</operacionUIdorigen>
+            <operacionUIddestino>541</operacionUIddestino>
             <estado>Cancelado</estado>
             <abono>5000.00</abono>
             <fechaValor>2017-03-09</fechaValor>

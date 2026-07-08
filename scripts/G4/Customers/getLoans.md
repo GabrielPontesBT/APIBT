@@ -77,7 +77,35 @@ Código | Descripción
     "Token": "444B674391BCA7676279700A"
   },
   "customerLoan": {
-    "customerLoan": []
+    "customerLoan": [],
+    "AccountBalance": 0,
+    "AmortizationTypeId": 0,
+    "AmortizationTypeDescription": "",
+    "BranchId": 0,
+    "BranchDescription": "",
+    "DateOfLastTotalPayment": "",
+    "ExpirationDate": "",
+    "FirstUnpaidDate": "",
+    "InstallmentPeriodicity": 0,
+    "InstallmentValue": 0,
+    "InterestRate": 0,
+    "LoanGUId": "",
+    "NumberOfInstallments": 0,
+    "OriginalAmount": 0,
+    "Product": {
+      "CurrencyId": "",
+      "CurrencyDescription": "",
+      "CurrencySign": "",
+      "KindId": "",
+      "KindDescription": "",
+      "ProductDescription": "",
+      "ProductGUId": ""
+    },
+    "StatusId": 0,
+    "StatusDescription": "",
+    "Term": 0,
+    "TotalPaidInstallments": 0,
+    "ValueDate": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -119,7 +147,7 @@ FirstUnpaidDate | Date | Fecha del primer pago impago.
 InstallmentPeriodicity | Int | Periodicidad de cuotas.
 InstallmentValue | Double | Valor cuota.
 InterestRate | Double | Tasa de interés.
-LoanGUID | String | GUID del préstamo.
+LoanGUId | String | GUID (identificador único global) del préstamo.
 NumberOfInstallments | Int | Número de cuotas.
 OriginalAmount | Double | Monto original.
 Product | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Producto.
@@ -145,6 +173,6 @@ CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(Length: 36)>$ | GUID del producto.
+ProductGUId | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
 :::
 <!-- CIERRA SDT -->

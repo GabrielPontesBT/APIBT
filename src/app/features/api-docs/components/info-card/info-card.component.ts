@@ -13,6 +13,15 @@ export class InfoCardComponent {
   @Input() modulo?: string;
   @Input() programa!: string;
   @Input() scope!: string;
+  @Input() method?: string;
+  @Input() endpoint?: string;
+
+  readonly knownMethods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
+
+  get methodSvg(): string | null {
+    const m = this.method?.toUpperCase();
+    return m && this.knownMethods.includes(m) ? `assets/image/${m}.svg` : null;
+  }
 
   constructor(private router: Router) {}
 

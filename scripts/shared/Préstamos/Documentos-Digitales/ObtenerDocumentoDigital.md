@@ -202,12 +202,12 @@ Los campos del tipo de dato estructurado sBTVersionDocumentoDigital son los sigu
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-archivo | String | Documento digital codificado en base 64. 
+Archivo | String | Documento digital codificado en base 64. 
 documentoId | Long | Título del documento digital. 
-fechaEmision | Date | Fecha de emisión del documento digital. 
-fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
-nombre | String | Nombre del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-version | Int | Número de versión del documento digital. 
+FechaEmision | Date | Fecha de emisión del documento digital. 
+FechaVencimiento | Date | Fecha de vencimiento del documento digital. 
+Nombre | String | Nombre del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Version | Int | Número de versión del documento digital. 
 :::
 <!-- CIERRA SDT -->

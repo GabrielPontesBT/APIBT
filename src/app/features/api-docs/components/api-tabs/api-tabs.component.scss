@@ -114,13 +114,13 @@
   to   { opacity: 1; }
 }
 
-.errors-note {
-  margin-top: 1rem;
+.comment {
+  //margin-top: 1rem;
   font-size: 0.875rem;
   color: var(--text-color);
   line-height: var(--line-height);
 
-  p { margin: 0.4rem 0; &:first-child { margin-top: 0; } }
+  p { /*margin: 0.4rem 0;*/ &:first-child { margin-top: 0; } }
 }
 
 @keyframes tabFadeIn {

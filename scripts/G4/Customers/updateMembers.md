@@ -140,7 +140,7 @@ DocumentTypeId | Short | Identificador del tipo de documento.
 DocumentTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de documento.
 OwnershipTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de propiedad.
 OwnershipTypeDescription | String | Descripción del tipo de propiedad.
-PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonGUId | String $<(Length: 36)>$ | GUID (identificador único global) de persona.
 PersonName | String $<(Length: 70)>$ | Nombre de persona.
 PersonType | String $<(Length: 1)>$ | Tipo de persona.
 :::

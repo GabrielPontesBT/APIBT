@@ -5,6 +5,7 @@
   "pubName": "BTCCETIN.TransferenciaTin",
   "programa": "RBTPG590",
   "scope": "Perú",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -28,7 +29,7 @@
       "Comentarios": "Codigo de camara (MPE005)"
     },
     {
-      "Nombre": "OperacionUID",
+      "Nombre": "OperacionUId",
       "Tipo": "Int",
       "Obligatoriedad": "M",
       "Comentarios": "id producto de ahorro."
@@ -70,11 +71,14 @@
       "Comentarios": "QR, unstructuredInformation CT1."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
-      "Nombre": "movimientoUID",
+      "Nombre": "movimientoUId",
       "Tipo": "Int",
-      "Comentarios": "movimiento UID."
+      "Comentarios": "Movimiento UID."
     },
     {
       "Nombre": "codRespuesta",
@@ -127,11 +131,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header />\r\n    <soapenv:Body>        \r\n\t\t<bts:BTCCETIN.TransferenciaTin>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:Canal>91</bts:Canal>\r\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\r\n\t\t\t<bts:operacionUID>6935</bts:operacionUID>\r\n\t\t\t<bts:Moneda>1</bts:Moneda>\r\n\t\t\t<bts:Importe>1030</bts:Importe>\r\n\t\t\t<bts:IDTransferencia>2025042818142008028191000603</bts:IDTransferencia>\r\n\t\t\t<bts:MPE001IDL>26596</bts:MPE001IDL>\r\n\t\t\t<bts:Celular></bts:Celular>\r\n\t\t\t<bts:IdQr></bts:IdQr>\r\n\t\t</bts:BTCCETIN.TransferenciaTin>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Confirmacion",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header />\r\n    <soapenv:Body>        \r\n\t\t<bts:BTCCETIN.TransferenciaTin>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:Canal>91</bts:Canal>\r\n\t\t\t<bts:IDCamara>2</bts:IDCamara>\r\n\t\t\t<bts:operacionUID>6935</bts:operacionUID>\r\n\t\t\t<bts:Moneda>1</bts:Moneda>\r\n\t\t\t<bts:Importe>1030</bts:Importe>\r\n\t\t\t<bts:IDTransferencia>2025042818142008028191000603</bts:IDTransferencia>\r\n\t\t\t<bts:MPE001IDL>26596</bts:MPE001IDL>\r\n\t\t\t<bts:Celular></bts:Celular>\r\n\t\t\t<bts:IdQr></bts:IdQr>\r\n\t\t</bts:BTCCETIN.TransferenciaTin>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n\t<SOAP-ENV:Body>\r\n\t\t<BTCCETIN.TransferenciaTinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>A60F0486A686F9C081A582A6</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<movimientoUID>1234</movimientoUID>\r\n\t\t\t<codRespuesta/>\r\n\t\t\t<dscRespuesta/>\t\t\t\t\r\n\t\t\t<Erroresnegocio/>\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>NEG_ERROR</Estado>\r\n\t\t\t\t<Fecha>2025-04-28</Fecha>\r\n\t\t\t\t<Hora>18:15:42</Hora>\r\n\t\t\t\t<Numero>6139047</Numero>\r\n\t\t\t\t<Servicio>BTCCETIN.TransferenciaTin</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCETIN.TransferenciaTinResponse>\r\n\t</SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Confirmacion",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n\t<SOAP-ENV:Body>\r\n\t\t<BTCCETIN.TransferenciaTinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>A60F0486A686F9C081A582A6</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<movimientoUID>1234</movimientoUID>\r\n\t\t\t<codRespuesta/>\r\n\t\t\t<dscRespuesta/>\t\t\t\t\r\n\t\t\t<Erroresnegocio/>\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>NEG_ERROR</Estado>\r\n\t\t\t\t<Fecha>2025-04-28</Fecha>\r\n\t\t\t\t<Hora>18:15:42</Hora>\r\n\t\t\t\t<Numero>6139047</Numero>\r\n\t\t\t\t<Servicio>BTCCETIN.TransferenciaTin</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCETIN.TransferenciaTinResponse>\r\n\t</SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [],

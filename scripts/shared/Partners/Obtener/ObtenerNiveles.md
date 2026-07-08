@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-tipoUId | Short | Identificador único del tipo de partner.
+TipoUId | Short | Identificador único del tipo de partner.
 
 @tab Datos de Salida
 
@@ -65,7 +65,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>673543DE2A22DFAC951F9E41</bts:Token>
          </bts:Btinreq>
-         <bts:tipoUId>1</bts:tipoUId>
+         <bts:TipoUId>1</bts:TipoUId>
       </bts:BTPartners.ObtenerNiveles>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -80,7 +80,7 @@ Código | Descripción
     "Requerimiento": "1",
     "Token": "673543DE2A22DFAC951F9E41"
   },
-  "tipoUId": 1
+  "TipoUId": 1
 }
 ```
 :::

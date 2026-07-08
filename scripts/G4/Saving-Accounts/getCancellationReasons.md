@@ -85,7 +85,9 @@ No aplica.
         "id": 3,
         "description": "OTROS"
       }
-    ]
+    ],
+    "Id": "",
+    "description": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -116,7 +118,7 @@ Los campos del tipo de dato estructurado SdtsBTLICancellationReason son los sigu
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Short $<(Length: 4)>$ | Identificador de motivo de cierre.
+Id | Short $<(Length: 4)>$ | Identificador de motivo de cierre.
 description | String $<(Length: 40)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

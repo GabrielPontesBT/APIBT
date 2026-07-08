@@ -149,49 +149,51 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtIntegrantesGrupo": {
-		"sBTIntegranteGrupo": [
-		  {
-			"clienteUId": "27",
-			"cuenta": "GONZALEZ DUARTE MARÍA LUISA",
-			"tipoIntegranteId": "2",
-			"tipoIntegrante": "Integrantes",
-			"fechaAlta": "2019-05-23",
-			"fechaBaja": "0000-00-00",
-			"vigente": "S"
-		  },
-		  {
-			"clienteUId": "28",
-			"cuenta": "ILARIO BRAN",
-			"tipoIntegranteId": "2",
-			"tipoIntegrante": "Integrantes",
-			"fechaAlta": "2019-05-23",
-			"fechaBaja": "0000-00-00",
-			"vigente": "S"
-		  }
-		]
-	},
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "786",
-        "Estado": "OK",
-        "Servicio": "BTMicrofinanzas.ObtenerIntegrantesGrupo",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "16:35:22",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtIntegrantesGrupo": {
+    "sBTIntegranteGrupo": [
+      {
+        "clienteUId": "27",
+        "cuenta": "GONZALEZ DUARTE MARÍA LUISA",
+        "tipoIntegranteId": "2",
+        "tipoIntegrante": "Integrantes",
+        "fechaAlta": "2019-05-23",
+        "fechaBaja": "0000-00-00",
+        "vigente": "S",
+        "identificacionAlternativa": ""
+      },
+      {
+        "clienteUId": "28",
+        "cuenta": "ILARIO BRAN",
+        "tipoIntegranteId": "2",
+        "tipoIntegrante": "Integrantes",
+        "fechaAlta": "2019-05-23",
+        "fechaBaja": "0000-00-00",
+        "vigente": "S",
+        "identificacionAlternativa": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "786",
+    "Estado": "OK",
+    "Servicio": "BTMicrofinanzas.ObtenerIntegrantesGrupo",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "16:35:22",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

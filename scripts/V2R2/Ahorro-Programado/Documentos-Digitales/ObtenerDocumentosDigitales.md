@@ -111,7 +111,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>65386256C895CD01D7DC796E</Token>
          </Btinreq>
-         <sdtDocumentoDigital>
+         <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
                <Titulo>PRUEBA</Titulo>
                <FechaActualizacion>2015-01-01</FechaActualizacion>
@@ -119,7 +119,7 @@ curl -X POST \
                <TipoDocumentoDigital>Plan de Pagos</TipoDocumentoDigital>
                <DocumentoId>265</DocumentoId>
             </sBTDocumentoDigital>
-         </sdtDocumentoDigital>
+         </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>12028</Numero>
@@ -137,36 +137,36 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDocumentoDigital": {
-        "sBTDocumentoDigital": {
-            "Titulo": "PRUEBA GABO",
-            "FechaActualizacion": "2015-01-01",
-            "FechaVencimiento": "",
-            "TipoDocumentoDigital": "Plan de Pagos",
-            "DocumentoId": "265"
-        }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 823,
-        "Estado": "OK",
-        "Servicio": "BTAhorroProgramado.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
-        "Fecha": "2018-11-12",
-        "Hora": "17:47:27",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentosDigitales": {
+    "sBTDocumentoDigital": {
+      "Titulo": "PRUEBA GABO",
+      "FechaActualizacion": "2015-01-01",
+      "FechaVencimiento": "",
+      "TipoDocumentoDigital": "Plan de Pagos",
+      "DocumentoId": "265"
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 823,
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.ObtenerDocumentosDigitales",
+    "Requerimiento": "1",
+    "Fecha": "2018-11-12",
+    "Hora": "17:47:27",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -183,11 +183,10 @@ Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-titulo | String | Título del documento digital.  
-fechaactualizacion | Date | Fecha de actualización del documento digital.  
-fechavencimiento | Date | Fecha de vencimiento del documento digital.  
-tipodocumentodigital | String | Tipo del documento digital.  
-documentoid | Long | Identificador del documento digital.  
-
+Titulo | String | Título del documento digital.  
+FechaActualizacion | Date | Fecha de actualización del documento digital.  
+FechaVencimiento | Date | Fecha de vencimiento del documento digital.  
+TipoDocumentoDigital | String | Tipo del documento digital.  
+DocumentoId | Long | Identificador del documento digital.  
 :::
 <!-- CIERRA SDT -->

@@ -5,6 +5,7 @@
   "pubName": "BTModeladorPrestamos.ObtenerComisiones",
   "programa": "RBTPG521",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador único de producto."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtComisiones",
@@ -33,11 +37,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTModeladorPrestamos.ObtenerComisiones>\r\n         <bts:Btinreq>\r\n            <bts:Token>e85b0edaecCD285A89A23FBE</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>48</bts:productoUId>\r\n      </bts:BTModeladorPrestamos.ObtenerComisiones>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"GP\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"productoUId\": 48\r\n}'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"GP\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"productoUId\": 48\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTModeladorPrestamos.ObtenerComisiones>\r\n         <bts:Btinreq>\r\n            <bts:Token>e85b0edaecCD285A89A23FBE</bts:Token>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:productoUId>48</bts:productoUId>\r\n      </bts:BTModeladorPrestamos.ObtenerComisiones>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"GP\",\r\n        \"Requerimiento\": 1\r\n    },\r\n    \"productoUId\": 48\r\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTModeladorPrestamos.ObtenerComisionesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>e85b0edaecCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sdtComisiones>\r\n            <sBTComisionPrestamo>\r\n               <porcentaje>0.0000</porcentaje>\r\n               <descripcion>Comision por venta seguro</descripcion>\r\n               <importe>0.00</importe>\r\n               <codigo>137</codigo>\r\n            </sBTComisionPrestamo>\r\n            <sBTComisionPrestamo>\r\n               <porcentaje>0.0000</porcentaje>\r\n               <descripcion>MiAuto - Otorgamiento</descripcion>\r\n               <importe>0.00</importe>\r\n               <codigo>300</codigo>\r\n            </sBTComisionPrestamo>\r\n         </sdtComisiones>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>13113</Numero>\r\n            <Servicio>BTModeladorPrestamos.ObtenerComisiones</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-23</Fecha>\r\n            <Hora>09:21:39</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTModeladorPrestamos.ObtenerComisionesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\"\r\n    },\r\n    \"sdtComisiones\": {\r\n        \"sBTComisionPrestamo\": [\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"Comision por venta seguro\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 137\r\n            },\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"MiAuto - Otorgamiento\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 300\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 13113,\r\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerComisiones\",\r\n        \"Estado\": \"OK\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2023-05-23\",\r\n        \"Hora\": \"09:21:39\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\"\r\n    },\r\n    \"sdtComisiones\": {\r\n        \"sBTComisionPrestamo\": [\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"Comision por venta seguro\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 137\r\n            },\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"MiAuto - Otorgamiento\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 300\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 13113,\r\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerComisiones\",\r\n        \"Estado\": \"OK\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2023-05-23\",\r\n        \"Hora\": \"09:21:39\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTModeladorPrestamos.ObtenerComisionesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>e85b0edaecCD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sdtComisiones>\r\n            <sBTComisionPrestamo>\r\n               <porcentaje>0.0000</porcentaje>\r\n               <descripcion>Comision por venta seguro</descripcion>\r\n               <importe>0.00</importe>\r\n               <codigo>137</codigo>\r\n            </sBTComisionPrestamo>\r\n            <sBTComisionPrestamo>\r\n               <porcentaje>0.0000</porcentaje>\r\n               <descripcion>MiAuto - Otorgamiento</descripcion>\r\n               <importe>0.00</importe>\r\n               <codigo>300</codigo>\r\n            </sBTComisionPrestamo>\r\n         </sdtComisiones>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>13113</Numero>\r\n            <Servicio>BTModeladorPrestamos.ObtenerComisiones</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-23</Fecha>\r\n            <Hora>09:21:39</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTModeladorPrestamos.ObtenerComisionesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"GP\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"e85b0edaecCD285A89A23FBE\"\r\n    },\r\n    \"sdtComisiones\": {\r\n        \"sBTComisionPrestamo\": [\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"Comision por venta seguro\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 137\r\n            },\r\n            {\r\n                \"porcentaje\": 0.0000,\r\n                \"descripcion\": \"MiAuto - Otorgamiento\",\r\n                \"importe\": 0.00,\r\n                \"codigo\": 300\r\n            }\r\n        ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 13113,\r\n        \"Servicio\": \"BTModeladorPrestamos.ObtenerComisiones\",\r\n        \"Estado\": \"OK\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2023-05-23\",\r\n        \"Hora\": \"09:21:39\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

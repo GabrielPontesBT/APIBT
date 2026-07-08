@@ -65,7 +65,7 @@ Código | Descripción
             <bts:Requerimiento>0</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Device>GZ</bts:Device>
-            <bts:Usuario>INSTALADOR</bts:Usuario>
+            <bts:usuario>INSTALADOR</bts:usuario>
             <bts:Token>DF1F942C6EC60E8B95BBEA69</bts:Token>
          </bts:Btinreq>
          <bts:usuario>INSTALADOR</bts:usuario>

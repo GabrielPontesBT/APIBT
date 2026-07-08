@@ -256,6 +256,9 @@ nombre | String | Nombre de producto.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
 papel | String | Símbolo de papel.
 productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -267,4 +270,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -1,0 +1,163 @@
+{
+  "slug": "loans/getgroup",
+  "pageTitle": "Get Group",
+  "description": "Método para obtener la información de un grupo.",
+  "pubName": "PublicLoans.getGroup",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0035",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "group",
+      "Tipo": "<a href=\"#sdtsbtmggetgroupdata\">SdtsBTMGGetGroupData</a>",
+      "Comentarios": "Datos del grupo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"groupId\": 1\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"groupId\": 1\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"\",\n    \"Requerimiento\": 1,\n    \"Token\": \"37E3E6C528B76F7D36652FF5\"\n  },\n  \"group\": {\n    \"groupId\": 1,\n    \"groupName\": \"LAS VENDEDORAS DEL SIGLO\",\n    \"branchId\": 1,\n    \"branchDescription\": \"Sucursal Beta\",\n    \"executiveId\": 1,\n    \"executiveDescription\": \"INSTALADOR\",\n    \"isAMemberDomicile\": false,\n    \"meetingDomicile\": \"Pasaje Los Robles C14\",\n    \"counterpartyOfDomicile\": 0,\n    \"meetingDomicileCorrelative\": 0,\n    \"meetingDayOfWeek\": 2,\n    \"meetingTime\": \"12:50\",\n    \"latePenaltyAmount\": 0,\n    \"absencePenaltyAmount\": 0,\n    \"isAccountOpenInInstitution\": true,\n    \"savingAccountGUID\": \"02dab08a-eb40-4f26-b527-64a8bd8ea2b9\",\n    \"savingAccountExternalId\": \"47859613645\",\n    \"cycleId\": 3\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:31:35\",\n    \"Numero\": 13541963,\n    \"Servicio\": \"PublicLoans.getGroup\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"\",\n    \"Requerimiento\": 1,\n    \"Token\": \"37E3E6C528B76F7D36652FF5\"\n  },\n  \"group\": {\n    \"groupId\": 1,\n    \"groupName\": \"LAS VENDEDORAS DEL SIGLO\",\n    \"branchId\": 1,\n    \"branchDescription\": \"Sucursal Beta\",\n    \"executiveId\": 1,\n    \"executiveDescription\": \"INSTALADOR\",\n    \"isAMemberDomicile\": false,\n    \"meetingDomicile\": \"Pasaje Los Robles C14\",\n    \"counterpartyOfDomicile\": 0,\n    \"meetingDomicileCorrelative\": 0,\n    \"meetingDayOfWeek\": 2,\n    \"meetingTime\": \"12:50\",\n    \"latePenaltyAmount\": 0,\n    \"absencePenaltyAmount\": 0,\n    \"isAccountOpenInInstitution\": true,\n    \"savingAccountGUID\": \"02dab08a-eb40-4f26-b527-64a8bd8ea2b9\",\n    \"savingAccountExternalId\": \"47859613645\",\n    \"cycleId\": 3\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:31:35\",\n    \"Numero\": 13541963,\n    \"Servicio\": \"PublicLoans.getGroup\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGetGroupData",
+      "fields": [
+        {
+          "Nombre": "absencePenaltyAmount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto de multa por ausencia."
+        },
+        {
+          "Nombre": "branchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "branchDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción de sucursal."
+        },
+        {
+          "Nombre": "counterpartyOfDomicile",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de contraparte del domicilio."
+        },
+        {
+          "Nombre": "cycleId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de ciclo."
+        },
+        {
+          "Nombre": "executiveId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de ejecutivo."
+        },
+        {
+          "Nombre": "executiveDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del ejecutivo."
+        },
+        {
+          "Nombre": "groupId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "groupName",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Nombre del grupo."
+        },
+        {
+          "Nombre": "isAccountOpenInInstitution",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Cuenta abierta en la institución?."
+        },
+        {
+          "Nombre": "isAMemberDomicile",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Es el domicilio de un miembro?."
+        },
+        {
+          "Nombre": "latePenaltyAmount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto de multa por tardanza."
+        },
+        {
+          "Nombre": "meetingDayOfWeek",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Día de reunión del grupo."
+        },
+        {
+          "Nombre": "meetingDomicile",
+          "Tipo": "String <strong>(Length: 50)</strong>",
+          "Comentarios": "Domicilio de reunión del grupo."
+        },
+        {
+          "Nombre": "meetingDomicileCorrelative",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Correlativo de domicilio de reunión."
+        },
+        {
+          "Nombre": "meetingTime",
+          "Tipo": "String <strong>(Length: 5)</strong>",
+          "Comentarios": "Hora de reunión del grupo."
+        },
+        {
+          "Nombre": "savingAccountExternalId",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Identificador de cuenta de ahorro externa."
+        },
+        {
+          "Nombre": "savingAccountGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de cuenta de ahorro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

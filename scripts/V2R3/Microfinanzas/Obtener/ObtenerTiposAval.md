@@ -126,30 +126,32 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtTiposAval": {
-          "TipoAval": {
-            "codigo": "1",
-            "descripcion": "Fiduciaria"
-          }
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.ObtenerTiposAval",
-          "Fecha": "2019-09-17",
-          "Hora": "12:20:32",
-          "Requerimiento": "95",
-          "Numero": "135",
-          "Estado": "OK"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtTiposAval": {
+    "TipoAval": {
+      "codigo": "1",
+      "descripcion": "Fiduciaria"
+    },
+    "codigo": 0,
+    "descripcion": ""
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.ObtenerTiposAval",
+    "Fecha": "2019-09-17",
+    "Hora": "12:20:32",
+    "Requerimiento": "95",
+    "Numero": "135",
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -5,6 +5,7 @@
   "pubName": "BTCadenaCierre.ObtenerDetalleProceso",
   "programa": "RBTPG503",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador de proceso batch."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "procesosBatch",
@@ -33,11 +37,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCadenaCierre.ObtenerDetalleProceso>\r\n         <bts:Btinreq>\r\n            <bts:Device>mc</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>6964034201CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:identificador>93</bts:identificador>\r\n      </bts:BTCadenaCierre.ObtenerDetalleProceso>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"mc\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"6964034201CD285A89A23FBE\"\r\n    },\r\n    \"identificador\": 93\r\n}'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"mc\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"6964034201CD285A89A23FBE\"\r\n    },\r\n    \"identificador\": 93\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCadenaCierre.ObtenerDetalleProceso>\r\n         <bts:Btinreq>\r\n            <bts:Device>mc</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>6964034201CD285A89A23FBE</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:identificador>93</bts:identificador>\r\n      </bts:BTCadenaCierre.ObtenerDetalleProceso>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Device\": \"mc\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"6964034201CD285A89A23FBE\"\r\n    },\r\n    \"identificador\": 93\r\n}'"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCadenaCierre.ObtenerDetalleProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>mc</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6964034201CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <sBTProcesoBatch>\r\n            <identificador>93</identificador>\r\n            <nombre>POCDE002</nombre>\r\n            <descripcion>Busca Indicios OCODEí</descripcion>\r\n            <periodicidad>DIARIA</periodicidad>\r\n            <parametrosExtendidos>SI</parametrosExtendidos>\r\n            <esReprocesable>No reprocesar nunca</esReprocesable>\r\n         </sBTProcesoBatch>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>42156</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCadenaCierre.ObtenerDetalleProceso</Servicio>\r\n            <Fecha>2022-06-01</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>13:44:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCadenaCierre.ObtenerDetalleProcesoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"mc\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"6964034201CD285A89A23FBE\"\r\n    },\r\n    \"sBTProcesoBatch\": {\r\n        \"identificador\": 93,\r\n        \"nombre\": \"POCDE002\",\r\n        \"descripcion\": \"Busca Indicios OCODEí\",\r\n        \"periodicidad\": \"DIARIA\",\r\n        \"parametrosExtendidos\": \"SI\",\r\n        \"esReprocesable\": \"No reprocesar nunca\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 42156,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCadenaCierre.ObtenerDetalleProceso\",\r\n        \"Fecha\": \"2022-06-01\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"13:44:21\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCadenaCierre.ObtenerDetalleProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>mc</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6964034201CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <procesosBatch>\r\n            <identificador>93</identificador>\r\n            <nombre>POCDE002</nombre>\r\n            <descripcion>Busca Indicios OCODEí</descripcion>\r\n            <periodicidad>DIARIA</periodicidad>\r\n            <parametrosExtendidos>SI</parametrosExtendidos>\r\n            <esReprocesable>No reprocesar nunca</esReprocesable>\r\n         </procesosBatch>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>42156</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCadenaCierre.ObtenerDetalleProceso</Servicio>\r\n            <Fecha>2022-06-01</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>13:44:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCadenaCierre.ObtenerDetalleProcesoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"mc\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"6964034201CD285A89A23FBE\"\n  },\n  \"procesosBatch\": {\n    \"identificador\": 93,\n    \"nombre\": \"POCDE002\",\n    \"descripcion\": \"Busca Indicios OCODEí\",\n    \"periodicidad\": \"DIARIA\",\n    \"parametrosExtendidos\": \"SI\",\n    \"esReprocesable\": \"No reprocesar nunca\"\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": 42156,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCadenaCierre.ObtenerDetalleProceso\",\n    \"Fecha\": \"2022-06-01\",\n    \"Requerimiento\": 1,\n    \"Hora\": \"13:44:21\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCadenaCierre.ObtenerDetalleProcesoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>mc</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>6964034201CD285A89A23FBE</Token>\r\n         </Btinreq>\r\n         <procesosBatch>\r\n            <identificador>93</identificador>\r\n            <nombre>POCDE002</nombre>\r\n            <descripcion>Busca Indicios OCODEí</descripcion>\r\n            <periodicidad>DIARIA</periodicidad>\r\n            <parametrosExtendidos>SI</parametrosExtendidos>\r\n            <esReprocesable>No reprocesar nunca</esReprocesable>\r\n         </procesosBatch>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>42156</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCadenaCierre.ObtenerDetalleProceso</Servicio>\r\n            <Fecha>2022-06-01</Fecha>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Hora>13:44:21</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCadenaCierre.ObtenerDetalleProcesoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"mc\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"6964034201CD285A89A23FBE\"\n  },\n  \"procesosBatch\": {\n    \"identificador\": 93,\n    \"nombre\": \"POCDE002\",\n    \"descripcion\": \"Busca Indicios OCODEí\",\n    \"periodicidad\": \"DIARIA\",\n    \"parametrosExtendidos\": \"SI\",\n    \"esReprocesable\": \"No reprocesar nunca\"\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": 42156,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCadenaCierre.ObtenerDetalleProceso\",\n    \"Fecha\": \"2022-06-01\",\n    \"Requerimiento\": 1,\n    \"Hora\": \"13:44:21\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

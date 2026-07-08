@@ -115,7 +115,9 @@ Código | Descripción
          <maximo>99999</maximo>
          <valorPorDefecto>30</valorPorDefecto>
          <tipo>Valor</tipo>
-         <sdtListaValores></sdtListaValores>
+         <sdtListaValores>
+            <valor>0</valor>
+         </sdtListaValores>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -134,32 +136,36 @@ Código | Descripción
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": "",
-        "Usuario": "INSTALADOR",
-        "Token": "1047454914CD285A89A23FBE",
-        "Device": ""
-    },
-    "minimo": 1,
-    "maximo": 99999,
-    "valorPorDefecto": 30,
-    "tipo": "Valor",
-    "sdtListaValores": {
-        "SdtsBTValor": []
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTModeladorPrestamos.ObtenerPlazo",
-        "Fecha": "2021-11-04",
-        "Hora": "09:57:14",
-        "Requerimiento": "",
-        "Numero": 8650,
-        "Estado": "OK"
-    }
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "",
+    "Usuario": "INSTALADOR",
+    "Token": "1047454914CD285A89A23FBE",
+    "Device": ""
+  },
+  "minimo": 1,
+  "maximo": 99999,
+  "valorPorDefecto": 30,
+  "tipo": "Valor",
+  "sdtListaValores": {
+    "SdtsBTValor": [
+      {
+        "valor": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTModeladorPrestamos.ObtenerPlazo",
+    "Fecha": "2021-11-04",
+    "Hora": "09:57:14",
+    "Requerimiento": "",
+    "Numero": 8650,
+    "Estado": "OK"
+  }
 }
 ```
 ::: 

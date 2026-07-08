@@ -32,7 +32,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-personaUId | Long | Identificador único de la persona.
+PersonaUId | Long | Identificador único de la persona.
 sdtTextos | [sBTTextoPersona](#sBTTextoPersona) | Listado de textos de la persona.
 modo | String | [Hidden: Valor fijo "INS" para este método].
 
@@ -75,7 +75,7 @@ Código | Descripción
             <bts:Token>D2868674D8C3483A48324170</bts:Token>
          </bts:Btinreq>
          <bts:PersonaUId>143</bts:PersonaUId>
-         <bts:sbtTextos>
+         <bts:sdtTextos>
             <bts:SdtsBTTextoPersona>
                <bts:renglon>2</bts:renglon>
                <bts:texto>ALEX</bts:texto>
@@ -89,7 +89,7 @@ Código | Descripción
                <bts:codigo>491</bts:codigo>
             </bts:SdtsBTTextoPersona>
 
-         </bts:sbtTextos>
+         </bts:sdtTextos>
       </bts:BTPersonas.AgregarTextos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -98,12 +98,7 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarTextos' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
+{
   "Btinreq": {
     "Canal": "BTDIGITAL",
     "Usuario": "INSTALADOR",
@@ -112,7 +107,7 @@ curl -X POST \
     "Token": "D2868674D8C3483A48324170"
   },
   "PersonaUId": "143",
-  "sbtTextos": [
+  "sdtTextos": [
     {
       "renglon": "2",
       "texto": "ALEX",
@@ -127,8 +122,6 @@ curl -X POST \
     }
   ]
 }
-
-'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

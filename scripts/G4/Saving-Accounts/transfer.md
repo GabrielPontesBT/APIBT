@@ -9,7 +9,7 @@ title: Transfer
 
 **Módulo:** Liabilities.SavingsAccounts
 
-**Programa:** PublicAPI.ABTSAPA00010
+**Programa:** PublicAPI.BTSAPA00010
 
 **Alcance:** Global
 :::

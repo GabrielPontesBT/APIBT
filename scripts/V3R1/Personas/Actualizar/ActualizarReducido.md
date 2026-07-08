@@ -185,86 +185,90 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarReducido' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": 255,
-   "sdtPersona": {
-      "nroDocumento": "72116339",
-      "estadoCivil": "Soltero/a",
-      "fechaInicioActividad": "",
-      "segundoNombre": "",
-      "fechaVencimiento": "",
-      "segundoApellido": "",
-      "fechaNacimiento": "1980-10-20",
-      "telefonoCelular": "",
-      "tipoDocumentoId": 1,
-      "actividadLaboral": "",
-      "clasificacionInternaId": 0,
-      "sexo": "M",
-      "primerNombre": "GONZALO",
-      "clasificacionInterna": "",
-      "paisDocumentoId": 845,
-      "telefonoFijo": "",
-      "primerApellido": "ZANELLI",
-      "ocupacion": "",
-      "sector": "",
-      "paisDocumento": "URUGUAY",
-      "ocupacionId": 0,
-      "sueldo": 0,
-      "nacionalidad": "URUGUAY",
-      "comentarioCorreo": "",
-      "domicilios": {
-      "sBTDomicilioCompleto": [{
-         "coloniaId": 0,
-         "agrupador1Id": 1,
-         "agrupador5": "",
-         "departamento": "Artigas",
-         "agrupador3Id": 0,
-         "agrupador4": "",
-         "agrupador3": "",
-         "barrio": "",
-         "detalleUbicacion": "",
-         "agrupador2": "",
-         "agrupador1": "prueba223",
-         "agrupador5Id": 0,
-         "tipoDomicilio": "Residencia",
-         "ubicacionDesde": "",
-         "direccion": "Avenida prueba22",
-         "colonia": "",
-         "paisId": 845,
-         "tipoVivienda": "",
-         "pais": "URUGUAY",
-         "agrupador2Id": 0,
-         "codigoPostal": "",
-         "tipoViviendaId": "",
-         "barrioId": 0,
-         "agrupador4Id": 0,
-         "localidad": "Artigas",
-         "localidadId": 1022,
-         "tipoDomicilioId": 1,
-         "departamentoId": 1
-      }]
-      },
-      "correoElectronico": "mail@mail.com",
-      "sectorId": 0,
-      "datosAdicionales": {"sBTDatoLista": []},
-      "actividadLaboralId": 0,
-      "tipoDocumento": "Cédula Identidad",
-      "nacionalidadId": 845,
-      "estadoCivilId": 1
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": 255,
+  "sdtPersona": {
+    "nroDocumento": "72116339",
+    "estadoCivil": "Soltero/a",
+    "fechaInicioActividad": "",
+    "segundoNombre": "",
+    "fechaVencimiento": "",
+    "segundoApellido": "",
+    "fechaNacimiento": "1980-10-20",
+    "telefonoCelular": "",
+    "tipoDocumentoId": 1,
+    "actividadLaboral": "",
+    "clasificacionInternaId": 0,
+    "sexo": "M",
+    "primerNombre": "GONZALO",
+    "clasificacionInterna": "",
+    "paisDocumentoId": 845,
+    "telefonoFijo": "",
+    "primerApellido": "ZANELLI",
+    "ocupacion": "",
+    "sector": "",
+    "paisDocumento": "URUGUAY",
+    "ocupacionId": 0,
+    "sueldo": 0,
+    "nacionalidad": "URUGUAY",
+    "comentarioCorreo": "",
+    "domicilios": {
+      "sBTDomicilioCompleto": [
+        {
+          "coloniaId": 0,
+          "agrupador1Id": 1,
+          "agrupador5": "",
+          "departamento": "Artigas",
+          "agrupador3Id": 0,
+          "agrupador4": "",
+          "agrupador3": "",
+          "barrio": "",
+          "detalleUbicacion": "",
+          "agrupador2": "",
+          "agrupador1": "prueba223",
+          "agrupador5Id": 0,
+          "tipoDomicilio": "Residencia",
+          "ubicacionDesde": "",
+          "direccion": "Avenida prueba22",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "",
+          "pais": "URUGUAY",
+          "agrupador2Id": 0,
+          "codigoPostal": "",
+          "tipoViviendaId": "",
+          "barrioId": 0,
+          "agrupador4Id": 0,
+          "localidad": "Artigas",
+          "localidadId": 1022,
+          "tipoDomicilioId": 1,
+          "departamentoId": 1
+        }
+      ]
+    },
+    "correoElectronico": "mail@mail.com",
+    "sectorId": 0,
+    "datosAdicionales": {
+      "sBTDatoLista": [
+        {
+          "clave": "",
+          "valor": ""
+        }
+      ]
+    },
+    "actividadLaboralId": 0,
+    "tipoDocumento": "Cédula Identidad",
+    "nacionalidadId": 845,
+    "estadoCivilId": 1
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -370,6 +374,9 @@ telefonoCelular | String | Teléfono celular.
 telefonoFijo | String | Teléfono fijo.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -405,6 +412,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -414,6 +424,8 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional.  
+valor | String | Valor de información adicional.
 :::
+
 <!-- CIERRA SDT -->
+

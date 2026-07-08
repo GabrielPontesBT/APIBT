@@ -132,6 +132,7 @@ curl -X POST \
             <fechaValor>2018-05-18</fechaValor>
             <fechaVencimiento>2021-05-18</fechaVencimiento>
             <cantidadCuotasImpagas>36</cantidadCuotasImpagas>
+            <simboloMoneda></simboloMoneda>
          </sdtPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -150,48 +151,55 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtPrestamo": {
-        "sucursal": "Sucursal Beta",
-        "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "cantidadCuotas": "37",
-        "capitalOriginal": "180000.00",
-        "estado": "Normal",
-        "operacionUId": "142",
-        "tasaVigente": "10.000000",
-        "plazo": "1096",
-        "saldoCapital": "-174180.15",
-        "tipoTasa": "Lineal Anual",
-        "producto": {
-            "papel": "",
-            "moneda": "",
-            "productoUId": "0",
-            "nombre": "Amort. - Capital F./Empr.- T/F"
-        },
-        "fechaValor": "2018-05-18",
-        "fechaVencimiento": "2021-05-18",
-        "cantidadCuotasImpagas": "36",
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPrestamo": {
+    "sucursal": "Sucursal Beta",
+    "idOperacionBT": "0010000100115000000000000000002700000000000326001",
+    "cantidadCuotas": "37",
+    "capitalOriginal": "180000.00",
+    "estado": "Normal",
+    "operacionUId": "142",
+    "tasaVigente": "10.000000",
+    "plazo": "1096",
+    "saldoCapital": "-174180.15",
+    "tipoTasa": "Lineal Anual",
+    "producto": {
+      "papel": "",
+      "moneda": "",
+      "productoUId": "0",
+      "nombre": "Amort. - Capital F./Empr.- T/F",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "767",
-        "Servicio": "BTPrestamos.ObtenerDetalleReducido",
-        "Estado": "OK",
-        "Requerimiento": 1,
-        "Fecha": "2017-12-12",
-        "Hora": "11:15:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "fechaValor": "2018-05-18",
+    "fechaVencimiento": "2021-05-18",
+    "cantidadCuotasImpagas": "36",
+    "idOperacionFmt": "",
+    "simboloMoneda": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "767",
+    "Servicio": "BTPrestamos.ObtenerDetalleReducido",
+    "Estado": "OK",
+    "Requerimiento": 1,
+    "Fecha": "2017-12-12",
+    "Hora": "11:15:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -223,7 +231,10 @@ saldoCapital | Double | Saldo de capital.
 simboloMoneda | String | Símbolo monetario. 
 sucursal | String | Sucursal del préstamo. 
 tasaVigente | Double | Tasa vigente. 
-tipoTasa | String | Tipo de tasa. 
+tipoTasa | String | Tipo de tasa.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -236,7 +247,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -249,4 +263,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

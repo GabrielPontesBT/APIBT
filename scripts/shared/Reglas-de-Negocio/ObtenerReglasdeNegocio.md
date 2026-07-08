@@ -112,7 +112,6 @@ curl -X POST \
                <descripcion>Botón Datos Pep's</descripcion>
                <reglaId>4</reglaId>
             </sBTReglaNegocio>
-            ...
          </sdtReglasNegocio>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

@@ -18,7 +18,7 @@ backtotop: false
 
 **Nombre publicación:** BTCuentasVista.DebitarEnCuenta 
 
-**Programa:** RBTPG569
+**Programa:** RBTPG582
 
 **Global/País:** Global
 :::
@@ -89,7 +89,7 @@ Código | Descripción
             <bts:Token>1244265502F955E77534D3E0</bts:Token>
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
-         <bts:sdtDatosDebitar>
+         <bts:sdtDatosDebito>
             <bts:clienteUId>140</bts:clienteUId>
             <bts:operacionUId>10140</bts:operacionUId>
             <bts:importe1>1000</bts:importe1>
@@ -100,7 +100,7 @@ Código | Descripción
             <bts:concepto2></bts:concepto2>
             <bts:concepto3></bts:concepto3>
             <bts:concepto4></bts:concepto4>
-         </bts:sdtDatosDebitar>
+         </bts:sdtDatosDebito>
       </bts:BTCuentasVista.DebitarEnCuenta>
    </soapenv:Body>
 
@@ -108,64 +108,27 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \ 
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?DebitarEnCuenta=' \ 
-  -H 'cache-control: no-cache' \ 
-  -H 'content-type: application/json' \ 
-  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \ 
-  -d '{
-"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-	"sdtDatosDebitar": { 
-		"operacionUId1": "10140", 
-		"operacionUId2": "10141", 
-		"operacionUId3": "", 
-		"operacionUId4": "", 
-		"operacionUId5": "", 
-		"importe1": "1000", 
-		"importe2": "5220", 
-		"importe3": "", 
-		"importe4": "", 
-		"importe5": "", 
-		"importe6": "", 
-		"importe7": "", 
-		"importe8": "", 
-		"concepto": "" 
-	}    
-}' 
-curl -X POST \ 
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?DebitarEnCuenta=' \ 
-  -H 'cache-control: no-cache' \ 
-  -H 'content-type: application/json' \ 
-  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \ 
-  -d '{
-"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-	"sdtDatosDebitar": { 
+{
+	"Btinreq": {
+		"Device": "AV",
+		"Usuario": "MINSTALADOR",
+		"Requerimiento": "",
+		"Canal": "BTDIGITAL",
+		"Token": "23B342928917607ECECF65BD"
+	},
+	"sdtDatosDebito": {
 		"clienteUId": "140",
-		"operacionUId": "10140", 
-		"importe1": "1000", 
-		"importe2": "5220", 
-		"importe3": "", 
-		"importe4": "", 
+		"operacionUId": "10140",
+		"importe1": "1000",
+		"importe2": "5220",
+		"importe3": "",
+		"importe4": "",
 		"concepto1": "test",
 		"concepto2": "",
 		"concepto3": "",
 		"concepto4": ""
-	}    
-}' 
-
-
+	}
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

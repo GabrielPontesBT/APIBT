@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ActualizarVictimaHechoViolento",
   "programa": "RBTPCO05",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Datos de persona víctima de hecho violento (Se ingresa solo si el campo esVictima = S)."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -94,11 +98,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarVictimaHechoViolento>\n         <bts:Btinreq>\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>42</bts:personaUId>\n         <bts:esVictima>S</bts:esVictima>\n         <bts:sdtVictimaHechoViolento>\n            <bts:entidadId>3</bts:entidadId>\n            <bts:municipio></bts:municipio>\n            <bts:departamento></bts:departamento>\n            <bts:inspeccionPolicia>Golpes</bts:inspeccionPolicia>\n            <bts:sitio>Casa</bts:sitio>\n            <bts:municipioId>421</bts:municipioId>\n            <bts:tipoId>3</bts:tipoId>\n            <bts:vereda>Av Italia</bts:vereda>\n            <bts:entidad></bts:entidad>\n            <bts:tipo></bts:tipo>\n            <bts:fechaCertificacion>2021-10-20</bts:fechaCertificacion>\n            <bts:fechaVencimiento>2022-08-20</bts:fechaVencimiento>\n            <bts:corregimiento>No tiene</bts:corregimiento>\n            <bts:departamentoId>8</bts:departamentoId>\n            <bts:fechaHecho>2021-06-20</bts:fechaHecho>\n         </bts:sdtVictimaHechoViolento>\n      </bts:BTPersonas.ActualizarVictimaHechoViolento>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarVictimaHechoViolento \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"personaUId\": \"42\",\n\t\"esVictima\": \"S\",\n\t\"sdtVictimaHechoViolento\": {\n\t  \"entidadId\": \"3\",\n\t  \"inspeccionPolicia\": \"Golpes\",\n\t  \"sitio\": \"Casa\",\n\t  \"municipioId\": \"421\",\n\t  \"tipoId\": \"3\",\n\t  \"vereda\": \"Av Italia\",\n\t  \"fechaCertificacion\": \"2021-10-20\",\n\t  \"fechaVencimiento\": \"2022-08-20\",\n\t  \"corregimiento\": \"No tiene\",\n\t  \"departamentoId\": \"8\",\n\t  \"fechaHecho\": \"2021-06-20\"\n\t}\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"personaUId\": \"42\",\n  \"esVictima\": \"S\",\n  \"sdtVictimaHechoViolento\": {\n    \"entidadId\": \"3\",\n    \"inspeccionPolicia\": \"Golpes\",\n    \"sitio\": \"Casa\",\n    \"municipioId\": \"421\",\n    \"tipoId\": \"3\",\n    \"vereda\": \"Av Italia\",\n    \"fechaCertificacion\": \"2021-10-20\",\n    \"fechaVencimiento\": \"2022-08-20\",\n    \"corregimiento\": \"No tiene\",\n    \"departamentoId\": \"8\",\n    \"fechaHecho\": \"2021-06-20\",\n    \"departamento\": \"\",\n    \"entidad\": \"\",\n    \"municipio\": \"\",\n    \"tipo\": \"\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarVictimaHechoViolento>\n         <bts:Btinreq>\n            <bts:Token>042638a184CD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>42</bts:personaUId>\n         <bts:esVictima>S</bts:esVictima>\n         <bts:sdtVictimaHechoViolento>\n            <bts:entidadId>3</bts:entidadId>\n            <bts:municipio></bts:municipio>\n            <bts:departamento></bts:departamento>\n            <bts:inspeccionPolicia>Golpes</bts:inspeccionPolicia>\n            <bts:sitio>Casa</bts:sitio>\n            <bts:municipioId>421</bts:municipioId>\n            <bts:tipoId>3</bts:tipoId>\n            <bts:vereda>Av Italia</bts:vereda>\n            <bts:entidad></bts:entidad>\n            <bts:tipo></bts:tipo>\n            <bts:fechaCertificacion>2021-10-20</bts:fechaCertificacion>\n            <bts:fechaVencimiento>2022-08-20</bts:fechaVencimiento>\n            <bts:corregimiento>No tiene</bts:corregimiento>\n            <bts:departamentoId>8</bts:departamentoId>\n            <bts:fechaHecho>2021-06-20</bts:fechaHecho>\n         </bts:sdtVictimaHechoViolento>\n      </bts:BTPersonas.ActualizarVictimaHechoViolento>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"personaUId\": \"42\",\n  \"esVictima\": \"S\",\n  \"sdtVictimaHechoViolento\": {\n    \"entidadId\": \"3\",\n    \"inspeccionPolicia\": \"Golpes\",\n    \"sitio\": \"Casa\",\n    \"municipioId\": \"421\",\n    \"tipoId\": \"3\",\n    \"vereda\": \"Av Italia\",\n    \"fechaCertificacion\": \"2021-10-20\",\n    \"fechaVencimiento\": \"2022-08-20\",\n    \"corregimiento\": \"No tiene\",\n    \"departamentoId\": \"8\",\n    \"fechaHecho\": \"2021-06-20\",\n    \"departamento\": \"\",\n    \"entidad\": \"\",\n    \"municipio\": \"\",\n    \"tipo\": \"\"\n  }\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarVictimaHechoViolentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>042638a184CD285A89A23FBE</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2089</Numero>\n            <Servicio>BTPersonas.ActualizarVictimaHechoViolento</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-03-10</Fecha>\n            <Hora>08:29:11</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ActualizarVictimaHechoViolentoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"Btoutreq\": {\n          \"Numero\": \"2089\",\n          \"Servicio\": \"BTPersonas.ActualizarVictimaHechoViolento\",\n          \"Estado\": \"OK\",\n          \"Requerimiento\": \"1\",\n          \"Fecha\": \"2020-03-10\",\n          \"Hora\": \"08:29:11\",\n          \"Canal\": \"BTDIGITAL\"\n        }\n}'"
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"Btoutreq\": {\n          \"Numero\": \"2089\",\n          \"Servicio\": \"BTPersonas.ActualizarVictimaHechoViolento\",\n          \"Estado\": \"OK\",\n          \"Requerimiento\": \"1\",\n          \"Fecha\": \"2020-03-10\",\n          \"Hora\": \"08:29:11\",\n          \"Canal\": \"BTDIGITAL\"\n        }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarVictimaHechoViolentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>042638a184CD285A89A23FBE</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>2089</Numero>\n            <Servicio>BTPersonas.ActualizarVictimaHechoViolento</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-03-10</Fecha>\n            <Hora>08:29:11</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ActualizarVictimaHechoViolentoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n        \"Btoutreq\": {\n          \"Numero\": \"2089\",\n          \"Servicio\": \"BTPersonas.ActualizarVictimaHechoViolento\",\n          \"Estado\": \"OK\",\n          \"Requerimiento\": \"1\",\n          \"Fecha\": \"2020-03-10\",\n          \"Hora\": \"08:29:11\",\n          \"Canal\": \"BTDIGITAL\"\n        }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -65,7 +65,6 @@ Código | Descripción
 
 @tab XML
 ```xml
-
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
@@ -77,7 +76,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>7</bts:Requerimiento>
          </bts:Btinreq>
-         <bts:cuentaUId>322</bts:cuentaUId>
+         <bts:clienteUId>322</bts:clienteUId>
          <bts:bolsilloUId>18830</bts:bolsilloUId>
          <bts:operacionCobroUId>1133</bts:operacionCobroUId>
       </bts:BTCuentasBolsillo.Cancelar>
@@ -87,23 +86,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-	'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Cancelar' \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-	-d '{
-	"Btinreq": {
-	  "Device": "1",
-	  "Usuario": "MINSTALADOR",
-	  "Token": "16c1cFC33CD93505A5382434",
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": "1"
-	},
-    "cuentaUId": 322,
-    "bolsilloUId": 18830,
-    "operacionCobroUId": 1133,
-}'
+{
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "MINSTALADOR",
+    "Token": "16c1cFC33CD93505A5382434",
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1"
+  },
+  "clienteUId": 322,
+  "bolsilloUId": 18830,
+  "operacionCobroUId": 1133
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -143,23 +137,23 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Device": "1",
-        "Usuario": "MINSTALADOR",
-        "Token": "16c1cFC33CD93505A5382434",
-        "Canal": "BTDIGITAL",
-        "Requerimiento": "1"
-    },
-    "movimientoUId":1843,
-    "Btoutreq": {
-        "Numero": "111399",
-        "Estado": "OK",
-        "Servicio": "BTCuentasBolsillo.Cancelar",
-        "Requerimiento": "1",
-        "Fecha": "2023-05-10",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:10:52"
-    }
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "MINSTALADOR",
+    "Token": "16c1cFC33CD93505A5382434",
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1"
+  },
+  "movimientoUId":1843,
+  "Btoutreq": {
+    "Numero": "111399",
+    "Estado": "OK",
+    "Servicio": "BTCuentasBolsillo.Cancelar",
+    "Requerimiento": "1",
+    "Fecha": "2023-05-10",
+    "Canal": "BTDIGITAL",
+    "Hora": "15:10:52"
+  }
 }'
 ```
 ::: 

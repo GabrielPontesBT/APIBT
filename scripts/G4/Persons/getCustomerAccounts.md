@@ -76,7 +76,13 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "customerCounterparties": {
-    "customerCounterparty": []
+    "customerCounterparty": [],
+    "CounterpartyGUId": "",
+    "Ownership": {
+      "Id": "",
+      "Description": ""
+    },
+    "Representative": false
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -107,9 +113,9 @@ Los campos del tipo de dato estructurado SdtsBTCPWCustomerCounterparty son los s
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-CounterpartyGUID | String $<(Length: 36)>$ | GUID de contraparte.
+CounterpartyGUId | String $<(Length: 36)>$ | GUID (identificador único global) de contraparte.
 Ownership | [SdtsBTCPWOwnershipType](#sdtsbtcpwownershiptype) | Tipo de propiedad.
-Representative | Boolean $<(Length: 1)>$ | Representante.
+Representative | Boolean | Representante.
 :::
 
 ::: details SdtsBTCPWOwnershipType

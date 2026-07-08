@@ -21,14 +21,22 @@ export interface DocValueTable {
   description: string;
 }
 
+export interface DocExampleTab {
+  name: string;
+  lang: string;
+  code: string;
+}
+
 export interface DocExamples {
   invocation: {
     xml: string;
     json: string;
+    tabs?: DocExampleTab[];
   };
   response: {
     xml: string;
     json: string;
+    tabs?: DocExampleTab[];
   };
 }
 
@@ -40,12 +48,20 @@ export interface DocPage {
   modulo?: string;
   programa: string;
   scope: string;
+  method?: string;
+  endpoint?: string;
   hasBackendConfig: boolean;
   backendText: string;
   backendData: any[];
   inputCols?: string[];
   inputData: DocTableRow[];
+  bodyCols?: string[];
   bodyData?: DocTableRow[];
+  headersData?: DocTableRow[];
+  headersNote?: string;
+  inputNote?: string;
+  bodyNote?: string;
+  outputNote?: string;
   outputData: DocTableRow[];
   flowDiagram?: string;
   errors: DocTableRow[];

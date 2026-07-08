@@ -1,0 +1,98 @@
+{
+  "slug": "saving-accounts/transfersectionbalance",
+  "pageTitle": "Transfer Section Balance",
+  "description": "Método para transferir desde o hacia un apartado.",
+  "pubName": "PublicSavingAccounts.transferSectionBalance",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0012",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "sectionGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "amount",
+      "Tipo": "Double <strong>(Length: 18.2)</strong>",
+      "Comentarios": "Saldo."
+    },
+    {
+      "Nombre": "reference",
+      "Tipo": "String <strong>(Length: 40)</strong>",
+      "Comentarios": "Referencia."
+    },
+    {
+      "Nombre": "transferMode",
+      "Tipo": "String <strong>(Length: 3)</strong>",
+      "Comentarios": "Modo de transferencia."
+    },
+    {
+      "Nombre": "geolocalization",
+      "Tipo": "<a href=\"#sdtsbtgeolocalization\">SdtsBTGeolocalization</a>",
+      "Comentarios": "Datos de geolocalización."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"sectionGUID\": \"0a1b8daf-ace1-40b9-a5fe-366c1e117193\",\n  \"amount\": \"50\",\n  \"reference\": \"Ahorros\",\n  \"transferMode\": \"INC\",\n  \"geolocalization\": {\n    \"latitude\": -45.123456,\n    \"longitude\": -33.123455,\n    \"timestamp\": \"2026-06-14T12:16:00UTC-3\"\n  }\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"sectionGUID\": \"0a1b8daf-ace1-40b9-a5fe-366c1e117193\",\n  \"amount\": \"50\",\n  \"reference\": \"Ahorros\",\n  \"transferMode\": \"INC\",\n  \"geolocalization\": {\n    \"latitude\": -45.123456,\n    \"longitude\": -33.123455,\n    \"timestamp\": \"2026-06-14T12:16:00UTC-3\"\n  }\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:45:56\",\n    \"Numero\": 13585059,\n    \"Servicio\": \"PublicSavingAccounts.transferSectionBalance\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"C004FACBFC2507D9B6B9A13E\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:45:56\",\n    \"Numero\": 13585059,\n    \"Servicio\": \"PublicSavingAccounts.transferSectionBalance\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double <strong>(Length: 11.8)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

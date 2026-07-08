@@ -79,7 +79,9 @@ No aplica.
         "id": 2,
         "description": "POR DECISIÓN DE LA ENTIDAD"
       }
-    ]
+    ],
+    "Id": "",
+    "description": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -110,7 +112,7 @@ Los campos del tipo de dato estructurado SdtsBTLICancellationOrigin son los sigu
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Short $<(Length: 4)>$ | Identificador de origen de cierre.
+Id | Short $<(Length: 4)>$ | Identificador de origen de cierre.
 description | String $<(Length: 40)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

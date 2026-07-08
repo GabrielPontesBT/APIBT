@@ -1,0 +1,219 @@
+{
+  "slug": "loans/addintercyclemember",
+  "pageTitle": "Add Intercycle Member",
+  "description": "Método para agregar un integrante como interciclo.",
+  "pubName": "PublicLoans.addIntercycleMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0048",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "memberSimulationInput",
+      "Tipo": "<a href=\"#sdtsbtmgmembersimulationin\">SdtsBTMGMemberSimulationIn</a>",
+      "Comentarios": "Datos de entrada para simular un integrante."
+    },
+    {
+      "Nombre": "keepInsurancesFees",
+      "Tipo": "Boolean",
+      "Comentarios": "Indica si se mantienen los seguros del preseteo."
+    },
+    {
+      "Nombre": "insurancesInput",
+      "Tipo": "<a href=\"#sdtsbtloinsurancein\">SdtsBTLOInsuranceIn</a>",
+      "Comentarios": "Listado de seguros de entrada para la simulación."
+    },
+    {
+      "Nombre": "disbursementOptions",
+      "Tipo": "<a href=\"#sdtsbtlowdisbursementoption\">SdtsBTLOWDisbursementOption</a>",
+      "Comentarios": "Listado de opciones de desembolso."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "accountingEntry",
+      "Tipo": "<a href=\"#sdtsbtmgmemberaccountingentry\">SdtsBTMGMemberAccountingEntry</a>",
+      "Comentarios": "Asiento de desembolso."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": \"70\",\n  \"memberSimulationInput\": {\n    \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n    \"disbursementDate\": \"2027-07-30\",\n    \"firstPaymentDate\": \"2027-08-30\",\n    \"memberTypeId\": \"3\",\n    \"rate\": \"15\",\n    \"requestedLoanAmount\": \"7500\"\n  },\n  \"keepInsurancesFees\": \"false\",\n  \"insurancesInput\": [\n    {\n      \"amount\": \"5\",\n      \"commercialValue\": \"\",\n      \"extraPremium\": \"\",\n      \"insuranceId\": \"1\",\n      \"percentage\": \"0.05\",\n      \"policyEndDate\": \"\",\n      \"policyNumber\": \"\",\n      \"policyStartDate\": \"\"\n    }\n  ],\n  \"disbursementOptions\": [\n    {\n      \"amount\": \"7500\",\n      \"branchId\": \"1\",\n      \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n      \"currencyId\": \"0\",\n      \"disbursementId\": \"25\",\n      \"savingAccountGUID\": \"\"\n    }\n  ]\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": \"70\",\n  \"memberSimulationInput\": {\n    \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n    \"disbursementDate\": \"2027-07-30\",\n    \"firstPaymentDate\": \"2027-08-30\",\n    \"memberTypeId\": \"3\",\n    \"rate\": \"15\",\n    \"requestedLoanAmount\": \"7500\"\n  },\n  \"keepInsurancesFees\": \"false\",\n  \"insurancesInput\": [\n    {\n      \"amount\": \"5\",\n      \"commercialValue\": \"\",\n      \"extraPremium\": \"\",\n      \"insuranceId\": \"1\",\n      \"percentage\": \"0.05\",\n      \"policyEndDate\": \"\",\n      \"policyNumber\": \"\",\n      \"policyStartDate\": \"\"\n    }\n  ],\n  \"disbursementOptions\": [\n    {\n      \"amount\": \"7500\",\n      \"branchId\": \"1\",\n      \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n      \"currencyId\": \"0\",\n      \"disbursementId\": \"25\",\n      \"savingAccountGUID\": \"\"\n    }\n  ]\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"accountingEntry\": {\n    \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n    \"loanGUID\": \"a157764e-8d23-44a9-8fa6-9392608c9e4d\",\n    \"movementGUID\": \"c35e28db-0fcd-451e-9cfd-e4b24791662a\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.addIntercycleMember\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"accountingEntry\": {\n    \"counterpartyGUID\": \"0b4dc6b9-388c-44b9-b637-a03f66111fb3\",\n    \"loanGUID\": \"a157764e-8d23-44a9-8fa6-9392608c9e4d\",\n    \"movementGUID\": \"c35e28db-0fcd-451e-9cfd-e4b24791662a\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.addIntercycleMember\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGMemberSimulationIn",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "disbursementDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de desembolso."
+        },
+        {
+          "Nombre": "firstPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del primer pago."
+        },
+        {
+          "Nombre": "memberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "requestedLoanAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de préstamo solicitado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOInsuranceIn",
+      "fields": [
+        {
+          "Nombre": "amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto del seguro."
+        },
+        {
+          "Nombre": "commercialValue",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Valor comercial."
+        },
+        {
+          "Nombre": "extraPremium",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Prima adicional."
+        },
+        {
+          "Nombre": "insuranceId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de seguro."
+        },
+        {
+          "Nombre": "percentage",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Porcentaje."
+        },
+        {
+          "Nombre": "policyEndDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de fin de póliza."
+        },
+        {
+          "Nombre": "policyNumber",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Número de póliza."
+        },
+        {
+          "Nombre": "policyStartDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de inicio de póliza."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOWDisbursementOption",
+      "fields": [
+        {
+          "Nombre": "amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de la opción de desembolso."
+        },
+        {
+          "Nombre": "branchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "currencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "disbursementId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador de desembolso."
+        },
+        {
+          "Nombre": "savingAccountGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorros."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberAccountingEntry",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "loanGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del préstamo."
+        },
+        {
+          "Nombre": "movementGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del movimiento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

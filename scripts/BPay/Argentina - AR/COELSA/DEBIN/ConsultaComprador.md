@@ -67,7 +67,7 @@ Código | Descripción
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Device>10.12.10.40</bts:Device>
          </bts:Btinreq>
-         <bts:Cuit>23112903879</bts:Cuit>
+         <bts:cuit>23112903879</bts:cuit>
       </bts:BTCOELSAGestionDebin.CompradorConsulta>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -107,6 +107,7 @@ Código | Descripción
                <Banco>094</Banco>
                <Cbu>0940099312000605600019</Cbu>
                <Endpoint>0000</Endpoint>
+            <Cuit></Cuit>
             </cuenta>
          </Cuenta>
          <Erroresnegocio></Erroresnegocio>

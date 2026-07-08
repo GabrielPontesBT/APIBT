@@ -125,6 +125,7 @@ curl -X POST \
                <Version>1</Version>
                <Nombre>ejemplo</Nombre>
                <Instancia>115</Instancia>
+               <documentoId>0</documentoId>
             </sBTVersionDocumentoDigital>
          </sdtDocumentoDigital>
          <Erroresnegocio></Erroresnegocio>
@@ -144,38 +145,41 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtDocumentoDigital": {
-      "sBTVersionDocumentoDigital": [ {
-          "FechaEmision": "2010-10-10",
-          "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-          "FechaVencimiento": "2020-10-10",
-          "TipoDocumentoDigital": "Recibo de Aguinaldo",
-          "Version": 1,
-          "Nombre": "ejemplo",
-          "Instancia": 115
-      } ]
-   },
-   "Erroresnegocio": {
-       "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-       "Numero": 881,
-       "Estado": "OK",
-       "Servicio": "BTPersonas.ObtenerDocumentoDigital",
-       "Requerimiento": 1,
-       "Fecha": "2018-11-13",
-       "Hora": "13:08:28",
-       "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentoDigital": {
+    "sBTVersionDocumentoDigital": [
+      {
+        "FechaEmision": "2010-10-10",
+        "Archivo": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+        "FechaVencimiento": "2020-10-10",
+        "TipoDocumentoDigital": "Recibo de Aguinaldo",
+        "Version": 1,
+        "Nombre": "ejemplo",
+        "Instancia": 115,
+        "documentoId": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 881,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerDocumentoDigital",
+    "Requerimiento": 1,
+    "Fecha": "2018-11-13",
+    "Hora": "13:08:28",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

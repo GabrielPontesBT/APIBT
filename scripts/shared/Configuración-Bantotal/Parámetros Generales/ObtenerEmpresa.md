@@ -214,7 +214,10 @@ fechaCierre | Date | Fecha de cierre.
 identificador | Short | Identificador de la empresa. 
 monedaDolar | [sBTMoneda](#sbtmoneda) | Código moneda dolar. 
 monedaNacional | [sBTMoneda](#sbtmoneda) | Código moneda nacional. 
-nombre | String | Nombre de la empresa. 
+nombre | String | Nombre de la empresa.
+:::
+
+::: details sBTSucursal
 
 ### sBTSucursal
 
@@ -228,7 +231,10 @@ direccion | String | Dirección de sucursal.
 identificador | Int | Identificador de sucursal. 
 latitud | Long | Latitud de sucursal. 
 longitud | Long | Longitud de sucursal. 
-telefono | String | Teléfono de sucursal. 
+telefono | String | Teléfono de sucursal.
+:::
+
+::: details sBTMoneda
 
 ### sBTMoneda
 
@@ -239,6 +245,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción de moneda. 
 identificador | Short | Identificador de moneda. 
-simbolo | String | Símbolo de moneda. 
+simbolo | String | Símbolo de moneda.
 :::
+
 <!-- CIERRA SDT -->
+

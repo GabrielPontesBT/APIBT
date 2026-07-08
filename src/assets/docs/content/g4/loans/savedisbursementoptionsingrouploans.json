@@ -1,0 +1,128 @@
+{
+  "slug": "loans/savedisbursementoptionsingrouploans",
+  "pageTitle": "Save Disbursement Options In Group Loans",
+  "description": "Método para guardar las opciones de desembolso de un préstamo grupal.",
+  "pubName": "PublicLoans.saveDisbursementOptionsInGroupLoans",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0045",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "cycleId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador del ciclo."
+    },
+    {
+      "Nombre": "disbursementOptionsByMember",
+      "Tipo": "<a href=\"#sdtsbtlowdisbursementoptionbymember\">SdtsBTLOWDisbursementOptionByMember</a>",
+      "Comentarios": "Listado de opciones por integrante."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el identificador de grupo.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060120",
+      "Descripción": "El grupo/ciclo ingresados no corresponden a una solicitud en trámite.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"cycleId\": 1,\n  \"disbursementOptionsByMember\": [\n    {\n      \"simulationGUID\": \"6bad8760-206d-4eed-ad31-845081289d22\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"a0f1dc41-1624-49dd-91a5-f28bf91e5d2c\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 2000\n        }\n      ]\n    },\n    {\n      \"simulationGUID\": \"776aed72-0744-4f54-a2a1-cf4fff0746e8\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 20000\n        }\n      ]\n    },\n    {\n      \"simulationGUID\": \"14257adc-63ae-4138-bc6b-f093b0ef43b2\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 35000\n        }\n      ]\n    }\n  ]\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"cycleId\": 1,\n  \"disbursementOptionsByMember\": [\n    {\n      \"simulationGUID\": \"6bad8760-206d-4eed-ad31-845081289d22\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"a0f1dc41-1624-49dd-91a5-f28bf91e5d2c\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 2000\n        }\n      ]\n    },\n    {\n      \"simulationGUID\": \"776aed72-0744-4f54-a2a1-cf4fff0746e8\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 20000\n        }\n      ]\n    },\n    {\n      \"simulationGUID\": \"14257adc-63ae-4138-bc6b-f093b0ef43b2\",\n      \"disbursementOptions\": [\n        {\n          \"disbursementId\": 25,\n          \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n          \"savingAccountGUID\": \"\",\n          \"branchId\": 1,\n          \"currencyId\": 0,\n          \"amount\": 35000\n        }\n      ]\n    }\n  ]\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:10:12\",\n    \"Numero\": 13547119,\n    \"Servicio\": \"PublicLoans.saveDisbursementOptionsInGroupLoans\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:10:12\",\n    \"Numero\": 13547119,\n    \"Servicio\": \"PublicLoans.saveDisbursementOptionsInGroupLoans\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOWDisbursementOptionByMember",
+      "fields": [
+        {
+          "Nombre": "disbursementOptions",
+          "Tipo": "<a href=\"#sdtsbtlowdisbursementoption\">SdtsBTLOWDisbursementOption</a>",
+          "Comentarios": "Opciones de desembolso."
+        },
+        {
+          "Nombre": "simulationGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la simulación."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOWDisbursementOption",
+      "fields": [
+        {
+          "Nombre": "amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "branchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "counterpartyGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "currencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "disbursementId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador de opción de desembolso."
+        },
+        {
+          "Nombre": "savingAccountGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

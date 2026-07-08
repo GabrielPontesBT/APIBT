@@ -5,6 +5,7 @@
   "pubName": "BTPartners.ActualizarVendedor",
   "programa": "RBTPN015",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Datos del vendedor."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -112,11 +116,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ActualizarVendedor>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n          </Btinreq>\r\n         <bts:sdtVendedor>\r\n            <bts:registradoEnBantotal>S</bts:registradoEnBantotal>\r\n            <bts:habilitado>S</bts:habilitado>\r\n            <bts:clienteUId>402</bts:clienteUId>\r\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n            <bts:personaUId>269</bts:personaUId>\r\n            <bts:email></bts:email>\r\n            <bts:nombrePuntoVenta></bts:nombrePuntoVenta>\r\n            <bts:telefono></bts:telefono>\r\n            <bts:codigoComision></bts:codigoComision>\r\n            <bts:usuarioBantotal></bts:usuarioBantotal>\r\n            <bts:nombre></bts:nombre>\r\n            <bts:vendedorUId>1</bts:vendedorUId>\r\n         </bts:sdtVendedor>\r\n      </bts:BTPartners.ActualizarVendedor>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"8D8FB1A2E87D4E904004B6BB\"\r\n  },\r\n  \"sdtVendedor\": {\r\n    \"registradoEnBantotal\": \"S\",\r\n    \"habilitado\": \"S\",\r\n    \"clienteUId\": 402,\r\n    \"puntoVentaUId\": 1,\r\n    \"partnerUId\": 1,\r\n    \"personaUId\": 269,\r\n    \"email\": \"\",\r\n    \"nombrePuntoVenta\": \"\",\r\n    \"telefono\": \"\",\r\n    \"codigoComision\": \"\",\r\n    \"usuarioBantotal\": \"\",\r\n    \"nombre\": \"\",\r\n    \"vendedorUId\": 1\r\n  }\r\n}"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"8D8FB1A2E87D4E904004B6BB\"\r\n  },\r\n  \"sdtVendedor\": {\r\n    \"registradoEnBantotal\": \"S\",\r\n    \"habilitado\": \"S\",\r\n    \"clienteUId\": 402,\r\n    \"puntoVentaUId\": 1,\r\n    \"partnerUId\": 1,\r\n    \"personaUId\": 269,\r\n    \"email\": \"\",\r\n    \"nombrePuntoVenta\": \"\",\r\n    \"telefono\": \"\",\r\n    \"codigoComision\": \"\",\r\n    \"usuarioBantotal\": \"\",\r\n    \"nombre\": \"\",\r\n    \"vendedorUId\": 1\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ActualizarVendedor>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>FPAIS</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>0A4505C5C795F276A390FC46</Token>\r\n          </Btinreq>\r\n         <bts:sdtVendedor>\r\n            <bts:registradoEnBantotal>S</bts:registradoEnBantotal>\r\n            <bts:habilitado>S</bts:habilitado>\r\n            <bts:clienteUId>402</bts:clienteUId>\r\n            <bts:puntoVentaUId>1</bts:puntoVentaUId>\r\n            <bts:partnerUId>1</bts:partnerUId>\r\n            <bts:personaUId>269</bts:personaUId>\r\n            <bts:email></bts:email>\r\n            <bts:nombrePuntoVenta></bts:nombrePuntoVenta>\r\n            <bts:telefono></bts:telefono>\r\n            <bts:codigoComision></bts:codigoComision>\r\n            <bts:usuarioBantotal></bts:usuarioBantotal>\r\n            <bts:nombre></bts:nombre>\r\n            <bts:vendedorUId>1</bts:vendedorUId>\r\n         </bts:sdtVendedor>\r\n      </bts:BTPartners.ActualizarVendedor>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"FPAIS\",\r\n    \"Requerimiento\": 1,\r\n    \"Token\": \"8D8FB1A2E87D4E904004B6BB\"\r\n  },\r\n  \"sdtVendedor\": {\r\n    \"registradoEnBantotal\": \"S\",\r\n    \"habilitado\": \"S\",\r\n    \"clienteUId\": 402,\r\n    \"puntoVentaUId\": 1,\r\n    \"partnerUId\": 1,\r\n    \"personaUId\": 269,\r\n    \"email\": \"\",\r\n    \"nombrePuntoVenta\": \"\",\r\n    \"telefono\": \"\",\r\n    \"codigoComision\": \"\",\r\n    \"usuarioBantotal\": \"\",\r\n    \"nombre\": \"\",\r\n    \"vendedorUId\": 1\r\n  }\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ActualizarVendedorResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38350</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ActualizarVendedor</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>16:40:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ActualizarVendedorResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38350,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ActualizarVendedor\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"16:40:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38350,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ActualizarVendedor\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"16:40:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ActualizarVendedorResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38350</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ActualizarVendedor</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>16:40:24</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ActualizarVendedorResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38350,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ActualizarVendedor\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"16:40:24\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

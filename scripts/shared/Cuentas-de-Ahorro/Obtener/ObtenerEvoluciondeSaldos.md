@@ -124,7 +124,6 @@ curl -X POST \
                   <mes>8</mes>
                   <saldo>0.00</saldo>
                </sBTSaldoMensual>
-               ...
             </saldos>
          </sdtEvolucionSaldo>
          <Erroresnegocio></Erroresnegocio>
@@ -144,45 +143,44 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtEvolucionSaldo": {
-        "productoUId": "9",
-        "saldos": {
-            "sBTSaldoMensual": [
-                {
-                    "saldo": "0.00",
-                    "mes": "9",
-                    "anio": "2018"
-                },
-                {
-                    "saldo": "0.00",
-                    "mes": "8",
-                    "anio": "2018"
-                },
-                ...
-            ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtEvolucionSaldo": {
+    "productoUId": "9",
+    "saldos": {
+      "sBTSaldoMensual": [
+        {
+          "saldo": "0.00",
+          "mes": "9",
+          "anio": "2018"
+        },
+        {
+          "saldo": "0.00",
+          "mes": "8",
+          "anio": "2018"
         }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "931",
-        "Estado": "OK",
-        "Servicio": "BTCuentasDeAhorro.ObtenerEvolucionDeSaldos",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "17:35:37",
-        "Canal": "BTDIGITAL"
+      ]
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "931",
+    "Estado": "OK",
+    "Servicio": "BTCuentasDeAhorro.ObtenerEvolucionDeSaldos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "17:35:37",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -200,8 +198,11 @@ Los campos del tipo de dato estructurado sBTEvolucionSaldos son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 productoUId | Long | Identificador único de producto. 
-saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual. 
- 
+saldos | [sBTSaldoMensual](#sbtsaldomensual) | Listado de saldo mensual.
+:::
+
+::: details sBTSaldoMensual
+
 ### sBTSaldoMensual
 
 ::: center 
@@ -211,6 +212,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 anio | Short | Año. 
 mes | Byte | Mes. 
-saldo | Double | Saldo mensual. 
+saldo | Double | Saldo mensual.
 :::
+
 <!-- CIERRA SDT -->
+

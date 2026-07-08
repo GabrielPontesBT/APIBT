@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-operacionUId | Long | Identificador único de operación simulada.
+OperacionUId | Long | Identificador único de operación simulada.
 
 @tab Datos de Salida
 
@@ -117,7 +117,7 @@ curl -X POST \
             <cantidadCuotas>37</cantidadCuotas>
             <capitalOriginal>180000.00</capitalOriginal>
             <estado>Normal</estado>
-            <operacionUId>142</operacionUId>
+            <OperacionUId>142</OperacionUId>
             <tasaVigente>10.000000</tasaVigente>
             <plazo>1096</plazo>
             <saldoCapital>-174180.15</saldoCapital>
@@ -132,6 +132,7 @@ curl -X POST \
             <fechaValor>2018-05-18</fechaValor>
             <fechaVencimiento>2021-05-18</fechaVencimiento>
             <cantidadCuotasImpagas>36</cantidadCuotasImpagas>
+            <simboloMoneda></simboloMoneda>
          </sdtPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -150,48 +151,50 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtPrestamo": {
-        "sucursal": "Sucursal Beta",
-        "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "cantidadCuotas": "37",
-        "capitalOriginal": "180000.00",
-        "estado": "Normal",
-        "operacionUId": "142",
-        "tasaVigente": "10.000000",
-        "plazo": "1096",
-        "saldoCapital": "-174180.15",
-        "tipoTasa": "Lineal Anual",
-        "producto": {
-            "papel": "",
-            "moneda": "",
-            "productoUId": "0",
-            "nombre": "Amort. - Capital F./Empr.- T/F"
-        },
-        "fechaValor": "2018-05-18",
-        "fechaVencimiento": "2021-05-18",
-        "cantidadCuotasImpagas": "36",
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPrestamo": {
+    "sucursal": "Sucursal Beta",
+    "idOperacionBT": "0010000100115000000000000000002700000000000326001",
+    "cantidadCuotas": "37",
+    "capitalOriginal": "180000.00",
+    "estado": "Normal",
+    "tasaVigente": "10.000000",
+    "plazo": "1096",
+    "saldoCapital": "-174180.15",
+    "tipoTasa": "Lineal Anual",
+    "producto": {
+      "papel": "",
+      "moneda": "",
+      "productoUId": "0",
+      "nombre": "Amort. - Capital F./Empr.- T/F"
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "767",
-        "Servicio": "BTPrestamos.ObtenerDetalleReducido",
-        "Estado": "OK",
-        "Requerimiento": "",
-        "Fecha": "2017-12-12",
-        "Hora": "11:15:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "fechaValor": "2018-05-18",
+    "fechaVencimiento": "2021-05-18",
+    "cantidadCuotasImpagas": "36",
+    "idOperacionFmt": "",
+    "OperacionUId": "142",
+    "simboloMoneda": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "767",
+    "Servicio": "BTPrestamos.ObtenerDetalleReducido",
+    "Estado": "OK",
+    "Requerimiento": "",
+    "Fecha": "2017-12-12",
+    "Hora": "11:15:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -216,14 +219,17 @@ fechaValor | Date | Fecha de alta del préstamo.
 fechaVencimiento | Date | Fecha de vencimiento del préstamo. 
 idOperacionBT | String | Identificador texto de operación. 
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
-operacionUId | Long | Identificador único de la operación simulada. 
+OperacionUId | Long | Identificador único de la operación simulada. 
 plazo | Int | Plazo del préstamo. 
 producto | [sBTProducto](#sbtproducto) | Producto. 
 saldoCapital | Double | Saldo de capital. 
 simboloMoneda | String | Símbolo monetario. 
 sucursal | String | Sucursal del préstamo. 
 tasaVigente | Double | Tasa vigente. 
-tipoTasa | String | Tipo de tasa. 
+tipoTasa | String | Tipo de tasa.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -235,6 +241,8 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
 :::
+
 <!-- CIERRA SDT -->
+

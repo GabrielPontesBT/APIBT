@@ -31,5 +31,20 @@
         </div>
       }
     </div>
+
+    @if (method || endpoint) {
+      <div class="info-card_block info-card_block--endpoint" [attr.data-method]="method?.toUpperCase()">
+        @if (method) {
+          @if (methodSvg) {
+            <img [src]="methodSvg" [alt]="method" class="info-card_method-badge">
+          } @else {
+            <span class="info-card_method-text">{{ method }}</span>
+          }
+        }
+        @if (endpoint) {
+          <span>{{ endpoint }}</span>
+        }
+      </div>
+    }
   </div>
 </mat-card>

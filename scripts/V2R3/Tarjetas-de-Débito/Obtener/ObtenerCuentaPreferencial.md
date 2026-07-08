@@ -66,7 +66,7 @@ Código | Descripción
             <bts:Token>0211202010280000399672</bts:Token>
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
-         <bts:tarjetaId>109</bts:tarjetaId>
+         <bts:tarjetaUId>109</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerCuentaPreferencial>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -74,20 +74,16 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerCuentaPreferencial' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
+{
+	"Btinreq": {
 		"Canal": "BTDIGITAL",
 		"Requerimiento": "1",
 		"Usuario": "BA",
-		"Token": "0211202010280000399672",
+		"Token": "23B342928917607ECECF65BD",
 		"Device": "MC"
-	 },
-	 "tarjetaId": "109"
-  } 
+	},
+	"tarjetaUId": "109"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

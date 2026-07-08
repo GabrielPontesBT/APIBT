@@ -180,79 +180,95 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtInstruciones": {
-      "sBTInstruccionCV": [
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtInstruciones": {
+    "sBTInstruccionCV": [
       {
-         "producto": {
-            "otrosConceptos": "",
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 251,
-            "nombre": "Valores a Compensar,"
-         },
-         "operacionUId": 1047,
-         "codigoInstruccion": 3,
-         "descripcionInstruccion": "Acreditar al Vencimiento"
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 251,
+          "nombre": "Valores a Compensar,",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "operacionUId": 1047,
+        "codigoInstruccion": 3,
+        "descripcionInstruccion": "Acreditar al Vencimiento"
       },
       {
-         "producto": {
-            "otrosConceptos": "",
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 251,
-            "nombre": "Valores a Compensar, CLEARING"
-         },
-         "operacionUId": 1048,
-         "codigoInstruccion": 3,
-         "descripcionInstruccion": "Acreditar al Vencimiento"
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 251,
+          "nombre": "Valores a Compensar, CLEARING",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "operacionUId": 1048,
+        "codigoInstruccion": 3,
+        "descripcionInstruccion": "Acreditar al Vencimiento"
       },
       {
-         "producto": {
-            "otrosConceptos": "",
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 251,
-            "nombre": "Valores a Compensar, CLEARING"
-         },
-         "operacionUId": 1049,
-         "codigoInstruccion": 3,
-         "descripcionInstruccion": "Acreditar al Vencimiento"
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 251,
+          "nombre": "Valores a Compensar, CLEARING",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "operacionUId": 1049,
+        "codigoInstruccion": 3,
+        "descripcionInstruccion": "Acreditar al Vencimiento"
       },
       {
-         "producto": {
-            "otrosConceptos": "",
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 251,
-            "nombre": "Valores a Compensar, CLEARING"
-         },
-         "operacionUId": 1050,
-         "codigoInstruccion": 3,
-         "descripcionInstruccion": "Acreditar al Vencimiento"
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 251,
+          "nombre": "Valores a Compensar, CLEARING",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "operacionUId": 1050,
+        "codigoInstruccion": 3,
+        "descripcionInstruccion": "Acreditar al Vencimiento"
       }
-      ]
-   },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8418,
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerSobregiros",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8418,
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerSobregiros",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -273,6 +289,9 @@ codigoInstruccion | Short | Código identificador de la instrucción.
 descripcionInstruccion | String | Descripción de la instrucción.
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 operacionUId | Long | Identificador único de la operación de la instrucción.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -286,6 +305,9 @@ nombre | String | Nombre del producto.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel.
 productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -298,4 +320,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -122,9 +122,22 @@ curl -X POST \
                <nombreEmpresa>Finaxis</nombreEmpresa>
             </sBTRubroBolsa>
             <sBTRubroBolsa>
-               ...
+   <cuentaCliente>0</cuentaCliente>
+   <descripcion></descripcion>
+   <empresa>0</empresa>
+   <moneda>0</moneda>
+   <nombreEmpresa></nombreEmpresa>
+   <nombrePapel></nombrePapel>
+   <nombreSucursal></nombreSucursal>
+   <ocurrencias>0</ocurrencias>
+   <operacion>0</operacion>
+   <papel>0</papel>
+   <rubro>0</rubro>
+   <signoMoneda></signoMoneda>
+   <subOperacion>0</subOperacion>
+   <sucursal>0</sucursal>
+   <tipoOperacion>0</tipoOperacion>
             </sBTRubroBolsa>
-            ...
          </sdtRubrosBolsa>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -170,7 +183,6 @@ curl -X POST \
                 "sucursal": 1,
                 "nombreEmpresa": "Finaxis"
             },
-            "..."
         ]
     },
     "Erroresnegocio": {

@@ -231,8 +231,8 @@ Los campos del tipo de dato estructurado sBTPlazo son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-descripcion | String | Descripción extendida del plazo.
-tipo | String | Tipo de plazo (Diario: 'D', Mensual: 'M', Anual: 'A').
-valor | Int | Plazo.
+Descripcion | String | Descripción extendida del plazo.
+Tipo | String | Tipo de plazo (Diario: 'D', Mensual: 'M', Anual: 'A').
+Valor | Int | Plazo.
 :::
 <!-- CIERRA SDT -->

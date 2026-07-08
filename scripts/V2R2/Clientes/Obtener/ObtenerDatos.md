@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-clienteUId | Long | Identificador único de cliente.
+clienteUID | Long | Identificador único de cliente.
 
 @tab Datos de Salida
 

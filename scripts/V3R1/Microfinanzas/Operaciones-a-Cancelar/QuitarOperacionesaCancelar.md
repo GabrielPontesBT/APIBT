@@ -188,6 +188,6 @@ Los campos del tipo de dato estructurado sBTOperacion son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-operacionUId | Long | identificador único de operación.
+operacionUId | Long | Identificador único de operación.
 :::
 <!-- CIERRA SDT -->

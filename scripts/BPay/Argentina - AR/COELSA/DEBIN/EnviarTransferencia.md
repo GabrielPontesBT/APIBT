@@ -68,31 +68,33 @@ Código | Descripción
             <bts:Token>0a8ca681b3464D4650046918</bts:Token>
          </bts:Btinreq>
          <bts:EnviarTransferenciaIN>
-            <bts:sucursalDebito>0099</bts:sucursalDebito>
-            <bts:plataforma></bts:plataforma>
+            <bts:SucursalDebito>0099</bts:SucursalDebito>
+            <bts:Plataforma></bts:Plataforma>
             <bts:IMSI></bts:IMSI>
-            <bts:bancoCredito>432</bts:bancoCredito>
+            <bts:BancoCredito>432</bts:BancoCredito>
             <bts:tipoPersonaCredito></bts:tipoPersonaCredito>
-            <bts:longitud>0</bts:longitud>
-            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>
+            <bts:Longitud>0</bts:Longitud>
+            <bts:TipoProductoCredito>10</bts:TipoProductoCredito>
             <bts:IMEI></bts:IMEI>
-            <bts:importeOperacion>101.00</bts:importeOperacion>
-            <bts:monedaOperacion>032</bts:monedaOperacion>
+            <bts:ImporteOperacion>101.00</bts:ImporteOperacion>
+            <bts:MonedaOperacion>032</bts:MonedaOperacion>
             <bts:CBUDebito>0940099366000013940012</bts:CBUDebito>
-            <bts:titularCredito>COOP DE V C C Y SS PALMARES LT</bts:titularCredito>
-            <bts:titularDebito>OJEDA FELIX ANGEL</bts:titularDebito>
-            <bts:tipoOperacion>transferencia</bts:tipoOperacion>
-            <bts:descripcionOperacion></bts:descripcionOperacion>
-            <bts:bancoDebito>094</bts:bancoDebito>
-            <bts:sucursalCredito>0001</bts:sucursalCredito>
+            <bts:TitularCredito>COOP DE V C C Y SS PALMARES LT</bts:TitularCredito>
+            <bts:TitularDebito>OJEDA FELIX ANGEL</bts:TitularDebito>
+            <bts:TipoOperacion>transferencia</bts:TipoOperacion>
+            <bts:DescripcionOperacion></bts:DescripcionOperacion>
+            <bts:BancoDebito>094</bts:BancoDebito>
+            <bts:SucursalCredito>0001</bts:SucursalCredito>
             <bts:CUITDebito>20042039390</bts:CUITDebito>
             <bts:CUITCredito>30694625114</bts:CUITCredito>
             <bts:CBUCredito>4320001010003000470010</bts:CBUCredito>
-            <bts:precision>0</bts:precision>
-            <bts:conceptoOperacion>CUO</bts:conceptoOperacion>
-            <bts:tipoDispositivo>02</bts:tipoDispositivo>
-            <bts:latitud>0</bts:latitud>
-            <bts:IPCliente>127.0.0.1</bts:IPCliente>
+            <bts:Precision>0</bts:Precision>
+            <bts:ConceptoOperacion>CUO</bts:ConceptoOperacion>
+            <bts:TipoDispositivo>02</bts:TipoDispositivo>
+            <bts:Latitud>0</bts:Latitud>
+            <bts:IpCliente>127.0.0.1</bts:IpCliente>
+            <AliasOrigen></AliasOrigen>
+            <AliasDestino></AliasDestino>
          </bts:EnviarTransferenciaIN>
       </bts:BTCOELSAGestionDebin.EnviarTransferencia>
    </soapenv:Body>
@@ -174,7 +176,7 @@ BancoCredito | String | Banco Crédito.
 SucursalCredito | String | Sucursal Crédito. 
 TitularCredito | String | Titular Crédito. 
 TipoProductoCredito | Short | Tipo de Producto Crédito. 
-tipoPersonaCredito | String | tipo Persona Crédito. 
+tipoPersonaCredito | String | Tipo Persona Crédito. 
 CBUCredito | Long | Clave Bancaria Uniforme Crédito. 
 CUITDebito | Long | Clave única de identificación tributaria Débito. 
 BancoDebito | String | Banco Débito. 

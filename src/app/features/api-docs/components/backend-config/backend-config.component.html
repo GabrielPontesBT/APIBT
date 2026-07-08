@@ -1,23 +1,25 @@
 <mat-card class="backend-card">
   <div class="icon-text-container">
     <span class="custom-icon"></span>
-    <h2>Configuración Backend</h2>
+    <h2>{{ title }}</h2>
   </div>
 
-  <!-- Si hay backendData, muestra las tablas -->
+  @if (note) {
+    <div class="backend-note">
+      <markdown [data]="note"></markdown>
+    </div>
+  }
+
   @if (backendData && backendData.length > 0) {
     @for (config of backendData; track config; let i = $index) {
       <div class="configuracion">
-        <p class="config-title">{{ config.titulo }}</p>
-        <app-api-table
-          [columns]="['Campo', 'Valor']"
-          [data]="config.datos">
-        </app-api-table>
+        @if (config.titulo) {
+          <p class="config-title">{{ config.titulo }}</p>
+        }
+        <app-api-table [columns]="columns" [data]="config.datos"></app-api-table>
       </div>
     }
   } @else {
     <pre [innerHTML]="text"></pre>
   }
-
-  <!-- Si no hay backendData, muestra el texto -->
 </mat-card>

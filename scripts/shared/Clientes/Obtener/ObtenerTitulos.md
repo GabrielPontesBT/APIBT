@@ -121,6 +121,7 @@ curl -X POST \
                <nombre>Titulo2</nombre>
                <precioActual>452</precioActual>
                <otrosConceptos/>
+               <grupo></grupo>
             </sBTTitulo>
          </sdtTitulos>
          <Erroresnegocio></Erroresnegocio>
@@ -140,16 +141,16 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtTitulos": {
-      "sBTTitulo": {
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtTitulos": {
+    "sBTTitulo": {
       "moneda": 80,
       "simbolo": "$",
       "pais": "URUGUAY",
@@ -157,22 +158,27 @@ curl -X POST \
       "codigo": 1,
       "nombre": "Titulo2",
       "precioActual": 452,
-      "otrosConceptos": ""
+      "grupo": "",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
       }
-   },
-    "Erroresnegocio": {
-      "BTErrorNegocio": []
-    },
-   "Btoutreq": {
-      "Numero": "987",
-      "Estado": "NEG_ERROR",
-      "Servicio": "BTTarjetasDeDebito.CrearConCuentasAsociadas",
-      "Requerimiento": 1,
-      "Fecha": "2017-12-22",
-      "Hora": "16:15:27",
-      "Canal": "BTDIGITAL"
-   }
-}'
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "987",
+    "Estado": "NEG_ERROR",
+    "Servicio": "BTTarjetasDeDebito.CrearConCuentasAsociadas",
+    "Requerimiento": 1,
+    "Fecha": "2017-12-22",
+    "Hora": "16:15:27",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -198,6 +204,9 @@ otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
 pais | String | Nombre del país.
 precioActual | Double | Precio actual.
 simbolo | String | Símbolo de moneda.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -210,4 +219,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

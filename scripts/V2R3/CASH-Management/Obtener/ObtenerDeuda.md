@@ -163,39 +163,45 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtInfoDetalleCash": {
-      "BTInfoDetalleCASH": {
-         "detalleOrden": 2,
-         "ordenId": 293,
-         "valoresDetalle": {
-            "SdtsBTValorCampoCASH": {
-               "tag": "CSMD006IMP",
-               "valor": 100
-            }
-         }
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtInfoDetalleCash": {
+    "BTInfoDetalleCASH": {
+      "detalleOrden": 2,
+      "ordenId": 293,
+      "valoresDetalle": {
+        "SdtsBTValorCampoCASH": {
+          "tag": "CSMD006IMP",
+          "valor": 100
+        }
       }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.ObtenerDeuda",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+    "detalleOrden": 0,
+    "ordenId": 0,
+    "valoresDetalle": {
+      "tag": "",
+      "valor": ""
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.ObtenerDeuda",
+    "Fecha": "2021-01-29",
+    "Requerimiento": "1",
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -228,17 +234,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 detalleOrden | Int | Detalle de la orden.
 ordenId | Long | Identificador de la orden.
-valoresDetalle | [sBTValorCampoCASH](#sbtvalorcampocash1) | Listado de datos de valores de campos CASH.
-
-### sBTValorCampoCASH1
-
-Los campos del tipo de dato estructurado sBTValorCampoCASH son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-tag | String | Tag del campo CASH.
-valor | String | Valor del campo CASH.
-
+valoresDetalle | [sBTValorCampoCASH](#sbtvalorcampocash) | Listado de datos de valores de campos CASH.
 :::
 <!-- CIERRA SDT -->
 

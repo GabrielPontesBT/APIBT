@@ -182,63 +182,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtCuentas": {
-        "sBTProductoPasivo": [
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subcuenta": "Mi account 1",
-                "operacionUId": 21,
-                "saldo": 10000000.00,
-                "idOperacionFmt": "000000028_001",
-                "idOperacionBT": "0010010210000000000000028001000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": 0,
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subcuenta": "Mi account 2",
-                "operacionUId": 81,
-                "saldo": 0.00,
-                "idOperacionFmt": "000000028_002",
-                "idOperacionBT": "0010010210000000000000028002000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": 0,
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 404,
-        "Estado": "OK",
-        "Servicio": "BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas",
-        "Fecha": "2018-05-03",
-        "Requerimiento": 1,
-        "Hora": "11:57:10",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentas": {
+    "sBTProductoPasivo": [
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subcuenta": "Mi account 1",
+        "operacionUId": 21,
+        "saldo": 10000000,
+        "idOperacionFmt": "000000028_001",
+        "idOperacionBT": "0010010210000000000000028001000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": 0,
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": ""
+          }
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subcuenta": "Mi account 2",
+        "operacionUId": 81,
+        "saldo": 0,
+        "idOperacionFmt": "000000028_002",
+        "idOperacionBT": "0010010210000000000000028002000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": 0,
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": ""
+          }
+        },
+        "sucursal": "Casa Matriz"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 404,
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas",
+    "Fecha": "2018-05-03",
+    "Requerimiento": 1,
+    "Hora": "11:57:10",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -263,7 +273,10 @@ producto | [sBTProducto](#sbtproducto) | Datos del Producto pasivo.
 saldo | Decimal | Saldo. 
 subcuenta | String | Nombre de la cuenta vista. 
 sucursal | String | Nombre de la sucursal de origen de la operación. 
-tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA'). 
+tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -276,7 +289,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -289,4 +305,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

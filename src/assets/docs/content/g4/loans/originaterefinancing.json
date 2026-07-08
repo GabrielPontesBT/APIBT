@@ -1,0 +1,99 @@
+{
+  "slug": "loans/originaterefinancing",
+  "pageTitle": "Originate Refinancing",
+  "description": "Método para contabilizar una refinanciación.",
+  "pubName": "PublicLoans.originateRefinancing",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0019",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "refinancingGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la refinanciación."
+    },
+    {
+      "Nombre": "simulationGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la simulación."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "geolocalization",
+      "Tipo": "<a href=\"#sdtsbtgeolocalization\">SdtsBTGeolocalization</a>",
+      "Comentarios": "Datos de geolocalización."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "movementGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120020061",
+      "Descripción": "No existen datos de simulación."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"simulationGUID\": \"a1d54c72-3f8b-4e20-91dc-6b83e5f029a4\",\n  \"geolocalization\": {\n    \"latitude\": -34.60376,\n    \"longitude\": -58.38162,\n    \"timestamp\": \"2026-06-19T10:55:00.000000-03:00\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"simulationGUID\": \"a1d54c72-3f8b-4e20-91dc-6b83e5f029a4\",\n  \"geolocalization\": {\n    \"latitude\": -34.60376,\n    \"longitude\": -58.38162,\n    \"timestamp\": \"2026-06-19T10:55:00.000000-03:00\"\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"movementGUID\": \"f3c82b15-6a47-4d91-b0e2-8d51a930c7e6\",\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:55:12\",\n    \"Numero\": \"10048347\",\n    \"Servicio\": \"PublicLoans.originateRefinancing\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"movementGUID\": \"f3c82b15-6a47-4d91-b0e2-8d51a930c7e6\",\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:55:12\",\n    \"Numero\": \"10048347\",\n    \"Servicio\": \"PublicLoans.originateRefinancing\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double <strong>(Length: 11.8)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

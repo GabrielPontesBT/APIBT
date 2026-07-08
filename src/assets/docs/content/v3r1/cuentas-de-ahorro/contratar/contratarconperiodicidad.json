@@ -5,6 +5,7 @@
   "pubName": "BTCuentasDeAhorro.ContratarConPeriodicidad",
   "programa": "RBTPG358",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -40,6 +41,9 @@
       "Comentarios": "[Hidden: Valor 'CA' por defecto]."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "operacionUId",
@@ -70,11 +74,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n    <soapenv:Body>\r\n      <bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1335244350CD285A89A23FBE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>10021</bts:clienteUId>\r\n         <bts:productoUId>94</bts:productoUId>\r\n         <bts:nombreSubcuenta>Caja de Ahorro</bts:nombreSubcuenta>\r\n         <bts:periodoAcreditacion>1</bts:periodoAcreditacion>\r\n      </bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1040992103CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"clienteUId\": \"10021\",\r\n    \"productoUId\": \"94\",\r\n    \"nombreSubcuenta\": \"Caja de Ahorro\",\r\n    \"periodoAcreditacion\": \"1\"\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n    <soapenv:Body>\r\n      <bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>1335244350CD285A89A23FBE</bts:Token>\r\n            <bts:Device></bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>10021</bts:clienteUId>\r\n         <bts:productoUId>94</bts:productoUId>\r\n         <bts:nombreSubcuenta>Caja de Ahorro</bts:nombreSubcuenta>\r\n         <bts:periodoAcreditacion>1</bts:periodoAcreditacion>\r\n      </bts:BTCuentasDeAhorro.ContratarConPeriodicidad>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1040992103CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"clienteUId\": \"10021\",\r\n    \"productoUId\": \"94\",\r\n    \"nombreSubcuenta\": \"Caja de Ahorro\",\r\n    \"periodoAcreditacion\": \"1\"\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasDeAhorro.ContratarConPeriodicidadResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento/>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1335244350CD285A89A23FBE</Token>\r\n            <Device/>\r\n         </Btinreq>\r\n         <operacionUId>10210</operacionUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTCuentasDeAhorro.ContratarConPeriodicidad</Servicio>\r\n            <Fecha>2021-10-29</Fecha>\r\n            <Hora>12:27:21</Hora>\r\n            <Requerimiento/>\r\n            <Numero>8442</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTCuentasDeAhorro.ContratarConPeriodicidadResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1040992103CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"operacionUId\": 10209,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTCuentasDeAhorro.ContratarConPeriodicidad\",\r\n        \"Fecha\": \"2021-10-29\",\r\n        \"Hora\": \"12:21:44\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 8440,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasDeAhorro.ContratarConPeriodicidadResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento/>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>1335244350CD285A89A23FBE</Token>\r\n            <Device/>\r\n         </Btinreq>\r\n         <operacionUId>10210</operacionUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTCuentasDeAhorro.ContratarConPeriodicidad</Servicio>\r\n            <Fecha>2021-10-29</Fecha>\r\n            <Hora>12:27:21</Hora>\r\n            <Requerimiento/>\r\n            <Numero>8442</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTCuentasDeAhorro.ContratarConPeriodicidadResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"1040992103CD285A89A23FBE\",\r\n        \"Device\": \"\"\r\n    },\r\n    \"operacionUId\": 10209,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTCuentasDeAhorro.ContratarConPeriodicidad\",\r\n        \"Fecha\": \"2021-10-29\",\r\n        \"Hora\": \"12:21:44\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 8440,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

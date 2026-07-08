@@ -6,11 +6,18 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTPEPA0004",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "housingTypes",
@@ -23,11 +30,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  }\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"housingTypes\": {\r\n    \"housingType\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"PROPIETARIO\"\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"INQUILINO\"\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"BHU\"\r\n      },\r\n      {\r\n        \"Id\": 4,\r\n        \"Description\": \"USUFRUCTO\"\r\n      },\r\n      {\r\n        \"Id\": 5,\r\n        \"Description\": \"FAMILIAR\"\r\n      },\r\n      {\r\n        \"Id\": 6,\r\n        \"Description\": \"OTROS\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:54:23\",\r\n    \"Numero\": 13469338,\r\n    \"Servicio\": \"PublicPersons.getHousingTypes\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"housingTypes\": {\n    \"housingType\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"PROPIETARIO\"\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"INQUILINO\"\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"BHU\"\n      },\n      {\n        \"Id\": 4,\n        \"Description\": \"USUFRUCTO\"\n      },\n      {\n        \"Id\": 5,\n        \"Description\": \"FAMILIAR\"\n      },\n      {\n        \"Id\": 6,\n        \"Description\": \"OTROS\"\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:54:23\",\n    \"Numero\": 13469338,\n    \"Servicio\": \"PublicPersons.getHousingTypes\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"housingTypes\": {\n    \"housingType\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"PROPIETARIO\"\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"INQUILINO\"\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"BHU\"\n      },\n      {\n        \"Id\": 4,\n        \"Description\": \"USUFRUCTO\"\n      },\n      {\n        \"Id\": 5,\n        \"Description\": \"FAMILIAR\"\n      },\n      {\n        \"Id\": 6,\n        \"Description\": \"OTROS\"\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:54:23\",\n    \"Numero\": 13469338,\n    \"Servicio\": \"PublicPersons.getHousingTypes\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

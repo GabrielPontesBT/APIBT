@@ -174,7 +174,10 @@ Los campos del tipo de dato estructurado sBTTarjetasDeDebitoAdicionales son los 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 adicionales | [sBDTarjetaDebitoAdicional](#sbdtarjetadebitoadicional) | Listado de tarjetas de débito adicionales. 
-tarjetaUId | Long | Identificador único de tarjeta. 
+tarjetaUId | Long | Identificador único de tarjeta.
+:::
+
+::: details sBDTarjetaDebitoAdicional
 
 ### sBDTarjetaDebitoAdicional
 
@@ -187,6 +190,8 @@ estado | String | Descripción de estado.
 fechaVencimiento | Date | Fecha de vencimiento. 
 nombreTarjeta | String | Nombre de tarjeta. 
 numeroTarjeta | String | Número de tarjeta. 
-tarjetaUId | Long | Identificador único de tarjeta. 
+tarjetaUId | Long | Identificador único de tarjeta.
 :::
+
 <!-- CIERRA SDT -->
+

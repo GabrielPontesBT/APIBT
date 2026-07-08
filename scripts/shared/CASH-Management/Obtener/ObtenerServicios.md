@@ -188,97 +188,119 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtServicios": {
-      "sBTConvServicioCASH": [
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtServicios": {
+    "sBTConvServicioCASH": [
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 15,
-         "descripcionServicio": "Transferencias Individuales"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 15,
+        "descripcionServicio": "Transferencias Individuales",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 20,
-         "descripcionServicio": "Nomina"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 20,
+        "descripcionServicio": "Nomina",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 50,
-         "descripcionServicio": "Proveedores"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 50,
+        "descripcionServicio": "Proveedores",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 101,
-         "descripcionServicio": "Debitos Automaticos"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 101,
+        "descripcionServicio": "Debitos Automaticos",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 301,
-         "descripcionServicio": "Cobro masivos de prestamos"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 301,
+        "descripcionServicio": "Cobro masivos de prestamos",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "P",
-         "contratoId": 0,
-         "servicio": 302,
-         "descripcionServicio": "Cob.indiv.prestamos"
+        "tipoServicio": "P",
+        "contratoId": 0,
+        "servicio": 302,
+        "descripcionServicio": "Cob.indiv.prestamos",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "C",
-         "contratoId": 0,
-         "servicio": 500,
-         "descripcionServicio": "Recaudaciones por Debito Automatico"
+        "tipoServicio": "C",
+        "contratoId": 0,
+        "servicio": 500,
+        "descripcionServicio": "Recaudaciones por Debito Automatico",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "C",
-         "contratoId": 0,
-         "servicio": 505,
-         "descripcionServicio": "Recaudaciones por Canales"
+        "tipoServicio": "C",
+        "contratoId": 0,
+        "servicio": 505,
+        "descripcionServicio": "Recaudaciones por Canales",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "C",
-         "contratoId": 0,
-         "servicio": 515,
-         "descripcionServicio": "Recaudaciones por Caja(Codigo de Barras)"
+        "tipoServicio": "C",
+        "contratoId": 0,
+        "servicio": 515,
+        "descripcionServicio": "Recaudaciones por Caja(Codigo de Barras)",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "C",
-         "contratoId": 0,
-         "servicio": 516,
-         "descripcionServicio": "Recaudaciones T.C. (Codigo de Barras)"
+        "tipoServicio": "C",
+        "contratoId": 0,
+        "servicio": 516,
+        "descripcionServicio": "Recaudaciones T.C. (Codigo de Barras)",
+        "descServicio": "",
+        "idContrato": 0
       },
       {
-         "tipoServicio": "C",
-         "contratoId": 0,
-         "servicio": 520,
-         "descripcionServicio": "Recaudos con Base"
+        "tipoServicio": "C",
+        "contratoId": 0,
+        "servicio": 520,
+        "descripcionServicio": "Recaudos con Base",
+        "descServicio": "",
+        "idContrato": 0
       }
-      ]
-   },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 7174,
-        "Estado": "OK",
-        "Servicio": "BTCASHManagement.ObtenerServicios",
-        "Requerimiento": "1",
-        "Fecha": "2019-04-24",
-        "Hora": "15:23:16",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 7174,
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.ObtenerServicios",
+    "Requerimiento": "1",
+    "Fecha": "2019-04-24",
+    "Hora": "15:23:16",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

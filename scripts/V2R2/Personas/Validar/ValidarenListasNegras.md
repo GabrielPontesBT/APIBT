@@ -44,7 +44,7 @@ nombreEmpresa | String | Nombre de empresa.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-existeEnLista | String | ¿Existe en lista? (S/N).
+ExisteEnLista | String | ¿Existe en lista? (S/N).
 sdtListasInhabilitados | [sBTListaInhabilitados](#sbtlistainhabilitados) | Listado de listas negras.
 
 @tab Errores

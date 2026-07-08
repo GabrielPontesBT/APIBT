@@ -5,6 +5,7 @@
   "pubName": "BTCuentasVista.ObtenerPeriodoDeAcreditacion",
   "programa": "RBTPG366",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador de Subcuenta con acreditación."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtPeriodoAcreditacion",
@@ -42,11 +46,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1136448858CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10211</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"432782790CD285A89A23FBEE\",\n        \"Device\": \"\"\n    },\n    \"operacionUId\": 10211\n}"
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"432782790CD285A89A23FBEE\",\n        \"Device\": \"\"\n    },\n    \"operacionUId\": 10211\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1136448858CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10211</bts:operacionUId>\n      </bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"432782790CD285A89A23FBEE\",\n        \"Device\": \"\"\n    },\n    \"operacionUId\": 10211\n}"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1136448858CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <sdtperiodoAcreditacion>\n            <descripcion>Diario</descripcion>\n            <valor>1</valor>\n         </sdtperiodoAcreditacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasVista.ObtenerPeriodoDeAcreditacion</Servicio>\n            <Fecha>2021-11-01</Fecha>\n            <Hora>12:27:47</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8476</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"432782790CD285A89A23FBEE\",\n        \"Device\": \"\"\n    },\n    \"sdtperiodoAcreditacion\": {\n        \"descripcion\": \"Diario\",\n        \"valor\": 1\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTCuentasVista.ObtenerPeriodoDeAcreditacion\",\n        \"Fecha\": \"2021-11-01\",\n        \"Hora\": \"12:40:20\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8478,\n        \"Estado\": \"OK\"\n    }\n}"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1136448858CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <sdtPeriodoAcreditacion>\n            <descripcion>Diario</descripcion>\n            <valor>1</valor>\n         </sdtPeriodoAcreditacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasVista.ObtenerPeriodoDeAcreditacion</Servicio>\n            <Fecha>2021-11-01</Fecha>\n            <Hora>12:27:47</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8476</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Token\": \"432782790CD285A89A23FBEE\",\n    \"Device\": \"\"\n  },\n  \"sdtPeriodoAcreditacion\": {\n    \"descripcion\": \"Diario\",\n    \"valor\": 1\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Servicio\": \"BTCuentasVista.ObtenerPeriodoDeAcreditacion\",\n    \"Fecha\": \"2021-11-01\",\n    \"Hora\": \"12:40:20\",\n    \"Requerimiento\": \"\",\n    \"Numero\": 8478,\n    \"Estado\": \"OK\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1136448858CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <sdtPeriodoAcreditacion>\n            <descripcion>Diario</descripcion>\n            <valor>1</valor>\n         </sdtPeriodoAcreditacion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasVista.ObtenerPeriodoDeAcreditacion</Servicio>\n            <Fecha>2021-11-01</Fecha>\n            <Hora>12:27:47</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8476</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Token\": \"432782790CD285A89A23FBEE\",\n    \"Device\": \"\"\n  },\n  \"sdtPeriodoAcreditacion\": {\n    \"descripcion\": \"Diario\",\n    \"valor\": 1\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Servicio\": \"BTCuentasVista.ObtenerPeriodoDeAcreditacion\",\n    \"Fecha\": \"2021-11-01\",\n    \"Hora\": \"12:40:20\",\n    \"Requerimiento\": \"\",\n    \"Numero\": 8478,\n    \"Estado\": \"OK\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

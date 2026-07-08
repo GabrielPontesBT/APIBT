@@ -80,7 +80,6 @@ Código | Descripción
          <bts:operacionUId>523</bts:operacionUId>
          <bts:fechaDesde>2018-12-09</bts:fechaDesde>
          <bts:fechaHasta>2018-12-10</bts:fechaHasta>
-         <bts:cantidadMovimientos>2</bts:cantidadMovimientos>
       </bts:BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -88,24 +87,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerEstadoDeCuentaPorPeriodo \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "operacionUId": "523",
-      "fechaDesde": "2018-12-09",
-      "fechaHasta": "2018-12-10",
-      "cantidadMovimientos": "2"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": "523",
+  "fechaDesde": "2018-12-09",
+  "fechaHasta": "2018-12-10"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -163,7 +156,7 @@ curl -X POST \
                </sBTMovimiento>
             </movimientos>
             <fechaDesde>2018-12-09</fechaDesde>
-         </estadoDeCuenta>
+         </sdtEstadoDeCuenta>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>546</Numero>
@@ -181,58 +174,48 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "sdtEstadoDeCuenta": {
-         "saldoPartida": "166666.67",
-         "fechaHasta": "2018-12-10",
-         "productoUID": "523",
-         "movimientos": [
-            {
-            "moneda": "$",
-            "hora": "13:56:48",
-            "concepto": "Transferencia entre cuentas",
-            "movimientoUId": "344",
-            "debitoCredito": "C",
-            "saldo": "246666.67",
-            "importe": "80000.00",
-            "numeroCheque": "0",
-            "tipoCambio": "0.000000",
-            "arbitraje": "0.000000",
-            "fecha": "2018-12-10"
-            },
-            {
-            "moneda": "$",
-            "hora": "13:55:11",
-            "concepto": "Transferencia entre cuentas",
-            "movimientoUId": "343",
-            "debitoCredito": "C",
-            "saldo": "166666.67",
-            "importe": "20000.00",
-            "numeroCheque": "0",
-            "tipoCambio": "0.000000",
-            "arbitraje": "0.000000",
-            "fecha": "2018-12-10"
-            }
-         ]	 
-	  },
-	  "fechaDesde": "2018-12-09",
-	  "Btoutreq": {
-		"Numero": "546",
-		"Estado": "OK",
-		"Servicio": "BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo",
-		"Requerimiento": "1",
-		"Fecha": "2019-08-15",
-		"Hora": "13:57:44",
-		"Canal": "BTDIGITAL"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtEstadoDeCuenta": {
+    "saldoPartida": "166666.67",
+    "fechaHasta": "2018-12-10",
+    "productoUID": "523",
+    "fechaDesde": "2018-12-09",
+    "movimientos": {
+      "arbitraje": 0,
+      "concepto": "",
+      "datosAdicionales": {
+        "detalle": ""
+      },
+      "debitoCredito": "",
+      "fecha": "",
+      "hora": "",
+      "importe": 0,
+      "moneda": "",
+      "movimientoUId": 0,
+      "numeroCheque": 0,
+      "ordinal": 0,
+      "referencia": "",
+      "saldo": 0,
+      "tipoCambio": 0
+    }
+  },
+  "Btoutreq": {
+    "Numero": "546",
+    "Estado": "OK",
+    "Servicio": "BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo",
+    "Requerimiento": "1",
+    "Fecha": "2019-08-15",
+    "Hora": "13:57:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -252,8 +235,11 @@ Nombre | Tipo | Comentarios
 fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta. 
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de Movimiento.
-productoUId | Long | Identificador de producto. 
-saldoPartida | Double | Saldo inicial. 
+productoUID | Long | Identificador de producto. 
+saldoPartida | Double | Saldo inicial.
+:::
+
+::: details sBTMovimiento
 
 ### sBTMovimiento
 
@@ -266,8 +252,8 @@ arbitraje | Double | Arbitraje de moneda.
 concepto | String | Concepto de movimiento. 
 datosAdicionales | [sBTDatoAdicional](#sbtdatoadicional) | Datos Adicionales.
 debitoCredito | String | Débito o Crédito (D o C). 
-fecha | Date | fecha de movimiento. 
-hora | String | hora de movimiento. 
+fecha | Date | Fecha de movimiento. 
+hora | String | Hora de movimiento. 
 importe | Double | Importe de movimiento. 
 moneda | String | Símbolo de moneda. 
 movimientoUId | Long | Identificador de movimiento. 
@@ -275,7 +261,10 @@ numeroCheque | Int | Número de cheque.
 ordinal | Short | Ordinal.  
 referencia | String | Referencia. 
 saldo | Double | Saldo de Cuenta Vista. 
-tipoCambio | Double | Tipo de cambio de moneda. 
+tipoCambio | Double | Tipo de cambio de moneda.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -286,4 +275,5 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 detalle | String | Detalle del dato adicional.
 :::
+
 <!-- CIERRA SDT -->

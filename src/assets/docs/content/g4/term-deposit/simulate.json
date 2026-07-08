@@ -6,9 +6,14 @@
   "modulo": "TermDeposit",
   "programa": "PublicAPI.BTTDPA0001",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "productGUID",
@@ -21,23 +26,25 @@
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
-      "Nombre": "capital",
+      "Nombre": "amount",
       "Tipo": "Double <strong>(Length: 18.2)</strong>",
       "Comentarios": "Importe de capital."
     },
     {
-      "Nombre": "plazo",
+      "Nombre": "term",
       "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Plazo."
     },
     {
-      "Nombre": "periodicidad",
+      "Nombre": "frequency",
       "Tipo": "Int <strong>(Length: 5)</strong>",
       "Comentarios": "Periodicidad."
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "simulation",
@@ -171,11 +178,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"productGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\r\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\r\n  \"capital\": 40000.00,\r\n  \"plazo\": 365,\r\n  \"periodicidad\": 30\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"productGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\r\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\r\n  \"capital\": 40000.00,\r\n  \"plazo\": 365,\r\n  \"periodicidad\": 30\r\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"simulation\": {\r\n    \"baseRate\": 5.500000,\r\n    \"capital\": 40000.00,\r\n    \"depositType\": 1,\r\n    \"expirationDate\": \"2026-07-14\",\r\n    \"firstReviewDate\": \"0001-01-01\",\r\n    \"fixedRateRateTypeId\": 0,\r\n    \"installmentCount\": 2,\r\n    \"installmentPeriodicity\": 30,\r\n    \"installments\": {\r\n      \"sBTTDWInstallment\": [\r\n        {\r\n          \"breachDate\": \"0001-01-01\",\r\n          \"capital\": 0.00,\r\n          \"capitalTax\": 0.00,\r\n          \"endDate\": \"2026-06-14\",\r\n          \"expectedPaymentDate\": \"2026-06-14\",\r\n          \"extendsTerm\": false,\r\n          \"installmentNumber\": 1,\r\n          \"installmentStatus\": \"V\",\r\n          \"installmentType\": \"I\",\r\n          \"installmentValue\": 180.82,\r\n          \"interest\": 180.82,\r\n          \"interestTax1\": 37.97,\r\n          \"interestTax2\": 0.00,\r\n          \"interestTax3\": 0.00,\r\n          \"revenueTax\": 0.00,\r\n          \"roundOff\": 0.00,\r\n          \"startDate\": \"2026-05-15\",\r\n          \"subTotal\": 180.82,\r\n          \"taxes\": 37.97,\r\n          \"term\": 30,\r\n          \"total\": 142.85,\r\n          \"type\": \"P\"\r\n        },\r\n        {\r\n          \"breachDate\": \"0001-01-01\",\r\n          \"capital\": 40000.00,\r\n          \"capitalTax\": 0.00,\r\n          \"endDate\": \"2026-07-14\",\r\n          \"expectedPaymentDate\": \"2026-07-14\",\r\n          \"extendsTerm\": false,\r\n          \"installmentNumber\": 2,\r\n          \"installmentStatus\": \"V\",\r\n          \"installmentType\": \"I\",\r\n          \"installmentValue\": 40180.82,\r\n          \"interest\": 180.82,\r\n          \"interestTax1\": 37.97,\r\n          \"interestTax2\": 0.00,\r\n          \"interestTax3\": 0.00,\r\n          \"revenueTax\": 0.00,\r\n          \"roundOff\": 0.00,\r\n          \"startDate\": \"2026-06-14\",\r\n          \"subTotal\": 40180.82,\r\n          \"taxes\": 37.97,\r\n          \"term\": 30,\r\n          \"total\": 40142.85,\r\n          \"type\": \"P\"\r\n        }\r\n      ]\r\n    },\r\n    \"liquidCapital\": false,\r\n    \"operationExpirationDate\": \"2026-07-14\",\r\n    \"plusRate\": 0.000000,\r\n    \"plusRateRateTypeId\": 0,\r\n    \"rate\": 5.500000,\r\n    \"rateClassId\": 1,\r\n    \"rateTypeId\": 1,\r\n    \"recordsSimulation\": false,\r\n    \"reviewDays\": 0,\r\n    \"term\": 60,\r\n    \"totalGeneral\": 40285.70,\r\n    \"totalInterest\": 361.64,\r\n    \"totalTaxes\": 75.94,\r\n    \"totalTerm\": 60,\r\n    \"valueDate\": \"2026-05-15\"\r\n  },\r\n  \"instructions\": {\r\n    \"instruction\": []\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-15\",\r\n    \"Hora\": \"14:07:38\",\r\n    \"Numero\": 13472660,\r\n    \"Servicio\": \"PublicTermDeposit.simulate\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"simulation\": {\r\n    \"baseRate\": 5.500000,\r\n    \"capital\": 40000.00,\r\n    \"depositType\": 1,\r\n    \"expirationDate\": \"2026-07-14\",\r\n    \"firstReviewDate\": \"0001-01-01\",\r\n    \"fixedRateRateTypeId\": 0,\r\n    \"installmentCount\": 2,\r\n    \"installmentPeriodicity\": 30,\r\n    \"installments\": {\r\n      \"sBTTDWInstallment\": [\r\n        {\r\n          \"breachDate\": \"0001-01-01\",\r\n          \"capital\": 0.00,\r\n          \"capitalTax\": 0.00,\r\n          \"endDate\": \"2026-06-14\",\r\n          \"expectedPaymentDate\": \"2026-06-14\",\r\n          \"extendsTerm\": false,\r\n          \"installmentNumber\": 1,\r\n          \"installmentStatus\": \"V\",\r\n          \"installmentType\": \"I\",\r\n          \"installmentValue\": 180.82,\r\n          \"interest\": 180.82,\r\n          \"interestTax1\": 37.97,\r\n          \"interestTax2\": 0.00,\r\n          \"interestTax3\": 0.00,\r\n          \"revenueTax\": 0.00,\r\n          \"roundOff\": 0.00,\r\n          \"startDate\": \"2026-05-15\",\r\n          \"subTotal\": 180.82,\r\n          \"taxes\": 37.97,\r\n          \"term\": 30,\r\n          \"total\": 142.85,\r\n          \"type\": \"P\"\r\n        },\r\n        {\r\n          \"breachDate\": \"0001-01-01\",\r\n          \"capital\": 40000.00,\r\n          \"capitalTax\": 0.00,\r\n          \"endDate\": \"2026-07-14\",\r\n          \"expectedPaymentDate\": \"2026-07-14\",\r\n          \"extendsTerm\": false,\r\n          \"installmentNumber\": 2,\r\n          \"installmentStatus\": \"V\",\r\n          \"installmentType\": \"I\",\r\n          \"installmentValue\": 40180.82,\r\n          \"interest\": 180.82,\r\n          \"interestTax1\": 37.97,\r\n          \"interestTax2\": 0.00,\r\n          \"interestTax3\": 0.00,\r\n          \"revenueTax\": 0.00,\r\n          \"roundOff\": 0.00,\r\n          \"startDate\": \"2026-06-14\",\r\n          \"subTotal\": 40180.82,\r\n          \"taxes\": 37.97,\r\n          \"term\": 30,\r\n          \"total\": 40142.85,\r\n          \"type\": \"P\"\r\n        }\r\n      ]\r\n    },\r\n    \"liquidCapital\": false,\r\n    \"operationExpirationDate\": \"2026-07-14\",\r\n    \"plusRate\": 0.000000,\r\n    \"plusRateRateTypeId\": 0,\r\n    \"rate\": 5.500000,\r\n    \"rateClassId\": 1,\r\n    \"rateTypeId\": 1,\r\n    \"recordsSimulation\": false,\r\n    \"reviewDays\": 0,\r\n    \"term\": 60,\r\n    \"totalGeneral\": 40285.70,\r\n    \"totalInterest\": 361.64,\r\n    \"totalTaxes\": 75.94,\r\n    \"totalTerm\": 60,\r\n    \"valueDate\": \"2026-05-15\"\r\n  },\r\n  \"instructions\": {\r\n    \"instruction\": []\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-15\",\r\n    \"Hora\": \"14:07:38\",\r\n    \"Numero\": 13472660,\r\n    \"Servicio\": \"PublicTermDeposit.simulate\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

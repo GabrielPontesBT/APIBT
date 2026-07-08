@@ -5,6 +5,7 @@
   "pubName": "BTDepositosAPlazo.ContratarSimulacion",
   "programa": "RBTPG457",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": true,
   "backendText": "Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: \r\n\r\nCampo | Valor \r\n:--------- | :---------  \r\nCorrelativo 1 | Módulo. \r\nCorrelativo 2 | Tipo de operación (El valor 999 indica todos los tipos de operación). \r\nCorrelativo 3 | Valor incremental. \r\nValor específico 1 | Moneda (El valor 9999 indica todas las monedas). \r\nValor específico 2 | Papel (El valor 999999 indica todos los papeles). \r\nValor específico 3 | Código de instrucción a habilitar. \r\nImporte específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago periódico de intereses).",
   "backendData": [
@@ -59,7 +60,7 @@
       "Comentarios": "Identificador único de la simulación."
     },
     {
-      "Nombre": "instruccionVTO",
+      "Nombre": "InstruccionVTO",
       "Tipo": "Short",
       "Comentarios": "Identificador de la instrucción al vencimiento"
     },
@@ -69,7 +70,7 @@
       "Comentarios": "Identificador único de la operación de la cuenta destino al vencimiento."
     },
     {
-      "Nombre": "instruccionPP",
+      "Nombre": "InstruccionPP",
       "Tipo": "Short",
       "Comentarios": "Identificador de la instrucción de pago periódico."
     },
@@ -89,6 +90,9 @@
       "Comentarios": "Listado de datos complementarios. Se pueden enviar los siguientes <a href=\"#valores\">valores.</a>"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtDatosExtendidos",
@@ -172,12 +176,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ContratarSimulacion>\r\n        <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\r\n            <bts:Device>GL</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>10009</bts:clienteUId>\r\n         <bts:simulacionId>93</bts:simulacionId>\r\n         <bts:InstruccionVTO>6</bts:InstruccionVTO>\r\n         <bts:cuentaUIdDestinoVTO></bts:cuentaUIdDestinoVTO>\r\n         <bts:InstruccionPP>7</bts:InstruccionPP>\r\n         <bts:cuentaUIdDestinoPP>10120</bts:cuentaUIdDestinoPP>\r\n         <bts:cuentaUIdDebito>10120</bts:cuentaUIdDebito>\r\n         <bts:sBTDatosExtendidos/>\r\n      </bts:BTDepositosAPlazo.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarSimulacion' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"30F74741A02C318CEFD55684\",\r\n        \"Device\": \"GL\"\r\n    },\r\n    \"clienteUId\": 10009,\r\n    \"simulacionId\": 93,\r\n    \"InstruccionVTO\": 6,\r\n    \"cuentaUIdDestinoVTO\": \"\",\r\n    \"InstruccionPP\": 7,\r\n    \"cuentaUIdDestinoPP\": 10120,\r\n    \"cuentaUIdDebito\": 10120,\r\n    \"sBTDatosExtendidos\": \"\"\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ContratarSimulacion>\r\n        <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\r\n            <bts:Device>GL</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatosExtendidos></bts:sdtDatosExtendidos>\r\n         <bts:clienteUId>10009</bts:clienteUId>\r\n         <bts:simulacionId>93</bts:simulacionId>\r\n         <bts:InstruccionVTO>6</bts:InstruccionVTO>\r\n         <bts:cuentaUIdDestinoVTO></bts:cuentaUIdDestinoVTO>\r\n         <bts:InstruccionPP>7</bts:InstruccionPP>\r\n         <bts:cuentaUIdDestinoPP>10120</bts:cuentaUIdDestinoPP>\r\n         <bts:cuentaUIdDebito>10120</bts:cuentaUIdDebito>\r\n      </bts:BTDepositosAPlazo.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Requerimiento\": 1,\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Token\": \"30F74741A02C318CEFD55684\",\r\n    \"Device\": \"GL\"\r\n  },\r\n  \"clienteUId\": 10009,\r\n  \"simulacionId\": 93,\r\n  \"InstruccionVTO\": 6,\r\n  \"cuentaUIdDestinoVTO\": \"\",\r\n  \"InstruccionPP\": 7,\r\n  \"cuentaUIdDestinoPP\": 10120,\r\n  \"cuentaUIdDebito\": 10120,\r\n  \"sdtDatosExtendidos\": {}\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTDepositosAPlazo.ContratarSimulacion>\r\n        <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Token>30F74741A02C318CEFD55684</bts:Token>\r\n            <bts:Device>GL</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:sdtDatosExtendidos></bts:sdtDatosExtendidos>\r\n         <bts:clienteUId>10009</bts:clienteUId>\r\n         <bts:simulacionId>93</bts:simulacionId>\r\n         <bts:InstruccionVTO>6</bts:InstruccionVTO>\r\n         <bts:cuentaUIdDestinoVTO></bts:cuentaUIdDestinoVTO>\r\n         <bts:InstruccionPP>7</bts:InstruccionPP>\r\n         <bts:cuentaUIdDestinoPP>10120</bts:cuentaUIdDestinoPP>\r\n         <bts:cuentaUIdDebito>10120</bts:cuentaUIdDebito>\r\n      </bts:BTDepositosAPlazo.ContratarSimulacion>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Requerimiento\": 1,\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Token\": \"30F74741A02C318CEFD55684\",\r\n    \"Device\": \"GL\"\r\n  },\r\n  \"clienteUId\": 10009,\r\n  \"simulacionId\": 93,\r\n  \"InstruccionVTO\": 6,\r\n  \"cuentaUIdDestinoVTO\": \"\",\r\n  \"InstruccionPP\": 7,\r\n  \"cuentaUIdDestinoPP\": 10120,\r\n  \"cuentaUIdDebito\": 10120,\r\n  \"sdtDatosExtendidos\": {}\r\n}"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>30F74741A02C318CEFD55684</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <sBTDatosExtendidos></sBTDatosExtendidos>\r\n         <operacionUId>15</operacionUId>\r\n         <movimientoUId>15</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTDepositosAPlazo.ContratarSimulacion</Servicio>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>11:35:46</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>507</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ContratarSimulacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Requerimiento\": 1,\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Token\": \"30F74741A02C318CEFD55684\",\r\n        \"Device\": \"GL\"\r\n    },\r\n    \"sBTDatosExtendidos\": \"\",\r\n    \"operacionUId\": 15,\r\n    \"movimientoUId\": 15,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Servicio\": \"BTDepositosAPlazo.ContratarSimulacion\",\r\n        \"Fecha\": \"2022-11-29\",\r\n        \"Hora\": \"11:35:46\",\r\n        \"Requerimiento\": 1,\r\n        \"Numero\": 507,\r\n        \"Estado\": \"OK\"\r\n    }\r\n}'"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>30F74741A02C318CEFD55684</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <operacionUId>15</operacionUId>\r\n         <movimientoUId>15</movimientoUId>\r\n         <sdtDatosExtendidos></sdtDatosExtendidos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTDepositosAPlazo.ContratarSimulacion</Servicio>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>11:35:46</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>507</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ContratarSimulacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Requerimiento\": 1,\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Token\": \"30F74741A02C318CEFD55684\",\r\n    \"Device\": \"GL\"\r\n  },\r\n  \"sdtDatosExtendidos\": {},\r\n  \"operacionUId\": 15,\r\n  \"movimientoUId\": 15,\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Servicio\": \"BTDepositosAPlazo.ContratarSimulacion\",\r\n    \"Fecha\": \"2022-11-29\",\r\n    \"Hora\": \"11:35:46\",\r\n    \"Requerimiento\": 1,\r\n    \"Numero\": 507,\r\n    \"Estado\": \"OK\"\r\n  },\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTDepositosAPlazo.ContratarSimulacionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Token>30F74741A02C318CEFD55684</Token>\r\n            <Device>GL</Device>\r\n         </Btinreq>\r\n         <operacionUId>15</operacionUId>\r\n         <movimientoUId>15</movimientoUId>\r\n         <sdtDatosExtendidos></sdtDatosExtendidos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTDepositosAPlazo.ContratarSimulacion</Servicio>\r\n            <Fecha>2022-11-29</Fecha>\r\n            <Hora>11:35:46</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>507</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTDepositosAPlazo.ContratarSimulacionResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Requerimiento\": 1,\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Token\": \"30F74741A02C318CEFD55684\",\r\n    \"Device\": \"GL\"\r\n  },\r\n  \"sdtDatosExtendidos\": {},\r\n  \"operacionUId\": 15,\r\n  \"movimientoUId\": 15,\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Servicio\": \"BTDepositosAPlazo.ContratarSimulacion\",\r\n    \"Fecha\": \"2022-11-29\",\r\n    \"Hora\": \"11:35:46\",\r\n    \"Requerimiento\": 1,\r\n    \"Numero\": 507,\r\n    \"Estado\": \"OK\"\r\n  },\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -5,6 +5,7 @@
   "pubName": "BTCOELSAGestionDebin.CompradorAdhesion",
   "programa": "RBTPAR54",
   "scope": "Argentina",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Datos de comprador para adhesión."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "compradorRespuesta",
@@ -41,12 +45,26 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>\n        <bts:BTCOELSAGestionDebin.CompradorAdhesion>\n            <bts:Btinreq>\n                <bts:Device>10.12.10.40</bts:Device>\n                <bts:Token>3db8e5f45c464D4650046918</bts:Token>\n                <bts:Canal>BTDIGITAL</bts:Canal>\n                <bts:Usuario>IVRISSO</bts:Usuario>\n                <bts:Requerimiento>1</bts:Requerimiento>\n            </bts:Btinreq>\n            <bts:Comprador>\n                <bts:emailContacto>kdominguez@mail.com</bts:emailContacto>\n                <bts:ctaCbu>0940099312000605600019</bts:ctaCbu>\n                <bts:endpoint>0202</bts:endpoint>\n                <bts:cuit>23112903879</bts:cuit>\n            </bts:Comprador>\n        </bts:BTCOELSAGestionDebin.CompradorAdhesion>\n    </soapenv:Body>\n</soapenv:Envelope>",
-      "json": ""
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>\n        <bts:BTCOELSAGestionDebin.CompradorAdhesion>\n            <bts:Btinreq>\n                <bts:Device>10.12.10.40</bts:Device>\n                <bts:Token>3db8e5f45c464D4650046918</bts:Token>\n                <bts:Canal>BTDIGITAL</bts:Canal>\n                <bts:Usuario>IVRISSO</bts:Usuario>\n                <bts:Requerimiento>1</bts:Requerimiento>\n            </bts:Btinreq>\n            <bts:comprador>\n                <bts:emailContacto>kdominguez@mail.com</bts:emailContacto>\n                <bts:ctaCbu>0940099312000605600019</bts:ctaCbu>\n                <bts:endpoint>0202</bts:endpoint>\n                <bts:cuit>23112903879</bts:cuit>\n            </bts:comprador>\n        </bts:BTCOELSAGestionDebin.CompradorAdhesion>\n    </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n    <soapenv:Header />\n    <soapenv:Body>\n        <bts:BTCOELSAGestionDebin.CompradorAdhesion>\n            <bts:Btinreq>\n                <bts:Device>10.12.10.40</bts:Device>\n                <bts:Token>3db8e5f45c464D4650046918</bts:Token>\n                <bts:Canal>BTDIGITAL</bts:Canal>\n                <bts:Usuario>IVRISSO</bts:Usuario>\n                <bts:Requerimiento>1</bts:Requerimiento>\n            </bts:Btinreq>\n            <bts:comprador>\n                <bts:emailContacto>kdominguez@mail.com</bts:emailContacto>\n                <bts:ctaCbu>0940099312000605600019</bts:ctaCbu>\n                <bts:endpoint>0202</bts:endpoint>\n                <bts:cuit>23112903879</bts:cuit>\n            </bts:comprador>\n        </bts:BTCOELSAGestionDebin.CompradorAdhesion>\n    </soapenv:Body>\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.CompradorAdhesionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <compradorRespuesta>\n            <descripcion>COMPRADOR ADHERIDO</descripcion>\n            <codigo>00</codigo>\n         </compradorRespuesta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.CompradorAdhesion</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>12:28:00</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038862</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.CompradorAdhesionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.CompradorAdhesionResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1095768874CD285A89A23FBE</Token>\n            <Device>ABC</Device>\n         </Btinreq>\n         <compradorRespuesta>\n            <descripcion>COMPRADOR ADHERIDO</descripcion>\n            <codigo>00</codigo>\n         </compradorRespuesta>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCOELSAGestionDebin.CompradorAdhesion</Servicio>\n            <Fecha>2024-08-21</Fecha>\n            <Hora>12:28:00</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>1038862</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.CompradorAdhesionResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [

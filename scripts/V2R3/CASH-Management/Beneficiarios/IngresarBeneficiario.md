@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 contratoId | Int | Identificador del contrato CASH del cliente.
-servicio | Short | Servicio de pago CASH.
+servicioId | Short | Servicio de pago CASH.
 clienteUId | Long | Identificador único de cliente.
 agendaId | Short | Identificador del tipo de agenda.
 beneficiarioDatos | [sBTValorCampoCASH](#sbtvalorcampocash) | Datos de Beneficiario con sus valores.
@@ -45,7 +45,7 @@ contratoIdO | Int | Identificador del Contrato CASH.
 servicioIdO | Short | Servicio de Pago CASH.
 agendaIdO | Short | Identificador del tipo de agenda.
 beneficiarioId | String | Se devuelve el Id que identifica el Beneficiario.
-beneficiarioCorr | Int | Correlativo asignado en la Agenda al nuevo Beneficiario.
+beneficiarioCorrelativo | Int | Correlativo asignado en la Agenda al nuevo Beneficiario.
 
 @tab Errores
 
@@ -128,64 +128,59 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?IngresarBeneficiario=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-    "Btinreq": {
-          "Requerimiento": "1",
-          "Device": "AC",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-      "contratoId": 8,
-      "servicioId": 240,
-      "clienteUId": "",
-      "agendaId": "",
-      "beneficiarioDatos": {
-         "sBTValorCampoCash": [
-            {
-               "tag": "BENEF_ID",
-               "valor": "ABC123"
-            },
-            {
-               "tag": "BENEF_NOM",
-               "valor": "JUAN PEREZ"
-            },
-            {
-               "tag": "PAIS",
-               "valor": "UY"
-            },
-            {
-               "tag": "TIPO_DOC",
-               "valor": 3
-            },
-            {
-               "tag": "NUM_DOC",
-               "valor": 2546545498
-            },
-            {
-               "tag": "BENEF_DIR",
-               "valor": "Avenida Italia 6201"
-            },
-            {
-               "tag": "FORMA_PAGO",
-               "valor": "PB"
-            },
-            {
-               "tag": "CUENTA",
-               "valor": 11200001
-            },
-            {
-               "tag": "MONEDA",
-               "valor": "$"
-            }
-         ]    
+{
+  "Btinreq": {
+    "Requerimiento": "1",
+    "Device": "AC",
+    "Canal": "BTDIGITAL",
+    "Usuario": "MINSTALADOR",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "contratoId": 8,
+  "servicioId": 240,
+  "clienteUId": "",
+  "agendaId": "",
+  "beneficiarioDatos": {
+    "sBTValorCampoCash": [
+      {
+        "tag": "BENEF_ID",
+        "valor": "ABC123"
+      },
+      {
+        "tag": "BENEF_NOM",
+        "valor": "JUAN PEREZ"
+      },
+      {
+        "tag": "PAIS",
+        "valor": "UY"
+      },
+      {
+        "tag": "TIPO_DOC",
+        "valor": 3
+      },
+      {
+        "tag": "NUM_DOC",
+        "valor": 2546545498
+      },
+      {
+        "tag": "BENEF_DIR",
+        "valor": "Avenida Italia 6201"
+      },
+      {
+        "tag": "FORMA_PAGO",
+        "valor": "PB"
+      },
+      {
+        "tag": "CUENTA",
+        "valor": 11200001
+      },
+      {
+        "tag": "MONEDA",
+        "valor": "$"
       }
-  }'
+    ]
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -228,32 +223,32 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": "1",
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "contratoIdO": 8,
-    "servicioIdO": 240,
-    "agendaIdO": 1,
-    "beneficiarioId": "ABC123",
-    "beneficiarioCorrelativo": 12,
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.IngresarBeneficiario",
-      "Fecha": "2021-01-29",
-      "Requerimiento": "1",
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "contratoIdO": 8,
+  "servicioIdO": 240,
+  "agendaIdO": 1,
+  "beneficiarioId": "ABC123",
+  "beneficiarioCorrelativo": 12,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.IngresarBeneficiario",
+    "Fecha": "2021-01-29",
+    "Requerimiento": "1",
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

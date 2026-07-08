@@ -5,6 +5,7 @@
   "pubName": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
   "programa": "RBTPG285",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Fecha de fin de visualización de calendario."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "descripcionCalendario",
@@ -69,11 +73,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>MC</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>200f0b8b654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:fechaInicio>2020-10-01</bts:fechaInicio>\n         <bts:fechaFin>2020-10-31</bts:fechaFin>\n      </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X GET \\\n   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados' \\\n   -H 'cache-control: no-cache' \\\n   -H 'content-type: application/json' \\\n   -d '{\n   \"Btinreq\": {\n        \"Device\": \"bms\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Requerimiento\": \"0\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Token\": \"faa36bd33f4A8B5C60A82434\"\n    },\n\t\"calendarioId\":1,\n\t\"calendarioId\":\"2020-10-01\",\n\t\"calendarioId\":\"2020-10-31\",\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"bms\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"0\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"faa36bd33f4A8B5C60A82434\"\n  },\n  \"calendarioId\": \"2020-10-31\",\n  \"fechaInicio\": \"\",\n  \"fechaFin\": \"\"\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Device>MC</bts:Device>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>200f0b8b654A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:calendarioId>1</bts:calendarioId>\n         <bts:fechaInicio>2020-10-01</bts:fechaInicio>\n         <bts:fechaFin>2020-10-31</bts:fechaFin>\n      </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"bms\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"0\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"faa36bd33f4A8B5C60A82434\"\n  },\n  \"calendarioId\": \"2020-10-31\",\n  \"fechaInicio\": \"\",\n  \"fechaFin\": \"\"\n}"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>200f0b8b654A8B5C60A82434</Token>\n         </Btinreq>\n         <descripcionCalendario>Calendario 1</descripcionCalendario>\n         <sdtDetalleCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-01</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-02</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            ...\n         </sdtDetalleCalendario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>109132</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleCalendario</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-11-24</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:41:08</Hora>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n\t\t\"Device\": \"MC\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"200f0b8b654A8B5C60A82434\"\n\t},\n\t\"descripcionCalendario\": \"Calendario 1\",\n\t\"sdtDetalleCalendario\": {\n\t  \"sBTDiaCalendario\": [\n\t\t{\n\t\t  \"fecha\": \"2020-10-01\",\n\t\t  \"habil\": \"S\"\n\t\t},\n\t\t{\n\t\t  \"fecha\": \"2020-10-02\",\n\t\t  \"habil\": \"S\"\n\t\t},\n\t\t...\n\t  ]\n\t},\n\t\"Btoutreq\": {\n\t  \"Numero\": \"109132\",\n\t  \"Estado\": \"OK\",\n\t  \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleCalendario\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Fecha\": \"2020-11-24\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Hora\": \"10:41:08\"\n\t}\n}"
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>200f0b8b654A8B5C60A82434</Token>\n         </Btinreq>\n         <descripcionCalendario>Calendario 1</descripcionCalendario>\n         <sdtDetalleCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-01</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-02</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n         </sdtDetalleCalendario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>109132</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleCalendario</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-11-24</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:41:08</Hora>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"MC\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"200f0b8b654A8B5C60A82434\"\n  },\n  \"descripcionCalendario\": \"Calendario 1\",\n  \"sdtDetalleCalendario\": {\n    \"sBTDiaCalendario\": [\n      {\n        \"fecha\": \"2020-10-01\",\n        \"habil\": \"S\"\n      },\n      {\n        \"fecha\": \"2020-10-02\",\n        \"habil\": \"S\"\n      }\n    ]\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"109132\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleCalendario\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2020-11-24\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Hora\": \"10:41:08\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>MC</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>200f0b8b654A8B5C60A82434</Token>\n         </Btinreq>\n         <descripcionCalendario>Calendario 1</descripcionCalendario>\n         <sdtDetalleCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-01</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n            <sBTDiaCalendario>\n               <fecha>2020-10-02</fecha>\n               <habil>S</habil>\n            </sBTDiaCalendario>\n         </sdtDetalleCalendario>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>109132</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTConfiguracionBantotal.ObtenerDetalleCalendario</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2020-11-24</Fecha>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:41:08</Hora>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"MC\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"200f0b8b654A8B5C60A82434\"\n  },\n  \"descripcionCalendario\": \"Calendario 1\",\n  \"sdtDetalleCalendario\": {\n    \"sBTDiaCalendario\": [\n      {\n        \"fecha\": \"2020-10-01\",\n        \"habil\": \"S\"\n      },\n      {\n        \"fecha\": \"2020-10-02\",\n        \"habil\": \"S\"\n      }\n    ]\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"109132\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTConfiguracionBantotal.ObtenerDetalleCalendario\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2020-11-24\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Hora\": \"10:41:08\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

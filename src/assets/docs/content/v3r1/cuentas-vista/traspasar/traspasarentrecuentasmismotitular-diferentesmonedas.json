@@ -5,6 +5,7 @@
   "pubName": "BTCuentasVista.TraspasarMismoTitularDiferentesMonedas",
   "programa": "RBTPG272",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de traspaso, teniendo en cuenta que:\r\n\r\n   - La cuenta vista origen se almacena en el preformato 1.\r\n\r\n   - La cuenta vista destino en el preformato 2.\r\n\r\n   - El importe a transferir se almacena en el preformato 1.\r\n\r\n   - Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal.\r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):\r\n\r\n   - Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.",
   "backendData": [],
@@ -25,6 +26,9 @@
       "Comentarios": "Datos del Traspaso."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtResultadoTraspaso",
@@ -70,12 +74,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n            <bts:Btinreq>\r\n                <bts:Device>AV</bts:Device>\r\n                <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n                <bts:Requerimiento></bts:Requerimiento>\r\n                <bts:Canal>BTDIGITAL</bts:Canal>\r\n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n            </bts:Btinreq>\r\n            <bts:personaUId>21</bts:personaUId>\r\n            <bts:sdtTraspaso>\r\n                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>\r\n                <bts:operacionUIdDestino>282</bts:operacionUIdDestino>\r\n                <bts:monedaId></bts:monedaId>\r\n                <bts:concepto>Traspaso</bts:concepto>\r\n                <bts:importeDebito>5000</bts:importeDebito>\r\n                <bts:importeCredito>500</bts:importeCredito>\r\n            </bts:sdtTraspaso>\r\n        </bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarMismoTitularDiferentesMonedas \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n        \"Requerimiento\": 1,\r\n        \"Device\": \"GP\",\r\n        \"Token\": \"b4ae55b35c4A8B5C60A82434\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    },\r\n    \"personaUId\": 21,\r\n    \"sdtTraspaso\":\r\n    {\r\n        \"operacionUIdOrigen\": 281,\r\n        \"importeDebito\": 5000,\r\n        \"importeCredito\": 500,\r\n        \"operacionUIdDestino\": 282,\r\n        \"monedaId\": \"\",\r\n        \"concepto\": \"Traspaso\"\r\n    }\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n            <bts:Btinreq>\r\n                <bts:Device>AV</bts:Device>\r\n                <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n                <bts:Requerimiento></bts:Requerimiento>\r\n                <bts:Canal>BTDIGITAL</bts:Canal>\r\n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n            </bts:Btinreq>\r\n            <bts:personaUId>21</bts:personaUId>\r\n            <bts:sdtTraspaso>\r\n              <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>\r\n              <bts:operacionUIdDestino>282</bts:operacionUIdDestino>\r\n              <bts:monedaId></bts:monedaId>\r\n              <bts:concepto>Traspaso</bts:concepto>\r\n              <bts:importeDebito>5000</bts:importeDebito>\r\n              <bts:importeCredito>500</bts:importeCredito>\r\n              <importe></importe>\r\n            </bts:sdtTraspaso>\r\n        </bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Requerimiento\": 1,\r\n    \"Device\": \"GP\",\r\n    \"Token\": \"b4ae55b35c4A8B5C60A82434\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  },\r\n  \"personaUId\": 21,\r\n  \"sdtTraspaso\": {\r\n    \"operacionUIdOrigen\": 281,\r\n    \"importeDebito\": 5000,\r\n    \"importeCredito\": 500,\r\n    \"operacionUIdDestino\": 282,\r\n    \"monedaId\": \"\",\r\n    \"concepto\": \"Traspaso\",\r\n    \"importe\": \"\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n            <bts:Btinreq>\r\n                <bts:Device>AV</bts:Device>\r\n                <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n                <bts:Requerimiento></bts:Requerimiento>\r\n                <bts:Canal>BTDIGITAL</bts:Canal>\r\n                <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>\r\n            </bts:Btinreq>\r\n            <bts:personaUId>21</bts:personaUId>\r\n            <bts:sdtTraspaso>\r\n              <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen>\r\n              <bts:operacionUIdDestino>282</bts:operacionUIdDestino>\r\n              <bts:monedaId></bts:monedaId>\r\n              <bts:concepto>Traspaso</bts:concepto>\r\n              <bts:importeDebito>5000</bts:importeDebito>\r\n              <bts:importeCredito>500</bts:importeCredito>\r\n              <importe></importe>\r\n            </bts:sdtTraspaso>\r\n        </bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Requerimiento\": 1,\r\n    \"Device\": \"GP\",\r\n    \"Token\": \"b4ae55b35c4A8B5C60A82434\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  },\r\n  \"personaUId\": 21,\r\n  \"sdtTraspaso\": {\r\n    \"operacionUIdOrigen\": 281,\r\n    \"importeDebito\": 5000,\r\n    \"importeCredito\": 500,\r\n    \"operacionUIdDestino\": 282,\r\n    \"monedaId\": \"\",\r\n    \"concepto\": \"Traspaso\",\r\n    \"importe\": \"\"\r\n  }\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAPENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAPENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <SOAP-ENV:Body>\r\n        <BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n            <Btinreq>\r\n                <Device>AV</Device>\r\n                <Usuario>MINSTALADOR</Usuario>\r\n                <Requerimiento/>\r\n                <Canal>BTDIGITAL</Canal>\r\n                <Token>268b6d23eb4A8B5C60A82434</Token>\r\n            </Btinreq>\r\n            <sdtResultadoTraspaso>\r\n                <operacionUIdOrigen>281</operacionUIdOrigen>\r\n                <idMovimiento>0010000100050007003720180706</idMovimiento>\r\n                <operacionUIdDestino>282</operacionUIdDestino>\r\n                <saldoOperacionOrigen>7432900.28</saldoOperacionOrigen>\r\n                <movimientoUId>141</movimientoUId>\r\n            </sdtResultadoTraspaso>\r\n            <Erroresnegocio></Erroresnegocio>\r\n            <Btoutreq>\r\n                <Numero>864</Numero>\r\n                <Estado>OK</Estado>\r\n                <Servicio>BTCuentasVista.TraspasarMismoTitularDiferentesMonedas</Servicio>\r\n                <Requerimiento/>\r\n                <Fecha>2017-12-18</Fecha>\r\n                <Hora>17:07:19</Hora>\r\n                <Canal>BTDIGITAL</Canal>\r\n            </Btoutreq>\r\n        </BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n        \"Device\": \"AV\",\r\n        \"Usuario\": \"MINSTALADOR\",\r\n        \"Requerimiento\": 1,\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n    },\r\n    \"sdtResultadoTraspaso\":\r\n    {\r\n        \"operacionUIdOrigen\": 281,\r\n        \"idMovimiento\": \"0010000100050007003720180706\",\r\n        \"operacionUIdDestino\": 282,\r\n        \"saldoOperacionOrigen\": 7432900.28,\r\n        \"movimientoUId\": 141\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": 864,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasVista.TraspasarMismoTitularDiferentesMonedas\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2019-07-22\",\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Hora\": \"16:00:37\"\r\n    }\r\n}'"
+      "json": "'{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AV\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n  },\r\n  \"sdtResultadoTraspaso\":\r\n  {\r\n    \"operacionUIdOrigen\": 281,\r\n    \"idMovimiento\": \"0010000100050007003720180706\",\r\n    \"operacionUIdDestino\": 282,\r\n    \"saldoOperacionOrigen\": 7432900.28,\r\n    \"movimientoUId\": 141\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": 864,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTCuentasVista.TraspasarMismoTitularDiferentesMonedas\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2019-07-22\",\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Hora\": \"16:00:37\"\r\n  }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAPENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAPENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <SOAP-ENV:Body>\r\n        <BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n            <Btinreq>\r\n                <Device>AV</Device>\r\n                <Usuario>MINSTALADOR</Usuario>\r\n                <Requerimiento/>\r\n                <Canal>BTDIGITAL</Canal>\r\n                <Token>268b6d23eb4A8B5C60A82434</Token>\r\n            </Btinreq>\r\n            <sdtResultadoTraspaso>\r\n                <operacionUIdOrigen>281</operacionUIdOrigen>\r\n                <idMovimiento>0010000100050007003720180706</idMovimiento>\r\n                <operacionUIdDestino>282</operacionUIdDestino>\r\n                <saldoOperacionOrigen>7432900.28</saldoOperacionOrigen>\r\n                <movimientoUId>141</movimientoUId>\r\n            </sdtResultadoTraspaso>\r\n            <Erroresnegocio></Erroresnegocio>\r\n            <Btoutreq>\r\n                <Numero>864</Numero>\r\n                <Estado>OK</Estado>\r\n                <Servicio>BTCuentasVista.TraspasarMismoTitularDiferentesMonedas</Servicio>\r\n                <Requerimiento/>\r\n                <Fecha>2017-12-18</Fecha>\r\n                <Hora>17:07:19</Hora>\r\n                <Canal>BTDIGITAL</Canal>\r\n            </Btoutreq>\r\n        </BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AV\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n  },\r\n  \"sdtResultadoTraspaso\":\r\n  {\r\n    \"operacionUIdOrigen\": 281,\r\n    \"idMovimiento\": \"0010000100050007003720180706\",\r\n    \"operacionUIdDestino\": 282,\r\n    \"saldoOperacionOrigen\": 7432900.28,\r\n    \"movimientoUId\": 141\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": 864,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTCuentasVista.TraspasarMismoTitularDiferentesMonedas\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2019-07-22\",\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Hora\": \"16:00:37\"\r\n  }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -91,6 +119,16 @@
           "Nombre": "importe",
           "Tipo": "Double",
           "Comentarios": "Importe del Movimiento."
+        },
+        {
+          "Nombre": "importeCredito",
+          "Tipo": "Double",
+          "Comentarios": "Importe de crédito del movimiento."
+        },
+        {
+          "Nombre": "importeDebito",
+          "Tipo": "Double",
+          "Comentarios": "Importe del débito del movimiento."
         },
         {
           "Nombre": "monedaId",

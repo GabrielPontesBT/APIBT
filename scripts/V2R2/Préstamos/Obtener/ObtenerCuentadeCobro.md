@@ -208,6 +208,9 @@ subCuenta | String | Sub cuenta.
 sucursal | String | Nombre de la sucursal.
 sucursalId | Short | Identificador de sucursal.
 tipoProducto | String | Tipo de producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -219,6 +222,8 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
 :::
+
 <!-- CIERRA SDT -->
+

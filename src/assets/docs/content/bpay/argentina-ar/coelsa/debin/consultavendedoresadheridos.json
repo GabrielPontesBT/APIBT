@@ -5,6 +5,7 @@
   "pubName": "BTCOELSAGestionDebin.VendedorAdheridoConsulta",
   "programa": "RBTPAR66",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -16,19 +17,22 @@
   "inputData": [
     {
       "Nombre": "listaVendedorAdhReq",
-      "Tipo": "sBTVendedoresAdheridosReq",
+      "Tipo": "<a href=\"#sbtvendedoresadheridosreq\">sBTVendedoresAdheridosReq</a>",
       "Comentarios": "Datos requeridos de un vendedor adherido."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "listaVendedorAdhRes",
-      "Tipo": "sBTVendedoresAdheridosRes",
+      "Tipo": "<a href=\"#sbtvendedoresadheridosres\">sBTVendedoresAdheridosRes</a>",
       "Comentarios": "Datos listados de un vendedor adherido."
     },
     {
       "Nombre": "CollectionVendedores",
-      "Tipo": "sBTVendedorAdhItem",
+      "Tipo": "<a href=\"#sbtvendedoradhitem\">sBTVendedorAdhItem</a>",
       "Comentarios": "Colección de vendedores adheridos."
     }
   ],
@@ -38,14 +42,94 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <bts:listaVendedorAdhReq>\n            <bts:listaTamano>10</bts:listaTamano>\n            <bts:listaPagina>1</bts:listaPagina>\n            <bts:VendedorCuit>30716226308</bts:VendedorCuit>\n            <bts:VendedorRubro>VARIOS</bts:VendedorRubro>\n         </bts:listaVendedorAdhReq>\n      </bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <bts:listaVendedorAdhReq>\n            <bts:listaTamano>10</bts:listaTamano>\n            <bts:listaPagina>1</bts:listaPagina>\n            <bts:VendedorCuit>30716226308</bts:VendedorCuit>\n            <bts:VendedorRubro>VARIOS</bts:VendedorRubro>\n         </bts:listaVendedorAdhReq>\n      </bts:BTCOELSAGestionDebin.VendedorAdheridoConsulta>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <ListaVendedorAdhRes>\n            <listadoPagTotales>0</listadoPagTotales>\n            <DescRespuesta>VENDEDORES ENCONTRADOS</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </ListaVendedorAdhRes>\n         <CollectionVendedores>\n            <sBTVendedorAdhItem>\n               <VendNomFantasia/>\n               <VendRubro>VARIOS</VendRubro>\n               <VendCuit>30716226308</VendCuit>\n            </sBTVendedorAdhItem>\n         </CollectionVendedores>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>259666842</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCOELSAGestionDebin.ConsultaVendAdheridos</Servicio>\n            <Fecha>2024-08-22</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:32:32</Hora>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <listaVendedorAdhRes>\n            <listadoPagTotales>0</listadoPagTotales>\n            <DescRespuesta>VENDEDORES ENCONTRADOS</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </listaVendedorAdhRes>\n         <CollectionVendedores>\n            <sBTVendedorAdhItem>\n               <VendNomFantasia/>\n               <VendRubro>VARIOS</VendRubro>\n               <VendCuit>30716226308</VendCuit>\n            </sBTVendedorAdhItem>\n         </CollectionVendedores>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>259666842</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCOELSAGestionDebin.ConsultaVendAdheridos</Servicio>\n            <Fecha>2024-08-22</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:32:32</Hora>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>ABC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>1300e34215CD285A89A23FBE</Token>\n         </Btinreq>\n         <listaVendedorAdhRes>\n            <listadoPagTotales>0</listadoPagTotales>\n            <DescRespuesta>VENDEDORES ENCONTRADOS</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </listaVendedorAdhRes>\n         <CollectionVendedores>\n            <sBTVendedorAdhItem>\n               <VendNomFantasia/>\n               <VendRubro>VARIOS</VendRubro>\n               <VendCuit>30716226308</VendCuit>\n            </sBTVendedorAdhItem>\n         </CollectionVendedores>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>259666842</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCOELSAGestionDebin.ConsultaVendAdheridos</Servicio>\n            <Fecha>2024-08-22</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Hora>10:32:32</Hora>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.VendedorAdheridoConsultaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "sBTVendedoresAdheridosReq",
+      "fields": [
+        {
+          "Nombre": "listaTamano",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de registros por página."
+        },
+        {
+          "Nombre": "listaPagina",
+          "Tipo": "Int",
+          "Comentarios": "Página de registros a obtener."
+        },
+        {
+          "Nombre": "VendedorCuit",
+          "Tipo": "String",
+          "Comentarios": "CUIT del vendedor."
+        },
+        {
+          "Nombre": "VendedorRubro",
+          "Tipo": "String",
+          "Comentarios": "Rubro del vendedor."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTVendedoresAdheridosRes",
+      "fields": [
+        {
+          "Nombre": "listadoPagTotales",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad total de páginas del listado."
+        },
+        {
+          "Nombre": "DescRespuesta",
+          "Tipo": "String",
+          "Comentarios": "Descripción de la respuesta."
+        },
+        {
+          "Nombre": "CodRespuesta",
+          "Tipo": "String",
+          "Comentarios": "Código de la respuesta."
+        }
+      ]
+    },
+    {
+      "typeName": "sBTVendedorAdhItem",
+      "fields": [
+        {
+          "Nombre": "VendNomFantasia",
+          "Tipo": "String",
+          "Comentarios": "Nombre de fantasía del vendedor."
+        },
+        {
+          "Nombre": "VendRubro",
+          "Tipo": "String",
+          "Comentarios": "Rubro del vendedor."
+        },
+        {
+          "Nombre": "VendCuit",
+          "Tipo": "String",
+          "Comentarios": "CUIT del vendedor."
+        }
+      ]
+    }
+  ],
   "valuesTable": [],
   "valuesBeforeStructuredTypes": true
 }

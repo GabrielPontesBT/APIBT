@@ -1,0 +1,154 @@
+{
+  "slug": "loans/getmember",
+  "pageTitle": "Get Member",
+  "description": "Método para obtener la información del miembro de un grupo de créditos.",
+  "pubName": "PublicLoans.getMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0036",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "member",
+      "Tipo": "<a href=\"#sdtsbtmgmemberdata\">SdtsBTMGMemberData</a>",
+      "Comentarios": "Datos del integrante."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el GUID de grupo.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060118",
+      "Descripción": "El integrante no existe.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 1,\n  \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 1,\n  \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"member\": {\n    \"counterpartyName\": \"FRANCELLA JUAN\",\n    \"memberTypeId\": 1,\n    \"memberTypeDescription\": \"Presidente\",\n    \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n    \"countryId\": 604,\n    \"countryDescription\": \"Perú\",\n    \"documentTypeId\": 11,\n    \"documentTypeDescription\": \"D.N.I.\",\n    \"documentNumber\": \"56643156\",\n    \"personName\": \"FRANCELLA JUAN\",\n    \"personGUID\": \"c0d89ffe-d515-4818-8224-fe8395eab960\",\n    \"cycleIdOfMember\": 0\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"14:34:08\",\n    \"Numero\": 13543657,\n    \"Servicio\": \"PublicLoans.getMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"member\": {\n    \"counterpartyName\": \"FRANCELLA JUAN\",\n    \"memberTypeId\": 1,\n    \"memberTypeDescription\": \"Presidente\",\n    \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\",\n    \"countryId\": 604,\n    \"countryDescription\": \"Perú\",\n    \"documentTypeId\": 11,\n    \"documentTypeDescription\": \"D.N.I.\",\n    \"documentNumber\": \"56643156\",\n    \"personName\": \"FRANCELLA JUAN\",\n    \"personGUID\": \"c0d89ffe-d515-4818-8224-fe8395eab960\",\n    \"cycleIdOfMember\": 0\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"14:34:08\",\n    \"Numero\": 13543657,\n    \"Servicio\": \"PublicLoans.getMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGMemberData",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de contraparte."
+        },
+        {
+          "Nombre": "counterpartyName",
+          "Tipo": "String <strong>(Length: 70)</strong>",
+          "Comentarios": "Nombre de contraparte."
+        },
+        {
+          "Nombre": "countryId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador del país."
+        },
+        {
+          "Nombre": "countryDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del país."
+        },
+        {
+          "Nombre": "cycleIdOfMember",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Ciclo del miembro en el grupo."
+        },
+        {
+          "Nombre": "documentNumber",
+          "Tipo": "String <strong>(Length: 25)</strong>",
+          "Comentarios": "Número de documento."
+        },
+        {
+          "Nombre": "documentTypeId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador del tipo de documento."
+        },
+        {
+          "Nombre": "documentTypeDescription",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción del tipo de documento."
+        },
+        {
+          "Nombre": "memberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        },
+        {
+          "Nombre": "memberTypeDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del tipo de miembro."
+        },
+        {
+          "Nombre": "personGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de persona."
+        },
+        {
+          "Nombre": "personName",
+          "Tipo": "String <strong>(Length: 70)</strong>",
+          "Comentarios": "Nombre de persona."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

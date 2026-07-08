@@ -1,0 +1,114 @@
+{
+  "slug": "loans/addmember",
+  "pageTitle": "Add Member",
+  "description": "Método para agregar un integrante a un grupo de créditos.",
+  "pubName": "PublicLoans.addMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0031",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "memberData",
+      "Tipo": "<a href=\"#sdtsbtmgmember\">SdtsBTMGMember</a>",
+      "Comentarios": "Datos del integrante de grupo."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el identificador de grupo.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060110",
+      "Descripción": "El número de integrantes del grupo es mayor al permitido.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060115",
+      "Descripción": "Se ingresó el integrante [Número de integrante] más de una vez.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060122",
+      "Descripción": "El estado de la contraparte es inválido.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060126",
+      "Descripción": "No existe configuración para el ciclo.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"groupId\": 127,\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\n  \"memberData\": {\n    \"MemberTypeId\": 3\n  }\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"groupId\": 127,\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\n  \"memberData\": {\n    \"MemberTypeId\": 3\n  }\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"12:14:34\",\n    \"Numero\": 13601033,\n    \"Servicio\": \"PublicLoans.addMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"F2F0A04C9CFE9B50C05BCFB8\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"12:14:34\",\n    \"Numero\": 13601033,\n    \"Servicio\": \"PublicLoans.addMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGMember",
+      "fields": [
+        {
+          "Nombre": "MemberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

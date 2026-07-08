@@ -225,6 +225,9 @@ sucursal | Int | Identificador de sucursal.
 telefono | String | Teléfono del usuario.  
 usuario | String | Identificador del usuario. 
 usuarioWorkflow | String | ¿Es usuario Workflow? (S/N).
+:::
+
+::: details sBTRolWF
 
 ### sBTRolWF
 
@@ -237,4 +240,6 @@ codigo | Int | Código del rol.
 descripcion | String | Descripción del rol.
 :::
 :::
+
 <!-- CIERRA SDT -->
+

@@ -5,6 +5,7 @@
   "pubName": "BTPayCaddy.ConsultaMovBloqueados",
   "programa": "RBTBPTD15",
   "scope": "Panamá",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -16,16 +17,19 @@
   ],
   "inputData": [
     {
-      "Nombre": "OperationUID",
+      "Nombre": "OperationUId",
       "Tipo": "Long",
       "Obligatorio": "S",
       "Comentarios": "OperacionUID referenciada a la cuenta."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "ListaMovimientos",
-      "Tipo": "SdtsBTEstadoCuentaCV",
+      "Tipo": "<a href=\"#sdtsbtestadocuentacv\">SdtsBTEstadoCuentaCV</a>",
       "Comentarios": "Lista de movimientos."
     }
   ],
@@ -39,15 +43,60 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      </bts:BTPayCaddy.ConsultaMovBloqueados>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n          <bts:OperacionUID>12</bts:OperacionUID>\r\n      </bts:BTPayCaddy.ConsultaMovBloqueados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPayCaddy.ConsultaMovBloqueados>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n          <bts:OperacionUID>12</bts:OperacionUID>\r\n      </bts:BTPayCaddy.ConsultaMovBloqueados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPayCaddy.ConsultaMovBloqueados>\r\n         <bts:Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </bts:Btinreq>\r\n          <bts:OperacionUID>12</bts:OperacionUID>\r\n      </bts:BTPayCaddy.ConsultaMovBloqueados>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.ConsultaMovBloqueadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n\t\t <ListaMovimientos>\r\n            <saldoPartida>2000</saldoPartida>\r\n            <fechaHasta>2026-05-06</fechaHasta>\r\n            <productoUID>12</productoUID>\r\n            <movimientos>32</movimientos>\r\n            <fechaDesde>2026-01-06</fechaDesde>\r\n         </ListaMovimientos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.ConsultaMovBloqueados</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.ConsultaMovBloqueadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.ConsultaMovBloqueadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n\t\t <ListaMovimientos>\r\n            <saldoPartida>2000</saldoPartida>\r\n            <fechaHasta>2026-05-06</fechaHasta>\r\n            <productoUId>12</productoUId>\r\n            <movimientos>32</movimientos>\r\n            <fechaDesde>2026-01-06</fechaDesde>\r\n         </ListaMovimientos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.ConsultaMovBloqueados</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.ConsultaMovBloqueadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPayCaddy.ConsultaMovBloqueadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n\t\t <ListaMovimientos>\r\n            <saldoPartida>2000</saldoPartida>\r\n            <fechaHasta>2026-05-06</fechaHasta>\r\n            <productoUId>12</productoUId>\r\n            <movimientos>32</movimientos>\r\n            <fechaDesde>2026-01-06</fechaDesde>\r\n         </ListaMovimientos>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2026-05-06</Fecha>\r\n            <Hora>12:40:45</Hora>\r\n            <Numero>920208</Numero>\r\n            <Servicio>BTPayCaddy.ConsultaMovBloqueados</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPayCaddy.ConsultaMovBloqueadosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
-  "structuredTypes": [],
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTEstadoCuentaCV",
+      "fields": [
+        {
+          "Nombre": "saldoPartida",
+          "Tipo": "Double",
+          "Comentarios": "Saldo de partida."
+        },
+        {
+          "Nombre": "fechaHasta",
+          "Tipo": "Date",
+          "Comentarios": "Fecha hasta."
+        },
+        {
+          "Nombre": "productoUId",
+          "Tipo": "Long",
+          "Comentarios": "Identificador único de producto."
+        },
+        {
+          "Nombre": "movimientos",
+          "Tipo": "Int",
+          "Comentarios": "Cantidad de movimientos."
+        },
+        {
+          "Nombre": "fechaDesde",
+          "Tipo": "Date",
+          "Comentarios": "Fecha desde."
+        }
+      ]
+    }
+  ],
   "valuesTable": [],
   "valuesBeforeStructuredTypes": true
 }

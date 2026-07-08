@@ -1,0 +1,203 @@
+{
+  "slug": "loans/creategroup",
+  "pageTitle": "Create Group",
+  "description": "Método para crear un grupo.",
+  "pubName": "PublicLoans.createGroup",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0030",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupData",
+      "Tipo": "<a href=\"#sdtsbtmggrouploan\">SdtsBTMGGroupLoan</a>",
+      "Comentarios": "Datos del grupo."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe."
+    },
+    {
+      "Código": "40020012",
+      "Descripción": "El número de contraparte no existe."
+    },
+    {
+      "Código": "40020020",
+      "Descripción": "Código de ejecutivo Incorrecto."
+    },
+    {
+      "Código": "40030005",
+      "Descripción": "Tipo de integrante incorrecto."
+    },
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "120060103",
+      "Descripción": "El día de reunión ingresado es incorrecto."
+    },
+    {
+      "Código": "120060106",
+      "Descripción": "Debe ingresar la dirección del domicilio de reunión."
+    },
+    {
+      "Código": "120060107",
+      "Descripción": "Debe indicar el integrante para el domicilio de reunión."
+    },
+    {
+      "Código": "120060108",
+      "Descripción": "La hora de reunión ingresada es incorrecta."
+    },
+    {
+      "Código": "120060109",
+      "Descripción": "Debe ingresar la cuenta de ahorros para el monto mínimo de ahorro."
+    },
+    {
+      "Código": "120060110",
+      "Descripción": "El número de integrantes del grupo es mayor al permitido."
+    },
+    {
+      "Código": "120060111",
+      "Descripción": "La hora de reunión indicada no cumple con el formato esperado (HH:MM)."
+    },
+    {
+      "Código": "120060112",
+      "Descripción": "Debe ingresar el nombre del grupo."
+    },
+    {
+      "Código": "120060113",
+      "Descripción": "El tipo de integrante no existe."
+    },
+    {
+      "Código": "120060115",
+      "Descripción": "Se ingresó el integrante [Número de integrante] más de una vez."
+    },
+    {
+      "Código": "120060122",
+      "Descripción": "El estado de la contraparte es inválido."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupData\": {\n    \"executiveId\": 2,\n    \"latePenaltyAmount\": 500,\n    \"meetingTime\": \"15:00\",\n    \"branchId\": 1,\n    \"members\": [\n      {\n        \"memberTypeId\": 1,\n        \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n      },\n      {\n        \"memberTypeId\": 3,\n        \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n      }\n    ],\n    \"savingAccountGUID\": \"\",\n    \"absencePenaltyAmount\": 250,\n    \"meetingDayOfWeek\": 2,\n    \"meetingDomicile\": \"AV. ITALIA 1212\",\n    \"savingAccountExternalId\": \"\",\n    \"groupName\": \"GRUPO COOPERACION\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupData\": {\n    \"executiveId\": 2,\n    \"latePenaltyAmount\": 500,\n    \"meetingTime\": \"15:00\",\n    \"branchId\": 1,\n    \"members\": [\n      {\n        \"memberTypeId\": 1,\n        \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n      },\n      {\n        \"memberTypeId\": 3,\n        \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n      }\n    ],\n    \"savingAccountGUID\": \"\",\n    \"absencePenaltyAmount\": 250,\n    \"meetingDayOfWeek\": 2,\n    \"meetingDomicile\": \"AV. ITALIA 1212\",\n    \"savingAccountExternalId\": \"\",\n    \"groupName\": \"GRUPO COOPERACION\"\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"15:27:31\",\n    \"Numero\": 13544537,\n    \"Servicio\": \"PublicLoans.createGroup\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"15:27:31\",\n    \"Numero\": 13544537,\n    \"Servicio\": \"PublicLoans.createGroup\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGroupLoan",
+      "fields": [
+        {
+          "Nombre": "absencePenaltyAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de multa por inasistencia."
+        },
+        {
+          "Nombre": "branchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "executiveId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de ejecutivo."
+        },
+        {
+          "Nombre": "groupName",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Nombre de grupo."
+        },
+        {
+          "Nombre": "latePenaltyAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de multa por tardanza."
+        },
+        {
+          "Nombre": "meetingDayOfWeek",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Día de reunión del grupo."
+        },
+        {
+          "Nombre": "meetingDomicile",
+          "Tipo": "String <strong>(Length: 50)</strong>",
+          "Comentarios": "Domicilio de reunión del grupo."
+        },
+        {
+          "Nombre": "meetingTime",
+          "Tipo": "String <strong>(Length: 5)</strong>",
+          "Comentarios": "Hora de reunión del grupo."
+        },
+        {
+          "Nombre": "members",
+          "Tipo": "<a href=\"#sdtsbtmgmembergrouploan\">SdtsBTMGMemberGroupLoan</a>",
+          "Comentarios": "Listado de miembros del grupo."
+        },
+        {
+          "Nombre": "savingAccountExternalId",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Identificador de cuenta de ahorro externa."
+        },
+        {
+          "Nombre": "savingAccountGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberGroupLoan",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "memberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de tipo de miembro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

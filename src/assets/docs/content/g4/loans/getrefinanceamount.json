@@ -1,0 +1,128 @@
+{
+  "slug": "loans/getrefinanceamount",
+  "pageTitle": "Get Refinance Amount",
+  "description": "Método para obtener el monto de refinanciación.",
+  "pubName": "PublicLoans.getRefinanceAmount",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0018",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    },
+    {
+      "Nombre": "refinancingGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la refinanciación."
+    },
+    {
+      "Nombre": "waivedConcepts",
+      "Tipo": "<a href=\"#sdtsbtlowaivedconcepts\">SdtsBTLOWaivedConcepts</a>",
+      "Comentarios": "Conceptos a condonar."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "newCapital",
+      "Tipo": "Double <strong>(Length: 18.2)</strong>",
+      "Comentarios": "Nuevo monto de capital."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"waivedConcepts\": {\n    \"arrearInterest\": 215.60,\n    \"capital\": 0.00,\n    \"fee1\": 0.00,\n    \"fees\": 0.00,\n    \"insurance1\": 0.00,\n    \"insurances\": 0.00,\n    \"interest\": 0.00,\n    \"interestArrearPayment\": 215.60,\n    \"others\": 0.00\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"waivedConcepts\": {\n    \"arrearInterest\": 215.60,\n    \"capital\": 0.00,\n    \"fee1\": 0.00,\n    \"fees\": 0.00,\n    \"insurance1\": 0.00,\n    \"insurances\": 0.00,\n    \"interest\": 0.00,\n    \"interestArrearPayment\": 215.60,\n    \"others\": 0.00\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"newCapital\": 47250.75,\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:41:05\",\n    \"Numero\": \"10048312\",\n    \"Servicio\": \"PublicLoans.getRefinanceAmount\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"newCapital\": 47250.75,\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:41:05\",\n    \"Numero\": \"10048312\",\n    \"Servicio\": \"PublicLoans.getRefinanceAmount\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOWaivedConcepts",
+      "fields": [
+        {
+          "Nombre": "arrearInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés de mora."
+        },
+        {
+          "Nombre": "capital",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "fee1",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Gasto 1."
+        },
+        {
+          "Nombre": "fees",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisiones."
+        },
+        {
+          "Nombre": "insurance1",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Seguro 1."
+        },
+        {
+          "Nombre": "insurances",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Seguros."
+        },
+        {
+          "Nombre": "interest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés."
+        },
+        {
+          "Nombre": "interestArrearPayment",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Pago de interés de mora."
+        },
+        {
+          "Nombre": "others",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Otros."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

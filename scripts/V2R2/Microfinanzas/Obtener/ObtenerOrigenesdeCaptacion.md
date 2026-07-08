@@ -154,60 +154,62 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "sdtOrigenesCaptacion": {
-        "OrigenCaptación": [
-          {
-            "identificador": "1",
-            "descripcion": "Red de Agencias"
-          },
-          {
-            "identificador": "2",
-            "descripcion": "Call Center"
-          },
-          {
-            "identificador": "3",
-            "descripcion": "Visita Página Web"
-          },
-          {
-            "identificador": "4",
-            "descripcion": "Referencia de otro cliente"
-          },
-          {
-            "identificador": "5",
-            "descripcion": "Publicidad Masiva"
-          },
-          {
-            "identificador": "6",
-            "descripcion": "Correos masivos"
-          },
-          {
-            "identificador": "7",
-            "descripcion": "Promotor Comunitario"
-          },
-          {
-            "identificador": "8",
-            "descripcion": "Otro"
-          }
-        ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtOrigenesCaptacion": {
+    "OrigenCaptación": [
+      {
+        "identificador": "1",
+        "descripcion": "Red de Agencias"
       },
-      "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTMicrofinanzas.ObtenerOrigenesCaptacion",
-        "Fecha": "2019-09-10",
-        "Hora": "14:52:38",
-        "Requerimiento": "95",
-        "Numero": "123",
-        "Estado": "OK"
+      {
+        "identificador": "2",
+        "descripcion": "Call Center"
+      },
+      {
+        "identificador": "3",
+        "descripcion": "Visita Página Web"
+      },
+      {
+        "identificador": "4",
+        "descripcion": "Referencia de otro cliente"
+      },
+      {
+        "identificador": "5",
+        "descripcion": "Publicidad Masiva"
+      },
+      {
+        "identificador": "6",
+        "descripcion": "Correos masivos"
+      },
+      {
+        "identificador": "7",
+        "descripcion": "Promotor Comunitario"
+      },
+      {
+        "identificador": "8",
+        "descripcion": "Otro"
       }
-}'
+    ],
+    "descripcion": "",
+    "identificador": 0
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.ObtenerOrigenesCaptacion",
+    "Fecha": "2019-09-10",
+    "Hora": "14:52:38",
+    "Requerimiento": "95",
+    "Numero": "123",
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -5,6 +5,7 @@
   "pubName": "BTCOELSAGestionDebin.ConfirmaDebito",
   "programa": "RBTPAR65",
   "scope": "Argentina",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Confirmar débito datos de entrada."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "confirmaDebitoRespuesta",
@@ -42,11 +46,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConfirmaDebito>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>8f4120fb56464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTConfirmaDebitoReq>             \n            <bts:DetalleAdiOri></bts:DetalleAdiOri>\n            <bts:Imsi></bts:Imsi>\n            <bts:IdDebin>MRD06ZO9WDV1PM1N5GP7XY</bts:IdDebin>\n            <bts:CompradorCbu>0940099366000013940012</bts:CompradorCbu>\n            <bts:VendedorTit>NAVAR SA</bts:VendedorTit>\n            <bts:Imei></bts:Imei>\n            <bts:Longitud></bts:Longitud>\n            <bts:CodRespuesta>00</bts:CodRespuesta>\n            <bts:DetalleTrxOri></bts:DetalleTrxOri>\n            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>\n            <bts:DetalleTermOri></bts:DetalleTermOri>\n            <bts:VendedorCbu>3150100611000100130016</bts:VendedorCbu>\n            <bts:Latitud></bts:Latitud>\n            <bts:Plataforma></bts:Plataforma>\n            <bts:TipoDispositivo></bts:TipoDispositivo>\n            <bts:DetalleMoneda>032</bts:DetalleMoneda>\n            <bts:VendedorCuit>27103484168</bts:VendedorCuit>\n            <bts:Precision></bts:Precision>\n            <bts:DetalleImporte>150.00</bts:DetalleImporte>\n            <bts:CompradorCuit>20042039390</bts:CompradorCuit>\n            <bts:IpCliente>127.0.0.1</bts:IpCliente>\n         </bts:sBTConfirmaDebitoReq>\n      </bts:BTCOELSAGestionDebin.ConfirmaDebito>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ConfirmaDebito>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>8f4120fb56464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:sBTConfirmaDebitoReq>             \n            <bts:DetalleAdiOri></bts:DetalleAdiOri>\n            <bts:Imsi></bts:Imsi>\n            <bts:IdDebin>MRD06ZO9WDV1PM1N5GP7XY</bts:IdDebin>\n            <bts:CompradorCbu>0940099366000013940012</bts:CompradorCbu>\n            <bts:VendedorTit>NAVAR SA</bts:VendedorTit>\n            <bts:Imei></bts:Imei>\n            <bts:Longitud></bts:Longitud>\n            <bts:CodRespuesta>00</bts:CodRespuesta>\n            <bts:DetalleTrxOri></bts:DetalleTrxOri>\n            <bts:tipoProductoCredito>10</bts:tipoProductoCredito>\n            <bts:DetalleTermOri></bts:DetalleTermOri>\n            <bts:VendedorCbu>3150100611000100130016</bts:VendedorCbu>\n            <bts:Latitud></bts:Latitud>\n            <bts:Plataforma></bts:Plataforma>\n            <bts:TipoDispositivo></bts:TipoDispositivo>\n            <bts:DetalleMoneda>032</bts:DetalleMoneda>\n            <bts:VendedorCuit>27103484168</bts:VendedorCuit>\n            <bts:Precision></bts:Precision>\n            <bts:DetalleImporte>150.00</bts:DetalleImporte>\n            <bts:CompradorCuit>20042039390</bts:CompradorCuit>\n            <bts:IpCliente>127.0.0.1</bts:IpCliente>\n         </bts:sBTConfirmaDebitoReq>\n      </bts:BTCOELSAGestionDebin.ConfirmaDebito>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <SOAP-ENV:Body>\n    <BTCOELSAGestionDebin.ConfirmaDebitoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n       <Btinreq>\n          <Canal>BTDIGITAL</Canal>\n          <Requerimiento>1</Requerimiento>\n          <Usuario>INSTALADOR</Usuario>\n          <Token>1095768874CD285A89A23FBE</Token>\n          <Device>ABC</Device>\n       </Btinreq>\n       <confirmaDebitoRespuesta>\n          <CodigoRes>00</CodigoRes>\n          <DescripcionRes>Ok - GARANTIA CORRECTA</DescripcionRes>\n          <FechaNegocio>2024-08-21T00:00:00</FechaNegocio>\n          <Modulo>400</Modulo>\n          <Transaccion>810</Transaccion>\n          <Sucursal>1</Sucursal>\n          <NroRelacion>2</NroRelacion>\n       </confirmaDebitoRespuesta>\n       <Erroresnegocio></Erroresnegocio>\n       <Btoutreq>\n          <Canal>BTDIGITAL</Canal>\n          <Servicio>BTCOELSAGestionDebin.ConfirmaDebito</Servicio>\n          <Fecha>2024-08-21</Fecha>\n          <Hora>13:07:37</Hora>\n          <Requerimiento>1</Requerimiento>\n          <Numero>1038867</Numero>\n          <Estado>OK</Estado>\n       </Btoutreq>\n    </BTCOELSAGestionDebin.ConfirmaDebitoResponse>\n  </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <SOAP-ENV:Body>\n    <BTCOELSAGestionDebin.ConfirmaDebitoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n       <Btinreq>\n          <Canal>BTDIGITAL</Canal>\n          <Requerimiento>1</Requerimiento>\n          <Usuario>INSTALADOR</Usuario>\n          <Token>1095768874CD285A89A23FBE</Token>\n          <Device>ABC</Device>\n       </Btinreq>\n       <confirmaDebitoRespuesta>\n          <CodigoRes>00</CodigoRes>\n          <DescripcionRes>Ok - GARANTIA CORRECTA</DescripcionRes>\n          <FechaNegocio>2024-08-21T00:00:00</FechaNegocio>\n          <Modulo>400</Modulo>\n          <Transaccion>810</Transaccion>\n          <Sucursal>1</Sucursal>\n          <NroRelacion>2</NroRelacion>\n       </confirmaDebitoRespuesta>\n       <Erroresnegocio></Erroresnegocio>\n       <Btoutreq>\n          <Canal>BTDIGITAL</Canal>\n          <Servicio>BTCOELSAGestionDebin.ConfirmaDebito</Servicio>\n          <Fecha>2024-08-21</Fecha>\n          <Hora>13:07:37</Hora>\n          <Requerimiento>1</Requerimiento>\n          <Numero>1038867</Numero>\n          <Estado>OK</Estado>\n       </Btoutreq>\n    </BTCOELSAGestionDebin.ConfirmaDebitoResponse>\n  </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -101,7 +119,7 @@
         {
           "Nombre": "tipoProductoCredito",
           "Tipo": "String",
-          "Comentarios": "tipo de producto crédito."
+          "Comentarios": "Tipo de producto crédito."
         },
         {
           "Nombre": "DetalleTermOri",

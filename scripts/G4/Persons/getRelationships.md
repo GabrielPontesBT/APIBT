@@ -76,7 +76,14 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "relationships": {
-    "relationship": []
+    "relationship": [],
+    "Bidirectional": false,
+    "BondId": 0,
+    "BondDescription": "",
+    "IntegrantName": "",
+    "JobTitleId": 0,
+    "Percentage": "",
+    "PersonGUId": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -107,12 +114,12 @@ Los campos del tipo de dato estructurado SdtsBTPEWRelationship son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
+Bidirectional | Boolean | Bidireccional.
 BondId | Short | Identificador del vínculo.
 BondDescription | String $<(Length: 30)>$ | Descripción del vínculo.
 IntegrantName | String $<(Length: 70)>$ | Nombre del integrante.
 JobTitleId | Short | Identificador del cargo.
 Percentage | Double $<(Length: 8)>$ | Porcentaje.
-PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonGUId | String $<(Length: 36)>$ | GUID (identificador único global) de persona.
 :::
 <!-- CIERRA SDT -->

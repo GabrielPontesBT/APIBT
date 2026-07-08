@@ -1,0 +1,119 @@
+{
+  "slug": "saving-accounts/currencyexchange",
+  "pageTitle": "Currency Exchange",
+  "description": "Método para realizar cambio de moneda.",
+  "pubName": "PublicSavingAccounts.currencyExchange",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0014",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "originData",
+      "Tipo": "<a href=\"#sdtsbtsapaorigindata\">SdtsBTSAPAOriginData</a>",
+      "Comentarios": "Datos del origen."
+    },
+    {
+      "Nombre": "exchangeRate",
+      "Tipo": "Double <strong>(Length: 15.8)</strong>",
+      "Comentarios": "Tipo de cambio."
+    },
+    {
+      "Nombre": "geolocalization",
+      "Tipo": "<a href=\"#sdtsbtgeolocalization\">SdtsBTGeolocalization</a>",
+      "Comentarios": "Datos de geolocalización."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "movementGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del movimiento."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"AD704D941B64FADDB9349539\"\n  },\n  \"counterpartyGUID\": \"eb862bab-1233-48d2-8a36-7e37f8f2ae67\",\n  \"originData\": {\n    \"amout\": \"3000\",\n    \"reference\": \"Cambio moneda\",\n    \"savingAccountGUIDOrigin\": \"1923a066-cf5b-452c-8cf2-a2b2d8b5a0c3\"\n  },\n  \"exchangeRate\": \"40.56\",\n  \"geolocalization\": {\n    \"latitude\": \"-21.542233\",\n    \"longitude\": \"-39.542133\",\n    \"timestamp\": \"2026-06-19T13:02:00UTC-3\"\n  }\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"AD704D941B64FADDB9349539\"\n  },\n  \"counterpartyGUID\": \"eb862bab-1233-48d2-8a36-7e37f8f2ae67\",\n  \"originData\": {\n    \"amout\": \"3000\",\n    \"reference\": \"Cambio moneda\",\n    \"savingAccountGUIDOrigin\": \"1923a066-cf5b-452c-8cf2-a2b2d8b5a0c3\"\n  },\n  \"exchangeRate\": \"40.56\",\n  \"geolocalization\": {\n    \"latitude\": \"-21.542233\",\n    \"longitude\": \"-39.542133\",\n    \"timestamp\": \"2026-06-19T13:02:00UTC-3\"\n  }\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"AD704D941B64FADDB9349539\"\n  },\n  \"movementGUID\": \"d7890f4f-4569-4d33-b0b1-25a4d66e8150\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"16:01:20\",\n    \"Numero\": 13603444,\n    \"Servicio\": \"PublicSavingAccounts.currencyExchange\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"AD704D941B64FADDB9349539\"\n  },\n  \"movementGUID\": \"d7890f4f-4569-4d33-b0b1-25a4d66e8150\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"16:01:20\",\n    \"Numero\": 13603444,\n    \"Servicio\": \"PublicSavingAccounts.currencyExchange\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTSAPAOriginData",
+      "fields": [
+        {
+          "Nombre": "amout",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Importe."
+        },
+        {
+          "Nombre": "reference",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Referencia."
+        },
+        {
+          "Nombre": "savingAccountGUIDOrigin",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorro de origen."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTGeolocalization",
+      "fields": [
+        {
+          "Nombre": "latitude",
+          "Tipo": "Double",
+          "Comentarios": "Latitud."
+        },
+        {
+          "Nombre": "longitude",
+          "Tipo": "Double <strong>(Length: 11.8)</strong>",
+          "Comentarios": "Longitud."
+        },
+        {
+          "Nombre": "timestamp",
+          "Tipo": "String <strong>(Length: 35)</strong>",
+          "Comentarios": "Fecha, hora y zona horaria expresado en el siguiente formato: AAAA-MM-DDTHH:MM:SS.XXXXXX(+/-)HH:MM."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

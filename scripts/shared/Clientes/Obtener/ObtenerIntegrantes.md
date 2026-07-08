@@ -200,7 +200,10 @@ paisDocumento | String | Nombre del país del documento.
 personaUId | Long | Identificador único de persona. 
 representativo | String | Indica si es titular representativo (S/N). 
 tipoDocumento | String | Nombre del tipo de documento. 
-titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante. 
+titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante.
+:::
+
+::: details sBTTipoIntegrante
 
 ### sBTTipoIntegrante
 
@@ -210,6 +213,8 @@ Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción del tipo de integrante. 
-identificador | Int | Identificador del tipo de integrante. 
+identificador | Int | Identificador del tipo de integrante.
 :::
+
 <!-- CIERRA SDT -->
+

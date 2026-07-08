@@ -120,7 +120,6 @@ curl -X POST \
                <itemId>115</itemId>
                <nombre>MONTO_CRED_MN</nombre>
             </sBTItemPAE>
-            ...
          </sdtItems>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>

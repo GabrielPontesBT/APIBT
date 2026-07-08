@@ -107,20 +107,20 @@ curl -X POST \
          </Btinreq>
          <sdtTiposGrupos>
             <sBTTipoGrupo>
-               <Codigo>1</Codigo>
-               <Descripcion>Grupo Solidario</Descripcion>
+               <codigo>1</codigo>
+               <descripcion>Grupo Solidario</descripcion>
             </sBTTipoGrupo>
             <sBTTipoGrupo>
-               <Codigo>2</Codigo>
-               <Descripcion>Grupo 2</Descripcion>
+               <codigo>2</codigo>
+               <descripcion>Grupo 2</descripcion>
             </sBTTipoGrupo>
             <sBTTipoGrupo>
-               <Codigo>4</Codigo>
-               <Descripcion>Grupo Compartamos</Descripcion>
+               <codigo>4</codigo>
+               <descripcion>Grupo Compartamos</descripcion>
             </sBTTipoGrupo>
             <sBTTipoGrupo>
-               <Codigo>5</Codigo>
-               <Descripcion>Domingo</Descripcion>
+               <codigo>5</codigo>
+               <descripcion>Domingo</descripcion>
             </sBTTipoGrupo>
          </sdtTiposGrupos>
          <Erroresnegocio></Erroresnegocio>

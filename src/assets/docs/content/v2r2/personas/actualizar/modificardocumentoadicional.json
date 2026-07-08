@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ModificarDocumentoAdicional",
   "programa": "RBTPG128",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "[Hidden: Valor fijo 'UPD' para este método]."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -69,12 +73,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ModificarDocumentoAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>2e3c830e3a4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaId>21</bts:personaId>\r\n         <bts:sdtDocumentoAdicional>\r\n            <bts:fechaEmision>2015-01-01</bts:fechaEmision>\r\n            <bts:tipoDocumento>3</bts:tipoDocumento>\r\n            <bts:fechaVencimiento>2024-01-01</bts:fechaVencimiento>\r\n            <bts:tipoDocumentoDsc></bts:tipoDocumentoDsc>\r\n            <bts:paisDocumentoDsc></bts:paisDocumentoDsc>\r\n            <bts:nroDocumento>TRT00987</bts:nroDocumento>\r\n            <bts:paisDocumento>63</bts:paisDocumento>\r\n         </bts:sdtDocumentoAdicional>\r\n      </bts:BTPersonas.ModificarDocumentoAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ModificarDocumentoAdicional=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 9827b2ac-efc7-deaf-0969-9be9808e05e1' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"personaId\": 21,\r\n   \"sdtDocumentoAdicional\": {\r\n      \"fechaEmision\": \"0000-00-00\",\r\n      \"tipoDocumento\": \"3\",\r\n      \"fechaVencimiento\": \"2024-01-01\",\r\n      \"tipoDocumentoDsc\": \"Pasaporte\",\r\n      \"paisDocumentoDsc\": \"ARGENTINA\",\r\n      \"nroDocumento\": \"B8789452\",\r\n      \"paisDocumento\": \"63\"\r\n   }\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ModificarDocumentoAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>2e3c830e3a4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>21</bts:personaUId>\r\n         <bts:sdtDocumentoAdicional>\r\n            <bts:fechaEmision>2015-01-01</bts:fechaEmision>\r\n            <bts:tipoDocumento>3</bts:tipoDocumento>\r\n            <bts:fechaVencimiento>2024-01-01</bts:fechaVencimiento>\r\n            <bts:tipoDocumentoDsc></bts:tipoDocumentoDsc>\r\n            <bts:paisDocumentoDsc></bts:paisDocumentoDsc>\r\n            <bts:nroDocumento>TRT00987</bts:nroDocumento>\r\n            <bts:paisDocumento>63</bts:paisDocumento>\r\n         </bts:sdtDocumentoAdicional>\r\n      </bts:BTPersonas.ModificarDocumentoAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AV\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n  },\r\n  \"personaUId\": 21,\r\n  \"sdtDocumentoAdicional\": {\r\n    \"fechaEmision\": \"0000-00-00\",\r\n    \"tipoDocumento\": \"3\",\r\n    \"fechaVencimiento\": \"2024-01-01\",\r\n    \"tipoDocumentoDsc\": \"Pasaporte\",\r\n    \"paisDocumentoDsc\": \"ARGENTINA\",\r\n    \"nroDocumento\": \"B8789452\",\r\n    \"paisDocumento\": \"63\"\r\n  },\r\n  \"personaUId\": 0\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPersonas.ModificarDocumentoAdicional>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>2e3c830e3a4A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:personaUId>21</bts:personaUId>\r\n         <bts:sdtDocumentoAdicional>\r\n            <bts:fechaEmision>2015-01-01</bts:fechaEmision>\r\n            <bts:tipoDocumento>3</bts:tipoDocumento>\r\n            <bts:fechaVencimiento>2024-01-01</bts:fechaVencimiento>\r\n            <bts:tipoDocumentoDsc></bts:tipoDocumentoDsc>\r\n            <bts:paisDocumentoDsc></bts:paisDocumentoDsc>\r\n            <bts:nroDocumento>TRT00987</bts:nroDocumento>\r\n            <bts:paisDocumento>63</bts:paisDocumento>\r\n         </bts:sdtDocumentoAdicional>\r\n      </bts:BTPersonas.ModificarDocumentoAdicional>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AV\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n  },\r\n  \"personaUId\": 21,\r\n  \"sdtDocumentoAdicional\": {\r\n    \"fechaEmision\": \"0000-00-00\",\r\n    \"tipoDocumento\": \"3\",\r\n    \"fechaVencimiento\": \"2024-01-01\",\r\n    \"tipoDocumentoDsc\": \"Pasaporte\",\r\n    \"paisDocumentoDsc\": \"ARGENTINA\",\r\n    \"nroDocumento\": \"B8789452\",\r\n    \"paisDocumento\": \"63\"\r\n  },\r\n  \"personaUId\": 0\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ModificarDocumentoAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>2e3c830e3a4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>97</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ModificarDocumentoAdicional</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2018-05-04</Fecha>\r\n            <Hora>16:25:42</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ModificarDocumentoAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"94\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTPersonas.ModificarDocumentoAdicional\",\r\n      \"Requerimiento\": 1,\r\n      \"Fecha\": \"2018-05-04\",\r\n      \"Hora\": \"16:18:26\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"94\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTPersonas.ModificarDocumentoAdicional\",\r\n      \"Requerimiento\": 1,\r\n      \"Fecha\": \"2018-05-04\",\r\n      \"Hora\": \"16:18:26\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPersonas.ModificarDocumentoAdicionalResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>2e3c830e3a4A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>97</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPersonas.ModificarDocumentoAdicional</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2018-05-04</Fecha>\r\n            <Hora>16:25:42</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPersonas.ModificarDocumentoAdicionalResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n   \"Erroresnegocio\": {\r\n      \"BTErrorNegocio\": []\r\n   },\r\n   \"Btoutreq\": {\r\n      \"Numero\": \"94\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTPersonas.ModificarDocumentoAdicional\",\r\n      \"Requerimiento\": 1,\r\n      \"Fecha\": \"2018-05-04\",\r\n      \"Hora\": \"16:18:26\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n   }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

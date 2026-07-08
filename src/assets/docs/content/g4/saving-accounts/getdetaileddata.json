@@ -6,17 +6,24 @@
   "modulo": "Liabilities.SavingsAccounts",
   "programa": "PublicAPI.BTSAPA0001",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
-      "Nombre": "savingAccountGUID",
+      "Nombre": "SavingAccountGUID",
       "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "savingAccountData",
@@ -45,12 +52,26 @@
   "errorsNote": "",
   "examples": {
     "invocation": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\r\n}'",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\n}"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountData\": {\r\n    \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\r\n    \"AccountStatementPreferences\": {\r\n      \"RegulatorResumeFrequency\": 0,\r\n      \"RegulatorResumeFrequencyDescription\": \"\",\r\n      \"AccountingResumeFrequency\": 0,\r\n      \"AccountingResumeFrequencyDescription\": \"\",\r\n      \"ShipmentMethod\": 1,\r\n      \"ShipmentMethodDescription\": \"Email\",\r\n      \"AddressShipmentMethodId\": 0,\r\n      \"AddressShipmentMethodDescription\": \"\",\r\n      \"EmailShipmentMethodId\": 0,\r\n      \"EmailShipmentMethodDescription\": \"\",\r\n      \"BranchShipmentMethodId\": 0,\r\n      \"BranchShipmentMethodDescription\": \"\",\r\n      \"AvoidsAccountingResume\": false\r\n    },\r\n    \"Amount\": 0,\r\n    \"AvailableAmount\": \"0.00\",\r\n    \"BankCode\": \"36500101000002060678\",\r\n    \"BoardTypeId\": 44,\r\n    \"BoardTypeDescription\": \"Cuenta a mi favor\",\r\n    \"BranchId\": 1,\r\n    \"BranchDescription\": \"Sucursal Beta\",\r\n    \"CancelationDate\": \"\",\r\n    \"CancelationOriginId\": 0,\r\n    \"CancelationOriginDescription\": \"\",\r\n    \"CancelationReasonId\": 0,\r\n    \"CancelationReasonDescription\": \"\",\r\n    \"CancelationUser\": \"\",\r\n    \"CancelationUserDescription\": \"\",\r\n    \"CircularityFee\": false,\r\n    \"ClassRateTypeId\": 0,\r\n    \"ClassRateTypeDescription\": \"\",\r\n    \"CounterpartyId\": 5090,\r\n    \"CounterpartyDescription\": \"CRAMPET GUTIERREZ PEDRO PABLO\",\r\n    \"CreationUser\": \"INSTALADOR\",\r\n    \"CreationUserDescription\": \"INSTALADOR\",\r\n    \"CreationDate\": \"2027-04-30\",\r\n    \"GrouperId\": 0,\r\n    \"GrouperDescription\": \"\",\r\n    \"LowAverageFee\": false,\r\n    \"LowAverageFeeId\": 0,\r\n    \"LowAverageFeeDescription\": \"\",\r\n    \"MovementFee\": false,\r\n    \"OpeningFee\": false,\r\n    \"PaymentMethod\": 2,\r\n    \"PaymentMethodDescription\": \"Promedio\",\r\n    \"PaymentPeriod\": 0,\r\n    \"PaymentPeriodDescription\": \"\",\r\n    \"PaysInterest\": true,\r\n    \"RateType\": 1,\r\n    \"StatusId\": 0,\r\n    \"StatusDescription\": \"Normal\",\r\n    \"SubStatusId\": 0,\r\n    \"SubStatusDescription\": \"\",\r\n    \"Product\": {\r\n      \"ProductGUID\": \"28169aa2-61c3-43ca-9fa9-e12ff30d4b71\",\r\n      \"ProductDescription\": \"CUENTA A MI FAVOR\",\r\n      \"CurrencyId\": 0,\r\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\r\n      \"CurrencySign\": \"$\",\r\n      \"KindId\": 0,\r\n      \"KindDescription\": \"Billete\"\r\n    },\r\n    \"ProductChanges\": {\r\n      \"SdtsBTSAWProductChange\": []\r\n    },\r\n    \"StatusChanges\": {\r\n      \"SdtsBTSAWStatusChange\": []\r\n    }\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:53:59\",\r\n    \"Numero\": 13466299,\r\n    \"Servicio\": \"PublicSavingAccounts.getDetailedData\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"savingAccountData\": {\n    \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\n    \"AccountStatementPreferences\": {\n      \"RegulatorResumeFrequency\": 0,\n      \"RegulatorResumeFrequencyDescription\": \"\",\n      \"AccountingResumeFrequency\": 0,\n      \"AccountingResumeFrequencyDescription\": \"\",\n      \"ShipmentMethod\": 1,\n      \"ShipmentMethodDescription\": \"Email\",\n      \"AddressShipmentMethodId\": 0,\n      \"AddressShipmentMethodDescription\": \"\",\n      \"EmailShipmentMethodId\": 0,\n      \"EmailShipmentMethodDescription\": \"\",\n      \"BranchShipmentMethodId\": 0,\n      \"BranchShipmentMethodDescription\": \"\",\n      \"AvoidsAccountingResume\": false\n    },\n    \"Amount\": 0,\n    \"AvailableAmount\": \"0.00\",\n    \"BankCode\": \"36500101000002060678\",\n    \"BoardTypeId\": 44,\n    \"BoardTypeDescription\": \"Cuenta a mi favor\",\n    \"BranchId\": 1,\n    \"BranchDescription\": \"Sucursal Beta\",\n    \"CancelationDate\": \"\",\n    \"CancelationOriginId\": 0,\n    \"CancelationOriginDescription\": \"\",\n    \"CancelationReasonId\": 0,\n    \"CancelationReasonDescription\": \"\",\n    \"CancelationUser\": \"\",\n    \"CancelationUserDescription\": \"\",\n    \"CircularityFee\": false,\n    \"ClassRateTypeId\": 0,\n    \"ClassRateTypeDescription\": \"\",\n    \"CounterpartyId\": 5090,\n    \"CounterpartyDescription\": \"CRAMPET GUTIERREZ PEDRO PABLO\",\n    \"CreationUser\": \"INSTALADOR\",\n    \"CreationUserDescription\": \"INSTALADOR\",\n    \"CreationDate\": \"2027-04-30\",\n    \"GrouperId\": 0,\n    \"GrouperDescription\": \"\",\n    \"LowAverageFee\": false,\n    \"LowAverageFeeId\": 0,\n    \"LowAverageFeeDescription\": \"\",\n    \"MovementFee\": false,\n    \"OpeningFee\": false,\n    \"PaymentMethod\": 2,\n    \"PaymentMethodDescription\": \"Promedio\",\n    \"PaymentPeriod\": 0,\n    \"PaymentPeriodDescription\": \"\",\n    \"PaysInterest\": true,\n    \"RateType\": 1,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"SubStatusId\": 0,\n    \"SubStatusDescription\": \"\",\n    \"Product\": {\n      \"ProductDescription\": \"CUENTA A MI FAVOR\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\",\n      \"ProductGUId\": \"28169aa2-61c3-43ca-9fa9-e12ff30d4b71\"\n    },\n    \"ProductChanges\": {\n      \"SdtsBTSAWProductChange\": [\n        {\n          \"Correlative\": 0,\n          \"Event\": \"\",\n          \"EventDate\": \"\",\n          \"EventUser\": \"\",\n          \"EventUserDescription\": \"\",\n          \"MovementGUId\": \"\",\n          \"PreviousProduct\": \"\",\n          \"PreviousProductDescription\": \"\",\n          \"ValidFrom\": \"\"\n        }\n      ]\n    },\n    \"StatusChanges\": {\n      \"SdtsBTSAWStatusChange\": [\n        {\n          \"ChangeDate\": \"\",\n          \"Comments\": \"\",\n          \"ConfirmationUserId\": \"\",\n          \"ConfirmationUserDescription\": \"\",\n          \"Correlative\": 0,\n          \"CreationUserId\": \"\",\n          \"CreationUserDescription\": \"\",\n          \"IsReversedEntry\": false,\n          \"NewStatusId\": 0,\n          \"NewStatusDescription\": \"\",\n          \"NewSubStatusId\": 0,\n          \"NewSubStatusDescription\": \"\",\n          \"PreviousStatusId\": 0,\n          \"PreviousStatusDescription\": \"\",\n          \"PreviousSubStatusId\": 0,\n          \"PreviousSubStatusDescription\": \"\"\n        }\n      ]\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:53:59\",\n    \"Numero\": 13466299,\n    \"Servicio\": \"PublicSavingAccounts.getDetailedData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"savingAccountData\": {\n    \"SavingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\n    \"AccountStatementPreferences\": {\n      \"RegulatorResumeFrequency\": 0,\n      \"RegulatorResumeFrequencyDescription\": \"\",\n      \"AccountingResumeFrequency\": 0,\n      \"AccountingResumeFrequencyDescription\": \"\",\n      \"ShipmentMethod\": 1,\n      \"ShipmentMethodDescription\": \"Email\",\n      \"AddressShipmentMethodId\": 0,\n      \"AddressShipmentMethodDescription\": \"\",\n      \"EmailShipmentMethodId\": 0,\n      \"EmailShipmentMethodDescription\": \"\",\n      \"BranchShipmentMethodId\": 0,\n      \"BranchShipmentMethodDescription\": \"\",\n      \"AvoidsAccountingResume\": false\n    },\n    \"Amount\": 0,\n    \"AvailableAmount\": \"0.00\",\n    \"BankCode\": \"36500101000002060678\",\n    \"BoardTypeId\": 44,\n    \"BoardTypeDescription\": \"Cuenta a mi favor\",\n    \"BranchId\": 1,\n    \"BranchDescription\": \"Sucursal Beta\",\n    \"CancelationDate\": \"\",\n    \"CancelationOriginId\": 0,\n    \"CancelationOriginDescription\": \"\",\n    \"CancelationReasonId\": 0,\n    \"CancelationReasonDescription\": \"\",\n    \"CancelationUser\": \"\",\n    \"CancelationUserDescription\": \"\",\n    \"CircularityFee\": false,\n    \"ClassRateTypeId\": 0,\n    \"ClassRateTypeDescription\": \"\",\n    \"CounterpartyId\": 5090,\n    \"CounterpartyDescription\": \"CRAMPET GUTIERREZ PEDRO PABLO\",\n    \"CreationUser\": \"INSTALADOR\",\n    \"CreationUserDescription\": \"INSTALADOR\",\n    \"CreationDate\": \"2027-04-30\",\n    \"GrouperId\": 0,\n    \"GrouperDescription\": \"\",\n    \"LowAverageFee\": false,\n    \"LowAverageFeeId\": 0,\n    \"LowAverageFeeDescription\": \"\",\n    \"MovementFee\": false,\n    \"OpeningFee\": false,\n    \"PaymentMethod\": 2,\n    \"PaymentMethodDescription\": \"Promedio\",\n    \"PaymentPeriod\": 0,\n    \"PaymentPeriodDescription\": \"\",\n    \"PaysInterest\": true,\n    \"RateType\": 1,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"SubStatusId\": 0,\n    \"SubStatusDescription\": \"\",\n    \"Product\": {\n      \"ProductDescription\": \"CUENTA A MI FAVOR\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\",\n      \"ProductGUId\": \"28169aa2-61c3-43ca-9fa9-e12ff30d4b71\"\n    },\n    \"ProductChanges\": {\n      \"SdtsBTSAWProductChange\": [\n        {\n          \"Correlative\": 0,\n          \"Event\": \"\",\n          \"EventDate\": \"\",\n          \"EventUser\": \"\",\n          \"EventUserDescription\": \"\",\n          \"MovementGUId\": \"\",\n          \"PreviousProduct\": \"\",\n          \"PreviousProductDescription\": \"\",\n          \"ValidFrom\": \"\"\n        }\n      ]\n    },\n    \"StatusChanges\": {\n      \"SdtsBTSAWStatusChange\": [\n        {\n          \"ChangeDate\": \"\",\n          \"Comments\": \"\",\n          \"ConfirmationUserId\": \"\",\n          \"ConfirmationUserDescription\": \"\",\n          \"Correlative\": 0,\n          \"CreationUserId\": \"\",\n          \"CreationUserDescription\": \"\",\n          \"IsReversedEntry\": false,\n          \"NewStatusId\": 0,\n          \"NewStatusDescription\": \"\",\n          \"NewSubStatusId\": 0,\n          \"NewSubStatusDescription\": \"\",\n          \"PreviousStatusId\": 0,\n          \"PreviousStatusDescription\": \"\",\n          \"PreviousSubStatusId\": 0,\n          \"PreviousSubStatusDescription\": \"\"\n        }\n      ]\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:53:59\",\n    \"Numero\": 13466299,\n    \"Servicio\": \"PublicSavingAccounts.getDetailedData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -134,7 +155,7 @@
         },
         {
           "Nombre": "CircularityFee",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Comisión de circularidad."
         },
         {
@@ -184,7 +205,7 @@
         },
         {
           "Nombre": "LowAverageFee",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Comisión de saldo mínimo."
         },
         {
@@ -199,12 +220,12 @@
         },
         {
           "Nombre": "MovementFee",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Comisión por movimiento."
         },
         {
           "Nombre": "OpeningFee",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Comisión de apertura."
         },
         {
@@ -229,7 +250,7 @@
         },
         {
           "Nombre": "PaysInterest",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Paga intereses."
         },
         {
@@ -250,7 +271,7 @@
         {
           "Nombre": "SavingAccountGUID",
           "Tipo": "String",
-          "Comentarios": "GUID de cuenta de ahorro."
+          "Comentarios": "GUID (identificador único global) de cuenta de ahorro."
         },
         {
           "Nombre": "StatusChanges",
@@ -304,7 +325,7 @@
         },
         {
           "Nombre": "AvoidsAccountingResume",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Evita resumen contable."
         },
         {
@@ -403,9 +424,9 @@
           "Comentarios": "Descripción del producto."
         },
         {
-          "Nombre": "ProductGUID",
+          "Nombre": "ProductGUId",
           "Tipo": "String <strong>(Length: 36)</strong>",
-          "Comentarios": "GUID del producto."
+          "Comentarios": "GUID (identificador único global) del producto."
         }
       ]
     },
@@ -438,9 +459,9 @@
           "Comentarios": "Descripción del usuario del evento."
         },
         {
-          "Nombre": "MovementGUID",
+          "Nombre": "MovementGUId",
           "Tipo": "String",
-          "Comentarios": "GUID del movimiento."
+          "Comentarios": "GUID (identificador único global) del movimiento."
         },
         {
           "Nombre": "PreviousProduct",

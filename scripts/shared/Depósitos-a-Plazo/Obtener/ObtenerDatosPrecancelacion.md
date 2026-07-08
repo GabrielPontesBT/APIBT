@@ -197,7 +197,10 @@ datosAdicionales | [sBTDatoAdicional](#sbtdatoAdicional) | Listado de datos adic
 plazo | Int | Plazo. 
 valorInicial | Double | Valor inicial. 
 tasaOriginal | Double | Tasa original. 
-tasaPrecancelacion | Double | Tasa de precancelación. 
+tasaPrecancelacion | Double | Tasa de precancelación.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
  
@@ -206,6 +209,7 @@ Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 detalle | String | Detalle.
-
 :::
+
 <!-- CIERRA SDT -->
+

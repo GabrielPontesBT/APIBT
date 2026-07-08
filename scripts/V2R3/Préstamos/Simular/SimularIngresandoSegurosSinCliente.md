@@ -148,7 +148,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>387E2B35D9F43B80C31D1FF0</Token>
          </Btinreq>
-         <sdtSimulacionPrestamo>
+         <sBTSimulacionPrestamo>
             <cft>28.210000</cft>
             <plazo>360</plazo>
             <tasa>23.000000</tasa>
@@ -242,7 +242,7 @@ curl -X POST \
             <seguros>1440.000000</seguros>
             <tasaNominalAnual>20.881010</tasaNominalAnual>
             <fechaValor>2020-10-13</fechaValor>
-         </sdtSimulacionPrestamo>
+         </sBTSimulacionPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>11921</Numero>
@@ -260,122 +260,126 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-      "Device": "AV",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "72e34bcd9d4A8B5C60A82434"
-   },
-   "sdtSimulacionPrestamo": {
-      "cft": "28.210000",
-      "plazo": "360",
-      "tasa": "23.000000",
-      "impuestos": "452.410000",
-      "tasaEfectiva": "0.000000",
-      "fechaVencimiento": "2021-10-13",
-      "producto": {
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "72e34bcd9d4A8B5C60A82434"
+  },
+  "sBTSimulacionPrestamo": {
+    "cft": "28.210000",
+    "plazo": "360",
+    "tasa": "23.000000",
+    "impuestos": "452.410000",
+    "tasaEfectiva": "0.000000",
+    "fechaVencimiento": "2021-10-13",
+    "producto": {
       "papel": "$",
       "moneda": "$",
       "productoUId": "71",
       "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
-      "otrosConceptos":""
-      },
-      "intereses": "2027.72",
-      "fechaPrimerPago": "2020-11-13",
-      "comisiones": "0.000000",
-      "valorCuota": "5000.00",
       "otrosConceptos": {
-      "SdtsBTConcepto": {
-         "texto": "SANCOR - Vida - Variante 1",
-         "valor": "1440.00",
-         "concepto": "100"
+        "concepto": "",
+        "texto": "",
+        "valor": 0
       }
-      },
-      "cronograma": {
+    },
+    "intereses": "2027.72",
+    "fechaPrimerPago": "2020-11-13",
+    "comisiones": "0.000000",
+    "valorCuota": "5000.00",
+    "otrosConceptos": {
+      "SdtsBTConcepto": {
+        "texto": "SANCOR - Vida - Variante 1",
+        "valor": "1440.00",
+        "concepto": "100"
+      }
+    },
+    "cronograma": {
       "SdtsBTCuotaPrestamoAlta": [
-         {
-            "importe": "5000.00",
-            "redondeo": "0.00",
-            "fechaPago": "2020-11-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2020-12-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-01-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-02-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-03-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-04-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-05-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-06-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-07-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-08-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-09-13"
-         },
-         {
-            "importe": "1719.44",
-            "redondeo": "0.00",
-            "fechaPago": "2021-10-13"
-         }
+        {
+          "importe": "5000.00",
+          "redondeo": "0.00",
+          "fechaPago": "2020-11-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2020-12-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-01-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-02-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-03-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-04-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-05-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-06-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-07-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-08-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-09-13"
+        },
+        {
+          "importe": "1719.44",
+          "redondeo": "0.00",
+          "fechaPago": "2021-10-13"
+        }
       ]
-      },
-      "totalPrestamo": "23942.44",
-      "capital": "20000.00",
-      "operacionUId": "1",
-      "tasaEfectivaAnual": "23.000000",
-      "seguros": "1440.000000",
-      "tasaNominalAnual": "20.881010",
-      "fechaValor": "2020-10-13"
-   },
-   "Erroresnegocio": "",
-   "Btoutreq": {
-      "Numero": 623,
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.SimularIngresandoSeguros",
-      "Fecha": "2019-11-20",
-      "Requerimiento": 1,
-      "Hora": "09:23:04",
-      "Canal": "BTDIGITAL"
-   }
-}'
+    },
+    "totalPrestamo": "23942.44",
+    "capital": "20000.00",
+    "operacionUId": "1",
+    "tasaEfectivaAnual": "23.000000",
+    "seguros": "1440.000000",
+    "tasaNominalAnual": "20.881010",
+    "fechaValor": "2020-10-13"
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": 623,
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularIngresandoSeguros",
+    "Fecha": "2019-11-20",
+    "Requerimiento": 1,
+    "Hora": "09:23:04",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -441,7 +445,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -454,7 +461,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -466,6 +476,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -474,6 +487,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+
