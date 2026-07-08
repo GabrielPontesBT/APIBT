@@ -68,6 +68,7 @@ Código | Descripción
             <bts:Token>172681201999865B3A2E76CF</bts:Token>
             <bts:Device>1</bts:Device>
          </bts:Btinreq>
+         <bts:calendarioId>1</bts:calendarioId>
          <bts:fecha>2021-03-26</bts:fecha>
       </bts:BTCalendarios.ObtenerProximaFechaHabil>
    </soapenv:Body>
@@ -76,21 +77,17 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerProximaFechaHabil' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "1",
-      "Usuario": "Instalador",
-      "Token": "172681201999865B3A2E76CF",
-      "Device": "1"
-    },
-    "fecha": "2021-03-26"
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "Instalador",
+    "Token": "172681201999865B3A2E76CF",
+    "Device": "1"
+  },
+  "fecha": "2021-03-26",
+  "calendarioId": "1"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

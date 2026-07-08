@@ -73,8 +73,8 @@ Código | Descripción
             <bts:Token>419385365CD285A89A23FBEE</bts:Token>
             <bts:Device>GP</bts:Device>
          </bts:Btinreq>
-         <bts:paisDocumento>320</bts:paisDocumento>
-         <bts:tipoDocumento>1</bts:tipoDocumento>
+         <bts:paisDocumentoId>320</bts:paisDocumentoId>
+         <bts:tipoDocumentoId>1</bts:tipoDocumentoId>
          <bts:numeroDocumento>2131248150408</bts:numeroDocumento>
       </bts:BTMicrofinanzas.BuscarCliente>
    </soapenv:Body>
@@ -83,23 +83,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?BuscarCliente \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "paisDocumento": "320",
-        "tipoDocumento": "1",
-        "numeroDocumento": "2131248150408"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "paisDocumentoId": "320",
+  "tipoDocumentoId": "1",
+  "numeroDocumento": "2131248150408"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -147,34 +142,40 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtCuentas": {
-          "Cuenta": {
-            "clienteUId": "2",
-            "titularidad": {
-              "identificador": "1",
-              "descripcion": "Titular"
-            },
-            "representativo": "S"
-          }
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.BuscarCliente",
-          "Fecha": "2019-09-11",
-          "Hora": "11:32:30",
-          "Requerimiento": "95",
-          "Numero": "128",
-          "Estado": "OK"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentas": {
+    "Cuenta": {
+      "clienteUId": "2",
+      "titularidad": {
+        "identificador": "1",
+        "descripcion": "Titular"
+      },
+      "representativo": "S"
+    },
+    "clienteUId": 0,
+    "representativo": "",
+    "titularidad": {
+      "descripcion": "",
+      "identificador": 0
+    }
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.BuscarCliente",
+    "Fecha": "2019-09-11",
+    "Hora": "11:32:30",
+    "Requerimiento": "95",
+    "Numero": "128",
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -193,7 +194,10 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 clienteUId | Long | Identificador único de cuenta. 
 representativo | String | Indica si es titular representativo (S/N).
-titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante. 
+titularidad | [sBTTipoIntegrante](#sbttipointegrante) | Tipo de integrante.
+:::
+
+::: details sBTTipoIntegrante
 
 ### sBTTipoIntegrante
 
@@ -203,6 +207,8 @@ Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion | String | Descripción del integrante.
-identificador | Int | Identificador del integrante. 
+identificador | Int | Identificador del integrante.
 :::
+
 <!-- CIERRA SDT -->
+

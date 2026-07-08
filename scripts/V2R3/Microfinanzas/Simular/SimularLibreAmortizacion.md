@@ -102,41 +102,42 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularLibreAmortizacion \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
--d '{
-    ":Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": "95",
-        "Usuario": "INSTALADOR",
-        "Token": "1001009404CD285A89A23FBE",
-        "Device": "GP"
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "95",
+    "Usuario": "INSTALADOR",
+    "Token": "1001009404CD285A89A23FBE",
+    "Device": "GP"
+  },
+  "sBTSimulacionLibreAmortizacion": {
+    "solicitudUId": "11077",
+    "clienteUId": "3",
+    "productoUId": "21",
+    "cantidadCuotas": "2",
+    "periodoCuotas": "30",
+    "monto": "10000",
+    "destinoCredito": "2",
+    "cuotasCapital": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2021-12-30",
+          "importe": "2000"
         },
-        "sBTSimulacionLibreAmortizacion": {
-        "solicitudUId": "11077",
-        "clienteUId": "3",
-        "productoUId": "21",
-        "cantidadCuotas": "2",
-        "periodoCuotas": "30",
-        "monto": "10000",
-        "destinoCredito": "2",
-        "cuotasCapital": {
-            "sBTCuotaPrestamoAlta": [
-            {
-                "fechaPago": "2021-12-30",
-                "importe": "2000"
-            },
-            {
-                "fechaPago": "2022-01-30",
-                "importe": "8000"
-            }
-            ]
+        {
+          "fechaPago": "2022-01-30",
+          "importe": "8000"
         }
-    }
-}'
+      ]
+    },
+    "cuotasInteres": {
+      "fechaPago": "",
+      "importe": 0
+    },
+    "pizarra": 0,
+    "tasa": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -244,88 +245,106 @@ curl -X POST \
 @tab JSON
 ```json
 {
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "95",
-      "Usuario": "INSTALADOR",
-      "Token": "1001009404CD285A89A23FBE",
-      "Device": "GP"
-      },
-      "sdtSimulacion": {
-         "operacionUId": "21",
-         "producto": {
-            "productoUId": "21",
-            "nombre": "PRESTAMOS, CADENA DE VALOR CAFE DIF.",
-            "moneda": "Q",
-            "papel": "$"
-         },
-         "fechaValor": "2021-11-30",
-         "fechaPrimerPago": "2021-12-30",
-         "fechaVencimiento": "2022-01-30",
-         "capital": "10000.00",
-         "intereses": "548.00",
-         "impuestos": "0.00",
-         "comisiones": "385.00",
-         "totalPrestamo": "10000.00",
-         "plazo": "0",
-         "tasa": "36.000000",
-         "tasaEfectiva": "0.000000",
-         "tasaEfectivaAnual": "42.576089",
-         "tasaNominalAnual": "36.000000",
-         "cronograma": {
-            "sBTCuotaSimulacion": [
-               {
-               "fechaPago": "2021-12-30",
-               "tipoCuota": "I",
-               "capital": "300.00",
-               "intereses": "0.00",
-               "seguros": "0.00",
-               "impuestos": "0.00",
-               "otrosConceptos": "0.00",
-               "cuota": "300.00"
-               },
-               {
-               "fechaPago": "2021-12-30",
-               "tipoCuota": "K",
-               "capital": "2000.00",
-               "intereses": "0.00",
-               "seguros": "0.00",
-               "impuestos": "0.00",
-               "otrosConceptos": "0.00",
-               "cuota": "2000.00"
-               },
-               {
-               "fechaPago": "2022-01-30",
-               "tipoCuota": "I",
-               "capital": "248.00",
-               "intereses": "0.00",
-               "seguros": "0.00",
-               "impuestos": "0.00",
-               "otrosConceptos": "0.00",
-               "cuota": "248.00"
-               },
-               {
-               "fechaPago": "2022-01-30",
-               "tipoCuota": "K",
-               "capital": "8000.00",
-               "intereses": "0.00",
-               "seguros": "0.00",
-               "impuestos": "0.00",
-               "otrosConceptos": "0.00",
-               "cuota": "8000.00"
-               }
-            ]
-         }
-      },
-      "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.SimularLibreAmortizacion",
-      "Fecha": "2019-11-01",
-      "Hora": "11:36:49",
-      "Requerimiento": "95",
-      "Numero": "1398",
-      "Estado": "OK"
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "95",
+    "Usuario": "INSTALADOR",
+    "Token": "1001009404CD285A89A23FBE",
+    "Device": "GP"
+  },
+  "sdtSimulacion": {
+    "operacionUId": "21",
+    "producto": {
+      "productoUId": "21",
+      "nombre": "PRESTAMOS, CADENA DE VALOR CAFE DIF.",
+      "moneda": "Q",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
       }
+    },
+    "fechaValor": "2021-11-30",
+    "fechaPrimerPago": "2021-12-30",
+    "fechaVencimiento": "2022-01-30",
+    "capital": "10000.00",
+    "intereses": "548.00",
+    "impuestos": "0.00",
+    "comisiones": "385.00",
+    "totalPrestamo": "10000.00",
+    "plazo": "0",
+    "tasa": "36.000000",
+    "tasaEfectiva": "0.000000",
+    "tasaEfectivaAnual": "42.576089",
+    "tasaNominalAnual": "36.000000",
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "fechaPago": "2021-12-30",
+          "tipoCuota": "I",
+          "capital": "300.00",
+          "intereses": "0.00",
+          "seguros": "0.00",
+          "impuestos": "0.00",
+          "otrosConceptos": "0.00",
+          "cuota": "300.00",
+          "concepto": "",
+          "interes": 0
+        },
+        {
+          "fechaPago": "2021-12-30",
+          "tipoCuota": "K",
+          "capital": "2000.00",
+          "intereses": "0.00",
+          "seguros": "0.00",
+          "impuestos": "0.00",
+          "otrosConceptos": "0.00",
+          "cuota": "2000.00",
+          "concepto": "",
+          "interes": 0
+        },
+        {
+          "fechaPago": "2022-01-30",
+          "tipoCuota": "I",
+          "capital": "248.00",
+          "intereses": "0.00",
+          "seguros": "0.00",
+          "impuestos": "0.00",
+          "otrosConceptos": "0.00",
+          "cuota": "248.00",
+          "concepto": "",
+          "interes": 0
+        },
+        {
+          "fechaPago": "2022-01-30",
+          "tipoCuota": "K",
+          "capital": "8000.00",
+          "intereses": "0.00",
+          "seguros": "0.00",
+          "impuestos": "0.00",
+          "otrosConceptos": "0.00",
+          "cuota": "8000.00",
+          "concepto": "",
+          "interes": 0
+        }
+      ]
+    },
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    }
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.SimularLibreAmortizacion",
+    "Fecha": "2019-11-01",
+    "Hora": "11:36:49",
+    "Requerimiento": "95",
+    "Numero": "1398",
+    "Estado": "OK"
+  }
 }
 ```
 ::: 
@@ -344,16 +363,19 @@ Los campos del tipo de dato estructurado sBTSimulacionLibreAmortizacion son los 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 cantidadCuotas | Long | Cantidad de cuotas del préstamo. 
-clienteUId* | Long | Identificador único de cliente. 
+clienteUId | Long | Identificador único de cliente. 
 cuotasCapital | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cuotas de capital. 
 cuotasInteres | [sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta) | Cuotas de intereses. 
 destinoCredito | Long | Código de actividad. 
 monto | Double | Capital solicitado. 
 periodoCuotas | Long | Período entre vencimiento de cada cuota. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
-productoUId* | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto. 
 solicitudUId | Long | Identificador de instancia Workflow.  
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -364,7 +386,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 fechaPago | Date | Fecha de pago de la cuota. 
 importe | Double | Importe de la cuota.
-::: 
+:::
 
 ::: details sBTSimulacionPrestamoLA
 
@@ -391,7 +413,10 @@ tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva. 
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
-totalPrestamo | Double | Total a pagar. 
+totalPrestamo | Double | Total a pagar.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -404,7 +429,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -416,6 +444,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -432,6 +463,8 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
 <!-- CIERRA SDT -->
+

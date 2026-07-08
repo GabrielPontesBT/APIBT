@@ -37,8 +37,8 @@ solicitudUId | Long | Identificador de instancia Workflow.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-controlOK | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
-sdtValidacionesPoliticas | [sBTValidacionPoliticas](#sbtvalidacionpoliticas) | Listado de validación de políticas.
+politicasOK | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
+sdtValidacionPolitica | [sBTValidacionPoliticas](#sbtvalidacionpoliticas) | Listado de validación de políticas.
 
 @tab Errores
 
@@ -111,7 +111,7 @@ curl -X POST \
             <Device>GP</Device>
          </Btinreq>
          <politicasOK>N</politicasOK>
-         <sdtValidacionesPoliticas>
+         <sdtValidacionPolitica>
             <ValidacionPolitica>
                <paisDocumentoId>320</paisDocumentoId>
                <paisDocumento>GUATEMALA</paisDocumento>
@@ -160,7 +160,7 @@ curl -X POST \
                   </SdtsBTPoliticaIncumplida>
                </politicas>
             </ValidacionPolitica>
-         </sdtValidacionesPoliticas>
+         </sdtValidacionPolitica>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -178,17 +178,17 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-   "Btinreq": {
-      "Canal": "BTDIGITAL",
-      "Requerimiento": "95",
-      "Usuario": "INSTALADOR",
-      "Token": "1001009404CD285A89A23FBE",
-      "Device": "GP"
-   },
-   "politicasOK": "N",
-   "sdtValidacionesPoliticas": {
-      "ValidacionPolitica": {
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "95",
+    "Usuario": "INSTALADOR",
+    "Token": "1001009404CD285A89A23FBE",
+    "Device": "GP"
+  },
+  "politicasOK": "N",
+  "sdtValidacionPolitica": {
+    "ValidacionPolitica": {
       "paisDocumentoId": "320",
       "paisDocumento": "GUATEMALA",
       "tipoDocumentoId": "1",
@@ -203,42 +203,49 @@ curl -X POST \
       "tipoIntegrante": "T",
       "nroEjecucion": "394",
       "politicas": {
-         "SdtsBTPoliticaIncumplida": [
-            {
+        "SdtsBTPoliticaIncumplida": [
+          {
             "politicaId": "354",
             "politica": "Edad del solicitante es mayor a la máxima permitida.",
             "restriccion": "B",
             "restriccionDsc": "Bloqueante",
             "nroAutorizacion": "0"
-            },
-            {
+          },
+          {
             "politicaId": "363",
             "politica": "Cliente excede el N° máximo de solicitudes en trámite.",
             "restriccion": "A",
             "restriccionDsc": "Alerta",
             "nroAutorizacion": "0"
-            },
-            {
+          },
+          {
             "politicaId": "366",
             "politica": "Existen Documentos Obligatorios No Recibidos.",
             "restriccion": "A",
             "restriccionDsc": "Alerta",
             "nroAutorizacion": "0"
-            }
-         ]
+          }
+        ]
       }
-      }
-   },
-   "Btoutreq": {
-      "Canal": "BTDIGITAL",
-      "Servicio": "BTMicrofinanzas.ValidarPoliticas",
-      "Fecha": "2019-11-01",
-      "Hora": "13:56:51",
-      "Requerimiento": "95",
-      "Numero": "1400",
-      "Estado": "OK"
-   }
-}'
+    },
+    "estado": "",
+    "estadoDsc": "",
+    "observacion": "",
+    "politica": "",
+    "politicaId": 0,
+    "restriccion": "",
+    "restriccionDsc": ""
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.ValidarPoliticas",
+    "Fecha": "2019-11-01",
+    "Hora": "13:56:51",
+    "Requerimiento": "95",
+    "Numero": "1400",
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

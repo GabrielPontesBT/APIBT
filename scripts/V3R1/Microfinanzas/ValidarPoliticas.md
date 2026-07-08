@@ -37,8 +37,8 @@ solicitudUId | Long | Identificador de instancia Workflow.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-politicas | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
-sdtValidacionesPoliticas | [sBTValidacionPolitica](#sbtvalidacionpolitica) | Listado de validación de políticas.
+politicasOK | String | Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.
+sdtValidacionPolitica | [sBTValidacionPolitica](#sbtvalidacionpolitica) | Listado de validación de políticas.
 
 @tab Errores
 
@@ -110,8 +110,8 @@ curl -X POST \
             <Token>1001009404CD285A89A23FBE</Token>
             <Device>GP</Device>
          </Btinreq>
-         <politicas>N</politicas>
-         <sdtValidacionesPoliticas>
+         <politicasOK>N</politicasOK>
+         <sdtValidacionPolitica>
             <sBTValidacionPolitica>
                <paisDocumentoId>320</paisDocumentoId>
                <paisDocumento>GUATEMALA</paisDocumento>
@@ -160,7 +160,7 @@ curl -X POST \
                   </sBTPoliticaIncumplida>
                </politicas>
             </sBTValidacionPolitica>
-         </sdtValidacionesPoliticas>
+         </sdtValidacionPolitica>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -186,8 +186,8 @@ curl -X POST \
       "Token": "1001009404CD285A89A23FBE",
       "Device": "GP"
    },
-   "politicas": "N",
-    "sdtValidacionesPoliticas": {
+   "politicasOK": "N",
+    "sdtValidacionPolitica": {
         "sBTValidacionPolitica": [
             {
                 "paisDocumentoId": 320,

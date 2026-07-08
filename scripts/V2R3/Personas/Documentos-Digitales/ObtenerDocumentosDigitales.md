@@ -111,22 +111,22 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>0868626a064A8B5C60A82434</Token>
          </Btinreq>
-         <documentosDigitales>
+         <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
-               <Titulo>C.I</Titulo>
-               <FechaActualizacion>2017-03-30</FechaActualizacion>
-               <FechaVencimiento>2018-03-30</FechaVencimiento>
-               <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
+               <titulo>C.I</titulo>
+               <fechaActualizacion>2017-03-30</fechaActualizacion>
+               <fechaVencimiento>2018-03-30</fechaVencimiento>
+               <tipoDocumentoDigital>Cédula de Identidad</tipoDocumentoDigital>
                <documentoId>83</documentoId>
             </sBTDocumentoDigital>
             <sBTDocumentoDigital>
-               <Titulo>C.I 2</Titulo>
-               <FechaActualizacion>2017-03-30</FechaActualizacion>
-               <FechaVencimiento>2018-03-30</FechaVencimiento>
-               <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
+               <titulo>C.I 2</titulo>
+               <fechaActualizacion>2017-03-30</fechaActualizacion>
+               <fechaVencimiento>2018-03-30</fechaVencimiento>
+               <tipoDocumentoDigital>Cédula de Identidad</tipoDocumentoDigital>
                <documentoId>84</documentoId>
             </sBTDocumentoDigital>
-         </documentosDigitales>
+         </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>770</Numero>
@@ -144,45 +144,45 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "documentosDigitales": {
-        "sBTDocumentoDigital": [
-            {
-                "Titulo": "C.I",
-                "FechaActualizacion": "2017-03-30",
-                "FechaVencimiento": "2018-03-30",
-                "TipoDocumentoDigital": "Cédula de Identidad",
-                "DocumentoId": 83
-            },
-            {
-                "Titulo": "C.I 2",
-                "FechaActualizacion": "2017-03-30",
-                "FechaVencimiento": "2018-03-30",
-                "TipoDocumentoDigital": "Cédula de Identidad",
-                "DocumentoId": 84
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 773,
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
-        "Fecha": "2018-11-12",
-        "Hora": "16:17:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentosDigitales": {
+    "sBTDocumentoDigital": [
+      {
+        "titulo": "C.I",
+        "fechaActualizacion": "2017-03-30",
+        "fechaVencimiento": "2018-03-30",
+        "tipoDocumentoDigital": "Cédula de Identidad",
+        "documentoId": 83
+      },
+      {
+        "titulo": "C.I 2",
+        "fechaActualizacion": "2017-03-30",
+        "fechaVencimiento": "2018-03-30",
+        "tipoDocumentoDigital": "Cédula de Identidad",
+        "documentoId": 84
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 773,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerDocumentosDigitales",
+    "Requerimiento": "1",
+    "Fecha": "2018-11-12",
+    "Hora": "16:17:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

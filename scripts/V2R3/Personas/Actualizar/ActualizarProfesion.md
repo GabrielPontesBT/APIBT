@@ -90,11 +90,11 @@ curl -X POST \
 		"Usuario": "MINSTALADOR",
 		"Requerimiento": "1",
 		"Canal": "BTDIGITAL",
-		"Token": "2081397563CD285A89A23FBE"
+		"Token": "23B342928917607ECECF65BD"
 	},
 	"personaUId": 10003,
 	"profesionId": 1000,
-	"fechaInicioProfesion": 2012-03-01
+	"fechaInicioProfesion": "2012-03-01"
   }'
 ```
 :::

@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 clienteUId | Long | Identificador único de cliente.
-tarjetaId | Long | Identificador de tarjeta.
+tarjetaUId | Long | Identificador de tarjeta.
 operacionUId | Long | Identificador único de operación de cuenta preferencial del cliente.
 
 @tab Datos de Salida
@@ -83,7 +83,7 @@ Código | Descripción
             <bts:Device>MC</bts:Device>
          </bts:Btinreq>
          <bts:clienteUId>1</bts:clienteUId>
-         <bts:tarjetaId>109</bts:tarjetaId>
+         <bts:tarjetaUId>109</bts:tarjetaUId>
          <bts:operacionUId>10</bts:operacionUId>
       </bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>
    </soapenv:Body>
@@ -98,6 +98,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
   -d '{
+  "Btinreq": {
 		"Canal": "BTDIGITAL",
 		"Requerimiento": 1,
 		"Usuario": "BA",
@@ -105,9 +106,9 @@ curl -X POST \
 		"Device": "MC"
 	 },
 	 "clienteUId": "1",
-	 "tarjetaId": "109"
+	 "tarjetaUId": "109",
 	 "operacionUId": "10"
-  } 
+} 
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

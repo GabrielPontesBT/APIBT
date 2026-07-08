@@ -87,10 +87,10 @@ Código | Descripción
          </bts:Btinreq>
          <bts:operacionUId>121</bts:operacionUId>
          <bts:documentoId>118</bts:documentoId>
-         <bts:nombreDelDocumento>ejemplo</bts:nombreDelDocumento>
+         <bts:nombre>ejemplo</bts:nombre>
          <bts:archivoCodificado>RG9jdW1lbnRvIGRlIGVqZW1wbG8=</bts:archivoCodificado>
-         <bts:fechaDeEmision>2010-10-10</bts:fechaDeEmision>
-         <bts:fechaDeVencimiento>2020-10-10</bts:fechaDeVencimiento>
+         <bts:fechaEmision>2010-10-10</bts:fechaEmision>
+         <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
       </bts:BTPrestamos.ActualizarDocumentoDigital>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -98,26 +98,21 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ActualizarDocumentoDigital' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"operacionUId":"121",
-    "documentoId":"118",
-    "nombreDelDocumento":"ejemplo",
-    "archivoCodificado":"RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
-    "fechaDeEmision":"2010-10-10",
-    "fechaDeVencimiento": "2020-10-10"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": "121",
+  "documentoId": "118",
+  "nombre": "ejemplo",
+  "archivoCodificado": "RG9jdW1lbnRvIGRlIGVqZW1wbG8=",
+  "fechaEmision": "2010-10-10",
+  "fechaVencimiento": "2020-10-10"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

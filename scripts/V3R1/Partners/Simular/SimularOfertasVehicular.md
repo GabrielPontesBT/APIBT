@@ -41,7 +41,7 @@ sdtDatosOferta | [sBTOfertaInput](#sbtofertainput) | Datos de la oferta.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-simulacionId | Long | Identificador único de la simulación.
+simulacionUId | Long | Identificador único de la simulación.
 sdtOfertasPrestamo | [sBTOfertaPrestamo](#sbtofertaprestamo) | Listado de ofertas del préstamo.
 
 @tab Errores
@@ -156,66 +156,97 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularOfertasVehicular' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
-    "sdtPartner": {
-          "puntoVentaUId": 1,
-          "vendedorUId": 1,
-          "partnerUId": 1
-        },
-        "clienteUId": 342,
-        "sdtDatosVehiculo": {
-          "tipoCambioPref": 1,
-          "proveedorGps": 2,
-          "precio": 33,
-          "monedaPrecio": 1,
-          "datosAdicionales": {
-              "sBTConcepto": []
-          },
-          "versionUId": 2,
-          "kitMantenimiento": 1,
-          "estadoId": 1,
-          "entregaInicial": 43,
-          "tipoGps": 1
-        },
-        "sdtDatosOferta": {
-          "pizarra": 0,
-          "fechaValor": "2023-11-14",
-          "productoUId": 48,
-          "monto": 8745,
-          "comisionesCuota": {
-              "sBTComisionPrestamo": []
-          },
-          "periodoCuotas": 35,
-          "diaPago": 14,
-          "ballon": 0,
-          "tasa": 36,
-          "cuotas": {
-              "Int": [1]
-          },
-          "fechaPrimerPago": "2023-11-14",
-          "cuotasExtraordinarias": {
-              "sBTCuotaExtraordinaria": []
-          },
-          "seguros": {
-              "sBTSeguroPrestamo": []
-          },
-          "comisiones": {
-              "sBTComisionPrestamo": []
-          }
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPartner": {
+    "puntoVentaUId": 1,
+    "vendedorUId": 1,
+    "partnerUId": 1
+  },
+  "clienteUId": 342,
+  "sdtDatosVehiculo": {
+    "tipoCambioPref": 1,
+    "proveedorGps": 2,
+    "precio": 33,
+    "monedaPrecio": 1,
+    "datosAdicionales": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
-    }'  
+      ]
+    },
+    "versionUId": 2,
+    "kitMantenimiento": 1,
+    "estadoId": 1,
+    "entregaInicial": 43,
+    "tipoGps": 1
+  },
+  "sdtDatosOferta": {
+    "pizarra": 0,
+    "fechaValor": "2023-11-14",
+    "productoUId": 48,
+    "monto": 8745,
+    "comisionesCuota": {
+      "sBTComisionPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importe": 0,
+          "porcentaje": 0
+        }
+      ]
+    },
+    "periodoCuotas": 35,
+    "diaPago": 14,
+    "ballon": 0,
+    "tasa": 36,
+    "cuotas": {
+      "Int": [
+        1
+      ]
+    },
+    "fechaPrimerPago": "2023-11-14",
+    "cuotasExtraordinarias": {
+      "sBTCuotaExtraordinaria": [
+        {
+          "mes": 0,
+          "porcentajeCuota": 0
+        }
+      ]
+    },
+    "seguros": {
+      "sBTSeguroPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importeFijo": 0,
+          "modificable": "",
+          "porcentaje": 0,
+          "tipo": ""
+        }
+      ]
+    },
+    "comisiones": {
+      "sBTComisionPrestamo": [
+        {
+          "codigo": 0,
+          "descripcion": "",
+          "importe": 0,
+          "porcentaje": 0
+        }
+      ]
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -236,7 +267,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b6a06c447cCD285A89A23FBE</Token>
          </Btinreq>
-         <simulacionId>256</simulacionId>
+         <simulacionUId>256</simulacionUId>
          <sdtOfertasPrestamo>
             <sBTOfertaPrestamo>
                <otrosConceptos>0.00</otrosConceptos>
@@ -281,7 +312,7 @@ curl -X POST \
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    "simulacionId": 256,
+    "simulacionUId": 256,
     "sdtOfertasPrestamo": {
         "sBTOfertaPrestamo": [
             {
@@ -357,6 +388,9 @@ proveedorGps | Int | Proveedor del GPS.
 tipoCambioPref | Double | Tipo de cambios.
 tipoGps | Int | Tipo de GPS.
 versionUId | Long | Identificador único de la versión.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -393,6 +427,9 @@ pizarra | Int | Pizarra.
 productoUId | Long | Identificador único de producto.
 seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 tasa | Double | Tasa.
+:::
+
+::: details sBTComisionPrestamo
 
 ### sBTComisionPrestamo
 
@@ -405,6 +442,9 @@ codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 porcentaje | Double | Porcentaje de comisión.
+:::
+
+::: details sBTCuotaExtraordinaria
 
 ### sBTCuotaExtraordinaria
 
@@ -415,6 +455,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 mes | Byte | Mes.
 porcentajeCuota | Double | Porcentaje de cuota.
+:::
+
+::: details sBTSeguroPrestamo
 
 ### sBTSeguroPrestamo
 

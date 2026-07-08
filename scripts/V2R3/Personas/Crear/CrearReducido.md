@@ -139,7 +139,6 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-   "personaUId":"2",
    "sdtPersona": {
         "paisDocumentoId": 845,
         "apartamento": "",

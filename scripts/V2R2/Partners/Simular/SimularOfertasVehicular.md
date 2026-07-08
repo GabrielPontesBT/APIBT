@@ -42,7 +42,7 @@ sdtDatosOferta | [sBTOfertaInput](#sbtofertainput) | Datos de la oferta.
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 simulacionUId | Long | Identificador único de la simulación.
-sdtOfertas | [sBTOfertaPrestamo](#sbtofertaprestamo) | Listado de ofertas del préstamo.
+sdtOfertasPrestamo | [sBTOfertaPrestamo](#sbtofertaprestamo) | Listado de ofertas del préstamo.
 
 @tab Errores
 
@@ -148,6 +148,7 @@ Código | Descripción
                   <bts:codigo></bts:codigo>
                </bts:SdtsBTComisionPrestamo>
             </bts:comisiones>
+            <pizarra>0</pizarra>
          </bts:sdtDatosOferta>
       </bts:BTPartners.SimularOfertasVehicular>
    </soapenv:Body>
@@ -156,89 +157,87 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularOfertasVehicular' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtPartner": {
+    "puntoVentaUId": 1,
+    "vendedorUId": 1,
+    "partnerUId": 1
+  },
+  "clienteUId": 342,
+  "sdtDatosVehiculo": {
+    "tipoCambioPref": 1,
+    "proveedorGps": 2,
+    "precio": 33,
+    "monedaPrecio": 1,
+    "datosAdicionales": {
+      "SdtsBTConcepto": {
+        "texto": "",
+        "valor": "",
+        "concepto": ""
+      }
     },
-    "sdtPartner": {
-          "puntoVentaUId": 1,
-          "vendedorUId": 1,
-          "partnerUId": 1
-        },
-        "clienteUId": 342,
-        "sdtDatosVehiculo": {
-          "tipoCambioPref": 1,
-          "proveedorGps": 2,
-          "precio": 33,
-          "monedaPrecio": 1,
-          "datosAdicionales": {
-            "SdtsBTConcepto": {
-              "texto": "",
-              "valor": "",
-              "concepto": ""
-            }
-          },
-          "versionUId": 2,
-          "kitMantenimiento": 1,
-          "estadoId": 1,
-          "entregaInicial": 43,
-          "tipoGps": 1
-        },
-        "sdtDatosOferta": {
-          "pizzarra": 0,
-          "fechaValor": "2023-11-14",
-          "productoUId": 48,
-          "monto": 8745,
-          "comisionesCuota": {
-            "SdtsBTComisionPrestamo": {
-              "porcentaje": "",
-              "descripcion": "",
-              "importe": "",
-              "codigo": ""
-            }
-          },
-          "periodoCuotas": 35,
-          "diaPago": 14,
-          "ballon": "",
-          "tasa": 36,
-          "cuotas": {
-            "Int": 1
-          },
-          "fechaPrimerPago": "2023-11-14",
-          "cuotasExtraordinarias": {
-            "SdtsBTCuotaExtraordinaria": {
-              "mes": "",
-              "porcentajeCuota": ""
-            }
-          },
-          "seguros": {
-            "SdtsBTSeguroPrestamo": {
-              "porcentaje": "",
-              "descripcion": "",
-              "tipo": "",
-              "importe": "",
-              "codigo": ""
-            }
-          },
-          "comisiones": {
-            "SdtsBTComisionPrestamo": {
-              "porcentaje": "",
-              "descripcion": "",
-              "importe": "",
-              "codigo": ""
-            }
-          }
-        }
-    }'  
+    "versionUId": 2,
+    "kitMantenimiento": 1,
+    "estadoId": 1,
+    "entregaInicial": 43,
+    "tipoGps": 1
+  },
+  "sdtDatosOferta": {
+    "pizzarra": 0,
+    "fechaValor": "2023-11-14",
+    "productoUId": 48,
+    "monto": 8745,
+    "comisionesCuota": {
+      "SdtsBTComisionPrestamo": {
+        "porcentaje": "",
+        "descripcion": "",
+        "importe": "",
+        "codigo": ""
+      }
+    },
+    "periodoCuotas": 35,
+    "diaPago": 14,
+    "ballon": "",
+    "tasa": 36,
+    "cuotas": {
+      "Int": 1
+    },
+    "fechaPrimerPago": "2023-11-14",
+    "cuotasExtraordinarias": {
+      "SdtsBTCuotaExtraordinaria": {
+        "mes": "",
+        "porcentajeCuota": ""
+      }
+    },
+    "seguros": {
+      "SdtsBTSeguroPrestamo": {
+        "porcentaje": "",
+        "descripcion": "",
+        "tipo": "",
+        "importe": "",
+        "codigo": "",
+        "importeFijo": 0,
+        "modificable": ""
+      }
+    },
+    "comisiones": {
+      "SdtsBTComisionPrestamo": {
+        "porcentaje": "",
+        "descripcion": "",
+        "importe": "",
+        "codigo": ""
+      }
+    },
+    "pizarra": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -259,7 +258,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>b6a06c447cCD285A89A23FBE</Token>
          </Btinreq>
-         <simulacionId>256</simulacionId>
+         <simulacionUId>256</simulacionUId>
          <sdtOfertasPrestamo>
             <sBTOfertaPrestamo>
                <otrosConceptos>0.00</otrosConceptos>
@@ -296,46 +295,46 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
-    "simulacionId": 256,
-    "sdtOfertasPrestamo": {
-        "sBTOfertaPrestamo": {
-        "otrosConceptos": 0,
-        "fechaValor": "2019-11-25",
-        "capital": 1000,
-        "totalComisiones": 0,
-        "valorCuota": 101.81,
-        "cantidadCuotas": 12,
-        "tasa": 23,
-        "totalSeguros": 0,
-        "fechaPrimerPago": "2020-05-05",
-        "totalIntereses": 221.74,
-        "fechaVencimiento": "2021-04-05",
-        "tea": 25.590075,
-        "plazo": 497,
-        "totalAPagar": 1221.74,
-        "totalImpuestos": 0,
-        "cft": 25.03
-        }
-    },
-    "Erroresnegocio": "",
-    "Btoutreq": {
-        "Numero": 249703,
-        "Estado": "OK",
-        "Servicio": "BTPartners.SimularOfertasVehicular",
-        "Requerimiento": 0,
-        "Fecha": "2023-10-10",
-        "Hora": "17:11:02",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "simulacionUId": 256,
+  "sdtOfertasPrestamo": {
+    "sBTOfertaPrestamo": {
+      "otrosConceptos": 0,
+      "fechaValor": "2019-11-25",
+      "capital": 1000,
+      "totalComisiones": 0,
+      "valorCuota": 101.81,
+      "cantidadCuotas": 12,
+      "tasa": 23,
+      "totalSeguros": 0,
+      "fechaPrimerPago": "2020-05-05",
+      "totalIntereses": 221.74,
+      "fechaVencimiento": "2021-04-05",
+      "tea": 25.590075,
+      "plazo": 497,
+      "totalAPagar": 1221.74,
+      "totalImpuestos": 0,
+      "cft": 25.03
     }
-}'
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": 249703,
+    "Estado": "OK",
+    "Servicio": "BTPartners.SimularOfertasVehicular",
+    "Requerimiento": 0,
+    "Fecha": "2023-10-10",
+    "Hora": "17:11:02",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -376,6 +375,9 @@ proveedorGps | Int | Proveedor del GPS.
 tipoCambioPref | Double | Tipo de cambios.
 tipoGps | Int | Tipo de GPS.
 versionUId | Long | Identificador único de la versión.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -412,6 +414,9 @@ pizarra | Int | Pizarra.
 productoUId | Long | Identificador único de producto.
 seguros | [sBTSeguroPrestamo](#sbtseguroprestamo) | Listado de seguros.
 tasa | Double | Tasa.
+:::
+
+::: details sBTComisionPrestamo
 
 ### sBTComisionPrestamo
 
@@ -424,6 +429,9 @@ codigo | Int | Código de comisión.
 descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 porcentaje | Double | Porcentaje de comisión.
+:::
+
+::: details sBTCuotaExtraordinaria
 
 ### sBTCuotaExtraordinaria
 
@@ -434,6 +442,9 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 mes | Byte | Mes.
 porcentajeCuota | Double | Porcentaje de cuota.
+:::
+
+::: details sBTSeguroPrestamo
 
 ### sBTSeguroPrestamo
 

@@ -69,20 +69,15 @@ No aplica.
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerImpuestos' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "558273287F955E77534D3E02",
-	  "bts:Device": "AC"
-	}
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "BANTOTAL",
+    "Token": "558273287F955E77534D3E02",
+    "Device": "AC"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -225,8 +220,8 @@ curl -X POST \
             } 
          }, 
          { 
-            "", 
-            "": "Ingresos Brutos Percepciones", 
+            "codigo": "2", 
+            "descripcion": "Ingresos Brutos Percepciones", 
             "condiciones": { 
                "SdtsBTImpuestoCondicion": [ 
                   { 
@@ -310,6 +305,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de impuesto.
 condiciones | [sBTImpuestoCondicion](#sbtimpuestocondicion) | Listado de condiciones del impuesto.
 descripcion | String | Descripción del impuesto.
+:::
+
+::: details sBTImpuestoCondicion
 
 ### sBTImpuestoCondicion
 
@@ -321,4 +319,6 @@ codigo | Short | Código de condición.
 descripcion | String | Descripción de condición.
 tipo | String | Tipo de condición.
 :::
+
 <!-- CIERRA SDT -->
+

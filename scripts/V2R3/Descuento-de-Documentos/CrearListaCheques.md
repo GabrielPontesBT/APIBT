@@ -77,7 +77,7 @@ Código | Descripción
          </bts:Btinreq>
          <bts:clienteUId>12</bts:clienteUId>
          <bts:productoUId>17</bts:productoUId>
-         <bts:sListaCheques>
+         <bts:sdtListaCheques>
             <bts:sBTDescuentoCheque>
                <bts:identificacion>1522156151</bts:identificacion>
                <bts:fechaEmision>2018-11-20</bts:fechaEmision>
@@ -92,7 +92,7 @@ Código | Descripción
                <bts:telefono>098756022</bts:telefono>
                <bts:tasa>0</bts:tasa>
             </bts:sBTDescuentoCheque>
-         </bts:sListaCheques>
+         </bts:sdtListaCheques>
          <bts:montoADescontar>1000</bts:montoADescontar>
          <bts:tasa>10</bts:tasa>
          <bts:porcentajeAforo>10</bts:porcentajeAforo>
@@ -104,41 +104,37 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?CrearListaCheques=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"clienteUId":12,
-	"productoUId":17,
-	"montoADescontar":1000,
-	"tasa":10,
-	"porcentajeAforo":10,
-	"sListaCheques": {
-      "sBTDescuentoCheque": {
-         "identificacion": "1522156151",
-         "fechaEmision": "2018-11-20",
-         "fechaVto": "2020-12-20",
-         "monto": "1000",
-         "banco": "1",
-         "agencia": "25634",
-         "plaza": "502",
-         "personaUId": "1",
-         "ciudad": "CIUDAD",
-         "domicilio": "DOMICILIO",
-         "telefono": "098756022",
-         "tasa": "0"
-      }
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": 12,
+  "productoUId": 17,
+  "montoADescontar": 1000,
+  "tasa": 10,
+  "porcentajeAforo": 10,
+  "sdtListaCheques": {
+    "sBTDescuentoCheque": {
+      "identificacion": "1522156151",
+      "fechaEmision": "2018-11-20",
+      "fechaVto": "2020-12-20",
+      "monto": "1000",
+      "banco": "1",
+      "agencia": "25634",
+      "plaza": "502",
+      "personaUId": "1",
+      "ciudad": "CIUDAD",
+      "domicilio": "DOMICILIO",
+      "telefono": "098756022",
+      "tasa": "0"
+    }
+  },
+  "fechaValor": ""
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -163,7 +159,7 @@ curl -X POST \
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
-            <Servicio>BTDescuentoDocumentos.CrearLista</Servicio>
+            <Servicio>BTDescuentoDocumentos.CrearListaCheques</Servicio>
             <Fecha>2018-12-14</Fecha>
             <Hora>15:26:20</Hora>
             <Requerimiento>1</Requerimiento>

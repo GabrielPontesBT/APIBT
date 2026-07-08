@@ -69,6 +69,7 @@ Código | Descripción
             <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
          <bts:operacionUId>5</bts:operacionUId>
+         <bts:expresadoEn>M</bts:expresadoEn>
       </bts:BTDepositosAPlazo.ObtenerDatos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -76,21 +77,17 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatos=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "operacionUId": 5,
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": 5,
+  "expresadoEn": "M"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -186,85 +183,100 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtPlazoFijo": {
-      "plazo": "360",
-      "tasaEfectiva": "0.000000",
-      "periodicidad": "0",
-      "simboloMoneda": "$",
-      "fechaVencimiento": "2016-12-22",
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPlazoFijo": {
+    "plazo": "360",
+    "tasaEfectiva": "0.000000",
+    "periodicidad": "0",
+    "simboloMoneda": "$",
+    "fechaVencimiento": "2016-12-22",
+    "producto": {
+      "papel": "",
+      "moneda": "$",
+      "productoUId": "0",
+      "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "intereses": "55465.38",
+    "fechaProximoVencimiento": "0000-00-00",
+    "tasaVigente": "3.750000",
+    "idOperacionBT": "0010100000022000000000000000002700000000000085001",
+    "renovacionAutomatica": "N",
+    "idOperacionFmt": "85-0",
+    "interesesPendientes": "0.00",
+    "cantidadRenovaciones": "0",
+    "tasaOriginal": "3.750000",
+    "interesesAcreditados": "0.00",
+    "tipoTasa": "Efectiva Anual",
+    "acreditacionPeriodicaIntereses": "N",
+    "cuentaContable": "",
+    "operacionUId": "5",
+    "instruccionVencimiento": {
+      "sucursal": "Casa Matriz",
       "producto": {
         "papel": "",
         "moneda": "$",
         "productoUId": "0",
-        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
+        "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
       },
-      "intereses": "55465.38",
-      "fechaProximoVencimiento": "0000-00-00",
-      "tasaVigente": "3.750000",
-      "idOperacionBT": "0010100000022000000000000000002700000000000085001",
-      "renovacionAutomatica": "N",
-      "idOperacionFmt": "85-0",
-      "interesesPendientes": "0.00",
-      "cantidadRenovaciones": "0",
-      "tasaOriginal": "3.750000",
-      "interesesAcreditados": "0.00",
-      "tipoTasa": "Efectiva Anual",
-      "acreditacionPeriodicaIntereses": "N",
-      "cuentaContable": "",
-      "operacionUId": "5",
-      "instruccionVencimiento": {
-        "sucursal": "Casa Matriz",
-        "producto": {
-          "papel": "",
-          "moneda": "$",
-          "productoUId": "0",
-          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-        },
-        "descripcion": "Cancelar y Acreditar al vto.",
-        "operacionUId": "9",
-        "idOperacionFmt": "000000027_001"
-      },
-      "instruccionAcreditacion": {
-        "sucursal": "",
-        "producto": {
-          "papel": "",
-          "moneda": "",
-          "productoUId": "0",
-          "nombre": ""
-        },
-        "descripcion": "",
-        "operacionUId": "0",
-        "idOperacionFmt": ""
-      },
-      "saldo": "0.00",
-      "montoInicial": "1500000.00",
-      "estado": "",
-      "diasHastaVencimiento": "0",
-      "montoFinal": "0.00",
-      "sucursal": "Casa Matriz",
-      "fechaValor": "2015-12-28"
+      "descripcion": "Cancelar y Acreditar al vto.",
+      "operacionUId": "9",
+      "idOperacionFmt": "000000027_001"
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "instruccionAcreditacion": {
+      "sucursal": "",
+      "producto": {
+        "papel": "",
+        "moneda": "",
+        "productoUId": "0",
+        "nombre": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      "descripcion": "",
+      "operacionUId": "0",
+      "idOperacionFmt": ""
     },
-    "Btoutreq": {
-      "Numero": "986",
-      "Estado": "OK",
-      "Servicio": "BTDepositosAPlazo.ObtenerDatos",
-      "Requerimiento": "",
-      "Fecha": "2017-12-22",
-      "Hora": "14:57:24",
-      "Canal": "BTDIGITAL"
-    }
-}'
+    "saldo": "0.00",
+    "montoInicial": "1500000.00",
+    "estado": "",
+    "diasHastaVencimiento": "0",
+    "montoFinal": "0.00",
+    "sucursal": "Casa Matriz",
+    "fechaValor": "2015-12-28"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "986",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerDatos",
+    "Requerimiento": "",
+    "Fecha": "2017-12-22",
+    "Hora": "14:57:24",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -308,8 +320,11 @@ sucursal | String | Nombre de la sucursal de alta.
 tasaEfectiva | Double | Tasa efectiva. 
 tasaOriginal | Double | Tasa original. 
 tasaVigente | Double | Tasa vigente. 
-tipoTasa | String | Tipo de tasa. 
- 
+tipoTasa | String | Tipo de tasa.
+:::
+
+::: details sBTInstruccion
+
 ### sBTInstruccion
 
 ::: center 
@@ -321,7 +336,10 @@ descripcion | String | Descripción de la instrucción.
 idOperacionFmt | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos de producto. 
-sucursal | String | Nombre de la Sucursal de la operación. 
+sucursal | String | Nombre de la Sucursal de la operación.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -334,7 +352,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -347,4 +368,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+
