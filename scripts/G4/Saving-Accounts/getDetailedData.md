@@ -22,7 +22,7 @@ title: Get Detailed Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-savingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
+SavingAccountGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la cuenta de ahorro.
 
 @tab Datos de Salida
 
@@ -57,8 +57,8 @@ Código | Descripción
     "Requerimiento": "1",
     "Token": "8EE696AD86E93556C39DD2CC"
   },
-  "savingAccountGUID": "92b2ce1f-34e7-4606-bdd4-e62bde656979"
-}'
+  "SavingAccountGUID": "92b2ce1f-34e7-4606-bdd4-e62bde656979"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -133,19 +133,50 @@ Código | Descripción
     "SubStatusId": 0,
     "SubStatusDescription": "",
     "Product": {
-      "ProductGUID": "28169aa2-61c3-43ca-9fa9-e12ff30d4b71",
       "ProductDescription": "CUENTA A MI FAVOR",
       "CurrencyId": 0,
       "CurrencyDescription": "Pesos Uruguayos",
       "CurrencySign": "$",
       "KindId": 0,
-      "KindDescription": "Billete"
+      "KindDescription": "Billete",
+      "ProductGUId": "28169aa2-61c3-43ca-9fa9-e12ff30d4b71"
     },
     "ProductChanges": {
-      "SdtsBTSAWProductChange": []
+      "SdtsBTSAWProductChange": [
+        {
+          "Correlative": 0,
+          "Event": "",
+          "EventDate": "",
+          "EventUser": "",
+          "EventUserDescription": "",
+          "MovementGUId": "",
+          "PreviousProduct": "",
+          "PreviousProductDescription": "",
+          "ValidFrom": ""
+        }
+      ]
     },
     "StatusChanges": {
-      "SdtsBTSAWStatusChange": []
+      "SdtsBTSAWStatusChange": [
+        {
+          "ChangeDate": "",
+          "Comments": "",
+          "ConfirmationUserId": "",
+          "ConfirmationUserDescription": "",
+          "Correlative": 0,
+          "CreationUserId": "",
+          "CreationUserDescription": "",
+          "IsReversedEntry": false,
+          "NewStatusId": 0,
+          "NewStatusDescription": "",
+          "NewSubStatusId": 0,
+          "NewSubStatusDescription": "",
+          "PreviousStatusId": 0,
+          "PreviousStatusDescription": "",
+          "PreviousSubStatusId": 0,
+          "PreviousSubStatusDescription": ""
+        }
+      ]
     }
   },
   "BusinessErrors": {
@@ -192,7 +223,7 @@ CancelationReasonId | Byte $<(Length: 2)>$ | Identificador del motivo de cancela
 CancelationReasonDescription | String | Descripción del motivo de cancelación.
 CancelationUser | String | Usuario de cancelación.
 CancelationUserDescription | String | Descripción del usuario de cancelación.
-CircularityFee | Boolean $<(Length: 1)>$ | Comisión de circularidad.
+CircularityFee | Boolean | Comisión de circularidad.
 ClassRateTypeId | Int $<(Length: 5)>$ | Identificador del tipo de clase de tasa.
 ClassRateTypeDescription | String $<(Length: 20)>$ | Descripción del tipo de clase de tasa.
 CounterpartyId | Int $<(Length: 9)>$ | Identificador de contraparte.
@@ -202,20 +233,20 @@ CreationUser | String | Usuario de creación.
 CreationUserDescription | String | Descripción del usuario de creación.
 GrouperId | Short | Identificador del agrupador.
 GrouperDescription | String | Descripción del agrupador.
-LowAverageFee | Boolean $<(Length: 1)>$ | Comisión de saldo mínimo.
+LowAverageFee | Boolean | Comisión de saldo mínimo.
 LowAverageFeeId | Int $<(Length: 5)>$ | Identificador de comisión de saldo mínimo.
 LowAverageFeeDescription | String $<(Length: 30)>$ | Descripción de comisión de saldo mínimo.
-MovementFee | Boolean $<(Length: 1)>$ | Comisión por movimiento.
-OpeningFee | Boolean $<(Length: 1)>$ | Comisión de apertura.
+MovementFee | Boolean | Comisión por movimiento.
+OpeningFee | Boolean | Comisión de apertura.
 PaymentMethod | Short | Método de pago.
 PaymentMethodDescription | String | Descripción del método de pago.
 PaymentPeriod | Long $<(Length: 18)>$ | Período de pago.
 PaymentPeriodDescription | String | Descripción del período de pago.
-PaysInterest | Boolean $<(Length: 1)>$ | Paga intereses.
+PaysInterest | Boolean | Paga intereses.
 Product | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Producto.
 ProductChanges | [SdtsBTSAWProductChange](#sdtsbtsawproductchange) | Cambios de producto.
 RateType | Long | Tipo de tasa.
-SavingAccountGUID | String | GUID de cuenta de ahorro.
+SavingAccountGUID | String | GUID (identificador único global) de cuenta de ahorro.
 StatusChanges | [SdtsBTSAWStatusChange](#sdtsbtsawstatuschange) | Cambios de estado.
 StatusId | Byte $<(Length: 2)>$ | Identificador de estado.
 StatusDescription | String | Descripción del estado.
@@ -236,7 +267,7 @@ AccountingResumeFrequency | Long $<(Length: 18)>$ | Frecuencia de resumen contab
 AccountingResumeFrequencyDescription | String | Descripción de la frecuencia de resumen contable.
 AddressShipmentMethodId | Byte $<(Length: 2)>$ | Identificador del método de envío a dirección.
 AddressShipmentMethodDescription | String | Descripción del método de envío a dirección.
-AvoidsAccountingResume | Boolean $<(Length: 1)>$ | Evita resumen contable.
+AvoidsAccountingResume | Boolean | Evita resumen contable.
 BranchShipmentMethodId | Int $<(Length: 5)>$ | Identificador del método de envío a sucursal.
 BranchShipmentMethodDescription | String | Descripción del método de envío a sucursal.
 EmailShipmentMethodId | Byte $<(Length: 2)>$ | Identificador del método de envío por correo.
@@ -276,7 +307,7 @@ CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(Length: 36)>$ | GUID del producto.
+ProductGUId | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
 :::
 
 ::: details SdtsBTSAWProductChange
@@ -293,7 +324,7 @@ Event | Int $<(Length: 5)>$ | Evento.
 EventDate | Date $<(Length: 8)>$ | Fecha del evento.
 EventUser | String | Usuario del evento.
 EventUserDescription | String $<(Length: 30)>$ | Descripción del usuario del evento.
-MovementGUID | String | GUID del movimiento.
+MovementGUId | String | GUID (identificador único global) del movimiento.
 PreviousProduct | Long $<(Length: 18)>$ | Producto anterior.
 PreviousProductDescription | String | Descripción del producto anterior.
 ValidFrom | Date $<(Length: 8)>$ | Válido desde.

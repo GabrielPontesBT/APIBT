@@ -130,18 +130,33 @@ curl -X POST \
                <papel>$</papel>
                <productoUId>60</productoUId>
                <nombre>Crédito Francés REEST</nombre>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>$</moneda>
                <papel>UI</papel>
                <productoUId>61</productoUId>
                <nombre>Crédito Francés REEST</nombre>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <moneda>USD</moneda>
                <papel>$</papel>
                <productoUId>62</productoUId>
                <nombre>Crédito Francés REEST</nombre>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
@@ -162,47 +177,62 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "BANTOTAL",
-        "Token": "324915377F955E77534D3E02",
-        "Device": "AC"
-    },
-	"sdtProductos": {
-        "sBTProducto": [
-        {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 60,
-            "nombre": "Crédito Francés REEST"
-        },
-        {
-            "moneda": "$",
-            "papel": "UI",
-            "productoUId": 61,
-            "nombre": "Crédito Francés REEST"
-        },
-        {
-            "moneda": "USD",
-            "papel": "$",
-            "productoUId": 62,
-            "nombre": "Crédito Francés REEST"
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "324915377F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 60,
+        "nombre": "Crédito Francés REEST",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTPrestamos.ObtenerProductosRefinanciacion",
-        "Fecha": "2019-11-19",
-        "Hora": "13:05:22",
-        "Requerimiento": 1,
-        "Numero": 6924,
-        "Estado": "OK"
-    }
+      },
+      {
+        "moneda": "$",
+        "papel": "UI",
+        "productoUId": 61,
+        "nombre": "Crédito Francés REEST",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "USD",
+        "papel": "$",
+        "productoUId": 62,
+        "nombre": "Crédito Francés REEST",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerProductosRefinanciacion",
+    "Fecha": "2019-11-19",
+    "Hora": "13:05:22",
+    "Requerimiento": 1,
+    "Numero": 6924,
+    "Estado": "OK"
+  }
 }
 ```
 :::
@@ -239,7 +269,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -252,4 +285,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

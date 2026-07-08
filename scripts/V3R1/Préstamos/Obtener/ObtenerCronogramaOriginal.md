@@ -75,21 +75,16 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerCronogramaOriginal' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "480647346F955E77534D3E02",
-	  "bts:Device": "AC"
-	},
-	"operacionUId": 10118
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "BANTOTAL",
+    "Token": "480647346F955E77534D3E02",
+    "Device": "AC"
+  },
+  "operacionUId": 10118
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -325,226 +320,230 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-	"Btinreq": { 
-	  "Canal": "BTDIGITAL", 
-	  "Requerimiento": 1, 
-	  "Usuario": "BANTOTAL", 
-	  "Token": "480647346F955E77534D3E02", 
-	  "Device": "AC" 
-	}, 
-	"sdtPrestamoOriginal": { 
-	  "producto": { 
-		"productoUId": "105", 
-		"nombre": "Amortización Automática TF", 
-		"moneda": "$", 
-		"papel": "$" 
-	  }, 
-	  "sucursalId": "1000", 
-	  "sucursal": "Casa Matriz", 
-	  "especie": "Billete", 
-	  "fechaValor": "2018-05-15", 
-	  "tasa": "23.000000", 
-	  "modalidad": "Francés con Seg.e Impu.", 
-	  "monedaId": "0", 
-	  "simboloMoneda": "$", 
-	  "precio": "0.00000000", 
-	  "fechaVencimiento": "2019-05-16", 
-	  "totalCapital": "19999.00", 
-	  "totalIntereses": "2613.64", 
-	  "totalMora": "0.00", 
-	  "totalComisiones": "0.00", 
-	  "totalImpuestos": "0.00", 
-	  "totalSeguros": "240.00", 
-	  "totalPagar": "22852.64", 
-	  "planDePagos": { 
-		"sBTCuotaPrestamoOriginal": [ 
-		  { 
-			"nroCuota": "1", 
-			"fechaDesde": "2018-05-15", 
-			"fechaHasta": "2018-06-18", 
-			"plazo": "34", 
-			"saldoCapital": "19999.00", 
-			"capital": "1455.92", 
-			"intereses": "428.47", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "2", 
-			"fechaDesde": "2018-06-18", 
-			"fechaHasta": "2018-07-16", 
-			"plazo": "28", 
-			"saldoCapital": "18543.08", 
-			"capital": "1557.22", 
-			"intereses": "327.17", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "3", 
-			"fechaDesde": "2018-07-16", 
-			"fechaHasta": "2018-08-16", 
-			"plazo": "31", 
-			"saldoCapital": "16985.86", 
-			"capital": "1552.58", 
-			"intereses": "331.81", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "4", 
-			"fechaDesde": "2018-08-16", 
-			"fechaHasta": "2018-09-17", 
-			"plazo": "32", 
-			"saldoCapital": "15433.28", 
-			"capital": "1573.19", 
-			"intereses": "311.20", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "5", 
-			"fechaDesde": "2018-09-17", 
-			"fechaHasta": "2018-10-16", 
-			"plazo": "29", 
-			"saldoCapital": "13860.09", 
-			"capital": "1631.11", 
-			"intereses": "253.28", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "6", 
-			"fechaDesde": "2018-10-16", 
-			"fechaHasta": "2018-11-16", 
-			"plazo": "31", 
-			"saldoCapital": "12228.98", 
-			"capital": "1645.51", 
-			"intereses": "238.88", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "7", 
-			"fechaDesde": "2018-11-16", 
-			"fechaHasta": "2018-12-17", 
-			"plazo": "31", 
-			"saldoCapital": "10583.47", 
-			"capital": "1677.65", 
-			"intereses": "206.74", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "8", 
-			"fechaDesde": "2018-12-17", 
-			"fechaHasta": "2019-01-16", 
-			"plazo": "30", 
-			"saldoCapital": "8905.82", 
-			"capital": "1716.03", 
-			"intereses": "168.36", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "9", 
-			"fechaDesde": "2019-01-16", 
-			"fechaHasta": "2019-02-18", 
-			"plazo": "33", 
-			"saldoCapital": "7189.79", 
-			"capital": "1734.88", 
-			"intereses": "149.51", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "10", 
-			"fechaDesde": "2019-02-18", 
-			"fechaHasta": "2019-03-18", 
-			"plazo": "28", 
-			"saldoCapital": "5454.91", 
-			"capital": "1788.14", 
-			"intereses": "96.25", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "11", 
-			"fechaDesde": "2019-03-18", 
-			"fechaHasta": "2019-04-16", 
-			"plazo": "29", 
-			"saldoCapital": "3666.77", 
-			"capital": "1817.38", 
-			"intereses": "67.01", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.39", 
-			"situacion": "PAGA" 
-		  }, 
-		  { 
-			"nroCuota": "12", 
-			"fechaDesde": "2019-04-16", 
-			"fechaHasta": "2019-05-16", 
-			"plazo": "30", 
-			"saldoCapital": "1849.39", 
-			"capital": "1849.39", 
-			"intereses": "34.96", 
-			"impuestos": "0.00", 
-			"seguros": "20.00", 
-			"comisiones": "0.00", 
-			"total": "1904.35", 
-			"situacion": "PAGA" 
-		  } 
-		] 
-	  }, 
-	  "operacionUId": "10118", 
-	  "idOperacionBT": "0010100000101000000000000000002800000000000074001", 
-	  "cantidadCuotas": "12" 
-	}, 
-	"Erroresnegocio": { 
-	}, 
-	"Btoutreq": { 
-	  "Canal": "BTDIGITAL", 
-	  "Servicio": "BTPrestamos.ObtenerCronogramaOriginal", 
-	  "Fecha": "2021-03-18", 
-	  "Hora": "10:03:41", 
-	  "Requerimiento": 1, 
-	  "Numero": "8032", 
-	  "Estado": "OK" 
-	} 
-} 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "480647346F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtPrestamoOriginal": {
+    "producto": {
+      "productoUId": "105",
+      "nombre": "Amortización Automática TF",
+      "moneda": "$",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "sucursalId": "1000",
+    "sucursal": "Casa Matriz",
+    "especie": "Billete",
+    "fechaValor": "2018-05-15",
+    "tasa": "23.000000",
+    "modalidad": "Francés con Seg.e Impu.",
+    "monedaId": "0",
+    "simboloMoneda": "$",
+    "precio": "0.00000000",
+    "fechaVencimiento": "2019-05-16",
+    "totalCapital": "19999.00",
+    "totalIntereses": "2613.64",
+    "totalMora": "0.00",
+    "totalComisiones": "0.00",
+    "totalImpuestos": "0.00",
+    "totalSeguros": "240.00",
+    "totalPagar": "22852.64",
+    "planDePagos": {
+      "sBTCuotaPrestamoOriginal": [
+        {
+          "nroCuota": "1",
+          "fechaDesde": "2018-05-15",
+          "fechaHasta": "2018-06-18",
+          "plazo": "34",
+          "saldoCapital": "19999.00",
+          "capital": "1455.92",
+          "intereses": "428.47",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "2",
+          "fechaDesde": "2018-06-18",
+          "fechaHasta": "2018-07-16",
+          "plazo": "28",
+          "saldoCapital": "18543.08",
+          "capital": "1557.22",
+          "intereses": "327.17",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "3",
+          "fechaDesde": "2018-07-16",
+          "fechaHasta": "2018-08-16",
+          "plazo": "31",
+          "saldoCapital": "16985.86",
+          "capital": "1552.58",
+          "intereses": "331.81",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "4",
+          "fechaDesde": "2018-08-16",
+          "fechaHasta": "2018-09-17",
+          "plazo": "32",
+          "saldoCapital": "15433.28",
+          "capital": "1573.19",
+          "intereses": "311.20",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "5",
+          "fechaDesde": "2018-09-17",
+          "fechaHasta": "2018-10-16",
+          "plazo": "29",
+          "saldoCapital": "13860.09",
+          "capital": "1631.11",
+          "intereses": "253.28",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "6",
+          "fechaDesde": "2018-10-16",
+          "fechaHasta": "2018-11-16",
+          "plazo": "31",
+          "saldoCapital": "12228.98",
+          "capital": "1645.51",
+          "intereses": "238.88",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "7",
+          "fechaDesde": "2018-11-16",
+          "fechaHasta": "2018-12-17",
+          "plazo": "31",
+          "saldoCapital": "10583.47",
+          "capital": "1677.65",
+          "intereses": "206.74",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "8",
+          "fechaDesde": "2018-12-17",
+          "fechaHasta": "2019-01-16",
+          "plazo": "30",
+          "saldoCapital": "8905.82",
+          "capital": "1716.03",
+          "intereses": "168.36",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "9",
+          "fechaDesde": "2019-01-16",
+          "fechaHasta": "2019-02-18",
+          "plazo": "33",
+          "saldoCapital": "7189.79",
+          "capital": "1734.88",
+          "intereses": "149.51",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "10",
+          "fechaDesde": "2019-02-18",
+          "fechaHasta": "2019-03-18",
+          "plazo": "28",
+          "saldoCapital": "5454.91",
+          "capital": "1788.14",
+          "intereses": "96.25",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "11",
+          "fechaDesde": "2019-03-18",
+          "fechaHasta": "2019-04-16",
+          "plazo": "29",
+          "saldoCapital": "3666.77",
+          "capital": "1817.38",
+          "intereses": "67.01",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.39",
+          "situacion": "PAGA"
+        },
+        {
+          "nroCuota": "12",
+          "fechaDesde": "2019-04-16",
+          "fechaHasta": "2019-05-16",
+          "plazo": "30",
+          "saldoCapital": "1849.39",
+          "capital": "1849.39",
+          "intereses": "34.96",
+          "impuestos": "0.00",
+          "seguros": "20.00",
+          "comisiones": "0.00",
+          "total": "1904.35",
+          "situacion": "PAGA"
+        }
+      ]
+    },
+    "operacionUId": "10118",
+    "idOperacionBT": "0010100000101000000000000000002800000000000074001",
+    "cantidadCuotas": "12"
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerCronogramaOriginal",
+    "Fecha": "2021-03-18",
+    "Hora": "10:03:41",
+    "Requerimiento": 1,
+    "Numero": "8032",
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -582,8 +581,11 @@ totalImpuestos | Double | Total de impuestos.
 totalIntereses | Double | Total de intereses. 
 totalMora | Double | Total de mora. 
 totalPagar | Double | Total a pagar. 
-totalSeguros | Double | Total de seguros. 
- 
+totalSeguros | Double | Total de seguros.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -595,7 +597,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -607,6 +612,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoOriginal
 
 ### sBTCuotaPrestamoOriginal
 
@@ -626,6 +634,8 @@ plazo | Int | Plazo.
 saldoCapital | Double | Saldo capital. 
 seguros | Double | Seguros. 
 situacion | String | Situación. 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

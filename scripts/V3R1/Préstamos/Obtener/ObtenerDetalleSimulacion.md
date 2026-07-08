@@ -298,196 +298,215 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{ 
-	"Btinreq": { 
-          "Token": "DC534B7EE96C31983417C526", 
-          "Canal": "BTDIGITAL", 
-          "Device": "AV", 
-          "Usuario": "MINSTALADOR", 
-          "Requerimiento": 1 
-        }, 
-        "sdtDetalleSimulacion": { 
-          "cft": 28.21, 
-          "tasa": 23, 
-          "plazo": 360, 
-          "impuestos": 25.3, 
-          "tasaEfectiva": 0, 
-          "fechaVencimiento": "2021-01-02", 
-          "producto": { 
-            "papel": "$", 
-            "moneda": "$", 
-            "productoUId": 0, 
-            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF" 
-          }, 
-          "intereses": 115.01, 
-          "fechaPrimerPago": "2020-02-02", 
-          "comisiones": 650.84, 
-          "valorCuota": 263.74, 
-          "otrosConceptos": { 
-            "sBTConcepto": [{ 
-              "texto": "", 
-              "valor": 10.0, 
-              "concepto": "COMIS_DESEMB" 
-            }] 
-          }, 
-          "cronograma": { 
-            "sBTCuotaSimulacion": [ 
-              { 
-                "otrosConceptos": 90.52, 
-                "capital": 75.76, 
-                "impuestos": 5.609999999999999, 
-                "intereses": 17.16, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 301.9, 
-                "fechaPago": "2020-02-02", 
-                "seguros": 112.85000000000001 
-              }, 
-              { 
-                "otrosConceptos": 84.28999999999999, 
-                "capital": 77.06, 
-                "impuestos": 5.32, 
-                "intereses": 15.86, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 295.35, 
-                "fechaPago": "2020-03-02", 
-                "seguros": 112.82000000000001 
-              }, 
-              { 
-                "otrosConceptos": 77.96, 
-                "capital": 78.38, 
-                "impuestos": 5.03, 
-                "intereses": 14.54, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 288.69, 
-                "fechaPago": "2020-04-02", 
-                "seguros": 112.78 
-              }, 
-              { 
-                "otrosConceptos": 71.52, 
-                "capital": 79.73, 
-                "impuestos": 4.73, 
-                "intereses": 13.19, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 281.92, 
-                "fechaPago": "2020-05-02", 
-                "seguros": 112.75 
-              }, 
-              { 
-                "otrosConceptos": 64.97, 
-                "capital": 81.1, 
-                "impuestos": 4.43, 
-                "intereses": 11.82, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 275.03, 
-                "fechaPago": "2020-06-02", 
-                "seguros": 112.71000000000001 
-              }, 
-              { 
-                "otrosConceptos": 58.3, 
-                "capital": 82.49000000000001, 
-                "impuestos": 4.12, 
-                "intereses": 10.43, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 268.01, 
-                "fechaPago": "2020-07-02", 
-                "seguros": 112.67 
-              }, 
-              { 
-                "otrosConceptos": 51.519999999999996, 
-                "capital": 83.9, 
-                "impuestos": 3.81, 
-                "intereses": 9.02, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 260.89, 
-                "fechaPago": "2020-08-02", 
-                "seguros": 112.64 
-              }, 
-              { 
-                "otrosConceptos": 44.62, 
-                "capital": 85.34, 
-                "impuestos": 3.5, 
-                "intereses": 7.58, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 253.64, 
-                "fechaPago": "2020-09-02", 
-                "seguros": 112.60000000000001 
-              }, 
-              { 
-                "otrosConceptos": 37.61, 
-                "capital": 86.81, 
-                "impuestos": 3.17, 
-                "intereses": 6.11, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 246.26, 
-                "fechaPago": "2020-10-02", 
-                "seguros": 112.56 
-              }, 
-              { 
-                "otrosConceptos": 30.47, 
-                "capital": 88.3, 
-                "impuestos": 2.85, 
-                "intereses": 4.62, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 238.76, 
-                "fechaPago": "2020-11-02", 
-                "seguros": 112.52000000000001 
-              }, 
-              { 
-                "otrosConceptos": 23.22, 
-                "capital": 89.81, 
-                "impuestos": 2.5100000000000002, 
-                "intereses": 3.11, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 231.13, 
-                "fechaPago": "2020-12-02", 
-                "seguros": 112.48 
-              }, 
-              { 
-                "otrosConceptos": 15.84, 
-                "capital": 91.32000000000001, 
-                "impuestos": 2.18, 
-                "intereses": 1.57, 
-                "concepto": "Capital/Interés", 
-                "tipoCuota": "M", 
-                "cuota": 223.35, 
-                "fechaPago": "2021-01-02", 
-                "seguros": 112.44000000000001 
-              } 
-            ] 
-          }, 
-          "totalPrestamo": 3164.93, 
-          "capital": 1000, 
-          "operacionUId": 18544, 
-          "tasaEfectivaAnual": 23, 
-          "seguros": 1351.82, 
-          "tasaNominalAnual": 20.878535, 
-          "montoDesembolso": 3154.93, 
-          "fechaValor": "2020-01-02" 
-        }, 
-        "Erroresnegocio": {
-          "BTErrorNegocio": []
-        }, 
-        "Btoutreq": { 
-          "Estado": "OK", 
-          "Canal": "BTDIGITAL", 
-          "Fecha": "2022-11-25", 
-          "Servicio": "BTPrestamos.ObtenerDetalleSimulacion", 
-          "Hora": "08:48:45", 
-          "Numero": 225610, 
-          "Requerimiento": 1 
-        } 
-}' 
+{
+  "Btinreq": {
+    "Token": "DC534B7EE96C31983417C526",
+    "Canal": "BTDIGITAL",
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1
+  },
+  "sdtDetalleSimulacion": {
+    "cft": 28.21,
+    "tasa": 23,
+    "plazo": 360,
+    "impuestos": 25.3,
+    "tasaEfectiva": 0,
+    "fechaVencimiento": "2021-01-02",
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": 0,
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "intereses": 115.01,
+    "fechaPrimerPago": "2020-02-02",
+    "comisiones": 650.84,
+    "valorCuota": 263.74,
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "texto": "",
+          "valor": 10,
+          "concepto": "COMIS_DESEMB"
+        }
+      ]
+    },
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "otrosConceptos": 90.52,
+          "capital": 75.76,
+          "impuestos": 5.609999999999999,
+          "intereses": 17.16,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 301.9,
+          "fechaPago": "2020-02-02",
+          "seguros": 112.85000000000001,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 84.28999999999999,
+          "capital": 77.06,
+          "impuestos": 5.32,
+          "intereses": 15.86,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 295.35,
+          "fechaPago": "2020-03-02",
+          "seguros": 112.82000000000001,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 77.96,
+          "capital": 78.38,
+          "impuestos": 5.03,
+          "intereses": 14.54,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 288.69,
+          "fechaPago": "2020-04-02",
+          "seguros": 112.78,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 71.52,
+          "capital": 79.73,
+          "impuestos": 4.73,
+          "intereses": 13.19,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 281.92,
+          "fechaPago": "2020-05-02",
+          "seguros": 112.75,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 64.97,
+          "capital": 81.1,
+          "impuestos": 4.43,
+          "intereses": 11.82,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 275.03,
+          "fechaPago": "2020-06-02",
+          "seguros": 112.71000000000001,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 58.3,
+          "capital": 82.49000000000001,
+          "impuestos": 4.12,
+          "intereses": 10.43,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 268.01,
+          "fechaPago": "2020-07-02",
+          "seguros": 112.67,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 51.519999999999996,
+          "capital": 83.9,
+          "impuestos": 3.81,
+          "intereses": 9.02,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 260.89,
+          "fechaPago": "2020-08-02",
+          "seguros": 112.64,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 44.62,
+          "capital": 85.34,
+          "impuestos": 3.5,
+          "intereses": 7.58,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 253.64,
+          "fechaPago": "2020-09-02",
+          "seguros": 112.60000000000001,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 37.61,
+          "capital": 86.81,
+          "impuestos": 3.17,
+          "intereses": 6.11,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 246.26,
+          "fechaPago": "2020-10-02",
+          "seguros": 112.56,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 30.47,
+          "capital": 88.3,
+          "impuestos": 2.85,
+          "intereses": 4.62,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 238.76,
+          "fechaPago": "2020-11-02",
+          "seguros": 112.52000000000001,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 23.22,
+          "capital": 89.81,
+          "impuestos": 2.5100000000000002,
+          "intereses": 3.11,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 231.13,
+          "fechaPago": "2020-12-02",
+          "seguros": 112.48,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 15.84,
+          "capital": 91.32000000000001,
+          "impuestos": 2.18,
+          "intereses": 1.57,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "cuota": 223.35,
+          "fechaPago": "2021-01-02",
+          "seguros": 112.44000000000001,
+          "interes": 0
+        }
+      ]
+    },
+    "totalPrestamo": 3164.93,
+    "capital": 1000,
+    "operacionUId": 18544,
+    "tasaEfectivaAnual": 23,
+    "seguros": 1351.82,
+    "tasaNominalAnual": 20.878535,
+    "montoDesembolso": 3154.93,
+    "fechaValor": "2020-01-02"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Estado": "OK",
+    "Canal": "BTDIGITAL",
+    "Fecha": "2022-11-25",
+    "Servicio": "BTPrestamos.ObtenerDetalleSimulacion",
+    "Hora": "08:48:45",
+    "Numero": 225610,
+    "Requerimiento": 1
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -507,7 +526,7 @@ Nombre | Tipo | Comentarios
 capital | Double | Capital. 
 cft | Double | Costo financiero total. 
 comisiones | Double | Comisiones. 
-cronograma | sBTCuotaSimulacion | Cronograma del préstamo. 
+cronograma | [sBTCuotaSimulacion](#sbtcuotasimulacion) | Cronograma del préstamo. 
 fechaPrimerPago | Date | Fecha de primer pago. 
 fechaValor | Date | Fecha de valor. 
 fechaVencimiento | Date | Fecha de vencimiento. 
@@ -515,7 +534,7 @@ impuestos | Double | Impuestos.
 intereses | Double | Intereses. 
 montoDesembolso | Double | Monto de desembolso. 
 operacionUId | Long | Identificador único de operación. 
-otrosConceptos | sBTConceptos | Datos de otros conceptos. 
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos. 
 plazo | Int | Plazo. 
 producto | [sBTProducto](#sbtproducto) | Datos del Producto. 
 seguros | Double | Seguros. 
@@ -524,7 +543,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total del préstamo. 
-valorCuota | Double | Valor de cuota. 
+valorCuota | Double | Valor de cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -537,7 +559,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -549,6 +574,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -565,6 +593,8 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
 <!-- CIERRA SDT -->
+

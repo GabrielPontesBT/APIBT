@@ -5,6 +5,7 @@
   "pubName": "BTCASHManagement.ObtenerDeuda",
   "programa": "RBTPGC61",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -35,6 +36,9 @@
       "Comentarios": "Datos de valores de campos CASH."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtInfoDetalleCash",
@@ -69,11 +73,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.ObtenerDeuda>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>13</bts:contratoId>\r\n         <bts:servicio>600</bts:servicio>\r\n         <bts:deudaId>42525261</bts:deudaId>\r\n         <bts:sdtValorCampoCash>\r\n            <bts:sBTValorCampoCash>\r\n               <bts:tag>CSMD006IMP</bts:tag>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTValorCampoCash>\r\n         </bts:sdtValorCampoCash>\r\n      </bts:BTCASHManagement.ObtenerDeuda>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDeuda=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": 1,\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"contratoId\": 13,\r\n    \"servicio\": 600,\r\n    \"deudaId\": \"42525261\",\r\n    \"sdtValorCampoCash\": {\r\n      \"sBTValorCampoCash\": [\r\n         {\r\n            \"tag\": \"CSMD006IMP\",\r\n            \"valor\": \"\"\r\n         }\r\n      ]\r\n    }\r\n  }'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDeuda=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": 1,\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"contratoId\": 13,\r\n    \"servicio\": 600,\r\n    \"deudaId\": \"42525261\",\r\n    \"sdtValorCampoCash\": {\r\n      \"sBTValorCampoCash\": [\r\n         {\r\n            \"tag\": \"CSMD006IMP\",\r\n            \"valor\": \"\"\r\n         }\r\n      ]\r\n    }\r\n  }'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.ObtenerDeuda>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>F971DE0C3D4C96A5ABC22DAD</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:contratoId>13</bts:contratoId>\r\n         <bts:servicio>600</bts:servicio>\r\n         <bts:deudaId>42525261</bts:deudaId>\r\n         <bts:sdtValorCampoCash>\r\n            <bts:sBTValorCampoCash>\r\n               <bts:tag>CSMD006IMP</bts:tag>\r\n               <bts:valor></bts:valor>\r\n            </bts:sBTValorCampoCash>\r\n         </bts:sdtValorCampoCash>\r\n      </bts:BTCASHManagement.ObtenerDeuda>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDeuda=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \\\r\n  -d '{\r\n    \"Btinreq\": {\r\n          \"Requerimiento\": 1,\r\n          \"Device\": \"AC\",\r\n          \"Canal\": \"BTDIGITAL\",\r\n          \"Usuario\": \"MINSTALADOR\",\r\n          \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"contratoId\": 13,\r\n    \"servicio\": 600,\r\n    \"deudaId\": \"42525261\",\r\n    \"sdtValorCampoCash\": {\r\n      \"sBTValorCampoCash\": [\r\n         {\r\n            \"tag\": \"CSMD006IMP\",\r\n            \"valor\": \"\"\r\n         }\r\n      ]\r\n    }\r\n  }'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.ObtenerDeudaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <sdtInfoDetalleCash>\r\n            <BTInfoDetalleCASH>\r\n               <detalleOrden>2</detalleOrden>\r\n               <ordenId>293</ordenId>\r\n               <valoresDetalle>\r\n                  <sBTValorCampoCASH>\r\n                     <tag>CSMD006IMP</tag>\r\n                     <valor>100.00</valor>\r\n                  </sBTValorCampoCASH>\r\n               </valoresDetalle>\r\n            </BTInfoDetalleCASH>\r\n         </sdtInfoDetalleCash>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-19</Fecha>\r\n            <Hora>12:22:16</Hora>\r\n            <Numero>26139</Numero>\r\n            <Servicio>BTCASHManagement.ObtenerDeuda</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.ObtenerDeudaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n    \"Btinreq\": {\r\n      \"Device\": \"AC\",\r\n      \"Usuario\": \"MINSTALADOR\",\r\n      \"Requerimiento\": 1,\r\n      \"Canal\": \"BTDIGITAL\",\r\n      \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n    },\r\n    \"sdtInfoDetalleCash\": {\r\n      \"BTInfoDetalleCASH\": [\r\n         {\r\n            \"detalleOrden\": 2,\r\n            \"ordenId\": 293,\r\n            \"valoresDetalle\": {\r\n               \"sBTValorCampoCASH\": [\r\n                  {\r\n                     \"tag\": \"CSMD006IMP\",\r\n                     \"valor\": \"100.00\"\r\n                  }\r\n               ]\r\n            }\r\n         }\r\n      ]\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n      \"Numero\": \"10403\",\r\n      \"Estado\": \"OK\",\r\n      \"Servicio\": \"BTCASHManagement.ObtenerDeuda\",\r\n      \"Fecha\": \"2021-01-29\",\r\n      \"Requerimiento\": 1,\r\n      \"Hora\": \"13:10:17\",\r\n      \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AC\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n  },\r\n  \"sdtInfoDetalleCash\": {\r\n    \"BTInfoDetalleCASH\": [\r\n      {\r\n        \"detalleOrden\": 2,\r\n        \"ordenId\": 293,\r\n        \"valoresDetalle\": {\r\n          \"sBTValorCampoCASH\": [\r\n            {\r\n              \"tag\": \"CSMD006IMP\",\r\n              \"valor\": \"100.00\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    ],\r\n    \"detalleOrden\": 0,\r\n    \"ordenId\": 0,\r\n    \"valoresDetalle\": {\r\n      \"tag\": \"\",\r\n      \"valor\": \"\"\r\n    }\r\n  },\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": \"10403\",\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTCASHManagement.ObtenerDeuda\",\r\n    \"Fecha\": \"2021-01-29\",\r\n    \"Requerimiento\": 1,\r\n    \"Hora\": \"13:10:17\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.ObtenerDeudaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>F971DE0C3D4C96A5ABC22DAD</Token>\r\n         </Btinreq>\r\n         <sdtInfoDetalleCash>\r\n            <BTInfoDetalleCASH>\r\n               <detalleOrden>2</detalleOrden>\r\n               <ordenId>293</ordenId>\r\n               <valoresDetalle>\r\n                  <sBTValorCampoCASH>\r\n                     <tag>CSMD006IMP</tag>\r\n                     <valor>100.00</valor>\r\n                  </sBTValorCampoCASH>\r\n               </valoresDetalle>\r\n            </BTInfoDetalleCASH>\r\n         </sdtInfoDetalleCash>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2024-11-19</Fecha>\r\n            <Hora>12:22:16</Hora>\r\n            <Numero>26139</Numero>\r\n            <Servicio>BTCASHManagement.ObtenerDeuda</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCASHManagement.ObtenerDeudaResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"AC\",\r\n    \"Usuario\": \"MINSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"6fc29caa9d4A8B5C60A82434\"\r\n  },\r\n  \"sdtInfoDetalleCash\": {\r\n    \"BTInfoDetalleCASH\": [\r\n      {\r\n        \"detalleOrden\": 2,\r\n        \"ordenId\": 293,\r\n        \"valoresDetalle\": {\r\n          \"sBTValorCampoCASH\": [\r\n            {\r\n              \"tag\": \"CSMD006IMP\",\r\n              \"valor\": \"100.00\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    ],\r\n    \"detalleOrden\": 0,\r\n    \"ordenId\": 0,\r\n    \"valoresDetalle\": {\r\n      \"tag\": \"\",\r\n      \"valor\": \"\"\r\n    }\r\n  },\r\n  \"Erroresnegocio\": {\r\n    \"BTErrorNegocio\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Numero\": \"10403\",\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTCASHManagement.ObtenerDeuda\",\r\n    \"Fecha\": \"2021-01-29\",\r\n    \"Requerimiento\": 1,\r\n    \"Hora\": \"13:10:17\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -107,23 +135,8 @@
         },
         {
           "Nombre": "valoresDetalle",
-          "Tipo": "<a href=\"#sbtvalorcampocash1\">sBTValorCampoCASH</a>",
+          "Tipo": "<a href=\"#sbtvalorcampocash\">sBTValorCampoCASH</a>",
           "Comentarios": "Listado de datos de valores de campos CASH."
-        }
-      ]
-    },
-    {
-      "typeName": "sBTValorCampoCASH1",
-      "fields": [
-        {
-          "Nombre": "tag",
-          "Tipo": "String",
-          "Comentarios": "Tag del campo CASH."
-        },
-        {
-          "Nombre": "valor",
-          "Tipo": "String",
-          "Comentarios": "Valor del campo CASH."
         }
       ]
     }

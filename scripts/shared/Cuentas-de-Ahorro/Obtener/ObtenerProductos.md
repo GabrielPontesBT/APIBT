@@ -110,26 +110,45 @@ curl -X POST \
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> 
                <moneda>$</moneda> 
                <papel/> 
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>2</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Física</nombre> 
                <moneda>USD</moneda> 
                <papel/> 
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>3</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> 
                <moneda>$</moneda> 
                <papel/> 
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto> 
             <sBTProducto> 
                <productoUId>4</productoUId> 
                <nombre>CAJAS DE AHORRO, Caja de Ahorro P.Jurídica</nombre> 
                <moneda>USD</moneda> 
                <papel/> 
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto> 
-            ...
          </sdtProductos> 
          <Erroresnegocio></Erroresnegocio> 
          <Btoutreq> 
@@ -143,49 +162,58 @@ curl -X POST \
          </Btoutreq> 
       </BTCuentasDeAhorro.ObtenerProductosResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope> 
+</SOAP-ENV:Envelope>
 ``` 
 
 @tab JSON
 ```json
-'{ 
-	"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": 1, 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-	}, 
-    "sdtProductos": { 
-        "sBTProducto": [ 
-            { 
-                "papel": "", 
-                "moneda": "$", 
-                "productoUId": "1", 
-                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
-            }, 
-            { 
-                "papel": "", 
-                "moneda": "USD", 
-                "productoUId": "2", 
-                "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
-            }, 
-            ...
-        ] 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Numero": "989", 
-        "Estado": "OK", 
-        "Servicio": "BTCuentasDeAhorro.ObtenerProductos", 
-        "Requerimiento": 1, 
-        "Fecha": "2017-12-22", 
-        "Hora": "17:55:13", 
-        "Canal": "BTDIGITAL" 
-    } 
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "1",
+        "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "2",
+        "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "989",
+    "Estado": "OK",
+    "Servicio": "BTCuentasDeAhorro.ObtenerProductos",
+    "Requerimiento": 1,
+    "Fecha": "2017-12-22",
+    "Hora": "17:55:13",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -206,7 +234,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -219,4 +250,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

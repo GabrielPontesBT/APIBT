@@ -200,79 +200,94 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosPasivos": {
-        "sBTProductoPasivo": [
-            {
-                "tipoProducto": "CC",
-                "estado": "Normal",
-                "subCuenta": "PESOS",
-                "operacionUId": "9",
-                "saldo": "26675306.42",
-                "idOperacionFmt": "000000027_001",
-                "idOperacionBT": "0010100000020000000000000000002700001000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "CC",
-                "estado": "Cobro Administrativo",
-                "subCuenta": "Prueba CC",
-                "operacionUId": "81",
-                "saldo": "4500.00",
-                "idOperacionFmt": "000000027_004",
-                "idOperacionBT": "0010100000020000000000000000002700004000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "CC",
-                "estado": "Cobro Administrativo",
-                "subCuenta": "",
-                "operacionUId": "61",
-                "saldo": "120000.00",
-                "idOperacionFmt": "000000027_003",
-                "idOperacionBT": "0010100000020000000000000000002700003000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "782",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerCuentasCorrientes",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "13:02:32",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosPasivos": {
+    "sBTProductoPasivo": [
+      {
+        "tipoProducto": "CC",
+        "estado": "Normal",
+        "subCuenta": "PESOS",
+        "operacionUId": "9",
+        "saldo": "26675306.42",
+        "idOperacionFmt": "000000027_001",
+        "idOperacionBT": "0010100000020000000000000000002700001000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "CC",
+        "estado": "Cobro Administrativo",
+        "subCuenta": "Prueba CC",
+        "operacionUId": "81",
+        "saldo": "4500.00",
+        "idOperacionFmt": "000000027_004",
+        "idOperacionBT": "0010100000020000000000000000002700004000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "CC",
+        "estado": "Cobro Administrativo",
+        "subCuenta": "",
+        "operacionUId": "61",
+        "saldo": "120000.00",
+        "idOperacionFmt": "000000027_003",
+        "idOperacionBT": "0010100000020000000000000000002700003000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "782",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerCuentasCorrientes",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "13:02:32",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -297,8 +312,11 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Double | Saldo contable de la CC. 
 subCuenta | String | Nombre de la subcuenta. 
 sucursal | String | Nombre de la sucursal. 
-tipoProducto | String | Tipo de producto. 
- 
+tipoProducto | String | Tipo de producto.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -310,7 +328,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -323,4 +344,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

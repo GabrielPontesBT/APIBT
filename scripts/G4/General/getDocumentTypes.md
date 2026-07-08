@@ -458,7 +458,16 @@ Código | Descripción
         "MaxLength": 0,
         "MainDocument": true
       }
-    ]
+    ],
+    "AppliesToFI": "",
+    "Description": "",
+    "Format": "",
+    "Id": 0,
+    "MainDocument": false,
+    "MaxLength": 0,
+    "MinLength": "",
+    "PersonType": "",
+    "ShortDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -493,7 +502,7 @@ AppliesToFI | String $<(Length: 1)>$ | Aplica a institución financiera.
 Description | String $<(Length: 30)>$ | Descripción.
 Format | String $<(Length: 1)>$ | Formato.
 Id | Short | Identificador.
-MainDocument | Boolean $<(Length: 1)>$ | Documento principal.
+MainDocument | Boolean | Documento principal.
 MaxLength | Short | Longitud máxima.
 MinLength | Byte $<(Length: 2)>$ | Longitud mínima.
 PersonType | String $<(Length: 1)>$ | Tipo de persona.

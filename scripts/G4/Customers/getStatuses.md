@@ -89,7 +89,9 @@ No aplica.
         "Id": 9,
         "Description": "ALTA INCONCLUSA (INST.FINANC.)"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
   "BusinessErrors": {
     "BusinessError": []

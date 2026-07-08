@@ -168,74 +168,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "personaJuridica": {
-        "nroDocumento": "214567892142",
-        "numeroPuerta": "0",
-        "nombreReducido": "BANCO MODELO",
-        "paisDomicilio": "URUGUAY",
-        "razonSocial": "BANCO MODELO",
-        "departamento": "Montevideo",
-        "nroRegistro": "78940",
-        "naturalezaJuridica": "Sociedad Anónima",
-        "barrio": "Centro",
-        "apartamento": ,
-        "tipoDocumentoId": "2",
-        "tipoActividadId": "1",
-        "piso": ,
-        "paisId": "845",
-        "fechaConstitucion": "2007-08-22",
-        "actividad": ,
-        "paisDomicilioId": "845",
-        "pais": "URUGUAY",
-        "codigoPostal": ,
-        "tipoActividad": "Actividad Principal",
-        "barrioId": "330",
-        "localidadId": "10",
-        "localidad": "Montevideo",
-        "correoElectronico": "1",
-        "actividadId": "0",
-        "calle": ,
-        "naturalezaJuridicaId": "1",
-        "tipoDocumento": "RUT",
-        "departamentoId": "10",
-        "telefonoFijo": "3213342222",
-        "piso": "123"
-    },
-    "sdtIntegrantesJuridicos": {
-        "SdtsBTIntegranteJuridico": {
-            "nroDocumento": "27928980",
-            "vinculoId": "1",
-            "pais": "URUGUAY",
-            "tipoDocumentoId": "1",
-            "participacion": "100.00",
-            "tipoDocumento": "Cédula Identidad",
-            "personaUId": "141",
-            "paisId": "845",
-            "nombre": "PRANKA VISENTIN ERIKA VERONICA",
-            "vinculo": "Presidente"
-        }
-    },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "80",
-      "Estado": "OK",
-      "Servicio": "BTPersonas.ObtenerPersonasJuridicas",
-      "Fecha": "2018-05-04",
-      "Requerimiento": "1",
-      "Hora": "15:54:29",
-      "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaJuridica": {
+    "nroDocumento": "214567892142",
+    "numeroPuerta": "0",
+    "nombreReducido": "BANCO MODELO",
+    "paisDomicilio": "URUGUAY",
+    "razonSocial": "BANCO MODELO",
+    "departamento": "Montevideo",
+    "nroRegistro": "78940",
+    "naturalezaJuridica": "Sociedad Anónima",
+    "barrio": "Centro",
+    "apartamento": {},
+    "tipoDocumentoId": "2",
+    "tipoActividadId": "1",
+    "piso": "123",
+    "paisId": "845",
+    "fechaConstitucion": "2007-08-22",
+    "actividad": {},
+    "paisDomicilioId": "845",
+    "pais": "URUGUAY",
+    "codigoPostal": {},
+    "tipoActividad": "Actividad Principal",
+    "barrioId": "330",
+    "localidadId": "10",
+    "localidad": "Montevideo",
+    "correoElectronico": "1",
+    "actividadId": "0",
+    "calle": {},
+    "naturalezaJuridicaId": "1",
+    "tipoDocumento": "RUT",
+    "departamentoId": "10",
+    "telefonoFijo": "3213342222"
+  },
+  "sdtIntegrantesJuridicos": {
+    "SdtsBTIntegranteJuridico": {
+      "nroDocumento": "27928980",
+      "vinculoId": "1",
+      "pais": "URUGUAY",
+      "tipoDocumentoId": "1",
+      "participacion": "100.00",
+      "tipoDocumento": "Cédula Identidad",
+      "personaUId": "141",
+      "paisId": "845",
+      "nombre": "PRANKA VISENTIN ERIKA VERONICA",
+      "vinculo": "Presidente"
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "80",
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerPersonasJuridicas",
+    "Fecha": "2018-05-04",
+    "Requerimiento": "1",
+    "Hora": "15:54:29",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -5,6 +5,7 @@
   "pubName": "BTTarjetasDeDebito.Activar",
   "programa": "RBTPG069",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -25,6 +26,9 @@
       "Comentarios": "Identificador único de cliente."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -45,11 +49,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Activar>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>407fce50864A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000002072</bts:tarjetaUId>\n         <bts:clienteUId>161</bts:clienteUId>\n      </bts:BTTarjetasDeDebito.Activar>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Activar=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 19f16614-b11e-9eaf-4034-1d7994c6019f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 2000002072,\n   \"clienteUId\": 161\n}'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Activar=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 19f16614-b11e-9eaf-4034-1d7994c6019f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 2000002072,\n   \"clienteUId\": 161\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.Activar>\n         <bts:Btinreq>\n            <bts:Device>AV</bts:Device>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento/>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Token>407fce50864A8B5C60A82434</bts:Token>\n         </bts:Btinreq>\n         <bts:tarjetaUId>2000002072</bts:tarjetaUId>\n         <bts:clienteUId>161</bts:clienteUId>\n      </bts:BTTarjetasDeDebito.Activar>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Activar=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 19f16614-b11e-9eaf-4034-1d7994c6019f' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"tarjetaUId\": 2000002072,\n   \"clienteUId\": 161\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ActivarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>407fce50864A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>997</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.Activar</Servicio>\n            <Fecha>2017-12-26</Fecha>\n            <Requerimiento/>\n            <Hora>11:30:24</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ActivarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"974\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.Activar\",\n      \"Fecha\": \"2017-12-22\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"13:11:46\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"974\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.Activar\",\n      \"Fecha\": \"2017-12-22\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"13:11:46\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.ActivarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>AV</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento/>\n            <Canal>BTDIGITAL</Canal>\n            <Token>407fce50864A8B5C60A82434</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>997</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTTarjetasDeDebito.Activar</Servicio>\n            <Fecha>2017-12-26</Fecha>\n            <Requerimiento/>\n            <Hora>11:30:24</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTTarjetasDeDebito.ActivarResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"Erroresnegocio\": {\n      \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"974\",\n      \"Estado\": \"NEG_ERROR\",\n      \"Servicio\": \"BTTarjetasDeDebito.Activar\",\n      \"Fecha\": \"2017-12-22\",\n      \"Requerimiento\": \"\",\n      \"Hora\": \"13:11:46\",\n      \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

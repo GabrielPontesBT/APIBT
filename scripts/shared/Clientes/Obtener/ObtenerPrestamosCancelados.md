@@ -113,7 +113,7 @@ curl -X POST \
          <sdtPrestamos>
             <sBTPrestamoCancelado>
                <operacionUId>1</operacionUId>
-               <idOperacionFmt>0000000170-000</idOperacionFmt>
+               <idOperacionFMT>0000000170-000</idOperacionFMT>
                <idOperacionBT>0010000100101000000000000000002700000000000170003</idOperacionBT>
                <producto>
                   <productoUId>0</productoUId>
@@ -144,41 +144,46 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-	"Btinreq": { 
-		"Device": "MC", 
-		"Usuario": "INSTALADOR", 
-		"Requerimiento": "1", 
-		"Canal": "BTDIGITAL", 
-		"Token": "b674899860CD285A89A23FBE" 
-	}, 
-	"sdtPrestamos": { 
-		"sBTPrestamoCancelado": { 
-			"operacionUId": "1", 
-			"idOperacionFmt": "0000000170-000", 
-			"idOperacionBT": "0010000100101000000000000000002700000000000170003", 
-			"producto": { 
-				"productoUId": "0", 
-				"nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad", 
-				"moneda": "$", 
-				"papel": "" 
-			}, 
-			"sucursal": "Sucursal Beta", 
-			"fechaValor": "2019-01-15", 
-			"fechaVencimiento": "2020-01-15", 
-			"fechaCancelacion": "2020-01-15" 
-		} 
-	}, 
-	"Erroresnegocio": "", 
-	"Btoutreq": { 
-		"Numero": "270", 
-		"Servicio": "BTClientes.ObtenerPrestamosCancelados", 
-		"Estado": "OK", 
-		"Fecha": "2020-04-13", 
-		"Requerimiento": "1", 
-		"Hora": "10:42:34", 
-		"Canal": "BTDIGITAL" 
-	}, 
+{
+  "Btinreq": {
+    "Device": "MC",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "b674899860CD285A89A23FBE"
+  },
+  "sdtPrestamos": {
+    "sBTPrestamoCancelado": {
+      "operacionUId": "1",
+      "idOperacionBT": "0010000100101000000000000000002700000000000170003",
+      "producto": {
+        "productoUId": "0",
+        "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      "sucursal": "Sucursal Beta",
+      "fechaValor": "2019-01-15",
+      "fechaVencimiento": "2020-01-15",
+      "fechaCancelacion": "2020-01-15",
+      "idOperacionFMT": "0000000170-000"
+    }
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": "270",
+    "Servicio": "BTClientes.ObtenerPrestamosCancelados",
+    "Estado": "OK",
+    "Fecha": "2020-04-13",
+    "Requerimiento": "1",
+    "Hora": "10:42:34",
+    "Canal": "BTDIGITAL"
+  }
 }
 ```
 ::: 
@@ -203,7 +208,10 @@ idOperacionBT | String | Identificador String Bantotal (concatenación de todos 
 idOperacionFMT | String | Identificador String (concatenación de algunos conceptos claves de la operación). 
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
-sucursal | String | Nombre de la sucursal. 
+sucursal | String | Nombre de la sucursal.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -216,7 +224,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -229,4 +240,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

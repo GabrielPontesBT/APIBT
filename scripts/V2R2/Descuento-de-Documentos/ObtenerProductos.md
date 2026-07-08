@@ -176,6 +176,11 @@ curl -X POST \
                <moneda>USD</moneda>
                <papel/>
             </SdtsBTProducto>
+            <otrosConceptos>
+               <concepto></concepto>
+               <texto></texto>
+               <valor>0</valor>
+            </otrosConceptos>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -194,103 +199,163 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "sdtProductos": {
-      "SdtsBTProducto": [
-         {
-            "productoUId": "12",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "13",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
-            "moneda": "USD",
-            "papel": ""
-         },
-         {
-            "productoUId": "14",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "15",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
-            "moneda": "USD",
-            "papel": ""
-         },
-         {
-            "productoUId": "16",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Facturas USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "17",
-            "nombre": "COMPRA DE DOCUMENTOS, Compra Facturas USD",
-            "moneda": "USD",
-            "papel": ""
-         },
-         {
-            "productoUId": "18",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "19",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
-            "moneda": "USD",
-            "papel": ""
-         },
-         {
-            "productoUId": "20",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "21",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
-            "moneda": "USD",
-            "papel": ""
-         },
-         {
-            "productoUId": "22",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
-            "moneda": "$",
-            "papel": ""
-         },
-         {
-            "productoUId": "23",
-            "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
-            "moneda": "USD",
-            "papel": ""
-         }
-      ]
-   },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "727",
-        "Estado": "OK",
-        "Servicio": "BTDescuentoDocumentos.ObtenerProductos",
-        "Fecha": "2017-11-24",
-        "Requerimiento": "",
-        "Hora": "15:59:42",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "SdtsBTProducto": [
+      {
+        "productoUId": "12",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "13",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Persona USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "14",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "15",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Cheques Empresa  USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "16",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Facturas USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "17",
+        "nombre": "COMPRA DE DOCUMENTOS, Compra Facturas USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "18",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "19",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Persona USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "20",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "21",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Cheques Empresa USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "22",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "productoUId": "23",
+        "nombre": "DESCUENTO DE DOCUMENTOS, Descuento Facturas USD",
+        "moneda": "USD",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "727",
+    "Estado": "OK",
+    "Servicio": "BTDescuentoDocumentos.ObtenerProductos",
+    "Fecha": "2017-11-24",
+    "Requerimiento": "",
+    "Hora": "15:59:42",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -311,7 +376,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -324,4 +392,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

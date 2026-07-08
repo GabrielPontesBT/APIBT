@@ -47,6 +47,36 @@
   //::ng-deep strong { color: var(--red-1); }
 }
 
+.info-card_block--endpoint {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+
+  &[data-method="GET"]    { border-color: var(--method-get-border);    background: var(--method-get-bg); }
+  &[data-method="POST"]   { border-color: var(--method-post-border);   background: var(--method-post-bg); }
+  &[data-method="PUT"]    { border-color: var(--method-put-border);    background: var(--method-put-bg); }
+  &[data-method="DELETE"] { border-color: var(--method-delete-border); background: var(--method-delete-bg); }
+}
+
+.info-card_method-badge {
+  height: 1.5rem;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 1rem;
+}
+
+.info-card_method-text {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.info-card_endpoint-separator {
+  color: var(--border-color);
+  user-select: none;
+}
+
+
 @media (max-width: 768px) {
   .info-card_row {
     grid-template-columns: 1fr;

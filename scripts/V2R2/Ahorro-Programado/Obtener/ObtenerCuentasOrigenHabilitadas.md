@@ -103,6 +103,7 @@ curl -X POST \
 		"clienteUId": 81,
 		"productoUId": 41
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -158,62 +159,63 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtCuentas": {
-        "sBTProductoPasivo": [
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subCuenta": "Mi account 1",
-                "operacionUId": "21",
-                "saldo": "10000000.00",
-                "idOperacionFmt": "000000028_001",
-                "idOperacionBT": "0010010210000000000000028001000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "CA",
-                "estado": "Normal",
-                "subCuenta": "Mi account 2",
-                "operacionUId": "81",
-                "saldo": "0.00",
-                "idOperacionFmt": "000000028_002",
-                "idOperacionBT": "0010010210000000000000028002000000000001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-                },
-                "sucursal": "Casa Matriz"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "402",
-        "Estado": "OK",
-        "Servicio": "BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas",
-        "Fecha": "2018-05-03",
-        "Requerimiento": "1",
-        "Hora": "11:24:55",
-        "Canal": "BTDIGITAL"
-    }
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentas": {
+    "sBTProductoPasivo": [
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subCuenta": "Mi account 1",
+        "operacionUId": "21",
+        "saldo": "10000000.00",
+        "idOperacionFmt": "000000028_001",
+        "idOperacionBT": "0010010210000000000000028001000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "CA",
+        "estado": "Normal",
+        "subCuenta": "Mi account 2",
+        "operacionUId": "81",
+        "saldo": "0.00",
+        "idOperacionFmt": "000000028_002",
+        "idOperacionBT": "0010010210000000000000028002000000000001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
+        },
+        "sucursal": "Casa Matriz"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "402",
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas",
+    "Fecha": "2018-05-03",
+    "Requerimiento": "1",
+    "Hora": "11:24:55",
+    "Canal": "BTDIGITAL"
+  }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
@@ -235,11 +237,13 @@ idOperacionBT | String | Identificador String Bantotal (concatenación de todos 
 producto | [sBTProducto](#sbtproducto) | Datos del Producto pasivo.
 tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
 sucursal | String | Nombre de la sucursal de origen de la operación.
-subcuenta | String | Nombre de la cuenta vista.
+subCuenta | String | Nombre de la cuenta vista.
 saldo | Decimal | Saldo.
 estado | String | Descripción de estado.
 :::
- 
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -252,4 +256,6 @@ nombre | String | Nombre del producto.
 moneda | String | Símbolo de la moneda.
 papel | String | Símbolo del papel.
 :::
+
 <!-- CIERRA SDT -->
+

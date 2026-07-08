@@ -28,7 +28,7 @@ counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) 
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-counterpartyData | SdtsBTCPWCounterparty | Datos de la contraparte.
+counterpartyData | [SdtsBTCPWCounterparty](#sdtsbtcpwcounterparty) | Datos de la contraparte.
 
 @tab Datos de Salida
 
@@ -163,13 +163,13 @@ CreationDate | Date $<(Length: 8)>$ | Fecha de creación.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
 EconomicActivityId | Long | Identificador de actividad económica.
 EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
-Employee | Boolean $<(Length: 1)>$ | ¿Es empleado?.
+Employee | Boolean | ¿Es empleado?.
 ExecutiveId | Int $<(Length: 5)>$ | Identificador del ejecutivo.
 ExecutiveDescription | String $<(Length: 30)>$ | Descripción del ejecutivo.
-FinancialInstitution | Boolean $<(Length: 1)>$ | Institución financiera.
+FinancialInstitution | Boolean | Institución financiera.
 InternalClassificationId | Short | Identificador de clasificación interna.
 InternalClassificationDescription | String $<(Length: 30)>$ | Descripción de clasificación interna.
-Resident | Boolean $<(Length: 1)>$ | ¿Es residente?.
+Resident | Boolean | ¿Es residente?.
 SectorId | Short | Identificador de sector.
 SectorDescription | String $<(Length: 30)>$ | Descripción del sector.
 SegmentId | Byte $<(Length: 2)>$ | Identificador del segmento.

@@ -113,7 +113,7 @@ curl -X POST \
 				<Canal>BTDIGITAL</Canal>        
 				<Token>268b6d2B5C60A82434</Token>    
 			</Btinreq> 
-			<sdtCotizaciones> 
+			<sdtCotizacion> 
 				<sBTCotizacion> 
 				   <identificador>105</identificador> 
 				   <monedaISO>AUD</monedaISO> 
@@ -144,7 +144,7 @@ curl -X POST \
 				   <compra>600.00000000</compra> 
 				   <venta>700.00000000</venta> 
 				</sBTCotizacion> 
-			 </sdtCotizaciones> 
+			 </sdtCotizacion> 
 			 <Erroresnegocio></Erroresnegocio> 
 			 <Btoutreq> 
 				<Canal>BTDIGITAL</Canal> 
@@ -157,63 +157,63 @@ curl -X POST \
 			 </Btoutreq> 
         </BTPrecios.ObtenerCotizacionAFechaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope> 
+</SOAP-ENV:Envelope>
 ```
 
 @tab JSON
 ```json
-'{ 
-	"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": 1, 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-	},        
-	"sdtCotizaciones": { 
-		"sBTCotizacion": [ 
-			{ 
-				"identificador": "105", 
-				"monedaISO": "AUD", 
-				"compra": "1.00000000", 
-				"venta": "1.00000000" 
-			}, 
-			{ 
-				"identificador": "500", 
-				"monedaISO": "ARS", 
-				"compra": "10.00000000", 
-				"venta": "11.00000000" 
-			}, 
-			{ 
-				"identificador": "501", 
-				"monedaISO": "AR$", 
-				"compra": "9.50000000", 
-				"venta": "10.00000000" 
-			}, 
-			{ 
-				"identificador": "1000", 
-				"monedaISO": "BRL", 
-				"compra": "14.00000000", 
-				"venta": "14.40000000" 
-			}, 
-			{ 
-				"identificador": "9000", 
-				"monedaISO": "ORO", 
-				"compra": "600.00000000", 
-				"venta": "700.00000000" 
-			} 
-		] 
-	}, 
-  "Btoutreq": { 
-	  "Numero": "103", 
-	  "Estado": "OK", 
-	  "Servicio": "BTPrecios.ObtenerCotizacionAFechaResponse", 
-	  "Requerimiento": "1", 
-	  "Fecha": "2019-07-22", 
-	  "Canal": "BTDIGITAL", 
-	  "Hora": "16:00:37" 
-	} 
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCotizacion": {
+    "sBTCotizacion": [
+      {
+        "identificador": "105",
+        "monedaISO": "AUD",
+        "compra": "1.00000000",
+        "venta": "1.00000000"
+      },
+      {
+        "identificador": "500",
+        "monedaISO": "ARS",
+        "compra": "10.00000000",
+        "venta": "11.00000000"
+      },
+      {
+        "identificador": "501",
+        "monedaISO": "AR$",
+        "compra": "9.50000000",
+        "venta": "10.00000000"
+      },
+      {
+        "identificador": "1000",
+        "monedaISO": "BRL",
+        "compra": "14.00000000",
+        "venta": "14.40000000"
+      },
+      {
+        "identificador": "9000",
+        "monedaISO": "ORO",
+        "compra": "600.00000000",
+        "venta": "700.00000000"
+      }
+    ]
+  },
+  "Btoutreq": {
+    "Numero": "103",
+    "Estado": "OK",
+    "Servicio": "BTPrecios.ObtenerCotizacionAFechaResponse",
+    "Requerimiento": "1",
+    "Fecha": "2019-07-22",
+    "Canal": "BTDIGITAL",
+    "Hora": "16:00:37"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -5,6 +5,7 @@
   "pubName": "BTTransferenciasACH.ConfirmarACH",
   "programa": "RBPHO07",
   "scope": "Honduras",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -22,6 +23,9 @@
       "Comentarios": "Identificador Transferencia (PAYD01ID)."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "Estado",
@@ -45,11 +49,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTransferenciasACH.ConfirmarACH>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTINTERNO</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>088459081EF05E4F9E3B2B7A</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:IdTransferencia>131</bts:IdTransferencia>\r\n      </bts:BTTransferenciasACH.ConfirmarACH>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTTransferenciasACH.ConfirmarACH>\r\n         <bts:Btinreq>\r\n            <bts:Canal>BTINTERNO</bts:Canal>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Device>1</bts:Device>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Token>088459081EF05E4F9E3B2B7A</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:IdTransferencia>131</bts:IdTransferencia>\r\n      </bts:BTTransferenciasACH.ConfirmarACH>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTransferenciasACH.ConfirmarACHResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n         <Estado/>\r\n         <OriginalMessageId/>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2025-05-02</Fecha>\r\n            <Hora>14:47:59</Hora>\r\n            <Numero>2249</Numero>\r\n            <Servicio>BTTransferenciasACH.ConfirmarACH</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTINTERNO</Canal>\r\n         </Btoutreq>\r\n      </BTTransferenciasACH.ConfirmarACHResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "xml",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTTransferenciasACH.ConfirmarACHResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Device>1</Device>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Token>088459081EF05E4F9E3B2B7A</Token>\r\n         </Btinreq>\r\n         <Estado/>\r\n         <OriginalMessageId/>\r\n         <Erroresnegocio/>\r\n         <Btoutreq>\r\n            <Estado>OK</Estado>\r\n            <Fecha>2025-05-02</Fecha>\r\n            <Hora>14:47:59</Hora>\r\n            <Numero>2249</Numero>\r\n            <Servicio>BTTransferenciasACH.ConfirmarACH</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTINTERNO</Canal>\r\n         </Btoutreq>\r\n      </BTTransferenciasACH.ConfirmarACHResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [],

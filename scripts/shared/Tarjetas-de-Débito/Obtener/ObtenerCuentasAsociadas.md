@@ -146,47 +146,67 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtCuentasAsociadasTD": {
-      "cuentas": {
-         "sBDCuentaAsociadaTD": [ {
-            "saldo": "100.00",
-            "simboloMoneda": "$",
-            "sucursal": "Casa Matriz",
-            "producto": {
-               "papel": "",
-               "moneda": "$",
-               "productoUId": "0",
-               "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-            },
-            "operacionUId": "101",
-            "subCuenta": "",
-            "idOperacionFmt": "000000040_005",
-            "estado": "Normal"
-         } ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentasAsociadasTD": {
+    "cuentas": {
+      "sBDCuentaAsociadaTD": [
+        {
+          "saldo": "100.00",
+          "simboloMoneda": "$",
+          "sucursal": "Casa Matriz",
+          "producto": {
+            "papel": "",
+            "moneda": "$",
+            "productoUId": "0",
+            "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
+          },
+          "operacionUId": "101",
+          "subCuenta": "",
+          "idOperacionFmt": "000000040_005",
+          "estado": "Normal"
+        }
+      ],
+      "estado": "",
+      "idOperacionFmt": "",
+      "operacionUId": 0,
+      "producto": {
+        "moneda": "",
+        "nombre": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "papel": "",
+        "productoUId": 0
       },
-      "tarjetaUId": "3"
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "976",
-      "Estado": "OK",
-      "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadas",
-      "Fecha": "2017-12-22",
-      "Requerimiento": 1,
-      "Hora": "13:15:07",
-      "Canal": "BTDIGITAL"
-   }
-}'
+      "saldo": 0,
+      "simboloMoneda": "",
+      "subCuenta": "",
+      "sucursal": ""
+    },
+    "tarjetaUId": "3"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "976",
+    "Estado": "OK",
+    "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAsociadas",
+    "Fecha": "2017-12-22",
+    "Requerimiento": 1,
+    "Hora": "13:15:07",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -205,7 +225,10 @@ Los campos del tipo de dato estructurado sBDCuentasAsociadasTD son los siguiente
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 cuentas | [sBDCuentaAsociadaTD](#sbdcuentaasociadatd) | Datos de cuenta asociada. 
-tarjetaUId | Long | Identificador único de tarjeta. 
+tarjetaUId | Long | Identificador único de tarjeta.
+:::
+
+::: details sBDCuentaAsociadaTD
 
 ### sBDCuentaAsociadaTD
 
@@ -221,7 +244,10 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Double | Saldo de la cuenta. 
 simboloMoneda | String | Símbolo de moneda. 
 subCuenta | String | Nombre de la subcuenta. 
-sucursal | String | Nombre de la sucursal. 
+sucursal | String | Nombre de la sucursal.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -234,7 +260,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -247,4 +276,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

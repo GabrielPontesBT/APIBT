@@ -6,9 +6,14 @@
   "modulo": "Liabilities.SavingsAccounts",
   "programa": "PublicAPI.BTSAPA0005",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "savingAccountGUID",
@@ -21,7 +26,9 @@
       "Comentarios": "GUID (identificador único global) del producto."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [],
   "errors": [
     {
@@ -45,11 +52,25 @@
   "examples": {
     "invocation": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"savingAccountGUID\": \"42755eb6-18a7-4492-b17e-e248be17b5fd\",\n  \"productGUID\": \"57a29eb2-f783-41dd-87a2-c53c2edcdf6e\"\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"savingAccountGUID\": \"42755eb6-18a7-4492-b17e-e248be17b5fd\",\n  \"productGUID\": \"57a29eb2-f783-41dd-87a2-c53c2edcdf6e\"\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:57:25\",\n    \"Numero\": 13496130,\n    \"Servicio\": \"PublicSavingAccounts.updateProduct\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"98FF1E4659B9A7B4F95BF7B5\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:57:25\",\n    \"Numero\": 13496130,\n    \"Servicio\": \"PublicSavingAccounts.updateProduct\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

@@ -127,7 +127,6 @@ curl -X POST \
                </producto>
                <sucursal>Sucursal Ciudad de la Costa</sucursal>
             </sBTProductoPasivo>
-            ...
          </sdtProductosPasivos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -146,45 +145,50 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "CC6345192D8633F531F01D1D"
-    },
-    "sdtProductosPasivos": {
-        "sBTProductoPasivo": {
-            "tipoProducto": "CB",
-            "estado": "Normal",
-            "subCuenta": "",
-            "operacionUId": 18766,
-            "saldo": 910000.00,
-            "idOperacionFmt": 29010,
-            "idOperacionBT": 10100000221000000000000000002900010000000000002,
-            "producto": {
-                "moneda": "$",
-                "papel": "",
-                "productoUId": 512,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos"
-            },
-            "sucursal": "Sucursal Ciudad de la Costa"
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "CC6345192D8633F531F01D1D"
+  },
+  "sdtProductosPasivos": {
+    "sBTProductoPasivo": {
+      "tipoProducto": "CB",
+      "estado": "Normal",
+      "subCuenta": "",
+      "operacionUId": 18766,
+      "saldo": 910000,
+      "idOperacionFmt": 29010,
+      "idOperacionBT": 1.0100000221e+46,
+      "producto": {
+        "moneda": "$",
+        "papel": "",
+        "productoUId": 512,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 228501,
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerBolsillos",
-        "Requerimiento": 0,
-        "Fecha": "2023-11-01",
-        "Hora": "11:31:01",
-        "Canal": "BTDIGITAL"
+      },
+      "sucursal": "Sucursal Ciudad de la Costa"
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 228501,
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerBolsillos",
+    "Requerimiento": 0,
+    "Fecha": "2023-11-01",
+    "Hora": "11:31:01",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -207,10 +211,13 @@ idOperacionFmt | String | Identificador String (concatenación de algunos concep
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos del Producto pasivo. 
 saldo | Decimal | Saldo. 
-subcuenta | String | Nombre de la cuenta vista. 
+subCuenta | String | Nombre de la cuenta vista. 
 sucursal | String | Nombre de la sucursal de origen de la operación. 
-tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA'). 
- 
+tipoProducto | String | Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -222,7 +229,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -235,4 +245,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

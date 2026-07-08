@@ -88,7 +88,9 @@ No aplica.
         "Id": 4,
         "Description": "INSTITUCIONES FINANCIERAS"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
   "BusinessErrors": {
     "BusinessError": []

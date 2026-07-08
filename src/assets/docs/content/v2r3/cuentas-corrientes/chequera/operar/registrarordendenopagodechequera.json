@@ -5,6 +5,7 @@
   "pubName": "BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera",
   "programa": "RBTPG244",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -50,6 +51,9 @@
       "Comentarios": "Número de cheque final de la chequera."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "numeroDenuncia",
@@ -132,11 +136,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1820366692F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10176</bts:operacionUId>\n         <bts:chequeraId>21</bts:chequeraId>\n         <bts:tipoDenunciante>A</bts:tipoDenunciante>\n         <bts:tipoDenuncia>E</bts:tipoDenuncia>\n         <bts:motivoDenuncia>P</bts:motivoDenuncia>\n         <bts:chequeDesde>1326</bts:chequeDesde>\n         <bts:chequeHasta>1350</bts:chequeHasta>\n      </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoChequera' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"operacionUId\": \"10176\",\n\t\"chequeraId\": \"21\",\n\t\"tipoDenunciante\": \"A\",\n\t\"tipoDenuncia\": \"E\",\n\t\"motivoDenuncia\": \"P\",\n\t\"chequeDesde\": \"1326\",\n\t\"chequeHasta\": \"1350\"\n}'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoChequera' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"operacionUId\": \"10176\",\n\t\"chequeraId\": \"21\",\n\t\"tipoDenunciante\": \"A\",\n\t\"tipoDenuncia\": \"E\",\n\t\"motivoDenuncia\": \"P\",\n\t\"chequeDesde\": \"1326\",\n\t\"chequeHasta\": \"1350\"\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>1820366692F955E77534D3E0</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10176</bts:operacionUId>\n         <bts:chequeraId>21</bts:chequeraId>\n         <bts:tipoDenunciante>A</bts:tipoDenunciante>\n         <bts:tipoDenuncia>E</bts:tipoDenuncia>\n         <bts:motivoDenuncia>P</bts:motivoDenuncia>\n         <bts:chequeDesde>1326</bts:chequeDesde>\n         <bts:chequeHasta>1350</bts:chequeHasta>\n      </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoChequera' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"operacionUId\": \"10176\",\n\t\"chequeraId\": \"21\",\n\t\"tipoDenunciante\": \"A\",\n\t\"tipoDenuncia\": \"E\",\n\t\"motivoDenuncia\": \"P\",\n\t\"chequeDesde\": \"1326\",\n\t\"chequeHasta\": \"1350\"\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1820366692F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <numeroDenuncia>1</numeroDenuncia>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera</Servicio>\n            <Fecha>2020-11-13</Fecha>\n            <Hora>11:20:03</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>7888</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"numeroDenuncia\": \"1\",\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera\",\n\t  \"Fecha\": \"2020-11-13\",\n\t  \"Hora\": \"11:20:03\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"7888\",\n\t  \"Estado\": \"OK\"\n\t}\n}'"
+      "json": "'{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"numeroDenuncia\": \"1\",\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera\",\n\t  \"Fecha\": \"2020-11-13\",\n\t  \"Hora\": \"11:20:03\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"7888\",\n\t  \"Estado\": \"OK\"\n\t}\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>1820366692F955E77534D3E0</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <numeroDenuncia>1</numeroDenuncia>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera</Servicio>\n            <Fecha>2020-11-13</Fecha>\n            <Hora>11:20:03</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>7888</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n\t\"Btinreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Usuario\": \"BANTOTAL\",\n\t  \"Token\": \"1820366692F955E77534D3E0\",\n\t  \"Device\": \"AC\"\n\t},\n\t\"numeroDenuncia\": \"1\",\n\t\"Btoutreq\": {\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Servicio\": \"BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera\",\n\t  \"Fecha\": \"2020-11-13\",\n\t  \"Hora\": \"11:20:03\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Numero\": \"7888\",\n\t  \"Estado\": \"OK\"\n\t}\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

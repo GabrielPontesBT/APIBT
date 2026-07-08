@@ -31,13 +31,13 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sBTSolicitudSimulacionAhorroProgramado | [sBTSolicitudSimulacionAhorro](#sbtsolicitudsimulacionahorro) | Datos de la simulación.
+sdtSolicitudSimulacionAhorroProgramado | [sBTSolicitudSimulacionAhorro](#sbtsolicitudsimulacionahorro) | Datos de la simulación.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sBTSimulacionAhorroProgramado | [sBTSimulacionAhorroProgramado](#sbtsimulacionahorroprogramado) | Simulación de ahorro programado.
+sdtSimulacion | [sBTSimulacionAhorroProgramado](#sbtsimulacionahorroprogramado) | Simulación de ahorro programado.
 
 @tab Errores
 
@@ -73,18 +73,18 @@ Código | Descripción
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>
          </bts:Btinreq>
-         <bts:sdtDatos>
-            <bts:abono>10000</bts:abono>
-            <bts:productoUid>82</bts:productoUid>
+         <bts:sdtSolicitudSimulacionAhorroProgramado>
+            <bts:Abono>10000</bts:Abono>
+            <bts:productoUId>82</bts:productoUId>
             <bts:montoTotalAhorrar>0</bts:montoTotalAhorrar>
-            <bts:clienteUid>61</bts:clienteUid>
-            <bts:personaUid>22</bts:personaUid>
+            <bts:clienteUId>61</bts:clienteUId>
+            <bts:personaUId>22</bts:personaUId>
             <bts:diaIncremento>5</bts:diaIncremento>
             <bts:depositoInicial>1000</bts:depositoInicial>
             <bts:fechaInicioAhorro></bts:fechaInicioAhorro>
             <bts:plazo>360</bts:plazo>
             <bts:periodicidadIncremento>1</bts:periodicidadIncremento>
-         </bts:sdtDatos>
+         </bts:sdtSolicitudSimulacionAhorroProgramado>
       </bts:BTAhorroProgramado.Simular>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -92,32 +92,27 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Simular' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Device": "GL",
-          "Requerimiento": 1,
-          "Token": "01D45E9964612A4C8CCB1055"
-        },
-        "sdtDatos": {
-          "abono": 10000,
-          "productoUid": 82,
-          "montoTotalAhorrar": 0,
-          "clienteUid": 61,
-          "personaUid": 22,
-          "diaIncremento": 5,
-          "depositoInicial": 1000,
-          "fechaInicioAhorro": "",
-          "plazo": 360,
-          "periodicidadIncremento": 1
-        }
-    }'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Usuario": "MINSTALADOR",
+    "Device": "GL",
+    "Requerimiento": 1,
+    "Token": "01D45E9964612A4C8CCB1055"
+  },
+  "sdtSolicitudSimulacionAhorroProgramado": {
+    "montoTotalAhorrar": 0,
+    "diaIncremento": 5,
+    "depositoInicial": 1000,
+    "fechaInicioAhorro": "",
+    "plazo": 360,
+    "periodicidadIncremento": 1,
+    "Abono": 10000,
+    "clienteUId": 61,
+    "personaUId": 22,
+    "productoUId": 82
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -159,7 +154,6 @@ curl -X POST \
                   <fechaPago>2021-02-05</fechaPago>
                   <capital>10000.00</capital>
                </SdtsBTCuotaAhorro>
-               ...
             </cronograma>
             <simulacionId>741</simulacionId>
             <depositoInicial>1000.00</depositoInicial>
@@ -196,68 +190,67 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Device": "GL",
-          "Requerimiento": 1,
-          "Token": "01D45E9964612A4C8CCB1055"
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Usuario": "MINSTALADOR",
+    "Device": "GL",
+    "Requerimiento": 1,
+    "Token": "01D45E9964612A4C8CCB1055"
+  },
+  "sdtSimulacion": {
+    "fechaInicio": "2021-01-05",
+    "cronograma": {
+      "SdtsBTCuotaAhorro": [
+        {
+          "tasa": 10,
+          "impuestos": 0,
+          "interes": 8.49,
+          "otrosConceptos": "",
+          "plazo": 31,
+          "fechaPago": "2021-01-05",
+          "capital": 1000
         },
-        "sdtSimulacion": {
-          "fechaInicio": "2021-01-05",
-          "cronograma": {
-            "SdtsBTCuotaAhorro": [
-              {
-                "tasa": 10,
-                "impuestos": 0,
-                "interes": 8.49,
-                "otrosConceptos": "",
-                "plazo": 31,
-                "fechaPago": "2021-01-05",
-                "capital": 1000
-              },
-              {
-                "tasa": 10,
-                "impuestos": 0,
-                "interes": 84.38,
-                "otrosConceptos": "",
-                "plazo": 59,
-                "fechaPago": "2021-02-05",
-                "capital": 10000
-              },
-              ...
-            ]
-          },
-          "simulacionId": 741,
-          "depositoInicial": 1000,
-          "tasaOriginal": 10,
-          "totalIntereses": 5463,
-          "Abono": 10000,
-          "totalAhorro": 111000,
-          "fechaVencimiento": "2021-12-31",
-          "plazo": 360,
-          "producto": {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 82,
-            "nombre": "Ahorro en Sueldo Pesos"
-          },
-          "periodicidadIncremento": 1,
-          "sucursal": "Casa Matriz",
-          "totalImpuestos": 0
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Estado": "OK",
-          "Fecha": "2022-11-29",
-          "Hora": "17:21:52",
-          "Numero": 11095,
-          "Servicio": "BTAhorroProgramado.Simular",
-          "Requerimiento": 1,
-          "Canal": "BTDIGITAL"
+        {
+          "tasa": 10,
+          "impuestos": 0,
+          "interes": 84.38,
+          "otrosConceptos": "",
+          "plazo": 59,
+          "fechaPago": "2021-02-05",
+          "capital": 10000
         }
-}'
+      ]
+    },
+    "simulacionId": 741,
+    "depositoInicial": 1000,
+    "tasaOriginal": 10,
+    "totalIntereses": 5463,
+    "Abono": 10000,
+    "totalAhorro": 111000,
+    "fechaVencimiento": "2021-12-31",
+    "plazo": 360,
+    "producto": {
+      "moneda": "$",
+      "papel": "$",
+      "productoUId": 82,
+      "nombre": "Ahorro en Sueldo Pesos"
+    },
+    "periodicidadIncremento": 1,
+    "sucursal": "Casa Matriz",
+    "totalImpuestos": 0
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Estado": "OK",
+    "Fecha": "2022-11-29",
+    "Hora": "17:21:52",
+    "Numero": 11095,
+    "Servicio": "BTAhorroProgramado.Simular",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -274,7 +267,7 @@ Los campos del tipo de dato estructurado sBTSolicitudSimulacionAhorro son los si
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-abono | Double | Abono.
+Abono | Double | Abono.
 clienteUId | Long | Identificador único de cliente.
 depositoInicial | Double | Depósito inicial.
 diaIncremento | Int | Día de incremento.
@@ -295,7 +288,7 @@ Los campos del tipo de dato estructurado sBTSimulacionAhorroProgramado son los s
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-abono | Double | Abono.
+Abono | Double | Abono.
 cronograma | [sBTCronogramaAhorro](#sbtcronogramaahorro) | Detalle del cronograma de ahorro.
 depositoInicial | Double | Depósito inicial.
 fechaInicio | Date | Fecha de inicio.
@@ -309,6 +302,9 @@ tasaOriginal | Double | Tasa original.
 totalAhorro | Double | Total del ahorro.
 totalImpuestos | Double | Total de impuestos.
 totalIntereses | Double | Total de intereses.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -321,6 +317,9 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto.
 papel | String | Símbolo del papel.
 productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTCronogramaAhorro
 
 ### sBTCronogramaAhorro
 
@@ -330,6 +329,9 @@ Los campos del tipo de dato estructurado sBTCronogramaAhorro son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 sBTCronogramaAhorro | [sBTCuotaAhorro](#sbtcuotaahorro) | Datos de la cuota de ahorro.
+:::
+
+::: details sBTCuotaAhorro
 
 ### sBTCuotaAhorro
 
@@ -345,6 +347,9 @@ interes | Double | Interés.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 plazo | Int | Plazo.
 tasa | Double | Tasa.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -357,4 +362,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

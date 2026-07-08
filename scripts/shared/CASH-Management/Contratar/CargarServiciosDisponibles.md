@@ -137,39 +137,39 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"sdtServicios": {                   
-        "sBTConvServicioCASH": [ 
-			{ 
-				"descServicio": "Pagos por Planilla",  
-				"tipoServicio": "P",  
-				"servicio": 1,  
-				"idContrato": 1 
-			} 
-		] 
-	},
-	"Erroresnegocio": { 
-		"BTErrorNegocio": []    
-    },
-
-	"Btoutreq": {
-
-	  "Numero": 7168,
-	  "Estado": "OK",
-	  "Servicio": "BTCASHManagement.CargarServiciosDisponibles",
-	  "Requerimiento": "1",
-	  "Fecha": "2019-04-24",
-	  "Hora": "12:43:25",
-	  "Canal": "BTDIGITAL"
-	 }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtServicios": {
+    "sBTConvServicioCASH": [
+      {
+        "descServicio": "Pagos por Planilla",
+        "tipoServicio": "P",
+        "servicio": 1,
+        "idContrato": 1,
+        "contratoId": 0,
+        "descripcionServicio": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 7168,
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.CargarServiciosDisponibles",
+    "Requerimiento": "1",
+    "Fecha": "2019-04-24",
+    "Hora": "12:43:25",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

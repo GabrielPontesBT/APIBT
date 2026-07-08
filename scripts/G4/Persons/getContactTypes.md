@@ -103,7 +103,10 @@ No aplica.
         "description": "WHATSAPP",
         "requiresTelephoneCompany": false
       }
-    ]
+    ],
+    "Id": "",
+    "description": "",
+    "requiresTelephoneCompany": false
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -134,7 +137,7 @@ Los campos del tipo de dato estructurado sBTPEContactTypes son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Byte $<(Length: 2)>$ | Identificador de tipo de contacto.
+Id | Byte $<(Length: 2)>$ | Identificador de tipo de contacto.
 description | String $<(Length: 50)>$ | Descripción.
 requiresTelephoneCompany | Boolean | Requiere compañía telefónica?.
 :::

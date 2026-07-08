@@ -33,7 +33,7 @@ Nombre | Tipo | Obligatoriedad | Comentarios
 :--------- | :--------- | :--------- | :---------
 Canal   		| Int 		| M	| 15 - Web, 91 - BancaMovil, 51 - Net.
 idCamara 		| Int 		| M	| Codigo de camara (MPE005)
-OperacionUID	| Int 		| M	| id producto de ahorro.
+OperacionUId	| Int 		| M	| id producto de ahorro.
 Moneda 			| Int 		| M	| 1 - soles, 2 - dolares.
 Importe			| Double	| M	| Importe.
 IDTransferencia	| Int 		| M	| InstruccionID (Resultado AV4).
@@ -45,7 +45,7 @@ CodigoQr		| String 	| O	| QR, unstructuredInformation CT1.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-movimientoUID 	| Int 	 | movimiento UID.
+movimientoUId 	| Int 	 | Movimiento UID.
 codRespuesta 	| String | Codigo error CCE.
 dscRespuesta 	| String | Descripcion error.
 Erroresnegocio 	| Int 	 | ErrorNegocio.

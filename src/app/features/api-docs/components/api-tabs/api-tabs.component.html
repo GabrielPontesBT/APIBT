@@ -1,5 +1,8 @@
 <mat-tab-group class="api-tabs" disableRipple animationDuration="0ms">
   <mat-tab label="Datos de Entrada">
+    @if (inputNote) {
+      <div class="comment"><markdown [data]="inputNote"></markdown></div>
+    }
     @if (inputCols.length || inputData.length) {
       <app-api-table [columns]="inputCols" [data]="inputData" [wideSecondCol]="isV4"></app-api-table>
     } @else {
@@ -7,13 +10,19 @@
     }
   </mat-tab>
 
-  @if (bodyData.length) {
+  @if (bodyData.length || bodyNote) {
     <mat-tab label="Body">
+      @if (bodyNote) {
+        <div class="comment"><markdown [data]="bodyNote"></markdown></div>
+      }
       <app-api-table [columns]="bodyCols" [data]="bodyData" [wideSecondCol]="isV4"></app-api-table>
     </mat-tab>
   }
 
   <mat-tab label="Datos de Salida">
+    @if (outputNote) {
+      <div class="comment"><markdown [data]="outputNote"></markdown></div>
+    }
     @if (outputCols.length || outputData.length) {
       <app-api-table [columns]="outputCols" [data]="outputData" [wideSecondCol]="isV4"></app-api-table>
     } @else {
@@ -22,15 +31,15 @@
   </mat-tab>
 
   <mat-tab label="Errores">
+    @if (errorsNote) {
+      <div class="comment">
+        <markdown [data]="errorsNote"></markdown>
+      </div>
+    }
     @if (errorCols.length || errors.length) {
       <app-api-table [columns]="errorCols" [data]="errors"></app-api-table>
     } @else {
       <p class="no-aplica">No aplica</p>
-    }
-    @if (errorsNote) {
-      <div class="errors-note">
-        <markdown [data]="errorsNote"></markdown>
-      </div>
     }
   </mat-tab>
 

@@ -69,20 +69,15 @@ No aplica.
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerImpuestos' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"bts:Btinreq": {
-	  "bts:Canal": "BTDIGITAL",
-	  "bts:Requerimiento": "1",
-	  "bts:Usuario": "BANTOTAL",
-	  "bts:Token": "558273287F955E77534D3E02",
-	  "bts:Device": "AC"
-	}
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "BANTOTAL",
+    "Token": "558273287F955E77534D3E02",
+    "Device": "AC"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -191,105 +186,105 @@ curl -X POST \
 
 @tab JSON
 ```json
- { 
-   "Btinreq": { 
-      "Canal": "BTDIGITAL", 
-      "Requerimiento": "1", 
-      "Usuario": "INSTALADOR", 
-      "Token": "670752960CD285A89A23FBEE", 
-      "Device": "BTDIGITAL" 
-   }, 
-   "sdtImpuestos": { 
-      "SdtsBTImpuesto": [ 
-         { 
-            "codigo": "1", 
-            "descripcion": "I.V.A.", 
-            "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
-                  { 
-                     "codigo": "1", 
-                     "descripcion": "Gravado", 
-                     "tipo": "A" 
-                  }, 
-                  { 
-                     "codigo": "2", 
-                     "descripcion": "Responsable Inscripto", 
-                     "tipo": "J" 
-                  }, 
-                  { 
-                     "codigo": "4", 
-                     "descripcion": "Exento o  No Alcanzado", 
-                     "tipo": "A" 
-                  } 
-               ] 
-            } 
-         }, 
-         { 
-            "", 
-            "": "Ingresos Brutos Percepciones", 
-            "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
-                  { 
-                     "codigo": "1", 
-                     "descripcion": "Gravado", 
-                     "tipo": null 
-                  }, 
-                  { 
-                     "codigo": "2", 
-                     "descripcion": "Responsable Inscripto", 
-                     "tipo": null 
-                  } 
-               ] 
-            } 
-         }, 
-         { 
-            "codigo": "4", 
-            "descripcion": "Impuesto de Sellos", 
-            "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
-                  { 
-                     "codigo": "1", 
-                     "descripcion": "Gravado", 
-                     "tipo": null 
-                  }, 
-                  { 
-                     "codigo": "2", 
-                     "descripcion": "Exento", 
-                     "tipo": null 
-                  } 
-               ] 
-            } 
-         }, 
-         { 
-            "codigo": "5", 
-            "descripcion": "Ret. Impuesto a las Ganancias", 
-            "condiciones": { 
-               "SdtsBTImpuestoCondicion": [ 
-                  { 
-                     "codigo": "1", 
-                     "descripcion": "Gravado", 
-                     "tipo": null 
-                  }, 
-                  { 
-                     "codigo": "4", 
-                     "descripcion": "Excento", 
-                     "tipo": null 
-                  } 
-               ] 
-            } 
-         } 
-      ] 
-   }, 
-   "Erroresnegocio": null, 
-   "Btoutreq": { 
-      "Canal": "BTDIGITAL", 
-      "Servicio": "BTConfiguracionBantotal.ObtenerImpuestos", 
-      "Fecha": "2021-05-27", 
-      "Hora": "11:58:08", 
-      "Requerimiento": "1", 
-      "Numero": "8353", 
-      "Estado": "OK" 
-   } 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "INSTALADOR",
+    "Token": "670752960CD285A89A23FBEE",
+    "Device": "BTDIGITAL"
+  },
+  "sdtImpuestos": {
+    "SdtsBTImpuesto": [
+      {
+        "codigo": "1",
+        "descripcion": "I.V.A.",
+        "condiciones": {
+          "SdtsBTImpuestoCondicion": [
+            {
+              "codigo": "1",
+              "descripcion": "Gravado",
+              "tipo": "A"
+            },
+            {
+              "codigo": "2",
+              "descripcion": "Responsable Inscripto",
+              "tipo": "J"
+            },
+            {
+              "codigo": "4",
+              "descripcion": "Exento o  No Alcanzado",
+              "tipo": "A"
+            }
+          ]
+        }
+      },
+      {
+        "codigo": "2",
+        "descripcion": "Ingresos Brutos Percepciones",
+        "condiciones": {
+          "SdtsBTImpuestoCondicion": [
+            {
+              "codigo": "1",
+              "descripcion": "Gravado",
+              "tipo": null
+            },
+            {
+              "codigo": "2",
+              "descripcion": "Responsable Inscripto",
+              "tipo": null
+            }
+          ]
+        }
+      },
+      {
+        "codigo": "4",
+        "descripcion": "Impuesto de Sellos",
+        "condiciones": {
+          "SdtsBTImpuestoCondicion": [
+            {
+              "codigo": "1",
+              "descripcion": "Gravado",
+              "tipo": null
+            },
+            {
+              "codigo": "2",
+              "descripcion": "Exento",
+              "tipo": null
+            }
+          ]
+        }
+      },
+      {
+        "codigo": "5",
+        "descripcion": "Ret. Impuesto a las Ganancias",
+        "condiciones": {
+          "SdtsBTImpuestoCondicion": [
+            {
+              "codigo": "1",
+              "descripcion": "Gravado",
+              "tipo": null
+            },
+            {
+              "codigo": "4",
+              "descripcion": "Excento",
+              "tipo": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": null,
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTConfiguracionBantotal.ObtenerImpuestos",
+    "Fecha": "2021-05-27",
+    "Hora": "11:58:08",
+    "Requerimiento": "1",
+    "Numero": "8353",
+    "Estado": "OK"
+  }
 }
 ```
 :::
@@ -310,6 +305,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de impuesto.
 condiciones | [sBTImpuestoCondicion](#sbtimpuestocondicion) | Listado de condiciones del impuesto.
 descripcion | String | Descripción del impuesto.
+:::
+
+::: details sBTImpuestoCondicion
 
 ### sBTImpuestoCondicion
 
@@ -321,4 +319,6 @@ codigo | Short | Código de condición.
 descripcion | String | Descripción de condición.
 tipo | String | Tipo de condición.
 :::
+
 <!-- CIERRA SDT -->
+

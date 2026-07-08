@@ -130,47 +130,43 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarInformacionFinanciera' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-    "Btinreq": {
-        "Token": "042638a184CD285A89A23FBE",
-        "Usuario": "INSTALADOR",
-        "Device": "1",
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1
+{
+  "Btinreq": {
+    "Token": "042638a184CD285A89A23FBE",
+    "Usuario": "INSTALADOR",
+    "Device": "1",
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1
+  },
+  "personaUId": 42,
+  "sdtInformacionFinanciera": {
+    "paisOrigenRecursos": "",
+    "otrosIngresosMensualesDesc": "Alquileres",
+    "operacionesInternacionales": {
+      "tipoProducto": "CDT",
+      "moneda": "",
+      "ciudadId": 1465,
+      "nombreEntidad": "Nombre Entidad Prueba",
+      "monto": 884561,
+      "pais": "",
+      "ciudad": "",
+      "operaMonedaExtranjera": "S",
+      "numeroProducto": "AAALLL",
+      "tipoOperacion": "Inversiones",
+      "monedaId": 801,
+      "paisId": 845,
+      "departamentoId": 0
     },
-    "personaUId": 42,
-    "sdtInformacionFinanciera": {
-        "paisOrigenRecursos": "",
-        "otrosIngresosMensualesDesc": "Alquileres",
-        "operacionesInternacionales": {
-            "tipoProducto": "CDT",
-            "moneda": "",
-            "ciudadId": 1465,
-            "nombreEntidad": "Nombre Entidad Prueba",
-            "monto": 884561.00,
-            "pais": "",
-            "ciudad": "",
-            "operaMonedaExtranjera": "S",
-            "numeroProducto": "AAALLL",
-            "tipoOperacion": "Inversiones",
-            "monedaId": 801,
-            "paisId": 845
-        },
-        "totalPasivos": 450000.00,
-        "origenRecursos": "C",
-        "totalIngresosMensuales": 550015.00,
-        "egresosMensuales": 380000.00,
-        "otrosIngresosMensuales": 450015.00,
-        "ingresosMensuales": 100000.00,
-        "totalActivos": 950000.00,
-        "paisOrigenRecursosId": ""
-    }
-}'
+    "totalPasivos": 450000,
+    "origenRecursos": "C",
+    "totalIngresosMensuales": 550015,
+    "egresosMensuales": 380000,
+    "otrosIngresosMensuales": 450015,
+    "ingresosMensuales": 100000,
+    "totalActivos": 950000,
+    "paisOrigenRecursosId": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -255,7 +251,10 @@ paisOrigenRecursos | String | País (Se pide si el país de origen de recursos e
 paisOrigenRecursosId | Short | Identificador de país (Se pide si el país de origen de recursos es O = Otro). 
 totalActivos | Double | Importe del total de activos. 
 totalIngresosMensuales | Double | Importe del total de ingresos mensuales. 
-totalPasivos | Double | Importe del total de pasivos. 
+totalPasivos | Double | Importe del total de pasivos.
+:::
+
+::: details sBTPCOOperacionesInternacionales
 
 ### sBTPCOOperacionesInternacionales
 
@@ -276,6 +275,8 @@ operaMonedaExtranjera | String | (S = Si / N = No) (El resto de los datos solo s
 pais | String | Nombre de país. 
 paisId | Short | Identificador de país. 
 tipoOperacion | String | Tipo de operación (Se puede ingresar uno que no se encuentre en la guía de proceso). 
-tipoProducto | String | Tipo de producto. 
+tipoProducto | String | Tipo de producto.
 :::
+
 <!-- CIERRA SDT -->
+

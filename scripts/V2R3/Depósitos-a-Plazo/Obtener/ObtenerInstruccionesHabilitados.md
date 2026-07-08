@@ -305,7 +305,7 @@ Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Clave del dato extendido. 
-lista | [sBTDatosLista](#sbtdatolista) | Lista de datos. 
+lista | [sBTDatoLista](#sbtdatolista) | Lista de datos. 
 tipo | String | Tipo de dato extendido. 
 valor | String | Valor de dato extendido.
 :::
@@ -335,34 +335,6 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código. 
 datosExtendidos | [sBTDatoExtendido](#sbtdatoextendido) | Listado de datos complementarios. 
 descripcion | String | Descripción.
-:::
-
-::: details sBTDatoExtendido
-
-### sBTDatoExtendido
-
-::: center 
-Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Clave del dato extendido. 
-lista | [sBTDatoLista](#sbtdatalista) | Lista de datos. 
-tipo | String | Tipo de dato extendido. 
-valor | String | Valor de dato extendido.
-:::
-
-::: details sBTDatoLista
-
-### sBTDatoLista
-
-::: center 
-Los campos del tipo de dato estructurado sBTDatoLista son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional.
 :::
 
 <!-- CIERRA SDT -->

@@ -140,18 +140,6 @@ curl -X POST \
                <nombre>YENS</nombre>
             </sBTMonedaIndice>
          </sdtMonedas>
-         <sdtIndices>
-            <sBTMonedaIndice>
-               <tipoCambio>N</tipoCambio>
-               <codigo>0</codigo>
-               <nombre>Billete</nombre>
-            </sBTMonedaIndice>
-            <sBTMonedaIndice>
-               <tipoCambio>N</tipoCambio>
-               <codigo>50</codigo>
-               <nombre>Unidad de Valor Adquisitivo</nombre>
-            </sBTMonedaIndice>
-         </sdtIndices>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>11991</Numero>
@@ -170,78 +158,64 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-    "Btinreq": {
-        "Device": "1",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "959C2E0AEF210ABC0D8AA8F7"
-    },
-    "sdtMonedas": {
-        "sBTMonedaIndice": [
-            {
-                "tipoCambio": "N",
-                "codigo": 0,
-                "nombre": "Pesos"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 105,
-                "nombre": "DOLAR AUSTRALIANO"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 500,
-                "nombre": "PESOS ARGENTINOS"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 1111,
-                "nombre": "EURO"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 2222,
-                "nombre": "DÓLAR ESTADOUNIDENSE"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 2225,
-                "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 3600,
-                "nombre": "YENS"
-            }
-        ]
-    },
-    "sdtIndices": {
-        "sBTMonedaIndice": [
-            {
-                "tipoCambio": "N",
-                "codigo": 0,
-                "nombre": "Billete"
-            },
-            {
-                "tipoCambio": "N",
-                "codigo": 50,
-                "nombre": "Unidad de Valor Adquisitivo"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 11991,
-        "Estado": "OK",
-        "Servicio": "BTIndicadores.ObtenerMonedasIndices",
-        "Requerimiento": 0,
-        "Fecha": "2023-05-22",
-        "Canal": "BTDIGITAL",
-        "Hora": "15:09:29"
-    }
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "959C2E0AEF210ABC0D8AA8F7"
+  },
+  "sdtMonedas": {
+    "sBTMonedaIndice": [
+      {
+          "tipoCambio": "N",
+          "codigo": 0,
+          "nombre": "Pesos"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 105,
+          "nombre": "DOLAR AUSTRALIANO"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 500,
+          "nombre": "PESOS ARGENTINOS"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 1111,
+          "nombre": "EURO"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 2222,
+          "nombre": "DÓLAR ESTADOUNIDENSE"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 2225,
+          "nombre": "DÓLAR ESTADOUNIDENSE - BILLETE"
+      },
+      {
+          "tipoCambio": "N",
+          "codigo": 3600,
+          "nombre": "YENS"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+      "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+      "Numero": 11991,
+      "Estado": "OK",
+      "Servicio": "BTIndicadores.ObtenerMonedasIndices",
+      "Requerimiento": 0,
+      "Fecha": "2023-05-22",
+      "Canal": "BTDIGITAL",
+      "Hora": "15:09:29"
+  }
 }'
 ```
 ::: 

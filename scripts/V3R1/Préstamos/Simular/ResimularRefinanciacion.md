@@ -85,7 +85,7 @@ Código | Descripción
                </bts:sBTConcepto>
             </bts:otrosConceptos>
             <bts:diaPago></bts:diaPago>
-            <bts:clienteUid>370</bts:clienteUid>
+            <bts:clienteUId>370</bts:clienteUId>
          </bts:sdtSimulacionUpdate>
       </bts:BTPrestamos.ResimularRefinanciacion>
    </soapenv:Body>
@@ -94,33 +94,28 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ResimularRefinanciacion=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-    "Btinreq": {
-          "Requerimiento": 1,
-          "Device": "GZ",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-      "simulacionUId": 16,
-      "sdtSimulacionUpdate": {
-         "fechaPrimerPago": "2023-06-21",
-         "otrosConceptos": {
-         "sBTConcepto": {
-            "texto": "",
-            "valor": "",
-            "concepto": ""
-         }
-         },
-         "diaPago": "",
-         "clienteUid": 370
+{
+  "Btinreq": {
+    "Requerimiento": 1,
+    "Device": "GZ",
+    "Canal": "BTDIGITAL",
+    "Usuario": "MINSTALADOR",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "simulacionUId": 16,
+  "sdtSimulacionUpdate": {
+    "fechaPrimerPago": "2023-06-21",
+    "otrosConceptos": {
+      "sBTConcepto": {
+        "texto": "",
+        "valor": "",
+        "concepto": ""
       }
-  }'
+    },
+    "diaPago": "",
+    "clienteUId": 370
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -336,213 +331,227 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtSimulacion": {
-          "cft": 218.87,
-          "plus": 0,
-          "nomSucursal": "Casa Matriz",
-          "otrosConceptos": "",
-          "tasaNominalAnual": 5,
-          "precio": 0,
-          "tipoAmortizacionDsc": "Francés con Seg.e Impu.",
-          "cronograma": {
-            "sBTCuotaSimulacion": [
-              {
-                "otrosConceptos": 0,
-                "capital": 42186.64,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 22,
-                "intereses": 522.48,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-03-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 57.21,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1157.21,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 42378.99,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 23,
-                "intereses": 349.11,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-04-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 38.23,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1138.23,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 42572.22,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 24,
-                "intereses": 174.95,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-05-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 19.16,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1119.16,
-                "comisiones": 0
-              }
-            ]
-          },
-          "comisionesDesembolso": 10000,
-          "segurosDesembolso": 0,
-          "cantidadCuotas": 24,
-          "impuestosDesembolso": 0,
-          "fechaPrimerPago": "2023-06-21",
-          "operacionUId": 415,
-          "valorCuota": 43866.33,
-          "diasRevision": 0,
-          "totalSeguros": 5565.6,
-          "plazo": 690,
-          "producto": {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 198,
-            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
-          },
-          "capital": 1000000,
-          "tipoAmortizacionCod": 3,
-          "totalIntereses": 46717.75,
-          "seguros": {
-            "sBTSeguroPrestamo": {
-              "porcentaje": 0,
-              "descripcion": "SANCOR- Desempleo %saldos",
-              "importe": 5565.6,
-              "tipo": "DESEMPLEO",
-              "codigo": 200
-            }
-          },
-          "fechaValor": "2025-05-30",
-          "tasaEfectiva": 0,
-          "coeficienteIVA": 0,
-          "totalImpuestos": 0,
-          "periodicidad": 30,
-          "tasaEfectivaAnual": 5.116339,
-          "totalPrestamo": 1062791.92,
-          "fechaVencimiento": "2025-05-21",
-          "tasa": 5,
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "cft": 218.87,
+    "plus": 0,
+    "nomSucursal": "Casa Matriz",
+    "tasaNominalAnual": 5,
+    "precio": 0,
+    "tipoAmortizacionDsc": "Francés con Seg.e Impu.",
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "otrosConceptos": 0,
+          "capital": 42186.64,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 22,
+          "intereses": 522.48,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
           "redondeo": 0,
-          "montoDesembolso": 990000,
-          "comisiones": {
-            "sBTComisionPrestamo": [
+          "cuota": 43866.33,
+          "fechaPago": "2025-03-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
               {
                 "porcentaje": 0,
-                "descripcion": "Hipotecario - Importe Fijo",
-                "importe": 0,
-                "modificable": "",
-                "codigo": 141
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
               },
               {
                 "porcentaje": 0,
-                "descripcion": "F.H.A.",
-                "importe": 10000,
-                "modificable": "",
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 57.21,
+                "tipo": "DESEMPLEO",
                 "codigo": 200
               }
             ]
           },
-          "totalComisiones": 10508.57,
-          "comisionesCuota": {
-            "sBTComisionPrestamo": {
-              "porcentaje": 0,
-              "descripcion": "F.H.A.",
-              "importe": 508.57,
-              "modificable": "",
-              "codigo": 200
-            }
-          }
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1157.21,
+          "comisiones": 0,
+          "interes": 0
         },
-    "Erroresnegocio":,
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.ResimularRefinanciacion",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        {
+          "otrosConceptos": 0,
+          "capital": 42378.99,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 23,
+          "intereses": 349.11,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-04-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 38.23,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1138.23,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 42572.22,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 24,
+          "intereses": 174.95,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-05-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 19.16,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1119.16,
+          "comisiones": 0,
+          "interes": 0
+        }
+      ]
+    },
+    "comisionesDesembolso": 10000,
+    "segurosDesembolso": 0,
+    "cantidadCuotas": 24,
+    "impuestosDesembolso": 0,
+    "fechaPrimerPago": "2023-06-21",
+    "operacionUId": 415,
+    "valorCuota": 43866.33,
+    "diasRevision": 0,
+    "totalSeguros": 5565.6,
+    "plazo": 690,
+    "producto": {
+      "moneda": "$",
+      "papel": "$",
+      "productoUId": 198,
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "capital": 1000000,
+    "tipoAmortizacionCod": 3,
+    "totalIntereses": 46717.75,
+    "seguros": {
+      "sBTSeguroPrestamo": {
+        "porcentaje": 0,
+        "descripcion": "SANCOR- Desempleo %saldos",
+        "importe": 5565.6,
+        "tipo": "DESEMPLEO",
+        "codigo": 200,
+        "importeFijo": 0,
+        "modificable": ""
+      }
+    },
+    "fechaValor": "2025-05-30",
+    "tasaEfectiva": 0,
+    "coeficienteIVA": 0,
+    "totalImpuestos": 0,
+    "periodicidad": 30,
+    "tasaEfectivaAnual": 5.116339,
+    "totalPrestamo": 1062791.92,
+    "fechaVencimiento": "2025-05-21",
+    "tasa": 5,
+    "redondeo": 0,
+    "montoDesembolso": 990000,
+    "comisiones": {
+      "sBTComisionPrestamo": [
+        {
+          "porcentaje": 0,
+          "descripcion": "Hipotecario - Importe Fijo",
+          "importe": 0,
+          "modificable": "",
+          "codigo": 141
+        },
+        {
+          "porcentaje": 0,
+          "descripcion": "F.H.A.",
+          "importe": 10000,
+          "modificable": "",
+          "codigo": 200
+        }
+      ]
+    },
+    "totalComisiones": 10508.57,
+    "comisionesCuota": {
+      "sBTComisionPrestamo": {
+        "porcentaje": 0,
+        "descripcion": "F.H.A.",
+        "importe": 508.57,
+        "modificable": "",
+        "codigo": 200
+      }
+    },
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     }
-}'
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ResimularRefinanciacion",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -550,7 +559,7 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTSimulacionUpdate  
+::: details sBTSimulacionUpdate
 
 ### sBTSimulacionUpdate
 
@@ -562,20 +571,10 @@ Nombre | Tipo | Comentarios
 clienteUId | Long | Identificador único de cliente.
 diaPago | Byte | Días de pago.
 fechaPrimerPago | Date | Fecha del primer pago.
-otrosConceptos | [sBTConcepto](#sbtconcepto1) | Otros conceptos.
-
-### sBTConcepto1
-
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :---------
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Otros conceptos.
 :::
 
-::: details sBTSimulacionOutput  
+::: details sBTSimulacionOutput
 
 ### sBTSimulacionOutput
 
@@ -599,8 +598,8 @@ fechaVencimiento | Date | Fecha de vencimiento.
 impuestosDesembolso | Double | Impuestos de desembolso.
 montoDesembolso | Double | Monto de desembolso.
 nomSucursal | String | Nombre de la sucursal.
-operacionUid | Long | Identificador único de operación.
-otrosConceptos | [sBTConcepto](#sbtconcepto2) | Datos de otros conceptos.
+operacionUId | Long | Identificador único de operación.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 periodicidad | Int | Periodicidad.
 plazo | Int | Plazo.
 plus | Double | Tasa plus.
@@ -621,9 +620,13 @@ totalIntereses | Double | Total de intereses.
 totalPrestamo | Double | Total de préstamo.
 totalSeguros | Double | Total de seguros.
 valorCuota | Double | Valor de la cuota.
+:::
 
-### sBTConcepto2
+::: details sBTConcepto
 
+### sBTConcepto
+
+::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
@@ -631,6 +634,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -647,6 +653,9 @@ interes | Double | Monto de intereses en la cuota.
 otrosConceptos | Double | Importe correspondiente a otros conceptos.
 seguros | Double | Monto de seguros en la cuota.
 tipoCuota | String | Tipo de la cuota (Capital/Interés).
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -657,20 +666,12 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
-otrosConceptos | [sBTConcepto](#sbtconcepto3) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
 productoUId | Long | Identificador único de producto. 
+:::
 
-### sBTConcepto3
-
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :---------
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+::: details sBTSeguroPrestamo
 
 ### sBTSeguroPrestamo
 
@@ -684,6 +685,9 @@ importeFijo | Decimal | Importe fijo del seguro.
 modificable | String | Indica si es modificable.
 porcentaje | Decimal | Porcentaje del seguro.
 tipo | String | Tipo del seguro.
+:::
+
+::: details sBTComisionPrestamo
 
 ### sBTComisionPrestamo
 
@@ -696,4 +700,6 @@ descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 porcentaje | Double | Porcentaje de comisión.
 :::
+
 <!-- CIERRA SDT -->
+

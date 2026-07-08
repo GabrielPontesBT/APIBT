@@ -54,7 +54,7 @@ El mensaje de error puede variar ya que es devuelto por el programa que valida u
 <!-- CIERRA TABLA DE DATOS -->
 
 <!-- ABRE EJEMPLO DE INVOCACIÓN -->
-::: warning Ejemplo de Invocación
+::: details Ejemplo de Invocación
 ::: code-tabs #Formato
 
 @tab XML
@@ -100,7 +100,7 @@ curl -X POST \
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
 <!-- ABRE EJEMPLO DE RESPUESTA -->
-::: warning Ejemplo de Respuesta
+::: details Ejemplo de Respuesta
 ::: code-tabs #Formato
 
 @tab XML

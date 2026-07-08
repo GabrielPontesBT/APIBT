@@ -37,7 +37,7 @@ Camara	   | Byte          | M	            | Id cámara.
 
 Nombre         | Tipo            | Comentarios
 :---------    | :---------   | :---------
-ListaBancos    | SdtsbtListaBanco| Devuelve el listado de los bancos con sus códigos.
+ListaBancos    | [SdtsbtListaBanco](#sdtsbtlistabanco)| Devuelve el listado de los bancos con sus códigos.
 
 @tab Errores
 
@@ -285,3 +285,20 @@ Código | Descripción
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
+
+## **Tipos de Dato Estructurado**
+
+<!-- ABRE SDT -->
+::: details SdtsbtListaBanco
+
+### SdtsbtListaBanco
+
+::: center
+Los campos del tipo de dato estructurado SdtsbtListaBanco son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+CodBco | Int | Código del banco.
+NomBaco | String | Nombre del banco.
+:::
+<!-- CIERRA SDT -->

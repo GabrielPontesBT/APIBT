@@ -208,12 +208,14 @@ function extractMethodMeta(content, relPath) {
     const pubNameMatch = block.match(/\*\*Nombre publicación:\*\*\s*(.+)/i);
     const programaMatch = block.match(/\*\*Programa:\*\*\s*(.+)/i);
     const scopeMatch = block.match(/\*\*Global\/País:\*\*\s*(.+)/i);
+    const endpointMatch = block.match(/\*\*Endpoint:\*\*\s*(.+)/i);
 
     return {
       description: markdownLinksToHtml(normalizeWhitespace(descriptionMatch ? descriptionMatch[1].replace(/:::$/, '').trim() : ''), relPath),
       pubName: normalizeWhitespace(pubNameMatch ? pubNameMatch[1] : ''),
       programa: normalizeWhitespace(programaMatch ? programaMatch[1] : ''),
-      scope: normalizeWhitespace(scopeMatch ? scopeMatch[1] : '')
+      scope: normalizeWhitespace(scopeMatch ? scopeMatch[1] : ''),
+      endpoint: normalizeWhitespace(endpointMatch ? endpointMatch[1] : '')
     };
   }
 }
@@ -262,6 +264,11 @@ function extractApiTabs(content, relPath) {
     const inputMd = sections['Datos de Entrada'] || '';
     const inputCols = extractTableHeaders(inputMd);
     const inputData = parseTable(inputMd, relPath);
+    const bodyMd = sections['Body'] || '';
+    const bodyCols = extractTableHeaders(bodyMd);
+    const bodyData = parseTable(bodyMd, relPath);
+    const headersMd = sections['Headers'] || '';
+    const headersData = parseTable(headersMd, relPath);
     const outputData = parseTable(sections['Datos de Salida'] || '', relPath);
     const errorsBlock = sections['Errores'] || '';
     const flowDiagram = extractFlowDiagramUrl(sections['Diagrama de Flujo'] || '');
@@ -283,6 +290,9 @@ function extractApiTabs(content, relPath) {
     return {
       inputCols,
       inputData,
+      bodyCols,
+      bodyData,
+      headersData,
       outputData,
       errors,
       errorsNote,
@@ -328,14 +338,36 @@ function extractExamples(content) {
     }
   }
 
+  function extractAllTabs(block) {
+    const tabs = [];
+    const tabRegex = /@tab\s*([^\n]+)\n([\s\S]*?)(?=(?:@tab|:::|$))/g;
+    let match = tabRegex.exec(block);
+
+    while (match !== null) {
+      const name = match[1].trim();
+      const body = match[2].trim();
+      const codeMatch = body.match(/```(\w+)\s*([\s\S]*?)```/);
+
+      if (codeMatch) {
+        tabs.push({ name, lang: codeMatch[1], code: codeMatch[2].trim() });
+      }
+
+      match = tabRegex.exec(block);
+    }
+
+    return tabs;
+  }
+
   return {
     invocation: {
       xml: extractCode(invocationBlock, 'xml'),
-      json: extractCode(invocationBlock, 'json')
+      json: extractCode(invocationBlock, 'json'),
+      tabs: extractAllTabs(invocationBlock)
     },
     response: {
       xml: extractCode(responseBlock, 'xml'),
-      json: extractCode(responseBlock, 'json')
+      json: extractCode(responseBlock, 'json'),
+      tabs: extractAllTabs(responseBlock)
     }
   };
 }
@@ -605,11 +637,15 @@ function buildDocJson(mdFilePath, relPath) {
     pubName: methodMeta.pubName,
     programa: methodMeta.programa,
     scope: methodMeta.scope || 'Global',
+    endpoint: methodMeta.endpoint,
     hasBackendConfig: backendConfig.hasBackendConfig,
     backendText: backendConfig.backendText,
     backendData: backendConfig.backendData,
     inputCols: apiTabs.inputCols,
     inputData: apiTabs.inputData,
+    bodyCols: apiTabs.bodyCols,
+    bodyData: apiTabs.bodyData,
+    headersData: apiTabs.headersData,
     outputData: apiTabs.outputData,
     errors: apiTabs.errors,
     errorsNote: apiTabs.errorsNote,

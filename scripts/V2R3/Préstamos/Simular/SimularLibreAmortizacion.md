@@ -135,42 +135,44 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularLibreAmortizacion \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-        "Btinreq": {
-          "Device": "AV",
-          "Usuario": "MINSTALADOR",
-          "Canal": "BTDIGITAL",
-          "Token": "658fcb0b034A8B5C60A82434"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Canal": "BTDIGITAL",
+    "Token": "658fcb0b034A8B5C60A82434"
+  },
+  "sdtPrestamo": {
+    "productoUId": "75",
+    "monto": "10000",
+    "clienteUId": "221",
+    "actividad": "1111",
+    "cantidadCuotas": "?",
+    "cuotasCapital": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2020-04-15",
+          "importe": "3000"
         },
-        "sdtPrestamo": {
-          "productoUId": "75",
-          "monto": "10000",
-          "clienteUId": "221",
-          "actividad": "1111",
-          "cantidadCuotas": "?",
-          "cuotasCapital": {
-            "sBTCuotaPrestamoAlta": [
-              {
-                "fechaPago": "2020-04-15",
-                "importe": "3000"
-              },
-              {
-                "fechaPago": "2020-05-15",
-                "importe": "3000"
-              },
-              {
-                "fechaPago": "2020-06-15",
-                "importe": "4000"
-              }
-            ]
-          }
+        {
+          "fechaPago": "2020-05-15",
+          "importe": "3000"
+        },
+        {
+          "fechaPago": "2020-06-15",
+          "importe": "4000"
         }
-      }'
+      ]
+    },
+    "cuotasInteres": {
+      "fechaPago": "",
+      "importe": 0
+    },
+    "periodoCuotas": 0,
+    "pizarra": 0,
+    "tasa": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -425,7 +427,10 @@ monto | Double | Capital solicitado.
 periodoCuotas | Long | Período entre vencimiento de cada cuota. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 productoUId | Long | Identificador único de producto. 
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -434,9 +439,9 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
- 
+
 ::: details sBTSimulacionPrestamoLA  
 
 ### sBTSimulacionPrestamoLA
@@ -460,7 +465,10 @@ tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva. 
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
-totalPrestamo | Double | Total a pagar. 
+totalPrestamo | Double | Total a pagar.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -472,7 +480,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -485,4 +496,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

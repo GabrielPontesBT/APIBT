@@ -166,7 +166,14 @@ Código | Descripción
         "KindId": 0,
         "KindDescription": "Billete"
       }
-    ]
+    ],
+    "CurrencyId": "",
+    "CurrencyDescription": "",
+    "CurrencySign": "",
+    "KindId": "",
+    "KindDescription": "",
+    "ProductDescription": "",
+    "ProductGUID": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -203,6 +210,6 @@ CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(Length: 36)>$ | GUID del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
 :::
 <!-- CIERRA SDT -->

@@ -157,56 +157,61 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtCajaAhorro": {
-        "cobraIntereses": "S",
-        "producto": {
-            "papel": "",
-            "moneda": "$",
-            "productoUId": "0",
-            "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física"
-        },
-        "idOperacionBT": "0010100000021000000000000000001100001000000000001",
-        "saldoPorConfirmar": "0.00",
-        "descPaquete": "",
-        "idOperacionFmt": "000000011_001",
-        "ejecutivo": "",
-        "saldoCobertura": "0.00",
-        "pagaInteresSobregiro": "N",
-        "saldoDisponible": "7433400.28",
-        "pagaComisCantMovimientos": "S",
-        "saldoBloqueado": "0.00",
-        "pagaComisBajoPromedio": "S",
-        "operacionUId": "281",
-        "frecuenciaEmisionEC": "Cuatrimestral",
-        "diasSobregiro": "0",
-        "saldoContable": "7433400.28",
-        "estado": "Normal",
-        "fechaApertura": "2015-12-23",
-        "sucursal": "Casa Matriz",
-        "pagaComisEstadoCuenta": "",
-        "paquete": "N"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCajaAhorro": {
+    "cobraIntereses": "S",
+    "producto": {
+      "papel": "",
+      "moneda": "$",
+      "productoUId": "0",
+      "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "857",
-        "Estado": "OK",
-        "Servicio": "BTCuentasDeAhorro.ObtenerDatos",
-        "Fecha": "2017-12-18",
-        "Requerimiento": 1,
-        "Hora": "10:43:47",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "idOperacionBT": "0010100000021000000000000000001100001000000000001",
+    "saldoPorConfirmar": "0.00",
+    "descPaquete": "",
+    "idOperacionFmt": "000000011_001",
+    "ejecutivo": "",
+    "saldoCobertura": "0.00",
+    "pagaInteresSobregiro": "N",
+    "saldoDisponible": "7433400.28",
+    "pagaComisCantMovimientos": "S",
+    "saldoBloqueado": "0.00",
+    "pagaComisBajoPromedio": "S",
+    "operacionUId": "281",
+    "frecuenciaEmisionEC": "Cuatrimestral",
+    "diasSobregiro": "0",
+    "saldoContable": "7433400.28",
+    "estado": "Normal",
+    "fechaApertura": "2015-12-23",
+    "sucursal": "Casa Matriz",
+    "pagaComisEstadoCuenta": "",
+    "paquete": "N"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "857",
+    "Estado": "OK",
+    "Servicio": "BTCuentasDeAhorro.ObtenerDatos",
+    "Fecha": "2017-12-18",
+    "Requerimiento": 1,
+    "Hora": "10:43:47",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -244,8 +249,11 @@ saldoCobertura | Double | Saldo de cobertura.
 saldoContable | Double | Saldo total. 
 saldoDisponible | Double | Saldo disponible. 
 saldoPorConfirmar | Double | Saldo pendiente de confirmación. 
-sucursal | String | Nombre de la sucursal de alta. 
- 
+sucursal | String | Nombre de la sucursal de alta.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -257,7 +265,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -270,4 +281,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

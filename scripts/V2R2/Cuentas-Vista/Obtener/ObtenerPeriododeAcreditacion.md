@@ -105,10 +105,10 @@ Código | Descripción
             <Token>1136448858CD285A89A23FBE</Token>
             <Device/>
          </Btinreq>
-         <sdtperiodoAcreditacion>
+         <sdtPeriodoAcreditacion>
             <descripcion>Diario</descripcion>
             <valor>1</valor>
-         </sdtperiodoAcreditacion>
+         </sdtPeriodoAcreditacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -127,29 +127,29 @@ Código | Descripción
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": "",
-        "Usuario": "INSTALADOR",
-        "Token": "432782790CD285A89A23FBEE",
-        "Device": ""
-    },
-    "sdtperiodoAcreditacion": {
-        "descripcion": "Diario",
-        "valor": 1
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTCuentasVista.ObtenerPeriodoDeAcreditacion",
-        "Fecha": "2021-11-01",
-        "Hora": "12:40:20",
-        "Requerimiento": "",
-        "Numero": 8478,
-        "Estado": "OK"
-    }
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "",
+    "Usuario": "INSTALADOR",
+    "Token": "432782790CD285A89A23FBEE",
+    "Device": ""
+  },
+  "sdtPeriodoAcreditacion": {
+    "descripcion": "Diario",
+    "valor": 1
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTCuentasVista.ObtenerPeriodoDeAcreditacion",
+    "Fecha": "2021-11-01",
+    "Hora": "12:40:20",
+    "Requerimiento": "",
+    "Numero": 8478,
+    "Estado": "OK"
+  }
 }
 ```
 ::: 

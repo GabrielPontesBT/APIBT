@@ -113,7 +113,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>D2868674D8C3483A48324170</Token>
          </Btinreq>
-         <sbtTextos>
+         <sdtTextos>
             <SdtsBTTextoPersona>
                <renglon>2</renglon>
                <texto>ALEX</texto>
@@ -132,7 +132,7 @@ curl -X POST \
                <descripcion>APELLIDOS DEL CÓNYUGE</descripcion>
                <codigo>491</codigo>
             </SdtsBTTextoPersona>
-         </sbtTextos>
+         </sdtTextos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>36637</Numero>
@@ -150,7 +150,7 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
+{
   "Btinreq": {
     "Device": "FC",
     "Usuario": "INSTALADOR",
@@ -158,26 +158,12 @@ curl -X POST \
     "Canal": "BTDIGITAL",
     "Token": "D2868674D8C3483A48324170"
   },
-  "sbtTextos": [
-    {
-      "renglon": "2",
-      "texto": "ALEX",
-      "descripcion": "NOMBRE DEL BENEFICIARIO:",
-      "codigo": "11"
-    },
-    {
-      "renglon": "1",
-      "texto": "Rodriguez",
-      "descripcion": "APELLIDOS DEL CÓNYUGE",
-      "codigo": "491"
-    },
-    {
-      "renglon": "2",
-      "texto": "Rodriguez",
-      "descripcion": "APELLIDOS DEL CÓNYUGE",
-      "codigo": "491"
-    }
-  ],
+  "sdtTextos": {
+    "codigo": 0,
+    "descripcion": "",
+    "renglon": 0,
+    "texto": ""
+  },
   "Erroresnegocio": "",
   "Btoutreq": {
     "Numero": "36637",
@@ -189,8 +175,6 @@ curl -X POST \
     "Canal": "BTDIGITAL"
   }
 }
-
-'
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -116,6 +116,7 @@ curl -X POST \
         <fechaInicio>2021-10-12</fechaInicio>
         <fechaFin>2021-10-12</fechaFin>
         <duracion>00:03:53</duracion>
+         <identificador></identificador>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>42156</Numero>
@@ -133,30 +134,31 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "mc",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "6964034201CD285A89A23FBE"
-    },
-    "fechaInicio": "2021-10-12",
-    "fechaFin": "2021-10-12",
-    "duracion": "00:03:53",
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 42156,
-        "Estado": "OK",
-        "Servicio": "BTCadenaCierre.ObtenerDatelleEjecucion",
-        "Fecha": "2022-06-01",
-        "Requerimiento": 1,
-        "Hora": "13:44:21",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "mc",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6964034201CD285A89A23FBE"
+  },
+  "fechaInicio": "2021-10-12",
+  "fechaFin": "2021-10-12",
+  "duracion": "00:03:53",
+  "identificador": 0,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 42156,
+    "Estado": "OK",
+    "Servicio": "BTCadenaCierre.ObtenerDatelleEjecucion",
+    "Fecha": "2022-06-01",
+    "Requerimiento": 1,
+    "Hora": "13:44:21",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

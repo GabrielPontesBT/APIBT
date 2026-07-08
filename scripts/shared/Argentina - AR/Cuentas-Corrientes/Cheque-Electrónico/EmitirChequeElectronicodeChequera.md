@@ -128,7 +128,13 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>ec8CE93AA1</Token>
          </Btinreq>
-         <listaCheques></listaCheques>
+         <listaCheques>
+            <beneficiario></beneficiario>
+            <CMC7>0</CMC7>
+            <importe>0</importe>
+            <numerocheque>0</numerocheque>
+            <numerochequera>0</numerochequera>
+         </listaCheques>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>2565</Numero>
@@ -146,30 +152,38 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"listaCheques": {
-        "sBTChequeElectronico": []
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 8396,
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.EmitirChequeElectronicoDeChequera",
-        "Requerimiento": "1",
-        "Fecha": "2019-05-07",
-        "Hora": "15:54:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "listaCheques": {
+    "sBTChequeElectronico": [
+      {
+        "beneficiario": "",
+        "CMC7": 0,
+        "importe": 0,
+        "numerocheque": 0,
+        "numerochequera": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 8396,
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.EmitirChequeElectronicoDeChequera",
+    "Requerimiento": "1",
+    "Fecha": "2019-05-07",
+    "Hora": "15:54:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

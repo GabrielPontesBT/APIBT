@@ -365,20 +365,6 @@ papel | String | Símbolo del papel.
 productoUId | Long | Identificador único de producto.
 :::
 
-::: details sBTConcepto
-
-### sBTConcepto
-
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto. 
-texto | String | Texto. 
-valor | Double | Importe.
-:::
-
 ::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion

@@ -6,9 +6,14 @@
   "modulo": "Liabilities.SavingsAccounts",
   "programa": "PublicAPI.BTSAPA0007",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
@@ -16,7 +21,9 @@
       "Comentarios": "GUID (identificador único global) de la contraparte."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "savingsAccounts",
@@ -38,11 +45,25 @@
   "examples": {
     "invocation": {
       "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"9CAA9F8022504584A5E8DED9\"\n  },\n  \"counterpartyGUID\": \"8ac8ff85-69bc-406b-92fd-c48a674283df0\"\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"9CAA9F8022504584A5E8DED9\"\n  },\n  \"counterpartyGUID\": \"8ac8ff85-69bc-406b-92fd-c48a674283df0\"\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"GPONTES\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15BE97FEFB54603E9455AF48\"\n  },\n  \"savingsAccounts\": {\n    \"savingsAccount\": [\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 19840.9,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"971a3810-9097-4f7c-a220-1c160691d2d2\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA SUELDO\",\n      },\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 47000.0,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"647740db-fe95-4b6a-8d12-abc55d34bcb8\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA PARA AHORRAR\",\n      },\n      {\n        \"availableBalance\": 0.0,\n        \"balance\": 54039.27,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"9037bb24-f99a-42e1-93cf-a42bb5af3f37\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA GASTOS\",\n      }\n    ]\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:00:41\",\n    \"Numero\": 13495841,\n    \"Servicio\": \"PublicSavingAccounts.getCustomerSavingsAccounts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"GPONTES\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15BE97FEFB54603E9455AF48\"\n  },\n  \"savingsAccounts\": {\n    \"savingsAccount\": [\n      {\n        \"availableBalance\": 0,\n        \"balance\": 19840.9,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"971a3810-9097-4f7c-a220-1c160691d2d2\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA SUELDO\"\n      },\n      {\n        \"availableBalance\": 0,\n        \"balance\": 47000,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"647740db-fe95-4b6a-8d12-abc55d34bcb8\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA PARA AHORRAR\"\n      },\n      {\n        \"availableBalance\": 0,\n        \"balance\": 54039.27,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"9037bb24-f99a-42e1-93cf-a42bb5af3f37\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA GASTOS\"\n      }\n    ],\n    \"availableBalance\": \"\",\n    \"balance\": \"\",\n    \"currencyId\": \"\",\n    \"currencyDescription\": \"\",\n    \"currencySign\": \"\",\n    \"kindId\": \"\",\n    \"kindDescription\": \"\",\n    \"kindSign\": \"\",\n    \"savingsAccountGUID\": \"\",\n    \"statusId\": \"\",\n    \"statusDescription\": \"\",\n    \"subAccountDescription\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:00:41\",\n    \"Numero\": 13495841,\n    \"Servicio\": \"PublicSavingAccounts.getCustomerSavingsAccounts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"GPONTES\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15BE97FEFB54603E9455AF48\"\n  },\n  \"savingsAccounts\": {\n    \"savingsAccount\": [\n      {\n        \"availableBalance\": 0,\n        \"balance\": 19840.9,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"971a3810-9097-4f7c-a220-1c160691d2d2\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA SUELDO\"\n      },\n      {\n        \"availableBalance\": 0,\n        \"balance\": 47000,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"647740db-fe95-4b6a-8d12-abc55d34bcb8\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA PARA AHORRAR\"\n      },\n      {\n        \"availableBalance\": 0,\n        \"balance\": 54039.27,\n        \"currencyDescription\": \"Pesos Uruguayos\",\n        \"currencyId\": 0,\n        \"currencySign\": \"$\",\n        \"kindDescription\": \"Billete\",\n        \"kindId\": 0,\n        \"kindSign\": \"-\",\n        \"savingsAccountGUID\": \"9037bb24-f99a-42e1-93cf-a42bb5af3f37\",\n        \"statusDescription\": \"Normal\",\n        \"statusId\": 0,\n        \"subAccountDescription\": \"CUENTA GASTOS\"\n      }\n    ],\n    \"availableBalance\": \"\",\n    \"balance\": \"\",\n    \"currencyId\": \"\",\n    \"currencyDescription\": \"\",\n    \"currencySign\": \"\",\n    \"kindId\": \"\",\n    \"kindDescription\": \"\",\n    \"kindSign\": \"\",\n    \"savingsAccountGUID\": \"\",\n    \"statusId\": \"\",\n    \"statusDescription\": \"\",\n    \"subAccountDescription\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-20\",\n    \"Hora\": \"19:00:41\",\n    \"Numero\": 13495841,\n    \"Servicio\": \"PublicSavingAccounts.getCustomerSavingsAccounts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -29,7 +29,7 @@ counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) 
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-counterparty | [SdtsBTCPWCounterpartyQuery](#sdtsbtcpwcounterpartyquery) | Datos de la contraparte.
+Counterparty | [SdtsBTCPWCounterpartyQuery](#sdtsbtcpwcounterpartyquery) | Datos de la contraparte.
 
 @tab Errores
 
@@ -75,11 +75,10 @@ Código | Descripción
     "Requerimiento": "1",
     "Token": "444B674391BCA7676279700A"
   },
-  "counterparty": {
+  "Counterparty": {
     "Integration": {
       "SdtsBTCPWCounterpartyIntegration": [
         {
-          "PersonGUID": "f43a3946-4ae1-4a27-861d-c1c2d9cee87d",
           "CountryId": 604,
           "CountryDescription": "Perú",
           "DocumentTypeId": 11,
@@ -88,19 +87,33 @@ Código | Descripción
           "PersonName": "PONTES SILVA GABRIEL",
           "OwnershipTypeId": 1,
           "OwnershipTypeDescription": "TITULAR REPRESENTAT.",
-          "PersonType": "F"
+          "PersonType": "F",
+          "PersonGUId": "f43a3946-4ae1-4a27-861d-c1c2d9cee87d"
         }
       ]
     },
     "Texts": {
-      "SdtsBTPAWText": []
+      "SdtsBTPAWText": [
+        {
+          "Id": "",
+          "Description": "",
+          "Text": ""
+        }
+      ]
     },
     "FinancialInstitution": {
       "CompanyId": 0,
       "IsCorrespondentAccount": false,
       "Type": 0,
       "CustomFields": {
-        "SdtsBTPAWCustomField": []
+        "SdtsBTPAWCustomField": [
+          {
+            "Correlative": 0,
+            "Id": "",
+            "Description": "",
+            "Value": ""
+          }
+        ]
       },
       "DocumentTypeId": 0,
       "EntryStatusId": 0,
@@ -134,7 +147,14 @@ Código | Descripción
       "ExecutiveDescription": "",
       "FinancialInstitution": false,
       "CustomFields": {
-        "SdtsBTPAWCustomField": []
+        "SdtsBTPAWCustomField": [
+          {
+            "Correlative": 0,
+            "Id": "",
+            "Description": "",
+            "Value": ""
+          }
+        ]
       },
       "InternalClassificationDescription": "",
       "EconomicActivityDescription": "",
@@ -144,13 +164,49 @@ Código | Descripción
       "CounterpartyDescription": "PONTES SILVA GABRIEL"
     },
     "EconomicGroups": {
-      "SdtsBTEGWEconomicGroup": []
+      "SdtsBTEGWEconomicGroup": [
+        {
+          "GroupId": "",
+          "GroupName": "",
+          "GroupTypeId": "",
+          "GroupTypeDescription": "",
+          "MemberTypeId": ""
+        }
+      ]
     },
     "Contacts": {
-      "SdtsBTPEWContact": []
+      "SdtsBTPEWContact": [
+        {
+          "AddressCorrelative": "",
+          "AddressId": "",
+          "AssociatedToAnAddress": false,
+          "Comment": "",
+          "ContactTypeId": "",
+          "ContactTypeDescription": "",
+          "Correlative": "",
+          "Enabled": false,
+          "EndTimeRange1": "",
+          "EndTimeRange2": "",
+          "Priority": "",
+          "ReceivesMails": false,
+          "StartTimeRange1": "",
+          "StartTimeRange2": "",
+          "TelephoneCompanyId": "",
+          "TelephoneCompanyDescription": "",
+          "Text": "",
+          "Validated": false
+        }
+      ]
     },
     "CustomFields": {
-      "SdtsBTPAWCustomField": []
+      "SdtsBTPAWCustomField": [
+        {
+          "Correlative": 0,
+          "Id": "",
+          "Description": "",
+          "Value": ""
+        }
+      ]
     }
   },
   "BusinessErrors": {
@@ -202,22 +258,22 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
 AddressId | String $<(Length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+AssociatedToAnAddress | Boolean | Asociado a una dirección.
 Comment | String $<(Length: 250)>$ | Comentario.
 ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
 ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
 Correlative | Byte $<(Length: 2)>$ | Correlativo.
-Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+Enabled | Boolean | Habilitado.
 EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
 EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
 Priority | Byte $<(Length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+ReceivesMails | Boolean | Recibe correos.
 StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
 StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
 TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
 TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
 Text | String $<(Length: 250)>$ | Texto.
-Validated | Boolean $<(Length: 1)>$ | Validado.
+Validated | Boolean | Validado.
 :::
 
 ::: details SdtsBTCPWCounterparty
@@ -239,13 +295,13 @@ CreationDate | Date $<(Length: 8)>$ | Fecha de creación.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
 EconomicActivityId | Long | Identificador de actividad económica.
 EconomicActivityDescription | String $<(Length: 80)>$ | Descripción de actividad económica.
-Employee | Boolean $<(Length: 1)>$ | ¿Es empleado?.
+Employee | Boolean | ¿Es empleado?.
 ExecutiveId | Int $<(Length: 5)>$ | Identificador del ejecutivo.
 ExecutiveDescription | String $<(Length: 30)>$ | Descripción del ejecutivo.
-FinancialInstitution | Boolean $<(Length: 1)>$ | Institución financiera.
+FinancialInstitution | Boolean | Institución financiera.
 InternalClassificationId | Short | Identificador de clasificación interna.
 InternalClassificationDescription | String $<(Length: 30)>$ | Descripción de clasificación interna.
-Resident | Boolean $<(Length: 1)>$ | ¿Es residente?.
+Resident | Boolean | ¿Es residente?.
 SectorId | Short | Identificador de sector.
 SectorDescription | String $<(Length: 30)>$ | Descripción del sector.
 SegmentId | Byte $<(Length: 2)>$ | Identificador del segmento.
@@ -329,7 +385,7 @@ DocumentTypeId | Short | Identificador del tipo de documento.
 DocumentTypeDescription | String $<(Length: 30)>$ | Descripción del tipo de documento.
 OwnershipTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de propiedad.
 OwnershipTypeDescription | String | Descripción del tipo de propiedad.
-PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonGUId | String $<(Length: 36)>$ | GUID (identificador único global) de persona.
 PersonName | String $<(Length: 70)>$ | Nombre de persona.
 PersonType | String $<(Length: 1)>$ | Tipo de persona.
 :::

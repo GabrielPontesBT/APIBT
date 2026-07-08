@@ -37,7 +37,7 @@ productoUId | Long | Identificador único de producto.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-sdtPeriodos | sBTPeriodo | Listado de periodos habilitados.
+sdtPeriodos | [sBTPeriodo](#sbtperiodo) | Listado de periodos habilitados.
 
 ::: details sBTPeriodo  
 
@@ -48,9 +48,9 @@ Los campos del tipo de dato estructurado sBTPeriodo son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-valor | Int | Período.  
-tipo | String | Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A').  
-descripcion | String | Descripción extendida del período.  
+Valor | Int | Período.  
+Tipo | String | Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A').  
+Descripcion | String | Descripción extendida del período.  
 
 :::
 
@@ -106,6 +106,7 @@ curl -X POST \
 	},
 		"productoUId": 41
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -199,6 +200,7 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
@@ -214,9 +216,9 @@ Los campos del tipo de dato estructurado sBTPeriodo son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-valor | Int | Período.  
-tipo | String | Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A').  
-descripcion | String | Descripción extendida del período.  
+Valor | Int | Período.  
+Tipo | String | Tipo de período (Diario: 'D', Mensual: 'M', Anual: 'A').  
+Descripcion | String | Descripción extendida del período.  
 
 :::
 <!-- CIERRA SDT -->

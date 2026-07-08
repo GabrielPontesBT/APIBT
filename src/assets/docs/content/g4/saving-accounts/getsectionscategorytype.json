@@ -1,0 +1,93 @@
+{
+  "slug": "saving-accounts/getsectionscategorytype",
+  "pageTitle": "Get Sections Category Type",
+  "description": "Método para obtener los tipos de categoría de apartados",
+  "pubName": "PublicSavingAccounts.getSectionsCategoryType",
+  "modulo": "Liabilities.SavingsAccounts",
+  "programa": "PublicAPI.BTSAPA0013",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "offset",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Número de registros a omitir desde el inicio del resultado."
+    },
+    {
+      "Nombre": "limit",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad máxima de registros a retornar en una sola respuesta."
+    },
+    {
+      "Nombre": "categoryDescriptionFilter",
+      "Tipo": "String <strong>(Length: 40)</strong>",
+      "Comentarios": "Filtro de descripción de categoría."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "categoryTypes",
+      "Tipo": "<a href=\"#sdtsbtsasectioncategorytype\">SdtsBTSASectionCategoryType</a>",
+      "Comentarios": "Listado de tipos de categoría."
+    },
+    {
+      "Nombre": "hasNext",
+      "Tipo": "Boolean",
+      "Comentarios": "Indica si existen más páginas disponibles."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"479BB17608F43851D4037782\"\n  },\n  \"offset\": \"0\",\n  \"limit\": \"20\",\n  \"categoryDescriptionFilter\": \"\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"479BB17608F43851D4037782\"\n  },\n  \"offset\": \"0\",\n  \"limit\": \"20\",\n  \"categoryDescriptionFilter\": \"\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"479BB17608F43851D4037782\"\n  },\n  \"categoryTypes\": {\n    \"categoryType\": [\n      {\n        \"categoryCode\": 1,\n        \"categoryDescription\": \"Viaje\"\n      },\n      {\n        \"categoryCode\": 2,\n        \"categoryDescription\": \"Estudio\"\n      },\n      {\n        \"categoryCode\": 3,\n        \"categoryDescription\": \"Vacaciones\"\n      },\n      {\n        \"categoryCode\": 4,\n        \"categoryDescription\": \"Fondo de emergencia\"\n      },\n      {\n        \"categoryCode\": 5,\n        \"categoryDescription\": \"Provisiones\"\n      },\n      {\n        \"categoryCode\": 6,\n        \"categoryDescription\": \"Otros\"\n      }\n    ],\n    \"categoryCode\": \"\",\n    \"categoryDescription\": \"\"\n  },\n  \"hasNext\": false,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"18:47:58\",\n    \"Numero\": 13584264,\n    \"Servicio\": \"PublicSavingAccounts.getSectionsCategoryType\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"479BB17608F43851D4037782\"\n  },\n  \"categoryTypes\": {\n    \"categoryType\": [\n      {\n        \"categoryCode\": 1,\n        \"categoryDescription\": \"Viaje\"\n      },\n      {\n        \"categoryCode\": 2,\n        \"categoryDescription\": \"Estudio\"\n      },\n      {\n        \"categoryCode\": 3,\n        \"categoryDescription\": \"Vacaciones\"\n      },\n      {\n        \"categoryCode\": 4,\n        \"categoryDescription\": \"Fondo de emergencia\"\n      },\n      {\n        \"categoryCode\": 5,\n        \"categoryDescription\": \"Provisiones\"\n      },\n      {\n        \"categoryCode\": 6,\n        \"categoryDescription\": \"Otros\"\n      }\n    ],\n    \"categoryCode\": \"\",\n    \"categoryDescription\": \"\"\n  },\n  \"hasNext\": false,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"18:47:58\",\n    \"Numero\": 13584264,\n    \"Servicio\": \"PublicSavingAccounts.getSectionsCategoryType\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTSASectionCategoryType",
+      "fields": [
+        {
+          "Nombre": "categoryCode",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de categoría."
+        },
+        {
+          "Nombre": "categoryDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de categoría."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

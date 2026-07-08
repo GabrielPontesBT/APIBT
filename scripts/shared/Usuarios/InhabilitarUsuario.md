@@ -66,7 +66,7 @@ Código | Descripción
             <bts:Device>GP</bts:Device>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Token>bc8b678bc44A8B5C60A82434</bts:Token>
          </bts:Btinreq>
          <bts:usuario>GPONTES</bts:usuario>

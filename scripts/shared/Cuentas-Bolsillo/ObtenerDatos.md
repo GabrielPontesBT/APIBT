@@ -212,6 +212,9 @@ operacionBolsilloUId | Long | Identificador único de la operación de bolsillo.
 parametros | [sBTParamBolsillo](#sbtparambolsillo)
 productoBolsilloId | Short | Identificador único del producto del bolsillo.
 saldo | Double | Saldo.
+:::
+
+::: details sBTParamBolsillo
 
 ### sBTParamBolsillo
 
@@ -225,4 +228,6 @@ metaAhorro | Double | Meta de ahorro de la cuenta.
 pagaIntereses | String | ¿Paga intereses? (S/N).
 tasa | Double | Tasa.
 :::
+
 <!-- CIERRA SDT -->
+

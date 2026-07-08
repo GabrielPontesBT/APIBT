@@ -136,6 +136,7 @@ curl -X POST \
                <diasMora>19</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>2</nroCuota>
@@ -157,6 +158,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>3</nroCuota>
@@ -178,6 +185,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>4</nroCuota>
@@ -199,6 +212,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>5</nroCuota>
@@ -220,6 +239,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>6</nroCuota>
@@ -241,6 +266,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>7</nroCuota>
@@ -262,6 +293,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>8</nroCuota>
@@ -283,6 +320,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>9</nroCuota>
@@ -304,6 +347,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
             <sBTCuotaPrestamo>
                <nroCuota>10</nroCuota>
@@ -325,6 +374,12 @@ curl -X POST \
                <diasMora>0</diasMora>
                <fechaUltimoPago>0000-00-00</fechaUltimoPago>
                <importePago>0.00</importePago>
+               <detalleConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </detalleConceptos>
+               <redondeo>0</redondeo>
             </sBTCuotaPrestamo>
          </cronograma>
          <Erroresnegocio></Erroresnegocio>
@@ -345,240 +400,303 @@ curl -X POST \
 @tab JSON
 ```json
 {
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": 1,
-		"Usuario": "INSTALADOR",
-		"Token": "191631443CD285A89A23FBEE",
-		"Device": "AC"
-	},
-   "cronograma": {
-        "sBTCuotaPrestamo": [
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "191631443CD285A89A23FBEE",
+    "Device": "AC"
+  },
+  "cronograma": {
+    "sBTCuotaPrestamo": [
+      {
+        "nroCuota": 1,
+        "fechaPago": "2019-08-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 523.74,
+        "intereses": 1495.66,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 345.37,
+        "interesMora": 74.19,
+        "otrosConceptos": 0,
+        "detalleConceptos": {
+          "sBTConcepto": [
             {
-              "nroCuota": 1,
-              "fechaPago": "2019-08-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 523.74,
-              "intereses": 1495.66,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 345.37,
-              "interesMora": 74.19,
-              "otrosConceptos": 0.00,
-              "detalleConceptos": { "sBTConcepto": [] },
-              "total": 2438.96,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 19,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 2,
-              "fechaPago": "2019-09-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1125.28,
-              "intereses": 1002.60,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 220.57,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 3,
-              "fechaPago": "2019-10-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1257.94,
-              "intereses": 893.86,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 196.65,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 4,
-              "fechaPago": "2019-11-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1326.65,
-              "intereses": 837.54,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 184.26,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 5,
-              "fechaPago": "2019-12-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1469.05,
-              "intereses": 720.82,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 158.58,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 6,
-              "fechaPago": "2020-01-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1562.88,
-              "intereses": 643.91,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 141.66,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 7,
-              "fechaPago": "2020-02-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1694.93,
-              "intereses": 535.67,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 117.85,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 8,
-              "fechaPago": "2020-03-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1872.10,
-              "intereses": 390.45,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 85.90,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 9,
-              "fechaPago": "2020-04-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 1996.32,
-              "intereses": 288.63,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 63.50,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
-            },
-            {
-              "nroCuota": 10,
-              "fechaPago": "2020-05-07",
-              "tipoCuota": "M",
-              "concepto": "Capital/Interés",
-              "fechaVencimiento": "0000-00-00",
-              "capital": 2171.11,
-              "intereses": 145.36,
-              "comisiones": 0.00,
-              "seguros": 0.00,
-              "subsidios": 0.00,
-              "impuestos": 31.98,
-              "interesMora": 0.00,
-              "otrosConceptos": 0.00,
-              "total": 2348.45,
-              "estado": "Impaga",
-              "estadoDsc": "",
-              "diasMora": 0,
-              "fechaUltimoPago": "0000-00-00",
-              "importePago": 0.00
+              "concepto": "",
+              "texto": "",
+              "valor": 0
             }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTPrestamos.ObtenerCronogramaAFecha",
-        "Fecha": "2019-07-26",
-        "Hora": "11:35:37",
-        "Requerimiento": 1,
-        "Numero": 120420,
-        "Estado": "OK"
-    }
+          ]
+        },
+        "total": 2438.96,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 19,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 2,
+        "fechaPago": "2019-09-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1125.28,
+        "intereses": 1002.6,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 220.57,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 3,
+        "fechaPago": "2019-10-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1257.94,
+        "intereses": 893.86,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 196.65,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 4,
+        "fechaPago": "2019-11-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1326.65,
+        "intereses": 837.54,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 184.26,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 5,
+        "fechaPago": "2019-12-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1469.05,
+        "intereses": 720.82,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 158.58,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 6,
+        "fechaPago": "2020-01-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1562.88,
+        "intereses": 643.91,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 141.66,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 7,
+        "fechaPago": "2020-02-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1694.93,
+        "intereses": 535.67,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 117.85,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 8,
+        "fechaPago": "2020-03-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1872.1,
+        "intereses": 390.45,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 85.9,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 9,
+        "fechaPago": "2020-04-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 1996.32,
+        "intereses": 288.63,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 63.5,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      },
+      {
+        "nroCuota": 10,
+        "fechaPago": "2020-05-07",
+        "tipoCuota": "M",
+        "concepto": "Capital/Interés",
+        "fechaVencimiento": "0000-00-00",
+        "capital": 2171.11,
+        "intereses": 145.36,
+        "comisiones": 0,
+        "seguros": 0,
+        "subsidios": 0,
+        "impuestos": 31.98,
+        "interesMora": 0,
+        "otrosConceptos": 0,
+        "total": 2348.45,
+        "estado": "Impaga",
+        "estadoDsc": "",
+        "diasMora": 0,
+        "fechaUltimoPago": "0000-00-00",
+        "importePago": 0,
+        "detalleConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        },
+        "redondeo": 0
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerCronogramaAFecha",
+    "Fecha": "2019-07-26",
+    "Hora": "11:35:37",
+    "Requerimiento": 1,
+    "Numero": 120420,
+    "Estado": "OK"
+  }
 }
 ```
 :::
@@ -616,7 +734,10 @@ redondeo | Double | Redondeo.
 seguros | Double | Seguros de la cuota. 
 subsidios | Double | Subsidios  de la cuota. 
 tipoCuota | String | Tipo de cuota (Capital - K / Interés - I / Capital-Interés - M / Pago Mínimo - T / Cuota Fija - F). 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -629,4 +750,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

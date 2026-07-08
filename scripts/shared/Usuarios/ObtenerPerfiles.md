@@ -63,7 +63,7 @@ Código | Descripción
          <bts:Btinreq>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Requerimiento>1</bts:Requerimiento>
-            <bts:Usuario>BANTOTAL</bts:Usuario>
+            <bts:usuario>BANTOTAL</bts:usuario>
             <bts:Token>2062732190F955E77534D3E0</bts:Token>
             <bts:Device>AC</bts:Device>
          </bts:Btinreq>

@@ -6,9 +6,14 @@
   "modulo": "Liabilities",
   "programa": "PublicAPI.BTLIPA0002",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "cancellationOriginId",
@@ -16,7 +21,9 @@
       "Comentarios": "Identificador del origen de cancelación."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "cancellationReasons",
@@ -29,11 +36,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"cancellationOriginId\": 1\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"cancellationOriginId\": 1\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"cancellationReasons\": {\r\n    \"cancellationReason\": [\r\n      {\r\n        \"id\": 1,\r\n        \"description\": \"CAMBIO DE INSTITUCIÓN\"\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"description\": \"CUENTA EN DESUSO\"\r\n      },\r\n      {\r\n        \"id\": 3,\r\n        \"description\": \"OTROS\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:09\",\r\n    \"Numero\": 13466303,\r\n    \"Servicio\": \"PublicSavingAccounts.getCancellationReasons\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"cancellationReasons\": {\n    \"cancellationReason\": [\n      {\n        \"id\": 1,\n        \"description\": \"CAMBIO DE INSTITUCIÓN\"\n      },\n      {\n        \"id\": 2,\n        \"description\": \"CUENTA EN DESUSO\"\n      },\n      {\n        \"id\": 3,\n        \"description\": \"OTROS\"\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:54:09\",\n    \"Numero\": 13466303,\n    \"Servicio\": \"PublicSavingAccounts.getCancellationReasons\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\n  },\n  \"cancellationReasons\": {\n    \"cancellationReason\": [\n      {\n        \"id\": 1,\n        \"description\": \"CAMBIO DE INSTITUCIÓN\"\n      },\n      {\n        \"id\": 2,\n        \"description\": \"CUENTA EN DESUSO\"\n      },\n      {\n        \"id\": 3,\n        \"description\": \"OTROS\"\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-13\",\n    \"Hora\": \"20:54:09\",\n    \"Numero\": 13466303,\n    \"Servicio\": \"PublicSavingAccounts.getCancellationReasons\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -41,7 +62,7 @@
       "typeName": "SdtsBTLICancellationReason",
       "fields": [
         {
-          "Nombre": "id",
+          "Nombre": "Id",
           "Tipo": "Short <strong>(Length: 4)</strong>",
           "Comentarios": "Identificador de motivo de cierre."
         },

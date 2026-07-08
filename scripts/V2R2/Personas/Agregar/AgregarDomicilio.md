@@ -208,7 +208,7 @@ calle | String | Calle del domicilio.
 codigoPostal | String | Código postal. 
 departamento | String | Nombre del departamento. 
 departamentoId | Int | Identificador del departamento. 
-dirección | String | Dirección. 
+direccion | String | Dirección. 
 localidad | String | Nombre de la localidad. 
 localidadId | Int | Identificador de la localidad. 
 numeroPuerta | String | Número de puerta. 

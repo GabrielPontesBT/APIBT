@@ -1,0 +1,96 @@
+{
+  "slug": "loans/cancel",
+  "pageTitle": "Cancel",
+  "description": "Método para cancelar un préstamo.",
+  "pubName": "PublicLoans.cancel",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0016",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "loanGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del préstamo."
+    },
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    },
+    {
+      "Nombre": "savingAccountGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "reference",
+      "Tipo": "String",
+      "Comentarios": "Referencia."
+    },
+    {
+      "Nombre": "date",
+      "Tipo": "Date",
+      "Comentarios": "Fecha."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "movementGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del movimiento."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050001",
+      "Descripción": "Debe ingresar el GUID de préstamo."
+    },
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "120050006",
+      "Descripción": "El préstamo ingresado no pertenece al cliente."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"loanGUID\": \"441b5348-c5d7-4a4c-903e-311ae720a130\",\n  \"counterpartyGUID\": \"a0f1dc41-1624-49dd-91a5-f28bf91e5d2c\",\n  \"savingAccountGUID\": \"95f6c6fb-6028-4ec5-b6c5-41612225ae15\",\n  \"reference\": \"Cancelación de préstamo\",\n  \"date\": \"\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"loanGUID\": \"441b5348-c5d7-4a4c-903e-311ae720a130\",\n  \"counterpartyGUID\": \"a0f1dc41-1624-49dd-91a5-f28bf91e5d2c\",\n  \"savingAccountGUID\": \"95f6c6fb-6028-4ec5-b6c5-41612225ae15\",\n  \"reference\": \"Cancelación de préstamo\",\n  \"date\": \"\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"movementGUID\": \"f5173f26-0642-4c61-8164-6e257f1956a9\",\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"17:39:52\",\n    \"Numero\": 13546654,\n    \"Servicio\": \"PublicLoans.cancel\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"movementGUID\": \"f5173f26-0642-4c61-8164-6e257f1956a9\",\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"17:39:52\",\n    \"Numero\": 13546654,\n    \"Servicio\": \"PublicLoans.cancel\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

@@ -215,6 +215,8 @@ identificador | String | Identificador de la empresa originante.
 prestaciones | [sBTPrestacion](#sbtprestacion) | Listado de prestaciones.
 :::
 
+::: details sBTPrestacion
+
 ### sBTPrestacion
 
 ::: center 
@@ -225,4 +227,6 @@ Nombre | Tipo | Comentarios
 codigo | String | Código identificador de la prestación.
 descripcion | String | Descripción de la prestación.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -88,7 +88,9 @@ No aplica.
         "Id": 5,
         "Description": "APODERADO"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
   "BusinessErrors": {
     "BusinessError": []

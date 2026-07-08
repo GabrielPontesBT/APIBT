@@ -1,0 +1,234 @@
+{
+  "slug": "loans/getcancelationtotalconcepts",
+  "pageTitle": "Get Cancellation Total Concepts",
+  "description": "Método para obtener los totales de conceptos de cancelación.",
+  "pubName": "PublicLoans.getcancellationTotalConcepts",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0017",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    },
+    {
+      "Nombre": "loanGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de préstamo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "calculationDate",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de cálculo."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "refinancingGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la refinanciación."
+    },
+    {
+      "Nombre": "totalConcepts",
+      "Tipo": "<a href=\"#sdtsbtlototalconcepts\">SdtsBTLOTotalConcepts</a>",
+      "Comentarios": "Totales de conceptos financieros."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"loanGUID\": \"b84e1c60-73d2-4a91-8f5e-cf920a371d24\",\n  \"calculationDate\": \"2026-06-19\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"counterpartyGUID\": \"3a7f2d91-bc14-4e58-9f3a-d2c18b450e77\",\n  \"loanGUID\": \"b84e1c60-73d2-4a91-8f5e-cf920a371d24\",\n  \"calculationDate\": \"2026-06-19\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"totalConcepts\": {\n    \"debt\": 48750.00,\n    \"kindValue\": 0.00,\n    \"otherConcepts\": 320.50,\n    \"roundOff\": 0.12,\n    \"totalOfArrearFees\": 180.00,\n    \"totalOfArrearTax\": 32.40,\n    \"totalOfCancellationFee\": 250.00,\n    \"totalOfCancellationFeeTaxes\": 45.00,\n    \"totalOfCapital\": 45000.00,\n    \"totalOfCapitalConcessional\": 0.00,\n    \"totalOfCapitalTaxes\": 0.00,\n    \"totalOfCompensatoryInterest\": 1250.75,\n    \"totalOfCompensatoryInterestTaxes\": 225.14,\n    \"totalOfConcessional\": 0.00,\n    \"totalOfDeferredInterest\": 0.00,\n    \"totalOfDeferredInterestTaxes\": 0.00,\n    \"totalOfDistributedInsurances\": 420.00,\n    \"totalOfDistributedInterest\": 875.30,\n    \"totalOfDistributedInterestTaxes\": 157.55,\n    \"totalOfInsurances\": 420.00,\n    \"totalOfInterest\": 3750.00,\n    \"totalOfInterestArrear\": 215.60,\n    \"totalOfInterestTaxes\": 675.00,\n    \"totalOfPunitiveInterest\": 0.00,\n    \"totalOfPunitiveInterestTaxes\": 0.00,\n    \"totalOfQuotaFees\": 300.00,\n    \"totalOfQuotaFeesTaxes\": 54.00,\n    \"totalOfTaxes\": 1189.09,\n    \"totalOfUnpaidRoundOff\": 0.12\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:35:22\",\n    \"Numero\": \"10048291\",\n    \"Servicio\": \"PublicLoans.getcancellationTotalConcepts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"refinancingGUID\": \"e7a3d240-91bc-4f82-b3e5-2a7c640d18f9\",\n  \"totalConcepts\": {\n    \"debt\": 48750.00,\n    \"kindValue\": 0.00,\n    \"otherConcepts\": 320.50,\n    \"roundOff\": 0.12,\n    \"totalOfArrearFees\": 180.00,\n    \"totalOfArrearTax\": 32.40,\n    \"totalOfCancellationFee\": 250.00,\n    \"totalOfCancellationFeeTaxes\": 45.00,\n    \"totalOfCapital\": 45000.00,\n    \"totalOfCapitalConcessional\": 0.00,\n    \"totalOfCapitalTaxes\": 0.00,\n    \"totalOfCompensatoryInterest\": 1250.75,\n    \"totalOfCompensatoryInterestTaxes\": 225.14,\n    \"totalOfConcessional\": 0.00,\n    \"totalOfDeferredInterest\": 0.00,\n    \"totalOfDeferredInterestTaxes\": 0.00,\n    \"totalOfDistributedInsurances\": 420.00,\n    \"totalOfDistributedInterest\": 875.30,\n    \"totalOfDistributedInterestTaxes\": 157.55,\n    \"totalOfInsurances\": 420.00,\n    \"totalOfInterest\": 3750.00,\n    \"totalOfInterestArrear\": 215.60,\n    \"totalOfInterestTaxes\": 675.00,\n    \"totalOfPunitiveInterest\": 0.00,\n    \"totalOfPunitiveInterestTaxes\": 0.00,\n    \"totalOfQuotaFees\": 300.00,\n    \"totalOfQuotaFeesTaxes\": 54.00,\n    \"totalOfTaxes\": 1189.09,\n    \"totalOfUnpaidRoundOff\": 0.12\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-19\",\n    \"Hora\": \"10:35:22\",\n    \"Numero\": \"10048291\",\n    \"Servicio\": \"PublicLoans.getcancellationTotalConcepts\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOTotalConcepts",
+      "fields": [
+        {
+          "Nombre": "debt",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Deuda."
+        },
+        {
+          "Nombre": "kindValue",
+          "Tipo": "Double <strong>(Length: 15.8)</strong>",
+          "Comentarios": "Valor en especie."
+        },
+        {
+          "Nombre": "otherConcepts",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Otros conceptos."
+        },
+        {
+          "Nombre": "roundOff",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Redondeo."
+        },
+        {
+          "Nombre": "totalOfArrearFees",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de gastos de mora."
+        },
+        {
+          "Nombre": "totalOfArrearTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuesto de mora."
+        },
+        {
+          "Nombre": "totalOfCancellationFee",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de gasto de cancelación."
+        },
+        {
+          "Nombre": "totalOfCancellationFeeTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del gasto de cancelación."
+        },
+        {
+          "Nombre": "totalOfCapital",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de capital."
+        },
+        {
+          "Nombre": "totalOfCapitalConcessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de capital concesional."
+        },
+        {
+          "Nombre": "totalOfCapitalTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del capital."
+        },
+        {
+          "Nombre": "totalOfCompensatoryInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés compensatorio."
+        },
+        {
+          "Nombre": "totalOfCompensatoryInterestTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del interés compensatorio."
+        },
+        {
+          "Nombre": "totalOfConcessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total concesional."
+        },
+        {
+          "Nombre": "totalOfDeferredInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés diferido."
+        },
+        {
+          "Nombre": "totalOfDeferredInterestTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del interés diferido."
+        },
+        {
+          "Nombre": "totalOfDistributedInsurances",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de seguros distribuidos."
+        },
+        {
+          "Nombre": "totalOfDistributedInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés distribuido."
+        },
+        {
+          "Nombre": "totalOfDistributedInterestTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del interés distribuido."
+        },
+        {
+          "Nombre": "totalOfInsurances",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de seguros."
+        },
+        {
+          "Nombre": "totalOfInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés."
+        },
+        {
+          "Nombre": "totalOfInterestArrear",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés de mora."
+        },
+        {
+          "Nombre": "totalOfInterestTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del interés."
+        },
+        {
+          "Nombre": "totalOfPunitiveInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de interés punitorio."
+        },
+        {
+          "Nombre": "totalOfPunitiveInterestTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos del interés punitorio."
+        },
+        {
+          "Nombre": "totalOfQuotaFees",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de gastos de cuota."
+        },
+        {
+          "Nombre": "totalOfQuotaFeesTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos de gastos de cuota."
+        },
+        {
+          "Nombre": "totalOfTaxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de impuestos."
+        },
+        {
+          "Nombre": "totalOfUnpaidRoundOff",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de redondeo impago."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

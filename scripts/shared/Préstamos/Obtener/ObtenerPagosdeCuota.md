@@ -148,48 +148,54 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtPagoDeCuota": {
-        "fechaUltimoPago": "2018-11-05",
-        "detalle": {
-            "sBTDetallePagoCuota": [
-                {
-                    "otrosConceptos": "0.00",
-                    "capital": "0.00",
-                    "impuestos": "0.00",
-                    "intereses": "1287.08",
-                    "total": "1287.08",
-                    "fechaPago": "2018-11-05",
-                    "detalleConceptos": {
-                        "sBTConcepto": []
-                    },
-                    "seguros": "0.00",
-                    "comisiones": "0.00"
-                }
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPagoDeCuota": {
+    "fechaUltimoPago": "2018-11-05",
+    "detalle": {
+      "sBTDetallePagoCuota": [
+        {
+          "otrosConceptos": "0.00",
+          "capital": "0.00",
+          "impuestos": "0.00",
+          "intereses": "1287.08",
+          "total": "1287.08",
+          "fechaPago": "2018-11-05",
+          "detalleConceptos": {
+            "sBTConcepto": [
+              {
+                "concepto": "",
+                "texto": "",
+                "valor": 0
+              }
             ]
-        },
-        "importePago": "1287.08"
+          },
+          "seguros": "0.00",
+          "comisiones": "0.00"
+        }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "906",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerPagosCuota",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "13:56:38",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "importePago": "1287.08"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "906",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerPagosCuota",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "13:56:38",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -208,8 +214,11 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 detalle | [sBTDetallePagoCuota](#sbtdetallepagocuota) | Listado de pagos de una cuota. 
 fechaUltimoPago | Date | Fecha de último pago de la cuota. 
-importePago | Double | Importe pagado. 
- 
+importePago | Double | Importe pagado.
+:::
+
+::: details sBTDetallePagoCuota
+
 ### sBTDetallePagoCuota
 
 ::: center 
@@ -225,7 +234,10 @@ impuestos | Double | Impuestos de la cuota.
 intereses | Double | Intereses de la cuota. 
 otrosConceptos | Double | Importe otros conceptos. 
 seguros | Double | Seguros de la cuota. 
-total | Double | Total de la cuota. 
+total | Double | Total de la cuota.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -236,6 +248,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

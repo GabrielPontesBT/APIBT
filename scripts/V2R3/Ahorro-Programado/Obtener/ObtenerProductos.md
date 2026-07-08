@@ -81,6 +81,7 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -168,6 +169,7 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
@@ -183,7 +185,7 @@ Los campos del tipo de dato estructurado sBTProducto son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-productouid | Long | Identificador único de producto.  
+productoUId | Long | Identificador único de producto.  
 nombre | String | Nombre del producto.  
 moneda | String | Símbolo de la moneda.  
 papel | String | Símbolo del papel.  

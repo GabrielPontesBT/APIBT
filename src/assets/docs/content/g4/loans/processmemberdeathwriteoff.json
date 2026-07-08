@@ -1,0 +1,73 @@
+{
+  "slug": "loans/processmemberdeathwriteoff",
+  "pageTitle": "Process Member Death Write Off",
+  "description": "Método para quebranto por fallecimiento",
+  "pubName": "PublicLoans.processMemberDeathWriteOff",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0050",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "loanGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del préstamo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "deceasedDate",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de fallecimiento."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "movementGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del movimiento."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"E3ADC97E57DC5FDE4F408A70\"\n  },\n  \"groupId\": \"70\",\n  \"loanGUID\": \"7de60dc6-b377-4683-9a8d-95ce6c69df74\",\n  \"deceasedDate\": \"2027-07-30\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"E3ADC97E57DC5FDE4F408A70\"\n  },\n  \"groupId\": \"70\",\n  \"loanGUID\": \"7de60dc6-b377-4683-9a8d-95ce6c69df74\",\n  \"deceasedDate\": \"2027-07-30\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"E3ADC97E57DC5FDE4F408A70\"\n  },\n  \"movementGUID\": \"58cfb0f0-4922-4d38-8d76-3a72ba3aa9d0\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"18:50:57\",\n    \"Numero\": 13584292,\n    \"Servicio\": \"PublicLoans.processMemberDeathWriteOff\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"E3ADC97E57DC5FDE4F408A70\"\n  },\n  \"movementGUID\": \"58cfb0f0-4922-4d38-8d76-3a72ba3aa9d0\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"18:50:57\",\n    \"Numero\": 13584292,\n    \"Servicio\": \"PublicLoans.processMemberDeathWriteOff\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

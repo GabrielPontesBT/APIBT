@@ -323,6 +323,9 @@ Los campos del tipo de dato estructurado sBTEstadoCuentaDebito son los siguiente
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 movimientos | [sBTMovimientoDebito](#sbtmovimientodebito) | Listado de movimientos.
+:::
+
+::: details sBTMovimientoDebito
 
 ### sBTMovimientoDebito
 
@@ -339,6 +342,8 @@ hora | String | Hora de movimiento.
 importe | Double | Importe. 
 moneda | String | Moneda del movimiento. 
 red | String | Red por donde se realizó el movimiento. 
-referencia | String | Referencia. 
+referencia | String | Referencia.
 :::
+
 <!-- CIERRA SDT -->
+

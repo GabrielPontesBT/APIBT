@@ -35,7 +35,7 @@ operacionUId | Long | Identificador único de operación.
 clienteUId | Long | Identificador único de cliente.
 importe | Double | Importe a bloquear.
 fechaVencimiento | Date | Fecha vencimiento de bloqueo.
-motivo | String | Motivo del bloqueo.
+Motivo | String | Motivo del bloqueo.
 
 @tab Datos de Salida
 
@@ -81,7 +81,7 @@ Código | Descripción
          <bts:clienteUId>61</bts:clienteUId>
          <bts:importe>5</bts:importe>
          <bts:fechaVencimiento>2018-05-14</bts:fechaVencimiento>
-         <bts:motivo>Motivo Bloqueo 01</bts:motivo>
+         <bts:Motivo>Motivo Bloqueo 01</bts:Motivo>
       </bts:BTCuentasVista.BloquearSaldo>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -108,6 +108,7 @@ curl -X POST \
 	"fechaVencimiento": "2018-05-14",
 	"Motivo": "Motivo Bloqueo 02"	 
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -171,5 +172,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

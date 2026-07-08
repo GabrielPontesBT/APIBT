@@ -140,7 +140,6 @@ curl -X POST \
                   <fechaPago>2020-05-05</fechaPago>
                   <seguros>0.00</seguros>
                </sBTCuotaSimulacion>
-               ...
             </cronograma>
             <tasaEfectiva>0.000000</tasaEfectiva>
             <intereses>279.90</intereses>
@@ -178,65 +177,69 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Canal": "BTDIGITAL", 
-        "Requerimiento": "", 
-        "Usuario": "BANTOTAL", 
-        "Token": "324915377F955E77534D3E02", 
-        "Device": "AC" 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "",
+    "Usuario": "BANTOTAL",
+    "Token": "324915377F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtOferta": {
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     },
-	"sdtOferta": { 
-		"otrosConceptos" : {}, 
-		"fechaValor": "2019-11-25", 
-		"capital": "1000.00", 
-		"cronograma": { 
-		  "sBTCuotaSimulacion": [ 
-			{ 
-			  "otrosConceptos": "0.00", 
-			  "capital": "0.00", 
-			  "impuestos": "0.00", 
-			  "intereses": "0.00", 
-			  "concepto": "", 
-			  "tipoCuota": "", 
-			  "cuota": "268.67", 
-			  "fechaPago": "2020-05-05", 
-			  "seguros": "0.00" 
-			}, 
-			...
-		  ] 
-		}, 
-		"tasaEfectiva": "0.000000", 
-		"intereses": "279.90", 
-		"tasaNominalAnual": "23.000000", 
-		"totalPrestamo": "3223.97", 
-		"valorCuota": "268.67", 
-		"tasaEfectivaAnual": "25.590075", 
-		"operacionUId": "194", 
-		"tasa": "23.000000", 
-		"fechaPrimerPago": "2020-05-05", 
-		"idOperacionBT": "0010100000101000000000000000004200000000000418001", 
-		"fechaVencimiento": "2021-04-05", 
-		"producto": { 
-		  "moneda": "$", 
-		  "papel": "$", 
-		  "productoUId": "43", 
-		  "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF" 
-		}, 
-		"plazo": "497" 
-	},
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTPrestamos.ObtenerDetalleOferta", 
-        "Fecha": "2019-11-19", 
-        "Hora": "13:05:22", 
-        "Requerimiento": "", 
-        "Numero": 6924, 
-        "Estado": "OK" 
-    } 
+    "fechaValor": "2019-11-25",
+    "capital": "1000.00",
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "otrosConceptos": "0.00",
+          "capital": "0.00",
+          "impuestos": "0.00",
+          "intereses": "0.00",
+          "concepto": "",
+          "tipoCuota": "",
+          "cuota": "268.67",
+          "fechaPago": "2020-05-05",
+          "seguros": "0.00",
+          "interes": 0
+        }
+      ]
+    },
+    "tasaEfectiva": "0.000000",
+    "intereses": "279.90",
+    "tasaNominalAnual": "23.000000",
+    "totalPrestamo": "3223.97",
+    "valorCuota": "268.67",
+    "tasaEfectivaAnual": "25.590075",
+    "operacionUId": "194",
+    "tasa": "23.000000",
+    "fechaPrimerPago": "2020-05-05",
+    "idOperacionBT": "0010100000101000000000000000004200000000000418001",
+    "fechaVencimiento": "2021-04-05",
+    "producto": {
+      "moneda": "$",
+      "papel": "$",
+      "productoUId": "43",
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
+    },
+    "plazo": "497"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerDetalleOferta",
+    "Fecha": "2019-11-19",
+    "Hora": "13:05:22",
+    "Requerimiento": "",
+    "Numero": 6924,
+    "Estado": "OK"
+  }
 }
 ```
 :::
@@ -270,9 +273,11 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total del préstamo. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
 :::
- 
+
+::: details sBTConcepto
+
 ### sBTConcepto
 
 ::: center 
@@ -282,8 +287,10 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto. 
 texto | String | Texto. 
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -300,8 +307,10 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -313,17 +322,6 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
-
-### sBTConcepto
-
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+productoUId | Long | Identificador único de producto.
 :::
-<!-- CIERRA SDT -->
+

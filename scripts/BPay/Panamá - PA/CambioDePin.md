@@ -67,9 +67,9 @@ Código | Descripción
             <Requerimiento>1</Requerimiento>
             <Token>088459081EF05E4F9E3B2B7A</Token>
          </bts:Btinreq>
-         <bts:carId>16843331-08d3-4ed1-a101-0192df055e86</bts:carId>
-         <bts:pin>1234</bts:pin>
-      <bts:BTPayCaddy.CambioDePin>
+         <bts:CarID>16843331-08d3-4ed1-a101-0192df055e86</bts:CarID>
+         <bts:Pin>1234</bts:Pin>
+      </bts:BTPayCaddy.CambioDePin>
    </soapenv:Body>
 </soapenv:Envelope>
 ```

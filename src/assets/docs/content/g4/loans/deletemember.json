@@ -1,0 +1,82 @@
+{
+  "slug": "loans/deletemember",
+  "pageTitle": "Delete Member",
+  "description": "Método para eliminar un miembro de un grupo de créditos.",
+  "pubName": "PublicLoans.deleteMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0033",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el GUID de grupo.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 1,\n  \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 1,\n  \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"15:19:51\",\n    \"Numero\": 13544460,\n    \"Servicio\": \"PublicLoans.deleteMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"15:19:51\",\n    \"Numero\": 13544460,\n    \"Servicio\": \"PublicLoans.deleteMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

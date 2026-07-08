@@ -162,64 +162,79 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "120109606CD285A89A23FBEE",
-        "Device": "MC"
-    },
-    "sdtCuentasAAsociar": {
-        "sBTCuentaAAsociarTD": [
-            {
-                "operacionUId": 10212,
-                "producto": {
-                    "productoUId": 133,
-                    "nombre": "CUENTA CORRIENTE, GENÉRICA",
-                    "moneda": "$",
-                    "papel": ""
-                },
-                "sucursal": "Casa Matriz",
-                "subCuenta": ""
-            },
-            {
-                "operacionUId": 10213,
-                "producto": {
-                    "productoUId": 93,
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                    "moneda": "$",
-                    "papel": ""
-                },
-                "sucursal": "Casa Matriz",
-                "subCuenta": "PESOS"
-            },
-            {
-                "operacionUId": 10214,
-                "producto": {
-                    "productoUId": 93,
-                    "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
-                    "moneda": "$",
-                    "papel": ""
-                },
-                "sucursal": "Casa Matriz",
-                "subCuenta": "PESOS"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAAsociar",
-        "Fecha": "2021-11-30",
-        "Hora": "11:04:47",
-        "Requerimiento": 1,
-        "Numero": 8767,
-        "Estado": "OK"
-    }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "120109606CD285A89A23FBEE",
+    "Device": "MC"
+  },
+  "sdtCuentasAAsociar": {
+    "sBTCuentaAAsociarTD": [
+      {
+        "operacionUId": 10212,
+        "producto": {
+          "productoUId": 133,
+          "nombre": "CUENTA CORRIENTE, GENÉRICA",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "subCuenta": ""
+      },
+      {
+        "operacionUId": 10213,
+        "producto": {
+          "productoUId": 93,
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "subCuenta": "PESOS"
+      },
+      {
+        "operacionUId": 10214,
+        "producto": {
+          "productoUId": 93,
+          "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+          "moneda": "$",
+          "papel": "",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "subCuenta": "PESOS"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTTarjetasDeDebito.ObtenerCuentasAAsociar",
+    "Fecha": "2021-11-30",
+    "Hora": "11:04:47",
+    "Requerimiento": 1,
+    "Numero": 8767,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -238,8 +253,11 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
-subcuenta | String | Nombre de la cuenta. 
-sucursal | String | Sucursal de la cuenta. 
+subCuenta | String | Nombre de la cuenta. 
+sucursal | String | Sucursal de la cuenta.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -252,7 +270,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -265,4 +286,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

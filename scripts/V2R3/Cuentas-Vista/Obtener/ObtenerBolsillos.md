@@ -228,10 +228,10 @@ Los campos del tipo de dato estructurado sBTInfRBolsillo son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-estado | Byte | Estado. 
-nombreProducto | String | Nombre del producto. 
-operacionBolsilloUId | Long | Identificador único de la operación de bolsillo. 
-productoBolsilloId | Short | Identificador único del producto del bolsillo. 
-saldo | Double | Saldo. 
+Estado | Byte | Estado. 
+NombreProducto | String | Nombre del producto. 
+OperacionBolsilloUID | Long | Identificador único de la operación de bolsillo. 
+ProductoBolsilloId | Short | Identificador único del producto del bolsillo. 
+Saldo | Double | Saldo. 
 :::
 <!-- CIERRA SDT -->

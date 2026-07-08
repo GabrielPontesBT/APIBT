@@ -218,27 +218,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "numeroLote": 23411,
-    "logPrecancelacion": 22,
-    "Erroresnegocio":,
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.SolicitarPrecancelacion",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "numeroLote": 23411,
+  "logPrecancelacion": 22,
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SolicitarPrecancelacion",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

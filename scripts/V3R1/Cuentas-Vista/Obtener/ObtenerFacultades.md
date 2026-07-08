@@ -173,73 +173,99 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "INSTALADOR",
-        "Token": "30F74741A02C318CEFD55684",
-        "Device": "GL"
-    },
-    "sdtFacultades": {
-        "sBTFacultad": [
-            {
-                "grupos": "",
-                "firmantes": "",
-                "descripcion": "Firma de Cheques",
-                "tipo": "Categoría",
-                "codigo": 1
-            },
-            {
-                "grupos": {
-                    "sBTFacultadGrupo": {
-                        "moneda": "$",
-                        "codigoMoneda": 0,
-                        "vigenciaHasta": "2022-10-04",
-                        "monto": 99999990.00,
-                        "habilitado": "S",
-                        "firmantes": {
-                            "sBTFacultadFirmante": {
-                                "potestad": "Titular",
-                                "personaUId": 161,
-                                "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
-                                "categoria": ""
-                            }
-                        },
-                        "codigoPapel": 0,
-                        "papel": "$",
-                        "numero": 1,
-                        "vigenciaDesde": "2020-01-02"
-                    }
-                },
-                "firmantes": "",
-                "descripcion": "Retiro de cuentas vista",
-                "tipo": "Persona",
-                "codigo": 2
-            }
-        ]
-    },
-    "sdtFirmantes": {
-        "sBTFacultadFirmante": {
-            "potestad": "Titular",
-            "personaUId": 161,
-            "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
-            "categoria": ""
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "sdtFacultades": {
+    "sBTFacultad": [
+      {
+        "descripcion": "Firma de Cheques",
+        "tipo": "Categoría",
+        "codigo": 1,
+        "firmantes": {
+          "categoria": "",
+          "nombre": "",
+          "personaUId": 0,
+          "potestad": ""
+        },
+        "grupos": {
+          "codigoMoneda": 0,
+          "codigoPapel": 0,
+          "firmantes": {
+            "categoria": "",
+            "nombre": "",
+            "personaUId": 0,
+            "potestad": ""
+          },
+          "habilitado": "",
+          "moneda": "",
+          "monto": 0,
+          "numero": 0,
+          "papel": "",
+          "vigenciaDesde": "",
+          "vigenciaHasta": ""
         }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTCuentasVista.ObtenerFacultades",
-        "Fecha": "2022-11-29",
-        "Hora": "10:23:37",
-        "Requerimiento": 1,
-        "Numero": 486,
-        "Estado": "OK"
+      },
+      {
+        "grupos": {
+          "sBTFacultadGrupo": {
+            "moneda": "$",
+            "codigoMoneda": 0,
+            "vigenciaHasta": "2022-10-04",
+            "monto": 99999990,
+            "habilitado": "S",
+            "firmantes": {
+              "sBTFacultadFirmante": {
+                "potestad": "Titular",
+                "personaUId": 161,
+                "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
+                "categoria": ""
+              }
+            },
+            "codigoPapel": 0,
+            "papel": "$",
+            "numero": 1,
+            "vigenciaDesde": "2020-01-02"
+          }
+        },
+        "descripcion": "Retiro de cuentas vista",
+        "tipo": "Persona",
+        "codigo": 2,
+        "firmantes": {
+          "categoria": "",
+          "nombre": "",
+          "personaUId": 0,
+          "potestad": ""
+        }
+      }
+    ]
+  },
+  "sdtFirmantes": {
+    "sBTFacultadFirmante": {
+      "potestad": "Titular",
+      "personaUId": 161,
+      "nombre": "AZQUEZ SZENTANDRASI LEJANDRO",
+      "categoria": ""
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTCuentasVista.ObtenerFacultades",
+    "Fecha": "2022-11-29",
+    "Hora": "10:23:37",
+    "Requerimiento": 1,
+    "Numero": 486,
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -260,7 +286,10 @@ codigo | Short | Código.
 descripcion | String | Descripción. 
 firmantes | [sBTFacultadFirmante](#sbtfacultadfirmante) | Listado de firmantes de la facultad. 
 grupos | [sBTFacultadGrupo](#sbtfacultadgrupo) | Listado de grupos de la facultad. 
-tipo | String | Tipo. 
+tipo | String | Tipo.
+:::
+
+::: details sBTFacultadGrupo
 
 ### sBTFacultadGrupo
 
@@ -278,7 +307,7 @@ monto | Long | Monto.
 numero | Short | Número de grupo. 
 papel | String | Papel. 
 vigenciaDesde | Date | Fecha de vigencia desde. 
-vigenciaHasta | Date | Fecha de vigencia hasta. 
+vigenciaHasta | Date | Fecha de vigencia hasta.
 :::
 
 ::: details sBTFacultadFirmante

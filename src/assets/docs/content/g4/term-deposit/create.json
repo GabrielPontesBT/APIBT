@@ -6,9 +6,14 @@
   "modulo": "TermDeposit",
   "programa": "PublicAPI.BTTDPA0002",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "simulationGUID",
@@ -31,6 +36,7 @@
       "Comentarios": "GUID (identificador único global) de la cuenta de destino del pago periódico."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "expirationInstruction",
@@ -43,6 +49,7 @@
       "Comentarios": "Identificador de la instrucción de pago periódico."
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "termDepositGUID",
@@ -148,12 +155,26 @@
   "errorsNote": "",
   "examples": {
     "invocation": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"simulationGUID\": \"3f47a1b2-8c5e-4d9a-b6f1-2e8d3c7a4051\",\r\n  \"counterpartyGUID\": \"7a2b9c4d-1e6f-4830-a5d2-9b3c8e1f6742\",\r\n  \"expirationAccountGUID\": \"1d5e8f2a-3b7c-4960-8e1d-5a2f9b4c7d83\",\r\n  \"recurringPaymentAccountGUID\": \"\",\r\n  \"expirationInstruction\": 1,\r\n  \"recurringPaymentInstruction\": \r\n}'",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"simulationGUID\": \"3f47a1b2-8c5e-4d9a-b6f1-2e8d3c7a4051\",\n  \"counterpartyGUID\": \"7a2b9c4d-1e6f-4830-a5d2-9b3c8e1f6742\",\n  \"expirationAccountGUID\": \"1d5e8f2a-3b7c-4960-8e1d-5a2f9b4c7d83\",\n  \"recurringPaymentAccountGUID\": \"\",\n  \"expirationInstruction\": 1,\n  \"recurringPaymentInstruction\": {}\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"simulationGUID\": \"3f47a1b2-8c5e-4d9a-b6f1-2e8d3c7a4051\",\n  \"counterpartyGUID\": \"7a2b9c4d-1e6f-4830-a5d2-9b3c8e1f6742\",\n  \"expirationAccountGUID\": \"1d5e8f2a-3b7c-4960-8e1d-5a2f9b4c7d83\",\n  \"recurringPaymentAccountGUID\": \"\",\n  \"expirationInstruction\": 1,\n  \"recurringPaymentInstruction\": {}\n}"
+        }
+      ]
     },
     "response": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"termDepositGUID\": \"2e8b5c1a-7d3f-4a92-b6e4-1c9d7f5a8b36\",\r\n  \"movementGUID\": \"6f1d4b8e-2a5c-4739-9b3e-4d7c1f8a5b92\",\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-15\",\r\n    \"Hora\": \"14:07:38\",\r\n    \"Numero\": 13472661,\r\n    \"Servicio\": \"PublicTermDeposit.create\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\r\n  },\r\n  \"termDepositGUID\": \"2e8b5c1a-7d3f-4a92-b6e4-1c9d7f5a8b36\",\r\n  \"movementGUID\": \"6f1d4b8e-2a5c-4739-9b3e-4d7c1f8a5b92\",\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-15\",\r\n    \"Hora\": \"14:07:38\",\r\n    \"Numero\": 13472661,\r\n    \"Servicio\": \"PublicTermDeposit.create\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

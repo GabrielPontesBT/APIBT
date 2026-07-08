@@ -79,21 +79,16 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro_v1?ObtenerDebitoAutomaticoDePrestamo' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 78klf1dc-e332-95b4-1dl8-23ba149h2471' \
-  -d '{
-	"Btinreq": {
-		"bts:Device": "AS",
-      "bts:Requerimiento": {},
-      "bts:Canal": "BTDIGITAL",
-      "bts:Usuario": "INSTALADOR",
-      "bts:Token": "jl1dv2s9advF271A85B22FCH"
-	},
-   "bts:operacionUId": "83"
-}'
+{
+  "Btinreq": {
+    "Device": "AS",
+    "Requerimiento": {},
+    "Canal": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Token": "jl1dv2s9advF271A85B22FCH"
+  },
+  "operacionUId": "83"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -183,38 +178,38 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"bts:Btinreq": {
-      "bts:Device": "AS",
-      "bts:Requerimiento": {},
-      "bts:Canal": "BTDIGITAL",
-      "bts:Usuario": "INSTALADOR",
-      "bts:Token": "jl1dv2s9advF271A85B22FCH"
-	},
-   "sdtCobroPrestamo": {
-      "sBTCobroPrestamo": [
+{
+  "Btinreq": {
+    "Device": "AS",
+    "Requerimiento": {},
+    "Canal": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Token": "jl1dv2s9advF271A85B22FCH"
+  },
+  "sdtCobroPrestamo": {
+    "sBTCobroPrestamo": [
       {
-       "operacionUId": "520",
-       "cobroParcial": "S",
-       "admiteSobregiro": "N"
+        "operacionUId": "520",
+        "cobroParcial": "S",
+        "admiteSobregiro": "N"
       },
       {
-       "operacionUId": "521",
-       "cobroParcial": "S",
-       "admiteSobregiro": "N"
+        "operacionUId": "521",
+        "cobroParcial": "S",
+        "admiteSobregiro": "N"
       }
-      ]
-   },
-    "Btoutreq": {
-         "Numero": "15848",
-         "Estado": "OK",
-         "Servicio": "BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo",
-         "Requerimiento": "",
-         "Fecha": "2025-11-25",
-         "Hora": "09:17:26",
-         "Canal": "BTDIGITAL"
-    }
-}'
+    ]
+  },
+  "Btoutreq": {
+    "Numero": "15848",
+    "Estado": "OK",
+    "Servicio": "BTCuentasDeAhorro.ObtenerDebitoAutomaticoDePrestamo",
+    "Requerimiento": "",
+    "Fecha": "2025-11-25",
+    "Hora": "09:17:26",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -57,7 +57,7 @@ Código | Descripción
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      </bts:BTPayCaddy.DesbloqueoTarjeta>
+      <bts:BTPayCaddy.DesbloqueoTarjeta>
          <bts:Btinreq>
             <Canal>BTINTERNO</Canal>
             <Usuario>INSTALADOR</Usuario>
@@ -65,7 +65,7 @@ Código | Descripción
             <Requerimiento>1</Requerimiento>
             <Token>088459081EF05E4F9E3B2B7A</Token>
          </bts:Btinreq>
-         <bts:carId>16843331-08d3-4ed1-a101-0192df055e86</bts:carId>
+         <bts:CarID>16843331-08d3-4ed1-a101-0192df055e86</bts:CarID>
       </bts:BTPayCaddy.DesbloqueoTarjeta>
    </soapenv:Body>
 </soapenv:Envelope>

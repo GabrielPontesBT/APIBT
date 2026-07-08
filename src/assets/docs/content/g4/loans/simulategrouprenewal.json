@@ -1,0 +1,264 @@
+{
+  "slug": "loans/simulategrouprenewal",
+  "pageTitle": "Simulate Group Renewal",
+  "description": "Método para renovar un préstamo grupal",
+  "pubName": "PublicLoans.simulateGroupRenewal",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0046",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "simulationData",
+      "Tipo": "<a href=\"#sdtsbtmggrouploansimulation\">SdtsBTMGGroupLoanSimulation</a>",
+      "Comentarios": "Datos de entrada para la simulación."
+    },
+    {
+      "Nombre": "renewingMembers",
+      "Tipo": "<a href=\"#sdtsbtmgmembersimulation\">SdtsBTMGMemberSimulation</a>",
+      "Comentarios": "Listado de integrantes que renuevan."
+    },
+    {
+      "Nombre": "newMembers",
+      "Tipo": "<a href=\"#sdtsbtmgmembersimulationnew\">SdtsBTMGMemberSimulationNew</a>",
+      "Comentarios": "Listado de nuevos integrantes."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "groupLoan",
+      "Tipo": "<a href=\"#sdtsbtmgloangroupcycleout\">SdtsBTMGLoanGroupCycleOut</a>",
+      "Comentarios": "Datos del crédito grupal simulado."
+    },
+    {
+      "Nombre": "members",
+      "Tipo": "<a href=\"#sdtsbtmgmemberloansimulationout\">SdtsBTMGMemberLoanSimulationOut</a>",
+      "Comentarios": "Listado de integrantes del crédito grupal."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": 4,\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\",\n  \"simulationData\": {\n    \"amortizationTypeId\": \"3\",\n    \"clearanceTypeId\": \"1\",\n    \"firstPaymentDate\": \"\",\n    \"installmentPeriodicity\": 30,\n    \"numberOfInstallments\": 10,\n    \"rateTypeId\": \"1\",\n    \"valueDate\": \"2027-09-21\"\n  },\n  \"renewingMembers\": {\n    \"renewingMember\": [\n      {\n        \"counterpartyGUID\": \"46a24688-e781-4b26-af46-989275e55266\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      },\n\t  {\n        \"counterpartyGUID\": \"72888c65-1d41-4eaf-97e3-620ff1c2b538\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      },\n\t  {\n        \"counterpartyGUID\": \"2eb7f4a7-88df-4601-a5a8-5efc0760a2d8\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      }\n    ]\n  },\n  \"newMembers\": {\n    \"newMember\": [\n      {\n        \"counterpartyGUID\": \"88c8643e-d0bf-45d6-a919-547812e1bb6a\",\n        \"memberTypeId\": \"3\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 12000\n      }\n    ]\n  }\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": 4,\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\",\n  \"simulationData\": {\n    \"amortizationTypeId\": \"3\",\n    \"clearanceTypeId\": \"1\",\n    \"firstPaymentDate\": \"\",\n    \"installmentPeriodicity\": 30,\n    \"numberOfInstallments\": 10,\n    \"rateTypeId\": \"1\",\n    \"valueDate\": \"2027-09-21\"\n  },\n  \"renewingMembers\": {\n    \"renewingMember\": [\n      {\n        \"counterpartyGUID\": \"46a24688-e781-4b26-af46-989275e55266\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      },\n\t  {\n        \"counterpartyGUID\": \"72888c65-1d41-4eaf-97e3-620ff1c2b538\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      },\n\t  {\n        \"counterpartyGUID\": \"2eb7f4a7-88df-4601-a5a8-5efc0760a2d8\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 22000\n      }\n    ]\n  },\n  \"newMembers\": {\n    \"newMember\": [\n      {\n        \"counterpartyGUID\": \"88c8643e-d0bf-45d6-a919-547812e1bb6a\",\n        \"memberTypeId\": \"3\",\n        \"rate\": 15,\n        \"requestedLoanAmount\": 12000\n      }\n    ]\n  }\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupLoan\": {\n    \"cycleId\": 2,\n    \"expirationDate\": \"2028-07-21\",\n    \"groupId\": 4,\n    \"installmentAmount\": 8534,\n    \"memberCount\": 4,\n    \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\",\n    \"rate\": 15,\n    \"term\": 300,\n    \"totalFinancialCost\": 22.01,\n    \"totalOfCapital\": 78000\n  },\n  \"members\": {\n    \"member\": [\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"46a24688-e781-4b26-af46-989275e55266\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"b24e7ab4-5db7-46e5-9c6d-bee8d6595778\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"72888c65-1d41-4eaf-97e3-620ff1c2b538\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"acf7f61e-20ea-4f05-bfe6-cabe8e01354b\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"2eb7f4a7-88df-4601-a5a8-5efc0760a2d8\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"bc8ab99b-d418-40ab-89ba-d5b459ccc5ed\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 12000,\n        \"counterpartyGUID\": \"88c8643e-d0bf-45d6-a919-547812e1bb6a\",\n        \"disbursementAmount\": 12000,\n        \"installmentAmount\": 1313,\n        \"simulationGUID\": \"56331d88-9b07-4b99-b479-06209db760f0\",\n        \"totalFinancialCost\": 22.01\n      }\n    ],\n    \"capital\": \"\",\n    \"counterpartyGUID\": \"\",\n    \"disbursementAmount\": \"\",\n    \"installmentAmount\": \"\",\n    \"simulationGUID\": \"\",\n    \"totalFinancialCost\": \"\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.simulateGroupRenewal\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupLoan\": {\n    \"cycleId\": 2,\n    \"expirationDate\": \"2028-07-21\",\n    \"groupId\": 4,\n    \"installmentAmount\": 8534,\n    \"memberCount\": 4,\n    \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\",\n    \"rate\": 15,\n    \"term\": 300,\n    \"totalFinancialCost\": 22.01,\n    \"totalOfCapital\": 78000\n  },\n  \"members\": {\n    \"member\": [\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"46a24688-e781-4b26-af46-989275e55266\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"b24e7ab4-5db7-46e5-9c6d-bee8d6595778\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"72888c65-1d41-4eaf-97e3-620ff1c2b538\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"acf7f61e-20ea-4f05-bfe6-cabe8e01354b\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 22000,\n        \"counterpartyGUID\": \"2eb7f4a7-88df-4601-a5a8-5efc0760a2d8\",\n        \"disbursementAmount\": 606.11,\n        \"installmentAmount\": 2407,\n        \"simulationGUID\": \"bc8ab99b-d418-40ab-89ba-d5b459ccc5ed\",\n        \"totalFinancialCost\": 22.01\n      },\n      {\n        \"capital\": 12000,\n        \"counterpartyGUID\": \"88c8643e-d0bf-45d6-a919-547812e1bb6a\",\n        \"disbursementAmount\": 12000,\n        \"installmentAmount\": 1313,\n        \"simulationGUID\": \"56331d88-9b07-4b99-b479-06209db760f0\",\n        \"totalFinancialCost\": 22.01\n      }\n    ],\n    \"capital\": \"\",\n    \"counterpartyGUID\": \"\",\n    \"disbursementAmount\": \"\",\n    \"installmentAmount\": \"\",\n    \"simulationGUID\": \"\",\n    \"totalFinancialCost\": \"\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.simulateGroupRenewal\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGroupLoanSimulation",
+      "fields": [
+        {
+          "Nombre": "amortizationTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de amortización."
+        },
+        {
+          "Nombre": "clearanceTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de despeje."
+        },
+        {
+          "Nombre": "firstPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del primer pago."
+        },
+        {
+          "Nombre": "installmentPeriodicity",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Periodicidad de cuotas."
+        },
+        {
+          "Nombre": "numberOfInstallments",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Número de cuotas."
+        },
+        {
+          "Nombre": "rateTypeId",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de tasa."
+        },
+        {
+          "Nombre": "valueDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberSimulation",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "requestedLoanAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de préstamo solicitado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberSimulationNew",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "memberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "requestedLoanAmount",
+          "Tipo": "Double <strong>(Length: 18)</strong>",
+          "Comentarios": "Monto de préstamo solicitado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGLoanGroupCycleOut",
+      "fields": [
+        {
+          "Nombre": "cycleId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de ciclo."
+        },
+        {
+          "Nombre": "expirationDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "groupId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Monto de cuota."
+        },
+        {
+          "Nombre": "memberCount",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Cantidad de miembros."
+        },
+        {
+          "Nombre": "productGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "Identificador único global (GUID) del producto."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.2)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "totalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.2)</strong>",
+          "Comentarios": "Costo financiero total."
+        },
+        {
+          "Nombre": "totalOfCapital",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Total de capital."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberLoanSimulationOut",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "disbursementAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de desembolso."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de cuota."
+        },
+        {
+          "Nombre": "simulationGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la simulación."
+        },
+        {
+          "Nombre": "totalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Costo financiero total."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

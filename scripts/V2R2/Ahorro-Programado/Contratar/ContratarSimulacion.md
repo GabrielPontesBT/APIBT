@@ -72,10 +72,10 @@ Código | Descripción
          </bts:Btinreq>
          <bts:sdtDatos>
             <bts:simulacionId>741</bts:simulacionId>
-            <bts:cuentaDestinoUid>661</bts:cuentaDestinoUid>
+            <bts:cuentaDestinoUId>661</bts:cuentaDestinoUId>
             <bts:motivoAhorro>Prueba</bts:motivoAhorro>
-            <bts:cuentaOrigenUid>661</bts:cuentaOrigenUid>
-            <bts:clienteUid>61</bts:clienteUid>
+            <bts:cuentaOrigenUId>661</bts:cuentaOrigenUId>
+            <bts:clienteUId>61</bts:clienteUId>
          </bts:sdtDatos>
       </bts:BTAhorroProgramado.ContratarSimulacion>
    </soapenv:Body>
@@ -99,10 +99,10 @@ curl -X POST \
         },
         "sdtDatos": {
           "simulacionId": 741,
-          "cuentaDestinoUid": 661,
+          "cuentaDestinoUId": 661,
           "motivoAhorro": "Prueba",
-          "cuentaOrigenUid": 661,
-          "clienteUid": 61
+          "cuentaOrigenUId": 661,
+          "clienteUId": 61
         }
     }'
 ```
@@ -179,11 +179,11 @@ Los campos del tipo de dato estructurado sBTCrearSolicitudAhorro son los siguien
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-clienteuid | Long | Identificador de cliente.  
-simulacionid | Long | Identificador de simulación.  
-cuentaorigenuid | Long | Identificador de cuenta origen.  
-cuentadestinouid | Long | Identificador de cuenta destino.  
-motivoahorro | String | Motivo de ahorro.  
+clienteUId | Long | Identificador de cliente.  
+simulacionId | Long | Identificador de simulación.  
+cuentaOrigenUId | Long | Identificador de cuenta origen.  
+cuentaDestinoUId | Long | Identificador de cuenta destino.  
+motivoAhorro | String | Motivo de ahorro.  
 
 :::
 <!-- CIERRA SDT -->

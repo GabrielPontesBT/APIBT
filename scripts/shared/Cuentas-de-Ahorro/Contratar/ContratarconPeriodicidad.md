@@ -97,6 +97,7 @@ Código | Descripción
     "nombreSubcuenta": "Caja de Ahorro",
     "periodoAcreditacion": "1"
 }
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -156,5 +157,6 @@ Código | Descripción
         "Estado": "OK"
     }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

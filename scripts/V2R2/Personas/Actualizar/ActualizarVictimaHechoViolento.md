@@ -105,34 +105,34 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarVictimaHechoViolento \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "42",
-	"esVictima": "S",
-	"sdtVictimaHechoViolento": {
-	  "entidadId": "3",
-	  "inspeccionPolicia": "Golpes",
-	  "sitio": "Casa",
-	  "municipioId": "421",
-	  "tipoId": "3",
-	  "vereda": "Av Italia",
-	  "fechaCertificacion": "2021-10-20",
-	  "fechaVencimiento": "2022-08-20",
-	  "corregimiento": "No tiene",
-	  "departamentoId": "8",
-	  "fechaHecho": "2021-06-20"
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": "42",
+  "esVictima": "S",
+  "sdtVictimaHechoViolento": {
+    "entidadId": "3",
+    "inspeccionPolicia": "Golpes",
+    "sitio": "Casa",
+    "municipioId": "421",
+    "tipoId": "3",
+    "vereda": "Av Italia",
+    "fechaCertificacion": "2021-10-20",
+    "fechaVencimiento": "2022-08-20",
+    "corregimiento": "No tiene",
+    "departamentoId": "8",
+    "fechaHecho": "2021-06-20",
+    "departamento": "",
+    "entidad": "",
+    "municipio": "",
+    "tipo": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

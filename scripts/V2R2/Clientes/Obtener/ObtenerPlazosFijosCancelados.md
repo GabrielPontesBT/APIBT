@@ -175,52 +175,57 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosPlazoFijoCancelados": {
-		"SdtsBTProductoPlazoFijoCancelado": {
-		  "operacionUId": "73",
-		  "idOperacionFmt": "0000000108_00000",
-		  "idOperacionBT": "00100102200000000000000029000000000108001",
-		  "producto": {
-			"productoUId": "5",
-			"nombre": "DPF Intransferible Mda. Nac.",
-			"moneda": "$",
-			"papel": ""
-		  },
-		  "sucursal": "Casa Matriz",
-		  "fechaAlta": "2016-10-26",
-		  "fechaVencimiento": "2016-10-26",
-		  "capital": "10000.00",
-		  "intereses": "0.00",
-		  "impuestos": "0.00",
-		  "instruccion": "Cancelar y Acreditar al vto.",
-		  "instruccionCod": "2",
-		  "tasaOriginal": "2.750000",
-		  "tasaFinal": "2.750000",
-		  "tipoTasa": "",
-		  "plazo": "0"
-		}
-	},
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "784",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerPlazosFijosCancelados",
-        "Fecha": "2017-12-15",
-        "Requerimiento": "",
-        "Hora": "13:50:44",
-        "Canal": "BTDIGITAL"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosPlazoFijoCancelados": {
+    "SdtsBTProductoPlazoFijoCancelado": {
+      "operacionUId": "73",
+      "idOperacionFmt": "0000000108_00000",
+      "idOperacionBT": "00100102200000000000000029000000000108001",
+      "producto": {
+        "productoUId": "5",
+        "nombre": "DPF Intransferible Mda. Nac.",
+        "moneda": "$",
+        "papel": "",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      "sucursal": "Casa Matriz",
+      "fechaAlta": "2016-10-26",
+      "fechaVencimiento": "2016-10-26",
+      "capital": "10000.00",
+      "intereses": "0.00",
+      "impuestos": "0.00",
+      "instruccion": "Cancelar y Acreditar al vto.",
+      "instruccionCod": "2",
+      "tasaOriginal": "2.750000",
+      "tasaFinal": "2.750000",
+      "tipoTasa": "",
+      "plazo": "0"
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "784",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerPlazosFijosCancelados",
+    "Fecha": "2017-12-15",
+    "Requerimiento": "",
+    "Hora": "13:50:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -252,8 +257,11 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 sucursal | String | Nombre de la sucursal. 
 tasaFinal | Double | Tasa final del depósito. 
 tasaOriginal | Double |	Tasa original del depósito. 
-tipoTasa | String |	Descripción del tipo de tasa. 
- 
+tipoTasa | String |	Descripción del tipo de tasa.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -265,7 +273,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -278,4 +289,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

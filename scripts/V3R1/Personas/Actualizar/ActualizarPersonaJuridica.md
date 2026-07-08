@@ -126,6 +126,41 @@ Código | Descripción
             <bts:correoElectronico>AV@GMAIL.COM</bts:correoElectronico>
             <bts:telefonoFijo>3213342222</bts:telefonoFijo>
             <bts:piso>123</bts:piso>
+            <datosAdicionales>
+               <clave></clave>
+               <valor></valor>
+            </datosAdicionales>
+            <domicilios>
+               <agrupador1></agrupador1>
+               <agrupador1Id>0</agrupador1Id>
+               <agrupador2></agrupador2>
+               <agrupador2Id>0</agrupador2Id>
+               <agrupador3></agrupador3>
+               <agrupador3Id>0</agrupador3Id>
+               <agrupador4></agrupador4>
+               <agrupador4Id>0</agrupador4Id>
+               <agrupador5></agrupador5>
+               <agrupador5Id>0</agrupador5Id>
+               <barrio></barrio>
+               <barrioId>0</barrioId>
+               <codigoPostal></codigoPostal>
+               <colonia></colonia>
+               <coloniaId>0</coloniaId>
+               <departamento></departamento>
+               <departamentoId>0</departamentoId>
+               <detalleUbicacion></detalleUbicacion>
+               <direccion></direccion>
+               <localidad></localidad>
+               <localidadId>0</localidadId>
+               <pais></pais>
+               <paisId>0</paisId>
+               <tipoDomicilio></tipoDomicilio>
+               <tipoDomicilioId>0</tipoDomicilioId>
+               <tipoVivienda></tipoVivienda>
+               <tipoViviendaId></tipoViviendaId>
+               <ubicacionDesde></ubicacionDesde>
+            </domicilios>
+            <telefonoCelular></telefonoCelular>
          </bts:sdtPersonaJuridica>
       </bts:BTPersonas.ActualizarPersonaJuridica>
    </soapenv:Body>
@@ -134,54 +169,84 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarPersonaJuridica' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-   "Btinreq": {
-   "Canal": "BTDIGITAL",
-   "Requerimiento": 1,
-   "Usuario": "IN",
-   "Token": "247d9cc0aD285A89A23FBE",
-   "Device": "MC"
-   },
-   "personaUId": 103,
-    "sdtPersonaJuridica": {
-        "nroDocumento": "219999990016",
-        "fechaExpiracion": "2030-31-31",
-        "numeroPuerta": "1",
-        "nombreReducido": "prueba",
-        "paisDomicilio": "",
-        "razonSocial": "EMPRESA",
-        "departamento": "",
-        "nroRegistro": "",
-        "naturalezaJuridica": "1",
-        "barrio": "1",
-        "apartamento": "",
-        "tipoDocumentoId": 2,
-        "tipoActividadId": 1,
-        "fechaConstitucion": "2020-01-01",
-        "paisId": 845,
-        "actividad": "",
-        "paisDomicilioId": 845,
-        "pais": "",
-        "codigoPostal": "91000",
-        "tipoActividad": "",
-        "barrioId": 1,
-        "localidad": "",
-        "localidadId": 1008,
-        "actividadId": 1111,
-        "calle": "1",
-        "tipoDocumento": "2",
-        "naturalezaJuridicaId": 1,
-        "departamentoId": 2,
-        "correoElectronico": "AV@GMAIL.COM",
-        "telefonoFijo": "3213342222",
-        "piso": "123"
-    }
-}''
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "IN",
+    "Token": "247d9cc0aD285A89A23FBE",
+    "Device": "MC"
+  },
+  "personaUId": 103,
+  "sdtPersonaJuridica": {
+    "nroDocumento": "219999990016",
+    "fechaExpiracion": "2030-31-31",
+    "numeroPuerta": "1",
+    "nombreReducido": "prueba",
+    "paisDomicilio": "",
+    "razonSocial": "EMPRESA",
+    "departamento": "",
+    "nroRegistro": "",
+    "naturalezaJuridica": "1",
+    "barrio": "1",
+    "apartamento": "",
+    "tipoDocumentoId": 2,
+    "tipoActividadId": 1,
+    "fechaConstitucion": "2020-01-01",
+    "paisId": 845,
+    "actividad": "",
+    "paisDomicilioId": 845,
+    "pais": "",
+    "codigoPostal": "91000",
+    "tipoActividad": "",
+    "barrioId": 1,
+    "localidad": "",
+    "localidadId": 1008,
+    "actividadId": 1111,
+    "calle": "1",
+    "tipoDocumento": "2",
+    "naturalezaJuridicaId": 1,
+    "departamentoId": 2,
+    "correoElectronico": "AV@GMAIL.COM",
+    "telefonoFijo": "3213342222",
+    "piso": "123",
+    "datosAdicionales": {
+      "clave": "",
+      "valor": ""
+    },
+    "domicilios": {
+      "agrupador1": "",
+      "agrupador1Id": 0,
+      "agrupador2": "",
+      "agrupador2Id": 0,
+      "agrupador3": "",
+      "agrupador3Id": 0,
+      "agrupador4": "",
+      "agrupador4Id": 0,
+      "agrupador5": "",
+      "agrupador5Id": 0,
+      "barrio": "",
+      "barrioId": 0,
+      "codigoPostal": "",
+      "colonia": "",
+      "coloniaId": 0,
+      "departamento": "",
+      "departamentoId": 0,
+      "detalleUbicacion": "",
+      "direccion": "",
+      "localidad": "",
+      "localidadId": 0,
+      "pais": "",
+      "paisId": 0,
+      "tipoDomicilio": "",
+      "tipoDomicilioId": 0,
+      "tipoVivienda": "",
+      "tipoViviendaId": "",
+      "ubicacionDesde": ""
+    },
+    "telefonoCelular": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -275,6 +340,9 @@ tipoActividad | String | Nombre de tipo de actividad.
 tipoActividadId | Long | Identificador de tipo de actividad.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -311,6 +379,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -322,4 +393,6 @@ Nombre | Tipo | Comentarios
 clave | String | Identificador de información adicional.
 valor | String | Valor de información adicional.
 :::
+
 <!-- CIERRA SDT -->
+

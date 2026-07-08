@@ -91,6 +91,7 @@ curl -X POST \
 	},
    "especie": "50"
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -150,5 +151,6 @@ curl -X POST \
       "Canal": "BTDIGITAL"
    }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

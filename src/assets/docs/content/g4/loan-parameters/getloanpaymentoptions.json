@@ -1,0 +1,98 @@
+{
+  "slug": "loan-parameters/getloanpaymentoptions",
+  "pageTitle": "Get Loan Payment Options",
+  "description": "Método para obtener un listado de las opciones de cobro.",
+  "pubName": "PublicLoanParameters.getLoanPaymentOptions",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0024",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "paymentOptions",
+      "Tipo": "<a href=\"#sdtsbtloandisbursementoption\">SdtsBTLoanDisbursementOption</a>",
+      "Comentarios": "Listado de opciones de cobro."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"4DA0C1E4009B6706B0882690\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"4DA0C1E4009B6706B0882690\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"4DA0C1E4009B6706B0882690\"\n  },\n  \"paymentOptions\": {\n    \"paymentOption\": [\n      {\n        \"optionId\": 15,\n        \"description\": \"CAJA DE AHORROS PRODUCTO (COMÚN)\",\n        \"asksSavingAccount\": true,\n        \"asksBranch\": false,\n        \"asksCurrency\": false,\n        \"asksCounterparty\": false\n      },\n      {\n        \"optionId\": 65,\n        \"description\": \"CTAS. POR PAGAR - GRUPALES\",\n        \"asksSavingAccount\": true,\n        \"asksBranch\": false,\n        \"asksCurrency\": false,\n        \"asksCounterparty\": false\n      }\n    ],\n    \"asksBranch\": false,\n    \"asksCounterparty\": false,\n    \"asksCurrency\": false,\n    \"asksSavingAccount\": false,\n    \"description\": \"\",\n    \"optionId\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:33:11\",\n    \"Numero\": 13584898,\n    \"Servicio\": \"PublicLoanParameters.getLoanPaymentOptions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"4DA0C1E4009B6706B0882690\"\n  },\n  \"paymentOptions\": {\n    \"paymentOption\": [\n      {\n        \"optionId\": 15,\n        \"description\": \"CAJA DE AHORROS PRODUCTO (COMÚN)\",\n        \"asksSavingAccount\": true,\n        \"asksBranch\": false,\n        \"asksCurrency\": false,\n        \"asksCounterparty\": false\n      },\n      {\n        \"optionId\": 65,\n        \"description\": \"CTAS. POR PAGAR - GRUPALES\",\n        \"asksSavingAccount\": true,\n        \"asksBranch\": false,\n        \"asksCurrency\": false,\n        \"asksCounterparty\": false\n      }\n    ],\n    \"asksBranch\": false,\n    \"asksCounterparty\": false,\n    \"asksCurrency\": false,\n    \"asksSavingAccount\": false,\n    \"description\": \"\",\n    \"optionId\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:33:11\",\n    \"Numero\": 13584898,\n    \"Servicio\": \"PublicLoanParameters.getLoanPaymentOptions\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLoanDisbursementOption",
+      "fields": [
+        {
+          "Nombre": "asksBranch",
+          "Tipo": "Boolean",
+          "Comentarios": "Requiere ingresar sucursal."
+        },
+        {
+          "Nombre": "asksCounterparty",
+          "Tipo": "Boolean",
+          "Comentarios": "Requiere ingresar contraparte."
+        },
+        {
+          "Nombre": "asksCurrency",
+          "Tipo": "Boolean",
+          "Comentarios": "Requiere ingresar moneda."
+        },
+        {
+          "Nombre": "asksSavingAccount",
+          "Tipo": "Boolean",
+          "Comentarios": "Requiere ingresar cuenta vista."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de la opción de desembolso."
+        },
+        {
+          "Nombre": "optionId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Identificador."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "loan-parameters/getgroupmember",
+  "pageTitle": "Get Group Member",
+  "description": "Método para obtener la cantidad de integrantes permitidos en un crédito grupal.",
+  "pubName": "PublicLoanParameters.getGroupMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0025",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "cycleId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador del ciclo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "minimum",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
+      "Comentarios": "Número mínimo de integrantes."
+    },
+    {
+      "Nombre": "maximum",
+      "Tipo": "Short <strong>(Length: 3)</strong>",
+      "Comentarios": "Número máximo de integrantes."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"cycleId\": \"1\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"cycleId\": \"1\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 3,\n  \"maximum\": 999,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:26\",\n    \"Numero\": 13568704,\n    \"Servicio\": \"PublicLoanParameters.getGroupMember\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 3,\n  \"maximum\": 999,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:35:26\",\n    \"Numero\": 13568704,\n    \"Servicio\": \"PublicLoanParameters.getGroupMember\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

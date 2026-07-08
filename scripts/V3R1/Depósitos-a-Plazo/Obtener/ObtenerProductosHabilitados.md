@@ -98,14 +98,14 @@ curl -X POST \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
    "Btinreq": {
-            "Canal": "BTDIGITAL",
-            "Requerimiento": 1,
-            "Usuario": "INSTALADOR",
-            "Token": "30F74741A02C318CEFD55684",
-            "Device": "GL"
-         },
-         "tipoDeProducto": ""
-      }'
+      "Canal": "BTDIGITAL",
+      "Requerimiento": 1,
+      "Usuario": "INSTALADOR",
+      "Token": "30F74741A02C318CEFD55684",
+      "Device": "GL"
+    },
+    "tipoDeProducto": ""
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -126,7 +126,7 @@ curl -X POST \
             <Token>30F74741A02C318CEFD55684</Token>
             <Device>GL</Device>
          </Btinreq>
-         <sBTProductosDepositoAPlazo>
+         <sdtProductosDepositoAPlazo>
             <Producto>
                <Producto>
                   <productoUId>132</productoUId>
@@ -135,9 +135,9 @@ curl -X POST \
                   <papel>$</papel>
                </Producto>
                <tipoDeDeposito>PP</tipoDeDeposito>
-               <DatosExtendidos></DatosExtendidos>
+               <datosExtendidos></datosExtendidos>
             </Producto>
-         </sBTProductosDepositoAPlazo>
+         </sdtProductosDepositoAPlazo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Canal>BTDIGITAL</Canal>
@@ -155,39 +155,47 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 1,
-          "Usuario": "INSTALADOR",
-          "Token": "30F74741A02C318CEFD55684",
-          "Device": "GL"
-        },
-        "sdtProductosDepositoAPlazo": {
-          "sBTProductosDepositoAPlazo": [
-            {
-              "productoUId": 132,
-              "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.",
-              "moneda": "S/.",
-              "papel": "$",
-              "tipoDeDeposito": "PP",
-              "datosExtendidos": ""
-            }
-          ]
-        },
-        "Erroresnegocio": {
-          "BTErrorNegocio": []
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTDepositosAPlazo.ObtenerProductosHabilitados",
-          "Fecha": "2022-11-29",
-          "Hora": "10:40:47",
-          "Requerimiento": 1,
-          "Numero": 496,
-          "Estado": "OK"
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "INSTALADOR",
+    "Token": "30F74741A02C318CEFD55684",
+    "Device": "GL"
+  },
+  "sdtProductosDepositoAPlazo": {
+    "sBTProductosDepositoAPlazo": [
+      {
+        "productoUId": 132,
+        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible Mda. Nac.",
+        "moneda": "S/.",
+        "papel": "$",
+        "tipoDeDeposito": "PP",
+        "datosExtendidos": {
+          "clave": "",
+          "lista": {
+            "clave": "",
+            "valor": ""
+          },
+          "tipo": "",
+          "valor": ""
         }
-      }'
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTDepositosAPlazo.ObtenerProductosHabilitados",
+    "Fecha": "2022-11-29",
+    "Hora": "10:40:47",
+    "Requerimiento": 1,
+    "Numero": 496,
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -209,7 +217,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
 productoUId | Long | Identificador único de producto. 
-tipoDeDeposito | String | Tipo de depósito. (VTO: Vencimiento, PP: Pago periódico). 
+tipoDeDeposito | String | Tipo de depósito. (VTO: Vencimiento, PP: Pago periódico).
+:::
+
+::: details sBTDatoExtendido
 
 ### sBTDatoExtendido
 
@@ -221,7 +232,10 @@ Nombre | Tipo | Comentarios
 clave | String | Clave del dato extendido. 
 lista | [sBTDatoLista](#sbtdatolista) | Lista de datos 
 tipo | String | Tipo de dato extendido. 
-valor | String | Valor de dato extendido. 
+valor | String | Valor de dato extendido.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -231,6 +245,6 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+valor | String | Valor de información adicional.
 :::
 <!-- CIERRA SDT -->

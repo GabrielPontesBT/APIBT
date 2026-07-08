@@ -121,11 +121,11 @@ curl -X POST \
          </Btinreq>
          <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
-               <DocumentoId>87</DocumentoId>
-               <TipoDocumentoDigital>Contrato</TipoDocumentoDigital>
-               <Titulo>Prueba Asociar Contrato</Titulo>
-               <FechaActualizacion>2020-10-10</FechaActualizacion>
-               <FechaVencimiento>2010-10-10</FechaVencimiento>
+               <documentoId>87</documentoId>
+               <tipoDocumentoDigital>Contrato</tipoDocumentoDigital>
+               <titulo>Prueba Asociar Contrato</titulo>
+               <fechaActualizacion>2020-10-10</fechaActualizacion>
+               <fechaVencimiento>2010-10-10</fechaVencimiento>
             </sBTDocumentoDigital>
          </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
@@ -146,36 +146,36 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtDocumentosDigitales": {
-        "sBTDocumentoDigital": [
-            {
-                "titulo": "Prueba Asociar Contrato",
-                "fechaActualizacion": "2020-10-10",
-                "fechaVencimiento": "2010-10-10",
-                "tipoDocumentoDigital": "Contrato",
-                "documentoId": 87
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 3090,
-        "Estado": "OK",
-        "Servicio": "BTCuentasVista.ObtenerDocumentosDigitales",
-        "Fecha": "2018-11-20",
-        "Requerimiento": 1,
-        "Hora": "18:01:45",
-        "Canal": "BTDIGITAL"
-    }
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentosDigitales": {
+    "sBTDocumentoDigital": [
+      {
+        "titulo": "Prueba Asociar Contrato",
+        "fechaActualizacion": "2020-10-10",
+        "fechaVencimiento": "2010-10-10",
+        "tipoDocumentoDigital": "Contrato",
+        "documentoId": 87
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 3090,
+    "Estado": "OK",
+    "Servicio": "BTCuentasVista.ObtenerDocumentosDigitales",
+    "Fecha": "2018-11-20",
+    "Requerimiento": 1,
+    "Hora": "18:01:45",
+    "Canal": "BTDIGITAL"
+  }
 }'
 ```
 ::: 
@@ -193,7 +193,7 @@ Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-documentoId | Long | documentoId del documento digital.
+documentoId | Long | DocumentoId del documento digital.
 fechaActualizacion | Date | Fecha de actualización del documento digital. 
 fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
 tipoDocumentoDigital | String | Tipo del documento digital. 

@@ -100,30 +100,26 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudRenovacion \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "usuarioIngreso": "INSTALADOR",
-    "usuarioAsignacion": "INSTALADOR",
-    "datosSolicitud": {
-        "clienteUId": 4,
-        "asesorId": 1,
-        "sucursalId": 1,
-        "origenCaptacion": 5,
-        "asunto": "SIN ASUNTO",
-        "comentario": "SOLICITUD DESDE API"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "usuarioIngreso": "INSTALADOR",
+  "usuarioAsignacion": "INSTALADOR",
+  "datosSolicitud": {
+    "clienteUId": 4,
+    "asesorId": 1,
+    "sucursalId": 1,
+    "origenCaptacion": 5,
+    "asunto": "SIN ASUNTO",
+    "comentario": "SOLICITUD DESDE API"
+  },
+  "fechaIngreso": ""
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

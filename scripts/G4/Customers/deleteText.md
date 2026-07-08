@@ -23,7 +23,7 @@ title: Delete Text
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 counterpartyGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la contraparte.
-id | Int $<(Length: 5)>$ | Identificador de texto.
+Id | Int $<(Length: 5)>$ | Identificador de texto.
 
 @tab Datos de Salida
 
@@ -65,8 +65,8 @@ Código | Descripción
     "Token": "444B674391BCA7676279700A"
   },
   "counterpartyGUID": "45399742-1326-4d8d-b7c8-10eb4cf976b0",
-  "id": 1
-}'
+  "Id": 1
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

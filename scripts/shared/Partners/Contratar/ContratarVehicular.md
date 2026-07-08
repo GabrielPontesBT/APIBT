@@ -245,6 +245,9 @@ datosAdicionales | [sBTConcepto](#sbtconcepto) | Datos de otros datos.
 fiadores | Long | Listado de fiadores.
 numeroMotor | String | Número del motor.
 placa | String | Placa.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -257,4 +260,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

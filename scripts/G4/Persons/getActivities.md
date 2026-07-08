@@ -22,7 +22,7 @@ title: Get Activities
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-activityTypeId | Long $<(Length: 15)>$ | Identificador de tipo de actividad.
+ActivityTypeId | Long $<(Length: 15)>$ | Identificador de tipo de actividad.
 
 
 @tab Datos de Salida
@@ -55,8 +55,8 @@ No aplica.
     "Requerimiento": "1",
     "Token": "0F262E85182DF86F9CA30F0E"
   },
-  "activityTypeId": 1
-}'
+  "ActivityTypeId": 1
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -124,7 +124,11 @@ No aplica.
         "ActivityTypeId": 1,
         "ActivityTypeDescription": "PRODUCCIÓN VEGETAL"
       }
-    ]
+    ],
+    "ActivityId": "",
+    "ActivityDescription": "",
+    "ActivityTypeId": "",
+    "ActivityTypeDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []

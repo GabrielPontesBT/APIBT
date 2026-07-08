@@ -211,7 +211,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 codigo | Int | Código del seguro. 
 descripcion | String | Descripción del seguro. 
-importe | Int | importe total del seguro. 
+importe | Int | Importe total del seguro. 
 extraPrima | Int | Porcentaje extra del Seguro.
 
 :::

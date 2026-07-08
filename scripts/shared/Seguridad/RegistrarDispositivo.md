@@ -62,7 +62,7 @@ Código | Descripción
       <bts:BTSeguridad.RegistrarDispositivo>
          <bts:Btinreq>
             <bts:Device>AV</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Requerimiento/>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>be9fc8708b4A8B5C60A82434</bts:Token>

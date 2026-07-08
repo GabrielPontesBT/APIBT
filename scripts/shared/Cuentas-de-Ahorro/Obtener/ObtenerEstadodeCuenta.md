@@ -168,65 +168,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtEstadoDeCuenta": {
-        "saldoPartida": "208750.00",
-        "fechaHasta": "2018-10-09",
-        "productoUId": "9",
-        "movimientos": {
-            "sBTMovimiento": [
-                {
-                    "moneda": "",
-                    "hora": "16:45:54",
-                    "referencia": "",
-                    "concepto": "",
-                    "movimientoUId": "135",
-                    "debitoCredito": "D",
-                    "saldo": "143750.00",
-                    "importe": "5000.00",
-                    "numeroCheque": "0",
-                    "tipoCambio": "0.000000",
-                    "arbitraje": "0.000000",
-                    "fecha": "2018-10-09"
-                },
-                {
-                    "moneda": "",
-                    "hora": "12:10:37",
-                    "referencia": "",
-                    "concepto": "",
-                    "movimientoUId": "216",
-                    "debitoCredito": "D",
-                    "saldo": "148750.00",
-                    "importe": "5000.00",
-                    "numeroCheque": "0",
-                    "tipoCambio": "0.000000",
-                    "arbitraje": "0.000000",
-                    "fecha": "2018-09-10"
-                }
-            ]
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtEstadoDeCuenta": {
+    "saldoPartida": "208750.00",
+    "fechaHasta": "2018-10-09",
+    "productoUId": "9",
+    "movimientos": {
+      "sBTMovimiento": [
+        {
+          "moneda": "",
+          "hora": "16:45:54",
+          "referencia": "",
+          "concepto": "",
+          "movimientoUId": "135",
+          "debitoCredito": "D",
+          "saldo": "143750.00",
+          "importe": "5000.00",
+          "numeroCheque": "0",
+          "tipoCambio": "0.000000",
+          "arbitraje": "0.000000",
+          "fecha": "2018-10-09",
+          "datosAdicionales": {
+            "detalle": ""
+          },
+          "ordinal": 0
         },
-        "fechaDesde": "2018-07-11"
+        {
+          "moneda": "",
+          "hora": "12:10:37",
+          "referencia": "",
+          "concepto": "",
+          "movimientoUId": "216",
+          "debitoCredito": "D",
+          "saldo": "148750.00",
+          "importe": "5000.00",
+          "numeroCheque": "0",
+          "tipoCambio": "0.000000",
+          "arbitraje": "0.000000",
+          "fecha": "2018-09-10",
+          "datosAdicionales": {
+            "detalle": ""
+          },
+          "ordinal": 0
+        }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "928",
-        "Estado": "OK",
-        "Servicio": "BTCuentasDeAhorro.ObtenerEstadoDeCuenta",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "17:33:12",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "fechaDesde": "2018-07-11"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "928",
+    "Estado": "OK",
+    "Servicio": "BTCuentasDeAhorro.ObtenerEstadoDeCuenta",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "17:33:12",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -247,7 +255,10 @@ fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta.
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Datos de movimiento. 
 productoUId | Long | Identificador único de producto. 
-saldoPartida | Double | Saldo inicial. 
+saldoPartida | Double | Saldo inicial.
+:::
+
+::: details sBTMovimiento
 
 ### sBTMovimiento
 
@@ -269,7 +280,10 @@ numeroCheque | Int | Número de cheque
 ordinal | Int | Número de ordinal. 
 referencia | String | Referencia.. 
 saldo | Double | Saldo de cuenta vista. 
-tipoCambio | Double | Tipo de cambio de moneda. 
+tipoCambio | Double | Tipo de cambio de moneda.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -278,6 +292,8 @@ Los campos del tipo de dato estructurado sBTDatoAdicional son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-detalle | String | Detalle de dato adicional. 
+detalle | String | Detalle de dato adicional.
 :::
+
 <!-- CIERRA SDT -->
+

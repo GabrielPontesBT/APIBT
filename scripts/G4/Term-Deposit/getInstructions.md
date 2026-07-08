@@ -105,7 +105,22 @@ Código | Descripción
         "SuboperationId": 0,
         "Type": 0
       }
-    ]
+    ],
+    "Accounted": "",
+    "AccountingAccountId": "",
+    "BranchId": "",
+    "CompanyId": "",
+    "CounterpartyId": "",
+    "CurrencyId": "",
+    "Id": "",
+    "Description": "",
+    "KindId": "",
+    "ModuleId": "",
+    "MovementGUID": "",
+    "OperationId": "",
+    "OperationTypeId": "",
+    "SuboperationId": "",
+    "Type": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -146,7 +161,7 @@ Id | Short $<(Length: 3)>$ | Identificador.
 Description | String | Descripción.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 ModuleId | Int $<(Length: 5)>$ | Identificador de módulo.
-MovementGUID | String | GUID del movimiento.
+MovementGUID | String | GUID (identificador único global) del movimiento.
 OperationId | Int $<(Length: 9)>$ | Identificador de operación.
 OperationTypeId | Short $<(Length: 3)>$ | Identificador del tipo de operación.
 SuboperationId | Int $<(Length: 5)>$ | Identificador de suboperación.

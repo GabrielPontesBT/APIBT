@@ -110,10 +110,10 @@ curl -X POST \
          </Btinreq>
          <sdtAgencias>
             <sBTAgenciaBanco>
-               <banco>2</banco>
-               <sucursal>5</sucursal>
+               <Banco>2</Banco>
+               <Sucursal>5</Sucursal>
                <nombre>Sucursal Central</nombre>
-               <codPostal>11400</codPostal>
+               <CodPostal>11400</CodPostal>
             </sBTAgenciaBanco>
          </sdtAgencias>
          <Erroresnegocio></Erroresnegocio>
@@ -178,9 +178,9 @@ Los campos del tipo de dato estructurado sBTAgenciaBanco son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-banco | Int | Identificador de banco.
-codPostal | String | Código postal.
-nombre | String | Nombre de la sucursal.
-sucursal | Long | Identificador de sucursal.
+Banco | Int | Identificador de banco.
+CodPostal | String | Código postal.
+Nombre | String | Nombre de la sucursal.
+Sucursal | Long | Identificador de sucursal.
 :::
 <!-- CIERRA SDT -->

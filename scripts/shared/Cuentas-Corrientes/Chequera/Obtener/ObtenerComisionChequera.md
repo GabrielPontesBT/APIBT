@@ -97,12 +97,10 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-      "operacionUId": "601",
-      "tipoChequeraId": "2",
-      "cantidadChequeras": "1"
-    }
-  }
-}
+  "operacionUId": "601",
+  "tipoChequeraId": "2",
+  "cantidadChequeras": "1"
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -143,26 +141,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-      "moneda": "$",
-      "importeComision": "5000.0",
-      "Btoutreq": {
-        "Numero": "420",
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerComisionChequera",
-        "Fecha": "2019-08-09",
-        "Requerimiento": "1",
-        "Hora": "10:19:03",
-        "Canal": "BTDIGITAL"
-      }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "moneda": "$",
+  "comision": "5000.0",
+  "impuestos": 0,
+  "Btoutreq": {
+    "Numero": "420",
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerComisionChequera",
+    "Fecha": "2019-08-09",
+    "Requerimiento": "1",
+    "Hora": "10:19:03",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

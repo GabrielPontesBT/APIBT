@@ -1,0 +1,134 @@
+{
+  "slug": "loans/paymembergroupinstallment",
+  "pageTitle": "Pay Member Group Installment",
+  "description": "Método para pagar cuotas de un grupo por miembro.",
+  "pubName": "PublicLoans.payMemberGroupInstallment",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0052",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "date",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de cobro."
+    },
+    {
+      "Nombre": "memberPayments",
+      "Tipo": "<a href=\"#sdtsbtlowpaymentoptionbymember\">SdtsBTLOWPaymentOptionByMember</a>",
+      "Comentarios": "Cobros por miembro."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "members",
+      "Tipo": "<a href=\"#sdtsbtmgmemberaccountingentry\">SdtsBTMGMemberAccountingEntry</a>",
+      "Comentarios": "Listado de asiento por integrante."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": \"35\",\n  \"date\": \"\",\n  \"memberPayments\": [\n    {\n      \"amount\": \"500\",\n      \"branchId\": \"\",\n      \"counterpartyGUID\": \"\",\n      \"currencyId\": \"0\",\n      \"loanGUID\": \"b9422a07-a698-4189-b6f6-5d9fa257cac0\",\n      \"paymentId\": \"15\",\n      \"savingAccountGUID\": \"95f6c6fb-6028-4ec5-b6c5-41612225ae15\"\n    }\n  ]\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"groupId\": \"35\",\n  \"date\": \"\",\n  \"memberPayments\": [\n    {\n      \"amount\": \"500\",\n      \"branchId\": \"\",\n      \"counterpartyGUID\": \"\",\n      \"currencyId\": \"0\",\n      \"loanGUID\": \"b9422a07-a698-4189-b6f6-5d9fa257cac0\",\n      \"paymentId\": \"15\",\n      \"savingAccountGUID\": \"95f6c6fb-6028-4ec5-b6c5-41612225ae15\"\n    }\n  ]\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"members\": {\n    \"member\": [\n      {\n        \"loanGUID\": \"b9422a07-a698-4189-b6f6-5d9fa257cac0\",\n        \"counterpartyGUID\": \"4100b799-9e33-44db-8312-6396cd2af91a\",\n        \"movementGUID\": \"543fbd4b-3ad1-4388-978b-edee17c4651e\"\n      }\n    ],\n    \"counterpartyGUID\": \"\",\n    \"loanGUID\": \"\",\n    \"movementGUID\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:38:50\",\n    \"Numero\": \"13584973\",\n    \"Servicio\": \"PublicLoans.payMemberGroupInstallment\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"23B342928917607ECECF65BD\"\n  },\n  \"members\": {\n    \"member\": [\n      {\n        \"loanGUID\": \"b9422a07-a698-4189-b6f6-5d9fa257cac0\",\n        \"counterpartyGUID\": \"4100b799-9e33-44db-8312-6396cd2af91a\",\n        \"movementGUID\": \"543fbd4b-3ad1-4388-978b-edee17c4651e\"\n      }\n    ],\n    \"counterpartyGUID\": \"\",\n    \"loanGUID\": \"\",\n    \"movementGUID\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-16\",\n    \"Hora\": \"19:38:50\",\n    \"Numero\": \"13584973\",\n    \"Servicio\": \"PublicLoans.payMemberGroupInstallment\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOWPaymentOptionByMember",
+      "fields": [
+        {
+          "Nombre": "amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de la opción de pago."
+        },
+        {
+          "Nombre": "branchId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de sucursal."
+        },
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "currencyId",
+          "Tipo": "Short <strong>(Length: 4)</strong>",
+          "Comentarios": "Identificador de moneda."
+        },
+        {
+          "Nombre": "loanGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del préstamo."
+        },
+        {
+          "Nombre": "paymentId",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Forma de cobro."
+        },
+        {
+          "Nombre": "savingAccountGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la cuenta de ahorros."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberAccountingEntry",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de la contraparte."
+        },
+        {
+          "Nombre": "loanGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del préstamo."
+        },
+        {
+          "Nombre": "movementGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del movimiento."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

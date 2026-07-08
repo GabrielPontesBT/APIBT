@@ -61,7 +61,7 @@ Código | Descripción
       <bts:BTSeguridad.ObtenerExcepciones>
          <bts:Btinreq>
             <bts:Device>ES</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>

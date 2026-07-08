@@ -95,33 +95,28 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarReferencia' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId":"21",
-	"sBTReferencia": {
-		"vinculoId": "3",
-		"domicilio3": "",
-		"domicilio2": "",
-		"domicilio1": "18 de Julio 1234",
-		"tipoId": "P",
-		"correlativo": "1",
-		"tipo": "",
-		"telefono": "1234 5678",
-		"nombre": "Rodolfo Rías",
-		"vinculo": ""
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": "21",
+  "sdtReferencia": {
+    "vinculoId": "3",
+    "domicilio3": "",
+    "domicilio2": "",
+    "domicilio1": "18 de Julio 1234",
+    "tipoId": "P",
+    "correlativo": "1",
+    "tipo": "",
+    "telefono": "1234 5678",
+    "nombre": "Rodolfo Rías",
+    "vinculo": ""
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

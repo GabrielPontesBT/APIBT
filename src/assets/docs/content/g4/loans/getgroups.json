@@ -1,0 +1,113 @@
+{
+  "slug": "loans/getgroups",
+  "pageTitle": "Get Groups",
+  "description": "Método para obtener un listado de los grupos de créditos existentes.",
+  "pubName": "PublicLoans.getGroups",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0034",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "offset",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Número de registros a omitir desde el inicio del resultado."
+    },
+    {
+      "Nombre": "limit",
+      "Tipo": "Long <strong>(Length: 10)</strong>",
+      "Comentarios": "Cantidad máxima de registros a retornar en una sola respuesta."
+    },
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "name",
+      "Tipo": "String <strong>(Length: 30)</strong>",
+      "Comentarios": "Nombre del grupo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "hasNext",
+      "Tipo": "Boolean",
+      "Comentarios": "¿Existen más páginas disponibles en la paginación?"
+    },
+    {
+      "Nombre": "groups",
+      "Tipo": "<a href=\"#sdtsbtmggetgroupsdata\">SdtsBTMGGetGroupsData</a>",
+      "Comentarios": "Listado de grupos."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"offset\": 0,\n  \"limit\": 5,\n  \"groupId\": \"\",\n  \"name\": \"\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"offset\": 0,\n  \"limit\": 5,\n  \"groupId\": \"\",\n  \"name\": \"\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"hasNext\": true,\n  \"groups\": {\n    \"cycleId\": \"\",\n    \"groupId\": \"\",\n    \"groupName\": \"\",\n    \"status\": \"\",\n    \"statusDescription\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:42:09\",\n    \"Numero\": 13542406,\n    \"Servicio\": \"PublicLoans.getGroups\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"hasNext\": true,\n  \"groups\": {\n    \"cycleId\": \"\",\n    \"groupId\": \"\",\n    \"groupName\": \"\",\n    \"status\": \"\",\n    \"statusDescription\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:42:09\",\n    \"Numero\": 13542406,\n    \"Servicio\": \"PublicLoans.getGroups\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGetGroupsData",
+      "fields": [
+        {
+          "Nombre": "cycleId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de ciclo."
+        },
+        {
+          "Nombre": "groupId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "groupName",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Nombre del grupo."
+        },
+        {
+          "Nombre": "status",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Estado."
+        },
+        {
+          "Nombre": "statusDescription",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción del estado."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

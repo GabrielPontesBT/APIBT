@@ -107,6 +107,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>268b6d23eb4A8B5C60A82434</Token>
          </Btinreq>
+         <sdtVinculos>
          <sBTVinculo>
                <identificador>1</identificador>
                <descripcion>Presidente</descripcion>

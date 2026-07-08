@@ -101,7 +101,29 @@ Código | Descripción
         "OccupationTypeDescription": "DEPENDIENTE",
         "Income": "90000.00"
       }
-    ]
+    ],
+    "CompanyDocument": "",
+    "CompanyName": "",
+    "Correlative": "",
+    "EconomicActivityId": "",
+    "EconomicActivityDescription": "",
+    "EconomicActivityTypeId": "",
+    "EconomicActivityTypeDescription": "",
+    "EndDate": "",
+    "EstablishmentTypeId": "",
+    "EstablishmentTypeDescription": "",
+    "Exports": false,
+    "Imports": false,
+    "Income": "",
+    "JobTitleId": "",
+    "JobTitleDescription": "",
+    "MainOccupation": false,
+    "Multilateral": false,
+    "OccupationId": "",
+    "OccupationDescription": "",
+    "OccupationTypeId": 0,
+    "OccupationTypeDescription": "",
+    "StartDate": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -142,13 +164,13 @@ EconomicActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tip
 EndDate | Date $<(Length: 8)>$ | Fecha de fin.
 EstablishmentTypeId | Int $<(Length: 6)>$ | Identificador del tipo de establecimiento.
 EstablishmentTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de establecimiento.
-Exports | Boolean $<(Length: 1)>$ | Exporta.
-Imports | Boolean $<(Length: 1)>$ | Importa.
+Exports | Boolean | Exporta.
+Imports | Boolean | Importa.
 Income | Double $<(Length: 18)>$ | Ingresos.
 JobTitleId | Short $<(Length: 4)>$ | Identificador del cargo.
 JobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo.
-MainOccupation | Boolean $<(Length: 1)>$ | Ocupación principal.
-Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+MainOccupation | Boolean | Ocupación principal.
+Multilateral | Boolean | Multilateral.
 OccupationId | Int $<(Length: 5)>$ | Identificador de ocupación.
 OccupationDescription | String $<(Length: 30)>$ | Descripción de la ocupación.
 OccupationTypeId | Short | Identificador del tipo de ocupación.

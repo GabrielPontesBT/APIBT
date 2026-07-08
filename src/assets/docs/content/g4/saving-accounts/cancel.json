@@ -6,9 +6,14 @@
   "modulo": "Liabilities.SavingsAccounts",
   "programa": "PublicAPI.BTSAPA0004",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "counterpartyGUID",
@@ -26,6 +31,7 @@
       "Comentarios": "GUID (identificador único global) de la cuenta de cobro o desembolso."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "cancellationOriginId",
@@ -38,6 +44,7 @@
       "Comentarios": "Identificador del motivo de cancelación."
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "movementGUID",
@@ -171,11 +178,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\r\n  \"cancellationOriginId\": 1,\r\n  \"cancellationReasonId\": 1,\r\n  \"paymentOrChargeAccountGUID\": \"d4c55780-98c1-43ab-bc6d-ccaab69807c3\"\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"counterpartyGUID\": \"394e48fc-b99c-4546-aeaf-862f9699ec03\",\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\",\r\n  \"cancellationOriginId\": 1,\r\n  \"cancellationReasonId\": 1,\r\n  \"paymentOrChargeAccountGUID\": \"d4c55780-98c1-43ab-bc6d-ccaab69807c3\"\r\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"movementGUID\": \"9f8c499f-c014-480b-84b2-0fddda6b0054\",\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:15\",\r\n    \"Numero\": 13466304,\r\n    \"Servicio\": \"PublicSavingAccounts.cancel\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"movementGUID\": \"9f8c499f-c014-480b-84b2-0fddda6b0054\",\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:15\",\r\n    \"Numero\": 13466304,\r\n    \"Servicio\": \"PublicSavingAccounts.cancel\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

@@ -255,10 +255,10 @@ Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-fechaActualizacion | Date | Fecha de actualizacion del documento digital. 
-fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
-instancia | Long | Instancia del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-titulo | String | Titulo del documento digital. 
+FechaActualizacion | Date | Fecha de actualizacion del documento digital. 
+FechaVencimiento | Date | Fecha de vencimiento del documento digital. 
+Instancia | Long | Instancia del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Titulo | String | Titulo del documento digital. 
 :::
 <!-- CIERRA SDT -->

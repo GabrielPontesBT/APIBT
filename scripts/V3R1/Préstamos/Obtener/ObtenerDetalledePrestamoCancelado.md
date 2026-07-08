@@ -200,6 +200,7 @@ curl -X POST \
                   <diasMora>0</diasMora>
                </sBTCuotaCancelada>
             </cronograma>
+            <tasaEfectiva>0</tasaEfectiva>
          </sdtPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -218,115 +219,122 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-	  "Canal": "BTDIGITAL",
-	  "Requerimiento": 1,
-	  "Usuario": "BANTOTAL",
-	  "Token": "1576177365F955E77534D3E0",
-	  "Device": "AC"
-	},
-	"sdtPrestamo": {
-	  "operacionUId": "10118",
-	  "idOperacionFmt": "74-0",
-	  "idOperacionBT": "0010100000101000000000000000002800000000000074001",
-	  "producto": {
-		"productoUId": "36",
-		"nombre": "Amortización Automática TF",
-		"moneda": "$",
-		"papel": "$"
-	  },
-	  "tipoProducto": "AM",
-	  "sucursal": "Casa Matriz",
-	  "simboloMoneda": "$",
-	  "tipoAmortizacion": "Francés con Seg.e Impu.",
-	  "capitalOriginal": "19999.00",
-	  "fechaValor": "2018-05-15",
-	  "fechaVencimiento": "2019-05-16",
-	  "periodicidad": "30",
-	  "plazo": "366",
-	  "cantidadCuotas": "12",
-	  "fechaCancelacion": "2020-03-05",
-	  "tipoTasa": "Lineal Anual",
-	  "tipoDia": "Meses Calendario",
-	  "tipoAno": "365 Días",
-	  "tasaOriginal": "23.000000",
-	  "plus": "0.000000",
-	  "cronograma": {
-		"sBTCuotaCancelada": [
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2486.68",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2499.33",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2466.81",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2442.12",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2431.69",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2403.76",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2380.28",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2358.28",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2326.69",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2307.67",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2280.59",
-			"diasMora": "0"
-		  },
-		  {
-			"fechaPago": "2020-03-05",
-			"importePago": "2251.73",
-			"diasMora": "0"
-		  }
-		]
-	  }
-	},
-	"Btoutreq": {
-	  "Canal": "BTDIGITAL",
-	  "Servicio": "BTPrestamos.ObtenerDetallePrestamoCancelado",
-	  "Fecha": "2019-08-13",
-	  "Hora": "10:04:44",
-	  "Requerimiento": 1,
-	  "Numero": "6656",
-	  "Estado": "OK"
-	}
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "1576177365F955E77534D3E0",
+    "Device": "AC"
+  },
+  "sdtPrestamo": {
+    "operacionUId": "10118",
+    "idOperacionFmt": "74-0",
+    "idOperacionBT": "0010100000101000000000000000002800000000000074001",
+    "producto": {
+      "productoUId": "36",
+      "nombre": "Amortización Automática TF",
+      "moneda": "$",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "tipoProducto": "AM",
+    "sucursal": "Casa Matriz",
+    "simboloMoneda": "$",
+    "tipoAmortizacion": "Francés con Seg.e Impu.",
+    "capitalOriginal": "19999.00",
+    "fechaValor": "2018-05-15",
+    "fechaVencimiento": "2019-05-16",
+    "periodicidad": "30",
+    "plazo": "366",
+    "cantidadCuotas": "12",
+    "fechaCancelacion": "2020-03-05",
+    "tipoTasa": "Lineal Anual",
+    "tipoDia": "Meses Calendario",
+    "tipoAno": "365 Días",
+    "tasaOriginal": "23.000000",
+    "plus": "0.000000",
+    "cronograma": {
+      "sBTCuotaCancelada": [
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2486.68",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2499.33",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2466.81",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2442.12",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2431.69",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2403.76",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2380.28",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2358.28",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2326.69",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2307.67",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2280.59",
+          "diasMora": "0"
+        },
+        {
+          "fechaPago": "2020-03-05",
+          "importePago": "2251.73",
+          "diasMora": "0"
+        }
+      ]
+    },
+    "claseTasa": "",
+    "tasaEfectiva": 0
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerDetallePrestamoCancelado",
+    "Fecha": "2019-08-13",
+    "Hora": "10:04:44",
+    "Requerimiento": 1,
+    "Numero": "6656",
+    "Estado": "OK"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -365,8 +373,11 @@ tipoAmortizacion | String | Tipo de amortización.
 tipoAno | String | Tipo de año. 
 tipoDia | String | Tipo de día del préstamo. 
 tipoProducto | String | Tipo de producto (Amortizable/Plan de pagos). 
-tipoTasa | String | Tipo de tasa. 
- 
+tipoTasa | String | Tipo de tasa.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -378,7 +389,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -390,6 +404,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaCancelada
 
 ### sBTCuotaCancelada
 
@@ -400,6 +417,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 diasMora | Short | Días de mora con los que se pago la cuota. 
 fechaPago | Date | Fecha de pago. 
-importePago | Double | Importe total pago de la cuota. 
+importePago | Double | Importe total pago de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

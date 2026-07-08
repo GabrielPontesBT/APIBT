@@ -136,7 +136,12 @@ No aplica.
         "Bidirectional": false,
         "Multilateral": true
       }
-    ]
+    ],
+    "Bidirectional": false,
+    "Id": 0,
+    "Description": "",
+    "Multilateral": false,
+    "Type": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -167,10 +172,10 @@ Los campos del tipo de dato estructurado SdtsBTPEWBond son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
+Bidirectional | Boolean | Bidireccional.
 Id | Short | Identificador.
 Description | String $<(Length: 30)>$ | Descripción.
-Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+Multilateral | Boolean | Multilateral.
 Type | String $<(Length: 1)>$ | Tipo de vínculo.
 :::
 <!-- CIERRA SDT -->

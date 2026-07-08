@@ -173,7 +173,7 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+Clave | String | Identificador de información adicional. 
+Valor | String | Valor de información adicional. 
 :::
 <!-- CIERRA SDT -->

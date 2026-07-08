@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-personaUId | Long | Identificador único de persona.
+PersonaUId | Long | Identificador único de persona.
 sdtCorreoElectronico | [sBTCorreoElectronico](#sbtcorreoelectronico) | Datos de correo electrónico.
 
 @tab Datos de Salida
@@ -66,7 +66,7 @@ Código | Descripción
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>268b6d23eb4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
-         <bts:personaUId>41</bts:personaUId>
+         <bts:PersonaUId>41</bts:PersonaUId>
          <bts:sdtCorreoElectronico>            
             <bts:correoElectronico>CD@GMAIL.COM</bts:correoElectronico>
             <bts:correlativo>1</bts:correlativo>

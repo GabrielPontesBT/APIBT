@@ -107,6 +107,7 @@ curl -X POST \
       "montoMetaAhorro": 15000,   
       "fechaMetaAhorro": "0001-01-01"
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -164,5 +165,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

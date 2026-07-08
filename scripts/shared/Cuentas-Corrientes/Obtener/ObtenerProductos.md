@@ -179,79 +179,119 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "41",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": "42",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física"
-            },
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "43",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": "44",
-                "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica"
-            },
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "45",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": "46",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas"
-            },
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "47",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": "48",
-                "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "933",
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerProductos",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "17:37:18",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "41",
+        "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "42",
+        "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Física",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "43",
+        "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "44",
+        "nombre": "CUENTA CORRIENTE, Cuenta corriente P.Jurídica",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "45",
+        "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "46",
+        "nombre": "CUENTAS VISTA, Depósitos Vista P. Físicas",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "47",
+        "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "48",
+        "nombre": "CUENTAS VISTA, Depósitos Vista P. Jurídicas",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "933",
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerProductos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "17:37:18",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -272,7 +312,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -285,4 +328,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

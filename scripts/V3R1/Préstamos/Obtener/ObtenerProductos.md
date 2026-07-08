@@ -109,8 +109,12 @@ curl -X POST \
                <nombre>Amortización Automática TF</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
-            ...
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -128,38 +132,42 @@ curl -X POST \
 ```
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": 61,
-                "nombre": "Amortización Automática TF"
-            },
-            ...
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 723,
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerProductos",
-        "Fecha": "2017-11-24",
-        "Requerimiento": 0,
-        "Hora": "13:09:53",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": 61,
+        "nombre": "Amortización Automática TF",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 723,
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerProductos",
+    "Fecha": "2017-11-24",
+    "Requerimiento": 0,
+    "Hora": "13:09:53",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -180,7 +188,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -193,4 +204,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

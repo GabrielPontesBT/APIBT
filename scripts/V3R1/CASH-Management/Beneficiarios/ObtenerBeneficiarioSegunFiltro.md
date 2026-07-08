@@ -145,7 +145,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>CARLOS ABARCA</nombre>
-               <id>2546545498</id>
+               <Id>2546545498</Id>
                <corr>1</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -153,7 +153,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>DIEGO CERVINI</nombre>
-               <id>15040306</id>
+               <Id>15040306</Id>
                <corr>2</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -161,7 +161,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>ISABEL PUIG</nombre>
-               <id>18685347</id>
+               <Id>18685347</Id>
                <corr>3</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -169,7 +169,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>FLORENCIA NEBOT</nombre>
-               <id>47851468</id>
+               <Id>47851468</Id>
                <corr>4</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -177,7 +177,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>PAUEL CARRASCO</nombre>
-               <id>43162495</id>
+               <Id>43162495</Id>
                <corr>5</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -185,7 +185,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>MARIA SOSA</nombre>
-               <id>46321571</id>
+               <Id>46321571</Id>
                <corr>6</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -193,7 +193,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>SEBASTIAN CASABLANCA</nombre>
-               <id>28964523</id>
+               <Id>28964523</Id>
                <corr>7</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -201,7 +201,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>MATIAS PEREZ</nombre>
-               <id>36528547</id>
+               <Id>36528547</Id>
                <corr>8</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -209,7 +209,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>LEONARDO DOMINGUEZ</nombre>
-               <id>25634581</id>
+               <Id>25634581</Id>
                <corr>9</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -217,7 +217,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>VALENTINA BRUNO</nombre>
-               <id>39635424</id>
+               <Id>39635424</Id>
                <corr>10</corr>
             </sBTResumenBeneficiario>
             <sBTResumenBeneficiario>
@@ -225,7 +225,7 @@ curl -X POST \
                <servicio>240</servicio>
                <codAgenda>1</codAgenda>
                <nombre>SUSANA GIMENEZ</nombre>
-               <id>41705427</id>
+               <Id>41705427</Id>
                <corr>11</corr>
             </sBTResumenBeneficiario>
          </sdtBeneficiario>
@@ -246,119 +246,119 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtBeneficiario": {
-         "sBTResumenBeneficiario": [
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "CARLOS ABARCA",
-            "id": 2546545498,
-            "corr": 1
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "DIEGO CERVINI",
-            "id": 15040306,
-            "corr": 2
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "ISABEL PUIG",
-            "id": 18685347,
-            "corr": 3
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "FLORENCIA NEBOT",
-            "id": 47851468,
-            "corr": 4
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "PAUEL CARRASCO",
-            "id": 43162495,
-            "corr": 5
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "MARIA SOSA",
-            "id": 46321571,
-            "corr": 6
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "SEBASTIAN CASABLANCA",
-            "id": 28964523,
-            "corr": 7
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "MATIAS PEREZ",
-            "id": 36528547,
-            "corr": 8
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "LEONARDO DOMINGUEZ",
-            "id": 25634581,
-            "corr": 9
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "VALENTINA BRUNO",
-            "id": 39635424,
-            "corr": 10
-         },
-         {
-            "contrato": 8,
-            "servicio": 240,
-            "codAgenda": 1,
-            "nombre": "SUSANA GIMENEZ",
-            "id": 41705427,
-            "corr": 11
-         }
-         ]
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtBeneficiario": {
+    "sBTResumenBeneficiario": [
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "CARLOS ABARCA",
+        "corr": 1,
+        "Id": 2546545498
       },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-      "Numero": 10403,
-      "Estado": "OK",
-      "Servicio": "BTCASHManagement.ObtenerBeneficiarioSegunFiltro",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
-    }
-}'
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "DIEGO CERVINI",
+        "corr": 2,
+        "Id": 15040306
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "ISABEL PUIG",
+        "corr": 3,
+        "Id": 18685347
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "FLORENCIA NEBOT",
+        "corr": 4,
+        "Id": 47851468
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "PAUEL CARRASCO",
+        "corr": 5,
+        "Id": 43162495
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "MARIA SOSA",
+        "corr": 6,
+        "Id": 46321571
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "SEBASTIAN CASABLANCA",
+        "corr": 7,
+        "Id": 28964523
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "MATIAS PEREZ",
+        "corr": 8,
+        "Id": 36528547
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "LEONARDO DOMINGUEZ",
+        "corr": 9,
+        "Id": 25634581
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "VALENTINA BRUNO",
+        "corr": 10,
+        "Id": 39635424
+      },
+      {
+        "contrato": 8,
+        "servicio": 240,
+        "codAgenda": 1,
+        "nombre": "SUSANA GIMENEZ",
+        "corr": 11,
+        "Id": 41705427
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 10403,
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.ObtenerBeneficiarioSegunFiltro",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -393,7 +393,7 @@ contrato | Int | Contrato.
 servicio | Short | Servicio.
 codAgenda | Short | Código de agenda.
 nombre | String | Nombre.
-id | String | Identificador.
+Id | String | Identificador.
 corr | Int | Correlativo.
 
 :::

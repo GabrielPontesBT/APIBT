@@ -37,7 +37,7 @@ cuentaBT | Int | Número de cuenta Bantotal.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-existe | String | ¿Existe? (S/N).
+Existe | String | ¿Existe? (S/N).
 
 @tab Errores
 
@@ -109,7 +109,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>268b6d23eb4A8B5C60A82434</Token>
          </Btinreq>
-         <existe>S</existe>
+         <Existe>S</Existe>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>847</Numero>

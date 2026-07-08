@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.EliminarTextos",
   "programa": "RBTPG593",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "[Hidden: Valor fijo \"DLT\" para este método]."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -61,12 +65,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>143</bts:personaUId>\n         <bts:sbtTextos>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>1</bts:renglon>\n               <bts:texto></bts:texto>\n               <bts:descripcion></bts:descripcion>\n               <bts:codigo>11</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n         </bts:sbtTextos>\n      </bts:BTPersonas.EliminarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarTextos' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"FC\",\n    \"Requerimiento\": \"0\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"personaUId\": \"143\",\n  \"sbtTextos\": [\n    {\n      \"renglon\": \"1\",\n      \"texto\": \"\",\n      \"descripcion\": \"\",\n      \"codigo\": \"11\"\n    }\n  ]\n}\n\n\n'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>143</bts:personaUId>\n         <bts:sdtTextos>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>1</bts:renglon>\n               <bts:texto></bts:texto>\n               <bts:descripcion></bts:descripcion>\n               <bts:codigo>11</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n         </bts:sdtTextos>\n      </bts:BTPersonas.EliminarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"FC\",\n    \"Requerimiento\": \"0\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"personaUId\": \"143\",\n  \"sdtTextos\": [\n    {\n      \"renglon\": \"1\",\n      \"texto\": \"\",\n      \"descripcion\": \"\",\n      \"codigo\": \"11\"\n    }\n  ]\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EliminarTextos>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>FC</bts:Device>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Token>D2868674D8C3483A48324170</bts:Token>\n         </bts:Btinreq>\n         <bts:personaUId>143</bts:personaUId>\n         <bts:sdtTextos>\n            <bts:SdtsBTTextoPersona>\n               <bts:renglon>1</bts:renglon>\n               <bts:texto></bts:texto>\n               <bts:descripcion></bts:descripcion>\n               <bts:codigo>11</bts:codigo>\n            </bts:SdtsBTTextoPersona>\n         </bts:sdtTextos>\n      </bts:BTPersonas.EliminarTextos>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"FC\",\n    \"Requerimiento\": \"0\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"personaUId\": \"143\",\n  \"sdtTextos\": [\n    {\n      \"renglon\": \"1\",\n      \"texto\": \"\",\n      \"descripcion\": \"\",\n      \"codigo\": \"11\"\n    }\n  ]\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.EliminarTextosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>FC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>D2868674D8C3483A48324170</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>36636</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.EliminarTextos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-11-07</Fecha>\n            <Hora>15:46:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.EliminarTextosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n  \"Btinreq\": {\n    \"Device\": \"FC\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"0\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"Erroresnegocio\": \"\",\n  \"Btoutreq\": {\n    \"Numero\": \"36636\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.EliminarTextos\",\n    \"Requerimiento\": \"0\",\n    \"Fecha\": \"2025-11-07\",\n    \"Hora\": \"15:46:54\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}\n'"
+      "json": "'{\n  \"Btinreq\": {\n    \"Device\": \"FC\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"0\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"Erroresnegocio\": \"\",\n  \"Btoutreq\": {\n    \"Numero\": \"36636\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.EliminarTextos\",\n    \"Requerimiento\": \"0\",\n    \"Fecha\": \"2025-11-07\",\n    \"Hora\": \"15:46:54\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}\n'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.EliminarTextosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>FC</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>D2868674D8C3483A48324170</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>36636</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.EliminarTextos</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2025-11-07</Fecha>\n            <Hora>15:46:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.EliminarTextosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n  \"Btinreq\": {\n    \"Device\": \"FC\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Requerimiento\": \"0\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"D2868674D8C3483A48324170\"\n  },\n  \"Erroresnegocio\": \"\",\n  \"Btoutreq\": {\n    \"Numero\": \"36636\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.EliminarTextos\",\n    \"Requerimiento\": \"0\",\n    \"Fecha\": \"2025-11-07\",\n    \"Hora\": \"15:46:54\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}\n'"
+        }
+      ]
     }
   },
   "structuredTypes": [

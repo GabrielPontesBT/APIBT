@@ -184,7 +184,7 @@ Los campos del tipo de dato estructurado sBTSesionesPorUsuario son los siguiente
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-cantidadsesiones | Int | Cantidad de sesiones abiertas.
+cantidadSesiones | Int | Cantidad de sesiones abiertas.
 usuario | String | Identificador de usuario.
 :::
 <!-- CIERRA SDT -->

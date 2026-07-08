@@ -159,58 +159,63 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtCuentaCorriente": {
-        "cobraIntereses": "",
-        "producto": {
-            "papel": "",
-            "moneda": "$",
-            "productoUId": "0",
-            "nombre": "LEASING, Amort. - Capital F./Empr.- T/F"
-        },
-        "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "saldoPorConfirmar": "0.00",
-        "sobregiroAutorizado": "",
-        "descPaquete": "",
-        "idOperacionFmt": "000000027_000",
-        "ejecutivo": "Instalador",
-        "saldoCobertura": "0.00",
-        "pagaInteresSobregiro": "",
-        "saldoDisponible": "-174180.15",
-        "pagaComisCantMovimientos": "",
-        "saldoBloqueado": "0.00",
-        "pagaComisBajoPromedio": "",
-        "frecuenciaEmisionEC": "",
-        "operacionUId": "142",
-        "chequeras": "",
-        "diasSobregiro": "1",
-        "saldoContable": "-174180.15",
-        "estado": "Normal",
-        "fechaApertura": "2018-05-18",
-        "sucursal": "Sucursal Beta",
-        "pagaComisEstadoCuenta": "",
-        "paquete": "N"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentaCorriente": {
+    "cobraIntereses": "",
+    "producto": {
+      "papel": "",
+      "moneda": "$",
+      "productoUId": "0",
+      "nombre": "LEASING, Amort. - Capital F./Empr.- T/F",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "926",
-        "Estado": "OK",
-        "Servicio": "BTCuentasCorrientes.ObtenerDatos",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "17:31:29",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "idOperacionBT": "0010000100115000000000000000002700000000000326001",
+    "saldoPorConfirmar": "0.00",
+    "sobregiroAutorizado": "",
+    "descPaquete": "",
+    "idOperacionFmt": "000000027_000",
+    "ejecutivo": "Instalador",
+    "saldoCobertura": "0.00",
+    "pagaInteresSobregiro": "",
+    "saldoDisponible": "-174180.15",
+    "pagaComisCantMovimientos": "",
+    "saldoBloqueado": "0.00",
+    "pagaComisBajoPromedio": "",
+    "frecuenciaEmisionEC": "",
+    "operacionUId": "142",
+    "chequeras": "",
+    "diasSobregiro": "1",
+    "saldoContable": "-174180.15",
+    "estado": "Normal",
+    "fechaApertura": "2018-05-18",
+    "sucursal": "Sucursal Beta",
+    "pagaComisEstadoCuenta": "",
+    "paquete": "N"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "926",
+    "Estado": "OK",
+    "Servicio": "BTCuentasCorrientes.ObtenerDatos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "17:31:29",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -249,7 +254,10 @@ saldoContable | Double | Saldo total.
 saldoDisponible | Double | Saldo disponible. 
 saldoPorConfirmar | Double | Saldo pendiente de confirmación. 
 sobregiroAutorizado | String | ¿Sobregiro autorizado? (S/N). 
-sucursal | String | Nombre de la sucursal de alta. 
+sucursal | String | Nombre de la sucursal de alta.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -262,7 +270,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -275,4 +286,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -90,6 +90,7 @@ curl -X POST \
 },
    "ahorroUId": 205
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -118,7 +119,7 @@ curl -X POST \
             <periodosDeGraciaHabilitados>3</periodosDeGraciaHabilitados>
             <fechaVencimiento>2017-05-08</fechaVencimiento>
             <fechaProximaRenovacion>0000-00-00</fechaProximaRenovacion>
-            <clienteUId>61</clienteUId>
+            <>61</>
             <montoMeta>0.00</montoMeta>
             <intentosDeIncrementoUtilizados>0</intentosDeIncrementoUtilizados>
             <productoUId>82</productoUId>
@@ -139,6 +140,7 @@ curl -X POST \
             <estado>Cancelado</estado>
             <abono>5000.00</abono>
             <fechaValor>2017-03-09</fechaValor>
+            <clienteUId>47</clienteUId>
          </sdtDetalleAhorro>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -158,57 +160,59 @@ curl -X POST \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
-        "Canal": "BTDIGITAL",
-        "Token": "75e20bd1614A8B5C60A82434"
-    },
-    "sdtDetalleAhorro": {
-        "plazo": 60,
-        "ahorroUId": 205,
-        "diaDeIncremento": 9,
-        "periodicidad": 1,
-        "fechaAltaSolicitud": "2017-03-06",
-        "periodosDeGraciaHabilitados": 3,
-        "fechaVencimiento": "2017-05-08",
-        "fechaProximaRenovacion": "0000-00-00",
-        "clienteUId": 61,
-        "montoMeta": 0,
-        "intentosDeIncrementoUtilizados": 0,
-        "productoUId": 82,
-        "periodosDeGraciaUtilizados": 0,
-        "tasaActual": 10.2,
-        "observacion": "",
-        "tipoDeDia": "Días Calendario",
-        "motivoMeta": "",
-        "intentosDeIncrementoHabilitados": 30,
-        "fechaMeta": "0000-00-00",
-        "tasaOriginal": 10.2,
-        "saldoActual": 0,
-        "tipoTasa": "Lineal Anual",
-        "fechaProximoIncremento": "2017-06-09",
-        "renueva": "No",
-        "operacionUIdOrigen": 541,
-        "operacionUIdDestino": 541,
-        "estado": "Cancelado",
-        "abono": 0,
-        "fechaValor": "2017-03-09"
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 9361,
-        "Estado": "OK",
-        "Servicio": "BTAhorroProgramado.Obtener",
-        "Fecha": "2019-11-19",
-        "Requerimiento": "",
-        "Hora": "11:46:44",
-        "Canal": "BTDIGITAL"
-    }
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "75e20bd1614A8B5C60A82434"
+  },
+  "sdtDetalleAhorro": {
+    "plazo": 60,
+    "ahorroUId": 205,
+    "diaDeIncremento": 9,
+    "periodicidad": 1,
+    "fechaAltaSolicitud": "2017-03-06",
+    "periodosDeGraciaHabilitados": 3,
+    "fechaVencimiento": "2017-05-08",
+    "fechaProximaRenovacion": "0000-00-00",
+    "": 61,
+    "montoMeta": 0,
+    "intentosDeIncrementoUtilizados": 0,
+    "productoUId": 82,
+    "periodosDeGraciaUtilizados": 0,
+    "tasaActual": 10.2,
+    "observacion": "",
+    "tipoDeDia": "Días Calendario",
+    "motivoMeta": "",
+    "intentosDeIncrementoHabilitados": 30,
+    "fechaMeta": "0000-00-00",
+    "tasaOriginal": 10.2,
+    "saldoActual": 0,
+    "tipoTasa": "Lineal Anual",
+    "fechaProximoIncremento": "2017-06-09",
+    "renueva": "No",
+    "operacionUIdOrigen": 541,
+    "operacionUIdDestino": 541,
+    "estado": "Cancelado",
+    "abono": 0,
+    "fechaValor": "2017-03-09",
+    "clienteUId": "47"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 9361,
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.Obtener",
+    "Fecha": "2019-11-19",
+    "Requerimiento": "",
+    "Hora": "11:46:44",
+    "Canal": "BTDIGITAL"
+  }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
 
@@ -224,35 +228,34 @@ Los campos del tipo de dato estructurado sBTDetalleAhorro son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-clienteid | Long | identificador único del cliente.  
-productoid | Long | identificador único de producto.  
-ahorroid | Long | identificador único del ahorro.  
-fechavencimiento | Date | fecha del vencimiento del ahorro.  
-periodicidad | Short | periodicidad (en días) del ahorro.  
-diadeincremento | Short | día en que se da el incremento.  
-abono | Double | abono.  
-intentosdeincrementohabilitados | Short | intentos de incremento habilitados.  
-intentosdeincrementoutilizados | Short | intentos de incremento utilizados.  
-periodosdegraciautilizados | Short | períodos de gracia utilizados.  
-periodosdegraciahabilitados | Short | períodos de gracia habilitados.  
-tasaoriginal | Double | tasa original.  
-tasaactual | Double | tasa actual.  
-tipotasa | String | tipo de tasa.  
-saldoactual | Double | saldo actual del ahorro.  
-fechaproximoincremento | Date | fecha del próximo incremento.  
-fechaproximarenovacion | Date | fecha del próximo incremento.  
-estado | String | estado del ahorro.  
+clienteUId | Long | Identificador único del cliente.  
+productoUId | Long | Identificador único de producto.  
+ahorroUId | Long | Identificador único del ahorro.  
+fechaVencimiento | Date | Fecha del vencimiento del ahorro.  
+periodicidad | Short | Periodicidad (en días) del ahorro.  
+diaDeIncremento | Short | Día en que se da el incremento.  
+abono | Double | Abono.  
+intentosDeIncrementoHabilitados | Short | Intentos de incremento habilitados.  
+intentosDeIncrementoUtilizados | Short | Intentos de incremento utilizados.  
+periodosDeGraciaUtilizados | Short | Períodos de gracia utilizados.  
+periodosDeGraciaHabilitados | Short | Períodos de gracia habilitados.  
+tasaOriginal | Double | Tasa original.  
+tasaActual | Double | Tasa actual.  
+tipoTasa | String | Tipo de tasa.  
+saldoActual | Double | Saldo actual del ahorro.  
+fechaProximoIncremento | Date | Fecha del próximo incremento.  
+fechaProximaRenovacion | Date | Fecha del próximo incremento.  
+estado | String | Estado del ahorro.  
 renueva | String | ¿renueva? (s/n).  
-observacion | String | observación.  
-tipodedia | String | tipo de día utilizado.  
-operacionuidorigen | Long | identificador único de la operación de orígen.  
-operacionuiddestino | Long | identificador único de la operación de destino.  
-plazo | Short | plazo para el ahorro.  
-fechaaltasolicitud | Date | fecha de alta de la solicitud.  
-fechavalor | Date | fecha valor del ahorro.  
-montometa | Double | monto meta del ahorro.  
-fechameta | Date | fecha meta del ahorro.  
-motivometa | String | motivo de la meta.  
-
+observacion | String | Observación.  
+tipoDeDia | String | Tipo de día utilizado.  
+operacionUIdOrigen | Long | Identificador único de la operación de origen.  
+operacionUIdDestino | Long | Identificador único de la operación de destino.  
+plazo | Short | Plazo para el ahorro.  
+fechaAltaSolicitud | Date | Fecha de alta de la solicitud.  
+fechaValor | Date | Fecha valor del ahorro.  
+montoMeta | Double | Monto meta del ahorro.  
+fechaMeta | Date | Fecha meta del ahorro.  
+motivoMeta | String | Motivo de la meta.  
 :::
 <!-- CIERRA SDT -->

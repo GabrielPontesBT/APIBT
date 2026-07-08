@@ -175,6 +175,13 @@ curl -X POST \
             <fechaProximoVencimiento>2018-11-26</fechaProximoVencimiento>
             <fechaPrimerCuotaImpaga>2018-10-25</fechaPrimerCuotaImpaga>
             <fechaUltimoPago>0000-00-00</fechaUltimoPago>
+            <costoFinancieroTotal>0</costoFinancieroTotal>
+            <saldosPendiente>
+               <concepto></concepto>
+               <texto></texto>
+               <valor>0</valor>
+            </saldosPendiente>
+            <totalSaldosPendiente>0</totalSaldosPendiente>
          </sdtPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -194,87 +201,99 @@ curl -X POST \
 @tab JSON
 ```json
 {
-	"Btinreq": {
-		"Canal": "BTDIGITAL",
-		"Requerimiento": 1,
-		"Usuario": "BANTOTAL",
-		"Token": "324915377F955E77534D3E02",
-		"Device": "AC"
-	},
-    "sdtPrestamo": {
-        "claseTasa": "",
-        "tipoTasa": "Lineal Anual",
-        "tipoDia": "Meses Calendario",
-        "tipoAno": "360 Días",
-        "tasaOriginal": 19.000000,
-        "tasaVigente": 19.000000,
-        "plus": 0.000000,
-        "tasaEfectiva": 0.000000,
-        "diasRevision": 0,
-        "tipoTasaMora": "Lineal Anual",
-        "tasaMoraOriginal": 19.000000,
-        "tasaMoraVigente": 0.000000,
-        "tasaPunitorios": 0.000000,
-        "operacionUId": 15,
-        "idOperacionFmt": "189-0",
-        "idOperacionBT": "0010000100103000000000000000002700000000000189001",
-        "producto": {
-            "productoUId": 0,
-            "nombre": "PRÉSTAMOS CONSUMO, Amortización Automática TF",
-            "moneda": "$",
-            "papel": "$"
-        },
-        "tipoProducto": "AM",
-        "sucursal": "Sucursal Beta",
-        "simboloMoneda": "$",
-        "tipoAmortizacion": "Francés con Seg.e Impu.",
-        "cuentaContable": "Consumo reajustables",
-        "actividad": "01112 Trigo",
-        "estado": "Normal",
-        "precioOriginal": 0.000000,
-        "precioActual": 0.000000,
-        "coeficienteIVA": 22.000000,
-        "capitalOriginal": 12000.00,
-        "saldoCapital": 12000.00,
-        "valorCuota": 1231.74,
-        "fechaValor": "2018-09-25",
-        "fechaVencimiento": "2019-09-25",
-        "interesDevengado": 0.00,
-        "interesMoraDevengado": 0.00,
-        "resultadoInteresNormalDevengado": 0.00,
-        "interesSuspenso": 0.00,
-        "deudaCancelacionTotal": 14793.06,
-        "deudaTotalAFecha": 2475.64,
-        "cantidadCuotasVencidas": 1,
-        "deudaTotalVencida": 1243.90,
-        "interesVigente": 313.03,
-        "interesMora": 9.97,
-        "interesPunitorio": 0.00,
-        "totalImpuestos": 287.27,
-        "periodicidad": 30,
-        "plazo": 365,
-        "diasMora": 21,
-        "diasMoraPromedio": 0,
-        "cantidadCuotas": 12,
-        "cantidadCuotasImpagas": 12,
-        "cuotasPagasConRetaso": 0,
-        "fechaPrimerPago": "2018-10-25",
-        "fechaProximoVencimiento": "2018-11-26",
-        "fechaPrimerCuotaImpaga": "2018-10-25",
-        "fechaUltimoPago": "0000-00-00"
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "324915377F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtPrestamo": {
+    "claseTasa": "",
+    "tipoTasa": "Lineal Anual",
+    "tipoDia": "Meses Calendario",
+    "tipoAno": "360 Días",
+    "tasaOriginal": 19,
+    "tasaVigente": 19,
+    "plus": 0,
+    "tasaEfectiva": 0,
+    "diasRevision": 0,
+    "tipoTasaMora": "Lineal Anual",
+    "tasaMoraOriginal": 19,
+    "tasaMoraVigente": 0,
+    "tasaPunitorios": 0,
+    "operacionUId": 15,
+    "idOperacionFmt": "189-0",
+    "idOperacionBT": "0010000100103000000000000000002700000000000189001",
+    "producto": {
+      "productoUId": 0,
+      "nombre": "PRÉSTAMOS CONSUMO, Amortización Automática TF",
+      "moneda": "$",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "tipoProducto": "AM",
+    "sucursal": "Sucursal Beta",
+    "simboloMoneda": "$",
+    "tipoAmortizacion": "Francés con Seg.e Impu.",
+    "cuentaContable": "Consumo reajustables",
+    "actividad": "01112 Trigo",
+    "estado": "Normal",
+    "precioOriginal": 0,
+    "precioActual": 0,
+    "coeficienteIVA": 22,
+    "capitalOriginal": 12000,
+    "saldoCapital": 12000,
+    "valorCuota": 1231.74,
+    "fechaValor": "2018-09-25",
+    "fechaVencimiento": "2019-09-25",
+    "interesDevengado": 0,
+    "interesMoraDevengado": 0,
+    "resultadoInteresNormalDevengado": 0,
+    "interesSuspenso": 0,
+    "deudaCancelacionTotal": 14793.06,
+    "deudaTotalAFecha": 2475.64,
+    "cantidadCuotasVencidas": 1,
+    "deudaTotalVencida": 1243.9,
+    "interesVigente": 313.03,
+    "interesMora": 9.97,
+    "interesPunitorio": 0,
+    "totalImpuestos": 287.27,
+    "periodicidad": 30,
+    "plazo": 365,
+    "diasMora": 21,
+    "diasMoraPromedio": 0,
+    "cantidadCuotas": 12,
+    "cantidadCuotasImpagas": 12,
+    "cuotasPagasConRetaso": 0,
+    "fechaPrimerPago": "2018-10-25",
+    "fechaProximoVencimiento": "2018-11-26",
+    "fechaPrimerCuotaImpaga": "2018-10-25",
+    "fechaUltimoPago": "0000-00-00",
+    "costoFinancieroTotal": 0,
+    "saldosPendiente": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTPrestamos.ObtenerDetalleAFecha",
-        "Fecha": "2019-11-19",
-        "Hora": "16:03:15",
-        "Requerimiento": 1,
-        "Numero": 6975,
-        "Estado": "OK"
-    }
+    "totalSaldosPendiente": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.ObtenerDetalleAFecha",
+    "Fecha": "2019-11-19",
+    "Hora": "16:03:15",
+    "Requerimiento": 1,
+    "Numero": 6975,
+    "Estado": "OK"
+  }
 }
 ```
 ::: 
@@ -349,7 +368,10 @@ tipoTasa | String | Tipo de tasa.
 tipoTasaMora | String | Tipo de tasa de mora. 
 totalImpuestos | Double | Total de impuestos. 
 totalSaldosPendiente | Double | Total saldos pendiente. 
-valorCuota | Double | Valor de la cuota. 
+valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -362,7 +384,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -375,4 +400,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

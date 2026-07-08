@@ -5,6 +5,7 @@
   "pubName": "BTTarjetasDeDebito.AsociarCuenta",
   "programa": "RBTPG377",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Identificador único de tarjeta de débito."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -50,11 +54,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.AsociarCuenta>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1080548031CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10</bts:operacionUId>\n         <bts:tipoDeCuenta>1</bts:tipoDeCuenta>\n         <bts:tarjetaUId>1</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.AsociarCuenta>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n\n    \"operacionUId\":\"10\",\n    \"tipoDeCuenta\":\"1\",\n    \"tarjetaUId\"  :\"1\"\n}"
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n\n    \"operacionUId\":\"10\",\n    \"tipoDeCuenta\":\"1\",\n    \"tarjetaUId\"  :\"1\"\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTTarjetasDeDebito.AsociarCuenta>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento></bts:Requerimiento>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>1080548031CD285A89A23FBE</bts:Token>\n            <bts:Device></bts:Device>\n         </bts:Btinreq>\n         <bts:operacionUId>10</bts:operacionUId>\n         <bts:tipoDeCuenta>1</bts:tipoDeCuenta>\n         <bts:tarjetaUId>1</bts:tarjetaUId>\n      </bts:BTTarjetasDeDebito.AsociarCuenta>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n\n    \"operacionUId\":\"10\",\n    \"tipoDeCuenta\":\"1\",\n    \"tarjetaUId\"  :\"1\"\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.AsociarCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1080548031CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTTarjetasDeDebito.AsociarCuenta</Servicio>\n            <Fecha>2021-10-29</Fecha>\n            <Hora>14:27:12</Hora>\n            <Requerimiento/>\n            <Numero>8451</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTTarjetasDeDebito.AsociarCuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTTarjetasDeDebito.AsociarCuenta\",\n        \"Fecha\": \"2021-10-29\",\n        \"Hora\": \"13:37:58\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8449,\n        \"Estado\": \"OK\"\n    }\n}"
+      "json": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTTarjetasDeDebito.AsociarCuenta\",\n        \"Fecha\": \"2021-10-29\",\n        \"Hora\": \"13:37:58\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8449,\n        \"Estado\": \"OK\"\n    }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTTarjetasDeDebito.AsociarCuentaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento/>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1080548031CD285A89A23FBE</Token>\n            <Device/>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTTarjetasDeDebito.AsociarCuenta</Servicio>\n            <Fecha>2021-10-29</Fecha>\n            <Hora>14:27:12</Hora>\n            <Requerimiento/>\n            <Numero>8451</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTTarjetasDeDebito.AsociarCuentaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"\",\n        \"Usuario\": \"INSTALADOR\",\n        \"Token\": \"1518870407CD285A89A23FBE\",\n        \"Device\": \"\"\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTTarjetasDeDebito.AsociarCuenta\",\n        \"Fecha\": \"2021-10-29\",\n        \"Hora\": \"13:37:58\",\n        \"Requerimiento\": \"\",\n        \"Numero\": 8449,\n        \"Estado\": \"OK\"\n    }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

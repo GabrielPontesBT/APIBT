@@ -171,73 +171,78 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{ 
-    "Btinreq": { 
-        "Device": "GP", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": 1, 
-        "Canal": "BTDIGITAL", 
-        "Token": "c2cfd09eff4A8B5C60A82434" 
-    }, 
-    "sdtTarjetas": { 
-        "sBDProductoTarjeta": [ 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000089", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001957, 
-            "tipoTarjeta": "MAESTRO NOMINADA" 
-        }, 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000132", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001942, 
-            "tipoTarjeta": "MAESTRO PREEMBOZADA" 
-        }, 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000098", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001982, 
-            "tipoTarjeta": "MAESTRO NOMINADA" 
-        }, 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000105", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001983, 
-            "tipoTarjeta": "MAESTRO NOMINADA" 
-        }, 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000141", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001943, 
-            "tipoTarjeta": "MAESTRO PREEMBOZADA" 
-        }, 
-        { 
-            "sucursal": "Sucursal Beta", 
-            "numeroTarjeta": "5010730101000000123", 
-            "adicional": "N", 
-            "tarjetaUID": 2000001985, 
-            "tipoTarjeta": "MAESTRO NOMINADA" 
-        } 
-        ] 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": []
-    }, 
-    "Btoutreq": { 
-        "Numero": 16575, 
-        "Estado": "OK", 
-        "Servicio": "BTPersonas.ObtenerTarjetasDeDebito", 
-        "Requerimiento": 1, 
-        "Fecha": "2022-05-26", 
-        "Hora": "09:01:21", 
-        "Canal": "BTDIGITAL" 
-    } 
-}'
+{
+  "Btinreq": {
+    "Device": "GP",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "c2cfd09eff4A8B5C60A82434"
+  },
+  "sdtTarjetas": {
+    "sBDProductoTarjeta": [
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000089",
+        "adicional": "N",
+        "tarjetaUID": 2000001957,
+        "tipoTarjeta": "MAESTRO NOMINADA"
+      },
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000132",
+        "adicional": "N",
+        "tarjetaUID": 2000001942,
+        "tipoTarjeta": "MAESTRO PREEMBOZADA"
+      },
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000098",
+        "adicional": "N",
+        "tarjetaUID": 2000001982,
+        "tipoTarjeta": "MAESTRO NOMINADA"
+      },
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000105",
+        "adicional": "N",
+        "tarjetaUID": 2000001983,
+        "tipoTarjeta": "MAESTRO NOMINADA"
+      },
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000141",
+        "adicional": "N",
+        "tarjetaUID": 2000001943,
+        "tipoTarjeta": "MAESTRO PREEMBOZADA"
+      },
+      {
+        "sucursal": "Sucursal Beta",
+        "numeroTarjeta": "5010730101000000123",
+        "adicional": "N",
+        "tarjetaUID": 2000001985,
+        "tipoTarjeta": "MAESTRO NOMINADA"
+      }
+    ],
+    "adicional": "",
+    "numeroTarjeta": "",
+    "sucursal": "",
+    "tarjetaUID": 0,
+    "tipoTarjeta": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 16575,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerTarjetasDeDebito",
+    "Requerimiento": 1,
+    "Fecha": "2022-05-26",
+    "Hora": "09:01:21",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -5,6 +5,7 @@
   "pubName": "BTCOELSAGestionDebin.DebinListado",
   "programa": "RBTPAR64",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Datos listados de un Debin."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "DebinDatosRes",
@@ -38,11 +42,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ListaDebin>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>02cb4baaac464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:ListaDebinReq>\n            <bts:listadoPagina>1</bts:listadoPagina>\n            <bts:OpeFecDesde>2022-01-30T23:59:59.999Z</bts:OpeFecDesde>\n            <bts:vendedorCuit>20128329464</bts:vendedorCuit>\n            <bts:compradorBco></bts:compradorBco>\n            <bts:compradorCuit></bts:compradorCuit>\n            <bts:vendedorBco>094</bts:vendedorBco>\n            <bts:vendedorLote></bts:vendedorLote>\n            <bts:vendedorTerm></bts:vendedorTerm>\n            <bts:listadoTamano>10</bts:listadoTamano>\n            <bts:OpeFecHasta>2022-12-30T23:59:59.999Z</bts:OpeFecHasta>\n            <bts:CodEstado>ACREDITADO</bts:CodEstado>\n            <bts:compradorCbu></bts:compradorCbu>\n            <bts:vendedorCbu></bts:vendedorCbu>\n            <bts:tipoDebin>debin</bts:tipoDebin>\n         </bts:ListaDebinReq>\n      </bts:BTCOELSAGestionDebin.ListaDebin>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCOELSAGestionDebin.ListaDebin>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Usuario>IVRISSO</bts:Usuario>\n            <bts:Token>02cb4baaac464D4650046918</bts:Token>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Device>10.12.10.40</bts:Device>\n         </bts:Btinreq>\n         <bts:ListaDebinReq>\n            <bts:listadoPagina>1</bts:listadoPagina>\n            <bts:OpeFecDesde>2022-01-30T23:59:59.999Z</bts:OpeFecDesde>\n            <bts:vendedorCuit>20128329464</bts:vendedorCuit>\n            <bts:compradorBco></bts:compradorBco>\n            <bts:compradorCuit></bts:compradorCuit>\n            <bts:vendedorBco>094</bts:vendedorBco>\n            <bts:vendedorLote></bts:vendedorLote>\n            <bts:vendedorTerm></bts:vendedorTerm>\n            <bts:listadoTamano>10</bts:listadoTamano>\n            <bts:OpeFecHasta>2022-12-30T23:59:59.999Z</bts:OpeFecHasta>\n            <bts:CodEstado>ACREDITADO</bts:CodEstado>\n            <bts:compradorCbu></bts:compradorCbu>\n            <bts:vendedorCbu></bts:vendedorCbu>\n            <bts:tipoDebin>debin</bts:tipoDebin>\n         </bts:ListaDebinReq>\n      </bts:BTCOELSAGestionDebin.ListaDebin>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
-      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.ListaDebinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>51691464ea464D4650046918</Token>\n         </Btinreq>\n         <DebinDatosRes>\n            <listadoPagTotales>2</listadoPagTotales>\n            <DescRespuesta>LISTA DEBIN ENCONTRADA</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </DebinDatosRes>\n         <CollectionDebines>\n            <debin>\n               <CompradorCuit>20056853562</CompradorCuit>\n               <VendedorCbu>0940099374001380450017</VendedorCbu>\n               <Concepto>CUO</Concepto>\n               <DebinId>GWY7ZEPN6Y7E4ZP2Q0M51O</DebinId>\n               <VendedorTerm/>\n               <Devolucion>false</Devolucion>\n               <DebinTipo>DEBIN</DebinTipo>\n               <CompradorCbu>0940099366000071650012</CompradorCbu>\n               <IdOperOriginal>0</IdOperOriginal>\n               <Moneda>032</Moneda>\n               <Importe>10.22</Importe>\n               <CompradorTitular>YUNES RAMON ABRAHAM</CompradorTitular>\n               <CodigoEst>ACREDITADO</CodigoEst>\n               <DebinVencimiento>2022-08-11T23:59:52.2323699-03:00</DebinVencimiento>\n               <VendedorCuit>20128329464</VendedorCuit>\n               <CompradorAlias>RAMONYUNESBCSA1</CompradorAlias>\n               <VendedorTitular>YUNES RAMON ALBERTO</VendedorTitular>\n            </debin>\n            ...\n         </CollectionDebines>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-08-01</Fecha>\n            <Hora>17:43:01</Hora>\n            <Numero>171267369</Numero>\n            <Servicio>BTCOELSAGestionDebin.ListaDebin</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.ListaDebinResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.ListaDebinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>51691464ea464D4650046918</Token>\n         </Btinreq>\n         <DebinDatosRes>\n            <listadoPagTotales>2</listadoPagTotales>\n            <DescRespuesta>LISTA DEBIN ENCONTRADA</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </DebinDatosRes>\n         <CollectionDebines>\n            <debin>\n               <CompradorCuit>20056853562</CompradorCuit>\n               <VendedorCbu>0940099374001380450017</VendedorCbu>\n               <Concepto>CUO</Concepto>\n               <DebinId>GWY7ZEPN6Y7E4ZP2Q0M51O</DebinId>\n               <VendedorTerm/>\n               <Devolucion>false</Devolucion>\n               <DebinTipo>DEBIN</DebinTipo>\n               <CompradorCbu>0940099366000071650012</CompradorCbu>\n               <IdOperOriginal>0</IdOperOriginal>\n               <Moneda>032</Moneda>\n               <Importe>10.22</Importe>\n               <CompradorTitular>YUNES RAMON ABRAHAM</CompradorTitular>\n               <CodigoEst>ACREDITADO</CodigoEst>\n               <DebinVencimiento>2022-08-11T23:59:52.2323699-03:00</DebinVencimiento>\n               <VendedorCuit>20128329464</VendedorCuit>\n               <CompradorAlias>RAMONYUNESBCSA1</CompradorAlias>\n               <VendedorTitular>YUNES RAMON ALBERTO</VendedorTitular>\n            </debin>\n         </CollectionDebines>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-08-01</Fecha>\n            <Hora>17:43:01</Hora>\n            <Numero>171267369</Numero>\n            <Servicio>BTCOELSAGestionDebin.ListaDebin</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.ListaDebinResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCOELSAGestionDebin.ListaDebinResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Usuario>IVRISSO</Usuario>\n            <Device>10.12.10.40</Device>\n            <Requerimiento>1</Requerimiento>\n            <Token>51691464ea464D4650046918</Token>\n         </Btinreq>\n         <DebinDatosRes>\n            <listadoPagTotales>2</listadoPagTotales>\n            <DescRespuesta>LISTA DEBIN ENCONTRADA</DescRespuesta>\n            <CodRespuesta>00</CodRespuesta>\n         </DebinDatosRes>\n         <CollectionDebines>\n            <debin>\n               <CompradorCuit>20056853562</CompradorCuit>\n               <VendedorCbu>0940099374001380450017</VendedorCbu>\n               <Concepto>CUO</Concepto>\n               <DebinId>GWY7ZEPN6Y7E4ZP2Q0M51O</DebinId>\n               <VendedorTerm/>\n               <Devolucion>false</Devolucion>\n               <DebinTipo>DEBIN</DebinTipo>\n               <CompradorCbu>0940099366000071650012</CompradorCbu>\n               <IdOperOriginal>0</IdOperOriginal>\n               <Moneda>032</Moneda>\n               <Importe>10.22</Importe>\n               <CompradorTitular>YUNES RAMON ABRAHAM</CompradorTitular>\n               <CodigoEst>ACREDITADO</CodigoEst>\n               <DebinVencimiento>2022-08-11T23:59:52.2323699-03:00</DebinVencimiento>\n               <VendedorCuit>20128329464</VendedorCuit>\n               <CompradorAlias>RAMONYUNESBCSA1</CompradorAlias>\n               <VendedorTitular>YUNES RAMON ALBERTO</VendedorTitular>\n            </debin>\n         </CollectionDebines>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Estado>OK</Estado>\n            <Fecha>2024-08-01</Fecha>\n            <Hora>17:43:01</Hora>\n            <Numero>171267369</Numero>\n            <Servicio>BTCOELSAGestionDebin.ListaDebin</Servicio>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCOELSAGestionDebin.ListaDebinResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -72,7 +90,7 @@
         {
           "Nombre": "vendedorLote",
           "Tipo": "Short",
-          "Comentarios": "vendedor Lote."
+          "Comentarios": "Vendedor Lote."
         },
         {
           "Nombre": "vendedorBco",
@@ -127,7 +145,7 @@
         {
           "Nombre": "listadoPagTotales",
           "Tipo": "Short",
-          "Comentarios": "listado páginas totales."
+          "Comentarios": "Listado páginas totales."
         },
         {
           "Nombre": "CodRespuesta",

@@ -22,7 +22,7 @@ title: Get Data
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-termDepositGUID | String $<(Length: 36)>$ | GUID (identificador único global) del depósito a plazo.
+TermDepositGUID | String $<(Length: 36)>$ | GUID (identificador único global) del depósito a plazo.
 
 @tab Body
 
@@ -85,8 +85,8 @@ Completar manualmente | Completar manualmente| 60001 | No existe la moneda ingre
     "Requerimiento": "1",
     "Token": "A8068BDF0E08AC754A7B94F5"
   },
-  "termDepositGUID": "6d865a97-7cde-4b25-935d-a02bdeba9844"
-}'
+  "TermDepositGUID": "6d865a97-7cde-4b25-935d-a02bdeba9844"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -143,13 +143,13 @@ Completar manualmente | Completar manualmente| 60001 | No existe la moneda ingre
     "YearType": 2,
     "YearTypeDescription": "365 - Año calendario",
     "Product": {
-      "ProductGUID": "8fd31000-0027-4028-8a66-eede56e485dd",
       "ProductDescription": "DPF TIPO 1 - COMERCIAL 365 EFECTIVA",
       "CurrencyId": 0,
       "CurrencyDescription": "Pesos Uruguayos",
       "CurrencySign": "$",
       "KindId": 0,
-      "KindDescription": "Billete"
+      "KindDescription": "Billete",
+      "ProductGUId": "8fd31000-0027-4028-8a66-eede56e485dd"
     },
     "Instructions": {
       "SdtsBTTDWInstruction": [
@@ -157,7 +157,6 @@ Completar manualmente | Completar manualmente| 60001 | No existe la moneda ingre
           "Id": 1,
           "Description": "Cancelar y Acreditar al vto.",
           "Accounted": "S",
-          "MovementGUID": "626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c",
           "AccountingAccountId": 102100000,
           "BranchId": 0,
           "CompanyId": 0,
@@ -168,15 +167,55 @@ Completar manualmente | Completar manualmente| 60001 | No existe la moneda ingre
           "OperationId": 0,
           "OperationTypeId": 0,
           "SuboperationId": 0,
-          "Type": 0
+          "Type": 0,
+          "MovementGUId": "626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c"
         }
       ]
     },
     "Installments": {
-      "SdtsBTTDWInstallment": []
+      "SdtsBTTDWInstallment": [
+        {
+          "breachDate": "",
+          "capital": "",
+          "capitalTax": "",
+          "endDate": "",
+          "expectedPaymentDate": "",
+          "extendsTerm": false,
+          "installmentNumber": 0,
+          "installmentStatus": "",
+          "installmentType": "",
+          "installmentValue": "",
+          "interest": "",
+          "interestTax1": "",
+          "interestTax2": "",
+          "interestTax3": "",
+          "revenueTax": "",
+          "roundOff": "",
+          "startDate": "",
+          "subTotal": "",
+          "taxes": "",
+          "Term": "",
+          "total": "",
+          "type": ""
+        }
+      ]
     },
     "Events": {
-      "SdtsBTTDWEvent": []
+      "SdtsBTTDWEvent": [
+        {
+          "Accounted": "",
+          "Correlative": "",
+          "EventDate": "",
+          "Id": "",
+          "MovementGUId": "",
+          "Name": "",
+          "PlusRate": "",
+          "Rate": "",
+          "RateTypeId": "",
+          "RateTypeDescription": "",
+          "ValueDate": ""
+        }
+      ]
     }
   },
   "BusinessErrors": {
@@ -216,12 +255,12 @@ CancellationDate | Date $<(Length: 8)>$ | Fecha de cancelación.
 DayType | Byte $<(Length: 1)>$ | Tipo de día.
 DayTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de día.
 Events | [SdtsBTTDWEvent](#sdtsbttdwevent) | Events.
-ExpandEndOfMonth | Boolean $<(Length: 1)>$ | Ampliar fin de mes.
+ExpandEndOfMonth | Boolean | Ampliar fin de mes.
 ExpirationDate | Date $<(Length: 8)>$ | Fecha de vencimiento.
 ExpirationType | String $<(Length: 1)>$ | Tipo de vencimiento.
 ExpirationTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de vencimiento.
-ForcesCommercialTerm | Boolean $<(Length: 1)>$ | Fuerza plazo comercial.
-IncludesTaxes | Boolean $<(Length: 1)>$ | Incluye impuestos.
+ForcesCommercialTerm | Boolean | Fuerza plazo comercial.
+IncludesTaxes | Boolean | Incluye impuestos.
 InstallmentCount | Int $<(Length: 5)>$ | Cantidad de cuotas.
 Installments | [SdtsBTTDWInstallment](#sdtsbttdwinstallment) | Cuotas.
 Instructions | [SdtsBTTDWInstruction](#sdtsbttdwinstruction) | Instrucciones.
@@ -245,7 +284,7 @@ RevisionDay | Int $<(Length: 5)>$ | Día de revisión.
 StatusId | Short | Identificador de estado.
 StatusDescription | String | Descripción del estado.
 Term | Int $<(Length: 5)>$ | Plazo.
-TermDepositGUID | String | GUID del depósito a plazo.
+TermDepositGUID | String | GUID (identificador único global) del depósito a plazo.
 ValueDate | Date $<(Length: 8)>$ | Fecha valor.
 YearType | Byte $<(Length: 1)>$ | Tipo de año.
 YearTypeDescription | String $<(Length: 40)>$ | Descripción del tipo de año.
@@ -264,7 +303,7 @@ Accounted | String $<(Length: 1)>$ | Contabilizado.
 Correlative | Long $<(Length: 10)>$ | Correlativo.
 EventDate | Date $<(Length: 8)>$ | Fecha del evento.
 Id | Int $<(Length: 5)>$ | Identificador.
-MovementGUID | String | GUID del movimiento.
+MovementGUId | String | GUID (identificador único global) del movimiento.
 Name | String | Nombre.
 PlusRate | Double $<(Length: 11)>$ | Tasa adicional.
 Rate | Double $<(Length: 11)>$ | Tasa.
@@ -301,7 +340,7 @@ roundOff | Numeric $<(Length: 18, dec: 2)>$ | Diferencia de redondeo.
 startDate | Date | Fecha de inicio del período.
 subTotal | Numeric $<(Length: 18, dec: 2)>$ | Subtotal de la cuota.
 taxes | Numeric $<(Length: 18, dec: 2)>$ | Total de impuestos de la cuota.
-term | Numeric $<(Length: 5)>$ | Plazo de la cuota.
+Term | Numeric $<(Length: 5)>$ | Plazo de la cuota.
 total | Numeric $<(Length: 18, dec: 2)>$ | Total de la cuota.
 type | Character $<(Length: 1)>$ | Tipo de movimiento (P - Pago, I - Incremento, D - Decremento).
 :::
@@ -325,7 +364,7 @@ Id | Short $<(Length: 3)>$ | Identificador.
 Description | String | Descripción.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 ModuleId | Int $<(Length: 5)>$ | Identificador de módulo.
-MovementGUID | String | GUID del movimiento.
+MovementGUId | String | GUID (identificador único global) del movimiento.
 OperationId | Int $<(Length: 9)>$ | Identificador de operación.
 OperationTypeId | Short $<(Length: 3)>$ | Identificador del tipo de operación.
 SuboperationId | Int $<(Length: 5)>$ | Identificador de suboperación.
@@ -347,6 +386,6 @@ CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
 KindId | Int $<(Length: 6)>$ | Identificador del tipo.
 KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
 ProductDescription | String | Descripción del producto.
-ProductGUID | String $<(Length: 36)>$ | GUID del producto.
+ProductGUId | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
 :::
 <!-- CIERRA SDT -->

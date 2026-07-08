@@ -6,9 +6,14 @@
   "modulo": "Liabilities.SavingsAccounts",
   "programa": "PublicAPI.BTSAPA0003",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "savingAccountGUID",
@@ -16,7 +21,9 @@
       "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [],
   "errors": [
     {
@@ -52,11 +59,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"savingAccountGUID\": \"92b2ce1f-34e7-4606-bdd4-e62bde656979\"\r\n}'"
+        }
+      ]
     },
     "response": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:01\",\r\n    \"Numero\": 13466300,\r\n    \"Servicio\": \"PublicSavingAccounts.block\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"8EE696AD86E93556C39DD2CC\"\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-13\",\r\n    \"Hora\": \"20:54:01\",\r\n    \"Numero\": 13466300,\r\n    \"Servicio\": \"PublicSavingAccounts.block\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

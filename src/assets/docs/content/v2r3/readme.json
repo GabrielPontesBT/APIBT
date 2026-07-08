@@ -16,11 +16,13 @@
   "examples": {
     "invocation": {
       "xml": "",
-      "json": ""
+      "json": "",
+      "tabs": []
     },
     "response": {
       "xml": "",
-      "json": ""
+      "json": "",
+      "tabs": []
     }
   },
   "structuredTypes": [],

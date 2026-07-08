@@ -67,7 +67,7 @@ Código | Descripción
             <bts:Token>20130357454A8B5C60A82434</bts:Token>
             <bts:Device>GP</bts:Device>
          </bts:Btinreq>
-         <bts:usuario>CAJERO</bts:usuario>
+         <bts:perfil>CAJERO</bts:perfil>
       </bts:BTUsuarios.ObtenerUsuariosParaPerfil>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -75,21 +75,16 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuariosParaPerfil' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "MINSTALADOR",
-        "Token": "20130357454A8B5C60A82434",
-        "Device": "GP"
-    },
-    "usuario": "CAJERO"
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "MINSTALADOR",
+    "Token": "20130357454A8B5C60A82434",
+    "Device": "GP"
+  },
+  "perfil": "CAJERO",
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

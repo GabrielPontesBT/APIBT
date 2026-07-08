@@ -6,11 +6,18 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTCPPA0010",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "statuses",
@@ -23,11 +30,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  }\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  }\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"444B674391BCA7676279700A\"\r\n  },\r\n  \"statuses\": {\r\n    \"status\": [\r\n      {\r\n        \"Id\": 1,\r\n        \"Description\": \"ACTIVA\"\r\n      },\r\n      {\r\n        \"Id\": 2,\r\n        \"Description\": \"INHABILITADA\"\r\n      },\r\n      {\r\n        \"Id\": 3,\r\n        \"Description\": \"CERRADA\"\r\n      },\r\n      {\r\n        \"Id\": 9,\r\n        \"Description\": \"ALTA INCONCLUSA (INST.FINANC.)\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"16:13:55\",\r\n    \"Numero\": 13468805,\r\n    \"Servicio\": \"PublicCustomers.getStatuses\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"444B674391BCA7676279700A\"\n  },\n  \"statuses\": {\n    \"status\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"ACTIVA\"\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"INHABILITADA\"\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"CERRADA\"\n      },\n      {\n        \"Id\": 9,\n        \"Description\": \"ALTA INCONCLUSA (INST.FINANC.)\"\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"16:13:55\",\n    \"Numero\": 13468805,\n    \"Servicio\": \"PublicCustomers.getStatuses\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"444B674391BCA7676279700A\"\n  },\n  \"statuses\": {\n    \"status\": [\n      {\n        \"Id\": 1,\n        \"Description\": \"ACTIVA\"\n      },\n      {\n        \"Id\": 2,\n        \"Description\": \"INHABILITADA\"\n      },\n      {\n        \"Id\": 3,\n        \"Description\": \"CERRADA\"\n      },\n      {\n        \"Id\": 9,\n        \"Description\": \"ALTA INCONCLUSA (INST.FINANC.)\"\n      }\n    ],\n    \"Id\": \"\",\n    \"Description\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"16:13:55\",\n    \"Numero\": 13468805,\n    \"Servicio\": \"PublicCustomers.getStatuses\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

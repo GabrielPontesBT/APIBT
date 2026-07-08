@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.EvaluarPAE",
   "programa": "RBTPGP50",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -35,6 +36,9 @@
       "Comentarios": "Colección de valores PAE."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "valor",
@@ -100,11 +104,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EvaluarPAE>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\n         </bts:Btinreq>\n         <bts:modeloId>23</bts:modeloId>\n         <bts:personaUId>62</bts:personaUId>\n         <bts:productoUId>3</bts:productoUId>\n         <bts:sdtValores>\n            <bts:sBTPAEValorItem>\n               <bts:itemValor></bts:itemValor>\n               <bts:itemNombre></bts:itemNombre>\n            </bts:sBTPAEValorItem>\n         </bts:sdtValores>\n      </bts:BTPersonas.EvaluarPAE>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EvaluarPAE=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"GZ\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"modeloId\": 23,\n   \"personaUId\": 62,\n   \"productoUId\": 3,\n   \"sdtValores\": {\n      \"sBTPAEValorItem\": {\n      \"itemValor\": \"\",\n      \"itemNombre\": \"\"\n      }\n   }\n}'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EvaluarPAE=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"GZ\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"modeloId\": 23,\n   \"personaUId\": 62,\n   \"productoUId\": 3,\n   \"sdtValores\": {\n      \"sBTPAEValorItem\": {\n      \"itemValor\": \"\",\n      \"itemNombre\": \"\"\n      }\n   }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.EvaluarPAE>\n         <bts:Btinreq>\n            <bts:Requerimiento>0</bts:Requerimiento>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>GZ</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>E1F15D391E5C8FAC4189A627</bts:Token>\n         </bts:Btinreq>\n         <bts:modeloId>23</bts:modeloId>\n         <bts:personaUId>62</bts:personaUId>\n         <bts:productoUId>3</bts:productoUId>\n         <bts:sdtValores>\n            <bts:sBTPAEValorItem>\n               <bts:itemValor></bts:itemValor>\n               <bts:itemNombre></bts:itemNombre>\n            </bts:sBTPAEValorItem>\n         </bts:sdtValores>\n      </bts:BTPersonas.EvaluarPAE>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EvaluarPAE=' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"GZ\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"modeloId\": 23,\n   \"personaUId\": 62,\n   \"productoUId\": 3,\n   \"sdtValores\": {\n      \"sBTPAEValorItem\": {\n      \"itemValor\": \"\",\n      \"itemNombre\": \"\"\n      }\n   }\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.EvaluarPAEResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>E1F15D391E5C8FAC4189A627</Token>\n         </Btinreq>\n         <valor>10000.0</valor>\n         <mensaje/>\n         <sdtPoliticas/>\n         <numeroEjecucion>2</numeroEjecucion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16893</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.EvaluarPAE</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2023-10-31</Fecha>\n            <Hora>08:50:51</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.EvaluarPAEResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n   \"valor\": 10000,\n   \"mensaje\": \"\",\n   \"sdtPoliticas\": \"\",\n   \"numeroEjecucion\": 2,\n   \"Erroresnegocio\": {\n       \"BTErrorNegocio\": []\n   },\n   \"Btoutreq\": {\n       \"Numero\": \"835\",\n       \"Estado\": \"OK\",\n       \"Servicio\": \"BTPersonas.EvaluarPAE\",\n       \"Fecha\": \"2017-12-18\",\n       \"Requerimiento\": \"\",\n       \"Hora\": \"01:48:53\",\n       \"Canal\": \"BTDIGITAL\"\n   }\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"valor\": 10000,\n  \"mensaje\": \"\",\n  \"sdtPoliticas\": {\n    \"estado\": \"\",\n    \"estadoDsc\": \"\",\n    \"nroAutorizacion\": 0,\n    \"observacion\": \"\",\n    \"politica\": \"\",\n    \"politicaId\": 0,\n    \"restriccion\": \"\",\n    \"restriccionDsc\": \"\"\n  },\n  \"numeroEjecucion\": 2,\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"835\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.EvaluarPAE\",\n    \"Fecha\": \"2017-12-18\",\n    \"Requerimiento\": \"\",\n    \"Hora\": \"01:48:53\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.EvaluarPAEResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>GZ</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>0</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>E1F15D391E5C8FAC4189A627</Token>\n         </Btinreq>\n         <valor>10000.0</valor>\n         <mensaje/>\n         <sdtPoliticas/>\n         <numeroEjecucion>2</numeroEjecucion>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>16893</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.EvaluarPAE</Servicio>\n            <Requerimiento>0</Requerimiento>\n            <Fecha>2023-10-31</Fecha>\n            <Hora>08:50:51</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.EvaluarPAEResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"valor\": 10000,\n  \"mensaje\": \"\",\n  \"sdtPoliticas\": {\n    \"estado\": \"\",\n    \"estadoDsc\": \"\",\n    \"nroAutorizacion\": 0,\n    \"observacion\": \"\",\n    \"politica\": \"\",\n    \"politicaId\": 0,\n    \"restriccion\": \"\",\n    \"restriccionDsc\": \"\"\n  },\n  \"numeroEjecucion\": 2,\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"835\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.EvaluarPAE\",\n    \"Fecha\": \"2017-12-18\",\n    \"Requerimiento\": \"\",\n    \"Hora\": \"01:48:53\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

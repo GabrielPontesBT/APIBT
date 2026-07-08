@@ -111,22 +111,22 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>0868626a064A8B5C60A82434</Token>
          </Btinreq>
-         <documentosDigitales>
+         <sdtDocumentosDigitales>
             <sBTDocumentoDigital>
                <Titulo>C.I</Titulo>
                <FechaActualizacion>2017-03-30</FechaActualizacion>
                <FechaVencimiento>2018-03-30</FechaVencimiento>
                <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
-               <documentoId>83</documentoId>
+               <DocumentoId>83</DocumentoId>
             </sBTDocumentoDigital>
             <sBTDocumentoDigital>
                <Titulo>C.I 2</Titulo>
                <FechaActualizacion>2017-03-30</FechaActualizacion>
                <FechaVencimiento>2018-03-30</FechaVencimiento>
                <TipoDocumentoDigital>Cédula de Identidad</TipoDocumentoDigital>
-               <documentoId>84</documentoId>
+               <DocumentoId>84</DocumentoId>
             </sBTDocumentoDigital>
-         </documentosDigitales>
+         </sdtDocumentosDigitales>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>770</Numero>
@@ -144,45 +144,45 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "documentosDigitales": {
-        "sBTDocumentoDigital": [
-            {
-                "Titulo": "C.I",
-                "FechaActualizacion": "2017-03-30",
-                "FechaVencimiento": "2018-03-30",
-                "TipoDocumentoDigital": "Cédula de Identidad",
-                "DocumentoId": 83
-            },
-            {
-                "Titulo": "C.I 2",
-                "FechaActualizacion": "2017-03-30",
-                "FechaVencimiento": "2018-03-30",
-                "TipoDocumentoDigital": "Cédula de Identidad",
-                "DocumentoId": 84
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 773,
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ObtenerDocumentosDigitales",
-        "Requerimiento": "1",
-        "Fecha": "2018-11-12",
-        "Hora": "16:17:09",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtDocumentosDigitales": {
+    "sBTDocumentoDigital": [
+      {
+        "Titulo": "C.I",
+        "FechaActualizacion": "2017-03-30",
+        "FechaVencimiento": "2018-03-30",
+        "TipoDocumentoDigital": "Cédula de Identidad",
+        "DocumentoId": 83
+      },
+      {
+        "Titulo": "C.I 2",
+        "FechaActualizacion": "2017-03-30",
+        "FechaVencimiento": "2018-03-30",
+        "TipoDocumentoDigital": "Cédula de Identidad",
+        "DocumentoId": 84
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 773,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerDocumentosDigitales",
+    "Requerimiento": "1",
+    "Fecha": "2018-11-12",
+    "Hora": "16:17:09",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -199,10 +199,10 @@ Los campos del tipo de dato estructurado sBTDocumentoDigital son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-documentoId | Long | Identificador del documento digital. 
-fechaActualizacion | Date | Fecha de actualización del documento digital. 
-fechaVencimiento | Date | Fecha de vencimiento del documento digital. 
-tipoDocumentoDigital | String | Tipo del documento digital. 
-titulo | String | Título del documento digital. 
+DocumentoId | Long | Identificador del documento digital. 
+FechaActualizacion | Date | Fecha de actualización del documento digital. 
+FechaVencimiento | Date | Fecha de vencimiento del documento digital. 
+TipoDocumentoDigital | String | Tipo del documento digital. 
+Titulo | String | Título del documento digital. 
 :::
 <!-- CIERRA SDT -->

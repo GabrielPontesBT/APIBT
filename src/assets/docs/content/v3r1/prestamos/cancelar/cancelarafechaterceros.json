@@ -5,6 +5,7 @@
   "pubName": "BTPrestamos.CancelarAFechaTerceros",
   "programa": "RBTPG833",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": true,
   "backendText": "1) Definir la transacción de Pago, teniendo en cuenta que: \r\n\r\n\t- El préstamo se almacena en el preformato 1. \r\n\r\n\t- La cuenta vista de cobro se almacena en el preformato 2. \r\n\r\n\t- Los correlativos del subordinal deben corresponderse con los módulos de los productos definidos en el subordinal. \r\n\r\n2) Configurar la transacción parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). \r\n\r\n3) Se debe indicar los ordinales donde se encuentra definido el préstamo y la cuenta de cobro.",
   "backendData": [],
@@ -45,6 +46,9 @@
       "Comentarios": "Indica si se controla la existencia de la operación de cobro [Hidden: Valores 'S'/'N']."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "movimientoUId",
@@ -98,12 +102,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.CancelarAFechaTerceros>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>321</bts:operacionUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n         <bts:operacionCobroUId>281</bts:operacionCobroUId>\r\n         <bts:referencia>Cancelar</bts:referencia>\r\n         <bts:fecha>2016-10-10</bts:fecha>\r\n        <bts:controlaExistenciaOperacionCobro>N</bts:controlaExistenciaOperacionCobro>\r\n      </bts:BTPrestamos.CancelarAFechaTerceros>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?CancelarAFechaTerceros=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 342,\r\n    \"clienteUId\": 161,\r\n    \"operacionCobroUId\": 281,\r\n    \"referencia\": \"Cancelar\",\r\n\t\"fecha\": \"2020-10-10\",\r\n    \"controlaExistenciaOperacionCobro\": \"N\"\r\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.CancelarAFechaTerceros>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>321</bts:operacionUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n         <bts:operacionCobroUId>281</bts:operacionCobroUId>\r\n         <bts:referencia>Cancelar</bts:referencia>\r\n         <bts:fecha>2016-10-10</bts:fecha>\n      </bts:BTPrestamos.CancelarAFechaTerceros>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"operacionUId\": 342,\n  \"clienteUId\": 161,\n  \"operacionCobroUId\": 281,\n  \"referencia\": \"Cancelar\",\n  \"fecha\": \"2020-10-10\"\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPrestamos.CancelarAFechaTerceros>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>dc7d30c0044A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>321</bts:operacionUId>\r\n         <bts:clienteUId>161</bts:clienteUId>\r\n         <bts:operacionCobroUId>281</bts:operacionCobroUId>\r\n         <bts:referencia>Cancelar</bts:referencia>\r\n         <bts:fecha>2016-10-10</bts:fecha>\n      </bts:BTPrestamos.CancelarAFechaTerceros>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"operacionUId\": 342,\n  \"clienteUId\": 161,\n  \"operacionCobroUId\": 281,\n  \"referencia\": \"Cancelar\",\n  \"fecha\": \"2020-10-10\"\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.CancelarAFechaTercerosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>dc7d30c0044A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <movimientoUId>121</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>758</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.CancelarAFechaTerceros</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-05</Fecha>\r\n            <Hora>13:32:15</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.CancelarAFechaTercerosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": \"122\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"759\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.CancelarAFechaTerceros\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2017-12-05\",\r\n        \"Hora\": \"13:39:04\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": \"122\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"759\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.CancelarAFechaTerceros\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2017-12-05\",\r\n        \"Hora\": \"13:39:04\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPrestamos.CancelarAFechaTercerosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>dc7d30c0044A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <movimientoUId>121</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>758</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPrestamos.CancelarAFechaTerceros</Servicio>\r\n            <Requerimiento/>\r\n            <Fecha>2017-12-05</Fecha>\r\n            <Hora>13:32:15</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPrestamos.CancelarAFechaTercerosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": \"122\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"759\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTPrestamos.CancelarAFechaTerceros\",\r\n        \"Requerimiento\": 1,\r\n        \"Fecha\": \"2017-12-05\",\r\n        \"Hora\": \"13:39:04\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

@@ -190,91 +190,111 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Canal": "BTDIGITAL",
-        "Requerimiento": 1,
-        "Usuario": "IN",
-        "Token": "12420485CD285A89A23FBE",
-        "Device": "MC"
-    },
-    "sdtDetalleAsiento": {
-        "sucursalId": 1,
-        "descripcion": "CAJA, Traspaso entre Cuentas",
-        "usuarioIngreso": "BANTOTAL",
-        "usuarioConfirmacion": "BANTOTAL",
-        "fechaContabilizacion": "2018-10-15",
-        "hora": "13:08:23",
-        "fechaValor": "2018-10-15",
-        "anulado": "N",
-        "movimientoUIdOriginal": 8,
-        "movimientoUIdAnulacion": 0,
-        "ordinales": {
-            "sBTOrdinal": [
-                {
-                    "operacionUId": 10189,
-                    "idOperacionBT": 10000100021000000000000000002700003000000000000,
-                    "debitoCredito": "D",
-                    "importe": 10000.00,
-                    "producto": {
-                        "productoUId": 0,
-                        "nombre": "CAJAS DE AHORRO, GENÉRICA",
-                        "moneda": "$",
-                        "papel": "$"
-                    }
-                },
-                {
-                    "operacionUId": 10191,
-                    "idOperacionBT": 10000100020222200000000000002700002000000000000,
-                    "debitoCredito": "C",
-                    "importe": 25.00,
-                    "producto": {
-                        "productoUId": 0,
-                        "nombre": "CUENTA CORRIENTE, GENÉRICA",
-                        "moneda": "USD",
-                        "papel": "$"
-                    }
-                },
-                {
-                    "operacionUId": 10192,
-                    "idOperacionBT": 10000100496222200000000000000000000000000000000,
-                    "debitoCredito": "D",
-                    "importe": 25.00,
-                    "producto": {
-                        "productoUId": 0,
-                        "nombre": "POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA",
-                        "moneda": "USD",
-                        "papel": "$"
-                    }
-                },
-                {
-                    "operacionUId": 10193,
-                    "idOperacionBT": 10000100497000000000000000000000000000000000000,
-                    "debitoCredito": "C",
-                    "importe": 10000.00,
-                    "producto": {
-                        "productoUId": 0,
-                        "nombre": "VALUACION MONEDA EXTRANJERA, VALUACION MONEDA EXTRANJERA",
-                        "moneda": "$",
-                        "papel": "$"
-                    }
-                }
-            ]
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "IN",
+    "Token": "12420485CD285A89A23FBE",
+    "Device": "MC"
+  },
+  "sdtDetalleAsiento": {
+    "sucursalId": 1,
+    "descripcion": "CAJA, Traspaso entre Cuentas",
+    "usuarioIngreso": "BANTOTAL",
+    "usuarioConfirmacion": "BANTOTAL",
+    "fechaContabilizacion": "2018-10-15",
+    "hora": "13:08:23",
+    "fechaValor": "2018-10-15",
+    "anulado": "N",
+    "movimientoUIdOriginal": 8,
+    "movimientoUIdAnulacion": 0,
+    "ordinales": {
+      "sBTOrdinal": [
+        {
+          "operacionUId": 10189,
+          "idOperacionBT": 1.0000100021e+46,
+          "debitoCredito": "D",
+          "importe": 10000,
+          "producto": {
+            "productoUId": 0,
+            "nombre": "CAJAS DE AHORRO, GENÉRICA",
+            "moneda": "$",
+            "papel": "$",
+            "otrosConceptos": {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          }
+        },
+        {
+          "operacionUId": 10191,
+          "idOperacionBT": 1.00001000202222e+46,
+          "debitoCredito": "C",
+          "importe": 25,
+          "producto": {
+            "productoUId": 0,
+            "nombre": "CUENTA CORRIENTE, GENÉRICA",
+            "moneda": "USD",
+            "papel": "$",
+            "otrosConceptos": {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          }
+        },
+        {
+          "operacionUId": 10192,
+          "idOperacionBT": 1.00001004962222e+46,
+          "debitoCredito": "D",
+          "importe": 25,
+          "producto": {
+            "productoUId": 0,
+            "nombre": "POSICION MONEDA EXTRANJERA, POSICION MONEDA EXTRANJERA",
+            "moneda": "USD",
+            "papel": "$",
+            "otrosConceptos": {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          }
+        },
+        {
+          "operacionUId": 10193,
+          "idOperacionBT": 1.0000100497e+46,
+          "debitoCredito": "C",
+          "importe": 10000,
+          "producto": {
+            "productoUId": 0,
+            "nombre": "VALUACION MONEDA EXTRANJERA, VALUACION MONEDA EXTRANJERA",
+            "moneda": "$",
+            "papel": "$",
+            "otrosConceptos": {
+              "concepto": "",
+              "texto": "",
+              "valor": 0
+            }
+          }
         }
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Canal": "BTDIGITAL",
-        "Servicio": "BTContabilidad.ObtenerDetalleMovimiento",
-        "Fecha": "2020-10-29",
-        "Hora": "16:13:11",
-        "Requerimiento": 1,
-        "Numero": 7704,
-        "Estado": "OK"
+      ]
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTContabilidad.ObtenerDetalleMovimiento",
+    "Fecha": "2020-10-29",
+    "Hora": "16:13:11",
+    "Requerimiento": 1,
+    "Numero": 7704,
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -301,8 +321,11 @@ movimientoUIdOriginal  | Long | Identificador único de movimiento original.
 ordinales | [sBTOrdinal](#sbtordinal) | Listado de ordinales del movimiento. 
 sucursalId | Int | Identificador de sucursal. 
 usuarioConfirmacion | String | Usuario de confirmación del movimiento. 
-usuarioIngreso | String | Usuario de ingreso del movimiento. 
- 
+usuarioIngreso | String | Usuario de ingreso del movimiento.
+:::
+
+::: details sBTOrdinal
+
 ### sBTOrdinal
 
 ::: center 
@@ -314,7 +337,10 @@ debitoCredito | String | ¿Es débito o crédito? (Crédito: 'C', Débito: 'D').
 idOperacionBT | String | Identificador String Bantotal (concatenación de todos los conceptos claves de la operación). 
 importe | Double | Importe. 
 operacionUId | Long | Identificador único de operación. 
-producto | [sBTProducto](#sbtproducto) | Datos del Producto. 
+producto | [sBTProducto](#sbtproducto) | Datos del Producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -327,7 +353,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -340,4 +369,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

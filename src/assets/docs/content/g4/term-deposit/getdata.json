@@ -6,16 +6,22 @@
   "modulo": "TermDeposit",
   "programa": "PublicAPI.BTTDPA0003",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
-      "Nombre": "termDepositGUID",
+      "Nombre": "TermDepositGUID",
       "Tipo": "String <strong>(Length: 36)</strong>",
       "Comentarios": "GUID (identificador único global) del depósito a plazo."
     }
   ],
+  "bodyNote": "",
   "bodyData": [
     {
       "Nombre": "Completar manualmente",
@@ -23,6 +29,7 @@
       "Comentarios": "Completar manualmente"
     }
   ],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "termDepositData",
@@ -143,12 +150,26 @@
   "errorsNote": "",
   "examples": {
     "invocation": {
-      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}'",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\"\n}"
+        }
+      ]
     },
     "response": {
-      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositData\": {\n    \"AccountingAccountId\": 162502000,\n    \"AccountingAccountDescription\": \"Dep.A Plazo Fijo Intran.No Reaj.Res\",\n    \"Amount\": \"2000.00\",\n    \"Balance\": \"2000.00\",\n    \"CancellationDate\": \"\",\n    \"DayType\": 1,\n    \"DayTypeDescription\": \"Comerciales\",\n    \"ExpandEndOfMonth\": true,\n    \"ExpirationDate\": \"2028-02-02\",\n    \"ExpirationType\": \"P\",\n    \"ExpirationTypeDescription\": \"Día hábil posterior\",\n    \"ForcesCommercialTerm\": false,\n    \"IncludesTaxes\": false,\n    \"InstallmentCount\": 0,\n    \"InterestCalculationType\": \"C\",\n    \"KindValue\": \"0E-8\",\n    \"LastRevisionDay\": \"\",\n    \"NextPaymentDate\": \"\",\n    \"PayDate\": \"\",\n    \"PaymentType\": 1,\n    \"PaymentTypeDescription\": \"\",\n    \"Period\": 0,\n    \"PlusRate\": \"0.000000\",\n    \"Rate\": \"13.000000\",\n    \"RateClassId\": 0,\n    \"RateClassDescription\": \"\",\n    \"RateManagement\": 0,\n    \"RateTypeId\": 1,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"RevisionDay\": 0,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"Term\": 361,\n    \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\",\n    \"ValueDate\": \"2027-02-01\",\n    \"YearType\": 2,\n    \"YearTypeDescription\": \"365 - Año calendario\",\n    \"Product\": {\n      \"ProductGUID\": \"8fd31000-0027-4028-8a66-eede56e485dd\",\n      \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\"\n    },\n    \"Instructions\": {\n      \"SdtsBTTDWInstruction\": [\n        {\n          \"Id\": 1,\n          \"Description\": \"Cancelar y Acreditar al vto.\",\n          \"Accounted\": \"S\",\n          \"MovementGUID\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\",\n          \"AccountingAccountId\": 102100000,\n          \"BranchId\": 0,\n          \"CompanyId\": 0,\n          \"CounterpartyId\": 4612,\n          \"CurrencyId\": 0,\n          \"KindId\": 0,\n          \"ModuleId\": 0,\n          \"OperationId\": 0,\n          \"OperationTypeId\": 0,\n          \"SuboperationId\": 0,\n          \"Type\": 0\n        }\n      ]\n    },\n    \"Installments\": {\n      \"SdtsBTTDWInstallment\": []\n    },\n    \"Events\": {\n      \"SdtsBTTDWEvent\": []\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:35\",\n    \"Numero\": 13472659,\n    \"Servicio\": \"PublicTermDeposit.getData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositData\": {\n    \"AccountingAccountId\": 162502000,\n    \"AccountingAccountDescription\": \"Dep.A Plazo Fijo Intran.No Reaj.Res\",\n    \"Amount\": \"2000.00\",\n    \"Balance\": \"2000.00\",\n    \"CancellationDate\": \"\",\n    \"DayType\": 1,\n    \"DayTypeDescription\": \"Comerciales\",\n    \"ExpandEndOfMonth\": true,\n    \"ExpirationDate\": \"2028-02-02\",\n    \"ExpirationType\": \"P\",\n    \"ExpirationTypeDescription\": \"Día hábil posterior\",\n    \"ForcesCommercialTerm\": false,\n    \"IncludesTaxes\": false,\n    \"InstallmentCount\": 0,\n    \"InterestCalculationType\": \"C\",\n    \"KindValue\": \"0E-8\",\n    \"LastRevisionDay\": \"\",\n    \"NextPaymentDate\": \"\",\n    \"PayDate\": \"\",\n    \"PaymentType\": 1,\n    \"PaymentTypeDescription\": \"\",\n    \"Period\": 0,\n    \"PlusRate\": \"0.000000\",\n    \"Rate\": \"13.000000\",\n    \"RateClassId\": 0,\n    \"RateClassDescription\": \"\",\n    \"RateManagement\": 0,\n    \"RateTypeId\": 1,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"RevisionDay\": 0,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"Term\": 361,\n    \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\",\n    \"ValueDate\": \"2027-02-01\",\n    \"YearType\": 2,\n    \"YearTypeDescription\": \"365 - Año calendario\",\n    \"Product\": {\n      \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\",\n      \"ProductGUId\": \"8fd31000-0027-4028-8a66-eede56e485dd\"\n    },\n    \"Instructions\": {\n      \"SdtsBTTDWInstruction\": [\n        {\n          \"Id\": 1,\n          \"Description\": \"Cancelar y Acreditar al vto.\",\n          \"Accounted\": \"S\",\n          \"AccountingAccountId\": 102100000,\n          \"BranchId\": 0,\n          \"CompanyId\": 0,\n          \"CounterpartyId\": 4612,\n          \"CurrencyId\": 0,\n          \"KindId\": 0,\n          \"ModuleId\": 0,\n          \"OperationId\": 0,\n          \"OperationTypeId\": 0,\n          \"SuboperationId\": 0,\n          \"Type\": 0,\n          \"MovementGUId\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\"\n        }\n      ]\n    },\n    \"Installments\": {\n      \"SdtsBTTDWInstallment\": [\n        {\n          \"breachDate\": \"\",\n          \"capital\": \"\",\n          \"capitalTax\": \"\",\n          \"endDate\": \"\",\n          \"expectedPaymentDate\": \"\",\n          \"extendsTerm\": false,\n          \"installmentNumber\": 0,\n          \"installmentStatus\": \"\",\n          \"installmentType\": \"\",\n          \"installmentValue\": \"\",\n          \"interest\": \"\",\n          \"interestTax1\": \"\",\n          \"interestTax2\": \"\",\n          \"interestTax3\": \"\",\n          \"revenueTax\": \"\",\n          \"roundOff\": \"\",\n          \"startDate\": \"\",\n          \"subTotal\": \"\",\n          \"taxes\": \"\",\n          \"Term\": \"\",\n          \"total\": \"\",\n          \"type\": \"\"\n        }\n      ]\n    },\n    \"Events\": {\n      \"SdtsBTTDWEvent\": [\n        {\n          \"Accounted\": \"\",\n          \"Correlative\": \"\",\n          \"EventDate\": \"\",\n          \"Id\": \"\",\n          \"MovementGUId\": \"\",\n          \"Name\": \"\",\n          \"PlusRate\": \"\",\n          \"Rate\": \"\",\n          \"RateTypeId\": \"\",\n          \"RateTypeDescription\": \"\",\n          \"ValueDate\": \"\"\n        }\n      ]\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:35\",\n    \"Numero\": 13472659,\n    \"Servicio\": \"PublicTermDeposit.getData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"A8068BDF0E08AC754A7B94F5\"\n  },\n  \"termDepositData\": {\n    \"AccountingAccountId\": 162502000,\n    \"AccountingAccountDescription\": \"Dep.A Plazo Fijo Intran.No Reaj.Res\",\n    \"Amount\": \"2000.00\",\n    \"Balance\": \"2000.00\",\n    \"CancellationDate\": \"\",\n    \"DayType\": 1,\n    \"DayTypeDescription\": \"Comerciales\",\n    \"ExpandEndOfMonth\": true,\n    \"ExpirationDate\": \"2028-02-02\",\n    \"ExpirationType\": \"P\",\n    \"ExpirationTypeDescription\": \"Día hábil posterior\",\n    \"ForcesCommercialTerm\": false,\n    \"IncludesTaxes\": false,\n    \"InstallmentCount\": 0,\n    \"InterestCalculationType\": \"C\",\n    \"KindValue\": \"0E-8\",\n    \"LastRevisionDay\": \"\",\n    \"NextPaymentDate\": \"\",\n    \"PayDate\": \"\",\n    \"PaymentType\": 1,\n    \"PaymentTypeDescription\": \"\",\n    \"Period\": 0,\n    \"PlusRate\": \"0.000000\",\n    \"Rate\": \"13.000000\",\n    \"RateClassId\": 0,\n    \"RateClassDescription\": \"\",\n    \"RateManagement\": 0,\n    \"RateTypeId\": 1,\n    \"RateTypeDescription\": \"Efectiva Anual\",\n    \"RevisionDay\": 0,\n    \"StatusId\": 0,\n    \"StatusDescription\": \"Normal\",\n    \"Term\": 361,\n    \"TermDepositGUID\": \"6d865a97-7cde-4b25-935d-a02bdeba9844\",\n    \"ValueDate\": \"2027-02-01\",\n    \"YearType\": 2,\n    \"YearTypeDescription\": \"365 - Año calendario\",\n    \"Product\": {\n      \"ProductDescription\": \"DPF TIPO 1 - COMERCIAL 365 EFECTIVA\",\n      \"CurrencyId\": 0,\n      \"CurrencyDescription\": \"Pesos Uruguayos\",\n      \"CurrencySign\": \"$\",\n      \"KindId\": 0,\n      \"KindDescription\": \"Billete\",\n      \"ProductGUId\": \"8fd31000-0027-4028-8a66-eede56e485dd\"\n    },\n    \"Instructions\": {\n      \"SdtsBTTDWInstruction\": [\n        {\n          \"Id\": 1,\n          \"Description\": \"Cancelar y Acreditar al vto.\",\n          \"Accounted\": \"S\",\n          \"AccountingAccountId\": 102100000,\n          \"BranchId\": 0,\n          \"CompanyId\": 0,\n          \"CounterpartyId\": 4612,\n          \"CurrencyId\": 0,\n          \"KindId\": 0,\n          \"ModuleId\": 0,\n          \"OperationId\": 0,\n          \"OperationTypeId\": 0,\n          \"SuboperationId\": 0,\n          \"Type\": 0,\n          \"MovementGUId\": \"626e97c1-cc5b-4ee8-9c37-72ec5bf0cb2c\"\n        }\n      ]\n    },\n    \"Installments\": {\n      \"SdtsBTTDWInstallment\": [\n        {\n          \"breachDate\": \"\",\n          \"capital\": \"\",\n          \"capitalTax\": \"\",\n          \"endDate\": \"\",\n          \"expectedPaymentDate\": \"\",\n          \"extendsTerm\": false,\n          \"installmentNumber\": 0,\n          \"installmentStatus\": \"\",\n          \"installmentType\": \"\",\n          \"installmentValue\": \"\",\n          \"interest\": \"\",\n          \"interestTax1\": \"\",\n          \"interestTax2\": \"\",\n          \"interestTax3\": \"\",\n          \"revenueTax\": \"\",\n          \"roundOff\": \"\",\n          \"startDate\": \"\",\n          \"subTotal\": \"\",\n          \"taxes\": \"\",\n          \"Term\": \"\",\n          \"total\": \"\",\n          \"type\": \"\"\n        }\n      ]\n    },\n    \"Events\": {\n      \"SdtsBTTDWEvent\": [\n        {\n          \"Accounted\": \"\",\n          \"Correlative\": \"\",\n          \"EventDate\": \"\",\n          \"Id\": \"\",\n          \"MovementGUId\": \"\",\n          \"Name\": \"\",\n          \"PlusRate\": \"\",\n          \"Rate\": \"\",\n          \"RateTypeId\": \"\",\n          \"RateTypeDescription\": \"\",\n          \"ValueDate\": \"\"\n        }\n      ]\n    }\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-15\",\n    \"Hora\": \"14:07:35\",\n    \"Numero\": 13472659,\n    \"Servicio\": \"PublicTermDeposit.getData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -197,7 +218,7 @@
         },
         {
           "Nombre": "ExpandEndOfMonth",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Ampliar fin de mes."
         },
         {
@@ -217,12 +238,12 @@
         },
         {
           "Nombre": "ForcesCommercialTerm",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Fuerza plazo comercial."
         },
         {
           "Nombre": "IncludesTaxes",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Incluye impuestos."
         },
         {
@@ -343,7 +364,7 @@
         {
           "Nombre": "TermDepositGUID",
           "Tipo": "String",
-          "Comentarios": "GUID del depósito a plazo."
+          "Comentarios": "GUID (identificador único global) del depósito a plazo."
         },
         {
           "Nombre": "ValueDate",
@@ -386,9 +407,9 @@
           "Comentarios": "Identificador."
         },
         {
-          "Nombre": "MovementGUID",
+          "Nombre": "MovementGUId",
           "Tipo": "String",
-          "Comentarios": "GUID del movimiento."
+          "Comentarios": "GUID (identificador único global) del movimiento."
         },
         {
           "Nombre": "Name",
@@ -521,7 +542,7 @@
           "Comentarios": "Total de impuestos de la cuota."
         },
         {
-          "Nombre": "term",
+          "Nombre": "Term",
           "Tipo": "Numeric <strong>(Length: 5)</strong>",
           "Comentarios": "Plazo de la cuota."
         },
@@ -591,9 +612,9 @@
           "Comentarios": "Identificador de módulo."
         },
         {
-          "Nombre": "MovementGUID",
+          "Nombre": "MovementGUId",
           "Tipo": "String",
-          "Comentarios": "GUID del movimiento."
+          "Comentarios": "GUID (identificador único global) del movimiento."
         },
         {
           "Nombre": "OperationId",
@@ -651,9 +672,9 @@
           "Comentarios": "Descripción del producto."
         },
         {
-          "Nombre": "ProductGUID",
+          "Nombre": "ProductGUId",
           "Tipo": "String <strong>(Length: 36)</strong>",
-          "Comentarios": "GUID del producto."
+          "Comentarios": "GUID (identificador único global) del producto."
         }
       ]
     }

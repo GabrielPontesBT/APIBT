@@ -6,9 +6,14 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTPEPA0011",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
       "Nombre": "personGUID",
@@ -16,7 +21,9 @@
       "Comentarios": "GUID (identificador único global) de la persona."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "contacts",
@@ -38,11 +45,25 @@
   "examples": {
     "invocation": {
       "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\"\r\n}'",
-      "xml": ""
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"personGUID\": \"a542ed11-a4e4-4ead-83b6-b3530961c2b9\"\r\n}'"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"contacts\": {\r\n    \"contact\": [\r\n      {\r\n        \"Correlative\": 1,\r\n        \"ContactTypeId\": 3,\r\n        \"ContactTypeDescription\": \"CORREO ELECTRÓNICO\",\r\n        \"Text\": \"GPONTES@GMAIL.COM\",\r\n        \"Comment\": \"CORREO\",\r\n        \"TelephoneCompanyId\": 1,\r\n        \"TelephoneCompanyDescription\": \"\",\r\n        \"Enabled\": true,\r\n        \"AssociatedToAnAddress\": false,\r\n        \"AddressCorrelative\": 0,\r\n        \"AddressId\": \"\",\r\n        \"Validated\": true,\r\n        \"ReceivesMails\": false,\r\n        \"StartTimeRange1\": \"\",\r\n        \"EndTimeRange1\": \"\",\r\n        \"StartTimeRange2\": \"\",\r\n        \"EndTimeRange2\": \"\",\r\n        \"Priority\": 3\r\n      },\r\n      {\r\n        \"Correlative\": 1,\r\n        \"ContactTypeId\": 1,\r\n        \"ContactTypeDescription\": \"TELEFONO MÓVIL\",\r\n        \"Text\": \"095265956\",\r\n        \"Comment\": \"TELEFONO CELULAR\",\r\n        \"TelephoneCompanyId\": 1,\r\n        \"TelephoneCompanyDescription\": \"\",\r\n        \"Enabled\": true,\r\n        \"AssociatedToAnAddress\": false,\r\n        \"AddressCorrelative\": 0,\r\n        \"AddressId\": \"\",\r\n        \"Validated\": true,\r\n        \"ReceivesMails\": false,\r\n        \"StartTimeRange1\": \"\",\r\n        \"EndTimeRange1\": \"\",\r\n        \"StartTimeRange2\": \"\",\r\n        \"EndTimeRange2\": \"\",\r\n        \"Priority\": 1\r\n      },\r\n      {\r\n        \"Correlative\": 1,\r\n        \"ContactTypeId\": 2,\r\n        \"ContactTypeDescription\": \"TELEFONO FIJO\",\r\n        \"Text\": \"25148765\",\r\n        \"Comment\": \"TELEFONO FIJO\",\r\n        \"TelephoneCompanyId\": 1,\r\n        \"TelephoneCompanyDescription\": \"\",\r\n        \"Enabled\": true,\r\n        \"AssociatedToAnAddress\": false,\r\n        \"AddressCorrelative\": 0,\r\n        \"AddressId\": \"\",\r\n        \"Validated\": true,\r\n        \"ReceivesMails\": false,\r\n        \"StartTimeRange1\": \"\",\r\n        \"EndTimeRange1\": \"\",\r\n        \"StartTimeRange2\": \"\",\r\n        \"EndTimeRange2\": \"\",\r\n        \"Priority\": 2\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:55:09\",\r\n    \"Numero\": 13469353,\r\n    \"Servicio\": \"PublicPersons.getContactData\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"contacts\": {\n    \"contact\": [\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 3,\n        \"ContactTypeDescription\": \"CORREO ELECTRÓNICO\",\n        \"Text\": \"GPONTES@GMAIL.COM\",\n        \"Comment\": \"CORREO\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 3\n      },\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 1,\n        \"ContactTypeDescription\": \"TELEFONO MÓVIL\",\n        \"Text\": \"095265956\",\n        \"Comment\": \"TELEFONO CELULAR\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 1\n      },\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 2,\n        \"ContactTypeDescription\": \"TELEFONO FIJO\",\n        \"Text\": \"25148765\",\n        \"Comment\": \"TELEFONO FIJO\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 2\n      }\n    ],\n    \"AddressCorrelative\": \"\",\n    \"AddressId\": \"\",\n    \"AssociatedToAnAddress\": false,\n    \"Comment\": \"\",\n    \"ContactTypeId\": \"\",\n    \"ContactTypeDescription\": \"\",\n    \"Correlative\": \"\",\n    \"Enabled\": false,\n    \"EndTimeRange1\": \"\",\n    \"EndTimeRange2\": \"\",\n    \"Priority\": \"\",\n    \"ReceivesMails\": false,\n    \"StartTimeRange1\": \"\",\n    \"StartTimeRange2\": \"\",\n    \"TelephoneCompanyId\": \"\",\n    \"TelephoneCompanyDescription\": \"\",\n    \"Text\": \"\",\n    \"Validated\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:55:09\",\n    \"Numero\": 13469353,\n    \"Servicio\": \"PublicPersons.getContactData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"contacts\": {\n    \"contact\": [\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 3,\n        \"ContactTypeDescription\": \"CORREO ELECTRÓNICO\",\n        \"Text\": \"GPONTES@GMAIL.COM\",\n        \"Comment\": \"CORREO\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 3\n      },\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 1,\n        \"ContactTypeDescription\": \"TELEFONO MÓVIL\",\n        \"Text\": \"095265956\",\n        \"Comment\": \"TELEFONO CELULAR\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 1\n      },\n      {\n        \"Correlative\": 1,\n        \"ContactTypeId\": 2,\n        \"ContactTypeDescription\": \"TELEFONO FIJO\",\n        \"Text\": \"25148765\",\n        \"Comment\": \"TELEFONO FIJO\",\n        \"TelephoneCompanyId\": 1,\n        \"TelephoneCompanyDescription\": \"\",\n        \"Enabled\": true,\n        \"AssociatedToAnAddress\": false,\n        \"AddressCorrelative\": 0,\n        \"AddressId\": \"\",\n        \"Validated\": true,\n        \"ReceivesMails\": false,\n        \"StartTimeRange1\": \"\",\n        \"EndTimeRange1\": \"\",\n        \"StartTimeRange2\": \"\",\n        \"EndTimeRange2\": \"\",\n        \"Priority\": 2\n      }\n    ],\n    \"AddressCorrelative\": \"\",\n    \"AddressId\": \"\",\n    \"AssociatedToAnAddress\": false,\n    \"Comment\": \"\",\n    \"ContactTypeId\": \"\",\n    \"ContactTypeDescription\": \"\",\n    \"Correlative\": \"\",\n    \"Enabled\": false,\n    \"EndTimeRange1\": \"\",\n    \"EndTimeRange2\": \"\",\n    \"Priority\": \"\",\n    \"ReceivesMails\": false,\n    \"StartTimeRange1\": \"\",\n    \"StartTimeRange2\": \"\",\n    \"TelephoneCompanyId\": \"\",\n    \"TelephoneCompanyDescription\": \"\",\n    \"Text\": \"\",\n    \"Validated\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:55:09\",\n    \"Numero\": 13469353,\n    \"Servicio\": \"PublicPersons.getContactData\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -61,7 +82,7 @@
         },
         {
           "Nombre": "AssociatedToAnAddress",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Asociado a una dirección."
         },
         {
@@ -86,7 +107,7 @@
         },
         {
           "Nombre": "Enabled",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Habilitado."
         },
         {
@@ -106,7 +127,7 @@
         },
         {
           "Nombre": "ReceivesMails",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Recibe correos."
         },
         {
@@ -136,7 +157,7 @@
         },
         {
           "Nombre": "Validated",
-          "Tipo": "Boolean <strong>(Length: 1)</strong>",
+          "Tipo": "Boolean",
           "Comentarios": "Validado."
         }
       ]

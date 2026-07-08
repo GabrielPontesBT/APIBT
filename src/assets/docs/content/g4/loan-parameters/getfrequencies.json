@@ -1,0 +1,88 @@
+{
+  "slug": "loan-parameters/getfrequencies",
+  "pageTitle": "Get Frequencies",
+  "description": "Método para obtener la periodicidad de cuotas de un producto de préstamos.",
+  "pubName": "PublicLoanParameters.getFrequencies",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0028",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "frequencies",
+      "Tipo": "<a href=\"#sdtsbtlolistparameter\">SdtsBTLOListParameter</a>",
+      "Comentarios": "Listado de frecuencias de pago."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"frequencies\": {\n    \"frequency\": [\n      {\n        \"id\": 7,\n        \"description\": \"SEMANAL\",\n        \"defaultValue\": true\n      },\n      {\n        \"id\": 15,\n        \"description\": \"BISEMANAL\",\n        \"defaultValue\": false\n      },\n      {\n        \"id\": 30,\n        \"description\": \"MENSUAL\",\n        \"defaultValue\": false\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\",\n    \"defaultValue\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:34:58\",\n    \"Numero\": 13568695,\n    \"Servicio\": \"PublicLoanParameters.getFrequencies\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"frequencies\": {\n    \"frequency\": [\n      {\n        \"id\": 7,\n        \"description\": \"SEMANAL\",\n        \"defaultValue\": true\n      },\n      {\n        \"id\": 15,\n        \"description\": \"BISEMANAL\",\n        \"defaultValue\": false\n      },\n      {\n        \"id\": 30,\n        \"description\": \"MENSUAL\",\n        \"defaultValue\": false\n      }\n    ],\n    \"Id\": \"\",\n    \"description\": \"\",\n    \"defaultValue\": false\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:34:58\",\n    \"Numero\": 13568695,\n    \"Servicio\": \"PublicLoanParameters.getFrequencies\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOListParameter",
+      "fields": [
+        {
+          "Nombre": "Id",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de frecuencia."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String <strong>(Length: 256)</strong>",
+          "Comentarios": "Descripción de frecuencia."
+        },
+        {
+          "Nombre": "defaultValue",
+          "Tipo": "Boolean",
+          "Comentarios": "¿Está preseteado como valor por defecto para el producto?"
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

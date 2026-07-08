@@ -137,7 +137,25 @@ Código | Descripción
         "EndTimeRange2": "",
         "Priority": 2
       }
-    ]
+    ],
+    "AddressCorrelative": "",
+    "AddressId": "",
+    "AssociatedToAnAddress": false,
+    "Comment": "",
+    "ContactTypeId": "",
+    "ContactTypeDescription": "",
+    "Correlative": "",
+    "Enabled": false,
+    "EndTimeRange1": "",
+    "EndTimeRange2": "",
+    "Priority": "",
+    "ReceivesMails": false,
+    "StartTimeRange1": "",
+    "StartTimeRange2": "",
+    "TelephoneCompanyId": "",
+    "TelephoneCompanyDescription": "",
+    "Text": "",
+    "Validated": false
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -170,21 +188,21 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
 AddressId | String $<(Length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+AssociatedToAnAddress | Boolean | Asociado a una dirección.
 Comment | String $<(Length: 250)>$ | Comentario.
 ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
 ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
 Correlative | Byte $<(Length: 2)>$ | Correlativo.
-Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+Enabled | Boolean | Habilitado.
 EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
 EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
 Priority | Byte $<(Length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+ReceivesMails | Boolean | Recibe correos.
 StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
 StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
 TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
 TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
 Text | String $<(Length: 250)>$ | Texto.
-Validated | Boolean $<(Length: 1)>$ | Validado.
+Validated | Boolean | Validado.
 :::
 <!-- CIERRA SDT -->

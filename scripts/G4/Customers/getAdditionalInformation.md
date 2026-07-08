@@ -75,7 +75,11 @@ Código | Descripción
     "Token": "444B674391BCA7676279700A"
   },
   "customFields": {
-    "customField": []
+    "customField": [],
+    "Correlative": 0,
+    "Id": "",
+    "Description": "",
+    "Value": ""
   },
   "BusinessErrors": {
     "BusinessError": []

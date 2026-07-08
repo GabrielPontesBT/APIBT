@@ -1,17 +1,19 @@
 ---
 title: Get Administrative Levels
+type: GET
 ---
 
 <!-- ABRE DATOS DEL MÉTODO -->
-::: note Método para obtener un listado de los niveles administrativos de un país.
+::: note
+Método para obtener un listado de los niveles administrativos de un país.
 
 **Nombre publicación:** PublicGeneral.getAdministrativeLevels
-
-**Módulo:** General
 
 **Programa:** PublicAPI.BTCNPA0002
 
 **Alcance:** Global
+
+**Endpoint:** /public/General/v1/getAdministrativeLevels
 :::
 <!-- CIERRA DATOS DEL MÉTODO -->
 
@@ -21,25 +23,27 @@ title: Get Administrative Levels
 @tab Datos de Entrada
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 countryId | Short $<(Length: 3)>$ | Identificador de país.
 firstLevel | Int $<(Length: 5)>$ | Identificador de primer nivel administrativo.
 secondLevel | Int $<(Length: 5)>$ | Identificador de segundo nivel administrativo.
 
+@tab Body
+
+No aplica.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
+:--------- | :--------- | :---------
 administrativeLevels | [SdtsBTCNWAdministrativeLevel](#sdtsbtcnwadministrativelevel) | Listado de niveles administrativos.
 
 @tab Errores
 
 Código | Descripción
-:--------- | :-----------
-50020021 | No existe el Id de primer nivel ingresado
-50020028 | No existe el Id de segundo nivel ingresado
-50020034 | No existe el Id de tercer nivel ingresado
+:--------- | :---------
+500 | 
+50020018 | El país no se encuentra registrado
 
 :::
 <!-- CIERRA TABLA DE DATOS -->
@@ -49,97 +53,101 @@ Código | Descripción
 <!-- ABRE EJEMPLO DE INVOCACIÓN -->
 ::: details Ejemplo de Invocación
 ::: code-tabs #Formato
-@tab JSON
-```json
-{
-  "Btinreq": {
-    "Canal": "BTDIGITAL",
-    "Usuario": "INSTALADOR",
-    "Device": "INSTALADOR",
-    "Requerimiento": "1",
-    "Token": "3985F17F736C68B94646C7E6"
-  },
-  "countryId": 484,
-  "firstLevel": "1",
-  "secondLevel": 0
-}'
+
+@tab cURL
+```bash
+curl -X GET \
+  '{{baseUrl}}/public/General/v1/getAdministrativeLevels?countryId=484&firstLevel=9&secondLevel=0' \
+  -H 'Device: {{device}}' \
+  -H 'Usuario: {{usuario}}' \
+  -H 'Requerimiento: {{requerimiento}}' \
+  -H 'Canal: {{canal}}' \
+  -H 'Token: {{token}}'
 ```
+
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
 <!-- ABRE EJEMPLO DE RESPUESTA -->
 ::: details Ejemplo de Respuesta
 ::: code-tabs #Formato
+
 @tab JSON
 ```json
 {
-  "Btinreq": {
-    "Canal": "BTDIGITAL",
-    "Usuario": "INSTALADOR",
-    "Device": "INSTALADOR",
-    "Requerimiento": "1",
-    "Token": "3985F17F736C68B94646C7E6"
-  },
   "administrativeLevels": {
     "administrativeLevel": [
       {
-        "Id": 1,
-        "Description": "Aguascalientes"
+        "Description": "Azcapotzalco",
+        "Id": 2
       },
       {
-        "Id": 2,
-        "Description": "Asientos"
+        "Description": "Coyoacan",
+        "Id": 3
       },
       {
-        "Id": 3,
-        "Description": "Calvillo"
+        "Description": "Cuajimalpa de Morelos",
+        "Id": 4
       },
       {
-        "Id": 4,
-        "Description": "Cosio"
+        "Description": "Gustavo A. Madero",
+        "Id": 5
       },
       {
-        "Id": 5,
-        "Description": "Jesus Maria"
+        "Description": "Iztacalco",
+        "Id": 6
       },
       {
-        "Id": 6,
-        "Description": "Pabellon de Arteaga"
+        "Description": "Iztapalapa",
+        "Id": 7
       },
       {
-        "Id": 7,
-        "Description": "Rincon de Romo"
+        "Description": "La Magdalena Contreras",
+        "Id": 8
       },
       {
-        "Id": 8,
-        "Description": "San Jose de Gracia"
+        "Description": "Milpa Alta",
+        "Id": 9
       },
       {
-        "Id": 9,
-        "Description": "Tepezala"
+        "Description": "alvaro Obregon",
+        "Id": 10
       },
       {
-        "Id": 10,
-        "Description": "El Llano"
+        "Description": "Tlahuac",
+        "Id": 11
       },
       {
-        "Id": 11,
-        "Description": "San Francisco de los Romo"
+        "Description": "Tlalpan",
+        "Id": 12
+      },
+      {
+        "Description": "Xochimilco",
+        "Id": 13
+      },
+      {
+        "Description": "Benito Juarez",
+        "Id": 14
+      },
+      {
+        "Description": "Cuauhtemoc",
+        "Id": 15
+      },
+      {
+        "Description": "Miguel Hidalgo",
+        "Id": 16
+      },
+      {
+        "Description": "Venustiano Carranza",
+        "Id": 17
       }
-    ]
+    ],
+    "Id": "",
+    "Description": ""
   },
-  "BusinessErrors": {
-    "BusinessError": []
-  },
-  "Btoutreq": {
-    "Estado": "OK",
-    "Fecha": "2026-05-13",
-    "Hora": "20:42:55",
-    "Numero": 13466265,
-    "Servicio": "PublicGeneral.getAdministrativeLevels",
-    "Requerimiento": "1",
-    "Canal": "BTDIGITAL"
-  }
+  "countryId": "",
+  "firstLevel": "",
+  "secondLevel": ""
 }
 ```
 :::
@@ -156,8 +164,8 @@ Código | Descripción
 Los campos del tipo de dato estructurado SdtsBTCNWAdministrativeLevel son los siguientes:
 
 Nombre | Tipo | Comentarios
-:--------- | :----------- | :-----------
-Id | Int $<(Length: 9)>$ | Identificador.
-Description | String $<(Length: 30)>$ | Descripción.
+:--------- | :--------- | :---------
+Id | Int $<(Length: 9)>$ | Identificador del nivel administrativo.
+Description | String $<(Length: 30)>$ | Descripción del nivel administrativo.
 :::
 <!-- CIERRA SDT -->

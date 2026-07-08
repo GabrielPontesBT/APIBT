@@ -594,494 +594,623 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtPrestamos": {
-         "sBTPrestamoItem": [
-         {
-            "plazo": 365,
-            "periodicidad": 30,
-            "fechaVencimiento": "2021-04-09",
-            "producto": {
-               "papel": "$",
-               "moneda": "$",
-               "productoUId": 198,
-               "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
-            },
-            "tasaVigente": 26,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 10051.7,
-            "saldoCapital": 100000,
-            "fechaPrimerIncumplimiento": "2020-05-09",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000941-000",
-            "capitalOriginal": 100000,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 9,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2020-04-09",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-01-06",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 10,
-            "saldoCapital": 55.4,
-            "fechaPrimerIncumplimiento": "2024-08-12",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001598-000",
-            "capitalOriginal": 72.51,
-            "cantidadCuotasPagas": 6,
-            "operacionUId": 201,
-            "fechaUltimoPago": "2024-01-12",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-01-12",
-            "cantidadCuotas": 0
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-01-06",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 85.78,
-            "saldoCapital": 670.18,
-            "fechaPrimerIncumplimiento": "2024-04-12",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001600-000",
-            "capitalOriginal": 725.18,
-            "cantidadCuotasPagas": 2,
-            "operacionUId": 212,
-            "fechaUltimoPago": "2024-03-08",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-01-12",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-03-03",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 777.36,
-            "saldoCapital": 5803.03,
-            "fechaPrimerIncumplimiento": "2024-04-08",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001601-000",
-            "capitalOriginal": 5803.03,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 214,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-03-08",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-01-06",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 561.84,
-            "saldoCapital": 5551.49,
-            "fechaPrimerIncumplimiento": "2024-03-12",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001602-000",
-            "capitalOriginal": 5801.49,
-            "cantidadCuotasPagas": 1,
-            "operacionUId": 215,
-            "fechaUltimoPago": "2024-02-12",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-01-12",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-01-06",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 697.47,
-            "saldoCapital": 7051.86,
-            "fechaPrimerIncumplimiento": "2024-03-12",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001603-000",
-            "capitalOriginal": 7251.86,
-            "cantidadCuotasPagas": 1,
-            "operacionUId": 216,
-            "fechaUltimoPago": "2024-02-12",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-01-12",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 360,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-04-25",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 699.66,
-            "saldoCapital": 7001.01,
-            "fechaPrimerIncumplimiento": "2024-06-30",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001614-000",
-            "capitalOriginal": 7254.16,
-            "cantidadCuotasPagas": 1,
-            "operacionUId": 290,
-            "fechaUltimoPago": "2024-05-30",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-04-30",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 365,
-            "periodicidad": 30,
-            "fechaVencimiento": "2025-08-05",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 23,
-            "idOperacionBT": 1.0000100101e+46,
-            "valorCuota": 1058.6,
-            "saldoCapital": 10000,
-            "fechaPrimerIncumplimiento": "2024-09-05",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001710-000",
-            "capitalOriginal": 10000,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 833,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2024-08-05",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 365,
-            "periodicidad": 30,
-            "fechaVencimiento": "2019-12-10",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 19,
-            "idOperacionBT": 1.0000100103e+46,
-            "valorCuota": 1315.17,
-            "saldoCapital": 20482.89,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000627-000",
-            "capitalOriginal": 20500,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 270,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2018-12-10",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 3600,
-            "periodicidad": 30,
-            "fechaVencimiento": "2029-09-07",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 10,
-            "idOperacionBT": 1.0000100103e+46,
-            "valorCuota": 61600.1,
-            "saldoCapital": 499982.89,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000803-000",
-            "capitalOriginal": 500000,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 271,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2019-10-30",
-            "cantidadCuotas": 120
-         },
-         {
-            "plazo": 1800,
-            "periodicidad": 30,
-            "fechaVencimiento": "2024-10-03",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 5,
-            "idOperacionBT": 1.0000100103e+46,
-            "valorCuota": 19239.7,
-            "saldoCapital": 256556.69,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000804-000",
-            "capitalOriginal": 300000,
-            "cantidadCuotasPagas": 30,
-            "operacionUId": 272,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2019-10-30",
-            "cantidadCuotas": 60
-         },
-         {
-            "plazo": 450,
-            "periodicidad": 15,
-            "fechaVencimiento": "2021-01-22",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 10,
-            "idOperacionBT": 1.0000100103e+46,
-            "valorCuota": 5811.71,
-            "saldoCapital": 36556.69,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000805-000",
-            "capitalOriginal": 80000,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 273,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2019-10-30",
-            "cantidadCuotas": 30
-         },
-         {
-            "plazo": 1080,
-            "periodicidad": 30,
-            "fechaVencimiento": "2022-10-14",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 5,
-            "idOperacionBT": 1.0000100103e+46,
-            "valorCuota": 7121.15,
-            "saldoCapital": 56556.69,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000806-000",
-            "capitalOriginal": 100000,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 274,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Casa Matriz",
-            "tipoProducto": "AM",
-            "fechaValor": "2019-10-30",
-            "cantidadCuotas": 36
-         },
-         {
-            "plazo": 365,
-            "periodicidad": 0,
-            "fechaVencimiento": "2022-10-14",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 5,
-            "idOperacionBT": 1.0100000103e+46,
-            "valorCuota": 7121.15,
-            "saldoCapital": 12056.69,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000079-000",
-            "capitalOriginal": 55500,
-            "cantidadCuotasPagas": 0,
-            "operacionUId": 275,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Sucursal Ciudad de la Costa",
-            "tipoProducto": "AM",
-            "fechaValor": "2018-02-13",
-            "cantidadCuotas": 24
-         },
-         {
-            "plazo": 366,
-            "periodicidad": 0,
-            "fechaVencimiento": "2016-05-04",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 10,
-            "idOperacionBT": 1.0100000103e+46,
-            "valorCuota": 32099.83,
-            "saldoCapital": 293550.45,
-            "fechaPrimerIncumplimiento": "",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000000083-000",
-            "capitalOriginal": 368496.88,
-            "cantidadCuotasPagas": 1,
-            "operacionUId": 276,
-            "fechaUltimoPago": "",
-            "tipoAmortizacion": "",
-            "estado": "Normal",
-            "sucursal": "Sucursal Ciudad de la Costa",
-            "tipoProducto": "AM",
-            "fechaValor": "2015-05-04",
-            "cantidadCuotas": 12
-         },
-         {
-            "plazo": 361,
-            "periodicidad": 30,
-            "fechaVencimiento": "2024-10-21",
-            "producto": {
-               "moneda": "$",
-               "otrosConceptos":"",
-               "papel": "$",
-               "productoUId": 82,
-               "nombre": "Ahorro en Sueldo Pesos"
-            },
-            "tasaVigente": 10,
-            "idOperacionBT": 1.0100000103e+46,
-            "valorCuota": 1033.47,
-            "saldoCapital": 5980.2,
-            "fechaPrimerIncumplimiento": "2024-04-22",
-            "otrosConceptos": "",
-            "idOperacionFmt": "0000001372-000",
-            "capitalOriginal": 10000,
-            "cantidadCuotasPagas": 5,
-            "operacionUId": 20,
-            "fechaUltimoPago": "2024-04-09",
-            "tipoAmortizacion": "Francés con Seg.e Impu.",
-            "estado": "Normal",
-            "sucursal": "Sucursal Ciudad de la Costa",
-            "tipoProducto": "AM",
-            "fechaValor": "2023-10-20",
-            "cantidadCuotas": 12
-         }
-         ]
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtPrestamos": {
+    "sBTPrestamoItem": [
+      {
+        "plazo": 365,
+        "periodicidad": 30,
+        "fechaVencimiento": "2021-04-09",
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 198,
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 26,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 10051.7,
+        "saldoCapital": 100000,
+        "fechaPrimerIncumplimiento": "2020-05-09",
+        "idOperacionFmt": "0000000941-000",
+        "capitalOriginal": 100000,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 9,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2020-04-09",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
       },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-      "Numero": 10403,
-      "Estado": "OK",
-      "Servicio": "BTClientes.ObtenerPrestamos",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
-    }
-}'
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-01-06",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 10,
+        "saldoCapital": 55.4,
+        "fechaPrimerIncumplimiento": "2024-08-12",
+        "idOperacionFmt": "0000001598-000",
+        "capitalOriginal": 72.51,
+        "cantidadCuotasPagas": 6,
+        "operacionUId": 201,
+        "fechaUltimoPago": "2024-01-12",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-01-12",
+        "cantidadCuotas": 0,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-01-06",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 85.78,
+        "saldoCapital": 670.18,
+        "fechaPrimerIncumplimiento": "2024-04-12",
+        "idOperacionFmt": "0000001600-000",
+        "capitalOriginal": 725.18,
+        "cantidadCuotasPagas": 2,
+        "operacionUId": 212,
+        "fechaUltimoPago": "2024-03-08",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-01-12",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-03-03",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 777.36,
+        "saldoCapital": 5803.03,
+        "fechaPrimerIncumplimiento": "2024-04-08",
+        "idOperacionFmt": "0000001601-000",
+        "capitalOriginal": 5803.03,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 214,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-03-08",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-01-06",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 561.84,
+        "saldoCapital": 5551.49,
+        "fechaPrimerIncumplimiento": "2024-03-12",
+        "idOperacionFmt": "0000001602-000",
+        "capitalOriginal": 5801.49,
+        "cantidadCuotasPagas": 1,
+        "operacionUId": 215,
+        "fechaUltimoPago": "2024-02-12",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-01-12",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-01-06",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 697.47,
+        "saldoCapital": 7051.86,
+        "fechaPrimerIncumplimiento": "2024-03-12",
+        "idOperacionFmt": "0000001603-000",
+        "capitalOriginal": 7251.86,
+        "cantidadCuotasPagas": 1,
+        "operacionUId": 216,
+        "fechaUltimoPago": "2024-02-12",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-01-12",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-04-25",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 699.66,
+        "saldoCapital": 7001.01,
+        "fechaPrimerIncumplimiento": "2024-06-30",
+        "idOperacionFmt": "0000001614-000",
+        "capitalOriginal": 7254.16,
+        "cantidadCuotasPagas": 1,
+        "operacionUId": 290,
+        "fechaUltimoPago": "2024-05-30",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-04-30",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 365,
+        "periodicidad": 30,
+        "fechaVencimiento": "2025-08-05",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 23,
+        "idOperacionBT": 1.0000100101e+46,
+        "valorCuota": 1058.6,
+        "saldoCapital": 10000,
+        "fechaPrimerIncumplimiento": "2024-09-05",
+        "idOperacionFmt": "0000001710-000",
+        "capitalOriginal": 10000,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 833,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2024-08-05",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 365,
+        "periodicidad": 30,
+        "fechaVencimiento": "2019-12-10",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 19,
+        "idOperacionBT": 1.0000100103e+46,
+        "valorCuota": 1315.17,
+        "saldoCapital": 20482.89,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000627-000",
+        "capitalOriginal": 20500,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 270,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2018-12-10",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 3600,
+        "periodicidad": 30,
+        "fechaVencimiento": "2029-09-07",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 10,
+        "idOperacionBT": 1.0000100103e+46,
+        "valorCuota": 61600.1,
+        "saldoCapital": 499982.89,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000803-000",
+        "capitalOriginal": 500000,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 271,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2019-10-30",
+        "cantidadCuotas": 120,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 1800,
+        "periodicidad": 30,
+        "fechaVencimiento": "2024-10-03",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 5,
+        "idOperacionBT": 1.0000100103e+46,
+        "valorCuota": 19239.7,
+        "saldoCapital": 256556.69,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000804-000",
+        "capitalOriginal": 300000,
+        "cantidadCuotasPagas": 30,
+        "operacionUId": 272,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2019-10-30",
+        "cantidadCuotas": 60,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 450,
+        "periodicidad": 15,
+        "fechaVencimiento": "2021-01-22",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 10,
+        "idOperacionBT": 1.0000100103e+46,
+        "valorCuota": 5811.71,
+        "saldoCapital": 36556.69,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000805-000",
+        "capitalOriginal": 80000,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 273,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2019-10-30",
+        "cantidadCuotas": 30,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 1080,
+        "periodicidad": 30,
+        "fechaVencimiento": "2022-10-14",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 5,
+        "idOperacionBT": 1.0000100103e+46,
+        "valorCuota": 7121.15,
+        "saldoCapital": 56556.69,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000806-000",
+        "capitalOriginal": 100000,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 274,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Casa Matriz",
+        "tipoProducto": "AM",
+        "fechaValor": "2019-10-30",
+        "cantidadCuotas": 36,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 365,
+        "periodicidad": 0,
+        "fechaVencimiento": "2022-10-14",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 5,
+        "idOperacionBT": 1.0100000103e+46,
+        "valorCuota": 7121.15,
+        "saldoCapital": 12056.69,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000079-000",
+        "capitalOriginal": 55500,
+        "cantidadCuotasPagas": 0,
+        "operacionUId": 275,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Sucursal Ciudad de la Costa",
+        "tipoProducto": "AM",
+        "fechaValor": "2018-02-13",
+        "cantidadCuotas": 24,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 366,
+        "periodicidad": 0,
+        "fechaVencimiento": "2016-05-04",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 10,
+        "idOperacionBT": 1.0100000103e+46,
+        "valorCuota": 32099.83,
+        "saldoCapital": 293550.45,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000083-000",
+        "capitalOriginal": 368496.88,
+        "cantidadCuotasPagas": 1,
+        "operacionUId": 276,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Normal",
+        "sucursal": "Sucursal Ciudad de la Costa",
+        "tipoProducto": "AM",
+        "fechaValor": "2015-05-04",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 361,
+        "periodicidad": 30,
+        "fechaVencimiento": "2024-10-21",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 10,
+        "idOperacionBT": 1.0100000103e+46,
+        "valorCuota": 1033.47,
+        "saldoCapital": 5980.2,
+        "fechaPrimerIncumplimiento": "2024-04-22",
+        "idOperacionFmt": "0000001372-000",
+        "capitalOriginal": 10000,
+        "cantidadCuotasPagas": 5,
+        "operacionUId": 20,
+        "fechaUltimoPago": "2024-04-09",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "sucursal": "Sucursal Ciudad de la Costa",
+        "tipoProducto": "AM",
+        "fechaValor": "2023-10-20",
+        "cantidadCuotas": 12,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 10403,
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerPrestamos",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -1119,6 +1248,9 @@ tasaVigente	| Double | Tasa vigente.
 tipoAmortizacion | String | Tipo de amortización.
 tipoProducto | String |	Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
 valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -1131,7 +1263,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -1144,4 +1279,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

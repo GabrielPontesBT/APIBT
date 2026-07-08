@@ -39,14 +39,14 @@ Se debe parametrizar el programa particular que resuelve la encriptación de la 
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-personaUId | Long | Identificador único de persona.
-tarjetaUId | Long | Identificador único de tarjeta.
+personaUID | Long | Identificador único de persona.
+tarjetaUID | Long | Identificador único de tarjeta.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjeta | String | Tarjeta encriptada.
+Tarjeta | String | Tarjeta encriptada.
 
 @tab Errores
 

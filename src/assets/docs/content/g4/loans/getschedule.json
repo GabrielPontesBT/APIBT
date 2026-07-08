@@ -1,0 +1,798 @@
+{
+  "slug": "loans/getschedule",
+  "pageTitle": "Get Schedule",
+  "description": "Método para obtener el cronograma de cuotas de un préstamo.",
+  "pubName": "PublicLoans.getSchedule",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0003",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "loanGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del préstamo."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "queryDate",
+      "Tipo": "Date",
+      "Comentarios": "Fecha de consulta."
+    },
+    {
+      "Nombre": "includePayments",
+      "Tipo": "Boolean",
+      "Comentarios": "¿Incluir pagos?"
+    },
+    {
+      "Nombre": "includeFuturePayments",
+      "Tipo": "Boolean",
+      "Comentarios": "¿Incluir pagos futuros?"
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "installments",
+      "Tipo": "<a href=\"#sdtsbtlowinstallment\">SdtsBTLOWInstallment</a>",
+      "Comentarios": "Listado de cuotas."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050001",
+      "Descripción": "Debe ingresar el GUID de préstamo."
+    },
+    {
+      "Código": "120020069",
+      "Descripción": "La fecha de consulta es menor a la fecha valor de la operación."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"loanGUID\": \"\",\n  \"queryDate\": \"2026-01-01\",\n  \"includePayments\": false,\n  \"includeFuturePayments\": false\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"loanGUID\": \"\",\n  \"queryDate\": \"2026-01-01\",\n  \"includePayments\": false,\n  \"includeFuturePayments\": false\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"installments\": {\n    \"installment\": [\n      {\n        \"ArrearDays\": 0,\n        \"ArrearFee1\": 0,\n        \"ArrearFee2\": 0,\n        \"ArrearFee3\": 0,\n        \"ArrearInterest\": 0,\n        \"ArrearTax\": 0,\n        \"Capital\": 0,\n        \"CapitalConcessional\": 0,\n        \"CapitalTax\": 0,\n        \"CompensatoryInterest\": 0,\n        \"CompensatoryInterestTax\": 0,\n        \"Concessional\": 0,\n        \"DecimalsNumber\": \"\",\n        \"DefaultDate\": \"2026-01-01\",\n        \"DeferredInterests\": 0,\n        \"DeferredInterestTax1\": 0,\n        \"DeferredInterestTax2\": 0,\n        \"DeferredInterestTax3\": 0,\n        \"DistributedInsurance1\": 0,\n        \"DistributedInsurance2\": 0,\n        \"DistributedInterest\": 0,\n        \"DistributedInterestTax1\": 0,\n        \"DistributedInterestTax2\": 0,\n        \"DistributedInterestTax3\": 0,\n        \"EndDate\": \"2026-01-01\",\n        \"ExtendsTerm\": false,\n        \"Fees\": [\n          {\n            \"Amount\": 0,\n            \"AppliesToDisbursement\": false,\n            \"CalculationBase\": \"\",\n            \"ChargeBase\": \"\",\n            \"Description\": \"\",\n            \"DistributionForm\": \"\",\n            \"Enabled\": false,\n            \"ExcludesCapitalization\": false,\n            \"FeeId\": 0,\n            \"FeeTypeId\": \"\",\n            \"MaximumAmount\": 0,\n            \"MinimumAmount\": 0,\n            \"Modifiable\": false,\n            \"ModificationType\": \"\",\n            \"Modified\": false,\n            \"Percentage\": 0,\n            \"SuggestsAmount\": 0,\n            \"Tax\": 0,\n            \"Total\": 0,\n            \"TotalAmount\": 0\n          }\n        ],\n        \"FeeTotal\": 0,\n        \"GraceInQuota\": false,\n        \"GraceReach\": \"\",\n        \"InArrear\": false,\n        \"InitialDate\": \"2026-01-01\",\n        \"InstallmentNumber\": 0,\n        \"InstallmentType\": \"\",\n        \"InstallmentValue\": 0,\n        \"Insurances\": [\n          {\n            \"AddedAmount\": 0,\n            \"AllowsModification\": false,\n            \"AssociatesInsurancePolicy\": false,\n            \"ChargeTypeId\": \"\",\n            \"CommercialValue\": 0,\n            \"Description\": \"\",\n            \"ExtraPremium\": 0,\n            \"Id\": 0,\n            \"ManagesExtraPremium\": false,\n            \"Modified\": false,\n            \"PercentageModified\": 0,\n            \"PolicyEndDate\": \"2026-01-01\",\n            \"PolicyNumber\": \"\",\n            \"PolicyStartDate\": \"2026-01-01\",\n            \"Total\": 0\n          }\n        ],\n        \"InsurancesTotal\": 0,\n        \"Interest\": 0,\n        \"InterestTax1\": 0,\n        \"InterestTax2\": 0,\n        \"InterestTax3\": 0,\n        \"InversePlannedPaymentDate\": 0,\n        \"Payments\": [\n          {\n            \"AccountBalance\": 0,\n            \"ArrearFee1\": 0,\n            \"ArrearFee2\": 0,\n            \"ArrearFee3\": 0,\n            \"ArrearInterest\": 0,\n            \"ArrearRate\": 0,\n            \"ArrearTax\": 0,\n            \"Capital\": 0,\n            \"CapitalConcessional\": 0,\n            \"CapitalTax\": 0,\n            \"CompensatoryInterest\": 0,\n            \"CompensatoryInterestTax\": 0,\n            \"Concessional\": 0,\n            \"DeferredInterest\": 0,\n            \"DeferredInterestTax1\": 0,\n            \"DeferredInterestTax2\": 0,\n            \"DeferredInterestTax3\": 0,\n            \"DistributedInsurance1\": 0,\n            \"DistributedInsurance2\": 0,\n            \"DistributedInterest\": 0,\n            \"DistributedInterestTax1\": 0,\n            \"DistributedInterestTax2\": 0,\n            \"DistributedInterestTax3\": 0,\n            \"Fees\": [\n              {\n                \"Amount\": 0,\n                \"AppliesToDisbursement\": false,\n                \"CalculationBase\": \"\",\n                \"ChargeBase\": \"\",\n                \"Description\": \"\",\n                \"DistributionForm\": \"\",\n                \"Enabled\": false,\n                \"ExcludesCapitalization\": false,\n                \"FeeId\": 0,\n                \"FeeTypeId\": \"\",\n                \"MaximumAmount\": 0,\n                \"MinimumAmount\": 0,\n                \"Modifiable\": false,\n                \"ModificationType\": \"\",\n                \"Modified\": false,\n                \"Percentage\": 0,\n                \"SuggestsAmount\": 0,\n                \"Tax\": 0,\n                \"Total\": 0,\n                \"TotalAmount\": 0\n              }\n            ],\n            \"FeeTotal\": 0,\n            \"InstallmentNumber\": 0,\n            \"InstallmentType\": \"\",\n            \"Insurances\": [\n              {\n                \"AddedAmount\": 0,\n                \"AllowsModification\": false,\n                \"AssociatesInsurancePolicy\": false,\n                \"ChargeTypeId\": \"\",\n                \"CommercialValue\": 0,\n                \"Description\": \"\",\n                \"ExtraPremium\": 0,\n                \"Id\": 0,\n                \"ManagesExtraPremium\": false,\n                \"Modified\": false,\n                \"PercentageModified\": 0,\n                \"PolicyEndDate\": \"2026-01-01\",\n                \"PolicyNumber\": \"\",\n                \"PolicyStartDate\": \"2026-01-01\",\n                \"Total\": 0\n              }\n            ],\n            \"InsurancesTotal\": 0,\n            \"Interest\": 0,\n            \"InterestModality\": \"\",\n            \"InterestTax1\": 0,\n            \"InterestTax2\": 0,\n            \"InterestTax3\": 0,\n            \"MovementGUID\": \"\",\n            \"PaymentDate\": \"2026-01-01\",\n            \"PaymentNumber\": 0,\n            \"PlannedPaymentDate\": \"2026-01-01\",\n            \"PunitiveInterest\": 0,\n            \"PunitiveInterestTax\": 0,\n            \"RoundOff\": 0,\n            \"StatusId\": \"\",\n            \"Subvention1\": 0,\n            \"Subvention2\": 0,\n            \"Subvention3\": 0,\n            \"Taxes\": 0,\n            \"Total\": 0\n          }\n        ],\n        \"PlannedPaymentDate\": \"2026-01-01\",\n        \"PunitiveInterest\": 0,\n        \"PunitiveInterestTax\": 0,\n        \"RoundOff\": 0,\n        \"StatusId\": \"\",\n        \"SubTotal\": 0,\n        \"Subvention1\": 0,\n        \"Subvention2\": 0,\n        \"Subvention3\": 0,\n        \"Taxes\": 0,\n        \"TaxWithoutSubvention\": 0,\n        \"Term\": 0,\n        \"Total\": 0\n      }\n    ],\n    \"ArrearDays\": \"\",\n    \"ArrearFee1\": \"\",\n    \"ArrearFee2\": \"\",\n    \"ArrearFee3\": \"\",\n    \"ArrearInterest\": \"\",\n    \"ArrearTax\": \"\",\n    \"Capital\": \"\",\n    \"CapitalConcessional\": \"\",\n    \"CapitalTax\": \"\",\n    \"CompensatoryInterest\": \"\",\n    \"CompensatoryInterestTax\": \"\",\n    \"Concessional\": \"\",\n    \"DecimalsNumber\": \"\",\n    \"DefaultDate\": \"\",\n    \"DeferredInterests\": \"\",\n    \"DeferredInterestTax1\": \"\",\n    \"DeferredInterestTax2\": \"\",\n    \"DeferredInterestTax3\": \"\",\n    \"DistributedInsurance1\": \"\",\n    \"DistributedInsurance2\": \"\",\n    \"DistributedInterest\": \"\",\n    \"DistributedInterestTax1\": \"\",\n    \"DistributedInterestTax2\": \"\",\n    \"DistributedInterestTax3\": \"\",\n    \"EndDate\": \"\",\n    \"ExtendsTerm\": false,\n    \"Fees\": {\n      \"Amount\": \"\",\n      \"AppliesToDisbursement\": false,\n      \"CalculationBase\": \"\",\n      \"ChargeBase\": \"\",\n      \"Description\": \"\",\n      \"DistributionForm\": \"\",\n      \"Enabled\": false,\n      \"ExcludesCapitalization\": false,\n      \"FeeId\": \"\",\n      \"FeeTypeId\": \"\",\n      \"MaximumAmount\": \"\",\n      \"MinimumAmount\": \"\",\n      \"Modifiable\": false,\n      \"ModificationType\": \"\",\n      \"Modified\": false,\n      \"Percentage\": \"\",\n      \"SuggestsAmount\": \"\",\n      \"Tax\": \"\",\n      \"Total\": \"\",\n      \"TotalAmount\": \"\"\n    },\n    \"FeeTotal\": \"\",\n    \"GraceInQuota\": false,\n    \"GraceReach\": \"\",\n    \"InArrear\": false,\n    \"InitialDate\": \"\",\n    \"InstallmentNumber\": 0,\n    \"InstallmentType\": \"\",\n    \"InstallmentValue\": \"\",\n    \"Insurances\": {\n      \"AddedAmount\": \"\",\n      \"AllowsModification\": false,\n      \"AssociatesInsurancePolicy\": false,\n      \"ChargeTypeId\": \"\",\n      \"CommercialValue\": \"\",\n      \"Description\": \"\",\n      \"ExtraPremium\": \"\",\n      \"Id\": \"\",\n      \"ManagesExtraPremium\": false,\n      \"Modified\": false,\n      \"PercentageModified\": \"\",\n      \"PolicyEndDate\": \"\",\n      \"PolicyNumber\": \"\",\n      \"PolicyStartDate\": \"\",\n      \"Total\": \"\"\n    },\n    \"InsurancesTotal\": \"\",\n    \"Interest\": \"\",\n    \"InterestTax1\": \"\",\n    \"InterestTax2\": \"\",\n    \"InterestTax3\": \"\",\n    \"InversePlannedPaymentDate\": \"\",\n    \"Payments\": {\n      \"AccountBalance\": \"\",\n      \"ArrearFee1\": \"\",\n      \"ArrearFee2\": \"\",\n      \"ArrearFee3\": \"\",\n      \"ArrearInterest\": \"\",\n      \"ArrearRate\": \"\",\n      \"ArrearTax\": \"\",\n      \"Capital\": \"\",\n      \"CapitalConcessional\": \"\",\n      \"CapitalTax\": \"\",\n      \"CompensatoryInterest\": \"\",\n      \"CompensatoryInterestTax\": \"\",\n      \"Concessional\": \"\",\n      \"DeferredInterest\": \"\",\n      \"DeferredInterestTax1\": \"\",\n      \"DeferredInterestTax2\": \"\",\n      \"DeferredInterestTax3\": \"\",\n      \"DistributedInsurance1\": \"\",\n      \"DistributedInsurance2\": \"\",\n      \"DistributedInterest\": \"\",\n      \"DistributedInterestTax1\": \"\",\n      \"DistributedInterestTax2\": \"\",\n      \"DistributedInterestTax3\": \"\",\n      \"Fees\": {\n        \"Amount\": \"\",\n        \"AppliesToDisbursement\": false,\n        \"CalculationBase\": \"\",\n        \"ChargeBase\": \"\",\n        \"Description\": \"\",\n        \"DistributionForm\": \"\",\n        \"Enabled\": false,\n        \"ExcludesCapitalization\": false,\n        \"FeeId\": \"\",\n        \"FeeTypeId\": \"\",\n        \"MaximumAmount\": \"\",\n        \"MinimumAmount\": \"\",\n        \"Modifiable\": false,\n        \"ModificationType\": \"\",\n        \"Modified\": false,\n        \"Percentage\": \"\",\n        \"SuggestsAmount\": \"\",\n        \"Tax\": \"\",\n        \"Total\": \"\",\n        \"TotalAmount\": \"\"\n      },\n      \"FeeTotal\": \"\",\n      \"InstallmentNumber\": \"\",\n      \"InstallmentType\": \"\",\n      \"Insurances\": {\n        \"AddedAmount\": \"\",\n        \"AllowsModification\": false,\n        \"AssociatesInsurancePolicy\": false,\n        \"ChargeTypeId\": \"\",\n        \"CommercialValue\": \"\",\n        \"Description\": \"\",\n        \"ExtraPremium\": \"\",\n        \"Id\": \"\",\n        \"ManagesExtraPremium\": false,\n        \"Modified\": false,\n        \"PercentageModified\": \"\",\n        \"PolicyEndDate\": \"\",\n        \"PolicyNumber\": \"\",\n        \"PolicyStartDate\": \"\",\n        \"Total\": \"\"\n      },\n      \"InsurancesTotal\": \"\",\n      \"Interest\": \"\",\n      \"InterestModality\": \"\",\n      \"InterestTax1\": \"\",\n      \"InterestTax2\": \"\",\n      \"InterestTax3\": \"\",\n      \"MovementGUId\": \"\",\n      \"PaymentDate\": \"\",\n      \"PaymentNumber\": 0,\n      \"PlannedPaymentDate\": \"\",\n      \"PunitiveInterest\": \"\",\n      \"PunitiveInterestTax\": \"\",\n      \"RoundOff\": \"\",\n      \"StatusId\": \"\",\n      \"Subvention1\": \"\",\n      \"Subvention2\": \"\",\n      \"Subvention3\": \"\",\n      \"Taxes\": \"\",\n      \"Total\": \"\"\n    },\n    \"PlannedPaymentDate\": \"\",\n    \"PunitiveInterest\": \"\",\n    \"PunitiveInterestTax\": \"\",\n    \"RoundOff\": \"\",\n    \"StatusId\": \"\",\n    \"SubTotal\": \"\",\n    \"Subvention1\": \"\",\n    \"Subvention2\": \"\",\n    \"Subvention3\": \"\",\n    \"Taxes\": \"\",\n    \"TaxWithoutSubvention\": \"\",\n    \"Term\": \"\",\n    \"Total\": \"\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.getSchedule\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"TOKEN_AQUI\"\n  },\n  \"installments\": {\n    \"installment\": [\n      {\n        \"ArrearDays\": 0,\n        \"ArrearFee1\": 0,\n        \"ArrearFee2\": 0,\n        \"ArrearFee3\": 0,\n        \"ArrearInterest\": 0,\n        \"ArrearTax\": 0,\n        \"Capital\": 0,\n        \"CapitalConcessional\": 0,\n        \"CapitalTax\": 0,\n        \"CompensatoryInterest\": 0,\n        \"CompensatoryInterestTax\": 0,\n        \"Concessional\": 0,\n        \"DecimalsNumber\": \"\",\n        \"DefaultDate\": \"2026-01-01\",\n        \"DeferredInterests\": 0,\n        \"DeferredInterestTax1\": 0,\n        \"DeferredInterestTax2\": 0,\n        \"DeferredInterestTax3\": 0,\n        \"DistributedInsurance1\": 0,\n        \"DistributedInsurance2\": 0,\n        \"DistributedInterest\": 0,\n        \"DistributedInterestTax1\": 0,\n        \"DistributedInterestTax2\": 0,\n        \"DistributedInterestTax3\": 0,\n        \"EndDate\": \"2026-01-01\",\n        \"ExtendsTerm\": false,\n        \"Fees\": [\n          {\n            \"Amount\": 0,\n            \"AppliesToDisbursement\": false,\n            \"CalculationBase\": \"\",\n            \"ChargeBase\": \"\",\n            \"Description\": \"\",\n            \"DistributionForm\": \"\",\n            \"Enabled\": false,\n            \"ExcludesCapitalization\": false,\n            \"FeeId\": 0,\n            \"FeeTypeId\": \"\",\n            \"MaximumAmount\": 0,\n            \"MinimumAmount\": 0,\n            \"Modifiable\": false,\n            \"ModificationType\": \"\",\n            \"Modified\": false,\n            \"Percentage\": 0,\n            \"SuggestsAmount\": 0,\n            \"Tax\": 0,\n            \"Total\": 0,\n            \"TotalAmount\": 0\n          }\n        ],\n        \"FeeTotal\": 0,\n        \"GraceInQuota\": false,\n        \"GraceReach\": \"\",\n        \"InArrear\": false,\n        \"InitialDate\": \"2026-01-01\",\n        \"InstallmentNumber\": 0,\n        \"InstallmentType\": \"\",\n        \"InstallmentValue\": 0,\n        \"Insurances\": [\n          {\n            \"AddedAmount\": 0,\n            \"AllowsModification\": false,\n            \"AssociatesInsurancePolicy\": false,\n            \"ChargeTypeId\": \"\",\n            \"CommercialValue\": 0,\n            \"Description\": \"\",\n            \"ExtraPremium\": 0,\n            \"Id\": 0,\n            \"ManagesExtraPremium\": false,\n            \"Modified\": false,\n            \"PercentageModified\": 0,\n            \"PolicyEndDate\": \"2026-01-01\",\n            \"PolicyNumber\": \"\",\n            \"PolicyStartDate\": \"2026-01-01\",\n            \"Total\": 0\n          }\n        ],\n        \"InsurancesTotal\": 0,\n        \"Interest\": 0,\n        \"InterestTax1\": 0,\n        \"InterestTax2\": 0,\n        \"InterestTax3\": 0,\n        \"InversePlannedPaymentDate\": 0,\n        \"Payments\": [\n          {\n            \"AccountBalance\": 0,\n            \"ArrearFee1\": 0,\n            \"ArrearFee2\": 0,\n            \"ArrearFee3\": 0,\n            \"ArrearInterest\": 0,\n            \"ArrearRate\": 0,\n            \"ArrearTax\": 0,\n            \"Capital\": 0,\n            \"CapitalConcessional\": 0,\n            \"CapitalTax\": 0,\n            \"CompensatoryInterest\": 0,\n            \"CompensatoryInterestTax\": 0,\n            \"Concessional\": 0,\n            \"DeferredInterest\": 0,\n            \"DeferredInterestTax1\": 0,\n            \"DeferredInterestTax2\": 0,\n            \"DeferredInterestTax3\": 0,\n            \"DistributedInsurance1\": 0,\n            \"DistributedInsurance2\": 0,\n            \"DistributedInterest\": 0,\n            \"DistributedInterestTax1\": 0,\n            \"DistributedInterestTax2\": 0,\n            \"DistributedInterestTax3\": 0,\n            \"Fees\": [\n              {\n                \"Amount\": 0,\n                \"AppliesToDisbursement\": false,\n                \"CalculationBase\": \"\",\n                \"ChargeBase\": \"\",\n                \"Description\": \"\",\n                \"DistributionForm\": \"\",\n                \"Enabled\": false,\n                \"ExcludesCapitalization\": false,\n                \"FeeId\": 0,\n                \"FeeTypeId\": \"\",\n                \"MaximumAmount\": 0,\n                \"MinimumAmount\": 0,\n                \"Modifiable\": false,\n                \"ModificationType\": \"\",\n                \"Modified\": false,\n                \"Percentage\": 0,\n                \"SuggestsAmount\": 0,\n                \"Tax\": 0,\n                \"Total\": 0,\n                \"TotalAmount\": 0\n              }\n            ],\n            \"FeeTotal\": 0,\n            \"InstallmentNumber\": 0,\n            \"InstallmentType\": \"\",\n            \"Insurances\": [\n              {\n                \"AddedAmount\": 0,\n                \"AllowsModification\": false,\n                \"AssociatesInsurancePolicy\": false,\n                \"ChargeTypeId\": \"\",\n                \"CommercialValue\": 0,\n                \"Description\": \"\",\n                \"ExtraPremium\": 0,\n                \"Id\": 0,\n                \"ManagesExtraPremium\": false,\n                \"Modified\": false,\n                \"PercentageModified\": 0,\n                \"PolicyEndDate\": \"2026-01-01\",\n                \"PolicyNumber\": \"\",\n                \"PolicyStartDate\": \"2026-01-01\",\n                \"Total\": 0\n              }\n            ],\n            \"InsurancesTotal\": 0,\n            \"Interest\": 0,\n            \"InterestModality\": \"\",\n            \"InterestTax1\": 0,\n            \"InterestTax2\": 0,\n            \"InterestTax3\": 0,\n            \"MovementGUID\": \"\",\n            \"PaymentDate\": \"2026-01-01\",\n            \"PaymentNumber\": 0,\n            \"PlannedPaymentDate\": \"2026-01-01\",\n            \"PunitiveInterest\": 0,\n            \"PunitiveInterestTax\": 0,\n            \"RoundOff\": 0,\n            \"StatusId\": \"\",\n            \"Subvention1\": 0,\n            \"Subvention2\": 0,\n            \"Subvention3\": 0,\n            \"Taxes\": 0,\n            \"Total\": 0\n          }\n        ],\n        \"PlannedPaymentDate\": \"2026-01-01\",\n        \"PunitiveInterest\": 0,\n        \"PunitiveInterestTax\": 0,\n        \"RoundOff\": 0,\n        \"StatusId\": \"\",\n        \"SubTotal\": 0,\n        \"Subvention1\": 0,\n        \"Subvention2\": 0,\n        \"Subvention3\": 0,\n        \"Taxes\": 0,\n        \"TaxWithoutSubvention\": 0,\n        \"Term\": 0,\n        \"Total\": 0\n      }\n    ],\n    \"ArrearDays\": \"\",\n    \"ArrearFee1\": \"\",\n    \"ArrearFee2\": \"\",\n    \"ArrearFee3\": \"\",\n    \"ArrearInterest\": \"\",\n    \"ArrearTax\": \"\",\n    \"Capital\": \"\",\n    \"CapitalConcessional\": \"\",\n    \"CapitalTax\": \"\",\n    \"CompensatoryInterest\": \"\",\n    \"CompensatoryInterestTax\": \"\",\n    \"Concessional\": \"\",\n    \"DecimalsNumber\": \"\",\n    \"DefaultDate\": \"\",\n    \"DeferredInterests\": \"\",\n    \"DeferredInterestTax1\": \"\",\n    \"DeferredInterestTax2\": \"\",\n    \"DeferredInterestTax3\": \"\",\n    \"DistributedInsurance1\": \"\",\n    \"DistributedInsurance2\": \"\",\n    \"DistributedInterest\": \"\",\n    \"DistributedInterestTax1\": \"\",\n    \"DistributedInterestTax2\": \"\",\n    \"DistributedInterestTax3\": \"\",\n    \"EndDate\": \"\",\n    \"ExtendsTerm\": false,\n    \"Fees\": {\n      \"Amount\": \"\",\n      \"AppliesToDisbursement\": false,\n      \"CalculationBase\": \"\",\n      \"ChargeBase\": \"\",\n      \"Description\": \"\",\n      \"DistributionForm\": \"\",\n      \"Enabled\": false,\n      \"ExcludesCapitalization\": false,\n      \"FeeId\": \"\",\n      \"FeeTypeId\": \"\",\n      \"MaximumAmount\": \"\",\n      \"MinimumAmount\": \"\",\n      \"Modifiable\": false,\n      \"ModificationType\": \"\",\n      \"Modified\": false,\n      \"Percentage\": \"\",\n      \"SuggestsAmount\": \"\",\n      \"Tax\": \"\",\n      \"Total\": \"\",\n      \"TotalAmount\": \"\"\n    },\n    \"FeeTotal\": \"\",\n    \"GraceInQuota\": false,\n    \"GraceReach\": \"\",\n    \"InArrear\": false,\n    \"InitialDate\": \"\",\n    \"InstallmentNumber\": 0,\n    \"InstallmentType\": \"\",\n    \"InstallmentValue\": \"\",\n    \"Insurances\": {\n      \"AddedAmount\": \"\",\n      \"AllowsModification\": false,\n      \"AssociatesInsurancePolicy\": false,\n      \"ChargeTypeId\": \"\",\n      \"CommercialValue\": \"\",\n      \"Description\": \"\",\n      \"ExtraPremium\": \"\",\n      \"Id\": \"\",\n      \"ManagesExtraPremium\": false,\n      \"Modified\": false,\n      \"PercentageModified\": \"\",\n      \"PolicyEndDate\": \"\",\n      \"PolicyNumber\": \"\",\n      \"PolicyStartDate\": \"\",\n      \"Total\": \"\"\n    },\n    \"InsurancesTotal\": \"\",\n    \"Interest\": \"\",\n    \"InterestTax1\": \"\",\n    \"InterestTax2\": \"\",\n    \"InterestTax3\": \"\",\n    \"InversePlannedPaymentDate\": \"\",\n    \"Payments\": {\n      \"AccountBalance\": \"\",\n      \"ArrearFee1\": \"\",\n      \"ArrearFee2\": \"\",\n      \"ArrearFee3\": \"\",\n      \"ArrearInterest\": \"\",\n      \"ArrearRate\": \"\",\n      \"ArrearTax\": \"\",\n      \"Capital\": \"\",\n      \"CapitalConcessional\": \"\",\n      \"CapitalTax\": \"\",\n      \"CompensatoryInterest\": \"\",\n      \"CompensatoryInterestTax\": \"\",\n      \"Concessional\": \"\",\n      \"DeferredInterest\": \"\",\n      \"DeferredInterestTax1\": \"\",\n      \"DeferredInterestTax2\": \"\",\n      \"DeferredInterestTax3\": \"\",\n      \"DistributedInsurance1\": \"\",\n      \"DistributedInsurance2\": \"\",\n      \"DistributedInterest\": \"\",\n      \"DistributedInterestTax1\": \"\",\n      \"DistributedInterestTax2\": \"\",\n      \"DistributedInterestTax3\": \"\",\n      \"Fees\": {\n        \"Amount\": \"\",\n        \"AppliesToDisbursement\": false,\n        \"CalculationBase\": \"\",\n        \"ChargeBase\": \"\",\n        \"Description\": \"\",\n        \"DistributionForm\": \"\",\n        \"Enabled\": false,\n        \"ExcludesCapitalization\": false,\n        \"FeeId\": \"\",\n        \"FeeTypeId\": \"\",\n        \"MaximumAmount\": \"\",\n        \"MinimumAmount\": \"\",\n        \"Modifiable\": false,\n        \"ModificationType\": \"\",\n        \"Modified\": false,\n        \"Percentage\": \"\",\n        \"SuggestsAmount\": \"\",\n        \"Tax\": \"\",\n        \"Total\": \"\",\n        \"TotalAmount\": \"\"\n      },\n      \"FeeTotal\": \"\",\n      \"InstallmentNumber\": \"\",\n      \"InstallmentType\": \"\",\n      \"Insurances\": {\n        \"AddedAmount\": \"\",\n        \"AllowsModification\": false,\n        \"AssociatesInsurancePolicy\": false,\n        \"ChargeTypeId\": \"\",\n        \"CommercialValue\": \"\",\n        \"Description\": \"\",\n        \"ExtraPremium\": \"\",\n        \"Id\": \"\",\n        \"ManagesExtraPremium\": false,\n        \"Modified\": false,\n        \"PercentageModified\": \"\",\n        \"PolicyEndDate\": \"\",\n        \"PolicyNumber\": \"\",\n        \"PolicyStartDate\": \"\",\n        \"Total\": \"\"\n      },\n      \"InsurancesTotal\": \"\",\n      \"Interest\": \"\",\n      \"InterestModality\": \"\",\n      \"InterestTax1\": \"\",\n      \"InterestTax2\": \"\",\n      \"InterestTax3\": \"\",\n      \"MovementGUId\": \"\",\n      \"PaymentDate\": \"\",\n      \"PaymentNumber\": 0,\n      \"PlannedPaymentDate\": \"\",\n      \"PunitiveInterest\": \"\",\n      \"PunitiveInterestTax\": \"\",\n      \"RoundOff\": \"\",\n      \"StatusId\": \"\",\n      \"Subvention1\": \"\",\n      \"Subvention2\": \"\",\n      \"Subvention3\": \"\",\n      \"Taxes\": \"\",\n      \"Total\": \"\"\n    },\n    \"PlannedPaymentDate\": \"\",\n    \"PunitiveInterest\": \"\",\n    \"PunitiveInterestTax\": \"\",\n    \"RoundOff\": \"\",\n    \"StatusId\": \"\",\n    \"SubTotal\": \"\",\n    \"Subvention1\": \"\",\n    \"Subvention2\": \"\",\n    \"Subvention3\": \"\",\n    \"Taxes\": \"\",\n    \"TaxWithoutSubvention\": \"\",\n    \"Term\": \"\",\n    \"Total\": \"\"\n  },\n  \"BusinessErrors\": \"\",\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-01-01\",\n    \"Hora\": \"00:00:00\",\n    \"Numero\": \"00000000\",\n    \"Servicio\": \"PublicLoans.getSchedule\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTLOWInstallment",
+      "fields": [
+        {
+          "Nombre": "ArrearDays",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Días de mora."
+        },
+        {
+          "Nombre": "ArrearFee1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 1."
+        },
+        {
+          "Nombre": "ArrearFee2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 2."
+        },
+        {
+          "Nombre": "ArrearFee3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 3."
+        },
+        {
+          "Nombre": "ArrearInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés de mora."
+        },
+        {
+          "Nombre": "ArrearTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre mora."
+        },
+        {
+          "Nombre": "Capital",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "CapitalConcessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital concesional."
+        },
+        {
+          "Nombre": "CapitalTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre capital."
+        },
+        {
+          "Nombre": "CompensatoryInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés compensatorio."
+        },
+        {
+          "Nombre": "CompensatoryInterestTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre interés compensatorio."
+        },
+        {
+          "Nombre": "Concessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Concesional."
+        },
+        {
+          "Nombre": "DecimalsNumber",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Número de decimales."
+        },
+        {
+          "Nombre": "DefaultDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de incumplimiento."
+        },
+        {
+          "Nombre": "DeferredInterests",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Intereses diferidos."
+        },
+        {
+          "Nombre": "DeferredInterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 1."
+        },
+        {
+          "Nombre": "DeferredInterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 2."
+        },
+        {
+          "Nombre": "DeferredInterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 3."
+        },
+        {
+          "Nombre": "DistributedInsurance1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Seguro distribuido 1."
+        },
+        {
+          "Nombre": "DistributedInsurance2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Seguro distribuido 2."
+        },
+        {
+          "Nombre": "DistributedInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés distribuido."
+        },
+        {
+          "Nombre": "DistributedInterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 1."
+        },
+        {
+          "Nombre": "DistributedInterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 2."
+        },
+        {
+          "Nombre": "DistributedInterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 3."
+        },
+        {
+          "Nombre": "EndDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de fin."
+        },
+        {
+          "Nombre": "ExtendsTerm",
+          "Tipo": "Boolean",
+          "Comentarios": "Extiende plazo."
+        },
+        {
+          "Nombre": "Fees",
+          "Tipo": "<a href=\"#sdtsbtlowfee\">SdtsBTLOWFee</a>",
+          "Comentarios": "Comisiones."
+        },
+        {
+          "Nombre": "FeeTotal",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de comisiones."
+        },
+        {
+          "Nombre": "GraceInQuota",
+          "Tipo": "Boolean",
+          "Comentarios": "Gracia en cuota."
+        },
+        {
+          "Nombre": "GraceReach",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de gracia."
+        },
+        {
+          "Nombre": "InArrear",
+          "Tipo": "Boolean",
+          "Comentarios": "En mora."
+        },
+        {
+          "Nombre": "InitialDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha inicial."
+        },
+        {
+          "Nombre": "InstallmentNumber",
+          "Tipo": "Short",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "InstallmentType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cuota."
+        },
+        {
+          "Nombre": "InstallmentValue",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Valor de la cuota."
+        },
+        {
+          "Nombre": "Insurances",
+          "Tipo": "<a href=\"#sdtsbtlowinsurance\">SdtsBTLOWInsurance</a>",
+          "Comentarios": "Seguros."
+        },
+        {
+          "Nombre": "InsurancesTotal",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de seguros."
+        },
+        {
+          "Nombre": "Interest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés."
+        },
+        {
+          "Nombre": "InterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 1."
+        },
+        {
+          "Nombre": "InterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 2."
+        },
+        {
+          "Nombre": "InterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 3."
+        },
+        {
+          "Nombre": "InversePlannedPaymentDate",
+          "Tipo": "Int <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha prevista de pago inversa."
+        },
+        {
+          "Nombre": "Payments",
+          "Tipo": "<a href=\"#sdtsbtlowpayment\">SdtsBTLOWPayment</a>",
+          "Comentarios": "Pagos."
+        },
+        {
+          "Nombre": "PlannedPaymentDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha prevista de pago."
+        },
+        {
+          "Nombre": "PunitiveInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés punitorio."
+        },
+        {
+          "Nombre": "PunitiveInterestTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre interés punitorio."
+        },
+        {
+          "Nombre": "RoundOff",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Redondeo."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "SubTotal",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subtotal."
+        },
+        {
+          "Nombre": "Subvention1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 1."
+        },
+        {
+          "Nombre": "Subvention2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 2."
+        },
+        {
+          "Nombre": "Subvention3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 3."
+        },
+        {
+          "Nombre": "Taxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuestos."
+        },
+        {
+          "Nombre": "TaxWithoutSubvention",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sin subvención."
+        },
+        {
+          "Nombre": "Term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOWFee",
+      "fields": [
+        {
+          "Nombre": "Amount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto."
+        },
+        {
+          "Nombre": "AppliesToDisbursement",
+          "Tipo": "Boolean",
+          "Comentarios": "Aplica al desembolso."
+        },
+        {
+          "Nombre": "CalculationBase",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Base de cálculo."
+        },
+        {
+          "Nombre": "ChargeBase",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Base de cargo."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String <strong>(Length: 30)</strong>",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "DistributionForm",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Forma de distribución."
+        },
+        {
+          "Nombre": "Enabled",
+          "Tipo": "Boolean",
+          "Comentarios": "Habilitado."
+        },
+        {
+          "Nombre": "ExcludesCapitalization",
+          "Tipo": "Boolean",
+          "Comentarios": "Excluye capitalización."
+        },
+        {
+          "Nombre": "FeeId",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Identificador de comisión."
+        },
+        {
+          "Nombre": "FeeTypeId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de comisión."
+        },
+        {
+          "Nombre": "MaximumAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto máximo."
+        },
+        {
+          "Nombre": "MinimumAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto mínimo."
+        },
+        {
+          "Nombre": "Modifiable",
+          "Tipo": "Boolean",
+          "Comentarios": "Modificable."
+        },
+        {
+          "Nombre": "ModificationType",
+          "Tipo": "Byte <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de modificación."
+        },
+        {
+          "Nombre": "Modified",
+          "Tipo": "Boolean",
+          "Comentarios": "Modificado."
+        },
+        {
+          "Nombre": "Percentage",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Porcentaje."
+        },
+        {
+          "Nombre": "SuggestsAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Sugiere monto."
+        },
+        {
+          "Nombre": "Tax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total."
+        },
+        {
+          "Nombre": "TotalAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto total."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOWInsurance",
+      "fields": [
+        {
+          "Nombre": "AddedAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto agregado."
+        },
+        {
+          "Nombre": "AllowsModification",
+          "Tipo": "Boolean",
+          "Comentarios": "Permite modificación."
+        },
+        {
+          "Nombre": "AssociatesInsurancePolicy",
+          "Tipo": "Boolean",
+          "Comentarios": "Asocia póliza de seguro."
+        },
+        {
+          "Nombre": "ChargeTypeId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador del tipo de cargo."
+        },
+        {
+          "Nombre": "CommercialValue",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Valor comercial."
+        },
+        {
+          "Nombre": "Description",
+          "Tipo": "String",
+          "Comentarios": "Descripción."
+        },
+        {
+          "Nombre": "ExtraPremium",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Prima adicional."
+        },
+        {
+          "Nombre": "Id",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador."
+        },
+        {
+          "Nombre": "ManagesExtraPremium",
+          "Tipo": "Boolean",
+          "Comentarios": "Gestiona prima adicional."
+        },
+        {
+          "Nombre": "Modified",
+          "Tipo": "Boolean",
+          "Comentarios": "Modificado."
+        },
+        {
+          "Nombre": "PercentageModified",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Porcentaje modificado."
+        },
+        {
+          "Nombre": "PolicyEndDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de fin de póliza."
+        },
+        {
+          "Nombre": "PolicyNumber",
+          "Tipo": "String <strong>(Length: 20)</strong>",
+          "Comentarios": "Número de póliza."
+        },
+        {
+          "Nombre": "PolicyStartDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de inicio de póliza."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTLOWPayment",
+      "fields": [
+        {
+          "Nombre": "AccountBalance",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Saldo contable."
+        },
+        {
+          "Nombre": "ArrearFee1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 1."
+        },
+        {
+          "Nombre": "ArrearFee2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 2."
+        },
+        {
+          "Nombre": "ArrearFee3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Comisión por mora 3."
+        },
+        {
+          "Nombre": "ArrearInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés de mora."
+        },
+        {
+          "Nombre": "ArrearRate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa de mora."
+        },
+        {
+          "Nombre": "ArrearTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre mora."
+        },
+        {
+          "Nombre": "Capital",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "CapitalConcessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Capital concesional."
+        },
+        {
+          "Nombre": "CapitalTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre capital."
+        },
+        {
+          "Nombre": "CompensatoryInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés compensatorio."
+        },
+        {
+          "Nombre": "CompensatoryInterestTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre interés compensatorio."
+        },
+        {
+          "Nombre": "Concessional",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Concesional."
+        },
+        {
+          "Nombre": "DeferredInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés diferido."
+        },
+        {
+          "Nombre": "DeferredInterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 1."
+        },
+        {
+          "Nombre": "DeferredInterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 2."
+        },
+        {
+          "Nombre": "DeferredInterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés diferido 3."
+        },
+        {
+          "Nombre": "DistributedInsurance1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Seguro distribuido 1."
+        },
+        {
+          "Nombre": "DistributedInsurance2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Seguro distribuido 2."
+        },
+        {
+          "Nombre": "DistributedInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés distribuido."
+        },
+        {
+          "Nombre": "DistributedInterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 1."
+        },
+        {
+          "Nombre": "DistributedInterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 2."
+        },
+        {
+          "Nombre": "DistributedInterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés distribuido 3."
+        },
+        {
+          "Nombre": "Fees",
+          "Tipo": "<a href=\"#sdtsbtlowfee\">SdtsBTLOWFee</a>",
+          "Comentarios": "Comisiones."
+        },
+        {
+          "Nombre": "FeeTotal",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de comisiones."
+        },
+        {
+          "Nombre": "InstallmentNumber",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Número de cuota."
+        },
+        {
+          "Nombre": "InstallmentType",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Tipo de cuota."
+        },
+        {
+          "Nombre": "Insurances",
+          "Tipo": "<a href=\"#sdtsbtlowinsurance\">SdtsBTLOWInsurance</a>",
+          "Comentarios": "Seguros."
+        },
+        {
+          "Nombre": "InsurancesTotal",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total de seguros."
+        },
+        {
+          "Nombre": "Interest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés."
+        },
+        {
+          "Nombre": "InterestModality",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Modalidad de interés."
+        },
+        {
+          "Nombre": "InterestTax1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 1."
+        },
+        {
+          "Nombre": "InterestTax2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 2."
+        },
+        {
+          "Nombre": "InterestTax3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto de interés 3."
+        },
+        {
+          "Nombre": "MovementGUId",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) del movimiento."
+        },
+        {
+          "Nombre": "PaymentDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha de pago."
+        },
+        {
+          "Nombre": "PaymentNumber",
+          "Tipo": "Short",
+          "Comentarios": "Número de pago."
+        },
+        {
+          "Nombre": "PlannedPaymentDate",
+          "Tipo": "Date <strong>(Length: 8)</strong>",
+          "Comentarios": "Fecha prevista de pago."
+        },
+        {
+          "Nombre": "PunitiveInterest",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Interés punitorio."
+        },
+        {
+          "Nombre": "PunitiveInterestTax",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuesto sobre interés punitorio."
+        },
+        {
+          "Nombre": "RoundOff",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Redondeo."
+        },
+        {
+          "Nombre": "StatusId",
+          "Tipo": "String <strong>(Length: 1)</strong>",
+          "Comentarios": "Identificador de estado."
+        },
+        {
+          "Nombre": "Subvention1",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 1."
+        },
+        {
+          "Nombre": "Subvention2",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 2."
+        },
+        {
+          "Nombre": "Subvention3",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Subvención 3."
+        },
+        {
+          "Nombre": "Taxes",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Impuestos."
+        },
+        {
+          "Nombre": "Total",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Total."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

@@ -138,36 +138,51 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtEstadoDeCuenta": {
-      "saldoPartida": "0.00",
-      "fechaHasta": "2018-10-09",
-      "productoUId": "5",
-      "fechaDesde": "2018-07-11",
-      "movimientos": {
-         "sBTMovimiento": []
-      },
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "915",
-      "Estado": "OK",
-      "Servicio": "BTDepositosAPlazo.ObtenerMovimientos",
-      "Fecha": "2017-12-21",
-      "Requerimiento": 1,
-      "Hora": "17:01:31",
-      "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtEstadoDeCuenta": {
+    "saldoPartida": "0.00",
+    "fechaHasta": "2018-10-09",
+    "productoUId": "5",
+    "fechaDesde": "2018-07-11",
+    "movimientos": {
+      "sBTMovimiento": [
+        {
+          "arbitraje": 0,
+          "concepto": "",
+          "debitoCredito": "",
+          "fecha": "",
+          "hora": "",
+          "importe": 0,
+          "moneda": "",
+          "movimientoUId": 0,
+          "numeroCheque": 0,
+          "referencia": "",
+          "saldo": 0,
+          "tipoCambio": 0
+        }
+      ]
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "915",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerMovimientos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "17:01:31",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -179,6 +194,8 @@ curl -X POST \
 
 ### sBTEstadoCuentaCV
 
+### sBTDatoExtendido
+
 ::: center 
 Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes: 
 
@@ -188,7 +205,10 @@ fechaDesde | Date | Fecha desde la cual se emite el estado de cuenta.
 fechaHasta | Date | Fecha hasta la cual se emite el estado de cuenta. 
 movimientos | [sBTMovimiento](#sbtmovimiento) | Listado de movimientos. 
 productoUId | Long | Identificador único de producto. 
-saldoPartida | Double | Saldo inicial. 
+saldoPartida | Double | Saldo inicial.
+:::
+
+::: details sBTMovimiento
 
 ### sBTMovimiento
 
@@ -208,6 +228,8 @@ movimientoUId | Long | Identificador único de movimiento.
 numeroCheque | Int | Número de cheque. 
 referencia | String | Referencia. 
 saldo | Double | Saldo del depósito. 
-tipoCambio | Double | Tipo de cambio de moneda. 
+tipoCambio | Double | Tipo de cambio de moneda.
 :::
+
 <!-- CIERRA SDT -->
+

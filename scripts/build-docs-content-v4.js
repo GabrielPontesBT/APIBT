@@ -73,14 +73,16 @@ function stripMarkdownLinks(text) {
 }
 
 function markdownLinksToHtml(text, baseRelPath) {
-  return String(text || '').replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    if (baseRelPath && href.toLowerCase().endsWith('.md')) {
-      const dir = path.dirname(baseRelPath).replace(/\\/g, '/');
-      const resolved = path.posix.normalize(`${dir}/${href}`);
-      return `<a href="/${buildSlugFromRelPath(resolved)}">${label}</a>`;
-    }
-    return `<a href="${href}">${label}</a>`;
-  });
+  return String(text || '')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      if (baseRelPath && href.toLowerCase().endsWith('.md')) {
+        const dir = path.dirname(baseRelPath).replace(/\\/g, '/');
+        const resolved = path.posix.normalize(`${dir}/${href}`);
+        return `<a href="/${buildSlugFromRelPath(resolved)}">${label}</a>`;
+      }
+      return `<a href="${href}">${label}</a>`;
+    })
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 }
 
 /**
@@ -103,6 +105,23 @@ function escapeNonTagHtml(text) {
   result = result.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   result = result.replace(/\x00(\d+)\x00/g, (_, i) => links[parseInt(i, 10)]);
   return result;
+}
+
+// ── Directivas VuePress (::: tipo ... :::) ─────────────────────────────────────
+
+function stripVpressDirectives(text) {
+  return String(text || '').replace(/:::[ \t]*\w[^\n]*\n[\s\S]*?:::/g, '').trim();
+}
+
+function extractVpressDirectiveContent(text) {
+  const results = [];
+  const re = /:::[ \t]*\w[^\n]*\n([\s\S]*?):::/g;
+  let m;
+  while ((m = re.exec(String(text || ''))) !== null) {
+    const content = m[1].trim();
+    if (content) results.push(content);
+  }
+  return results.join('\n\n');
 }
 
 // ── Bloques ────────────────────────────────────────────────────────────────────
@@ -166,17 +185,19 @@ function extractMethodMeta(content, relPath) {
   const pubMatch    = block.match(/\*\*(?:Nombre publicación|Publication Name):\*\*\s*(.+)/i);
   const moduloMatch = block.match(/\*\*(?:Módulo|Module):\*\*\s*(.+)/i);
   const progMatch   = block.match(/\*\*(?:Programa|Program):\*\*\s*(.+)/i);
-  const scopeMatch  = block.match(/\*\*(?:Alcance|Scope|Global\/País):\*\*\s*(.+)/i);
+  const scopeMatch    = block.match(/\*\*(?:Alcance|Scope|Global\/País):\*\*\s*(.+)/i);
+  const endpointMatch = block.match(/\*\*(?:Endpoint):\*\*\s*(.+)/i);
 
   return {
     description: markdownLinksToHtml(
       normalizeWhitespace(descMatch ? descMatch[1].replace(/:::$/, '').trim() : ''),
       relPath
     ),
-    pubName:  normalizeWhitespace(pubMatch    ? pubMatch[1]    : ''),
-    modulo:   normalizeWhitespace(moduloMatch ? moduloMatch[1] : ''),
-    programa: normalizeWhitespace(progMatch   ? progMatch[1]   : ''),
-    scope:    normalizeWhitespace(scopeMatch  ? scopeMatch[1]  : ''),
+    pubName:   normalizeWhitespace(pubMatch      ? pubMatch[1]      : ''),
+    modulo:    normalizeWhitespace(moduloMatch   ? moduloMatch[1]   : ''),
+    programa:  normalizeWhitespace(progMatch     ? progMatch[1]     : ''),
+    scope:     normalizeWhitespace(scopeMatch    ? scopeMatch[1]    : ''),
+    endpoint:  normalizeWhitespace(endpointMatch ? endpointMatch[1] : ''),
   };
 }
 
@@ -198,16 +219,27 @@ function extractApiTabs(content, relPath) {
   if (!block) return { inputData: [], bodyData: [], outputData: [], errors: [], errorsNote: '' };
 
   const sections = {};
-  const tabRegex = /@tab\s*([^\n]+)\n([\s\S]*?)(?=(?:@tab|:::|$))/g;
+  // Detenemos solo en @tab o fin de bloque; los ::: internos (tip, warning, etc.)
+  // los maneja cada sección individualmente con stripVpressDirectives.
+  const tabRegex = /@tab\s*([^\n]+)\n([\s\S]*?)(?=@tab|$)/g;
   let match;
   while ((match = tabRegex.exec(block)) !== null) {
-    sections[match[1].trim()] = match[2].trim();
+    // Quitar el ::: de cierre del bloque externo que puede quedar al final del último tab
+    sections[match[1].trim()] = match[2].trim().replace(/\n?:::\s*$/, '').trim();
   }
 
-  const inputRaw  = sections['Datos de Entrada'] || sections['Input Data']  || '';
-  const bodyRaw   = sections['Body']             || '';
-  const outputRaw = sections['Datos de Salida']  || sections['Output Data'] || '';
-  const errorsRaw = sections['Errores']          || sections['Errors']      || '';
+  const inputRaw   = sections['Datos de Entrada'] || sections['Input Data']  || '';
+  const bodyRaw    = sections['Body']             || '';
+  const headersRaw = sections['Headers']          || '';
+  const outputRaw  = sections['Datos de Salida']  || sections['Output Data'] || '';
+  const errorsRaw  = sections['Errores']          || sections['Errors']      || '';
+
+  // Para cada tab, extraer la nota de directivas (::: comment) y parsear solo la tabla
+  const headersNote = extractVpressDirectiveContent(headersRaw);
+  const headersData = parseTable(stripVpressDirectives(headersRaw), relPath);
+  const inputNote   = extractVpressDirectiveContent(inputRaw);
+  const bodyNote    = extractVpressDirectiveContent(bodyRaw);
+  const outputNote  = extractVpressDirectiveContent(outputRaw);
 
   let errors = [];
   let errorsNote = '';
@@ -217,15 +249,21 @@ function extractApiTabs(content, relPath) {
   } else {
     const allLines   = errorsRaw.split('\n').map(l => l.trim());
     const tableLines = allLines.filter(l => l.includes('|'));
-    const noteLines  = allLines.filter(l => l && !l.includes('|'));
+    // Excluir marcadores ::: y líneas vacías; conservar solo el texto del warning/note
+    const noteLines  = allLines.filter(l => l && !l.includes('|') && !/^:::/.test(l));
     errors     = tableLines.length ? parseTable(tableLines.join('\n'), relPath) : [];
     errorsNote = noteLines.join('\n\n');
   }
 
   return {
-    inputData:  parseTable(inputRaw,  relPath),
-    bodyData:   parseTable(bodyRaw,   relPath),
-    outputData: parseTable(outputRaw, relPath),
+    headersData,
+    headersNote,
+    inputNote,
+    inputData:   parseTable(stripVpressDirectives(inputRaw),  relPath),
+    bodyNote,
+    bodyData:    parseTable(stripVpressDirectives(bodyRaw),   relPath),
+    outputNote,
+    outputData:  parseTable(stripVpressDirectives(outputRaw), relPath),
     errors,
     errorsNote,
   };
@@ -269,6 +307,31 @@ function extractSdts(content) {
   return sdts;
 }
 
+// ── Configuración Backend (Headers y similares) ────────────────────────────────
+
+function extractHeadersConfig(content, relPath) {
+  const block = extractBlockWithAlternatives(content, [
+    { start: '<!-- ABRE CONFIGURACIÓN BACKEND -->', end: '<!-- CIERRA CONFIGURACIÓN BACKEND -->' },
+    { start: '<!-- ABRE LA CONFIGURACION BACKEND -->', end: '<!-- CIERRA LA CONFIGURACION BACKEND -->' },
+  ]);
+
+  if (!block) return { headersData: [], headersNote: '' };
+
+  // Extraer el contenido interior del bloque ::: info/note/etc exterior (greedy hasta el último :::)
+  const outerInner = block.match(/:::[ \t]*\w[^\n]*\n([\s\S]*)\n*:::\s*$/);
+  const inner = outerInner ? outerInner[1] : block;
+
+  // Extraer el comentario del bloque ::: comment interior
+  const commentMatch = inner.match(/:::[ \t]*comment[^\n]*\n([\s\S]*?):::/);
+  const headersNote = commentMatch ? commentMatch[1].trim() : '';
+
+  // Quitar el bloque ::: comment y parsear lo que queda como tabla
+  const tableText = inner.replace(/:::[ \t]*comment[^\n]*\n[\s\S]*?:::/g, '').trim();
+  const headersData = parseTable(tableText, relPath);
+
+  return { headersData, headersNote };
+}
+
 // ── Ejemplos ───────────────────────────────────────────────────────────────────
 
 function extractExamples(content) {
@@ -292,10 +355,24 @@ function extractExamples(content) {
     return match[0].replace(new RegExp('```' + language, 'g'), '').replace(/```/g, '').trim();
   }
 
+  function extractAllTabs(block) {
+    const tabs = [];
+    const tabRegex = /@tab\s*([^\n]+)\n([\s\S]*?)(?=(?:@tab|:::|$))/g;
+    let match;
+    while ((match = tabRegex.exec(block)) !== null) {
+      const name = match[1].trim();
+      const body = match[2].trim();
+      const codeMatch = body.match(/```(\w+)\s*([\s\S]*?)```/);
+      if (codeMatch) {
+        tabs.push({ name, lang: codeMatch[1], code: codeMatch[2].trim() });
+      }
+    }
+    return tabs;
+  }
+
   return {
-    // V4 usa solo JSON; xml queda vacío para que la UI omita esa pestaña
-    invocation: { json: extractCode(invocationBlock, 'json'), xml: '' },
-    response:   { json: extractCode(responseBlock,   'json'), xml: '' },
+    invocation: { json: extractCode(invocationBlock, 'json'), xml: '', tabs: extractAllTabs(invocationBlock) },
+    response:   { json: extractCode(responseBlock,   'json'), xml: '', tabs: extractAllTabs(responseBlock)   },
   };
 }
 
@@ -325,6 +402,7 @@ function buildDocJson(mdFilePath, relPath) {
   const pageTitle      = buildPageTitle(parsed.data || {}, content, slug);
   const methodMeta     = extractMethodMeta(content, relPath);
   const apiTabs        = extractApiTabs(content, relPath);
+  const headersConfig  = extractHeadersConfig(content, relPath);
   const examples       = extractExamples(content);
   const structuredTypes = extractSdts(content);
 
@@ -336,13 +414,20 @@ function buildDocJson(mdFilePath, relPath) {
     modulo:           methodMeta.modulo,
     programa:         methodMeta.programa,
     scope:            methodMeta.scope || 'Global',
+    method:           normalizeWhitespace(parsed.data?.type || ''),
+    endpoint:         methodMeta.endpoint,
     // V4 no usa configuración backend; se incluyen los campos vacíos
     // para mantener compatibilidad con el modelo DocPage del frontend
     hasBackendConfig: false,
     backendText:      '',
     backendData:      [],
+    headersData:      headersConfig.headersData.length ? headersConfig.headersData : apiTabs.headersData,
+    headersNote:      headersConfig.headersData.length ? headersConfig.headersNote : apiTabs.headersNote,
+    inputNote:        apiTabs.inputNote,
     inputData:        apiTabs.inputData,
+    bodyNote:         apiTabs.bodyNote,
     bodyData:         apiTabs.bodyData,
+    outputNote:       apiTabs.outputNote,
     outputData:       apiTabs.outputData,
     errors:           apiTabs.errors,
     errorsNote:       apiTabs.errorsNote,

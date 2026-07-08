@@ -23,7 +23,7 @@ title: Delete Text
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 personGUID | String $<(Length: 36)>$ | GUID (identificador único global) de la persona.
-id | Int $<(Length: 5)>$ | Identificador de texto.
+Id | Int $<(Length: 5)>$ | Identificador de texto.
 
 
 @tab Datos de Salida
@@ -66,8 +66,8 @@ Código | Descripción
     "Token": "0F262E85182DF86F9CA30F0E"
   },
   "personGUID": "a542ed11-a4e4-4ead-83b6-b3530961c2b9",
-  "id": 1
-}'
+  "Id": 1
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

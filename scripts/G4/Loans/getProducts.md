@@ -1,0 +1,115 @@
+---
+title: Get Products
+---
+
+<!-- ABRE DATOS DEL MÉTODO -->
+::: note Método para obtener un listado de los productos de préstamo.
+
+**Nombre publicación:** PublicLoans.getProducts
+
+**Módulo:** Configuration.ProductsHub
+
+**Programa:** PublicAPI.BTPHPA0002
+
+**Alcance:** Global
+:::
+<!-- CIERRA DATOS DEL MÉTODO -->
+
+<!-- ABRE TABLA DE DATOS -->
+::: tabs #Datos
+
+@tab Datos de Entrada
+
+No aplica.
+
+@tab Datos de Salida
+
+Nombre | Tipo | Comentarios
+:--------- | :----------- | :-----------
+products | [SdtsBTPHWProduct](#sdtsbtphwproduct) | Listado de productos.
+
+@tab Errores
+
+No aplica.
+
+:::
+<!-- CIERRA TABLA DE DATOS -->
+
+## **Ejemplos**
+
+<!-- ABRE EJEMPLO DE INVOCACIÓN -->
+::: details Ejemplo de Invocación
+::: code-tabs #Formato
+@tab JSON
+```json
+{
+  "Btinreq": {
+    "Canal": "BTMOBILE",
+    "Usuario": "INSTALADOR",
+    "Device": "INSTALADOR",
+    "Requerimiento": 1,
+    "Token": "229E7557863E8FC9C64DFECC"
+  }
+}
+```
+:::
+<!-- CIERRA EJEMPLO DE INVOCACIÓN -->
+
+<!-- ABRE EJEMPLO DE RESPUESTA -->
+::: details Ejemplo de Respuesta
+::: code-tabs #Formato
+@tab JSON
+```json
+{
+  "Btinreq": {
+    "Canal": "BTMOBILE",
+    "Usuario": "INSTALADOR",
+    "Device": "INSTALADOR",
+    "Requerimiento": 1,
+    "Token": "229E7557863E8FC9C64DFECC"
+  },
+  "products": {
+    "CurrencyId": "",
+    "CurrencyDescription": "",
+    "CurrencySign": "",
+    "KindId": "",
+    "KindDescription": "",
+    "ProductDescription": "",
+    "ProductGUID": ""
+  },
+  "BusinessErrors": [],
+  "Btoutreq": {
+    "Estado": "OK",
+    "Fecha": "2026-06-09",
+    "Hora": "13:52:25",
+    "Numero": 13542420,
+    "Servicio": "PublicLoans.getProducts",
+    "Requerimiento": 1,
+    "Canal": "BTMOBILE"
+  }
+}
+```
+:::
+<!-- CIERRA EJEMPLO DE RESPUESTA -->
+
+## **Tipos de Dato Estructurado**
+
+<!-- ABRE SDT -->
+::: details SdtsBTPHWProduct
+
+### SdtsBTPHWProduct
+
+::: center
+Los campos del tipo de dato estructurado SdtsBTPHWProduct son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :----------- | :-----------
+CurrencyId | Short $<(Length: 4)>$ | Identificador de moneda.
+CurrencyDescription | String $<(Length: 30)>$ | Descripción de la moneda.
+CurrencySign | String $<(Length: 4)>$ | Símbolo de la moneda.
+KindId | Int $<(Length: 6)>$ | Identificador del tipo.
+KindDescription | String $<(Length: 30)>$ | Descripción del tipo.
+ProductDescription | String | Descripción del producto.
+ProductGUID | String $<(Length: 36)>$ | GUID (identificador único global) del producto.
+:::
+<!-- CIERRA SDT -->

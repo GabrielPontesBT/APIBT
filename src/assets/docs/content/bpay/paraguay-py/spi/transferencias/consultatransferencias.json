@@ -5,6 +5,7 @@
   "pubName": "BTTransferencias.Consultar",
   "programa": "PBTPPY101",
   "scope": "Paraguay",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -28,6 +29,9 @@
       "Comentarios": "(E) Enviada - (R) Recibida."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "camara",
@@ -67,7 +71,7 @@
     {
       "Nombre": "concepto",
       "Tipo": "String",
-      "Comentarios": "motivo, detalle."
+      "Comentarios": "Motivo, detalle."
     },
     {
       "Nombre": "referenciaUnica",
@@ -106,11 +110,25 @@
   "examples": {
     "invocation": {
       "xml": "",
-      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"movimientoUID\": \"438\",\r\n    \"sentido\": \"E\"\r\n}"
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"movimientoUID\": \"438\",\r\n    \"sentido\": \"E\"\r\n}",
+      "tabs": [
+        {
+          "name": "Envio transferencia",
+          "lang": "json",
+          "code": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"movimientoUID\": \"438\",\r\n    \"sentido\": \"E\"\r\n}"
+        }
+      ]
     },
     "response": {
       "xml": "",
-      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"camara\": \"SPI\",\r\n    \"codigoBanco\": 12,\r\n    \"nombreBanco\": \"BANCO GNB PARAGUAY SA\",\r\n    \"cuenta\": \"010143323888\",\r\n    \"nombre\": \"DESTINATARIO\",\r\n    \"tipoDocumento\": \"CI\",\r\n    \"documento\": \"3546681\",\r\n    \"concepto\": \"Pago de alquiler\",\r\n    \"referenciaUnica\": \"TUFIPYPA28042561440002719663\",\r\n    \"estado\": \"OK\",\r\n    \"fecha\": \"2025-04-28\",\r\n    \"hora\": \"17:04:21\",\r\n    \"referenciaEnvio\": \"\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2025-05-02\",\r\n        \"Hora\": \"16:51:43\",\r\n        \"Numero\": 14385,\r\n        \"Servicio\": \"BTTransferencias.Consultar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+      "json": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"camara\": \"SPI\",\r\n    \"codigoBanco\": 12,\r\n    \"nombreBanco\": \"BANCO GNB PARAGUAY SA\",\r\n    \"cuenta\": \"010143323888\",\r\n    \"nombre\": \"DESTINATARIO\",\r\n    \"tipoDocumento\": \"CI\",\r\n    \"documento\": \"3546681\",\r\n    \"concepto\": \"Pago de alquiler\",\r\n    \"referenciaUnica\": \"TUFIPYPA28042561440002719663\",\r\n    \"estado\": \"OK\",\r\n    \"fecha\": \"2025-04-28\",\r\n    \"hora\": \"17:04:21\",\r\n    \"referenciaEnvio\": \"\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2025-05-02\",\r\n        \"Hora\": \"16:51:43\",\r\n        \"Numero\": 14385,\r\n        \"Servicio\": \"BTTransferencias.Consultar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}",
+      "tabs": [
+        {
+          "name": "Respuesta",
+          "lang": "json",
+          "code": "{\r\n    \"Btinreq\": {\r\n        \"Canal\": \"BTDIGITAL\",\r\n        \"Usuario\": \"INSTALADOR\",\r\n        \"Device\": \"ABC\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Token\": \"59A1752B373672F3C3EECC3D\"\r\n    },\r\n    \"camara\": \"SPI\",\r\n    \"codigoBanco\": 12,\r\n    \"nombreBanco\": \"BANCO GNB PARAGUAY SA\",\r\n    \"cuenta\": \"010143323888\",\r\n    \"nombre\": \"DESTINATARIO\",\r\n    \"tipoDocumento\": \"CI\",\r\n    \"documento\": \"3546681\",\r\n    \"concepto\": \"Pago de alquiler\",\r\n    \"referenciaUnica\": \"TUFIPYPA28042561440002719663\",\r\n    \"estado\": \"OK\",\r\n    \"fecha\": \"2025-04-28\",\r\n    \"hora\": \"17:04:21\",\r\n    \"referenciaEnvio\": \"\",\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Estado\": \"OK\",\r\n        \"Fecha\": \"2025-05-02\",\r\n        \"Hora\": \"16:51:43\",\r\n        \"Numero\": 14385,\r\n        \"Servicio\": \"BTTransferencias.Consultar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [],

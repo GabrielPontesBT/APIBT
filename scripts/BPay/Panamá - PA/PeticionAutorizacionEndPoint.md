@@ -65,7 +65,7 @@ Funding        | Boolean    | Indica si la transacción corresponde a un fondeo.
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-      </bts:BTPayCaddy.PeticionAutorizacionEndPoint>
+      <bts:BTPayCaddy.PeticionAutorizacionEndPoint>
          <bts:Btinreq>
             <Canal>BTINTERNO</Canal>
             <Usuario>INSTALADOR</Usuario>

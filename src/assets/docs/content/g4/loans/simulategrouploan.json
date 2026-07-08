@@ -1,0 +1,259 @@
+{
+  "slug": "loans/simulategrouploan",
+  "pageTitle": "Simulate Group Loan",
+  "description": "Método para simular un préstamo grupal.",
+  "pubName": "PublicLoans.simulateGroupLoan",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0040",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "simulationData",
+      "Tipo": "<a href=\"#sdtsbtmggroupsimulationdata\">SdtsBTMGGroupSimulationData</a>",
+      "Comentarios": "Datos de la simulación."
+    },
+    {
+      "Nombre": "membersSimulation",
+      "Tipo": "<a href=\"#sdtsbtmgmembersimulation\">SdtsBTMGMemberSimulation</a>",
+      "Comentarios": "Listado de integrantes para la simulación."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "groupLoan",
+      "Tipo": "<a href=\"#sdtsbtmgloangroupcycleout\">SdtsBTMGLoanGroupCycleOut</a>",
+      "Comentarios": "Datos generales del crédito grupal"
+    },
+    {
+      "Nombre": "memberLoan",
+      "Tipo": "<a href=\"#sdtsbtmgmemberloansimulationout\">SdtsBTMGMemberLoanSimulationOut</a>",
+      "Comentarios": "Miembros del préstamo."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "980003",
+      "Descripción": "No existe el producto ingresado."
+    },
+    {
+      "Código": "20010014",
+      "Descripción": "No existe el tipo de tasa ingresado."
+    },
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe."
+    },
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte."
+    },
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    },
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el identificador de grupo."
+    },
+    {
+      "Código": "120050011",
+      "Descripción": "Debe ingresar al menos un integrante para simular."
+    },
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe."
+    },
+    {
+      "Código": "120060102",
+      "Descripción": "El número de integrantes del grupo es menor al permitido."
+    },
+    {
+      "Código": "120060110",
+      "Descripción": "El número de integrantes del grupo es mayor al permitido."
+    },
+    {
+      "Código": "120060134",
+      "Descripción": "El capital solicitado del integrante no puede ser menor al adeudado."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 33,\n  \"productGUID\": \"8fc7a34d-eace-448e-aab5-2c4a2c4fe4b9\",\n  \"simulationData\": {\n    \"amortizationTypeId\": 1,\n    \"clearanceTypeId\": 1,\n    \"valueDate\": \"\",\n    \"firstPaymentDate\": \"2027-08-02\",\n    \"numberOfInstallments\": 12,\n    \"installmentPeriodicity\": 30,\n    \"rateTypeId\": 1\n  },\n  \"membersSimulation\": [\n    {\n      \"requestedLoanAmount\": 50000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"b37c32b0-d455-4c91-9ff0-ce00638906d3\"\n    },\n    {\n      \"requestedLoanAmount\": 10000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n    },\n    {\n      \"requestedLoanAmount\": 10000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n    }\n  ]\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 33,\n  \"productGUID\": \"8fc7a34d-eace-448e-aab5-2c4a2c4fe4b9\",\n  \"simulationData\": {\n    \"amortizationTypeId\": 1,\n    \"clearanceTypeId\": 1,\n    \"valueDate\": \"\",\n    \"firstPaymentDate\": \"2027-08-02\",\n    \"numberOfInstallments\": 12,\n    \"installmentPeriodicity\": 30,\n    \"rateTypeId\": 1\n  },\n  \"membersSimulation\": [\n    {\n      \"requestedLoanAmount\": 50000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"b37c32b0-d455-4c91-9ff0-ce00638906d3\"\n    },\n    {\n      \"requestedLoanAmount\": 10000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"6a8b903d-cfaa-4984-b906-573f8d35c960\"\n    },\n    {\n      \"requestedLoanAmount\": 10000,\n      \"rate\": 15,\n      \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupLoan\": {\n    \"groupId\": 33,\n    \"cycleId\": 1,\n    \"totalOfCapital\": 73660,\n    \"memberCount\": 3,\n    \"expirationDate\": \"2028-07-30\",\n    \"term\": 375,\n    \"installmentAmount\": 10714.39,\n    \"totalFinancialCost\": 0\n  },\n  \"memberLoan\": {\n    \"capital\": 0,\n    \"counterpartyGUID\": \"\",\n    \"installmentAmount\": \"\",\n    \"simulationGUID\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:23:06\",\n    \"Numero\": 13547158,\n    \"Servicio\": \"PublicLoans.simulateGroupLoan\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupLoan\": {\n    \"groupId\": 33,\n    \"cycleId\": 1,\n    \"totalOfCapital\": 73660,\n    \"memberCount\": 3,\n    \"expirationDate\": \"2028-07-30\",\n    \"term\": 375,\n    \"installmentAmount\": 10714.39,\n    \"totalFinancialCost\": 0\n  },\n  \"memberLoan\": {\n    \"capital\": 0,\n    \"counterpartyGUID\": \"\",\n    \"installmentAmount\": \"\",\n    \"simulationGUID\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:23:06\",\n    \"Numero\": 13547158,\n    \"Servicio\": \"PublicLoans.simulateGroupLoan\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGroupSimulationData",
+      "fields": [
+        {
+          "Nombre": "amortizationTypeId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de amortización."
+        },
+        {
+          "Nombre": "clearanceTypeId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador de la forma de despeje."
+        },
+        {
+          "Nombre": "firstPaymentDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha del primer pago."
+        },
+        {
+          "Nombre": "installmentPeriodicity",
+          "Tipo": "Int",
+          "Comentarios": "Periodicidad de cuotas."
+        },
+        {
+          "Nombre": "numberOfInstallments",
+          "Tipo": "Int",
+          "Comentarios": "Número de cuotas."
+        },
+        {
+          "Nombre": "rateTypeId",
+          "Tipo": "Byte",
+          "Comentarios": "Identificador del tipo de tasa."
+        },
+        {
+          "Nombre": "valueDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha valor."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberSimulation",
+      "fields": [
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de contraparte."
+        },
+        {
+          "Nombre": "rate",
+          "Tipo": "Double <strong>(Length: 11.6)</strong>",
+          "Comentarios": "Tasa."
+        },
+        {
+          "Nombre": "requestedLoanAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de préstamo solicitado."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGLoanGroupCycleOut",
+      "fields": [
+        {
+          "Nombre": "cycleId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador de ciclo."
+        },
+        {
+          "Nombre": "expirationDate",
+          "Tipo": "Date",
+          "Comentarios": "Fecha de vencimiento."
+        },
+        {
+          "Nombre": "groupId",
+          "Tipo": "Int <strong>(Length: 9)</strong>",
+          "Comentarios": "Identificador del grupo."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Valor cuota."
+        },
+        {
+          "Nombre": "memberCount",
+          "Tipo": "Short <strong>(Length: 3)</strong>",
+          "Comentarios": "Cantidad de miembros."
+        },
+        {
+          "Nombre": "term",
+          "Tipo": "Int <strong>(Length: 5)</strong>",
+          "Comentarios": "Plazo."
+        },
+        {
+          "Nombre": "totalFinancialCost",
+          "Tipo": "Double <strong>(Length: 11.2)</strong>",
+          "Comentarios": "Costo Financiero Total."
+        },
+        {
+          "Nombre": "totalOfCapital",
+          "Tipo": "Double <strong>(Length: 18.5)</strong>",
+          "Comentarios": "Total de capital."
+        }
+      ]
+    },
+    {
+      "typeName": "SdtsBTMGMemberLoanSimulationOut",
+      "fields": [
+        {
+          "Nombre": "capital",
+          "Tipo": "Double",
+          "Comentarios": "Capital."
+        },
+        {
+          "Nombre": "counterpartyGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de contraparte."
+        },
+        {
+          "Nombre": "installmentAmount",
+          "Tipo": "Double <strong>(Length: 18.2)</strong>",
+          "Comentarios": "Monto de cuota."
+        },
+        {
+          "Nombre": "simulationGUID",
+          "Tipo": "String <strong>(Length: 36)</strong>",
+          "Comentarios": "GUID (identificador único global) de simulación."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

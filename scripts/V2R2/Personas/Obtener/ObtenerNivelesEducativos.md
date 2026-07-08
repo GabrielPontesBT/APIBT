@@ -83,6 +83,7 @@ curl -X POST \
         "Token": "bc8b678bc44A8B5C60A82434"
     }
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 

@@ -125,6 +125,7 @@ Código | Descripción
                 <item>541</item>
                </bts:operaciones>
             <bts:pizarra>0</bts:pizarra>
+            <plazo>0</plazo>
          </bts:sdtRefinanciacion>
       </bts:BTPrestamos.SimularRefinanciacionSaldoCapital>
    </soapenv:Body>
@@ -133,35 +134,30 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularRefinanciacionSaldoCapital=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtRefinanciacion": {
-        "clienteUId": 4,
-        "productoUId": 61,
-        "fechaPrimerPago": "2018-12-10",
-        "monto": 1000,
-        "cantidadCuotas": 12,
-        "periodoCuotas": 30,
-		"tasa": 0,
-		"pizarra": 0,
-		"actividad": 11200,
-		"operaciones": {
-			"item":541		 
-		}
-
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtRefinanciacion": {
+    "clienteUId": 4,
+    "productoUId": 61,
+    "fechaPrimerPago": "2018-12-10",
+    "monto": 1000,
+    "cantidadCuotas": 12,
+    "periodoCuotas": 30,
+    "tasa": 0,
+    "pizarra": 0,
+    "actividad": 11200,
+    "operaciones": {
+      "item": 541
+    },
+    "plazo": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -230,58 +226,68 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtSimulacion": {
-        "otrosConceptos": {
-            "sBTConcepto": []
-        },
-        "fechaValor": "2018-11-05",
-        "capital": "1000.00",
-        "tasaEfectiva": "0.000000",
-        "intereses": "28.97",
-        "tasaNominalAnual": "23.000000",
-        "totalPrestamo": "2515.00",
-        "valorCuota": "209.58",
-        "tasaEfectivaAnual": "25.590075",
-        "operacionUId": "261",
-        "tasa": "23.000000",
-        "fechaPrimerPago": "2018-12-10",
-        "fechaVencimiento": "2019-11-10",
-        "producto": {
-            "papel": "",
-            "moneda": "$",
-            "productoUId": "0",
-            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
         }
-        "cronograma": {
-            "sBTCuotaPrestamoAlta": [
-                {
-                    "fechaPago": "2017-08-10",
-                    "importe": 10000.00
-                }
-            ]
+      ]
+    },
+    "fechaValor": "2018-11-05",
+    "capital": "1000.00",
+    "tasaEfectiva": "0.000000",
+    "intereses": "28.97",
+    "tasaNominalAnual": "23.000000",
+    "totalPrestamo": "2515.00",
+    "valorCuota": "209.58",
+    "tasaEfectivaAnual": "25.590075",
+    "operacionUId": "261",
+    "tasa": "23.000000",
+    "fechaPrimerPago": "2018-12-10",
+    "fechaVencimiento": "2019-11-10",
+    "producto": {
+      "papel": "",
+      "moneda": "$",
+      "productoUId": "0",
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
+    },
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2017-08-10",
+          "importe": 10000
         }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "727",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.SimularRefinanciacionSaldoCapital",
-        "Fecha": "2017-11-24",
-        "Requerimiento": "",
-        "Hora": "15:59:42",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "plazo": 0
+  },
+  "refinanciacionId": 0,
+  "saldoCapitalCancelacion": 0,
+  "deudaTotalCancelacion": 0,
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "727",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularRefinanciacionSaldoCapital",
+    "Fecha": "2017-11-24",
+    "Requerimiento": "",
+    "Hora": "15:59:42",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -333,7 +339,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -345,7 +354,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -357,6 +369,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -365,6 +380,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

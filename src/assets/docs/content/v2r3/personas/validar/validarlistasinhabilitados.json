@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ValidarListasInhabilitados",
   "programa": "RBTPG313",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -60,9 +61,12 @@
       "Comentarios": "Razón social"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
-      "Nombre": "listaInhabilitados",
+      "Nombre": "sdtListaInhabilitados",
       "Tipo": "<a href=\"#sbtlistainhabilitados\">sBTListaInhabilitados</a>",
       "Comentarios": "Listado de lista de inhabilitados."
     }
@@ -93,12 +97,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarListasInhabilitados>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>ccbe8f2A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:pais>845</bts:pais>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDeDocumento>27511184</bts:numeroDeDocumento>\n         <bts:tipoPersona></bts:tipoPersona>\n         <bts:primerNombre></bts:primerNombre>\n         <bts:segundoNombre></bts:segundoNombre>\n         <bts:primerApellido></bts:primerApellido>\n         <bts:segundoApellido></bts:segundoApellido>\n         <bts:razonSocial></bts:razonSocial>\n      </bts:BTPersonas.ValidarListasInhabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarListasInhabilitados' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"pais\":\"845\",\n\t\"tipoDocumento\":\"1\",\n\t\"numeroDeDocumento\":\"27511184\",\n\t\"tipoPersona\":\"\",\n\t\"primerNombre\":\"\",\n\t\"segundoNombre\":\"\",\n\t\"primerApellido\":\"\",\n\t\"segundoApellido\":\"\",\n\t\"razonSocial\":\"\"\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarListasInhabilitados>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>ccbe8f2A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:pais>845</bts:pais>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDocumento>27511184</bts:numeroDocumento>\n         <bts:tipoPersona></bts:tipoPersona>\n         <bts:primerNombre></bts:primerNombre>\n         <bts:segundoNombre></bts:segundoNombre>\n         <bts:primerApellido></bts:primerApellido>\n         <bts:segundoApellido></bts:segundoApellido>\n         <bts:razonSocial></bts:razonSocial>\n      </bts:BTPersonas.ValidarListasInhabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"pais\": \"845\",\n  \"tipoDocumento\": \"1\",\n  \"numeroDocumento\": \"27511184\",\n  \"tipoPersona\": \"\",\n  \"primerNombre\": \"\",\n  \"segundoNombre\": \"\",\n  \"primerApellido\": \"\",\n  \"segundoApellido\": \"\",\n  \"razonSocial\": \"\"\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ValidarListasInhabilitados>\n         <bts:Btinreq>\n            <bts:Device>10</bts:Device>\n            <bts:Token>ccbe8f2A82434</bts:Token>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:pais>845</bts:pais>\n         <bts:tipoDocumento>1</bts:tipoDocumento>\n         <bts:numeroDocumento>27511184</bts:numeroDocumento>\n         <bts:tipoPersona></bts:tipoPersona>\n         <bts:primerNombre></bts:primerNombre>\n         <bts:segundoNombre></bts:segundoNombre>\n         <bts:primerApellido></bts:primerApellido>\n         <bts:segundoApellido></bts:segundoApellido>\n         <bts:razonSocial></bts:razonSocial>\n      </bts:BTPersonas.ValidarListasInhabilitados>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"pais\": \"845\",\n  \"tipoDocumento\": \"1\",\n  \"numeroDocumento\": \"27511184\",\n  \"tipoPersona\": \"\",\n  \"primerNombre\": \"\",\n  \"segundoNombre\": \"\",\n  \"primerApellido\": \"\",\n  \"segundoApellido\": \"\",\n  \"razonSocial\": \"\"\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ValidarListasInhabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>ccbe8f2A82434</Token>\n         </Btinreq>\n         <sdtListaInhabilitados>\n            <sBTListaInhabilitados>\n               <descripcion>LAVADO DE DINERO</descripcion>\n               <fechaHasta>0000-00-00</fechaHasta>\n               <fechaDesde>2016-06-13</fechaDesde>\n               <codigo>1</codigo>\n               <bloqueante>S</bloqueante>\n            </sBTListaInhabilitados>\n         </sdtListaInhabilitados>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>8508</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.ValidarListasInhabilitados</Servicio>\n            <Fecha>2019-05-09</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>10:32:18</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ValidarListasInhabilitadosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"AV\",\n\t\t\"Usuario\": \"MINSTALADOR\",\n\t\t\"Requerimiento\": \"\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"sdtListaInhabilitados\": {\n\t\t\"sBTListaInhabilitados\": {\n\t\t\t\"descripcion\": \"LAVADO DE DINERO\",\n\t\t\t\"fechaHasta\": \"0000-00-00\",\n\t\t\t\"fechaDesde\": \"2016-06-13\",\n\t\t\t\"codigo\": \"1\",\n\t\t\t\"bloqueante\": \"S\"\n\t\t}\n\t},\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Numero\": 8396,\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTPersonas.ValidarListasInhabilitados\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2019-05-07\",\n        \"Hora\": \"15:54:44\",\n        \"Canal\": \"BTDIGITAL\"\n    }\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"sdtListaInhabilitados\": {\n    \"sBTListaInhabilitados\": {\n      \"descripcion\": \"LAVADO DE DINERO\",\n      \"fechaHasta\": \"0000-00-00\",\n      \"fechaDesde\": \"2016-06-13\",\n      \"codigo\": \"1\",\n      \"bloqueante\": \"S\"\n    }\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": 8396,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.ValidarListasInhabilitados\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2019-05-07\",\n    \"Hora\": \"15:54:44\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ValidarListasInhabilitadosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>10</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>ccbe8f2A82434</Token>\n         </Btinreq>\n         <sdtListaInhabilitados>\n            <sBTListaInhabilitados>\n               <descripcion>LAVADO DE DINERO</descripcion>\n               <fechaHasta>0000-00-00</fechaHasta>\n               <fechaDesde>2016-06-13</fechaDesde>\n               <codigo>1</codigo>\n               <bloqueante>S</bloqueante>\n            </sBTListaInhabilitados>\n         </sdtListaInhabilitados>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>8508</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTPersonas.ValidarListasInhabilitados</Servicio>\n            <Fecha>2019-05-09</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>10:32:18</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ValidarListasInhabilitadosResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": \"\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"sdtListaInhabilitados\": {\n    \"sBTListaInhabilitados\": {\n      \"descripcion\": \"LAVADO DE DINERO\",\n      \"fechaHasta\": \"0000-00-00\",\n      \"fechaDesde\": \"2016-06-13\",\n      \"codigo\": \"1\",\n      \"bloqueante\": \"S\"\n    }\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": 8396,\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTPersonas.ValidarListasInhabilitados\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2019-05-07\",\n    \"Hora\": \"15:54:44\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

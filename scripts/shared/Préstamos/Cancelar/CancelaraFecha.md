@@ -109,25 +109,20 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?CancelarAFecha=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 9bdf8096-2be0-d0b4-4017-971713b37367' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "operacionUId": 342,
-    "clienteUId": 161,
-    "operacionUId_cobro": 281,
-    "referencia": "Cancelar"
-	"fecha": "2020-10-10"
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": 342,
+  "clienteUId": 161,
+  "operacionUId_cobro": 281,
+  "referencia": "Cancelar",
+  "fecha": "2020-10-10"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

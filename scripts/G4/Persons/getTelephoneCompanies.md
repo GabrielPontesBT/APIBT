@@ -86,7 +86,9 @@ Código | Descripción
         "id": 3,
         "description": "MOVISTAR"
       }
-    ]
+    ],
+    "Id": 0,
+    "description": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -117,7 +119,7 @@ Los campos del tipo de dato estructurado sBTPEWTelephoneCompany son los siguient
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Short | Identificador de compañía telefónica.
+Id | Short | Identificador de compañía telefónica.
 description | String | Descripción.
 :::
 <!-- CIERRA SDT -->

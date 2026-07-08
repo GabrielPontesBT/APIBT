@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ObtenerVictimaHechoViolento",
   "programa": "RBTPCO06",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador único de persona"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "esVictima",
@@ -47,11 +51,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerVictimaHechoViolento>\n         <bts:Btinreq>\n            <bts:Token>d235ac28e6CD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>21</bts:personaUId>\n      </bts:BTPersonas.ObtenerVictimaHechoViolento>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVictimaHechoViolento \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"personaUId\": \"21\"\n}'"
+      "json": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVictimaHechoViolento \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"personaUId\": \"21\"\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ObtenerVictimaHechoViolento>\n         <bts:Btinreq>\n            <bts:Token>d235ac28e6CD285A89A23FBE</bts:Token>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Device>1</bts:Device>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:personaUId>21</bts:personaUId>\n      </bts:BTPersonas.ObtenerVictimaHechoViolento>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\nhttps://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVictimaHechoViolento \\\n-H 'cache-control: no-cache' \\\n-H 'content-type: application/json' \\\n-d '{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"personaUId\": \"21\"\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerVictimaHechoViolentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>d235ac28e6CD285A89A23FBE</Token>\n         </Btinreq>\n         <esVictima>S</esVictima>\n         <sdtVictimaHechoViolento>\n            <entidadId>4</entidadId>\n            <municipio>SAN JUAN DEL CESAR</municipio>\n            <departamento>LA GUAJIRA</departamento>\n            <inspeccionPolicia>Herida de arma</inspeccionPolicia>\n            <sitio>Casa</sitio>\n            <municipioId>650</municipioId>\n            <tipoId>2</tipoId>\n            <vereda>25 de Agosto</vereda>\n            <fechaCertificacion>2020-01-07</fechaCertificacion>\n            <tipo>Medio</tipo>\n            <entidad>Personerías Municipales</entidad>\n            <fechaVencimiento>2021-11-30</fechaVencimiento>\n            <corregimiento>No tiene</corregimiento>\n            <departamentoId>44</departamentoId>\n            <fechaHecho>2019-05-03</fechaHecho>\n         </sdtVictimaHechoViolento>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1966</Numero>\n            <Servicio>BTPersonas.ObtenerVictimaHechoViolento</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-03-09</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>10:36:30</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ObtenerVictimaHechoViolentoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"esVictima\": \"S\",\n\t\"sdtVictimaHechoViolento\": {\n\t\t\"entidadId\": \"4\",\n\t\t\"municipio\": \"SAN JUAN DEL CESAR\",\n\t\t\"departamento\": \"LA GUAJIRA\",\n\t\t\"inspeccionPolicia\": \"Herida de arma\",\n\t\t\"sitio\": \"Casa\",\n\t\t\"municipioId\": \"650\",\n\t\t\"tipoId\": \"2\",\n\t\t\"vereda\": \"25 de Agosto\",\n\t\t\"fechaCertificacion\": \"2020-01-07\",\n\t\t\"tipo\": \"Medio\",\n\t\t\"entidad\": \"Personerías Municipales\",\n\t\t\"fechaVencimiento\": \"2021-11-30\",\n\t\t\"corregimiento\": \"No tiene\",\n\t\t\"departamentoId\": \"44\",\n\t\t\"fechaHecho\": \"2019-05-03\"\n\t},\n\t\"Btoutreq\": {\n\t  \"Numero\": \"1729\",\n\t  \"Estado\": \"OK\",\n\t  \"Servicio\": \"BTPersonas.ObtenerVictimaHechoViolento\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Fecha\": \"2020-03-05\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Hora\": \"13:10:51\"\n\t}\n}'"
+      "json": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"esVictima\": \"S\",\n\t\"sdtVictimaHechoViolento\": {\n\t\t\"entidadId\": \"4\",\n\t\t\"municipio\": \"SAN JUAN DEL CESAR\",\n\t\t\"departamento\": \"LA GUAJIRA\",\n\t\t\"inspeccionPolicia\": \"Herida de arma\",\n\t\t\"sitio\": \"Casa\",\n\t\t\"municipioId\": \"650\",\n\t\t\"tipoId\": \"2\",\n\t\t\"vereda\": \"25 de Agosto\",\n\t\t\"fechaCertificacion\": \"2020-01-07\",\n\t\t\"tipo\": \"Medio\",\n\t\t\"entidad\": \"Personerías Municipales\",\n\t\t\"fechaVencimiento\": \"2021-11-30\",\n\t\t\"corregimiento\": \"No tiene\",\n\t\t\"departamentoId\": \"44\",\n\t\t\"fechaHecho\": \"2019-05-03\"\n\t},\n\t\"Btoutreq\": {\n\t  \"Numero\": \"1729\",\n\t  \"Estado\": \"OK\",\n\t  \"Servicio\": \"BTPersonas.ObtenerVictimaHechoViolento\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Fecha\": \"2020-03-05\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Hora\": \"13:10:51\"\n\t}\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ObtenerVictimaHechoViolentoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>d235ac28e6CD285A89A23FBE</Token>\n         </Btinreq>\n         <esVictima>S</esVictima>\n         <sdtVictimaHechoViolento>\n            <entidadId>4</entidadId>\n            <municipio>SAN JUAN DEL CESAR</municipio>\n            <departamento>LA GUAJIRA</departamento>\n            <inspeccionPolicia>Herida de arma</inspeccionPolicia>\n            <sitio>Casa</sitio>\n            <municipioId>650</municipioId>\n            <tipoId>2</tipoId>\n            <vereda>25 de Agosto</vereda>\n            <fechaCertificacion>2020-01-07</fechaCertificacion>\n            <tipo>Medio</tipo>\n            <entidad>Personerías Municipales</entidad>\n            <fechaVencimiento>2021-11-30</fechaVencimiento>\n            <corregimiento>No tiene</corregimiento>\n            <departamentoId>44</departamentoId>\n            <fechaHecho>2019-05-03</fechaHecho>\n         </sdtVictimaHechoViolento>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>1966</Numero>\n            <Servicio>BTPersonas.ObtenerVictimaHechoViolento</Servicio>\n            <Estado>OK</Estado>\n            <Fecha>2020-03-09</Fecha>\n            <Requerimiento>1</Requerimiento>\n            <Hora>10:36:30</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ObtenerVictimaHechoViolentoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n\t\"Btinreq\": {\n\t\t\"Device\": \"1\",\n\t\t\"Usuario\": \"INSTALADOR\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\n\t},\n\t\"esVictima\": \"S\",\n\t\"sdtVictimaHechoViolento\": {\n\t\t\"entidadId\": \"4\",\n\t\t\"municipio\": \"SAN JUAN DEL CESAR\",\n\t\t\"departamento\": \"LA GUAJIRA\",\n\t\t\"inspeccionPolicia\": \"Herida de arma\",\n\t\t\"sitio\": \"Casa\",\n\t\t\"municipioId\": \"650\",\n\t\t\"tipoId\": \"2\",\n\t\t\"vereda\": \"25 de Agosto\",\n\t\t\"fechaCertificacion\": \"2020-01-07\",\n\t\t\"tipo\": \"Medio\",\n\t\t\"entidad\": \"Personerías Municipales\",\n\t\t\"fechaVencimiento\": \"2021-11-30\",\n\t\t\"corregimiento\": \"No tiene\",\n\t\t\"departamentoId\": \"44\",\n\t\t\"fechaHecho\": \"2019-05-03\"\n\t},\n\t\"Btoutreq\": {\n\t  \"Numero\": \"1729\",\n\t  \"Estado\": \"OK\",\n\t  \"Servicio\": \"BTPersonas.ObtenerVictimaHechoViolento\",\n\t  \"Requerimiento\": \"1\",\n\t  \"Fecha\": \"2020-03-05\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Hora\": \"13:10:51\"\n\t}\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

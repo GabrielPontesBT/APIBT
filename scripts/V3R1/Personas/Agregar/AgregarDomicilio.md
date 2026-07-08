@@ -32,7 +32,7 @@ backtotop: false
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 personaUId | Long | Identificador único de persona.
-sbtDomicilio | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
+sdtDomicilio | [sBTDomicilioCompleto](#sbtdomiciliocompleto) | Datos de domicilio.
 
 @tab Datos de Salida
 
@@ -68,8 +68,8 @@ Código | Descripción
             <bts:Token>07FA51224D38D18C61F15934</bts:Token>
          </bts:Btinreq>
          <bts:personaUId>238</bts:personaUId>
-         <bts:domicilio>
-		   <bts:coloniaId>1</bts:coloniaId>
+         <bts:sdtDomicilio>
+		         <bts:coloniaId>1</bts:coloniaId>
              <bts:agrupador1Id>1</bts:agrupador1Id>
              <bts:agrupador5></bts:agrupador5>
              <bts:departamento></bts:departamento>
@@ -97,7 +97,7 @@ Código | Descripción
              <bts:localidad>1</bts:localidad>
              <bts:tipoDomicilioId>4</bts:tipoDomicilioId>
              <bts:departamentoId>10</bts:departamentoId>
-         </bts:domicilio>
+         </bts:sdtDomicilio>
       </bts:BTPersonas.AgregarDomicilio>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -119,37 +119,37 @@ curl -X POST \
     "Token": "07FA51224D38D18C61F15934"
   },
  "personaUId": 238,
- "sbtDomicilio": {
-          "coloniaId": 1,
-          "agrupador1Id": 1,
-          "agrupador5": "",
-          "departamento": "",
-          "agrupador4": "",
-          "agrupador3Id": 1,
-          "detalleUbicacion": "",
-          "barrio": "",
-          "agrupador3": "Apto",
-          "agrupador2": "1",
-          "agrupador1": "Calle",
-          "agrupador5Id": "",
-          "tipoDomicilio": "",
-          "ubicacionDesde": "",
-          "direccion": "",
-          "colonia": "",
-          "paisId": 845,
-          "tipoVivienda": "",
-          "pais": "",
-          "agrupador2Id": 1,
-          "codigoPostal": "12800",
-          "tipoViviendaId": 1,
-          "agrupador4Id": "",
-          "barrioId": 10,
-          "localidadId": 10,
-          "localidad": "",
-          "tipoDomicilioId": 4,
-          "departamentoId": 10
-         }
-      }'
+ "sdtDomicilio": {
+    "coloniaId": 1,
+    "agrupador1Id": 1,
+    "agrupador5": "",
+    "departamento": "",
+    "agrupador4": "",
+    "agrupador3Id": 1,
+    "detalleUbicacion": "",
+    "barrio": "",
+    "agrupador3": "Apto",
+    "agrupador2": "1",
+    "agrupador1": "Calle",
+    "agrupador5Id": "",
+    "tipoDomicilio": "",
+    "ubicacionDesde": "",
+    "direccion": "",
+    "colonia": "",
+    "paisId": 845,
+    "tipoVivienda": "",
+    "pais": "",
+    "agrupador2Id": 1,
+    "codigoPostal": "12800",
+    "tipoViviendaId": 1,
+    "agrupador4Id": "",
+    "barrioId": 10,
+    "localidadId": 10,
+    "localidad": "",
+    "tipoDomicilioId": 4,
+    "departamentoId": 10
+    }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

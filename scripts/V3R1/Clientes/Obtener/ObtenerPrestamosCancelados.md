@@ -160,58 +160,68 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtPrestamos": {
-         "sBTPrestamoItem": [{
-         "plazo": 634,
-         "periodicidad": 0,
-         "fechaVencimiento": "",
-         "producto": {
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 72,
-            "nombre": "PRÉSTAMOS, Amortización Automática TF",
-            "otrosConceptos":""
-         },
-         "tasaVigente": 0,
-         "idOperacionBT": 1.0100000103e+46,
-         "valorCuota": 1760.66,
-         "saldoCapital": 1760.66,
-         "fechaPrimerIncumplimiento": "",
-         "otrosConceptos": "",
-         "idOperacionFmt": "0000000426-000",
-         "capitalOriginal": 1760.66,
-         "cantidadCuotasPagas": 2,
-         "operacionUId": 834,
-         "fechaUltimoPago": "",
-         "tipoAmortizacion": "",
-         "estado": "Operación Cancelada",
-         "sucursal": "Sucursal Ciudad de la Costa",
-         "tipoProducto": "AM",
-         "fechaValor": "2018-11-10",
-         "cantidadCuotas": 44
-         }]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-      "Numero": 10403,
-      "Estado": "OK",
-      "Servicio": "BTClientes.ObtenerPrestamosCancelados",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtPrestamos": {
+    "sBTPrestamoItem": [
+      {
+        "plazo": 634,
+        "periodicidad": 0,
+        "fechaVencimiento": "",
+        "producto": {
+          "papel": "$",
+          "moneda": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS, Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "tasaVigente": 0,
+        "idOperacionBT": 1.0100000103e+46,
+        "valorCuota": 1760.66,
+        "saldoCapital": 1760.66,
+        "fechaPrimerIncumplimiento": "",
+        "idOperacionFmt": "0000000426-000",
+        "capitalOriginal": 1760.66,
+        "cantidadCuotasPagas": 2,
+        "operacionUId": 834,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "",
+        "estado": "Operación Cancelada",
+        "sucursal": "Sucursal Ciudad de la Costa",
+        "tipoProducto": "AM",
+        "fechaValor": "2018-11-10",
+        "cantidadCuotas": 44,
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 10403,
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerPrestamosCancelados",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -249,6 +259,9 @@ tasaVigente	| Double | Tasa vigente.
 tipoAmortizacion | String | Tipo de amortización.
 tipoProducto | String |	Tipo de producto pasivo (Cuenta Corriente: 'CC', Caja de Ahorro: 'CA').
 valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -261,7 +274,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -274,4 +290,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

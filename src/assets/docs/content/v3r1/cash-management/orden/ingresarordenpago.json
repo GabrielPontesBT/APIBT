@@ -5,6 +5,7 @@
   "pubName": "BTCASHManagement.IngresarOrdenPago",
   "programa": "RBTPGC31",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -50,6 +51,9 @@
       "Comentarios": "Listado de valores de campos CASH."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "ordenId",
@@ -80,11 +84,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.IngresarOrdenPago>\r\n        <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>311020191114150000216393</bts:Token>\r\n            <bts:Device>001</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:contrato>3</bts:contrato>\r\n         <bts:servicio>10</bts:servicio>\r\n         <bts:operacionUId_debito>1</bts:operacionUId_debito>\r\n         <bts:moneda>101</bts:moneda>\r\n         <bts:importe>1000</bts:importe>\r\n         <bts:fecha>2019-11-06</bts:fecha>\r\n         <bts:sdtListaCampos>\r\n            <bts:sBTValorCampoCASH>\r\n               <bts:tag>ORDENANTE_NOM</bts:tag>\r\n               <bts:valor>Francisco Otheguy</bts:valor>\r\n            </bts:sBTValorCampoCASH>\r\n         </bts:sdtListaCampos>\r\n      </bts:BTCASHManagement.IngresarOrdenPago>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_CASHManagement_v1?IngresarOrdenPago' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Postman-Token: e985ea19-7527-41bc-bc60-fe431d9352b0,dbbd8038-2208-48fc-9395-1dfa11f1a0b1' \\\r\n  -H 'User-Agent: PostmanRuntime/7.16.3' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"contrato\":3,\r\n\t\"servicio\":10,\r\n\t\"operacionUId_debito\":1,\r\n\t\"moneda\":101,\r\n\t\"importe\":1000,\r\n\t\"fecha\" : \"2019-11-06\",\r\n\t\"sdtListaCampos\": {\r\n\t\t\"sBTValorCampoCASH\": [\r\n\t\t\t{\r\n\t\t\t\t\"tag\" : \"ORDENANTE_NOM\",\r\n\t\t\t\t\"valor\" : \"Francisco Otheguy\"\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_CASHManagement_v1?IngresarOrdenPago' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Postman-Token: e985ea19-7527-41bc-bc60-fe431d9352b0,dbbd8038-2208-48fc-9395-1dfa11f1a0b1' \\\r\n  -H 'User-Agent: PostmanRuntime/7.16.3' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"contrato\":3,\r\n\t\"servicio\":10,\r\n\t\"operacionUId_debito\":1,\r\n\t\"moneda\":101,\r\n\t\"importe\":1000,\r\n\t\"fecha\" : \"2019-11-06\",\r\n\t\"sdtListaCampos\": {\r\n\t\t\"sBTValorCampoCASH\": [\r\n\t\t\t{\r\n\t\t\t\t\"tag\" : \"ORDENANTE_NOM\",\r\n\t\t\t\t\"valor\" : \"Francisco Otheguy\"\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCASHManagement.IngresarOrdenPago>\r\n        <bts:Btinreq>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Token>311020191114150000216393</bts:Token>\r\n            <bts:Device>001</bts:Device>\r\n         </bts:Btinreq>\r\n         <bts:contrato>3</bts:contrato>\r\n         <bts:servicio>10</bts:servicio>\r\n         <bts:operacionUId_debito>1</bts:operacionUId_debito>\r\n         <bts:moneda>101</bts:moneda>\r\n         <bts:importe>1000</bts:importe>\r\n         <bts:fecha>2019-11-06</bts:fecha>\r\n         <bts:sdtListaCampos>\r\n            <bts:sBTValorCampoCASH>\r\n               <bts:tag>ORDENANTE_NOM</bts:tag>\r\n               <bts:valor>Francisco Otheguy</bts:valor>\r\n            </bts:sBTValorCampoCASH>\r\n         </bts:sdtListaCampos>\r\n      </bts:BTCASHManagement.IngresarOrdenPago>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_CASHManagement_v1?IngresarOrdenPago' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Postman-Token: e985ea19-7527-41bc-bc60-fe431d9352b0,dbbd8038-2208-48fc-9395-1dfa11f1a0b1' \\\r\n  -H 'User-Agent: PostmanRuntime/7.16.3' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"contrato\":3,\r\n\t\"servicio\":10,\r\n\t\"operacionUId_debito\":1,\r\n\t\"moneda\":101,\r\n\t\"importe\":1000,\r\n\t\"fecha\" : \"2019-11-06\",\r\n\t\"sdtListaCampos\": {\r\n\t\t\"sBTValorCampoCASH\": [\r\n\t\t\t{\r\n\t\t\t\t\"tag\" : \"ORDENANTE_NOM\",\r\n\t\t\t\t\"valor\" : \"Francisco Otheguy\"\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.IngresarOrdenPagoResponse>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Token>311020191114150000216393</Token>\r\n            <Device>001</Device>\r\n         </Btinreq>\r\n         <ordenId>304</ordenId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTCASHManagement.IngresarOrdenPago</Servicio>\r\n            <Fecha>2019-10-31</Fecha>\r\n            <Hora>16:15:43</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>672</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTCASHManagement.IngresarOrdenPagoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"ordenId\":304,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"4438\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCASHManagement.IngresarOrdenPago\",\r\n        \"Fecha\": \"2018-12-14\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"17:00:28\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"ordenId\":304,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"4438\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCASHManagement.IngresarOrdenPago\",\r\n        \"Fecha\": \"2018-12-14\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"17:00:28\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCASHManagement.IngresarOrdenPagoResponse>\r\n         <Btinreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Token>311020191114150000216393</Token>\r\n            <Device>001</Device>\r\n         </Btinreq>\r\n         <ordenId>304</ordenId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Servicio>BTCASHManagement.IngresarOrdenPago</Servicio>\r\n            <Fecha>2019-10-31</Fecha>\r\n            <Hora>16:15:43</Hora>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Numero>672</Numero>\r\n            <Estado>OK</Estado>\r\n         </Btoutreq>\r\n      </BTCASHManagement.IngresarOrdenPagoResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"ordenId\":304,\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"4438\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCASHManagement.IngresarOrdenPago\",\r\n        \"Fecha\": \"2018-12-14\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"17:00:28\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

@@ -193,92 +193,101 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-   "Btinreq": {
-      "Device": "AS",
-         "Usuario": "INSTALADOR",
-         "Requerimiento": 1,
-         "Canal": "BTDIGITAL",
-         "Token": "E90CADA1F3E3690DCCF3217A"
-      },
-      "sdtPersona": {
-         "nroDocumento": "73284906",
-         "estadoCivil": "Soltero/a",
-         "segundoNombre": "LUCIA",
-         "fechaInicioActividad": "2023-05-09",
-         "fechaVencimiento": "2030-10-12",
-         "segundoApellido": "GOMEZ",
-         "fechaNacimiento": "1989-04-10",
-         "telefonoCelular": "095376512",
-         "tipoDocumentoId": 1,
-         "actividadLaboral": "67110 Administración de mercados financieros",
-         "clasificacionInternaId": 0,
-         "sexo": "F",
-         "clasificacionInterna": "",
-         "primerNombre": "ANA",
-         "paisDocumentoId": 845,
-         "telefonoFijo": "42235681",
-         "primerApellido": "LOPEZ",
-         "ocupacion": "Asalariado",
-         "sector": "",
-         "paisDocumento": "URUGUAY",
-         "ocupacionId": 1,
-         "sueldo": 65000.0,
-         "nacionalidad": "URUGUAY",
-         "comentarioCorreo": "",
-         "domicilios": {
-            "sBTDomicilioCompleto": [{
-               "coloniaId": 0,
-               "agrupador1Id": 1,
-               "agrupador5": "",
-               "departamento": "Montevideo",
-               "agrupador4": "301",
-               "agrupador3Id": 4,
-               "detalleUbicacion": "",
-               "barrio": "Centro",
-               "agrupador3": "3",
-               "agrupador2": "1147",
-               "agrupador1": "18 de julio",
-               "agrupador5Id": 0,
-               "tipoDomicilio": "Residencia",
-               "ubicacionDesde": "2010-01-01",
-               "direccion": "AVENIDA 18 DE JULIO NO. PUERTA 1147 PISO 3 OFICINA 301",
-               "colonia": "",
-               "paisId": 845,
-               "tipoVivienda": "Propietario",
-               "pais": "URUGUAY",
-               "agrupador2Id": 1,
-               "codigoPostal": "11800",
-               "tipoViviendaId": "1",
-               "agrupador4Id": 1,
-               "barrioId": 330,
-               "localidadId": 10,
-               "localidad": "Montevideo",
-               "tipoDomicilioId": 1,
-               "departamentoId": 10
-            }]
-         },
-         "datosAdicionales": {"sBTDatoLista": []},
-         "correoElectronico": "alucia@gmail.com",
-         "sectorId": 0,
-         "actividadLaboralId": 67110,
-         "tipoDocumento": "Cédula Identidad",
-         "nacionalidadId": 845,
-         "estadoCivilId": "1"
+{
+  "Btinreq": {
+    "Device": "AS",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "E90CADA1F3E3690DCCF3217A"
+  },
+  "sdtPersona": {
+    "nroDocumento": "73284906",
+    "estadoCivil": "Soltero/a",
+    "segundoNombre": "LUCIA",
+    "fechaInicioActividad": "2023-05-09",
+    "fechaVencimiento": "2030-10-12",
+    "segundoApellido": "GOMEZ",
+    "fechaNacimiento": "1989-04-10",
+    "telefonoCelular": "095376512",
+    "tipoDocumentoId": 1,
+    "actividadLaboral": "67110 Administración de mercados financieros",
+    "clasificacionInternaId": 0,
+    "sexo": "F",
+    "clasificacionInterna": "",
+    "primerNombre": "ANA",
+    "paisDocumentoId": 845,
+    "telefonoFijo": "42235681",
+    "primerApellido": "LOPEZ",
+    "ocupacion": "Asalariado",
+    "sector": "",
+    "paisDocumento": "URUGUAY",
+    "ocupacionId": 1,
+    "sueldo": 65000,
+    "nacionalidad": "URUGUAY",
+    "comentarioCorreo": "",
+    "domicilios": {
+      "sBTDomicilioCompleto": [
+        {
+          "coloniaId": 0,
+          "agrupador1Id": 1,
+          "agrupador5": "",
+          "departamento": "Montevideo",
+          "agrupador4": "301",
+          "agrupador3Id": 4,
+          "detalleUbicacion": "",
+          "barrio": "Centro",
+          "agrupador3": "3",
+          "agrupador2": "1147",
+          "agrupador1": "18 de julio",
+          "agrupador5Id": 0,
+          "tipoDomicilio": "Residencia",
+          "ubicacionDesde": "2010-01-01",
+          "direccion": "AVENIDA 18 DE JULIO NO. PUERTA 1147 PISO 3 OFICINA 301",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "Propietario",
+          "pais": "URUGUAY",
+          "agrupador2Id": 1,
+          "codigoPostal": "11800",
+          "tipoViviendaId": "1",
+          "agrupador4Id": 1,
+          "barrioId": 330,
+          "localidadId": 10,
+          "localidad": "Montevideo",
+          "tipoDomicilioId": 1,
+          "departamentoId": 10
+        }
+      ]
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "datosAdicionales": {
+      "sBTDatoLista": [
+        {
+          "clave": "",
+          "valor": ""
+        }
+      ]
     },
-    "Btoutreq": {
-        "Numero": 35202,
-         "Estado": "OK",
-         "Servicio": "BTPersonas.Obtener",
-         "Requerimiento": 0,
-         "Fecha": "2025-05-13",
-         "Canal": "BTDIGITAL",
-         "Hora": "10:19:37"
-    }
-}'
+    "correoElectronico": "alucia@gmail.com",
+    "sectorId": 0,
+    "actividadLaboralId": 67110,
+    "tipoDocumento": "Cédula Identidad",
+    "nacionalidadId": 845,
+    "estadoCivilId": "1"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 35202,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.Obtener",
+    "Requerimiento": 0,
+    "Fecha": "2025-05-13",
+    "Canal": "BTDIGITAL",
+    "Hora": "10:19:37"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -326,6 +335,9 @@ telefonoCelular | String | Teléfono celular.
 telefonoFijo | String | Teléfono fijo.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -361,6 +373,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -370,6 +385,8 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional. 
+valor | String | Valor de información adicional.
 :::
+
 <!-- CIERRA SDT -->
+

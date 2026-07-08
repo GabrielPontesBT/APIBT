@@ -5,6 +5,7 @@
   "pubName": "BTCuentasBolsillo.Cancelar",
   "programa": "RBTPG613",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Identificador único de la operación de cobro."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "movimientoUId",
@@ -79,12 +83,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.Cancelar>\n         <bts:Btinreq>\n           <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>3E7C0C38BBBB8ECFE4C31B86</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>7</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:cuentaUId>322</bts:cuentaUId>\n         <bts:bolsilloUId>18830</bts:bolsilloUId>\n         <bts:operacionCobroUId>1133</bts:operacionCobroUId>\n      </bts:BTCuentasBolsillo.Cancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Cancelar' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"1\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cFC33CD93505A5382434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n    \"cuentaUId\": 322,\n    \"bolsilloUId\": 18830,\n    \"operacionCobroUId\": 1133,\n}'"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.Cancelar>\n         <bts:Btinreq>\n           <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>3E7C0C38BBBB8ECFE4C31B86</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>7</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>322</bts:clienteUId>\n         <bts:bolsilloUId>18830</bts:bolsilloUId>\n         <bts:operacionCobroUId>1133</bts:operacionCobroUId>\n      </bts:BTCuentasBolsillo.Cancelar>\n   </soapenv:Body>\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Token\": \"16c1cFC33CD93505A5382434\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"1\"\n  },\n  \"clienteUId\": 322,\n  \"bolsilloUId\": 18830,\n  \"operacionCobroUId\": 1133\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTCuentasBolsillo.Cancelar>\n         <bts:Btinreq>\n           <bts:Device>1</bts:Device>\n            <bts:Usuario>INSTALADOR</bts:Usuario>\n            <bts:Token>3E7C0C38BBBB8ECFE4C31B86</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>7</bts:Requerimiento>\n         </bts:Btinreq>\n         <bts:clienteUId>322</bts:clienteUId>\n         <bts:bolsilloUId>18830</bts:bolsilloUId>\n         <bts:operacionCobroUId>1133</bts:operacionCobroUId>\n      </bts:BTCuentasBolsillo.Cancelar>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Token\": \"16c1cFC33CD93505A5382434\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"1\"\n  },\n  \"clienteUId\": 322,\n  \"bolsilloUId\": 18830,\n  \"operacionCobroUId\": 1133\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasBolsillo.Cancelar xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>7</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>3E7C0C38BBBB8ECFE4C31B86</Token>\n         </Btinreq>\n         <movimientoUId>1843</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>228487</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasBolsillo.Cancelar</Servicio>\n            <Requerimiento>7</Requerimiento>\n            <Fecha>2023-11-01</Fecha>\n            <Hora>10:03:48</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasBolsillo.Cancelar>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{\n    \"Btinreq\": {\n        \"Device\": \"1\",\n        \"Usuario\": \"MINSTALADOR\",\n        \"Token\": \"16c1cFC33CD93505A5382434\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": \"1\"\n    },\n    \"movimientoUId\":1843,\n    \"Btoutreq\": {\n        \"Numero\": \"111399\",\n        \"Estado\": \"OK\",\n        \"Servicio\": \"BTCuentasBolsillo.Cancelar\",\n        \"Requerimiento\": \"1\",\n        \"Fecha\": \"2023-05-10\",\n        \"Canal\": \"BTDIGITAL\",\n        \"Hora\": \"15:10:52\"\n    }\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Token\": \"16c1cFC33CD93505A5382434\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"1\"\n  },\n  \"movimientoUId\":1843,\n  \"Btoutreq\": {\n    \"Numero\": \"111399\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasBolsillo.Cancelar\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2023-05-10\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Hora\": \"15:10:52\"\n  }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTCuentasBolsillo.Cancelar xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>INSTALADOR</Usuario>\n            <Requerimiento>7</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>3E7C0C38BBBB8ECFE4C31B86</Token>\n         </Btinreq>\n         <movimientoUId>1843</movimientoUId>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>228487</Numero>\n            <Estado>OK</Estado>\n            <Servicio>BTCuentasBolsillo.Cancelar</Servicio>\n            <Requerimiento>7</Requerimiento>\n            <Fecha>2023-11-01</Fecha>\n            <Hora>10:03:48</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTCuentasBolsillo.Cancelar>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"1\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Token\": \"16c1cFC33CD93505A5382434\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Requerimiento\": \"1\"\n  },\n  \"movimientoUId\":1843,\n  \"Btoutreq\": {\n    \"Numero\": \"111399\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasBolsillo.Cancelar\",\n    \"Requerimiento\": \"1\",\n    \"Fecha\": \"2023-05-10\",\n    \"Canal\": \"BTDIGITAL\",\n    \"Hora\": \"15:10:52\"\n  }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

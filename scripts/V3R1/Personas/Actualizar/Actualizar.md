@@ -181,90 +181,91 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?Actualizar=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 631e45d0-2c12-1ccc-7e5c-a067d4de5fb8' \
-  -d '{
-	"Btinreq": {
-          "Device": "AS",
-          "Usuario": "INSTALADOR",
-          "Requerimiento": 1,
-          "Canal": "BTDIGITAL",
-          "Token": "571F9E08C47490ACEBE3A263"
-        },
-        "personaUId": 219,
-        "sdtPersona": {
-          "nroDocumento": "13348799",
-          "estadoCivil": "Soltero/a",
-          "segundoNombre": "Batista",
-          "fechaInicioActividad": "2021-03-15",
-          "fechaVencimiento": "2045-01-01",
-          "segundoApellido": "Rodriguez",
-          "fechaNacimiento": "1890-01-20",
-          "telefonoCelular": "099876531",
-          "tipoDocumentoId": 1,
-          "actividadLaboral": "92410 Actividades deportivas",
-          "clasificacionInternaId": 1,
-          "sexo": "M",
-          "clasificacionInterna": "",
-          "primerNombre": "JULIO",
-          "paisDocumentoId": 845,
-          "telefonoFijo": "24044040",
-          "primerApellido": "ALVAREZ",
-          "ocupacion": "Pensionado",
-          "sector": "",
-          "paisDocumento": "URUGUAY",
-          "ocupacionId": 2,
-          "sueldo": 100000,
-          "nacionalidad": "URUGUAY", 
-          "comentarioCorreo": "Correo Personal",
-          "domicilios": {
-            "sBTDomicilioCompleto": [{
-              "coloniaId": 1,
-              "agrupador1Id": 3,
-              "agrupador5": "",
-              "departamento": "Montevideo",
-              "agrupador4": "Ejidio",
-              "agrupador3Id": 1,
-              "detalleUbicacion": "ENFRENTE A PANADERIA",
-              "barrio": "",
-              "agrupador3": "4",
-              "agrupador2": "1190",
-              "agrupador1": "Maldonado",
-              "agrupador5Id": "",
-              "tipoDomicilio": "",
-              "ubicacionDesde": "2024-08-17",
-              "direccion": "",
-              "colonia": "",
-              "paisId": 845,
-              "tipoVivienda": "Inquilino",
-              "pais": "",
-              "agrupador2Id": 1,
-              "codigoPostal": "19870",
-              "tipoViviendaId": 2,
-              "agrupador4Id": 1,
-              "barrioId": 140,
-              "localidadId": 10,
-              "localidad": "Montevideo",
-              "tipoDomicilioId": 1,
-              "departamentoId": 10
-            }]
-          },
-          "datosAdicionales": {
-            "sBTDatoAdicional": [{
-              "detalle": ""
-            }]
-          },
-          "correoElectronico": "JULIOB@GMAIL.COM",
-          "sectorId": 1,
-          "actividadLaboralId": 92410,
-          "tipoDocumento": "",
-          "nacionalidadId": 845,
-          "estadoCivilId": 1
+{
+  "Btinreq": {
+    "Device": "AS",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "571F9E08C47490ACEBE3A263"
+  },
+  "personaUId": 219,
+  "sdtPersona": {
+    "nroDocumento": "13348799",
+    "estadoCivil": "Soltero/a",
+    "segundoNombre": "Batista",
+    "fechaInicioActividad": "2021-03-15",
+    "fechaVencimiento": "2045-01-01",
+    "segundoApellido": "Rodriguez",
+    "fechaNacimiento": "1890-01-20",
+    "telefonoCelular": "099876531",
+    "tipoDocumentoId": 1,
+    "actividadLaboral": "92410 Actividades deportivas",
+    "clasificacionInternaId": 1,
+    "sexo": "M",
+    "clasificacionInterna": "",
+    "primerNombre": "JULIO",
+    "paisDocumentoId": 845,
+    "telefonoFijo": "24044040",
+    "primerApellido": "ALVAREZ",
+    "ocupacion": "Pensionado",
+    "sector": "",
+    "paisDocumento": "URUGUAY",
+    "ocupacionId": 2,
+    "sueldo": 100000,
+    "nacionalidad": "URUGUAY",
+    "comentarioCorreo": "Correo Personal",
+    "domicilios": {
+      "sBTDomicilioCompleto": [
+        {
+          "coloniaId": 1,
+          "agrupador1Id": 3,
+          "agrupador5": "",
+          "departamento": "Montevideo",
+          "agrupador4": "Ejidio",
+          "agrupador3Id": 1,
+          "detalleUbicacion": "ENFRENTE A PANADERIA",
+          "barrio": "",
+          "agrupador3": "4",
+          "agrupador2": "1190",
+          "agrupador1": "Maldonado",
+          "agrupador5Id": "",
+          "tipoDomicilio": "",
+          "ubicacionDesde": "2024-08-17",
+          "direccion": "",
+          "colonia": "",
+          "paisId": 845,
+          "tipoVivienda": "Inquilino",
+          "pais": "",
+          "agrupador2Id": 1,
+          "codigoPostal": "19870",
+          "tipoViviendaId": 2,
+          "agrupador4Id": 1,
+          "barrioId": 140,
+          "localidadId": 10,
+          "localidad": "Montevideo",
+          "tipoDomicilioId": 1,
+          "departamentoId": 10
         }
-      }'
+      ]
+    },
+    "datosAdicionales": {
+      "sBTDatoAdicional": [
+        {
+          "detalle": "",
+          "clave": "",
+          "valor": ""
+        }
+      ]
+    },
+    "correoElectronico": "JULIOB@GMAIL.COM",
+    "sectorId": 1,
+    "actividadLaboralId": 92410,
+    "tipoDocumento": "",
+    "nacionalidadId": 845,
+    "estadoCivilId": 1
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -368,6 +369,9 @@ telefonoCelular | String | Teléfono celular.
 telefonoFijo | String | Teléfono fijo.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -403,6 +407,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 
@@ -412,6 +419,8 @@ Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 clave | String | Identificador de información adicional. 
-valor | String | Valor de información adicional.  
+valor | String | Valor de información adicional.
 :::
+
 <!-- CIERRA SDT -->
+

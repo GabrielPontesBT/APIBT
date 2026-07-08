@@ -91,28 +91,31 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularPlazoFijo \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sBTSimulacionPlazoFijo": {
-          "solicitudUId": "10972",
-          "clienteUId": "2",
-          "productoUId": "29",
-          "plazo": "365",
-          "monto": "35000",
-          "destinoCredito": "28"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sBTSimulacionPlazoFijo": {
+    "solicitudUId": "10972",
+    "clienteUId": "2",
+    "productoUId": "29",
+    "plazo": "365",
+    "monto": "35000",
+    "destinoCredito": "28",
+    "datosAdicionales": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    },
+    "fechaVencimiento": "",
+    "pizarra": 0,
+    "tasa": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -179,51 +182,70 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtSimulacion": {
-          "operacionUId": "18",
-          "producto": {
-            "productoUId": "29",
-            "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Plazo Fijo",
-            "papel": "$"
-          },
-          "capital": "35000.00",
-          "valorCuota": "40323.00",
-          "intereses": "5323.00",
-          "tasa": "15.000000",
-          "tasaEfectiva": "0.000000",
-          "tasaEfectivaAnual": "14.985122",
-          "tasaNominalAnual": "15.000000",
-          "totalPrestamo": "40323.00",
-          "fechaValor": "2020-10-20",
-          "fechaVencimiento": "2021-10-20",
-          "fechaPrimerPago": "2021-10-20",
-          "plazo": "365",
-          "cronograma": {
-            "sBTCuotaPrestamoAlta": {
-              "fechaPago": "2021-10-20",
-              "importe": "40323.00",
-              "redondeo": "0.00"
-            }
-          }
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.SimularPlazoFijo",
-          "Fecha": "2019-10-18",
-          "Hora": "15:43:17",
-          "Requerimiento": "95",
-          "Numero": "1317",
-          "Estado": "OK"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "operacionUId": "18",
+    "producto": {
+      "productoUId": "29",
+      "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Plazo Fijo",
+      "papel": "$",
+      "moneda": "",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "capital": "35000.00",
+    "valorCuota": "40323.00",
+    "intereses": "5323.00",
+    "tasa": "15.000000",
+    "tasaEfectiva": "0.000000",
+    "tasaEfectivaAnual": "14.985122",
+    "tasaNominalAnual": "15.000000",
+    "totalPrestamo": "40323.00",
+    "fechaValor": "2020-10-20",
+    "fechaVencimiento": "2021-10-20",
+    "fechaPrimerPago": "2021-10-20",
+    "plazo": "365",
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": {
+        "fechaPago": "2021-10-20",
+        "importe": "40323.00",
+        "redondeo": "0.00",
+        "capital": 0,
+        "concepto": "",
+        "cuota": 0,
+        "impuestos": 0,
+        "interes": 0,
+        "otrosConceptos": 0,
+        "seguros": 0,
+        "tipoCuota": ""
+      }
+    },
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    }
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.SimularPlazoFijo",
+    "Fecha": "2019-10-18",
+    "Hora": "15:43:17",
+    "Requerimiento": "95",
+    "Numero": "1317",
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -240,16 +262,19 @@ Los campos del tipo de dato estructurado sBTSimulacionPlazoFijo son los siguient
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-clienteUId* | Long | Identificador único de cliente. 
+clienteUId | Long | Identificador único de cliente. 
 datosAdicionales | [sBTConcepto](#sbtconcepto) | Importe otros conceptos. 
 destinoCredito | Long | Código de destino del crédito. 
 fechaVencimiento | Date | Fecha de Vencimiento (Obligatorio si no se carga plazo). 
-monto* | Double | Capital solicitado. 
+monto | Double | Capital solicitado. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 plazo | Int | Plazo (Obligatorio si no se carga Fecha de Vencimiento). 
-productoUId* | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto. 
 solicitudUId | Long | Identificador de instancia Workflow. 
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -258,9 +283,9 @@ Los campos del tipo de dato estructurado sBTConcepto son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-concepto | string | concepto. 
-texto | string | texto. 
-valor | double | importe. 
+concepto | String | Concepto. 
+texto | String | Texto. 
+valor | Double | Importe.
 :::
 
 ::: details sBTSimulacionPrestamo
@@ -287,7 +312,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -300,15 +328,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
+productoUId | Long | Identificador único de producto.
+:::
 
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-concepto | String | Concepto. 
-texto | String | Texto. 
-valor | Double | Importe. 
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -325,6 +348,8 @@ impuestos | Double | Monto de impuestos en la cuota.
 interes | Double | Monto de intereses en la cuota. 
 otrosConceptos | Double | Importe correspondiente a otros conceptos. 
 seguros | Double | Monto de seguros en la cuota. 
-tipoCuota | String | Tipo de la cuota (Capital/Interés). 
+tipoCuota | String | Tipo de la cuota (Capital/Interés).
 :::
+
 <!-- CIERRA SDT -->
+

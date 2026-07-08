@@ -5,6 +5,7 @@
   "pubName": "BTConfiguracionBantotal.ObtenerPizarraPorModulo",
   "programa": "RBTPG294",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Módulo."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtPizarras",
@@ -38,11 +42,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>480647346F955E77534D3E02</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:modulo>20</bts:modulo>\n      </bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPizarraPorModulo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"modulo\": 20\n}'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPizarraPorModulo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"modulo\": 20\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>BANTOTAL</bts:Usuario>\n            <bts:Token>480647346F955E77534D3E02</bts:Token>\n            <bts:Device>AC</bts:Device>\n         </bts:Btinreq>\n         <bts:modulo>20</bts:modulo>\n      </bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPizarraPorModulo' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n  -d '{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"modulo\": 20\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>480647346F955E77534D3E02</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <sdtPizarras>\n            <sBTPizarra>\n               <codigo>99998</codigo>\n               <descripcion>Pizarra Atrib. Exten</descripcion>\n            </sBTPizarra>\n         </sdtPizarras>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerPizarraPorModulo</Servicio>\n            <Fecha>2021-03-18</Fecha>\n            <Hora>10:49:45</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8033</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "'{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"sdtPizarras\": {\n        \"sBTPizarra\": {\n            \"codigo\": 99998,\n            \"descripcion\": \"Pizarra Atrib. Exten\"\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerPizarraPorModulo\",\n        \"Fecha\": \"2021-03-18\",\n        \"Hora\": \"10:49:45\",\n        \"Requerimiento\": 1,\n        \"Numero\": 8033,\n        \"Estado\": \"OK\"\n    }\n}'"
+      "json": "'{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"sdtPizarras\": {\n        \"sBTPizarra\": {\n            \"codigo\": 99998,\n            \"descripcion\": \"Pizarra Atrib. Exten\"\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerPizarraPorModulo\",\n        \"Fecha\": \"2021-03-18\",\n        \"Hora\": \"10:49:45\",\n        \"Requerimiento\": 1,\n        \"Numero\": 8033,\n        \"Estado\": \"OK\"\n    }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>BANTOTAL</Usuario>\n            <Token>480647346F955E77534D3E02</Token>\n            <Device>AC</Device>\n         </Btinreq>\n         <sdtPizarras>\n            <sBTPizarra>\n               <codigo>99998</codigo>\n               <descripcion>Pizarra Atrib. Exten</descripcion>\n            </sBTPizarra>\n         </sdtPizarras>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTConfiguracionBantotal.ObtenerPizarraPorModulo</Servicio>\n            <Fecha>2021-03-18</Fecha>\n            <Hora>10:49:45</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>8033</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\n    \"Btinreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Requerimiento\": 1,\n        \"Usuario\": \"BANTOTAL\",\n        \"Token\": \"480647346F955E77534D3E02\",\n        \"Device\": \"AC\"\n    },\n    \"sdtPizarras\": {\n        \"sBTPizarra\": {\n            \"codigo\": 99998,\n            \"descripcion\": \"Pizarra Atrib. Exten\"\n        }\n    },\n    \"Erroresnegocio\": {\n        \"BTErrorNegocio\": []\n    },\n    \"Btoutreq\": {\n        \"Canal\": \"BTDIGITAL\",\n        \"Servicio\": \"BTConfiguracionBantotal.ObtenerPizarraPorModulo\",\n        \"Fecha\": \"2021-03-18\",\n        \"Hora\": \"10:49:45\",\n        \"Requerimiento\": 1,\n        \"Numero\": 8033,\n        \"Estado\": \"OK\"\n    }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [

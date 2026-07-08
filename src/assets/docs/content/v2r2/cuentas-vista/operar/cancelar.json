@@ -5,6 +5,7 @@
   "pubName": "BTCuentasVista.Cancelar",
   "programa": "RBTPG474",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "Identificador único de la cuenta vista de acreditación/cobro de la liquidación."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "movimientoUId",
@@ -152,11 +156,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.Cancelar>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>65386256C895CD01D7DC796E</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>201</bts:clienteUId>\r\n         <bts:cuentaLiquidacionUId>310</bts:cuentaLiquidacionUId>\r\n         <bts:cuentaAcreditacionUId>311</bts:cuentaAcreditacionUId>\r\n      </bts:BTCuentasVista.Cancelar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\   \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\ \r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\": \"201\",\r\n\t\"cuentaLiquidacionUId\": \"310\",\r\n\t\"cuentaAcreditacionUId\": \"311\",\r\n}'"
+      "json": "curl -X POST \\   \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\ \r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\": \"201\",\r\n\t\"cuentaLiquidacionUId\": \"310\",\r\n\t\"cuentaAcreditacionUId\": \"311\",\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasVista.Cancelar>\r\n         <bts:Btinreq>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Device>GP</bts:Device>\r\n            <bts:Token>65386256C895CD01D7DC796E</bts:Token>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n         </bts:Btinreq>\r\n         <bts:clienteUId>201</bts:clienteUId>\r\n         <bts:cuentaLiquidacionUId>310</bts:cuentaLiquidacionUId>\r\n         <bts:cuentaAcreditacionUId>311</bts:cuentaAcreditacionUId>\r\n      </bts:BTCuentasVista.Cancelar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\   \r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar' \\ \r\n  -H 'cache-control: no-cache' \\ \r\n  -H 'content-type: application/json' \\ \r\n  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\ \r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n\t\"clienteUId\": \"201\",\r\n\t\"cuentaLiquidacionUId\": \"310\",\r\n\t\"cuentaAcreditacionUId\": \"311\",\r\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasVista.CancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>65386256C895CD01D7DC796E</Token>\r\n         </Btinreq>\r\n         <movimientoUId>1032</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>12044</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasVista.Cancelar</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-23</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>15:19:22</Hora>\r\n         </Btoutreq>\r\n      </BTCuentasVista.CancelarResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": 1032,\r\n    \"Btoutreq\": {\r\n        \"Numero\": 823,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasVista.Cancelar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2018-11-12\",\r\n        \"Hora\": \"17:47:27\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": 1032,\r\n    \"Btoutreq\": {\r\n        \"Numero\": 823,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasVista.Cancelar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2018-11-12\",\r\n        \"Hora\": \"17:47:27\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasVista.CancelarResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>GP</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>65386256C895CD01D7DC796E</Token>\r\n         </Btinreq>\r\n         <movimientoUId>1032</movimientoUId>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>12044</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasVista.Cancelar</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2023-05-23</Fecha>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Hora>15:19:22</Hora>\r\n         </Btoutreq>\r\n      </BTCuentasVista.CancelarResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"movimientoUId\": 1032,\r\n    \"Btoutreq\": {\r\n        \"Numero\": 823,\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasVista.Cancelar\",\r\n        \"Requerimiento\": \"1\",\r\n        \"Fecha\": \"2018-11-12\",\r\n        \"Hora\": \"17:47:27\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

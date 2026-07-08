@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ActualizarIntegrantePersonaJuridica",
   "programa": "RBTPG280",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -30,6 +31,9 @@
       "Comentarios": "[Hidden: Valor fijo 'UP1' para este método]."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -86,11 +90,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>IN</bts:Usuario>\n            <bts:Token>14298073CD285A89A23FBE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:personaJuridicaUId>2</bts:personaJuridicaUId>\n         <bts:sdtIntegranteAlta>\n             <bts:personaUId>1</bts:personaIntegranteUId>\n             <bts:vinculoId>1</bts:vinculoId>\n             <bts:participacion>50</bts:participacion>\n         </bts:sdtIntegranteAlta>\n      </bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarIntegrantePersonaJuridica' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t \"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t },\n\t \"personaJuridicaUId\": \"2\",\n\t \"sdtIntegranteAlta\": {\n\t\t \"personaUId\": \"1\",\n\t\t \"vinculoId\": \"1\",\n\t\t \"participacion\": \"50\",\n\t }\n   }'"
+      "json": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarIntegrantePersonaJuridica' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t \"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t },\n\t \"personaJuridicaUId\": \"2\",\n\t \"sdtIntegranteAlta\": {\n\t\t \"personaUId\": \"1\",\n\t\t \"vinculoId\": \"1\",\n\t\t \"participacion\": \"50\",\n\t }\n   }'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\n         <bts:Btinreq>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Usuario>IN</bts:Usuario>\n            <bts:Token>14298073CD285A89A23FBE</bts:Token>\n            <bts:Device>MC</bts:Device>\n         </bts:Btinreq>\n         <bts:personaJuridicaUId>2</bts:personaJuridicaUId>\n         <bts:sdtIntegranteAlta>\n             <bts:personaUId>1</bts:personaIntegranteUId>\n             <bts:vinculoId>1</bts:vinculoId>\n             <bts:participacion>50</bts:participacion>\n         </bts:sdtIntegranteAlta>\n      </bts:BTPersonas.ActualizarIntegrantePersonaJuridica>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarIntegrantePersonaJuridica' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \\\n  -d '{\n\t \"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t },\n\t \"personaJuridicaUId\": \"2\",\n\t \"sdtIntegranteAlta\": {\n\t\t \"personaUId\": \"1\",\n\t\t \"vinculoId\": \"1\",\n\t\t \"participacion\": \"50\",\n\t }\n   }'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarIntegrantePersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1429807CD285A89A23FBE</Token>\n            <Device>MC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.ActualizarIntegrantePersonaJuridica</Servicio>\n            <Fecha>2020-11-02</Fecha>\n            <Hora>12:06:37</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10140</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.ActualizarIntegrantePersonaJuridicaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{\n\t\"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t},\n\t\"Erroresnegocio\": null,\n\t\"Btoutreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Servicio\": \"BTPersonas.ActualizarIntegrantePersonaJuridica\",\n\t\t\"Fecha\": \"2020-11-02\",\n\t\t\"Hora\": \"12:06:37\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Numero\": \"10140\",\n\t\t\"Estado\": \"OK\"\n\t}\n}"
+      "json": "{\n\t\"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t},\n\t\"Erroresnegocio\": null,\n\t\"Btoutreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Servicio\": \"BTPersonas.ActualizarIntegrantePersonaJuridica\",\n\t\t\"Fecha\": \"2020-11-02\",\n\t\t\"Hora\": \"12:06:37\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Numero\": \"10140\",\n\t\t\"Estado\": \"OK\"\n\t}\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarIntegrantePersonaJuridicaResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Canal>BTDIGITAL</Canal>\n            <Requerimiento>1</Requerimiento>\n            <Usuario>INSTALADOR</Usuario>\n            <Token>1429807CD285A89A23FBE</Token>\n            <Device>MC</Device>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Canal>BTDIGITAL</Canal>\n            <Servicio>BTPersonas.ActualizarIntegrantePersonaJuridica</Servicio>\n            <Fecha>2020-11-02</Fecha>\n            <Hora>12:06:37</Hora>\n            <Requerimiento>1</Requerimiento>\n            <Numero>10140</Numero>\n            <Estado>OK</Estado>\n         </Btoutreq>\n      </BTPersonas.ActualizarIntegrantePersonaJuridicaResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n\t\"Btinreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Usuario\": \"IN\",\n\t\t\"Token\": \"14298073CD285A89A23FBE\",\n\t\t\"Device\": \"MC\"\n\t},\n\t\"Erroresnegocio\": null,\n\t\"Btoutreq\": {\n\t\t\"Canal\": \"BTDIGITAL\",\n\t\t\"Servicio\": \"BTPersonas.ActualizarIntegrantePersonaJuridica\",\n\t\t\"Fecha\": \"2020-11-02\",\n\t\t\"Hora\": \"12:06:37\",\n\t\t\"Requerimiento\": \"1\",\n\t\t\"Numero\": \"10140\",\n\t\t\"Estado\": \"OK\"\n\t}\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

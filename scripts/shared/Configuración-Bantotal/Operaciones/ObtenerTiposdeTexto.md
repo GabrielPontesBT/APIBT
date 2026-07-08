@@ -106,59 +106,59 @@ curl -X POST \
          <sdtTextos>
             <sBTTipoTexto>
                <descripcion>OPERACIONES REFINANCIADAS:</descripcion>
-               <identificador>2</identificador>
+               <Identificador>2</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>INGRESE N° CUENTA SFB</descripcion>
-               <identificador>3</identificador>
+               <Identificador>3</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE Y APELLIDO TITULARES</descripcion>
-               <identificador>4</identificador>
+               <Identificador>4</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE</descripcion>
-               <identificador>5</identificador>
+               <Identificador>5</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>TIPO Y NUMERO DE DOCUMENTO</descripcion>
-               <identificador>6</identificador>
+               <Identificador>6</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>DOMICILIO</descripcion>
-               <identificador>7</identificador>
+               <Identificador>7</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>BAJA DE MULTA 50%</descripcion>
-               <identificador>8</identificador>
+               <Identificador>8</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>BARRIO</descripcion>
-               <identificador>9</identificador>
+               <Identificador>9</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>COMENTARIO SOBRE APERTURA</descripcion>
-               <identificador>10</identificador>
+               <Identificador>10</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>NOMBRE DEL BENEFICIARIO:</descripcion>
-               <identificador>11</identificador>
+               <Identificador>11</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>MOTIVOS DEL EMBARGO</descripcion>
-               <identificador>12</identificador>
+               <Identificador>12</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>JUZGADO:</descripcion>
-               <identificador>13</identificador>
+               <Identificador>13</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>DEMANDANTE</descripcion>
-               <identificador>14</identificador>
+               <Identificador>14</Identificador>
             </sBTTipoTexto>
             <sBTTipoTexto>
                <descripcion>FECHA INICIO DE MORA DD/MM</descripcion>
-               <identificador>16</identificador>
+               <Identificador>16</Identificador>
             </sBTTipoTexto>
          </sdtTextos>
          <Erroresnegocio></Erroresnegocio>
@@ -276,6 +276,6 @@ Los campos del tipo de dato estructurado sBTTipoTexto son los siguientes:
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 descripcion	| String	| Descripción de tipo de texto.
-identificador | Long | Identificador de tipo de texto.
+Identificador | Long | Identificador de tipo de texto.
 :::
 <!-- CIERRA SDT -->

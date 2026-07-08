@@ -83,22 +83,18 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X GET \
-   'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados' \
-   -H 'cache-control: no-cache' \
-   -H 'content-type: application/json' \
-   -d '{
-   "Btinreq": {
-        "Device": "bms",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "0",
-        "Canal": "BTDIGITAL",
-        "Token": "faa36bd33f4A8B5C60A82434"
-    },
-	"calendarioId":1,
-	"calendarioId":"2020-10-01",
-	"calendarioId":"2020-10-31",
-}'
+{
+  "Btinreq": {
+    "Device": "bms",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "0",
+    "Canal": "BTDIGITAL",
+    "Token": "faa36bd33f4A8B5C60A82434"
+  },
+  "calendarioId": "2020-10-31",
+  "fechaInicio": "",
+  "fechaFin": ""
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -129,7 +125,6 @@ curl -X GET \
                <fecha>2020-10-02</fecha>
                <habil>S</habil>
             </sBTDiaCalendario>
-            ...
          </sdtDetalleCalendario>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -149,36 +144,35 @@ curl -X GET \
 @tab JSON
 ```json
 {
-    "Btinreq": {
-		"Device": "MC",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "200f0b8b654A8B5C60A82434"
-	},
-	"descripcionCalendario": "Calendario 1",
-	"sdtDetalleCalendario": {
-	  "sBTDiaCalendario": [
-		{
-		  "fecha": "2020-10-01",
-		  "habil": "S"
-		},
-		{
-		  "fecha": "2020-10-02",
-		  "habil": "S"
-		},
-		...
-	  ]
-	},
-	"Btoutreq": {
-	  "Numero": "109132",
-	  "Estado": "OK",
-	  "Servicio": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
-	  "Requerimiento": "1",
-	  "Fecha": "2020-11-24",
-	  "Canal": "BTDIGITAL",
-	  "Hora": "10:41:08"
-	}
+  "Btinreq": {
+    "Device": "MC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "200f0b8b654A8B5C60A82434"
+  },
+  "descripcionCalendario": "Calendario 1",
+  "sdtDetalleCalendario": {
+    "sBTDiaCalendario": [
+      {
+        "fecha": "2020-10-01",
+        "habil": "S"
+      },
+      {
+        "fecha": "2020-10-02",
+        "habil": "S"
+      }
+    ]
+  },
+  "Btoutreq": {
+    "Numero": "109132",
+    "Estado": "OK",
+    "Servicio": "BTConfiguracionBantotal.ObtenerDetalleCalendario",
+    "Requerimiento": "1",
+    "Fecha": "2020-11-24",
+    "Canal": "BTDIGITAL",
+    "Hora": "10:41:08"
+  }
 }
 ```
 ::: 

@@ -33,7 +33,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 idExcepcion | Int | Identificador de excepción.
 usuario | String | Usuario.
-contraseña | String | Contraseña.
+contrasena | String | Contraseña.
 autoriza | String | Autoriza [Hidden: Valor fijo 'S' para este método].
 
 @tab Datos de Salida
@@ -64,14 +64,14 @@ Código | Descripción
       <bts:BTSeguridad.AutorizarExcepcion>
          <bts:Btinreq>             
             <bts:Device>ES</bts:Device>
-            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:usuario>MINSTALADOR</bts:usuario>
             <bts:Requerimiento>1</bts:Requerimiento>
             <bts:Canal>BTDIGITAL</bts:Canal>
             <bts:Token>dac8c7fdec4A8B5C60A82434</bts:Token>
          </bts:Btinreq>
          <bts:idExcepcion>1853</bts:idExcepcion>
-         <bts:usuario>BANTOTAL</bts:Usuario>
-         <bts:contraseña>z0na#1357</bts:Contraseña>
+         <bts:usuario>BANTOTAL</bts:usuario>
+         <bts:contrasena>z0na#1357</bts:Contraseña>
       </bts:BTSeguridad.AutorizarExcepcion>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -92,9 +92,9 @@ curl -X POST \
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
-    "idExcepcion": 1854,
-    "usuario": "BANTOTAL",
-    "contraseña": "z0na#1357"
+  "idExcepcion": 1854,
+  "usuario": "BANTOTAL",
+  "contrasena": "z0na#1357"
 }'
 ```
 :::

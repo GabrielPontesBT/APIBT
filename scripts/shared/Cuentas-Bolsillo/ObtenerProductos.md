@@ -150,59 +150,75 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GZ",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Token": "A511D678BEE7D9654933B7EB"
-    },
-    "sdtProductos": {
-        "sBTProducto": [
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 511,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "USD",
-                "papel": "$",
-                "productoUId": 531,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 512,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
-                "otrosConceptos": ""
-            },
-            {
-                "moneda": "$",
-                "papel": "$",
-                "productoUId": 532,
-                "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
-                "otrosConceptos": ""
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 228456,
-        "Estado": "OK",
-        "Servicio": "BTCuentasBolsillo.ObtenerProductos",
-        "Requerimiento": 0,
-        "Fecha": "2023-10-31",
-        "Hora": "15:32:03",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "GZ",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "A511D678BEE7D9654933B7EB"
+  },
+  "sdtProductos": {
+    "sBTProducto": [
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 511,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "USD",
+        "papel": "$",
+        "productoUId": 531,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Ahorro",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 512,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Gastos",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "moneda": "$",
+        "papel": "$",
+        "productoUId": 532,
+        "nombre": "CUENTAS BOLSILLO, Bolsillo Viajes",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 228456,
+    "Estado": "OK",
+    "Servicio": "BTCuentasBolsillo.ObtenerProductos",
+    "Requerimiento": 0,
+    "Fecha": "2023-10-31",
+    "Hora": "15:32:03",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -223,7 +239,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -236,4 +255,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

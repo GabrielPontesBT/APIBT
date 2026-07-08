@@ -74,14 +74,14 @@ Código | Descripción
             <bts:Token>D2868674D8C3483A48324170</bts:Token>
          </bts:Btinreq>
          <bts:personaUId>143</bts:personaUId>
-         <bts:sbtTextos>
+         <bts:sdtTextos>
             <bts:SdtsBTTextoPersona>
                <bts:renglon>1</bts:renglon>
                <bts:texto></bts:texto>
                <bts:descripcion></bts:descripcion>
                <bts:codigo>11</bts:codigo>
             </bts:SdtsBTTextoPersona>
-         </bts:sbtTextos>
+         </bts:sdtTextos>
       </bts:BTPersonas.EliminarTextos>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -89,12 +89,7 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarTextos' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
+{
   "Btinreq": {
     "Canal": "BTDIGITAL",
     "Usuario": "INSTALADOR",
@@ -103,18 +98,13 @@ curl -X POST \
     "Token": "D2868674D8C3483A48324170"
   },
   "personaUId": "143",
-  "sbtTextos": [
-    {
-      "renglon": "1",
-      "texto": "",
-      "descripcion": "",
-      "codigo": "11"
-    }
-  ]
+  "sdtTextos": {
+    "codigo": 0,
+    "descripcion": "",
+    "renglon": 0,
+    "texto": ""
+  }
 }
-
-
-'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

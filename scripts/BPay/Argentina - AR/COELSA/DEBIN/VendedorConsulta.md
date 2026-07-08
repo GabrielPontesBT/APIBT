@@ -67,7 +67,7 @@ Código | Descripción
                <Token>1095768874CD285A89A23FBE</Token>
                <Device>ABC</Device>
             </Btinreq>
-         <bts:Cuit>30716226308</bts:Cuit>
+         <bts:cuit>30716226308</bts:cuit>
       </bts:BTCOELSAGestionDebin.ConsultaVendedor>
    </soapenv:Body>
 </soapenv:Envelope>

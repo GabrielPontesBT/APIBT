@@ -451,6 +451,9 @@ producto | String | Nombre del producto.
 sucursal | String | Nombre de la sucursal.
 titular | String | Titular. 
 total | Double | Total.
+:::
+
+::: details sBTAbono
 
 ### sBTAbono
 
@@ -469,4 +472,6 @@ TAE | Double | TAE.
 TAN | Double | TAN.
 tasa | Double | Tasa del abono.
 :::
+
 <!-- CIERRA SDT -->
+

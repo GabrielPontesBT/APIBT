@@ -212,90 +212,102 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-        "Canal": "BTDIGITAL", 
-        "Requerimiento": 1, 
-        "Usuario": "BANTOTAL", 
-        "Token": "324915377F955E77534D3E02", 
-        "Device": "AC" 
-    }, 
-    "sdtProductosPlazoFijo": { 
-		"sBTProductoPlazoFijo": [ 
-		  { 
-			"operacionUId": "10108", 
-			"idOperacionFmt": "0000000292_000", 
-			"idOperacionBT": "0010000100022000000000000000002700000000000292001", 
-			"producto": {
-            "moneda": "$",
-            "otrosConceptos":"",
-            "papel": "$",
-            "productoUId": 82,
-            "nombre": "Ahorro en Sueldo Pesos"
-          },
-			"sucursal": "Sucursal Beta", 
-			"saldo": "1000.00", 
-			"estado": "Normal", 
-			"fechaAlta": "2018-10-15", 
-			"fechaVencimiento": "2019-10-15", 
-			"plazoTotal": "360", 
-			"plazoTranscurrido": "507", 
-			"porcentajeAvance": "100.000000" 
-		  }, 
-		  { 
-			"operacionUId": "7", 
-			"idOperacionFmt": "0000000028_000", 
-			"idOperacionBT": "0010100000022000000000000000002700000000000028001", 
-			"producto": {
-            "moneda": "$",
-            "otrosConceptos":"",
-            "papel": "$",
-            "productoUId": 82,
-            "nombre": "Ahorro en Sueldo Pesos"
-          },
-			"sucursal": "Casa Matriz", 
-			"saldo": "15000.00", 
-			"estado": "Normal", 
-			"fechaAlta": "2018-08-16", 
-			"fechaVencimiento": "2019-08-12", 
-			"plazoTotal": "361", 
-			"plazoTranscurrido": "567", 
-			"porcentajeAvance": "100.000000" 
-		  }, 
-		  { 
-			"operacionUId": "8", 
-			"idOperacionFmt": "0000000085_000", 
-			"idOperacionBT": "0010100000022000000000000000002700000000000085001", 
-			"producto": {
-            "moneda": "$",
-            "otrosConceptos":"",
-            "papel": "$",
-            "productoUId": 82,
-            "nombre": "Ahorro en Sueldo Pesos"
-          },
-			"sucursal": "Casa Matriz", 
-			"saldo": "1500000.00", 
-			"estado": "Normal", 
-			"fechaAlta": "2015-12-28", 
-			"fechaVencimiento": "2016-12-22", 
-			"plazoTotal": "360", 
-			"plazoTranscurrido": "1529", 
-			"porcentajeAvance": "100.000000" 
-		  } 
-		] 
-	}, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTClientes.ObtenerPlazosFijosConAvance", 
-        "Fecha": "2019-11-19", 
-        "Hora": "13:05:22", 
-        "Requerimiento": 1, 
-        "Numero": 6924, 
-        "Estado": "OK" 
-    } 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "324915377F955E77534D3E02",
+    "Device": "AC"
+  },
+  "sdtProductosPlazoFijo": {
+    "sBTProductoPlazoFijo": [
+      {
+        "operacionUId": "10108",
+        "idOperacionFmt": "0000000292_000",
+        "idOperacionBT": "0010000100022000000000000000002700000000000292001",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Sucursal Beta",
+        "saldo": "1000.00",
+        "estado": "Normal",
+        "fechaAlta": "2018-10-15",
+        "fechaVencimiento": "2019-10-15",
+        "plazoTotal": "360",
+        "plazoTranscurrido": "507",
+        "porcentajeAvance": "100.000000"
+      },
+      {
+        "operacionUId": "7",
+        "idOperacionFmt": "0000000028_000",
+        "idOperacionBT": "0010100000022000000000000000002700000000000028001",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "saldo": "15000.00",
+        "estado": "Normal",
+        "fechaAlta": "2018-08-16",
+        "fechaVencimiento": "2019-08-12",
+        "plazoTotal": "361",
+        "plazoTranscurrido": "567",
+        "porcentajeAvance": "100.000000"
+      },
+      {
+        "operacionUId": "8",
+        "idOperacionFmt": "0000000085_000",
+        "idOperacionBT": "0010100000022000000000000000002700000000000085001",
+        "producto": {
+          "moneda": "$",
+          "papel": "$",
+          "productoUId": 82,
+          "nombre": "Ahorro en Sueldo Pesos",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz",
+        "saldo": "1500000.00",
+        "estado": "Normal",
+        "fechaAlta": "2015-12-28",
+        "fechaVencimiento": "2016-12-22",
+        "plazoTotal": "360",
+        "plazoTranscurrido": "1529",
+        "porcentajeAvance": "100.000000"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTClientes.ObtenerPlazosFijosConAvance",
+    "Fecha": "2019-11-19",
+    "Hora": "13:05:22",
+    "Requerimiento": 1,
+    "Numero": 6924,
+    "Estado": "OK"
+  }
 }
 ```
 :::
@@ -324,8 +336,11 @@ plazoTranscurrido | Int | Plazo transcurrido desde la fecha de alta de la operac
 porcentajeAvance | Double | Porcentaje de avance. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 saldo | Double | Saldo de la operación. 
-sucursal | String | Nombre de la sucursal de alta. 
- 
+sucursal | String | Nombre de la sucursal de alta.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -337,7 +352,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -350,4 +368,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

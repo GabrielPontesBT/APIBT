@@ -72,22 +72,19 @@ sdtEstadoCuentaAhorro | [sBTEstadoCuentaAhorro](#sbtestadocuentaahorro) | Estado
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerEstadoDeCuenta=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 02100864-83c5-1642-ca5f-a8589b3524b4' \
-  -d '{
-	"Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
-        "Canal": "BTDIGITAL",
-        "Token": "75e20bd1614A8B5C60A82434"
-    },
-    "ahorroUId": 205,
-	"fechaDesde": "2017-03-06",
-}'  "fechaHasta": "2017-11-30"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "75e20bd1614A8B5C60A82434"
+  },
+  "ahorroUId": 205,
+  "fechaDesde": "2017-03-06",
+  "fechaHasta": ""
+}
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -259,5 +256,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"  
     }  
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,0 +1,114 @@
+{
+  "slug": "loans/updatemember",
+  "pageTitle": "Update Member",
+  "description": "Método para actualizar un miembro de un grupo de créditos.",
+  "pubName": "PublicLoans.updateMember",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0032",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "counterpartyGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la contraparte."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "memberData",
+      "Tipo": "<a href=\"#sdtsbtmgmember\">SdtsBTMGMember</a>",
+      "Comentarios": "Datos del integrante."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "40020006",
+      "Descripción": "Contraparte no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "40030005",
+      "Descripción": "Tipo de integrante incorrecto.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050002",
+      "Descripción": "Debe ingresar el GUID de contraparte.",
+      "Programas": ""
+    },
+    {
+      "Código": "120050010",
+      "Descripción": "Debe ingresar el identificador de grupo.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060113",
+      "Descripción": "El tipo de integrante no existe.",
+      "Programas": ""
+    },
+    {
+      "Código": "120060122",
+      "Descripción": "El estado de la contraparte es inválido.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 33,\n  \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n  \"memberData\": {\n    \"MemberTypeId\": 1\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 33,\n  \"counterpartyGUID\": \"4b1a2036-c91f-444f-b8ba-ec047793b28f\",\n  \"memberData\": {\n    \"MemberTypeId\": 1\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:26:09\",\n    \"Numero\": 13547171,\n    \"Servicio\": \"PublicLoans.updateMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:26:09\",\n    \"Numero\": 13547171,\n    \"Servicio\": \"PublicLoans.updateMember\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGMember",
+      "fields": [
+        {
+          "Nombre": "MemberTypeId",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador del tipo de miembro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

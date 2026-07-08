@@ -134,34 +134,42 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-        "Requerimiento": 0,
-        "Canal": "BTDIGITAL",
-        "Device": "GZ",
-        "Usuario": "Instalador",
-        "Token": "8e3a8ef2dd99865B3A2E76CF"
-    },
-    "sdtTitulares": {
-          "sBTTitularTelefono": [{
-            "datosAdicionales": {"sBTDatoAdicional": []},
-            "personaUId": 227,
-            "nombre": "RIVERA PERALTA FLORENCIA"
-        }]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 20054,
-        "Estado": "OK",
-        "Servicio": "BTPersonas.ObtenerTitularesDelTelefono",
-        "Requerimiento": 0,
-        "Fecha": "2024-04-23",
-        "Hora": "11:00:04",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Token": "8e3a8ef2dd99865B3A2E76CF"
+  },
+  "sdtTitulares": {
+    "sBTTitularTelefono": [
+      {
+        "datosAdicionales": {
+          "sBTDatoAdicional": [
+            {
+              "detalle": ""
+            }
+          ]
+        },
+        "personaUId": 227,
+        "nombre": "RIVERA PERALTA FLORENCIA"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 20054,
+    "Estado": "OK",
+    "Servicio": "BTPersonas.ObtenerTitularesDelTelefono",
+    "Requerimiento": 0,
+    "Fecha": "2024-04-23",
+    "Hora": "11:00:04",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -182,6 +190,9 @@ Nombre | Tipo | Comentarios
 datosAdicionales | [sBTDatoAdicional](#sbtdatoadicional) | Listado de datos adicionales.
 nombre | String | Nombre de la persona.
 personaUId | Long | Identificador único de la persona.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -192,4 +203,6 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 detalle | String | Detalle.
 :::
+
 <!-- CIERRA SDT -->
+

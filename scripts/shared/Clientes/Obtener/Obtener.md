@@ -155,6 +155,7 @@ curl -X POST \
             <bts:direccion>1</bts:direccion>
             <bts:referencia>Juan Perez</bts:referencia>
             <bts:piso>123</bts:piso>			 
+            <ejecutivoId>0</ejecutivoId>
          </sdtPersona>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -173,73 +174,75 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtPersona": {
-      "apartamento": "13B",
-      "paisDocumentoId": "845",
-      "sectorId": "3",
-      "tipoDocumentoId": "1",
-      "ingresos": "1500.00",
-      "nacionalidad": "URUGUAY",
-      "ocupacionId": "1",
-      "sexo": "M",
-      "barrio": "",
-      "estadoCivil": "",
-      "nroDocumento": "27573084",
-      "localidad": "Montevideo",
-      "clasificacionInternaId": "1",
-      "segundoNombre": "",
-      "telefonoCelular": "",
-      "departamentoId": "10",
-      "actividadLaboral": "01112 Trigo",
-      "nacionalidadId": "845",
-      "localidadId": "10",
-      "clasificacionInterna": "IFE - Actividades bursátiles",
-      "paisDomicilioId": "845",
-      "sector": "Público Nacional",
-      "telefonoFijo": "26004288",
-      "codigoPostal": "",
-      "primerNombre": "ALEJANDRO",
-      "fechaNacimiento": "1976-02-26",
-      "actividadLaboralId": "1112",
-      "primerApellido": "vVAZQUEZ",
-      "estadoCivilId": "Soltero/a",
-      "segundoApellido": "SZENTANDRASI",
-      "paisDocumento": "URUGUAY",
-      "fechaInicioActividad": "0000-00-00",
-      "ocupacion": "Empleado",
-      "paisDomicilio": "URUGUAY",
-      "departamento": "Montevideo",
-      "fechaVencimiento": "0000-00-00",
-      "correoElectronico": "AV@GMAIL.COM",
-      "numeroPuerta": "7216",
-      "calle": "BAZZURRO",
-      "barrioId": "0",
-      "tipoDocumento": "Cédula Identidad",
-      "dirección": ,
-      "referencia": "EN LA ESQUINA",
-      "piso": "123"
-   },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "778",
-      "Estado": "OK",
-      "Servicio": "BTClientes.Obtener",
-      "Fecha": "2017-12-15",
-      "Requerimiento": "",
-      "Hora": "11:08:57",
-      "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPersona": {
+    "apartamento": "13B",
+    "paisDocumentoId": "845",
+    "sectorId": "3",
+    "tipoDocumentoId": "1",
+    "ingresos": "1500.00",
+    "nacionalidad": "URUGUAY",
+    "ocupacionId": "1",
+    "sexo": "M",
+    "barrio": "",
+    "estadoCivil": "",
+    "nroDocumento": "27573084",
+    "localidad": "Montevideo",
+    "clasificacionInternaId": "1",
+    "segundoNombre": "",
+    "telefonoCelular": "",
+    "departamentoId": "10",
+    "actividadLaboral": "01112 Trigo",
+    "nacionalidadId": "845",
+    "localidadId": "10",
+    "clasificacionInterna": "IFE - Actividades bursátiles",
+    "paisDomicilioId": "845",
+    "sector": "Público Nacional",
+    "telefonoFijo": "26004288",
+    "codigoPostal": "",
+    "primerNombre": "ALEJANDRO",
+    "fechaNacimiento": "1976-02-26",
+    "actividadLaboralId": "1112",
+    "primerApellido": "vVAZQUEZ",
+    "estadoCivilId": "Soltero/a",
+    "segundoApellido": "SZENTANDRASI",
+    "paisDocumento": "URUGUAY",
+    "fechaInicioActividad": "0000-00-00",
+    "ocupacion": "Empleado",
+    "paisDomicilio": "URUGUAY",
+    "departamento": "Montevideo",
+    "fechaVencimiento": "0000-00-00",
+    "correoElectronico": "AV@GMAIL.COM",
+    "numeroPuerta": "7216",
+    "calle": "BAZZURRO",
+    "barrioId": "0",
+    "tipoDocumento": "Cédula Identidad",
+    "dirección": {},
+    "referencia": "EN LA ESQUINA",
+    "piso": "123",
+    "direccion": "",
+    "ejecutivoId": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "778",
+    "Estado": "OK",
+    "Servicio": "BTClientes.Obtener",
+    "Fecha": "2017-12-15",
+    "Requerimiento": "",
+    "Hora": "11:08:57",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

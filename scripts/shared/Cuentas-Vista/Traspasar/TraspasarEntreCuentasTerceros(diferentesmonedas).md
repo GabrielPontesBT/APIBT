@@ -98,46 +98,40 @@ Código | Descripción
             </bts:Btinreq> 
             <bts:clienteUId>21</bts:clienteUId> 
             <bts:sdtTraspaso> 
-                <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> 
-                <bts:importeDebito>5000</bts:importeDebito> 
-                <bts:importeCredito>500</bts:importeCredito> 
-                <bts:operacionUIdDestino>282</bts:operacionUIdDestino> 
-                <bts:monedaId></bts:monedaId>    
-                <bts:concepto>Traspaso</bts:concepto>     
+              <bts:operacionUIdOrigen>281</bts:operacionUIdOrigen> 
+              <bts:importeDebito>5000</bts:importeDebito> 
+              <bts:importeCredito>500</bts:importeCredito> 
+              <bts:operacionUIdDestino>282</bts:operacionUIdDestino> 
+              <bts:monedaId></bts:monedaId>    
+              <bts:concepto>Traspaso</bts:concepto>     
+              <importe>0</importe>
             </bts:sdtTraspaso>   
-            <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  
         </bts:BTCuentasVista.TraspasarCuentasTercerosDiferentesMonedas>  
     </soapenv:Body> 
-</soapenv:Envelope>  
+</soapenv:Envelope>
 ```
 
 @tab JSON
 ```json
-curl -X POST \ 
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?DiferentesMonedas \ 
-  -H 'cache-control: no-cache' \ 
-  -H 'content-type: application/json' \ 
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \ 
-  -d '{ 
-    "Btinreq": { 
-        "Device": "AV", 
-        "Usuario": "MINSTALADOR", 
-        "Requerimiento": 1, 
-        "Canal": "BTDIGITAL", 
-        "Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-    "clienteUId": "21", 
-    "sdtTraspaso":  
-      { 
-        "operacionUIdOrigen": "281", 
-        "importeDebito": "5000", 
-        "importeCredito": "500", 
-        "operacionUIdDestino": "282", 
-        "monedaId": "", 
-        "concepto": "Traspaso", 
-      }, 
-    "tipoDeCambio": "31.5" 
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": "21",
+  "sdtTraspaso": {
+    "operacionUIdOrigen": "281",
+    "importeDebito": "5000",
+    "importeCredito": "500",
+    "operacionUIdDestino": "282",
+    "monedaId": "",
+    "concepto": "Traspaso",
+    "importe": 0
+  },
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

@@ -9,7 +9,7 @@ title: Get Executives
 
 **Módulo:** Customers
 
-**Programa:** PublicAPI.ABTCPPA0026
+**Programa:** PublicAPI.BTCPPA0026
 
 **Alcance:** Global
 :::
@@ -121,7 +121,9 @@ No aplica.
         "id": 6,
         "description": "GRUPO 4"
       }
-    ]
+    ],
+    "Id": "",
+    "description": ""
   },
   "BusinessErrors": {
     "BusinessError": []
@@ -152,7 +154,7 @@ Los campos del tipo de dato estructurado sBTCPExecutive son los siguientes:
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-id | Int $<(Length: 5)>$ | Identificador de ejecutivo.
+Id | Int $<(Length: 5)>$ | Identificador de ejecutivo.
 description | String $<(Length: 30)>$ | Descripción.
 :::
 <!-- CIERRA SDT -->

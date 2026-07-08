@@ -2,21 +2,32 @@
   @for (section of sections; track section) {
     <mat-tab [label]="getTabLabel(section)">
       <div class="code-toggle">
-        @if (hasXml(section)) {
-          <button
-            mat-button
-            [class.active]="view[section] === 'xml'"
-            (click)="switchView(section, 'xml')">
-            XML
-          </button>
-        }
-        @if (hasJson(section)) {
-          <button
-            mat-button
-            [class.active]="view[section] === 'json'"
-            (click)="switchView(section, 'json')">
-            JSON
-          </button>
+        @if (hasTabs(section)) {
+          @for (tab of getTabs(section); track tab.name; let i = $index) {
+            <button
+              mat-button
+              [class.active]="selectedTab[section] === i"
+              (click)="switchTab(section, i)">
+              {{ tab.name }}
+            </button>
+          }
+        } @else {
+          @if (hasXml(section)) {
+            <button
+              mat-button
+              [class.active]="view[section] === 'xml'"
+              (click)="switchView(section, 'xml')">
+              XML
+            </button>
+          }
+          @if (hasJson(section)) {
+            <button
+              mat-button
+              [class.active]="view[section] === 'json'"
+              (click)="switchView(section, 'json')">
+              JSON
+            </button>
+          }
         }
         <button mat-icon-button (click)="copyCode(section)"
           [class.copied]="copiedSection === section"
@@ -27,7 +38,11 @@
       </div>
       <!-- ENVOLVER con div para manejar el scroll -->
       <div class="code-scroll">
-        <pre><code [innerHTML]="highlightedCode[section][view[section]]" [class]="'language-' + view[section]"></code></pre>
+        @if (hasTabs(section)) {
+          <pre><code [innerHTML]="highlightedTabs[section][selectedTab[section]]" [class]="'language-' + getTabs(section)[selectedTab[section]]?.lang"></code></pre>
+        } @else {
+          <pre><code [innerHTML]="highlightedCode[section][view[section]]" [class]="'language-' + view[section]"></code></pre>
+        }
       </div>
     </mat-tab>
   }

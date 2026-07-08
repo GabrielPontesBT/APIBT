@@ -189,8 +189,8 @@ detalleDescripcion | String | Detalle descripción.
 mismoTitular | Short | Mismo titular. 
 ipCliente | String | IP Cliente. 
 imei | String | IMEI. 
-latitud | Short | latitud. 
-longitud | Short | longitud. 
+latitud | Short | Latitud. 
+longitud | Short | Longitud. 
 precision | Short | Precisión. 
 tipoDispositivo | String | Tipo dispositivo. 
 plataforma | String | Plataforma. 

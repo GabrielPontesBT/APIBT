@@ -172,6 +172,7 @@ curl -X POST \
                <mensajesError></mensajesError>
             </sBTDetallePago>
          </detallePagos>
+         <erroresPago></erroresPago>
          <Erroresnegocio>
             <BTErrorNegocio/>
          </Erroresnegocio>
@@ -191,84 +192,85 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"cuentaDebito":1,
-	"cantidadLineas":5,
-	"moneda":101,
-	"importe":50,
-	"referencia" : "",
-	"fechaPago" : "0000-00-00",
-	"estado" : "P",	 
-	"detallePagos": {
-		"sBTDetallePago": [
-		   {
-			  "nombre": "RAMON PEREIRA",
-			  "beneficiarioId": [],
-			  "beneficiarioCuenta": "4466885511",
-			  "beneficiarioBanco": [],
-			  "fechaPago": "2019-05-30",
-			  "moneda": "101",
-			  "importe": "11.00",
-			  "estado": "V",
-			  "mensajesError": []
-		   },
-		   {
-			  "nombre": [],
-			  "beneficiarioId": [],
-			  "beneficiarioCuenta": "020000010100001",
-			  "beneficiarioBanco": [],
-			  "fechaPago": "2019-05-30",
-			  "moneda": "101",
-			  "importe": "12.00",
-			  "estado": "M",
-			  "mensajesError": {
-				 "item": "PCSM237-Moneda de orden no puede ser distinta de moneda de cuenta destino"
-			  }
-		   },
-		   {
-			  "nombre": "DANIEL COHEN",
-			  "beneficiarioId": [],
-			  "beneficiarioCuenta": "369354899",
-			  "beneficiarioBanco": [],
-			  "fechaPago": "2019-05-30",
-			  "moneda": "101",
-			  "importe": "13.00",
-			  "estado": "V",
-			  "mensajesError": []
-		   },
-		   {
-			  "nombre": "VICTOR SARRIAS",
-			  "beneficiarioId": [],
-			  "beneficiarioCuenta": "44556677",
-			  "beneficiarioBanco": [],
-			  "fechaPago": "2019-05-30",
-			  "moneda": "101",
-			  "importe": "14.00",
-			  "estado": "V",
-			  "mensajesError": []
-		   }
-		]
-	},
-	"Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "790",
-        "Estado": "OK",
-        "Servicio": "BTCASHManagement.ObtenerDetallePago",
-        "Fecha": "2017-12-17",
-        "Requerimiento": 1,
-        "Hora": "16:48:12",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "cuentaDebito": 1,
+  "cantidadLineas": 5,
+  "moneda": 101,
+  "importe": 50,
+  "referencia": "",
+  "fechaPago": "0000-00-00",
+  "estado": "P",
+  "detallePagos": {
+    "sBTDetallePago": [
+      {
+        "nombre": "RAMON PEREIRA",
+        "beneficiarioId": [],
+        "beneficiarioCuenta": "4466885511",
+        "beneficiarioBanco": [],
+        "fechaPago": "2019-05-30",
+        "moneda": "101",
+        "importe": "11.00",
+        "estado": "V",
+        "mensajesError": []
+      },
+      {
+        "nombre": [],
+        "beneficiarioId": [],
+        "beneficiarioCuenta": "020000010100001",
+        "beneficiarioBanco": [],
+        "fechaPago": "2019-05-30",
+        "moneda": "101",
+        "importe": "12.00",
+        "estado": "M",
+        "mensajesError": {
+          "item": "PCSM237-Moneda de orden no puede ser distinta de moneda de cuenta destino"
+        }
+      },
+      {
+        "nombre": "DANIEL COHEN",
+        "beneficiarioId": [],
+        "beneficiarioCuenta": "369354899",
+        "beneficiarioBanco": [],
+        "fechaPago": "2019-05-30",
+        "moneda": "101",
+        "importe": "13.00",
+        "estado": "V",
+        "mensajesError": []
+      },
+      {
+        "nombre": "VICTOR SARRIAS",
+        "beneficiarioId": [],
+        "beneficiarioCuenta": "44556677",
+        "beneficiarioBanco": [],
+        "fechaPago": "2019-05-30",
+        "moneda": "101",
+        "importe": "14.00",
+        "estado": "V",
+        "mensajesError": []
+      }
+    ]
+  },
+  "erroresPago": "",
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "790",
+    "Estado": "OK",
+    "Servicio": "BTCASHManagement.ObtenerDetallePago",
+    "Fecha": "2017-12-17",
+    "Requerimiento": 1,
+    "Hora": "16:48:12",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

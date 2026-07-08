@@ -136,6 +136,42 @@ curl -X POST \
             <departamentoId>10</departamentoId>
             <telefonoFijo>3213342222</telefonoFijo>
             <piso>123</piso>
+            <datosAdicionales>
+               <clave></clave>
+               <valor></valor>
+            </datosAdicionales>
+            <domicilios>
+               <agrupador1></agrupador1>
+               <agrupador1Id>0</agrupador1Id>
+               <agrupador2></agrupador2>
+               <agrupador2Id>0</agrupador2Id>
+               <agrupador3></agrupador3>
+               <agrupador3Id>0</agrupador3Id>
+               <agrupador4></agrupador4>
+               <agrupador4Id>0</agrupador4Id>
+               <agrupador5></agrupador5>
+               <agrupador5Id>0</agrupador5Id>
+               <barrio></barrio>
+               <barrioId>0</barrioId>
+               <codigoPostal></codigoPostal>
+               <colonia></colonia>
+               <coloniaId>0</coloniaId>
+               <departamento></departamento>
+               <departamentoId>0</departamentoId>
+               <detalleUbicacion></detalleUbicacion>
+               <direccion></direccion>
+               <localidad></localidad>
+               <localidadId>0</localidadId>
+               <pais></pais>
+               <paisId>0</paisId>
+               <tipoDomicilio></tipoDomicilio>
+               <tipoDomicilioId>0</tipoDomicilioId>
+               <tipoVivienda></tipoVivienda>
+               <tipoViviendaId></tipoViviendaId>
+               <ubicacionDesde></ubicacionDesde>
+            </domicilios>
+            <fechaExpiracion></fechaExpiracion>
+            <telefonoCelular></telefonoCelular>
          </personaJuridica>
          <sdtIntegrantesJuridicos>
             <sBTIntegranteJuridico>
@@ -168,73 +204,111 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "GP",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "3578f1ef27CD285A89A23FBE"
-	},
-   "personaJuridica": {
-        "nroDocumento": "214567892142",
-        "numeroPuerta": 0,
-        "nombreReducido": "BANCO MODELO",
-        "paisDomicilio": "URUGUAY",
-        "razonSocial": "BANCO MODELO",
-        "departamento": "Montevideo",
-        "nroRegistro": 78940,
-        "naturalezaJuridica": "Sociedad Anónima",
-        "barrio": "Centro",
-        "apartamento": "",
-        "tipoDocumentoId": 2,
-        "tipoActividadId": 1,
-        "piso": "123",
-        "paisId": 845,
-        "fechaConstitucion": "2007-08-22",
-        "actividad": "",
-        "paisDomicilioId": 845,
+{
+  "Btinreq": {
+    "Device": "GP",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "3578f1ef27CD285A89A23FBE"
+  },
+  "personaJuridica": {
+    "nroDocumento": "214567892142",
+    "numeroPuerta": 0,
+    "nombreReducido": "BANCO MODELO",
+    "paisDomicilio": "URUGUAY",
+    "razonSocial": "BANCO MODELO",
+    "departamento": "Montevideo",
+    "nroRegistro": 78940,
+    "naturalezaJuridica": "Sociedad Anónima",
+    "barrio": "Centro",
+    "apartamento": "",
+    "tipoDocumentoId": 2,
+    "tipoActividadId": 1,
+    "piso": "123",
+    "paisId": 845,
+    "fechaConstitucion": "2007-08-22",
+    "actividad": "",
+    "paisDomicilioId": 845,
+    "pais": "URUGUAY",
+    "codigoPostal": "",
+    "tipoActividad": "Actividad Principal",
+    "barrioId": 330,
+    "localidadId": 10,
+    "localidad": "Montevideo",
+    "correoElectronico": "1",
+    "actividadId": 0,
+    "calle": "",
+    "naturalezaJuridicaId": 1,
+    "tipoDocumento": "RUT",
+    "departamentoId": 10,
+    "telefonoFijo": "3213342222",
+    "datosAdicionales": {
+      "clave": "",
+      "valor": ""
+    },
+    "domicilios": {
+      "agrupador1": "",
+      "agrupador1Id": 0,
+      "agrupador2": "",
+      "agrupador2Id": 0,
+      "agrupador3": "",
+      "agrupador3Id": 0,
+      "agrupador4": "",
+      "agrupador4Id": 0,
+      "agrupador5": "",
+      "agrupador5Id": 0,
+      "barrio": "",
+      "barrioId": 0,
+      "codigoPostal": "",
+      "colonia": "",
+      "coloniaId": 0,
+      "departamento": "",
+      "departamentoId": 0,
+      "detalleUbicacion": "",
+      "direccion": "",
+      "localidad": "",
+      "localidadId": 0,
+      "pais": "",
+      "paisId": 0,
+      "tipoDomicilio": "",
+      "tipoDomicilioId": 0,
+      "tipoVivienda": "",
+      "tipoViviendaId": "",
+      "ubicacionDesde": ""
+    },
+    "fechaExpiracion": "",
+    "telefonoCelular": ""
+  },
+  "sdtIntegrantesJuridicos": {
+    "sBTIntegranteJuridico": [
+      {
+        "nroDocumento": "27928980",
+        "vinculoId": 1,
         "pais": "URUGUAY",
-        "codigoPostal": "",
-        "tipoActividad": "Actividad Principal",
-        "barrioId": 330,
-        "localidadId": 10,
-        "localidad": "Montevideo",
-        "correoElectronico": "1",
-        "actividadId": 0,
-        "calle": "",
-        "naturalezaJuridicaId": 1,
-        "tipoDocumento": "RUT",
-        "departamentoId": 10,
-        "telefonoFijo": "3213342222"
-    },
-    "sdtIntegrantesJuridicos": {
-        "sBTIntegranteJuridico": [{
-            "nroDocumento": "27928980",
-            "vinculoId": 1,
-            "pais": "URUGUAY",
-            "tipoDocumentoId": 1,
-            "participacion": 100.0,
-            "tipoDocumento": "Cédula Identidad",
-            "personaUId": 141,
-            "paisId": 845,
-            "nombre": "PRANKA VISENTIN ERIKA VERONICA",
-            "vinculo": "Presidente"
-        }]
-    },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": 16624,
-      "Estado": "BTS_PLAT_ERROR",
-      "Servicio": "BTPersonas.ObtenerPersonaJuridica",
-      "Fecha": "2022-06-23",
-      "Requerimiento": 1,
-      "Hora": "14:57:38",
-      "Canal": "BTDIGITAL"
-   }
-}'
+        "tipoDocumentoId": 1,
+        "participacion": 100,
+        "tipoDocumento": "Cédula Identidad",
+        "personaUId": 141,
+        "paisId": 845,
+        "nombre": "PRANKA VISENTIN ERIKA VERONICA",
+        "vinculo": "Presidente"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 16624,
+    "Estado": "BTS_PLAT_ERROR",
+    "Servicio": "BTPersonas.ObtenerPersonaJuridica",
+    "Fecha": "2022-06-23",
+    "Requerimiento": 1,
+    "Hora": "14:57:38",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -272,6 +346,9 @@ tipoActividad | String | Nombre de tipo de actividad.
 tipoActividadId | Long | Identificador de tipo de actividad.
 tipoDocumento | String | Nombre del tipo de documento.
 tipoDocumentoId | Short | Identificador del tipo de documento.
+:::
+
+::: details sBTDomicilioCompleto
 
 ### sBTDomicilioCompleto
 
@@ -308,6 +385,9 @@ tipoDomicilioId | Byte | Identificador del tipo de domicilio.
 tipoVivienda | String | Descripción del tipo de vivienda.
 tipoViviendaId | String | Identificador del tipo de vivienda.
 ubicacionDesde | Date | Fecha desde que reside en ese domicilio.
+:::
+
+::: details sBTDatoLista
 
 ### sBTDatoLista
 

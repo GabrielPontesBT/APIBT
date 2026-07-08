@@ -31,7 +31,7 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-operacionUId | Long | Identificador único de operación simulada.
+OperacionUId | Long | Identificador único de operación simulada.
 
 @tab Datos de Salida
 
@@ -130,7 +130,7 @@ curl -X POST \
             <claseTasa/>
             <tipoAmortizacion>Leasing</tipoAmortizacion>
             <simboloMoneda>$</simboloMoneda>
-            <operacionUId>142</operacionUId>
+            <OperacionUId>142</OperacionUId>
             <fechaPrimerCuotaImpaga>2018-07-18</fechaPrimerCuotaImpaga>
             <valorCuota>0.00</valorCuota>
             <diasRevision>0</diasRevision>
@@ -172,6 +172,14 @@ curl -X POST \
             <tipoProducto>AM</tipoProducto>
             <tasaPunitorios>0.000000</tasaPunitorios>
             <deudaTotalAFecha>23433.85</deudaTotalAFecha>
+            <costoFinancieroTotal>0</costoFinancieroTotal>
+            <saldosPendiente>
+               <concepto></concepto>
+               <texto></texto>
+               <valor>0</valor>
+            </saldosPendiente>
+            <totalSaldosPendiente>0</totalSaldosPendiente>
+            <capitalSolicitado>0</capitalSolicitado>
          </sdtPrestamo>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -190,90 +198,102 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 0,
-		"Canal": "BTDIGITAL",
-		"Token": "75e20bd1614A8B5C60A82434"
-	},
-    "sdtPrestamo": {
-        "interesVigente": 6812.75,
-        "deudaTotalVencida": 17614.00,
-        "tipoTasaMora": "Lineal Anual",
-        "cuotasPagasConRetaso": 0,
-        "sucursal": "Sucursal Beta",
-        "diasMoraPromedio": 0,
-        "plus": 0.000000,
-        "actividad": "01112 Trigo",
-        "tasaOriginal": 10.000000,
-        "idOperacionBT": "0010000100115000000000000000002700000000000326001",
-        "diasMora": 83,
-        "cantidadCuotas": 37,
-        "estado": "Normal",
-        "capitalOriginal": 180000.00,
-        "tipoDia": "Meses Calendario",
-        "fechaPrimerPago": "2018-07-18",
-        "claseTasa": "",
-        "tipoAmortizacion": "Leasing",
-        "simboloMoneda": "$",
-        "operacionUId": 142,
-        "fechaPrimerCuotaImpaga": "2018-07-18",
-        "valorCuota": 0.00,
-        "diasRevision": 0,
-        "precioOriginal": 0.000000,
-        "tasaVigente": 10.000000,
-        "tasaMoraVigente": 0.000000,
-        "interesDevengado": 0.00,
-        "interesSuspenso": 0.00,
-        "deudaCancelacionTotal": 213849.01,
-        "plazo": 1096,
-        "tipoTasa": "Lineal Anual",
-        "interesMora": 154.45,
-        "saldoCapital": 174180.15,
-        "precioActual": 0.000000,
-        "cantidadCuotasVencidas": 3,
-        "producto": {
-            "papel": "$",
-            "moneda": "$",
-            "productoUId": 0,
-            "nombre": "LEASING, Amort. - Capital F./Empr.- T/F",
-            "otrosConceptos": ""
-        },
-        "fechaUltimoPago": "2018-05-18",
-        "interesMoraDevengado": 0.00,
-        "idOperacionFmt": "326-0",
-        "fechaProximoVencimiento": "2018-10-18",
-        "fechaValor": "2018-05-18",
-        "tasaMoraOriginal": 10.000000,
-        "tasaEfectiva": 0.000000,
-        "totalImpuestos": 0.00,
-        "coeficienteIVA": 0.000000,
-        "periodicidad": 30,
-        "resultadoInteresNormalDevengado": 0.00,
-        "fechaVencimiento": "2021-05-18",
-        "cantidadCuotasImpagas": 36,
-        "cuentaContable": "Ds.P/Arrend.Financ.No Reaj.Res.",
-        "tipoAno": "360 Días",
-        "interesPunitorio": 0.00,
-        "tipoProducto": "AM",
-        "tasaPunitorios": 0.000000,
-        "deudaTotalAFecha": 23433.85
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "75e20bd1614A8B5C60A82434"
+  },
+  "sdtPrestamo": {
+    "interesVigente": 6812.75,
+    "deudaTotalVencida": 17614,
+    "tipoTasaMora": "Lineal Anual",
+    "cuotasPagasConRetaso": 0,
+    "sucursal": "Sucursal Beta",
+    "diasMoraPromedio": 0,
+    "plus": 0,
+    "actividad": "01112 Trigo",
+    "tasaOriginal": 10,
+    "idOperacionBT": "0010000100115000000000000000002700000000000326001",
+    "diasMora": 83,
+    "cantidadCuotas": 37,
+    "estado": "Normal",
+    "capitalOriginal": 180000,
+    "tipoDia": "Meses Calendario",
+    "fechaPrimerPago": "2018-07-18",
+    "claseTasa": "",
+    "tipoAmortizacion": "Leasing",
+    "simboloMoneda": "$",
+    "fechaPrimerCuotaImpaga": "2018-07-18",
+    "valorCuota": 0,
+    "diasRevision": 0,
+    "precioOriginal": 0,
+    "tasaVigente": 10,
+    "tasaMoraVigente": 0,
+    "interesDevengado": 0,
+    "interesSuspenso": 0,
+    "deudaCancelacionTotal": 213849.01,
+    "plazo": 1096,
+    "tipoTasa": "Lineal Anual",
+    "interesMora": 154.45,
+    "saldoCapital": 174180.15,
+    "precioActual": 0,
+    "cantidadCuotasVencidas": 3,
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": 0,
+      "nombre": "LEASING, Amort. - Capital F./Empr.- T/F",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
     },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
+    "fechaUltimoPago": "2018-05-18",
+    "interesMoraDevengado": 0,
+    "idOperacionFmt": "326-0",
+    "fechaProximoVencimiento": "2018-10-18",
+    "fechaValor": "2018-05-18",
+    "tasaMoraOriginal": 10,
+    "tasaEfectiva": 0,
+    "totalImpuestos": 0,
+    "coeficienteIVA": 0,
+    "periodicidad": 30,
+    "resultadoInteresNormalDevengado": 0,
+    "fechaVencimiento": "2021-05-18",
+    "cantidadCuotasImpagas": 36,
+    "cuentaContable": "Ds.P/Arrend.Financ.No Reaj.Res.",
+    "tipoAno": "360 Días",
+    "interesPunitorio": 0,
+    "tipoProducto": "AM",
+    "tasaPunitorios": 0,
+    "deudaTotalAFecha": 23433.85,
+    "costoFinancieroTotal": 0,
+    "OperacionUId": 142,
+    "saldosPendiente": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     },
-    "Btoutreq": {
-        "Numero": 950,
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerDetalle",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 0,
-        "Hora": "18:33:21",
-        "Canal": "BTDIGITAL"
-    }
-}'
+    "totalSaldosPendiente": 0,
+    "capitalSolicitado": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 950,
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerDetalle",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 0,
+    "Hora": "18:33:21",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -321,7 +341,7 @@ interesMoraDevengado | Double | Intereses de mora devengados.
 interesPunitorio | Double | Intereses punitorios. 
 interesSuspenso | Double | Intereses en suspenso. 
 interesVigente | Double | Monto de interés vigente. 
-operacionUId | Long | Identificador único de la operación simulada. 
+OperacionUId | Long | Identificador único de la operación simulada. 
 periodicidad | Int | Período entre cuotas. 
 plazo | Int | Plazo del préstamo. 
 plus | Double | Tasa plus. 
@@ -349,6 +369,9 @@ totalImpuestos | Double | Total de impuestos.
 totalSaldosPendiente | Double | Total saldos pendiente. 
 valorCuota | Double | Valor de la cuota. 
 capitalSolicitado | Double | Capital solicitado.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -361,7 +384,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -374,4 +400,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

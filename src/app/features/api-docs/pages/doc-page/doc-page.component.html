@@ -21,13 +21,24 @@ doc-page.component.html
         [pubName]="page.pubName"
         [modulo]="page.modulo"
         [programa]="page.programa"
-        [scope]="page.scope">
+        [scope]="page.scope"
+        [method]="page.method"
+        [endpoint]="page.endpoint">
       </app-info-card>
       @if (page.hasBackendConfig) {
         <app-backend-config
           class="fade-only"
           [text]="page.backendText"
           [backendData]="page.backendData || []">
+        </app-backend-config>
+      }
+      @if (page.headersData?.length) {
+        <app-backend-config
+          class="fade-only"
+          [title]="'Headers'"
+          [note]="page.headersNote ?? ''"
+          [columns]="['Nombre', 'Descripción']"
+          [backendData]="[{ titulo: '', datos: page.headersData! }]">
         </app-backend-config>
       }
       @if (hasTabs) {
@@ -37,6 +48,9 @@ doc-page.component.html
           [inputData]="page.inputData"
           [bodyCols]="['Nombre', 'Tipo', 'Comentarios']"
           [bodyData]="page.bodyData ?? []"
+          [inputNote]="page.inputNote ?? ''"
+          [bodyNote]="page.bodyNote ?? ''"
+          [outputNote]="page.outputNote ?? ''"
           [outputCols]="['Nombre', 'Tipo', 'Comentarios']"
           [outputData]="page.outputData"
           [errorCols]="['Código', 'Descripción']"

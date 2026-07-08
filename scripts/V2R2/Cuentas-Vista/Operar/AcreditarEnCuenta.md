@@ -18,7 +18,7 @@ backtotop: false
 
 **Nombre publicación:** BTCuentasVista.AcreditarEnCuenta 
 
-**Programa:** RBTPG569
+**Programa:** RBTPG582
 
 **Global/País:** Global
 :::
@@ -67,8 +67,6 @@ Código | Descripción
 30002 | Debe ingresar al menos un importe.
 30004 | No se recuperó la operación origen para el Identificador: X.
 30004 | No se recuperó la cuenta cliente origen para el Identificador: X.
-
-
 ::: 
 <!-- CIERRA TABLA DE DATOS -->
 
@@ -124,36 +122,6 @@ curl -X POST \
 		"Token": "fa2c02c95a4A8B5C60A82434" 
     }, 
 	"sdtDatosAcreditar": { 
-		"operacionUId1": "10140", 
-		"operacionUId2": "10141", 
-		"operacionUId3": "", 
-		"operacionUId4": "", 
-		"operacionUId5": "", 
-		"importe1": "1000", 
-		"importe2": "5220", 
-		"importe3": "", 
-		"importe4": "", 
-		"importe5": "", 
-		"importe6": "", 
-		"importe7": "", 
-		"importe8": "", 
-		"concepto": "" 
-	}    
-}' 
-curl -X POST \ 
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?AcreditarEnCuenta=' \ 
-  -H 'cache-control: no-cache' \ 
-  -H 'content-type: application/json' \ 
-  -H 'postman-token: fde8ae30-8752-c0fe-cf77-f8761a5ddcff' \ 
-  -d '{
-"Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": "", 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-	"sdtDatosAcreditar": { 
 		"clienteUId": "140",
 		"operacionUId": "10140", 
 		"importe1": "1000", 
@@ -166,8 +134,6 @@ curl -X POST \
 		"concepto4": ""
 	}    
 }' 
-
-
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -255,6 +221,3 @@ importe4	|Double	|Importe 4 del movimiento.
 operacionUId |	Long|	Identificador único de operación.
 :::
 <!-- CIERRA SDT -->
-
-
-

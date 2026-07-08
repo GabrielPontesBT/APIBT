@@ -143,61 +143,88 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?CrearParaPersonaJuridica' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-   "Btinreq": {
-   "Canal": "BTDIGITAL",
-   "Requerimiento": "1",
-   "Usuario": "INSTALADOR",
-   "Token": "247d9cc0a3CD285A89A23FBE",
-   "Device": "MC"
-   },
-   "sdtPersonaJuridicaAlta": {
-      "nroDocumento": "219999990016",
-      "numeroPuerta": "1",
-      "nombreReducido": "prueba",
-      "paisDomicilio": null,
-      "razonSocial": "EMPRESA",
-      "departamento": null,
-      "nroRegistro": null,
-      "naturalezaJuridica": "1",
-      "barrio": "1",
-      "apartamento": null,
-      "tipoDocumentoId": "2",
-      "tipoActividadId": "1",
-      "fechaConstitucion": "2020-01-01",
-      "paisId": "845",
-      "actividad": null,
-      "paisDomicilioId": "845",
-      "pais": null,
-      "codigoPostal": "91000",
-      "tipoActividad": null,
-      "barrioId": "1",
-      "localidad": null,
-      "localidadId": "1008",
-      "actividadId": "1111",
-      "calle": "1",
-      "tipoDocumento": "2",
-      "naturalezaJuridicaId": "1",
-      "departamentoId": "2",
-      "correoElectronico": "AV@GMAIL.COM",
-      "telefonoFijo": "3213342222",
-      "piso": "123"
-      },
-   "sdtIntegrantesJuridicosAlta": {
-      "sBTIntegranteJuridicoAlta": [
-         {
-            "vinculoId": "1",
-            "personaUId": "141",
-            "participacion": ""
-            }
-      ]
-   }
-}'
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": "1",
+    "Usuario": "INSTALADOR",
+    "Token": "247d9cc0a3CD285A89A23FBE",
+    "Device": "MC"
+  },
+  "sdtPersonaJuridica": {
+    "nroDocumento": "219999990016",
+    "numeroPuerta": "1",
+    "nombreReducido": "prueba",
+    "paisDomicilio": null,
+    "razonSocial": "EMPRESA",
+    "departamento": null,
+    "nroRegistro": null,
+    "naturalezaJuridica": "1",
+    "barrio": "1",
+    "apartamento": null,
+    "tipoDocumentoId": "2",
+    "tipoActividadId": "1",
+    "fechaConstitucion": "2020-01-01",
+    "paisId": "845",
+    "actividad": null,
+    "paisDomicilioId": "845",
+    "pais": null,
+    "codigoPostal": "91000",
+    "tipoActividad": null,
+    "barrioId": "1",
+    "localidad": null,
+    "localidadId": "1008",
+    "actividadId": "1111",
+    "calle": "1",
+    "tipoDocumento": "2",
+    "naturalezaJuridicaId": "1",
+    "departamentoId": "2",
+    "correoElectronico": "AV@GMAIL.COM",
+    "telefonoFijo": "3213342222",
+    "piso": "123"
+  },
+  "sdtIntegrantesJuridicosAlta": {
+    "sBTIntegranteJuridicoAlta": [
+      {
+        "vinculoId": "1",
+        "personaUId": "141",
+        "participacion": ""
+      }
+    ]
+  },
+  "sdtPersonaJuridica": {
+    "actividad": "",
+    "actividadId": 0,
+    "apartamento": "",
+    "barrio": "",
+    "barrioId": 0,
+    "calle": "",
+    "codigoPostal": "",
+    "correoElectronico": "",
+    "departamento": "",
+    "departamentoId": 0,
+    "fechaConstitucion": "",
+    "localidad": "",
+    "localidadId": 0,
+    "naturalezaJuridica": "",
+    "naturalezaJuridicaId": 0,
+    "nombreReducido": "",
+    "nroDocumento": "",
+    "nroRegistro": 0,
+    "numeroPuerta": "",
+    "pais": "",
+    "paisDomicilio": "",
+    "paisDomicilioId": 0,
+    "paisId": 0,
+    "piso": "",
+    "razonSocial": "",
+    "telefonoFijo": "",
+    "tipoActividad": "",
+    "tipoActividadId": 0,
+    "tipoDocumento": "",
+    "tipoDocumentoId": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

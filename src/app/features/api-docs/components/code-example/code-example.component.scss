@@ -242,6 +242,17 @@ code[class*="language-"] *::selection {
 }
 
 
+// PLACEHOLDERS {{variable}}
+:host ::ng-deep .placeholder {
+  color: #c678dd !important;
+  font-style: italic;
+}
+
+// VALORES DE QUERY PARAMS (?key=VALUE)
+:host ::ng-deep .param-value {
+  color: #56b6c2 !important;
+}
+
 // NÚMEROS VERDES
 :host ::ng-deep .token.number {
   color: #025c52 !important;

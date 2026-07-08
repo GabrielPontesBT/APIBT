@@ -267,7 +267,10 @@ cofresSeguridad | [sCTResumenProducto](#sctresumenproducto) | Cofres de segurida
 cuentasCorrientes | [sCTResumenProducto](#sctresumenproducto) | Cuentas corrientes. 
 plazosFijos | [sCTResumenProducto](#sctresumenproducto) | Plazos fijos. 
 prestamos | [sCTResumenProducto](#sctresumenproducto) | Préstamos. 
-tarjetasDebito | [sCTResumenProducto](#sctresumenproducto) | Tarjetas de débito. 
+tarjetasDebito | [sCTResumenProducto](#sctresumenproducto) | Tarjetas de débito.
+:::
+
+::: details sCTResumenProducto
 
 ### sCTResumenProducto
 
@@ -279,6 +282,8 @@ Nombre | Tipo | Comentarios
 cantidad | Int |  Cantidad de operaciones. 
 descripcion | String | Descripción. 
 saldoMN | Double |  Saldo disponible en moneda nacional. 
-saldoUSD | Double |  Saldo disponible en dólares. 
+saldoUSD | Double |  Saldo disponible en dólares.
 :::
+
 <!-- CIERRA SDT -->
+

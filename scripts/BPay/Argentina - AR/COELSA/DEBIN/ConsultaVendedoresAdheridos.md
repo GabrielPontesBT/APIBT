@@ -31,14 +31,14 @@ backtotop: false
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-listaVendedorAdhReq | sBTVendedoresAdheridosReq | Datos requeridos de un vendedor adherido.
+listaVendedorAdhReq | [sBTVendedoresAdheridosReq](#sbtvendedoresadheridosreq) | Datos requeridos de un vendedor adherido.
 
 @tab Datos de Salida
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-listaVendedorAdhRes | sBTVendedoresAdheridosRes | Datos listados de un vendedor adherido.
-CollectionVendedores | sBTVendedorAdhItem | Colección de vendedores adheridos.
+listaVendedorAdhRes | [sBTVendedoresAdheridosRes](#sbtvendedoresadheridosres) | Datos listados de un vendedor adherido.
+CollectionVendedores | [sBTVendedorAdhItem](#sbtvendedoradhitem) | Colección de vendedores adheridos.
 
 @tab Errores
 
@@ -98,11 +98,11 @@ No aplica
             <Canal>BTDIGITAL</Canal>
             <Token>1300e34215CD285A89A23FBE</Token>
          </Btinreq>
-         <ListaVendedorAdhRes>
+         <listaVendedorAdhRes>
             <listadoPagTotales>0</listadoPagTotales>
             <DescRespuesta>VENDEDORES ENCONTRADOS</DescRespuesta>
             <CodRespuesta>00</CodRespuesta>
-         </ListaVendedorAdhRes>
+         </listaVendedorAdhRes>
          <CollectionVendedores>
             <sBTVendedorAdhItem>
                <VendNomFantasia/>
@@ -130,3 +130,50 @@ No aplica
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
+
+## **Tipos de Dato Estructurado**
+
+<!-- ABRE SDT -->
+::: details sBTVendedoresAdheridosReq
+
+### sBTVendedoresAdheridosReq
+
+::: center
+Los campos del tipo de dato estructurado sBTVendedoresAdheridosReq son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+listaTamano | Int | Cantidad de registros por página.
+listaPagina | Int | Página de registros a obtener.
+VendedorCuit | String | CUIT del vendedor.
+VendedorRubro | String | Rubro del vendedor.
+:::
+
+::: details sBTVendedoresAdheridosRes
+
+### sBTVendedoresAdheridosRes
+
+::: center
+Los campos del tipo de dato estructurado sBTVendedoresAdheridosRes son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+listadoPagTotales | Int | Cantidad total de páginas del listado.
+DescRespuesta | String | Descripción de la respuesta.
+CodRespuesta | String | Código de la respuesta.
+:::
+
+::: details sBTVendedorAdhItem
+
+### sBTVendedorAdhItem
+
+::: center
+Los campos del tipo de dato estructurado sBTVendedorAdhItem son los siguientes:
+
+Nombre | Tipo | Comentarios
+:--------- | :--------- | :---------
+VendNomFantasia | String | Nombre de fantasía del vendedor.
+VendRubro | String | Rubro del vendedor.
+VendCuit | String | CUIT del vendedor.
+:::
+<!-- CIERRA SDT -->

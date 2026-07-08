@@ -5,6 +5,7 @@
   "pubName": "BTSPIDevoluciones.SolicitudRetornoFondos",
   "programa": "RBTPPY011",
   "scope": "Paraguay",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -40,6 +41,9 @@
       "Comentarios": "Código de devolución."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "identificador",
@@ -107,11 +111,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSPIDevoluciones.SolicitudRetornoFondos>\r\n         <bts:Btinreq>\r\n            <bts:Device>ABC</bts:Device>\r\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTINTERNO</bts:Canal>\r\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:canal>WEB</bts:canal>\r\n         <bts:referencia>BGNBPYPX27052537200024217053</bts:referencia>\r\n         <bts:importe>1300</bts:importe>\r\n         <bts:razonCodigo>AC03</bts:razonCodigo>\r\n      </bts:BTSPIDevoluciones.SolicitudRetornoFondos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTSPIDevoluciones.SolicitudRetornoFondos>\r\n         <bts:Btinreq>\r\n            <bts:Device>ABC</bts:Device>\r\n            <bts:Usuario>BANTOTAL1</bts:Usuario>\r\n            <bts:Requerimiento>1</bts:Requerimiento>\r\n            <bts:Canal>BTINTERNO</bts:Canal>\r\n            <bts:Token>072C85F2036D7EBE3EC09EB5</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:canal>WEB</bts:canal>\r\n         <bts:referencia>BGNBPYPX27052537200024217053</bts:referencia>\r\n         <bts:importe>1300</bts:importe>\r\n         <bts:razonCodigo>AC03</bts:razonCodigo>\r\n      </bts:BTSPIDevoluciones.SolicitudRetornoFondos>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTSPIDevoluciones.SolicitudRetornoFondosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>ABC</Device>\r\n            <Usuario>BANTOTAL1</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Token>072C85F2036D7EBE3EC09EB5</Token>\r\n         </Btinreq>\r\n         <identificador>24191140</identificador>\r\n         <referenciaGenerada>BGNBPYPX30052560000024217118</referenciaGenerada>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>433583056</Numero>\r\n            <Servicio>BTSPIDevoluciones.SolicitudRetornoFondos</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2025-05-30</Fecha>\r\n            <Hora>16:40:28</Hora>\r\n            <Canal>BTINTERNO</Canal>\r\n         </Btoutreq>\r\n      </BTSPIDevoluciones.SolicitudRetornoFondosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTSPIDevoluciones.SolicitudRetornoFondosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>ABC</Device>\r\n            <Usuario>BANTOTAL1</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTINTERNO</Canal>\r\n            <Token>072C85F2036D7EBE3EC09EB5</Token>\r\n         </Btinreq>\r\n         <identificador>24191140</identificador>\r\n         <referenciaGenerada>BGNBPYPX30052560000024217118</referenciaGenerada>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>433583056</Numero>\r\n            <Servicio>BTSPIDevoluciones.SolicitudRetornoFondos</Servicio>\r\n            <Estado>OK</Estado>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2025-05-30</Fecha>\r\n            <Hora>16:40:28</Hora>\r\n            <Canal>BTINTERNO</Canal>\r\n         </Btoutreq>\r\n      </BTSPIDevoluciones.SolicitudRetornoFondosResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [],

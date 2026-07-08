@@ -146,22 +146,27 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtCuentasDeCobro": {
-      "sBTCuentaDeCobro": {
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCuentasDeCobro": {
+    "sBTCuentaDeCobro": {
       "sucursal": "Sucursal #3",
       "producto": {
-         "moneda": "$",
-         "papel": "Bill",
-         "productoUId": 6,
-         "nombre": "CAJA DE AHORROS, 656"
+        "moneda": "$",
+        "papel": "Bill",
+        "productoUId": 6,
+        "nombre": "CAJA DE AHORROS, 656",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
       },
       "idOperacionBT": 1.003021008e+38,
       "operacionUId": 108,
@@ -169,21 +174,21 @@ curl -X POST \
       "idOperacionFmt": "000060929_001",
       "sucursalId": 3,
       "tipoProducto": "CA"
-      }
-   },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "111",
-        "Estado": "OK",
-        "Servicio": "BTPrestamos.ObtenerCuentasDeCobro",
-        "Requerimiento": 1,
-        "Fecha": "2018-05-04",
-        "Hora": "18:27:34",
-        "Canal": "BTDIGITAL"
     }
-}'
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "111",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerCuentasDeCobro",
+    "Requerimiento": 1,
+    "Fecha": "2018-05-04",
+    "Hora": "18:27:34",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -208,6 +213,9 @@ subCuenta | String | Sub cuenta.
 sucursal | String | Nombre de la sucursal.
 sucursalId | Short | Identificador de sucursal.
 tipoProducto | String | Tipo de producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -220,7 +228,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -233,4 +244,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

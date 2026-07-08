@@ -125,7 +125,6 @@ CollectionDebines | [bBTListaDebinItem](#bbtlistadebinitem) | Colección de Debi
                <CompradorAlias>RAMONYUNESBCSA1</CompradorAlias>
                <VendedorTitular>YUNES RAMON ALBERTO</VendedorTitular>
             </debin>
-            ...
          </CollectionDebines>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -160,7 +159,7 @@ listadoTamano | Short |  Tamaño listado.
 listadoPagina | Short |  Página. 
 vendedorCuit | String |  Clave única de identificación tributaria del vendedor. 
 vendedorTerm | String |  Número de terminal del vendedor. 
-vendedorLote | Short |  vendedor Lote. 
+vendedorLote | Short |  Vendedor Lote. 
 vendedorBco | String |  Codigo del banco. 
 vendedorBco | String |  Clave Bancaria Uniforme vendedor. 
 compradorCuit | String |  Clave única de identificación tributaria del comprador. 
@@ -181,7 +180,7 @@ Los campos del tipo de dato estructurado sBTListaDebinRes son los siguientes:
 
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
-listadoPagTotales | Short | listado páginas totales. 
+listadoPagTotales | Short | Listado páginas totales. 
 CodRespuesta | String |  Código respuesta. 
 DescRespuesta | String |  Descripción de respuesta. 
 :::

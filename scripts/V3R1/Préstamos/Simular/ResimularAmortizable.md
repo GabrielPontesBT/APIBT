@@ -82,7 +82,7 @@ Código | Descripción
                </bts:sBTConcepto>
             </bts:otrosConceptos>
             <bts:diaPago></bts:diaPago>
-            <bts:clienteUid>101</bts:clienteUid>
+            <bts:clienteUId>101</bts:clienteUId>
          </bts:sdtSimulacionUpdate>
       </bts:BTPrestamos.ResimularAmortizable>
    </soapenv:Body>
@@ -91,33 +91,28 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ResimularAmortizable=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-    "Btinreq": {
-          "Requerimiento": 1,
-          "Device": "GZ",
-          "Canal": "BTDIGITAL",
-          "Usuario": "MINSTALADOR",
-          "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-      "operacionUId": 415,
-      "sdtSimulacionUpdate": {
-         "fechaPrimerPago": "2023-06-21",
-         "otrosConceptos": {
-         "sBTConcepto": {
-            "texto": "",
-            "valor": "",
-            "concepto": ""
-         }
-         },
-         "diaPago": "",
-         "clienteUid": 101
+{
+  "Btinreq": {
+    "Requerimiento": 1,
+    "Device": "GZ",
+    "Canal": "BTDIGITAL",
+    "Usuario": "MINSTALADOR",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "operacionUId": 415,
+  "sdtSimulacionUpdate": {
+    "fechaPrimerPago": "2023-06-21",
+    "otrosConceptos": {
+      "sBTConcepto": {
+        "texto": "",
+        "valor": "",
+        "concepto": ""
       }
-  }'
+    },
+    "diaPago": "",
+    "clienteUId": 101
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -1055,957 +1050,28 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-      "Device": "AC",
-      "Usuario": "MINSTALADOR",
-      "Requerimiento": 1,
-      "Canal": "BTDIGITAL",
-      "Token": "6fc29caa9d4A8B5C60A82434"
-    },
-    "sdtSimulacion": {
-          "cft": 218.87,
-          "plus": 0,
-          "nomSucursal": "Casa Matriz",
-          "otrosConceptos": "",
-          "tasaNominalAnual": 5,
-          "precio": 0,
-          "tipoAmortizacionDsc": "Francés con Seg.e Impu.",
-          "cronograma": {
-            "sBTCuotaSimulacion": [
-              {
-                "otrosConceptos": 0,
-                "capital": 68207.76,
-                "impuestos": 0,
-                "detalleComisiones": {
-                  "sBTComisionPrestamo": {
-                    "porcentaje": 0,
-                    "descripcion": "F.H.A.",
-                    "importe": 508.57,
-                    "modificable": "",
-                    "codigo": 200
-                  }
-                },
-                "nroCuota": 1,
-                "intereses": 0,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-06-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": -25300,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 450,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 0,
-                "detalleConceptos": "",
-                "seguros": -24850,
-                "comisiones": 508.57
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 38517.74,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 2,
-                "intereses": 3829.28,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-07-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 419.31,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1519.31,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 38693.37,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 3,
-                "intereses": 3670.99,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-08-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 401.97,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1501.97,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 38869.79,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 4,
-                "intereses": 3511.98,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-09-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 384.56,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1484.56,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39047.02,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 5,
-                "intereses": 3352.24,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-10-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 367.07,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1467.07,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39225.06,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 6,
-                "intereses": 3191.77,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-11-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 349.5,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1449.5,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39403.91,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 7,
-                "intereses": 3030.57,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2023-12-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 331.85,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1431.85,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39583.57,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 8,
-                "intereses": 2868.64,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-01-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 314.12,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1414.12,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39764.06,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 9,
-                "intereses": 2705.97,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-02-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 296.3,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1396.3,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 39945.37,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 10,
-                "intereses": 2542.55,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-03-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 278.41,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1378.41,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 40127.51,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 11,
-                "intereses": 2378.39,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-04-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 260.43,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1360.43,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 40310.46,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 12,
-                "intereses": 2213.49,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-05-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 242.38,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1342.38,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 40494.26,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 13,
-                "intereses": 2047.83,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-06-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 224.24,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1324.24,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 40678.91,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 14,
-                "intereses": 1881.41,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-07-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 206.01,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1306.01,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 40864.38,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 15,
-                "intereses": 1714.24,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-08-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 187.71,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1287.71,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41050.71,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 16,
-                "intereses": 1546.3,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-09-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 169.32,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1269.32,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41237.88,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 17,
-                "intereses": 1377.6,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-10-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 150.85,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1250.85,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41425.91,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 18,
-                "intereses": 1208.13,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-11-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 132.29,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1232.29,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41614.79,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 19,
-                "intereses": 1037.89,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2024-12-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 113.65,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1213.65,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41804.54,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 20,
-                "intereses": 866.87,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-01-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 94.92,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1194.92,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 41995.15,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 21,
-                "intereses": 695.07,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-02-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 76.11,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1176.11,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 42186.64,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 22,
-                "intereses": 522.48,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-03-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 57.21,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1157.21,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 42378.99,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 23,
-                "intereses": 349.11,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-04-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 38.23,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1138.23,
-                "comisiones": 0
-              },
-              {
-                "otrosConceptos": 0,
-                "capital": 42572.22,
-                "impuestos": 0,
-                "detalleComisiones": "",
-                "nroCuota": 24,
-                "intereses": 174.95,
-                "subsidios": 0,
-                "concepto": "Capital/Interés",
-                "tipoCuota": "M",
-                "redondeo": 0,
-                "cuota": 43866.33,
-                "fechaPago": "2025-05-21",
-                "detalleSeguros": {
-                  "sBTSeguroPrestamo": [
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR - Vida - Variante 1",
-                      "importe": 1100,
-                      "tipo": "VIDA",
-                      "codigo": 100
-                    },
-                    {
-                      "porcentaje": 0,
-                      "descripcion": "SANCOR- Desempleo %saldos",
-                      "importe": 19.16,
-                      "tipo": "DESEMPLEO",
-                      "codigo": 200
-                    }
-                  ]
-                },
-                "plazo": 30,
-                "detalleConceptos": "",
-                "seguros": 1119.16,
-                "comisiones": 0
-              }
-            ]
-          },
-          "comisionesDesembolso": 10000,
-          "segurosDesembolso": 0,
-          "cantidadCuotas": 24,
-          "impuestosDesembolso": 0,
-          "fechaPrimerPago": "2023-06-21",
-          "operacionUId": 415,
-          "valorCuota": 43866.33,
-          "diasRevision": 0,
-          "totalSeguros": 5565.6,
-          "plazo": 690,
-          "producto": {
-            "moneda": "$",
-            "papel": "$",
-            "productoUId": 198,
-            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
-          },
-          "capital": 1000000,
-          "tipoAmortizacionCod": 3,
-          "totalIntereses": 46717.75,
-          "seguros": {
-            "sBTSeguroPrestamo": {
-              "porcentaje": 0,
-              "descripcion": "SANCOR- Desempleo %saldos",
-              "importe": 5565.6,
-              "tipo": "DESEMPLEO",
-              "codigo": 200
-            }
-          },
-          "fechaValor": "2025-05-30",
-          "tasaEfectiva": 0,
-          "coeficienteIVA": 0,
-          "totalImpuestos": 0,
-          "periodicidad": 30,
-          "tasaEfectivaAnual": 5.116339,
-          "totalPrestamo": 1062791.92,
-          "fechaVencimiento": "2025-05-21",
-          "tasa": 5,
-          "redondeo": 0,
-          "montoDesembolso": 990000,
-          "comisiones": {
-            "sBTComisionPrestamo": [
-              {
-                "porcentaje": 0,
-                "descripcion": "Hipotecario - Importe Fijo",
-                "importe": 0,
-                "modificable": "",
-                "codigo": 141
-              },
-              {
-                "porcentaje": 0,
-                "descripcion": "F.H.A.",
-                "importe": 10000,
-                "modificable": "",
-                "codigo": 200
-              }
-            ]
-          },
-          "totalComisiones": 10508.57,
-          "comisionesCuota": {
+{
+  "Btinreq": {
+    "Device": "AC",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6fc29caa9d4A8B5C60A82434"
+  },
+  "sdtSimulacion": {
+    "cft": 218.87,
+    "plus": 0,
+    "nomSucursal": "Casa Matriz",
+    "tasaNominalAnual": 5,
+    "precio": 0,
+    "tipoAmortizacionDsc": "Francés con Seg.e Impu.",
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "otrosConceptos": 0,
+          "capital": 68207.76,
+          "impuestos": 0,
+          "detalleComisiones": {
             "sBTComisionPrestamo": {
               "porcentaje": 0,
               "descripcion": "F.H.A.",
@@ -2013,19 +1079,983 @@ curl -X POST \
               "modificable": "",
               "codigo": 200
             }
-          }
+          },
+          "nroCuota": 1,
+          "intereses": 0,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-06-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": -25300,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 450,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 0,
+          "detalleConceptos": "",
+          "seguros": -24850,
+          "comisiones": 508.57,
+          "interes": 0
         },
-    "Erroresnegocio":,
-    "Btoutreq": {
-      "Numero": "10403",
-      "Estado": "OK",
-      "Servicio": "BTPrestamos.ResimularAmortizable",
-      "Fecha": "2021-01-29",
-      "Requerimiento": 1,
-      "Hora": "13:10:17",
-      "Canal": "BTDIGITAL"
+        {
+          "otrosConceptos": 0,
+          "capital": 38517.74,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 2,
+          "intereses": 3829.28,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-07-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 419.31,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1519.31,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 38693.37,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 3,
+          "intereses": 3670.99,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-08-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 401.97,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1501.97,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 38869.79,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 4,
+          "intereses": 3511.98,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-09-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 384.56,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1484.56,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39047.02,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 5,
+          "intereses": 3352.24,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-10-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 367.07,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1467.07,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39225.06,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 6,
+          "intereses": 3191.77,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-11-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 349.5,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1449.5,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39403.91,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 7,
+          "intereses": 3030.57,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2023-12-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 331.85,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1431.85,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39583.57,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 8,
+          "intereses": 2868.64,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-01-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 314.12,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1414.12,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39764.06,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 9,
+          "intereses": 2705.97,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-02-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 296.3,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1396.3,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 39945.37,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 10,
+          "intereses": 2542.55,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-03-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 278.41,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1378.41,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 40127.51,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 11,
+          "intereses": 2378.39,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-04-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 260.43,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1360.43,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 40310.46,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 12,
+          "intereses": 2213.49,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-05-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 242.38,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1342.38,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 40494.26,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 13,
+          "intereses": 2047.83,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-06-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 224.24,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1324.24,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 40678.91,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 14,
+          "intereses": 1881.41,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-07-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 206.01,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1306.01,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 40864.38,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 15,
+          "intereses": 1714.24,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-08-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 187.71,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1287.71,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41050.71,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 16,
+          "intereses": 1546.3,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-09-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 169.32,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1269.32,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41237.88,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 17,
+          "intereses": 1377.6,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-10-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 150.85,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1250.85,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41425.91,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 18,
+          "intereses": 1208.13,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-11-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 132.29,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1232.29,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41614.79,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 19,
+          "intereses": 1037.89,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2024-12-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 113.65,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1213.65,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41804.54,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 20,
+          "intereses": 866.87,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-01-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 94.92,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1194.92,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 41995.15,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 21,
+          "intereses": 695.07,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-02-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 76.11,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1176.11,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 42186.64,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 22,
+          "intereses": 522.48,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-03-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 57.21,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1157.21,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 42378.99,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 23,
+          "intereses": 349.11,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-04-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 38.23,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1138.23,
+          "comisiones": 0,
+          "interes": 0
+        },
+        {
+          "otrosConceptos": 0,
+          "capital": 42572.22,
+          "impuestos": 0,
+          "detalleComisiones": "",
+          "nroCuota": 24,
+          "intereses": 174.95,
+          "subsidios": 0,
+          "concepto": "Capital/Interés",
+          "tipoCuota": "M",
+          "redondeo": 0,
+          "cuota": 43866.33,
+          "fechaPago": "2025-05-21",
+          "detalleSeguros": {
+            "sBTSeguroPrestamo": [
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR - Vida - Variante 1",
+                "importe": 1100,
+                "tipo": "VIDA",
+                "codigo": 100
+              },
+              {
+                "porcentaje": 0,
+                "descripcion": "SANCOR- Desempleo %saldos",
+                "importe": 19.16,
+                "tipo": "DESEMPLEO",
+                "codigo": 200
+              }
+            ]
+          },
+          "plazo": 30,
+          "detalleConceptos": "",
+          "seguros": 1119.16,
+          "comisiones": 0,
+          "interes": 0
+        }
+      ]
+    },
+    "comisionesDesembolso": 10000,
+    "segurosDesembolso": 0,
+    "cantidadCuotas": 24,
+    "impuestosDesembolso": 0,
+    "fechaPrimerPago": "2023-06-21",
+    "operacionUId": 415,
+    "valorCuota": 43866.33,
+    "diasRevision": 0,
+    "totalSeguros": 5565.6,
+    "plazo": 690,
+    "producto": {
+      "moneda": "$",
+      "papel": "$",
+      "productoUId": 198,
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "capital": 1000000,
+    "tipoAmortizacionCod": 3,
+    "totalIntereses": 46717.75,
+    "seguros": {
+      "sBTSeguroPrestamo": {
+        "porcentaje": 0,
+        "descripcion": "SANCOR- Desempleo %saldos",
+        "importe": 5565.6,
+        "tipo": "DESEMPLEO",
+        "codigo": 200,
+        "importeFijo": 0,
+        "modificable": ""
+      }
+    },
+    "fechaValor": "2025-05-30",
+    "tasaEfectiva": 0,
+    "coeficienteIVA": 0,
+    "totalImpuestos": 0,
+    "periodicidad": 30,
+    "tasaEfectivaAnual": 5.116339,
+    "totalPrestamo": 1062791.92,
+    "fechaVencimiento": "2025-05-21",
+    "tasa": 5,
+    "redondeo": 0,
+    "montoDesembolso": 990000,
+    "comisiones": {
+      "sBTComisionPrestamo": [
+        {
+          "porcentaje": 0,
+          "descripcion": "Hipotecario - Importe Fijo",
+          "importe": 0,
+          "modificable": "",
+          "codigo": 141
+        },
+        {
+          "porcentaje": 0,
+          "descripcion": "F.H.A.",
+          "importe": 10000,
+          "modificable": "",
+          "codigo": 200
+        }
+      ]
+    },
+    "totalComisiones": 10508.57,
+    "comisionesCuota": {
+      "sBTComisionPrestamo": {
+        "porcentaje": 0,
+        "descripcion": "F.H.A.",
+        "importe": 508.57,
+        "modificable": "",
+        "codigo": 200
+      }
+    },
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
     }
-}'
+  },
+  "Erroresnegocio": {},
+  "Btoutreq": {
+    "Numero": "10403",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ResimularAmortizable",
+    "Fecha": "2021-01-29",
+    "Requerimiento": 1,
+    "Hora": "13:10:17",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -2033,7 +2063,7 @@ curl -X POST \
 ## **Tipos de Dato Estructurado**
 
 <!-- ABRE SDT -->
-::: details sBTSimulacionUpdate  
+::: details sBTSimulacionUpdate
 
 ### sBTSimulacionUpdate
 
@@ -2045,20 +2075,10 @@ Nombre | Tipo | Comentarios
 clienteUId | Long | Identificador único de cliente.
 diaPago | Byte | Días de pago.
 fechaPrimerPago | Date | Fecha del primer pago.
-otrosConceptos | [sBTConcepto](#sbtconcepto1) | Otros conceptos.
-
-### sBTConcepto1
-
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :---------
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Otros conceptos.
 :::
 
-::: details sBTSimulacionOutput  
+::: details sBTSimulacionOutput
 
 ### sBTSimulacionOutput
 
@@ -2082,8 +2102,8 @@ fechaVencimiento | Date | Fecha de vencimiento.
 impuestosDesembolso | Double | Impuestos de desembolso.
 montoDesembolso | Double | Monto de desembolso.
 nomSucursal | String | Nombre de la sucursal.
-operacionUid | Long | Identificador único de operación.
-otrosConceptos | [sBTConcepto](#sbtconcepto2) | Datos de otros conceptos.
+operacionUId | Long | Identificador único de operación.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 periodicidad | Int | Periodicidad.
 plazo | Int | Plazo.
 plus | Double | Tasa plus.
@@ -2104,9 +2124,13 @@ totalIntereses | Double | Total de intereses.
 totalPrestamo | Double | Total de préstamo.
 totalSeguros | Double | Total de seguros.
 valorCuota | Double | Valor de la cuota.
+:::
 
-### sBTConcepto2
+::: details sBTConcepto
 
+### sBTConcepto
+
+::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
 Nombre | Tipo | Comentarios 
@@ -2114,6 +2138,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaSimulacion
 
 ### sBTCuotaSimulacion
 
@@ -2130,6 +2157,9 @@ interes | Double | Monto de intereses en la cuota.
 otrosConceptos | Double | Importe correspondiente a otros conceptos.
 seguros | Double | Monto de seguros en la cuota.
 tipoCuota | String | Tipo de la cuota (Capital/Interés).
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -2140,20 +2170,12 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
-otrosConceptos | [sBTConcepto](#sbtconcepto3) | Datos de otros conceptos.
+otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
 productoUId | Long | Identificador único de producto. 
+:::
 
-### sBTConcepto3
-
-::: center 
-Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :---------
-concepto | String | Concepto.
-texto | String | Texto.
-valor | Double | Importe.
+::: details sBTSeguroPrestamo
 
 ### sBTSeguroPrestamo
 
@@ -2167,6 +2189,9 @@ importeFijo | Decimal | Importe fijo del seguro.
 modificable | String | Indica si es modificable.
 porcentaje | Decimal | Porcentaje del seguro.
 tipo | String | Tipo del seguro.
+:::
+
+::: details sBTComisionPrestamo
 
 ### sBTComisionPrestamo
 
@@ -2179,4 +2204,6 @@ descripcion | String | Descripción de la comisión.
 importe | Double | Importe de la comisión.
 porcentaje | Double | Porcentaje de comisión.
 :::
+
 <!-- CIERRA SDT -->
+

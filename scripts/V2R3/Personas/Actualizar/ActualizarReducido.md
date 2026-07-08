@@ -153,63 +153,66 @@ Código | Descripción
             <bts:numeroPuerta>7216</bts:numeroPuerta>
             <bts:calle>BAZZURRO</bts:calle>
             <bts:barrioId></bts:barrioId>
+            <clasificacionInternaId>0</clasificacionInternaId>
+            <ejecutivoId>0</ejecutivoId>
+            <piso></piso>
+            <sectorId>0</sectorId>
          </bts:sdtPersona>
       </bts:BTPersonas.ActualizarReducido>
    </soapenv:Body>
 </soapenv:Envelope>
-
 ```
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarReducido' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId":"2",
-   "sdtPersona": {
-      "paisDocumentoId": 845,
-      "tipoDocumentoId": 1,
-      "nroDocumento": "41875255",
-      "ingresos": "1500.00",
-      "nacionalidad": "URUGUAY",
-      "sexo": "M",
-      "segundoNombre": "",
-      "telefonoCelular": "",
-      "departamentoId": 10,
-      "ocupacionId": "1",
-      "actividadLaboralId": 1112,
-      "nacionalidadId": 845,
-      "localidadId": "10",
-      "paisDomicilioId": 845,
-      "telefonoFijo": "26004288",
-      "codigoPostal": "",
-      "primerNombre": "aALEJANDRO",
-      "fechaNacimiento": "1976-02-26",
-      "primerApellido": "vVAZQUEZ",
-      "estadoCivilId": "1",
-      "segundoApellido": "SZENTANDRASI",
-      "paisDocumento": "URUGUAY",
-      "fechaInicioActividad": "1980-01-01",
-      "ocupacion": "Empleado",
-      "paisDomicilio": "URUGUAY",
-      "fechaVencimiento": "2025-01-01",
-      "correoElectronico": "AV@GMAIL.COM",
-      "numeroPuerta": "7216",
-      "calle": "BAZZURRO",
-      "apartamento": "13B",
-      "barrioId": 0,
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": "2",
+  "sdtPersona": {
+    "paisDocumentoId": 845,
+    "tipoDocumentoId": 1,
+    "nroDocumento": "41875255",
+    "ingresos": "1500.00",
+    "nacionalidad": "URUGUAY",
+    "sexo": "M",
+    "segundoNombre": "",
+    "telefonoCelular": "",
+    "departamentoId": 10,
+    "ocupacionId": "1",
+    "actividadLaboralId": 1112,
+    "nacionalidadId": 845,
+    "localidadId": "10",
+    "paisDomicilioId": 845,
+    "telefonoFijo": "26004288",
+    "codigoPostal": "",
+    "primerNombre": "aALEJANDRO",
+    "fechaNacimiento": "1976-02-26",
+    "primerApellido": "vVAZQUEZ",
+    "estadoCivilId": "1",
+    "segundoApellido": "SZENTANDRASI",
+    "paisDocumento": "URUGUAY",
+    "fechaInicioActividad": "1980-01-01",
+    "ocupacion": "Empleado",
+    "paisDomicilio": "URUGUAY",
+    "fechaVencimiento": "2025-01-01",
+    "correoElectronico": "AV@GMAIL.COM",
+    "numeroPuerta": "7216",
+    "calle": "BAZZURRO",
+    "apartamento": "13B",
+    "barrioId": 0,
+    "clasificacionInternaId": 0,
+    "ejecutivoId": 0,
+    "estadoCivil": "",
+    "piso": "",
+    "sectorId": 0
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

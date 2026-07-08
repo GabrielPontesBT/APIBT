@@ -41,7 +41,7 @@ codigoDomicilio | Byte | Código de domicilio a donde se asociará la tarjeta.
 
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
-tarjetaUId | Long | Identificador único de tarjeta.
+tarjetaUID | Long | Identificador único de tarjeta.
 tarjetaNumero | String | Número de tarjeta.
 fechaVencimiento | Date | Fecha de vencimiento.
 

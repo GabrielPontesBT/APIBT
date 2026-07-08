@@ -362,7 +362,7 @@ CustomerAcquisitionSource | Int $<(Length: 5)>$ | Fuente de adquisición del cli
 CustomerAcquisitionSourceDescription | String $<(Length: 30)>$ | Descripción de la fuente de adquisición del cliente.
 CustomFields | [SdtsBTPAWCustomField](#sdtsbtpawcustomfield) | Campos personalizados.
 DateOfDeath | Date $<(Length: 8)>$ | Fecha de fallecimiento.
-Deceased | Boolean $<(Length: 1)>$ | Fallecido.
+Deceased | Boolean | Fallecido.
 DependentsNumber | Short $<(Length: 3)>$ | Número de dependientes.
 DocumentNumber | String $<(Length: 25)>$ | Número de documento.
 DocumentTypeId | Short | Identificador del tipo de documento.
@@ -373,14 +373,14 @@ FirstName | String $<(Length: 25)>$ | Primer nombre.
 Gender | String $<(Length: 1)>$ | Género.
 InstructionLevelId | Short | Identificador del nivel de instrucción.
 InstructionLevelDescription | String $<(Length: 30)>$ | Descripción del nivel de instrucción.
-LegalCitizen | Boolean $<(Length: 1)>$ | Ciudadano legal.
+LegalCitizen | Boolean | Ciudadano legal.
 MaritalStatusId | Byte $<(Length: 2)>$ | Identificador del estado civil.
 MaritalStatusDescription | String $<(Length: 20)>$ | Descripción del estado civil.
 Occupations | [SdtsBTPEWOccupation](#sdtsbtpewoccupation) | Ocupaciones.
-PEP | Boolean $<(Length: 1)>$ | PEP (Persona Expuesta Políticamente).
+PEP | Boolean | PEP (Persona Expuesta Políticamente).
 References | [SdtsBTPEWReference](#sdtsbtpewreference) | Referencias.
 Relationships | [SdtsBTPEWRelationship](#sdtsbtpewrelationship) | Relaciones.
-RequiresSpouse | Boolean $<(Length: 1)>$ | Requiere cónyuge.
+RequiresSpouse | Boolean | Requiere cónyuge.
 SecondLastname | String $<(Length: 30)>$ | Segundo apellido.
 SecondName | String $<(Length: 25)>$ | Segundo nombre.
 Worth | Double $<(Length: 18)>$ | Patrimonio.
@@ -413,7 +413,7 @@ DistrictDescription | String | Descripción del distrito.
 GeographicalUbication | String $<(Length: 6)>$ | Ubicación geográfica.
 HousingTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de vivienda.
 HousingTypeDescription | String | Descripción del tipo de vivienda.
-IsABusiness | Boolean $<(Length: 1)>$ | ¿Es un negocio?.
+IsABusiness | Boolean | ¿Es un negocio?.
 Latitude | Double $<(Length: 10)>$ | Latitud.
 Level1Data | String $<(Length: 30)>$ | Datos del nivel 1.
 Level1Id | Short $<(Length: 3)>$ | Identificador del nivel 1.
@@ -428,7 +428,7 @@ Level4Data | String $<(Length: 30)>$ | Datos del nivel 4.
 Level4Id | Short $<(Length: 3)>$ | Identificador del nivel 4.
 Level4Description | String $<(Length: 35)>$ | Descripción del nivel 4.
 Longitude | Double $<(Length: 10)>$ | Longitud.
-MainAddress | Boolean $<(Length: 1)>$ | Dirección principal.
+MainAddress | Boolean | Dirección principal.
 PostalCode | String $<(Length: 8)>$ | Código postal.
 References | String $<(Length: 140)>$ | Referencias.
 SettlementType | Short $<(Length: 3)>$ | Tipo de asentamiento.
@@ -447,22 +447,22 @@ Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
 AddressCorrelative | Short $<(Length: 3)>$ | Correlativo de dirección.
 AddressId | String $<(Length: 140)>$ | Identificador de dirección.
-AssociatedToAnAddress | Boolean $<(Length: 1)>$ | Asociado a una dirección.
+AssociatedToAnAddress | Boolean | Asociado a una dirección.
 Comment | String $<(Length: 250)>$ | Comentario.
 ContactTypeId | Byte $<(Length: 2)>$ | Identificador del tipo de contacto.
 ContactTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de contacto.
 Correlative | Byte $<(Length: 2)>$ | Correlativo.
-Enabled | Boolean $<(Length: 1)>$ | Habilitado.
+Enabled | Boolean | Habilitado.
 EndTimeRange1 | String $<(Length: 5)>$ | Fin del rango horario 1.
 EndTimeRange2 | String $<(Length: 5)>$ | Fin del rango horario 2.
 Priority | Byte $<(Length: 2)>$ | Prioridad.
-ReceivesMails | Boolean $<(Length: 1)>$ | Recibe correos.
+ReceivesMails | Boolean | Recibe correos.
 StartTimeRange1 | String $<(Length: 5)>$ | Inicio del rango horario 1.
 StartTimeRange2 | String $<(Length: 5)>$ | Inicio del rango horario 2.
 TelephoneCompanyId | Short $<(Length: 3)>$ | Identificador de compañía telefónica.
 TelephoneCompanyDescription | String $<(Length: 50)>$ | Descripción de la compañía telefónica.
 Text | String $<(Length: 250)>$ | Texto.
-Validated | Boolean $<(Length: 1)>$ | Validado.
+Validated | Boolean | Validado.
 :::
 
 ::: details SdtsBTPAWCustomField
@@ -499,13 +499,13 @@ EconomicActivityTypeDescription | String $<(Length: 60)>$ | Descripción del tip
 EndDate | Date $<(Length: 8)>$ | Fecha de fin.
 EstablishmentTypeId | Int $<(Length: 6)>$ | Identificador del tipo de establecimiento.
 EstablishmentTypeDescription | String $<(Length: 50)>$ | Descripción del tipo de establecimiento.
-Exports | Boolean $<(Length: 1)>$ | Exporta.
-Imports | Boolean $<(Length: 1)>$ | Importa.
+Exports | Boolean | Exporta.
+Imports | Boolean | Importa.
 Income | Double $<(Length: 18)>$ | Ingresos.
 JobTitleId | Short $<(Length: 4)>$ | Identificador del cargo.
 JobTitleDescription | String $<(Length: 30)>$ | Descripción del cargo.
-MainOccupation | Boolean $<(Length: 1)>$ | Ocupación principal.
-Multilateral | Boolean $<(Length: 1)>$ | Multilateral.
+MainOccupation | Boolean | Ocupación principal.
+Multilateral | Boolean | Multilateral.
 OccupationId | Int $<(Length: 5)>$ | Identificador de ocupación.
 OccupationDescription | String $<(Length: 30)>$ | Descripción de la ocupación.
 OccupationTypeId | Short | Identificador del tipo de ocupación.
@@ -547,12 +547,12 @@ Los campos del tipo de dato estructurado SdtsBTPEWRelationship son los siguiente
 
 Nombre | Tipo | Comentarios
 :--------- | :----------- | :-----------
-Bidirectional | Boolean $<(Length: 1)>$ | Bidireccional.
+Bidirectional | Boolean | Bidireccional.
 BondId | Short | Identificador del vínculo.
 BondDescription | String $<(Length: 30)>$ | Descripción del vínculo.
 IntegrantName | String $<(Length: 70)>$ | Nombre del integrante.
 JobTitleId | Short | Identificador del cargo.
 Percentage | Double $<(Length: 8)>$ | Porcentaje.
-PersonGUID | String $<(Length: 36)>$ | GUID de persona.
+PersonGUId | String $<(Length: 36)>$ | GUID (identificador único global) de persona.
 :::
 <!-- CIERRA SDT -->

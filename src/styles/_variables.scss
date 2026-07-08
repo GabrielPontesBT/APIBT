@@ -17,6 +17,12 @@
   --red-2: #edd6d7;
   --search-result: #eee23a;
 
+  // MÉTODOS HTTP
+  --method-get-border:    #61affe; --method-get-bg:    #e8f3ff;
+  --method-post-border:   #49cc90; --method-post-bg:   #e8f6f0;
+  --method-put-border:    #fca130; --method-put-bg:    #fff4e6;
+  --method-delete-border: #f93e3e; --method-delete-bg: #ffe8e8;
+
   // TEXTOS
   --text-color: #2c3e50;
   --text-color-negative: #c9ced8;
@@ -125,6 +131,12 @@ html.dark-mode {
   --red-1: #e53935;
   --red-1-darken: #b71c1c;
   --red-2: #3a1c1c;
+
+  // MÉTODOS HTTP
+  --method-get-border:    #4a8fd4; --method-get-bg:    #0d1e30;
+  --method-post-border:   #3aaa74; --method-post-bg:   #091e15;
+  --method-put-border:    #d4891e; --method-put-bg:    #2a1e0d;
+  --method-delete-border: #d43030; --method-delete-bg: #2a0d0d;
 }
 
 // SCSS compile-time variables (no cambian con el tema)

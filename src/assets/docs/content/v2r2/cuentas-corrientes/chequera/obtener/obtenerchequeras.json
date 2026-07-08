@@ -5,6 +5,7 @@
   "pubName": "BTCuentasCorrientes.ObtenerChequeras",
   "programa": "RBTPG010",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -20,6 +21,9 @@
       "Comentarios": "Identificador único de operación."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtChequeras",
@@ -42,11 +46,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasCorrientes.ObtenerChequeras>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>81</bts:operacionUId>\r\n      </bts:BTCuentasCorrientes.ObtenerChequeras>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerChequeras=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6ac0ee72-d095-6a5a-e735-c5fe1a6935af' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 81\r\n}'"
+      "json": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerChequeras=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6ac0ee72-d095-6a5a-e735-c5fe1a6935af' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 81\r\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTCuentasCorrientes.ObtenerChequeras>\r\n         <bts:Btinreq>\r\n            <bts:Device>AV</bts:Device>\r\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento/>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>75e20bd1614A8B5C60A82434</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:operacionUId>81</bts:operacionUId>\r\n      </bts:BTCuentasCorrientes.ObtenerChequeras>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\r\n  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerChequeras=' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'postman-token: 6ac0ee72-d095-6a5a-e735-c5fe1a6935af' \\\r\n  -d '{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"operacionUId\": 81\r\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasCorrientes.ObtenerChequerasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>407fce50864A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtChequeras>\r\n            <chequera></chequera>\r\n            <productoUId>81</productoUId>\r\n            <cantidad>0</cantidad>\r\n         </sdtChequeras>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>992</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasCorrientes.ObtenerChequeras</Servicio>\r\n            <Fecha>2017-12-26</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>11:16:17</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCuentasCorrientes.ObtenerChequerasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "'{\r\n\t\"Btinreq\": {\r\n\t\t\"Device\": \"AV\",\r\n\t\t\"Usuario\": \"MINSTALADOR\",\r\n\t\t\"Requerimiento\": 1,\r\n\t\t\"Canal\": \"BTDIGITAL\",\r\n\t\t\"Token\": \"fa2c02c95a4A8B5C60A82434\"\r\n\t},\r\n    \"sdtChequeras\": {\r\n        \"chequera\": {\r\n            \"sBTChequera\": []\r\n        },\r\n        \"productoUId\": \"81\",\r\n        \"cantidad\": \"0\"\r\n    },\r\n    \"Erroresnegocio\": {\r\n        \"BTErrorNegocio\": []\r\n    },\r\n    \"Btoutreq\": {\r\n        \"Numero\": \"993\",\r\n        \"Estado\": \"OK\",\r\n        \"Servicio\": \"BTCuentasCorrientes.ObtenerChequeras\",\r\n        \"Fecha\": \"2017-12-26\",\r\n        \"Requerimiento\": 1,\r\n        \"Hora\": \"11:19:27\",\r\n        \"Canal\": \"BTDIGITAL\"\r\n    }\r\n}'"
+      "json": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"sdtChequeras\": {\n    \"chequera\": {\n      \"sBTChequera\": [\n        {\n          \"cantidadCheques\": 0,\n          \"chequeInicial\": 0,\n          \"chequesDisponibles\": 0,\n          \"estado\": \"\",\n          \"fechaAlta\": \"\",\n          \"tipo\": \"\"\n        }\n      ]\n    },\n    \"productoUId\": \"81\",\n    \"cantidad\": \"0\"\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"993\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasCorrientes.ObtenerChequeras\",\n    \"Fecha\": \"2017-12-26\",\n    \"Requerimiento\": 1,\n    \"Hora\": \"11:19:27\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTCuentasCorrientes.ObtenerChequerasResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>AV</Device>\r\n            <Usuario>MINSTALADOR</Usuario>\r\n            <Requerimiento/>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>407fce50864A8B5C60A82434</Token>\r\n         </Btinreq>\r\n         <sdtChequeras>\r\n            <chequera></chequera>\r\n            <productoUId>81</productoUId>\r\n            <cantidad>0</cantidad>\r\n         </sdtChequeras>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>992</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTCuentasCorrientes.ObtenerChequeras</Servicio>\r\n            <Fecha>2017-12-26</Fecha>\r\n            <Requerimiento/>\r\n            <Hora>11:16:17</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTCuentasCorrientes.ObtenerChequerasResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Device\": \"AV\",\n    \"Usuario\": \"MINSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTDIGITAL\",\n    \"Token\": \"fa2c02c95a4A8B5C60A82434\"\n  },\n  \"sdtChequeras\": {\n    \"chequera\": {\n      \"sBTChequera\": [\n        {\n          \"cantidadCheques\": 0,\n          \"chequeInicial\": 0,\n          \"chequesDisponibles\": 0,\n          \"estado\": \"\",\n          \"fechaAlta\": \"\",\n          \"tipo\": \"\"\n        }\n      ]\n    },\n    \"productoUId\": \"81\",\n    \"cantidad\": \"0\"\n  },\n  \"Erroresnegocio\": {\n    \"BTErrorNegocio\": []\n  },\n  \"Btoutreq\": {\n    \"Numero\": \"993\",\n    \"Estado\": \"OK\",\n    \"Servicio\": \"BTCuentasCorrientes.ObtenerChequeras\",\n    \"Fecha\": \"2017-12-26\",\n    \"Requerimiento\": 1,\n    \"Hora\": \"11:19:27\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [
@@ -91,7 +119,7 @@
         {
           "Nombre": "estado",
           "Tipo": "String",
-          "Comentarios": "estado de chequera."
+          "Comentarios": "Estado de chequera."
         },
         {
           "Nombre": "fechaAlta",
@@ -101,7 +129,7 @@
         {
           "Nombre": "tipo",
           "Tipo": "String",
-          "Comentarios": "tipo de chequera."
+          "Comentarios": "Tipo de chequera."
         }
       ]
     }

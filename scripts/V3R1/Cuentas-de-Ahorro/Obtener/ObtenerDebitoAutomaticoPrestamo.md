@@ -85,13 +85,13 @@ curl -X POST \
   -H 'postman-token: 78klf1dc-e332-95b4-1dl8-23ba149h2471' \
   -d '{
 	"Btinreq": {
-		"bts:Device": "AS",
-      "bts:Requerimiento": {},
-      "bts:Canal": "BTDIGITAL",
-      "bts:Usuario": "INSTALADOR",
-      "bts:Token": "jl1dv2s9advF271A85B22FCH"
+		"Device": "AS",
+      "Requerimiento": {},
+      "Canal": "BTDIGITAL",
+      "Usuario": "INSTALADOR",
+      "Token": "jl1dv2s9advF271A85B22FCH"
 	},
-   "bts:operacionUId": "83"
+   "operacionUId": "83"
 }'
 ```
 :::
@@ -183,12 +183,12 @@ curl -X POST \
 @tab JSON
 ```json
 '{
-	"bts:Btinreq": {
-      "bts:Device": "AS",
-      "bts:Requerimiento": {},
-      "bts:Canal": "BTDIGITAL",
-      "bts:Usuario": "INSTALADOR",
-      "bts:Token": "jl1dv2s9advF271A85B22FCH"
+	"Btinreq": {
+      "Device": "AS",
+      "Requerimiento": {},
+      "Canal": "BTDIGITAL",
+      "Usuario": "INSTALADOR",
+      "Token": "jl1dv2s9advF271A85B22FCH"
 	},
    "sdtCobroPrestamo": {
       "sBTCobroPrestamo": [

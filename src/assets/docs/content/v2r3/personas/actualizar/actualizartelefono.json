@@ -5,6 +5,7 @@
   "pubName": "BTPersonas.ActualizarTelefono",
   "programa": "RBTPG485",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -40,6 +41,9 @@
       "Comentarios": "Identificador correlativo de teléfono."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [],
   "errors": [
     {
@@ -80,11 +84,35 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarTelefono>\n         <bts:Btinreq>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>A088577A8D1E89A20E6EF27D</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>61</bts:personaUId>\n         <bts:numeroTelefono>099274742</bts:numeroTelefono>\n         <bts:tipoTelefonoId>2</bts:tipoTelefonoId>\n         <bts:domicilioId>1</bts:domicilioId>\n         <bts:telefonoId>1</bts:telefonoId>\n      </bts:BTPersonas.ActualizarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>",
-      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarTelefono' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"AV\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": \"61\",\n   \"numeroTelefono\": \"099274742\",\n   \"tipoTelefonoId\": \"2\",\n   \"domicilioId\": \"1\",\n   \"telefonoId\": \"1\"\n}'"
+      "json": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarTelefono' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"AV\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": \"61\",\n   \"numeroTelefono\": \"099274742\",\n   \"tipoTelefonoId\": \"2\",\n   \"domicilioId\": \"1\",\n   \"telefonoId\": \"1\"\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <bts:BTPersonas.ActualizarTelefono>\n         <bts:Btinreq>\n            <bts:Usuario>MINSTALADOR</bts:Usuario>\n            <bts:Requerimiento>1</bts:Requerimiento>\n            <bts:Token>A088577A8D1E89A20E6EF27D</bts:Token>\n            <bts:Canal>BTDIGITAL</bts:Canal>\n            <bts:Device>1</bts:Device>\n         </bts:Btinreq>\n         <bts:personaUId>61</bts:personaUId>\n         <bts:numeroTelefono>099274742</bts:numeroTelefono>\n         <bts:tipoTelefonoId>2</bts:tipoTelefonoId>\n         <bts:domicilioId>1</bts:domicilioId>\n         <bts:telefonoId>1</bts:telefonoId>\n      </bts:BTPersonas.ActualizarTelefono>\n   </soapenv:Body>\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "curl -X POST \\\n\t'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarTelefono' \\\n\t-H 'cache-control: no-cache' \\\n\t-H 'content-type: application/json' \\\n\t-H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \\\n\t-d '{\n\t\"Btinreq\": {\n\t  \"Device\": \"AV\",\n\t  \"Usuario\": \"MINSTALADOR\",\n\t  \"Token\": \"16c1cc9b534A8B5C60A82434\",\n\t  \"Canal\": \"BTDIGITAL\",\n\t  \"Requerimiento\": \"1\"\n\t},\n\t\"personaUId\": \"61\",\n   \"numeroTelefono\": \"099274742\",\n   \"tipoTelefonoId\": \"2\",\n   \"domicilioId\": \"1\",\n   \"telefonoId\": \"1\"\n}'"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarTelefonoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>A088577A8D1E89A20E6EF27D</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>10294</Numero>\n            <Servicio>BTPersonas.ActualizarTelefono</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-05</Fecha>\n            <Hora>11:40:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ActualizarTelefonoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>",
-      "json": "{ \n   \"Btinreq\": {\n      \"Device\": \"AV\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"fa2c02c95a4A8B5C60A82434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"111397\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.ActualizarTelefono\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-05\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"11:45:24\"\n   }\n}'"
+      "json": "{ \n   \"Btinreq\": {\n      \"Device\": \"AV\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"fa2c02c95a4A8B5C60A82434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"111397\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.ActualizarTelefono\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-05\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"11:45:24\"\n   }\n}'",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n   <SOAP-ENV:Body>\n      <BTPersonas.ActualizarTelefonoResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\n         <Btinreq>\n            <Device>1</Device>\n            <Usuario>MINSTALADOR</Usuario>\n            <Requerimiento>1</Requerimiento>\n            <Canal>BTDIGITAL</Canal>\n            <Token>A088577A8D1E89A20E6EF27D</Token>\n         </Btinreq>\n         <Erroresnegocio></Erroresnegocio>\n         <Btoutreq>\n            <Numero>10294</Numero>\n            <Servicio>BTPersonas.ActualizarTelefono</Servicio>\n            <Estado>OK</Estado>\n            <Requerimiento>1</Requerimiento>\n            <Fecha>2023-05-05</Fecha>\n            <Hora>11:40:54</Hora>\n            <Canal>BTDIGITAL</Canal>\n         </Btoutreq>\n      </BTPersonas.ActualizarTelefonoResponse>\n   </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{ \n   \"Btinreq\": {\n      \"Device\": \"AV\",\n      \"Usuario\": \"MINSTALADOR\",\n      \"Token\": \"fa2c02c95a4A8B5C60A82434\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Requerimiento\": \"1\"\n   },\n   \"Btoutreq\": {\n      \"Numero\": \"111397\",\n      \"Estado\": \"OK\",\n      \"Servicio\": \"BTPersonas.ActualizarTelefono\",\n      \"Requerimiento\": \"1\",\n      \"Fecha\": \"2023-05-05\",\n      \"Canal\": \"BTDIGITAL\",\n      \"Hora\": \"11:45:24\"\n   }\n}'"
+        }
+      ]
     }
   },
   "structuredTypes": [],

@@ -185,63 +185,73 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosPasivos": {
-        "sBTProductoPasivo": [
-            {
-                "tipoProducto": "AH",
-                "estado": "Normal",
-                "subCuenta": "",
-                "operacionUId": "6",
-                "saldo": "15000.00",
-                "idOperacionFmt": "0000000028_000",
-                "idOperacionBT": "0010100000022000000000000000002700000000000028001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "4",
-                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado"
-                },
-                "sucursal": "Casa Matriz"
-            },
-            {
-                "tipoProducto": "AH",
-                "estado": "Normal",
-                "subCuenta": "",
-                "operacionUId": "7",
-                "saldo": "350000.00",
-                "idOperacionFmt": "0000000092_000",
-                "idOperacionBT": "0010000100022000000000000000002700000000000092001",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "1",
-                    "nombre": "AHORRO PROGRAMADO, Ahorro Programado"
-                },
-                "sucursal": "Sucursal Beta"
-            },
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "784",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerAhorrosProgramados",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "13:50:44",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosPasivos": {
+    "sBTProductoPasivo": [
+      {
+        "tipoProducto": "AH",
+        "estado": "Normal",
+        "subCuenta": "",
+        "operacionUId": "6",
+        "saldo": "15000.00",
+        "idOperacionFmt": "0000000028_000",
+        "idOperacionBT": "0010100000022000000000000000002700000000000028001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "4",
+          "nombre": "AHORRO PROGRAMADO, Ahorro Programado",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "tipoProducto": "AH",
+        "estado": "Normal",
+        "subCuenta": "",
+        "operacionUId": "7",
+        "saldo": "350000.00",
+        "idOperacionFmt": "0000000092_000",
+        "idOperacionBT": "0010000100022000000000000000002700000000000092001",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "1",
+          "nombre": "AHORRO PROGRAMADO, Ahorro Programado",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "sucursal": "Sucursal Beta"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "784",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerAhorrosProgramados",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "13:50:44",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -266,7 +276,10 @@ producto | [sBTProducto](#sbtproducto) | Datos del producto.
 saldo | Double | Saldo del ahorro programado. 
 subCuenta | String | Nombre de la cuenta vista. 
 sucursal | String | Nombre de la sucursal. 
-tipoProducto | String | Tipo de producto. 
+tipoProducto | String | Tipo de producto.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -279,7 +292,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -292,4 +308,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

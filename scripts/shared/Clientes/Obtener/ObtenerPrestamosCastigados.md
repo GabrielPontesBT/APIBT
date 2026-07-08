@@ -159,45 +159,50 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProductosPrestamos": {
-        "sBTProductoPrestamo": [
-            {
-                "saldo": "87128.11",
-                "sucursal": "Sucursal Beta",
-                "producto": {
-                    "papel": "",
-                    "moneda": "$",
-                    "productoUId": "0",
-                    "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad"
-                },
-                "idOperacionBT": "0010000100101000000000000000002700000000000170003",
-                "operacionUId": "1",
-                "idOperacionFmt": "0000000170-000",
-                "estado": ""
-            },
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "786",
-        "Estado": "OK",
-        "Servicio": "BTClientes.ObtenerPrestamosCastigados",
-        "Fecha": "2017-12-15",
-        "Requerimiento": 1,
-        "Hora": "16:35:22",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductosPrestamos": {
+    "sBTProductoPrestamo": [
+      {
+        "saldo": "87128.11",
+        "sucursal": "Sucursal Beta",
+        "producto": {
+          "papel": "",
+          "moneda": "$",
+          "productoUId": "0",
+          "nombre": "PRÉSTAMOS HIPOTECARIOS, Amor.Libre Empresa Int.Ad",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "idOperacionBT": "0010000100101000000000000000002700000000000170003",
+        "operacionUId": "1",
+        "idOperacionFmt": "0000000170-000",
+        "estado": ""
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "786",
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerPrestamosCastigados",
+    "Fecha": "2017-12-15",
+    "Requerimiento": 1,
+    "Hora": "16:35:22",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -220,8 +225,11 @@ idOperacionFmt | String | Identificador String (concatenación de algunos concep
 operacionUId | Long | Identificador único de operación. 
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 saldo | Double | Capital. 
-sucursal | String | Nombre de la sucursal. 
- 
+sucursal | String | Nombre de la sucursal.
+:::
+
+::: details sBTProducto
+
 ### sBTProducto
 
 ::: center 
@@ -233,7 +241,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -244,6 +255,8 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 concepto | String | Concepto.
 texto | String | Texto.
-valor | Double | Importe. 
+valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

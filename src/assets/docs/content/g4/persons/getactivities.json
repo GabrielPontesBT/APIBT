@@ -6,17 +6,24 @@
   "modulo": "Customers",
   "programa": "PublicAPI.BTPEPA0025",
   "scope": "Global",
+  "method": "",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
   "inputData": [
     {
-      "Nombre": "activityTypeId",
+      "Nombre": "ActivityTypeId",
       "Tipo": "Long <strong>(Length: 15)</strong>",
       "Comentarios": "Identificador de tipo de actividad."
     }
   ],
+  "bodyNote": "",
   "bodyData": [],
+  "outputNote": "",
   "outputData": [
     {
       "Nombre": "activities",
@@ -28,12 +35,26 @@
   "errorsNote": "No aplica.",
   "examples": {
     "invocation": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"activityTypeId\": 1\r\n}'",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"ActivityTypeId\": 1\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"ActivityTypeId\": 1\n}"
+        }
+      ]
     },
     "response": {
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\r\n  },\r\n  \"activities\": {\r\n    \"activity\": [\r\n      {\r\n        \"ActivityId\": 1111,\r\n        \"ActivityDescription\": \"ARROZ\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1112,\r\n        \"ActivityDescription\": \"TRIGO\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1113,\r\n        \"ActivityDescription\": \"OLEAGINOSOS\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1114,\r\n        \"ActivityDescription\": \"CEBADA\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1120,\r\n        \"ActivityDescription\": \"CUL.DE HORT.Y LEG.,ESPECIALI. HORTICOL. Y PRO.DE VIVERO\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1131,\r\n        \"ActivityDescription\": \"FRUTICUL.(EXC. VITICUL.),PLANTAS PARA PREP.BEB.Y ESPEC.\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1132,\r\n        \"ActivityDescription\": \"VITICULTURA\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      },\r\n      {\r\n        \"ActivityId\": 1133,\r\n        \"ActivityDescription\": \"OTROS CULTIVOS\",\r\n        \"ActivityTypeId\": 1,\r\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\r\n      }\r\n    ]\r\n  },\r\n  \"BusinessErrors\": {\r\n    \"BusinessError\": []\r\n  },\r\n  \"Btoutreq\": {\r\n    \"Estado\": \"OK\",\r\n    \"Fecha\": \"2026-05-14\",\r\n    \"Hora\": \"18:55:33\",\r\n    \"Numero\": 13469365,\r\n    \"Servicio\": \"PublicPersons.getActivities\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
-      "xml": ""
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"activities\": {\n    \"activity\": [\n      {\n        \"ActivityId\": 1111,\n        \"ActivityDescription\": \"ARROZ\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1112,\n        \"ActivityDescription\": \"TRIGO\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1113,\n        \"ActivityDescription\": \"OLEAGINOSOS\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1114,\n        \"ActivityDescription\": \"CEBADA\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1120,\n        \"ActivityDescription\": \"CUL.DE HORT.Y LEG.,ESPECIALI. HORTICOL. Y PRO.DE VIVERO\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1131,\n        \"ActivityDescription\": \"FRUTICUL.(EXC. VITICUL.),PLANTAS PARA PREP.BEB.Y ESPEC.\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1132,\n        \"ActivityDescription\": \"VITICULTURA\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1133,\n        \"ActivityDescription\": \"OTROS CULTIVOS\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      }\n    ],\n    \"ActivityId\": \"\",\n    \"ActivityDescription\": \"\",\n    \"ActivityTypeId\": \"\",\n    \"ActivityTypeDescription\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:55:33\",\n    \"Numero\": 13469365,\n    \"Servicio\": \"PublicPersons.getActivities\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"0F262E85182DF86F9CA30F0E\"\n  },\n  \"activities\": {\n    \"activity\": [\n      {\n        \"ActivityId\": 1111,\n        \"ActivityDescription\": \"ARROZ\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1112,\n        \"ActivityDescription\": \"TRIGO\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1113,\n        \"ActivityDescription\": \"OLEAGINOSOS\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1114,\n        \"ActivityDescription\": \"CEBADA\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1120,\n        \"ActivityDescription\": \"CUL.DE HORT.Y LEG.,ESPECIALI. HORTICOL. Y PRO.DE VIVERO\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1131,\n        \"ActivityDescription\": \"FRUTICUL.(EXC. VITICUL.),PLANTAS PARA PREP.BEB.Y ESPEC.\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1132,\n        \"ActivityDescription\": \"VITICULTURA\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      },\n      {\n        \"ActivityId\": 1133,\n        \"ActivityDescription\": \"OTROS CULTIVOS\",\n        \"ActivityTypeId\": 1,\n        \"ActivityTypeDescription\": \"PRODUCCIÓN VEGETAL\"\n      }\n    ],\n    \"ActivityId\": \"\",\n    \"ActivityDescription\": \"\",\n    \"ActivityTypeId\": \"\",\n    \"ActivityTypeDescription\": \"\"\n  },\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-05-14\",\n    \"Hora\": \"18:55:33\",\n    \"Numero\": 13469365,\n    \"Servicio\": \"PublicPersons.getActivities\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

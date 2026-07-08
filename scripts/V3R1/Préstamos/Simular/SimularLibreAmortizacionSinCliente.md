@@ -137,6 +137,10 @@ Código | Descripción
 					   <bts:importe>1000</bts:importe>
 				   </bts:sBTCuotaPrestamoAlta>
 			   </bts:cuotasCapital>
+            <cuotasInteres>
+               <fechaPago></fechaPago>
+               <importe>0</importe>
+            </cuotasInteres>
          </bts:sdtDatosLibreAmortizacion>
       </bts:BTPrestamos.SimularLibreAmortizacionSinCliente>
    </soapenv:Body>
@@ -145,56 +149,55 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularLibreAmortizacionSinCliente' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 6b958b92-122d-189b-a0b5-7a4a0569b79d' \
-  -d '{
-        "Btinreq": {
-          "Device": "AV",
-          "Usuario": "MINSTALADOR",
-          "Canal": "BTDIGITAL",
-          "Token": "658fcb0b034A8B5C60A82434"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Canal": "BTDIGITAL",
+    "Token": "658fcb0b034A8B5C60A82434"
+  },
+  "sdtDatosLibreAmortizacion": {
+    "actividad": "11200",
+    "pizarra": "0",
+    "tasa": "0",
+    "productoUId": "75",
+    "monto": "10000",
+    "cantidadCuotas": "0",
+    "periodoCuotas": "30",
+    "cuotasCapital": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "fechaPago": "2019-01-10",
+          "importe": "2000"
         },
-		"sdtDatosLibreAmortizacion": {
-			"actividad": "11200",
-			"pizarra": "0",
-			"tasa": "0",
-			"productoUId": "75",
-			"monto": "10000",
-			"cantidadCuotas": "0",
-			"periodoCuotas": "30",
-			"cuotasCapital": {
-			  "sBTCuotaPrestamoAlta": [
-			  	  {
-			  	  	"fechaPago": "2019-01-10",
-			  	  	"importe": "2000"
-			  	  },
-			  	  {
-			  	  	"fechaPago": "2019-02-10",
-			  	  	"importe": "2000"
-			  	  },
-			  	  {
-			  	  	"fechaPago": "2019-03-10",
-			  	  	"importe": "1000"
-			  	  },
-			  	  {
-			  	  	"fechaPago": "2019-04-10",
-			  	  	"importe": "2000"
-			  	  },
-			  	  {
-			  	  	"fechaPago": "2019-05-10",
-			  	  	"importe": "2000"
-			  	  },
-			  	  {
-			  	  	"fechaPago": "2019-06-10",
-			  	  	"importe": "1000"
-			  	  }
-			  	]
-			  }
-	  }
-}'
+        {
+          "fechaPago": "2019-02-10",
+          "importe": "2000"
+        },
+        {
+          "fechaPago": "2019-03-10",
+          "importe": "1000"
+        },
+        {
+          "fechaPago": "2019-04-10",
+          "importe": "2000"
+        },
+        {
+          "fechaPago": "2019-05-10",
+          "importe": "2000"
+        },
+        {
+          "fechaPago": "2019-06-10",
+          "importe": "1000"
+        }
+      ]
+    },
+    "cuotasInteres": {
+      "fechaPago": "",
+      "importe": 0
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -323,188 +326,193 @@ curl -X POST \
 
 @tab JSON
 ```json 
-'{ 
-    "Btinreq": { 
-        "Canal": "BTDIGITAL", 
-        "Requerimiento": 1, 
-        "Usuario": "BANTOTAL", 
-        "Token": "1017966210F955E77534D3E0", 
-        "Device": "AC" 
-    }, 
-    "sdtSimulacion": { 
-        "operacionUId": 0, 
-        "producto": { 
-            "productoUId": 0, 
-            "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Irregular o Amort. Libre", 
-            "moneda": "$", 
-            "papel": "$" 
-        }, 
-        "fechaValor": "2016-08-15", 
-        "fechaPrimerPago": "2019-01-10", 
-        "fechaVencimiento": "2019-06-10", 
-        "capital": 10000.00, 
-        "intereses": 3946.66, 
-        "impuestos": 868.26, 
-        "comisiones": 0.00, 
-        "totalPrestamo": 10000.00, 
-        "plazo": 0, 
-        "tasa": 15.000000, 
-        "tasaEfectiva": 0.000000, 
-        "tasaEfectivaAnual": 16.068320, 
-        "tasaNominalAnual": 15.000000, 
-        "otrosConceptos": { 
-            "sBTConcepto": [] 
-        }, 
-        "cronograma": { 
-            "sBTCuotaSimulacion": [ 
-                { 
-                    "fechaPago": "2019-01-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 3658.33, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 804.83, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 4463.16 
-                }, 
-                { 
-                    "fechaPago": "2019-01-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 2000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 2000.00 
-                }, 
-                { 
-                    "fechaPago": "2019-02-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 103.33, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 22.73, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 126.06 
-                }, 
-                { 
-                    "fechaPago": "2019-02-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 2000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 2000.00 
-                }, 
-                { 
-                    "fechaPago": "2019-03-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 70.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 15.40, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 85.40 
-                }, 
-                { 
-                    "fechaPago": "2019-03-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 1000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 1000.00 
-                }, 
-                { 
-                    "fechaPago": "2019-04-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 64.58, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 14.21, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 78.79 
-                }, 
-                { 
-                    "fechaPago": "2019-04-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 2000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 2000.00 
-                }, 
-                { 
-                    "fechaPago": "2019-05-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 37.50, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 8.25, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 45.75 
-                }, 
-                { 
-                    "fechaPago": "2019-05-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 2000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 2000.00 
-                }, 
-                { 
-                    "fechaPago": "2019-06-10", 
-                    "tipoCuota": "I", 
-                    "concepto": "", 
-                    "capital": 12.92, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 2.84, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 15.76 
-                }, 
-                { 
-                    "fechaPago": "2019-06-10", 
-                    "tipoCuota": "K", 
-                    "concepto": "", 
-                    "capital": 1000.00, 
-                    "intereses": 0.00, 
-                    "seguros": 0.00, 
-                    "impuestos": 0.00, 
-                    "otrosConceptos": 0.00, 
-                    "cuota": 1000.00 
-                } 
-            ] 
-        } 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Canal": "BTDIGITAL", 
-        "Servicio": "BTPrestamos.SimularLibreAmortizacionSinCliente", 
-        "Fecha": "2019-11-20", 
-        "Hora": "11:19:16", 
-        "Requerimiento": 1, 
-        "Numero": 7035, 
-        "Estado": "OK" 
-    } 
-}' 
+{
+  "Btinreq": {
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 1,
+    "Usuario": "BANTOTAL",
+    "Token": "1017966210F955E77534D3E0",
+    "Device": "AC"
+  },
+  "sdtSimulacion": {
+    "operacionUId": 0,
+    "producto": {
+      "productoUId": 0,
+      "nombre": "PRÉSTAMOS SECTORIALES (PASIVO), Irregular o Amort. Libre",
+      "moneda": "$",
+      "papel": "$",
+      "otrosConceptos": {
+        "concepto": "",
+        "texto": "",
+        "valor": 0
+      }
+    },
+    "fechaValor": "2016-08-15",
+    "fechaPrimerPago": "2019-01-10",
+    "fechaVencimiento": "2019-06-10",
+    "capital": 10000,
+    "intereses": 3946.66,
+    "impuestos": 868.26,
+    "comisiones": 0,
+    "totalPrestamo": 10000,
+    "plazo": 0,
+    "tasa": 15,
+    "tasaEfectiva": 0,
+    "tasaEfectivaAnual": 16.06832,
+    "tasaNominalAnual": 15,
+    "otrosConceptos": {
+      "sBTConcepto": []
+    },
+    "cronograma": {
+      "sBTCuotaSimulacion": [
+        {
+          "fechaPago": "2019-01-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 3658.33,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 804.83,
+          "otrosConceptos": 0,
+          "cuota": 4463.16
+        },
+        {
+          "fechaPago": "2019-01-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 2000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 2000
+        },
+        {
+          "fechaPago": "2019-02-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 103.33,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 22.73,
+          "otrosConceptos": 0,
+          "cuota": 126.06
+        },
+        {
+          "fechaPago": "2019-02-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 2000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 2000
+        },
+        {
+          "fechaPago": "2019-03-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 70,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 15.4,
+          "otrosConceptos": 0,
+          "cuota": 85.4
+        },
+        {
+          "fechaPago": "2019-03-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 1000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 1000
+        },
+        {
+          "fechaPago": "2019-04-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 64.58,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 14.21,
+          "otrosConceptos": 0,
+          "cuota": 78.79
+        },
+        {
+          "fechaPago": "2019-04-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 2000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 2000
+        },
+        {
+          "fechaPago": "2019-05-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 37.5,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 8.25,
+          "otrosConceptos": 0,
+          "cuota": 45.75
+        },
+        {
+          "fechaPago": "2019-05-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 2000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 2000
+        },
+        {
+          "fechaPago": "2019-06-10",
+          "tipoCuota": "I",
+          "concepto": "",
+          "capital": 12.92,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 2.84,
+          "otrosConceptos": 0,
+          "cuota": 15.76
+        },
+        {
+          "fechaPago": "2019-06-10",
+          "tipoCuota": "K",
+          "concepto": "",
+          "capital": 1000,
+          "intereses": 0,
+          "seguros": 0,
+          "impuestos": 0,
+          "otrosConceptos": 0,
+          "cuota": 1000
+        }
+      ]
+    }
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTPrestamos.SimularLibreAmortizacionSinCliente",
+    "Fecha": "2019-11-20",
+    "Hora": "11:19:16",
+    "Requerimiento": 1,
+    "Numero": 7035,
+    "Estado": "OK"
+  }
+}
 ``` 
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -530,7 +538,10 @@ monto | Double | Capital solicitado.
 periodoCuotas | Long | Período entre vencimiento de cada cuota. 
 pizarra | Short | Tipo de pizarra. Si no se indica toma la preseteada para el producto. 
 productoUId | Long | Identificador único de producto. 
-tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra. 
+tasa | Double | Tasa. Si no se indica toma la correspondiente al tipo de pizarra.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -539,7 +550,7 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
 
 ::: details sBTSimulacionPrestamoLA  
@@ -565,7 +576,10 @@ tasa | Double | Tasa.
 tasaEfectiva | Double | Tasa efectiva. 
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
-totalPrestamo | Double | Total a pagar. 
+totalPrestamo | Double | Total a pagar.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -578,7 +592,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -591,4 +608,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

@@ -120,7 +120,11 @@ No aplica.
         "StatusId": 3,
         "StatusDescription": "CERRADA"
       }
-    ]
+    ],
+    "Id": "",
+    "Description": "",
+    "StatusId": "",
+    "StatusDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []

@@ -1,0 +1,77 @@
+{
+  "slug": "loan-parameters/getrate",
+  "pageTitle": "Get Rate",
+  "description": "Método para obtener la tasa definida para un producto.",
+  "pubName": "PublicLoanParameters.getRate",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0026",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "defaultRate",
+      "Tipo": "Double <strong>(Length: 11)</strong>",
+      "Comentarios": "Tasa por defecto."
+    },
+    {
+      "Nombre": "rateTypeId",
+      "Tipo": "Byte <strong>(Length: 1)</strong>",
+      "Comentarios": "Tipo de tasa."
+    },
+    {
+      "Nombre": "rateTypeDescription",
+      "Tipo": "String <strong>(Length: 20)</strong>",
+      "Comentarios": "Descripción de tipo de tasa."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"defaultRate\": 20,\n  \"rateTypeId\": 1,\n  \"rateTypeDescription\": \"Efectiva Anual\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:36:33\",\n    \"Numero\": 13568710,\n    \"Servicio\": \"PublicLoanParameters.getRate\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"defaultRate\": 20,\n  \"rateTypeId\": 1,\n  \"rateTypeDescription\": \"Efectiva Anual\",\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:36:33\",\n    \"Numero\": 13568710,\n    \"Servicio\": \"PublicLoanParameters.getRate\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

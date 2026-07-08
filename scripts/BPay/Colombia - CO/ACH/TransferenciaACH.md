@@ -58,7 +58,7 @@ Nombre         | Tipo            | Comentarios
 Comision 	   | Double          | Comisión.
 Impuesto 	   | Double          | Impuesto.
 MPE001IDL 	   | Short           | Identificador de la operación (MPE001IDL).
-MovimientoUID 	| Long            | Identificador del movimiento.
+MovimientoUId 	| Long            | Identificador del movimiento.
 
 @tab Errores
 

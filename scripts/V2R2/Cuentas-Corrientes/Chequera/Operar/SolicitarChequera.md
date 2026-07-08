@@ -96,33 +96,28 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?SolicitarChequera' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"operacionUId":"2",
-   "tipoCheque":"1",
-   "cantidadLibretas":"1",
-   "bts:datosSolicitud": {
-          "bts:persona1Texto1": "D.N.I. 123456",
-          "bts:persona1Texto2": "Juan Perez",
-          "bts:persona2Texto1": " ",
-          "bts:persona2Texto2": " ",
-          "bts:persona3Texto1": " ",
-          "bts:persona3Texto2": " ",
-          "bts:domicilio": "Avenida Italia 2145",
-          "bts:sucuraslDeRetiroId": " "
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "operacionUId": "2",
+  "tipoCheque": "1",
+  "cantidadLibretas": "1",
+  "datosSolicitud": {
+    "persona1Texto1": "D.N.I. 123456",
+    "persona1Texto2": "Juan Perez",
+    "persona2Texto1": " ",
+    "persona2Texto2": " ",
+    "persona3Texto1": " ",
+    "persona3Texto2": " ",
+    "domicilio": "Avenida Italia 2145",
+    "sucuraslDeRetiroId": " "
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

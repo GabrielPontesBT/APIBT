@@ -106,6 +106,7 @@ curl -X POST \
       "ahorroUId": 61,
       "montoAbono": 2500
 	}'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -163,5 +164,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

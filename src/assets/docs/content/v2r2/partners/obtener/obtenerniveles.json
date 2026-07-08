@@ -5,6 +5,7 @@
   "pubName": "BTPartners.ObtenerNiveles",
   "programa": "RBTPN018",
   "scope": "Global",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -15,11 +16,14 @@
   ],
   "inputData": [
     {
-      "Nombre": "tipoUId",
+      "Nombre": "TipoUId",
       "Tipo": "Short",
       "Comentarios": "Identificador único del tipo de partner."
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
       "Nombre": "sdtNiveles",
@@ -37,12 +41,36 @@
   "flowDiagram": "",
   "examples": {
     "invocation": {
-      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerNiveles>\r\n         <bts:Btinreq>\r\n            <bts:Device>INSTALADOR</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>673543DE2A22DFAC951F9E41</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:tipoUId>1</bts:tipoUId>\r\n      </bts:BTPartners.ObtenerNiveles>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Device\": \"INSTALADOR\",\r\n    \"Requerimiento\": \"1\",\r\n    \"Token\": \"673543DE2A22DFAC951F9E41\"\r\n  },\r\n  \"tipoUId\": 1\r\n}"
+      "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerNiveles>\r\n         <bts:Btinreq>\r\n            <bts:Device>INSTALADOR</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>673543DE2A22DFAC951F9E41</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:TipoUId>1</bts:TipoUId>\r\n      </bts:BTPartners.ObtenerNiveles>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"673543DE2A22DFAC951F9E41\"\n  },\n  \"TipoUId\": 1\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <bts:BTPartners.ObtenerNiveles>\r\n         <bts:Btinreq>\r\n            <bts:Device>INSTALADOR</bts:Device>\r\n            <bts:Usuario>INSTALADOR</bts:Usuario>\r\n            <bts:Requerimiento></bts:Requerimiento>\r\n            <bts:Canal>BTDIGITAL</bts:Canal>\r\n            <bts:Token>673543DE2A22DFAC951F9E41</bts:Token>\r\n         </bts:Btinreq>\r\n         <bts:TipoUId>1</bts:TipoUId>\r\n      </bts:BTPartners.ObtenerNiveles>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"673543DE2A22DFAC951F9E41\"\n  },\n  \"TipoUId\": 1\n}"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ObtenerNivelesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <sdtNiveles>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 1A - Venta</Descripcion>\r\n               <NivelUId>1</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>4</CantidadPartners>\r\n            </sBTNivel>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 2A - Venta y cobro cuota</Descripcion>\r\n               <NivelUId>2</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>1</CantidadPartners>\r\n            </sBTNivel>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 3A - Venta, cobro y post-venta</Descripcion>\r\n               <NivelUId>3</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>0</CantidadPartners>\r\n            </sBTNivel>\r\n         </sdtNiveles>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38307</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ObtenerNiveles</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>15:41:29</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ObtenerNivelesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"sdtNiveles\": {\r\n    \"sBTNivel\": [\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 1A - Venta\",\r\n        \"NivelUId\": 1,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 4\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 2A - Venta y cobro cuota\",\r\n        \"NivelUId\": 2,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 1\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 3A - Venta, cobro y post-venta\",\r\n        \"NivelUId\": 3,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 0\r\n      }\r\n    ]\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38307,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ObtenerNiveles\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"15:41:29\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+      "json": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"sdtNiveles\": {\r\n    \"sBTNivel\": [\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 1A - Venta\",\r\n        \"NivelUId\": 1,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 4\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 2A - Venta y cobro cuota\",\r\n        \"NivelUId\": 2,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 1\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 3A - Venta, cobro y post-venta\",\r\n        \"NivelUId\": 3,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 0\r\n      }\r\n    ]\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38307,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ObtenerNiveles\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"15:41:29\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}",
+      "tabs": [
+        {
+          "name": "XML",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n   <SOAP-ENV:Body>\r\n      <BTPartners.ObtenerNivelesResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n         <Btinreq>\r\n            <Device>FPAIS</Device>\r\n            <Usuario>INSTALADOR</Usuario>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Canal>BTDIGITAL</Canal>\r\n            <Token>E7B55B3848F0357E436D77D3</Token>\r\n         </Btinreq>\r\n         <sdtNiveles>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 1A - Venta</Descripcion>\r\n               <NivelUId>1</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>4</CantidadPartners>\r\n            </sBTNivel>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 2A - Venta y cobro cuota</Descripcion>\r\n               <NivelUId>2</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>1</CantidadPartners>\r\n            </sBTNivel>\r\n            <sBTNivel>\r\n               <TipoUId>1</TipoUId>\r\n               <Descripcion>Nivel 3A - Venta, cobro y post-venta</Descripcion>\r\n               <NivelUId>3</NivelUId>\r\n               <Habilitado>S</Habilitado>\r\n               <CantidadPartners>0</CantidadPartners>\r\n            </sBTNivel>\r\n         </sdtNiveles>\r\n         <Erroresnegocio></Erroresnegocio>\r\n         <Btoutreq>\r\n            <Numero>38307</Numero>\r\n            <Estado>OK</Estado>\r\n            <Servicio>BTPartners.ObtenerNiveles</Servicio>\r\n            <Requerimiento>1</Requerimiento>\r\n            <Fecha>2026-05-20</Fecha>\r\n            <Hora>15:41:29</Hora>\r\n            <Canal>BTDIGITAL</Canal>\r\n         </Btoutreq>\r\n      </BTPartners.ObtenerNivelesResponse>\r\n   </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\r\n  \"Btinreq\": {\r\n    \"Device\": \"FPAIS\",\r\n    \"Usuario\": \"INSTALADOR\",\r\n    \"Requerimiento\": 1,\r\n    \"Canal\": \"BTDIGITAL\",\r\n    \"Token\": \"E7B55B3848F0357E436D77D3\"\r\n  },\r\n  \"sdtNiveles\": {\r\n    \"sBTNivel\": [\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 1A - Venta\",\r\n        \"NivelUId\": 1,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 4\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 2A - Venta y cobro cuota\",\r\n        \"NivelUId\": 2,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 1\r\n      },\r\n      {\r\n        \"TipoUId\": 1,\r\n        \"Descripcion\": \"Nivel 3A - Venta, cobro y post-venta\",\r\n        \"NivelUId\": 3,\r\n        \"Habilitado\": \"S\",\r\n        \"CantidadPartners\": 0\r\n      }\r\n    ]\r\n  },\r\n  \"Erroresnegocio\": {},\r\n  \"Btoutreq\": {\r\n    \"Numero\": 38307,\r\n    \"Estado\": \"OK\",\r\n    \"Servicio\": \"BTPartners.ObtenerNiveles\",\r\n    \"Requerimiento\": 1,\r\n    \"Fecha\": \"2026-05-20\",\r\n    \"Hora\": \"15:41:29\",\r\n    \"Canal\": \"BTDIGITAL\"\r\n  }\r\n}"
+        }
+      ]
     }
   },
   "structuredTypes": [

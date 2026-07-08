@@ -1,0 +1,72 @@
+{
+  "slug": "loans/getmembertypes",
+  "pageTitle": "Get Member Types",
+  "description": "Método para obtener un listado de los tipos de miembro que pueden conformar un grupo de créditos.",
+  "pubName": "PublicLoans.getMemberTypes",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0038",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "memberTypes",
+      "Tipo": "<a href=\"#sdtsbtmggroupmembertype\">SdtsBTMGGroupMemberType</a>",
+      "Comentarios": "Listado de tipos de integrantes de un grupo de créditos."
+    }
+  ],
+  "errors": [],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  }\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"memberTypes\": {\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:50:43\",\n    \"Numero\": 13542419,\n    \"Servicio\": \"PublicLoans.getMemberTypes\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"memberTypes\": {\n    \"Id\": \"\",\n    \"description\": \"\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"13:50:43\",\n    \"Numero\": 13542419,\n    \"Servicio\": \"PublicLoans.getMemberTypes\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [
+    {
+      "typeName": "SdtsBTMGGroupMemberType",
+      "fields": [
+        {
+          "Nombre": "Id",
+          "Tipo": "Byte <strong>(Length: 2)</strong>",
+          "Comentarios": "Identificador de tipo de miembro."
+        },
+        {
+          "Nombre": "description",
+          "Tipo": "String <strong>(Length: 40)</strong>",
+          "Comentarios": "Descripción de tipo de miembro."
+        }
+      ]
+    }
+  ],
+  "valuesTable": []
+}

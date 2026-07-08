@@ -127,12 +127,22 @@ curl -X POST \
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
                <moneda>$</moneda>
                <papel/>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
             <sBTProducto>
                <productoUId>104</productoUId>
                <nombre>DEPOSITOS A PLAZO FIJO, DPF Intransferible</nombre>
                <moneda>USD</moneda>
                <papel/>
+               <otrosConceptos>
+                  <concepto></concepto>
+                  <texto></texto>
+                  <valor>0</valor>
+               </otrosConceptos>
             </sBTProducto>
          </sdtProducto>
          <Erroresnegocio></Erroresnegocio>
@@ -152,43 +162,53 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-    "sdtProducto": {
-        "sBTProducto": [
-            {
-                "papel": "",
-                "moneda": "$",
-                "productoUId": "103",
-                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
-            },
-            {
-                "papel": "",
-                "moneda": "USD",
-                "productoUId": "104",
-                "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": "908",
-        "Estado": "OK",
-        "Servicio": "BTDepositosAPlazo.ObtenerProductos",
-        "Fecha": "2017-12-21",
-        "Requerimiento": 1,
-        "Hora": "15:12:50",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProducto": {
+    "sBTProducto": [
+      {
+        "papel": "",
+        "moneda": "$",
+        "productoUId": "103",
+        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "papel": "",
+        "moneda": "USD",
+        "productoUId": "104",
+        "nombre": "DEPOSITOS A PLAZO FIJO, DPF Intransferible",
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "908",
+    "Estado": "OK",
+    "Servicio": "BTDepositosAPlazo.ObtenerProductos",
+    "Fecha": "2017-12-21",
+    "Requerimiento": 1,
+    "Hora": "15:12:50",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -209,7 +229,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -222,4 +245,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

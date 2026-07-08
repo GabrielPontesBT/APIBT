@@ -227,103 +227,110 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-   "Btinreq": { 
-      "Device": "BTDIGITAL", 
-      "Usuario": "INSTALADOR", 
-      "Requerimiento": "1", 
-      "Canal": "BTDIGITAL", 
-      "Token": "d25cdaf98eCD285A89A23FBE" 
-   }, 
-   "sdtSimulacionPrestamo": { 
-	  "otrosConceptos": { 
-	  	"sBTConcepto": [] 
-	  }, 
-      "fechaValor": "2020-01-01", 
-      "capital": "45587.56", 
-      "cronograma": { 
-         "sBTCuotaPrestamoAlta": [ 
-            { 
-               "importe": "9594.84", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-02-01" 
-            }, 
-            { 
-               "importe": "9230.36", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-03-01" 
-            }, 
-            { 
-               "importe": "8859.63", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-04-01" 
-            }, 
-            { 
-               "importe": "8482.52", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-05-01" 
-            }, 
-            { 
-               "importe": "8098.96", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-06-01" 
-            }, 
-            { 
-               "importe": "7708.80", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-07-01" 
-            }, 
-            { 
-               "importe": "7311.97", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-08-01" 
-            }, 
-            { 
-               "importe": "6908.30", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-09-01" 
-            }, 
-            { 
-               "importe": "6497.72", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-10-01" 
-            }, 
-            { 
-               "importe": "6080.09", 
-               "redondeo": "0.00", 
-               "fechaPago": "2020-11-01" 
-            } 
-         ] 
-      }, 
-      "tasaEfectiva": "0.000000", 
-      "intereses": "4412.43", 
-      "tasaNominalAnual": "20.878536", 
-      "totalPrestamo": "78773.19", 
-      "valorCuota": "7877.32", 
-      "tasaEfectivaAnual": "23.000000", 
-      "tasa": "23.000000", 
-      "fechaPrimerPago": "2020-02-01", 
-      "fechaVencimiento": "2020-11-01", 
-      "producto": { 
-         "papel": "$", 
-         "moneda": "$", 
-         "productoUId": "181", 
-         "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF" 
-      }, 
-      "plazo": "300" 
-   }, 
-   "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-   }, 
-   "Btoutreq": { 
-      "Numero": "110672", 
-      "Estado": "OK", 
-      "Servicio": "BTPrestamos.SimularDespejandoCapitalCantCuotas", 
-      "Requerimiento": "1", 
-      "Fecha": "2021-03-18", 
-      "Canal": "BTDIGITAL", 
-      "Hora": "12:34:44" 
-   } 
+{
+  "Btinreq": {
+    "Device": "BTDIGITAL",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "d25cdaf98eCD285A89A23FBE"
+  },
+  "sdtSimulacionPrestamo": {
+    "otrosConceptos": {
+      "sBTConcepto": [
+        {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      ]
+    },
+    "fechaValor": "2020-01-01",
+    "capital": "45587.56",
+    "cronograma": {
+      "sBTCuotaPrestamoAlta": [
+        {
+          "importe": "9594.84",
+          "redondeo": "0.00",
+          "fechaPago": "2020-02-01"
+        },
+        {
+          "importe": "9230.36",
+          "redondeo": "0.00",
+          "fechaPago": "2020-03-01"
+        },
+        {
+          "importe": "8859.63",
+          "redondeo": "0.00",
+          "fechaPago": "2020-04-01"
+        },
+        {
+          "importe": "8482.52",
+          "redondeo": "0.00",
+          "fechaPago": "2020-05-01"
+        },
+        {
+          "importe": "8098.96",
+          "redondeo": "0.00",
+          "fechaPago": "2020-06-01"
+        },
+        {
+          "importe": "7708.80",
+          "redondeo": "0.00",
+          "fechaPago": "2020-07-01"
+        },
+        {
+          "importe": "7311.97",
+          "redondeo": "0.00",
+          "fechaPago": "2020-08-01"
+        },
+        {
+          "importe": "6908.30",
+          "redondeo": "0.00",
+          "fechaPago": "2020-09-01"
+        },
+        {
+          "importe": "6497.72",
+          "redondeo": "0.00",
+          "fechaPago": "2020-10-01"
+        },
+        {
+          "importe": "6080.09",
+          "redondeo": "0.00",
+          "fechaPago": "2020-11-01"
+        }
+      ]
+    },
+    "tasaEfectiva": "0.000000",
+    "intereses": "4412.43",
+    "tasaNominalAnual": "20.878536",
+    "totalPrestamo": "78773.19",
+    "valorCuota": "7877.32",
+    "tasaEfectivaAnual": "23.000000",
+    "tasa": "23.000000",
+    "fechaPrimerPago": "2020-02-01",
+    "fechaVencimiento": "2020-11-01",
+    "producto": {
+      "papel": "$",
+      "moneda": "$",
+      "productoUId": "181",
+      "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF"
+    },
+    "plazo": "300",
+    "operacionUId": 0
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "110672",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.SimularDespejandoCapitalCantCuotas",
+    "Requerimiento": "1",
+    "Fecha": "2021-03-18",
+    "Canal": "BTDIGITAL",
+    "Hora": "12:34:44"
+  }
 }
 ```
 ::: 
@@ -378,7 +385,10 @@ tasaEfectiva | Double | Tasa efectiva.
 tasaEfectivaAnual | Double | Tasa efectiva anual. 
 tasaNominalAnual | Double | Tasa nominal anual. 
 totalPrestamo | Double | Total a pagar. 
-valorCuota | Double | Valor cuota. 
+valorCuota | Double | Valor cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -390,7 +400,10 @@ Nombre | Tipo | Comentarios
 moneda | String | Símbolo de la moneda. 
 nombre | String | Nombre del producto. 
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -402,6 +415,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTCuotaPrestamoAlta
 
 ### sBTCuotaPrestamoAlta
 
@@ -410,6 +426,8 @@ Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 fechaPago | Date | Fecha de pago de la cuota. 
-importe | Double | Importe de la cuota. 
+importe | Double | Importe de la cuota.
 :::
+
 <!-- CIERRA SDT -->
+

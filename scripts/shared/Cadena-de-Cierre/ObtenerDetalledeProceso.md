@@ -107,14 +107,14 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>6964034201CD285A89A23FBE</Token>
          </Btinreq>
-         <sBTProcesoBatch>
+         <procesosBatch>
             <identificador>93</identificador>
             <nombre>POCDE002</nombre>
             <descripcion>Busca Indicios OCODEí</descripcion>
             <periodicidad>DIARIA</periodicidad>
             <parametrosExtendidos>SI</parametrosExtendidos>
             <esReprocesable>No reprocesar nunca</esReprocesable>
-         </sBTProcesoBatch>
+         </procesosBatch>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>42156</Numero>
@@ -132,35 +132,35 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "mc",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "6964034201CD285A89A23FBE"
-    },
-    "sBTProcesoBatch": {
-        "identificador": 93,
-        "nombre": "POCDE002",
-        "descripcion": "Busca Indicios OCODEí",
-        "periodicidad": "DIARIA",
-        "parametrosExtendidos": "SI",
-        "esReprocesable": "No reprocesar nunca"
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 42156,
-        "Estado": "OK",
-        "Servicio": "BTCadenaCierre.ObtenerDetalleProceso",
-        "Fecha": "2022-06-01",
-        "Requerimiento": 1,
-        "Hora": "13:44:21",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "mc",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "6964034201CD285A89A23FBE"
+  },
+  "procesosBatch": {
+    "identificador": 93,
+    "nombre": "POCDE002",
+    "descripcion": "Busca Indicios OCODEí",
+    "periodicidad": "DIARIA",
+    "parametrosExtendidos": "SI",
+    "esReprocesable": "No reprocesar nunca"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 42156,
+    "Estado": "OK",
+    "Servicio": "BTCadenaCierre.ObtenerDetalleProceso",
+    "Fecha": "2022-06-01",
+    "Requerimiento": 1,
+    "Hora": "13:44:21",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

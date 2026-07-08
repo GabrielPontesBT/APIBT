@@ -72,22 +72,19 @@ sdtEstadoCuentaAhorro | [sBTEstadoCuentaAhorro](#sbtestadocuentaahorro) | Estado
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerEstadoDeCuenta=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 02100864-83c5-1642-ca5f-a8589b3524b4' \
-  -d '{
-	"Btinreq": {
-        "Device": "AV",
-        "Usuario": "MINSTALADOR",
-        "Requerimiento": "",
-        "Canal": "BTDIGITAL",
-        "Token": "75e20bd1614A8B5C60A82434"
-    },
-    "ahorroUId": 205,
-	"fechaDesde": "2017-03-06",
-}'  "fechaHasta": "2017-11-30"
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "75e20bd1614A8B5C60A82434"
+  },
+  "ahorroUId": 205,
+  "fechaDesde": "2017-03-06",
+  "fechaHasta": "2017-11-30"
+}
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -180,84 +177,85 @@ curl -X POST \
 
 @tab JSON
 ```json
-{  
-    "Btinreq": {  
-        "Device": "AV",  
-        "Usuario": "MINSTALADOR",  
-        "Requerimiento": "",  
-        "Canal": "BTDIGITAL",  
-        "Token": "2a721032f94A8B5C60A82434"  
-    },  
-    "sdtEstadoCuentaAhorro": {  
-        "ahorroUId": 205,  
-        "abonoActual": 5000,  
-        "periodicidad": 1,  
-        "periodosGraciaUtilizados": 0,  
-        "totalInteresesGenerados": 0,  
-        "clienteUId": 61,  
-        "fechaProximoVencimiento": "2017-07-07",  
-        "productoUId": 82,  
-        "observacion": "Se cumplió con la cantidad máxima de periodos de renovación.",  
-        "intentosIncremento": 0,  
-        "diaIncremento": 9,  
-        "movimientos": {  
-            "sBTMovimientoAhorro": [  
-                {  
-                    "saldoAhorro": 1000,  
-                    "fecha": "2017-03-06",  
-                    "interes": 0,  
-                    "capital": 1000,  
-                    "concepto": "Depósito inicial"  
-                },  
-                {  
-                    "saldoAhorro": 6000,  
-                    "fecha": "2017-04-10",  
-                    "interes": 0,  
-                    "capital": 5000,  
-                    "concepto": "Incremento de ahorro"  
-                },  
-                {  
-                    "saldoAhorro": 6016.77,  
-                    "fecha": "2017-05-08",  
-                    "interes": 16.77,  
-                    "capital": 6000,  
-                    "concepto": "Renovación del ahorro"  
-                },  
-                {  
-                    "saldoAhorro": 11016.77,  
-                    "fecha": "2017-05-09",  
-                    "interes": 0,  
-                    "capital": 5000,  
-                    "concepto": "Incremento de ahorro"  
-                },  
-                {  
-                    "saldoAhorro": 11200.75,  
-                    "fecha": "2017-11-30",  
-                    "interes": 183.98,  
-                    "capital": 11055.89,  
-                    "concepto": "Acreditación del ahorro"  
-                }  
-            ]  
-        },  
-        "totalDepositado": 11000,  
-        "totalInteresesAcreditados": 200.75,  
-        "renueva": "No",  
-        "operacionUIdOrigen": 2,  
-        "operacionUIdDestino": 2,  
-        "estado": "Cancelado"  
-    },  
-    "Erroresnegocio": {  
-        "BTErrorNegocio": []  
-    },  
-    "Btoutreq": {  
-        "Numero": 9355,  
-        "Estado": "OK",  
-        "Servicio": "BTAhorroProgramado.ObtenerEstadoDeCuenta",  
-        "Fecha": "2019-11-19",  
-        "Requerimiento": "",  
-        "Hora": "11:26:34",  
-        "Canal": "BTDIGITAL"  
-    }  
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "2a721032f94A8B5C60A82434"
+  },
+  "sdtEstadoCuentaAhorro": {
+    "ahorroUId": 205,
+    "abonoActual": 5000,
+    "periodicidad": 1,
+    "periodosGraciaUtilizados": 0,
+    "totalInteresesGenerados": 0,
+    "clienteUId": 61,
+    "fechaProximoVencimiento": "2017-07-07",
+    "productoUId": 82,
+    "observacion": "Se cumplió con la cantidad máxima de periodos de renovación.",
+    "intentosIncremento": 0,
+    "diaIncremento": 9,
+    "movimientos": {
+      "sBTMovimientoAhorro": [
+        {
+          "saldoAhorro": 1000,
+          "fecha": "2017-03-06",
+          "interes": 0,
+          "capital": 1000,
+          "concepto": "Depósito inicial"
+        },
+        {
+          "saldoAhorro": 6000,
+          "fecha": "2017-04-10",
+          "interes": 0,
+          "capital": 5000,
+          "concepto": "Incremento de ahorro"
+        },
+        {
+          "saldoAhorro": 6016.77,
+          "fecha": "2017-05-08",
+          "interes": 16.77,
+          "capital": 6000,
+          "concepto": "Renovación del ahorro"
+        },
+        {
+          "saldoAhorro": 11016.77,
+          "fecha": "2017-05-09",
+          "interes": 0,
+          "capital": 5000,
+          "concepto": "Incremento de ahorro"
+        },
+        {
+          "saldoAhorro": 11200.75,
+          "fecha": "2017-11-30",
+          "interes": 183.98,
+          "capital": 11055.89,
+          "concepto": "Acreditación del ahorro"
+        }
+      ]
+    },
+    "totalDepositado": 11000,
+    "totalInteresesAcreditados": 200.75,
+    "renueva": "No",
+    "operacionUIdOrigen": 2,
+    "operacionUIdDestino": 2,
+    "estado": "Cancelado"
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 9355,
+    "Estado": "OK",
+    "Servicio": "BTAhorroProgramado.ObtenerEstadoDeCuenta",
+    "Fecha": "2019-11-19",
+    "Requerimiento": "",
+    "Hora": "11:26:34",
+    "Canal": "BTDIGITAL"
+  }
 }
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

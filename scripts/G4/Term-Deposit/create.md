@@ -90,8 +90,8 @@ Código | Descripción
   "expirationAccountGUID": "1d5e8f2a-3b7c-4960-8e1d-5a2f9b4c7d83",
   "recurringPaymentAccountGUID": "",
   "expirationInstruction": 1,
-  "recurringPaymentInstruction": 
-}'
+  "recurringPaymentInstruction": {}
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

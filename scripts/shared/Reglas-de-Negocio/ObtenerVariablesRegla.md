@@ -109,7 +109,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>86b12d9cbaCD285A89A23FBE</Token>
          </Btinreq>
-         <Variableregla>
+         <sdtVariablesRegla>
             <sBTVariableRegla>
                <tipoDato>E-Entero</tipoDato>
                <descripcion>Moneda</descripcion>
@@ -134,7 +134,7 @@ curl -X POST \
                <variableId>4</variableId>
                <nombre>TCVTA</nombre>
             </sBTVariableRegla>
-         </Variableregla>
+         </sdtVariablesRegla>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>44445</Numero>
@@ -152,55 +152,55 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-    "Btinreq": {
-        "Device": "GP",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "86b12d9cbaCD285A89A23FBE"
-    },
-    "Variableregla": {
-        "sBTVariableRegla": [
-            {
-                "tipoDato": "E-Entero",
-                "descripcion": "Moneda",
-                "variableId": 1,
-                "nombre": "MONEDA"
-            },
-            {
-                "tipoDato": "N-Numerico",
-                "descripcion": "Importe",
-                "variableId": 2,
-                "nombre": "IMPORTE"
-            },
-            {
-                "tipoDato": "N-Numerico",
-                "descripcion": "Tipo de Cambio",
-                "variableId": 3,
-                "nombre": "TCCOMPRA"
-            },
-            {
-                "tipoDato": "N-Numerico",
-                "descripcion": "Tipo de Cambio Vta",
-                "variableId": 4,
-                "nombre": "TCVTA"
-            }
-        ]
-    },
-    "Erroresnegocio": {
-        "BTErrorNegocio": []
-    },
-    "Btoutreq": {
-        "Numero": 44445,
-        "Estado": "OK",
-        "Servicio": "BTReglasNegocio.ObtenerVariablesRegla",
-        "Fecha": "2022-06-02",
-        "Requerimiento": 1,
-        "Hora": "10:05:38",
-        "Canal": "BTDIGITAL"
-    }
-}'
+{
+  "Btinreq": {
+    "Device": "GP",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "86b12d9cbaCD285A89A23FBE"
+  },
+  "sdtVariablesRegla": {
+    "sBTVariableRegla": [
+      {
+        "tipoDato": "E-Entero",
+        "descripcion": "Moneda",
+        "variableId": 1,
+        "nombre": "MONEDA"
+      },
+      {
+        "tipoDato": "N-Numerico",
+        "descripcion": "Importe",
+        "variableId": 2,
+        "nombre": "IMPORTE"
+      },
+      {
+        "tipoDato": "N-Numerico",
+        "descripcion": "Tipo de Cambio",
+        "variableId": 3,
+        "nombre": "TCCOMPRA"
+      },
+      {
+        "tipoDato": "N-Numerico",
+        "descripcion": "Tipo de Cambio Vta",
+        "variableId": 4,
+        "nombre": "TCVTA"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 44445,
+    "Estado": "OK",
+    "Servicio": "BTReglasNegocio.ObtenerVariablesRegla",
+    "Fecha": "2022-06-02",
+    "Requerimiento": 1,
+    "Hora": "10:05:38",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

@@ -1,0 +1,77 @@
+{
+  "slug": "loan-parameters/getcapital",
+  "pageTitle": "Get Capital",
+  "description": "Método para obtener el rango de capital de un producto de préstamos, incluyendo su valor por defecto.",
+  "pubName": "PublicLoanParameters.getCapital",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0022",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "productGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) del producto."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [],
+  "outputNote": "",
+  "outputData": [
+    {
+      "Nombre": "minimum",
+      "Tipo": "Double <strong>(Length: 10)</strong>",
+      "Comentarios": "Capital mínimo."
+    },
+    {
+      "Nombre": "maximum",
+      "Tipo": "Double <strong>(Length: 10)</strong>",
+      "Comentarios": "Capital máximo."
+    },
+    {
+      "Nombre": "defaultValue",
+      "Tipo": "Double <strong>(Length: 10)</strong>",
+      "Comentarios": "Capital por defecto."
+    }
+  ],
+  "errors": [
+    {
+      "Código": "120050009",
+      "Descripción": "Debe ingresar el GUID de producto."
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"productGUID\": \"bf0d7e10-dce6-4bd4-b866-9984556613ec\"\n}'"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 2000,\n  \"maximum\": 200000,\n  \"defaultValue\": 2000,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:34:40\",\n    \"Numero\": 13568691,\n    \"Servicio\": \"PublicLoanParameters.getCapital\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTDIGITAL\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": \"1\",\n    \"Token\": \"15A37FA9852954F6770E9868\"\n  },\n  \"minimum\": 2000,\n  \"maximum\": 200000,\n  \"defaultValue\": 2000,\n  \"BusinessErrors\": {\n    \"BusinessError\": []\n  },\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-03\",\n    \"Hora\": \"17:34:40\",\n    \"Numero\": 13568691,\n    \"Servicio\": \"PublicLoanParameters.getCapital\",\n    \"Requerimiento\": \"1\",\n    \"Canal\": \"BTDIGITAL\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

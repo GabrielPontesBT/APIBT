@@ -5,6 +5,7 @@
   "pubName": "BTCCE.ObtenerBancos",
   "programa": "RBTPPE284",
   "scope": "Perú",
+  "endpoint": "",
   "hasBackendConfig": false,
   "backendText": "",
   "backendData": [],
@@ -22,9 +23,12 @@
       "Comentarios": "Codigo de camara (MPE005)"
     }
   ],
+  "bodyCols": [],
+  "bodyData": [],
+  "headersData": [],
   "outputData": [
     {
-      "Nombre": "movimientoUID",
+      "Nombre": "movimientoUId",
       "Tipo": "<a href=\"#sbtlistabancox\">sBTListaBancox</a>",
       "Comentarios": "Lista Bancos."
     }
@@ -40,11 +44,25 @@
   "examples": {
     "invocation": {
       "xml": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t<soapenv:Header/>\r\n\t<soapenv:Body>\r\n\t\t<bts:BTCCE.ObtenerBancos>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:IDCamara>1</bts:IDCamara>\r\n\t\t</bts:BTCCE.ObtenerBancos>\r\n\t</soapenv:Body>\r\n</soapenv:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Lista",
+          "lang": "xml",
+          "code": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:bts=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t<soapenv:Header/>\r\n\t<soapenv:Body>\r\n\t\t<bts:BTCCE.ObtenerBancos>\r\n\t\t\t<bts:Btinreq>\r\n\t\t\t\t<bts:Canal>BTDIGITAL</bts:Canal>\r\n\t\t\t\t<bts:Usuario>INSTALADOR</bts:Usuario>\r\n\t\t\t\t<bts:Device>1</bts:Device>\r\n\t\t\t\t<bts:Requerimiento>1</bts:Requerimiento>\r\n\t\t\t\t<bts:Token>A60F0486A686F9C081A582A6</bts:Token>\r\n\t\t\t</bts:Btinreq>\r\n\t\t\t<bts:IDCamara>1</bts:IDCamara>\r\n\t\t</bts:BTCCE.ObtenerBancos>\r\n\t</soapenv:Body>\r\n</soapenv:Envelope>"
+        }
+      ]
     },
     "response": {
       "xml": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n\t<SOAP-ENV:Body>\r\n\t\t<BTCCE.ObtenerBancosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>A60F0486A686F9C081A582A6</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<ListaBancos>\r\n\t\t\t\t<Lista>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>1</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Banco Central de Reserva Peru</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>2</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Banco de Crédito del Perú</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>3</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Interbank</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>7</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Citibank del Perú S.A.</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>9</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Scotiabank Perú S.A.A.</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>11</CodBco>\r\n\t\t\t\t\t\t<NomBaco>BBVA Continental</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t</Lista>\r\n\t\t\t</ListaBancos>\r\n\t\t\t<Erroresnegocio/>\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>OK</Estado>\r\n\t\t\t\t<Fecha>2025-04-29</Fecha>\r\n\t\t\t\t<Hora>06:21:19</Hora>\r\n\t\t\t\t<Numero>6140610</Numero>\r\n\t\t\t\t<Servicio>BTCCE.ObtenerBancos</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCE.ObtenerBancosResponse>\r\n\t</SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>",
-      "json": ""
+      "json": "",
+      "tabs": [
+        {
+          "name": "Lista",
+          "lang": "xml",
+          "code": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n\t<SOAP-ENV:Body>\r\n\t\t<BTCCE.ObtenerBancosResponse xmlns=\"http://uy.com.dlya.bantotal/BTSOA/\">\r\n\t\t\t<Btinreq>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t\t<Usuario>INSTALADOR</Usuario>\r\n\t\t\t\t<Device>1</Device>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Token>A60F0486A686F9C081A582A6</Token>\r\n\t\t\t</Btinreq>\r\n\t\t\t<ListaBancos>\r\n\t\t\t\t<Lista>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>1</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Banco Central de Reserva Peru</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>2</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Banco de Crédito del Perú</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>3</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Interbank</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>7</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Citibank del Perú S.A.</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>9</CodBco>\r\n\t\t\t\t\t\t<NomBaco>Scotiabank Perú S.A.A.</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t\t<SdtsbtListaBancox>\r\n\t\t\t\t\t\t<CodBco>11</CodBco>\r\n\t\t\t\t\t\t<NomBaco>BBVA Continental</NomBaco>\r\n\t\t\t\t\t</SdtsbtListaBancox>\r\n\t\t\t\t</Lista>\r\n\t\t\t</ListaBancos>\r\n\t\t\t<Erroresnegocio/>\r\n\t\t\t<Btoutreq>\r\n\t\t\t\t<Estado>OK</Estado>\r\n\t\t\t\t<Fecha>2025-04-29</Fecha>\r\n\t\t\t\t<Hora>06:21:19</Hora>\r\n\t\t\t\t<Numero>6140610</Numero>\r\n\t\t\t\t<Servicio>BTCCE.ObtenerBancos</Servicio>\r\n\t\t\t\t<Requerimiento>1</Requerimiento>\r\n\t\t\t\t<Canal>BTDIGITAL</Canal>\r\n\t\t\t</Btoutreq>\r\n\t\t</BTCCE.ObtenerBancosResponse>\r\n\t</SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+        }
+      ]
     }
   },
   "structuredTypes": [

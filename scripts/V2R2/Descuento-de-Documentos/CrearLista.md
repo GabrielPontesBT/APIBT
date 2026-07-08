@@ -98,35 +98,32 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?CrearLista=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"clienteUId":12,
-	"productoUId":17,
-	"montoADescontar":1000,
-	"tasa":10,
-	"porcentajeAforo":10,
-	"sdtListaDocumentos": {
-      "identificacion": "1522156151",
-      "fechaEmision": "2018-11-20",
-      "fechaVto": "2020-12-20",
-      "monto": "1000",
-      "personaUId": "1",
-      "ciudad": "CIUDAD",
-      "domicilio": "DOMICILIO",
-      "telefono": "098756022",
-      "tasa": "0"
-   }'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "clienteUId": 12,
+  "productoUId": 17,
+  "montoADescontar": 1000,
+  "tasa": 10,
+  "porcentajeAforo": 10,
+  "sdtListaDocumentos": {
+    "identificacion": "1522156151",
+    "fechaEmision": "2018-11-20",
+    "fechaVto": "2020-12-20",
+    "monto": "1000",
+    "personaUId": "1",
+    "ciudad": "CIUDAD",
+    "domicilio": "DOMICILIO",
+    "telefono": "098756022",
+    "tasa": "0"
+  },
+  "fechaValor": ""
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

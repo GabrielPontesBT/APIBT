@@ -91,7 +91,7 @@ Código | Descripción
             <bts:texto></bts:texto>
             <bts:mercado>51</bts:mercado>
             <bts:precio>1000</bts:precio>
-            <bts:cuentaUId>221</bts:cuentaUId>
+            <bts:clienteUId>221</bts:clienteUId>
             <bts:otrosConceptos>
                <bts:sBTConcepto>
                   <bts:texto></bts:texto>
@@ -115,47 +115,42 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ComprarTitulo' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
-  -d '{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "sdtCompra": {
-      "plazo": 3,
-      "tasa": 60,
-      "fecha": "2020-08-11",
-      "moneda": 0,
-      "especie": 5787,
-      "tipo": "C",
-      "texto": "",
-      "mercado": 51,
-      "precio": 1000,
-      "cuentaUId": 221,
-      "otrosConceptos": {
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtCompra": {
+    "plazo": 3,
+    "tasa": 60,
+    "fecha": "2020-08-11",
+    "moneda": 0,
+    "especie": 5787,
+    "tipo": "C",
+    "texto": "",
+    "mercado": 51,
+    "precio": 1000,
+    "clienteUId": 221,
+    "otrosConceptos": {
       "sBTConcepto": {
-         "texto": "",
-         "valor": "",
-         "concepto": ""
+        "texto": "",
+        "valor": "",
+        "concepto": ""
       }
-      },
-      "valorNominal": 0,
-      "solicita": "P",
-      "comision": "",
-      "formaPago": "CC",
-      "operacionUId": 7,
-      "ingresa": "I",
-      "vigenciaHasta": "",
-      "tipoPrecio": "L"
-   }
-}'
+    },
+    "valorNominal": 0,
+    "solicita": "P",
+    "comision": "",
+    "formaPago": "CC",
+    "operacionUId": 7,
+    "ingresa": "I",
+    "vigenciaHasta": "",
+    "tipoPrecio": "L"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -252,6 +247,9 @@ tipo | String | Tipo de compra.
 tipoPrecio | String | Tipo de precio limite o cerrado.
 valorNominal | Double | Valor nominal.
 vigenciaHasta | Date | Fecha de vigencia hasta.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -264,4 +262,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

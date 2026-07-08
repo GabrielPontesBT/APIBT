@@ -302,233 +302,283 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{ 
-	"Btinreq": { 
-    "Requerimiento": 0, 
-    "Canal": "BTDIGITAL", 
-    "Device": "GZ", 
-    "Usuario": "Instalador", 
-    "Token": "d51ae0498699865B3A2E76CF" 
-	}, 
-    "quedanRegistros": "S", 
-    "cantidadRegistros": 154, 
-    "sdtDatosPrestamos": { 
-        "sBTDatosPrestamo": [ 
-        { 
-            "plazo": 422, 
-            "eventosPosteriores": "N", 
-            "deudaTotalVencida": 2623560.33, 
-            "periodicidad": 30, 
-            "simboloMoneda": "$", 
-            "fechaVencimiento": "2021-01-02", 
-            "producto": { 
-            "moneda": "CRC", 
-            "papel": "$", 
-            "otrosConceptos": "", 
-            "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
-            }, 
-            "clienteUId": 4, 
-            "fechaProximoVencimiento": "", 
-            "tasaVigente": 10, 
-            "fechaPrimerCuotaImpaga": "2020-02-07", 
-            "valorCuota": -34266.33, 
-            "saldoCapital": 30000, 
-            "otrosConceptos": "", 
-            "cantidadCuotasVencidas": 12, 
-            "capitalOriginal": 30000, 
-            "tir": 0, 
-            "deudaCancelacionTotal": 2623560.33, 
-            "diasMora": 0, 
-            "operacionUId": 15, 
-            "cantidadCuotasImpagas": 12, 
-            "deudaTotalAFecha": 2623560.33, 
-            "nombreCliente": "PRANKA ERIKA", 
-            "cuotasPagasConRetraso": 0, 
-            "fechaUltimoPago": "", 
-            "tipoAmortizacion": "Francés", 
-            "datosAdicionales": "", 
-            "estado": "Normal", 
-            "tasaMoraVigente": 10, 
-            "sucursal": "Casa Matriz", 
-            "fechaValor": "2019-11-07", 
-            "cantidadCuotas": 12 
-        }, 
-        { 
-            "plazo": 452, 
-            "eventosPosteriores": "N", 
-            "deudaTotalVencida": 7255644.02, 
-            "periodicidad": 30, 
-            "simboloMoneda": "$", 
-            "fechaVencimiento": "2021-03-05", 
-            "producto": { 
-            "moneda": "CRC", 
-            "papel": "$", 
-            "otrosConceptos": "", 
-            "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
-            }, 
-            "clienteUId": 4, 
-            "fechaProximoVencimiento": "", 
-            "tasaVigente": 10, 
-            "fechaPrimerCuotaImpaga": "2020-06-08", 
-            "valorCuota": 21968.79, 
-            "saldoCapital": 109602.47, 
-            "otrosConceptos": "", 
-            "cantidadCuotasVencidas": 10, 
-            "capitalOriginal": 120000, 
-            "tir": 0, 
-            "deudaCancelacionTotal": 7255644.02, 
-            "diasMora": 0, 
-            "operacionUId": 16, 
-            "cantidadCuotasImpagas": 10, 
-            "deudaTotalAFecha": 7255644.02, 
-            "nombreCliente": "PRANKA ERIKA", 
-            "cuotasPagasConRetraso": 0, 
-            "fechaUltimoPago": "2020-02-07", 
-            "tipoAmortizacion": "Francés con Seg.e Impu.", 
-            "datosAdicionales": "", 
-            "estado": "Normal", 
-            "tasaMoraVigente": 10, 
-            "sucursal": "Casa Matriz", 
-            "fechaValor": "2019-12-09", 
-            "cantidadCuotas": 12 
-        }, 
-        { 
-            "plazo": 360, 
-            "eventosPosteriores": "N", 
-            "deudaTotalVencida": 1818126.01, 
-            "periodicidad": 30, 
-            "simboloMoneda": "$", 
-            "fechaVencimiento": "2020-12-03", 
-            "producto": { 
-            "moneda": "CRC", 
-            "papel": "$", 
-            "otrosConceptos": "", 
-            "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
-            }, 
-            "clienteUId": 4, 
-            "fechaProximoVencimiento": "", 
-            "tasaVigente": 10, 
-            "fechaPrimerCuotaImpaga": "", 
-            "valorCuota": -48039.65, 
-            "saldoCapital": 24289.29, 
-            "otrosConceptos": "", 
-            "cantidadCuotasVencidas": 0, 
-            "capitalOriginal": 38000, 
-            "tir": 0, 
-            "deudaCancelacionTotal": 1818126.01, 
-            "diasMora": 0, 
-            "operacionUId": 17, 
-            "cantidadCuotasImpagas": 0, 
-            "deudaTotalAFecha": 1818126.01, 
-            "nombreCliente": "PRANKA ERIKA", 
-            "cuotasPagasConRetraso": 0, 
-            "fechaUltimoPago": "", 
-            "tipoAmortizacion": "Francés", 
-            "datosAdicionales": "", 
-            "estado": "Normal", 
-            "tasaMoraVigente": 10, 
-            "sucursal": "Casa Matriz", 
-            "fechaValor": "2019-12-09", 
-            "cantidadCuotas": 0 
-        }, 
-        { 
-            "plazo": 452, 
-            "eventosPosteriores": "N", 
-            "deudaTotalVencida": 6759733.33, 
-            "periodicidad": 30, 
-            "simboloMoneda": "$", 
-            "fechaVencimiento": "2021-03-05", 
-            "producto": { 
-            "moneda": "CRC", 
-            "papel": "$", 
-            "otrosConceptos": "", 
-            "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
-            }, 
-            "clienteUId": 4, 
-            "fechaProximoVencimiento": "", 
-            "tasaVigente": 10, 
-            "fechaPrimerCuotaImpaga": "2020-01-08", 
-            "valorCuota": -113220.3, 
-            "saldoCapital": 89000, 
-            "otrosConceptos": "", 
-            "cantidadCuotasVencidas": 12, 
-            "capitalOriginal": 89000, 
-            "tir": 0, 
-            "deudaCancelacionTotal": 6759733.33, 
-            "diasMora": 0, 
-            "operacionUId": 18, 
-            "cantidadCuotasImpagas": 12, 
-            "deudaTotalAFecha": 6759733.33, 
-            "nombreCliente": "PRANKA ERIKA", 
-            "cuotasPagasConRetraso": 0, 
-            "fechaUltimoPago": "", 
-            "tipoAmortizacion": "Francés", 
-            "datosAdicionales": "", 
-            "estado": "Normal", 
-            "tasaMoraVigente": 10, 
-            "sucursal": "Casa Matriz", 
-            "fechaValor": "2019-12-09", 
-            "cantidadCuotas": 12 
-        }, 
-        { 
-            "plazo": 360, 
-            "eventosPosteriores": "N", 
-            "deudaTotalVencida": 4996392.44, 
-            "periodicidad": 30, 
-            "simboloMoneda": "$", 
-            "fechaVencimiento": "2020-12-03", 
-            "producto": { 
-            "moneda": "CRC", 
-            "papel": "$", 
-            "otrosConceptos": "", 
-            "productoUId": 72, 
-            "nombre": "PRÉSTAMOS-Amortización Automática TF" 
-            }, 
-            "clienteUId": 4, 
-            "fechaProximoVencimiento": "", 
-            "tasaVigente": 10, 
-            "fechaPrimerCuotaImpaga": "", 
-            "valorCuota": -66151.03, 
-            "saldoCapital": 52000, 
-            "otrosConceptos": "", 
-            "cantidadCuotasVencidas": 0, 
-            "capitalOriginal": 52000, 
-            "tir": 0, 
-            "deudaCancelacionTotal": 4996392.44, 
-            "diasMora": 0, 
-            "operacionUId": 19, 
-            "cantidadCuotasImpagas": 0, 
-            "deudaTotalAFecha": 4996392.44, 
-            "nombreCliente": "PRANKA ERIKA", 
-            "cuotasPagasConRetraso": 0, 
-            "fechaUltimoPago": "", 
-            "tipoAmortizacion": "Francés", 
-            "datosAdicionales": "", 
-            "estado": "Normal", 
-            "tasaMoraVigente": 10, 
-            "sucursal": "Casa Matriz", 
-            "fechaValor": "2019-12-09", 
-            "cantidadCuotas": 0 
-        } 
-        ] 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Numero": "901", 
-        "Estado": "OK", 
-        "Servicio": "BTPrestamos.ObtenerPrestamosSinMora", 
-        "Fecha": "2023-10-25", 
-        "Requerimiento": 1, 
-        "Hora": "12:27:52", 
-        "Canal": "BTDIGITAL" 
-    } 
-}' 
+{
+  "Btinreq": {
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Device": "GZ",
+    "Usuario": "Instalador",
+    "Token": "d51ae0498699865B3A2E76CF"
+  },
+  "quedanRegistros": "S",
+  "cantidadRegistros": 154,
+  "sdtDatosPrestamos": {
+    "sBTDatosPrestamo": [
+      {
+        "plazo": 422,
+        "eventosPosteriores": "N",
+        "deudaTotalVencida": 2623560.33,
+        "periodicidad": 30,
+        "simboloMoneda": "$",
+        "fechaVencimiento": "2021-01-02",
+        "producto": {
+          "moneda": "CRC",
+          "papel": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS-Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "clienteUId": 4,
+        "fechaProximoVencimiento": "",
+        "tasaVigente": 10,
+        "fechaPrimerCuotaImpaga": "2020-02-07",
+        "valorCuota": -34266.33,
+        "saldoCapital": 30000,
+        "cantidadCuotasVencidas": 12,
+        "capitalOriginal": 30000,
+        "tir": 0,
+        "deudaCancelacionTotal": 2623560.33,
+        "diasMora": 0,
+        "operacionUId": 15,
+        "cantidadCuotasImpagas": 12,
+        "deudaTotalAFecha": 2623560.33,
+        "nombreCliente": "PRANKA ERIKA",
+        "cuotasPagasConRetraso": 0,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés",
+        "estado": "Normal",
+        "tasaMoraVigente": 10,
+        "sucursal": "Casa Matriz",
+        "fechaValor": "2019-11-07",
+        "cantidadCuotas": 12,
+        "datosAdicionales": {
+          "detalle": ""
+        },
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 452,
+        "eventosPosteriores": "N",
+        "deudaTotalVencida": 7255644.02,
+        "periodicidad": 30,
+        "simboloMoneda": "$",
+        "fechaVencimiento": "2021-03-05",
+        "producto": {
+          "moneda": "CRC",
+          "papel": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS-Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "clienteUId": 4,
+        "fechaProximoVencimiento": "",
+        "tasaVigente": 10,
+        "fechaPrimerCuotaImpaga": "2020-06-08",
+        "valorCuota": 21968.79,
+        "saldoCapital": 109602.47,
+        "cantidadCuotasVencidas": 10,
+        "capitalOriginal": 120000,
+        "tir": 0,
+        "deudaCancelacionTotal": 7255644.02,
+        "diasMora": 0,
+        "operacionUId": 16,
+        "cantidadCuotasImpagas": 10,
+        "deudaTotalAFecha": 7255644.02,
+        "nombreCliente": "PRANKA ERIKA",
+        "cuotasPagasConRetraso": 0,
+        "fechaUltimoPago": "2020-02-07",
+        "tipoAmortizacion": "Francés con Seg.e Impu.",
+        "estado": "Normal",
+        "tasaMoraVigente": 10,
+        "sucursal": "Casa Matriz",
+        "fechaValor": "2019-12-09",
+        "cantidadCuotas": 12,
+        "datosAdicionales": {
+          "detalle": ""
+        },
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "eventosPosteriores": "N",
+        "deudaTotalVencida": 1818126.01,
+        "periodicidad": 30,
+        "simboloMoneda": "$",
+        "fechaVencimiento": "2020-12-03",
+        "producto": {
+          "moneda": "CRC",
+          "papel": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS-Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "clienteUId": 4,
+        "fechaProximoVencimiento": "",
+        "tasaVigente": 10,
+        "fechaPrimerCuotaImpaga": "",
+        "valorCuota": -48039.65,
+        "saldoCapital": 24289.29,
+        "cantidadCuotasVencidas": 0,
+        "capitalOriginal": 38000,
+        "tir": 0,
+        "deudaCancelacionTotal": 1818126.01,
+        "diasMora": 0,
+        "operacionUId": 17,
+        "cantidadCuotasImpagas": 0,
+        "deudaTotalAFecha": 1818126.01,
+        "nombreCliente": "PRANKA ERIKA",
+        "cuotasPagasConRetraso": 0,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés",
+        "estado": "Normal",
+        "tasaMoraVigente": 10,
+        "sucursal": "Casa Matriz",
+        "fechaValor": "2019-12-09",
+        "cantidadCuotas": 0,
+        "datosAdicionales": {
+          "detalle": ""
+        },
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 452,
+        "eventosPosteriores": "N",
+        "deudaTotalVencida": 6759733.33,
+        "periodicidad": 30,
+        "simboloMoneda": "$",
+        "fechaVencimiento": "2021-03-05",
+        "producto": {
+          "moneda": "CRC",
+          "papel": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS-Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "clienteUId": 4,
+        "fechaProximoVencimiento": "",
+        "tasaVigente": 10,
+        "fechaPrimerCuotaImpaga": "2020-01-08",
+        "valorCuota": -113220.3,
+        "saldoCapital": 89000,
+        "cantidadCuotasVencidas": 12,
+        "capitalOriginal": 89000,
+        "tir": 0,
+        "deudaCancelacionTotal": 6759733.33,
+        "diasMora": 0,
+        "operacionUId": 18,
+        "cantidadCuotasImpagas": 12,
+        "deudaTotalAFecha": 6759733.33,
+        "nombreCliente": "PRANKA ERIKA",
+        "cuotasPagasConRetraso": 0,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés",
+        "estado": "Normal",
+        "tasaMoraVigente": 10,
+        "sucursal": "Casa Matriz",
+        "fechaValor": "2019-12-09",
+        "cantidadCuotas": 12,
+        "datosAdicionales": {
+          "detalle": ""
+        },
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      },
+      {
+        "plazo": 360,
+        "eventosPosteriores": "N",
+        "deudaTotalVencida": 4996392.44,
+        "periodicidad": 30,
+        "simboloMoneda": "$",
+        "fechaVencimiento": "2020-12-03",
+        "producto": {
+          "moneda": "CRC",
+          "papel": "$",
+          "productoUId": 72,
+          "nombre": "PRÉSTAMOS-Amortización Automática TF",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "clienteUId": 4,
+        "fechaProximoVencimiento": "",
+        "tasaVigente": 10,
+        "fechaPrimerCuotaImpaga": "",
+        "valorCuota": -66151.03,
+        "saldoCapital": 52000,
+        "cantidadCuotasVencidas": 0,
+        "capitalOriginal": 52000,
+        "tir": 0,
+        "deudaCancelacionTotal": 4996392.44,
+        "diasMora": 0,
+        "operacionUId": 19,
+        "cantidadCuotasImpagas": 0,
+        "deudaTotalAFecha": 4996392.44,
+        "nombreCliente": "PRANKA ERIKA",
+        "cuotasPagasConRetraso": 0,
+        "fechaUltimoPago": "",
+        "tipoAmortizacion": "Francés",
+        "estado": "Normal",
+        "tasaMoraVigente": 10,
+        "sucursal": "Casa Matriz",
+        "fechaValor": "2019-12-09",
+        "cantidadCuotas": 0,
+        "datosAdicionales": {
+          "detalle": ""
+        },
+        "otrosConceptos": {
+          "concepto": "",
+          "texto": "",
+          "valor": 0
+        }
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "901",
+    "Estado": "OK",
+    "Servicio": "BTPrestamos.ObtenerPrestamosSinMora",
+    "Fecha": "2023-10-25",
+    "Requerimiento": 1,
+    "Hora": "12:27:52",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -576,6 +626,9 @@ tasaVigente | Double | Tasa vigente.
 tipoAmortizacion | String | Tipo de amortización.
 tir | Double | Tir.
 valorCuota | Double | Valor de la cuota.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -588,7 +641,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -600,6 +656,9 @@ Nombre | Tipo | Comentarios
 concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
+:::
+
+::: details sBTDatoAdicional
 
 ### sBTDatoAdicional
 
@@ -609,4 +668,6 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 detalle | String | Detalle de dato adicional.
 :::
+
 <!-- CIERRA SDT -->
+

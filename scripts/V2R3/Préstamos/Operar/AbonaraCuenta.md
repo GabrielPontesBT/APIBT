@@ -50,7 +50,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 operacionUId | Long | Identificador único de operación simulada.
 clienteUId | Long | Identificador único de cliente.
-importe | Double | Importe a pagar.
+Importe | Double | Importe a pagar.
 recibeOperacionCobro | String | [Hidden: Recibe o no operación de cobro (S/N)].
 operacionUId_cobro | Long | Identificador único de operación de la cuenta vista de donde se cobrará el préstamo.
 referencia | String | Referencia

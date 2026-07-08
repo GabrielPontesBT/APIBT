@@ -186,9 +186,9 @@ Los campos del tipo de dato estructurado sBTChequeElectronico son los siguientes
 Nombre | Tipo | Comentarios 
 :--------- | :--------- | :--------- 
 beneficiario | String | Nombre del beneficiario. 
-cmc7 | Long | Identificador CMC7 de cheque electrónico.
+CMC7 | Long | Identificador CMC7 de cheque electrónico.
 importe | Double | Importe. 
-numerocheque | Long | Numero de cheque electrónico. 
-numerochequera | Long | Numero de chequera electrónica. 
+numeroCheque | Long | Numero de cheque electrónico. 
+numeroChequera | Long | Numero de chequera electrónica. 
 :::
 <!-- CIERRA SDT -->

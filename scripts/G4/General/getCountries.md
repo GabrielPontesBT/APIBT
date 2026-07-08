@@ -2823,7 +2823,17 @@ Código | Descripción
           "SdtsBTCNWEconomicBloc": []
         }
       }
-    ]
+    ],
+    "EconomicBlocs": {
+      "Id": "",
+      "Description": ""
+    },
+    "Id": "",
+    "ISO2": "",
+    "ISO3": "",
+    "ISOName": "",
+    "Name": "",
+    "TelephoneCodePrefix": ""
   },
   "BusinessErrors": {
     "BusinessError": []

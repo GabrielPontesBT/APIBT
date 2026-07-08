@@ -156,6 +156,11 @@ curl -X POST \
                <moneda>Q</moneda>
                <papel/>
             </Producto>
+            <otrosConceptos>
+               <concepto></concepto>
+               <texto></texto>
+               <valor>0</valor>
+            </otrosConceptos>
          </sdtProductos>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
@@ -174,68 +179,77 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": "",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-        "sdtProductos": {
-          "Producto": [
-            {
-              "productoUId": "1",
-              "nombre": "AGRICOLA PLAN DE PAGOS K + I",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "2",
-              "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "3",
-              "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "4",
-              "nombre": "AGRICOLA CREDI - AGRO MENOR",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "21",
-              "nombre": "CADENA DE VALOR CAFE DIF.",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "22",
-              "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "23",
-              "nombre": "VIVIENDA HIPOTECARIO",
-              "moneda": "Q"
-            },
-            {
-              "productoUId": "24",
-              "nombre": "VIVIENDA HIPOTECARIO LIBRE",
-              "moneda": "Q"
-            }
-          ]
-        },
-        "Btoutreq": {
-          "Canal": "BTDIGITAL",
-          "Servicio": "BTMicrofinanzas.ObtenerProductos",
-          "Fecha": "2019-09-18",
-          "Hora": "15:56:50",
-          "Requerimiento": "95",
-          "Numero": "161",
-          "Estado": "OK"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": "",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtProductos": {
+    "Producto": [
+      {
+        "productoUId": "1",
+        "nombre": "AGRICOLA PLAN DE PAGOS K + I",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "2",
+        "nombre": "AGRICOLA PLAN DE PAGOS LIBRE",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "3",
+        "nombre": "AGRICOLA PP LIBRE RECUPERADOS",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "4",
+        "nombre": "AGRICOLA CREDI - AGRO MENOR",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "21",
+        "nombre": "CADENA DE VALOR CAFE DIF.",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "22",
+        "nombre": "CADENA DE VALOR CREDI-BRÓCOLI",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "23",
+        "nombre": "VIVIENDA HIPOTECARIO",
+        "moneda": "Q"
+      },
+      {
+        "productoUId": "24",
+        "nombre": "VIVIENDA HIPOTECARIO LIBRE",
+        "moneda": "Q"
+      }
+    ],
+    "moneda": "",
+    "nombre": "",
+    "otrosConceptos": {
+      "concepto": "",
+      "texto": "",
+      "valor": 0
+    },
+    "papel": "",
+    "productoUId": 0
+  },
+  "Btoutreq": {
+    "Canal": "BTDIGITAL",
+    "Servicio": "BTMicrofinanzas.ObtenerProductos",
+    "Fecha": "2019-09-18",
+    "Hora": "15:56:50",
+    "Requerimiento": "95",
+    "Numero": "161",
+    "Estado": "OK"
+  }
+}
 ```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -256,7 +270,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -269,4 +286,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

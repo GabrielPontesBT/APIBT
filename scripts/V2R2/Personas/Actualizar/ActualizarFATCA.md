@@ -100,32 +100,32 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarFATCA \
--H 'cache-control: no-cache' \
--H 'content-type: application/json' \
--d '{
-	"Btinreq": {
-		"Device": "1",
-		"Usuario": "INSTALADOR",
-		"Requerimiento": "1",
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-	"personaUId": "42",
-	"sdtInformacionFATCA": {
-	  "ingresoBrutoEEUU": "N",
-	  "permanencia183Dias": "N",
-	  "tieneGreenCard": "N",
-	  "residenciaMasPaises": "N",
-	  "codigoTIN": "ABCDEF",
-	  "pagoFuenteEEUU": "N",
-	  "residenciasFiscales": {
-		"sBTPCOResidenciaFiscal": {
-		}
-	  },
-	}
-}'
+{
+  "Btinreq": {
+    "Device": "1",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": "1",
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "personaUId": "42",
+  "sdtInformacionFATCA": {
+    "ingresoBrutoEEUU": "N",
+    "permanencia183Dias": "N",
+    "tieneGreenCard": "N",
+    "residenciaMasPaises": "N",
+    "codigoTIN": "ABCDEF",
+    "pagoFuenteEEUU": "N",
+    "residenciasFiscales": {
+      "sBTPCOResidenciaFiscal": {
+        "codigoTIN": "",
+        "correlativo": 0,
+        "pais": "",
+        "paisId": 0
+      }
+    }
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -208,15 +208,5 @@ residenciasFiscales | [sBTPCOResidenciasFiscales](#sbtpcoresidenciasfiscales) | 
 tieneGreenCard | String | Poseedor de la tarjeta verde o "Green Card" de los EEUU (S/N). 
 
 ### sBTPCOResidenciasFiscales
-
-::: center 
-Los campos del tipo de dato estructurado sBTPCOInformacionFATCA son los siguientes:
-
-Nombre | Tipo | Comentarios 
-:--------- | :--------- | :--------- 
-codigoTIN | String | Código TIN. 
-correlativo | Short | Número de correlativo. 
-pais | String | Nombre del país. 
-paisId | Short | Identificador de país. 
 :::
-<!-- CIERRA SDT -->
+

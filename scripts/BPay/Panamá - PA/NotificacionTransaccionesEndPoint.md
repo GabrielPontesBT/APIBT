@@ -69,7 +69,7 @@ Nombre            | Tipo   | Comentarios |
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
-     </bts:BTPayCaddy.NotificacionTransaccionesEndPoint>
+     <bts:BTPayCaddy.NotificacionTransaccionesEndPoint>
          <bts:Btinreq>
             <Canal>BTINTERNO</Canal>
             <Usuario>INSTALADOR</Usuario>
@@ -115,7 +115,7 @@ Nombre            | Tipo   | Comentarios |
             <Requerimiento>1</Requerimiento>
             <Token>088459081EF05E4F9E3B2B7A</Token>
          </Btinreq>
-         <Erroresnegocio></Erroresnegocio>
+         <ErroresNegocio></ErroresNegocio>
          <Btoutreq>
             <Estado>OK</Estado>
             <Fecha>2026-05-06</Fecha>

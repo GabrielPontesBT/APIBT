@@ -67,12 +67,12 @@ Código | Descripción
                 <bts:Usuario>IVRISSO</bts:Usuario>
                 <bts:Requerimiento>1</bts:Requerimiento>
             </bts:Btinreq>
-            <bts:Comprador>
+            <bts:comprador>
                 <bts:emailContacto>kdominguez@mail.com</bts:emailContacto>
                 <bts:ctaCbu>0940099312000605600019</bts:ctaCbu>
                 <bts:endpoint>0202</bts:endpoint>
                 <bts:cuit>23112903879</bts:cuit>
-            </bts:Comprador>
+            </bts:comprador>
         </bts:BTCOELSAGestionDebin.CompradorAdhesion>
     </soapenv:Body>
 </soapenv:Envelope>

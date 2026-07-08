@@ -78,13 +78,13 @@ curl -X POST \
   -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
   -d '{
 	"Btinreq": {
-          "Usuario": "Instalador",
-          "Token": "289a9ca6a299865B3A2E76CF",
-          "Device": 2,
-          "Canal": "BTDIGITAL",
-          "Requerimiento": 0
-        }
-	}'
+    "Usuario": "Instalador",
+    "Token": "289a9ca6a299865B3A2E76CF",
+    "Device": 2,
+    "Canal": "BTDIGITAL",
+    "Requerimiento": 0
+  }
+}'
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
@@ -105,7 +105,7 @@ curl -X POST \
             <Canal>BTDIGITAL</Canal>
             <Token>289a9ca6a299865B3A2E76CF</Token>
          </Btinreq>
-         <sbtMotivosInhabilitacion>
+         <sdtMotivosInhabilitacion>
             <SdtsBTMotivoInhabilitacion>
                <descripcion>Embargo</descripcion>
                <codigo>1</codigo>
@@ -118,7 +118,11 @@ curl -X POST \
                <descripcion>Retenciones</descripcion>
                <codigo>10</codigo>
             </SdtsBTMotivoInhabilitacion>
-         </sbtMotivosInhabilitacion>
+         </sdtMotivosInhabilitacion>
+         <sdtMotivosInhabilitacion>
+            <codigo>0</codigo>
+            <descripcion></descripcion>
+         </sdtMotivosInhabilitacion>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
             <Numero>1827</Numero>
@@ -136,41 +140,45 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-          "Device": 2,
-          "Usuario": "Instalador",
-          "Requerimiento": 0,
-          "Canal": "BTDIGITAL",
-          "Token": "289a9ca6a299865B3A2E76CF"
-        },
-        "sbtMotivosInhabilitacion": {
-          "SdtsBTMotivoInhabilitacion": [
-            {
-              "descripcion": "Embargo",
-              "codigo": 1
-            },
-            {
-              "descripcion": "En Juicio",
-              "codigo": 3
-            },
-            {
-              "descripcion": "Retenciones",
-              "codigo": 10
-            }
-          ]
-        },
-        "Erroresnegocio": "",
-        "Btoutreq": {
-          "Numero": 1827,
-          "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
-          "Estado": "OK",
-          "Fecha": "2022-10-27",
-          "Requerimiento": 0,
-          "Hora": "09:39:20",
-          "Canal": "BTDIGITAL"
-        }
-}'
+{
+  "Btinreq": {
+    "Device": 2,
+    "Usuario": "Instalador",
+    "Requerimiento": 0,
+    "Canal": "BTDIGITAL",
+    "Token": "289a9ca6a299865B3A2E76CF"
+  },
+  "sdtMotivosInhabilitacion": {
+    "SdtsBTMotivoInhabilitacion": [
+      {
+        "descripcion": "Embargo",
+        "codigo": 1
+      },
+      {
+        "descripcion": "En Juicio",
+        "codigo": 3
+      },
+      {
+        "descripcion": "Retenciones",
+        "codigo": 10
+      }
+    ]
+  },
+  "sdtMotivosInhabilitacion": {
+    "codigo": 0,
+    "descripcion": ""
+  },
+  "Erroresnegocio": "",
+  "Btoutreq": {
+    "Numero": 1827,
+    "Servicio": "Prueba.ObtenerMotivosInhabilitacion",
+    "Estado": "OK",
+    "Fecha": "2022-10-27",
+    "Requerimiento": 0,
+    "Hora": "09:39:20",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

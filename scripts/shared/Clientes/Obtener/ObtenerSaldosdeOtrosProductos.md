@@ -182,66 +182,76 @@ curl -X POST \
 
 @tab JSON
 ```json
-{ 
-    "Btinreq": { 
-		"Device": "AV", 
-		"Usuario": "MINSTALADOR", 
-		"Requerimiento": 1, 
-		"Canal": "BTDIGITAL", 
-		"Token": "fa2c02c95a4A8B5C60A82434" 
-    }, 
-    "sdtSaldosProducto": { 
-        "sBTSaldoProducto": [ 
-            { 
-                "fechaValor": "2015-12-05", 
-                "estado": "Normal", 
-                "operacionUId": 162, 
-                "saldo": 60000, 
-                "tasa": 0, 
-                "idOperacionFmt": "0000000000-006", 
-                "fechaVencimiento": "0000-00-00", 
-                "idOperacionBT": "0010010210000050000000029006000000000003", 
-                "producto": { 
-                    "moneda": "$", 
-                    "papel": "UI", 
-                    "productoUId": 62, 
-                    "nombre": "CAJAS DE AHORRO, Caja Ahorro P.Física Especie" 
-                }, 
-                "plazo": 0, 
-                "sucursal": "Casa Matriz" 
-            }, 
-            { 
-                "fechaValor": "2015-12-05", 
-                "estado": "Normal", 
-                "operacionUId": 163, 
-                "saldo": 1400, 
-                "tasa": 0, 
-                "idOperacionFmt": "0000000000-005", 
-                "fechaVencimiento": "0000-00-00", 
-                "idOperacionBT": "0010010212222000000000029005000000000001", 
-                "producto": { 
-                    "moneda": "USD", 
-                    "papel": "", 
-                    "productoUId": 63, 
-                    "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física" 
-                }, 
-                "plazo": 0, 
-                "sucursal": "Casa Matriz" 
-            } 
-        ] 
-    }, 
-    "Erroresnegocio": { 
-        "BTErrorNegocio": [] 
-    }, 
-    "Btoutreq": { 
-        "Numero": 9343, 
-        "Estado": "OK", 
-        "Servicio": "BTClientes.ObtenerSaldosProducto", 
-        "Fecha": "2019-10-28", 
-        "Requerimiento": 1, 
-        "Hora": "18:41:21", 
-        "Canal": "BTDIGITAL" 
-    } 
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtSaldosProducto": {
+    "sBTSaldoProducto": [
+      {
+        "fechaValor": "2015-12-05",
+        "estado": "Normal",
+        "operacionUId": 162,
+        "saldo": 60000,
+        "tasa": 0,
+        "idOperacionFmt": "0000000000-006",
+        "fechaVencimiento": "0000-00-00",
+        "idOperacionBT": "0010010210000050000000029006000000000003",
+        "producto": {
+          "moneda": "$",
+          "papel": "UI",
+          "productoUId": 62,
+          "nombre": "CAJAS DE AHORRO, Caja Ahorro P.Física Especie",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "plazo": 0,
+        "sucursal": "Casa Matriz"
+      },
+      {
+        "fechaValor": "2015-12-05",
+        "estado": "Normal",
+        "operacionUId": 163,
+        "saldo": 1400,
+        "tasa": 0,
+        "idOperacionFmt": "0000000000-005",
+        "fechaVencimiento": "0000-00-00",
+        "idOperacionBT": "0010010212222000000000029005000000000001",
+        "producto": {
+          "moneda": "USD",
+          "papel": "",
+          "productoUId": 63,
+          "nombre": "CAJAS DE AHORRO, Caja de Ahorro P.Física",
+          "otrosConceptos": {
+            "concepto": "",
+            "texto": "",
+            "valor": 0
+          }
+        },
+        "plazo": 0,
+        "sucursal": "Casa Matriz"
+      }
+    ]
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": 9343,
+    "Estado": "OK",
+    "Servicio": "BTClientes.ObtenerSaldosProducto",
+    "Fecha": "2019-10-28",
+    "Requerimiento": 1,
+    "Hora": "18:41:21",
+    "Canal": "BTDIGITAL"
+  }
 }
 ```
 ::: 
@@ -270,7 +280,10 @@ plazo | Int | Plazo.
 producto | [sBTProducto](#sbtproducto) | Datos del producto. 
 saldo | Double | Capital. 
 sucursal | String | Nombre de la sucursal. 
-tasa | Double | Tasa. 
+tasa | Double | Tasa.
+:::
+
+::: details sBTProducto
 
 ### sBTProducto
 
@@ -283,7 +296,10 @@ moneda | String | Símbolo de la moneda.
 nombre | String | Nombre del producto. 
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Datos de otros conceptos.
 papel | String | Símbolo del papel. 
-productoUId | Long | Identificador único de producto. 
+productoUId | Long | Identificador único de producto.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -296,4 +312,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

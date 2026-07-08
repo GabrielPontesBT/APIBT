@@ -1,0 +1,73 @@
+{
+  "slug": "loans/updategrouploansavingaccount",
+  "pageTitle": "Update Group Loan Saving Account",
+  "description": "Método para actualizar la cuenta de ahorro de un grupo.",
+  "pubName": "PublicLoans.updateGroupLoanSavingAccount",
+  "modulo": "Loans",
+  "programa": "PublicAPI.BTLOPA0029",
+  "scope": "Global",
+  "method": "",
+  "endpoint": "",
+  "hasBackendConfig": false,
+  "backendText": "",
+  "backendData": [],
+  "headersData": [],
+  "headersNote": "",
+  "inputNote": "",
+  "inputData": [
+    {
+      "Nombre": "savingAccountGUID",
+      "Tipo": "String <strong>(Length: 36)</strong>",
+      "Comentarios": "GUID (identificador único global) de la cuenta de ahorro."
+    }
+  ],
+  "bodyNote": "",
+  "bodyData": [
+    {
+      "Nombre": "groupId",
+      "Tipo": "Int <strong>(Length: 9)</strong>",
+      "Comentarios": "Identificador de grupo."
+    },
+    {
+      "Nombre": "savingAccountExternalId",
+      "Tipo": "String <strong>(Length: 30)</strong>",
+      "Comentarios": "Identificador externo de cuenta de ahorro."
+    }
+  ],
+  "outputNote": "",
+  "outputData": [],
+  "errors": [
+    {
+      "Código": "120060101",
+      "Descripción": "El grupo no existe.",
+      "Programas": ""
+    }
+  ],
+  "errorsNote": "",
+  "examples": {
+    "invocation": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"savingAccountGUID\": \"6c1fcaa1-fa80-4764-b9d0-6441c5e0057c\",\n  \"savingAccountExternalId\": \"\"\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"groupId\": 32,\n  \"savingAccountGUID\": \"6c1fcaa1-fa80-4764-b9d0-6441c5e0057c\",\n  \"savingAccountExternalId\": \"\"\n}"
+        }
+      ]
+    },
+    "response": {
+      "json": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:13:09\",\n    \"Numero\": 13547121,\n    \"Servicio\": \"PublicLoans.updateGroupLoanSavingAccount\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}",
+      "xml": "",
+      "tabs": [
+        {
+          "name": "JSON",
+          "lang": "json",
+          "code": "{\n  \"Btinreq\": {\n    \"Canal\": \"BTMOBILE\",\n    \"Usuario\": \"INSTALADOR\",\n    \"Device\": \"INSTALADOR\",\n    \"Requerimiento\": 1,\n    \"Token\": \"229E7557863E8FC9C64DFECC\"\n  },\n  \"BusinessErrors\": [],\n  \"Btoutreq\": {\n    \"Estado\": \"OK\",\n    \"Fecha\": \"2026-06-09\",\n    \"Hora\": \"18:13:09\",\n    \"Numero\": 13547121,\n    \"Servicio\": \"PublicLoans.updateGroupLoanSavingAccount\",\n    \"Requerimiento\": 1,\n    \"Canal\": \"BTMOBILE\"\n  }\n}"
+        }
+      ]
+    }
+  },
+  "structuredTypes": [],
+  "valuesTable": []
+}

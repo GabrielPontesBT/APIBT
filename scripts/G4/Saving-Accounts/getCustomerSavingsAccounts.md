@@ -77,7 +77,7 @@ Código | Descripción
   "savingsAccounts": {
     "savingsAccount": [
       {
-        "availableBalance": 0.0,
+        "availableBalance": 0,
         "balance": 19840.9,
         "currencyDescription": "Pesos Uruguayos",
         "currencyId": 0,
@@ -88,11 +88,11 @@ Código | Descripción
         "savingsAccountGUID": "971a3810-9097-4f7c-a220-1c160691d2d2",
         "statusDescription": "Normal",
         "statusId": 0,
-        "subAccountDescription": "CUENTA SUELDO",
+        "subAccountDescription": "CUENTA SUELDO"
       },
       {
-        "availableBalance": 0.0,
-        "balance": 47000.0,
+        "availableBalance": 0,
+        "balance": 47000,
         "currencyDescription": "Pesos Uruguayos",
         "currencyId": 0,
         "currencySign": "$",
@@ -102,10 +102,10 @@ Código | Descripción
         "savingsAccountGUID": "647740db-fe95-4b6a-8d12-abc55d34bcb8",
         "statusDescription": "Normal",
         "statusId": 0,
-        "subAccountDescription": "CUENTA PARA AHORRAR",
+        "subAccountDescription": "CUENTA PARA AHORRAR"
       },
       {
-        "availableBalance": 0.0,
+        "availableBalance": 0,
         "balance": 54039.27,
         "currencyDescription": "Pesos Uruguayos",
         "currencyId": 0,
@@ -116,9 +116,21 @@ Código | Descripción
         "savingsAccountGUID": "9037bb24-f99a-42e1-93cf-a42bb5af3f37",
         "statusDescription": "Normal",
         "statusId": 0,
-        "subAccountDescription": "CUENTA GASTOS",
+        "subAccountDescription": "CUENTA GASTOS"
       }
-    ]
+    ],
+    "availableBalance": "",
+    "balance": "",
+    "currencyId": "",
+    "currencyDescription": "",
+    "currencySign": "",
+    "kindId": "",
+    "kindDescription": "",
+    "kindSign": "",
+    "savingsAccountGUID": "",
+    "statusId": "",
+    "statusDescription": "",
+    "subAccountDescription": ""
   },
   "BusinessErrors": {
     "BusinessError": []

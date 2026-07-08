@@ -92,8 +92,8 @@ curl -X POST \
 	},
 	"grupoId": 3,
 	"clienteUId": "156"
-	}
 }'
+```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->
 
@@ -151,5 +151,6 @@ curl -X POST \
         "Canal": "BTDIGITAL"
     }
 }'
+```
 ::: 
 <!-- CIERRA EJEMPLO DE RESPUESTA -->

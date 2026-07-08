@@ -283,6 +283,9 @@ estadoId | Short | Identificador del estado.
 monedaPrecio | Short | Precio de la moneda.
 precio | Double | Precio.
 versionUId | Long | Identificador de la versión.
+:::
+
+::: details sBTConcepto
 
 ### sBTConcepto
 
@@ -310,6 +313,12 @@ nombre | String | Nombre.
 otrosConceptos | [sBTConcepto](#sbtconcepto) | Listado de otros conceptos.
 papel | String | Papel.
 productoUId | Long | Identificador del producto.
+:::
+
+::: details sBTConcepto
+
+### sBTConcepto
+
 ::: center 
 Los campos del tipo de dato estructurado sBTConcepto son los siguientes: 
 
@@ -319,4 +328,6 @@ concepto | String | Concepto.
 texto | String | Texto.
 valor | Double | Importe.
 :::
+
 <!-- CIERRA SDT -->
+

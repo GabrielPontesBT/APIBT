@@ -157,65 +157,77 @@ curl -X POST \
 
 @tab JSON
 ```json
-'{
-	"Btinreq": {
-		"Device": "AV",
-		"Usuario": "MINSTALADOR",
-		"Requerimiento": 1,
-		"Canal": "BTDIGITAL",
-		"Token": "fa2c02c95a4A8B5C60A82434"
-	},
-   "paquetes": {
-         "sBTPaquete": {
-         "codigo": "1",
-         "descripcion": "Cuenta Persona",
-         "vigente": "S",
-         "productos": {
-            "sBTProductoPaquete": [
-               {
-               "productoUId": "154",
-               "moneda": "PESOS",
-               "papel": "Billete",
-               "cantidad": "0"
-               },
-               {
-               "productoUId": "93",
-               "nombre": "Cuenta corriente P.Física",
-               "moneda": "PESOS",
-               "papel": "Billete",
-               "cantidad": "1"
-               },
-               {
-               "productoUId": "134",
-               "nombre": "Caja de Ahorro P.Física",
-               "moneda": "DÓLAR ESTADOUNIDENSE",
-               "papel": "Billete",
-               "cantidad": "1"
-               },
-               {
-               "productoUId": "155",
-               "nombre": "TARJETA DE DEBITO",
-               "moneda": "PESOS",
-               "papel": "Billete",
-               "cantidad": "0"
-               }
-            ]
-         }
-         }
-      },
-   "Erroresnegocio": {
-      "BTErrorNegocio": []
-   },
-   "Btoutreq": {
-      "Numero": "790",
-      "Estado": "OK",
-      "Servicio": "BTConfiguracionBantotal.ObtenerPaquetes",
-      "Fecha": "2017-12-17",
-      "Requerimiento": 1,
-      "Hora": "16:48:12",
-      "Canal": "BTDIGITAL"
-   }
-}'
+{
+  "Btinreq": {
+    "Device": "AV",
+    "Usuario": "MINSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "fa2c02c95a4A8B5C60A82434"
+  },
+  "sdtPaquetes": {
+    "sBTPaquete": {
+      "codigo": "1",
+      "descripcion": "Cuenta Persona",
+      "vigente": "S",
+      "productos": {
+        "sBTProductoPaquete": [
+          {
+            "productoUId": "154",
+            "moneda": "PESOS",
+            "papel": "Billete",
+            "cantidad": "0"
+          },
+          {
+            "productoUId": "93",
+            "nombre": "Cuenta corriente P.Física",
+            "moneda": "PESOS",
+            "papel": "Billete",
+            "cantidad": "1"
+          },
+          {
+            "productoUId": "134",
+            "nombre": "Caja de Ahorro P.Física",
+            "moneda": "DÓLAR ESTADOUNIDENSE",
+            "papel": "Billete",
+            "cantidad": "1"
+          },
+          {
+            "productoUId": "155",
+            "nombre": "TARJETA DE DEBITO",
+            "moneda": "PESOS",
+            "papel": "Billete",
+            "cantidad": "0"
+          }
+        ]
+      }
+    }
+  },
+  "sdtPaquetes": {
+    "codigo": 0,
+    "descripcion": "",
+    "productos": {
+      "cantidad": 0,
+      "moneda": "",
+      "nombre": "",
+      "papel": "",
+      "productoUId": 0
+    },
+    "vigente": ""
+  },
+  "Erroresnegocio": {
+    "BTErrorNegocio": []
+  },
+  "Btoutreq": {
+    "Numero": "790",
+    "Estado": "OK",
+    "Servicio": "BTConfiguracionBantotal.ObtenerPaquetes",
+    "Fecha": "2017-12-17",
+    "Requerimiento": 1,
+    "Hora": "16:48:12",
+    "Canal": "BTDIGITAL"
+  }
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -236,6 +248,9 @@ codigo | Int | Código de paquete.
 descripcion | String | Descripción de paquete.
 productos | [sBTProductoPaquete](#sbtproductopaquete) | Listado de productos incluidos en el paquete.
 vigente | String | Indica si está vigente el paquete (S/N).
+:::
+
+::: details sBTProductoPaquete
 
 ### sBTProductoPaquete
 
@@ -249,4 +264,6 @@ nombre | String | Nombre de producto.
 papel | String | Símbolo de papel.
 productoUId | Long | Identificador único de producto.
 :::
+
 <!-- CIERRA SDT -->
+

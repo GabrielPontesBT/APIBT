@@ -185,37 +185,30 @@ curl -X POST \
     "Token": "C5DFB132EC9DE80A8063A90E"
   },
   "sdtAgrupadores": {
-    "niveles": [
-      {
-        "codigo": 1,
-        "descripcion": "Avenida",
-        "subNivel2": [
-          {
-            "codigo": 1,
-            "descripcion": "No. Puerta",
-            "subNivel3": [
-              {
-                "codigo": 1,
-                "descripcion": "Piso",
-                "subNivel4": [
-                  {
-                    "codigo": 1,
-                    "descripcion": "Esquina",
-                    "subNivel5": [
-                      {
-                        "codigo": 1,
-                        "descripcion": "Niv5",
-                        "subNivel6": []
-                      }
-                    ]
-                  }
-                ]
+    "niveles": {
+      "codigo": 0,
+      "descripcion": "",
+      "subNivel2": {
+        "codigo": 0,
+        "descripcion": "",
+        "subNivel3": {
+          "codigo": 0,
+          "descripcion": "",
+          "subNivel4": {
+            "codigo": 0,
+            "descripcion": "",
+            "subNivel": {
+              "codigo": 0,
+              "descripcion": "",
+              "subNivel6": {
+                "codigo": 0,
+                "descripcion": ""
               }
-            ]
+            }
           }
-        ]
+        }
       }
-    ]
+    }
   },
   "Erroresnegocio": "",
   "Btoutreq": {
@@ -228,7 +221,6 @@ curl -X POST \
     "Hora": "16:39:16"
   }
 }
-
 ```
 :::
 <!-- CIERRA EJEMPLO DE RESPUESTA -->
@@ -246,6 +238,9 @@ Los campos del tipo de dato estructurado sBTAgrupadores son los siguientes:
 Nombre | Tipo | Comentarios
 :--------- | :--------- | :---------
 niveles | [sBTAgrupadorNiv1](#sbtagrupadorniv1) | Colección del primer subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv1
 
 ### sBTAgrupadorNiv1
 
@@ -257,6 +252,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel2 | [sBTAgrupadorNiv2](#sbtagrupadorniv2) | Colección del segundo subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv2
 
 ### sBTAgrupadorNiv2
 
@@ -268,6 +266,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel3 | [sBTAgrupadorNiv3](#sbtagrupadorniv3) | Colección del tercer subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv3
 
 ### sBTAgrupadorNiv3
 
@@ -279,6 +280,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel4 | [sBTAgrupadorNiv4](#sbtagrupadorniv4) | Colección del cuarto subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv4
 
 ### sBTAgrupadorNiv4
 
@@ -290,6 +294,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel | [sBTAgrupadorNiv5](#sbtagrupadorniv5) | Colección del quinto subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv5
 
 ### sBTAgrupadorNiv5
 
@@ -301,6 +308,9 @@ Nombre | Tipo | Comentarios
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
 subNivel6 | [sBTAgrupadorNiv6](#sbtagrupadorniv6) | Colección del quinto subnivel de agrupación.
+:::
+
+::: details sBTAgrupadorNiv6
 
 ### sBTAgrupadorNiv6
 
@@ -311,5 +321,7 @@ Nombre | Tipo | Comentarios
 :--------- | :--------- | :--------- 
 codigo | Short | Código de agrupador.
 descripcion | String | Nombre de agrupador.
-::: 
+:::
+
 <!-- CIERRA SDT -->
+

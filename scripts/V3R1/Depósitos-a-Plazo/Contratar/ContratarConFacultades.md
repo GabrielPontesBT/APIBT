@@ -85,7 +85,6 @@ Código | Descripción
          <bts:operacionUIdOrigen>1128</bts:operacionUIdOrigen>
          <bts:operacionUIdDestino>824</bts:operacionUIdDestino>
          <bts:instruccionAlVencimiento>1</bts:instruccionAlVencimiento>
-         <bts:controlaMismoCliente>N</bts:controlaMismoCliente>
          <bts:tipoIntegracionCuenta>A</bts:tipoIntegracionCuenta>
       </bts:BTDepositosAPlazo.ContratarConFacultades>
    </soapenv:Body>
@@ -94,27 +93,21 @@ Código | Descripción
 
 @tab JSON
 ```json
-curl -X POST \
-  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarConFacultades=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: b80d8c23-883d-589a-228b-4009ae6eba1c' \
-  -d '{
-    "Btinreq": {
-        "Device": "FP",
-        "Usuario": "INSTALADOR",
-        "Requerimiento": 1,
-        "Canal": "BTDIGITAL",
-        "Token": "00C39357A152407BC2F8A995"
-    },
-    "simulacionUId": 528,
-    "clienteUId": 322,
-    "operacionUIdOrigen": 1128,
-    "operacionUIdDestino": 824,
-    "instruccionAlVencimiento": 1,
-    "controlaMismoCliente": "N",
-    "tipoIntegracionCuenta": "A"
-}'
+{
+  "Btinreq": {
+    "Device": "FP",
+    "Usuario": "INSTALADOR",
+    "Requerimiento": 1,
+    "Canal": "BTDIGITAL",
+    "Token": "00C39357A152407BC2F8A995"
+  },
+  "simulacionUId": 528,
+  "clienteUId": 322,
+  "operacionUIdOrigen": 1128,
+  "operacionUIdDestino": 824,
+  "instruccionAlVencimiento": 1,
+  "tipoIntegracionCuenta": "A"
+}
 ```
 :::
 <!-- CIERRA EJEMPLO DE INVOCACIÓN -->

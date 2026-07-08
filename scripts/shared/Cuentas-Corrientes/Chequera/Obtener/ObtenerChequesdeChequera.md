@@ -126,7 +126,6 @@ curl -X POST \
                <estado>1</estado>
                <descripcion>Pago</descripcion>
             </sBTCheque>
-            ...
          </sdtCheques>
          <Erroresnegocio></Erroresnegocio>
          <Btoutreq>
