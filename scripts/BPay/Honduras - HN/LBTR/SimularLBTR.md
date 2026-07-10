@@ -29,23 +29,23 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal   		    | String    | M	|
-BancoDestino 	    | Int 		| M	| Código de banco destino.
-OperacionUId	    | Long 		| M	| id producto de ahorro.
-CuentaDestino 	    | Int 		| M	| Número de cuenta destino.
-TipoCuentaDestino	| Double	| M	| Tipo de cuenta destino (1 o 2).
-NombreDestino	    | String 	| M	| Nombre beneficiario.
-TipoDocumento		| Short	    | M	| Tipo Documento Beneficiario.
-DocBeneficiario		| String	| M	| Nro. Documento Beneficiario.
-Comentario		    | String 	| M	| Comentario.
+Canal   		    | String    | S	|
+BancoDestino 	    | Int 		| S	| Código de banco destino.
+OperacionUId	    | Long 		| S	| id producto de ahorro.
+CuentaDestino 	    | Int 		| S	| Número de cuenta destino.
+TipoCuentaDestino	| Double	| S	| Tipo de cuenta destino (1 o 2).
+NombreDestino	    | String 	| S	| Nombre beneficiario.
+TipoDocumento		| Short	    | S	| Tipo Documento Beneficiario.
+DocBeneficiario		| String	| S	| Nro. Documento Beneficiario.
+Comentario		    | String 	| S	| Comentario.
 Moneda              | Short     |   | 1. Lempira 2. Dólar
-Importe             | Double    | M | Importe de la operación.
-Email               | String    | M | Correo electrónico.
-Direccion			| String 	| M	| Dirección.
-Telefono            | String    | M | Nro. de teléfono.
-CodigoProposito     | Short     | M | Código de propósito.
+Importe             | Double    | S | Importe de la operación.
+Email               | String    | S | Correo electrónico.
+Direccion			| String 	| S	| Dirección.
+Telefono            | String    | S | Nro. de teléfono.
+CodigoProposito     | Short     | S | Código de propósito.
 
 @tab Datos de Salida
 

@@ -29,23 +29,23 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal   		    | String    | M	|
-BancoDestino 	    | Int 		| M	| Código de banco destino.
-OperacionUId	    | Long 		| M	| id producto de ahorro.
-CuentaDestino 	    | Int 		| M	| Número de cuenta destino.
-TipoCuentaDestino	| Double	| M	| Tipo de cuenta destino (1 o 2).
-NombreDestino	    | String 	| M	| Nombre beneficiario.
-DocBeneficiario		| String	| M	| Nro. Documento Beneficiario.
-Direccion			| String 	| M	| Dirección.
-Comentario		    | String 	| M	| Comentario.
+Canal   		    | String    | S	|
+BancoDestino 	    | Int 		| S	| Código de banco destino.
+OperacionUId	    | Long 		| S	| id producto de ahorro.
+CuentaDestino 	    | Int 		| S	| Número de cuenta destino.
+TipoCuentaDestino	| Double	| S	| Tipo de cuenta destino (1 o 2).
+NombreDestino	    | String 	| S	| Nombre beneficiario.
+DocBeneficiario		| String	| S	| Nro. Documento Beneficiario.
+Direccion			| String 	| S	| Dirección.
+Comentario		    | String 	| S	| Comentario.
 Moneda              | Short     |   | 1. Lempira 2. Dólar
-Importe             | Double    | M | Importe de la operación.
-Email               | String    | M | Correo electrónico.
-Telefono            | String    | M | Nro. de teléfono.
-ClaveValor          | Collection| M | No se utiliza actualmente.
-TipoTransferencia   | Int       | M | Tipo de transferencia
+Importe             | Double    | S | Importe de la operación.
+Email               | String    | S | Correo electrónico.
+Telefono            | String    | S | Nro. de teléfono.
+ClaveValor          | Collection| S | No se utiliza actualmente.
+TipoTransferencia   | Int       | S | Tipo de transferencia
 
 @tab Datos de Salida
 

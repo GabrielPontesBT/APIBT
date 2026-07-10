@@ -29,27 +29,27 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre            | Tipo          | Obligatoriedad | Comentarios
+Nombre            | Tipo          | Obligatorio | Comentarios
 :---------       | :---------   | :---------    | :---------
-Canal	            | String        | M	            | Canal.
-IdCamara	         | Int	          | M              | Id de cámara.
+Canal	            | String        | S	            | Canal.
+IdCamara	         | Int	          | S              | Id de cámara.
 OriPais	         | Short	       | N              | País origen.
 OriTDoc	         | Short	       | N              | Tipo documento ordenante.
 OriNDoc	         | String	       | N              | Documento ordenante.
 OriNombre	      | String	       | N              | Nombre ordenante.
-OperacionUId      | Long	       | M              | Operación Uid ordenante (BTSIO00Id).
+OperacionUId      | Long	       | S              | Operación Uid ordenante (BTSIO00Id).
 CuentaOrigen      | String	       | N              | Cuenta ordenante.
-BancoDestino      | Short	       | M              | Banco Destino.
-BenTDoc           | Short	       | M              | Tipo documento Destino.
-BenNDoc           | String	       | M              | Documento Destino.
-BenNombre         | String	       | M              | Nombre Destino.
-CuentaDestino     | String	       | M              | Cuenta Destino.
-Importe           | Double	       | M              | Import.
-CodigoServicio    | String	       | M              | Tipo documento Destino.
-CodigoTransaccion | Short	       | M              | Documento Destino.
-ConceptoOperacion | String	       | M              | Nombre Destino.
-Addenda           | String	       | M              | Cuenta Destino.
-Simular           | String	       | M              | Import.
+BancoDestino      | Short	       | S              | Banco Destino.
+BenTDoc           | Short	       | S              | Tipo documento Destino.
+BenNDoc           | String	       | S              | Documento Destino.
+BenNombre         | String	       | S              | Nombre Destino.
+CuentaDestino     | String	       | S              | Cuenta Destino.
+Importe           | Double	       | S              | Import.
+CodigoServicio    | String	       | S              | Tipo documento Destino.
+CodigoTransaccion | Short	       | S              | Documento Destino.
+ConceptoOperacion | String	       | S              | Nombre Destino.
+Addenda           | String	       | S              | Cuenta Destino.
+Simular           | String	       | S              | Import.
 
 @tab Datos de Salida
 

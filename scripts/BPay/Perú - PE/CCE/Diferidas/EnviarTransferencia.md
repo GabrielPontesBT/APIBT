@@ -29,22 +29,22 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal 				| String 	| M	| Canal IB, APP
-NombreTitular 		| String 	| M	| Nombre titular
-MismoTitular 		| String 	| M	| M / O
-Modo 				| String 	| M	| S - Simular, C - Confirmacion
-CuentaOrigen 		| String 	| M	| Cuenta origen
-MdaMovimiento 		| Int 		| M	| 1 Soles, 2 Dolares
-ImpMovimiento 		| Double 	| M	| Importe transferencia
-TpoDocBeneficiario 	| Int 		| M	| Tipo documento
-NroDocBeneficiario 	| String 	| M	| Nro documento
-NombreBeneficiario 	| String 	| M	| Nombre destinatario
-BancoDestino 		| Int 		| M	| Codigo banco destino
-CCIDestino 			| String 	| M	| Cuenta destino
-Concepto 			| String 	| M	| Referencia de la transferencia
-TipoTranferencia	| Int 		| M	| 220, 222, 225...
+Canal 				| String 	| S	| Canal IB, APP
+NombreTitular 		| String 	| S	| Nombre titular
+MismoTitular 		| String 	| S	| M / O
+Modo 				| String 	| S	| S - Simular, C - Confirmacion
+CuentaOrigen 		| String 	| S	| Cuenta origen
+MdaMovimiento 		| Int 		| S	| 1 Soles, 2 Dolares
+ImpMovimiento 		| Double 	| S	| Importe transferencia
+TpoDocBeneficiario 	| Int 		| S	| Tipo documento
+NroDocBeneficiario 	| String 	| S	| Nro documento
+NombreBeneficiario 	| String 	| S	| Nombre destinatario
+BancoDestino 		| Int 		| S	| Codigo banco destino
+CCIDestino 			| String 	| S	| Cuenta destino
+Concepto 			| String 	| S	| Referencia de la transferencia
+TipoTranferencia	| Int 		| S	| 220, 222, 225...
 
 
 @tab Datos de Salida

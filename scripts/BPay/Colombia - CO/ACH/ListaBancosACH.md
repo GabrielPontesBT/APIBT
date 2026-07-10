@@ -29,9 +29,9 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre      | Tipo          | Obligatoriedad | Comentarios
+Nombre      | Tipo          | Obligatorio | Comentarios
 :--------- | :---------   | :---------    | :---------
-Camara	   | Byte          | M	            | Id cámara.
+Camara	   | Byte          | S	            | Id cámara.
 
 @tab Datos de Salida
 

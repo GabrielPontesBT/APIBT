@@ -29,10 +29,10 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-IDCamara | Int		| M | Id cámara.
-PayLoad	 | String	| M	| Json AV2, CT2, CT5.
+IDCamara | Int		| S | Id cámara.
+PayLoad	 | String	| S	| Json AV2, CT2, CT5.
 
 @tab Datos de Salida
 

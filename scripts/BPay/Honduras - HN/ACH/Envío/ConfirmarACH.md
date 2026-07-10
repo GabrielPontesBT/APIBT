@@ -29,9 +29,9 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-IdTransferencia	    | Int       | M	| Identificador Transferencia (PAYD01ID).
+IdTransferencia	    | Int       | S	| Identificador Transferencia (PAYD01ID).
 
 @tab Datos de Salida
 
