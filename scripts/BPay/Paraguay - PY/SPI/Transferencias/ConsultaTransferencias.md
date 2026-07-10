@@ -29,10 +29,10 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-movimientoUId | Int | M | Identificador de movimiento contable (BTSIE00Id).
-sentido	| Int | M | (E) Enviada - (R) Recibida.
+movimientoUId | Int | S | Identificador de movimiento contable (BTSIE00Id).
+sentido	| Int | S | (E) Enviada - (R) Recibida.
 
 @tab Datos de Salida
 

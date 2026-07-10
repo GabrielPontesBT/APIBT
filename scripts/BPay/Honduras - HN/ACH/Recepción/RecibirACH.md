@@ -29,9 +29,9 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-TransfRecibidaACH | SdtBbpTransRecibidaInACH | M	| Sdt con datos de la transferencia.
+TransfRecibidaACH | SdtBbpTransRecibidaInACH | S	| Sdt con datos de la transferencia.
 
 @tab Datos de Salida
 
@@ -41,25 +41,25 @@ Código   | Short 	 | Código de respuesta.
 
 @tab SdtBbpTransRecibidaInACH
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Monto         | Int    | M	| Importe.
-NombreBen     | String | M	| Nombre beneficiario.
-Transaccion   | Int    | O	| -
-Referencia    | String | O	| Referencia del movimiento.
-tipoCuentaBen | Int    | M	| Tipo de cuenta del beneficiario.
-cuentaRec     | Int    | M	| Cuenta beneficiario.
-Moneda        | Int    | M	| Código de moneda de la operación.
-Canal         | Int    | O	| Canal.
-TipoCuentaOri | Int    | M	| Tipo de cuenta originante.
-IdOrigen      | Int    | M	| Documento originante.
-DireccionBen  | String | O	| Dirección del beneficiario.
-Cndmgsp       | String | O	| -
-NombreOri     | String | M	| Nombre originante.
-IdBeneficiario| Int    | M	| Documento beneficiario.
-BancoOrigen   | Int    | M	| Código del banco originante.
-Bandera       | Char   | O	| -
-CuentaOri     | Int    | M	| Cuenta originante.
+Monto         | Int    | S	| Importe.
+NombreBen     | String | S	| Nombre beneficiario.
+Transaccion   | Int    | N	| -
+Referencia    | String | N	| Referencia del movimiento.
+tipoCuentaBen | Int    | S	| Tipo de cuenta del beneficiario.
+cuentaRec     | Int    | S	| Cuenta beneficiario.
+Moneda        | Int    | S	| Código de moneda de la operación.
+Canal         | Int    | N	| Canal.
+TipoCuentaOri | Int    | S	| Tipo de cuenta originante.
+IdOrigen      | Int    | S	| Documento originante.
+DireccionBen  | String | N	| Dirección del beneficiario.
+Cndmgsp       | String | N	| -
+NombreOri     | String | S	| Nombre originante.
+IdBeneficiario| Int    | S	| Documento beneficiario.
+BancoOrigen   | Int    | S	| Código del banco originante.
+Bandera       | Char   | N	| -
+CuentaOri     | Int    | S	| Cuenta originante.
 
 @tab Errores
 

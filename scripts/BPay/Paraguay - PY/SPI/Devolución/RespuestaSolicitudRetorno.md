@@ -29,15 +29,15 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal	         | String | M | Código de transacción (MPE011CTR).
-referencia	   | String | M | Referencia de la transferencia original.
-Motivo	      | String | M | Motivo de la aceptación o rechazo.
-Importe	      | Double	| M | Importe.
-Codigo	      | String | M | Código de devolución.
-Devolucion	   | String | M | ACEPTAR o RECHAZAR.
-Simular	      | String | M | Simular la contabilización.
+Canal	         | String | S | Código de transacción (MPE011CTR).
+referencia	   | String | S | Referencia de la transferencia original.
+Motivo	      | String | S | Motivo de la aceptación o rechazo.
+Importe	      | Double	| S | Importe.
+Codigo	      | String | S | Código de devolución.
+Devolucion	   | String | S | ACEPTAR o RECHAZAR.
+Simular	      | String | S | Simular la contabilización.
 
 
 @tab Datos de Salida

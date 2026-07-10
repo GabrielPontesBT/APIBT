@@ -29,23 +29,23 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-operacionUId   			    | Int 		| M	| Identificador Cuenta débito (BTSIO00Id).
-moneda 			            | Int 		| M	| Valor de moneda nacional(6900) ó dólar(1). 
-importeTransferencia		| Double    | M	| Importe a enviar. 
-bancoDestino 				| Int 		| M	| Código de banco destino(FXSNP1Id).
-cuentaDestino				| String	| M	| Cuenta de cliente a realizar crédito.
-tipoDocumentoBeneficiario	| Int 		| M	| Tipo documento del cliente crédito.
-documentoBeneficiario		| String	| M	| Numero de documento de cliente crédito.
-nombreBeneficiario		    | String 	| M	| Nombre de cliente crédito.
-detalleTransferencia		| String 	| M	| Motivo - mensaje a enviar en la transferencia.
-conceptoEntidadReceptora 	| String 	| O	| Campo utilizado en transferencias LBTR - ACH.
-codigoProposito 			| String	| M	| Concepto del Servicio del Cliente del Traspasante (CSCT).
-codigoInstrumento 			| String 	| M	| Código utilizado para indicar si es alias o normal.
-canal                       | String 	| M	| Canal de entrada: HB(HomeBanking) - MOBILE.
-modoEnvio                   | String 	| M	| Acción a realizar, VALIDAR, SIMULAR, TRANSFERIR.
-camara                      | String 	| M	| Tipo de cámara por donde se desea enviar la transferencia(SPI).
+operacionUId   			    | Int 		| S	| Identificador Cuenta débito (BTSIO00Id).
+moneda 			            | Int 		| S	| Valor de moneda nacional(6900) ó dólar(1). 
+importeTransferencia		| Double    | S	| Importe a enviar. 
+bancoDestino 				| Int 		| S	| Código de banco destino(FXSNP1Id).
+cuentaDestino				| String	| S	| Cuenta de cliente a realizar crédito.
+tipoDocumentoBeneficiario	| Int 		| S	| Tipo documento del cliente crédito.
+documentoBeneficiario		| String	| S	| Numero de documento de cliente crédito.
+nombreBeneficiario		    | String 	| S	| Nombre de cliente crédito.
+detalleTransferencia		| String 	| S	| Motivo - mensaje a enviar en la transferencia.
+conceptoEntidadReceptora 	| String 	| N	| Campo utilizado en transferencias LBTR - ACH.
+codigoProposito 			| String	| S	| Concepto del Servicio del Cliente del Traspasante (CSCT).
+codigoInstrumento 			| String 	| S	| Código utilizado para indicar si es alias o normal.
+canal                       | String 	| S	| Canal de entrada: HB(HomeBanking) - MOBILE.
+modoEnvio                   | String 	| S	| Acción a realizar, VALIDAR, SIMULAR, TRANSFERIR.
+camara                      | String 	| S	| Tipo de cámara por donde se desea enviar la transferencia(SPI).
 
 @tab Datos de Salida
 

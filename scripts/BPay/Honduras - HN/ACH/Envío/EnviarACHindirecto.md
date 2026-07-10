@@ -29,21 +29,21 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal   		    | String    | M	|
-IdClienteIndirecto  | Long      | M | Código de banco cliente indirecto.
-BancoDestino 	    | Int 		| M	| Código de banco destino.
-NroCuentaDestino 	| Int 		| M	| Número de cuenta destino.
-TipoCuentaDestino	| Double	| M	| Tipo de cuenta destino (1 o 2).
-IdentidadDestino	| String	| M	| Nro. Documento Beneficiario.
-NombreDestino	    | String 	| M	| Nombre beneficiario.
-Direccion			| String 	| M	| Dirección.
-Comentario		    | String 	| M	| Comentario.
+Canal   		    | String    | S	|
+IdClienteIndirecto  | Long      | S | Código de banco cliente indirecto.
+BancoDestino 	    | Int 		| S	| Código de banco destino.
+NroCuentaDestino 	| Int 		| S	| Número de cuenta destino.
+TipoCuentaDestino	| Double	| S	| Tipo de cuenta destino (1 o 2).
+IdentidadDestino	| String	| S	| Nro. Documento Beneficiario.
+NombreDestino	    | String 	| S	| Nombre beneficiario.
+Direccion			| String 	| S	| Dirección.
+Comentario		    | String 	| S	| Comentario.
 Moneda              | Short     |   | 1. Lempira 2. Dólar
-Importe             | Double    | M | Importe de la operación.
-CorreoElectronico   | String    | M | Correo electrónico.
-NroTelefono            | String    | M | Nro. de teléfono.
+Importe             | Double    | S | Importe de la operación.
+CorreoElectronico   | String    | S | Correo electrónico.
+NroTelefono            | String    | S | Nro. de teléfono.
 
 @tab Datos de Salida
 

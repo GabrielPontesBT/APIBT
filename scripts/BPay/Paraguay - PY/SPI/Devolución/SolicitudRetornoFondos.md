@@ -29,12 +29,12 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal	         | String | M | Canal de envío.
-referencia	   | String | M | Referencia de la transferencia original.
-importe	      | Double	| M | Importe.
-razonCodigo	   | String | M | Código de devolución.
+Canal	         | String | S | Canal de envío.
+referencia	   | String | S | Referencia de la transferencia original.
+importe	      | Double	| S | Importe.
+razonCodigo	   | String | S | Código de devolución.
 
 
 @tab Datos de Salida

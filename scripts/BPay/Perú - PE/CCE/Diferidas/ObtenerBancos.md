@@ -29,9 +29,9 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-idCamara 		| Int 		| M	| Codigo de camara (MPE005)
+idCamara 		| Int 		| S	| Codigo de camara (MPE005)
 
 @tab Datos de Salida
 

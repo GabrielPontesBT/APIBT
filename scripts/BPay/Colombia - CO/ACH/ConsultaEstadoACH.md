@@ -29,10 +29,10 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre      | Tipo          | Obligatoriedad | Comentarios
+Nombre      | Tipo          | Obligatorio | Comentarios
 :--------- | :---------   | :---------    | :---------
-IdCamara	   | Int           | M	            | Id cámara.
-SdtIDLIn    | bbtIdLogPagos | M              | MPE001IDL para consultar estados.
+IdCamara	   | Int           | S	            | Id cámara.
+SdtIDLIn    | bbtIdLogPagos | S              | MPE001IDL para consultar estados.
 
 @tab Datos de Salida
 

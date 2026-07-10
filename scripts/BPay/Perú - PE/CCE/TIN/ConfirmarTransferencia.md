@@ -29,17 +29,17 @@ backtotop: false
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal   		| Int 		| M	| 15 - Web, 91 - BancaMovil, 51 - Net.
-idCamara 		| Int 		| M	| Codigo de camara (MPE005)
-OperacionUId	| Int 		| M	| id producto de ahorro.
-Moneda 			| Int 		| M	| 1 - soles, 2 - dolares.
-Importe			| Double	| M	| Importe.
-IDTransferencia	| Int 		| M	| InstruccionID (Resultado AV4).
-MPE001IDL		| Int		| M	| Id Bandeja BT.
-Celular			| Int	 	| O	| Celular beneficiario.
-CodigoQr		| String 	| O	| QR, unstructuredInformation CT1.
+Canal   		| Int 		| S	| 15 - Web, 91 - BancaMovil, 51 - Net.
+idCamara 		| Int 		| S	| Codigo de camara (MPE005)
+OperacionUId	| Int 		| S	| id producto de ahorro.
+Moneda 			| Int 		| S	| 1 - soles, 2 - dolares.
+Importe			| Double	| S	| Importe.
+IDTransferencia	| Int 		| S	| InstruccionID (Resultado AV4).
+MPE001IDL		| Int		| S	| Id Bandeja BT.
+Celular			| Int	 	| N	| Celular beneficiario.
+CodigoQr		| String 	| N	| QR, unstructuredInformation CT1.
 
 @tab Datos de Salida
 

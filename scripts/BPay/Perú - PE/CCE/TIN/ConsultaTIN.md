@@ -38,20 +38,20 @@ Este método no ejecuta la transferencia en sí, sino que representa el primer p
 
 @tab Datos de Entrada
 
-Nombre | Tipo | Obligatoriedad | Comentarios
+Nombre | Tipo | Obligatorio | Comentarios
 :--------- | :--------- | :--------- | :---------
-Canal   			| Int 		| M	| 15 - Web, 91 - BancaMovil, 51 - Net.
-idCamara 			| Int 		| M	| Codigo de camara (MPE005)
-OperacionUId		| Int 		| M	| id producto de ahorro.
-Moneda 				| Int 		| M	| 1 - soles, 2 - dolares.
-Importe				| Double	| M	| Importe.
-CodigoTransaccion	| Int 		| M	| 320 - Transferencias ordinarias, 325 - Pagos a cuenta tarjeta.
-BancoDestino		| Int		| M	| Banco Destino.
-SucursalDestino		| Int	 	| O	| Sucursal Destino (solo si es 325).
-CCIBeneficiario		| String 	| O	| CCI de recepcion de fondos.
-nroCelular 			| String 	| O	| Interoperabilidad.
-Directorio 			| Int 		| O	| Interoperabilidad.
-CodigoQR 			| String 	| O	| Interoperabilidad.
+Canal   			| Int 		| S	| 15 - Web, 91 - BancaMovil, 51 - Net.
+idCamara 			| Int 		| S	| Codigo de camara (MPE005)
+OperacionUId		| Int 		| S	| id producto de ahorro.
+Moneda 				| Int 		| S	| 1 - soles, 2 - dolares.
+Importe				| Double	| S	| Importe.
+CodigoTransaccion	| Int 		| S	| 320 - Transferencias ordinarias, 325 - Pagos a cuenta tarjeta.
+BancoDestino		| Int		| S	| Banco Destino.
+SucursalDestino		| Int	 	| N	| Sucursal Destino (solo si es 325).
+CCIBeneficiario		| String 	| N	| CCI de recepcion de fondos.
+nroCelular 			| String 	| N	| Interoperabilidad.
+Directorio 			| Int 		| N	| Interoperabilidad.
+CodigoQR 			| String 	| N	| Interoperabilidad.
 
 @tab Datos de Salida
 
